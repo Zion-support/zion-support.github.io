@@ -1,12 +1,12 @@
 
-import React from 'react',
-import { ResumeSelector, ResumeOption } from "../resume-selector",
-import { Button } from "@/components/ui/button",
+import React from 'react';
+import { ResumeSelector, ResumeOption } from "../resume-selector";
+import { Button } from "@/components/ui/button";
 export interface ResumeTabProps {
-  selectedResumeId?: string | null,
+  selectedResumeId?: string | null;
   onSelectResume?: (resumeId: string) => void,
   onResumeSelected?: (resume: ResumeOption) => void,
-  onApply?: () => Promise<void>,
+  onApply?: () => Promise<void>;
   isSubmitting?: boolean
 }
 
@@ -19,7 +19,7 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
     if (onSelectResume) {
       onSelectResume(resume.id)
     }
-  },
+  };
   
   return (
     <div className="space-y-4">

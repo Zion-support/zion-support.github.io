@@ -1,22 +1,22 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Zap, Target, Stethoscope, 
-  BarChart3, Cpu, Globe, Users, Award,
+  BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const features = [
   'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
-],
+];
 
 const pricingPlans = [
   {
@@ -25,14 +25,14 @@ const pricingPlans = [
     period: 'month',
     features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'],
     popular: false
-  },
+  };
   {
     name: 'Professional',
     price: 799,
     period: 'month',
     features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'],
     popular: true
-  },
+  };
   {
     name: 'Enterprise',
     price: 1999,
@@ -40,7 +40,7 @@ const pricingPlans = [
     features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included'],
     popular: false
   }
-],
+];
 
 export default function AIDiagnosticPlatform() {
   return (

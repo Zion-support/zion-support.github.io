@@ -1,22 +1,22 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react',
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase',
-import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations',
-import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
+import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
+import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
 export default function UltraFuturistic2029InnovationsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
-  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services],
+  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
 
   return (
     <>
@@ -120,35 +120,35 @@ export default function UltraFuturistic2029InnovationsPage() {
                   icon: Brain,
                   color: 'from-purple-600 to-pink-600',
                   services: cuttingEdge2029Services.filter(s => s.category.includes('Consciousness') || s.category.includes('Business'))
-                },
+                };
                 {
                   title: '⚛️ Quantum & Neuroscience',
                   description: 'Quantum computing meets brain-computer interfaces for unprecedented capabilities',
                   icon: Atom,
                   color: 'from-indigo-600 to-purple-600',
                   services: cuttingEdge2029Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time'))
-                },
+                };
                 {
                   title: '🚀 Space Colonization & Mining',
-                  description: 'Automated space exploration, colonization, and resource extraction systems',
+                  description: 'Automated space exploration, colonization, and resource extraction systems';
                   icon: Rocket,
                   color: 'from-red-600 to-orange-600',
                   services: cuttingEdge2029Services.filter(s => s.category.includes('Space') || s.category.includes('Time'))
-                },
+                };
                 {
                   title: '🏠 Space Architecture & Energy',
                   description: 'Advanced habitat design and space-based energy harvesting platforms',
                   icon: Globe,
                   color: 'from-green-600 to-teal-600',
                   services: cuttingEdge2029Services.filter(s => s.category.includes('Architecture') || s.category.includes('Energy'))
-                },
+                };
                 {
                   title: '👁️ AI Reality Augmentation',
                   description: 'Real-time AI-powered reality enhancement and content generation',
                   icon: Eye,
                   color: 'from-orange-600 to-red-600',
                   services: cuttingEdge2029Services.filter(s => s.category.includes('Augmented Reality'))
-                },
+                };
                 {
                   title: '⏰ Quantum Time Manipulation',
                   description: 'Quantum-based time perception manipulation and optimization',

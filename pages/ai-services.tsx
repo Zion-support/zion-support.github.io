@@ -1,23 +1,23 @@
-import Link from 'next/link',
-import Head from 'next/head',
-import { useState, useEffect } from 'react',
-import { ContactInfo } from '../types',
-import ErrorBoundary from '../components/ErrorBoundary',
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100),
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-  }, []),
+  }, []);
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  },
+  };
 
   const categories = [
     { id: 'all', name: 'All AI Services', count: 100 },
@@ -27,7 +27,7 @@ export default function AIServices() {
     { id: 'predictive', name: 'Predictive Analytics', count: 15 },
     { id: 'automation', name: 'AI Automation', count: 15 },
     { id: 'specialized', name: 'Specialized AI', count: 10 }
-  ],
+  ];
 
   const services = [
     {
@@ -39,17 +39,17 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
-    },
+    };
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
-      description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
+      description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.';
       category: 'predictive',
       features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
-    },
+    };
     {
       id: 3,
       name: 'AI Legal Document Analysis',
@@ -59,17 +59,17 @@ export default function AIServices() {
       price: '$199/month',
       popular: false,
       useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
-    },
+    };
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
-      description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
+      description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.';
       category: 'nlp',
       features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
       useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
-    },
+    };
     {
       id: 5,
       name: 'AI-Powered Search & Discovery',
@@ -79,17 +79,17 @@ export default function AIServices() {
       price: '$99/month',
       popular: false,
       useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
-    },
+    };
     {
       id: 6,
       name: 'Computer Vision Solutions',
-      description: 'Advanced image and video analysis for object detection, recognition, and processing.',
+      description: 'Advanced image and video analysis for object detection, recognition, and processing.';
       category: 'computer-vision',
       features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
       useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
-    },
+    };
     {
       id: 7,
       name: 'Machine Learning Model Training',
@@ -99,17 +99,17 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: false,
       useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
-    },
+    };
     {
       id: 8,
       name: 'Natural Language Processing',
-      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
+      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.';
       category: 'nlp',
       features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
       useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
-    },
+    };
     {
       id: 9,
       name: 'AI Process Automation',
@@ -119,27 +119,27 @@ export default function AIServices() {
       price: '$159/month',
       popular: false,
       useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
-    },
+    };
     {
       id: 10,
       name: 'Predictive Analytics Engine',
-      description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
+      description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.';
       category: 'predictive',
       features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
       useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
-    },
+    };
     {
       id: 11,
       name: 'AI Content Generation',
-      description: 'Intelligent content creation for marketing, documentation, and communication.',
+      description: 'Intelligent content creation for marketing, documentation, and communication.';
       category: 'specialized',
       features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,
       useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
-    },
+    };
     {
       id: 12,
       name: 'AI Chatbot Development',
@@ -150,11 +150,11 @@ export default function AIServices() {
       popular: true,
       useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
     }
-  ],
+  ];
 
   const filteredServices = selectedCategory === 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory),
+    : services.filter(service => service.category === selectedCategory);
   return (
     <>
       <Head>
@@ -354,9 +354,9 @@ export default function AIServices() {
     </>
   )
 }
-import SEO from '../components/SEO',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Link from 'next/link',
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Link from 'next/link';
 export default function AIServicesPage() {
   return (
     <UltraAdvancedFuturisticBackground>

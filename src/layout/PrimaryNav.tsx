@@ -1,47 +1,47 @@
-import { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { Logo } from '@/components/header/Logo',
-import { PointsBadge } from '@/components/loyalty/PointsBadge',
-import { UserMenu } from '@/components/header/UserMenu',
-import { LanguageSelector } from '@/components/header/LanguageSelector',
-import { ModeToggle } from '@/components/ModeToggle',
-import { useAuth } from '@/hooks/useAuth',
-import { useIsMobile } from '@/hooks/use-mobile',
-import { useMessaging } from '@/context/MessagingContext',
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',
-import { generateSearchSuggestions } from '@/data/marketplaceData',
-import { slugify } from '@/lib/slugify',
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation',
-import { MobileMenu } from '@/components/header/MobileMenu',
-import { MobileBottomNav } from '@/components/header/MobileBottomNav',
+import { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Logo } from '@/components/header/Logo';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import { UserMenu } from '@/components/header/UserMenu';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { ModeToggle } from '@/components/ModeToggle';
+import { useAuth } from '@/hooks/useAuth';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { useMessaging } from '@/context/MessagingContext';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { slugify } from '@/lib/slugify';
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { Menu, X } from 'lucide-react'
-import { useTranslation } from 'react-i18next',
-import { CartDrawer } from '@/components/cart/CartDrawer',
-import { LoginModal } from '@/components/auth/LoginModal',
+import { useTranslation } from 'react-i18next';
+import { CartDrawer } from '@/components/cart/CartDrawer';
+import { LoginModal } from '@/components/auth/LoginModal';
 export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-  const [loginOpen, setLoginOpen] = useState(false),
-  const { user } = useAuth(),
-  const isLoggedIn = !!user,
-  const isMobile = useIsMobile(),
-  const { t } = useTranslation(),
-  const router = useRouter(),
-  const [query, setQuery] = useState(''),
-  const suggestions = generateSearchSuggestions(),
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const { user } = useAuth();
+  const isLoggedIn = !!user;
+  const isMobile = useIsMobile();
+  const { t } = useTranslation();
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const suggestions = generateSearchSuggestions();
 
-  let unreadCount = 0,
+  let unreadCount = 0;
   try {
-    const messaging = useMessaging(),
+    const messaging = useMessaging();
     unreadCount = messaging.unreadCount
   } catch {
     // context not available
   }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    const trimmed = query.trim(),
+    e.preventDefault();
+    const trimmed = query.trim();
     if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed }),
       router
@@ -49,7 +49,7 @@ export function PrimaryNav() {
         .then(() => setQuery(''))
         .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
     }
-  },
+  };
 
   return (
     <>
@@ -90,7 +90,7 @@ export function PrimaryNav() {
                     // Default: search results page with query parameter
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
-                  setQuery(''),
+                  setQuery('');
                   
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
@@ -126,7 +126,7 @@ export function PrimaryNav() {
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
                     onClick={(e) => {
-                      e.preventDefault(),
+                      e.preventDefault();
                       setLoginOpen(true)
                     }}
                   >
@@ -154,7 +154,7 @@ export function PrimaryNav() {
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
                 onClick={(e) => {
-                  e.preventDefault(),
+                  e.preventDefault();
                   setLoginOpen(true)
                 }}
               >

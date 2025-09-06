@@ -1,49 +1,49 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
-  DollarSign, Users, Clock, CheckCircle, ArrowRight,
-  Phone, Mail, MapPin, ExternalLink, Search, Filter,
-  Grid, List, ChevronDown, ChevronUp, Sparkles,
+  DollarSign, Users, Clock, CheckCircle, ArrowRight;
+  Phone, Mail, MapPin, ExternalLink, Search, Filter;
+  Grid, List, ChevronDown, ChevronUp, Sparkles;
   Crown, Award, Target, Globe, Cpu, Database
-} from 'lucide-react',
-import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground',
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
-import { nextGenerationAIServices } from '../data/next-generation-ai-services',
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-import { innovativeAIServices } from '../data/innovative-ai-services',
-import { quantumSpaceServices } from '../data/quantum-space-services',
-import { enterpriseITServices } from '../data/enterprise-it-services',
-import { realMarketServices } from '../data/real-market-services',
-import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025',
+} from 'lucide-react';
+import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { realMarketServices } from '../data/real-market-services';
+import { newVerifiedServicesQ22025 } from '../data/real-verified-services-q2-2025';
 export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<string>('name'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<string>('name');
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   // Combine all services for comprehensive showcase
   const allServices = [
-    ...nextGenerationAIServices,
-    ...cuttingEdgeITServices,
-    ...innovativeMicroSaasV2Services,
-    ...enhancedRealMicroSaasServices,
-    ...innovativeAIServices,
-    ...quantumSpaceServices,
-    ...enterpriseITServices,
-    ...realMarketServices,
+    ...nextGenerationAIServices;
+    ...cuttingEdgeITServices;
+    ...innovativeMicroSaasV2Services;
+    ...enhancedRealMicroSaasServices;
+    ...innovativeAIServices;
+    ...quantumSpaceServices;
+    ...enterpriseITServices;
+    ...realMarketServices;
     ...newVerifiedServicesQ22025
-  ],
+  ];
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -52,7 +52,7 @@ export default function EnhancedServicesShowcase() {
     { id: 'innovative-saas', name: 'Innovative SaaS', icon: '💻', count: innovativeMicroSaasV2Services.length },
     { id: 'quantum-space', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length }
-  ],
+  ];
 
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
@@ -61,7 +61,7 @@ export default function EnhancedServicesShowcase() {
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customer Count' },
     { id: 'popularity', name: 'Popularity' }
-  ],
+  ];
 
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
@@ -71,41 +71,41 @@ export default function EnhancedServicesShowcase() {
         (selectedCategory === 'cutting-edge-it' && cuttingEdgeITServices.includes(service)) ||
         (selectedCategory === 'innovative-saas' && innovativeMicroSaasV2Services.includes(service)) ||
         (selectedCategory === 'quantum-space' && quantumSpaceServices.includes(service)) ||
-        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service)),
+        (selectedCategory === 'enterprise' && enterpriseITServices.includes(service));
       
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())),
+                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
       
       return matchesCategory && matchesSearch
-    }),
+    });
 
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name)),
-        break,
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        break;
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, ''))),
-        break,
+        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
+        break;
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, ''))),
-        break,
+        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
+        break;
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0)),
-        break,
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
       case 'customers':
-        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0)),
-        break,
+        filtered.sort((a, b) => (b.customers || 0) - (a.customers || 0));
+        break;
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
-        break,
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
+        break;
       default: break
     }
 
     return filtered
-  }, [allServices, selectedCategory, searchTerm, sortBy]),
+  }, [allServices, selectedCategory, searchTerm, sortBy]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -116,7 +116,7 @@ export default function EnhancedServicesShowcase() {
         delayChildren: 0.2
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -128,28 +128,28 @@ export default function EnhancedServicesShowcase() {
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   const featuredServices = [
     {
       title: '🚀 ArrowRight-Generation AI Services',
       description: 'Revolutionary AI platforms that push the boundaries of what\'s possible',
-      services: nextGenerationAIServices.slice(0, 3),
+      services: nextGenerationAIServices.slice(0, 3);
       color: 'from-purple-500 to-pink-600'
-    },
+    };
     {
       title: '⚡ Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions for the modern enterprise',
-      services: cuttingEdgeITServices.slice(0, 3),
+      services: cuttingEdgeITServices.slice(0, 3);
       color: 'from-blue-500 to-cyan-600'
-    },
+    };
     {
       title: '💻 Innovative Micro SaaS Solutions',
       description: 'Creative and practical SaaS tools for every business need',
-      services: innovativeMicroSaasV2Services.slice(0, 3),
+      services: innovativeMicroSaasV2Services.slice(0, 3);
       color: 'from-green-500 to-emerald-600'
     }
-  ],
+  ];
 
   return (
     <UltraAdvancedFuturisticMatrixBackground intensity="high"       colorScheme="quantum">
@@ -492,7 +492,7 @@ export default function EnhancedServicesShowcase() {
                 <Button 
                   href="#"
                   onClick={() => {
-                    setSearchTerm(''),
+                    setSearchTerm('');
                     setSelectedCategory('all')
                   }}
                   variant="primary"
@@ -572,10 +572,10 @@ const Button = ({
   children, 
   onClick 
 }: {
-  href?: string,
-  variant?: 'primary' | 'secondary',
-  size?: 'sm' | 'md' | 'lg',
-  className?: string,
+  href?: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
   children: React.ReactNode,
   onClick?: () => void
 }) => {
@@ -584,15 +584,15 @@ const Button = ({
   const variantClasses = {
     primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
     secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'
-  },
+  };
   
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'
-  },
+  };
 
-  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`,
+  const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
 
   if (href) {
     return (
@@ -607,4 +607,4 @@ const Button = ({
       {children}
     </button>
   )
-},
+};

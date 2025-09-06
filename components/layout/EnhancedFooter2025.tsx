@@ -1,19 +1,19 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
-  Phone, Mail, MapPin, Star, ArrowRight,
-  Brain, Atom, Shield, Rocket, Target, Microscope,
-  Zap, Globe, Database, Lock, Cloud, BarChart3,
+  Phone, Mail, MapPin, Star, ArrowRight;
+  Brain, Atom, Shield, Rocket, Target, Microscope;
+  Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -26,7 +26,7 @@ const serviceCategories = [
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
     ]
-  },
+  };
   {
     title: 'Quantum & Emerging Tech',
     icon: Atom,
@@ -37,7 +37,7 @@ const serviceCategories = [
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
       { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' }
     ]
-  },
+  };
   {
     title: 'Enterprise IT',
     icon: Shield,
@@ -48,7 +48,7 @@ const serviceCategories = [
       { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' },
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }
     ]
-  },
+  };
   {
     title: 'Micro SAAS',
     icon: Target,
@@ -60,7 +60,7 @@ const serviceCategories = [
       { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ]
   }
-],
+];
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -69,14 +69,14 @@ const companyLinks = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' }
-],
+];
 
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms of Service', href: '/terms' },
   { name: 'Cookie Policy', href: '/cookies' },
   { name: 'GDPR Compliance', href: '/gdpr' }
-],
+];
 
 const socialLinks = [
   { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
@@ -84,10 +84,10 @@ const socialLinks = [
   { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
   { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
-],
+];
 
 const EnhancedFooter2025: React.FC = () => {
-  const currentYear = new Date().getFullYear(),
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50">
@@ -289,6 +289,6 @@ const EnhancedFooter2025: React.FC = () => {
       </div>
     </footer>
   )
-},
+};
 
-export default EnhancedFooter2025,
+export default EnhancedFooter2025;

@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function TechnologyInsightsPage() {
   const technologyTrends = [
     {
@@ -10,7 +10,7 @@ export default function TechnologyInsightsPage() {
       category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true
-    },
+    };
     {
       id: 'edge-ai',
       title: 'Edge AI Revolution',
@@ -18,7 +18,7 @@ export default function TechnologyInsightsPage() {
       category: 'AI/ML',
       readTime: '12 min read',
       featured: false
-    },
+    };
     {
       id: 'autonomous-vehicles',
       title: 'Autonomous Vehicle Technology',
@@ -27,7 +27,7 @@ export default function TechnologyInsightsPage() {
       readTime: '18 min read',
       featured: false
     }
-  ],
+  ];
 
   const researchAreas = [
     {
@@ -35,20 +35,20 @@ export default function TechnologyInsightsPage() {
       description: 'Pioneering research in building truly autonomous systems that can operate independently.',
       focus: ['Decision MakingSelf-LearningAdaptive BehaviorSystem Integration'],
       icon: '🔬'
-    },
+    };
     {
       title: 'AI Ethics & Governance',
       description: 'Research into responsible AI development and ethical considerations for autonomous systems.',
       focus: ['Ethical AIBias DetectionTransparencyAccountability'],
       icon: '⚖️'
-    },
+    };
     {
       title: 'Human-AI Collaboration',
       description: 'Exploring how humans and AI can work together effectively and safely.',
       focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],
       icon: '🤝'
     }
-  ],
+  ];
 
   const whitepapers = [
     {
@@ -58,7 +58,7 @@ export default function TechnologyInsightsPage() {
       pages: '45',
       category: 'Technology',
       downloadUrl: '/whitepapers/autonomous-systems-future.pdf'
-    },
+    };
     {
       id: 'ai-ethics-framework',
       title: 'AI Ethics Framework for Business',
@@ -66,7 +66,7 @@ export default function TechnologyInsightsPage() {
       pages: '32',
       category: 'Ethics',
       downloadUrl: '/whitepapers/ai-ethics-framework.pdf'
-    },
+    };
     {
       id: 'automation-roi-guide',
       title: 'Automation ROI Guide',
@@ -75,7 +75,7 @@ export default function TechnologyInsightsPage() {
       category: 'Business',
       downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     }
-  ],
+  ];
 
   return (
     <>

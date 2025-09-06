@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react',
-import EnhancedNavigation from './EnhancedNavigation',
-import EnhancedFooter from './EnhancedFooter',
-import i18n, { isRtl } from '../../utils/i18n',
-import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt',
+import React, { useEffect } from 'react';
+import EnhancedNavigation from './EnhancedNavigation';
+import EnhancedFooter from './EnhancedFooter';
+import i18n, { isRtl } from '../../utils/i18n';
+import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 export type EnhancedLayoutProps = {
   children: React.ReactNode
-},
+};
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {
-    const lng = i18n.resolvedLanguage || i18n.language,
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr'),
+    const lng = i18n.resolvedLanguage || i18n.language;
+    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng)
-  }, []),
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">

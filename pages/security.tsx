@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 export default function Security() {
   const securityMeasures = [
     {
@@ -13,7 +13,7 @@ export default function Security() {
       features: [
         'End-to-end encryption for all data in transitAES-256 encryption for data at restRegular automated backups with encryptionSecure data centers with 24/7 monitoringData residency compliance for global clients'
       ]
-    },
+    };
     {
       id: 'access-control',
       title: 'Access Control',
@@ -21,7 +21,7 @@ export default function Security() {
       features: [
         'Multi-factor authentication (MFA) requiredRole-based access control (RBAC)Principle of least privilege implementationRegular access reviews and deprovisioningSingle sign-on (SSO) integration'
       ]
-    },
+    };
     {
       id: 'infrastructure',
       title: 'Infrastructure Security',
@@ -29,7 +29,7 @@ export default function Security() {
       features: [
         'Network segmentation and firewallsIntrusion detection and prevention systemsRegular vulnerability assessmentsAutomated security patchingDDoS protection and rate limiting'
       ]
-    },
+    };
     {
       id: 'monitoring',
       title: 'Security Monitoring',
@@ -38,7 +38,7 @@ export default function Security() {
         '24/7 security operations center (SOC)Real-time threat detection and responseComprehensive audit loggingSecurity incident response teamContinuous security monitoring tools'
       ]
     }
-  ],
+  ];
 
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -46,7 +46,7 @@ export default function Security() {
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
-  ],
+  ];
 
   return (
     <>

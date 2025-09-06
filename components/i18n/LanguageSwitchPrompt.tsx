@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react',
-import { useTranslation } from 'react-i18next',
-import i18n, { supportedLocales, isRtl } from '../../utils/i18n',
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
 
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
@@ -9,36 +9,36 @@ const localeLabelKey: Record<string, string> = {
   ar: 'lang.arabic'},
 
 export default function LanguageSwitchPrompt() {
-  const { t } = useTranslation(),
-  const [suggested, setSuggested] = useState<string | null>(null),
+  const { t } = useTranslation();
+  const [suggested, setSuggested] = useState<string | null>(null);
 
   useEffect(() => {
-    const key = 'langPromptShown',
-    const preferred = localStorage.getItem('preferredLanguage'),
+    const key = 'langPromptShown';
+    const preferred = localStorage.getItem('preferredLanguage');
     if (preferred) return, // user has chosen
     if (localStorage.getItem(key)) return, // already prompted
 
-    const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en',
-    const normalized = detected.split('-')[0],
-    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null,
+    const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
+    const normalized = detected.split('-')[0];
+    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
     if (suggestion) setSuggested(suggestion)
-  }, []),
+  }, []);
 
-  if (!suggested) return null,
+  if (!suggested) return null;
 
   const accept = async () => {
-    await i18n.changeLanguage(suggested!),
-    localStorage.setItem('preferredLanguage', suggested!),
-    localStorage.setItem('langPromptShown1'),
-    document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr'),
-    document.documentElement.setAttribute('lang', suggested!),
+    await i18n.changeLanguage(suggested!);
+    localStorage.setItem('preferredLanguage', suggested!);
+    localStorage.setItem('langPromptShown1');
+    document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', suggested!);
     setSuggested(null)
-  },
+  };
 
   const decline = () => {
-    localStorage.setItem('langPromptShown1'),
+    localStorage.setItem('langPromptShown1');
     setSuggested(null)
-  },
+  };
 
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">

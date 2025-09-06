@@ -1,49 +1,49 @@
 
-import React, { useState, useEffect } from 'react',
-import { useParams } from 'react-router-dom',
-import { useProjects } from '@/hooks/useProjects',
-import { useMilestones } from '@/hooks/useMilestones',
-import { useJobDetails } from '@/hooks/useJobDetails',
-import { useAuth } from '@/hooks/useAuth',
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useProjects } from '@/hooks/useProjects';
+import { useMilestones } from '@/hooks/useMilestones';
+import { useJobDetails } from '@/hooks/useJobDetails';
+import { useAuth } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { 
-  MilestoneActivities,
-  MilestoneManager,
-  MilestoneCreator,
-  ProjectActions,
+  MilestoneActivities;
+  MilestoneManager;
+  MilestoneCreator;
+  ProjectActions;
   ProjectHeader
-} from './components',
+} from './components';
 
 export function ProjectMilestonesContent() {
-  const { projectId } = useParams() as { projectId?: string },
-  const { user } = useAuth(),
-  const { getProjectById } = useProjects(),
+  const { projectId } = useParams() as { projectId?: string };
+  const { user } = useAuth();
+  const { getProjectById } = useProjects();
   const { 
     milestones, 
-    activities,
+    activities;
     isLoading: milestonesLoading, 
-    createMilestone,
-    updateMilestoneStatus,
-    deleteMilestone,
-    uploadDeliverable,
-    isSubmitting,
+    createMilestone;
+    updateMilestoneStatus;
+    deleteMilestone;
+    uploadDeliverable;
+    isSubmitting;
     refetch
-  } = useMilestones(projectId),
-  const [project, setProject] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [activeTab, setActiveTab] = useState('milestones'),
+  } = useMilestones(projectId);
+  const [project, setProject] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState('milestones');
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),
   
-  const { isUnderDispute, disputeId } = useDisputeCheck(projectId),
+  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
 
   useEffect(() => {
     async function loadProject() {
-      if (!projectId) return,
+      if (!projectId) return;
       
-      setIsLoading(true),
+      setIsLoading(true);
       try {
-        const projectData = await getProjectById(projectId),
+        const projectData = await getProjectById(projectId);
         if (projectData) {
           setProject(projectData)
         }
@@ -54,20 +54,20 @@ export function ProjectMilestonesContent() {
       }
     }
     
-    loadProject(),
+    loadProject();
     refetch()
-  }, [projectId, getProjectById, refetch]),
+  }, [projectId, getProjectById, refetch]);
 
   const handleMilestoneCreated = async () => {
     await refetch()
-  },
+  };
   
   // Determine if the user is the client or talent
-  const isClient = user?.id === project?.client_id,
-  const isTalent = user?.id === project?.talent_id,
+  const isClient = user?.id === project?.client_id;
+  const isTalent = user?.id === project?.talent_id;
 
   // Determine project type based on job category or default to "Other"
-  const projectType = job?.category || "Other",
+  const projectType = job?.category || "Other";
 
   if (isLoading || !project) {
     return (
@@ -80,7 +80,7 @@ export function ProjectMilestonesContent() {
   }
 
   const handleMilestoneSubmit = async (data: any) => {
-    if (!projectId) return,
+    if (!projectId) return;
     
     // Ensure all required fields are present
     const milestoneData = {
@@ -90,12 +90,12 @@ export function ProjectMilestonesContent() {
       amount: data.amount,
       status: "pending" as const,
       due_date: data.due_date ? data.due_date.toISOString() : undefined
-    },
+    };
     
-    await createMilestone(milestoneData),
-    setActiveTab('milestones'),
+    await createMilestone(milestoneData);
+    setActiveTab('milestones');
     await handleMilestoneCreated()
-  },
+  };
 
   return (
     <div className="container mx-auto py-8 px-4">

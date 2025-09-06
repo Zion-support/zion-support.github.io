@@ -1,23 +1,23 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
-import { TalentProfile } from "@/types/talent",
-import type { UserProfile } from "@/types/auth",
-import { cn } from "@/lib/utils",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { z } from "zod",
-import { format, addDays } from "date-fns",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
+import { TalentProfile } from "@/types/talent";
+import type { UserProfile } from "@/types/auth";
+import { cn } from "@/lib/utils";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { z } from "zod";
+import { format, addDays } from "date-fns";
 import { CalendarIcon } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { useInterviews } from "@/hooks/useInterviews",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { toast } from "@/components/ui/use-toast";
+import { useInterviews } from "@/hooks/useInterviews";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface InterviewRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -28,17 +28,17 @@ const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
-  }),
-  time: z.string().min(1, "Please select a time for the interview."),
-  duration: z.string().min(1, "Please select the interview duration."),
-  platform: z.string().min(1, "Please select a meeting platform."),
+  });
+  time: z.string().min(1, "Please select a time for the interview.");
+  duration: z.string().min(1, "Please select the interview duration.");
+  platform: z.string().min(1, "Please select a meeting platform.");
   meetingLink: z.string().optional(),
-  title: z.string().min(3, "Please provide a brief title for the interview."),
+  title: z.string().min(3, "Please provide a brief title for the interview.");
   notes: z.string().optional()}),
 
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
-  const { requestInterview } = useInterviews(),
-  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { requestInterview } = useInterviews();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -58,15 +58,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       return
     }
 
-    setIsSubmitting(true),
+    setIsSubmitting(true);
 
     try {
       // Combine date and time
-      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,
-      const scheduledDate = new Date(dateTimeString),
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+      const scheduledDate = new Date(dateTimeString);
       
       // Calculate end time based on duration
-      const durationMinutes = parseInt(values.duration),
+      const durationMinutes = parseInt(values.duration);
 
       await requestInterview({
         talent_id: talent.id,
@@ -78,7 +78,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         meeting_link: values.meetingLink,
         interview_type: "video",
         title: values.title
-      }),
+      });
 
       toast({
         title: "Interview requested",
@@ -96,11 +96,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   }
 
   const timeSlots = [
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";
     "18:00", "18:30", "19:00", "19:30", "20: 00"
-  ],
+  ];
 
   return (
     <Form {...form}>
@@ -147,7 +147,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <Button
                         variant="outline"
                         className={cn(
-                          "w-full pl-3 text-left font-normal",
+                          "w-full pl-3 text-left font-normal";
                           !field.value && "text-muted-foreground"
                         )}
                       >

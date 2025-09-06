@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
   Cpu, Database, Users, Award, BookOpen, Phone
-} from 'lucide-react',
+} from 'lucide-react';
 
 const EnhancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false),
-  const [isScrolled, setIsScrolled] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
-    },
+    };
 
-    window.addEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
+  }, []);
 
   const services = [
     { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
@@ -27,7 +27,7 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
     { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
     { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
-  ],
+  ];
 
   const company = [
     { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' },
@@ -35,16 +35,16 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },
     { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
-  ],
+  ];
 
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  },
+  };
 
   const closeAllDropdowns = () => {
-    setActiveDropdown(null),
+    setActiveDropdown(null);
     setIsOpen(false)
-  },
+  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -225,6 +225,6 @@ const EnhancedNavigation: React.FC = () => {
       </div>
     </nav>
   )
-},
+};
 
-export default EnhancedNavigation,
+export default EnhancedNavigation;

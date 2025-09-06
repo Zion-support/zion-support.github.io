@@ -1,19 +1,19 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-import { useState } from 'react',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 
 const TalentProfile: NextPage = () => {
-  const router = useRouter(),
-  const { slug } = router.query,
+  const router = useRouter();
+  const { slug } = router.query;
 
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
 
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
-  },
+  };
 
   return (
     <div className="space-y-6 pb-20">
@@ -67,6 +67,6 @@ const TalentProfile: NextPage = () => {
       </section>
     </div>
   )
-},
+};
 
-export default TalentProfile,
+export default TalentProfile;

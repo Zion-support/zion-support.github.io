@@ -3,7 +3,7 @@ import type { ReviewsSummary } from '../../types/reviews';
 import StarRating from './StarRating';
 type Props = {
   summary: ReviewsSummary
-},
+};
 
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
@@ -20,6 +20,6 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
       </div>
     </div>
   )
-},
+};
 
 export default ReviewSummary;

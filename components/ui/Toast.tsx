@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import { CheckCircle, AlertCircle, X, Info } from 'lucide-react',
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
 
-export type ToastType = 'success' | 'error' | 'info' | 'warning',
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
 
 export interface Toast {
   id: string,
   type: ToastType,
   title: string,
-  message?: string,
+  message?: string;
   duration?: number
 }
 
@@ -18,58 +18,58 @@ interface ToastProps {
 }
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
-  const [isVisible, setIsVisible] = useState(true),
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(false),
+      setIsVisible(false);
       setTimeout(() => onRemove(toast.id), 300)
-    }, toast.duration || 5000),
+    }, toast.duration || 5000);
 
     return () => clearTimeout(timer)
-  }, [toast.id, toast.duration, onRemove]),
+  }, [toast.id, toast.duration, onRemove]);
 
   const getIcon = () => {
     switch (toast.type) {
       case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-400" />,
+        return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'error':
-        return <AlertCircle className="w-5 h-5 text-red-400" />,
+        return <AlertCircle className="w-5 h-5 text-red-400" />;
       case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-400" />,
+        return <AlertCircle className="w-5 h-5 text-yellow-400" />;
       case 'info':
-        return <Info className="w-5 h-5 text-blue-400" />,
+        return <Info className="w-5 h-5 text-blue-400" />;
       default: return <Info className="w-5 h-5 text-blue-400" />
     }
-  },
+  };
 
   const getBorderColor = () => {
     switch (toast.type) {
       case 'success':
-        return 'border-green-500/20',
+        return 'border-green-500/20';
       case 'error':
-        return 'border-red-500/20',
+        return 'border-red-500/20';
       case 'warning':
-        return 'border-yellow-500/20',
+        return 'border-yellow-500/20';
       case 'info':
-        return 'border-blue-500/20',
+        return 'border-blue-500/20';
       default: return 'border-blue-500/20'
     }
-  },
+  };
 
   const getBackgroundColor = () => {
     switch (toast.type) {
       case 'success':
-        return 'bg-green-500/10',
+        return 'bg-green-500/10';
       case 'error':
-        return 'bg-red-500/10',
+        return 'bg-red-500/10';
       case 'warning':
-        return 'bg-yellow-500/10',
+        return 'bg-yellow-500/10';
       case 'info':
-        return 'bg-blue-500/10',
+        return 'bg-blue-500/10';
       default: return 'bg-blue-500/10'
     }
-  },
+  };
 
   return (
     <motion.div
@@ -95,7 +95,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         </div>
         <button
           onClick={() => {
-            setIsVisible(false),
+            setIsVisible(false);
             setTimeout(() => onRemove(toast.id), 300)
           }}
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
@@ -120,7 +120,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       </div>
     </motion.div>
   )
-},
+};
 
 interface ToastContainerProps {
   toasts: Toast[],
@@ -137,43 +137,43 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
       </AnimatePresence>
     </div>
   )
-},
+};
 
 // Hook for managing toasts
 export const useToast = () => {
-  const [toasts, setToasts] = useState<Toast[]>([]),
+  const [toasts, setToasts] = useState<Toast[]>([]);
 
   const addToast = (toast: Omit<Toast, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9),
-    const newToast = { ...toast, id },
+    const id = Math.random().toString(36).substr(2, 9);
+    const newToast = { ...toast, id };
     setToasts(prev => [...prev, newToast])
-  },
+  };
 
   const removeToast = (id: string) => {
     setToasts(prev => prev.filter(toast => toast.id !== id))
-  },
+  };
 
   const showSuccess = (title: string, message?: string) => {
     addToast({ type: 'success', title, message })
-  },
+  };
 
   const showError = (title: string, message?: string) => {
     addToast({ type: 'error', title, message })
-  },
+  };
 
   const showInfo = (title: string, message?: string) => {
     addToast({ type: 'info', title, message })
-  },
+  };
 
   const showWarning = (title: string, message?: string) => {
     addToast({ type: 'warning', title, message })
-  },
+  };
 
   return {
-    toasts,
-    showSuccess,
-    showError,
-    showInfo,
-    showWarning,
+    toasts;
+    showSuccess;
+    showError;
+    showInfo;
+    showWarning;
     removeToast}
-},
+};

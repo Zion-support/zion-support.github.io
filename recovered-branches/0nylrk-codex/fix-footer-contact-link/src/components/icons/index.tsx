@@ -1,5 +1,5 @@
-import React from 'react',
-import * as LucideIcons from 'lucide-react',
+import React from 'react';
+import * as LucideIcons from 'lucide-react';
 // Alias for missing icons or for icons with different names
 const iconAliases: Record<string, keyof typeof LucideIcons> = {
   // Grid views
@@ -102,99 +102,99 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {
   Key: 'Key',
   Tag: 'Tag' as keyof typeof LucideIcons},
 
-type IconProps = LucideIcons.LucideProps,
+type IconProps = LucideIcons.LucideProps;
 
 // Create a type safe export for each icon
 const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
   const IconComponent = (props: IconProps) => {
     // Fix: Use proper type casting to access the icon component
-    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
+    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>;
     return <LucideIcon {...props} />
-  },
-  IconComponent.displayName = aliasName,
+  };
+  IconComponent.displayName = aliasName;
   return IconComponent
-},
+};
 
 // Export all of our icon components
-const iconExports: Record<string, React.FC<IconProps>> = {},
+const iconExports: Record<string, React.FC<IconProps>> = {};
 
 // Generate icon exports
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
     iconExports[alias] = createIconComponent(alias, lucideName)
   } else {
-    console.warn(`Icon '${lucideName}' not found in lucide-react`),
+    console.warn(`Icon '${lucideName}' not found in lucide-react`);
     // Use a fallback icon
     iconExports[alias] = createIconComponent(alias, 'HelpCircle')
   }
-}),
+});
 
 export const {
-  LayoutGrid,
-  List,
-  Zap,
-  Settings,
-  Plus,
-  HelpCircle,
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Github,
-  Server,
-  Network,
-  Recycle,
-  Truck,
-  HardDrive,
-  Check,
-  CheckIcon,
-  Handshake,
-  StarIcon,
-  Moon,
-  Sun,
-  Bell,
-  CalendarIcon,
-  ChevronRight,
-  MoreHorizontal,
-  MoreVertical,
-  Quote,
-  Info,
-  AlertTriangle,
-  Ban,
-  ShieldAlert,
-  Archive,
-  Trash2,
-  Trash,
-  Power,
-  RefreshCw,
-  Copy,
-  ClipboardCopy,
-  Download,
-  LogIn,
-  EyeOff,
-  Wallet,
-  Code,
-  Megaphone,
-  Terminal,
-  ThumbsUp,
-  ThumbsDown,
-  Pin,
-  Lock,
-  Trophy,
-  Award,
-  BadgeCheck,
-  MessageSquare,
-  Link,
-  Briefcase,
-  FileText,
-  Clock,
-  Save,
-  StarOff,
-  LayoutDashboard,
-  BarChart,
-  BookOpen,
-  Key,
-  Tag} = iconExports,
+  LayoutGrid;
+  List;
+  Zap;
+  Settings;
+  Plus;
+  HelpCircle;
+  Twitter;
+  Linkedin;
+  Facebook;
+  Instagram;
+  Github;
+  Server;
+  Network;
+  Recycle;
+  Truck;
+  HardDrive;
+  Check;
+  CheckIcon;
+  Handshake;
+  StarIcon;
+  Moon;
+  Sun;
+  Bell;
+  CalendarIcon;
+  ChevronRight;
+  MoreHorizontal;
+  MoreVertical;
+  Quote;
+  Info;
+  AlertTriangle;
+  Ban;
+  ShieldAlert;
+  Archive;
+  Trash2;
+  Trash;
+  Power;
+  RefreshCw;
+  Copy;
+  ClipboardCopy;
+  Download;
+  LogIn;
+  EyeOff;
+  Wallet;
+  Code;
+  Megaphone;
+  Terminal;
+  ThumbsUp;
+  ThumbsDown;
+  Pin;
+  Lock;
+  Trophy;
+  Award;
+  BadgeCheck;
+  MessageSquare;
+  Link;
+  Briefcase;
+  FileText;
+  Clock;
+  Save;
+  StarOff;
+  LayoutDashboard;
+  BarChart;
+  BookOpen;
+  Key;
+  Tag} = iconExports;
 
 // Also export all original icons from lucide-react
-export * from 'lucide-react',
+export * from 'lucide-react';

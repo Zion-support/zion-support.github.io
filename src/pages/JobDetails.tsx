@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate
-import { Header } from '@/components/Header',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
+import { Header } from '@/components/Header';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react'
-import { formatDistanceToNow } from 'date-fns',
-import { toast } from 'sonner',
-import { useAuth } from '@/hooks/useAuth',
-import useJobDetails from '@/hooks/useJobDetails',
-import { ApplyToJobModal } from '@/components/messaging/job-application',
-import { SEO } from '@/components/SEO',
-import { useWhitelabel } from '@/context/WhitelabelContext',
-import { JobDetailsSkeleton } from '@/components/jobs',
+import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
+import { useAuth } from '@/hooks/useAuth';
+import useJobDetails from '@/hooks/useJobDetails';
+import { ApplyToJobModal } from '@/components/messaging/job-application';
+import { SEO } from '@/components/SEO';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { JobDetailsSkeleton } from '@/components/jobs';
 interface Job {
   id: string,
   title: string,
   description: string,
-  company_name?: string,
+  company_name?: string;
   budget: { min: number, max: number },
   client_id: string,
-  skills?: string[],
+  skills?: string[];
   created_at: string,
   category: string,
   deadline?: string
@@ -29,18 +29,18 @@ interface Job {
 export default function JobDetails() {
   const router = useRouter(), // Init router
   const { jobId: rawJobId } = router.query, // Get jobId from query
-  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined,
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
   const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
-  const { user, isAuthenticated } = useAuth(),
+  const { user, isAuthenticated } = useAuth();
   // navigate is now router
-  const { isWhitelabel, brandName } = useWhitelabel(),
+  const { isWhitelabel, brandName } = useWhitelabel();
   
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
   const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified",
+    if (!budget) return "Not specified";
     return `$${budget.min} - $${budget.max}`
-  },
+  };
 
   if (isLoading) {
     return <JobDetailsSkeleton />
@@ -61,26 +61,26 @@ export default function JobDetails() {
 
   const handleApply = () => {
     if (!isAuthenticated) {
-      toast.error("Please log in to apply for this job"),
+      toast.error("Please log in to apply for this job");
       router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId
       return
     }
 
     if (user?.userType !== "talent" && user?.userType !== "admin" && user?.userType !== "client") {
-      toast.error("Only job seekers can apply for jobs"),
+      toast.error("Only job seekers can apply for jobs");
       return
     }
     
     setIsApplyModalOpen(true)
-  },
+  };
 
   const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success("Application submitted successfully!"),
+    toast.success("Application submitted successfully!");
     setIsApplyModalOpen(false)
-  },
+  };
 
 
-  const isOwnJob = user?.id === job.client_id,
+  const isOwnJob = user?.id === job.client_id;
 
   return (
     <>

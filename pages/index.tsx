@@ -8,8 +8,8 @@ import {
   Brain, 
   Globe, 
   Users, 
-  CheckCircle,
-  Star,
+  CheckCircle;
+  Star;
   ChevronRight
 } from 'lucide-react';
 import Button from '../components/ui/Button';
@@ -23,19 +23,19 @@ const Home: React.FC = () => {
       title: "AI-Powered Solutions",
       description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
       features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
-    },
+    };
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Cybersecurity Excellence",
       description: "Protect your digital assets with our comprehensive security solutions and threat intelligence.",
       features: ["Threat Detection", "Vulnerability Assessment", "Incident Response", "Compliance Management"]
-    },
+    };
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Cloud Infrastructure",
       description: "Scale your business with our robust cloud solutions and infrastructure management services.",
       features: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Multi-Cloud Strategy"]
-    },
+    };
     {
       icon: <Users className="w-8 h-8" />,
       title: "Digital Transformation",
@@ -54,19 +54,19 @@ const Home: React.FC = () => {
   const testimonials = [
     {
       name: "Sarah Johnson",
-      role: "CTO, TechCorp",
+      role: "CTO, TechCorp";
       content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%.",
       rating: 5
-    },
+    };
     {
       name: "Michael Chen",
-      role: "CEO, InnovateLabs",
+      role: "CEO, InnovateLabs";
       content: "Outstanding cybersecurity services. They helped us achieve SOC 2 compliance in record time.",
       rating: 5
-    },
+    };
     {
       name: "Emily Rodriguez",
-      role: "VP Engineering, DataFlow",
+      role: "VP Engineering, DataFlow";
       content: "The cloud migration was seamless. Our applications now run 50% faster with better reliability.",
       rating: 5
     }

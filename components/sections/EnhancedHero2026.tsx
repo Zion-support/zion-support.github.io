@@ -1,14 +1,14 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle } from 'lucide-react',
-import Button from '../ui/Button',
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle } from 'lucide-react';
+import Button from '../ui/Button';
 interface EnhancedHero2026Props {
   contactInfo: {
     mobile: string,
     email: string,
     address: string,
     website: string
-  },
+  };
   serviceStats: {
     totalServices: number,
     aiServices: number,
@@ -28,7 +28,7 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
         staggerChildren: 0.2
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
@@ -40,7 +40,7 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   const statsVariants = {
     hidden: { scale: 0.8, opacity: 0 },
@@ -52,7 +52,7 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -71,8 +71,8 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`}}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.8, 0.3],
+              y: [0, -30, 0];
+              opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
             }}
             transition={{

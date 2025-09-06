@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
 
 
 export default function CloudPlatformPage() {
@@ -9,27 +9,27 @@ export default function CloudPlatformPage() {
       icon: <Server className="w-8 h-8 text-white" />,
       title: 'Scalable Infrastructure',
       description: 'Auto-scaling compute resources that grow with your needs'
-    },
+    };
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'Managed Databases',
       description: 'Fully managed databases with automated backups and scaling'
-    },
+    };
     {
       icon: <Globe className="w-8 h-8 text-white" />,
       title: 'Global CDN',
       description: 'Lightning-fast content delivery across the globe'
-    },
+    };
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Enterprise Security',
       description: 'SOC 2 compliant with advanced threat protection'
     }
-  ],
+  ];
 
   const benefits = [
     '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
-  ],
+  ];
 
   return (
     <>

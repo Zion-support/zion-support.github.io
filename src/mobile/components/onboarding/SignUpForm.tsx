@@ -1,46 +1,46 @@
-import React, { useState } from "react",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { useAuth } from "@/context/auth/AuthProvider",
+import React, { useState } from "react";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
-  const router = useRouter(),
-  const { signUp, login, loginWithGoogle } = useAuth(),
+  const router = useRouter();
+  const { signUp, login, loginWithGoogle } = useAuth();
   
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     name: ""}),
-  const [isLoading, setIsLoading] = useState(false),
-  const [signupMode, setSignupMode] = useState(true),
-  const [error, setError] = useState(""),
-  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),
-  const [showVerificationMessage, setShowVerificationMessage] = useState(false),
+  const [isLoading, setIsLoading] = useState(false);
+  const [signupMode, setSignupMode] = useState(true);
+  const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value })),
-    setError(""),
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setError("");
     setFieldErrors(prev => ({ ...prev, [name]: "" }))
-  },
+  };
   
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setError(""),
-    setFieldErrors({}),
-    setIsLoading(true),
+    e.preventDefault();
+    setError("");
+    setFieldErrors({});
+    setIsLoading(true);
 
-    const errors: { email?: string, password?: string, name?: string } = {},
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,
+    const errors: { email?: string, password?: string, name?: string } = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/;
 
     if (signupMode && !formData.name.trim()) {
       errors.name = 'Full name is required'
@@ -59,8 +59,8 @@ export function SignUpForm() {
     }
 
     if (Object.keys(errors).length > 0) {
-      setFieldErrors(errors),
-      setIsLoading(false),
+      setFieldErrors(errors);
+      setIsLoading(false);
       return
     }
     
@@ -81,7 +81,7 @@ export function SignUpForm() {
           router.push("/mobile")
         }
       } else {
-        const { error } = await login(formData.email, formData.password),
+        const { error } = await login(formData.email, formData.password);
         
         if (error) {
           throw new Error(error)
@@ -95,7 +95,7 @@ export function SignUpForm() {
     } finally {
       setIsLoading(false)
     }
-  },
+  };
   
   const handleGoogleLogin = async () => {
     try {
@@ -103,7 +103,7 @@ export function SignUpForm() {
     } catch (err: any) {
       setError(err.message)
     }
-  },
+  };
   
   return (
     <div className="space-y-4 px-4">

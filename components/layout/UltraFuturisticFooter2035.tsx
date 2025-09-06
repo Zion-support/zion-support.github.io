@@ -1,21 +1,21 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
-  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
-  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
+  Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
+  Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
+  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
+  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const footerSections = [
   {
@@ -43,7 +43,7 @@ const footerSections = [
       { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
       { name: 'Managed Postgres HA', href: '/managed-postgres-ha' }
     ]
-  },
+  };
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms and solutions',
@@ -59,7 +59,7 @@ const footerSections = [
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' }
     ]
-  },
+  };
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum and space technologies',
@@ -77,7 +77,7 @@ const footerSections = [
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
       { name: 'Quantum Robotics', href: '/quantum-robotics' }
     ]
-  },
+  };
   {
     title: 'Enterprise IT',
     description: 'Advanced enterprise infrastructure solutions',
@@ -92,7 +92,7 @@ const footerSections = [
       { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
       { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity' }
     ]
-  },
+  };
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
@@ -107,7 +107,7 @@ const footerSections = [
       { name: 'AI HR Recruitment', href: '/ai-hr-recruitment' },
       { name: 'AI Customer Service', href: '/ai-customer-service' }
     ]
-  },
+  };
   {
     title: 'Industry Solutions',
     description: 'Industry-specific technology solutions',
@@ -122,10 +122,10 @@ const footerSections = [
       { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
       { name: 'Biotech AI Research', href: '/biotech-ai-research-platform' }
     ]
-  },
+  };
   {
     title: 'Resources',
-    description: 'Documentation, support, and learning',
+    description: 'Documentation, support, and learning';
     icon: <BookOpen className="w-5 h-5 text-cyan-400" />,
     links: [
       { name: 'Documentation', href: '/docs' },
@@ -140,7 +140,7 @@ const footerSections = [
       { name: 'Services Advertising', href: '/services-advertising' }
     ]
   }
-],
+];
 
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
@@ -149,12 +149,12 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
-],
+];
 
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  },
+  };
 
   return (
     <footer className="relative bg-black text-white overflow-hidden">
@@ -168,9 +168,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
+              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
-            `,
+            `;
             backgroundSize: '200px 200px'
           }}
           animate={{
@@ -316,6 +316,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
       </div>
     </footer>
   )
-},
+};
 
-export default UltraFuturisticFooter2035,
+export default UltraFuturisticFooter2035;

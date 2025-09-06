@@ -1,8 +1,8 @@
-'use client',
+'use client';
 
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react',
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,26 +12,26 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  }),
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formData,
+      ...formData;
       [e.target.name]: e.target.value
     })
-  },
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSubmitting(true),
+    e.preventDefault();
+    setIsSubmitting(true);
     
     // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000)),
-      setSubmitStatus('success'),
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
       setFormData({
         name: '',
         email: '',
@@ -45,11 +45,11 @@ const ContactForm: React.FC = () => {
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
 
   const services = [
     'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
-  ],
+  ];
 
   const contactInfo = [
     {
@@ -57,20 +57,20 @@ const ContactForm: React.FC = () => {
       title: 'Email Us',
       content: 'contact@ziontechgroup.com',
       href: 'mailto:contact@ziontechgroup.com'
-    },
+    };
     {
       icon: Phone,
       title: 'Call Us',
       content: '+1 (555) 123-4567',
       href: 'tel:+15551234567'
-    },
+    };
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Tech Street, Innovation City, IC 12345',
+      content: '123 Tech Street, Innovation City, IC 12345';
       href: '#'
     }
-  ],
+  ];
 
   return (
     <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
@@ -339,6 +339,6 @@ const ContactForm: React.FC = () => {
       </div>
     </section>
   )
-},
+};
 
-export default ContactForm,
+export default ContactForm;

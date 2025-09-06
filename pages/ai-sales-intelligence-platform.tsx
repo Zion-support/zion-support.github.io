@@ -1,4 +1,4 @@
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AISalesIntelligencePlatform() {
 	return (
@@ -11,11 +11,11 @@ export default function AISalesIntelligencePlatform() {
 			implementationWeeks="Implementation: 1–3 weeks"
 			roiNote="Average ROI 3–8x within 60 days"
 			features={[
-				"AI lead scoring using firmographics, intent, and engagement",
-				"One-click hyper-personalized emails and sequences",
-				"Meeting prep briefs and objection handling",
-				"Forecasting with scenario simulations",
-				"CRM automations for notes, tasks, and next steps",
+				"AI lead scoring using firmographics, intent, and engagement";
+				"One-click hyper-personalized emails and sequences";
+				"Meeting prep briefs and objection handling";
+				"Forecasting with scenario simulations";
+				"CRM automations for notes, tasks, and next steps";
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}

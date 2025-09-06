@@ -1,25 +1,25 @@
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 import { 
-  Code,
+  Code;
   Database, 
   Globe, 
   Shield, 
   Zap, 
   Bot, 
   BarChart3, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  ExternalLink,
-  Play,
-  BookOpen,
-  Github,
+  Lock;
+  ArrowRight;
+  CheckCircle;
+  Star;
+  ExternalLink;
+  Play;
+  BookOpen;
+  Github;
   Terminal
-} from 'lucide-react',
+} from 'lucide-react';
 
 export default function ApiToolsPage() {
   const apiTools = [
@@ -29,12 +29,12 @@ export default function ApiToolsPage() {
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
       features: [
         'Support for 20+ programming languagesReal-time code completion and suggestionsCustom code templates and patternsIntegration with popular IDEsCode review and optimization suggestions'
-      ],
+      ];
       pricing: {
         free: '100 requests/month',
         pro: '$49/month',
         enterprise: 'Custom'
-      },
+      };
       category: 'Development',
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500',
@@ -42,22 +42,22 @@ export default function ApiToolsPage() {
       docs: 'https://docs.codegen.api',
       github: 'https://github.com/codegen-api',
       status: 'Live',
-      users: '15,000+',
+      users: '15,000+';
       rating: 4.8,
       responseTime: '<100ms'
-    },
+    };
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'DataSync API - Real-time Data Synchronization',
-      description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
+      description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.';
       features: [
         'Multi-database support (PostgreSQL, MySQL, MongoDB)Real-time change detection and propagationConflict resolution and data validationWebhook support for custom integrationsComprehensive audit logging and monitoring'
-      ],
+      ];
       pricing: {
-        free: '1,000 syncs/month',
+        free: '1,000 syncs/month';
         pro: '$79/month',
         enterprise: 'Custom'
-      },
+      };
       category: 'Data',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500',
@@ -65,22 +65,22 @@ export default function ApiToolsPage() {
       docs: 'https://docs.datasync.api',
       github: 'https://github.com/datasync-api',
       status: 'Live',
-      users: '8,500+',
+      users: '8,500+';
       rating: 4.9,
       responseTime: '<50ms'
-    },
+    };
     {
       icon: <Globe className="w-8 h-8 text-white" />,
       title: 'GeoAPI - Advanced Geospatial Services',
-      description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',
+      description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.';
       features: [
         'Global geocoding and reverse geocodingReal-time traffic and routing optimizationGeofencing and location trackingMap visualization and customizationSpatial data analysis and clustering'
-      ],
+      ];
       pricing: {
-        free: '10,000 requests/month',
+        free: '10,000 requests/month';
         pro: '$99/month',
         enterprise: 'Custom'
-      },
+      };
       category: 'Location',
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
@@ -88,22 +88,22 @@ export default function ApiToolsPage() {
       docs: 'https://docs.geo.api',
       github: 'https://github.com/geo-api',
       status: 'Live',
-      users: '12,000+',
+      users: '12,000+';
       rating: 4.7,
       responseTime: '<75ms'
-    },
+    };
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'AuthGuard API - Enterprise Authentication',
-      description: 'Secure, scalable authentication and authorization system with advanced security features.',
+      description: 'Secure, scalable authentication and authorization system with advanced security features.';
       features: [
         'Multi-factor authentication (MFA)OAuth 2.0 and OpenID Connect supportRole-based access control (RBAC)Advanced threat detection and preventionCompliance with SOC2, GDPR, and HIPAA'
-      ],
+      ];
       pricing: {
-        free: '1,000 users/month',
+        free: '1,000 users/month';
         pro: '$149/month',
         enterprise: 'Custom'
-      },
+      };
       category: 'Security',
       color: 'bg-gradient-to-br from-red-500 to-orange-600',
       gradient: 'from-red-400 to-orange-500',
@@ -111,22 +111,22 @@ export default function ApiToolsPage() {
       docs: 'https://docs.authguard.api',
       github: 'https://github.com/authguard-api',
       status: 'Live',
-      users: '6,800+',
+      users: '6,800+';
       rating: 4.9,
       responseTime: '<25ms'
-    },
+    };
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'WebhookHub - Intelligent Webhook Management',
-      description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.',
+      description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.';
       features: [
         'Guaranteed webhook delivery with retry logicEvent filtering and transformationReal-time monitoring and analyticsCustom authentication and securityIntegration with popular platforms'
-      ],
+      ];
       pricing: {
-        free: '5,000 webhooks/month',
+        free: '5,000 webhooks/month';
         pro: '$39/month',
         enterprise: 'Custom'
-      },
+      };
       category: 'Integration',
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       gradient: 'from-yellow-400 to-orange-500',
@@ -134,22 +134,22 @@ export default function ApiToolsPage() {
       docs: 'https://docs.webhookhub.api',
       github: 'https://github.com/webhookhub-api',
       status: 'Live',
-      users: '9,200+',
+      users: '9,200+';
       rating: 4.8,
       responseTime: '<30ms'
-    },
+    };
     {
       icon: <Bot className="w-8 h-8 text-white" />,
       title: 'NLP API - Natural Language Processing',
-      description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.',
+      description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.';
       features: [
         'Text classification and categorizationSentiment analysis and emotion detectionNamed entity recognition (NER)Language detection and translationCustom model training and fine-tuning'
-      ],
+      ];
       pricing: {
-        free: '5,000 requests/month',
+        free: '5,000 requests/month';
         pro: '$69/month',
         enterprise: 'Custom'
-      },
+      };
       category: 'AI/ML',
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500',
@@ -157,22 +157,22 @@ export default function ApiToolsPage() {
       docs: 'https://docs.nlp.api',
       github: 'https://github.com/nlp-api',
       status: 'Live',
-      users: '11,500+',
+      users: '11,500+';
       rating: 4.7,
       responseTime: '<200ms'
-    },
+    };
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Analytics API - Business Intelligence',
       description: 'Comprehensive analytics and reporting APIs for data-driven decision making.',
       features: [
         'Real-time data aggregation and analysisCustom dashboard creation and sharingAdvanced filtering and segmentationExport capabilities (CSV, JSON, PDF)Scheduled reports and alerts'
-      ],
+      ];
       pricing: {
-        free: '10,000 events/month',
+        free: '10,000 events/month';
         pro: '$89/month',
         enterprise: 'Custom'
-      },
+      };
       category: 'Analytics',
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       gradient: 'from-teal-400 to-cyan-500',
@@ -180,22 +180,22 @@ export default function ApiToolsPage() {
       docs: 'https://docs.analytics.api',
       github: 'https://github.com/analytics-api',
       status: 'Live',
-      users: '7,800+',
+      users: '7,800+';
       rating: 4.8,
       responseTime: '<150ms'
-    },
+    };
     {
       icon: <Lock className="w-8 h-8 text-white" />,
       title: 'EncryptAPI - Data Encryption Services',
-      description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',
+      description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.';
       features: [
         'AES-256 encryption and decryptionSecure key management and rotationDigital signatures and certificatesCompliance with FIPS 140-2 standardsHardware security module (HSM) support'
-      ],
+      ];
       pricing: {
-        free: '1,000 operations/month',
+        free: '1,000 operations/month';
         pro: '$119/month',
         enterprise: 'Custom'
-      },
+      };
       category: 'Security',
       color: 'bg-gradient-to-br from-gray-500 to-slate-600',
       gradient: 'from-gray-400 to-slate-500',
@@ -203,18 +203,18 @@ export default function ApiToolsPage() {
       docs: 'https://docs.encrypt.api',
       github: 'https://github.com/encrypt-api',
       status: 'Live',
-      users: '4,200+',
+      users: '4,200+';
       rating: 4.9,
       responseTime: '<20ms'
     }
-  ],
+  ];
 
-  const categories = ['AllDevelopmentDataLocationSecurityIntegrationAI/MLAnalytics'],
-  const [selectedCategory, setSelectedCategory] = React.useState('All'),
+  const categories = ['AllDevelopmentDataLocationSecurityIntegrationAI/MLAnalytics'];
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
 
   const filteredTools = selectedCategory === 'All' 
     ? apiTools 
-    : apiTools.filter(tool => tool.category === selectedCategory),
+    : apiTools.filter(tool => tool.category === selectedCategory);
 
   return (
     <>

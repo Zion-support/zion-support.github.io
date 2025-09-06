@@ -1,33 +1,33 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react',
-import { X } from 'lucide-react',
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { X } from 'lucide-react';
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system',
   content: string,
   timestamp?: number
-},
+};
 
 function generateSessionId(): string {
-  if (typeof window === 'undefined') return '',
-  const existing = window.localStorage.getItem('zion_support_session_id'),
-  if (existing) return existing,
-  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`,
-  window.localStorage.setItem('zion_support_session_id', id),
+  if (typeof window === 'undefined') return '';
+  const existing = window.localStorage.getItem('zion_support_session_id');
+  if (existing) return existing;
+  const id = `sess_${Math.random().toString(36).slice(2)}_${Date.now()}`;
+  window.localStorage.setItem('zion_support_session_id', id);
   return id
 }
 
 export default function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false),
-  const [messages, setMessages] = useState<ChatMessage[]>([]),
-  const [input, setInput] = useState(''),
-  const [isLoading, setIsLoading] = useState(false),
-  const [failedIntents, setFailedIntents] = useState(0),
-  const [showEscalation, setShowEscalation] = useState(false),
-  const sessionIdRef = useRef<string>(''),
-  const messagesEndRef = useRef<HTMLDivElement | null>(null),
+  const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [failedIntents, setFailedIntents] = useState(0);
+  const [showEscalation, setShowEscalation] = useState(false);
+  const sessionIdRef = useRef<string>('');
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     sessionIdRef.current = generateSessionId()
-  }, []),
+  }, []);
 
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
@@ -35,16 +35,16 @@ export default function ChatWidget() {
       setMessages([
         { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
     }
-  }, [isOpen, messages.length]),
+  }, [isOpen, messages.length]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [messages]),
+  }, [messages]);
 
   const quickReplies = useMemo(
-    () => ['How do I hire?How do I get matched?Billing help'],
+    () => ['How do I hire?How do I get matched?Billing help'];
     []
-  ),
+  );
 
   async function logEvent(eventType: string, payload: any) {
     try {
@@ -66,13 +66,13 @@ export default function ChatWidget() {
   }
 
   async function onSend(messageText?: string) {
-    const text = (messageText ?? input).trim(),
-    if (!text) return,
+    const text = (messageText ?? input).trim();
+    if (!text) return;
 
     const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() },
-    setMessages((prev) => [...prev, newUserMessage]),
-    setInput(''),
-    setIsLoading(true),
+    setMessages((prev) => [...prev, newUserMessage]);
+    setInput('');
+    setIsLoading(true);
     await logEvent('message/user', { content: text }),
 
     try {
@@ -81,21 +81,21 @@ export default function ChatWidget() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
-          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})}),
-      const data = await res.json(),
+          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
+      const data = await res.json();
 
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
           role: 'assistant',
           content: data.assistantMessage,
           timestamp: Date.now()},
-        setMessages((prev) => [...prev, assistantMessage]),
+        setMessages((prev) => [...prev, assistantMessage]);
         await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta })
       }
 
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
-          const next = n + 1,
+          const next = n + 1;
           if (next >= 3) {
             escalateSupport('Failed to match user intent 3+ times')
           }
@@ -106,7 +106,7 @@ export default function ChatWidget() {
       }
     } catch (e) {
       setMessages((prev) => [
-        ...prev,
+        ...prev;
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
@@ -180,7 +180,7 @@ export default function ChatWidget() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
-                      e.preventDefault(),
+                      e.preventDefault();
                       onSend()
                     }
                   }}

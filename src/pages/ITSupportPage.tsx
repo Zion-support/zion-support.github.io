@@ -1,5 +1,5 @@
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
 export default function ITSupportPage() {
@@ -14,7 +14,7 @@ export default function ITSupportPage() {
       icon: <ShieldCheck className="h-8 w-8" />},
     {
       title: "Multi-Channel Support",
-      description: "Get help via phone, chat, or onsite visits tailored to your needs.",
+      description: "Get help via phone, chat, or onsite visits tailored to your needs.";
       icon: <Phone className="h-8 w-8" />}],
 
   const testimonials = [

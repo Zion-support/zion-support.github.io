@@ -1,29 +1,29 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
   Phone, Mail, MapPin
-} from 'lucide-react',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',
+} from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 export default function InnovativeServicesShowcase2029() {
   const allServices = [
-    ...aiAutonomousEcosystemServices2029,
-    ...emergingTechBreakthroughServices2029,
+    ...aiAutonomousEcosystemServices2029;
+    ...emergingTechBreakthroughServices2029;
     ...practicalBusinessSolutionServices2029
-  ],
+  ];
 
   const serviceCategories = [
     {
@@ -31,20 +31,20 @@ export default function InnovativeServicesShowcase2029() {
       icon: Brain,
       color: 'from-violet-600 via-purple-600 to-indigo-600',
       services: aiAutonomousEcosystemServices2029
-    },
+    };
     {
       title: '⚛️ Emerging Tech Breakthroughs',
       icon: Atom,
       color: 'from-indigo-600 via-blue-600 to-cyan-600',
       services: emergingTechBreakthroughServices2029
-    },
+    };
     {
       title: '🎯 Practical Business Solutions',
       icon: Target,
       color: 'from-cyan-600 via-teal-600 to-emerald-600',
       services: practicalBusinessSolutionServices2029
     }
-  ],
+  ];
 
   return (
     <>

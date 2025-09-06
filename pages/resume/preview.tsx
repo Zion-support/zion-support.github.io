@@ -1,23 +1,23 @@
-import { GetServerSideProps } from 'next',
-import React, { useMemo, useRef, useState } from 'react',
-import PdfExportButton from '../../components/ui/PdfExportButton',
-import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
-import { createServerClient } from '../../utils/supabase/server',
+import { GetServerSideProps } from 'next';
+import React, { useMemo, useRef, useState } from 'react';
+import PdfExportButton from '../../components/ui/PdfExportButton';
+import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
+import { createServerClient } from '../../utils/supabase/server';
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
   versions?: Array<{ id: string, label: string, data: ResumeData }>
-},
+};
 
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current'),
-  const targetRef = useRef<HTMLDivElement>(null),
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current');
+  const targetRef = useRef<HTMLDivElement>(null);
 
   const activeData = useMemo(() => {
-    if (selectedVersionId === 'current') return initialData,
-    const found = versions.find(v => v.id === selectedVersionId),
+    if (selectedVersionId === 'current') return initialData;
+    const found = versions.find(v => v.id === selectedVersionId);
     return found?.data || initialData
-  }, [selectedVersionId, initialData, versions]),
+  }, [selectedVersionId, initialData, versions]);
 
   return (
     <div className="relative">
@@ -62,8 +62,8 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Simple auth guard for talent users, adjust with real roles when available
-  const supabase = createServerClient(),
-  const user = await (supabase as any).auth.getUser?.(),
+  const supabase = createServerClient();
+  const user = await (supabase as any).auth.getUser?.();
 
   if (!user) {
     return {
@@ -76,7 +76,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const initialData: ResumeData = {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' },
-    summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',
+    summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.';
     skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'],
     technologies: ['OpenAISupabasePostgresVercelDocker'],
     experience: [
@@ -87,7 +87,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         end: 'Present',
         location: 'Remote',
         bullets: [
-          'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}],
+          'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}];
     education: [
       { institution: 'University of Example', degree: 'B.Sc. Computer Science', start: '2016', end: '2020' }],
     certifications: ['AWS Certified Solutions Architect – AssociateTensorFlow Developer Certificate'],
@@ -98,4 +98,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
 
   return { props: { initialData, versions } }
-},
+};

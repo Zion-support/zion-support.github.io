@@ -1,8 +1,8 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 import { 
   Brain, Shield, Rocket, Cpu, Database, Atom, Users, 
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
-} from 'lucide-react',
+} from 'lucide-react';
 
 interface Service {
   id: string,
@@ -18,14 +18,14 @@ interface Service {
   roi: string,
   marketSize: string,
   growthRate: string,
-  popular?: boolean,
+  popular?: boolean;
   icon: React.ComponentType<any>,
   color: string
 }
 
 const EnhancedServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const services: Service[] = [
     {
@@ -45,7 +45,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       popular: true,
       icon: Brain,
       color: 'from-purple-500 to-pink-500'
-    },
+    };
     {
       id: 'quantum-cyber',
       name: 'Quantum Cybersecurity',
@@ -63,7 +63,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       popular: false,
       icon: Shield,
       color: 'from-red-500 to-orange-500'
-    },
+    };
     {
       id: 'edge-computing',
       name: 'Edge Computing Orchestration',
@@ -81,13 +81,13 @@ const EnhancedServicesShowcase: React.FC = () => {
       popular: false,
       icon: Cpu,
       color: 'from-emerald-500 to-teal-500'
-    },
+    };
     {
       id: 'space-tech',
       name: 'Space Technology Innovation',
       tagline: 'Accelerate space exploration with cutting-edge technology solutions',
       category: 'Space Tech',
-      price: '$2,499',
+      price: '$2,499';
       period: '/month',
       setupTime: '8-12 weeks',
       customers: '25+',
@@ -99,7 +99,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       popular: true,
       icon: Rocket,
       color: 'from-violet-500 to-purple-500'
-    },
+    };
     {
       id: 'neural-interface',
       name: 'Neural Interface Development',
@@ -117,13 +117,13 @@ const EnhancedServicesShowcase: React.FC = () => {
       popular: false,
       icon: Brain,
       color: 'from-pink-500 to-rose-500'
-    },
+    };
     {
       id: 'quantum-ai',
       name: 'Quantum AI Neural Networks',
       tagline: 'Quantum-powered AI with advanced consciousness capabilities',
       category: 'Quantum AI',
-      price: '$1,299',
+      price: '$1,299';
       period: '/month',
       setupTime: '10-14 weeks',
       customers: '15+',
@@ -136,28 +136,28 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Atom,
       color: 'from-blue-500 to-cyan-500'
     }
-  ],
+  ];
 
-  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))],
+  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
   
   const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
-  }),
+  });
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
-      'AI & Analytics': Brain,
-      'Security': Shield,
-      'Infrastructure': Cpu,
-      'Space Tech': Rocket,
-      'Emerging Tech': Brain,
+      'AI & Analytics': Brain;
+      'Security': Shield;
+      'Infrastructure': Cpu;
+      'Space Tech': Rocket;
+      'Emerging Tech': Brain;
       'Quantum AI': Atom
-    },
+    };
     return iconMap[category] || Brain
-  },
+  };
 
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">
@@ -346,6 +346,6 @@ const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </section>
   )
-},
+};
 
-export default EnhancedServicesShowcase,
+export default EnhancedServicesShowcase;

@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  X,
-  ChevronDown,
-  LogOut,
-  Building2,
-  Phone,
-  Mail,
-  MapPin,
+  X;
+  ChevronDown;
+  LogOut;
+  Building2;
+  Phone;
+  Mail;
+  MapPin;
 } from 'lucide-react';
 const navigation = {
   'Services': [
@@ -22,13 +22,13 @@ const navigation = {
 
     { name: 'IoT Solutions', href: '/iot-solutions' }
 
-  ],
+  ];
   'Solutions': [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Startup Solutions', href: '/solutions/startup' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
     { name: 'Custom Development', href: '/solutions/custom' }
-  ],
+  ];
   'Industries': [
     { name: 'Healthcare', href: '/industries/healthcare' },
     { name: 'Finance', href: '/industries/finance' },
@@ -38,7 +38,7 @@ const navigation = {
     { name: 'Retail', href: '/industries/retail' },
     { name: 'Agriculture', href: '/industries/agriculture' },
     { name: 'Energy', href: '/industries/energy' }
-  ],
+  ];
   'Resources': [
     { name: 'Blog', href: '/blog' },
     { name: 'Documentation', href: '/docs' },
@@ -48,7 +48,7 @@ const navigation = {
     { name: 'Webinars', href: '/webinars' },
     { name: 'Training', href: '/training' },
     { name: 'FAQ', href: '/faq' }
-  ],
+  ];
   'Company': [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -69,8 +69,8 @@ const quickLinks = [
 ];
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void,
 }
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
@@ -135,7 +135,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                       onClick={() => handleDropdownToggle(title)}
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
 
-                    >,
+                    >;
 
                       <span>{title}</span>
                       <ChevronDown className={`w-5 h-5 transition-transform ${

@@ -1,10 +1,10 @@
-import React, { useState } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, ExternalLink, Star, TrendingUp, 
-  Users, Zap, Shield, Clock, Check, Brain,
+  Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
-} from 'lucide-react',
+} from 'lucide-react';
 
 interface UltraAdvancedServiceCardProps {
   service: {
@@ -39,7 +39,7 @@ interface UltraAdvancedServiceCardProps {
       email: string,
       address: string,
       website: string
-    },
+    };
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
@@ -50,19 +50,19 @@ interface UltraAdvancedServiceCardProps {
 }
 
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
-  const [isExpanded, setIsExpanded] = useState(false),
-  const [isHovered, setIsHovered] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const getCategoryIcon = (category: string) => {
-    if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />,
-    if (category.includes('Quantum')) return <Zap className="w-4 h-4" />,
-    if (category.includes('Space')) return <Rocket className="w-4 h-4" />,
-    if (category.includes('Biotech') || category.includes('Healthcare')) return <Dna className="w-4 h-4" />,
-    if (category.includes('Finance') || category.includes('Trading')) return <DollarSign className="w-4 h-4" />,
-    if (category.includes('Security') || category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />,
-    if (category.includes('Internet') || category.includes('Network')) return <Globe className="w-4 h-4" />,
+    if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
+    if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
+    if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
+    if (category.includes('Biotech') || category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
+    if (category.includes('Finance') || category.includes('Trading')) return <DollarSign className="w-4 h-4" />;
+    if (category.includes('Security') || category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
+    if (category.includes('Internet') || category.includes('Network')) return <Globe className="w-4 h-4" />;
     return <Zap className="w-4 h-4" />
-  },
+  };
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -73,7 +73,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         duration: 0.6,
         ease: "easeOut" as const
       }
-    },
+    };
     hover: {
       y: -10,
       transition: {
@@ -81,7 +81,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   const contentVariants = {
     hidden: { opacity: 0, height: 0 },
@@ -93,7 +93,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   return (
     <motion.div
@@ -111,7 +111,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           isHovered ? 'opacity-100' : 'opacity-50'
         }`}
         style={{
-          background: `linear-gradient(135deg, ${service.color})`,
+          background: `linear-gradient(135deg, ${service.color})`;
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
       />
       
@@ -290,6 +290,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       </div>
     </motion.div>
   )
-},
+};
 
-export default UltraAdvancedServiceCard,
+export default UltraAdvancedServiceCard;

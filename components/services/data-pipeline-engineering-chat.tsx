@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 const DataPipelineEngineeringChat: NextPage = () => {
   return (
     <div>
@@ -16,6 +16,6 @@ const DataPipelineEngineeringChat: NextPage = () => {
       </main>
     </div>
   )
-},
+};
 
-export default DataPipelineEngineeringChat,
+export default DataPipelineEngineeringChat;

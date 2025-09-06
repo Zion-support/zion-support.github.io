@@ -1,40 +1,40 @@
-import React, { useEffect } from 'react',
-import Head from 'next/head',
+import React, { useEffect } from 'react';
+import Head from 'next/head';
 interface SEOProps {
-  title?: string,
-  description?: string,
-  keywords?: string | string[],
-  image?: string,
-  url?: string,
-  type?: 'website' | 'article' | 'product',
-  publishedTime?: string,
-  modifiedTime?: string,
-  author?: string,
-  section?: string,
-  tags?: string[],
-  structuredData?: any,
-  noindex?: boolean,
+  title?: string;
+  description?: string;
+  keywords?: string | string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+  structuredData?: any;
+  noindex?: boolean;
   nofollow?: boolean
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',
-  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',
-  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',
-  image = '/images/zion-tech-group-og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  publishedTime,
-  modifiedTime,
-  author = 'Zion Tech Group',
-  section,
-  tags = [],
-  structuredData,
-  noindex = false,
+  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
+  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
+  image = '/images/zion-tech-group-og-image.jpg';
+  url = 'https://ziontechgroup.com';
+  type = 'website';
+  publishedTime;
+  modifiedTime;
+  author = 'Zion Tech Group';
+  section;
+  tags = [];
+  structuredData;
+  noindex = false;
   nofollow = false}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`,
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`,
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
+  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
 
   return (
     <Head>
@@ -94,50 +94,50 @@ const SEO: React.FC<SEOProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-            "description": description,
-            "foundingDate": "2020",
+            "@context": "https://schema.org";
+            "@type": "Organization";
+            "name": "Zion Tech Group";
+            "url": "https://ziontechgroup.com";
+            "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png";
+            "description": description;
+            "foundingDate": "2020";
             "sameAs": [
-              "https://www.linkedin.com/company/zion-tech-group",
-              "https://twitter.com/ziontechgroup",
+              "https://www.linkedin.com/company/zion-tech-group";
+              "https://twitter.com/ziontechgroup";
               "https://github.com/Zion-Holdings"
-            ],
+            ];
             "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-800-ZION-TECH",
-              "contactType": "customer service",
+              "@type": "ContactPoint";
+              "telephone": "+1-800-ZION-TECH";
+              "contactType": "customer service";
               "availableLanguage": "English"
-            },
+            };
             "address": {
-              "@type": "PostalAddress",
+              "@type": "PostalAddress";
               "addressCountry": "US"
-            },
+            };
             "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Technology Services",
+              "@type": "OfferCatalog";
+              "name": "Technology Services";
               "itemListElement": [
                 {
-                  "@type": "Offer",
+                  "@type": "Offer";
                   "itemOffered": {
-                    "@type": "Service",
+                    "@type": "Service";
                     "name": "AI & Machine Learning Solutions"
                   }
-                },
+                };
                 {
-                  "@type": "Offer",
+                  "@type": "Offer";
                   "itemOffered": {
-                    "@type": "Service",
+                    "@type": "Service";
                     "name": "Quantum Computing Services"
                   }
-                },
+                };
                 {
-                  "@type": "Offer",
+                  "@type": "Offer";
                   "itemOffered": {
-                    "@type": "Service",
+                    "@type": "Service";
                     "name": "Space Technology Solutions"
                   }
                 }
@@ -178,6 +178,6 @@ const SEO: React.FC<SEOProps> = ({
       )}
     </Head>
   )
-},
+};
 
-export default SEO,
+export default SEO;

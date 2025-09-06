@@ -1,7 +1,7 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 // Using an explicit empty object type for props to satisfy lint rules
-type Props = Record<string, never>,
+type Props = Record<string, never>;
 
 const ServicePage: NextPage<Props> = () => {
   return (
@@ -18,6 +18,6 @@ const ServicePage: NextPage<Props> = () => {
       </main>
     </div>
   )
-},
+};
 
-export default ServicePage,
+export default ServicePage;

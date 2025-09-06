@@ -1,19 +1,19 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, Star, 
-  Rocket, Brain, Atom, Building, Briefcase, Microscope,
-  Twitter, Facebook, Linkedin, Instagram, Youtube,
+  Rocket, Brain, Atom, Building, Briefcase, Microscope;
+  Twitter, Facebook, Linkedin, Instagram, Youtube;
   Github, Zap, Sparkles, Shield, Cpu, Database
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -25,7 +25,7 @@ const serviceCategories = [
       { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
       { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' }
     ]
-  },
+  };
   {
     title: '🧠 AI & Technology',
     services: [
@@ -34,7 +34,7 @@ const serviceCategories = [
       { name: 'Natural Language Processing', href: '/nlp-services' },
       { name: 'Computer Vision', href: '/computer-vision' }
     ]
-  },
+  };
   {
     title: '⚛️ Quantum & Emerging Tech',
     services: [
@@ -43,7 +43,7 @@ const serviceCategories = [
       { name: 'IoT Platforms', href: '/iot-platforms' },
       { name: 'Space Technology', href: '/space-tech' }
     ]
-  },
+  };
   {
     title: '🏙️ Enterprise Solutions',
     services: [
@@ -53,7 +53,7 @@ const serviceCategories = [
       { name: 'DevOps Automation', href: '/devops-automation' }
     ]
   }
-],
+];
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -64,14 +64,14 @@ const quickLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Privacy', href: '/privacy', icon: Shield }
-],
+];
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-],
+];
 
 const footerSections = [
   {
@@ -84,7 +84,7 @@ const footerSections = [
       { name: 'Press & Media', href: '/press' },
       { name: 'Partnerships', href: '/partnerships' }
     ]
-  },
+  };
   {
     title: 'Solutions',
     links: [
@@ -95,7 +95,7 @@ const footerSections = [
       { name: 'Cloud Solutions', href: '/cloud-solutions' },
       { name: 'Blockchain', href: '/blockchain-solutions' }
     ]
-  },
+  };
   {
     title: 'Resources',
     links: [
@@ -106,7 +106,7 @@ const footerSections = [
       { name: 'API Reference', href: '/api' },
       { name: 'Support Center', href: '/support' }
     ]
-  },
+  };
   {
     title: 'Legal',
     links: [
@@ -118,7 +118,7 @@ const footerSections = [
       { name: 'Compliance', href: '/compliance' }
     ]
   }
-],
+];
 
 const UltraFuturisticFooter2029 = () => {
   return (
@@ -297,6 +297,6 @@ const UltraFuturisticFooter2029 = () => {
       </div>
     </footer>
   )
-},
+};
 
-export default UltraFuturisticFooter2029,
+export default UltraFuturisticFooter2029;

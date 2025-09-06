@@ -1,9 +1,9 @@
-'use client',
+'use client';
 
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const stats = [
@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
     { icon: Award, value: '50+', label: 'Awards Won' },
     { icon: Star, value: '99%', label: 'Client Satisfaction' },
     { icon: Zap, value: '24/7', label: 'Support Available' }
-  ],
+  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
         <motion.div
           className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
           animate={{
-            scale: [1, 1.2, 1],
+            scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 8,
@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
         <motion.div
           className="absolute top-40 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
           animate={{
-            scale: [1.2, 1, 1.2],
+            scale: [1.2, 1, 1.2];
             opacity: [0.6, 0.3, 0.6]}}
           transition={{
             duration: 10,
@@ -158,6 +158,6 @@ const HeroSection: React.FC = () => {
       </motion.div>
     </section>
   )
-},
+};
 
-export default HeroSection,
+export default HeroSection;

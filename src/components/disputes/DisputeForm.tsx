@@ -1,27 +1,27 @@
-import React, { useState } from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue} from "@/components/ui/select",
-import { Input } from "@/components/ui/input",
-import { disputeReasonLabels } from "@/types/disputes",
-import { useDisputes } from "@/hooks/useDisputes",
-import { toast } from "sonner",
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
+import { disputeReasonLabels } from "@/types/disputes";
+import { useDisputes } from "@/hooks/useDisputes";
+import { toast } from "sonner";
 import { FileText } from 'lucide-react'
 
 const formSchema = z.object({
@@ -33,10 +33,10 @@ const formSchema = z.object({
 
 type DisputeFormProps = {
   projectId: string,
-  milestoneId?: string,
+  milestoneId?: string;
   onDisputeCreated?: (disputeId: string) => void,
   onCancel?: () => void
-},
+};
 
 export function DisputeForm({ 
   projectId, 
@@ -44,9 +44,9 @@ export function DisputeForm({
   onDisputeCreated, 
   onCancel 
 }: DisputeFormProps) {
-  const { createDispute } = useDisputes(),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [files, setFiles] = useState<File[]>([]),
+  const { createDispute } = useDisputes();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [files, setFiles] = useState<File[]>([]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,22 +57,22 @@ export function DisputeForm({
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const newFiles = Array.from(e.target.files),
-      setFiles(prev => [...prev, ...newFiles]),
+      const newFiles = Array.from(e.target.files);
+      setFiles(prev => [...prev, ...newFiles]);
       form.setValue("attachments", [...files, ...newFiles])
     }
-  },
+  };
 
   const removeFile = (index: number) => {
-    const newFiles = [...files],
-    newFiles.splice(index, 1),
-    setFiles(newFiles),
+    const newFiles = [...files];
+    newFiles.splice(index, 1);
+    setFiles(newFiles);
     form.setValue("attachments", newFiles)
-  },
+  };
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      setIsSubmitting(true),
+      setIsSubmitting(true);
       
       const dispute = await createDispute({
         project_id: projectId,
@@ -87,7 +87,7 @@ export function DisputeForm({
           // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
         
-        toast.success("Your dispute has been submitted"),
+        toast.success("Your dispute has been submitted");
         
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)

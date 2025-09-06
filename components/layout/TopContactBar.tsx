@@ -1,10 +1,10 @@
-import React, { useState } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, 
-  Clock, ChevronDown, ChevronUp,
+  Clock, ChevronDown, ChevronUp;
   MessageCircle, Calendar, Star
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -13,16 +13,16 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST',
   rating: '4.9/5 (200+ Reviews)'
-},
+};
 
 const quickActions = [
   { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> },
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> },
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
-],
+];
 
 export default function TopContactBar() {
-  const [isExpanded, setIsExpanded] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="relative z-40">

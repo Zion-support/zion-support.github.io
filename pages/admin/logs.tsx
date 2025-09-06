@@ -1,38 +1,38 @@
-import { useState, useEffect } from 'react',
-import { GetServerSideProps } from 'next',
-import fs from 'fs',
-import path from 'path',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react',
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
+import fs from 'fs';
+import path from 'path';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
   id: string,
   timestamp: string,
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical',
   message: string,
   category: string,
-  context?: Record<string, unknown>,
-  stack?: string,
-  url?: string,
-  userAgent?: string,
-  userId?: string,
+  context?: Record<string, unknown>;
+  stack?: string;
+  url?: string;
+  userAgent?: string;
+  userId?: string;
   sessionId: string,
   source: 'client' | 'server' | 'middleware' | 'api',
-  component?: string,
-  feature?: string,
+  component?: string;
+  feature?: string;
   error?: {
     name: string,
     message: string,
-    stack?: string,
+    stack?: string;
     cause?: unknown
-  },
+  };
   performance?: {
-    memory?: number,
-    timing?: number,
+    memory?: number;
+    timing?: number;
     fps?: number
   }
 }
@@ -48,18 +48,18 @@ interface LogsPageProps {
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
-      return <Info className="h-4 w-4 text-blue-500" />,
+      return <Info className="h-4 w-4 text-blue-500" />;
     case 'info':
-      return <Info className="h-4 w-4 text-green-500" />,
+      return <Info className="h-4 w-4 text-green-500" />;
     case 'warn':
-      return <AlertTriangle className="h-4 w-4 text-yellow-500" />,
+      return <AlertTriangle className="h-4 w-4 text-yellow-500" />;
     case 'error':
-      return <AlertCircle className="h-4 w-4 text-red-500" />,
+      return <AlertCircle className="h-4 w-4 text-red-500" />;
     case 'critical':
-      return <XCircle className="h-4 w-4 text-red-700" />,
+      return <XCircle className="h-4 w-4 text-red-700" />;
     default: return <Info className="h-4 w-4 text-gray-500" />
   }
-},
+};
 
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   const colors = {
@@ -74,22 +74,22 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
       {level.toUpperCase()}
     </Badge>
   )
-},
+};
 
 export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
-  const [logs, setLogs] = useState<LogEntry[]>(initialLogs),
-  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [levelFilter, setLevelFilter] = useState<string>('all'),
-  const [categoryFilter, setCategoryFilter] = useState<string>('all'),
-  const [sourceFilter, setSourceFilter] = useState<string>('all'),
-  const [isLoading, setIsLoading] = useState(false),
+  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
+  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [levelFilter, setLevelFilter] = useState<string>('all');
+  const [categoryFilter, setCategoryFilter] = useState<string>('all');
+  const [sourceFilter, setSourceFilter] = useState<string>('all');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean),
-  const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean),
+  const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
+  const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
 
   useEffect(() => {
-    let filtered = logs,
+    let filtered = logs;
 
     // Search filter
     if (searchTerm) {
@@ -116,14 +116,14 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     }
 
     setFilteredLogs(filtered)
-  }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]),
+  }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]);
 
   const refreshLogs = async () => {
-    setIsLoading(true),
+    setIsLoading(true);
     try {
-      const response = await fetch('/api/admin/logs'),
+      const response = await fetch('/api/admin/logs');
       if (response.ok) {
-        const data = await response.json(),
+        const data = await response.json();
         setLogs(data.logs)
       }
     } catch (error) {
@@ -131,28 +131,28 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     } finally {
       setIsLoading(false)
     }
-  },
+  };
 
   const exportLogs = () => {
-    const dataStr = JSON.stringify(filteredLogs, null, 2),
-    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr),
+    const dataStr = JSON.stringify(filteredLogs, null, 2);
+    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     
-    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,
+    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
     
-    const linkElement = document.createElement('a'),
-    linkElement.setAttribute('href', dataUri),
-    linkElement.setAttribute('download', exportFileDefaultName),
+    const linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click()
-  },
+  };
 
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString()
-  },
+  };
 
   const formatPerformance = (performance?: LogEntry['performance']) => {
-    if (!performance) return null,
+    if (!performance) return null;
     
-    const parts = [],
+    const parts = [];
     if (performance.memory) {
       parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`)
     }
@@ -164,7 +164,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     }
     
     return parts.length > 0 ? parts.join() : null
-  },
+  };
 
   return (
     <div className="container mx-auto p-6 space-y-6">
@@ -374,23 +374,23 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const logsDir = path.join(process.cwd(), 'logs'),
+    const logsDir = path.join(process.cwd(), 'logs');
     const logs: LogEntry[] = [],
 
     // Read all log files
     if (fs.existsSync(logsDir)) {
-      const files = fs.readdirSync(logsDir),
-      const logFiles = files.filter(file => file.endsWith('.log')),
+      const files = fs.readdirSync(logsDir);
+      const logFiles = files.filter(file => file.endsWith('.log'));
 
       for (const file of logFiles) {
         try {
-          const filePath = path.join(logsDir, file),
-          const content = fs.readFileSync(filePath, 'utf-8'),
-          const lines = content.split('\n').filter(line => line.trim()),
+          const filePath = path.join(logsDir, file);
+          const content = fs.readFileSync(filePath, 'utf-8');
+          const lines = content.split('\n').filter(line => line.trim());
 
           for (const line of lines) {
             try {
-              const logEntry = JSON.parse(line),
+              const logEntry = JSON.parse(line);
               logs.push(logEntry)
             } catch (parseError) {
               // Skip malformed log entries
@@ -403,22 +403,22 @@ export const getServerSideProps: GetServerSideProps = async () => {
     }
 
     // Sort logs by timestamp (newest first)
-    logs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()),
+    logs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
     // Calculate statistics
-    const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length,
-    const warningCount = logs.filter(log => log.level === 'warn').length,
-    const totalCount = logs.length,
+    const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
+    const warningCount = logs.filter(log => log.level === 'warn').length;
+    const totalCount = logs.length;
 
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
-        errorCount,
-        warningCount,
-        totalCount,
+        errorCount;
+        warningCount;
+        totalCount;
         lastUpdated: new Date().toISOString()}}
   } catch (error) {
-            logErrorToProduction('Error reading logs:', error),
+            logErrorToProduction('Error reading logs:', error);
     return {
       props: {
         logs: [],

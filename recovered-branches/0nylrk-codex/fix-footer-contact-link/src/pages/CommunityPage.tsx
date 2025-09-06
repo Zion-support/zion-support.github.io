@@ -1,14 +1,14 @@
 
-import { useState } from "react",
-import { Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { AppLayout } from "@/layout/AppLayout",
-import ForumCategories from "@/components/community/ForumCategories",
-import PostCard from "@/components/community/PostCard",
-import { useAuth } from "@/hooks/useAuth",
-import { ForumPost } from "@/types/community",
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
+import { AppLayout } from "@/layout/AppLayout";
+import ForumCategories from "@/components/community/ForumCategories";
+import PostCard from "@/components/community/PostCard";
+import { useAuth } from "@/hooks/useAuth";
+import { ForumPost } from "@/types/community";
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -20,7 +20,7 @@ const featuredPosts: ForumPost[] = [
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
-    tags: ["machine-learning", "fine-tuning", "gpt"],
+    tags: ["machine-learning", "fine-tuning", "gpt"];
     createdAt: "2025-04-01T12:00:00Z",
     updatedAt: "2025-04-01T12:00:00Z",
     upvotes: 48,
@@ -28,7 +28,7 @@ const featuredPosts: ForumPost[] = [
     replyCount: 12,
     isAnswered: true,
     isFeatured: true
-  },
+  };
   {
     id: "2",
     title: "How to build an effective AI talent profile?",
@@ -37,7 +37,7 @@ const featuredPosts: ForumPost[] = [
     authorName: "Sarah Chen",
     authorAvatar: "https://i.pravatar.cc/150?img=5",
     categoryId: "getting-hired",
-    tags: ["profile", "tips", "hiring"],
+    tags: ["profile", "tips", "hiring"];
     createdAt: "2025-04-03T09:15:00Z",
     updatedAt: "2025-04-03T09:15:00Z",
     upvotes: 32,
@@ -46,7 +46,7 @@ const featuredPosts: ForumPost[] = [
     isPinned: true,
     isFeatured: true
   }
-],
+];
 
 // Mock data for recent posts
 const recentPosts: ForumPost[] = [
@@ -57,13 +57,13 @@ const recentPosts: ForumPost[] = [
     authorId: "user3",
     authorName: "Michael Wong",
     categoryId: "project-help",
-    tags: ["testing", "automation", "ci-cd"],
+    tags: ["testing", "automation", "ci-cd"];
     createdAt: "2025-04-10T14:30:00Z",
     updatedAt: "2025-04-10T14:30:00Z",
     upvotes: 5,
     downvotes: 0,
     replyCount: 2
-  },
+  };
   {
     id: "4",
     title: "Feature request: Team collaboration tools",
@@ -71,13 +71,13 @@ const recentPosts: ForumPost[] = [
     authorId: "user4",
     authorName: "Emma Davis",
     categoryId: "feedback",
-    tags: ["feature-request", "teams", "collaboration"],
+    tags: ["feature-request", "teams", "collaboration"];
     createdAt: "2025-04-09T18:45:00Z",
     updatedAt: "2025-04-09T18:45:00Z",
     upvotes: 12,
     downvotes: 1,
     replyCount: 3
-  },
+  };
   {
     id: "5",
     title: "How to handle client scope creep?",
@@ -85,7 +85,7 @@ const recentPosts: ForumPost[] = [
     authorId: "user5",
     authorName: "David Lin",
     categoryId: "project-help",
-    tags: ["client-management", "scope", "projects"],
+    tags: ["client-management", "scope", "projects"];
     createdAt: "2025-04-08T10:20:00Z",
     updatedAt: "2025-04-08T10:20:00Z",
     upvotes: 24,
@@ -93,11 +93,11 @@ const recentPosts: ForumPost[] = [
     replyCount: 7,
     isAnswered: true
   }
-],
+];
 
 export default function CommunityPage() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("categories"),
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("categories");
   
   return (
     <AppLayout>

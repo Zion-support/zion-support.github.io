@@ -1,8 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 
 export default function CloudMonitoringPage() {
   const features = [
@@ -15,7 +15,7 @@ export default function CloudMonitoringPage() {
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Advanced Analytics',
-      description: 'Deep insights into performance metrics, resource utilization, and business intelligence.',
+      description: 'Deep insights into performance metrics, resource utilization, and business intelligence.';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'},
     {
@@ -27,13 +27,13 @@ export default function CloudMonitoringPage() {
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'Multi-Cloud Support',
-      description: 'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.',
+      description: 'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.';
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'},
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Security Monitoring',
-      description: 'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.',
+      description: 'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.';
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       gradient: 'from-yellow-400 to-orange-500'},
     {
@@ -48,23 +48,23 @@ export default function CloudMonitoringPage() {
       category: 'Infrastructure',
       icon: <Server className="w-6 h-6 text-blue-400" />,
       metrics: ['CPU UsageMemory UtilizationDisk I/ONetwork PerformanceContainer Metrics']
-    },
+    };
     {
       category: 'Applications',
       icon: <Code className="w-6 h-6 text-green-400" />,
       metrics: ['Response TimeError RatesThroughputUser ExperienceAPI Performance']
-    },
+    };
     {
       category: 'Databases',
       icon: <Database className="w-6 h-6 text-purple-400" />,
       metrics: ['Query PerformanceConnection PoolIndex UsageReplication LagStorage Growth']
-    },
+    };
     {
       category: 'Security',
       icon: <Shield className="w-6 h-6 text-red-400" />,
       metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
     }
-  ],
+  ];
 
   const pricingPlans = [
     {
@@ -74,11 +74,11 @@ export default function CloudMonitoringPage() {
       description: 'Perfect for small teams and startups',
       features: [
         'Up to 10 serversBasic monitoringEmail alerts7-day data retentionCommunity supportMobile app access'
-      ],
+      ];
       popular: false,
       color: 'border-gray-600',
       buttonColor: 'bg-gray-600 hover:bg-gray-700'
-    },
+    };
     {
       name: 'Professional',
       price: '$199',
@@ -86,11 +86,11 @@ export default function CloudMonitoringPage() {
       description: 'Ideal for growing businesses',
       features: [
         'Up to 100 serversAdvanced monitoringSMS & Slack alerts30-day data retentionPriority supportCustom dashboardsAPI accessTeam collaboration'
-      ],
+      ];
       popular: true,
       color: 'border-blue-500',
       buttonColor: 'bg-blue-600 hover:bg-blue-700'
-    },
+    };
     {
       name: 'Enterprise',
       price: '$599',
@@ -98,12 +98,12 @@ export default function CloudMonitoringPage() {
       description: 'For large organizations',
       features: [
         'Unlimited serversFull monitoring suiteCustom integrations1-year data retentionDedicated supportWhite-label solutionSLA guaranteeOn-premise option'
-      ],
+      ];
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-  ],
+  ];
 
   const integrations = [
     { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' },
@@ -114,34 +114,34 @@ export default function CloudMonitoringPage() {
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
     { name: 'Jira', icon: '📋', description: 'Issue tracking' }
-  ],
+  ];
 
   const useCases = [
     {
       title: 'DevOps Teams',
-      description: 'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
+      description: 'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.';
       icon: '🔄',
       benefits: ['Faster deploymentsReduced downtimeBetter collaborationAutomated scaling']
-    },
+    };
     {
       title: 'SaaS Companies',
-      description: 'Track user experience, application performance, and business metrics.',
+      description: 'Track user experience, application performance, and business metrics.';
       icon: '💼',
       benefits: ['User satisfactionRevenue optimizationCompetitive advantageCustomer retention']
-    },
+    };
     {
       title: 'E-commerce',
-      description: 'Monitor website performance, payment processing, and inventory systems.',
+      description: 'Monitor website performance, payment processing, and inventory systems.';
       icon: '🛒',
       benefits: ['Higher conversionFaster checkoutInventory optimizationRevenue growth']
-    },
+    };
     {
       title: 'Financial Services',
-      description: 'Ensure compliance, security, and 24/7 availability of critical systems.',
+      description: 'Ensure compliance, security, and 24/7 availability of critical systems.';
       icon: '💰',
       benefits: ['Regulatory complianceFraud detectionRisk managementCustomer trust']
     }
-  ],
+  ];
 
   return (
     <>

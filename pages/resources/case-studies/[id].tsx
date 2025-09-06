@@ -1,10 +1,10 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 export default function CaseStudyResourcePage() {
-  const router = useRouter(),
-  const { id } = router.query,
+  const router = useRouter();
+  const { id } = router.query;
 
   // Case studies data - this should match the data in resources.tsx
   const caseStudies = [
@@ -13,7 +13,7 @@ export default function CaseStudyResourcePage() {
       title: 'AI-Powered Manufacturing Automation',
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime',
+      results: '40% increase in production efficiency, 60% reduction in downtime';
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
       fullContent: `
         <h2>Executive Summary</h2>
@@ -71,13 +71,13 @@ export default function CaseStudyResourcePage() {
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company 
         as a leader in smart manufacturing.</p>
       `
-    },
+    };
     {
       id: 'content-generation-scale',
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
       industry: 'Marketing',
-      results: '10x increase in content output, 85% improvement in engagement',
+      results: '10x increase in content output, 85% improvement in engagement';
       description: 'Transforming content creation through autonomous AI systems.',
       fullContent: `
         <h2>Executive Summary</h2>
@@ -135,14 +135,14 @@ export default function CaseStudyResourcePage() {
         while maintaining creative excellence. The system continues to learn and improve, positioning the agency 
         for continued growth and success.</p>
       `
-    },
+    };
     {
       id: 'cloud-infrastructure-optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E-commerce Platform',
       industry: 'Technology',
-      results: '50% reduction in cloud costs, 99.9% uptime achieved',
-      description: 'Building self-healing, auto-scaling cloud infrastructure.',
+      results: '50% reduction in cloud costs, 99.9% uptime achieved';
+      description: 'Building self-healing, auto-scaling cloud infrastructure.';
       fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically 
@@ -200,9 +200,9 @@ export default function CaseStudyResourcePage() {
         optimal performance and cost efficiency.</p>
       `
     }
-  ],
+  ];
 
-  const caseStudy = caseStudies.find(study => study.id === id),
+  const caseStudy = caseStudies.find(study => study.id === id);
 
   if (!caseStudy) {
     return (

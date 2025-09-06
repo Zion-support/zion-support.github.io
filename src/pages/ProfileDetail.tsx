@@ -1,31 +1,31 @@
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-  const router = useRouter(),
-  const profileId = router.query.profileId as string,
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading(true),
-      setError(null),
+      setIsLoading(true);
+      setError(null);
       try {
         if (!profileId) {
-          setError("Profile ID is missing."),
+          setError("Profile ID is missing.");
           return
         }
 
@@ -33,20 +33,20 @@ export default function ProfileDetail() {
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single(),
+          .single();
 
         if (error) {
           throw new Error(error.message)
         }
 
         if (!data) {
-          setError("Profile not found."),
+          setError("Profile not found.");
           return
         }
 
         setProfileData(data)
       } catch (err: any) {
-        setError(err.message || "Failed to fetch profile."),
+        setError(err.message || "Failed to fetch profile.");
         toast({
           title: "Error",
           description: err.message || "Failed to fetch profile.",
@@ -54,10 +54,10 @@ export default function ProfileDetail() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
 
     fetchProfile()
-  }, [profileId]),
+  }, [profileId]);
 
   if (isLoading) {
     return (

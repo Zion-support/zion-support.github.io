@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
   const featuredNews = [
     {
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
@@ -10,7 +10,7 @@ import React from 'react',
       image: '/api/placeholder/600/400',
       tags: ['AI ConsciousnessBreakthroughInnovation'],
       readTime: '5 min read'
-    },
+    };
     {
       title: 'Quantum Computing Breakthrough: Solving Complex Optimization Problems',
       excerpt: 'Our quantum team achieves significant milestone in solving previously impossible computational challenges.',
@@ -22,15 +22,15 @@ import React from 'react',
       tags: ['Quantum ComputingResearchBreakthrough'],
       icon: <Atom className="w-6 h-6" />,
       featured: true
-    },
+    };
     {
       title: 'Cybersecurity Partnership with Global Tech Leaders',
       excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.',
       author: 'Partnerships Team',
       date: '2025-01-10',
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [selectedYear, setSelectedYear] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedYear, setSelectedYear] = useState('all');
 
   const categories = [
     { id: 'all', name: 'All News', icon: Newspaper, count: 45 },
@@ -38,20 +38,20 @@ import React from 'react',
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 },
     { id: 'space', name: 'Space Technology', icon: Rocket, count: 8 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 7 }
-  ],
+  ];
 
   const years = [
     { id: 'all', name: 'All Years' },
     { id: '2025', name: '2025' },
     { id: '2024', name: '2024' },
     { id: '2023', name: '2023' }
-  ],
+  ];
 
-  Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink,
-  TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,
+  Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink;
+  TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
   Clock, BookOpen, Video, Podcast, FileText, Search
-} from 'lucide-react',
-import Link from 'next/link',
+} from 'lucide-react';
+import Link from 'next/link';
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -69,7 +69,7 @@ import Link from 'next/link',
       readTime: "5 min read",
       image: "/images/news/quantum-ai-launch.jpg",
       tags: ["Quantum Computing", "AI", "Product Launch"]
-    },
+    };
     {
       id: 2,
       title: "New Partnership with Global Healthcare Consortium",
@@ -80,40 +80,40 @@ import Link from 'next/link',
       readTime: "4 min read",
       image: "/images/news/healthcare-partnership.jpg",
       tags: ["Healthcare", "Partnership", "AI"]
-    },
+    };
     {
       id: 3,
       title: "Breakthrough in Autonomous Cybersecurity Systems",
-      excerpt: "Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.",
+      excerpt: "Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.";
       category: "Research",
       author: "Research Team",
       date: "2025-01-10",
       readTime: "6 min read",
       image: "/images/news/cybersecurity-breakthrough.jpg",
       tags: ["Cybersecurity", "Research", "Autonomous Systems"]
-    },
+    };
     {
       id: 4,
       title: "Space Technology Division Expands Operations",
-      excerpt: "Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.",
+      excerpt: "Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.";
       category: "Company News",
       author: "Space Technology Team",
       date: "2025-01-08",
       readTime: "3 min read",
       image: "/images/news/space-expansion.jpg",
       tags: ["Space Technology", "Expansion", "Satellites"]
-    },
+    };
     {
       id: 5,
       title: "AI Ethics and Governance Framework Released",
-      excerpt: "We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.",
+      excerpt: "We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.";
       category: "Policy",
       author: "AI Ethics Team",
       date: "2025-01-05",
       readTime: "7 min read",
       image: "/images/news/ai-ethics-framework.jpg",
       tags: ["AI Ethics", "Governance", "Policy"]
-    },
+    };
     {
       id: 6,
       title: "Financial Services Innovation Award Winner",
@@ -129,27 +129,27 @@ export default function News() {
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',
-      excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.',
+      excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.';
       category: 'Company News',
       author: 'Dr. Sarah Chen',
       date: '2024-01-15',
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
       tags: ['AIQuantum ComputingInnovation'],
-import Head from 'next/head',
+import Head from 'next/head';
 export default function NewsPage() {
   const newsArticles = [
     {
       id: 1,
       title: "Zion Tech Group Launches New AI-Powered Automation Platform",
-      excerpt: "Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.",
+      excerpt: "Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.";
       date: "2025-01-19",
       category: "Company News",
       author: "Zion Tech Group",
       readTime: "3 min read",
       image: "🚀",
       featured: true
-    },
+    };
     {
       id: 2,
             </motion.div>
@@ -370,17 +370,17 @@ export default function NewsPage() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Search, Calendar, Clock, User, Tag, 
   ArrowRight, ExternalLink, TrendingUp, 
   BookOpen, Globe, Video
-} from 'lucide-react',
-import Link from 'next/link',
+} from 'lucide-react';
+import Link from 'next/link';
 export default function News() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
     { id: 'all', name: 'All News', count: 24 },
@@ -389,13 +389,13 @@ export default function News() {
     { id: 'enterprise', name: 'Enterprise IT', count: 5 },
     { id: 'research', name: 'Research & Development', count: 3 },
     { id: 'industry', name: 'Industry Insights', count: 2 }
-  ],
+  ];
 
   const featuredNews = [
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
-      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.',
+      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.';
       category: 'ai',
       author: 'Dr. Sarah Chen',
       date: '2024-01-15',
@@ -403,11 +403,11 @@ export default function News() {
       image: '/images/news/ai-consciousness-launch.jpg',
       featured: true,
       tags: ['AI ConsciousnessPlatform LaunchInnovation']
-    },
+    };
     {
       id: 2,
       title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability',
-      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.',
+      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.';
       category: 'quantum',
       author: 'Prof. Michael Rodriguez',
       date: '2024-01-12',
@@ -416,7 +416,7 @@ export default function News() {
       featured: true,
       tags: ['Quantum ComputingResearchBreakthrough']
     }
-  ],
+  ];
 
   const latestNews = [
     {
@@ -429,7 +429,7 @@ export default function News() {
       readTime: '4 min read',
       image: '/images/news/enterprise-ai-trends.jpg',
       tags: ['Enterprise AIBest Practices2024 Trends']
-    },
+    };
     {
       id: 4,
       title: 'The Future of Autonomous Business Systems',
@@ -440,7 +440,7 @@ export default function News() {
       readTime: '6 min read',
       image: '/images/news/autonomous-systems.jpg',
       tags: ['Autonomous SystemsFuture of WorkInnovation']
-    },
+    };
     {
       id: 5,
       title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
@@ -451,11 +451,11 @@ export default function News() {
       readTime: '5 min read',
       image: '/images/news/ai-cybersecurity.jpg',
       tags: ['CybersecurityAI SecurityDigital Protection']
-    },
+    };
     {
       id: 6,
       title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies',
-      excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.',
+      excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.';
       category: 'quantum',
       author: 'Dr. Elena Petrova',
       date: '2024-01-03',
@@ -463,7 +463,7 @@ export default function News() {
       image: '/images/news/quantum-ml.jpg',
       tags: ['Quantum MLResearchTechnology Convergence']
     }
-  ],
+  ];
 
   const industryInsights = [
     {
@@ -475,7 +475,7 @@ export default function News() {
       date: '2024-01-01',
       readTime: '6 min read',
       tags: ['AI EthicsBusiness ImpactConsciousness']
-    },
+    };
     {
       id: 8,
       title: 'Micro-SaaS Revolution: How Small Teams Are Building Big Solutions',
@@ -486,7 +486,7 @@ export default function News() {
       readTime: '4 min read',
       tags: ['Micro-SaaSStartupsSoftware Industry']
     }
-  ],
+  ];
 
   const upcomingEvents = [
     {
@@ -495,10 +495,10 @@ export default function News() {
       type: 'Conference',
       date: '2024-02-15',
       time: '9:00 AM - 6:00 PM',
-      location: 'San Francisco, CA',
+      location: 'San Francisco, CA';
       description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',
       registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024'
-    },
+    };
     {
       id: 2,
       title: 'Quantum Computing Workshop',
@@ -509,15 +509,15 @@ export default function News() {
       description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.',
       registration: 'https://ziontechgroup.com/events/quantum-workshop'
     }
-  ],
+  ];
 
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory,
+                         article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
     return matchesSearch && matchesCategory
-  }),
+  });
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -525,7 +525,7 @@ export default function News() {
       month: 'long',
       day: 'numeric'
     })
-  },
+  };
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -534,9 +534,9 @@ export default function News() {
       enterprise: 'from-green-500 to-emerald-500',
       research: 'from-orange-500 to-red-500',
       industry: 'from-indigo-500 to-purple-500'
-    },
+    };
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
-  },
+  };
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -602,18 +602,18 @@ export default function News() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-    'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services',
+    'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services';
     'MetaverseIndustry Insights'
-  ],
+  ];
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString),
+    const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
     })
-  },
+  };
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -1426,17 +1426,17 @@ export default function News() {
       author: "Sarah Chen",
       readTime: "2 min read",
       image: "🤝"
-    },
+    };
     {
       id: 3,
       title: "AI Ethics Guidelines Released for Responsible Development",
-      excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.",
+      excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.";
       date: "2025-01-17",
       category: "Innovation",
       author: "Dr. Emily Watson",
       readTime: "4 min read",
       image: "⚖️"
-    },
+    };
     {
       id: 4,
       title: "New Office Opening in Singapore",
@@ -1446,7 +1446,7 @@ export default function News() {
       author: "Marcus Rodriguez",
       readTime: "2 min read",
       image: "🌏"
-    },
+    };
     {
       id: 5,
       title: "Machine Learning Model Achieves 99.7% Accuracy",
@@ -1456,7 +1456,7 @@ export default function News() {
       author: "Dr. James Wilson",
       readTime: "5 min read",
       image: "🧠"
-    },
+    };
     {
       id: 6,
       title: "Annual Sustainability Report Published",
@@ -1466,7 +1466,7 @@ export default function News() {
       author: "Lisa Park",
       readTime: "6 min read",
       image: "🌱"
-    },
+    };
     {
       id: 7,
       title: "Customer Success Story: Retail Automation",
@@ -1476,20 +1476,20 @@ export default function News() {
       author: "Alex Thompson",
       readTime: "4 min read",
       image: "📊"
-    },
+    };
     {
       id: 8,
       title: "New Research Paper on Autonomous Systems",
-      excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure.",
+      excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure.";
       date: "2025-01-12",
       category: "Research",
       author: "Prof. Maria Garcia",
       readTime: "7 min read",
       image: "📚"
     }
-  ],
+  ];
 
-  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],
+  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
 
   return (
     <>

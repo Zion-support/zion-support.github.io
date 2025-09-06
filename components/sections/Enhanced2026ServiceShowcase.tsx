@@ -1,9 +1,9 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react',
-import { innovative2026AIServices } from '../../data/innovative-2026-ai-services',
-import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure',
-import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas',
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
+import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
+import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
+import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -14,14 +14,14 @@ export default function Enhanced2026ServiceShowcase() {
         delayChildren: 0.1
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { 
       opacity: 0, 
       y: 50,
       scale: 0.9
-    },
+    };
     visible: { 
       opacity: 1, 
       y: 0,
@@ -31,7 +31,7 @@ export default function Enhanced2026ServiceShowcase() {
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   const cardVariants = {
     hover: {
@@ -42,7 +42,7 @@ export default function Enhanced2026ServiceShowcase() {
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   const renderServiceCard = (service: any, index: number) => (
     <motion.div
@@ -125,7 +125,7 @@ export default function Enhanced2026ServiceShowcase() {
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
       </motion.div>
     </motion.div>
-  ),
+  );
 
   return (
     <section className="py-20 relative overflow-hidden">

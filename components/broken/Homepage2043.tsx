@@ -1,45 +1,45 @@
-import React, { useEffect, useState, useCallback } from 'react',
-import Layout from './layout/Layout',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useEffect, useState, useCallback } from 'react';
+import Layout from './layout/Layout';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3,
-  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft,
+  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
+  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
-} from 'lucide-react',
+} from 'lucide-react';
 
 // Import our new revolutionary services
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services',
-import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services',
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
+import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
 const Homepage2043: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false),
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0),
-  const [isHovered, setIsHovered] = useState(false),
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
   
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true);
     
     // Auto-rotate featured services
     const serviceInterval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)
-    }, 4000),
+    }, 4000);
     
     // Auto-rotate testimonials
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonialIndex((prev) => (prev + 1) % 3)
-    }, 6000),
+    }, 6000);
     
     return () => {
-      clearInterval(serviceInterval),
+      clearInterval(serviceInterval);
       clearInterval(testimonialInterval)
     }
-  }, []),
+  }, []);
 
   // Combine all revolutionary services
-  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices],
+  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
 
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6),
+  const featuredServices = allRevolutionaryServices.slice(0, 6);
 
   const features = [
     { 
@@ -49,7 +49,7 @@ const Homepage2043: React.FC = () => {
       href: "/quantum-neural-consciousness-platform", 
       color: "from-purple-500 to-pink-500",
       gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
-    },
+    };
     { 
       icon: AtomIcon, 
       title: "Quantum Computing", 
@@ -57,7 +57,7 @@ const Homepage2043: React.FC = () => {
       href: "/quantum-bio-computing-platform", 
       color: "from-blue-500 to-cyan-500",
       gradient: "bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
-    },
+    };
     { 
       icon: Shield, 
       title: "Future Cybersecurity", 
@@ -65,7 +65,7 @@ const Homepage2043: React.FC = () => {
       href: "/quantum-internet-security-gateway", 
       color: "from-red-500 to-orange-500",
       gradient: "bg-gradient-to-br from-red-500/20 to-orange-500/20"
-    },
+    };
     { 
       icon: Rocket, 
       title: "Space Technology", 
@@ -73,7 +73,7 @@ const Homepage2043: React.FC = () => {
       href: "/autonomous-space-mining-ai", 
       color: "from-indigo-500 to-purple-500",
       gradient: "bg-gradient-to-br from-indigo-500/20 to-purple-500/20"
-    },
+    };
     { 
       icon: Cpu, 
       title: "Autonomous Systems", 
@@ -81,7 +81,7 @@ const Homepage2043: React.FC = () => {
       href: "/autonomous-business-ecosystem-ai", 
       color: "from-emerald-500 to-teal-500",
       gradient: "bg-gradient-to-br from-emerald-500/20 to-teal-500/20"
-    },
+    };
     { 
       icon: Database, 
       title: "Business Intelligence", 
@@ -90,14 +90,14 @@ const Homepage2043: React.FC = () => {
       color: "from-yellow-500 to-orange-500",
       gradient: "bg-gradient-to-br from-yellow-500/20 to-orange-500/20"
     }
-  ],
+  ];
 
   const stats = [
     { number: "2000+", label: "Revolutionary Services", icon: Star, color: "from-yellow-400 to-orange-500" },
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-400 to-emerald-500" },
     { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-400 to-pink-500" },
     { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
-  ],
+  ];
 
   const testimonials = [
     {
@@ -107,7 +107,7 @@ const Homepage2043: React.FC = () => {
       content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",
       rating: 5,
       avatar: "👩‍🔬"
-    },
+    };
     {
       name: "Marcus Rodriguez",
       role: "CTO",
@@ -115,7 +115,7 @@ const Homepage2043: React.FC = () => {
       content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.",
       rating: 5,
       avatar: "👨‍🚀"
-    },
+    };
     {
       name: "Dr. Emily Watson",
       role: "Research Director",
@@ -124,27 +124,27 @@ const Homepage2043: React.FC = () => {
       rating: 5,
       avatar: "👩‍💻"
     }
-  ],
+  ];
 
   const handleGetStarted = useCallback(() => {
     window.location.href = '/revolutionary-2040-2041-pricing-showcase'
-  }, []),
+  }, []);
 
   const handleWatchDemo = useCallback(() => {
     window.location.href = '/services'
-  }, []),
+  }, []);
 
   const handleContact = useCallback(() => {
     window.location.href = '/contact'
-  }, []),
+  }, []);
 
   const nextService = () => {
     setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length)
-  },
+  };
 
   const prevService = () => {
     setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
-  },
+  };
 
   return (
     <Layout>
@@ -169,9 +169,9 @@ const Homepage2043: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
                   animate={{
-                    x: [0, 150, 0],
-                    y: [0, -150, 0],
-                    opacity: [0, 1, 0],
+                    x: [0, 150, 0];
+                    y: [0, -150, 0];
+                    opacity: [0, 1, 0];
                     scale: [0, 1.5, 0]}}
                   transition={{
                     duration: 8 + i * 0.3,
@@ -189,7 +189,7 @@ const Homepage2043: React.FC = () => {
             {/* Enhanced grid pattern */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`;
                 backgroundSize: '50px 50px'
               }}></div>
             </div>
@@ -568,6 +568,6 @@ const Homepage2043: React.FC = () => {
       </main>
     </Layout>
   )
-},
+};
 
-export default Homepage2043,
+export default Homepage2043;

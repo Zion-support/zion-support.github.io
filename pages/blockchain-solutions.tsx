@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 const BlockchainSolutions: NextPage = () => {
   return (
     <div>
@@ -14,6 +14,6 @@ const BlockchainSolutions: NextPage = () => {
       </main>
     </div>
   )
-},
+};
 
-export default BlockchainSolutions,
+export default BlockchainSolutions;

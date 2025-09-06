@@ -2,10 +2,10 @@ import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Brain, Atom, Shield, Target, Rocket,
-  ArrowRight, Check, Star, TrendingUp, Users,
+  Brain, Atom, Shield, Target, Rocket;
+  ArrowRight, Check, Star, TrendingUp, Users;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
-} from 'lucide-react',
+} from 'lucide-react';
 
 // Import our new 2025 V2 innovative services
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
@@ -17,7 +17,7 @@ const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
-},
+};
 
 const staggerContainer = {
   animate: {
@@ -25,16 +25,16 @@ const staggerContainer = {
       staggerChildren: 0.1
     }
   }
-},
+};
 
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
-    ...innovativeMicroSaas2025ExpansionV2,
-    ...innovativeITServices2025ExpansionV2,
-    ...innovativeAIServices2025ExpansionV2,
-    ...industrySpecificSolutions2025V2,
+    ...innovativeMicroSaas2025ExpansionV2;
+    ...innovativeITServices2025ExpansionV2;
+    ...innovativeAIServices2025ExpansionV2;
+    ...industrySpecificSolutions2025V2;
     ...emergingTechBreakthroughs2025V2
-  ],
+  ];
 
   const serviceCategories = [
     {
@@ -44,7 +44,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       color: 'from-blue-500 to-cyan-500',
       services: innovativeMicroSaas2025ExpansionV2,
       description: 'Cutting-edge micro SAAS solutions for modern businesses'
-    },
+    };
     {
       id: 'it-infrastructure',
       name: 'IT Infrastructure Services',
@@ -52,7 +52,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       color: 'from-purple-500 to-pink-500',
       services: innovativeITServices2025ExpansionV2,
       description: 'Advanced IT infrastructure and security solutions'
-    },
+    };
     {
       id: 'ai-services',
       name: 'AI & Machine Learning',
@@ -60,7 +60,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       color: 'from-green-500 to-emerald-500',
       services: innovativeAIServices2025ExpansionV2,
       description: 'Intelligent AI solutions for business transformation'
-    },
+    };
     {
       id: 'industry-solutions',
       name: 'Industry Solutions',
@@ -68,7 +68,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
       color: 'from-orange-500 to-red-500',
       services: industrySpecificSolutions2025V2,
       description: 'Specialized solutions for specific industries'
-    },
+    };
     {
       id: 'emerging-tech',
       name: 'Emerging Technology',
@@ -77,13 +77,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
       services: emergingTechBreakthroughs2025V2,
       description: 'Breakthrough technologies of the future'
     }
-  ],
+  ];
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

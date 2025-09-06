@@ -1,37 +1,37 @@
-import React, { useState, useEffect } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Label } from '@/components/ui/label',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
+import React, { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
 import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { fireEvent } from '@/lib/analytics',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { cn } from '@/lib/utils';
+import { fireEvent } from '@/lib/analytics';
+import {logErrorToProduction} from '@/utils/productionLogger';
 const signupSchema = z.object({
-  name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters'),
-  email: z.string().email('Please enter a valid email address').min(1, 'Email is required'),
+  name: z.string().min(2, 'Full Name must be at least 2 characters').max(50, 'Name must be less than 50 characters');
+  email: z.string().email('Please enter a valid email address').min(1, 'Email is required');
   password: z.string()
     .min(8, 'Password must be at least 8 characters')
     .regex(/[A-Z]/, 'Password must include at least one uppercase letter')
     .regex(/[a-z]/, 'Password must include at least one lowercase letter')
     .regex(/[0-9]/, 'Password must include at least one number')
-    .regex(/[^A-Za-z0-9]/, 'Password must include at least one special character'),
+    .regex(/[^A-Za-z0-9]/, 'Password must include at least one special character');
   confirmPassword: z.string()
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords don't match",
   path: ["confirmPassword"]}),
 
-type SignupFormData = z.infer<typeof signupSchema>,
+type SignupFormData = z.infer<typeof signupSchema>;
 
 interface SignupFormProps {
   onSuccess?: (result: {
     email: string,
     emailVerificationRequired: boolean
-  }) => void,
+  }) => void;
   onError?: (error: string) => void
 }
 
@@ -42,48 +42,48 @@ interface FieldValidationState {
 }
 
 export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [showPassword, setShowPassword] = useState(false),
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
-  const [fieldStates, setFieldStates] = useState<Record<string, FieldValidationState>>({}),
-  const { signUp } = useAuth(),
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [fieldStates, setFieldStates] = useState<Record<string, FieldValidationState>>({});
+  const { signUp } = useAuth();
   
   const {
-    register,
-    handleSubmit,
-    formState: { errors, isValid, touchedFields },
-    setError,
-    reset,
-    watch,
+    register;
+    handleSubmit;
+    formState: { errors, isValid, touchedFields };
+    setError;
+    reset;
+    watch;
     trigger} = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema),
     mode: 'onChange', // Enable real-time validation
-  }),
+  });
 
-  const watchedFields = watch(),
+  const watchedFields = watch();
 
   // Real-time field validation with debounce
   useEffect(() => {
-    const timeouts: Record<string, NodeJS.Timeout> = {},
+    const timeouts: Record<string, NodeJS.Timeout> = {};
 
     Object.keys(watchedFields).forEach((fieldName) => {
-      const typedFieldName = fieldName as keyof SignupFormData,
+      const typedFieldName = fieldName as keyof SignupFormData;
       if (touchedFields[typedFieldName]) {
         setFieldStates(prev => ({
-          ...prev,
+          ...prev;
           [fieldName]: { 
             isValid: prev[fieldName]?.isValid ?? false,
             isValidating: true,
             error: prev[fieldName]?.error ?? null
           }
-        })),
+        }));
 
         timeouts[fieldName] = setTimeout(async () => {
-          const result = await trigger(typedFieldName),
-          const error = errors[typedFieldName],
+          const result = await trigger(typedFieldName);
+          const error = errors[typedFieldName];
           
           setFieldStates(prev => ({
-            ...prev,
+            ...prev;
             [fieldName]: {
               isValid: result,
               isValidating: false,
@@ -92,18 +92,18 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           }))
         }, 300)
       }
-    }),
+    });
 
     return () => {
       Object.values(timeouts).forEach(clearTimeout)
     }
-  }, [watchedFields, touchedFields, trigger, errors]),
+  }, [watchedFields, touchedFields, trigger, errors]);
 
   const getFieldValidationIcon = (fieldName: string) => {
-    const state = fieldStates[fieldName],
-    const isTouched = touchedFields[fieldName as keyof SignupFormData],
+    const state = fieldStates[fieldName];
+    const isTouched = touchedFields[fieldName as keyof SignupFormData];
     
-    if (!isTouched) return null,
+    if (!isTouched) return null;
     
     if (state?.isValidating) {
       return <Loader2 className="h-4 w-4 animate-spin text-blue-500" />
@@ -118,13 +118,13 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
     
     return null
-  },
+  };
 
   const getFieldClasses = (fieldName: string) => {
-    const state = fieldStates[fieldName],
-    const isTouched = touchedFields[fieldName as keyof SignupFormData],
+    const state = fieldStates[fieldName];
+    const isTouched = touchedFields[fieldName as keyof SignupFormData];
     
-    if (!isTouched) return '',
+    if (!isTouched) return '';
     
     if (state?.isValidating) {
       return 'border-blue-300 focus:border-blue-500 focus:ring-blue-500/20'
@@ -139,44 +139,44 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
     
     return ''
-  },
+  };
 
   const getPasswordStrength = (password: string) => {
     if (!password) return { strength: 0, label: '' },
     
-    let strength = 0,
+    let strength = 0;
     const checks = [
-      password.length >= 8,
-      /[A-Z]/.test(password),
-      /[a-z]/.test(password),
-      /[0-9]/.test(password),
-      /[^A-Za-z0-9]/.test(password)],
+      password.length >= 8;
+      /[A-Z]/.test(password);
+      /[a-z]/.test(password);
+      /[0-9]/.test(password);
+      /[^A-Za-z0-9]/.test(password)];
     
-    strength = checks.filter(Boolean).length,
+    strength = checks.filter(Boolean).length;
     
-    const labels = ['Very WeakWeakFairGoodStrong'],
-    const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500bg-green-500'],
+    const labels = ['Very WeakWeakFairGoodStrong'];
+    const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500bg-green-500'];
     
     return {
-      strength,
+      strength;
       label: labels[strength - 1] || '',
       color: colors[strength - 1] || 'bg-gray-300',
       percentage: (strength / 5) * 100
     }
-  },
+  };
 
-  const passwordStrength = getPasswordStrength(watchedFields.password || ''),
+  const passwordStrength = getPasswordStrength(watchedFields.password || '');
 
   const onSubmit = async (data: SignupFormData) => {
-    fireEvent('signup_submit'),
-    setIsSubmitting(true),
+    fireEvent('signup_submit');
+    setIsSubmitting(true);
 
     try {
       // Use AuthProvider's signup function
       const result = await signUp(data.email, data.password, {
         name: data.name,
         displayName: data.name
-      }),
+      });
 
       if (result.error) {
         logErrorToProduction('Signup error:', { data: result.error }),
@@ -201,7 +201,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           })
         }
         
-        onError?.(result.error),
+        onError?.(result.error);
         return
       }
 
@@ -210,10 +210,10 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         title: "Account Created Successfully!",
         description: result.emailVerificationRequired 
           ? "Please check your email to verify your account before logging in."
-          : "You can now log in to your account."}),
+          : "You can now log in to your account."});
 
-      reset(),
-      fireEvent('signup_success'),
+      reset();
+      fireEvent('signup_success');
       onSuccess?.({
         email: data.email,
         emailVerificationRequired: result.emailVerificationRequired ?? false})
@@ -221,10 +221,10 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     } catch (error: any) {
       logErrorToProduction('Unexpected signup error:', { data: error }),
       fireEvent('signup_error', { message: error.message || 'unexpected' }),
-      const errorMessage = 'An unexpected error occurred during signup. Please try again.',
+      const errorMessage = 'An unexpected error occurred during signup. Please try again.';
       
       setError('root', { message: errorMessage }),
-      onError?.(errorMessage),
+      onError?.(errorMessage);
 
       toast({
         title: "Signup Failed",
@@ -233,7 +233,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

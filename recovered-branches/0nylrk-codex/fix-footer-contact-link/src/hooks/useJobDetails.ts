@@ -1,30 +1,30 @@
 
-import { useState, useEffect } from 'react',
-import { supabase } from '@/integrations/supabase/client',
+import { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {
-  const [job, setJob] = useState(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState(null),
+  const [job, setJob] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   async function loadJobDetails() {
     if (!jobId) {
-      setIsLoading(false),
+      setIsLoading(false);
       return
     }
     
     try {
-      setIsLoading(true),
+      setIsLoading(true);
       const { data, error } = await supabase
         .from('jobs')
         .select('*')
         .eq('id', jobId)
-        .single(),
+        .single();
         
-      if (error) throw error,
-      setJob(data),
+      if (error) throw error;
+      setJob(data);
       setError(null)
     } catch (err) {
-      console.error('Error loading job details:', err),
+      console.error('Error loading job details:', err);
       setError(err.message)
     } finally {
       setIsLoading(false)
@@ -34,14 +34,14 @@ export function useJobDetails(jobId: string | undefined) {
   // Load job details when component mounts or jobId changes
   useEffect(() => {
     loadJobDetails()
-  }, [jobId]),
+  }, [jobId]);
 
   return {
-    job,
-    isLoading,
-    error,
+    job;
+    isLoading;
+    error;
     loadJobDetails
   }
 }
 
-export default useJobDetails,
+export default useJobDetails;

@@ -1,34 +1,34 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  FaRocket,
+  FaRocket;
   FaBrain, 
   FaCloud, 
   FaShieldAlt, 
   FaChartLine, 
-  FaCogs,
-  FaLightbulb,
-  FaGlobe,
-  FaMobile,
-  FaDatabase,
-  FaNetworkWired,
-  FaRobot,
+  FaCogs;
+  FaLightbulb;
+  FaGlobe;
+  FaMobile;
+  FaDatabase;
+  FaNetworkWired;
+  FaRobot;
   FaSearch
-} from 'react-icons/fa',
+} from 'react-icons/fa';
 import { 
-  SiNextdotjs,
+  SiNextdotjs;
   SiReact, 
   SiTypescript, 
-  SiTailwindcss,
-  SiPrisma,
-  SiSupabase,
-  SiVercel,
-  SiDocker,
-  SiKubernetes,
-  SiAws,
-  SiGooglecloud,
+  SiTailwindcss;
+  SiPrisma;
+  SiSupabase;
+  SiVercel;
+  SiDocker;
+  SiKubernetes;
+  SiAws;
+  SiGooglecloud;
   SiMicrosoftazure
-} from 'react-icons/si',
+} from 'react-icons/si';
 
 interface Service {
   id: string,
@@ -41,7 +41,7 @@ interface Service {
     starter: number,
     professional: number,
     enterprise: number
-  },
+  };
   technologies: string[],
   benefits: string[]
 }
@@ -61,35 +61,35 @@ const serviceCategories: ServiceCategory[] = [
     description: 'Cutting-edge artificial intelligence and machine learning solutions',
     icon: <FaBrain className="w-8 h-8" />,
     color: 'from-purple-500 to-pink-500'
-  },
+  };
   {
     id: 'cloud',
     name: 'Cloud & DevOps',
     description: 'Scalable cloud infrastructure and development operations',
     icon: <FaCloud className="w-8 h-8" />,
     color: 'from-blue-500 to-cyan-500'
-  },
+  };
   {
     id: 'security',
     name: 'Cybersecurity',
     description: 'Advanced security solutions for modern threats',
     icon: <FaShieldAlt className="w-8 h-8" />,
     color: 'from-red-500 to-orange-500'
-  },
+  };
   {
     id: 'data',
     name: 'Data & Analytics',
     description: 'Comprehensive data management and analytics platforms',
     icon: <FaDatabase className="w-8 h-8" />,
     color: 'from-green-500 to-emerald-500'
-  },
+  };
   {
     id: 'iot',
     name: 'IoT & Edge Computing',
     description: 'Internet of Things and edge computing solutions',
     icon: <FaNetworkWired className="w-8 h-8" />,
     color: 'from-indigo-500 to-purple-500'
-  },
+  };
   {
     id: 'automation',
     name: 'Process Automation',
@@ -97,7 +97,7 @@ const serviceCategories: ServiceCategory[] = [
     icon: <FaRobot className="w-8 h-8" />,
     color: 'from-yellow-500 to-orange-500'
   }
-],
+];
 
 const services: Service[] = [
   {
@@ -108,17 +108,17 @@ const services: Service[] = [
     category: 'automation',
     features: [
       'Intelligent workflow automationNatural language processingPredictive analyticsReal-time decision makingCustom AI model trainingMulti-platform integration'
-    ],
+    ];
     pricing: {
       starter: 299,
       professional: 799,
       enterprise: 1999
-    },
+    };
     technologies: ['TensorFlowPyTorchOpenAILangChainReactNode.js'],
     benefits: [
       'Reduce manual tasks by 80%Improve accuracy by 95%24/7 automated operationsScalable AI infrastructure'
     ]
-  },
+  };
   {
     id: 'quantum-computing-platform',
     title: 'Quantum Computing Platform',
@@ -127,17 +127,17 @@ const services: Service[] = [
     category: 'ai-ml',
     features: [
       'Quantum algorithm optimizationHybrid classical-quantum computingQuantum machine learningCryptographic solutionsQuantum simulation toolsAPI access to quantum hardware'
-    ],
+    ];
     pricing: {
       starter: 999,
       professional: 2499,
       enterprise: 4999
-    },
+    };
     technologies: ['QiskitCirqPennyLanePythonC++CUDA'],
     benefits: [
       'Solve previously impossible problemsExponential speed improvementsFuture-proof technologyResearch and development support'
     ]
-  },
+  };
   {
     id: 'edge-ai-platform',
     title: 'Edge AI Computing Platform',
@@ -146,17 +146,17 @@ const services: Service[] = [
     category: 'iot',
     features: [
       'Edge device optimizationReal-time AI inferenceDistributed learningLow-latency processingOffline AI capabilitiesEdge-to-cloud synchronization'
-    ],
+    ];
     pricing: {
       starter: 199,
       professional: 599,
       enterprise: 1499
-    },
+    };
     technologies: ['TensorFlow LiteONNX RuntimeEdge TPURaspberry PiArduino'],
     benefits: [
       'Reduced latency by 90%Lower bandwidth costsEnhanced privacyScalable edge deployment'
     ]
-  },
+  };
   {
     id: 'quantum-cybersecurity',
     title: 'Quantum Cybersecurity Suite',
@@ -165,17 +165,17 @@ const services: Service[] = [
     category: 'security',
     features: [
       'Post-quantum cryptographyQuantum key distributionAdvanced threat detectionZero-trust architectureCompliance frameworksReal-time monitoring'
-    ],
+    ];
     pricing: {
       starter: 399,
       professional: 999,
       enterprise: 2499
-    },
+    };
     technologies: ['NIST PQCQKD protocolsZero TrustSIEMSOAR'],
     benefits: [
       'Future-proof securityQuantum-resistant encryptionComprehensive complianceAdvanced threat protection'
     ]
-  },
+  };
   {
     id: 'data-fabric-platform',
     title: 'Intelligent Data Fabric Platform',
@@ -184,17 +184,17 @@ const services: Service[] = [
     category: 'data',
     features: [
       'Unified data accessReal-time analyticsData governanceAI-powered insightsMulti-cloud supportData lineage tracking'
-    ],
+    ];
     pricing: {
       starter: 299,
       professional: 799,
       enterprise: 1999
-    },
+    };
     technologies: ['Apache KafkaApache SparkSnowflakeDatabricksAirflow'],
     benefits: [
       'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
     ]
-  },
+  };
   {
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
@@ -203,27 +203,27 @@ const services: Service[] = [
     category: 'cloud',
     features: [
       'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scalingMulti-cloud deploymentDevOps automation'
-    ],
+    ];
     pricing: {
       starter: 199,
       professional: 599,
       enterprise: 1499
-    },
+    };
     technologies: ['KubernetesDockerHelmArgoCDPrometheusGrafana'],
     benefits: [
       'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
     ]
   }
-],
+];
 
 const EnhancedServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedService, setSelectedService] = useState<Service | null>(null),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
 
   const filteredServices = useMemo(() => {
-    let filtered = services,
+    let filtered = services;
     
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
@@ -240,21 +240,21 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.pricing.starter - b.pricing.starter,
+          return a.pricing.starter - b.pricing.starter;
         case 'category':
-          return a.category.localeCompare(b.category),
+          return a.category.localeCompare(b.category);
         default: return a.title.localeCompare(b.title)
       }
     })
-  }, [selectedCategory, searchTerm, sortBy]),
+  }, [selectedCategory, searchTerm, sortBy]);
 
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service)
-  },
+  };
 
   const closeModal = () => {
     setSelectedService(null)
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -520,6 +520,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       </AnimatePresence>
     </div>
   )
-},
+};
 
 export default EnhancedServicesShowcase2025;

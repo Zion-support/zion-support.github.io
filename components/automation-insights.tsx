@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function AutomationInsightsPage() {
   const automationTrends = [
     {
@@ -10,7 +10,7 @@ export default function AutomationInsightsPage() {
       category: 'Trends',
       readTime: '8 min read',
       featured: true
-    },
+    };
     {
       id: 'autonomous-systems',
       title: 'Building Autonomous Systems',
@@ -18,7 +18,7 @@ export default function AutomationInsightsPage() {
       category: 'Implementation',
       readTime: '12 min read',
       featured: false
-    },
+    };
     {
       id: 'automation-roi',
       title: 'Calculating Automation ROI',
@@ -27,7 +27,7 @@ export default function AutomationInsightsPage() {
       readTime: '10 min read',
       featured: false
     }
-  ],
+  ];
 
   const automationTools = [
     {
@@ -36,14 +36,14 @@ export default function AutomationInsightsPage() {
       description: 'Our proprietary framework for building scalable automation solutions.',
       type: 'Framework',
       complexity: 'Advanced'
-    },
+    };
     {
       id: 'performance-monitor',
       title: 'Performance Monitoring Suite',
       description: 'Comprehensive tools for monitoring and optimizing automation performance.',
       type: 'Tool',
       complexity: 'Intermediate'
-    },
+    };
     {
       id: 'deployment-automation',
       title: 'Deployment Automation',
@@ -51,30 +51,30 @@ export default function AutomationInsightsPage() {
       type: 'Process',
       complexity: 'Beginner'
     }
-  ],
+  ];
 
   const successMetrics = [
     {
       metric: '227',
       label: 'Active Automations',
       description: 'Successfully deployed and running'
-    },
+    };
     {
       metric: '99.9%',
       label: 'Uptime',
       description: 'Reliable automation performance'
-    },
+    };
     {
       metric: '40%',
       label: 'Efficiency Gain',
       label: 'Average improvement across projects'
-    },
+    };
     {
-      metric: '2,960+',
+      metric: '2,960+';
       label: 'Pages Generated',
       description: 'Content created autonomously'
     }
-  ],
+  ];
 
   return (
     <>

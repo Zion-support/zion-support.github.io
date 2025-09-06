@@ -1,8 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
 
 export default function AISeosuitePage() {
   const features = [
@@ -48,23 +48,23 @@ export default function AISeosuitePage() {
       category: 'Keyword Research',
       icon: <Search className="w-6 h-6 text-blue-400" />,
       tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
-    },
+    };
     {
       category: 'On-Page SEO',
       icon: <Target className="w-6 h-6 text-green-400" />,
       tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
-    },
+    };
     {
       category: 'Technical SEO',
       icon: <Settings className="w-6 h-6 text-purple-400" />,
       tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
-    },
+    };
     {
       category: 'Analytics & Reporting',
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
-  ],
+  ];
 
   const pricingPlans = [
     {
@@ -74,11 +74,11 @@ export default function AISeosuitePage() {
       description: 'Perfect for small websites and blogs',
       features: [
         'Up to 5 websitesBasic keyword researchMonthly site auditsEmail supportBasic reportingMobile app access'
-      ],
+      ];
       popular: false,
       color: 'border-gray-600',
       buttonColor: 'bg-gray-600 hover:bg-gray-700'
-    },
+    };
     {
       name: 'Professional',
       price: '$129',
@@ -86,11 +86,11 @@ export default function AISeosuitePage() {
       description: 'Ideal for growing businesses and agencies',
       features: [
         'Up to 25 websitesAdvanced keyword researchWeekly site auditsPriority supportAdvanced reportingCompetitor analysisAPI accessWhite-label reports'
-      ],
+      ];
       popular: true,
       color: 'border-blue-500',
       buttonColor: 'bg-blue-600 hover:bg-blue-700'
-    },
+    };
     {
       name: 'Enterprise',
       price: '$399',
@@ -98,12 +98,12 @@ export default function AISeosuitePage() {
       description: 'For large organizations and enterprises',
       features: [
         'Unlimited websitesFull SEO suiteDaily site auditsDedicated supportCustom reportingAdvanced analyticsSLA guaranteeOn-premise option'
-      ],
+      ];
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-  ],
+  ];
 
   const integrations = [
     { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
@@ -114,41 +114,41 @@ export default function AISeosuitePage() {
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
     { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
-  ],
+  ];
 
   const useCases = [
     {
       title: 'E-commerce Websites',
-      description: 'Optimize product pages, category pages, and search functionality for better conversions.',
+      description: 'Optimize product pages, category pages, and search functionality for better conversions.';
       icon: '🛍️',
       benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
-    },
+    };
     {
       title: 'Content Marketing',
-      description: 'Optimize blog posts, articles, and content for search engines and user engagement.',
+      description: 'Optimize blog posts, articles, and content for search engines and user engagement.';
       icon: '📝',
       benefits: ['Better content visibilityHigher engagement ratesMore organic trafficAuthority building']
-    },
+    };
     {
       title: 'Local Businesses',
       description: 'Improve local search visibility and attract customers in your area.',
       icon: '📍',
       benefits: ['Local search dominanceIncreased foot trafficBetter customer acquisitionCompetitive positioning']
-    },
+    };
     {
       title: 'SaaS Companies',
-      description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.',
+      description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.';
       icon: '💻',
       benefits: ['Higher conversion ratesBetter user experienceReduced acquisition costsMarket expansion']
     }
-  ],
+  ];
 
   const successMetrics = [
     { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
-  ],
+  ];
 
   return (
     <>

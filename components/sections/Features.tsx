@@ -1,6 +1,6 @@
-import React from 'react',
-import Card from '../ui/Card',
-import { Zap } from 'lucide-react',
+import React from 'react';
+import Card from '../ui/Card';
+import { Zap } from 'lucide-react';
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -18,14 +18,14 @@ interface FeaturesProps {
 }
 
 const Features: React.FC<FeaturesProps> = ({
-  title,
-  subtitle,
-  features,
+  title;
+  subtitle;
+  features;
   columns = 3}) => {
   const gridCols = {
-    2: 'md:grid-cols-2',
-    3: 'md:grid-cols-2 lg:grid-cols-3',
-    4: 'md:grid-cols-2 lg:grid-cols-4'},
+    2: 'md:grid-cols-2';
+    3: 'md:grid-cols-2 lg:grid-cols-3';
+    4: 'md:grid-cols-2 lg:grid-cols-4'};
 
   return (
     <section className="py-24 bg-black relative overflow-hidden">
@@ -71,6 +71,6 @@ const Features: React.FC<FeaturesProps> = ({
       </div>
     </section>
   )
-},
+};
 
-export default Features,
+export default Features;

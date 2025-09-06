@@ -1,35 +1,35 @@
 
-import { useAuth } from "@/hooks/useAuth",
+import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-import { JobMatchesCard } from "./JobMatchesCard",
-import { NoJobsCard } from "./NoJobsCard",
+import { Badge } from "@/components/ui/badge";
+import { useJobSuggestions } from "@/hooks/useJobSuggestions";
+import { JobMatchesCard } from "./JobMatchesCard";
+import { NoJobsCard } from "./NoJobsCard";
 interface SuggestedJobsProps {
   talentId?: string
 }
 
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
+  const { user } = useAuth();
+  const currentTalentId = talentId || user?.id;
   const { 
-    isLoading,
+    isLoading;
     updateJobMatchStatus, 
     categorizedMatches: { 
       newMatches, 
       viewedMatches, 
       appliedMatches 
     } 
-  } = useJobSuggestions(currentTalentId),
+  } = useJobSuggestions(currentTalentId);
 
   const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied'),
+    updateJobMatchStatus(matchId, 'applied');
     // In a real app, this might redirect to application form or open a modal
-  },
+  };
 
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
-  },
+  };
 
   if (isLoading) {
     return (

@@ -1,28 +1,28 @@
 
-import { useState } from "react",
+import { useState } from "react";
 import { Star } from 'lucide-react'
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form";
 import {
-  RadioGroup,
-  RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
+  RadioGroup;
+  RadioGroupItem} from "@/components/ui/radio-group";
+import { Switch } from "@/components/ui/switch";
+import { Review } from "@/types/reviews";
 interface ReviewFormValues {
-  rating?: number,
-  review_text?: string,
-  communication_rating?: number,
-  quality_rating?: number,
-  timeliness_rating?: number,
-  would_work_again?: boolean,
+  rating?: number;
+  review_text?: string;
+  communication_rating?: number;
+  quality_rating?: number;
+  timeliness_rating?: number;
+  would_work_again?: boolean;
   is_anonymous?: boolean
 }
 
@@ -31,18 +31,18 @@ interface ReviewFormProps {
   revieweeId: string,
   revieweeName: string,
   onSubmit: (data: any) => Promise<boolean>, 
-  defaultValues?: Review,
+  defaultValues?: Review;
   isSubmitting: boolean
 }
 
 export function ReviewForm({
-  projectId,
-  revieweeId,
-  revieweeName,
-  onSubmit,
-  defaultValues,
+  projectId;
+  revieweeId;
+  revieweeName;
+  onSubmit;
+  defaultValues;
   isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
+  const [hoveredStar, setHoveredStar] = useState<number>(0);
   
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
@@ -60,21 +60,21 @@ export function ReviewForm({
       timeliness_rating: undefined,
       would_work_again: undefined,
       is_anonymous: false}
-  }),
+  });
   
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
-      ...values,
+      ...values;
       project_id: projectId,
       reviewee_id: revieweeId},
     
-    const success = await onSubmit(formattedData),
+    const success = await onSubmit(formattedData);
     if (success) {
       form.reset()
     }
-  },
+  };
   
-  const watchRating = form.watch("rating"),
+  const watchRating = form.watch("rating");
   
   return (
     <Form {...form}>

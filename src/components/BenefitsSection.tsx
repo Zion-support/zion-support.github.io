@@ -1,11 +1,11 @@
 
-import { GradientHeading } from "./GradientHeading",
-import { FeatureCard } from "./FeatureCard",
+import { GradientHeading } from "./GradientHeading";
+import { FeatureCard } from "./FeatureCard";
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 interface BenefitsSectionProps {
-  className?: string,
+  className?: string;
   style?: React.CSSProperties
 }
 
@@ -28,8 +28,8 @@ const getBenefits = (t: any) => [
     icon: <TrendingDown className="w-8 h-8" />}],
 
 export function BenefitsSection({ className, style }: BenefitsSectionProps) {
-  const { t } = useTranslation(),
-  const benefits = getBenefits(t),
+  const { t } = useTranslation();
+  const benefits = getBenefits(t);
   
   return (
     <section className={cn("py-20 bg-zion-blue-light", className)} style={style}>

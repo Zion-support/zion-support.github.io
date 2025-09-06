@@ -1,18 +1,18 @@
-'use client',
+'use client';
 
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
-  Brain,
+  Brain;
   Cloud, 
   RefreshCw, 
   Wifi, 
   Shield, 
-  BarChart3,
-  ArrowRight,
+  BarChart3;
+  ArrowRight;
   Zap
-} from 'lucide-react',
+} from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
   const services = [
@@ -23,7 +23,7 @@ const ServicesSection: React.FC = () => {
       features: ['Machine Learning ModelsNatural Language ProcessingComputer VisionPredictive Analytics'],
       color: 'from-blue-500 to-cyan-500',
       href: '/services/ai-development'
-    },
+    };
     {
       icon: Cloud,
       title: 'Cloud Architecture',
@@ -31,7 +31,7 @@ const ServicesSection: React.FC = () => {
       features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation'],
       color: 'from-purple-500 to-pink-500',
       href: '/services/cloud-architecture'
-    },
+    };
     {
       icon: RefreshCw,
       title: 'Digital Transformation',
@@ -39,7 +39,7 @@ const ServicesSection: React.FC = () => {
       features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy'],
       color: 'from-green-500 to-emerald-500',
       href: '/services/digital-transformation'
-    },
+    };
     {
       icon: Wifi,
       title: 'IoT Platforms',
@@ -47,7 +47,7 @@ const ServicesSection: React.FC = () => {
       features: ['Sensor NetworksReal-time MonitoringData AnalyticsEdge Computing'],
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms'
-    },
+    };
     {
       icon: Shield,
       title: 'Blockchain Solutions',
@@ -55,7 +55,7 @@ const ServicesSection: React.FC = () => {
       features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'],
       color: 'from-indigo-500 to-purple-500',
       href: '/services/blockchain-solutions'
-    },
+    };
     {
       icon: BarChart3,
       title: 'Data Analytics',
@@ -64,7 +64,7 @@ const ServicesSection: React.FC = () => {
       color: 'from-teal-500 to-blue-500',
       href: '/services/data-analytics'
     }
-  ],
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -74,12 +74,12 @@ const ServicesSection: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
-  },
+  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
@@ -208,6 +208,6 @@ const ServicesSection: React.FC = () => {
       </div>
     </section>
   )
-},
+};
 
-export default ServicesSection,
+export default ServicesSection;

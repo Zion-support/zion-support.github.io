@@ -1,20 +1,20 @@
 
-import React from "react",
-import { WorkspaceHeader } from "./WorkspaceHeader",
-import { SharedInbox } from "./SharedInbox",
-import { TeamStats } from "./TeamStats",
-import { QuickActions } from "./QuickActions",
-import { RecentActivity } from "./RecentActivity",
-import { TalentPool } from "./TalentPool",
+import React from "react";
+import { WorkspaceHeader } from "./WorkspaceHeader";
+import { SharedInbox } from "./SharedInbox";
+import { TeamStats } from "./TeamStats";
+import { QuickActions } from "./QuickActions";
+import { RecentActivity } from "./RecentActivity";
+import { TalentPool } from "./TalentPool";
 export interface Company {
   id: string,
   name: string,
-  logoUrl?: string,
+  logoUrl?: string;
   theme?: {
     primaryColor: string,
     backgroundColor: string,
     textColor: string
-  },
+  };
   plan: string,
   teamSize: number,
   teamLimit: number,

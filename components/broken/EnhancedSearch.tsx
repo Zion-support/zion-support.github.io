@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react',
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
 
 interface SearchResult {
   id: string,
@@ -10,9 +10,9 @@ interface SearchResult {
   type: string,
   slug: string,
   relevance: number,
-  features?: string[],
+  features?: string[];
   pricing?: {
-    starter?: string,
+    starter?: string;
     enterprise?: string
   }
 }
@@ -20,27 +20,27 @@ interface SearchResult {
 interface SearchProps {
   onSearch: (query: string) => void,
   onResultSelect: (result: SearchResult) => void,
-  placeholder?: string,
-  className?: string,
+  placeholder?: string;
+  className?: string;
   showFilters?: boolean
 }
 
 const EnhancedSearch: React.FC<SearchProps> = ({
-  onSearch,
-  onResultSelect,
-  placeholder = "Search revolutionary services...",
-  className = "",
+  onSearch;
+  onResultSelect;
+  placeholder = "Search revolutionary services...";
+  className = "";
   showFilters = true
 }) => {
-  const [query, setQuery] = useState(''),
-  const [isSearching, setIsSearching] = useState(false),
-  const [showResults, setShowResults] = useState(false),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [selectedFilters, setSelectedFilters] = useState<string[]>([]),
-  const [searchHistory, setSearchHistory] = useState<string[]>([]),
+  const [query, setQuery] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
+  const [searchHistory, setSearchHistory] = useState<string[]>([]);
   const [popularSearches] = useState([
     'AI ConsciousnessQuantum ComputingCybersecurityBusiness IntelligenceSpace TechnologyAutonomous Systems'
-  ]),
+  ]);
 
   // Mock search results - in real app, this would come from API
   const mockSearchResults: SearchResult[] = [
@@ -54,7 +54,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 95,
       features: ['Emotional IntelligenceSelf-AwarenessConsciousness Evolution'],
       pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
-    },
+    };
     {
       id: '2',
       name: 'Quantum AI Hybrid Computing',
@@ -65,7 +65,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       relevance: 92,
       features: ['Quantum SupremacyAI IntegrationHybrid Computing'],
       pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
-    },
+    };
     {
       id: '3',
       name: 'Quantum Cybersecurity Intelligence',
@@ -77,70 +77,70 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       features: ['Quantum ResistanceThreat PredictionAI Security'],
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
     }
-  ],
+  ];
 
   const categories = [
     { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { id: 'quantum', name: 'Quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-500' },
     { id: 'business', name: 'Business', icon: Rocket, color: 'from-emerald-500 to-teal-500' }
-  ],
+  ];
 
   // Debounced search function
   const debouncedSearch = useCallback(
     useMemo(
       () => debounce((searchQuery: string) => {
         if (searchQuery.trim().length < 2) {
-          setResults([]),
-          setShowResults(false),
+          setResults([]);
+          setShowResults(false);
           return
         }
 
-        setIsSearching(true),
+        setIsSearching(true);
         
         // Simulate API call delay
         setTimeout(() => {
           const filteredResults = mockSearchResults.filter(result => {
             const matchesQuery = result.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                                result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                               result.category.toLowerCase().includes(searchQuery.toLowerCase()),
+                               result.category.toLowerCase().includes(searchQuery.toLowerCase());
             
             const matchesFilters = selectedFilters.length === 0 || 
                                  selectedFilters.some(filter => 
                                    result.category.toLowerCase().includes(filter.toLowerCase()) ||
                                    result.type.toLowerCase().includes(filter.toLowerCase())
-                                 ),
+                                 );
             
             return matchesQuery && matchesFilters
-          }),
+          });
 
           // Sort by relevance
-          const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance),
+          const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
           
-          setResults(sortedResults),
-          setShowResults(true),
+          setResults(sortedResults);
+          setShowResults(true);
           setIsSearching(false)
         }, 300)
-      }, 300),
+      }, 300);
       [selectedFilters]
-    ),
+    );
     [selectedFilters]
-  ),
+  );
 
   useEffect(() => {
     debouncedSearch(query)
-  }, [query, debouncedSearch]),
+  }, [query, debouncedSearch]);
 
   // Handle search input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value,
-    setQuery(value),
+    const value = e.target.value;
+    setQuery(value);
     
     if (value.trim().length === 0) {
-      setShowResults(false),
+      setShowResults(false);
       setResults([])
     }
-  }, [suggestions, selectedIndex, query, handleSearch]),
+  }, [suggestions, selectedIndex, query, handleSearch]);
 
   // Close search on outside click
   useEffect(() => {
@@ -148,34 +148,34 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
-    },
+    };
 
   // Handle search submission
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     if (query.trim()) {
-      onSearch(query),
-      addToSearchHistory(query),
+      onSearch(query);
+      addToSearchHistory(query);
       setShowResults(false)
     }
-  }, [router, handleSearch]),
+  }, [router, handleSearch]);
 
   // Handle quick action click
   const handleQuickAction = useCallback((action: string) => {
-    router.push(action),
+    router.push(action);
     setIsOpen(false)
-  }, [router]),
+  }, [router]);
 
   // Add search to history
   const addToSearchHistory = (searchTerm: string) => {
-    const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),
-    setSearchHistory(newHistory),
+    const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5);
+    setSearchHistory(newHistory);
     localStorage.setItem('zion-search-history', JSON.stringify(newHistory))
-  },
+  };
 
   // Load search history from localStorage
   useEffect(() => {
-    const savedHistory = localStorage.getItem('zion-search-history'),
+    const savedHistory = localStorage.getItem('zion-search-history');
     if (savedHistory) {
       try {
         setSearchHistory(JSON.parse(savedHistory))
@@ -183,7 +183,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
         console.error('Failed to parse search history:', error)
       }
     }
-  }, []),
+  }, []);
 
   // Handle filter toggle
   const toggleFilter = (filterId: string) => {
@@ -192,21 +192,21 @@ const EnhancedSearch: React.FC<SearchProps> = ({
         ? prev.filter(id => id !== filterId)
         : [...prev, filterId]
     )
-  },
+  };
 
   // Handle result selection
   const handleResultSelect = (result: SearchResult) => {
-    onResultSelect(result),
-    setShowResults(false),
+    onResultSelect(result);
+    setShowResults(false);
     setQuery('')
-  },
+  };
 
   // Clear search
   const clearSearch = () => {
-    setQuery(''),
-    setShowResults(false),
+    setQuery('');
+    setShowResults(false);
     setResults([])
-  },
+  };
 
   return (
     <div className={`relative ${className}`}>
@@ -433,7 +433,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       </AnimatePresence>
     </div>
   )
-},
+};
 
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
@@ -442,9 +442,9 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout),
+    clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait)
   }
 }
 
-export default EnhancedSearch,
+export default EnhancedSearch;

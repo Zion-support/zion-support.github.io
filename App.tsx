@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { JSX, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -44,25 +43,22 @@ import AccessibilityProvider from './components/AccessibilityProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 interface Service {
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  features: string[];
-  href: string;
-  color: string;
+  title: string,
+  description: string,
+  icon: React.ComponentType<{ className?: string }>,
+  features: string[],
+  href: string,
+  color: string,
 }
 
 interface Testimonial {
-  name: string;
-  company: string;
-  content: string;
-  rating: number;
+  name: string,
+  company: string,
+  content: string,
+  rating: number,
   avatar?: string;
 }
 
-=======
-import React, { JSX } from 'react';
->>>>>>> pr-11992
 export default function App(): JSX.Element {
   const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -125,7 +121,7 @@ export default function App(): JSX.Element {
       href: '/enterprise',
       color: 'indigo'
     }
-  ];
+  ],
 
   const testimonials: Testimonial[] = [
     {
@@ -146,21 +142,20 @@ export default function App(): JSX.Element {
       content: 'Outstanding IT services and cloud solutions. They delivered on time and within budget.',
       rating: 5
     }
-  ];
+  ],
 
   const stats = [
     { label: 'Micro SaaS Products', value: '150+', icon: Code },
     { label: 'AI Services', value: '100+', icon: Cpu },
     { label: 'IT Solutions', value: '100+', icon: Cloud },
     { label: 'Happy Clients', value: '500+', icon: Users }
-  ];
+  ],
 
   if (isLoading) {
     return <LoadingSpinner fullScreen text="Loading Zion Tech Group..." />;
   }
 
   return (
-<<<<<<< HEAD
     <AccessibilityProvider>
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <SEOHead 
@@ -341,7 +336,7 @@ export default function App(): JSX.Element {
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-slate-300 mb-6 italic">"{testimonial.content}"</p>
+                    <p className="text-slate-300 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-slate-400">{testimonial.company}</div>
@@ -394,10 +389,3 @@ export default function App(): JSX.Element {
     </AccessibilityProvider>
   );
 }
-=======
-    <main>
-      <h1>Hello App</h1>
-    </main>
-  )
-}
->>>>>>> pr-11992

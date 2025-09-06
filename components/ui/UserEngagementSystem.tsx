@@ -1,10 +1,10 @@
-import React from 'react',
+import React from 'react';
 export type EmptyStateProps = {
-  emoji?: string,
+  emoji?: string;
   title: string,
   message: string,
   action?: React.ReactNode
-},
+};
 
 export default function EmptyState({ emoji = '✨', title, message, action }: EmptyStateProps) {
   return (

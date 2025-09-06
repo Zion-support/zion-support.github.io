@@ -1,88 +1,88 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { 
-	Menu,
+	Menu;
 	X, 
 	ChevronDown, 
-	ChevronRight,
-	Phone,
-	Mail,
-	MapPin,
-	Globe,
-	ArrowRight,
-	Sparkles,
-	Brain,
-	Atom,
-	Shield,
-	DollarSign,
-	FileText,
-	BarChart3,
-	MessageSquare,
-	Truck,
-	Users,
-	Database,
-	Cpu,
-	Cloud,
-	Play,
-	Search,
-	ShieldCheck,
-	TrendingUp,
-	Rocket,
-	Zap,
-	Check,
-	Star,
-	Clock,
-	Target,
-	Building,
-	Award,
-	ChartBar,
-	Lock,
-	Smartphone,
-	Palette,
-	Calendar,
-	CreditCard,
-	Settings,
-	Code,
-	BookOpen,
-	Activity,
-	Bot,
-	ChevronRight as ChevronRightIcon,
-	Eye,
-	FlaskConical,
+	ChevronRight;
+	Phone;
+	Mail;
+	MapPin;
+	Globe;
+	ArrowRight;
+	Sparkles;
+	Brain;
+	Atom;
+	Shield;
+	DollarSign;
+	FileText;
+	BarChart3;
+	MessageSquare;
+	Truck;
+	Users;
+	Database;
+	Cpu;
+	Cloud;
+	Play;
+	Search;
+	ShieldCheck;
+	TrendingUp;
+	Rocket;
+	Zap;
+	Check;
+	Star;
+	Clock;
+	Target;
+	Building;
+	Award;
+	ChartBar;
+	Lock;
+	Smartphone;
+	Palette;
+	Calendar;
+	CreditCard;
+	Settings;
+	Code;
+	BookOpen;
+	Activity;
+	Bot;
+	ChevronRight as ChevronRightIcon;
+	Eye;
+	FlaskConical;
 	Link as LinkIcon
-} from 'lucide-react',
-import Button from '../ui/Button',
+} from 'lucide-react';
+import Button from '../ui/Button';
 export default function NeoFuturisticNavigation() {
-	const [isOpen, setIsOpen] = useState(false),
-	const [isScrolled, setIsScrolled] = useState(false),
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-	const router = useRouter(),
+	const [isOpen, setIsOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+	const router = useRouter();
 
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	},
+	};
 
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 20)
-		},
+		};
 
-		window.addEventListener('scroll', handleScroll),
+		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll)
-	}, []),
+	}, []);
 
 	const toggleDropdown = (dropdown: string) => {
 		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-	},
+	};
 
 	const closeMobileMenu = () => {
-		setIsOpen(false),
+		setIsOpen(false);
 		setActiveDropdown(null)
-	},
+	};
 
 	const isActive = (path: string) => router.pathname === path,
 
@@ -97,7 +97,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Quantum Optimization', description: 'Quantum algorithms for complex problems', price: '$199/month' },
 				{ name: 'Quantum Simulation', description: 'Advanced quantum simulations', price: '$399/month' }
 			]
-		},
+		};
 		{
 			name: 'AI & Machine Learning',
 			description: 'Advanced artificial intelligence and ML platforms',
@@ -108,7 +108,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'AI Analytics Platform', description: 'Advanced business intelligence', price: '$99/month' },
 				{ name: 'AI Automation Suite', description: 'Complete business automation', price: '$149/month' }
 			]
-		},
+		};
 		{
 			name: 'Cybersecurity',
 			description: 'Next-generation security solutions',
@@ -119,7 +119,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'AI Threat Detection', description: 'Intelligent security monitoring', price: '$89/month' },
 				{ name: 'Zero-Trust Platform', description: 'Advanced access control', price: '$129/month' }
 			]
-		},
+		};
 		{
 			name: 'Blockchain & Web3',
 			description: 'Future-proof blockchain and decentralized solutions',
@@ -130,7 +130,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'DeFi Protocol Suite', description: 'Complete DeFi solutions', price: '$199/month' },
 				{ name: 'NFT Marketplace', description: 'AI-curated NFT platform', price: '$99/month' }
 			]
-		},
+		};
 		{
 			name: 'IoT & Smart Cities',
 			description: 'Connected devices and intelligent infrastructure',
@@ -141,7 +141,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Smart City Suite', description: 'Complete urban intelligence', price: '$299/month' },
 				{ name: 'Industrial IoT', description: 'Manufacturing automation', price: '$249/month' }
 			]
-		},
+		};
 		{
 			name: 'Metaverse & VR/AR',
 			description: 'Immersive digital experiences and virtual worlds',
@@ -152,7 +152,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'VR Development', description: 'Complete VR platform', price: '$299/month' },
 				{ name: 'AR Solutions', description: 'Augmented reality platform', price: '$199/month' }
 			]
-		},
+		};
 		{
 			name: 'Robotics & Automation',
 			description: 'Intelligent automation and robotic systems',
@@ -163,7 +163,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Manufacturing AI', description: 'Autonomous manufacturing', price: '$199/month' },
 				{ name: 'Service Robotics', description: 'Intelligent service automation', price: '$349/month' }
 			]
-		},
+		};
 		{
 			name: 'Energy & Sustainability',
 			description: 'Green technology and energy optimization',
@@ -174,7 +174,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Smart Grid', description: 'Intelligent energy distribution', price: '$199/month' },
 				{ name: 'Sustainability AI', description: 'Environmental impact optimization', price: '$149/month' }
 			]
-		},
+		};
 		{
 			name: 'Financial Technology',
 			description: 'Innovative fintech and trading solutions',
@@ -185,7 +185,7 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'AI Risk Management', description: 'Intelligent financial risk analysis', price: '$399/month' },
 				{ name: 'Blockchain Finance', description: 'DeFi and blockchain solutions', price: '$199/month' }
 			]
-		},
+		};
 		{
 			name: 'Biotechnology & Healthcare',
 			description: 'AI-powered healthcare and biotech solutions',
@@ -197,14 +197,14 @@ export default function NeoFuturisticNavigation() {
 				{ name: 'Genomic AI', description: 'Advanced genetic analysis', price: '$399/month' }
 			]
 		}
-	],
+	];
 
 	const companyInfo = [
 		{ name: 'About Zion Tech Group', description: 'Leading the global micro SaaS revolution', icon: <Rocket className="w-5 h-5" />, link: '/about' },
 		{ name: 'Careers', description: 'Join our revolutionary team', icon: <Star className="w-5 h-5" />, link: '/careers' },
 		{ name: 'News & Updates', description: 'Latest announcements and releases', icon: <TrendingUp className="w-5 h-5" />, link: '/news' },
 		{ name: 'Contact', description: 'Talk to our team 24/7', icon: <Phone className="w-5 h-5" />, link: '/contact' }
-	],
+	];
 
 	const resources = [
 		{ name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' },
@@ -212,7 +212,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'Case Studies', description: 'Real-world success stories', icon: <BarChart3 className="w-5 h-5" />, link: '/case-studies' },
 		{ name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' },
 		{ name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' }
-	],
+	];
 
 	// Popular quick links to flagship services
 	const popularServiceLinks = [
@@ -225,7 +225,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'AI IoT Platform', href: '/ai-iot-platform' },
 		{ name: 'AI Sales Automation', href: '/ai-sales-automation' },
 		{ name: 'AI Market Research', href: '/ai-market-research' }
-	],
+	];
 
 	// Newly added real services quick links
 	const newServiceLinks = [
@@ -235,7 +235,7 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'GitHub Ops Health Dashboard', href: '/services/github-ops-health-dashboard' },
 		{ name: 'Error Budget Automation', href: '/services/error-budget-automation' },
 		{ name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
-	],
+	];
 
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

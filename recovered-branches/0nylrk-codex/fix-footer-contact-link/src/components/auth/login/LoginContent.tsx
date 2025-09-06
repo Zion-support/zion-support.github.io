@@ -1,5 +1,5 @@
 
-import { LoginCard } from "./LoginCard",
+import { LoginCard } from "./LoginCard";
 export function LoginContent() {
   return (
     <div className="flex min-h-screen bg-zion-blue">

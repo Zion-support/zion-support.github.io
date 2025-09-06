@@ -1,20 +1,20 @@
 
-import { ContractTemplate } from "@/types/contracts",
-import { Button } from "@/components/ui/button",
-import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { Card, CardContent } from "@/components/ui/card",
-import { Separator } from "@/components/ui/separator",
+import { ContractTemplate } from "@/types/contracts";
+import { Button } from "@/components/ui/button";
+import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react";
+import { useContractTemplates } from "@/hooks/useContractTemplates";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react",
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle} from "@/components/ui/alert-dialog";
+import { useState } from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -23,28 +23,28 @@ interface TemplateListProps {
 }
 
 export function TemplateList({
-  templates,
-  isLoading,
-  onSelect,
+  templates;
+  isLoading;
+  onSelect;
   onEdit
 }: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
 
   const handleDeleteClick = (templateId: string) => {
     setTemplateToDelete(templateId)
-  },
+  };
 
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
-      await deleteTemplate.mutateAsync(templateToDelete),
+      await deleteTemplate.mutateAsync(templateToDelete);
       setTemplateToDelete(null)
     }
-  },
+  };
 
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
-  },
+  };
 
   if (isLoading) {
     return (

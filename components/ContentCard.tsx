@@ -1,5 +1,5 @@
-import React from 'react',
-import Link from 'next/link',
+import React from 'react';
+import Link from 'next/link';
 interface ContentCardProps {
   title: string,
   description: string,
@@ -7,18 +7,18 @@ interface ContentCardProps {
   icon: string,
   color: string,
   glow: string,
-  date?: string,
-  category?: string
+  date?: string;
+  category?: string;
 }
 
 const ContentCard: React.FC<ContentCardProps> = ({
-  title,
-  description,
-  href,
-  icon,
-  color,
-  glow,
-  date,
+  title;
+  description;
+  href;
+  icon;
+  color;
+  glow;
+  date;
   category
 }) => {
   return (
@@ -69,6 +69,6 @@ const ContentCard: React.FC<ContentCardProps> = ({
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover: opacity-100 transition-opacity duration-500" />
     </Link>
   )
-},
+};
 
-export default ContentCard,
+export default ContentCard;

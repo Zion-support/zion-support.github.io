@@ -1,41 +1,41 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 import { 
-  SERVICE_CATEGORIES,
+  SERVICE_CATEGORIES;
   ALL_SERVICES, 
   AI_SERVICES, 
   IT_SERVICES, 
-  MICRO_SAAS_SERVICES,
-  CYBERSECURITY_SERVICES,
-  DATA_ANALYTICS_SERVICES,
+  MICRO_SAAS_SERVICES;
+  CYBERSECURITY_SERVICES;
+  DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS
-} from '@/data/servicesData',
-import { ServiceCategory, ServiceSolution } from '@/types/services',
+} from '@/data/servicesData';
+import { ServiceCategory, ServiceSolution } from '@/types/services';
 
 export function ServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const filteredServices = ALL_SERVICES.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch
-  }),
+  });
 
   const getServicesByCategory = (categoryId: string) => {
     switch (categoryId) {
-      case 'ai-services': return AI_SERVICES,
-      case 'it-services': return IT_SERVICES,
-      case 'micro-saas': return MICRO_SAAS_SERVICES,
-      case 'cybersecurity': return CYBERSECURITY_SERVICES,
-      case 'data-analytics': return DATA_ANALYTICS_SERVICES,
-      case 'cloud-solutions': return CLOUD_SOLUTIONS,
+      case 'ai-services': return AI_SERVICES;
+      case 'it-services': return IT_SERVICES;
+      case 'micro-saas': return MICRO_SAAS_SERVICES;
+      case 'cybersecurity': return CYBERSECURITY_SERVICES;
+      case 'data-analytics': return DATA_ANALYTICS_SERVICES;
+      case 'cloud-solutions': return CLOUD_SOLUTIONS;
       default: return ALL_SERVICES
     }
-  },
+  };
 
-  const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory),
+  const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -228,16 +228,16 @@ interface ServiceCardProps {
 }
 
 function ServiceCard({ service }: ServiceCardProps) {
-  const [showDetails, setShowDetails] = useState(false),
+  const [showDetails, setShowDetails] = useState(false);
 
   const getPopularPlan = () => {
-    if (service.pricing.professional.popular) return service.pricing.professional,
-    if (service.pricing.basic.popular) return service.pricing.basic,
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise,
+    if (service.pricing.professional.popular) return service.pricing.professional;
+    if (service.pricing.basic.popular) return service.pricing.basic;
+    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
     return service.pricing.professional
-  },
+  };
 
-  const popularPlan = getPopularPlan(),
+  const popularPlan = getPopularPlan();
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">

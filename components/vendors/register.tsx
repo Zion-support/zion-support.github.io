@@ -1,16 +1,16 @@
-import { FormEvent, useState } from 'react',
+import { FormEvent, useState } from 'react';
 
 export default function VendorRegisterPage() {
-  const [loading, setLoading] = useState(false),
-  const [message, setMessage] = useState<string | null>(null),
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState<string | null>(null);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault(),
-    setLoading(true),
-    setMessage(null),
-    const form = e.currentTarget,
-    const formData = new FormData(form),
-    const payload = Object.fromEntries(formData.entries()),
+    e.preventDefault();
+    setLoading(true);
+    setMessage(null);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
     try {
       const res = await fetch('/api/vendors/register', {
         method: 'POST',
@@ -21,17 +21,17 @@ export default function VendorRegisterPage() {
           servicesOffered: String(payload.servicesOffered || '')
             .split()
             .map(s => s.trim())
-            .filter(Boolean),
+            .filter(Boolean);
           teamSize: Number(payload.teamSize || 0),
           about: String(payload.about || ''),
           verificationDocs: String(payload.verificationDocs || '')
             .split()
             .map(s => s.trim())
-            .filter(Boolean),
+            .filter(Boolean);
           caseStudies: []})}),
-      const data = await res.json(),
-      if (!res.ok) throw new Error(data?.error || 'Failed to submit'),
-      setMessage('Application submitted. Await approval.'),
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Failed to submit');
+      setMessage('Application submitted. Await approval.');
       form.reset()
     } catch (err: any) {
       setMessage(err.message)

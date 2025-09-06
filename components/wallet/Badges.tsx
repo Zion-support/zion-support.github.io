@@ -1,9 +1,9 @@
-import React from "react",
+import React from "react";
 export type Badge = {
   id: string,
   label: string,
   threshold: number, // token balance threshold
-},
+};
 
 const BADGES: Badge[] = [
   { id: "starter", label: "Starter", threshold: 50 },
@@ -20,7 +20,7 @@ export function currentBadge(balance: number): Badge | null {
 }
 
 export default function Badges({ balance }: { balance: number }) {
-  const active = currentBadge(balance),
+  const active = currentBadge(balance);
   return (
     <div className="flex gap-2 items-center flex-wrap">
       {BADGES.map((b) => (

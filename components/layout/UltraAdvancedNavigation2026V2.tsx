@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react',
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 
 export default function UltraAdvancedNavigation2026V2() {
-  const [isOpen, setIsOpen] = useState(false),
-  const [isScrolled, setIsScrolled] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
-    },
-    window.addEventListener('scroll', handleScroll),
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
+  }, []);
 
   const navigationItems = [
     {
       name: 'Home',
       href: '/',
       icon: <Zap className="w-4 h-4" />
-    },
+    };
     {
       name: 'Services',
       href: '/services',
@@ -44,34 +44,34 @@ export default function UltraAdvancedNavigation2026V2() {
         { name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className="w-4 h-4" /> },
         { name: 'Global Solutions', href: '/services?category=global', icon: <Globe className="w-4 h-4" /> }
       ]
-    },
+    };
     {
       name: 'Showcase',
       href: '/enhanced-services-showcase-2026-v2',
       icon: <Rocket className="w-4 h-4" />
-    },
+    };
     {
       name: 'Pricing',
       href: '/pricing-enhanced-2026',
       icon: <Database className="w-4 h-4" />
-    },
+    };
     {
       name: 'About',
       href: '/about',
       icon: <Globe className="w-4 h-4" />
-    },
+    };
     {
       name: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
     }
-  ],
+  ];
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  },
+  };
 
   return (
     <>

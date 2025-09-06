@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 const UltraFuturisticBackground2047: React.FC = () => {
-  const [isClient, setIsClient] = useState(false),
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true)
-  }, []),
+  }, []);
 
   if (!isClient) {
     return (
@@ -24,7 +24,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 opacity-20"
           animate={{
-            rotate: [0, 360],
+            rotate: [0, 360];
             scale: [1, 1.2, 1]}}
           transition={{
             duration: 20,
@@ -38,7 +38,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 opacity-15"
           animate={{
-            rotate: [360, 0],
+            rotate: [360, 0];
             scale: [1, 0.8, 1]}}
           transition={{
             duration: 15,
@@ -53,7 +53,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute bottom-32 left-1/4 w-16 h-16 opacity-10"
           animate={{
-            y: [0, -30, 0],
+            y: [0, -30, 0];
             x: [0, 20, 0]}}
           transition={{
             duration: 8,
@@ -67,7 +67,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-1/3 right-1/4 w-20 h-20 opacity-15"
           animate={{
-            y: [0, 40, 0],
+            y: [0, 40, 0];
             x: [0, -30, 0]}}
           transition={{
             duration: 12,
@@ -107,7 +107,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
                 key={i}
                 className="w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent"
                 animate={{
-                  height: [32, 64, 32],
+                  height: [32, 64, 32];
                   opacity: [0.3, 1, 0.3]}}
                 transition={{
                   duration: 3,
@@ -145,7 +145,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
           animate={{
-            scale: [1, 20],
+            scale: [1, 20];
             opacity: [1, 0]}}
           transition={{
             duration: 4,
@@ -159,7 +159,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
           animate={{
-            scale: [1, 15],
+            scale: [1, 15];
             opacity: [1, 0]}}
           transition={{
             duration: 4,
@@ -174,7 +174,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
         <motion.div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
           animate={{
-            scale: [1, 10],
+            scale: [1, 10];
             opacity: [1, 0]}}
           transition={{
             duration: 4,
@@ -195,6 +195,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
       `}</style>
     </>
   )
-},
+};
 
-export default UltraFuturisticBackground2047,
+export default UltraFuturisticBackground2047;

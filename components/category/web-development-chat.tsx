@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 const WebDevelopmentChat: NextPage = () => {
   return (
     <div>
@@ -16,6 +16,6 @@ const WebDevelopmentChat: NextPage = () => {
       </main>
     </div>
   )
-},
+};
 
-export default WebDevelopmentChat,
+export default WebDevelopmentChat;

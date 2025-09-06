@@ -1,7 +1,7 @@
-import React from 'react',
+import React from 'react';
 type EnhancedLoadingProps = {
   lines?: number
-},
+};
 
 export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
   return (

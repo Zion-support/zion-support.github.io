@@ -1,47 +1,47 @@
-import { useState } from 'react',
-import { useRouter } from 'next/router',
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 export default function PostJobPage() {
-  const router = useRouter(),
-  const [title, setTitle] = useState(''),
-  const [description, setDescription] = useState(''),
-  const [category, setCategory] = useState(''),
-  const [skills, setSkills] = useState<string>(''),
-  const [budgetMinUsd, setBudgetMinUsd] = useState<string>(''),
-  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>(''),
-  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>(''),
-  const [clientEmail, setClientEmail] = useState(''),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [error, setError] = useState<string | null>(null),
+  const router = useRouter();
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [skills, setSkills] = useState<string>('');
+  const [budgetMinUsd, setBudgetMinUsd] = useState<string>('');
+  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>('');
+  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>('');
+  const [clientEmail, setClientEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault(),
-    setError(null),
+    e.preventDefault();
+    setError(null);
 
     if (!title || !description || !category || !clientEmail) {
-      setError('Please fill in all required fields.'),
+      setError('Please fill in all required fields.');
       return
     }
 
     try {
-      setIsSubmitting(true),
+      setIsSubmitting(true);
       const res = await fetch('/api/jobs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          title,
-          description,
-          category,
+          title;
+          description;
+          category;
           requiredSkills: skills
             .split()
             .map((s) => s.trim())
-            .filter(Boolean),
+            .filter(Boolean);
           budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
           budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
           deliveryDeadlineIso: deliveryDeadlineIso || undefined,
-          clientEmail})}),
+          clientEmail})});
 
-      const data = await res.json(),
-      if (!res.ok) throw new Error(data.error || 'Failed to post job'),
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to post job');
 
       router.push(`/client/dashboard`)
     } catch (err: any) {

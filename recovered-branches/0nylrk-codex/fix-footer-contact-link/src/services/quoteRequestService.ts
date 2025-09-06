@@ -1,6 +1,6 @@
 
-import { supabase } from "@/integrations/supabase/client",
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import { supabase } from "@/integrations/supabase/client";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
 export const quoteRequestService = {
   // Get all quote requests (for admin)
@@ -8,20 +8,20 @@ export const quoteRequestService = {
     const { data, error } = await supabase
       .from('quote_requests')
       .select(`
-        *,
+        *;
         talent:talent_id (
           display_name
         )
       `)
-      .order('created_at', { ascending: false }),
+      .order('created_at', { ascending: false });
     
-    if (error) throw error,
+    if (error) throw error;
     
     // Format the data to include talent_name
     return data.map((item: any) => ({
-      ...item,
+      ...item;
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
-  },
+  };
   
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
@@ -29,35 +29,35 @@ export const quoteRequestService = {
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
-      .order('created_at', { ascending: false }),
+      .order('created_at', { ascending: false });
     
-    if (error) throw error,
+    if (error) throw error;
     return data as QuoteRequest[]
-  },
+  };
   
   // Get a single quote request by id
   getById: async (id: string) => {
     const { data, error } = await supabase
       .from('quote_requests')
       .select(`
-        *,
+        *;
         talent:talent_id (
           display_name
         )
       `)
       .eq('id', id)
-      .single(),
+      .single();
     
-    if (error) throw error,
+    if (error) throw error;
     
     return {
-      ...data,
+      ...data;
       talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
-  },
+  };
   
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status },
+    const updates: any = { status };
     
     // If marking as responded, set replied_at
     if (status === 'responded') {
@@ -70,7 +70,7 @@ export const quoteRequestService = {
         .from('quote_requests')
         .select('viewed_at')
         .eq('id', id)
-        .single(),
+        .single();
       
       if (!data.viewed_at) {
         updates.viewed_at = new Date().toISOString()
@@ -81,11 +81,11 @@ export const quoteRequestService = {
       .from('quote_requests')
       .update(updates)
       .eq('id', id)
-      .select(),
+      .select();
     
-    if (error) throw error,
+    if (error) throw error;
     return data[0] as QuoteRequest
-  },
+  };
   
   // Archive/Unarchive a quote request
   toggleArchive: async (id: string, isArchived: boolean) => {
@@ -93,20 +93,20 @@ export const quoteRequestService = {
       .from('quote_requests')
       .update({ is_archived: isArchived })
       .eq('id', id)
-      .select(),
+      .select();
     
-    if (error) throw error,
+    if (error) throw error;
     return data[0] as QuoteRequest
-  },
+  };
   
   // Delete a quote request
   delete: async (id: string) => {
     const { error } = await supabase
       .from('quote_requests')
       .delete()
-      .eq('id', id),
+      .eq('id', id);
     
-    if (error) throw error,
+    if (error) throw error;
     return true
   }
-},
+};

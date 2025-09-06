@@ -1,31 +1,31 @@
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useMemo } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, 
   ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, 
-  Target, Satellite, Globe, Cpu, Lock, Palette, Layers,
+  Target, Satellite, Globe, Cpu, Lock, Palette, Layers;
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
-} from 'lucide-react',
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026',
+} from 'lucide-react';
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
 export default function Revolutionary2026Pricing() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('price-low'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('price-low');
 
   // Combine all 2026 services
   const all2026Services = [
-    ...innovative2026MicroSaasServicesV2,
+    ...innovative2026MicroSaasServicesV2;
     ...emergingTech2026ServicesV2
-  ],
+  ];
 
   // Filter services based on category and price
   const filteredServices = useMemo(() => {
-    let filtered = all2026Services,
+    let filtered = all2026Services;
 
     // Category filter
     if (selectedCategory !== 'all') {
@@ -46,11 +46,11 @@ export default function Revolutionary2026Pricing() {
     // Price filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseFloat(service.price.replace(/[^0-9.]/g, '')),
-        if (selectedPriceRange === 'low') return price < 1000,
-        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000,
-        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000,
-        if (selectedPriceRange === 'premium') return price >= 20000,
+        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+        if (selectedPriceRange === 'low') return price < 1000;
+        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
+        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
+        if (selectedPriceRange === 'premium') return price >= 20000;
         return true
       })
     }
@@ -58,23 +58,23 @@ export default function Revolutionary2026Pricing() {
     // Sort services
     filtered.sort((a, b) => {
       if (sortBy === 'price-low') {
-        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,
-        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
         return priceA - priceB
       }
       if (sortBy === 'price-high') {
-        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0,
-        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0,
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
         return priceB - priceA
       }
-      if (sortBy === 'rating') return b.rating - a.rating,
-      if (sortBy === 'popularity') return b.customers - a.customers,
-      if (sortBy === 'name') return a.name.localeCompare(b.name),
+      if (sortBy === 'rating') return b.rating - a.rating;
+      if (sortBy === 'popularity') return b.customers - a.customers;
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
       return 0
-    }),
+    });
 
     return filtered
-  }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]),
+  }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },
@@ -82,7 +82,7 @@ export default function Revolutionary2026Pricing() {
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },
     { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length }
-  ],
+  ];
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -90,7 +90,7 @@ export default function Revolutionary2026Pricing() {
     { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
-  ],
+  ];
 
   const sortOptions = [
     { id: 'price-low', name: 'Price Low to High' },
@@ -98,26 +98,26 @@ export default function Revolutionary2026Pricing() {
     { id: 'rating', name: 'Highest Rated' },
     { id: 'popularity', name: 'Most Popular' },
     { id: 'name', name: 'Name A-Z' }
-  ],
+  ];
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: all2026Services.length,
     averagePrice: all2026Services.reduce((acc, service) => {
-      const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0,
+      const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) || 0;
       return acc + price
-    }, 0) / all2026Services.length,
-    lowestPrice: Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),
-    highestPrice: Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0)),
+    }, 0) / all2026Services.length;
+    lowestPrice: Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0));
+    highestPrice: Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0));
     popularServices: all2026Services.filter(s => s.popular).length
-  },
+  };
 
   return (
     <UltraAdvancedFuturisticBackground 

@@ -1,10 +1,10 @@
-import React, { useState } from "react",
+import React, { useState } from "react";
 
 export interface TreeNode {
   name: string,
   path: string,
   type: "folder" | "file",
-  exists?: boolean,
+  exists?: boolean;
   children?: TreeNode[]
 }
 
@@ -14,27 +14,27 @@ interface TreeProps {
 }
 
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
-  const [open, setOpen] = useState<boolean>(false),
+  const [open, setOpen] = useState<boolean>(false);
 
-  const hasChildren = Array.isArray(node.children) && node.children.length > 0,
-  const toggle = () => setOpen((v) => !v),
+  const hasChildren = Array.isArray(node.children) && node.children.length > 0;
+  const toggle = () => setOpen((v) => !v);
 
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path)
-  },
+  };
 
   const clonePath = async () => {
-    const url = `${window.location.origin}/api/dev/source-map`,
+    const url = `${window.location.origin}/api/dev/source-map`;
     await fetch(url, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json";
         // Expect an admin token in local storage, fall back to prompt
-        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any;
       body: JSON.stringify({ path: node.path })})
-  },
+  };
 
-  const deploy = () => onDeploy && onDeploy(node.path),
+  const deploy = () => onDeploy && onDeploy(node.path);
 
   return (
     <div className="ml-2">
@@ -76,4 +76,4 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
   )
 }
 
-export default Tree,
+export default Tree;

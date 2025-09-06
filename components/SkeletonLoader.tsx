@@ -6,8 +6,8 @@ interface SkeletonLoaderProps {
 }
 
 const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
-  lines = 3,
-  className = '',
+  lines = 3;
+  className = '';
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>

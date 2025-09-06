@@ -1,23 +1,23 @@
-import Link from 'next/link',
-import Head from 'next/head',
-import { useState, useEffect } from 'react',
-import { ContactInfo } from '../types',
-import ErrorBoundary from '../components/ErrorBoundary',
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
 export default function ITServices() {
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100),
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-  }, []),
+  }, []);
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  },
+  };
 
   const categories = [
     { id: 'all', name: 'All IT Services', count: 100 },
@@ -27,7 +27,7 @@ export default function ITServices() {
     { id: 'blockchain', name: 'Blockchain & Web3', count: 15 },
     { id: 'quantum', name: 'Quantum Computing', count: 10 },
     { id: 'enterprise', name: 'Enterprise Solutions', count: 15 }
-  ],
+  ];
 
   const services = [
     {
@@ -39,7 +39,7 @@ export default function ITServices() {
       price: 'Custom Pricing',
       popular: true,
       benefits: ['Exponential SpeedupAdvanced CryptographyOptimization SolutionsFuture-Proof Technology']
-    },
+    };
     {
       id: 2,
       name: 'Blockchain & Web3 Solutions',
@@ -49,17 +49,17 @@ export default function ITServices() {
       price: 'Custom Pricing',
       popular: true,
       benefits: ['Decentralized SolutionsEnhanced SecurityTransparencyInnovation']
-    },
+    };
     {
       id: 3,
       name: 'DevSecOps & Security Automation',
-      description: 'Integrated development, security, and operations with automated security testing and deployment.',
+      description: 'Integrated development, security, and operations with automated security testing and deployment.';
       category: 'devops',
       features: ['CI/CD PipelinesSecurity ScanningAutomated TestingInfrastructure as Code'],
       price: '$199/month',
       popular: false,
       benefits: ['Faster DeploymentEnhanced SecurityReduced RiskAutomated Compliance']
-    },
+    };
     {
       id: 4,
       name: 'Enterprise Data Platform',
@@ -69,7 +69,7 @@ export default function ITServices() {
       price: '$299/month',
       popular: true,
       benefits: ['Data-Driven InsightsScalable ArchitectureCompliance ReadyAdvanced Analytics']
-    },
+    };
     {
       id: 5,
       name: 'High-Performance Computing Solutions',
@@ -79,7 +79,7 @@ export default function ITServices() {
       price: '$399/month',
       popular: false,
       benefits: ['Massive Processing PowerScalable ResourcesCost OptimizationAdvanced Capabilities']
-    },
+    };
     {
       id: 6,
       name: 'Cloud Migration Services',
@@ -89,7 +89,7 @@ export default function ITServices() {
       price: 'Custom Pricing',
       popular: true,
       benefits: ['Reduced CostsEnhanced ScalabilityImproved SecurityBetter Performance']
-    },
+    };
     {
       id: 7,
       name: 'Infrastructure as Code',
@@ -99,7 +99,7 @@ export default function ITServices() {
       price: '$149/month',
       popular: false,
       benefits: ['Consistent EnvironmentsFaster ProvisioningVersion ControlReduced Errors']
-    },
+    };
     {
       id: 8,
       name: 'Disaster Recovery Solutions',
@@ -109,7 +109,7 @@ export default function ITServices() {
       price: '$179/month',
       popular: true,
       benefits: ['Business ContinuityData ProtectionMinimal DowntimeCompliance Ready']
-    },
+    };
     {
       id: 9,
       name: 'Cybersecurity Assessment',
@@ -119,7 +119,7 @@ export default function ITServices() {
       price: '$249/month',
       popular: false,
       benefits: ['Risk IdentificationCompliance AssuranceSecurity HardeningThreat Mitigation']
-    },
+    };
     {
       id: 10,
       name: 'API Development & Integration',
@@ -129,7 +129,7 @@ export default function ITServices() {
       price: '$129/month',
       popular: true,
       benefits: ['System IntegrationImproved EfficiencyScalable ArchitectureDeveloper Experience']
-    },
+    };
     {
       id: 11,
       name: 'Microservices Architecture',
@@ -139,7 +139,7 @@ export default function ITServices() {
       price: '$199/month',
       popular: false,
       benefits: ['Scalable ArchitectureIndependent DeploymentTechnology DiversityFault Isolation']
-    },
+    };
     {
       id: 12,
       name: 'Edge Computing Solutions',
@@ -150,11 +150,11 @@ export default function ITServices() {
       popular: true,
       benefits: ['Reduced LatencyBandwidth SavingsOffline CapabilityEnhanced Performance']
     }
-  ],
+  ];
 
   const filteredServices = selectedCategory === 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory),
+    : services.filter(service => service.category === selectedCategory);
 
   return (
     <>

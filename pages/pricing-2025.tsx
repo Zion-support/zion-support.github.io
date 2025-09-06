@@ -1,16 +1,16 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Pricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
@@ -19,17 +19,17 @@ export default function Pricing2025() {
     { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },
     { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
-  ],
+  ];
 
   const filteredServices = innovative2025MicroSaasExpansionV3.filter(service => 
     selectedCategory === 'all' || service.category.includes(selectedCategory)
-  ),
+  );
 
   const getAnnualPrice = (monthlyPrice: string) => {
-    const price = parseFloat(monthlyPrice.replace('$', '')),
+    const price = parseFloat(monthlyPrice.replace('$', ''));
     const annualPrice = price * 12 * 0.8, // 20% discount for annual
     return `$${Math.round(annualPrice)}`
-  },
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -39,7 +39,7 @@ export default function Pricing2025() {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -50,7 +50,7 @@ export default function Pricing2025() {
         duration: 0.5
       }
     }
-  },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -350,23 +350,23 @@ export default function Pricing2025() {
               {
                 question: "What payment methods do you accept?",
                 answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can arrange custom payment terms."
-              },
+              };
               {
                 question: "Do you offer free trials?",
                 answer: "Yes! All our services come with free trial periods ranging from 14 to 60 days, depending on the service complexity."
-              },
+              };
               {
                 question: "Can I cancel my subscription anytime?",
                 answer: "Absolutely. You can cancel your subscription at any time with no cancellation fees. Your service will remain active until the end of your billing period."
-              },
+              };
               {
                 question: "Do you offer volume discounts?",
                 answer: "Yes, we offer volume discounts for organizations using multiple services. Contact our sales team for custom pricing and enterprise solutions."
-              },
+              };
               {
                 question: "What kind of support do you provide?",
                 answer: "We provide comprehensive support including documentation, tutorials, email support, and priority support for enterprise customers. Some services include dedicated account managers."
-              },
+              };
               {
                 question: "Can I upgrade or downgrade my plan?",
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."

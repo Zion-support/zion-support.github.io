@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorBoundaryState {
   hasError: boolean
   error: Error | null
@@ -57,7 +57,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     
     // Enhanced error logging
     const enhancedError = {
-      ...error,
+      ...error;
       componentStack: errorInfo.componentStack,
       errorBoundary: this.props.context || 'GlobalErrorBoundary',
       timestamp: new Date().toISOString(),
@@ -94,7 +94,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
 
     this.setState({
-      errorInfo,
+      errorInfo;
       errorId
     })
   }
@@ -222,14 +222,14 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
-        },
+        };
         body: JSON.stringify({
           errorId: this.state.errorId,
           error: {
             message: this.state.error.message,
             stack: this.state.error.stack,
             name: this.state.error.name
-          },
+          };
           errorInfo: this.state.errorInfo,
           userFeedback: this.state.userFeedback,
           context: this.props.context,

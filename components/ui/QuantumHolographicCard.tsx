@@ -1,6 +1,6 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react',
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
   service: {
@@ -35,14 +35,14 @@ interface QuantumHolographicCardProps {
       email: string,
       address: string,
       website: string
-    },
+    };
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
     reviews: number
-  },
+  };
   className?: string
 }
 
@@ -57,7 +57,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         duration: 0.6,
         ease: "easeOut" as const
       }
-    },
+    };
     hover: {
       y: -10,
       scale: 1.02,
@@ -66,20 +66,20 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         ease: "easeInOut" as const
       }
     }
-  },
+  };
 
   const glowVariants = {
     initial: { opacity: 0.5, scale: 1 },
     animate: {
-      opacity: [0.5, 1, 0.5],
-      scale: [1, 1.05, 1],
+      opacity: [0.5, 1, 0.5];
+      scale: [1, 1.05, 1];
       transition: {
         duration: 3,
         repeat: Infinity,
         ease: "easeInOut" as const
       }
     }
-  },
+  };
 
   const featureVariants = {
     hidden: { opacity: 0, x: -20 },
@@ -92,7 +92,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         ease: "easeOut" as const
       }
     })
-  },
+  };
 
   return (
     <motion.div
@@ -280,6 +280,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       </div>
     </motion.div>
   )
-},
+};
 
-export default QuantumHolographicCard,
+export default QuantumHolographicCard;

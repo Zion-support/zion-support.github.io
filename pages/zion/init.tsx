@@ -1,6 +1,6 @@
-import { useState } from 'react',
-import type { NextPage } from 'next',
-type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid',
+import { useState } from 'react';
+import type { NextPage } from 'next';
+type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
 
 type DeployFormState = {
   instanceName: string,
@@ -13,10 +13,10 @@ type DeployFormState = {
     primaryColor: string,
     secondaryColor: string,
     subdomain: string
-  },
-  modules: Record<string, boolean>,
+  };
+  modules: Record<string, boolean>;
   bonusModules: Record<string, boolean>
-},
+};
 
 const defaultModules: DeployFormState['modules'] = {
   marketplace: true,
@@ -24,20 +24,20 @@ const defaultModules: DeployFormState['modules'] = {
   academy: true,
   token: true,
   dao: true,
-  'nation-builder': true,
-  'launch-kit': true,
-  'book-builder': true,
-  'roadmap-whitepaper': true,
-  'api-docs-wiki': true,
-  'zion-brain': true},
+  'nation-builder': true;
+  'launch-kit': true;
+  'book-builder': true;
+  'roadmap-whitepaper': true;
+  'api-docs-wiki': true;
+  'zion-brain': true};
 
 const defaultBonus: DeployFormState['bonusModules'] = {
-  'global-map': false,
-  'franchise-onboarding': false,
-  'referral-ambassadors': false,
-  'grant-portal': false,
+  'global-map': false;
+  'franchise-onboarding': false;
+  'referral-ambassadors': false;
+  'grant-portal': false;
   trailer: false,
-  'book-store': false},
+  'book-store': false};
 
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState>({
@@ -49,35 +49,35 @@ const InitPage: NextPage = () => {
     branding: { logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' },
     modules: defaultModules,
     bonusModules: defaultBonus}),
-  const [submitting, setSubmitting] = useState(false),
-  const [result, setResult] = useState<any>(null),
-  const [error, setError] = useState<string | null>(null),
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
     setState((prev) => ({
-      ...prev,
+      ...prev;
       [group]: { ...prev[group], [key]: !prev[group][key] }}))
-  },
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setSubmitting(true),
-    setError(null),
-    setResult(null),
+    e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+    setResult(null);
     try {
       const res = await fetch('/api/deploy/genesis', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(state)}),
-      const json = await res.json(),
-      if (!res.ok) throw new Error(json?.error || 'Deployment failed'),
+      const json = await res.json();
+      if (!res.ok) throw new Error(json?.error || 'Deployment failed');
       setResult(json)
     } catch (err: any) {
       setError(err.message || 'Unexpected error')
     } finally {
       setSubmitting(false)
     }
-  },
+  };
 
   return (
     <div className="space-y-8">
@@ -177,6 +177,6 @@ const InitPage: NextPage = () => {
       )}
     </div>
   )
-},
+};
 
-export default InitPage,
+export default InitPage;

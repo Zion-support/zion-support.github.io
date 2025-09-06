@@ -1,33 +1,33 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react',
-import Layout from './layout/Layout',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { Suspense, lazy, useState, useEffect } from 'react';
+import Layout from './layout/Layout';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Star, 
-  Brain, Atom, Shield, Zap, TrendingUp, Globe,
-  Rocket, Target, Users, Cpu, Eye, Network,
-  Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette,
-  FileText, BarChart3, Heart, Truck, ShieldCheck,
+  Brain, Atom, Shield, Zap, TrendingUp, Globe;
+  Rocket, Target, Users, Cpu, Eye, Network;
+  Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette;
+  FileText, BarChart3, Heart, Truck, ShieldCheck;
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
-} from 'lucide-react',
+} from 'lucide-react';
 
 // Import new service data
-import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2',
-import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2',
+import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2';
+import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
 // Lazy load heavy components for better performance
-const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026')),
+const LazyServiceCard = lazy(() => import('./ui/UltraFuturisticServiceCard2026'));
 
 const Homepage2040: React.FC = () => {
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
-  const [isVisible, setIsVisible] = useState(false),
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length)
-    }, 5000),
+    }, 5000);
     return () => clearInterval(interval)
-  }, []),
+  }, []);
 
   // Enhanced animation variants for better performance
   const containerVariants = {
@@ -39,7 +39,7 @@ const Homepage2040: React.FC = () => {
         delayChildren: 0.2
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -51,18 +51,18 @@ const Homepage2040: React.FC = () => {
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   const floatingVariants = {
     float: {
-      y: [-10, 10, -10],
+      y: [-10, 10, -10];
       transition: {
         duration: 3,
         repeat: -1,
         ease: "easeInOut" as const
       }
     }
-  },
+  };
 
   const statsData = [
     {
@@ -72,7 +72,7 @@ const Homepage2040: React.FC = () => {
       icon: Sparkles,
       color: "text-cyan-400",
       hoverColor: "group-hover:text-cyan-300"
-    },
+    };
     {
       number: "∞",
       label: "Future Possibilities",
@@ -80,7 +80,7 @@ const Homepage2040: React.FC = () => {
       icon: InfinityIcon,
       color: "text-purple-400",
       hoverColor: "group-hover:text-purple-300"
-    },
+    };
     {
       number: "24/7",
       label: "Autonomous Operations",
@@ -88,7 +88,7 @@ const Homepage2040: React.FC = () => {
       icon: Cpu,
       color: "text-blue-400",
       hoverColor: "group-hover:text-blue-300"
-    },
+    };
     {
       number: "10x",
       label: "Performance Boost",
@@ -97,11 +97,11 @@ const Homepage2040: React.FC = () => {
       color: "text-green-400",
       hoverColor: "group-hover:text-green-300"
     }
-  ],
+  ];
 
   // Combine all services for showcase
-  const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2],
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 6),
+  const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2];
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
 
   const serviceCategories = [
     {
@@ -109,26 +109,26 @@ const Homepage2040: React.FC = () => {
       icon: Brain,
       count: allServices.filter(s => s.category.includes('AI')).length,
       color: "from-pink-500 to-rose-600"
-    },
+    };
     {
       name: "Quantum Technology",
       icon: Atom,
       count: allServices.filter(s => s.category.includes('Quantum')).length,
       color: "from-blue-500 to-cyan-600"
-    },
+    };
     {
       name: "Emerging Tech",
       icon: Rocket,
       count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space')).length,
       color: "from-purple-500 to-indigo-600"
-    },
+    };
     {
       name: "Cybersecurity",
       icon: Shield,
       count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
       color: "from-green-500 to-emerald-600"
     }
-  ],
+  ];
 
   return (
     <Layout>
@@ -172,7 +172,7 @@ const Homepage2040: React.FC = () => {
                     animationDelay: `${Math.random() * 3}s`
                   }}
                   animate={{
-                    scale: [0, 1, 0],
+                    scale: [0, 1, 0];
                     opacity: [0, 1, 0]}}
                   transition={{
                     duration: 3,
@@ -522,6 +522,6 @@ const Homepage2040: React.FC = () => {
       </main>
     </Layout>
   )
-},
+};
 
-export default Homepage2040,
+export default Homepage2040;

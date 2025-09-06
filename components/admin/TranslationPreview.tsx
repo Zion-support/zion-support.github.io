@@ -1,11 +1,11 @@
-import React, { useState } from 'react',
-import { useAutoTranslate } from '../../hooks/useAutoTranslate',
-const defaultTargets = ['enptesar'],
+import React, { useState } from 'react';
+import { useAutoTranslate } from '../../hooks/useAutoTranslate';
+const defaultTargets = ['enptesar'];
 
 export default function TranslationPreview() {
-  const [text, setText] = useState(''),
-  const [targets, setTargets] = useState<string[]>(defaultTargets),
-  const { translations, loading, error } = useAutoTranslate(text, targets),
+  const [text, setText] = useState('');
+  const [targets, setTargets] = useState<string[]>(defaultTargets);
+  const { translations, loading, error } = useAutoTranslate(text, targets);
 
   return (
     <div className="space-y-4">

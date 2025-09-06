@@ -1,31 +1,31 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
   Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
   Wifi, Building, Cpu as CpuIcon
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services',
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const heroStats = [
   { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },
   { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },
   { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },
   { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" /> }
-],
+];
 
 const serviceCategories = [
   {
@@ -35,7 +35,7 @@ const serviceCategories = [
     icon: Cloud,
     color: 'from-indigo-500 to-purple-600',
     features: ['Quantum ProcessingHybrid ComputingAI Acceleration']
-  },
+  };
   {
     title: 'Edge Computing & IoT',
     description: 'Autonomous edge infrastructure with intelligent optimization',
@@ -43,7 +43,7 @@ const serviceCategories = [
     icon: Wifi,
     color: 'from-green-500 to-emerald-600',
     features: ['Edge ProcessingIoT Orchestration5G Optimization']
-  },
+  };
   {
     title: 'Cybersecurity',
     description: 'Comprehensive security framework with continuous verification',
@@ -51,7 +51,7 @@ const serviceCategories = [
     icon: SecurityIcon,
     color: 'from-red-500 to-orange-600',
     features: ['Zero TrustThreat DetectionCompliance Automation']
-  },
+  };
   {
     title: 'Data Center Infrastructure',
     description: 'Self-managing data center infrastructure with AI optimization',
@@ -59,7 +59,7 @@ const serviceCategories = [
     icon: Building,
     color: 'from-blue-500 to-cyan-600',
     features: ['AI ManagementPredictive MaintenanceCost Optimization']
-  },
+  };
   {
     title: 'Quantum Networking',
     description: 'Next-generation networking with quantum encryption and optimization',
@@ -68,7 +68,7 @@ const serviceCategories = [
     color: 'from-purple-500 to-pink-600',
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
   }
-],
+];
 
 const heroFeatures = [
   {
@@ -76,53 +76,53 @@ const heroFeatures = [
     description: 'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
     icon: Atom,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
-  },
+  };
   {
     title: 'AI-Powered Automation',
     description: 'Intelligent automation that reduces operational costs by up to 70% while improving reliability.',
     icon: Brain,
     gradient: 'bg-gradient-to-r from-purple-500 to-pink-600'
-  },
+  };
   {
     title: 'Edge Computing',
     description: 'Distributed edge infrastructure that reduces latency and provides real-time processing capabilities.',
     icon: Wifi,
     gradient: 'bg-gradient-to-r from-green-500 to-emerald-600'
-  },
+  };
   {
     title: 'Zero Trust Security',
     description: 'Continuous verification and monitoring that provides comprehensive protection against modern threats.',
     icon: Shield,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
-],
+];
 
 const testimonials = [
   {
     name: 'Dr. Jennifer Martinez',
-    role: 'CTO, QuantumTech Industries',
+    role: 'CTO, QuantumTech Industries';
     company: 'QuantumTech Industries',
     content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',
     rating: 5,
     avatar: '👩‍🔬'
-  },
+  };
   {
     name: 'Robert Thompson',
-    role: 'Infrastructure Director, EdgeNet Solutions',
+    role: 'Infrastructure Director, EdgeNet Solutions';
     company: 'EdgeNet Solutions',
     content: 'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
     rating: 5,
     avatar: '👨‍💼'
-  },
+  };
   {
     name: 'Lisa Chang',
-    role: 'Security CISO, SecureCorp International',
+    role: 'Security CISO, SecureCorp International';
     company: 'SecureCorp International',
     content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
     avatar: '👩‍🔒'
   }
-],
+];
 
 export default function AdvancedITInfrastructureServices() {
   return (

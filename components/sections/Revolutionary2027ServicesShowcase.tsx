@@ -1,14 +1,14 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react',
-import Link from 'next/link',
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
+import Link from 'next/link';
 const Revolutionary2027ServicesShowcase = () => {
   const featuredServices = [
     {
       id: 'quantum-ai-consciousness-platform',
       name: 'Quantum AI Consciousness Platform',
       description: 'Simulate human consciousness with quantum computing - the first platform to combine quantum computing with advanced AI for breakthrough neuroscience research.',
-      price: '$9,999',
+      price: '$9,999';
       period: '/month',
       icon: Brain,
       color: 'from-purple-600 to-indigo-700',
@@ -16,12 +16,12 @@ const Revolutionary2027ServicesShowcase = () => {
       features: ['Quantum consciousness simulationNeural pattern recognitionEmotional intelligence modelingReal-time brain-computer interface'],
       marketSize: '$15B research market',
       growthRate: '300% annual growth'
-    },
+    };
     {
       id: 'autonomous-space-mining-ai',
       name: 'Autonomous Space Mining AI',
       description: 'AI-powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.',
-      price: '$15,999',
+      price: '$15,999';
       period: '/month',
       icon: Rocket,
       color: 'from-blue-600 to-cyan-700',
@@ -29,12 +29,12 @@ const Revolutionary2027ServicesShowcase = () => {
       features: ['Autonomous mining operationsResource detection algorithmsRisk assessment AIMission planning automation'],
       marketSize: '$3.8T space economy',
       growthRate: '400% annual growth'
-    },
+    };
     {
       id: 'dna-computing-platform',
       name: 'DNA Computing Platform',
       description: 'Molecular computing for complex problem solving - use DNA-based computation to solve problems exponentially faster than traditional computers.',
-      price: '$7,999',
+      price: '$7,999';
       period: '/month',
       icon: TestTube,
       color: 'from-green-600 to-emerald-700',
@@ -42,12 +42,12 @@ const Revolutionary2027ServicesShowcase = () => {
       features: ['DNA-based computationMolecular algorithm optimizationReal-time molecular analysisAlgorithm library (100+ algorithms)'],
       marketSize: '$2.1T biotechnology market',
       growthRate: '250% annual growth'
-    },
+    };
     {
       id: 'holographic-metaverse-platform',
       name: 'Holographic Metaverse Platform',
       description: 'Create immersive 3D holographic experiences - build next-generation virtual worlds with realistic holographic projections.',
-      price: '$3,999',
+      price: '$3,999';
       period: '/month',
       icon: Globe,
       color: 'from-pink-600 to-rose-700',
@@ -55,12 +55,12 @@ const Revolutionary2027ServicesShowcase = () => {
       features: ['3D holographic renderingReal-time 3D modelingHolographic projection systemsAI-powered content generation'],
       marketSize: '$800B metaverse market',
       growthRate: '350% annual growth'
-    },
+    };
     {
       id: 'autonomous-healthcare-ai',
       name: 'Autonomous Healthcare AI',
       description: 'Self-learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.',
-      price: '$5,999',
+      price: '$5,999';
       period: '/month',
       icon: Microscope,
       color: 'from-red-600 to-orange-700',
@@ -68,12 +68,12 @@ const Revolutionary2027ServicesShowcase = () => {
       features: ['Autonomous diagnosisTreatment recommendation AIContinuous learning algorithmsPredictive health analytics'],
       marketSize: '$4.1T healthcare market',
       growthRate: '280% annual growth'
-    },
+    };
     {
       id: 'quantum-internet-security-gateway',
       name: 'Quantum Internet Security Gateway',
       description: 'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum-resistant algorithms.',
-      price: '$8,999',
+      price: '$8,999';
       period: '/month',
       icon: Lock,
       color: 'from-indigo-600 to-purple-700',
@@ -82,14 +82,14 @@ const Revolutionary2027ServicesShowcase = () => {
       marketSize: '$500B cybersecurity market',
       growthRate: '500% annual growth'
     }
-  ],
+  ];
 
   const categories = [
     { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from-purple-500 to-indigo-600' },
     { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' },
     { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' },
     { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from-pink-500 to-rose-600' }
-  ],
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -99,7 +99,7 @@ const Revolutionary2027ServicesShowcase = () => {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -111,7 +111,7 @@ const Revolutionary2027ServicesShowcase = () => {
         ease: "easeOut" as const
       }
     }
-  },
+  };
 
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -272,6 +272,6 @@ const Revolutionary2027ServicesShowcase = () => {
       </div>
     </section>
   )
-},
+};
 
-export default Revolutionary2027ServicesShowcase,
+export default Revolutionary2027ServicesShowcase;

@@ -1,25 +1,25 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Rocket, Globe, Cpu, Database, 
-  TrendingUp, Users, Star, Zap, Lock, Target,
+  TrendingUp, Users, Star, Zap, Lock, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react',
+} from 'lucide-react';
 
 // Import our new innovative services
-import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3',
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3',
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3',
+import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
 const Innovative2025ServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   // Combine all innovative services
   const allInnovativeServices = [
-    ...innovativeMicroSaasExpansionV32025,
-    ...innovativeITServicesExpansion2025V3,
+    ...innovativeMicroSaasExpansionV32025;
+    ...innovativeITServicesExpansion2025V3;
     ...innovativeAIServicesExpansion2025V3
-  ],
+  ];
 
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
@@ -28,7 +28,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
     { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length },
     { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') || s.category.includes('FinOps')).length },
     { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length }
-  ],
+  ];
 
   const filteredServices = allInnovativeServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
@@ -37,27 +37,27 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       (selectedCategory === 'it' && (service.category.includes('IT') || service.category.includes('Infrastructure'))) ||
       (selectedCategory === 'cybersecurity' && service.category.includes('Security')) ||
       (selectedCategory === 'cloud' && (service.category.includes('Cloud') || service.category.includes('FinOps'))) ||
-      (selectedCategory === 'developer' && service.category.includes('Developer')),
+      (selectedCategory === 'developer' && service.category.includes('Developer'));
     
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()),
+      (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesCategory && matchesSearch
-  }),
+  });
 
   const stats = [
     { number: "15+", label: "Innovative Services", icon: Star },
     { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle },
     { number: "24/7", label: "AI Support Available", icon: Brain },
     { number: "200+", label: "Countries Served", icon: Globe }
-  ],
+  ];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
-  },
+  };
 
   const staggerContainer = {
     animate: {
@@ -65,7 +65,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   return (
     <>
@@ -278,7 +278,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                   </p>
                   <button
                     onClick={() => {
-                      setSearchTerm(''),
+                      setSearchTerm('');
                       setSelectedCategory('all')
                     }}
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
@@ -408,6 +408,6 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       </div>
     </>
   )
-},
+};
 
-export default Innovative2025ServicesShowcase,
+export default Innovative2025ServicesShowcase;

@@ -1,16 +1,16 @@
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEOOptimizer from '../components/SEOOptimizer',
-import AnalyticsTracker from '../components/AnalyticsTracker',
-import ErrorBoundary from '../components/ErrorBoundary',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import SEOOptimizer from '../components/SEOOptimizer';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+import ErrorBoundary from '../components/ErrorBoundary';
+import { motion } from 'framer-motion';
 import { 
   Shield, Lock, Eye, Database, Globe, 
   User, Settings, AlertTriangle, CheckCircle, Mail
-} from 'lucide-react',
+} from 'lucide-react';
 
 const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025',
+  const lastUpdated = 'January 17, 2025';
 
   const privacySections = [
     {
@@ -20,7 +20,7 @@ const PrivacyPage: React.FC = () => {
       content: [
         'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
       ]
-    },
+    };
     {
       title: 'How We Use Your Information',
       icon: <Settings className="w-8 h-8" />,
@@ -28,7 +28,7 @@ const PrivacyPage: React.FC = () => {
       content: [
         'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
       ]
-    },
+    };
     {
       title: 'Information Sharing',
       icon: <Globe className="w-8 h-8" />,
@@ -36,7 +36,7 @@ const PrivacyPage: React.FC = () => {
       content: [
         'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
       ]
-    },
+    };
     {
       title: 'Data Security',
       icon: <Lock className="w-8 h-8" />,
@@ -45,40 +45,40 @@ const PrivacyPage: React.FC = () => {
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
-  ],
+  ];
 
   const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal information',
       icon: <Eye className="w-6 h-6" />
-    },
+    };
     {
       title: 'Correction',
       description: 'Request correction of inaccurate information',
       icon: <CheckCircle className="w-6 h-6" />
-    },
+    };
     {
       title: 'Deletion',
       description: 'Request deletion of your personal information',
       icon: <AlertTriangle className="w-6 h-6" />
-    },
+    };
     {
       title: 'Portability',
       description: 'Request transfer of your data to another service',
       icon: <Database className="w-6 h-6" />
-    },
+    };
     {
       title: 'Objection',
       description: 'Object to processing of your personal information',
       icon: <User className="w-6 h-6" />
-    },
+    };
     {
       title: 'Restriction',
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
-  ],
+  ];
 
   return (
     <ErrorBoundary>
@@ -414,8 +414,8 @@ const PrivacyPage: React.FC = () => {
       </Layout>
     </ErrorBoundary>
   )
-},
+};
 
-export default PrivacyPage,
+export default PrivacyPage;
 
  

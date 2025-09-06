@@ -1,17 +1,17 @@
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 export default function AdminDashboard() {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Admin Dashboard",
-    "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
+    "@context": "https://schema.org";
+    "@type": "WebPage";
+    "name": "Admin Dashboard";
+    "description": "Monitor marketplace activity, manage listings and view analytics in one place.";
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-  },
+  };
 
   return (
     <>

@@ -1,25 +1,25 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Brain, Rocket, Target, Shield, Cpu, 
-  Facebook, Twitter, Linkedin, Instagram, Youtube,
-  Github, MessageCircle, Star, Zap, Sparkles,
-  Home, Users, Briefcase, BookOpen, TrendingUp,
-  MessageSquare, Calendar,
-  GraduationCap, ShieldCheck, Eye, Code, Wrench,
-  Smartphone, BarChart3, Palette, Camera, Video,
-  Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind,
+  Facebook, Twitter, Linkedin, Instagram, Youtube;
+  Github, MessageCircle, Star, Zap, Sparkles;
+  Home, Users, Briefcase, BookOpen, TrendingUp;
+  MessageSquare, Calendar;
+  GraduationCap, ShieldCheck, Eye, Code, Wrench;
+  Smartphone, BarChart3, Palette, Camera, Video;
+  Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind;
   Droplets, Mountain, Globe2, Bot, Crown, Infinity
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -32,7 +32,7 @@ const serviceCategories = [
       { name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator' },
       { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager' }
     ]
-  },
+  };
   {
     title: 'Quantum Technology',
     icon: Globe,
@@ -43,7 +43,7 @@ const serviceCategories = [
       { name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform' },
       { name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio' }
     ]
-  },
+  };
   {
     title: 'Space & Metaverse',
     icon: Rocket,
@@ -54,7 +54,7 @@ const serviceCategories = [
       { name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics' },
       { name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform' }
     ]
-  },
+  };
   {
     title: 'Enterprise IT',
     icon: Cpu,
@@ -66,7 +66,7 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
-],
+];
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -79,7 +79,7 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles },
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],
+];
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -88,7 +88,7 @@ const quickLinks = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
   { name: 'Support', href: '/support', icon: MessageCircle }
-],
+];
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
@@ -99,7 +99,7 @@ const resources = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Events', href: '/events', icon: Calendar },
   { name: 'Webinars', href: '/webinars', icon: Video }
-],
+];
 
 const company = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -110,7 +110,7 @@ const company = [
   { name: 'Press', href: '/press', icon: BookOpen },
   { name: 'Legal', href: '/legal', icon: Shield },
   { name: 'Privacy', href: '/privacy', icon: ShieldCheck }
-],
+];
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },
@@ -119,7 +119,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
-],
+];
 
 const footerSections = [
   {
@@ -132,7 +132,7 @@ const footerSections = [
       { name: 'Micro SAAS', href: '/services/micro-saas' },
       { name: 'Cybersecurity', href: '/services/cybersecurity' }
     ]
-  },
+  };
   {
     title: 'Solutions',
     links: [
@@ -143,7 +143,7 @@ const footerSections = [
       { name: 'Business Intelligence', href: '/solutions/business-intelligence' },
       { name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' }
     ]
-  },
+  };
   {
     title: 'Industries',
     links: [
@@ -154,7 +154,7 @@ const footerSections = [
       { name: 'Education', href: '/industries/education' },
       { name: 'Government', href: '/industries/government' }
     ]
-  },
+  };
   {
     title: 'Resources',
     links: [
@@ -166,7 +166,7 @@ const footerSections = [
       { name: 'Research', href: '/research' }
     ]
   }
-],
+];
 
 export default function UltraFuturisticFooter2029V2() {
   return (

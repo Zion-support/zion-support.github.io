@@ -1,7 +1,7 @@
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
 export default function AgenticRAGPage() {
 	const contactInfo = {
@@ -9,7 +9,7 @@ export default function AgenticRAGPage() {
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	},
+	};
 
 	const plans = [
 		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] },

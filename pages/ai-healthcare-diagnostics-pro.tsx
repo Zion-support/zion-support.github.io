@@ -1,138 +1,138 @@
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 import { 
   Stethoscope, Brain, Eye, Heart, 
   Microscope, Shield, BarChart3, 
   TrendingUp, Target, Users, CheckCircle, 
   ArrowRight, Cpu, Network, Database, 
-  Lock, Clock, DollarSign, PieChart,
+  Lock, Clock, DollarSign, PieChart;
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
-} from 'lucide-react',
-import Link from 'next/link',
+} from 'lucide-react';
+import Link from 'next/link';
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: "Advanced AI Diagnostics",
-      description: "Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.",
+      description: "Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.";
       color: "from-blue-500 to-cyan-500"
-    },
+    };
     {
       icon: Eye,
       title: "Multi-Modal Imaging",
-      description: "Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.",
+      description: "Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.";
       color: "from-purple-500 to-pink-500"
-    },
+    };
     {
       icon: Heart,
       title: "Predictive Analytics",
-      description: "AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.",
+      description: "AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.";
       color: "from-red-500 to-orange-500"
-    },
+    };
     {
       icon: Shield,
       title: "HIPAA Compliant",
-      description: "Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.",
+      description: "Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.";
       color: "from-green-500 to-emerald-500"
-    },
+    };
     {
       icon: BarChart3,
       title: "Real-time Monitoring",
       description: "Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.",
       color: "from-indigo-500 to-blue-500"
-    },
+    };
     {
       icon: Zap,
       title: "Automated Workflows",
-      description: "Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.",
+      description: "Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.";
       color: "from-yellow-500 to-orange-500"
     }
-  ],
+  ];
 
   const useCases = [
     {
       icon: Microscope,
       title: "Radiology & Imaging",
-      description: "AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.",
+      description: "AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.";
       benefits: ["95% accuracy rate", "80% faster diagnosis", "Reduced radiologist workload"]
-    },
+    };
     {
       icon: Heart,
       title: "Cardiology",
-      description: "Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.",
+      description: "Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.";
       benefits: ["Early disease detection", "Risk stratification", "Preventive care"]
-    },
+    };
     {
       icon: Brain,
       title: "Neurology",
-      description: "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data.",
+      description: "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data.";
       benefits: ["Early intervention", "Treatment planning", "Outcome prediction"]
-    },
+    };
     {
       icon: Microscope,
       title: "Pathology",
-      description: "Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.",
+      description: "Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.";
       benefits: ["Precision medicine", "Faster results", "Standardized analysis"]
     }
-  ],
+  ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$4,999",
+      price: "$4,999";
       period: "/month",
       description: "Perfect for small clinics and practices",
       features: [
-        "Up to 1,000 diagnostic scans/month",
-        "Basic AI diagnostic models",
-        "Standard reporting dashboard",
-        "Email support",
-        "HIPAA compliance",
+        "Up to 1,000 diagnostic scans/month";
+        "Basic AI diagnostic models";
+        "Standard reporting dashboard";
+        "Email support";
+        "HIPAA compliance";
         "API access (5,000 calls/month)"
-      ],
+      ];
       color: "from-blue-500 to-cyan-500",
       popular: false
-    },
+    };
     {
       name: "Professional",
-      price: "$12,999",
+      price: "$12,999";
       period: "/month",
       description: "Ideal for hospitals and medical centers",
       features: [
-        "Up to 10,000 diagnostic scans/month",
-        "Advanced AI diagnostic models",
-        "Multi-modal imaging support",
-        "Real-time monitoring & alerts",
-        "Priority support",
-        "API access (50,000 calls/month)",
-        "Custom integrations",
+        "Up to 10,000 diagnostic scans/month";
+        "Advanced AI diagnostic models";
+        "Multi-modal imaging support";
+        "Real-time monitoring & alerts";
+        "Priority support";
+        "API access (50,000 calls/month)";
+        "Custom integrations";
         "Training & certification"
-      ],
+      ];
       color: "from-purple-500 to-pink-500",
       popular: true
-    },
+    };
     {
       name: "Enterprise",
-      price: "$29,999",
+      price: "$29,999";
       period: "/month",
       description: "For large healthcare networks",
       features: [
-        "Unlimited diagnostic scans",
-        "Custom AI model development",
-        "Full multi-modal support",
-        "Dedicated account manager",
-        "24/7 phone support",
-        "Unlimited API access",
-        "White-label solutions",
-        "On-premise deployment",
+        "Unlimited diagnostic scans";
+        "Custom AI model development";
+        "Full multi-modal support";
+        "Dedicated account manager";
+        "24/7 phone support";
+        "Unlimited API access";
+        "White-label solutions";
+        "On-premise deployment";
         "Custom compliance features"
-      ],
+      ];
       color: "from-green-500 to-emerald-500",
       popular: false
     }
-  ],
+  ];
 
   const integrations = [
     {
@@ -140,77 +140,77 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       icon: Database,
       description: "DICOM integration with major PACS vendors",
       color: "from-blue-500 to-cyan-500"
-    },
+    };
     {
       name: "EHR Platforms",
       icon: Database,
-      description: "Epic, Cerner, Allscripts, athenahealth",
+      description: "Epic, Cerner, Allscripts, athenahealth";
       color: "from-green-500 to-emerald-500"
-    },
+    };
     {
       name: "LIS Systems",
       icon: Microscope,
       description: "Lab information systems integration",
       color: "from-purple-500 to-pink-500"
-    },
+    };
     {
       name: "RIS Systems",
       icon: BarChart3,
       description: "Radiology information systems",
       color: "from-orange-500 to-red-500"
-    },
+    };
     {
       name: "Medical Devices",
       icon: Stethoscope,
-      description: "CT, MRI, X-ray, ultrasound machines",
+      description: "CT, MRI, X-ray, ultrasound machines";
       color: "from-indigo-500 to-blue-500"
-    },
+    };
     {
       name: "Cloud Platforms",
       icon: Cpu,
-      description: "AWS, Azure, Google Cloud, IBM Cloud",
+      description: "AWS, Azure, Google Cloud, IBM Cloud";
       color: "from-yellow-500 to-orange-500"
     }
-  ],
+  ];
 
   const specialties = [
     {
       icon: Heart,
       name: "Cardiology",
-      description: "Heart disease detection, ECG analysis, cardiovascular risk assessment",
+      description: "Heart disease detection, ECG analysis, cardiovascular risk assessment";
       accuracy: "99.1%"
-    },
+    };
     {
       icon: Brain,
       name: "Neurology",
-      description: "Brain tumor detection, stroke diagnosis, neurological disorder analysis",
+      description: "Brain tumor detection, stroke diagnosis, neurological disorder analysis";
       accuracy: "98.9%"
-    },
+    };
     {
       icon: Activity,
       name: "Pulmonology",
-      description: "Lung cancer screening, pneumonia detection, respiratory disease analysis",
+      description: "Lung cancer screening, pneumonia detection, respiratory disease analysis";
       accuracy: "99.3%"
-    },
+    };
     {
       icon: Eye,
       name: "Ophthalmology",
-      description: "Retinal disease detection, glaucoma screening, diabetic retinopathy",
+      description: "Retinal disease detection, glaucoma screening, diabetic retinopathy";
       accuracy: "98.7%"
-    },
+    };
     {
       icon: Shield,
       name: "Hepatology",
-      description: "Liver disease detection, cirrhosis assessment, tumor identification",
+      description: "Liver disease detection, cirrhosis assessment, tumor identification";
       accuracy: "99.0%"
-    },
+    };
     {
       icon: Microscope,
       name: "Nephrology",
-      description: "Kidney disease detection, renal function analysis, transplant assessment",
+      description: "Kidney disease detection, renal function analysis, transplant assessment";
       accuracy: "98.8%"
     }
-  ],
+  ];
 
   return (
     <Layout>
@@ -594,6 +594,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       </section>
     </Layout>
   )
-},
+};
 
-export default AIHealthcareDiagnosticsPro,
+export default AIHealthcareDiagnosticsPro;

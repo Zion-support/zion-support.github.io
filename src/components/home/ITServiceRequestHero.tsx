@@ -1,60 +1,60 @@
-import React, { useState } from "react",
-import Image from "next/image",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { useToast } from "@/hooks/use-toast",
-import axios from "axios",
+import React, { useState } from "react";
+import Image from "next/image";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import axios from "axios";
 import { Loader2 } from 'lucide-react'
-import { useTranslation } from "react-i18next",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useTranslation } from "react-i18next";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function ITServiceRequestHero() {
 
-  const [name, setName] = useState(""),
-  const [email, setEmail] = useState(""),
-  const [phone, setPhone] = useState(""),
-  const [company, setCompany] = useState(""),
-  const [location, setLocation] = useState(""),
-  const [details, setDetails] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const { toast } = useToast(),
-  const { t } = useTranslation(),
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [company, setCompany] = useState("");
+  const [location, setLocation] = useState("");
+  const [details, setDetails] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
 
     if (!name || !email || !location) {
       toast({
         title: "Missing Information",
-        description: "Name, email and location are required.",
+        description: "Name, email and location are required.";
         variant: "destructive"}),
       return
     }
 
-    setIsSubmitting(true),
+    setIsSubmitting(true);
     try {
       const res = await axios.post("/api/onsite-request", {
-        name,
-        email,
-        phone,
-        company,
-        location,
-        details}),
+        name;
+        email;
+        phone;
+        company;
+        location;
+        details});
 
       if (res.status === 200) {
         toast({
           title: "Request received",
           description: "We've received your request. Our team will reach out shortly."}),
-        setName(""),
-        setEmail(""),
-        setPhone(""),
-        setCompany(""),
-        setLocation(""),
+        setName("");
+        setEmail("");
+        setPhone("");
+        setCompany("");
+        setLocation("");
         setDetails("")
       }
     } catch (err: any) {
-      logErrorToProduction(err),
+      logErrorToProduction(err);
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your request.",
@@ -62,7 +62,7 @@ export function ITServiceRequestHero() {
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
 
   return (
     <section

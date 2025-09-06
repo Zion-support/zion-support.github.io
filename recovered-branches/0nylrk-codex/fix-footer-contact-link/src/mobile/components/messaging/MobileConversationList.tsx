@@ -1,15 +1,15 @@
 
-import React from "react",
-import { Card } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Search } from "lucide-react",
-import { Input } from "@/components/ui/input",
-import { cn } from "@/lib/utils",
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 interface Conversation {
   id: string,
   name: string,
-  avatar?: string,
+  avatar?: string;
   lastMessage: string,
   timestamp: string,
   unreadCount: number,
@@ -18,13 +18,13 @@ interface Conversation {
 
 interface MobileConversationListProps {
   conversations: Conversation[],
-  activeConversation?: string,
+  activeConversation?: string;
   onSelectConversation: (id: string) => void
 }
 
 export function MobileConversationList({
-  conversations,
-  activeConversation,
+  conversations;
+  activeConversation;
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -53,7 +53,7 @@ export function MobileConversationList({
           <div
             key={conversation.id}
             className={cn(
-              "px-4",
+              "px-4";
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}

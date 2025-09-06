@@ -1,9 +1,9 @@
 
-import React from "react",
-import { TalentProfile } from "@/types/talent",
-import { ActiveFilters } from "@/components/talent/ActiveFilters",
-import { ResultsHeader } from "@/components/talent/ResultsHeader",
-import { TalentGrid } from "@/components/talent/TalentGrid",
+import React from "react";
+import { TalentProfile } from "@/types/talent";
+import { ActiveFilters } from "@/components/talent/ActiveFilters";
+import { ResultsHeader } from "@/components/talent/ResultsHeader";
+import { TalentGrid } from "@/components/talent/TalentGrid";
 interface TalentResultsProps {
   filteredTalents: TalentProfile[],
   isLoading: boolean,
@@ -19,22 +19,22 @@ interface TalentResultsProps {
     toggleAvailability: (availability: string) => void,
     selectedRegions: string[],
     toggleRegion: (region: string) => void,
-    priceRange: [number, number],
-    setPriceRange: (range: [number, number]) => void,
-    experienceRange: [number, number],
-    setExperienceRange: (range: [number, number]) => void,
+    priceRange: [number, number];
+    setPriceRange: (range: [number, number]) => void;
+    experienceRange: [number, number];
+    setExperienceRange: (range: [number, number]) => void;
     clearFilters: () => void
   }
 }
 
 export function TalentResults({
-  filteredTalents,
-  isLoading,
-  viewProfile,
-  handleRequestHire,
-  savedTalents,
-  handleToggleSave,
-  isAuthenticated,
+  filteredTalents;
+  isLoading;
+  viewProfile;
+  handleRequestHire;
+  savedTalents;
+  handleToggleSave;
+  isAuthenticated;
   activeFiltersProps
 }: TalentResultsProps) {
   return (

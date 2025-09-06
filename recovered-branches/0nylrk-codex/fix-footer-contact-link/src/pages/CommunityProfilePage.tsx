@@ -1,18 +1,18 @@
 
-import { useState, useEffect } from "react",
-import { useParams, Link } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { formatDistanceToNow } from "date-fns",
-import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community",
-import PostCard from "@/components/community/PostCard",
-import UserBadges from "@/components/community/UserBadges",
-import ReputationDisplay from "@/components/community/ReputationDisplay",
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { formatDistanceToNow } from "date-fns";
+import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community";
+import PostCard from "@/components/community/PostCard";
+import UserBadges from "@/components/community/UserBadges";
+import ReputationDisplay from "@/components/community/ReputationDisplay";
 // Mock user data
 const mockUser: CommunityUser = {
   id: "user1",
@@ -29,14 +29,14 @@ const mockUser: CommunityUser = {
       description: "Provided 10 accepted answers",
       icon: "Award",
       color: "#10B981"
-    },
+    };
     {
       id: "badge2",
       name: "Top Contributor",
       description: "Among the top 5% of contributors",
       icon: "Trophy",
       color: "#F59E0B"
-    },
+    };
     {
       id: "badge3",
       name: "First Post",
@@ -44,10 +44,10 @@ const mockUser: CommunityUser = {
       icon: "Star",
       color: "#6366F1"
     }
-  ],
+  ];
   isVerified: true,
   isModerator: false
-},
+};
 
 // Mock posts by this user
 const userPosts: ForumPost[] = [
@@ -60,7 +60,7 @@ const userPosts: ForumPost[] = [
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
-    tags: ["machine-learning", "fine-tuning", "gpt"],
+    tags: ["machine-learning", "fine-tuning", "gpt"];
     createdAt: "2025-04-01T12:00:00Z",
     updatedAt: "2025-04-01T12:00:00Z",
     upvotes: 48,
@@ -68,23 +68,23 @@ const userPosts: ForumPost[] = [
     replyCount: 12,
     isAnswered: true,
     isFeatured: true
-  },
+  };
   {
     id: "11",
     title: "How to structure an AI prompt for best results",
-    content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
+    content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...";
     authorId: "user1",
     authorName: "Alex Johnson",
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
-    tags: ["prompts", "techniques", "optimization"],
+    tags: ["prompts", "techniques", "optimization"];
     createdAt: "2025-03-20T14:25:00Z",
     updatedAt: "2025-03-20T14:25:00Z",
     upvotes: 36,
     downvotes: 1,
     replyCount: 8
-  },
+  };
   {
     id: "12",
     title: "Setting up effective monitoring for AI systems",
@@ -94,28 +94,28 @@ const userPosts: ForumPost[] = [
     authorAvatar: "https://i.pravatar.cc/150?img=3",
     authorRole: "Verified Talent",
     categoryId: "project-help",
-    tags: ["monitoring", "production", "devops"],
+    tags: ["monitoring", "production", "devops"];
     createdAt: "2025-03-12T09:30:00Z",
     updatedAt: "2025-03-12T09:30:00Z",
     upvotes: 24,
     downvotes: 0,
     replyCount: 6
   }
-],
+];
 
 export default function CommunityProfilePage() {
-  const { userId } = useParams(),
-  const [user, setUser] = useState<CommunityUser | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [posts, setPosts] = useState<ForumPost[]>([]),
+  const { userId } = useParams();
+  const [user, setUser] = useState<CommunityUser | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [posts, setPosts] = useState<ForumPost[]>([]);
   
   useEffect(() => {
     // In a real app, we would fetch the user data here
     // For now, we'll just use the mock data
-    setUser(mockUser),
-    setPosts(userPosts),
+    setUser(mockUser);
+    setPosts(userPosts);
     setIsLoading(false)
-  }, [userId]),
+  }, [userId]);
   
   if (isLoading) {
     return (

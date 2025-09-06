@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, ChevronRight, Home, Star, Users, 
-  Settings, HelpCircle, Mail, Phone, MapPin,
-  Brain, Atom, Shield, Rocket, DollarSign,
-  Globe, Cpu, Database, Lock, Zap,
-  TrendingUp, Award, CheckCircle, Clock,
-  ArrowRight, Search, Menu, X as CloseIcon,
-  Target, BookOpen, Truck, BarChart3,
+  Settings, HelpCircle, Mail, Phone, MapPin;
+  Brain, Atom, Shield, Rocket, DollarSign;
+  Globe, Cpu, Database, Lock, Zap;
+  TrendingUp, Award, CheckCircle, Clock;
+  ArrowRight, Search, Menu, X as CloseIcon;
+  Target, BookOpen, Truck, BarChart3;
   Sparkles, Eye, Lightbulb, Palette, Code
-} from 'lucide-react',
+} from 'lucide-react';
 
 interface SidebarItem {
   name: string,
   href: string,
-  icon?: React.ReactNode,
-  description?: string,
-  children?: SidebarItem[],
-  badge?: string,
-  isNew?: boolean,
+  icon?: React.ReactNode;
+  description?: string;
+  children?: SidebarItem[];
+  badge?: string;
+  isNew?: boolean;
   isHot?: boolean
 }
 
@@ -28,7 +28,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const sidebarItems: SidebarItem[] = [
   {
@@ -47,7 +47,7 @@ const sidebarItems: SidebarItem[] = [
       { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
     ]
-  },
+  };
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
@@ -71,7 +71,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' }
     ]
-  },
+  };
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
@@ -94,7 +94,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Quantum IoT Platform', href: '/quantum-iot', description: 'Quantum-secured IoT' },
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading', description: 'Quantum trading algorithms' }
     ]
-  },
+  };
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
@@ -113,7 +113,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
       { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
     ]
-  },
+  };
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
@@ -132,7 +132,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' },
       { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
     ]
-  },
+  };
   {
     name: 'Creative & Design',
     href: '/creative-services',
@@ -146,7 +146,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'AI Video Generation', href: '/ai-video-generation', description: 'Automated video content' },
       { name: 'AI Music Composition', href: '/ai-music-composition', description: 'AI-generated music' }
     ]
-  },
+  };
   {
     name: 'Research & Development',
     href: '/research-development',
@@ -160,7 +160,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Neuroscience Research', href: '/neuroscience-research-platform', description: 'Brain research tools' },
       { name: 'Climate Research AI', href: '/climate-research-ai', description: 'Environmental research automation' }
     ]
-  },
+  };
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
@@ -174,7 +174,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Education AI', href: '/education-ai-solutions', description: 'Educational technology' },
       { name: 'Transportation AI', href: '/transportation-ai-solutions', description: 'Smart transportation' }
     ]
-  },
+  };
   {
     name: 'Pricing & Plans',
     href: '/pricing',
@@ -188,7 +188,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
       { name: 'ROI Calculator', href: '/roi-calculator', description: 'Calculate your return on investment' }
     ]
-  },
+  };
   {
     name: 'Resources',
     href: '/resources',
@@ -202,7 +202,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
       { name: 'Research Papers', href: '/research-papers', description: 'Academic publications' }
     ]
-  },
+  };
   {
     name: 'Support',
     href: '/support',
@@ -217,7 +217,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ]
   }
-],
+];
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
@@ -226,7 +226,7 @@ const resources = [
   { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
-],
+];
 
 
 const supportLinks = [
@@ -236,24 +236,24 @@ const supportLinks = [
   { name: 'Status Page', href: '/status', description: 'Service status' },
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
   { name: 'Community', href: '/community', description: 'Connect with users' }
-],
+];
 
   const toggleSection = (title: string) => {
-    const newExpanded = new Set(expandedSections),
+    const newExpanded = new Set(expandedSections);
     if (newExpanded.has(title)) {
       newExpanded.delete(title)
     } else {
       newExpanded.add(title)
     }
     setExpandedSections(newExpanded)
-  },
+  };
 
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
-  ),
+  );
 
   return (
     <motion.aside
@@ -590,6 +590,6 @@ const supportLinks = [
       <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
     </motion.aside>
   )
-},
+};
 
-export default EnhancedSidebar2025,
+export default EnhancedSidebar2025;

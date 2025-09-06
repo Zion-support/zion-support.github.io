@@ -1,7 +1,7 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
 
 interface Service {
   id: string,
@@ -15,7 +15,7 @@ interface Service {
 
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[],
-  title?: string,
+  title?: string;
   subtitle?: string
 }
 

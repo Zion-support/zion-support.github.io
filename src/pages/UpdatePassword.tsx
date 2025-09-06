@@ -1,44 +1,44 @@
 
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { z } from "zod",
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { z } from "zod";
 import { LockKeyhole } from 'lucide-react'
 
-import { supabase } from "@/integrations/supabase/client",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { toast } from "@/hooks/use-toast",
-import { cleanupAuthState } from "@/utils/authUtils",
-import { logErrorToProduction } from '@/utils/productionLogger',
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form";
+import { toast } from "@/hooks/use-toast";
+import { cleanupAuthState } from "@/utils/authUtils";
+import { logErrorToProduction } from '@/utils/productionLogger';
 // Form validation schema
 const updatePasswordSchema = z
   .object({
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
-      .max(64, "Password must be less than 64 characters"),
+      .max(64, "Password must be less than 64 characters");
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
 
 export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false),
-  const [accessToken, setAccessToken] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
-  const [success, setSuccess] = useState(false),
-  const router = useRouter(),
+  const [isLoading, setIsLoading] = useState(false);
+  const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+  const router = useRouter();
 
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
@@ -49,9 +49,9 @@ export default function UpdatePassword() {
 
   useEffect(() => {
     // Extract access token from URL hash on the client
-    const hash = typeof window !== 'undefined' ? window.location.hash : "",
-    const hashParams = new URLSearchParams(hash.substring(1)),
-    const token = hashParams.get("access_token"),
+    const hash = typeof window !== 'undefined' ? window.location.hash : "";
+    const hashParams = new URLSearchParams(hash.substring(1));
+    const token = hashParams.get("access_token");
     
     if (token) {
       setAccessToken(token)
@@ -61,16 +61,16 @@ export default function UpdatePassword() {
 
     // Clean up auth state to prevent issues
     cleanupAuthState()
-  }, []),
+  }, []);
 
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
-      setError("No access token found. Please request a new password reset link."),
+      setError("No access token found. Please request a new password reset link.");
       return
     }
 
-    setIsLoading(true),
+    setIsLoading(true);
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
@@ -86,18 +86,18 @@ export default function UpdatePassword() {
           title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
-        setError(error.message),
+        setError(error.message);
         return
       }
 
       // Show success message and clean up auth state
-      setSuccess(true),
+      setSuccess(true);
       toast({
         title: "Password updated successfully",
         description: "You can now log in with your new password."}),
 
       // Clean auth state and redirect after a delay
-      cleanupAuthState(),
+      cleanupAuthState();
       setTimeout(() => {
         router.push("/login")
       }, 3000)
@@ -111,14 +111,14 @@ export default function UpdatePassword() {
     } finally {
       setIsLoading(false)
     }
-  },
+  };
 
   const onInvalid = (errors: any) => {
-    const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues,
+    const firstError = Object.keys(errors)[0] as keyof UpdatePasswordFormValues;
     if (firstError) {
       form.setFocus(firstError)
     }
-  },
+  };
 
   return (
     <>

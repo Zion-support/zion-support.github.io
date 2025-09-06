@@ -1,19 +1,19 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 
 export default function SEOAnalyzerToolPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false),
-  const [analysisResults, setAnalysisResults] = useState(null),
-  const [url, setUrl] = useState(''),
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
+  const [url, setUrl] = useState('');
 
   const features = [
     {
       icon: <Search className="w-8 h-8 text-white" />,
       title: 'Comprehensive SEO Analysis',
-      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',
+      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.';
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
@@ -40,35 +40,35 @@ export default function SEOAnalyzerToolPage() {
       category: 'On-Page SEO',
       factors: [
         'Title tags optimizationMeta descriptionsHeader structure (H1, H2, H3)Content quality and lengthInternal linking structureImage optimization (alt tags)'
-      ],
+      ];
       icon: '📝',
       color: 'text-green-400'
-    },
+    };
     {
       category: 'Technical SEO',
       factors: [
         'Page load speedMobile responsivenessXML sitemapRobots.txt configurationSSL certificateCore Web Vitals'
-      ],
+      ];
       icon: '⚙️',
       color: 'text-blue-400'
-    },
+    };
     {
       category: 'Content SEO',
       factors: [
         'Keyword densityContent relevanceReadability scoresContent freshnessMultimedia optimizationSchema markup'
-      ],
+      ];
       icon: '📊',
       color: 'text-purple-400'
-    },
+    };
     {
       category: 'Local SEO',
       factors: [
         'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
-      ],
+      ];
       icon: '📍',
       color: 'text-orange-400'
     }
-  ],
+  ];
 
   const pricing = [
     {
@@ -78,9 +78,9 @@ export default function SEOAnalyzerToolPage() {
       description: 'Perfect for small businesses and bloggers',
       features: [
         '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting'
-      ],
+      ];
       popular: false
-    },
+    };
     {
       name: 'Professional',
       price: '$89',
@@ -88,9 +88,9 @@ export default function SEOAnalyzerToolPage() {
       description: 'Ideal for growing businesses and agencies',
       features: [
         '50 website analyses/monthAdvanced SEO metricsKeyword research (500 keywords)Competitive analysisPriority supportAdvanced reportingAPI accessTeam collaboration'
-      ],
+      ];
       popular: true
-    },
+    };
     {
       name: 'Enterprise',
       price: '$249',
@@ -98,15 +98,15 @@ export default function SEOAnalyzerToolPage() {
       description: 'For large organizations and SEO agencies',
       features: [
         'Unlimited analysesEnterprise SEO metricsUnlimited keyword researchAdvanced competitive analysis24/7 dedicated supportCustom reportingWhite-label optionsCustom integrations'
-      ],
+      ];
       popular: false
     }
-  ],
+  ];
 
   const handleAnalyzeSEO = async () => {
-    if (!url.trim()) return,
+    if (!url.trim()) return;
     
-    setIsAnalyzing(true),
+    setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -120,19 +120,19 @@ export default function SEOAnalyzerToolPage() {
           { type: 'error', message: 'Missing meta description', priority: 'high' },
           { type: 'warning', message: 'Title tag too long (65 characters)', priority: 'medium' },
           { type: 'info', message: 'Consider adding more internal links', priority: 'low' }
-        ],
+        ];
         recommendations: [
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
-        ],
+        ];
         keywords: [
           { keyword: 'website optimization', volume: '12K', difficulty: 'medium' },
           { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
         ]
-      }),
+      });
       setIsAnalyzing(false)
     }, 4000)
-  },
+  };
 
   return (
     <>

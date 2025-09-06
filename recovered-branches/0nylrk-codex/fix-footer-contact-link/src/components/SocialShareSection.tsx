@@ -1,24 +1,24 @@
 
-import { Button } from "./ui/button",
-import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",
-import { toast } from "./ui/use-toast",
+import { Button } from "./ui/button";
+import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
+import { toast } from "./ui/use-toast";
 export function SocialShareSection() {
   // Current URL and text to share
-  const shareUrl = encodeURIComponent(window.location.href),
-  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),
+  const shareUrl = encodeURIComponent(window.location.href);
+  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
   
   // Social sharing functions
   const shareToTwitter = () => {
     window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
-  },
+  };
   
   const shareToFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
-  },
+  };
   
   const shareToLinkedIn = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
-  },
+  };
   
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
@@ -34,7 +34,7 @@ export function SocialShareSection() {
           variant: "destructive"
         })
       })
-  },
+  };
 
   const shareLinks = [
     {
@@ -42,25 +42,25 @@ export function SocialShareSection() {
       icon: <Twitter className="h-5 w-5" />,
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",
       onClick: shareToTwitter
-    },
+    };
     {
       name: "Facebook",
       icon: <Facebook className="h-5 w-5" />,
       color: "bg-[#4267B2] hover:bg-[#4267B2]/80",
       onClick: shareToFacebook
-    },
+    };
     {
       name: "LinkedIn",
       icon: <Linkedin className="h-5 w-5" />,
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80",
       onClick: shareToLinkedIn
-    },
+    };
     {
       name: "Copy Link",
       icon: <Link className="h-5 w-5" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
-    }],
+    }];
 
   return (
     <section className="py-12 bg-zion-blue">

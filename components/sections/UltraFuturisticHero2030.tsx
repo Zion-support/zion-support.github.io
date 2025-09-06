@@ -1,48 +1,48 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   ArrowRight, Zap, Brain, Atom, Rocket, Star, 
-  TrendingUp, Shield, Globe, Cpu, Sparkles,
+  TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const features = [
   {
     icon: Brain,
     title: 'AI Consciousness',
     description: 'Develop genuine AI consciousness and emotional intelligence'
-  },
+  };
   {
     icon: Atom,
     title: 'Quantum Computing',
     description: 'Leverage quantum algorithms for exponential performance'
-  },
+  };
   {
     icon: Rocket,
     title: 'Space Technology',
     description: 'Automated space exploration and resource utilization'
-  },
+  };
   {
     icon: Shield,
     title: 'Quantum Security',
     description: 'Unbreakable encryption with quantum key distribution'
   }
-],
+];
 
 const stats = [
   { number: '500+', label: 'Active Clients', icon: Users },
   { number: '99.9%', label: 'Uptime SLA', icon: Clock },
   { number: '24/7', label: 'Support', icon: Shield },
   { number: '2030', label: 'Future Ready', icon: Star }
-],
+];
 
 export default function UltraFuturisticHero2030() {
   return (
@@ -245,7 +245,7 @@ export default function UltraFuturisticHero2030() {
         <motion.div
           className="absolute top-20 right-20 w-2 h-2 bg-purple-400 rounded-full"
           animate={{
-            scale: [1, 2, 1],
+            scale: [1, 2, 1];
             opacity: [0.5, 1, 0.5]}}
           transition={{
             duration: 3,
@@ -256,7 +256,7 @@ export default function UltraFuturisticHero2030() {
         <motion.div
           className="absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full"
           animate={{
-            scale: [1, 1.5, 1],
+            scale: [1, 1.5, 1];
             opacity: [0.3, 0.8, 0.3]}}
           transition={{
             duration: 4,
@@ -267,7 +267,7 @@ export default function UltraFuturisticHero2030() {
         <motion.div
           className="absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full"
           animate={{
-            scale: [1, 3, 1],
+            scale: [1, 3, 1];
             opacity: [0.2, 0.6, 0.2]}}
           transition={{
             duration: 5,

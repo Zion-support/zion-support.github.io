@@ -1,16 +1,16 @@
 
-import React from "react",
-import { Link, useLocation } from "react-router-dom",
-import { Search } from "lucide-react",
-import { Input } from "@/components/ui/input",
-import { cn } from "@/lib/utils",
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
-  const location = useLocation(),
-  const currentPath = location.pathname,
+  const location = useLocation();
+  const currentPath = location.pathname;
   
   const navigationItems = [
     { title: "Getting Started", path: "/developers/docs/getting-started" },
@@ -47,7 +47,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
                 <Link
                   to={item.path}
                   className={cn(
-                    "block px-3 py-2 rounded-md text-sm",
+                    "block px-3 py-2 rounded-md text-sm";
                     currentPath === item.path
                       ? "bg-zion-purple/20 text-zion-cyan"
                       : "text-zinc-400 hover:text-white hover:bg-zinc-900"
@@ -69,4 +69,4 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   )
 }
 
-export default ApiDocsLayout,
+export default ApiDocsLayout;

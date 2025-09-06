@@ -1,15 +1,15 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   HelpCircle, MessageCircle, Phone, Mail, Clock, 
-  BookOpen, Video, FileText, Search, Filter,
+  BookOpen, Video, FileText, Search, Filter;
   CheckCircle, ArrowRight, Brain, Atom, Rocket, 
   Shield, Zap, Users, Star, TrendingUp, Code
-} from 'lucide-react',
+} from 'lucide-react';
 
 export default function Support() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const supportCategories = [
     {
@@ -18,35 +18,35 @@ export default function Support() {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       description: 'Support for AI consciousness and autonomous systems',
       articles: 25
-    },
+    };
     {
       id: 'quantum-solutions',
       name: 'Quantum Solutions',
       icon: <Atom className="w-8 h-8 text-purple-400" />,
       description: 'Help with quantum computing and cryptography',
       articles: 18
-    },
+    };
     {
       id: 'autonomous-systems',
       name: 'Autonomous Systems',
       icon: <Rocket className="w-8 h-8 text-green-400" />,
       description: 'Support for self-managing business operations',
       articles: 32
-    },
+    };
     {
       id: 'enterprise-it',
       name: 'Enterprise IT',
       icon: <Shield className="w-8 h-8 text-blue-400" />,
       description: 'Infrastructure and security support',
       articles: 28
-    },
+    };
     {
       id: 'billing',
       name: 'Billing & Account',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      description: 'Payment, invoices, and account management',
+      description: 'Payment, invoices, and account management';
       articles: 15
-    },
+    };
     {
       id: 'technical',
       name: 'Technical Issues',
@@ -54,7 +54,7 @@ export default function Support() {
       description: 'Bug reports and technical troubleshooting',
       articles: 42
     }
-  ],
+  ];
 
   const quickActions = [
     {
@@ -64,7 +64,7 @@ export default function Support() {
       action: 'Start Chat',
       color: 'from-cyan-500 to-blue-600',
       available: true
-    },
+    };
     {
       title: 'Phone Support',
       description: 'Speak directly with our experts',
@@ -72,7 +72,7 @@ export default function Support() {
       action: 'Call Now',
       color: 'from-green-500 to-emerald-600',
       available: true
-    },
+    };
     {
       title: 'Email Support',
       description: 'Send us a detailed message',
@@ -80,7 +80,7 @@ export default function Support() {
       action: 'Send Email',
       color: 'from-purple-500 to-pink-600',
       available: true
-    },
+    };
     {
       title: 'Video Call',
       description: 'Screen share and visual assistance',
@@ -89,7 +89,7 @@ export default function Support() {
       color: 'from-orange-500 to-red-600',
       available: true
     }
-  ],
+  ];
 
   const popularArticles = [
     {
@@ -98,28 +98,28 @@ export default function Support() {
       readTime: '5 min read',
       views: '2.4k',
       helpful: '98%'
-    },
+    };
     {
       title: 'Setting Up Quantum-Secure Infrastructure',
       category: 'Quantum Solutions',
       readTime: '8 min read',
       views: '1.8k',
       helpful: '95%'
-    },
+    };
     {
       title: 'Troubleshooting Autonomous System Errors',
       category: 'Autonomous Systems',
       readTime: '6 min read',
       views: '3.1k',
       helpful: '92%'
-    },
+    };
     {
       title: 'API Integration Best Practices',
       category: 'Technical Issues',
       readTime: '7 min read',
       views: '4.2k',
       helpful: '96%'
-    },
+    };
     {
       title: 'Understanding Your Invoice and Billing',
       category: 'Billing & Account',
@@ -127,29 +127,29 @@ export default function Support() {
       views: '1.5k',
       helpful: '89%'
     }
-  ],
+  ];
 
   const supportHours = [
     {
       day: 'Monday - Friday',
       hours: '9:00 AM - 8:00 PM EST',
       status: 'Available'
-    },
+    };
     {
       day: 'Saturday',
       hours: '10:00 AM - 6:00 PM EST',
       status: 'Available'
-    },
+    };
     {
       day: 'Sunday',
       hours: '12:00 PM - 6:00 PM EST',
       status: 'Limited'
     }
-  ],
+  ];
 
   const filteredCategories = selectedCategory === 'all' 
     ? supportCategories 
-    : supportCategories.filter(cat => cat.id === selectedCategory),
+    : supportCategories.filter(cat => cat.id === selectedCategory);
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -419,23 +419,23 @@ export default function Support() {
               {
                 question: "What is AI Consciousness Evolution?",
                 answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self-aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence."
-              },
+              };
               {
                 question: "How does Quantum Neural Ecosystem work?",
                 answer: "Our Quantum Neural Ecosystem combines quantum computing with neural networks to solve previously impossible problems, leveraging quantum superposition and entanglement for exponential computational power."
-              },
+              };
               {
                 question: "What makes Space Resource Intelligence unique?",
                 answer: "Our space technology uses AI-powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization."
-              },
+              };
               {
                 question: "How secure is your Quantum Cybersecurity platform?",
                 answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations."
-              },
+              };
               {
                 question: "Can I integrate your AI with my existing systems?",
                 answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure."
-              },
+              };
               {
                 question: "What support do you offer for enterprise deployments?",
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
@@ -720,9 +720,9 @@ export default function Support() {
       </section>
     </div>
   )
-},
+};
 
-export default Support,
+export default Support;
           </div>
         </section>
 
@@ -769,6 +769,6 @@ export default Support,
       </main>
     </Layout>
   )
-},
+};
 
-export default SupportPage,
+export default SupportPage;

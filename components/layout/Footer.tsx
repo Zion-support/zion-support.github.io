@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1">
             <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
             <p className="text-gray-300 mb-6">
-              Leading technology solutions provider helping businesses transform their digital presence,
+              Leading technology solutions provider helping businesses transform their digital presence;
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className="flex space-x-4">
