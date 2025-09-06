@@ -2,51 +2,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-<<<<<<< HEAD
-=======
 // https://vitejs.dev/config/
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-<<<<<<< HEAD
-    },
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          router: ['react-router-dom']
-        }
-      }
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    }
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
-  }
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
       '@components': path.resolve(__dirname, './src/components'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@utils': path.resolve(__dirname, './src/utils'),
@@ -77,6 +38,12 @@ export default defineConfig({
         }
       }
     }
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
->>>>>>> cursor/expand-services-advertise-and-build-project-5c86
