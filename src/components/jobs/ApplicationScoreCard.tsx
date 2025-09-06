@@ -4,12 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
-<<<<<<< HEAD
-import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
-=======
-import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { toast } from "sonner";
+import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
   application: JobApplication,
@@ -20,7 +15,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   const [isScoring, setIsScoring] = useState(false);
 
   // Determine if application has been scored
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const hasScore = typeof application.match_score === 'number';
   
       
@@ -28,12 +22,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const maxAttempts = 10;
       
 
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
@@ -235,4 +223,3 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   )
 }
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

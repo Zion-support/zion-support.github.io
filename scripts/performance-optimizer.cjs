@@ -6,6 +6,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -193,6 +194,8 @@ const BundleAnalyzer: React.FC = () => {
 
     analyzeBundle()}, []);
 >>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   getFilesRecursively(dir) {
@@ -219,6 +222,7 @@ const BundleAnalyzer: React.FC = () => {
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
 <<<<<<< HEAD
+<<<<<<< HEAD
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
 =======
@@ -228,6 +232,8 @@ const BundleAnalyzer: React.FC = () => {
 =======
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
 >>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   getBundleRecommendations(totalSize, fileCount) {
@@ -263,6 +269,7 @@ const BundleAnalyzer: React.FC = () => {
         totalSize += stats.size;
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -294,6 +301,8 @@ const BundleAnalyzer: React.FC = () => {
     </div>
   )};
 >>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       return {
@@ -307,6 +316,7 @@ const BundleAnalyzer: React.FC = () => {
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -481,6 +491,8 @@ function main() {
     log(`❌ Performance optimizations failed: ${error.message}`, 'ERROR');
     process.exit(1)}
 >>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

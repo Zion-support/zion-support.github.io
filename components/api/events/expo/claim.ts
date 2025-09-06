@@ -6,7 +6,6 @@ export default async function handler(
 ) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const { address, signature } = req.body || {};
   if (!address || !signature)
     return res.status(400).json({ error: 'Missing address or signature' });
@@ -17,10 +16,9 @@ export default async function handler(
     'signature:',
     signature.slice(0, 18) + '…'
   );
-  return res.status(200).json({ ok: true });
-=======
+  return res.status(200).json({ ok: true });  const { address, signature } = req.body || {};
+  if (!address || !signature) return res.status(400).json({ error: 'Missing address or signature' });
+  // In production: verify signature, mint or issue POAP
   console.log('[NFT Claim] address:', address, 'signature:', signature.slice(0, 18) + '…');
   return res.status(200).json({ ok: true })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

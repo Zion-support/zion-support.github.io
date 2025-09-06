@@ -416,9 +416,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4.8,
     reviews: 1900,
   },
-];
-=======
-      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
+];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.';
@@ -433,5 +431,3 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 1900
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

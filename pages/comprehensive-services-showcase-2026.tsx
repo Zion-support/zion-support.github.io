@@ -18,8 +18,7 @@ import {
   Globe,
   Robot,
   Cube,
-  Sparkles,;
-} from 'lucide-react';
+  Sparkles,;} from 'lucide-react';
 
 interface Service {
   id: string;
@@ -58,8 +57,7 @@ interface Service {
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-const ComprehensiveServicesShowcase2026: React.FC = () => {
+  reviews: number;const ComprehensiveServicesShowcase2026: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -97,7 +95,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     'AR/VR & Immersive Technology',
     'Robotics & Automation',
     'Digital Twin & Simulation',  ];
-
   const priceRanges = [
     { value: 'all', label: 'All Prices' },
     { value: '0-100', label: '$0 - $100' },
@@ -137,7 +134,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       })();
 
     return matchesSearch && matchesCategory && matchesPrice;  });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
@@ -156,8 +152,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       case 'customers':
         return b.customers - a.customers;
       default:
-        return 0;    }
-  });
+        return 0;    }  });
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -184,8 +179,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       'Edge Computing & 5G': <Globe className='w-5 h-5' />,
       'AR/VR & Immersive Technology': <Cube className='w-5 h-5' />,
       'Robotics & Automation': <Robot className='w-5 h-5' />,
-      'Digital Twin & Simulation': <Cube className='w-5 h-5' />,
-    };
+      'Digital Twin & Simulation': <Cube className='w-5 h-5' />,    };
     return iconMap[category] || <Sparkles className='w-5 h-5' />;
   };
 
@@ -523,5 +517,4 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   /* CTA Button */ 
 }<a > Learn More & Get Started </Link> </div> </div> </motion.div>) ) 
 }</div> </div> <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30"> <div className="text-center"> <h2 className="text-3xl font-bold text-white mb-4"> text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className=" text-center"> <div className=" w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Users className=" w-8 h-8 text-cyan-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Expert Team</h3> <p className=" text-gray-300 text-sm">Dedicated professionals ready to help</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Zap className=" w-8 h-8 text-blue-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Fast Implementation</h3> <p className=" text-gray-300 text-sm">Quick setup and deployment</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className=" w-8 h-8 text-purple-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">24/7 Support</h3> <p className=" text-gray-300 text-sm">Round-the-clock assistance</p> </div> </div> <div className=" flex flex-col sm:flex-row gap-4 justify-center items-center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300" > Call Us </Link> </div> </div> </div> </div> </div>) 
-};
-export default ComprehensiveServicesShowcase2026;
+};export default ComprehensiveServicesShowcase2026;

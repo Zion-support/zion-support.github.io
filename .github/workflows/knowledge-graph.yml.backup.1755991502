@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -11,6 +12,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Knowledge Graph Builder
 
 on:
@@ -24,6 +27,7 @@ on:
 
 permissions:
   contents: write
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -45,6 +49,9 @@ on:
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 jobs:
   graph:
     runs-on: ubuntu-latest
@@ -55,6 +62,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -68,6 +76,8 @@ jobs:
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Build knowledge graph
@@ -77,6 +87,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ -n "$(git status --porcelain)" ]]; then
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -94,9 +105,11 @@ jobs:
           git add public/automation/knowledge-graph.json automation_logs/knowledge-graph.log || true
           if ! git diff --cached --quiet; then
 >>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
-            git commit -m "chore(automation): update knowledge graph [skip ci]"
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+            git commit -m "chore(automation): update knowledge graph [skip ci]"
             git add -A            git commit -m "chore(automation): update knowledge graph [skip ci]"
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -104,6 +117,9 @@ jobs:
             git add -A            git commit -m "chore(automation): update knowledge graph [skip ci]"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+            git add -A            git commit -m "chore(automation): update knowledge graph [skip ci]"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             git push
           else
             echo "No changes to commit"

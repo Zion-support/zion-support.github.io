@@ -18,8 +18,7 @@ import {
   Shield,
   Phone,
   Mail,;
-} from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
+} from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
@@ -41,19 +40,16 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       icon: '🔬',
       count: emergingTechCount,
     },  ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $500', range: 'Under $500' },
     { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' },
     { id: 'high', name: 'Over $1,000', range: 'Over $1,000' },  ];
-
   const sortOptions = [
     { id: 'name', name: 'Name' },
     { id: 'price', name: 'Price' },
     { id: 'rating', name: 'Rating' },
     { id: 'popularity', name: 'Popularity' },  ];
-
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
@@ -80,7 +76,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
             return true;
         }
       });    }
-
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -107,7 +102,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
             .includes(searchTerm.toLowerCase()) ||
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );    }
-
     // Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -125,7 +119,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     });
 
     return filtered;  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -134,7 +127,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         staggerChildren: 0.1,
       },
     },  };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -144,7 +136,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         duration: 0.5,
       },
     },  };
-
   return (
     <>
       <Head>
@@ -178,8 +169,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 
       <UltraAdvancedFuturisticBackground2026
         intensity='extreme'
-        colorScheme='neural-network'        particleCount={800}
-        animationSpeed={3.0}
+        colorScheme='neural-network'        particleCount={800}        animationSpeed={3.0}
         enableHolographic={true}
         enableQuantumEffects={true}
         enableNeuralNetworks={true}
@@ -195,8 +185,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='mb-8'
-            >
+              className='mb-8'            >
               <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
                 2026 Innovative Services
               </h1>
@@ -204,8 +193,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                 Discover the future of technology with our cutting-edge 2026
                 services. From AI-powered solutions to quantum computing and
                 emerging technologies, transform your business with
-                next-generation innovation.              </p>
-            </motion.div>
+                next-generation innovation.              </p>            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -231,8 +219,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
               <div className='bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3'>
                 <span className='text-orange-400 font-semibold'>
                   Future-Proof
-                </span>              </div>
-            </motion.div>
+                </span>              </div>            </motion.div>
 
             {/* Search and Filters */}
             <motion.div
@@ -253,8 +240,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
               </div>
 
               <div className='flex flex-wrap gap-4 justify-center mb-8'>
-                {categories.map(category => (                  <button
-                    key={category.id}
+                {categories.map(category => (                  <button                    key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${
                       selectedCategory === category.id
@@ -262,14 +248,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
                     }`}
                   >
-                    <span className='mr-2'>{category.icon}</span>                    {category.name} ({category.count})
-                  </button>
+                    <span className='mr-2'>{category.icon}</span>                    {category.name} ({category.count})                  </button>
                 ))}
               </div>
 
               <div className='flex flex-wrap gap-4 justify-center'>
-                {priceRanges.map(range => (                  <button
-                    key={range.id}
+                {priceRanges.map(range => (                  <button                    key={range.id}
                     onClick={() => setSelectedPriceRange(range.id)}
                     className={`px-4 py-2 rounded-lg backdrop-blur-sm border transition-all duration-300 ${
                       selectedPriceRange === range.id
@@ -387,16 +371,14 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                           {service.features.length > 3 && (
                             <span className='text-gray-500 text-xs'>
                               +{service.features.length - 3} more features
-                            </span>                          )}
-                        </div>
+                            </span>                          )}                        </div>
                       </div>
 
                       {/* Category Badge */}
                       <div className='mb-4'>
                         <span
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}
-                        >                          {service.category}
-                        </span>
+                        >                          {service.category}                        </span>
                       </div>
 
                       {/* CTA Button */}
@@ -404,14 +386,12 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                         <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
                           <span className='flex items-center justify-center space-x-2'>
                             <span>Learn More</span>
-                            <ArrowRight className='w-4 h-4' />                          </span>
-                        </button>
+                            <ArrowRight className='w-4 h-4' />                          </span>                        </button>
                       </Link>
                     </div>
 
                     {/* Hover Effect Overlay */}
-                    <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>
-                </motion.div>
+                    <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>                </motion.div>
               ))}
             </motion.div>
 
@@ -429,8 +409,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
                   }}
-                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >
-                  Clear Filters
+                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >                  Clear Filters
                 </button>
               </motion.div>
             )}
@@ -439,8 +418,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -472,8 +450,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
               </div>
 
               <Link href='/contact'>
-                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started Today
-                </button>
+                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started Today                </button>
               </Link>
             </motion.div>
           </div>

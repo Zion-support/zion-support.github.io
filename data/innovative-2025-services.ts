@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> origin/automation-fixes
 export interface Innovative2025Service {
   id: string;
   name: string;
@@ -34,7 +30,6 @@ export interface Innovative2025Service {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
     address: string;
     website: string;
   };
@@ -46,17 +41,12 @@ export interface Innovative2025Service {
   reviews: number;
 export const innovative2025Services: Innovative2025Service[] = [
   // AI & Machine Learning Innovation Services
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const innovative2025Services: Innovative2025Service[] = [
   // AI & Machine Learning Innovation Services
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-multimodal-fusion-platform',
     name: 'AI Multimodal Fusion Platform',
     tagline: 'Unified AI processing across text, image, video, and audio',
@@ -64,9 +54,6 @@ export const innovative2025Services: Innovative2025Service[] = [
     period: '/month',
     description:
       'Revolutionary platform that seamlessly processes and analyzes multiple data types simultaneously, enabling breakthrough insights and applications across industries.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Cross-modal data fusion algorithms',
       'Real-time multimodal analysis',
       'Advanced pattern recognition',
@@ -675,9 +662,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     rating: 4.8,
     reviews: 32,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -690,26 +675,3 @@ export const innovative2025Services: Innovative2025Service[] = [
     reviews: 32
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-export const innovative2025Services: Innovative2025Service[] = [;
-  {;
-    id: "ai-innovation-hub",
-    name: "AI Innovation Hub",
-    tagline: "Center for AI innovation and development",
-    price: "$159/month",
-    description: "Comprehensive AI innovation platform that provides tools and resources for AI development.",
-    features[ "AI development tools",
-      "Innovation resources",
-      "Collaboration platform",
-      "Research database",
-      "Expert support" ],
-    link: "/services/ai-innovation-hub",
-    category: "Innovative 2025 Services",
-    realImplementation: true,
-    contactInfo: {;
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}}
->>>>>>> origin/automation-fixes

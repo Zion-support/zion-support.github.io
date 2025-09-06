@@ -20,13 +20,11 @@ import {
   BarChart3,
   Settings,;
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-const contactInfo = {
+import Layout from '../components/layout/Layout';const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
-
 const serviceHighlights = [
   {
     title: 'AI Code Generation',
@@ -93,7 +91,6 @@ const serviceHighlights = [
       'Performance optimization',
     ],
   },];
-
 const benefits = [
   {
     title: '80% Reduction in Manual Work',
@@ -118,7 +115,6 @@ const benefits = [
     icon: BarChart3,
     color: 'text-pink-400',
   },];
-
 export default function AIAutomationServices() {
   return (
     <Layout>
@@ -137,7 +133,6 @@ export default function AIAutomationServices() {
         />
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -225,15 +220,13 @@ export default function AIAutomationServices() {
               <Link href='#services' className='group'>
                 <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
                   <span>Explore Services</span>
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-                </button>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
               </Link>
 
               <Link href='/contact' className='group'>
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
                   <span>Get Started</span>
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
-              </Link>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>              </Link>
             </div>
           </motion.div>
         </div>
@@ -260,8 +253,7 @@ export default function AIAutomationServices() {
         id='services'
         className='py-20 bg-gradient-to-b from-black to-gray-900'
       >
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -279,8 +271,7 @@ export default function AIAutomationServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (              <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -307,8 +298,7 @@ export default function AIAutomationServices() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
-                      <CheckCircle className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>
-                    </li>
+                      <CheckCircle className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -318,8 +308,7 @@ export default function AIAutomationServices() {
 
       {/* Detailed Services */}
       <section className='py-20 bg-black'>
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -338,8 +327,7 @@ export default function AIAutomationServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedAIAutomationServices2025.map((service, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedAIAutomationServices2025.map((service, index) => (              <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -430,8 +418,7 @@ export default function AIAutomationServices() {
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
-                    >                      Get Started
-                    </Link>
+                    >                      Get Started                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -442,8 +429,7 @@ export default function AIAutomationServices() {
 
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -461,8 +447,7 @@ export default function AIAutomationServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (              <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -481,16 +466,14 @@ export default function AIAutomationServices() {
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {benefit.description}
-                </p>              </motion.div>
-            ))}
+                </p>              </motion.div>            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>
-        <div className='container mx-auto px-4 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4 text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -545,8 +528,7 @@ export default function AIAutomationServices() {
                 <div className='text-3xl font-bold text-emerald-400 mb-2'>
                   350%
                 </div>
-                <div className='text-gray-300'>Average ROI</div>              </div>
-            </div>
+                <div className='text-gray-300'>Average ROI</div>              </div>            </div>
           </motion.div>
         </div>
       </section>

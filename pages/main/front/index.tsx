@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 export default function FrontLanding() {
   return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
@@ -45,8 +44,7 @@ export default function FrontLanding() {
             </Link>
             <Link href='/contact'>
               <a className='text-white/80 hover:text-white'>Contact</a>
-            </Link>          </div>
-        </nav>
+            </Link>          </div>        </nav>
       </header>
 
       {/* Hero */}
@@ -58,8 +56,7 @@ export default function FrontLanding() {
               transition={{ duration: 0.6 }}
               className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'
             >
-              <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />              Autonomous agents running continuous improvements
-            </motion.div>
+              <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />              Autonomous agents running continuous improvements            </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 8 }}
@@ -70,7 +67,6 @@ export default function FrontLanding() {
               <span className='gradient-text'>
                 Autonomous Cloud Automations
               </span>            </motion.h1>
-
             <motion.p
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -80,13 +76,11 @@ export default function FrontLanding() {
               Self-improving, cloud-native agents that invent, generate, and run
               new automation factories—fixing, optimizing, and syncing changes
               to the repository continuously.            </motion.p>
-
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className='mt-8 flex flex-wrap justify-center gap-3'
-            >
+              className='mt-8 flex flex-wrap justify-center gap-3'            >
               <Link href='/automation'>
                 <a className='rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow'>
                   Explore Automations
@@ -109,8 +103,7 @@ export default function FrontLanding() {
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
                 ['Safety', 'Guardrails'],
-              ].map(([k, v]) => (                <motion.div
-                  key={k}
+              ].map(([k, v]) => (                <motion.div                  key={k}
                   initial={{ opacity: 0, y: 6 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -118,8 +111,7 @@ export default function FrontLanding() {
                   className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left'
                 >
                   <div className='text-lg font-bold text-white'>{k}</div>
-                  <div className='text-xs text-white/70'>{v}</div>                </motion.div>
-              ))}
+                  <div className='text-xs text-white/70'>{v}</div>                </motion.div>              ))}
             </div>
           </div>
         </section>
@@ -155,8 +147,7 @@ export default function FrontLanding() {
                 title: 'Observability',
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.',
               },
-            ].map(f => (              <motion.article
-                key={f.title}
+            ].map(f => (              <motion.article                key={f.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -165,8 +156,7 @@ export default function FrontLanding() {
               >
                 <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
                 <h3 className='text-lg font-semibold'>{f.title}</h3>
-                <p className='mt-1 text-sm text-white/75'>{f.desc}</p>              </motion.article>
-            ))}
+                <p className='mt-1 text-sm text-white/75'>{f.desc}</p>              </motion.article>            ))}
           </div>
         </section>
 
@@ -189,8 +179,7 @@ export default function FrontLanding() {
                 title: 'Content & SEO',
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
               },
-            ].map(c => (              <motion.article
-                key={c.title}
+            ].map(c => (              <motion.article                key={c.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -199,8 +188,7 @@ export default function FrontLanding() {
               >
                 <div className='absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl' />
                 <h3 className='text-lg font-semibold'>{c.title}</h3>
-                <p className='mt-1 text-sm text-white/75'>{c.desc}</p>              </motion.article>
-            ))}
+                <p className='mt-1 text-sm text-white/75'>{c.desc}</p>              </motion.article>            ))}
           </div>
         </section>
 
@@ -215,8 +203,7 @@ export default function FrontLanding() {
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
-            ].map(b => (              <motion.div
-                key={b}
+            ].map(b => (              <motion.div                key={b}
                 initial={{ opacity: 0, y: 6 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -224,14 +211,12 @@ export default function FrontLanding() {
                 className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md'
               >
                 <span className='mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
-                <span className='text-sm text-white/80'>{b}</span>              </motion.div>
-            ))}
+                <span className='text-sm text-white/80'>{b}</span>              </motion.div>            ))}
           </div>
         </section>
 
         {/* CTA */}
-        <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
+        <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion.div            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -254,8 +239,7 @@ export default function FrontLanding() {
                 <a className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'>
                   View Automations
                 </a>
-              </Link>            </div>
-          </motion.div>
+              </Link>            </div>          </motion.div>
         </section>
 
         {/* Explore more */}

@@ -16,8 +16,7 @@ import {
   ArrowRight,
   Star,
   Check,
-  ExternalLink,;} from 'lucide-react';
-import { 
+  ExternalLink,;} from 'lucide-react';import { 
   Zap;
   Shield, 
   BarChart3, 
@@ -32,9 +31,6 @@ import {
   Star;
   Check;
   ExternalLink
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-} from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
@@ -45,18 +41,12 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $19.99/month',
       rating: 4.8,
       users: '2M+',
-      icon: <Zap className='w-8 h-8 text-orange-400' />,
-=======
-      description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      icon: <Zap className='w-8 h-8 text-orange-400' />,      description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
       category: 'Automation',
       pricing: 'Free - $19.99/month',
       rating: 4.8,
       users: '2M+',
-<<<<<<< HEAD
       icon: <Zap className='w-8 h-8 text-orange-400' />,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
         '5000+ app integrations',
         'Visual workflow builder',
@@ -170,18 +160,12 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $25/month',
       rating: 4.5,
       users: '26K+',
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
-=======
-      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
       category: 'Analytics',
       pricing: 'Free - $25/month',
       rating: 4.5,
       users: '26K+',
-<<<<<<< HEAD
       icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
         'User behavior tracking',
         'Funnel analysis',
@@ -208,18 +192,12 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $57/month',
       rating: 4.7,
       users: '35K+',
-      icon: <Database className='w-8 h-8 text-green-400' />,
-=======
-      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      icon: <Database className='w-8 h-8 text-green-400' />,      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',
       category: 'Database',
       pricing: 'Free - $57/month',
       rating: 4.7,
       users: '35K+',
-<<<<<<< HEAD
       icon: <Database className='w-8 h-8 text-green-400' />,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
         'Fully managed MongoDB',
         'Global clusters',
@@ -270,18 +248,12 @@ export default function SaaSMarketplacePage() {
       pricing: 'Free - $8/month',
       rating: 4.9,
       users: '10K+',
-      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
-=======
-      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
       category: 'Project Management',
       pricing: 'Free - $8/month',
       rating: 4.9,
       users: '10K+',
-<<<<<<< HEAD
       icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
         'Issue tracking',
         'Roadmap planning',
@@ -321,14 +293,10 @@ export default function SaaSMarketplacePage() {
       ? microSaasServices
       : microSaasServices.filter(
           service => service.category === selectedCategory
-        );
-=======
-  const filteredServices = selectedCategory === 'All' 
+        );  const filteredServices = selectedCategory === 'All' 
     ? microSaasServices 
     : microSaasServices.filter(service => service.category === selectedCategory);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return (
     <>
       <Head>
@@ -346,8 +314,6 @@ export default function SaaSMarketplacePage() {
           content='Curated selection of the best micro SaaS services for modern businesses.'
         />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </Head>
 
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
@@ -391,14 +357,10 @@ export default function SaaSMarketplacePage() {
                 href='/contact'
                 variant='outline'
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0.4s' }}
-                href="/contact"
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0.4s' }}                href="/contact"
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                style={{ animationDelay: '0.4s' }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               >
                 Get Recommendations
               </Button>
@@ -412,7 +374,6 @@ export default function SaaSMarketplacePage() {
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -433,12 +394,28 @@ export default function SaaSMarketplacePage() {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
                 100K+
               </div>
-              <div className='text-gray-400 text-sm'>Total Users</div>            </div>
-=======
-              <div className="text-gray-400 text-sm">Total Users</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {microSaasServices.length}+
+              </div>
+              <div className="text-gray-400 text-sm">Curated Services</div>
             </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
+                9
+              </div>
+              <div className="text-gray-400 text-sm">Categories</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                4.7+
+              </div>
+              <div className="text-gray-400 text-sm">Avg Rating</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+                100K+
+              </div>
+              <div className="text-gray-400 text-sm">Total Users</div>
+            </div>
           </div>
         </div>
       </section>
@@ -447,14 +424,10 @@ export default function SaaSMarketplacePage() {
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-wrap justify-center gap-4'>
-            {categories.map(category => (              <button
-      <section className="py-16 bg-gray-900">
+            {categories.map(category => (              <button      <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              <button
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -478,8 +451,6 @@ export default function SaaSMarketplacePage() {
               {selectedCategory === 'All'
                 ? 'All Services'
                 : `${selectedCategory} Services`}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
@@ -563,14 +534,10 @@ export default function SaaSMarketplacePage() {
                         </div>
                         <div className='text-sm text-gray-300 max-w-xs'>
                           {service.useCase}
-                        </div>                      </div>
-                      
+                        </div>                      </div>                      
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{service.useCase}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                      </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     </div>
                   </div>
                 </div>
@@ -585,8 +552,6 @@ export default function SaaSMarketplacePage() {
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            Need Help Choosing?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -607,14 +572,10 @@ export default function SaaSMarketplacePage() {
               href='/services'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >
-              href="/services"
+              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/services"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               View Our Services
             </Button>
           </div>
@@ -623,7 +584,3 @@ export default function SaaSMarketplacePage() {
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

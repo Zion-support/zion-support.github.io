@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Security Intelligence System;
@@ -437,3 +438,5 @@ security.run().catch(console.error);
 =======
 security.run().catch(console.error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

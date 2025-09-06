@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface InnovativeMicroSaasService {
   id: string;
   name: string;
   tagline: string;
@@ -1081,8 +1079,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       rating: 4.9,
       reviews: 28,
     },
-  ];
-    features: [
+  ];    features: [
       'Autonomous warehouse robotsAI-powered route optimizationReal-time inventory trackingPredictive maintenanceMulti-robot coordinationSafety and collision avoidancePerformance analyticsScalable deployment';
       'API integration capabilities'
     ];
@@ -1106,5 +1103,3 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
     reviews: 28
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

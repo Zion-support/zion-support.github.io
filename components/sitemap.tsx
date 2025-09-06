@@ -44,8 +44,7 @@ export default function SitemapPage() {
         </ul>
       </div>
     </div>
-  );
-	const links = [
+  );	const links = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Services', href: '/services' },
 		{ name: 'All Services Showcase', href: '/comprehensive-services-showcase-2025' },
@@ -74,5 +73,3 @@ export default function SitemapPage() {
 		</div>
 	);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

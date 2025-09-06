@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { SEO } from '@/components/SEO';
@@ -39,10 +36,7 @@ export default function BlogPost() {
   const [error, setError] = useState<string | null>(null);
   const timedOut = useSkeletonTimeout(20000);
 
-  useEffect(() => {
-=======
-import { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
+  useEffect(() => {import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { SEO } from "@/components/SEO";
 import JsonLd from "@/components/JsonLd";
@@ -69,7 +63,6 @@ export default function BlogPost() {
   const timedOut = useSkeletonTimeout(20000),
   
   useEffect((,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     const fetchPost = async () => {
       setIsLoading(true);
       setError(null);
@@ -77,7 +70,6 @@ export default function BlogPost() {
         const data = await fetchWithRetry(`/api/blog/${slug}`);
         setPost(data);
         const related = BLOG_POSTS.filter(
-<<<<<<< HEAD
           p =>
             p.id !== data.id &&
             (p.category === data.category ||
@@ -85,46 +77,20 @@ export default function BlogPost() {
         ).slice(0, 3);
         setRelatedPosts(related);
         setIsLoading(false);
-        return;
-=======
-          (p,) =>
-            p.id !== data.id &&
-            (p.category === data.category ||
-              p.tags.some((tag,) => data.tags.includes(tag)))
-        ).slice(0, 3),
-        setRelatedPosts(related),
-        setIsLoading(false),
-        return
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      } catch (err) {
+        return;      } catch (err) {
         logErrorToProduction('Failed to fetch blog post', { data: err });
         setError('Failed to load article');
       }
 
-<<<<<<< HEAD
-      const currentPost = BLOG_POSTS.find(p => p.slug === slug);
-=======
-      const currentPost = BLOG_POSTS.find((p,) => p.slug === slug),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      if (currentPost) {
+      const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost);
         const related = BLOG_POSTS.filter(
-<<<<<<< HEAD
           p =>
             p.id !== currentPost.id &&
             (p.category === currentPost.category ||
               p.tags.some(tag => currentPost.tags.includes(tag)))
         ).slice(0, 3);
-        setRelatedPosts(related);
-=======
-          (p,) =>
-            p.id !== currentPost.id &&
-            (p.category === currentPost.category ||
-              p.tags.some((tag,) => currentPost.tags.includes(tag)))
-        ).slice(0, 3),
-        setRelatedPosts(related)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      } else {
+        setRelatedPosts(related);      } else {
         router.replace('/blog');
       }
       setIsLoading(false);
@@ -162,31 +128,24 @@ export default function BlogPost() {
   }
 
   // Helper function to get share URL
-<<<<<<< HEAD
   const getShareUrl = (platform: string) => {
     if (!post) return '';
 
     const url = encodeURIComponent(window.location.href);
     const title = encodeURIComponent(post.title);
-
-=======
-  const getShareUrl = (platform: string,) => {
-    if (!post) return '',
-    
-    const url = encodeURIComponent(window.location.href),
-    const title = encodeURIComponent(post.title),
-    
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    
+    switch (platform) {
+      case 'facebook':
+
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
       case 'twitter':
         return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
       case 'linkedin':
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
       default:
         return '#';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    }
   };
 
   const articleLd = {
@@ -205,18 +164,10 @@ export default function BlogPost() {
   return (
     <>
       <SEO
-<<<<<<< HEAD
         title={post.title}
         description={post.excerpt}
         keywords={post.tags.join(', ')}
-        ogImage={post.featuredImage}
-=======
-        title = {post.title,}
-        description = {post.excerpt,}
-        keywords = {post.tags.join(", "),}
-        ogImage = {post.featuredImage,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
       />
       <JsonLd data={articleLd} />
       <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
@@ -249,18 +200,10 @@ export default function BlogPost() {
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>
               <div className='flex items-center mb-4 sm:mb-0'>
                 <ImageWithRetry
-<<<<<<< HEAD
                   src={post.author.avatarUrl}
                   alt={post.author.name}
                   className='w-12 h-12 rounded-full mr-3'
-                  fallbackSrc='/images/blog-placeholder.svg'
-=======
-                  src = {post.author.avatarUrl,}
-                  alt = {post.author.name,}
-                  className="w-12 h-12 rounded-full mr-3"
-                  fallbackSrc="/images/blog-placeholder.svg"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                />
+                  fallbackSrc='/images/blog-placeholder.svg'                />
                 <div>
                   <p className='text-white font-medium'>{post.author.name}</p>
                   <p className='text-sm text-zion-slate-light'>
@@ -278,22 +221,12 @@ export default function BlogPost() {
                   <Clock className='h-4 w-4 mr-1' />
                   <span className='text-sm'>{post.readTime}</span>
                 </div>
-<<<<<<< HEAD
                 <div className='relative'>
                   <Button
                     variant='ghost'
                     size='sm'
                     className='text-zion-slate-light hover:text-white hover:bg-zion-blue-dark'
-                    onClick={() => setShowShareMenu(!showShareMenu)}
-=======
-                <div className="relative">
-                  <Button 
-                    variant="ghost" 
-                    size="sm"
-                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
-                    onClick = {() => setShowShareMenu(!showShareMenu),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  >
+                    onClick={() => setShowShareMenu(!showShareMenu)}                  >
                     <Share2 className='h-4 w-4 mr-1' />
                     <span className='text-sm'>Share</span>
                   </Button>
@@ -301,62 +234,32 @@ export default function BlogPost() {
                   {showShareMenu && (
                     <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>
                       <a
-<<<<<<< HEAD
                         href={getShareUrl('facebook')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on Facebook'
-                        title='Share on Facebook'
-=======
-                        href = {getShareUrl('facebook'),}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
-                        aria-label="Share on Facebook"
-                        title="Share on Facebook"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      >
+                        title='Share on Facebook'                      >
                         <Facebook className='h-4 w-4 mr-2' />
                         <span>Facebook</span>
                       </a>
                       <a
-<<<<<<< HEAD
                         href={getShareUrl('twitter')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on Twitter'
-                        title='Share on Twitter'
-=======
-                        href = {getShareUrl('twitter'),}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
-                        aria-label="Share on Twitter"
-                        title="Share on Twitter"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      >
+                        title='Share on Twitter'                      >
                         <Twitter className='h-4 w-4 mr-2' />
                         <span>Twitter</span>
                       </a>
                       <a
-<<<<<<< HEAD
                         href={getShareUrl('linkedin')}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white'
                         aria-label='Share on LinkedIn'
-                        title='Share on LinkedIn'
-=======
-                        href = {getShareUrl('linkedin'),}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
-                        aria-label="Share on LinkedIn"
-                        title="Share on LinkedIn"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      >
+                        title='Share on LinkedIn'                      >
                         <Linkedin className='h-4 w-4 mr-2' />
                         <span>LinkedIn</span>
                       </a>
@@ -371,18 +274,10 @@ export default function BlogPost() {
           <div className='mb-12 max-w-5xl mx-auto'>
             <div className='aspect-[21/9] rounded-lg overflow-hidden'>
               <ImageWithRetry
-<<<<<<< HEAD
                 src={post.featuredImage}
                 alt={post.featuredImageAlt || post.title}
                 className='object-cover w-full h-full'
-                fallbackSrc='/images/blog-placeholder.svg'
-=======
-                src = {post.featuredImage,}
-                alt = {post.featuredImageAlt || post.title,}
-                className="object-cover w-full h-full"
-                fallbackSrc="/images/blog-placeholder.svg"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              />
+                fallbackSrc='/images/blog-placeholder.svg'              />
             </div>
           </div>
 
@@ -395,16 +290,9 @@ export default function BlogPost() {
             {/* Tags */}
             <div className='flex flex-wrap gap-2 mt-12'>
               {post.tags.map(tag => (
-<<<<<<< HEAD
                 <span
                   key={tag}
-                  className='text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full'
-=======
-                <span 
-                  key = {tag,}
-                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                >
+                  className='text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full'                >
                   #{tag}
                 </span>
               ))}
@@ -420,32 +308,18 @@ export default function BlogPost() {
                 </h3>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                   {relatedPosts.map(relatedPost => (
-<<<<<<< HEAD
                     <Link
-                      key={relatedPost.id}
-=======
-                    <Link 
-                      key = {relatedPost.id,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      href={`/blog/${relatedPost.slug}`}
+                      key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
                       className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
                     >
                       <div className='aspect-[16/9] relative'>
                         <ImageWithRetry
-<<<<<<< HEAD
                           src={relatedPost.featuredImage}
                           alt={
                             relatedPost.featuredImageAlt || relatedPost.title
                           }
                           className='object-cover w-full h-full'
-                          fallbackSrc='/images/blog-placeholder.svg'
-=======
-                          src = {relatedPost.featuredImage,}
-                          alt = {relatedPost.featuredImageAlt || relatedPost.title,}
-                          className="object-cover w-full h-full"
-                          fallbackSrc="/images/blog-placeholder.svg"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                        />
+                          fallbackSrc='/images/blog-placeholder.svg'                        />
                       </div>
                       <div className='p-4'>
                         <span className='text-xs text-zion-cyan'>
@@ -508,13 +382,7 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) ) ;
 }</div> </div>) ";
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React from 'react';
+}'"import React from 'react';
 import { SEO } from '@/components / SEO';
 export default function Page() {;
     ],,
@@ -818,4 +686,4 @@ export default function BlogPost() {return (";
   );
 }
 }
->>>>>>> origin/automation-fixes
+}

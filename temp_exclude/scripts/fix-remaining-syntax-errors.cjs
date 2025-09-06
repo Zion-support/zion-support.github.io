@@ -74,6 +74,10 @@ function fixAllFiles() {
   
   return totalFixed;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 // Main execution
 try {
   console.log('🔍 Scanning for syntax errors...');
@@ -98,4 +102,8 @@ try {
 } catch (error) {
   console.error('❌ Error:', error.message);
   process.exit(1);
+<<<<<<< HEAD
 }}
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

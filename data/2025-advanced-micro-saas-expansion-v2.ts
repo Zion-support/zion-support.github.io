@@ -4,8 +4,6 @@ export const advancedMicroSaasExpansion2025V2 = [
     description: 'Advanced AI-powered content creation and management platform',
     category: 'AI & Data',
     pricing: '$299/month',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Multi-format content generation',
       'Brand voice customization',
       'Content calendar management',
@@ -228,11 +226,8 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Incident management',
     ],
   },
-];
-      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
+];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
     ]
 
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

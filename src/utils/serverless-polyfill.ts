@@ -64,66 +64,11 @@ if (typeof webpackChunk_N_E === 'undefined') {
 
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
-<<<<<<< HEAD
   __extends: function (d: any, b: any) {
     if (typeof b !== 'function' && b !== null)
       throw new TypeError(
         'Class extends value ' + String(b) + ' is not a constructor or null'
       );
-=======
-  __extends: function(d: any, b: any) {
-    if (typeof b !== "function" && b !== null)
-      throw new TypeError("Class extends value " + String(b) + " is not a constructor or null"),
-    
-    function __extends_helper(this: any) { this.constructor = d ,}
-    d.prototype = b === null ? Object.create(b) : (__extends_helper.prototype = b.prototype, new (__extends_helper as any)())
-  },
-  
-  __assign: function() {
-    return Object.assign || function (t: any) {
-      for (var s, i = 1, n = arguments.length, i < n, i++) {
-        s = arguments[i],
-        for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-          t[p] = s[p]
-      }
-      return t
-    }
-  }(),
-  
-  __rest: function (s: any, e: string[]) {
-    let t: any = {},
-    for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-      t[p] = s[p],
-    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
-      const symbols = Object.getOwnPropertySymbols(s),
-      for (let i = 0, i < symbols.length, i++) {
-        const symbol = symbols[i],
-        if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
-          t[symbol] = s[symbol]
-      }
-    }
-    return t
-  },
-  
-  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
-    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
-    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
-    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
-    return c > 3 && r && key && Object.defineProperty(target, key, r), r
-  },
-  
-  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
-    return new (P || (P = Promise))(function (resolve: any, reject: any) {
-      function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
-      function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
-      function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
-      step((generator = generator.apply(thisArg, _arguments || [])).next())
-    })
-  }
-},
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
     function __extends_helper(this: any) {
       this.constructor = d;
     }
@@ -352,12 +297,9 @@ export const verifyPolyfills = () => {
 export default {}; // Ensure this can be imported as a module
   ;
 }, // Ensure this can be imported as a module'"
-=======
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
 }
 
 export default {}, // Ensure this can be imported as a module
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

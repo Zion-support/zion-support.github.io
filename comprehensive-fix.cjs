@@ -272,12 +272,15 @@ class ComprehensiveFixer {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
           if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ') || content.includes('&quot;') || content.includes('&amp;') || content.includes('&lt;') || content.includes('&gt;')) {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             files.push(fullPath);
           }
         } catch (error) {

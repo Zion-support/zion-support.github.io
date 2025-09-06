@@ -26,8 +26,7 @@ import {
   Users,
   Clock,
   Eye,
-  Heart,;
-} from 'lucide-react';
+  Heart,;} from 'lucide-react';
 
 import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = {
@@ -57,7 +56,6 @@ const pricingRanges = [
   '$300 - $500',
   '$500 - $800',
   '$800+',];
-
 export default function ComprehensiveServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
@@ -71,8 +69,7 @@ export default function ComprehensiveServicesShowcase2025() {
   const filteredServices = comprehensiveRealServices2025.filter(service => {
     const categoryMatch =
       selectedCategory === 'All Services' ||
-      service.category.includes(selectedCategory);
-    let priceMatch = true;
+      service.category.includes(selectedCategory);    let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {
       const price = parseInt(service.price.replace('$', ''));
       switch (selectedPriceRange) {
@@ -97,7 +94,6 @@ export default function ComprehensiveServicesShowcase2025() {
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
 
     return categoryMatch && priceMatch && searchMatch;  });
-
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -112,8 +108,7 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       default:
-        return 0;    }
-  });
+        return 0;    }  });
 
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', ''));
@@ -135,7 +130,6 @@ export default function ComprehensiveServicesShowcase2025() {
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  };
-
   return (
     <>
       <Head>
@@ -164,8 +158,7 @@ export default function ComprehensiveServicesShowcase2025() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/comprehensive-services-showcase-2025'
-        />
-      </Head>
+        />      </Head>
 
       {/* Hero Section */}
       <section className='relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden'>
@@ -663,5 +656,4 @@ export default function ComprehensiveServicesShowcase2025() {
         </div>
       </section>
     </>
-  );
-export default ComprehensiveServicesShowcase2025;
+  );export default ComprehensiveServicesShowcase2025;

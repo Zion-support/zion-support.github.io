@@ -3,8 +3,7 @@ import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
 import ResumePreview, {
   ResumeData,;
-} from '../../../components/ui/ResumePreview';
-import { createServerClient } from '../../../utils/supabase/server';
+} from '../../../components/ui/ResumePreview';import { createServerClient } from '../../../utils/supabase/server';
 export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const ref = useRef<HTMLDivElement>(null);
@@ -60,12 +59,10 @@ export default function TalentPortfolio() {
       />
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
-  );
-export const getServerSideProps: GetServerSideProps = async () => {
+  );export const getServerSideProps: GetServerSideProps = async () => {
   const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.();
   if (!user) {
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
-  return { props: {} };
-};
+  return { props: {} };};

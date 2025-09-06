@@ -1,7 +1,6 @@
 //Zion Tech Group Website JavaScript 
 
 }) 
-
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
@@ -146,7 +145,6 @@ function trackEvent(eventName, eventData = {}) {
     // Implement your analytics tracking here
 }
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
   entries.forEach (entry => {
@@ -216,10 +214,8 @@ button class: e.target.className;
 page: window.location.pathname 
 }) 
 
-<<<<<<< HEAD
 });
-// Log performance when page is fully loaded window.addEventListener ('load', logPerformance);
-// Track page views
+// Log performance when page is fully loaded window.addEventListener ('load', logPerformance);// Track page views
 trackEvent('page_view', {
     page: window.location.pathname,
     title: document.title
@@ -238,5 +234,3 @@ document.addEventListener('click', function(e) {
 
 // Log performance when page is fully loaded
 window.addEventListener('load', logPerformance),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

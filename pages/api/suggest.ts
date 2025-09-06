@@ -25,7 +25,6 @@ const SKILLS = [
   'NLP',
   'PostgreSQL',
   'Rust',];
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const q = ((req.query.q as string) || '').toLowerCase();
   const suggestions = new Set<string>();

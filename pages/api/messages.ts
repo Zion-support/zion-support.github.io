@@ -25,8 +25,7 @@ import { rateLimit } from '../../utils/rateLimit';
   if (req.method === 'GET') {
     const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
-    const conv = conversations.find(c => c.id === String(conversationId));
-    if (!conv) {
+    const conv = conversations.find(c => c.id === String(conversationId));    if (!conv) {
       res.status(404).json({ error: 'Conversation not found' });
       return;
     }

@@ -12,8 +12,7 @@ import Layout from '../components/layout/Layout';
         <link
           rel='canonical'
           href='https://ziontechgroup.com/mobile-device-management'
-        />
-      </Head>
+        />      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto space-y-12'>
           <header className='text-center'>
@@ -47,8 +46,7 @@ import Layout from '../components/layout/Layout';
                   className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60'
                 >
                   <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5' />
-                  <span className='text-gray-200'>{f}</span>                </div>
-              ))}
+                  <span className='text-gray-200'>{f}</span>                </div>              ))}
             </div>
           </section>
 
@@ -64,8 +62,7 @@ import Layout from '../components/layout/Layout';
                 >
                   <div className='text-gray-400 text-sm mb-1'>{p.tier}</div>
                   <div className='text-2xl font-bold text-white'>{p.range}</div>
-                  <div className='text-sm text-gray-400 mt-2'>{p.note}</div>
-                </div>
+                  <div className='text-sm text-gray-400 mt-2'>{p.note}</div>                </div>
               ))}
             </div>
             <div className='text-sm text-gray-400 mt-3 text-center'>
@@ -87,8 +84,7 @@ import Layout from '../components/layout/Layout';
                   rel='noopener noreferrer'
                   className='px-4 py-3 rounded-xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 inline-flex items-center gap-2 text-cyan-300'
                 >
-                  <ExternalLink className='w-4 h-4' />                  <span>{r.name}</span>
-                </a>
+                  <ExternalLink className='w-4 h-4' />                  <span>{r.name}</span>                </a>
               ))}
             </div>
           </section>
@@ -98,8 +94,7 @@ import Layout from '../components/layout/Layout';
               <Shield className='w-5 h-5 text-purple-400' />
               <span>
                 SAML/SCIM, device attestation, and compliance-ready audit logs
-              </span>            </div>
-          </section>
+              </span>            </div>          </section>
         </div>
       </div>
     </Layout>

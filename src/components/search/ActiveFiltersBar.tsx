@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-export default ActiveFiltersBar;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React from 'react';
+
+export default ActiveFiltersBar;import React from 'react';
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -151,8 +144,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 },
 
 export default ActiveFiltersBar,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-=======
 interface Filter {
   key: string;
   value: string;
@@ -172,4 +163,3 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {;
     </div>;
   )}
 '";
->>>>>>> origin/automation-fixes

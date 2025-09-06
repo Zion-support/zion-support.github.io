@@ -4,16 +4,12 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-=======
-const contact = {
+  website: 'https://ziontechgroup.com',};const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Additional 2025 real micro-SaaS, AI and IT services
 export const new2025Services: EnhancedRealMicroSaasService[] = [
@@ -56,8 +52,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     marketSize: '$3.5B+ AI safety & governance',
     growthRate: '200% annual growth',
     variant: 'holographic-matrix',
-    contactInfo: contact,
-    features: [
+    contactInfo: contact,    features: [
       'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates'
     ];
     popular: true;
@@ -1456,7 +1451,3 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     reviews: 6,
   },
 ];
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

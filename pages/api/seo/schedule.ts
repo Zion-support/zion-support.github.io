@@ -24,7 +24,6 @@ export default async function handler(
       'Cybersecurity Experts in Berlin',
       'Cloud Architects in Lisbon',
     ];
-
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4);
 
     const outDir = path.join(process.cwd(), 'data', 'page-metadata', 'seo');

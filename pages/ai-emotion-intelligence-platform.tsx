@@ -26,8 +26,7 @@ import {
   Smartphone,;} from 'lucide-react';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-};
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';};
 
 const features = [
   {
@@ -66,7 +65,6 @@ const features = [
     description:
       'Get instant notifications for negative emotions requiring immediate attention',
   },];
-
 const useCases = [
   {
     title: 'Customer Service Optimization',
@@ -92,7 +90,6 @@ const useCases = [
       'Monitor employee emotional states to support mental health and productivity',
     icon: Heart,
   },];
-
 const pricing = [
   {
     name: 'Starter',
@@ -108,8 +105,7 @@ const pricing = [
     ],
     popular: false,
     cta: 'Get Started',
-  },  {
-    name: 'Professional',
+  },  {    name: 'Professional',
     price: '$1,299',
     period: '/month',
     description: 'Advanced emotion intelligence for growing businesses',
@@ -125,8 +121,7 @@ const pricing = [
     ],
     popular: true,
     cta: 'Start Free Trial',
-  },  {
-    name: 'Enterprise',
+  },  {    name: 'Enterprise',
     price: 'Custom',
     period: '',
     description: 'Custom solutions for large organizations',
@@ -186,8 +181,7 @@ export default function AIEmotionIntelligencePlatform() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6'
               >
-                <Sparkles className='w-4 h-4 mr-2' />                AI & Customer Experience
-              </motion.div>
+                <Sparkles className='w-4 h-4 mr-2' />                AI & Customer Experience              </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
@@ -195,8 +189,7 @@ export default function AIEmotionIntelligencePlatform() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='text-5xl md:text-7xl font-bold mb-6'
               >
-                <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>                  AI Emotion Intelligence Platform
-                </span>
+                <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>                  AI Emotion Intelligence Platform                </span>
               </motion.h1>
 
               <motion.p
@@ -207,7 +200,6 @@ export default function AIEmotionIntelligencePlatform() {
               >
                 Real-time emotion analysis and response for customer
                 interactions              </motion.p>
-
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -217,8 +209,7 @@ export default function AIEmotionIntelligencePlatform() {
                 Advanced AI platform that analyzes customer emotions in
                 real-time across voice, video, and text interactions, providing
                 intelligent responses and sentiment-driven insights for better
-                customer experience.              </motion.p>
-            </motion.div>
+                customer experience.              </motion.p>            </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
@@ -244,8 +235,7 @@ export default function AIEmotionIntelligencePlatform() {
               >
                 <span className='flex items-center'>
                   View Pricing
-                  <DollarSign className='ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-200' />                </span>
-              </Link>
+                  <DollarSign className='ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-200' />                </span>              </Link>
             </motion.div>
 
             {/* Key Stats */}
@@ -302,8 +292,7 @@ export default function AIEmotionIntelligencePlatform() {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -340,8 +329,7 @@ export default function AIEmotionIntelligencePlatform() {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              {useCases.map((useCase, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              {useCases.map((useCase, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -377,8 +365,7 @@ export default function AIEmotionIntelligencePlatform() {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricing.map((plan, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricing.map((plan, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -392,8 +379,7 @@ export default function AIEmotionIntelligencePlatform() {
                 >
                   {plan.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                      <span className='px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm font-semibold rounded-full'>                        Most Popular
-                      </span>
+                      <span className='px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm font-semibold rounded-full'>                        Most Popular                      </span>
                     </div>
                   )}
 
@@ -417,8 +403,7 @@ export default function AIEmotionIntelligencePlatform() {
                         className='flex items-center space-x-3'
                       >
                         <CheckCircle className='w-5 h-5 text-pink-400 flex-shrink-0' />
-                        <span className='text-gray-300'>{feature}</span>                      </li>
-                    ))}
+                        <span className='text-gray-300'>{feature}</span>                      </li>                    ))}
                   </ul>
 
                   <Link
@@ -439,8 +424,7 @@ export default function AIEmotionIntelligencePlatform() {
 
         {/* Contact Section */}
         <section className='py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -482,8 +466,7 @@ export default function AIEmotionIntelligencePlatform() {
                   <a
                     href={`tel:${contactInfo.mobile}`}
                     className='text-white font-semibold hover:text-pink-400 transition-colors'
-                  >
-                    {contactInfo.mobile}
+                  >                    {contactInfo.mobile}
                   </a>
                 </div>
                 <div className='flex flex-col items-center'>
@@ -502,8 +485,7 @@ export default function AIEmotionIntelligencePlatform() {
                   <a
                     href={contactInfo.website}
                     className='text-white font-semibold hover:text-cyan-400 transition-colors'
-                  >                    {contactInfo.website.replace('https://', '')}
-                  </a>
+                  >                    {contactInfo.website.replace('https://', '')}                  </a>
                 </div>
               </div>
             </motion.div>

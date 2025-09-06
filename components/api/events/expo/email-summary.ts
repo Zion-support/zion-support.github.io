@@ -6,8 +6,6 @@ export default async function handler(
 ) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  try {
     const provider = process.env.MAIL_PROVIDER || 'none';
     if (provider === 'none') {
       console.log('[EmailSummary] Stub: no provider configured');
@@ -19,10 +17,6 @@ export default async function handler(
     return res
       .status(500)
       .json({ error: e.message || 'Failed to queue emails' });
-  }
-=======
-    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
+  }    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

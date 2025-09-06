@@ -47,8 +47,7 @@ import {
   Building,
   Cpu as CpuIcon,;
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-const contactInfo = {
+import Layout from '../components/layout/Layout';const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -76,7 +75,6 @@ const heroStats = [
     value: '60%',
     icon: <TrendingUp className='w-5 h-5' />,
   },];
-
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
@@ -136,7 +134,6 @@ const serviceCategories = [
       'Security Monitoring',
     ],
   },];
-
 const heroFeatures = [
   {
     title: 'Quantum Computing',
@@ -144,8 +141,7 @@ const heroFeatures = [
       'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
     icon: Atom,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600',
-  },
-  {
+  },  {
     title: 'AI-Powered Automation',
     description:
       'Intelligent automation that reduces operational costs by up to 70% while improving reliability.',
@@ -166,7 +162,6 @@ const heroFeatures = [
     icon: Shield,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
   },];
-
 const testimonials = [
   {
     name: 'Dr. Jennifer Martinez',
@@ -176,16 +171,14 @@ const testimonials = [
       "Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible.",
     rating: 5,
     avatar: '👩‍🔬',
-  },  {
-    name: 'Robert Thompson',
+  },  {    name: 'Robert Thompson',
     role: 'Infrastructure Director, EdgeNet Solutions',
     company: 'EdgeNet Solutions',
     content:
       'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
     rating: 5,
     avatar: '👨‍💼',
-  },  {
-    name: 'Lisa Chang',
+  },  {    name: 'Lisa Chang',
     role: 'Security CISO, SecureCorp International',
     company: 'SecureCorp International',
     content:
@@ -193,7 +186,6 @@ const testimonials = [
     rating: 5,
     avatar: '👩‍🔒',
   },];
-
 export default function AdvancedITInfrastructureServices() {
   return (
     <Layout>
@@ -229,8 +221,7 @@ export default function AdvancedITInfrastructureServices() {
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -241,8 +232,7 @@ export default function AdvancedITInfrastructureServices() {
               Revolutionary infrastructure solutions with quantum computing,
               edge computing, and AI-powered automation for the future
             </p>
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
-                <motion.div
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -269,16 +259,14 @@ export default function AdvancedITInfrastructureServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'
               >
-                <Phone className='mr-2 w-5 h-5' />                Get Started
-              </Link>
+                <Phone className='mr-2 w-5 h-5' />                Get Started              </Link>
             </div>
           </motion.div>
         </div>
 
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -294,8 +282,7 @@ export default function AdvancedITInfrastructureServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -314,8 +301,7 @@ export default function AdvancedITInfrastructureServices() {
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
-                      <p className='text-gray-300'>{feature.description}</p>                    </div>
-                  </div>
+                      <p className='text-gray-300'>{feature.description}</p>                    </div>                  </div>
                 </div>
               </motion.div>
             ))}
@@ -324,8 +310,7 @@ export default function AdvancedITInfrastructureServices() {
 
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -340,8 +325,7 @@ export default function AdvancedITInfrastructureServices() {
             </p>
           </motion.div>
 
-          <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
-              <motion.div
+          <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (              <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -363,8 +347,7 @@ export default function AdvancedITInfrastructureServices() {
                   </p>
                 </div>
 
-                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
-                    <motion.div
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (                    <motion.div
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -421,8 +404,7 @@ export default function AdvancedITInfrastructureServices() {
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
-                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300'                            >
-                              Get Started
+                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300'                            >                              Get Started
                             </Link>
                           </div>
                         </div>
@@ -438,8 +420,7 @@ export default function AdvancedITInfrastructureServices() {
 
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -454,8 +435,7 @@ export default function AdvancedITInfrastructureServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -479,8 +459,7 @@ export default function AdvancedITInfrastructureServices() {
                 <div className='flex items-center'>
                   <div className='flex text-yellow-400'>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className='w-4 h-4 fill-current' />                    ))}
-                  </div>
+                      <Star key={i} className='w-4 h-4 fill-current' />                    ))}                  </div>
                 </div>
               </motion.div>
             ))}
@@ -490,8 +469,7 @@ export default function AdvancedITInfrastructureServices() {
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -520,8 +498,7 @@ export default function AdvancedITInfrastructureServices() {
             </div>
             <div className='mt-8 text-center'>
               <p className='text-gray-300 mb-2'>📍 {contactInfo.address}</p>
-              <p className='text-gray-300'>🌐 {contactInfo.website}</p>            </div>
-          </motion.div>
+              <p className='text-gray-300'>🌐 {contactInfo.website}</p>            </div>          </motion.div>
         </div>
       </section>
     </Layout>

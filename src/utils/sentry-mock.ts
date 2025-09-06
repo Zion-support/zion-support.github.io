@@ -26,16 +26,13 @@ const mockSentry = {
 
   // Transaction and performance monitoring
   startTransaction: () => mockTransaction,
-  finishTransaction: noop,
-  // Error boundary and React integration
+  finishTransaction: noop,  // Error boundary and React integration
   ErrorBoundary: ({ children }: any,) => children,
   withErrorBoundary: (component: any,) => component,
   showReportDialog: noop,
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Browser-specific methods
   onLoad: noop,
-<<<<<<< HEAD
   wrap: (fn: (...args: any[]) => any) => fn,
 
   // Server-specific methods (Node.js)
@@ -50,9 +47,6 @@ const mockSentry = {
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
         next(),
   },
-
-=======
-  wrap: (fn: (...args: any[],) => any) => fn,
   
   // Server-specific methods (Node.js)
   Handlers: {
@@ -60,7 +54,6 @@ const mockSentry = {
     errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
     tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
   
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   // Next.js specific
   withSentryConfig: (config: any,) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
@@ -151,15 +144,9 @@ const mockHub = {
   setExtras: noop,
   setContext: noop,
   configureScope: noop,
-<<<<<<< HEAD
   withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   startTransaction: () => mockTransaction,
 };
-=======
-  withScope: (callback: (...args: any[],) => any) => callback(mockScope),
-  startTransaction: () => mockTransaction},
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 // Export default mock that covers all Sentry packages
 export default mockSentry;
 
@@ -201,7 +188,3 @@ export const Severity = mockSentry.Severity;
 export { mockSentry as Sentry };
 
 // All exports are already defined above
-=======
-// All exports are already defined above
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

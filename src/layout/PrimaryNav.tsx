@@ -20,21 +20,6 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
-<<<<<<< HEAD
-=======
-export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-  const [loginOpen, setLoginOpen] = useState(false),
-  const { user } = useAuth(),
-  const isLoggedIn = !!user,
-  const isMobile = useIsMobile(),
-  const { t } = useTranslation(),
-  const router = useRouter(),
-  const [query, setQuery] = useState(''),
-  const suggestions = generateSearchSuggestions(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
-<<<<<<< HEAD
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
@@ -45,29 +30,6 @@ export function PrimaryNav() {
   const router = useRouter();
   const [query, setQuery] = useState('');
   const suggestions = generateSearchSuggestions();
-=======
-      // // // // // // // // console.log('PrimaryNav search submit:', query);
-      router.push(`/search/${slugify(query)}`);
-      setQuery('');
-      // // // // // console.log('PrimaryNav search submit:', query);`;
-      router.push(`/search/${slugify(query)}`);
-      setQuery('')}
-// Theme toggle component;
-  const [isDark, setIsDark] = useState<typeof false>(false);
-  const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
-    // Add theme switching logic here;
-};
-  return ();
-    <>;
-      <header;
-        className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md";
-        role="navigation";
-        data-testid="header";
-";
-        <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">;
-          <Logo  />;
->>>>>>> origin/automation-fixes
-
   let unreadCount = 0;
   try {
     const messaging = useMessaging();
@@ -76,32 +38,19 @@ export function PrimaryNav() {
     // context not available
   }
 
-<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const trimmed = query.trim();
-=======
-  const handleSubmit = (e: React.FormEvent,) => {
-    e.preventDefault(),
-    const trimmed = query.trim(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    if (trimmed) {
+    const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed });
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
-<<<<<<< HEAD
         .then(() => setQuery(''))
         .catch(err =>
           logErrorToProduction('Search navigation failed', err, {
             query: trimmed,
             component: 'PrimaryNav',
           })
-        );
-=======
-        .then((,) => setQuery(''))
-        .catch((err,) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    }
+        );    }
   };
 
   return (
@@ -115,18 +64,11 @@ export function PrimaryNav() {
         <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>
           <Logo />
 
-<<<<<<< HEAD
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-<<<<<<< HEAD
           <div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
-            />
-=======
-          <div className="hidden lg:block order-1 flex-shrink-0">
-            <ResponsiveNavigation openLoginModal={(returnToPath,) => setLoginOpen(true)} />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          </div>
+            />          </div>
 
           {/* Actions container with responsive layout */}
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>
@@ -137,20 +79,12 @@ export function PrimaryNav() {
               style={{ width: 'clamp(12rem, 20vw, 16rem)' }}
             >
               <EnhancedSearchInput
-<<<<<<< HEAD
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={sugg => {
                   logDebug('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
-                  });
-=======
-                value = {query,}
-                onChange = {setQuery,}
-                onSelectSuggestion={(sugg,) => {
-                  logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  // Handle different suggestion types with proper navigation
+                  });                  // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
                     router.push(`/marketplace/listing/${sugg.id}`);
@@ -178,7 +112,6 @@ export function PrimaryNav() {
                       suggestion_id: sugg.id || sugg.slug,
                     });
                   }
-=======
                   // // // // // console.log('PrimaryNav search suggestion selected:',
   sugg);
                   // Handle different suggestion types with proper navigation;
@@ -207,7 +140,6 @@ export function PrimaryNav() {
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug;
 })}
->>>>>>> origin/automation-fixes
                 }}
                 searchSuggestions = {suggestions,}
               />
@@ -219,68 +151,22 @@ export function PrimaryNav() {
               <CartDrawer />
             </div>
 
-<<<<<<< HEAD
             {/* Compact controls group */}
             <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>
               <ModeToggle />
               <LanguageSelector />
             </div>
-=======
-  t('nav.cart',Cart');
-}
-                  >";
-                    <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"  />;
-                    {cartCount > 0 && ("                      <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">;
-                        {cartCount}
-                      </span>;
-                    )}
-                  </Link>;
-                </HoverCardTrigger>;
-                <HoverCardContent>";
-                  <div className="p-4">";
-                    <p className="text-sm text-muted-foreground">Cart preview</p>;
-                  </div>;
-                </HoverCardContent>;
-              </HoverCard>;
-            </div>;
-
-            {/* Compact controls group */}";
-            <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">;
-              <ModeToggle  />;
-              <LanguageSelector  />;
-            </div>;
-
-            {/* Auth links - flex wrap for very small screens */}";
-            <div className="flex items-center gap-1 flex-wrap">;
-              {!isLoggedIn && (;
-                <>;
-                  <Link";
-                    href="/auth/login";
-                    className="text-sm hover:text-primary whitespace-nowrap";
-                    data-testid="login-link";
->>>>>>> origin/automation-fixes
-
             {/* Auth links - flex wrap for very small screens */}
             <div className='flex items-center gap-1 flex-wrap'>
               {!isLoggedIn && (
                 <>
                   <Link
-<<<<<<< HEAD
                     href='/auth/login'
                     className='text-sm hover:text-primary whitespace-nowrap'
                     data-testid='login-link'
                     onClick={e => {
                       e.preventDefault();
-                      setLoginOpen(true);
-=======
-                    href="/auth/login"
-                    className="text-sm hover: text-primary whitespace-nowrap"
-                    data-testid="login-link"
-                    onClick={(e,) => {
-                      e.preventDefault(),
-                      setLoginOpen(true)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    }}
+                      setLoginOpen(true);                    }}
                   >
                     {t('auth.login')}
                   </Link>
@@ -292,7 +178,6 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-<<<<<<< HEAD
               {isLoggedIn && <UserMenu />}
             </div>
           </div>
@@ -303,22 +188,12 @@ export function PrimaryNav() {
             <LanguageSelector />
             {!isLoggedIn && (
               <Link
-<<<<<<< HEAD
                 href='/auth/login'
                 className='text-sm hover:text-primary'
                 data-testid='login-link'
                 onClick={e => {
                   e.preventDefault();
-                  setLoginOpen(true);
-=======
-                href="/auth/login"
-                className="text-sm hover:text-primary"
-                data-testid="login-link"
-                onClick={(e,) => {
-                  e.preventDefault(),
-                  setLoginOpen(true)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                }}
+                  setLoginOpen(true);                }}
               >
                 {t('auth.login')}
               </Link>
@@ -326,25 +201,15 @@ export function PrimaryNav() {
             {isLoggedIn && <UserMenu />}
           </div>
 
-=======
               {isLoggedIn && <UserMenu  />}
             </div>;
           </div>;
->>>>>>> origin/automation-fixes
           {/* Mobile menu button */}
           <button
-<<<<<<< HEAD
             className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}
-=======
-            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
-            onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
-            aria-expanded = {mobileMenuOpen,}
-            aria-label = {t('general.toggle_mobile_menu'),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          >
+            aria-label={t('general.toggle_mobile_menu')}          >
             {mobileMenuOpen ? (
               <X className='h-6 w-6' />
             ) : (
@@ -356,28 +221,14 @@ export function PrimaryNav() {
       {mobileMenuOpen && (
         <div className='lg:hidden fixed inset-0 z-60 pt-16'>
           <div
-<<<<<<< HEAD
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
-            aria-hidden='true'
-=======
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick = {(,) => setMobileMenuOpen(false),}
-            aria-hidden="true"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          />
+            aria-hidden='true'          />
           <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
             <MobileMenu
-<<<<<<< HEAD
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={returnToPath => setLoginOpen(true)}
-=======
-              unreadCount = {unreadCount,}
-              onClose = {() => setMobileMenuOpen(false),}
-              openLoginModal = {(returnToPath,) => setLoginOpen(true),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            />
+              openLoginModal={returnToPath => setLoginOpen(true)}            />
           </div>
         </div>
       )}
@@ -391,7 +242,6 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
 }setQuery ('');
 //Track analytics event ;
 
-<<<<<<< HEAD
 }searchSuggestions= {;
   suggestions ;
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={;
@@ -434,13 +284,7 @@ setLoginOpen (true) ;
 }onOpenChange= {;
   setLoginOpen ;
 }/> </>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  { opacity: 0,
+}'"  { opacity: 0,
   height: 0;
 }}
               animate = {;
@@ -510,4 +354,4 @@ setLoginOpen (true) ;
     </header>;
   )}
 '"`;
->>>>>>> origin/automation-fixes
+}

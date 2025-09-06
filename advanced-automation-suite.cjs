@@ -507,6 +507,7 @@ function createDashboard() {
     <title>Zion Tech Group - Monitoring Dashboard</title>
     <style>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -546,6 +547,8 @@ function createDashboard() {
         .recommendation { padding: 10px; margin: 5px 0; background: #ecf0f1; border-radius: 4px; }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     </style>
 </head>
 <body>

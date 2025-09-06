@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -6,7 +5,6 @@ import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AuthModal } from '@/components/auth/AuthModal';
-<<<<<<< HEAD
 import {
   ArrowUp,
   Filter,
@@ -14,11 +12,7 @@ import {
   Sparkles,
   TrendingUp,
   Star,;
-} from 'lucide-react';
-=======
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { SkeletonCard } from '@/components/ui/skeleton';
+} from 'lucide-react';import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
 import { Button } from '@/components/ui/button';
@@ -32,10 +26,6 @@ import { useAuth } from '@/context/auth/AuthProvider';
 import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 /**
  * Marketplace component props
  */
@@ -43,22 +33,12 @@ export interface MarketplaceProps {
   // All props removed - component now fetches data independently
 
 // Market insights component
-<<<<<<< HEAD
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className='bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6'>
     <CardContent className='p-6'>
       <div className='flex items-center gap-2 mb-4'>
         <TrendingUp className='h-5 w-5 text-blue-400' />
-        <h3 className='text-lg font-semibold'>Market Insights</h3>
-=======
-const MarketInsights: React.FC<{ stats: any }> = ({ stats },) => (
-  <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
-    <CardContent className="p-6">
-      <div className="flex items-center gap-2 mb-4">
-        <TrendingUp className="h-5 w-5 text-blue-400" />
-        <h3 className="text-lg font-semibold">Market Insights</h3>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      </div>
+        <h3 className='text-lg font-semibold'>Market Insights</h3>      </div>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
         <div className='text-center'>
           <div className='text-2xl font-bold text-blue-400'>
@@ -91,7 +71,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats },) => (
 
 // Filter and sort controls
 const FilterControls: React.FC<{
-<<<<<<< HEAD
   sortBy: string;
   setSortBy: (sort: string) => void;
   filterCategory: string;
@@ -111,30 +90,7 @@ const FilterControls: React.FC<{
   locations: string[];
   showRecommended: boolean;
   setShowRecommended: (show: boolean) => void;
-  loading: boolean;
-=======
-  sortBy: string,
-  setSortBy: (sort: string,) => void,
-  filterCategory: string,
-  setFilterCategory: (category: string,) => void,
-  categories: string[],
-  priceRange: [number, number],
-  setPriceRange: (range: [number, number],) => void,
-  minAiScore: number,
-  setMinAiScore: (score: number,) => void,
-  minRating: number,
-  setMinRating: (rating: number,) => void,
-  filterAvailability: string,
-  setFilterAvailability: (value: string,) => void,
-  availabilityOptions: string[],
-  filterLocation: string,
-  setFilterLocation: (value: string,) => void,
-  locations: string[],
-  showRecommended: boolean,
-  setShowRecommended: (show: boolean,) => void,
-  loading: boolean
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-}> = ({
+  loading: boolean;}> = ({
   sortBy,
   setSortBy,
   filterCategory,
@@ -154,7 +110,6 @@ const FilterControls: React.FC<{
   locations,
   showRecommended,
   setShowRecommended,
-<<<<<<< HEAD
   loading,
 }) => (
   <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
@@ -166,20 +121,7 @@ const FilterControls: React.FC<{
       <select
         value={filterCategory}
         onChange={e => setFilterCategory(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'
-=======
-  loading
-},) => (
-  <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">
-      <Filter className="h-4 w-4 text-muted-foreground" />
-      <select
-        value = {filterCategory,}
-        onChange = {(e,) => setFilterCategory(e.target.value),}
-        className="bg-background border border-border px-3 py-2 rounded"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      >
+        className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>All Categories</option>
         {categories.map(category => (
           <option key={category} value={category}>
@@ -192,16 +134,9 @@ const FilterControls: React.FC<{
     <div className='flex items-center gap-2'>
       <SortAsc className='h-4 w-4 text-muted-foreground' />
       <select
-<<<<<<< HEAD
         value={sortBy}
         onChange={e => setSortBy(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'
-=======
-        value = {sortBy,}
-        onChange = {(e,) => setSortBy(e.target.value),}
-        className="bg-background border border-border px-3 py-2 rounded"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      >
+        className='bg-background border border-border px-3 py-2 rounded'      >
         <option value='newest'>Newest First</option>
         <option value='price-low'>Price: Low to High</option>
         <option value='price-high'>Price: High to Low</option>
@@ -214,7 +149,6 @@ const FilterControls: React.FC<{
     <div className='flex items-center gap-2'>
       <span className='text-sm'>$</span>
       <input
-<<<<<<< HEAD
         type='number'
         value={priceRange[0]}
         min={MIN_PRICE}
@@ -229,61 +163,26 @@ const FilterControls: React.FC<{
         min={priceRange[0]}
         max={MAX_PRICE}
         onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'
-=======
-        type="number"
-        value = {priceRange[0],}
-        min = {MIN_PRICE,}
-        max = {priceRange[1],}
-        onChange = {(e,) => setPriceRange([Number(e.target.value), priceRange[1]]),}
-        className="w-20 bg-background border border-border px-2 py-1 rounded"
-      />
-      <span>-</span>
-      <input
-        type="number"
-        value = {priceRange[1],}
-        min = {priceRange[0],}
-        max = {MAX_PRICE,}
-        onChange = {(e,) => setPriceRange([priceRange[0], Number(e.target.value)]),}
-        className="w-20 bg-background border border-border px-2 py-1 rounded"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      />
+        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
     </div>
 
     <div className='flex items-center gap-2'>
       <span className='text-sm'>AI ≥</span>
       <input
-<<<<<<< HEAD
         type='number'
         value={minAiScore}
         min={0}
         max={100}
         onChange={e => setMinAiScore(Number(e.target.value))}
-        className='w-16 bg-background border border-border px-2 py-1 rounded'
-=======
-        type="number"
-        value = {minAiScore,}
-        min = {0,}
-        max = {100,}
-        onChange = {(e,) => setMinAiScore(Number(e.target.value)),}
-        className="w-16 bg-background border border-border px-2 py-1 rounded"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      />
+        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
     </div>
 
     <div className='flex items-center gap-2'>
       <span className='text-sm'>Rating ≥</span>
       <select
-<<<<<<< HEAD
         value={minRating}
         onChange={e => setMinRating(Number(e.target.value))}
-        className='bg-background border border-border px-2 py-1 rounded'
-=======
-        value = {minRating,}
-        onChange = {(e,) => setMinRating(Number(e.target.value)),}
-        className="bg-background border border-border px-2 py-1 rounded"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      >
+        className='bg-background border border-border px-2 py-1 rounded'      >
         <option value={0}>Any</option>
         <option value={5}>5</option>
         <option value={4}>4</option>
@@ -295,16 +194,9 @@ const FilterControls: React.FC<{
 
     <div className='flex items-center gap-2'>
       <select
-<<<<<<< HEAD
         value={filterAvailability}
         onChange={e => setFilterAvailability(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'
-=======
-        value = {filterAvailability,}
-        onChange = {(e,) => setFilterAvailability(e.target.value),}
-        className="bg-background border border-border px-3 py-2 rounded"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      >
+        className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>Any Availability</option>
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>
@@ -316,16 +208,9 @@ const FilterControls: React.FC<{
 
     <div className='flex items-center gap-2'>
       <select
-<<<<<<< HEAD
         value={filterLocation}
         onChange={e => setFilterLocation(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'
-=======
-        value = {filterLocation,}
-        onChange = {(e,) => setFilterLocation(e.target.value),}
-        className="bg-background border border-border px-3 py-2 rounded"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      >
+        className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>All Locations</option>
         {locations.map(loc => (
           <option key={loc} value={loc}>
@@ -336,18 +221,10 @@ const FilterControls: React.FC<{
     </div>
 
     <Button
-<<<<<<< HEAD
       variant={showRecommended ? 'default' : 'outline'}
       size='sm'
       onClick={() => setShowRecommended(!showRecommended)}
-      className='flex items-center gap-2'
-=======
-      variant = {showRecommended ? "default" : "outline",}
-      size="sm"
-      onClick = {() => setShowRecommended(!showRecommended),}
-      className="flex items-center gap-2"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    >
+      className='flex items-center gap-2'    >
       <Sparkles className='h-4 w-4' />
       {showRecommended ? 'All Products' : 'Recommended'}
     </Button>
@@ -404,15 +281,9 @@ export default function Marketplace() {
   }, [isAuthenticated, user, router, toast]);
 
   // Fetch function for infinite scroll with AI product generation
-<<<<<<< HEAD
   const fetchProducts = useCallback(
     async (page: number, limit: number) => {
       await new Promise(resolve => setTimeout(resolve, 200));
-=======
-  const fetchProducts = useCallback(async (page: number, limit: number,) => {
-    await new Promise((resolve,) => setTimeout(resolve, 200)),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
       try {
         // Use static marketplace listings data for now (compatible with ProductListing type)
         const params = {
@@ -422,7 +293,6 @@ export default function Marketplace() {
           sort: sortBy,
         };
 
-<<<<<<< HEAD
         logInfo(
           'Marketplace.tsx: Fetching products using static data with params:',
           { data: params }
@@ -435,65 +305,7 @@ export default function Marketplace() {
         if (filterCategory) {
           items = items.filter(
             p => p.category.toLowerCase() === filterCategory.toLowerCase()
-          );
-=======
-      logInfo('Marketplace.tsx: Fetching products using static data with params:', { data: params }),
-      
-      // Use static data that's already of type ProductListing[]
-      let items: ProductListing[] = [...MARKETPLACE_LISTINGS],
-      
-      // Apply category filter from params
-      if (filterCategory) {
-        items = items.filter((p,) => p.category.toLowerCase() === filterCategory.toLowerCase())
-      }
-      
-      logInfo('Marketplace.tsx: Raw items from static data before filtering/sorting:', { data: JSON.stringify(items.slice(0, 5), null, 2) }),
-
-      if (showRecommended) {
-        items = items.filter((p,) => p.rating != null && p.rating >= 4.3)
-      }
-
-      items = items.filter((p,) => {
-        const price = p.price || 0,
-        const ai = p.aiScore || 0,
-        const rating = p.rating || 0,
-        const location = (p.location || '').toLowerCase(),
-        const availability = (p.availability || '').toLowerCase(),
-        return (
-          price >= priceRange[0] &&
-          price <= priceRange[1] &&
-          ai >= minAiScore &&
-          rating >= minRating &&
-          (!filterLocation || location.includes(filterLocation.toLowerCase())) &&
-          (!filterAvailability || availability === filterAvailability.toLowerCase())
-        )
-      }),
-
-      items.sort((a, b,) => {
-        switch (sortBy) {
-          case 'price-low':
-            return (a.price || 0) - (b.price || 0),
-          case 'price-high':
-            return (b.price || 0) - (a.price || 0),
-          case 'rating':
-            return (b.rating || 0) - (a.rating || 0),
-          case 'popular':
-            return (b.reviewCount || 0) - (a.reviewCount || 0),
-          case 'ai-score':
-            return (b.aiScore || 0) - (a.aiScore || 0),
-          case 'newest':
-          default: // Ensure createdAt exists and is a valid date string before parsing
-            const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0,
-            const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0,
-
-            // Handle NaN cases that might arise from invalid date strings
-            if (isNaN(timeB) && isNaN(timeA)) return 0, // Both invalid, treat as equal
-            if (isNaN(timeB)) return -1, // b is invalid, a comes first (appears newer)
-            if (isNaN(timeA)) return 1,  // a is invalid, b comes first
-
-            return timeB - timeA, // Both valid, sort by time
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        }
+          );        }
 
         logInfo(
           'Marketplace.tsx: Raw items from static data before filtering/sorting:',
@@ -646,16 +458,10 @@ export default function Marketplace() {
   ]); // Added all filter dependencies
 
   // Effect to explicitly refresh data when the component mounts or re-mounts
-<<<<<<< HEAD
   useEffect(() => {
     logInfo(
       'Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.'
-    );
-=======
-  useEffect((,) => {
-    logInfo('Marketplace.tsx: Component mounted/re-mounted, calling refresh to ensure fresh data.'),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    // We call refresh directly to ensure data is re-fetched.
+    );    // We call refresh directly to ensure data is re-fetched.
     // The useInfiniteScrollPagination hook's internal logic will manage its state.
     refresh();
     // Reset firstRenderRef for the new instance of the component, so filter changes behave as expected.
@@ -663,49 +469,30 @@ export default function Marketplace() {
   }, [refresh]); // `refresh` is a dependency. Ensure it's stable.
 
   // New effect to scroll to top AFTER products have been updated and refresh flag is set
-<<<<<<< HEAD
   useEffect(() => {
     if (isRefreshingAfterFilterChange.current && !loading) {
       // Check flag and ensure loading is false
       logInfo('Refresh complete and products updated, scrolling to top.');
       scrollToTop();
-      isRefreshingAfterFilterChange.current = false; // Reset flag
-=======
-  useEffect((,) => {
-    if (isRefreshingAfterFilterChange.current && !loading) { // Check flag and ensure loading is false
-      logInfo('Refresh complete and products updated, scrolling to top.'),
-      scrollToTop(),
-      isRefreshingAfterFilterChange.current = false, // Reset flag
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      // Optionally, provide user feedback about the filter change
+      isRefreshingAfterFilterChange.current = false; // Reset flag      // Optionally, provide user feedback about the filter change
       // toast({ title: 'Filters updated', description: 'Displaying products based on new criteria.' });
     }
   }, [products, loading, scrollToTop, toast]); // Depends on products and loading state
 
   // Calculate market stats
-<<<<<<< HEAD
   const marketStats = useMemo(() => {
     if (products.length === 0) return null;
     return {
       averagePrice:
         products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating:
-        products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
-=======
-  const marketStats = useMemo((,) => {
-    if (products.length === 0) return null,
-    return {
-      averagePrice: products.reduce((sum, p,) => sum + (p.price || 0), 0) / products.length,
-      averageRating: products.reduce((sum, p,) => sum + (p.rating || 0), 0) / products.length,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      totalProducts: products.length,
+        products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,      totalProducts: products.length,
       categoriesCount: Array.from(new Set(products.map(p => p.category)))
         .length,
     };
   }, [products]);
 
   // Get unique categories and other filter values
-<<<<<<< HEAD
   const categories = useMemo(() => {
     return Array.from(new Set(MARKETPLACE_LISTINGS.map(p => p.category)));
   }, []);
@@ -722,23 +509,7 @@ export default function Marketplace() {
 
   // Show scroll to top button
   const [showScrollTop, setShowScrollTop] = useState(false);
-  useEffect(() => {
-=======
-  const categories = useMemo((,) => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p,) => p.category)))
-  }, []),
-  const locations = useMemo((,) => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p,) => p.location).filter(Boolean)))
-  }, []).filter(Boolean) as string[],
-  const availabilityOptions = useMemo((,) => {
-    return Array.from(new Set(MARKETPLACE_LISTINGS.map((p,) => p.availability).filter(Boolean)))
-  }, []).filter(Boolean) as string[],
-
-  // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false),
-  useEffect((,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    const handleScroll = () => {
+  useEffect(() => {    const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800);
     };
     window.addEventListener('scroll', handleScroll);
@@ -761,14 +532,8 @@ export default function Marketplace() {
             {t('marketplace.hero_subtitle')}
           </p>
         </motion.div>
-<<<<<<< HEAD
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-          {Array.from({ length: 12 }).map((_, i) => (
-=======
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {Array.from({ length: 12 }).map((_, i,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            <SkeletonCard key={i} />
+          {Array.from({ length: 12 }).map((_, i) => (            <SkeletonCard key={i} />
           ))}
         </div>
       </div>
@@ -879,14 +644,8 @@ export default function Marketplace() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-<<<<<<< HEAD
         <AnimatePresence mode='popLayout'>
-          {products.map((product, index) => (
-=======
-        <AnimatePresence mode="popLayout">
-          {products.map((product, index,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            <motion.div
+          {products.map((product, index) => (            <motion.div
               key = {product.id,}
               ref = {index === products.length - 1 ? lastElementRef : null,}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -916,16 +675,9 @@ export default function Marketplace() {
                 }}
                 onBuy = {async () => {
                   if (!isAuthenticated) {
-<<<<<<< HEAD
                     setIsAuthModalOpen(true);
                     return; // Stop further execution
-                  }
-=======
-                    setIsAuthModalOpen(true),
-                    return, // Stop further execution
-                  ,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  try {
+                  }                  try {
                     await router.push(`/checkout/${product.id}`);
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', {
@@ -972,14 +724,8 @@ export default function Marketplace() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-<<<<<<< HEAD
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-            {Array.from({ length: 4 }).map((_, i) => (
-=======
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }).map((_, i,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              <SkeletonCard key={`loading-${i}`} />
+            {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />
             ))}
           </div>
         </motion.div>
@@ -1005,14 +751,8 @@ export default function Marketplace() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
-<<<<<<< HEAD
             onClick={scrollToTop}
-            className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'
-=======
-            onClick = {scrollToTop,}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            initial={{ opacity: 0, scale: 0 }}
+            className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
@@ -1265,9 +1005,7 @@ case 'newest': ;
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
-=======
   )
-=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -1316,7 +1054,4 @@ const Marketplace = () => {;
             </div>;
     </>;
   );
->>>>>>> origin/automation-fixes
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -23,9 +23,8 @@ export default async function handler(
         `attachment; filename="${code}-referrals.csv"`
       );
       return res.status(200).send(csv);    }
-
     const supabase = getServerSupabase();
-    const { data; error } = await supabase
+    const { data, error } = await supabase
       .from('referral_events')
       .select('event, created_at')
       .eq('partner_code', code)
@@ -43,8 +42,7 @@ export default async function handler(
     res.setHeader(
       'Content-Disposition',
       `attachment; filename="${code}-referrals.csv"`
-    );
-    return res.status(200).send(csv);
+    );    return res.status(200).send(csv);
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }

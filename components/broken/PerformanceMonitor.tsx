@@ -3,8 +3,6 @@
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
   
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 }) 
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
@@ -75,8 +73,5 @@ if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 
 };
-=======
 
 export default PerformanceMonitor;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -55,8 +55,7 @@ import {
   ChevronRight,
   Crown,
   Infinity,;
-} from 'lucide-react';import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
+} from 'lucide-react';import Button from '../components/ui/Button';import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
@@ -94,7 +93,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     if (serviceVariant.includes('integration')) return 'quantum-advanced';
     if (serviceVariant.includes('analytics')) return 'neural';
     return 'default';  };
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -170,14 +168,12 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
         s => s.category.includes('Manufacturing') || s.category.includes('IoT')
       ).length,
     },  ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
     { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' },  ];
-
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
     { id: 'price-low', name: 'Price Low to High' },
@@ -185,7 +181,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     { id: 'popularity', name: 'Most Popular' },
     { id: 'newest', name: 'Newest First' },
     { id: 'rating', name: 'Highest Rated' },  ];
-
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = all2026Services;
@@ -200,7 +195,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
             .includes(searchTerm.toLowerCase()) ||
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );    }
-
     // Category filter
     if (selectedCategory !== 'all') {
       if (selectedCategory === 'ai') {
@@ -238,8 +232,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
           service =>
             service.category.includes('Manufacturing') ||
             service.category.includes('IoT')
-        );      }
-    }
+        );      }    }
 
     // Price filter
     if (selectedPriceRange !== 'all') {
@@ -253,7 +246,6 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
         if (selectedPriceRange === 'premium') return price >= 20000;
         return true;
       });    }
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -287,8 +279,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     selectedCategory,
     selectedPriceRange,
     sortBy,
-  ]);
-  // Service statistics
+  ]);  // Service statistics
   const serviceStats = {
     totalServices: all2026Services.length,
     aiServices: all2026Services.filter(s => s.category.includes('AI')).length,
@@ -363,8 +354,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
         {/* Enhanced Header Section */}
         <section className='relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30'></div>
-          <div className='max-w-7xl mx-auto relative z-10 text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto relative z-10 text-center'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -378,8 +368,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
               </p>
 
               {/* Service Statistics */}
-              <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mb-12'>                {Object.entries(serviceStats).map(([key, value]) => (
-                  <motion.div
+              <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mb-12'>                {Object.entries(serviceStats).map(([key, value]) => (                  <motion.div
                     key={key}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -391,8 +380,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                     </div>
                     <div className='text-sm text-gray-400 capitalize'>
                       {key.replace(/([A-Z])/g, ' $1').trim()}
-                    </div>                  </motion.div>
-                ))}
+                    </div>                  </motion.div>                ))}
               </div>
 
               {/* Contact Information */}
@@ -411,8 +399,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                   </div>
                   <div className='flex items-center justify-center space-x-2'>
                     <MapPin className='w-4 h-4 text-purple-400' />
-                    <span className='text-center'>{contactInfo.address}</span>                  </div>
-                </div>
+                    <span className='text-center'>{contactInfo.address}</span>                  </div>                </div>
               </div>
             </motion.div>
           </div>
@@ -445,8 +432,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
                   >
-                    {categories.map(category => (                      <option key={category.id} value={category.id}>
-                        {category.name} ({category.count})
+                    {categories.map(category => (                      <option key={category.id} value={category.id}>                        {category.name} ({category.count})
                       </option>
                     ))}
                   </select>
@@ -462,8 +448,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                     onChange={e => setSelectedPriceRange(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
                   >
-                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
-                        {range.name}
+                    {priceRanges.map(range => (                      <option key={range.id} value={range.id}>                        {range.name}
                       </option>
                     ))}
                   </select>
@@ -479,8 +464,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                     onChange={e => setSortBy(e.target.value)}
                     className='w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
                   >
-                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
-                        {option.name}
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>                        {option.name}
                       </option>
                     ))}
                   </select>
@@ -509,8 +493,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                           : 'text-gray-400 hover:text-white'
                       }`}
                     >
-                      <List className='w-4 h-4 mx-auto' />                    </button>
-                  </div>
+                      <List className='w-4 h-4 mx-auto' />                    </button>                  </div>
                 </div>
               </div>
 
@@ -525,8 +508,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                   <span className='text-cyan-400 font-semibold'>
                     {all2026Services.length}
                   </span>{' '}
-                  services                </p>
-              </div>
+                  services                </p>              </div>
             </div>
           </div>
         </section>
@@ -534,8 +516,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
         {/* Enhanced Services Grid */}
         <section className='py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
-            <AnimatePresence mode='wait'>              {filteredServices.length === 0 ? (
-                <motion.div
+            <AnimatePresence mode='wait'>              {filteredServices.length === 0 ? (                <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -556,8 +537,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                       ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
                       : 'space-y-4'
                   }
-                >                  {filteredServices.map((service, index) => (
-                    <motion.div
+                >                  {filteredServices.map((service, index) => (                    <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -580,8 +560,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                           <div className='flex items-start justify-between mb-4'>
                             <div className='text-4xl'>{service.icon}</div>
                             {service.popular && (
-                              <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium'>                                Popular
-                              </div>
+                              <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium'>                                Popular                              </div>
                             )}
                           </div>
 
@@ -695,8 +674,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
                                 window.open(
                                   `mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`
                                 )
-                              }                            >
-                              Contact
+                              }                            >                              Contact
                             </Button>
                           </div>
                         </div>
@@ -711,8 +689,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
 
         {/* Enhanced Footer CTA */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -754,8 +731,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
               <div className='mt-8 text-sm text-gray-400'>
                 <p>
                   Contact: {contactInfo.mobile} | {contactInfo.email}
-                </p>                <p>{contactInfo.address}</p>
-              </div>
+                </p>                <p>{contactInfo.address}</p>              </div>
             </motion.div>
           </div>
         </section>

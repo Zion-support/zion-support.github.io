@@ -17,14 +17,12 @@ export default function SsoInABoxPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/sso-in-a-box')
   );  if (!service) return null;
-
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name='description' content={service.description} />
-        <link rel='canonical' href='https://ziontechgroup.com/sso-in-a-box' />
-      </Head>
+        <link rel='canonical' href='https://ziontechgroup.com/sso-in-a-box' />      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -100,8 +98,7 @@ export default function SsoInABoxPage() {
                   >
                     {service.contactInfo.address}
                   </a>
-                </div>              </div>
-            </div>
+                </div>              </div>            </div>
           </div>
         </div>
       </div>

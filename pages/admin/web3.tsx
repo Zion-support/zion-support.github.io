@@ -18,7 +18,6 @@ export default function AdminWeb3Page() {
     if (typeof window !== 'undefined')
       window.localStorage.setItem('zion-web3-users', JSON.stringify(list));
     setUsers(list);  };
-
   const metrics = {
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,

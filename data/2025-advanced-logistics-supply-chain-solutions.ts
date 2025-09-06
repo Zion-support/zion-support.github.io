@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string;
   name: string;
   tagline: string;
@@ -356,8 +354,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4.8,
       reviews: 112,
     },
-  ];
-    features: [
+  ];    features: [
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
     ];
@@ -391,8 +388,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     tagline: 'Quantum computing for complex logistics problems',
     price: '$2,999',
     period: '/month',
-    description: 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',
-    features: [
+    description: 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',    features: [
       'Quantum algorithmsRoute optimizationScheduling optimizationVehicle routingCapacity planningReal-time optimizationHigh-performance computingAPI access';
       'Custom modelsPerformance analytics'
     ];
@@ -425,8 +421,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     id: 'iot-fleet-management-platform', name: 'IoT Fleet Management Platform',
     tagline: 'Comprehensive IoT-based fleet monitoring and management', price: '$799',
     period: '/month',
-    description: 'Advanced IoT-based fleet management platform that provides real-time monitoring, predictive maintenance, and optimization for vehicle fleets.',
-    features: [
+    description: 'Advanced IoT-based fleet management platform that provides real-time monitoring, predictive maintenance, and optimization for vehicle fleets.',    features: [
       'Real-time trackingPredictive maintenanceFuel monitoringDriver behavior analysisRoute optimizationPerformance analyticsMobile integrationAPI access';
       'Custom dashboardsCompliance tools'
     ];
@@ -459,8 +454,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     id: 'blockchain-supply-chain-transparency', name: 'Blockchain Supply Chain Transparency Platform',
     tagline: 'End-to-end supply chain transparency with blockchain', price: '$899',
     period: '/month',
-    description: 'Advanced blockchain-based supply chain transparency platform that provides end-to-end visibility, traceability, and compliance across global supply chains.',
-    features: [
+    description: 'Advanced blockchain-based supply chain transparency platform that provides end-to-end visibility, traceability, and compliance across global supply chains.',    features: [
       'End-to-end traceabilitySmart contractsCompliance trackingQuality assuranceSustainability monitoringReal-time updatesAPI integrationData analytics';
       'Audit trailsPerformance monitoring'
     ];
@@ -494,8 +488,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     tagline: 'Intelligent warehouse automation and optimization',
     price: '$1,099',
     period: '/month',
-    description: 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',
-    features: [
+    description: 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',    features: [
       'Automated pickingSmart routingInventory optimizationPerformance analyticsPredictive maintenanceReal-time monitoringMobile integrationAPI access';
       'Custom workflowsCompliance tools'
     ];
@@ -525,5 +518,3 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     reviews: 112
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

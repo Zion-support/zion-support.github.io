@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 'use client';
 
@@ -31,85 +30,9 @@ import {
 } from 'lucide-react';
 
 const Header: React.FC = () => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap, Building, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Github, Globe, ArrowRight, CheckCircle, Star, Server, Users, Building2, FileText, Rocket, Target, Atom, Lock, TrendingUp, Workflow, MessageCircle, DollarSign, Briefcase, ArrowUp, Sparkles, Home, Truck, Factory, Heart, BookOpen, BarChart3, Cpu, Leaf, Satellite, HelpCircle, ShoppingBag } from 'lucide-react';
-import { useRouter } from 'next/router';
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import Link from 'next/link';
-
-const servicesDropdown = [
-  {
-    icon: Brain,
-    title: 'AI & Machine Learning',
-    description: 'Intelligent solutions for business automation',
-    href: '/ai-services',
-    features: ['Custom ML Models', 'NLP Solutions', 'Computer Vision', 'Predictive Analytics'],
-  },
-  {
-    icon: Server,
-    title: 'IT Services',
-    description: 'Comprehensive technology infrastructure',
-    href: '/it-services',
-    features: ['Cloud Migration', 'DevOps', 'Cybersecurity', 'System Integration'],
-  },
-  {
-    icon: Rocket,
-    title: 'Micro SaaS',
-    description: 'Scalable software solutions',
-    href: '/micro-saas',
-    features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'Maintenance'],
-  },
-  {
-    icon: Shield,
-    title: 'Cybersecurity',
-    description: 'Protect your digital assets',
-    href: '/cybersecurity',
-    features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
-  },
-] as const;
-
-const solutionsDropdown = [
-  {
-    icon: Building2,
-    title: 'Enterprise Solutions',
-    description: 'Large-scale business transformation',
-    href: '/enterprise',
-    features: ['Digital Transformation', 'Process Automation', 'Data Analytics', 'Cloud Strategy'],
-  },
-  {
-    icon: Target,
-    title: 'Startup Solutions',
-    description: 'Rapid growth and scaling',
-    href: '/solutions/startup',
-    features: ['MVP Development', 'Tech Stack Selection', 'Growth Strategy', 'Funding Support'],
-  },
-  {
-    icon: Globe,
-    title: 'E-commerce',
-    description: 'Online store optimization',
-    href: '/ecommerce',
-    features: ['Platform Development', 'Payment Integration', 'SEO Optimization', 'Analytics'],
-  },
-] as const;
-
-const industriesDropdown = [
-  { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-  { name: 'Finance', href: '/industries/finance', icon: DollarSign },
-  { name: 'Education', href: '/industries/education', icon: BookOpen },
-  { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
-  { name: 'Retail', href: '/industries/retail', icon: ShoppingBag },
-  { name: 'Government', href: '/industries/government', icon: Building2 },
-] as const;
-
-export default function Header() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
-<<<<<<< HEAD
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -149,8 +72,6 @@ export default function Header() {
       description: 'Speed and efficiency improvements',
       href: '/services/performance',
       icon: Zap
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    }
   ];
 
   const solutionsDropdown = [
@@ -248,42 +169,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-=======
-  const [isScrolled, setIsScrolled] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prev => !prev);
-  }, []);
-
-  const closeMenu = useCallback(() => {
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-    setIsSolutionsOpen(false);
-    setIsIndustriesOpen(false);
-  }, []);
-
-  const handleServiceClick = useCallback((href: string) => {
-    router.push(href);
-    closeMenu();
-  }, [router, closeMenu]);
-
-  return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
-      {/* Top Bar */}
+    <header className="bg-white shadow-lg sticky top-0 z-50">      {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
@@ -309,18 +195,10 @@ export default function Header() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       {/* Main Navigation */}
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      
-      {/* Main Navigation */}
-      <nav className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -334,18 +212,6 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
-=======
-            <Link
-              href="/"
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-              }`}
-            >
-              Home
-            </Link>
-            
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -454,7 +320,6 @@ export default function Header() {
               </AnimatePresence>
             </div>
 
-<<<<<<< HEAD
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
               <Link
@@ -492,8 +357,6 @@ export default function Header() {
       </nav>
 
       {/* Mobile Menu */}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -516,11 +379,8 @@ export default function Header() {
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                >
                   Get Started
                 </Link>
-=======
             <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               About
             </Link>
@@ -643,22 +503,16 @@ export default function Header() {
                     364 E Main St STE 1008, Middletown DE 19709
                   </div>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
     </header>
   );
 };
 
 export default Header;
-=======
     </header>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8

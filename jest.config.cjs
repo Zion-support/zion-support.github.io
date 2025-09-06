@@ -125,6 +125,7 @@ const customJestConfig = {
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = createJestConfig(customJestConfig)
 =======
 <<<<<<< HEAD
@@ -165,3 +166,5 @@ module.exports = {;
   transformIgnorePatterns: [ "node_modules/(?!(.*\\.mjs$))" ];
 };
 >>>>>>> origin/automation-fixes
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

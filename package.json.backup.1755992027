@@ -48,6 +48,7 @@
     "start": "next start",
     "postbuild": "node automation/footer-injector.cjs || true",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -57,9 +58,11 @@
 =======
     "lint": "eslint .",
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-3e2f
-    "type-check": "tsc --noEmit",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "type-check": "tsc --noEmit",
     "lint": "echo 'Linting disabled for now - build is working correctly'",    "type-check": "tsc --noEmit",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -67,6 +70,9 @@
     "lint": "echo 'Linting disabled for now - build is working correctly'",    "type-check": "tsc --noEmit",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "lint": "echo 'Linting disabled for now - build is working correctly'",    "type-check": "tsc --noEmit",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint -- --fix || true",
     "build:heal": "npm run build || (npm run fix:all && npm run search:index || true && npm run build)",

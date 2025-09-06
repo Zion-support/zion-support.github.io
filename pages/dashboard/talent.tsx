@@ -87,8 +87,7 @@ export default function TalentDashboard() {
                   className='text-xs py-1 px-2'
                 >
                   {s.key === 'skills' ? 'Add skills' : 'Mark done'}
-                </EnhancedButton>              )}
-            </li>
+                </EnhancedButton>              )}            </li>
           ))}
         </ul>
       </EnhancedCard>

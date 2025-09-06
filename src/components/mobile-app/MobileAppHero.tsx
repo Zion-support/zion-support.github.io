@@ -1,13 +1,7 @@
 };
-
 import React from "react";
 import Link from "next/link";
-<<<<<<< HEAD
-import { ArrowRight, Phone } from 'lucide-react'
-=======
-import { ArrowRight, Phone } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
@@ -54,6 +48,3 @@ export const MobileAppHero: React.FC = () => {
   )
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

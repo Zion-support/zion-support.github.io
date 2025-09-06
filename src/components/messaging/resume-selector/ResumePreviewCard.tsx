@@ -1,4 +1,3 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -6,15 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 import { Resume } from '@/types/resume';
 
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import { Resume } from "@/types/resume";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ResumePreviewCardProps {
   resume: Resume;
   onDownload: () => void;
@@ -39,22 +35,12 @@ export function ResumePreviewCard({
               </p>
             )}
           </div>
-<<<<<<< HEAD
           <Button
             variant='ghost'
             size='sm'
             onClick={onDownload}
             disabled={isLoading}
-            className='h-8 w-8 p-0'
-=======
-          <Button 
-            variant="ghost" 
-            size="sm" 
-            onClick = {onDownload,}
-            disabled = {isLoading,}
-            className="h-8 w-8 p-0"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          >
+            className='h-8 w-8 p-0'          >
             <Download className='h-4 w-4 text-zion-cyan' />
             <span className='sr-only'>Download Resume</span>
           </Button>
@@ -67,38 +53,27 @@ export function ResumePreviewCard({
         )}
 
         {resume.skills && resume.skills.length > 0 && (
-<<<<<<< HEAD
           <div className='flex flex-wrap gap-1 mt-2'>
             {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge
                 key={index}
                 variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >
-=======
-          <div className="flex flex-wrap gap-1 mt-2">
-            {resume.skills.slice(0, 5).map((skill, index,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
+            {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge 
                 key = {index,}
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {skill.name}
               </Badge>
             ))}
             {resume.skills.length > 5 && (
               <Badge
                 variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >
-=======
-              <Badge 
+                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge 
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 +{resume.skills.length - 5} more
               </Badge>
             )}
@@ -108,11 +83,4 @@ export function ResumePreviewCard({
     </Card>
   );
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

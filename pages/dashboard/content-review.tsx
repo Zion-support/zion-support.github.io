@@ -30,8 +30,7 @@ export default function ContentReviewPage() {
     reason?: string;
     userEmail?: string;
     contentType?: string;
-  }>({ status: 'pending' });  const query = useMemo(() => {
-    const p = new URLSearchParams();
+  }>({ status: 'pending' });  const query = useMemo(() => {    const p = new URLSearchParams();
     if (filters.status) p.set('status', filters.status);
     if (filters.reason) p.set('reason', filters.reason);
     if (filters.userEmail) p.set('userEmail', filters.userEmail);
@@ -65,8 +64,7 @@ export default function ContentReviewPage() {
     <EnhancedLayout>
       <div className='max-w-7xl mx-auto'>
         <div className='flex items-center justify-between mb-4'>
-          <h1 className='text-2xl font-semibold'>Admin Content Review</h1>
-        </div>
+          <h1 className='text-2xl font-semibold'>Admin Content Review</h1>        </div>
         <div className='mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm'>
           <select
             value={filters.status || ''}
@@ -172,8 +170,7 @@ export default function ContentReviewPage() {
                   >
                     No results
                   </td>
-                </tr>              )}
-            </tbody>
+                </tr>              )}            </tbody>
           </table>
         </div>
       </div>

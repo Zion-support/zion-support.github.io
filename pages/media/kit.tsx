@@ -10,8 +10,7 @@ import {
   getDefaultAssets,
   buildPressRelease,
   buildTimeline,;
-} from '../../utils/mediaKit';
-const KitPage = () => {
+} from '../../utils/mediaKit';const KitPage = () => {
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
@@ -28,7 +27,6 @@ const KitPage = () => {
 
   const onGenerateTimeline = useCallback(() => {
     setTimeline(buildTimeline(startDate));  }, [startDate]);
-
   const onDownloadZip = useCallback(async () => {
     const JSZip = (await import('jszip')).default;
     const zip = new JSZip();
@@ -37,8 +35,7 @@ const KitPage = () => {
      else if (asset.type === 'binary' && asset.path) {
         const res = await fetch(asset.path);
         const blob = await res.blob();
-        zip.file(asset.filename, blob);      }
-    }
+        zip.file(asset.filename, blob);      }    }
 
     // Add press releases
     const nowStr = new Date().toISOString().substring(0, 10);
@@ -52,8 +49,7 @@ const KitPage = () => {
       companyName,
       date: nowStr,
       tokenName,
-    });    zip.file('press-releases/seed-round.md', prSeed);
-    zip.file('press-releases/launch.md', prLaunch);
+    });    zip.file('press-releases/seed-round.md', prSeed);    zip.file('press-releases/launch.md', prLaunch);
     if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
 
     // Add timeline if generated
@@ -65,7 +61,6 @@ const KitPage = () => {
     const blob = await zip.generateAsync({ type: 'blob' });
     const { saveAs } = await import('file-saver');
     saveAs(blob, `zion-media-kit-${bundle}.zip`);  }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
-
   const onGeneratePdf = useCallback(async () => {
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
@@ -141,7 +136,6 @@ const KitPage = () => {
         </pre>
       </div>
     );  };
-
   return (
     <div>
       <Head>
@@ -235,8 +229,7 @@ const KitPage = () => {
                   <li key={t.label}>
                     <span className='font-medium'>{t.label}:</span> {t.date}
                   </li>
-                ))}              </ul>
-            )}
+                ))}              </ul>            )}
           </div>
         </section>
 
@@ -255,8 +248,7 @@ const KitPage = () => {
                   </a>
                 ) : (
                   <span className='text-gray-400 text-xs'>generated</span>
-                )}              </li>
-            ))}
+                )}              </li>            ))}
           </ul>
         </section>
 
@@ -271,7 +263,6 @@ const KitPage = () => {
         </section>
       </div>
     </div>
-  );
-};
+  );};
 
 export default KitPage;

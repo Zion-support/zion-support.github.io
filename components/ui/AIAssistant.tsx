@@ -6,8 +6,7 @@ export type AIAssistantProps = {
   defaultPrompt: string,
   systemPrompt?: string;
   onAccept: (markdown: string) => void,
-  authorizationToken?: string
-};
+  authorizationToken?: string};
 
 export default function AIAssistant({
   buttonLabel = 'Generate with AI',
@@ -53,8 +52,7 @@ export default function AIAssistant({
     } catch (e: any) {
       setError(e.message || 'Request failed')
     } finally {
-      setLoading(false)
-    }
+      setLoading(false)    }
   }, [authorizationToken, prompt, systemPrompt]);
 
   const onCopy = useCallback(async () => {
@@ -90,8 +88,7 @@ export default function AIAssistant({
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <h3 className="text-base font-semibold">{title}</h3>
-              <button onClick={onClose} className="text-sm opacity-70 hover:opacity-100">Close</button>
-            </div>
+              <button onClick={onClose} className="text-sm opacity-70 hover:opacity-100">Close</button>            </div>
 
             <div className="p-4 space-y-3">
               <div>
@@ -125,7 +122,6 @@ export default function AIAssistant({
               {error && (
                 <div className="text-red-600 text-sm">{error}</div>
               )}
-
               <div>
                 <label className="block text-xs font-medium mb-1" htmlFor="input-Output (markdown)">Output (markdown)</label>
                 {isEditing ? (

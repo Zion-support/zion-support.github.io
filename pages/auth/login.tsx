@@ -25,8 +25,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,;
-} from '@/components/ui/card';
-const LoginPage = () => {
+} from '@/components/ui/card';const LoginPage = () => {
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -35,8 +34,7 @@ const LoginPage = () => {
   const [isLoading, setIsLoading] = useState(false); // For login form submission
   const [user, setUser] = useState<User | null>(null);
   const [isCheckingSession, setIsCheckingSession] = useState(true); // For initial session check
-  const [sessionChecked, setSessionChecked] = useState(false); // New state: true after initial getSession completes  const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
-  const [isEmailUnverified, setIsEmailUnverified] = useState(false);
+  const [sessionChecked, setSessionChecked] = useState(false); // New state: true after initial getSession completes  const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);  const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
 
@@ -47,8 +45,7 @@ const LoginPage = () => {
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{
     type: 'success' | 'error';
     text: string;
-  } | null>(null);
-  // Using centralized Supabase client (imported at top)
+  } | null>(null);  // Using centralized Supabase client (imported at top)
 
   // Effect for initial session check and auth state changes
   useEffect(() => {
@@ -60,8 +57,7 @@ const LoginPage = () => {
         logWarn('LoginPage: Session check timeout after 5 seconds');
         setSessionCheckTimedOut(true);
         setIsCheckingSession(false); // Allow form to render if timeout
-        setSessionChecked(true); // Mark check as complete even on timeout      }
-    }, 5000);
+        setSessionChecked(true); // Mark check as complete even on timeout      }    }, 5000);
 
     const checkSessionAndListen = async () => {
       if (!mounted) return;
@@ -92,8 +88,7 @@ const LoginPage = () => {
           logErrorToProduction('LoginPage: Exception during getSession:', {
             data: e,
           });
-          clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too        }
-      } finally {
+          clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too        }      } finally {
         if (mounted) {
           setIsCheckingSession(false);
           setSessionChecked(true);
@@ -128,7 +123,6 @@ const LoginPage = () => {
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
         authListener?.subscription?.unsubscribe();
       };    };
-
     const unsubscribePromise = checkSessionAndListen();
 
     return () => {
@@ -180,8 +174,7 @@ const LoginPage = () => {
 
       logInfo(
         `LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`
-      );
-      // Add a small delay to ensure session is fully established
+      );      // Add a small delay to ensure session is fully established
       const redirectTimer = setTimeout(() => {
         // Double-check that we're still logged in before redirecting
         if (user && router.pathname === '/auth/login') {
@@ -204,8 +197,7 @@ const LoginPage = () => {
         message: 'Please enter your email address first',
       } as AuthError);
       return;
-    }
-    setIsResendingVerification(true);
+    }    setIsResendingVerification(true);
     try {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST',
@@ -229,8 +221,7 @@ const LoginPage = () => {
         message: 'Failed to resend verification email. Please try again.',
       } as AuthError);
     } finally {
-      setIsResendingVerification(false);    }
-  };
+      setIsResendingVerification(false);    }  };
 
   const handleProactiveResendVerification = async (e: FormEvent) => {
     e.preventDefault();
@@ -240,7 +231,6 @@ const LoginPage = () => {
         text: 'Please enter your email address.',
       });
       return;    }
-
     setIsProactivelyResending(true);
     setProactiveResendMessage(null);
     try {
@@ -267,8 +257,7 @@ const LoginPage = () => {
         text: 'An unexpected error occurred. Please try again.',
       });
     } finally {
-      setIsProactivelyResending(false);    }
-  };
+      setIsProactivelyResending(false);    }  };
 
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
@@ -376,8 +365,7 @@ const LoginPage = () => {
         message: exceptionMessage,
       } as AuthError);
     } finally {
-      setIsLoading(false);    }
-  };
+      setIsLoading(false);    }  };
 
   // Auto-redirect to verification status page for unverified users after showing message
   useEffect(() => {
@@ -388,7 +376,6 @@ const LoginPage = () => {
       return () => clearTimeout(timer);
     }
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
-
   // --- Rendering Logic ---
 
   // 1. Primary Loading State: During initial session check
@@ -405,7 +392,6 @@ const LoginPage = () => {
         </div>
       </div>
     );  }
-
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
@@ -433,7 +419,6 @@ const LoginPage = () => {
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
     );
     return null; // Or a minimal loader/empty div  }
-
   return (
     <>
       <Head>
@@ -445,8 +430,7 @@ const LoginPage = () => {
       </Head>
 
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
-        <Card className='w-full max-w-md'>          <CardHeader>
-            <CardTitle>Sign In</CardTitle>
+        <Card className='w-full max-w-md'>          <CardHeader>            <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
             </CardDescription>
@@ -504,8 +488,7 @@ const LoginPage = () => {
                 <Link
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
-                >                  Sign up
-                </Link>
+                >                  Sign up                </Link>
               </p>
             </div>
           </CardContent>

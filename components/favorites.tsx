@@ -2,17 +2,13 @@ import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function useFavorites() {
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
-<<<<<<< HEAD
-      if (raw) setFavorites(JSON.parse(raw));
-    } catch {}
+      if (raw) setFavorites(JSON.parse(raw));    } catch {}
   }, []);
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug)),
   return { favorites, remove };
@@ -23,11 +19,7 @@ export default function FavoritesPage() {
   const profiles = useMemo(
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug)),
     [favorites]
-  );
-=======
-  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
 
   return (
     <div>
@@ -53,22 +45,16 @@ export default function FavoritesPage() {
         </nav>
       </div>
 
-      <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
-      <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
+      <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>      <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
         <nav aria-label="Breadcrumb">
           <ol className="flex items-center gap-2">
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          </ol>
         </nav>
       </div>
 
-<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
       {profiles.length === 0 ? (
         <div className='rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center'>
           <div className='text-gray-600 dark:text-gray-300'>
@@ -126,15 +112,11 @@ export default function FavoritesPage() {
                     <a className='px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600'>
                       Request to Hire
                     </a>
-                  </Link>                </div>
-              <div className="mt-4 flex items-center justify-between text-sm">
+                  </Link>                </div>              <div className="mt-4 flex items-center justify-between text-sm">
                 <div className="font-medium">${t.hourlyRateUsd}/hr</div>
                 <div className="flex items-center gap-3">
                   <Link href={`/talent/${t.slug}`}><a className="px-3 py-1.5 rounded-md bg-indigo-600 text-white">View Profile</a></Link>
                   <Link href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
             </div>
           ))}
@@ -143,7 +125,3 @@ export default function FavoritesPage() {
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

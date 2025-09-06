@@ -15,6 +15,7 @@
   },
   "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44,22 +45,29 @@
     "@typescript-eslint/parser": "^8.39.0",
     "autoprefixer": "^10.4.21",
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
-    "eslint": "^8.57.0",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "eslint": "^8.57.0",
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.16",    "eslint": "^8.57.0",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@types/node": "^20.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.16",    "eslint": "^8.57.0",
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "eslint-config-next": "^14.0.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0"

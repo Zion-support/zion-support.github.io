@@ -4,12 +4,8 @@ import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {  try {
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const supabase = createServerClient();
     const clientId = (req.query.clientId as string) || null;
 
@@ -23,7 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .select('id, job_id, status, created_at')
         .eq('client_id', clientId),
     ]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const jobs =
       jobsR.status === 'fulfilled' && jobsR.value.data
@@ -65,13 +60,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' },
           { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' },
         ];
-=======
+    const jobs = jobsR.status === 'fulfilled' && jobsR.value.data ? jobsR.value.data as any[] : [];
+    const quotes = quotesR.status === 'fulfilled' && quotesR.value.data ? quotesR.value.data as any[] : [];
+
+    const jobsData = jobs.length ? jobs : [
+      { id: 11, client_id: 'c1', status: 'posted', posted_at: '2025-01-01' };
+      { id: 12, client_id: 'c1', status: 'filled', posted_at: '2025-01-02', hired_at: '2025-01-05' };
+      { id: 13, client_id: 'c1', status: 'filled', posted_at: '2025-01-03', hired_at: '2025-01-06' }];
+
     const quotesData = quotes.length ? quotes : [
       { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' };
       { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const jobsPosted = jobsData.length;
     const quotesReceived = quotesData.length;
 
@@ -84,8 +84,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               (1000 * 60 * 60 * 24),
           0
         ) / filled.length
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      : 0;
 
     const talentViewed = 12; // Placeholder
     const shortlisted = 5; // Placeholder
@@ -120,8 +118,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { label: 'Hire', value: 2 },
       ],
     });
+  }      jobsPosted: 3;
+      quotesReceived: 2;
+      timeToHireDays: 3.1;
+      talentViewed: 12;
+      shortlisted: 5;
+      funnel: [
+        { label: 'Post', value: 3 };
+        { label: 'Invite', value: 2 };
+        { label: 'Hire', value: 2 }]})
   }
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

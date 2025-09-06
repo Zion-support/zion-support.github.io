@@ -75,8 +75,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     await upsertReview(review);
 
-    return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
-  } catch (error: any) {
+    return res.status(201).json({ message: 'Review submitted', reviewId: review.id })  } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
   }
 }

@@ -27,21 +27,6 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Search, Filter } from 'lucide-react';
 import { SEO } from '@/components/SEO';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-<<<<<<< HEAD
-=======
-import React, { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Search, Filter } from 'lucide-react';
-import { SEO } from "@/components/SEO";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -251,18 +236,10 @@ export default function SupportRequests() {
               <div className='relative flex-1'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />
                 <Input
-<<<<<<< HEAD
                   placeholder='Search by ID, user or issue...'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
-                  className='pl-10'
-=======
-                  placeholder="Search by ID, user or issue..."
-                  value = {searchQuery,}
-                  onChange = {(e,) => setSearchQuery(e.target.value),}
-                  className="pl-10"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                />
+                  className='pl-10'                />
               </div>
 
               <Select
@@ -340,12 +317,7 @@ export default function SupportRequests() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-<<<<<<< HEAD
-                    {filteredRequests.map(request => (
-=======
-                    {filteredRequests.map((request,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      <TableRow key={request.id}>
+                    {filteredRequests.map(request => (                      <TableRow key={request.id}>
                         <TableCell className='font-medium'>
                           {request.id}
                         </TableCell>
@@ -459,8 +431,4 @@ export default function SupportRequests() {
   new Date (request.lastUpdated) .toLocaleDateString () ";
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

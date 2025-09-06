@@ -23,8 +23,7 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                     <div className='font-medium'>{a.title}</div>
                     <div className='text-xs opacity-70 mt-1'>
                       Last updated {new Date(a.updatedAt).toLocaleDateString()}
-                    </div>                  </a>
-                </Link>
+                    </div>                  </a>                </Link>
               ))}
           </div>
         </div>

@@ -11,14 +11,12 @@ export default function AdminLearn() {
     isFree: true,
     certificationBadge: '',
   });  const [message, setMessage] = useState('');
-
   async function saveCourse() {
     setMessage('');
     const resp = await fetch('/api/admin/learn/course', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    });
+      body: JSON.stringify(form),    });
     const data = await resp.json();
     if (data.ok) setMessage('Saved');
     else setMessage('Error: ' + (data.error || 'unknown'));
@@ -44,8 +42,7 @@ export default function AdminLearn() {
           className='border rounded px-3 py-2'
           value={form.category}
           onChange={e => setForm({ ...form, category: e.target.value })}
-        >          <option>AI Development</option>
-          <option>Freelancing</option>
+        >          <option>AI Development</option>          <option>Freelancing</option>
           <option>Remote Hiring</option>
           <option>Cloud Architecture</option>
         </select>

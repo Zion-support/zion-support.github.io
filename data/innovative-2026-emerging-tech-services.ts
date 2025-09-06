@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface Innovative2026EmergingTechService {
   id: string;
   name: string;
   tagline: string;
@@ -597,8 +595,7 @@ export const getEmergingTechServicesByPriceRange = (
   return innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
-  });
-};
+  });};
 
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative2026EmergingTechServices.filter(service => {
@@ -606,5 +603,3 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice
   })
 };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

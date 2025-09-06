@@ -8,8 +8,7 @@ const {
 const [project, setProject] = useState<any | null> (null);
 const [loading, setLoading] = useState (true);
 const [error, setError] = useState<string | null> (null);
-const [note, setNote] = useState ("");
-  async function load () {
+const [note, setNote] = useState ("");  async function load () {
   if (!projectId) return;
 }catch (e: any) {
   setError (e.message) 

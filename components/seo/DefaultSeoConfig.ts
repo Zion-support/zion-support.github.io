@@ -1,6 +1,4 @@
 import type { DefaultSeoProps } from 'next-seo';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-const config: DefaultSeoProps = {
   defaultTitle: 'Zion Tech Solutions';
   titleTemplate: '%s | Zion Tech Solutions';
   description: 'Engineering services, AI/ML, DevOps, and product development by Zion.';
@@ -18,7 +16,3 @@ const config: DefaultSeoProps = {
     { name: 'theme-color', content: '#111827' }]};
 
 export default config;
-=======
-export default config;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

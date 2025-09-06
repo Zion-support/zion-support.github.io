@@ -17,7 +17,6 @@ import {
   Code,
   Globe,
   Building,;} from 'lucide-react';
-
 export default function GetStarted() {
   const [selectedPath, setSelectedPath] = useState<string>('');
   const [currentStep, setCurrentStep] = useState(1);
@@ -44,15 +43,13 @@ export default function GetStarted() {
       description: 'Start your journey with our expert team',
       icon: <Rocket className='w-8 h-8 text-green-400' />,
     },  ];
-
   const technologyPaths = [
     {
       id: 'ai-consciousness',
       name: 'AI Consciousness & Emotional Intelligence',
       description:
         'Develop AI systems with genuine self-awareness and emotional intelligence',
-      icon: <Brain className='w-8 h-8 text-cyan-400' />,
-      features: [
+      icon: <Brain className='w-8 h-8 text-cyan-400' />,      features: [
         'AI consciousness development',
         'Emotional intelligence training',
         'Self-aware neural networks',
@@ -125,7 +122,6 @@ export default function GetStarted() {
       timeline: '4-12 months',
       complexity: 'Intermediate',
     },  ];
-
   const quickStartOptions = [
     {
       title: 'Free Consultation',
@@ -163,8 +159,7 @@ export default function GetStarted() {
 
   const handleNextStep = () => {
     if (currentStep < 4) {
-      setCurrentStep(currentStep + 1);    }
-  };
+      setCurrentStep(currentStep + 1);    }  };
 
   const handlePreviousStep = () => {
     if (currentStep > 1) {
@@ -200,8 +195,7 @@ export default function GetStarted() {
                 <span>Expert Guidance</span>
               </div>
               <div className='flex items-center gap-2 text-green-400'>
-                <CheckCircle className='w-6 h-6' />                <span>Proven Results</span>
-              </div>
+                <CheckCircle className='w-6 h-6' />                <span>Proven Results</span>              </div>
             </div>
           </motion.div>
         </div>
@@ -223,8 +217,7 @@ export default function GetStarted() {
             </p>
           </motion.div>
 
-          <div className='grid md:grid-cols-4 gap-8'>            {onboardingSteps.map((step, index) => (
-              <motion.div
+          <div className='grid md:grid-cols-4 gap-8'>            {onboardingSteps.map((step, index) => (              <motion.div
                 key={step.step}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -244,8 +237,7 @@ export default function GetStarted() {
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {step.description}
-                </p>              </motion.div>
-            ))}
+                </p>              </motion.div>            ))}
           </div>
         </div>
       </section>
@@ -267,14 +259,12 @@ export default function GetStarted() {
               </p>
             </motion.div>
 
-            <div className='grid lg:grid-cols-2 gap-8'>              {technologyPaths.map((path, index) => (
-                <motion.div
+            <div className='grid lg:grid-cols-2 gap-8'>              {technologyPaths.map((path, index) => (                <motion.div
                   key={path.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className='group cursor-pointer'
-                  onClick={() => handlePathSelection(path.id)}
+                  className='group cursor-pointer'                  onClick={() => handlePathSelection(path.id)}
                 >
                   <div className='p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300'>
                     <div className='flex items-start gap-4 mb-6'>
@@ -314,8 +304,7 @@ export default function GetStarted() {
                           {path.useCases.map(useCase => (
                             <span
                               key={useCase}
-                              className='px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm'                            >
-                              {useCase}
+                              className='px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm'                            >                              {useCase}
                             </span>
                           ))}
                         </div>
@@ -335,8 +324,7 @@ export default function GetStarted() {
                       </div>
                       <div className='flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'>
                         <span className='font-medium'>Select Path</span>
-                        <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />                      </div>
-                    </div>
+                        <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />                      </div>                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -380,8 +368,7 @@ export default function GetStarted() {
                       <label className='block text-sm font-medium text-gray-300 mb-2'>
                         Project Timeline
                       </label>
-                      <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>                        <option>Immediate (1-2 weeks)</option>
-                        <option>1-3 months</option>
+                      <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>                        <option>Immediate (1-2 weeks)</option>                        <option>1-3 months</option>
                         <option>3-6 months</option>
                         <option>6+ months</option>
                       </select>
@@ -391,8 +378,7 @@ export default function GetStarted() {
                       <label className='block text-sm font-medium text-gray-300 mb-2'>
                         Budget Range
                       </label>
-                      <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>                        <option>Under $50K</option>
-                        <option>$50K - $100K</option>
+                      <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>                        <option>Under $50K</option>                        <option>$50K - $100K</option>
                         <option>$100K - $500K</option>
                         <option>$500K+</option>
                       </select>
@@ -413,13 +399,11 @@ export default function GetStarted() {
                   <div className='flex justify-between pt-6'>
                     <button
                       onClick={handlePreviousStep}
-                      className='px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300'                    >
-                      Previous
+                      className='px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300'                    >                      Previous
                     </button>
                     <button
                       onClick={handleNextStep}
-                      className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'                    >
-                      Next Step
+                      className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'                    >                      Next Step
                     </button>
                   </div>
                 </div>
@@ -445,8 +429,7 @@ export default function GetStarted() {
             </p>
           </motion.div>
 
-          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>            {quickStartOptions.map((option, index) => (
-              <motion.div
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>            {quickStartOptions.map((option, index) => (              <motion.div
                 key={option.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -474,8 +457,7 @@ export default function GetStarted() {
 
                   <button
                     className={`w-full py-3 px-4 bg-gradient-to-r ${option.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}
-                  >                    {option.action}
-                  </button>
+                  >                    {option.action}                  </button>
                 </div>
               </motion.div>
             ))}
@@ -485,8 +467,7 @@ export default function GetStarted() {
 
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
-        <div className='container mx-auto px-4 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='container mx-auto px-4 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -508,8 +489,7 @@ export default function GetStarted() {
               </a>
               <a
                 href='/quote'
-                className='inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300'              >
-                Get a Quote
+                className='inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300'              >                Get a Quote
               </a>
             </div>
           </motion.div>

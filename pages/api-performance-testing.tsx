@@ -10,7 +10,6 @@ export default function ApiPerformanceTestingPage() {
     'CI checks and PR annotations',
     'Synthetic traffic for staging',
   ];
-
   return (
     <div className='relative isolate'>
       <section className='px-6 lg:px-10 py-16 lg:py-24'>

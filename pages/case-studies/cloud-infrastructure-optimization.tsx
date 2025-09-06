@@ -33,8 +33,7 @@ import Link from 'next/link';
                   </div>
                   <div className='text-center'>
                     <div className='text-3xl font-bold text-blue-400'>$5M+</div>
-                    <div className='text-white/70'>Annual Revenue</div>                  </div>
-                </div>
+                    <div className='text-white/70'>Annual Revenue</div>                  </div>                </div>
               </div>
             </section>
 
@@ -55,8 +54,7 @@ import Link from 'next/link';
                     </span>
                   </li>
                   <li className='flex items-start gap-3'>
-                    <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>
-                    <span>Performance issues during peak traffic periods</span>
+                    <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>                    <span>Performance issues during peak traffic periods</span>
                   </li>
                   <li className='flex items-start gap-3'>
                     <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>
@@ -65,8 +63,7 @@ import Link from 'next/link';
                     </span>
                   </li>
                   <li className='flex items-start gap-3'>
-                    <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>                    <span>Lack of monitoring and alerting systems</span>
-                  </li>
+                    <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>                    <span>Lack of monitoring and alerting systems</span>                  </li>
                 </ul>
               </div>
             </section>
@@ -83,8 +80,7 @@ import Link from 'next/link';
                 <p className='text-white/90 text-lg mb-6'>
                   We built a comprehensive cloud infrastructure solution that
                   automatically scales, monitors, and heals itself while
-                  optimizing costs and performance.
-                </p>
+                  optimizing costs and performance.                </p>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div className='bg-white/5 rounded-lg p-6 border border-white/10'>
@@ -125,8 +121,7 @@ import Link from 'next/link';
                     </h4>
                     <p className='text-white/80'>
                       AI-powered cost optimization algorithms automatically
-                      identify and implement cost-saving opportunities.                    </p>
-                  </div>
+                      identify and implement cost-saving opportunities.                    </p>                  </div>
                 </div>
               </div>
             </section>
@@ -178,8 +173,7 @@ import Link from 'next/link';
                     </h3>
                     <ul className='space-y-3 text-white/80'>
                       <li className='flex items-start gap-3'>
-                        <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>
-                        <span>Automatic failover and disaster recovery</span>
+                        <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>                        <span>Automatic failover and disaster recovery</span>
                       </li>
                       <li className='flex items-start gap-3'>
                         <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>
@@ -192,8 +186,7 @@ import Link from 'next/link';
                         <span>Real-time performance optimization</span>
                       </li>
                       <li className='flex items-start gap-3'>
-                        <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>                        <span>Reduced DevOps team workload</span>
-                      </li>
+                        <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>                        <span>Reduced DevOps team workload</span>                      </li>
                     </ul>
                   </div>
                 </div>
@@ -219,8 +212,7 @@ import Link from 'next/link';
                     >
                       <span className='text-blue-400 font-semibold'>
                         {tech}
-                      </span>                    </div>
-                  ))}
+                      </span>                    </div>                  ))}
                 </div>
               </div>
             </section>
@@ -273,8 +265,7 @@ import Link from 'next/link';
                       <p className='text-white/70'>
                         Comprehensive testing and gradual deployment to
                         production
-                      </p>                    </div>
-                  </div>
+                      </p>                    </div>                  </div>
                 </div>
               </div>
             </section>
@@ -299,8 +290,7 @@ import Link from 'next/link';
                   </Link>
                   <Link
                     href='/case-studies'
-                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-blue-400/50 transition-all duration-300'                  >
-                    View All Case Studies
+                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-blue-400/50 transition-all duration-300'                  >                    View All Case Studies
                   </Link>
                 </div>
               </div>

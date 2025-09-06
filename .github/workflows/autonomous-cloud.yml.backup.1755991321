@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Autonomous Cloud Ops
 =======
 name: Autonomous Cloud Automations
@@ -14,6 +17,7 @@ name: Autonomous Cloud Automations
 on:
   schedule:
     - cron: '*/30 * * * *' # every 30 minutes
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -30,10 +34,13 @@ on:
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   workflow_dispatch: {}
 
 permissions:
   contents: write
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -52,12 +59,16 @@ permissions:
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 jobs:
   run-automations:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -68,6 +79,8 @@ jobs:
           persist-credentials: true
 =======
 >>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -75,56 +88,9 @@ jobs:
           node-version: '20'
 
       - name: Install deps
-<<<<<<< HEAD
-        run: npm ci
-
-      - name: Generate sitemap
-        run: npm run sitemap || true
-
-      - name: Community backup
-        run: node scripts/community-backup.mjs || true
-
-      - name: Commit changes
-        run: |
-          git config user.name "zion-autobot"
-          git config user.email "autobot@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add -A
-            git commit -m "chore(auto): sitemap/community backup update [skip ci]"
-            git push
-          else
-            echo "No changes to commit"
-          fi
-=======
-        run: npm ci --prefer-offline --no-audit
-
-      - name: Run automations
-        run: |
-          node automation/auto-health-monitor/index.mjs || true
-          node automation/sitemap-maintenance-agents/generate-sitemap.cjs || true
-          node automation/autonomous-cloud/ai-talent-intake.cjs || true
-          node automation/autonomous-cloud/partner-kpis.cjs || true
-          node automation/autonomous-cloud/impact-metrics.cjs || true
-          node automation/git-health.cjs --fast || true
-
-      - name: Build site
-        run: npm run build
-
-      - name: Commit changes
-        run: |
-          git config user.name "autonomous-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add -A
-          if ! git diff --cached --quiet; then
-            git commit -m "chore(automations): autonomous cloud updates [skip ci]"
-            git push
-          else
-            echo "No changes to commit"
-          fi
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
-=======
         with:
           persist-credentials: true
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -133,3 +99,7 @@ jobs:
           persist-credentials: true
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+        with:
+          persist-credentials: true
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

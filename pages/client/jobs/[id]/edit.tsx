@@ -2,8 +2,7 @@ import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export default function EditJobPage() {
+const fetcher = (url: string) => fetch(url).then(r => r.json());export default function EditJobPage() {
   const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
@@ -17,8 +16,7 @@ export default function EditJobPage() {
     if (job) {
       setTitle(job.title || '');
       setDescription(job.description || '');
-      setCategory(job.category || '');    }
-  }, [job]);
+      setCategory(job.category || '');    }  }, [job]);
 
   async function save() {
     await fetch(`/api/jobs/${id}`, {
@@ -27,7 +25,6 @@ export default function EditJobPage() {
       body: JSON.stringify({ title, description, category }),
     });
     router.push('/client/dashboard');  }
-
   if (!job) return <div>Loading…</div>;
 
   return (

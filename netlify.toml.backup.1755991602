@@ -12,6 +12,7 @@
   node_bundler = "esbuild"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -24,6 +25,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -62,6 +65,7 @@
 
 [[redirects]]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -74,6 +78,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   from = "/og-image.jpg"
   to = "/og-image.svg"
   status = 301
@@ -111,6 +117,7 @@
 [[redirects]]
   from = "/legal"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -119,105 +126,11 @@
 =======
   from = "/ai-customer-success-automation"
   to = "/ai-customer-success-platform"
-  status = 301
-
-[[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/intelligent-content-automation-platform"
-  status = 301
-
-[[redirects]]
-  from = "/ai-consciousness-evolution"
-  to = "/ai-consciousness-evolution-2029"
-  status = 301
-
-[[redirects]]
-  from = "/ai-ethics-governance"
-  to = "/ai-ethics-governance-framework"
-  status = 301
-
-[[redirects]]
-  from = "/ai-autonomous-ecosystem"
-  to = "/ai-autonomous-ecosystem-manager"
-  status = 301
-
-[[redirects]]
-  from = "/ai-autonomous-business-process-automation"
-  to = "/ai-autonomous-business-operations"
-  status = 301
-
-[[redirects]]
-  from = "/ai-customer-intelligence-platform"
-  to = "/ai-customer-journey-analytics"
-  status = 301
-
-[[redirects]]
-  from = "/ai-financial-fraud-detection"
-  to = "/ai-financial-risk"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-network-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-encryption-gateway"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-identity-verification"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-compliance-automation"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-threat-detection"
-  to = "/quantum-cybersecurity-platform"
-  status = 301
-
-[[redirects]]
-  from = "/blockchain-enterprise-platform"
-  to = "/blockchain-infrastructure-platform"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-data-center"
-  to = "/quantum-cloud-infrastructure"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-networking"
-  to = "/quantum-services"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-vehicle-ai"
-  to = "/autonomous-vehicle-ai-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-materials-discovery"
-  to = "/quantum-materials-discovery-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-4a15
-  status = 301
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  status = 301
   to = "/terms"  status = 301
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -225,3 +138,6 @@
   to = "/terms"  status = 301
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  to = "/terms"  status = 301
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

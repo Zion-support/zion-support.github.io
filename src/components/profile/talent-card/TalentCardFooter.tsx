@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from "react";
-import { Star } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from 'lucide-react';
-import { TalentProfile } from "@/types/talent";
-import { HireRequestModal } from "@/components/profile/hire-request";
-import { useAuthStatus } from "@/hooks/talent";
-import type { UserProfile } from "@/types/auth";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useRouter } from 'next/router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -37,18 +26,10 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
   };
 
   // Handle request to hire
-<<<<<<< HEAD
   const handleRequestHire = (e: React.MouseEvent) => {
     e.stopPropagation();
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
-    
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  const handleRequestHire = (e: React.MouseEvent,) => {
+      const handleRequestHire = (e: React.MouseEvent,) => {
     e.stopPropagation(),
     
     if (onRequestHire) {
@@ -124,4 +105,3 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
   )
 }
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

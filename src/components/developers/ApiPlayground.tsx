@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import CodeBlock from "./CodeBlock";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface Param {
   name: string;
 type: string;
@@ -33,16 +24,9 @@ export function ApiPlayground({
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-<<<<<<< HEAD
   const handleParamChange = (name: string, value: string) => {
     setParamValues(prev => ({ ...prev, [name]: value }));
   };
-=======
-  const handleParamChange = (name: string, value: string,) => {
-    setParamValues((prev,) => ({ ...prev, [name]: value }))
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
     const baseUrl =
@@ -50,7 +34,6 @@ export function ApiPlayground({
       (typeof window !== 'undefined' ? window.location.origin : '');
     let url = `${baseUrl}${path}`;
 
-<<<<<<< HEAD
     const searchParams = new URLSearchParams();
     if (method === 'GET' || method === 'DELETE') {
       params.forEach(p => {
@@ -58,18 +41,7 @@ export function ApiPlayground({
         if (val) searchParams.append(p.name, val);
       });
       const query = searchParams.toString();
-      if (query) url += `?${query}`;
-=======
-    const searchParams = new URLSearchParams(),
-    if (method === "GET" || method === "DELETE") {
-      params.forEach((p,) => {
-        const val = paramValues[p.name],
-        if (val) searchParams.append(p.name, val)
-      }),
-      const query = searchParams.toString(),
-      if (query) url += `?${query}`
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    }
+      if (query) url += `?${query}`;    }
 
     const options: RequestInit = {
       method,
@@ -134,7 +106,6 @@ export function ApiPlayground({
   return (
     <div className='space-y-4'>
       <Input
-<<<<<<< HEAD
         value={apiKey}
         onChange={e => setApiKey(e.target.value)}
         placeholder='API Key'
@@ -143,32 +114,13 @@ export function ApiPlayground({
         <Input
           key={p.name}
           value={paramValues[p.name] || ''}
-          onChange={e => handleParamChange(p.name, e.target.value)}
-=======
-        value = {apiKey,}
-        onChange = {(e,) => setApiKey(e.target.value),}
-        placeholder="API Key"
-      />
-      {params.map((p,) => (
-        <Input
-          key = {p.name,}
-          value = {paramValues[p.name] || "",}
-          onChange = {(e,) => handleParamChange(p.name, e.target.value),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        />
+          onChange={e => handleParamChange(p.name, e.target.value)}        />
       ))}
       {method !== 'GET' && method !== 'DELETE' && (
         <Textarea
-<<<<<<< HEAD
           value={body}
           onChange={e => setBody(e.target.value)}
-          className='font-mono'
-=======
-          value = {body,}
-          onChange = {(e,) => setBody(e.target.value),}
-          className="font-mono"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        />
+          className='font-mono'        />
       )}
       <Button onClick={sendRequest} disabled={loading}>
         {loading ? 'Sending...' : 'Send Request'}
@@ -205,6 +157,3 @@ if (contentType?.includes ('application/json') ) {;
 }</div>) ;
 }export default ApiPlayground;
 '"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

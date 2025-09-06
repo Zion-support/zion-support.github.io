@@ -651,6 +651,7 @@
       "nextgen:scheduler": "node automation/nextgen-scheduler.cjs"
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -663,6 +664,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status"
   },
   "dependencies": {
@@ -693,6 +696,7 @@
     "import-fresh": "^3.3.1",
     "react-share": "^5.2.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -705,6 +709,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "lucide-react": "^0.536.0",
     "mime-types": "^3.0.1",
     "next": "^11.1.4",
@@ -748,6 +754,7 @@
       "eslint --fix"
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -760,6 +767,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",

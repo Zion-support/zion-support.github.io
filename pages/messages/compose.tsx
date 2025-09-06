@@ -12,8 +12,7 @@ export default function ComposePage() {
     jobTitle,
     talentId,
     talentName,
-  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
-  const [message, setMessage] = React.useState('');
+  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();  const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
@@ -34,8 +33,7 @@ export default function ComposePage() {
       ? { type: 'invite', jobId, jobTitle, talentId, talentName }
       : type === 'apply'
         ? { type: 'application', jobId, jobTitle }
-        : { type: 'general' };
-  const onSend = async () => {
+        : { type: 'general' };  const onSend = async () => {
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message.trim() && !file && !linkUrl) return;
     setSending(true);
@@ -43,8 +41,7 @@ export default function ComposePage() {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
       const mime = file.type || 'application/octet-stream';
-      attachmentBase64 = `data:${mime};base64,${base64}`;    }
-    const res = await fetch('/api/messages/compose', {
+      attachmentBase64 = `data:${mime};base64,${base64}`;    }    const res = await fetch('/api/messages/compose', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

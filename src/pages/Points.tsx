@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import {
   Gift,
   Star,
@@ -17,37 +16,20 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';
-=======
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
-<<<<<<< HEAD
-=======
-export default function PointsPage() {
-  const { isAuthenticated, user } = useAuth(),
-  const { ledger, balance, loading, fetchLedger } = usePoints(),
-  const [loginOpen, setLoginOpen] = useState(false),
-  const [redeeming, setRedeeming] = useState(false),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
@@ -58,12 +40,8 @@ export default function PointsPage() {
     id: string;
     cost: number;
     title: string;
-  }) {    if (!user?.id) return;
-=======
-  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
     if (!user?.id) return;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     setRedeeming(true);
     try {
       await fetch('/api/points/redeem', {
@@ -74,16 +52,14 @@ export default function PointsPage() {
           cost: reward.cost,
           reward: reward.title,
         }),
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       });
       await fetchLedger();
     } finally {
-      setRedeeming(false);    }
-=======
+      setRedeeming(false);    }      });
+      await fetchLedger()
+    } finally {
       setRedeeming(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 
   const earningOpportunities = [
@@ -94,8 +70,6 @@ export default function PointsPage() {
       points: '50 pts',
       action: isAuthenticated ? '✓ Completed' : 'Get Started',
     },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    {
       icon: <ShoppingBag className='h-5 w-5' />,
       title: 'First Purchase',
       description: 'Make your first purchase on the marketplace',
@@ -118,19 +92,14 @@ export default function PointsPage() {
     },  ];
 
   const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
-      title: "Refer Friends",
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  ];
 
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       id: 'premium1',
       title: 'Premium Features (1 month)',
@@ -150,9 +119,6 @@ export default function PointsPage() {
       category: 'Discount',
     },
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  ];
 
   if (!isAuthenticated) {
     return (
@@ -165,46 +131,30 @@ export default function PointsPage() {
               Earn points for every action you take and redeem them for
               exclusive rewards!
             </p>
-<<<<<<< HEAD
             <Button onClick={() => setLoginOpen(true)} size='lg'>              Join Now to Start Earning
             </Button>
           </div>
-
-=======
-            <Button onClick={() => setLoginOpen(true)} size="lg">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
             <Button onClick={(,) => setLoginOpen(true)} size="lg">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+            <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
             </Button>
           </div>
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <div className='grid md:grid-cols-2 gap-8 mb-12'>
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
-<<<<<<< HEAD
-                  <TrendingUp className='h-5 w-5' />                  How to Earn Points
-=======
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  How to Earn Points
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </CardTitle>
                 <CardDescription>
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
-<<<<<<< HEAD
               <CardContent className='space-y-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {earningOpportunities.map((opportunity, index) => (
                   <div
                     key={index}
@@ -215,23 +165,15 @@ export default function PointsPage() {
                       <h4 className='font-medium'>{opportunity.title}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {opportunity.description}
-                      </p>
-=======
-              <CardContent className="space-y-4">
-                {earningOpportunities.map((opportunity, index,) => (
-                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                      </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                     <div className="text-primary mt-1">{opportunity.icon}</div>
                     <div className="flex-1">
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     </div>
-                    <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>
-=======
+                    <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
                     <Badge variant="secondary">{opportunity.points}</Badge>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 ))}
               </CardContent>
             </Card>
@@ -239,43 +181,35 @@ export default function PointsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
-                  <Gift className='h-5 w-5' />                  Upcoming Rewards
-=======
-                <CardTitle className="flex items-center gap-2">
+                  <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
                   <Gift className="h-5 w-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Upcoming Rewards
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </CardTitle>
                 <CardDescription>
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
-<<<<<<< HEAD
               <CardContent className='space-y-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {upcomingRewards.map((reward, index) => (
                   <div
                     key={index}
                     className='flex items-center justify-between p-3 rounded-lg border'
-                  >
-=======
-              <CardContent className="space-y-4">
-                {upcomingRewards.map((reward, index,) => (
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    <div>
+                  >                    <div>
                       <h4 className='font-medium'>{reward.title}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {reward.category}
                       </p>
                     </div>
                     <Badge variant='outline'>{reward.cost}</Badge>                  </div>
-=======
                     <Badge variant="outline">{reward.cost}</Badge>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                {upcomingRewards.map((reward, index) => (
+                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
+                    <div>
+                      <h4 className="font-medium">{reward.title}</h4>
+                      <p className="text-sm text-muted-foreground">{reward.category}</p>
+                    </div>
+                    <Badge variant="outline">{reward.cost}</Badge>
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 ))}
               </CardContent>
             </Card>
@@ -289,9 +223,7 @@ export default function PointsPage() {
                 Our full rewards system is launching soon! Sign up now to start
                 earning points immediately.
               </p>
-              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>
-=======
-          <Card className="text-center">
+              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className="text-center">
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
@@ -301,9 +233,6 @@ export default function PointsPage() {
               <Button onClick={() => setLoginOpen(true)}>
                 Create Account
               </Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            </CardContent>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </Card>
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
@@ -318,16 +247,14 @@ export default function PointsPage() {
         <h1 className='text-4xl font-bold mb-4'>Your Rewards</h1>
         <div className='text-6xl font-bold text-primary mb-2'>
           {loading ? '...' : balance}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </div>
         <p className='text-xl text-muted-foreground'>Points Available</p>
         {!loading && balance === 0 && (
-          <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start
-=======
+          <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start        </div>
+        <p className="text-xl text-muted-foreground">Points Available</p>
+        {!loading && balance === 0 && (
           <p className="text-sm text-muted-foreground mt-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             You haven't earned any points yet. Complete the tasks below to start
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             earning and redeem rewards.
           </p>
         )}
@@ -337,24 +264,17 @@ export default function PointsPage() {
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
-              <TrendingUp className='h-5 w-5' />              Keep Earning
-=======
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <TrendingUp className='h-5 w-5' />              Keep Earning      <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              Keep Earning
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </CardTitle>
             <CardDescription>
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
-<<<<<<< HEAD
           <CardContent className='space-y-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {earningOpportunities.map((opportunity, index) => (
               <div
                 key={index}
@@ -365,16 +285,11 @@ export default function PointsPage() {
                   <h4 className='font-medium'>{opportunity.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {opportunity.description}
-                  </p>
-=======
-          <CardContent className="space-y-4">
-            {earningOpportunities.map((opportunity, index,) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <div className="text-primary mt-1">{opportunity.icon}</div>
                 <div className="flex-1">
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 </div>
                 <div className='text-right'>
                   <Badge variant='secondary' className='mb-1'>
@@ -382,14 +297,11 @@ export default function PointsPage() {
                   </Badge>
                   <p className='text-xs text-muted-foreground'>
                     {opportunity.action}
-                  </p>                </div>
-=======
+                  </p>                </div>                </div>
                 <div className="text-right">
                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
             ))}
           </CardContent>
@@ -398,32 +310,20 @@ export default function PointsPage() {
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
-              <Gift className='h-5 w-5' />              Available Rewards
-=======
-            <CardTitle className="flex items-center gap-2">
+              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
               <Gift className="h-5 w-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Available Rewards
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </CardTitle>
             <CardDescription>
               Redeem your points for these rewards
             </CardDescription>
           </CardHeader>
-<<<<<<< HEAD
           <CardContent className='space-y-4'>
             {upcomingRewards.map(reward => (
               <div
                 key={reward.id}
                 className='flex items-center justify-between p-3 rounded-lg border'
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          <CardContent className="space-y-4">
-            {upcomingRewards.map((reward,) => (
-              <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                <div>
                   <h4 className='font-medium'>{reward.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {reward.category}
@@ -434,26 +334,30 @@ export default function PointsPage() {
                     {reward.cost} pts
                   </Badge>
                   {balance >= reward.cost ? (
-<<<<<<< HEAD
                     <Button
                       size='sm'
                       onClick={() => handleRedeem(reward)}
                       disabled={redeeming}
-                    >
-=======
-                    <Button size="sm" onClick={(,) => handleRedeem(reward)} disabled={redeeming}>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      {redeeming ? 'Processing...' : 'Redeem'}
+                    >                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
                     <p className='text-xs text-muted-foreground'>
                       Need more points
                     </p>                  )}
-=======
                     <p className="text-xs text-muted-foreground">Need more points</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                <div>
+                  <h4 className="font-medium">{reward.title}</h4>
+                  <p className="text-sm text-muted-foreground">{reward.category}</p>
+                </div>
+                <div className="text-right space-y-1">
+                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
+                  {balance >= reward.cost ? (
+                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+                      {redeeming ? 'Processing...' : 'Redeem'}
+                    </Button>
+                  ) : (
+                    <p className="text-xs text-muted-foreground">Need more points</p>
                   )}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               </div>
             ))}
@@ -464,13 +368,9 @@ export default function PointsPage() {
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
-            <History className='h-5 w-5' />            Points History
-=======
-          <CardTitle className="flex items-center gap-2">
+            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
             <History className="h-5 w-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Points History
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </CardTitle>
           <CardDescription>Your recent points activity</CardDescription>
         </CardHeader>
@@ -479,8 +379,6 @@ export default function PointsPage() {
             <p className='text-center py-8 text-muted-foreground'>
               No points activity yet.
             </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          ) : (
             <ScrollArea className='h-64'>
               <div className='space-y-2 mt-2'>
                 {ledger.map(entry => (
@@ -499,20 +397,15 @@ export default function PointsPage() {
                       </p>
                     </div>
                     <Badge
-<<<<<<< HEAD
                       variant='outline'
                       className={
                         entry.delta >= 0
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
-                      }
-=======
-                      variant="outline"
+                      }                      variant="outline"
                       className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
-                      {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts
-                    </Badge>
+                      {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>
                   </div>
                 ))}
               </div>
@@ -533,19 +426,14 @@ export default function PointsPage() {
           </p>
           <div className='flex gap-4 justify-center'>
             <Button variant='outline' asChild>
-              <Link href='/marketplace'>Browse Marketplace</Link>
-          </p>
+              <Link href='/marketplace'>Browse Marketplace</Link>          </p>
           <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
               <Link href="/marketplace">Browse Marketplace</Link>
             </Button>
             <Button variant='outline' asChild>
-              <Link href='/community'>Join Community</Link>
-=======
-            <Button variant="outline" asChild>
+              <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
               <Link href="/community">Join Community</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </Button>
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>            </Button>
@@ -555,7 +443,3 @@ export default function PointsPage() {
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

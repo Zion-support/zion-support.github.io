@@ -2,40 +2,17 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Briefcase, Users, Check } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-<<<<<<< HEAD
 type UserRole = 'talent' | 'client' | null;
 
 interface RolePickerProps {
   onSelect: (role: UserRole) => void;
-=======
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Users, Check } from 'lucide-react';
-type UserRole = "talent" | "client" | null,
-
-interface RolePickerProps {
-  onSelect: (role: UserRole,) => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
 
-<<<<<<< HEAD
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role);
     onSelect(role);
   };
-=======
-  const handleSelect = (role: UserRole,) => {
-    setSelectedRole(role),
-    onSelect(role)
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   return (
     <div className='space-y-4 px-4'>
       <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
@@ -98,7 +75,4 @@ export function RolePicker({ onSelect }: RolePickerProps) {
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

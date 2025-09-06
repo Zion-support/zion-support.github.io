@@ -4,8 +4,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  try {
     const r = await fetch(
       `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`
     );
@@ -35,7 +33,4 @@ export default async function handler(
   } catch (e) {
     res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

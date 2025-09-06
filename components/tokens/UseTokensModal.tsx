@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { connectMetaMask, getAccounts } from '../../utils/wallet';
 
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
-
 export default function UseTokensModal({
   isOpen,
   onClose,
@@ -12,8 +11,7 @@ export default function UseTokensModal({
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
-  defaultType?: RedemptionType;
-}) {
+  defaultType?: RedemptionType;}) {
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
   const [tokens, setTokens] = useState<number>(100);
@@ -56,8 +54,7 @@ export default function UseTokensModal({
       <div className="relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4">
         <div className="flex items-center justify-between mb-3">
           <div className="font-semibold">Use ZION Tokens</div>
-          <button onClick={onClose} className="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">Close</button>
-        </div>
+          <button onClick={onClose} className="px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">Close</button>        </div>
 
         <div className="text-sm mb-3">Conversion rate: 1 ZION = $0.01</div>
 

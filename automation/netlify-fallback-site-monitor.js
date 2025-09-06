@@ -10,7 +10,6 @@ fallback: true
 return result;
 }catch (error) {
   console.error ('Fallback execution error:', error);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   statusCode: 500;
 body: JSON.stringify ({
@@ -18,8 +17,7 @@ body: JSON.stringify ({
 message: error.message 
 }) 
 
-};
-exports.handler = async (_event, _context) => {
+};exports.handler = async (_event, _context) => {
     console.log('site-monitor fallback executed locally'),
     
     try {
@@ -45,5 +43,3 @@ exports.handler = async (_event, _context) => {
         }
     }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

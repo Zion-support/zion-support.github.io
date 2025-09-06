@@ -17,7 +17,6 @@ export default function CiCdSecurityHardeningPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ci-cd-security-hardening')
   );  if (!service) return null;
-
   return (
     <Layout>
       <Head>
@@ -26,8 +25,7 @@ export default function CiCdSecurityHardeningPage() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/ci-cd-security-hardening'
-        />
-      </Head>
+        />      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -105,8 +103,7 @@ export default function CiCdSecurityHardeningPage() {
                   >
                     {service.contactInfo.address}
                   </a>
-                </div>              </div>
-            </div>
+                </div>              </div>            </div>
           </div>
         </div>
       </div>

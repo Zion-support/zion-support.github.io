@@ -29,7 +29,6 @@ export default function Reports() {
         .then(r => r.json())
         .then(setPagespeed),
     ]).catch(() => {});  }, []);
-
   const lastUptime = uptime[uptime.length - 1];
 
   return (

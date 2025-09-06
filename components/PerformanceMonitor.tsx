@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Star } from 'lucide-react';
 
@@ -45,8 +44,6 @@ declare global {
     loadEventStart: number, loadEventEnd: number,
     fetchStart: number,
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-}
 
 // Define Performance types if not available
 interface PerformanceEntry {
@@ -82,8 +79,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType('paint');
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      
       const performanceData = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -104,8 +99,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
           total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
           limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        } : null
       },
       if (onPerformanceData) {
         onPerformanceData(performanceData);
@@ -134,7 +127,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 };
 
 export default PerformanceMonitor;
-=======
 import React, { useEffect, useState } from 'react;
 interface PerformanceMetrics {fcp?: number;
   lcp?: number;
@@ -221,4 +213,3 @@ if (value <= thresholds.good) return 'text-green-600;
   );
 };
 export default PerformanceMonitor;
->>>>>>> origin/automation-fixes

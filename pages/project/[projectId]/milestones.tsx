@@ -8,26 +8,22 @@ import {
   createMilestone,
   fetchMilestones,
   updateMilestoneStatus,;
-} from '../../../utils/api/milestones-client';
-function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
+} from '../../../utils/api/milestones-client';function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
   const url = new URL(window.location.href);
   const r = url.searchParams.get('role');
   if (r === 'talent' || r === 'admin') return r;
-  return 'client';
-export default function ProjectMilestonesPage() {
+  return 'client';export default function ProjectMilestonesPage() {
   const router = useRouter();
   const { 'project-id': projectId } = router.query as any;
 
   const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
     getRoleFromEnvOrQuery()
-  );  const [milestones, setMilestones] = useState<Milestone[]>([]);
-  const [loading, setLoading] = useState(true);
+  );  const [milestones, setMilestones] = useState<Milestone[]>([]);  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setRole(getRoleFromEnvOrQuery());  }, []);
-
   // Demo cookie-based auth to hit API successfully
   useEffect(() => {
     if (!role) return;
@@ -39,8 +35,7 @@ export default function ProjectMilestonesPage() {
             ? 'client-1'
             : 'client-1';
       document.cookie = `x-user-id=${userId}; path=/`;
-      document.cookie = `x-user-role=${role}; path=/`;    } catch {}
-  }, [role]);
+      document.cookie = `x-user-role=${role}; path=/`;    } catch {}  }, [role]);
 
   useEffect(() => {
     if (!projectId) return;
@@ -71,7 +66,6 @@ export default function ProjectMilestonesPage() {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
     setMilestones(prev => [res.milestone, ...prev]);  };
-
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',
     milestoneId: string
@@ -90,7 +84,6 @@ export default function ProjectMilestonesPage() {
     setMilestones(prev =>
       prev.map(m => (m.id === milestoneId ? res.milestone : m))
     );  };
-
   return (
     <div>
       <Head>
@@ -98,8 +91,7 @@ export default function ProjectMilestonesPage() {
         <meta
           name='description'
           content='Track project deliverables and milestone payments'
-        />
-      </Head>
+        />      </Head>
 
       <div className='max-w-5xl mx-auto px-4 py-8'>
         <div className='mb-6'>
@@ -113,8 +105,7 @@ export default function ProjectMilestonesPage() {
           <div className='mb-8 p-4 rounded bg-gray-50 border'>
             <div className='flex items-center justify-between mb-3'>
               <h2 className='text-lg font-semibold'>Add Milestone</h2>
-              <span className='text-xs text-gray-500'>Role: {role}</span>            </div>
-            <MilestoneForm onSubmit={handleCreate} />
+              <span className='text-xs text-gray-500'>Role: {role}</span>            </div>            <MilestoneForm onSubmit={handleCreate} />
           </div>
         )}
 

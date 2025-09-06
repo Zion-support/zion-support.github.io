@@ -18,8 +18,7 @@ import {
   Phone,
   Mail,
   MapPin,;
-} from 'lucide-react';import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';
-import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';
+} from 'lucide-react';import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';
 import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030';
 import { futuristicAIServices2030 } from '../../data/2030-futuristic-ai-services';
 import { quantumEmergingTechServices2030 } from '../../data/2030-quantum-emerging-tech';
@@ -36,38 +35,32 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
       color: 'from-cyan-500 to-blue-500',
       services: futuristicAIServices2030,
       description: 'Next-generation AI consciousness and autonomous systems',
-    },    {
-      title: '⚛️ Quantum & Emerging Tech 2030',
+    },    {      title: '⚛️ Quantum & Emerging Tech 2030',
       icon: Atom,
       color: 'from-purple-500 to-indigo-500',
       services: quantumEmergingTechServices2030,
       description: 'Quantum computing and breakthrough technologies',
-    },    {
-      title: '🏢 Enterprise IT Solutions 2030',
+    },    {      title: '🏢 Enterprise IT Solutions 2030',
       icon: Globe,
       color: 'from-blue-500 to-cyan-500',
       services: enterpriseITSolutions2030,
       description: 'Autonomous enterprise infrastructure and operations',
-    },    {
-      title: '🌌 Space & Metaverse Tech 2030',
+    },    {      title: '🌌 Space & Metaverse Tech 2030',
       icon: Rocket,
       color: 'from-emerald-500 to-green-500',
       services: spaceMetaverseTechServices2030,
       description: 'Space exploration and digital reality platforms',
-    },    {
-      title: '🎯 Innovative Micro SAAS 2030',
+    },    {      title: '🎯 Innovative Micro SAAS 2030',
       icon: Target,
       color: 'from-yellow-500 to-orange-500',
       services: innovativeMicroSaasServices2030,
       description: 'Cutting-edge micro solutions and platforms',
-    },    {
-      title: '🔬 Research & Development 2030',
+    },    {      title: '🔬 Research & Development 2030',
       icon: Microscope,
       color: 'from-red-500 to-pink-500',
       services: researchDevelopmentServices2030,
       description: 'Breakthrough research and development solutions',
     },  ];
-
   return (
     <>
       <Head>
@@ -85,7 +78,6 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -149,8 +141,7 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                 contactType: 'customer service',
                 email: 'kleber@ziontechgroup.com',
               },
-            }),          }}
-        />
+            }),          }}        />
       </Head>
 
       <UltraFuturisticBackground2031>
@@ -194,8 +185,7 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'
-                >                  View Pricing
-                </motion.button>
+                >                  View Pricing                </motion.button>
               </div>
             </motion.div>
 
@@ -225,8 +215,7 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                   label: 'Security Rating',
                   value: 'Quantum-Safe',
                   color: 'text-pink-400',
-                },              ].map((stat, index) => (
-                <motion.div
+                },              ].map((stat, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -240,8 +229,7 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>
                     {stat.value}
                   </div>
-                  <div className='text-gray-400'>{stat.label}</div>                </motion.div>
-              ))}
+                  <div className='text-gray-400'>{stat.label}</div>                </motion.div>              ))}
             </div>
           </div>
         </section>
@@ -275,8 +263,7 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                 </p>
               </motion.div>
 
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {category.services.map((service, serviceIndex) => (
-                  <motion.div
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {category.services.map((service, serviceIndex) => (                  <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -307,16 +294,14 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 
                         <div className='flex items-center space-x-4 text-xs text-gray-400'>
                           <div className='flex items-center space-x-1'>
-                            <Clock className='w-3 h-3' />
-                            <span>{service.setupTime}</span>
+                            <Clock className='w-3 h-3' />                            <span>{service.setupTime}</span>
                           </div>
                           <div className='flex items-center space-x-1'>
                             <Users className='w-3 h-3' />
                             <span>{service.customers}+</span>
                           </div>
                           <div className='flex items-center space-x-1'>
-                            <Star className='w-3 h-3 text-yellow-400' />                            <span>{service.rating}</span>
-                          </div>
+                            <Star className='w-3 h-3 text-yellow-400' />                            <span>{service.rating}</span>                          </div>
                         </div>
                       </div>
 
@@ -324,8 +309,7 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                         <span className='text-xs text-gray-400'>
                           Trial: {service.trialDays} days
                         </span>
-                        <ArrowRight className='w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform' />                      </div>
-                    </div>
+                        <ArrowRight className='w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform' />                      </div>                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -335,8 +319,7 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
 
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -380,8 +363,7 @@ import { researchDevelopmentServices2030 } from '../../data/2030-research-develo
                 </div>
                 <div className='flex items-center justify-center space-x-2'>
                   <MapPin className='w-5 h-5 text-pink-400' />
-                  <span className='text-sm'>{contactInfo.address}</span>                </div>
-              </div>
+                  <span className='text-sm'>{contactInfo.address}</span>                </div>              </div>
             </motion.div>
           </div>
         </section>

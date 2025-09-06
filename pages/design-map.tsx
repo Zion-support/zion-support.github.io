@@ -23,8 +23,7 @@ export default function DesignMapPage() {
     } catch (e: any) {
       setSuggestion(e?.message || 'Failed to fetch suggestion');
     } finally {
-      setIsLoading(false);    }
-  }
+      setIsLoading(false);    }  }
 
   return (
     <>
@@ -58,8 +57,7 @@ export default function DesignMapPage() {
               className='px-3 py-2 rounded bg-neon-green text-black text-sm'
             >
               Export React
-            </a>
-          </div>
+            </a>          </div>
         </div>
 
         <div className='grid md:grid-cols-2 gap-6'>
@@ -104,8 +102,7 @@ export default function DesignMapPage() {
                 value={role}
                 onChange={e => setRole(e.target.value)}
                 className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40'
-              >                <option>Talent</option>
-                <option>Client</option>
+              >                <option>Talent</option>                <option>Client</option>
                 <option>Admin</option>
                 <option>DAO</option>
                 <option>AI Tools</option>
@@ -127,7 +124,6 @@ export default function DesignMapPage() {
       </section>
     </>
   );
-
 function MapColumn({
   title,
   sections,
@@ -154,8 +150,7 @@ function MapColumn({
                 <span
                   key={i.id}
                   className='text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800'
-                >                  {i.title}
-                </span>
+                >                  {i.title}                </span>
               ))}
             </div>
           </div>

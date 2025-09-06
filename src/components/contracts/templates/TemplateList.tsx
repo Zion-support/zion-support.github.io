@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
 import {
@@ -11,7 +10,6 @@ import {
   AlertDialogFooter;
   AlertDialogHeader;
   AlertDialogTitle} from "@/components/ui/alert-dialog";
-=======
 import { ContractTemplate } from "@/types/contracts";
 import { Button } from "@/components/ui/button";
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
@@ -31,7 +29,6 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useState } from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -216,8 +213,4 @@ return ;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={;
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

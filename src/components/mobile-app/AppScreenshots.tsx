@@ -1,14 +1,10 @@
 
-<<<<<<< HEAD
 
 };
-
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-=======
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots
 const mockScreenshots = [
@@ -83,13 +79,7 @@ export const AppScreenshots: React.FC = () => {
       </div>
     </section>
   )
-<<<<<<< HEAD
 };
-'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-},
+'"},
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+};

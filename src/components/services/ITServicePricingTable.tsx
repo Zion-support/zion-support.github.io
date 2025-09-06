@@ -14,17 +14,6 @@ import {
 } from '@/components/ui/table';
 import { Globe, Search, ArrowUpDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-<<<<<<< HEAD
-=======
-import { useState, useMemo } from "react";
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Globe, Search, ArrowUpDown } from 'lucide-react';
-import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortConfig, setSortConfig] = useState<{
@@ -35,15 +24,8 @@ export function ITServicePricingTable() {
     direction: 'ascending',
   });
 
-<<<<<<< HEAD
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
-
-=======
-  const sortedData = useMemo((,) => {
-    let filteredData = [...onsiteServicePricing],
-    
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item =>
@@ -81,18 +63,10 @@ export function ITServicePricingTable() {
         <div className='relative flex-1'>
           <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light' />
           <Input
-<<<<<<< HEAD
             placeholder='Search by country...'
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'
-=======
-            placeholder="Search by country..."
-            value = {searchQuery,}
-            onChange = {(e,) => setSearchQuery(e.target.value),}
-            className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          />
+            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />
         </div>
       </div>
 
@@ -100,38 +74,20 @@ export function ITServicePricingTable() {
         <Table>
           <TableHeader className='bg-zion-blue'>
             <TableRow>
-<<<<<<< HEAD
               <TableHead className='text-zion-cyan font-medium'>
                 <Button
                   variant='ghost'
                   onClick={() => handleSort('country')}
-                  className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'
-=======
-              <TableHead className="text-zion-cyan font-medium">
-                <Button 
-                  variant="ghost" 
-                  onClick = {() => handleSort("country"),}
-                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                >
+                  className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
                   <span>Country</span>
                   <ArrowUpDown className='h-4 w-4' />
                 </Button>
               </TableHead>
-<<<<<<< HEAD
               <TableHead className='text-right text-zion-cyan font-medium'>
                 <Button
                   variant='ghost'
                   onClick={() => handleSort('pricePerIncident')}
-                  className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'
-=======
-              <TableHead className="text-right text-zion-cyan font-medium">
-                <Button 
-                  variant="ghost" 
-                  onClick = {() => handleSort("pricePerIncident"),}
-                  className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                >
+                  className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >
                   <span>Price Per Incident</span>
                   <ArrowUpDown className='h-4 w-4' />
                 </Button>
@@ -140,7 +96,6 @@ export function ITServicePricingTable() {
           </TableHeader>
           <TableBody className='bg-zion-blue-dark'>
             {sortedData.length > 0 ? (
-<<<<<<< HEAD
               sortedData.map(item => (
                 <TableRow
                   key={item.country}
@@ -151,15 +106,7 @@ export function ITServicePricingTable() {
                     <span className='text-white'>{item.country}</span>
                   </TableCell>
                   <TableCell className='text-right font-medium text-white'>
-                    ${item.pricePerIncident.toFixed(2)}
-=======
-              sortedData.map((item,) => (
-                <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
-                  <TableCell className="flex items-center space-x-2">
-                    <Globe className="h-4 w-4 text-zion-purple" />
-                    <span className="text-white">{item.country}</span>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  </TableCell>
+                    ${item.pricePerIncident.toFixed(2)}                  </TableCell>
                 </TableRow>
               ))
             ) : (
@@ -177,7 +124,4 @@ export function ITServicePricingTable() {
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

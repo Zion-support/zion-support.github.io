@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
           
 import { logInfo, logWarn } from '@/utils/productionLogger';
 
-
-=======
-import React, { useState, useEffect, useRef, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import { Search, X } from 'lucide-react';
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
-import { useDebounce } from "@/hooks/useDebounce";
-import { useRouter } from "next/router";
-import { slugify } from "@/lib/slugify";
-import { debounce } from "lodash";
 import { logInfo, logWarn } from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string,) => void,
@@ -24,14 +9,8 @@ interface EnhancedSearchInputProps {
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
-<<<<<<< HEAD
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
-  placeholder?: string;
-=======
-  onSelectSuggestion?: (suggestion: SearchSuggestion,) => void,
-  placeholder?: string,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  /**
+  placeholder?: string;  /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -45,7 +24,6 @@ export function EnhancedSearchInput({
   placeholder = "Search...";
   searchSuggestions
 }: EnhancedSearchInputProps) {
-=======
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
 import { Search, X  } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -58,13 +36,11 @@ export function EnhancedSearchInput({;
   placeholder = "Search...",
   searchSuggestions;
 }: EnhancedSearchInputProps) {;
->>>>>>> origin/automation-fixes
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
   const [valueOnFocus, setValueOnFocus] = useState<string | null>(null);
   const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false);
   const { t } = useTranslation();
@@ -135,12 +111,7 @@ export function EnhancedSearchInput({;
         }
         setHighlightedIndex(-1);
       })
-<<<<<<< HEAD
       .catch(() => setFilteredSuggestions([]));
-=======
-      .catch((,) => setFilteredSuggestions([])),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
     return () => controller.abort()
   }, [debounced, searchSuggestions]);
 
@@ -190,7 +161,6 @@ export function EnhancedSearchInput({;
           e.preventDefault();
           setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)
         }
-=======
   const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo;
     () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {;
       if(!currentValue) {;
@@ -273,7 +243,6 @@ export function EnhancedSearchInput({;
           e.preventDefault();
           handleSelectSuggestion(filteredSuggestions[highlightedIndex].text);
 }
->>>>>>> origin/automation-fixes
         break;
       case 'ArrowUp':
         if (isFocused && filteredSuggestions.length > 0) {
@@ -305,7 +274,6 @@ export function EnhancedSearchInput({;
         setValueOnFocus(null);
         inputRef.current?.blur();
         break;
-<<<<<<< HEAD
       default:
         // For other keys (character input), reset enterHandledPostFocus
         setEnterHandledPostFocus(false);
@@ -332,37 +300,20 @@ export function EnhancedSearchInput({;
           type="text"
           id="enhanced-search-input"
           name="search"
-<<<<<<< HEAD
           value={value}
           onChange={(e) => {
             onChange(e.target.value);
             setEnterHandledPostFocus(false)
           }}
           onFocus={(e) => {
-            setIsFocused(true);
-=======
-          value = {value,}
-          onChange={(e,) => {
-            onChange(e.target.value),
-            setEnterHandledPostFocus(false)
-          }}
-          onFocus={(e,) => {
-            setIsFocused(true),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            setHighlightedIndex(-1), // Explicitly reset on focus
+            setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus
             const currentVal = e.target.value;
             setValueOnFocus(currentVal);
             setEnterHandledPostFocus(false);
             e.target.setSelectionRange(currentVal.length, currentVal.length)
           }}
-<<<<<<< HEAD
           onBlur={(e) => {
-            const relatedTarget = e.relatedTarget as HTMLElement;
-=======
-          onBlur = {(e,) => {
-            const relatedTarget = e.relatedTarget as HTMLElement,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
+            const relatedTarget = e.relatedTarget as HTMLElement;            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
               setIsFocused(false);
               setHighlightedIndex(-1)
             ,}
@@ -418,10 +369,7 @@ break ;
   () => onChange ('') ";
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;
-}'"
-=======
-  )
-=======
+}'"  )
       default:;
         break;
 }
@@ -471,7 +419,4 @@ break ;
       />;
     </div>;
   );
->>>>>>> origin/automation-fixes
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

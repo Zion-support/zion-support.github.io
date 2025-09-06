@@ -44,8 +44,7 @@ import {
   Network,
   Shield as SecurityIcon,;
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-const contactInfo = {
+import Layout from '../components/layout/Layout';const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -73,7 +72,6 @@ const heroStats = [
     value: '500%',
     icon: <TrendingUp className='w-5 h-5' />,
   },];
-
 const serviceCategories = [
   {
     title: 'AI Development Tools',
@@ -133,7 +131,6 @@ const serviceCategories = [
       'Governance Automation',
     ],
   },];
-
 const heroFeatures = [
   {
     title: 'AI-Powered Automation',
@@ -163,7 +160,6 @@ const heroFeatures = [
     icon: BarChart3,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
   },];
-
 const testimonials = [
   {
     name: 'Dr. Michael Chen',
@@ -173,16 +169,14 @@ const testimonials = [
       "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly.",
     rating: 5,
     avatar: '👨‍💻',
-  },  {
-    name: 'Sarah Rodriguez',
+  },  {    name: 'Sarah Rodriguez',
     role: 'DevOps Director, CloudScale Inc.',
     company: 'CloudScale Inc.',
     content:
       'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
     rating: 5,
     avatar: '👩‍💼',
-  },  {
-    name: 'David Kim',
+  },  {    name: 'David Kim',
     role: 'Security Manager, SecureNet Corp.',
     company: 'SecureNet Corp.',
     content:
@@ -190,7 +184,6 @@ const testimonials = [
     rating: 5,
     avatar: '👨‍🔒',
   },];
-
 export default function AdvancedAIAutomationServices() {
   return (
     <Layout>
@@ -226,8 +219,7 @@ export default function AdvancedAIAutomationServices() {
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -238,8 +230,7 @@ export default function AdvancedAIAutomationServices() {
               Transform your development, testing, DevOps, and security
               operations with revolutionary AI automation that works 24/7
             </p>
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
-                <motion.div
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -266,16 +257,14 @@ export default function AdvancedAIAutomationServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'
               >
-                <Phone className='mr-2 w-5 h-5' />                Get Started
-              </Link>
+                <Phone className='mr-2 w-5 h-5' />                Get Started              </Link>
             </div>
           </motion.div>
         </div>
 
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -291,8 +280,7 @@ export default function AdvancedAIAutomationServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -311,8 +299,7 @@ export default function AdvancedAIAutomationServices() {
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
-                      <p className='text-gray-300'>{feature.description}</p>                    </div>
-                  </div>
+                      <p className='text-gray-300'>{feature.description}</p>                    </div>                  </div>
                 </div>
               </motion.div>
             ))}
@@ -321,8 +308,7 @@ export default function AdvancedAIAutomationServices() {
 
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -337,8 +323,7 @@ export default function AdvancedAIAutomationServices() {
             </p>
           </motion.div>
 
-          <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
-              <motion.div
+          <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (              <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -360,8 +345,7 @@ export default function AdvancedAIAutomationServices() {
                   </p>
                 </div>
 
-                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
-                    <motion.div
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (                    <motion.div
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -418,8 +402,7 @@ export default function AdvancedAIAutomationServices() {
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
-                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'                            >
-                              Get Started
+                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'                            >                              Get Started
                             </Link>
                           </div>
                         </div>
@@ -435,8 +418,7 @@ export default function AdvancedAIAutomationServices() {
 
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -451,8 +433,7 @@ export default function AdvancedAIAutomationServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -476,8 +457,7 @@ export default function AdvancedAIAutomationServices() {
                 <div className='flex items-center'>
                   <div className='flex text-yellow-400'>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className='w-4 h-4 fill-current' />                    ))}
-                  </div>
+                      <Star key={i} className='w-4 h-4 fill-current' />                    ))}                  </div>
                 </div>
               </motion.div>
             ))}
@@ -487,8 +467,7 @@ export default function AdvancedAIAutomationServices() {
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -517,8 +496,7 @@ export default function AdvancedAIAutomationServices() {
             </div>
             <div className='mt-8 text-center'>
               <p className='text-gray-300 mb-2'>📍 {contactInfo.address}</p>
-              <p className='text-gray-300'>🌐 {contactInfo.website}</p>            </div>
-          </motion.div>
+              <p className='text-gray-300'>🌐 {contactInfo.website}</p>            </div>          </motion.div>
         </div>
       </section>
     </Layout>

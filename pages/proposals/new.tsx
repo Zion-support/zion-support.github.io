@@ -44,8 +44,7 @@ import AIAssistant from '../../components/ui/AIAssistant';
         <h2 className='text-lg font-semibold'>Proposal / Cover Letter</h2>
         <AIAssistant
           buttonLabel='Generate Pitch Based on Profile & Job'
-          title='Generate Proposal'          defaultPrompt={pitchPrompt}
-          onAccept={setCoverLetter}
+          title='Generate Proposal'          defaultPrompt={pitchPrompt}          onAccept={setCoverLetter}
           authorizationToken={operatorToken}
         />
       </div>
@@ -56,7 +55,6 @@ import AIAssistant from '../../components/ui/AIAssistant';
         className='mt-2 w-full rounded-md border p-3'
       />
     </div>
-  );
-};
+  );};
 
 export default NewProposal;

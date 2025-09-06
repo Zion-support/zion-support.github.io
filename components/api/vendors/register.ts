@@ -23,8 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       name,
       servicesOffered: Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
-      about,
-  try {
+      about,  try {
     const vendor = registerVendor({
       slug;
       name;
@@ -43,10 +42,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(201).json({ vendor });
   } catch (e: any) {
     res.status(500).json({ error: e.message });
-  }
-=======
-    res.status(500).json({ error: e.message })
+  }    res.status(500).json({ error: e.message })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

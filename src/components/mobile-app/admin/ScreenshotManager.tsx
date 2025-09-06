@@ -2,12 +2,7 @@
 import React, { useState, useRef } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Upload, Trash2, Plus } from 'lucide-react'
-=======
-import { Upload, Trash2, Plus } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { AppPlatform } from "./MetadataManager";
+import { Upload, Trash2, Plus } from 'lucide-react'import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 interface ScreenshotManagerProps {
   platform: AppPlatform
@@ -19,24 +14,15 @@ type Screenshot = {
   file: File
 };
 
-<<<<<<< HEAD
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-=======
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform },) => {
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]),
-  const [isDragging, setIsDragging] = useState(false),
-  const fileInputRef = useRef<HTMLInputElement>(null),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  
+  const fileInputRef = useRef<HTMLInputElement>(null);  
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>,) => {
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))
     }
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   
   const addScreenshots = (files: File[],) => {
     // Filter for image files only
@@ -45,14 +31,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
     
-<<<<<<< HEAD
       
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    // Limit the number of screenshots
+};    // Limit the number of screenshots
     const maxScreenshots = platform === "ios" ? 10 : 8,
     const availableSlots = maxScreenshots - screenshots.length,
     
@@ -174,4 +154,3 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     </Card>
   )
 },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

@@ -1,5 +1,4 @@
-// Marketplace data store utilities
-export interface Project {
+// Marketplace data store utilitiesexport interface Project {
   id: string;
   title: string;
   summary: string;

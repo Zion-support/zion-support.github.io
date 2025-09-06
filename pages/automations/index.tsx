@@ -26,12 +26,10 @@ const AutomationsIndex: NextPage = () => {
           <Link key={it.href} href={it.href}>
             <div className='enhanced-card hover:shadow-lg cursor-pointer'>
               <h2 className='text-xl font-semibold'>{it.title}</h2>
-              <p className='text-sm text-gray-600 mt-1'>{it.desc}</p>            </div>
-          </Link>
+              <p className='text-sm text-gray-600 mt-1'>{it.desc}</p>            </div>          </Link>
         ))}
       </div>
     </main>
-  );
-};
+  );};
 
 export default AutomationsIndex;

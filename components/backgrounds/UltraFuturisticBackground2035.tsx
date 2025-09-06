@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function UltraFuturisticBackground2035() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -9,14 +7,9 @@ export default function UltraFuturisticBackground2035() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-<<<<<<< HEAD
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
-    ).matches;
-=======
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    ).matches;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -25,8 +18,6 @@ export default function UltraFuturisticBackground2035() {
     canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
     if (ctx) {
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    }
 
     let animationFrameId: number;
     let particles: Array<{
@@ -36,17 +27,13 @@ export default function UltraFuturisticBackground2035() {
       vy: number;
       size: number;
       opacity: number;
-      color: string;    }> = [];
-      x: number,
+      color: string;    }> = [];      x: number,
       y: number,
       vx: number,
       vy: number,
       size: number,
       opacity: number,
       color: string
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    }> = [];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Initialize particles
     const initParticles = () => {
@@ -67,29 +54,20 @@ export default function UltraFuturisticBackground2035() {
           color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
             Math.floor(Math.random() * 4)
           ],
-        });      }
-=======
-      const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
+        });      }      const particleCount = prefersReducedMotion ? 12 : (isSmallScreen ? 40 : 100);
       for (let i = 0, i < particleCount, i++) {
         particles.push({
           x: Math.random() * canvas.width / (window.devicePixelRatio || 1),
           y: Math.random() * canvas.height / (window.devicePixelRatio || 1),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
           vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.4,
           size: Math.random() * (isSmallScreen ? 1.5 : 2) + 0.8,
           opacity: Math.random() * 0.35 + 0.08,
-<<<<<<< HEAD
           color: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981'][
             Math.floor(Math.random() * 4)
           ],
-        });
-=======
-          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
+        });          color: ['#8b5cf6#06b6d4#ec4899#10b981'][Math.floor(Math.random() * 4)]
         })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };
 
     // Update and draw particles
@@ -108,14 +86,10 @@ export default function UltraFuturisticBackground2035() {
         if (particle.y < 0)
           particle.y = canvas.height / (window.devicePixelRatio || 1);
         if (particle.y > canvas.height / (window.devicePixelRatio || 1))
-          particle.y = 0;
-        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1);
+          particle.y = 0;        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1);
         if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
         if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -128,12 +102,8 @@ export default function UltraFuturisticBackground2035() {
           ? 0
           : window.innerWidth < 768
             ? 90
-            : 140;        if (maxDistance > 0) {
-=======
-        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            : 140;        if (maxDistance > 0) {        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 90 : 140);
         if (maxDistance > 0) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           particles.forEach((otherParticle, otherIndex) => {
             if (index !== otherIndex) {
               const dx = particle.x - otherParticle.x;
@@ -147,7 +117,6 @@ export default function UltraFuturisticBackground2035() {
                 ctx.strokeStyle = particle.color;
                 ctx.globalAlpha =
                   ((maxDistance - distance) / maxDistance) * 0.08;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 ctx.lineWidth = 1;
                 ctx.stroke();
               }
@@ -156,21 +125,17 @@ export default function UltraFuturisticBackground2035() {
       });
 
       if (!prefersReducedMotion) {
-        animationFrameId = requestAnimationFrame(updateParticles);      }
-=======
+        animationFrameId = requestAnimationFrame(updateParticles);      }                ctx.lineWidth = 1;
+                ctx.stroke()
+              }
+            }
           })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         }
       });
 
       if (!prefersReducedMotion) {
-<<<<<<< HEAD
-        animationFrameId = requestAnimationFrame(updateParticles);
-=======
-        animationFrameId = requestAnimationFrame(updateParticles)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        animationFrameId = requestAnimationFrame(updateParticles);        animationFrameId = requestAnimationFrame(updateParticles)
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };
 
     initParticles();
@@ -183,14 +148,10 @@ export default function UltraFuturisticBackground2035() {
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
       }
-      initParticles();    };
-=======
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
+      initParticles();    };        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
       }
       initParticles()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     window.addEventListener('resize', handleResize);
 
@@ -199,14 +160,10 @@ export default function UltraFuturisticBackground2035() {
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
       }
-    };  }, []);
-=======
-        cancelAnimationFrame(animationFrameId)
+    };  }, []);        cancelAnimationFrame(animationFrameId)
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, []);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -218,7 +175,6 @@ export default function UltraFuturisticBackground2035() {
           background:
             'radial-gradient(ellipse at center, rgba(139,92,246,0.04) 0%, rgba(0,0,0,0) 70%)',
         }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       />
 
       {/* Animated Background Elements */}
@@ -233,19 +189,22 @@ export default function UltraFuturisticBackground2035() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',
-=======
+            ease: 'easeInOut',      />
+
+      {/* Animated Background Elements */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Floating Geometric Shapes */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-purple-500/15 rounded-full"
+          animate={{
             scale: [1, 1.15, 1];
             rotate: [0, 180, 360];
             opacity: [0.22, 0.45, 0.22]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-          }}
+            ease: 'easeInOut',          }}
         />
         
         <motion.div
@@ -253,22 +212,14 @@ export default function UltraFuturisticBackground2035() {
           animate={{
             scale: [1, 1.3, 1],
             rotate: [45, 225, 405],
-            opacity: [0.2, 0.5, 0.2],
-=======
-            scale: [1, 1.3, 1];
+            opacity: [0.2, 0.5, 0.2],            scale: [1, 1.3, 1];
             rotate: [45, 225, 405];
             opacity: [0.2, 0.5, 0.2]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+            ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
 
@@ -299,32 +250,22 @@ export default function UltraFuturisticBackground2035() {
         {/* Neon Glow Effects */}
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />
-        <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />
-=======
-          className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full"
+        <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />          className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full"
           animate={{
             scale: [1, 1.4, 1];
             y: [0, -20, 0];
             opacity: [0.4, 0.7, 0.4]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          }}
           transition={{
             duration: 12,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
 
         {/* Neon Glow Effects */}
-<<<<<<< HEAD
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />
         <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         {/* Animated Grid Lines */}
         <div className='absolute inset-0 opacity-10'>
@@ -338,20 +279,22 @@ export default function UltraFuturisticBackground2035() {
               backgroundSize: '50px 50px',
             }}
           />        </div>
-=======
+        {/* Animated Grid Lines */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px);
+              linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
             `;
             backgroundSize: '50px 50px'
           }} />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-1 h-1 bg-purple-400 rounded-full'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -359,24 +302,21 @@ export default function UltraFuturisticBackground2035() {
             animate={{
               y: [0, -30, 0],
               opacity: [0, 1, 0],
-              scale: [0, 1, 0],            }}
-=======
+              scale: [0, 1, 0],            }}            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
+            }}
+            animate={{
               y: [0, -30, 0];
               opacity: [0, 1, 0];
               scale: [0, 1, 0]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-              ease: 'easeInOut',            }}
-=======
-              ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           />
         ))}
 
@@ -396,49 +336,32 @@ export default function UltraFuturisticBackground2035() {
           className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
           animate={{
             scaleX: [0, 1, 0],
-            opacity: [0, 1, 0],          }}
-=======
-          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
+            opacity: [0, 1, 0],          }}          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
           animate={{
             scaleX: [0, 1, 0];
             opacity: [0, 1, 0]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
 
         <motion.div
-<<<<<<< HEAD
           className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
           animate={{
             scaleX: [0, 1, 0],
-            opacity: [0, 1, 0],
-=======
-          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
+            opacity: [0, 1, 0],          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
           animate={{
             scaleX: [0, 1, 0];
             opacity: [0, 1, 0]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           transition={{
             duration: 4,
             repeat: Infinity,
             delay: 2,
-            ease: 'easeInOut',          }}
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            ease: 'easeInOut',          }}            ease: "easeInOut"
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         />
 
         {/* Quantum Dots */}
@@ -446,7 +369,6 @@ export default function UltraFuturisticBackground2035() {
           <motion.div
             key={`quantum-${i}`}
             className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -454,30 +376,26 @@ export default function UltraFuturisticBackground2035() {
             animate={{
               scale: [0, 1, 0],
               opacity: [0, 0.8, 0],
-              rotate: [0, 360],            }}
-=======
+              rotate: [0, 360],            }}            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
+            }}
+            animate={{
               scale: [0, 1, 0];
               opacity: [0, 0.8, 0];
               rotate: [0, 360]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             transition={{
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,
-              ease: 'easeInOut',            }}
-=======
-              ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           />
         ))}
 
         {/* Neural Network Connections */}
         <svg className='absolute inset-0 w-full h-full opacity-20'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <defs>
             <linearGradient
               id='neuralGradient'
@@ -501,30 +419,37 @@ export default function UltraFuturisticBackground2035() {
               fill='url(#neuralGradient)'
               animate={{
                 r: [3, 6, 3],
-                opacity: [0.3, 0.8, 0.3],              }}
-=======
+                opacity: [0.3, 0.8, 0.3],              }}          <defs>
+            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.5" />
+              <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#ec4899" stopOpacity="0.5" />
+            </linearGradient>
+          </defs>
+          
+          {[...Array(8)].map((_, i) => (
+            <motion.circle
+              key={`neural-${i}`}
+              cx={`${20 + (i * 10)}%`}
+              cy={`${30 + (i * 5)}%`}
+              r="3"
+              fill="url(#neuralGradient)"
+              animate={{
                 r: [3, 6, 3];
                 opacity: [0.3, 0.8, 0.3]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               transition={{
                 duration: 4,
                 repeat: Infinity,
                 delay: i * 0.5,
-                ease: 'easeInOut',              }}
-=======
-                ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             />
           ))}
         </svg>
 
         {/* Holographic Effects */}
         <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
             animate={{
@@ -534,19 +459,17 @@ export default function UltraFuturisticBackground2035() {
             transition={{
               duration: 20,
               repeat: Infinity,
-              ease: 'linear',
-=======
+              ease: 'linear',          <motion.div
+            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
+            animate={{
               scale: [1, 1.1, 1];
               rotate: [0, 90, 180, 270, 360];
               opacity: [0.1, 0.3, 0.1]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }}
             transition={{
               duration: 20,
               repeat: Infinity,
-<<<<<<< HEAD
               ease: 'linear',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             }}
           />
 
@@ -559,29 +482,26 @@ export default function UltraFuturisticBackground2035() {
             transition={{
               duration: 15,
               repeat: Infinity,
-              ease: 'linear',            }}
-=======
+              ease: 'linear',            }}            }}
+          />
+          
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full"
+            animate={{
               scale: [1, 1.2, 1];
               rotate: [360, 270, 180, 90, 0];
               opacity: [0.1, 0.4, 0.1]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }}
             transition={{
               duration: 15,
               repeat: Infinity,
-<<<<<<< HEAD
-              ease: 'linear',
-=======
-              ease: "linear"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              ease: 'linear',              ease: "linear"
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           />
         </div>
 
         {/* Data Streams */}
         <div className='absolute right-0 top-0 w-32 h-full opacity-30'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={`stream-${i}`}
@@ -592,31 +512,28 @@ export default function UltraFuturisticBackground2035() {
               }}
               animate={{
                 height: [8, 32, 8],
-                opacity: [0.3, 1, 0.3],              }}
-=======
+                opacity: [0.3, 1, 0.3],              }}          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={`stream-${i}`}
+              className="absolute w-1 h-8 bg-gradient-to-b from-purple-400 to-transparent"
+              style={{
+                right: `${Math.random() * 32}px`,
+                top: `${i * 5}%`
+              }}
+              animate={{
                 height: [8, 32, 8];
                 opacity: [0.3, 1, 0.3]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-                ease: 'easeInOut',              }}
-=======
-                ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             />
           ))}
         </div>
       </div>
     </>
-  );
-=======
-  )
+  );  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

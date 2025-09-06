@@ -30,8 +30,7 @@ export default function DiversityInclusionPage() {
         </ul>
       </div>
     </div>
-  );
-	return (
+  );	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Diversity & Inclusion | Zion Tech Group</title>
@@ -50,5 +49,3 @@ export default function DiversityInclusionPage() {
 		</div>
 	);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

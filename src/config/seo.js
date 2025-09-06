@@ -28,8 +28,6 @@ export const defaultSEO = {
     {
       name: 'viewport',
       content: 'width=device-width, initial-scale = 1',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    },
     {
       name: 'theme-color',
       content: '#1e40af',

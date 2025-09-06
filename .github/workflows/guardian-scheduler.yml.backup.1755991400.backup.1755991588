@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:.github/workflows/guardian-scheduler.yml.backup.1755991400
 =======
 <<<<<<< HEAD
@@ -20,10 +21,13 @@ name: Dead Code Report
 
 =======
 <:.github/workflows/guardian-scheduler.yml.backup.1755991400
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Guardian Scheduler
 =
 name: Dead Code Report
 >
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -31,12 +35,15 @@ name: Dead Code Report
 >
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 on:
   workflow_dispatch: {}
   schedule:
     - cron: '*/10 * * * *'
 
 permissions:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -51,22 +58,29 @@ permissions:
 =======
   contents: read
 >>>>>>> origin/cursor/fix-github-actions-errors-987b
-
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
 <:.github/workflows/guardian-scheduler.yml.backup.1755991400
 =
 >  contents: write
   actions: read
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <:.github/workflows/guardian-scheduler.yml.backup.1755991400
 =
 >  contents: write
   actions: read
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 jobs:
   main:
     name: Main Job
@@ -88,6 +102,7 @@ jobs:
         run: npm ci --no-audit --no-fund
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:.github/workflows/guardian-scheduler.yml.backup.1755991400
 =======
 <<<<<<< HEAD
@@ -97,9 +112,12 @@ jobs:
 <:.github/workflows/guardian-scheduler.yml.backup.1755991400
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Run workflow
 <<<<<<< HEAD
         run: |
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -110,10 +128,13 @@ jobs:
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2
 ========
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 <:.github/workflows/guardian-scheduler.yml.backup.1755991400
       - name: Run workflow
         run: |
           echo "Workflow Workflow completed successfully"=
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -121,11 +142,15 @@ jobs:
           echo "Workflow Workflow completed successfully"=
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          echo "Workflow Workflow completed successfully"=
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -141,3 +166,6 @@ concurrency:
 >
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

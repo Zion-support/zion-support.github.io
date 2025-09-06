@@ -14,38 +14,18 @@ import {
 
 interface FavoriteButtonProps {
   itemId: string;
-<<<<<<< HEAD
   className?: string;
-=======
-  itemType: 'product' | 'talent' | 'equipment' | 'service';
-  className?: string}
-
-export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
-  const [isFavorited, setIsFavorited] = useState(false);
-    e.stopPropagation () ;
-    setIsFavorited(!isFavorited) ;
-    // Here you would typically make an API call to save / remove from favorites;
-    if(isFavorited) {;
->>>>>>> origin/automation-fixes
-
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const { isWishlisted, toggle } = useWishlist();
   const { isAuthenticated } = useAuth();
   const [loginOpen, setLoginOpen] = React.useState(false);
 
-<<<<<<< HEAD
   const handleClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-=======
-  const handleClick = (e: React.MouseEvent,) => {
-    e.stopPropagation(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    if (!isAuthenticated) {
+    e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true);
       return;
     }
 
-<<<<<<< HEAD
     const wasWishlisted = isWishlisted(itemId);
     toggle(itemId);
 
@@ -69,31 +49,18 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
               className = {cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
                 className
-<<<<<<< HEAD
               )}
               onClick={handleClick}
               aria-label={
                 active ? 'Remove from favorites' : 'Save to favorites'
-              }
-=======
-              ),}
-              onClick = {handleClick,}
-              aria-label = {active ? 'Remove from favorites' : 'Save to favorites',}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            >
+              }            >
               <Heart
                 className = {cn(
                   'h-4 w-4 transition-transform duration-200',
-<<<<<<< HEAD
                   active
                     ? 'fill-red-500 text-red-500 scale-110'
                     : 'text-zion-slate'
-                )}
-=======
-                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
-                ),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              />
+                )}              />
             </button>
           </TooltipTrigger>
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
@@ -102,11 +69,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
       // Add to favorites`;
       // console.log(`Added ${itemType} ${itemId} to favorites`)}  };
   return ();
@@ -130,4 +93,4 @@ className: {`w-4 h-4 transition-all duration-300 ${;
       />;
     </button>;) }
 '`;
->>>>>>> origin/automation-fixes
+}

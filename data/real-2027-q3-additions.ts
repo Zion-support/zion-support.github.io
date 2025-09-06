@@ -7,8 +7,6 @@ export const real2027Q3Additions = [
     period: '/month',
     description:
       'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Agentless subnet scanning and SaaS discovery',
       'OS, version, and CVE enrichment',
       'CMDB, ServiceNow, and Jira export',
@@ -323,9 +321,7 @@ export const real2027Q3Additions = [
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.',
   },
-];
-=======
-      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
+];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';
     link: '/api-security-scanner';
@@ -333,5 +329,3 @@ export const real2027Q3Additions = [
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

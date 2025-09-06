@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import Head from 'next/head';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function OffworldConsole() {
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
@@ -12,18 +10,13 @@ export default function OffworldConsole() {
 
   async function sendChat() {
     setStatus('Sending chat...');
-<<<<<<< HEAD
     const res = await fetch('/api/offworld/orbit?action=chat', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ from: 'anon', text: chat }),
     });
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');
-=======
-    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
+    setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 
   async function castVote() {
@@ -36,17 +29,12 @@ export default function OffworldConsole() {
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');  }
 
   async function syncProfile() {
-    setStatus('Pinning profile...');
-=======
-    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
+    setStatus('Pinning profile...');    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function syncProfile() {
     setStatus('Pinning profile...');
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const res = await fetch('/api/offworld/ipfs?action=json', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
@@ -55,31 +43,22 @@ export default function OffworldConsole() {
       }),
     });
     const data = await res.json();
-<<<<<<< HEAD
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');  }
 
   async function broadcast() {
-    setStatus('Broadcasting manifesto...');
-=======
-    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
+    setStatus('Broadcasting manifesto...');    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function broadcast() {
     setStatus('Broadcasting manifesto...');
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ message: 'We build beyond platforms.' }),
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  }
 
   return (
     <div className='min-h-screen p-8 space-y-8'>
@@ -164,7 +143,4 @@ export default function OffworldConsole() {
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

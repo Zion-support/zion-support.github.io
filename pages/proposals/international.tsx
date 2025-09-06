@@ -9,7 +9,6 @@ type ProposalListItem = {
   type: string;
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';
   createdAt: string;};
-
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]);
   const [filter, setFilter] = useState('All');
@@ -35,8 +34,7 @@ export default function InternationalProposalsPage() {
             className='border rounded px-2 py-1'
             value={filter}
             onChange={e => setFilter(e.target.value)}
-          >            <option>All</option>
-            <option>Global</option>
+          >            <option>All</option>            <option>Global</option>
             <option>Africa</option>
             <option>LATAM</option>
             <option>APAC</option>

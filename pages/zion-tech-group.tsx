@@ -79,7 +79,6 @@ import {
   Truck,
   ChevronRight,
   Home,;} from 'lucide-react';
-
 export default function ZionTechGroupPage() {
   return (
     <>
@@ -128,8 +127,7 @@ export default function ZionTechGroupPage() {
                   <Link
                     href='/contact'
                     className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                  >                    Contact
-                  </Link>
+                  >                    Contact                  </Link>
                 </div>
               </div>
             </div>
@@ -153,8 +151,7 @@ export default function ZionTechGroupPage() {
                     <ChevronRight className='h-4 w-4 text-gray-400' />
                     <span className='ml-4 text-sm font-medium text-white'>
                       About Zion Tech Group
-                    </span>                  </div>
-                </li>
+                    </span>                  </div>                </li>
               </ol>
             </nav>
           </div>
@@ -171,8 +168,7 @@ export default function ZionTechGroupPage() {
               <p className='mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl'>
                 We are the architects of tomorrow, building revolutionary
                 quantum AI solutions and autonomous systems that will define the
-                next decade of innovation.              </p>
-            </div>
+                next decade of innovation.              </p>            </div>
           </div>
         </div>
 
@@ -215,8 +211,7 @@ export default function ZionTechGroupPage() {
                   We envision a future where our technology platforms enable
                   breakthroughs in healthcare, climate change, space
                   exploration, and countless other fields that will shape the
-                  destiny of our species.                </p>
-              </div>
+                  destiny of our species.                </p>              </div>
             </div>
           </div>
         </div>
@@ -312,8 +307,7 @@ export default function ZionTechGroupPage() {
                 </h3>
                 <p className='text-gray-300'>
                   We don't just adapt to change; we anticipate it and create the
-                  technologies that will define tomorrow.                </p>
-              </div>
+                  technologies that will define tomorrow.                </p>              </div>
             </div>
           </div>
         </div>
@@ -380,8 +374,7 @@ export default function ZionTechGroupPage() {
                 </h3>
                 <p className='text-gray-300 text-sm'>
                   Quantum-resistant encryption and AI-powered threat detection
-                  systems.                </p>
-              </div>
+                  systems.                </p>              </div>
             </div>
           </div>
         </div>
@@ -422,8 +415,7 @@ export default function ZionTechGroupPage() {
                 <div className='text-4xl font-bold text-purple-400 mb-2'>
                   10+
                 </div>
-                <div className='text-gray-300'>Years Experience</div>              </div>
-            </div>
+                <div className='text-gray-300'>Years Experience</div>              </div>            </div>
           </div>
         </div>
 
@@ -436,8 +428,7 @@ export default function ZionTechGroupPage() {
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Meet the visionaries and experts who are driving innovation at
-                Zion Tech Group.
-              </p>
+                Zion Tech Group.              </p>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -479,8 +470,7 @@ export default function ZionTechGroupPage() {
                 <p className='text-purple-400 mb-2'>Chief Security Officer</p>
                 <p className='text-gray-300 text-sm'>
                   Cybersecurity specialist with expertise in quantum-resistant
-                  encryption and threat detection.                </p>
-              </div>
+                  encryption and threat detection.                </p>              </div>
             </div>
           </div>
         </div>
@@ -506,8 +496,7 @@ export default function ZionTechGroupPage() {
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700'
-              >                Schedule Consultation
-              </Link>
+              >                Schedule Consultation              </Link>
             </div>
           </div>
         </div>
@@ -550,8 +539,7 @@ export default function ZionTechGroupPage() {
                         <Link
                           href='/zion-tech-group'
                           className='text-base text-gray-300 hover:text-white'
-                        >                          Technology Platforms
-                        </Link>
+                        >                          Technology Platforms                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -571,8 +559,7 @@ export default function ZionTechGroupPage() {
                         <Link
                           href='/contact'
                           className='text-base text-gray-300 hover:text-white'
-                        >                          Contact
-                        </Link>
+                        >                          Contact                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -581,8 +568,7 @@ export default function ZionTechGroupPage() {
             </div>
             <div className='mt-12 border-t border-gray-700 pt-8'>
               <p className='text-base text-gray-400 xl:text-center'>
-                &copy; 2025 Zion Tech Group. All rights reserved.              </p>
-            </div>
+                &copy; 2025 Zion Tech Group. All rights reserved.              </p>            </div>
           </div>
         </footer>
       </div>

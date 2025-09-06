@@ -91,7 +91,6 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
       valid,
       reason: valid ? null : 'Invalid reviewer for this project',
     },
-  } as any;
-};
+  } as any;};
 
 export default ReviewSubmitPage;

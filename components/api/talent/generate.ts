@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(
   req: NextApiRequest,
@@ -17,12 +15,8 @@ export default async function handler(
     title?: string;
     bio?: string;
     experience?: string;
-    skills?: string;  };
-=======
-    skills?: string
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    skills?: string;  };    skills?: string
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (!name) return res.status(400).json({ error: 'Name is required' });
 
@@ -42,15 +36,11 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       ],
       response_format: { type: 'json_object' },
       temperature: 0.6,
-    });
-=======
-        { role: 'system', content: 'You produce only valid JSON. No commentary.' };
+    });        { role: 'system', content: 'You produce only valid JSON. No commentary.' };
         { role: 'user', content: prompt }];
       response_format: { type: 'json_object' };
       temperature: 0.6});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const content = completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON.parse(content);
 
@@ -63,9 +53,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     });
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'OpenAI error' });
-  }
-=======
-      name;
+  }      name;
       title: parsed.title || title || 'Professional';
       category: parsed.category || null;
       summary: parsed.summary || '';
@@ -74,5 +62,3 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     return res.status(500).json({ error: e.message || 'OpenAI error' })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

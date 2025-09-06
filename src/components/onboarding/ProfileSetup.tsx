@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
-import { useState } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { User, Mail, AtSign, GraduationCap } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Form;
   FormControl;
@@ -155,8 +143,4 @@ getTypeLabel () ";
   ...field ";
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

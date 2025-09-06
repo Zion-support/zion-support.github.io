@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge';
 import { ShieldAlert } from 'lucide-react';
 import {
@@ -6,14 +5,7 @@ import {
   TooltipContent,
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-=======
-
-import { Badge } from "@/components/ui/badge";
-import { ShieldAlert } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 
@@ -52,7 +44,4 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipContent>
     </Tooltip>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

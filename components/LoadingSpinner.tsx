@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingSpinnerProps {
@@ -11,24 +10,12 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-<<<<<<< HEAD
   text = 'Loading...',
-  className = '',
-=======
-  color = 'blue',
-  text,
-  fullScreen = false,
-  className = ''
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
-}) => {
+  className = '',}) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-<<<<<<< HEAD
-=======
-    xl: 'w-16 h-16'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-91d8
   };
 
   const colorClasses = {
@@ -61,7 +48,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 export default LoadingSpinner;
-=======
 import React from 'react;
 import { Loader2 } from 'lucide-react;
 interface LoadingSpinnerProps {
@@ -78,4 +64,3 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 };
 export default LoadingSpinner;
->>>>>>> origin/automation-fixes

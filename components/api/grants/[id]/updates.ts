@@ -7,15 +7,10 @@ import type { GrantApplication } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);
-=======
-const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+  return path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id);
@@ -28,18 +23,13 @@ function writeGrant(record: GrantApplication) {
     grantPath(record.id),
     JSON.stringify(record, null, 2),
     'utf8'
-  );
-=======
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+  );  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string };
   if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -60,7 +50,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       createdAt: new Date().toISOString(),
       content: content.trim(),
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     existing.updates = [...(existing.updates || []), update];
     existing.updatedAt = new Date().toISOString();
     writeGrant(existing);
@@ -68,10 +57,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
-=======
+  res.status(405).end('Method Not Allowed');    existing.updates = [...(existing.updates || []), update];
+    existing.updatedAt = new Date().toISOString();
+    writeGrant(existing);
+    return res.status(201).json({ update })
+  }
+
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

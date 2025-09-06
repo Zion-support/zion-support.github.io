@@ -23,7 +23,6 @@ export default function NewDisputePage() {
     talentId,
     clientId,
   } = router.query as Record<string, string>;  const user = useCurrentUser();
-
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
@@ -41,8 +40,7 @@ export default function NewDisputePage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!projectId || !description || !clientUserId || !talentUserId)
-      return alert('Please fill required fields');    setSubmitting(true);
-    try {
+      return alert('Please fill required fields');    setSubmitting(true);    try {
       const res = await fetch('/api/disputes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -56,8 +54,7 @@ export default function NewDisputePage() {
           reasonDetails,
           description,
         }),
-      });      if (!res.ok) throw new Error('Failed to create');
-      const { dispute } = await res.json();
+      });      if (!res.ok) throw new Error('Failed to create');      const { dispute } = await res.json();
 
       if (files.length > 0) {
         const filePayload = await Promise.all(
@@ -77,8 +74,7 @@ export default function NewDisputePage() {
     } catch (e: any) {
       alert(e.message || 'Error');
     } finally {
-      setSubmitting(false);    }
-  }
+      setSubmitting(false);    }  }
 
   return (
     <EnhancedLayout>
@@ -171,8 +167,7 @@ export default function NewDisputePage() {
         </form>
       </div>
     </EnhancedLayout>
-  );
-function toBase64(file: File): Promise<string> {
+  );function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = () => resolve(String(reader.result));

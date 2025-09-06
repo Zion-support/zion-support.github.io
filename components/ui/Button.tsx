@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 interface ButtonProps {
   children: React.ReactNode,
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
@@ -8,7 +7,6 @@ interface ButtonProps {
   onClick?: () => void;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
-=======
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../../src/lib/utils';
 
@@ -37,10 +35,8 @@ const buttonVariants = cva(;
     defaultVariants: {;
       variant: "default",
       size: "default",,
->>>>>>> origin/automation-fixes
 }
 
-<<<<<<< HEAD
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
@@ -66,7 +62,6 @@ const Button: React.FC<ButtonProps> = ({
   
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105 active:scale-95';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
-=======
 export interface ButtonProps;
   extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {;
   asChild?: boolean;
@@ -85,7 +80,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(;
 }
 );
 Button.displayName = "Button";
->>>>>>> origin/automation-fixes
 
   return (
     <motion.button

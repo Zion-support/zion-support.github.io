@@ -17,8 +17,7 @@ import {
   Mail,
   MapPin,
   Brain,
-  Sparkles,;
-} from 'lucide-react';
+  Sparkles,;} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
 export default function SpaceTechnologyAIPlatform() {
@@ -26,8 +25,7 @@ export default function SpaceTechnologyAIPlatform() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com',  };
 
   const features = [
     'AI-powered satellite operations',
@@ -100,7 +98,6 @@ export default function SpaceTechnologyAIPlatform() {
             rel='canonical'
             href='https://ziontechgroup.com/space-technology-ai-platform'
           />        </Head>
-
         <EnhancedNavigation2026 />
 
         {/* Hero Section */}
@@ -155,16 +152,14 @@ export default function SpaceTechnologyAIPlatform() {
 
               <div className='flex items-center justify-center space-x-8 text-gray-400'>
                 <div className='flex items-center space-x-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400' />
-                  <span>1-month setup</span>
+                  <CheckCircle className='w-5 h-5 text-green-400' />                  <span>1-month setup</span>
                 </div>
                 <div className='flex items-center space-x-2'>
                   <Shield className='w-5 h-5 text-blue-400' />
                   <span>Enterprise security</span>
                 </div>
                 <div className='flex items-center space-x-2'>
-                  <Users className='w-5 h-5 text-blue-400' />                  <span>120+ customers</span>
-                </div>
+                  <Users className='w-5 h-5 text-blue-400' />                  <span>120+ customers</span>                </div>
               </div>
             </motion.div>
           </div>
@@ -172,8 +167,7 @@ export default function SpaceTechnologyAIPlatform() {
 
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -190,8 +184,7 @@ export default function SpaceTechnologyAIPlatform() {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (                <motion.div
                   key={feature}
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -209,8 +202,7 @@ export default function SpaceTechnologyAIPlatform() {
                     </h3>
                     <p className='text-gray-400'>
                       Advanced AI-powered {feature.toLowerCase()} for enhanced
-                      space operations and exploration.                    </p>
-                  </div>
+                      space operations and exploration.                    </p>                  </div>
                 </motion.div>
               ))}
             </div>
@@ -219,8 +211,7 @@ export default function SpaceTechnologyAIPlatform() {
 
         {/* Market Position Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -237,13 +228,11 @@ export default function SpaceTechnologyAIPlatform() {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>              <motion.div
-                initial={{ opacity: 0, x: -20 }}
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>              <motion.div                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className='space-y-6'
-              >
+                className='space-y-6'              >
                 <h3 className='text-2xl font-bold text-white mb-6'>
                   Competitive Analysis
                 </h3>
@@ -264,8 +253,7 @@ export default function SpaceTechnologyAIPlatform() {
                     <span className='text-green-300 font-semibold'>
                       Our Advantage: AI integration, comprehensive platform,
                       affordable pricing
-                    </span>                  </div>
-                </div>
+                    </span>                  </div>                </div>
               </motion.div>
 
               <motion.div
@@ -301,8 +289,7 @@ export default function SpaceTechnologyAIPlatform() {
                     <div className='text-3xl font-bold text-yellow-400 mb-2'>
                       24
                     </div>
-                    <div className='text-yellow-300 text-sm'>Months to ROI</div>                  </div>
-                </div>
+                    <div className='text-yellow-300 text-sm'>Months to ROI</div>                  </div>                </div>
               </motion.div>
             </div>
           </div>
@@ -310,8 +297,7 @@ export default function SpaceTechnologyAIPlatform() {
 
         {/* Use Cases Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -328,8 +314,7 @@ export default function SpaceTechnologyAIPlatform() {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (                <motion.div
                   key={useCase}
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -347,8 +332,7 @@ export default function SpaceTechnologyAIPlatform() {
                     </h3>
                     <p className='text-gray-400'>
                       Leverage AI-powered space technology to optimize{' '}
-                      {useCase.toLowerCase()} and drive innovation.                    </p>
-                  </div>
+                      {useCase.toLowerCase()} and drive innovation.                    </p>                  </div>
                 </motion.div>
               ))}
             </div>
@@ -357,8 +341,7 @@ export default function SpaceTechnologyAIPlatform() {
 
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -382,8 +365,7 @@ export default function SpaceTechnologyAIPlatform() {
                 >
                   <Phone className='w-5 h-5' />
                   <span>Call {contactInfo.mobile}</span>
-                </motion.a>
-                <motion.a
+                </motion.a>                <motion.a
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -411,8 +393,7 @@ export default function SpaceTechnologyAIPlatform() {
                     <MapPin className='w-6 h-6 text-purple-400 mx-auto mb-2' />
                     <p className='text-white font-medium'>
                       {contactInfo.address}
-                    </p>                  </div>
-                </div>
+                    </p>                  </div>                </div>
               </div>
             </motion.div>
           </div>

@@ -1,7 +1,6 @@
  
 
 };
-
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
@@ -70,5 +69,3 @@ export default function TechRadar({ pypi, crates, github }: Props) {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

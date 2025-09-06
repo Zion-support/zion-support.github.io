@@ -1,12 +1,10 @@
  
 }interface BlogPostPageProps {
-  /** * Preloaded blog post for static generation. Can be null if not found. */ 
-interface BlogPostPageProps {
+  /** * Preloaded blog post for static generation. Can be null if not found. */ interface BlogPostPageProps {
   /**
    * Preloaded blog post for static generation. Can be null if not found.
    */
-  initialPost: BlogPost | null;
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
+  initialPost: BlogPost | null;const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter();
   const { slug } = router.query;
   const [post, setPost] = React.useState<BlogPost | null>(initialPost);
@@ -15,8 +13,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   React.useEffect(() => {
     if (initialPost && initialPost.slug === slug) {
       setPost(initialPost);
-      setError(null); // Clear any previous error    } else if (slug) {
-      // This case handles if the slug changes and initialPost is not for the current slug
+      setError(null); // Clear any previous error    } else if (slug) {      // This case handles if the slug changes and initialPost is not for the current slug
       // Or if initialPost was null from getStaticProps (which shouldn't happen if notFound is true)
       // For now, we will rely on getStaticProps to provide the correct post or a 404.
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
@@ -30,8 +27,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
         // should ideally not be hit frequently, as getStaticProps would have returned notFound.
         // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps:
         setPost(null);
-        setError('Article not found');      }
-    }
+        setError('Article not found');      }    }
   }, [slug, initialPost]);
 
   if (error) {
@@ -43,8 +39,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
     author: post.author.name,
     publishedTime: post.publishedDate,
     tags: post.tags || [],
-  };  const body = (post as any).body || post.content;
-  return (
+  };  const body = (post as any).body || post.content;  return (
     <>
       <AdvancedSEO
         title={post.title}
@@ -69,8 +64,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
           <div>
             <p className='m-0 font-medium'>{post.author.name}</p>
             {post.author.title && (
-              <p className='m-0 text-sm text-zion-slate-light'>                {post.author.title}
-              </p>
+              <p className='m-0 text-sm text-zion-slate-light'>                {post.author.title}              </p>
             )}
           </div>
         </div>
@@ -82,8 +76,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
               className='object-cover w-full h-full'
               onError={e => {
                 const target = e.currentTarget as HTMLImageElement;
-                target.src = '/images/blog-placeholder.svg';              }}
-            />
+                target.src = '/images/blog-placeholder.svg';              }}            />
           </div>
         )}
         <ReactMarkdown>{body}</ReactMarkdown>

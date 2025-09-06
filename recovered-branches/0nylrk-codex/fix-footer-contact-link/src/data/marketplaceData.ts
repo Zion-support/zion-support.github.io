@@ -3,17 +3,12 @@ import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
-=======
-
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-model-1',
     title: 'GPT-4 API Integration Package',
     description:
@@ -22,9 +17,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     price: 1999,
     currency: '$',
     tags: ['GPT-4', 'API Integration', 'NLP'],
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    author: {
       name: 'AI Solutions Inc.',
       id: 'ai-solutions',
       avatarUrl:
@@ -358,9 +350,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true,
     location: 'North America',
     availability: '2-4 Weeks',
-  },];
-=======
-      name: "ServerPro Systems";
+  },];      name: "ServerPro Systems";
       id: "serverpro"};
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
     createdAt: "2023-12-15T09:45:00.000Z";
@@ -370,9 +360,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     location: "North America";
     availability: "2-4 Weeks"
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
@@ -395,21 +383,20 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'GPU cluster',
     'Edge computing',
     'High performance storage',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ];
 
   // Convert strings to SearchSuggestion objects
   return suggestions.map(text => ({
     text,
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
-  }));};
-=======
+  }));};  ];
+  
+  // Convert strings to SearchSuggestion objects
+  return suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
@@ -428,8 +415,6 @@ export const generateFilterOptions = (): FilterOptions => {
     ),
   ].sort();
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  return {
     productTypes: productTypes.map(type => ({
       label: type,
       value: type,
@@ -464,9 +449,5 @@ availabilityOptions: availability.map (item => ({
 }) );
 ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
 
-};
-=======
-export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

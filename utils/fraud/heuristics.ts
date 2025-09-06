@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
 
 const suspiciousLinkHosts = [
@@ -106,7 +105,6 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
-
 export function runHeuristics(data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics
   const flags = new Set<string>();
@@ -124,7 +122,4 @@ export function runHeuristics(data: any): HeuristicResult {
     reasons,
     severity,
   };
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

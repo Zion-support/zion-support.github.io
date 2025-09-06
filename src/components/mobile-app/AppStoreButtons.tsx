@@ -1,11 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { Apple, GithubIcon } from 'lucide-react'
-=======
-import { Apple, GithubIcon } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { cn } from "@/lib/utils";
+import { Apple, GithubIcon } from 'lucide-react'import { cn } from "@/lib/utils";
 import { logInfo } from '@/utils/productionLogger';
 interface AppStoreButtonsProps {
   className?: string;
@@ -16,17 +11,10 @@ interface AppStoreButtonsProps {
 }
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   className;
   appStoreUrl = "#";
   googlePlayUrl = "#";
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  className,
+};  className,
   appStoreUrl = "#",
   googlePlayUrl = "#",
   onAppStoreClick,
@@ -93,4 +81,3 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     </div>
   )
 },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

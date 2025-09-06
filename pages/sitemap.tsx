@@ -196,8 +196,7 @@ export default function SitemapPage() {
       type: 'Address',
       value: 'Middletown, DE',
       action: 'https://maps.google.com/?q=Middletown,DE',
-    },
-  ];
+    },  ];
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
@@ -213,13 +212,11 @@ export default function SitemapPage() {
           content='Complete website sitemap and navigation guide.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/sitemap' />      </Head>
-
       <SmartHeader />
 
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -244,16 +241,14 @@ export default function SitemapPage() {
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
               >
                 Search Site
-                <Search className='w-5 h-5 ml-2' />              </a>
-            </div>
+                <Search className='w-5 h-5 ml-2' />              </a>            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Main Pages */}
       <section id='main-pages' className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -268,8 +263,7 @@ export default function SitemapPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (              <motion.div
                 key={page.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -289,8 +283,7 @@ export default function SitemapPage() {
                   </div>
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {page.description}
-                  </p>                </Link>
-              </motion.div>
+                  </p>                </Link>              </motion.div>
             ))}
           </div>
         </div>
@@ -298,8 +291,7 @@ export default function SitemapPage() {
 
       {/* Service Categories */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -314,8 +306,7 @@ export default function SitemapPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (              <motion.div
                 key={category.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -335,8 +326,7 @@ export default function SitemapPage() {
                   </div>
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {category.description}
-                  </p>                </Link>
-              </motion.div>
+                  </p>                </Link>              </motion.div>
             ))}
           </div>
         </div>
@@ -344,8 +334,7 @@ export default function SitemapPage() {
 
       {/* Featured Services */}
       <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -358,8 +347,7 @@ export default function SitemapPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (              <motion.div
                 key={service.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -377,8 +365,7 @@ export default function SitemapPage() {
                     </h3>
                     <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0' />
                   </div>
-                  <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
-              </motion.div>
+                  <p className='text-white/60 text-xs'>{service.category}</p>                </Link>              </motion.div>
             ))}
           </div>
         </div>
@@ -386,8 +373,7 @@ export default function SitemapPage() {
 
       {/* Resources & Tools */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -400,8 +386,7 @@ export default function SitemapPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (              <motion.div
                 key={resource.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -421,8 +406,7 @@ export default function SitemapPage() {
                   </div>
                   <p className='text-white/60 text-xs leading-relaxed'>
                     {resource.description}
-                  </p>                </Link>
-              </motion.div>
+                  </p>                </Link>              </motion.div>
             ))}
           </div>
         </div>
@@ -430,8 +414,7 @@ export default function SitemapPage() {
 
       {/* External Resources */}
       <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -444,8 +427,7 @@ export default function SitemapPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (              <motion.div
                 key={link.href}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -467,8 +449,7 @@ export default function SitemapPage() {
                   </div>
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {link.description}
-                  </p>                </a>
-              </motion.div>
+                  </p>                </a>              </motion.div>
             ))}
           </div>
         </div>
@@ -476,8 +457,7 @@ export default function SitemapPage() {
 
       {/* Contact Information */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-4xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-4xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -492,8 +472,7 @@ export default function SitemapPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (              <motion.div
                 key={contact.type}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -514,8 +493,7 @@ export default function SitemapPage() {
                       ? 'noopener noreferrer'
                       : ''
                   }
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'                >
-                  {contact.value}
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'                >                  {contact.value}
                 </a>
               </motion.div>
             ))}
@@ -525,8 +503,7 @@ export default function SitemapPage() {
 
       {/* Quick Navigation */}
       <section className='py-20 px-6'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -550,8 +527,7 @@ export default function SitemapPage() {
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
               >
                 Contact Support
-                <Mail className='w-5 h-5 ml-2' />              </Link>
-            </div>
+                <Mail className='w-5 h-5 ml-2' />              </Link>            </div>
           </motion.div>
         </div>
       </section>

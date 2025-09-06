@@ -1,8 +1,3 @@
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,7 +5,6 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-<<<<<<< HEAD
   AccordionTrigger,;
 } from '@/components/ui/accordion';
 import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
@@ -29,22 +23,6 @@ interface AIMilestoneGeneratorProps {
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
-=======
-  AccordionTrigger} from '@/components/ui/accordion',
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
-import { format, parseISO } from 'date-fns';
-import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
-import { Badge } from '@/components/ui/badge';
-interface AIMilestoneGeneratorProps {
-  scope: string,
-  startDate: string,
-  endDate: string | null,
-  projectType: string,
-  onAddMilestones: (milestones: GeneratedMilestone[],) => void,
-  onAddMilestone: (milestone: GeneratedMilestone,) => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export function AIMilestoneGenerator({
   scope,
   startDate,
@@ -77,7 +55,6 @@ export function AIMilestoneGenerator({
 
     await generateMilestones(input);
     // Initially select all milestones
-<<<<<<< HEAD
     const initialSelection: Record<number, boolean> = {};
     generatedMilestones.forEach((_, index: number) => {
       initialSelection[index] = true;
@@ -94,25 +71,6 @@ export function AIMilestoneGenerator({
     clearGeneratedMilestones();
     setSelectedMilestones({});
   };
-=======
-    const initialSelection: Record<number, boolean> = {},
-    generatedMilestones.forEach((_, index: number,) => {
-      initialSelection[index] = true
-    }),
-    setSelectedMilestones(initialSelection)
-  },
-
-  const handleAddToProject = () => {
-    const selectedMilestonesList = generatedMilestones.filter((_, index,) => 
-      selectedMilestones[index]
-    ),
-    
-    onAddMilestones(selectedMilestonesList),
-    clearGeneratedMilestones(),
-    setSelectedMilestones({})
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const toggleMilestoneSelection = (index: number,) => {
     setSelectedMilestones(prev => ({
       ...prev,
@@ -120,16 +78,9 @@ export function AIMilestoneGenerator({
     }));
   };
 
-<<<<<<< HEAD
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
     onAddMilestone(milestone);
   };
-=======
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone,) => {
-    onAddMilestone(milestone)
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const formatDate = (dateString: string,) => {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy');
@@ -146,16 +97,9 @@ export function AIMilestoneGenerator({
           AI Milestone Generator
         </h3>
         <Button
-<<<<<<< HEAD
           variant='outline'
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scope || !startDate || !projectType}
-=======
-          variant="outline"
-          onClick = {handleGenerateMilestones,}
-          disabled = {isGenerating || !scope || !startDate || !projectType,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        >
+          disabled={isGenerating || !scope || !startDate || !projectType}        >
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -178,21 +122,13 @@ export function AIMilestoneGenerator({
                 {generatedMilestones.length} milestones generated based on your
                 project scope
               </p>
-<<<<<<< HEAD
               <Button
                 onClick={handleAddToProject}
-                disabled={!Object.values(selectedMilestones).some(Boolean)}
-=======
-              <Button 
-                onClick = {handleAddToProject,}
-                disabled = {!Object.values(selectedMilestones).some(Boolean),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              >
+                disabled={!Object.values(selectedMilestones).some(Boolean)}              >
                 Add Selected to Project
               </Button>
             </div>
 
-<<<<<<< HEAD
             <Accordion type='multiple' className='w-full'>
               {generatedMilestones.map((milestone, index) => (
                 <AccordionItem
@@ -201,27 +137,12 @@ export function AIMilestoneGenerator({
                   className='border p-2 rounded-md mb-2'
                 >
                   <div className='flex items-center justify-between'>
-                    <div className='flex items-center flex-1'>
-=======
-            <Accordion type="multiple" className="w-full">
-              {generatedMilestones.map((milestone, index,) => (
-                <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center flex-1">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      <input
+                    <div className='flex items-center flex-1'>                      <input
                         type='checkbox'
                         id={`milestone-${index}`}
-<<<<<<< HEAD
                         checked={selectedMilestones[index] || false}
                         onChange={() => toggleMilestoneSelection(index)}
-                        className='mr-2 w-4 h-4 rounded text-primary'
-=======
-                        checked = {selectedMilestones[index] || false,}
-                        onChange = {(,) => toggleMilestoneSelection(index),}
-                        className="mr-2 w-4 h-4 rounded text-primary"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      />
+                        className='mr-2 w-4 h-4 rounded text-primary'                      />
                       <AccordionTrigger className='hover:no-underline flex-1 text-left'>
                         <div className='flex items-center'>
                           <span className='font-medium'>{milestone.title}</span>
@@ -236,20 +157,11 @@ export function AIMilestoneGenerator({
                       </AccordionTrigger>
                     </div>
                     <Button
-<<<<<<< HEAD
                       variant='ghost'
                       size='sm'
                       onClick={e => {
                         e.stopPropagation();
-                        handleAddSingleMilestone(milestone);
-=======
-                      variant="ghost"
-                      size="sm"
-                      onClick={(e,) => {
-                        e.stopPropagation(),
-                        handleAddSingleMilestone(milestone)
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      }}
+                        handleAddSingleMilestone(milestone);                      }}
                       className='mr-2'
                     >
                       <Plus className='h-4 w-4' />
@@ -275,7 +187,4 @@ export function AIMilestoneGenerator({
       )}
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

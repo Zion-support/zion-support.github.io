@@ -34,7 +34,6 @@ case 'customers': return (<> <Head> <title>Revolutionary 2025 Services Showcase 
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
-
 }whileInView= {
   {
   opacity: 1, y: 0 

@@ -38,8 +38,7 @@ import Link from 'next/link';
                             key={useCaseIndex}
                             className='text-sm text-gray-600 flex items-center'
                           >
-                            <span className='text-purple-500 mr-2'>•</span>                            {useCase}
-                          </li>
+                            <span className='text-purple-500 mr-2'>•</span>                            {useCase}                          </li>
                         ))}
                       </ul>
                     </div>
@@ -54,8 +53,7 @@ import Link from 'next/link';
                             key={benefitIndex}
                             className='text-sm text-gray-600 flex items-center'
                           >
-                            <span className='text-green-500 mr-2'>✓</span>                            {benefit}
-                          </li>
+                            <span className='text-green-500 mr-2'>✓</span>                            {benefit}                          </li>
                         ))}
                       </ul>
                     </div>
@@ -67,8 +65,7 @@ import Link from 'next/link';
 
                     <Link
                       href={solution.link}
-                      className='inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center'                    >
-                      Learn More
+                      className='inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center'                    >                      Learn More
                     </Link>
                   </div>
                 ))}
@@ -99,8 +96,7 @@ import Link from 'next/link';
           </div>
           <Link
             href='/contact'
-            className='bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors'          >
-            View Case Studies
+            className='bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors'          >            View Case Studies
           </Link>
         </div>
 
@@ -139,8 +135,7 @@ import Link from 'next/link';
           </div>
           <Link
             href='/contact'
-            className='bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors'          >
-            Discuss Custom Solutions
+            className='bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors'          >            Discuss Custom Solutions
           </Link>
         </div>
 
@@ -176,13 +171,11 @@ import Link from 'next/link';
               <p>kleber@ziontechgroup.com</p>
             </div>
             <div>
-              <h3 className='font-semibold mb-2'>🌐 Website</h3>              <p>https://ziontechgroup.com</p>
-            </div>
+              <h3 className='font-semibold mb-2'>🌐 Website</h3>              <p>https://ziontechgroup.com</p>            </div>
           </div>
         </div>
       </main>
     </div>
-  );
-};
+  );};
 
 export default SolutionsPage;

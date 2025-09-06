@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
   
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -12,12 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts";
-<<<<<<< HEAD
-import { Loader2, ShieldCheck, Download } from 'lucide-react'
-=======
-import { Loader2, ShieldCheck, Download } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { toast } from "sonner";
+import { Loader2, ShieldCheck, Download } from 'lucide-react'import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface SmartContractDeploymentProps {
   solidityCode: string,
@@ -87,16 +78,9 @@ export function SmartContractDeployment({
             <Switch
               id="deploy-blockchain"
               aria-label="Deploy to blockchain"
-<<<<<<< HEAD
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
-                ...deploymentOptions;
-=======
-              checked = {deploymentOptions.deployToChain,}
-              onCheckedChange={(checked,) => setDeploymentOptions({
-                ...deploymentOptions,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                deployToChain: checked
+                ...deploymentOptions;                deployToChain: checked
               })}
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
@@ -107,16 +91,9 @@ export function SmartContractDeployment({
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
                 <RadioGroup 
-<<<<<<< HEAD
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({
-                    ...deploymentOptions;
-=======
-                  defaultValue = {deploymentOptions.network,}
-                  onValueChange={(value,) => setDeploymentOptions({
-                    ...deploymentOptions,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    network: value as BlockchainNetwork
+                    ...deploymentOptions;                    network: value as BlockchainNetwork
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -136,16 +113,9 @@ export function SmartContractDeployment({
                 <Input 
                   id="wallet-address" 
                   placeholder="0x..." 
-<<<<<<< HEAD
                   value={deploymentOptions.walletAddress || ''}
                   onChange={(e) => setDeploymentOptions({
-                    ...deploymentOptions;
-=======
-                  value = {deploymentOptions.walletAddress || '',}
-                  onChange={(e,) => setDeploymentOptions({
-                    ...deploymentOptions,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    walletAddress: e.target.value
+                    ...deploymentOptions;                    walletAddress: e.target.value
                   })}
                 />
               </div>
@@ -154,16 +124,9 @@ export function SmartContractDeployment({
                 <Switch
                   id="use-escrow"
                   aria-label="Use escrow"
-<<<<<<< HEAD
                   checked={deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({
-                    ...deploymentOptions;
-=======
-                  checked = {deploymentOptions.useEscrow,}
-                  onCheckedChange={(checked,) => setDeploymentOptions({
-                    ...deploymentOptions,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    useEscrow: checked
+                    ...deploymentOptions;                    useEscrow: checked
                   })}
                 />
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>
@@ -209,8 +172,4 @@ export function SmartContractDeployment({
 }> {'";
   isDeploying ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract') ;
 }</Button> </CardFooter> </Card>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

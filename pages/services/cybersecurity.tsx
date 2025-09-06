@@ -13,8 +13,7 @@ import {
   Star,
   Users,
   Clock,
-  TrendingUp,;
-} from 'lucide-react';
+  TrendingUp,;} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
@@ -102,7 +101,6 @@ export default function CybersecurityServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/cybersecurity'
         />      </Head>
-
       <EnhancedNavigation />
 
       {/* Hero Section */}
@@ -118,8 +116,7 @@ export default function CybersecurityServicesPage() {
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Advanced security solutions that protect your digital assets and
-              ensure business continuity            </p>
-          </motion.div>
+              ensure business continuity            </p>          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -134,16 +131,14 @@ export default function CybersecurityServicesPage() {
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Secure Your Business
-              <ArrowRight className='w-5 h-5' />            </button>
-          </motion.div>
+              <ArrowRight className='w-5 h-5' />            </button>          </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
-              <motion.div
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (              <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -157,16 +152,14 @@ export default function CybersecurityServicesPage() {
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
-                <div className='text-white/70'>{stat.label}</div>              </motion.div>
-            ))}
+                <div className='text-white/70'>{stat.label}</div>              </motion.div>            ))}
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -181,15 +174,13 @@ export default function CybersecurityServicesPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (              <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300'
-              >
+                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300'              >
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}
                 >
@@ -213,8 +204,7 @@ export default function CybersecurityServicesPage() {
                   <span className='text-2xl font-bold text-orange-400'>
                     {service.price}
                   </span>
-                  <button className='px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105'>                    Get Started
-                  </button>
+                  <button className='px-6 py-3 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105'>                    Get Started                  </button>
                 </div>
               </motion.div>
             ))}
@@ -224,8 +214,7 @@ export default function CybersecurityServicesPage() {
 
       {/* CTA Section */}
       <section className='py-20 px-6'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -241,8 +230,7 @@ export default function CybersecurityServicesPage() {
               <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Security Assessment
               </button>
-              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Learn More
-              </button>
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Learn More              </button>
             </div>
           </motion.div>
         </div>

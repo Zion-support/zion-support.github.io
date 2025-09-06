@@ -7,8 +7,7 @@
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = 0.1,
   width,
-  height,}) => {
-export const LazyImage: React.FC<LazyImageProps> = ({
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
   src;
   alt;
   className = '';
@@ -16,9 +15,6 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   threshold = 0.1;
   width;
   height
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-}) => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -34,51 +30,41 @@ export const LazyImage: React.FC<LazyImageProps> = ({
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-=======
-          observer.disconnect()
+      observer.observe(imgRef.current);          observer.disconnect()
         }
       };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       { threshold }
     );
 
     if (imgRef.current) {
-<<<<<<< HEAD
       observer.observe(imgRef.current);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
 
     return () => observer.disconnect();
   }, [threshold]);
 
   const handleLoad = () => {
-    setIsLoaded(true);  };
-=======
+    setIsLoaded(true);  };    }
+
+    return () => observer.disconnect()
+  }, [threshold]);
+
+  const handleLoad = () => {
     setIsLoaded(true)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
       <img
         src={placeholder}
-        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-=======
-        alt=""
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
       />
-=======
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       {/* Actual Image */}
       {isInView && (
         <motion.img
@@ -97,24 +83,16 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   );
 };
 
-export default LazyImage;
-=======
-          className="w-full h-full object-cover"
+export default LazyImage;          className="w-full h-full object-cover"
           loading="lazy"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           style={{ width, height }}
         />
       )}
     </div>
-<<<<<<< HEAD
   );
 };
 
-export default LazyImage;
-=======
-  )
+export default LazyImage;  )
 };
 
 export default LazyImage;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

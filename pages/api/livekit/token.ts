@@ -9,20 +9,16 @@ import { AccessToken } from 'livekit-server-sdk';
       return res.status(400).json({ error: 'Missing roomName or identity' });
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
-      return res.status(500).json({ error: 'LiveKit env vars not configured' });
-    }
+      return res.status(500).json({ error: 'LiveKit env vars not configured' });    }
 
     const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
       identity: String(identity),
       name: name ? String(name) : String(identity),      ttl: 60 * 60, // 1 hour
     });
 
-    at.addGrant({
-      roomJoin: true,
-      room: String(roomName),
-      canPublish: audioOnly ? false : true,
-      canPublishData: true,
-      canSubscribe: true
+    at.addGrant({      roomJoin: true,
+      canPublish: true,
+      canSubscribe: true,
     });
     const token = await at.toJwt();
 

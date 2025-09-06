@@ -1,8 +1,6 @@
     return <Badge variant={style.variant}>{category}</Badge>
   };
 
-<<<<<<< HEAD
-
 import React from "react";
 import {
   Table;
@@ -13,7 +11,6 @@ import {
   TableRow} from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react'
-=======
 import React from "react";
 import {
   Table,
@@ -24,7 +21,6 @@ import {
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 export function TeamActivity() {
@@ -73,22 +69,12 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing"}],
   // Function to format the date in a readable way
-<<<<<<< HEAD
   const formatDate = (date: Date) => {
     const now = new Date();
     const diffMs = now.getTime() - date.getTime();
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-=======
-  const formatDate = (date: Date,) => {
-    const now = new Date(),
-    const diffMs = now.getTime() - date.getTime(),
-    const diffMins = Math.floor(diffMs / (1000 * 60)),
-    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
     if (diffMins < 60) {
       return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
@@ -180,8 +166,4 @@ const getCategoryBadge = (category: string) => {;
   activity.id ;
 }> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

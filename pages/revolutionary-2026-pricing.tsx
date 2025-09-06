@@ -29,8 +29,7 @@ import {
   ExternalLink,
   Filter,
   Grid,
-  List,;} from 'lucide-react';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+  List,;} from 'lucide-react';import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
@@ -66,7 +65,6 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
         }
         return true;
       });    }
-
     // Price filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -79,7 +77,6 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
         if (selectedPriceRange === 'premium') return price >= 20000;
         return true;
       });    }
-
     // Sort services
     filtered.sort((a, b) => {
       if (sortBy === 'price-low') {
@@ -93,8 +90,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
       if (sortBy === 'rating') return b.rating - a.rating;
       if (sortBy === 'popularity') return b.customers - a.customers;
       if (sortBy === 'name') return a.name.localeCompare(b.name);
-      return 0;
-    });
+      return 0;    });
 
     return filtered;
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services]);
@@ -138,27 +134,23 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
           s.category.includes('Enterprise') || s.category.includes('Business')
       ).length,
     },  ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
     { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' },  ];
-
   const sortOptions = [
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' },
     { id: 'rating', name: 'Highest Rated' },
     { id: 'popularity', name: 'Most Popular' },
     { id: 'name', name: 'Name A-Z' },  ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',  };
-
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: all2026Services.length,
@@ -177,8 +169,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
         s => parseFloat(s.price.replace(/[^0-9.]/g, '')) || 0
       )
     ),
-    popularServices: all2026Services.filter(s => s.popular).length,
-  };
+    popularServices: all2026Services.filter(s => s.popular).length,  };
 
   
     >
@@ -214,15 +205,13 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
             rel='canonical'
             href='https://ziontechgroup.com/revolutionary-2026-pricing'
           />        </Head>
-
         {/* Enhanced Navigation */}
         <EnhancedNavigation2026 />
 
         {/* Hero Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20'></div>
-          <div className='max-w-7xl mx-auto relative z-10'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto relative z-10'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -263,8 +252,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                   <div className='text-2xl font-bold text-yellow-400'>
                     {pricingStats.popularServices}
                   </div>
-                  <div className='text-gray-400 text-sm'>Popular Services</div>                </div>
-              </div>
+                  <div className='text-gray-400 text-sm'>Popular Services</div>                </div>              </div>
             </motion.div>
 
             {/* Contact Information */}
@@ -295,8 +283,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                   <MapPin className='w-5 h-5 text-purple-400' />
                   <span className='text-sm text-gray-300'>
                     {contactInfo.address}
-                  </span>                </div>
-              </div>
+                  </span>                </div>              </div>
             </motion.div>
           </div>
         </section>
@@ -308,8 +295,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
               <div className='flex flex-col lg:flex-row gap-6'>
                 {/* Category Filter */}
                 <div className='flex flex-wrap gap-2'>
-                  {categories.map(category => (                    <button
-                      key={category.id}
+                  {categories.map(category => (                    <button                      key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                         selectedCategory === category.id
@@ -324,8 +310,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
 
                 {/* Price Range Filter */}
                 <div className='flex flex-wrap gap-2'>
-                  {priceRanges.map(range => (                    <button
-                      key={range.id}
+                  {priceRanges.map(range => (                    <button                      key={range.id}
                       onClick={() => setSelectedPriceRange(range.id)}
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                         selectedPriceRange === range.id
@@ -345,8 +330,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                     onChange={e => setSortBy(e.target.value)}
                     className='px-3 py-2 bg-black/60 border border-purple-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500/60'
                   >
-                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
-                        {option.name}
+                    {sortOptions.map(option => (                      <option key={option.id} value={option.id}>                        {option.name}
                       </option>
                     ))}
                   </select>
@@ -369,15 +353,13 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
               </p>
             </div>
 
-            <AnimatePresence mode='wait'>              {filteredServices.length === 0 ? (
-                <motion.div
+            <AnimatePresence mode='wait'>              {filteredServices.length === 0 ? (                <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className='text-center py-20'
                 >
-                  <div className='text-gray-400 text-xl'>                    No services found matching your criteria.
-                    <br />
+                  <div className='text-gray-400 text-xl'>                    No services found matching your criteria.                    <br />
                     Try adjusting your filters.
                   </div>
                 </motion.div>
@@ -386,8 +368,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'                >
-                  {filteredServices.map((service, index) => (
+                  className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'                >                  {filteredServices.map((service, index) => (
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
@@ -420,8 +401,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                             <div className='text-gray-400 text-sm'>
                               {service.trialDays > 0
                                 ? `${service.trialDays}-day free trial`
-                                : 'No trial available'}                            </div>
-                          </div>
+                                : 'No trial available'}                            </div>                          </div>
                         </div>
 
                         {/* Features */}
@@ -492,8 +472,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                             href={`tel:${contactInfo.mobile}`}
                             className='bg-black/40 hover:bg-black/60 text-white font-semibold py-3 px-6 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center'
                           >
-                            <Phone className='w-4 h-4 mr-2' />                            Contact Sales
-                          </a>
+                            <Phone className='w-4 h-4 mr-2' />                            Contact Sales                          </a>
                         </div>
 
                         {/* Badges */}
@@ -503,8 +482,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                             </div>
                           )}
                           {service.price.includes('Custom') && (
-                            <div className='bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-bold px-3 py-1 rounded-full'>                              CUSTOM
-                            </div>
+                            <div className='bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-bold px-3 py-1 rounded-full'>                              CUSTOM                            </div>
                           )}
                         </div>
                       </div>
@@ -518,8 +496,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
 
         {/* Pricing Comparison */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-6xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-6xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -534,14 +511,12 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {/* Value Proposition */}
-              <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {/* Value Proposition */}              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className='text-center'
-              >
+                className='text-center'              >
                 <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6'>
                   <DollarSign className='w-8 h-8 text-white' />
                 </div>
@@ -551,8 +526,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                 <p className='text-gray-300'>
                   Get enterprise-grade technology at competitive prices. Our
                   services deliver 1000%+ ROI, making them the smartest
-                  investment for your business.                </p>
-              </motion.div>
+                  investment for your business.                </p>              </motion.div>
 
               {/* Technology */}
               <motion.div
@@ -560,8 +534,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className='text-center'
-              >
+                className='text-center'              >
                 <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6'>
                   <Rocket className='w-8 h-8 text-white' />
                 </div>
@@ -571,8 +544,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                 <p className='text-gray-300'>
                   Access the latest AI, quantum computing, and emerging
                   technologies before they become mainstream. Stay ahead of the
-                  competition with our innovative solutions.                </p>
-              </motion.div>
+                  competition with our innovative solutions.                </p>              </motion.div>
 
               {/* Support */}
               <motion.div
@@ -580,8 +552,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className='text-center'
-              >
+                className='text-center'              >
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6'>
                   <Users className='w-8 h-8 text-white' />
                 </div>
@@ -591,16 +562,14 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                 <p className='text-gray-300'>
                   Get dedicated support from our team of experts. We're here to
                   ensure your success with implementation, training, and ongoing
-                  optimization.                </p>
-              </motion.div>
+                  optimization.                </p>              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Call to Action */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -639,8 +608,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
                     {contactInfo.website}
                   </a>
                 </p>
-                <p className='mt-2'>{contactInfo.address}</p>              </div>
-            </motion.div>
+                <p className='mt-2'>{contactInfo.address}</p>              </div>            </motion.div>
           </div>
         </section>
       </div>

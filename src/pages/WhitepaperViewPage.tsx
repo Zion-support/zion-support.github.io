@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 
-export default WhitepaperViewPage;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React, { useState, useEffect } from 'react';
+export default WhitepaperViewPage;import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel
@@ -139,4 +133,3 @@ const WhitepaperViewPage: React.FC = () => {
 },
 
 export default WhitepaperViewPage,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

@@ -8,8 +8,6 @@ interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
   success: boolean,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-}
 
 interface RequestOptions extends RequestInit {
   timeout?: number;
@@ -44,8 +42,6 @@ class ApiClient {
 
   private async request<T>(
     endpoint: string,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const { timeout = this.defaultTimeout, ...fetchOptions } = options;
     
@@ -60,8 +56,6 @@ class ApiClient {
     'Content-Type': 'application/json',
     ...fetchOptions.headers
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      });
 
       clearTimeout(timeoutId);
 
@@ -76,8 +70,6 @@ class ApiClient {
       console.error('API request failed:', error);
       return {
         error: error instanceof Error ? error.message : 'Unknown error occurred', success: false,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      };
     }
   }
 
@@ -89,16 +81,12 @@ class ApiClient {
     return this.request<T>(endpoint, {
       ...options;
       method: 'POST', body: data ? JSON.stringify(data) : undefined,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    });
   }
 
   async put<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options;
       method: 'PUT', body: data ? JSON.stringify(data) : undefined,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    });
   }
 
   async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
@@ -108,4 +96,3 @@ class ApiClient {
 
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

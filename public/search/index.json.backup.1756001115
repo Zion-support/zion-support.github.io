@@ -136,6 +136,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -149,11 +150,14 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/ai-powered-it-asset-management",
     "title": "AI-Powered IT Asset Management - Zion Tech Group",
     "h1": ""
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -167,6 +171,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/ai-seo-suite",
     "title": "AI-Powered SEO Suite | Zion Tech Group - Advanced SEO Tools & Analytics",
     "h1": "AI-Powered SEO Suite"
@@ -238,6 +244,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -257,6 +264,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/autonomous-vehicle-ai-platform",
     "title": "{service.name} - Zion Tech Group",
     "h1": ""
@@ -628,6 +637,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -641,11 +651,14 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/quantum-neural-network-platform",
     "title": "Quantum Neural Network Platform - Zion Tech Group",
     "h1": ""
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -659,6 +672,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/quantum-secure-cloud-infrastructure",
     "title": "",
     "h1": "Quantum-Secure Cloud Infrastructure 2045"
@@ -736,6 +751,7 @@
   {
     "route": "/services",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -745,9 +761,11 @@
 =======
     "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
 >>>>>>> origin/cursor/website-audit-and-enhancement-7e54
-    "h1": ""
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "h1": ""
     "title": "Revolutionary 2025 Technology Services | Zion Tech Group",    "h1": ""
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -755,6 +773,9 @@
     "title": "Revolutionary 2025 Technology Services | Zion Tech Group",    "h1": ""
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "title": "Revolutionary 2025 Technology Services | Zion Tech Group",    "h1": ""
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   {
     "route": "/site-health",

@@ -4,17 +4,17 @@
 
 // NOTE: This file should not be edited
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
-// see https://nextjs.org/docs/basic-features/typescript for more information.
 =======
-// see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 // see https://nextjs.org/docs/basic-features/typescript for more information.
+// see https://nextjs.org/docs/basic-features/typescript for more information.
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -22,3 +22,5 @@
 // see https://nextjs.org/docs/basic-features/typescript for more information.
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

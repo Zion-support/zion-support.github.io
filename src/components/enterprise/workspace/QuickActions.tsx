@@ -11,33 +11,22 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react';
 export function QuickActions() {
   const actions = [
     {
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { FileText, Plus, Search, Calendar } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Calendar } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
-=======
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function QuickActions() {
   const actions = [
     {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       id: 'post-job',
       label: 'Post New Job',
       icon: <FileText className='h-5 w-5 mr-2' />,
       description: 'Create a new job posting',
       color: 'bg-blue-100 dark:bg-blue-900/20',
     },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    {
       id: 'add-member',
       label: 'Add Team Member',
       icon: <Plus className='h-5 w-5 mr-2' />,
@@ -67,18 +56,10 @@ export function QuickActions() {
       </CardHeader>
       <CardContent>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {actions.map(action => (
-<<<<<<< HEAD
             <Button
               key={action.id}
-              variant='outline'
-=======
-            <Button 
-              key = {action.id,}
-              variant="outline" 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              className={`h-auto justify-start p-4 ${action.color}`}
+              variant='outline'              className={`h-auto justify-start p-4 ${action.color}`}
             >
               <div className='flex flex-col items-start text-left'>
                 <div className='flex items-center'>
@@ -88,11 +69,20 @@ export function QuickActions() {
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
                 </span>              </div>
-=======
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          {actions.map(action => (
+            <Button 
+              key={action.id}
+              variant="outline" 
+              className={`h-auto justify-start p-4 ${action.color}`}
+            >
+              <div className="flex flex-col items-start text-left">
+                <div className="flex items-center">
+                  {action.icon}
+                  <span>{action.label}</span>
+                </div>
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </Button>
           ))}
         </div>
@@ -100,7 +90,3 @@ export function QuickActions() {
     </Card>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

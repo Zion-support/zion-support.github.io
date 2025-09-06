@@ -24,8 +24,7 @@ export default async function handler(
   await ensure();
   if (req.method === 'GET') {
     const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);  }
-  if (req.method === 'POST') {
+    return res.status(200).json(data);  }  if (req.method === 'POST') {
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const comment = {
@@ -34,8 +33,7 @@ export default async function handler(
       region: body.region || 'Global',
       author: body.author || 'anon',
       text: body.text || '',
-      createdAt: new Date().toISOString(),
-    };
+      createdAt: new Date().toISOString(),    };
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);

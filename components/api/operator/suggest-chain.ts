@@ -6,13 +6,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body || {};
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    return res.status(405).json({ error: 'Method not allowed' });  const { region, stakeUsd } = req.body || {};export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const { region, stakeUsd } = req.body || {};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const stake = Number(stakeUsd || 0);
 
   // Simple heuristics
@@ -22,7 +18,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
   let candidates = ['polygon', 'bnb', 'avalanche'];
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const regionLc = (region || '').toString().toLowerCase();
   if (regionLc.includes('apac') || regionLc.includes('asia')) {
@@ -50,9 +45,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res
     .status(200)
     .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
-=======
+  const regionLc = (region || '').toString().toLowerCase();
+  if (regionLc.includes('apac') || regionLc.includes('asia')) {
+    candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon']
+  } else if (regionLc.includes('eu') || regionLc.includes('europe')) {
+    candidates = stake > 5000 ? ['arbitrumethereumoptimism'] : ['polygonarbitrumoptimism']
+  } else if (regionLc.includes('us') || regionLc.includes('na') || regionLc.includes('america')) {
+    candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism']
+  }
+
   const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

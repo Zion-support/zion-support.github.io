@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -39,6 +40,9 @@
 }
 
 main();#!/usr/bin/env node;
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

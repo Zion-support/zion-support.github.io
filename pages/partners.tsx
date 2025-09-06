@@ -35,8 +35,7 @@ export default function PartnersPage() {
       ],
       icon: Globe,
       color: 'from-blue-500 to-cyan-500',
-    },
-    {
+    },    {
       name: 'NVIDIA',
       category: 'AI & Computing',
       description:
@@ -105,8 +104,7 @@ export default function PartnersPage() {
     {
       title: 'Technology Alliance',
       description: 'Deep technical integration and joint product development',
-      benefits: ['Shared technology roadmap', 'Joint R&D', 'Co-innovation'],
-      icon: Handshake,
+      benefits: ['Shared technology roadmap', 'Joint R&D', 'Co-innovation'],      icon: Handshake,
       color: 'from-blue-500 to-cyan-500',
     },
     {
@@ -162,7 +160,6 @@ export default function PartnersPage() {
           content='Strategic partnerships and collaboration opportunities.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/partners' />      </Head>
-
       <EnhancedNavigation />
 
       {/* Hero Section */}
@@ -178,8 +175,7 @@ export default function PartnersPage() {
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Building the future of technology through strategic partnerships
-              and collaboration            </p>
-          </motion.div>
+              and collaboration            </p>          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -194,16 +190,14 @@ export default function PartnersPage() {
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Become a Partner
-              <ArrowRight className='w-5 h-5' />            </button>
-          </motion.div>
+              <ArrowRight className='w-5 h-5' />            </button>          </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
-              <motion.div
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (              <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -217,16 +211,14 @@ export default function PartnersPage() {
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
-                <div className='text-white/70'>{stat.label}</div>              </motion.div>
-            ))}
+                <div className='text-white/70'>{stat.label}</div>              </motion.div>            ))}
           </div>
         </div>
       </section>
 
       {/* Partnership Types */}
       <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -241,15 +233,13 @@ export default function PartnersPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes.map((type, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes.map((type, index) => (              <motion.div
                 key={type.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'
-              >
+                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'              >
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}
                 >
@@ -265,8 +255,7 @@ export default function PartnersPage() {
                       key={benefit}
                       className='flex items-center text-white/80'
                     >
-                      <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3' />                      {benefit}
-                    </li>
+                      <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3' />                      {benefit}                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -277,8 +266,7 @@ export default function PartnersPage() {
 
       {/* Current Partners */}
       <section className='py-20 px-6'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -291,8 +279,7 @@ export default function PartnersPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners.map((partner, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners.map((partner, index) => (              <motion.div
                 key={partner.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -333,8 +320,7 @@ export default function PartnersPage() {
                           key={benefit}
                           className='text-xs text-white/80 flex items-center'
                         >
-                          <div className='w-1 h-1 bg-cyan-400 rounded-full mr-2' />                          {benefit}
-                        </li>
+                          <div className='w-1 h-1 bg-cyan-400 rounded-full mr-2' />                          {benefit}                        </li>
                       ))}
                     </ul>
                   </div>
@@ -349,8 +335,7 @@ export default function PartnersPage() {
                       Visit Website
                       <ExternalLink className='w-3 h-3' />
                     </a>
-                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>                      Learn More
-                    </button>
+                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105'>                      Learn More                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -361,8 +346,7 @@ export default function PartnersPage() {
 
       {/* Become a Partner CTA */}
       <section className='py-20 px-6'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -378,8 +362,7 @@ export default function PartnersPage() {
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Partnership Inquiry
               </button>
-              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Download Partnership Guide
-              </button>
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Download Partnership Guide              </button>
             </div>
           </motion.div>
         </div>

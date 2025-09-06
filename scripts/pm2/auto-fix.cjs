@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 
@@ -199,3 +200,5 @@ if (require.main === module) {
 module.exports = AutoFixer;
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

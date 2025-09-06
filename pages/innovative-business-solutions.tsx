@@ -49,8 +49,7 @@ import {
   TrendingUp as ChartIcon,
   Megaphone,
   HeadphonesIcon,
-  Users as TeamIcon,;
-} from 'lucide-react';
+  Users as TeamIcon,;} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 const contactInfo = {
@@ -81,7 +80,6 @@ const heroStats = [
     value: '400%',
     icon: <TrendingUp className='w-5 h-5' />,
   },];
-
 const serviceCategories = [
   {
     title: 'Business Intelligence & Analytics',
@@ -142,7 +140,6 @@ const serviceCategories = [
       'Employee Engagement',
     ],
   },];
-
 const heroFeatures = [
   {
     title: 'AI-Powered Intelligence',
@@ -150,8 +147,7 @@ const heroFeatures = [
       'Advanced AI algorithms that provide intelligent insights and automation for business operations.',
     icon: Brain,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600',
-  },
-  {
+  },  {
     title: 'Automated Workflows',
     description:
       'Intelligent automation that reduces manual tasks and improves operational efficiency.',
@@ -172,7 +168,6 @@ const heroFeatures = [
     icon: Sparkles,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
   },];
-
 const testimonials = [
   {
     name: 'Michael Rodriguez',
@@ -182,16 +177,14 @@ const testimonials = [
       "Zion Tech Group's business intelligence platform has transformed our decision-making process. We now have real-time insights that have increased our revenue by 300%.",
     rating: 5,
     avatar: '👨‍💼',
-  },  {
-    name: 'Sarah Johnson',
+  },  {    name: 'Sarah Johnson',
     role: 'Marketing Director, DigitalFlow Agency',
     company: 'DigitalFlow Agency',
     content:
       "The AI marketing automation platform has revolutionized our campaigns. We've seen conversion rates increase by 150% while reducing costs by 40%.",
     rating: 5,
     avatar: '👩‍💼',
-  },  {
-    name: 'David Chen',
+  },  {    name: 'David Chen',
     role: 'Sales Manager, TechSales Pro',
     company: 'TechSales Pro',
     content:
@@ -199,7 +192,6 @@ const testimonials = [
     rating: 5,
     avatar: '👨‍💻',
   },];
-
 export default function InnovativeBusinessSolutions() {
   return (
     <Layout>
@@ -235,8 +227,7 @@ export default function InnovativeBusinessSolutions() {
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20'></div>
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -247,8 +238,7 @@ export default function InnovativeBusinessSolutions() {
               Transform your business operations with AI-powered intelligence,
               automation, and analytics that drive growth and efficiency
             </p>
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
-                <motion.div
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -275,8 +265,7 @@ export default function InnovativeBusinessSolutions() {
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'
               >
-                <Phone className='mr-2 w-5 h-5' />                Get Started
-              </Link>
+                <Phone className='mr-2 w-5 h-5' />                Get Started              </Link>
             </div>
           </motion.div>
         </div>
@@ -284,8 +273,7 @@ export default function InnovativeBusinessSolutions() {
 
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -300,8 +288,7 @@ export default function InnovativeBusinessSolutions() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -320,8 +307,7 @@ export default function InnovativeBusinessSolutions() {
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
-                      <p className='text-gray-300'>{feature.description}</p>                    </div>
-                  </div>
+                      <p className='text-gray-300'>{feature.description}</p>                    </div>                  </div>
                 </div>
               </motion.div>
             ))}
@@ -331,8 +317,7 @@ export default function InnovativeBusinessSolutions() {
 
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -347,8 +332,7 @@ export default function InnovativeBusinessSolutions() {
             </p>
           </motion.div>
 
-          <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
-              <motion.div
+          <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (              <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -370,8 +354,7 @@ export default function InnovativeBusinessSolutions() {
                   </p>
                 </div>
 
-                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
-                    <motion.div
+                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (                    <motion.div
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -428,8 +411,7 @@ export default function InnovativeBusinessSolutions() {
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
-                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300'                            >
-                              Get Started
+                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300'                            >                              Get Started
                             </Link>
                           </div>
                         </div>
@@ -445,8 +427,7 @@ export default function InnovativeBusinessSolutions() {
 
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -461,8 +442,7 @@ export default function InnovativeBusinessSolutions() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -486,8 +466,7 @@ export default function InnovativeBusinessSolutions() {
                 <div className='flex items-center'>
                   <div className='flex text-yellow-400'>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className='w-4 h-4 fill-current' />                    ))}
-                  </div>
+                      <Star key={i} className='w-4 h-4 fill-current' />                    ))}                  </div>
                 </div>
               </motion.div>
             ))}
@@ -497,8 +476,7 @@ export default function InnovativeBusinessSolutions() {
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -527,8 +505,7 @@ export default function InnovativeBusinessSolutions() {
             </div>
             <div className='mt-8 text-center'>
               <p className='text-gray-300 mb-2'>📍 {contactInfo.address}</p>
-              <p className='text-gray-300'>🌐 {contactInfo.website}</p>            </div>
-          </motion.div>
+              <p className='text-gray-300'>🌐 {contactInfo.website}</p>            </div>          </motion.div>
         </div>
       </section>
     </Layout>

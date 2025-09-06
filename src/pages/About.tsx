@@ -1,17 +1,7 @@
-<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ContactSection } from '@/components/ContactSection';
 import Link from 'next/link';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-<<<<<<< HEAD
-=======
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ContactSection } from "@/components/ContactSection";
-import Link from "next/link";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function About() {
   const team = [
     {
@@ -36,7 +26,6 @@ export default function About() {
       bio: "Sam Lee serves as Zion's Head of Community, cultivating relationships with developers, partners, and customers worldwide. He previously launched multiple tech communities that grew from small meetups into thriving networks. At Zion, Sam orchestrates events, online forums, and mentorship programs that encourage collaboration and knowledge sharing. His empathetic approach helps newcomers feel welcomed while promoting an inclusive culture. Sam studied communications and has a background in user advocacy. In his downtime, he enjoys photography and traveling with his family, often.",
     },
   ];
-=======
 import React from 'react';
 import { SEO } from '../components/SEO';
 const About: React.FC = () => {;
@@ -211,7 +200,6 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
           </div>;
         </div>;
       </section>;
->>>>>>> origin/automation-fixes
 
   const timeline = [
     {
@@ -371,7 +359,6 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
                 </p>
               </div>
 
-<<<<<<< HEAD
               <div className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>
                 <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>
                   <svg
@@ -398,7 +385,6 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className='content-section'>
             <h2 className='text-3xl font-bold text-white mb-8 text-center'>
               Company Timeline
@@ -408,23 +394,11 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
                 <li key={event.year} className='mb-10 ml-4'>
                   <span className='absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-zion-cyan' />
                   <time className='font-semibold text-white'>{event.year}</time>
-                  <p className='text-zion-slate-light mt-2'>{event.text}</p>
-=======
-          <div className="content-section">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Company Timeline</h2>
-            <ol className="relative border-l border-zion-blue-light pl-6 max-w-3xl mx-auto">
-              {timeline.map((event,) => (
-                <li key={event.year} className="mb-10 ml-4">
-                  <span className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-zion-cyan" />
-                  <time className="font-semibold text-white">{event.year}</time>
-                  <p className="text-zion-slate-light mt-2">{event.text}</p>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                </li>
+                  <p className='text-zion-slate-light mt-2'>{event.text}</p>                </li>
               ))}
             </ol>
           </div>
 
-<<<<<<< HEAD
           <div className='content-section text-center'>
             <h2 className='text-3xl font-bold text-white mb-8'>
               Meet the Team
@@ -436,20 +410,7 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
                     <img
                       src={member.image}
                       alt={member.name}
-                      className='object-cover rounded-full'
-=======
-          <div className="content-section text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Meet the Team</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              {team.map((member,) => (
-                <div key={member.name} className="text-center space-y-3">
-                  <div className="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden">
-                    <img
-                      src = {member.image,}
-                      alt = {member.name,}
-                      className="object-cover rounded-full"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    />
+                      className='object-cover rounded-full'                    />
                   </div>
                   <p className='text-white font-bold'>{member.name}</p>
                   <p className='text-zion-slate-light'>{member.role}</p>
@@ -496,11 +457,6 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
       </main>
     </>
   );
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
       {/* CTA Section */}
       <section className="py-20">;
         <div className="container mx-auto px-4">;
@@ -645,4 +601,4 @@ className="border-2 border-white text-white hover: bg-white hover:text-blue-600 
 <Head> <title> About - Zion Tech Group</title> <meta name="description" content="Learn about Zion Tech Group" / /` > </Head> <main className="min - h-screen bg - white"> <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20"> <div className="text - center mb - 16"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 6"> About Zion Tech Group </h1> <p className="text - xl text - gray - 600 max - w-3xl mx - auto"> Leading technology solutions provider. </p> </div> <div className="grid md:grid - cols - 2 gap - 12"> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 4">Our Mission</h2> <p className="text - gray - 600 mb - 6"> To empower businesses with cutting - edge technology solutions that drive innovation, efficiency, and growth. </p> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 4">Our Vision</h2> <p className="text - gray - 600"> To be the leading technology partner for businesses seeking to transform their operations through AI, automation, and digital innovation. </p> </div> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 4">Why Choose Us</h2> <ul className="space - y-3 text - gray - 600"> <li>• Expert team with deep industry knowledge</li> <li>• Proven track record of successful implementations</li> <li>• Cutting - edge technology and innovative solutions</li> <li>• Dedicated support and ongoing maintenance</li> <li>• Competitive pricing and flexible engagement models</li> </ul> </div> </div> </div> </main> </>) }""";"  ];
 export default React.memo(function About () { return (<>;
 <Head> <title> About - Zion Tech Group</title> <meta name = "description" content="Learn about Zion Tech Group" / /"> </Head> <main className="min - h-screen bg - white"> <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20"> <div className="text - center mb - 16"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 6"> About Zion Tech Group </h1> <p className="text - xl text - gray - 600 max - w-3xl mx - auto"> Leading technology solutions provider. </p> </div> <div className="grid md:grid - cols - 2 gap - 12"> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 4">Our Mission</h2> <p className="text - gray - 600 mb - 6"> To empower businesses with cutting - edge technology solutions that drive innovation, efficiency, and growth. </p> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 4">Our Vision</h2> <p className="text - gray - 600"> To be the leading technology partner for businesses seeking to transform their operations through AI, automation, and digital innovation. </p> </div> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 4">Why Choose Us</h2> <ul className="space - y-3 text - gray - 600"> <li>• Expert team with deep industry knowledge</li> <li>• Proven track record of successful implementations</li> <li>• Cutting - edge technology and innovative solutions</li> <li>• Dedicated support and ongoing maintenance</li> <li>• Competitive pricing and flexible engagement models</li> </ul> </div> </div> </div> </main> </>) }"))))))))))))))
->>>>>>> origin/automation-fixes
+}

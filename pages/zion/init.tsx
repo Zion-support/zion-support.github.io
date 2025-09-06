@@ -2,7 +2,6 @@
   const [state, setState] = useState<DeployFormState> ({
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
   logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' };
-
 const defaultModules: DeployFormState['modules'] = {
   marketplace: true,
   gpt: true,
@@ -24,8 +23,7 @@ const defaultBonus: DeployFormState['bonusModules'] = {
   'grant-portal': false,
   trailer: false,
   'book-store': false,
-};
-const InitPage: NextPage = () => {
+};const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState>({
     instanceName: '',
     defaultLanguage: 'en',
@@ -40,8 +38,7 @@ const InitPage: NextPage = () => {
     },
     modules: defaultModules,
     bonusModules: defaultBonus,
-  });  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<any>(null);
+  });  const [submitting, setSubmitting] = useState(false);  const [result, setResult] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
 
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
@@ -49,7 +46,6 @@ const InitPage: NextPage = () => {
       ...prev,
       [group]: { ...prev[group], [key]: !prev[group][key] },
     }));  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -151,15 +147,13 @@ const InitPage: NextPage = () => {
                   governanceMode: e.target.value as GovernanceMode,
                 })
               }
-            >              <option>Admin</option>
-              <option>DAO</option>
+            >              <option>Admin</option>              <option>DAO</option>
               <option>Hybrid</option>
             </select>
           </div>
         </section>
 
-        <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <div>
+        <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>          <div>
             <label className='block text-sm font-medium'>Logo URL</label>
             <input
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
@@ -228,8 +222,7 @@ const InitPage: NextPage = () => {
                     type='checkbox'
                     checked={state.modules[key]}
                     onChange={() => handleToggle('modules', key)}
-                  />                  <span>/{key}</span>
-                </label>
+                  />                  <span>/{key}</span>                </label>
               ))}
             </div>
           </div>
@@ -242,8 +235,7 @@ const InitPage: NextPage = () => {
                     type='checkbox'
                     checked={state.bonusModules[key]}
                     onChange={() => handleToggle('bonusModules', key)}
-                  />                  <span>/{key}</span>
-                </label>
+                  />                  <span>/{key}</span>                </label>
               ))}
             </div>
           </div>
@@ -268,7 +260,6 @@ const InitPage: NextPage = () => {
         </div>
       )}
     </div>
-  );
-};
+  );};
 
 export default InitPage;

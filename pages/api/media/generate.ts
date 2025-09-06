@@ -12,8 +12,7 @@ export default async function handler(
       date = new Date().toISOString().substring(0, 10),
       raiseAmount,
       tokenName,
-    } = req.body || {};
-    const apiKey = process.env.OPENAI_API_KEY;
+    } = req.body || {};    const apiKey = process.env.OPENAI_API_KEY;
     if (apiKey) {
       try {
         const { OpenAI } = await import('openai');
@@ -25,16 +24,14 @@ export default async function handler(
             { role: 'system', content: 'You are a seasoned tech PR writer.' },
             { role: 'user', content: prompt },
             { role: 'user', content: prompt }
-ursor/integrate-build-improve-and-re-verify-b76c
-          ],
+ursor/integrate-build-improve-and-re-verify-b76c          ],
           temperature: 0.4,
           max_tokens: 500
         });
         const text = completion.choices?.[0]?.message?.content?.trim();
         if (text) {
           res.status(200).json({ ok: true, text });
-          return;        }
-      } catch (_) {
+          return;        }      } catch (_) {
         // fall through to template
       }
     }

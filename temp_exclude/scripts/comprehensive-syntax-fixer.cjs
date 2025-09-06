@@ -49,6 +49,7 @@
     let fixed = content;
     
     // Fix merge conflicts by keeping the HEAD version
+<<<<<<< HEAD
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
@@ -293,6 +294,8 @@ if (require.main === module) {
   }
 }
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

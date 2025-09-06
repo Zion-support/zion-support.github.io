@@ -28,26 +28,9 @@ if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
     (globalThis as any).process = createProcessObject();
   } else if (typeof (globalThis as any).process.env === 'undefined') {
-<<<<<<< HEAD
-    (globalThis as any).process.env = { ...defaultEnv };
-=======
-    (globalThis as any).process.env = { ...defaultEnv ,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  }
+    (globalThis as any).process.env = { ...defaultEnv };  }
 
-<<<<<<< HEAD
 }//Ensure process is available on window ;
-=======
-// Ensure process is available on window
-if (typeof window !== 'undefined') {
-  if (typeof (window as any).process === 'undefined') {
-    (window as any).process = createProcessObject()
-  } else if (typeof (window as any).process.env === 'undefined') {
-    (window as any).process.env = { ...defaultEnv ,}
-  }
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 // Ensure process is available globally
 if (typeof (globalThis as any).process === 'undefined') {
   (globalThis as any).process = createProcessObject();
@@ -105,7 +88,5 @@ export const processEnv =
 console.log('✅ Environment polyfill loaded successfully');
 
 export default safeEnv;
-=======
 export default safeEnv;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+export default safeEnv;

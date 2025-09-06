@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { useState, useEffect } from 'react';
+  import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
 import { Tabs } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-<<<<<<< HEAD
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
-=======
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { Button } from '@/components/ui/button';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'import { Button } from '@/components/ui/button';
 import { Resume } from '@/types/resume';
 // Import components
 import { ResumeProgress } from './ResumeProgress';
@@ -191,8 +181,4 @@ export function ResumeWizard() {
   prevStep ;
 }/>) ;
 }</Tabs> </CardContent> </Card> </div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

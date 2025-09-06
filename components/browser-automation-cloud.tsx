@@ -70,8 +70,7 @@ export default function BrowserAutomationCloudPage() {
         </section>
       </main>
     </>
-  );
-	return (
+  );	return (
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -101,5 +100,3 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -39,7 +39,6 @@
 }</div> <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > Industry Solutions </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8" > Tailored technology solutions designed specifically for your industry's unique challenges and opportunities. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Get Started <ArrowRight className="inline-block ml-2 w-5 h-5" /> </Link> <Link href="/demo" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > Request Demo </Link> </div> </motion.div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
-
 }whileInView= {
   {
   opacity: 1, y: 0 

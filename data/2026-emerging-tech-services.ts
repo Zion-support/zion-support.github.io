@@ -41,15 +41,11 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-=======
-  mobile: '+1 302 464 0950';
+  website: 'https://ziontechgroup.com',};  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
@@ -62,8 +58,6 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     period: '/month',
     description:
       'Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum machine learning capabilities. Features include quantum circuit optimization, quantum error correction, and hybrid quantum-classical computing.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Access to multiple quantum processors (IBM, Google, Rigetti)',
       'AI-optimized quantum algorithm library',
       'Quantum error correction and noise mitigation',
@@ -589,10 +583,6 @@ export const getEmergingTechServices2026ByPriceRange = (
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
-};
-=======
-    return price >= minPrice && price <= maxPrice
+};    return price >= minPrice && price <= maxPrice
   })
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

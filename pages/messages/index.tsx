@@ -12,12 +12,10 @@ const Messages: NextPage = () => {
 
       <EmptyState
         title='No messages yet'
-        description='Start a conversation by requesting a quote or responding to an existing one.'        icon={<span>📫</span>}
-        primaryAction={{ label: 'Explore talent', href: '/talent' }}
+        description='Start a conversation by requesting a quote or responding to an existing one.'        icon={<span>📫</span>}        primaryAction={{ label: 'Explore talent', href: '/talent' }}
         secondaryAction={{ label: 'Browse services', href: '/services' }}
       />
     </div>
-  );
-};
+  );};
 
 export default Messages;

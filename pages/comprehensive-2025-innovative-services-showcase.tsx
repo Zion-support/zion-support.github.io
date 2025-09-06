@@ -11,8 +11,7 @@ import {
   Star as StarIcon,
   Phone,
   Mail,
-  MapPin,;} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
+  MapPin,;} from 'lucide-react';import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
@@ -29,8 +28,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
         service.category.includes(selectedCategory);
       const matchesPrice =
         priceRange === 'all' || getPriceRange(service.price) === priceRange;
-      return matchesSearch && matchesCategory && matchesPrice;    })
-    .sort((a, b) => {
+      return matchesSearch && matchesCategory && matchesPrice;    })    .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
@@ -46,8 +44,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
         default:
-          return 0;      }
-    });
+          return 0;      }    });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,7 +54,6 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
         staggerChildren: 0.1,
       },
     },  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -67,13 +63,11 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
         duration: 0.5,
       },
     },  };
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com',  };
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden'>
@@ -101,13 +95,11 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
           rel='canonical'
           href='https://ziontechgroup.com/comprehensive-2025-services-showcase'
         />      </Head>
-
       <EnhancedNavigation />
 
       {/* Hero Section */}
       <section className='relative py-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -123,16 +115,14 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
             {/* Contact Information */}
             <div className='flex flex-wrap justify-center gap-6 mb-8 text-white/70'>
               <div className='flex items-center gap-2'>
-                <Phone className='w-5 h-5' />
-                <span>{contactInfo.mobile}</span>
+                <Phone className='w-5 h-5' />                <span>{contactInfo.mobile}</span>
               </div>
               <div className='flex items-center gap-2'>
                 <Mail className='w-5 h-5' />
                 <span>{contactInfo.email}</span>
               </div>
               <div className='flex items-center gap-2'>
-                <MapPin className='w-5 h-5' />                <span>{contactInfo.address}</span>
-              </div>
+                <MapPin className='w-5 h-5' />                <span>{contactInfo.address}</span>              </div>
             </div>
 
             {/* Stats */}
@@ -159,8 +149,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                 <div className='text-3xl font-bold text-orange-400'>
                   {allServices.filter(s => s.rating >= 4.5).length}
                 </div>
-                <div className='text-white/60'>Top Rated</div>              </div>
-            </div>
+                <div className='text-white/60'>Top Rated</div>              </div>            </div>
           </motion.div>
         </div>
       </section>
@@ -182,8 +171,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                   placeholder='Search services by name, description, or features...'
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-                  className='w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300'                />
-              </div>
+                  className='w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300'                />              </div>
             </div>
 
             {/* Filters */}
@@ -198,8 +186,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50'
                 >
-                  {categories.map(category => (                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
+                  {categories.map(category => (                    <option key={category.id} value={category.id}>                      {category.name} ({category.count})
                     </option>
                   ))}
                 </select>
@@ -209,8 +196,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
               <div>
                 <label className='block text-sm font-medium text-white/70 mb-2'>
                   Price Range
-                </label>
-                <select
+                </label>                <select
                   value={priceRange}
                   onChange={e => setPriceRange(e.target.value as any)}
                   className='w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50'
@@ -218,15 +204,13 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                   <option value='all'>All Prices</option>
                   <option value='budget'>Budget ($0 - $999)</option>
                   <option value='mid'>Mid-Range ($1,000 - $4,999)</option>
-                  <option value='enterprise'>Enterprise ($5,000+)</option>                </select>
-              </div>
+                  <option value='enterprise'>Enterprise ($5,000+)</option>                </select>              </div>
 
               {/* Sort By */}
               <div>
                 <label className='block text-sm font-medium text-white/70 mb-2'>
                   Sort By
-                </label>
-                <select
+                </label>                <select
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value as any)}
                   className='w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50'
@@ -234,8 +218,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                   <option value='popularity'>Popularity</option>
                   <option value='price'>Price (Low to High)</option>
                   <option value='rating'>Rating</option>
-                  <option value='newest'>Newest</option>                </select>
-              </div>
+                  <option value='newest'>Newest</option>                </select>              </div>
 
               {/* View Mode */}
               <div>
@@ -260,8 +243,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
                   >
-                    <List className='w-4 h-4' />                  </button>
-                </div>
+                    <List className='w-4 h-4' />                  </button>                </div>
               </div>
             </div>
           </motion.div>
@@ -303,8 +285,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                     setSelectedCategory('all');
                     setPriceRange('all');
                   }}
-                  className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300'                >
-                  Clear Filters
+                  className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300'                >                  Clear Filters
                 </button>
               </div>
             ) : (
@@ -314,8 +295,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                     ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                     : 'space-y-6'
                 }
-              >                {filteredServices.map((service, index) => (
-                  <motion.div
+              >                {filteredServices.map((service, index) => (                  <motion.div
                     key={service.id}
                     variants={itemVariants}
                     className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
@@ -344,8 +324,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                           </div>
                         </div>
                         {service.popular && (
-                          <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full'>                            Popular
-                          </div>
+                          <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full'>                            Popular                          </div>
                         )}
                       </div>
 
@@ -368,16 +347,14 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                             </div>
                           ))}
                           {service.features.length > 3 && (
-                            <div className='text-xs text-white/40'>                              +{service.features.length - 3} more features
-                            </div>
+                            <div className='text-xs text-white/40'>                              +{service.features.length - 3} more features                            </div>
                           )}
                         </div>
                       </div>
 
                       {/* Price and Rating */}
                       <div className='flex items-center justify-between mb-4'>
-                        <div className='text-2xl font-bold text-cyan-400'>
-                          {service.price}
+                        <div className='text-2xl font-bold text-cyan-400'>                          {service.price}
                           <span className='text-sm text-white/60'>
                             {service.period}
                           </span>
@@ -398,13 +375,11 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                           href={service.link}
                           target='_blank'
                           rel='noopener noreferrer'
-                          className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105'                        >
-                          Learn More
+                          className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105'                        >                          Learn More
                         </a>
                         <a
                           href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                          className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'                        >
-                          Contact
+                          className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10'                        >                          Contact
                         </a>
                       </div>
 
@@ -431,8 +406,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
                             <span className='block text-white/70'>ROI:</span>
                             <span className='text-green-400'>
                               {service.roi.split(' ').slice(0, 3).join(' ')}...
-                            </span>                          </div>
-                        </div>
+                            </span>                          </div>                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -445,8 +419,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
 
       {/* Contact CTA */}
       <section className='px-6 pb-20'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -478,8 +451,7 @@ import { specializedEnterpriseServices } from '../data/specialized-2025-enterpri
             </div>
             <div className='mt-8 text-white/60'>
               <p>Contact us directly:</p>
-              <div className='flex flex-wrap justify-center gap-6 mt-4'>                <span>{contactInfo.mobile}</span>
-                <span>{contactInfo.email}</span>
+              <div className='flex flex-wrap justify-center gap-6 mt-4'>                <span>{contactInfo.mobile}</span>                <span>{contactInfo.email}</span>
                 <span>{contactInfo.address}</span>
               </div>
             </div>

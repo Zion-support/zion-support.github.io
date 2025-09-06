@@ -20,8 +20,7 @@ import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 export default function VerifyStatus() {
   const router = useRouter();
   const { user: authUser, isLoading: authLoading } = useAuth(); // Get user from AuthContext
-  const { email: emailParam } = router.query;  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const { email: emailParam } = router.query;  const [email, setEmail] = useState('');  const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [isResending, setIsResending] = useState(false);
   const [isCheckingStatus, setIsCheckingStatus] = useState(false);
@@ -30,8 +29,7 @@ export default function VerifyStatus() {
 
   useEffect(() => {
     if (typeof emailParam === 'string') {
-      setEmail(emailParam);    }
-  }, [emailParam]);
+      setEmail(emailParam);    }  }, [emailParam]);
 
   // Countdown timer for resend button
   useEffect(() => {
@@ -42,12 +40,10 @@ export default function VerifyStatus() {
       }, 1000);
     }
     return () => clearInterval(interval);  }, [countdown]);
-
   const handleResendEmail = async () => {
     if (!email) {
       setError('Please enter your email address');
       return;    }
-
     setIsResending(true);
     setError('');
     setMessage('');
@@ -57,7 +53,6 @@ export default function VerifyStatus() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),      });
-
       const data = await response.json();
 
       if (response.ok) {
@@ -72,14 +67,12 @@ export default function VerifyStatus() {
     } catch (err) {
       setError('Network error. Please try again.');
     } finally {
-      setIsResending(false);    }
-  };
+      setIsResending(false);    }  };
 
   const handleCheckStatus = async () => {
     if (!email) {
       setError('Please enter your email address');
       return;    }
-
     setIsCheckingStatus(true);
     setError('');
     setMessage('');
@@ -101,14 +94,12 @@ export default function VerifyStatus() {
         data: { user },
         error: getUserError,
       } = await supabase.auth.getUser();
-
       if (getUserError) {
         setError(
           `Failed to get user status: ${getUserError.message}. Please try logging in directly.`
         );
         setIsCheckingStatus(false);
         return;      }
-
       if (user && user.email_confirmed_at) {
         setMessage('Email is verified! Redirecting to login...');
         // The onAuthStateChange listener in AuthProvider should ideally handle redirection.
@@ -162,22 +153,19 @@ export default function VerifyStatus() {
             <h1 className='text-2xl font-bold text-gray-900'>
               Email Verification
             </h1>
-            <p className='text-sm text-gray-600 mt-2'>              Check and manage your email verification status
-            </p>
+            <p className='text-sm text-gray-600 mt-2'>              Check and manage your email verification status            </p>
           </div>
 
           {/* Success Message */}
           {message && (
             <Alert className='border-green-500 bg-green-50 text-green-900'>
-              <CheckCircle className='h-4 w-4' />              <AlertDescription>{message}</AlertDescription>
-            </Alert>
+              <CheckCircle className='h-4 w-4' />              <AlertDescription>{message}</AlertDescription>            </Alert>
           )}
 
           {/* Error Message */}
           {error && (
             <Alert variant='destructive'>
-              <AlertCircle className='h-4 w-4' />              <AlertDescription>{error}</AlertDescription>
-            </Alert>
+              <AlertCircle className='h-4 w-4' />              <AlertDescription>{error}</AlertDescription>            </Alert>
           )}
 
           {/* Email Input */}
@@ -197,8 +185,7 @@ export default function VerifyStatus() {
               className='w-full'
             />
             {email && (
-              <p className='text-xs text-gray-500'>                We'll check the verification status for this email address
-              </p>
+              <p className='text-xs text-gray-500'>                We'll check the verification status for this email address              </p>
             )}
           </div>
 
@@ -208,14 +195,12 @@ export default function VerifyStatus() {
               <h3 className='text-sm font-medium text-slate-900 dark:text-slate-100 mb-2'>
                 Verification Status
               </h3>
-              <div className='text-sm text-slate-700 dark:text-slate-300 space-y-1'>                <p>• Check your email inbox for a verification link</p>
-                <p>• Click the link in the email to verify your account</p>
+              <div className='text-sm text-slate-700 dark:text-slate-300 space-y-1'>                <p>• Check your email inbox for a verification link</p>                <p>• Click the link in the email to verify your account</p>
                 <p>• Return here or try logging in after verification</p>
               </div>
               {lastSentTime && (
                 <p className='text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center'>
-                  <Clock className='h-3 w-3 mr-1' />                  Last email sent: {lastSentTime.toLocaleTimeString()}
-                </p>
+                  <Clock className='h-3 w-3 mr-1' />                  Last email sent: {lastSentTime.toLocaleTimeString()}                </p>
               )}
             </div>
           )}
@@ -234,8 +219,7 @@ export default function VerifyStatus() {
                 </>
               ) : (
                 <>
-                  <Eye className='h-4 w-4 mr-2' />                  Check Verification Status
-                </>
+                  <Eye className='h-4 w-4 mr-2' />                  Check Verification Status                </>
               )}
             </Button>
 
@@ -256,8 +240,7 @@ export default function VerifyStatus() {
                 </>
               ) : (
                 <>
-                  <Mail className='h-4 w-4 mr-2' />                  Resend Verification Email
-                </>
+                  <Mail className='h-4 w-4 mr-2' />                  Resend Verification Email                </>
               )}
             </Button>
 
@@ -265,8 +248,7 @@ export default function VerifyStatus() {
             <Button
               onClick={handleTryLogin}
               disabled={!email}
-              className='w-full'            >
-              Try Login
+              className='w-full'            >              Try Login
             </Button>
           </div>
 
@@ -282,8 +264,7 @@ export default function VerifyStatus() {
               size='sm'
               className='text-blue-600 hover:text-blue-500'
             >
-              <ArrowLeft className='h-4 w-4 mr-1' />              Go Back
-            </Button>
+              <ArrowLeft className='h-4 w-4 mr-1' />              Go Back            </Button>
           </div>
 
           {/* Additional Options */}
@@ -291,14 +272,12 @@ export default function VerifyStatus() {
             <Button
               onClick={() => router.push('/signup')}
               variant='ghost'
-              className='w-full text-sm'            >
-              Use Different Email Address
+              className='w-full text-sm'            >              Use Different Email Address
             </Button>
             <Button
               onClick={() => router.push('/contact')}
               variant='ghost'
-              className='w-full text-sm'            >
-              Contact Support
+              className='w-full text-sm'            >              Contact Support
             </Button>
           </div>
         </div>

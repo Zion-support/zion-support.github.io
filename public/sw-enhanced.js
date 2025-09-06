@@ -13,5 +13,3 @@ self.addEventListener('notificationclick', (event) = > {'; event.notification.cl
 async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
 ;  "return": []};
   "return": []};
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

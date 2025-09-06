@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface MarketValidatedService {
   id: string;
   name: string;
   tagline: string;
@@ -528,12 +525,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
     setupTime: '2 hours',
     contactInfo,
   },
-];
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import { ServiceVariant  } from "../types/service-variants";
+];import { ServiceVariant  } from "../types/service-variants";
 export interface MarketValidatedService {
 	id: string;
 	name: string;
@@ -941,4 +933,22 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 },
 ];,
 }}
->>>>>>> origin/automation-fixes
+	// Search and Knowledge
+	{
+		id: 'vector-search-starter';
+		name: 'Vector Search Starter';
+		tagline: 'Deploy a production-grade vector database and APIs';
+		price: '$89';
+		period: '/month';
+		description: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.';
+		features: ['Managed vector DBIngestion pipelinesMetadata filtersAccess controls'];
+		category: 'AI & Search';
+		link: 'https://ziontechgroup.com/vector-search-starter';
+		variant: 'quantum';
+		rating: 4.6;
+		customers: 410;
+		trialDays: 14;
+		setupTime: '2 hours';
+		contactInfo
+	}];
+

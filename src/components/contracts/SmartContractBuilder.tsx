@@ -1,21 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Save } from 'lucide-react';
-import { TalentProfile } from "@/types/talent";
-import { ContractForm, ContractFormValues } from "./components/ContractForm";
-import { ContractPreview } from "./components/ContractPreview";
-import { TemplateManager } from "./templates/TemplateManager";
-import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
-import { useSmartContracts } from "@/hooks/useSmartContracts";
-import { toast } from "sonner";
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -73,7 +56,6 @@ export function SmartContractBuilder({
       toast.error("Failed to deploy smart contract")
     }
   };
-=======
 // Placeholder ABIs - these should be generated from compiled contracts;
 const SIMPLE_AGREEMENT_ABI: ethers.InterfaceAbi = ["constructor(address client, address talent, string projectDetailsIPFSHash)",
   "function client() view returns(address)",
@@ -364,7 +346,6 @@ export function SmartContractBuilder({;
             )}
             {!generatedMarkdownContract && !isLoadingLegalDraft && <p>Generate a legal draft to preview and download.</p>}
           </TabsContent>;
->>>>>>> origin/automation-fixes
 
   // Modified to match the expected interface
   const handleFormSubmit = (contract: string,) => {
@@ -377,7 +358,6 @@ export function SmartContractBuilder({;
     setActiveTab("preview")
   };
 
-<<<<<<< HEAD
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -433,91 +413,9 @@ export function SmartContractBuilder({;
                     >
                       {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
                     </Button>
-                  </div>
-=======
-            {enableOnChainAgreement && formValues && ( // Only show if toggled and formValues exist;
-              <>;
-                <div>;
-                  <Label className="text-base font-semibold">Network</Label>;
-                  <RadioGroup;
-                    value={selectedNetwork}
-                    onValueChange={(value: 'ethereum' | 'polygon' | '') => setSelectedNetwork(value as any)}
-                    className="mt-2 flex space-x-4">;
-                    <div className="flex items-center space-x-2">;
-                      <RadioGroupItem value="ethereum" id="ethereum"  />;
-                      <Label htmlFor="ethereum">Ethereum</Label>;
-                    </div>;
-                    <div className="flex items-center space-x-2">;
-                      <RadioGroupItem value="polygon" id="polygon"  />;
-                      <Label htmlFor="polygon">Polygon</Label>;
-                    </div>;
-                  </RadioGroup>;
-                </div>;
-
-                <div>;
-                  <Label htmlFor="clientWalletAddress" className="text-base font-semibold">Client Wallet Address</Label>;
-                  <Input;
-                    id="clientWalletAddress";
-                    value={formValues.clientWalletAddress || ''}
-                    onChange={(e) => setFormValues(prev => ({...prev!, clientWalletAddress: e.target.value}))}
-                    placeholder="0x...";
-                    className="mt-1";
-                  />;
-                </div>;
-                <div>;
-                  <Label htmlFor="talentWalletAddress" className="text-base font-semibold">Talent Wallet Address</Label>;
-                  <Input;
-                    id="talentWalletAddress";
-                    value={formValues.talentWalletAddress || ''}
-                    onChange={(e) => setFormValues(prev => ({...prev!, talentWalletAddress: e.target.value}))}
-                    placeholder="0x...";
-                    className="mt-1";
-                  />;
-                </div>;
-                <Button;
-                  onClick={handleDeployOnChainContract}
-                  disabled={onChainDeploymentStatus === 'connecting' || onChainDeploymentStatus === 'fetching_code' || onChainDeploymentStatus === 'deploying' || !selectedNetwork || !formValues.clientWalletAddress || !formValues.talentWalletAddress}
-                  className="w-full py-3 text-base bg-blue-600 hover:bg-blue-700 flex items-center justify-center gap-2">;
-                  {onChainDeploymentStatus === 'connecting' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Connecting to Wallet...</>}
-                  {onChainDeploymentStatus === 'fetching_code' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Preparing Contract...</>}
-                  {onChainDeploymentStatus === 'deploying' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Deploying Contract...</>}
-                  {onChainDeploymentStatus === 'idle' && "Deploy Contract"}
-                  {onChainDeploymentStatus === 'success' && "Contract Deployed!"}
-                  {onChainDeploymentStatus === 'error' && "Retry Deployment"}
-                </Button>;
-
-                {onChainDeploymentStatus !== 'idle' && (;
-                  <div className="mt-4 p-4 border rounded-md space-y-2 bg-muted/50">;
-                    <h4 className="font-semibold">Deployment Status:</h4>;
-                    <p className="flex items-center">;
-                      {onChainDeploymentStatus === 'connecting' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Connecting to wallet...</>}
-                      {onChainDeploymentStatus === 'fetching_code' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Fetching contract code...</>}
-                      {onChainDeploymentStatus === 'deploying' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Deploying to {selectedNetwork}...</>}
-                      {onChainDeploymentStatus === 'success' && <CheckCircle className="mr-2 h-4 w-4 text-green-500"  />}
-                      {onChainDeploymentStatus === 'error' && <XCircle className="mr-2 h-4 w-4 text-red-500"  />}
-                      {onChainDeploymentStatus.charAt(0).toUpperCase() + onChainDeploymentStatus.slice(1).replace('_', ' ')}
-                    </p>;
-                    {transactionHash && (;
-                      <p>Transaction Hash: <a href={selectedNetwork === 'ethereum' ? `https://etherscan.io/tx/${transactionHash}` : `https://polygonscan.com/tx/${transactionHash}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center gap-1">{transactionHash.substring(0,10)}...{transactionHash.substring(transactionHash.length-8)} <ExternalLink className="h-3 w-3" /></a></p>;
-                    )}
-                    {deployedContractAddress && (;
-                      <p>Contract Address: <a href={selectedNetwork === 'ethereum' ? `https://etherscan.io/address/${deployedContractAddress}` : `https://polygonscan.com/address/${deployedContractAddress}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center gap-1">{deployedContractAddress} <ExternalLink className="h-3 w-3" /></a></p>;
-                    )}
-                    {deploymentError && (;
-                      <p className="text-red-500">Error: {deploymentError}</p>;
-                    )}
-                    {onChainDeploymentStatus === 'success' && populatedSolidityCode && (;
-                      <details className="mt-2">;
-                        <summary className="cursor-pointer text-sm text-muted-foreground">View Deployed Contract Code(Source)</summary>;
-                        <pre className="mt-1 p-2 bg-gray-800 text-white text-xs rounded-md overflow-x-auto">{populatedSolidityCode}</pre>;
-                      </details>;
-                    )}
-                  </div>;
->>>>>>> origin/automation-fixes
-                )}
+                  </div>                )}
               </div>
             )}
-<<<<<<< HEAD
           </TabsContent>
         </Tabs>
         
@@ -567,13 +465,7 @@ setActiveTab ("preview");
 }currentValues= {;
   formValues ;
 }/> </DialogContent> </Dialog>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
+}'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
 
             {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
             {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
@@ -588,4 +480,4 @@ setActiveTab ("preview");
       </DialogContent>;
     </Dialog>;
   )}
->>>>>>> origin/automation-fixes
+}

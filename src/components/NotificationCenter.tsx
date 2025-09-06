@@ -1,69 +1,11 @@
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect } from 'react';
-// Use the shared icon wrapper
-import { Bell } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { useNotifications } from '@/context/notifications/NotificationContext';
-import { useEnqueueSnackbar } from '@/context';
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { 
-  NotificationFilter,
-  NotificationHeader, 
-  NotificationList, 
-  NotificationFooter 
-} from '@/components/notifications',
-import { FilterType } from '@/components/notifications/NotificationFilter';
-export const NotificationCenter: React.FC = () => {
-  const { 
-    filteredNotifications,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     unreadCount, 
     markAsRead, 
 
-<<<<<<< HEAD
-=======
-  // Refresh notifications when popover opens, but avoid duplicate
-  useEffect((,) => {
-    if (open && !loadedOnce) {
-      const loadNotifications = async () => {
-        try {
-          await fetchNotifications(),
-          setError(null)
-        } catch (err) {
-          logErrorToProduction('Failed to fetch notifications:', { data: err }),
-          setError("Couldn't load notifications"),
-          enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
-        } finally {
-          setLoadedOnce(true)
-        }
-      },
-
-      loadNotifications()
-    }
-  }, [open, loadedOnce, fetchNotifications]),
-
-  const handleMarkAllAsRead = async () => {
-    try {
-      await markAllAsRead(),
-      enqueueSnackbar("All notifications marked as read", { variant: 'success' })
-    } catch (err) {
-      logErrorToProduction('Failed to mark notifications as read:', { data: err }),
-      enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
-    }
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const handleFilterChange = (newFilter: FilterType,) => {
     setFilter(newFilter as any)
   };
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
   return (
     <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
       <PopoverTrigger asChild>
@@ -101,4 +43,3 @@ export const NotificationCenter: React.FC = () => {
     </Popover>
   )
 },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from 'react-hook-form';
@@ -20,9 +19,6 @@ import {
 } from '@/components/ui/popover';
 import { Calendar } from '@/components/ui/calendar';
 import { ContractFormValues } from './ContractForm';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
 
 import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react';
@@ -41,20 +37,14 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>;
-=======
-  form: UseFormReturn<ContractFormValues>
+  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
     <>
       <FormField
-<<<<<<< HEAD
         control={form.control}
         name='projectName'
         render={({
@@ -65,20 +55,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
-              <Input placeholder='AI Website Development' {...field} />            </FormControl>
-=======
-=======
-        control = {form.control,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        name="projectName"
+              <Input placeholder='AI Website Development' {...field} />            </FormControl>        name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (
+        name="projectName"
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            </FormControl>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             <FormMessage />
           </FormItem>
         )}
@@ -96,31 +80,20 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormControl>
               <Textarea
                 placeholder='Describe the project scope, deliverables, and expectations...'
-                className='min-h-[120px]'                {...field}
-=======
+                className='min-h-[120px]'                {...field}        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> },) => (
       
       <FormField
-        control = {form.control,}
+        control={form.control}
         name="scopeSummary"
-<<<<<<< HEAD
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
-<<<<<<< HEAD
                 placeholder='Describe the project scope, deliverables, and expectations...'
-                className='min-h-[120px]'
-=======
-                placeholder="Describe the project scope, deliverables, and expectations..."
+                className='min-h-[120px]'                placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {...field}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               />
             </FormControl>
             <FormDescription>
@@ -140,31 +113,19 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           }: {
             field: ControllerRenderProps<ContractFormValues, 'startDate'>;
           }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>
-=======
-      
+            <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control = {form.control,}
           name="startDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> },) => (
             <FormItem className="flex flex-col">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              <FormLabel>Start Date</FormLabel>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-<<<<<<< HEAD
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-                      variant = {"outline",}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    >
                       {field.value ? (
                         format(field.value, 'PPP')
                       ) : (
@@ -176,22 +137,30 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
-<<<<<<< HEAD
                     mode='single'
                     selected={field.value}
                     onSelect={field.onChange}
-                    disabled={date => date < new Date()}                    initialFocus
-=======
-                    disabled={(date) => date < new Date()}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
-                    mode="single"
+                    disabled={date => date < new Date()}                    initialFocus                    mode="single"
                     selected = {field.value,}
                     onSelect = {field.onChange,}
                     disabled = {(date,) => date < new Date(),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+                    >
+                      {field.value ? (
+                        format(field.value, "PPP")
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                    </Button>
+                  </FormControl>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={field.value}
+                    onSelect={field.onChange}
+                    disabled={(date) => date < new Date()}
                     initialFocus
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   />
                 </PopoverContent>
               </Popover>
@@ -208,30 +177,18 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           }: {
             field: ControllerRenderProps<ContractFormValues, 'endDate'>;
           }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
-=======
-        
+            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>        
         <FormField
           control = {form.control,}
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (
             <FormItem className="flex flex-col">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              <FormLabel>End Date (Optional)</FormLabel>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
-<<<<<<< HEAD
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-                      variant = {"outline",}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    >
                       {field.value ? (
                         format(field.value, 'PPP')
                       ) : (
@@ -243,22 +200,30 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
-<<<<<<< HEAD
                     mode='single'
                     selected={field.value || undefined}
                     onSelect={field.onChange}
-                    disabled={date => date < form.getValues('startDate')}                    initialFocus
-=======
-                    disabled={(date) => date < form.getValues("startDate")}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
-                    mode="single"
+                    disabled={date => date < form.getValues('startDate')}                    initialFocus                    mode="single"
                     selected = {field.value || undefined,}
                     onSelect = {field.onChange,}
                     disabled = {(date,) => date < form.getValues("startDate"),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+                    >
+                      {field.value ? (
+                        format(field.value, "PPP")
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                    </Button>
+                  </FormControl>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={field.value || undefined}
+                    onSelect={field.onChange}
+                    disabled={(date) => date < form.getValues("startDate")}
                     initialFocus
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   />
                 </PopoverContent>
               </Popover>
@@ -273,7 +238,3 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

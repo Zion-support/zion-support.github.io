@@ -1,8 +1,3 @@
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -19,19 +14,11 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
-
-=======
-  FormMessage} from '@/components/ui/form',
-import { useState } from 'react';
-import { EducationFormFieldsProps } from './types';
-import { Education } from '@/types/resume';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Define schema for form validation
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required'),
@@ -67,16 +54,9 @@ export function EducationFormFields({
     },
   });
 
-<<<<<<< HEAD
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true);
-    setError(null);
-=======
-  const handleSubmit = async (data: EducationFormValues,) => {
-    setIsLoading(true),
-    setError(null),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    try {
+    setError(null);    try {
       await onSubmit(data);
     } catch (err: any) {
       setError(err.message || 'An error occurred');
@@ -90,16 +70,9 @@ export function EducationFormFields({
       <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-4'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
-<<<<<<< HEAD
             control={form.control}
             name='institution'
-            render={({ field }: { field: any }) => (
-=======
-            control = {form.control,}
-            name="institution"
-            render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              <FormItem>
+            render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
                   <Input
@@ -113,16 +86,9 @@ export function EducationFormFields({
           />
 
           <FormField
-<<<<<<< HEAD
             control={form.control}
             name='degree'
-            render={({ field }: { field: any }) => (
-=======
-            control = {form.control,}
-            name="degree"
-            render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              <FormItem>
+            render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
                   <Input
@@ -137,16 +103,9 @@ export function EducationFormFields({
         </div>
 
         <FormField
-<<<<<<< HEAD
           control={form.control}
           name='field_of_study'
-          render={({ field }: { field: any }) => (
-=======
-          control = {form.control,}
-          name="field_of_study"
-          render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            <FormItem>
+          render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
                 <Input
@@ -161,28 +120,13 @@ export function EducationFormFields({
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
-<<<<<<< HEAD
             control={form.control}
             name='start_date'
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
-                  <Input type='date' {...field} value={field.value || ''} />
-=======
-            control = {form.control,}
-            name="start_date"
-            render={({ field }: { field: any },) => (
-              <FormItem>
-                <FormLabel>Start Date</FormLabel>
-                <FormControl>
-                  <Input 
-                    type="date" 
-                    {...field}
-                    value = {field.value || '',}
-                  />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                </FormControl>
+                  <Input type='date' {...field} value={field.value || ''} />                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
@@ -190,18 +134,10 @@ export function EducationFormFields({
 
           <div className='space-y-4'>
             <FormField
-<<<<<<< HEAD
               control={form.control}
               name='is_current'
               render={({ field }: { field: any }) => (
-                <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>
-=======
-              control = {form.control,}
-              name="is_current"
-              render={({ field }: { field: any },) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  <FormControl>
+                <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
                     <Checkbox
                       checked = {field.value,}
                       onCheckedChange = {field.onChange,}
@@ -216,28 +152,13 @@ export function EducationFormFields({
 
             {!form.watch('is_current') && (
               <FormField
-<<<<<<< HEAD
                 control={form.control}
                 name='end_date'
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
-                      <Input type='date' {...field} value={field.value || ''} />
-=======
-                control = {form.control,}
-                name="end_date"
-                render={({ field }: { field: any },) => (
-                  <FormItem>
-                    <FormLabel>End Date</FormLabel>
-                    <FormControl>
-                      <Input 
-                        type="date" 
-                        {...field} 
-                        value = {field.value || '',}
-                      />
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    </FormControl>
+                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -247,16 +168,9 @@ export function EducationFormFields({
         </div>
 
         <FormField
-<<<<<<< HEAD
           control={form.control}
           name='location'
-          render={({ field }: { field: any }) => (
-=======
-          control = {form.control,}
-          name="location"
-          render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            <FormItem>
+          render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
                 <Input placeholder='Cambridge, MA' {...field} />
@@ -267,16 +181,9 @@ export function EducationFormFields({
         />
 
         <FormField
-<<<<<<< HEAD
           control={form.control}
           name='description'
-          render={({ field }: { field: any }) => (
-=======
-          control = {form.control,}
-          name="description"
-          render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            <FormItem>
+          render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>
                 <Textarea
@@ -296,18 +203,8 @@ export function EducationFormFields({
           </Alert>
         )}
 
-<<<<<<< HEAD
         <div className='flex justify-between pt-2'>
-          <Button type='button' variant='outline' onClick={onCancel}>
-=======
-        <div className="flex justify-between pt-2">
-          <Button
-            type="button"
-            variant="outline"
-            onClick = {onCancel,}
-          >
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            {isEditing ? 'Cancel' : 'Back'}
+          <Button type='button' variant='outline' onClick={onCancel}>            {isEditing ? 'Cancel' : 'Back'}
           </Button>
 
           <Button type='submit' disabled={isLoading}>
@@ -318,7 +215,4 @@ export function EducationFormFields({
       </form>
     </Form>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

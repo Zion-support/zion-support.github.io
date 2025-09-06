@@ -20,9 +20,7 @@ export function securityMiddleware(request) {
     );
   }
   
-  return response;
-=======
-// Security headers middleware
+  return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
     'X-Content-Type-Options': 'nosniff',
@@ -37,5 +35,3 @@ export function securityHeaders(req, res, next) {
   
   next();
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

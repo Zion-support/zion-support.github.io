@@ -18,18 +18,13 @@ import {
   Globe,;} from 'lucide-react';
 
 interface UltraAdvancedServiceCardProps {
-  service: {
-import { 
+  service: {import { 
   ArrowRight, ExternalLink, Star, TrendingUp, 
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-} from 'lucide-react';
 
 interface UltraAdvancedServiceCardProps {
   service: {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: string;
     name: string;
     tagline: string;
@@ -56,8 +51,6 @@ interface UltraAdvancedServiceCardProps {
     marketSize: string;
     growthRate: string;
     variant: string;
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     contactInfo: {
       mobile: string;
       email: string;
@@ -77,16 +70,26 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
 }) => {  const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-  const getCategoryIcon = (category: string) => {
-=======
+  const getCategoryIcon = (category: string) => {    contactInfo: {
+      mobile: string,
+      email: string,
+      address: string,
+      website: string
+    };
+    realImplementation: boolean,
+    implementationDetails: string,
+    launchDate: string,
+    customers: number,
+    rating: number,
+    reviews: number
+  }
+}
+
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const getCategoryIcon = (category: string) => {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     if (category.includes('AI') || category.includes('Machine Learning'))
       return <Brain className='w-4 h-4' />;
     if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;
@@ -99,7 +102,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       return <Lock className='w-4 h-4' />;
     if (category.includes('Internet') || category.includes('Network'))
       return <Globe className='w-4 h-4' />;
-<<<<<<< HEAD
     return <Zap className='w-4 h-4' />;  };
 
   const containerVariants = {
@@ -120,8 +122,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
   const contentVariants = {
     hidden: { opacity: 0, height: 0 },
-    visible: {
-    if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
+    visible: {    if (category.includes('AI') || category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
     if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
     if (category.includes('Biotech') || category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
@@ -129,50 +130,33 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     if (category.includes('Security') || category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
     if (category.includes('Internet') || category.includes('Network')) return <Globe className="w-4 h-4" />;
     return <Zap className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  };
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
-    visible: {
-=======
-    visible: { 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    visible: {    visible: { 
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-<<<<<<< HEAD
         ease: 'easeOut' as const,
       },
-    },
-=======
-        ease: "easeOut" as const
+    },        ease: "easeOut" as const
       }
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     hover: {
       y: -10,
       transition: {
         duration: 0.3,
-<<<<<<< HEAD
         ease: 'easeOut' as const,
       },
-    },
-=======
-        ease: "easeOut" as const
+    },        ease: "easeOut" as const
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const contentVariants = {
     hidden: { opacity: 0, height: 0 },
-<<<<<<< HEAD
     visible: {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      opacity: 1,
       height: 'auto',
       transition: {
         duration: 0.5,
@@ -185,22 +169,17 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       onHoverEnd={() => setIsHovered(false)}
     >
       {/* Glow Effect */}
-      <div
-  return (
+      <div  return (
     <motion.div
       className="relative group"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       whileHover="hover"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
       {/* Glow Effect */}
-<<<<<<< HEAD
       <div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
           isHovered ? 'opacity-100' : 'opacity-50'
         }`}
@@ -215,17 +194,21 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
       >
-        <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
-=======
+        <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
+          isHovered ? 'opacity-100' : 'opacity-50';
+        }`}
+        style={{
+          background: `linear-gradient(135deg, ${service.color})`;
+          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
+      />
+      
+      {/* Main Card */}
       <div 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
       >
-<<<<<<< HEAD
         <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {/* Header */}
           <div className='flex items-start justify-between mb-4'>
             <div className='flex items-center space-x-3'>
@@ -245,12 +228,25 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
             {service.popular && (
               <motion.div
-                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'                animate={{ scale: [1, 1.1, 1] }}
-=======
+                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'                animate={{ scale: [1, 1.1, 1] }}          {/* Header */}
+          <div className="flex items-start justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className="text-3xl">{service.icon}</div>
+              <div>
+                <div className="flex items-center space-x-2">
+                  {getCategoryIcon(service.category)}
+                  <span className="text-xs text-gray-400 uppercase tracking-wider">
+                    {service.category}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-white mt-1">{service.name}</h3>
+              </div>
+            </div>
+            
+            {service.popular && (
+              <motion.div
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 animate={{ scale: [1, 1.1, 1] }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 transition={{ duration: 2, repeat: Infinity }}
               >
                 POPULAR
@@ -262,25 +258,17 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
           </p>
 
-          {/* Price */}
-=======
-          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          {/* Price */}          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
             {service.tagline}
           </p>
 
           {/* Price */}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-baseline space-x-1'>
               <span className='text-2xl font-bold text-white'>
                 {service.price}
               </span>
               <span className='text-gray-400'>{service.period}</span>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            </div>
 
             <div className='flex items-center space-x-2'>
               <div className='flex items-center space-x-1'>
@@ -290,16 +278,11 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className='text-gray-400 text-sm'>({service.reviews})</span>            </div>
           </div>
 
-          {/* Quick Stats */}
-=======
-              <span className="text-gray-400 text-sm">({service.reviews})</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          {/* Quick Stats */}              <span className="text-gray-400 text-sm">({service.reviews})</span>
             </div>
           </div>
 
           {/* Quick Stats */}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <div className='grid grid-cols-2 gap-3 mb-4'>
             <div className='flex items-center space-x-2 text-sm'>
               <Users className='w-4 h-4 text-blue-400' />
@@ -311,13 +294,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <Clock className='w-4 h-4 text-green-400' />
               <span className='text-gray-300'>
                 {service.trialDays} day trial
-<<<<<<< HEAD
               </span>            </div>
           </div>
 
-          {/* Market Data */}
-=======
-          <div className="grid grid-cols-2 gap-3 mb-4">
+          {/* Market Data */}          <div className="grid grid-cols-2 gap-3 mb-4">
             <div className="flex items-center space-x-2 text-sm">
               <Users className="w-4 h-4 text-blue-400" />
               <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>
@@ -325,13 +305,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             <div className="flex items-center space-x-2 text-sm">
               <Clock className="w-4 h-4 text-green-400" />
               <span className="text-gray-300">{service.trialDays} day trial</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            </div>
           </div>
 
           {/* Market Data */}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <div className='bg-gray-800/50 rounded-lg p-3 mb-4'>
             <div className='flex items-center justify-between text-sm'>
               <span className='text-gray-400'>Market Size:</span>
@@ -343,10 +319,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <span className='text-gray-400'>Growth Rate:</span>
               <span className='text-blue-400 font-semibold'>
                 {service.growthRate}
-<<<<<<< HEAD
-              </span>            </div>
-=======
-          <div className="bg-gray-800/50 rounded-lg p-3 mb-4">
+              </span>            </div>          <div className="bg-gray-800/50 rounded-lg p-3 mb-4">
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-400">Market Size:</span>
               <span className="text-green-400 font-semibold">{service.marketSize}</span>
@@ -354,9 +327,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
             <div className="flex items-center justify-between text-sm mt-1">
               <span className="text-gray-400">Growth Rate:</span>
               <span className="text-blue-400 font-semibold">{service.growthRate}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
 
           {/* Expandable Content */}
@@ -372,9 +342,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 {/* Description */}
                 <div>
                   <h4 className='text-white font-semibold mb-2'>Description</h4>
-                  <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}
-=======
-                initial="hidden"
+                  <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}                initial="hidden"
                 animate="visible"
                 exit="hidden"
                 className="space-y-4"
@@ -383,9 +351,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 <div>
                   <h4 className="text-white font-semibold mb-2">Description</h4>
                   <p className="text-gray-300 text-sm leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                    {service.description}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </p>
                 </div>
 
@@ -401,17 +366,12 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                         className='flex items-center space-x-2 text-sm'
                       >
                         <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
-                        <span className='text-gray-300'>{feature}</span>                      </div>
-=======
-                  <h4 className="text-white font-semibold mb-2">Key Features</h4>
+                        <span className='text-gray-300'>{feature}</span>                      </div>                  <h4 className="text-white font-semibold mb-2">Key Features</h4>
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.slice(0, 6).map((feature, index) => (
                       <div key={index} className="flex items-center space-x-2 text-sm">
                         <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                      </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     ))}
                   </div>
                 </div>
@@ -420,7 +380,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
                   <p className='text-gray-300 text-sm'>{service.roi}</p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
 
                 {/* Contact Info */}
@@ -445,14 +404,24 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                       <span className='text-gray-400'>Address:</span>
                       <span className='text-white text-xs'>
                         {service.contactInfo.address}
-                      </span>                    </div>
-=======
+                      </span>                    </div>                </div>
+
+                {/* Contact Info */}
+                <div className="bg-gray-800/50 rounded-lg p-3">
+                  <h4 className="text-white font-semibold mb-2">Contact Information</h4>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-400">Mobile:</span>
+                      <span className="text-white">{service.contactInfo.mobile}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-400">Email:</span>
+                      <span className="text-white">{service.contactInfo.email}</span>
+                    </div>
                     <div className="flex items-center space-x-2">
                       <span className="text-gray-400">Address:</span>
                       <span className="text-white text-xs">{service.contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </div>
                 </div>
               </motion.div>
@@ -462,34 +431,29 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>
             <motion.button
-              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1.02 }}
-=======
-          <div className="flex space-x-3 mt-6">
+              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1.02 }}          <div className="flex space-x-3 mt-6">
             <motion.button
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               whileHover={{ scale: 1.02 }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               whileTap={{ scale: 0.98 }}
               onClick={() => window.open(service.link, '_blank')}
             >
               <span>Learn More</span>
               <ExternalLink className='w-4 h-4' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </motion.button>
 
             <motion.button
               className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
-                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}
-=======
+                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}            </motion.button>
+            
+            <motion.button
+              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
                 isExpanded 
                   ? 'border-gray-600 text-gray-400' 
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               }`}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setIsExpanded(!isExpanded)}
@@ -511,27 +475,18 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   );
 };
 
-export default UltraAdvancedServiceCard;
-=======
-            className="flex justify-center mt-4"
+export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >
             <ArrowRight className="w-5 h-5 text-gray-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          </motion.div>
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
   );
 };
 
-export default UltraAdvancedServiceCard;
-=======
-  )
+export default UltraAdvancedServiceCard;  )
 };
 
 export default UltraAdvancedServiceCard;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

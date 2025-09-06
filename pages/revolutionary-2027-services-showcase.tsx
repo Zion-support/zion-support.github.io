@@ -12,8 +12,7 @@ import {
   MapPin,
   MessageSquare,
   Globe,;
-} from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+} from 'lucide-react';import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
@@ -35,21 +34,18 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
       icon: '🎭',
       count: holographicCount,
     },  ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'under-500', name: 'Under $500', range: 'Under $500' },
     { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' },
     { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' },
     { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000' },  ];
-
   const sortOptions = [
     { id: 'name', name: 'Name' },
     { id: 'price', name: 'Price' },
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customers' },
     { id: 'launchDate', name: 'Launch Date' },  ];
-
   const filteredServices = useMemo(() => {
     let filtered = allServices;
 
@@ -75,7 +71,6 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
           return service.category.includes('Holographic');
         return true;
       });    }
-
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -99,7 +94,6 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
             .includes(searchTerm.toLowerCase()) ||
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );    }
-
     // Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -107,8 +101,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
           return (
             parseInt(a.price.replace(/[^0-9]/g, '')) -
             parseInt(b.price.replace(/[^0-9]/g, ''))
-          );        case 'rating':
-          return b.rating - a.rating;
+          );        case 'rating':          return b.rating - a.rating;
         case 'customers':
           return b.customers - a.customers;
         case 'launchDate':
@@ -121,13 +114,11 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
     });
 
     return filtered;  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',  };
-
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <Head>
@@ -160,8 +151,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
 
       {/* Hero Section */}
       <section className='pt-24 pb-16 px-4 relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto text-center relative z-10'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto text-center relative z-10'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -219,8 +209,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                 href='/services'
                 className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'
               >
-                <Globe className='w-5 h-5 mr-2' />                View All Services
-              </a>
+                <Globe className='w-5 h-5 mr-2' />                View All Services              </a>
             </div>
           </motion.div>
         </div>
@@ -253,8 +242,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
                 >
-                  {categories.map(category => (                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
+                  {categories.map(category => (                    <option key={category.id} value={category.id}>                      {category.name} ({category.count})
                     </option>
                   ))}
                 </select>
@@ -270,8 +258,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                   onChange={e => setSelectedPriceRange(e.target.value)}
                   className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
                 >
-                  {priceRanges.map(range => (                    <option key={range.id} value={range.id}>
-                      {range.name}
+                  {priceRanges.map(range => (                    <option key={range.id} value={range.id}>                      {range.name}
                     </option>
                   ))}
                 </select>
@@ -287,8 +274,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                   onChange={e => setSortBy(e.target.value)}
                   className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
                 >
-                  {sortOptions.map(option => (                    <option key={option.id} value={option.id}>
-                      {option.name}
+                  {sortOptions.map(option => (                    <option key={option.id} value={option.id}>                      {option.name}
                     </option>
                   ))}
                 </select>
@@ -305,8 +291,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                   <span className='font-semibold text-purple-400'>
                     {allServices.length}
                   </span>
-                  <span className='text-sm'> services</span>                </div>
-              </div>
+                  <span className='text-sm'> services</span>                </div>              </div>
             </div>
           </div>
         </div>
@@ -317,8 +302,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
         <div className='max-w-7xl mx-auto'>
           <AnimatePresence mode='wait'>
             {filteredServices.length > 0 ? (
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices.map((service, index) => (
-                  <motion.div
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices.map((service, index) => (                  <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -333,8 +317,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                         <div className='flex items-start justify-between mb-4'>
                           <div className='text-4xl'>{service.icon}</div>
                           {service.popular && (
-                            <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold'>                              POPULAR
-                            </div>
+                            <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold'>                              POPULAR                            </div>
                           )}
                         </div>
 
@@ -406,8 +389,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                         <div className='mb-4'>
                           <span
                             className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${service.color} text-white`}
-                          >                            {service.category}
-                          </span>
+                          >                            {service.category}                          </span>
                         </div>
 
                         {/* Action Buttons */}
@@ -423,8 +405,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                             href='/contact'
                             className='px-4 py-2 border border-gray-600 text-gray-200 hover:bg-gray-700 hover:border-gray-500 transform hover:scale-105 transition-all duration-300'
                           >
-                            <MessageSquare className='w-4 h-4' />                          </a>
-                        </div>
+                            <MessageSquare className='w-4 h-4' />                          </a>                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -450,8 +431,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                     setSelectedPriceRange('all');
                   }}
                   className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                >                  Clear Filters
-                </button>
+                >                  Clear Filters                </button>
               </motion.div>
             )}
           </AnimatePresence>
@@ -505,8 +485,7 @@ import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-m
                 href='/services'
                 className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'
               >
-                <Globe className='w-5 h-5 mr-2' />                Explore All Services
-              </a>
+                <Globe className='w-5 h-5 mr-2' />                Explore All Services              </a>
             </div>
           </motion.div>
         </div>

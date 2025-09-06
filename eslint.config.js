@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export default [
   js.configs.recommended,
   {
@@ -45,7 +41,6 @@ export default [
       }
     },
     plugins: {
-<<<<<<< HEAD
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks
@@ -57,55 +52,10 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
       'no-unused-vars': 'warn'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      '@typescript-eslint': tseslint,
-      react,
-      'react-hooks': reactHooks,
-      'jsx-a11y': jsxA11y
-    },
-    rules: {
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-=======
-import next from '@next/eslint-plugin-next';
-export default [;
-  js.configs.recommended,
-  {;
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {;
-      parser: typescriptParser,
-      parserOptions: {;
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {;
-          jsx: true,,
-},,
-},,
-},
-    plugins: {;
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': next,,
-},
-    rules: {;
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...next.configs.recommended.rules,
-      'no-unused-vars': 'warn',
->>>>>>> origin/automation-fixes
-      'no-console': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
-<<<<<<< HEAD
       '@typescript-eslint/no-explicit-any': 'warn'
     },
     settings: {
@@ -136,8 +86,6 @@ export default [;
         setImmediate: 'readonly',
         clearImmediate: 'readonly'
       }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    }
   },
   {
     ignores: [
@@ -166,39 +114,9 @@ export default [;
       'test_build/',
       'supabase/',
       'working-automation-suite.cjs'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    ]
+  }];
+import js from '@eslint/js'; import react from 'eslint-plugin-react'; import reactHooks from 'eslint-plugin-react-hooks'; import tseslint from '@typescript-eslint/eslint-plugin'; import tsparser from '@typescript-eslint/parser'; export default [ { files: ['***.{ts,tsx}'],languageOptions: { ecmaVersion: 2021,sourceType: 'module',parser: tsparser,parserOptions: { ecmaFeatures: { jsx: true } },globals: { window: 'readonly',document: 'readonly',console: 'readonly',process: 'readonly',PerformanceObserver: 'readonly',JSX: 'readonly',React: 'readonly',HTMLDivElement: 'readonly',MouseEvent: 'readonly',Node: 'readonly',RequestInit: 'readonly',Response: 'readonly',Headers: 'readonly',HTMLElement: 'readonly' } },plugins: { react,'react-hooks': reactHooks,'@typescript-eslint': tseslint },rules: { 'react/react-in-jsx-scope': 'off','react/prop-types': 'off','@typescript-eslint/no-unused-vars': ['warn',{ argsIgnorePattern: '^_' }],'@typescript-eslint/explicit-function-return-type': 'off','@typescript-eslint/explicit-module-boundary-types': 'off','no-unused-vars': 'off','no-console': 'warn','no-undef': 'off' },settings: { react: { version: 'detect' } } },{ ignores: [ 'node_modules*.ts','****','pages._quarantine*.cjs','next.config.*','playwright.config.ts','vite.config-backup.ts','public/**','.venv/**','api/**','jest.config.*','fix-*.js','fix-*.jsx','components/**','src/**','lib/**','utils/**','deployments/**','hooks/**','pages/**','pages.__backup/**','pages-disabled/**' ] } ];
     ]
   }
-=======
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',,
-},
-    settings: {;
-      react: {;
-        version: 'detect',,
-},,
-},,
-},
-  {;
-    files: ['**/*.cjs'],
-    languageOptions: {;
-      sourceType: 'commonjs',,
-},,
-},
-  {;
-    ignores: [;
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      'out/**',
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-    ],,
-},
->>>>>>> origin/automation-fixes
 ];
-=======
-import js from '@eslint/js'; import react from 'eslint-plugin-react'; import reactHooks from 'eslint-plugin-react-hooks'; import tseslint from '@typescript-eslint/eslint-plugin'; import tsparser from '@typescript-eslint/parser'; export default [ { files: ['***.{ts,tsx}'],languageOptions: { ecmaVersion: 2021,sourceType: 'module',parser: tsparser,parserOptions: { ecmaFeatures: { jsx: true } },globals: { window: 'readonly',document: 'readonly',console: 'readonly',process: 'readonly',PerformanceObserver: 'readonly',JSX: 'readonly',React: 'readonly',HTMLDivElement: 'readonly',MouseEvent: 'readonly',Node: 'readonly',RequestInit: 'readonly',Response: 'readonly',Headers: 'readonly',HTMLElement: 'readonly' } },plugins: { react,'react-hooks': reactHooks,'@typescript-eslint': tseslint },rules: { 'react/react-in-jsx-scope': 'off','react/prop-types': 'off','@typescript-eslint/no-unused-vars': ['warn',{ argsIgnorePattern: '^_' }],'@typescript-eslint/explicit-function-return-type': 'off','@typescript-eslint/explicit-module-boundary-types': 'off','no-unused-vars': 'off','no-console': 'warn','no-undef': 'off' },settings: { react: { version: 'detect' } } },{ ignores: [ 'node_modules*.ts','****','pages._quarantine*.cjs','next.config.*','playwright.config.ts','vite.config-backup.ts','public/**','.venv/**','api/**','jest.config.*','fix-*.js','fix-*.jsx','components/**','src/**','lib/**','utils/**','deployments/**','hooks/**','pages/**','pages.__backup/**','pages-disabled/**' ] } ];
->>>>>>> origin/automation-improvements

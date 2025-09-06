@@ -2,8 +2,7 @@ import useSWR from 'swr';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export default function DisputesIndexPage() {
+const fetcher = (url: string) => fetch(url).then(r => r.json());export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher);
   const disputes = data?.disputes || [];
   return (
@@ -15,8 +14,7 @@ export default function DisputesIndexPage() {
             <a className='text-sm text-blue-700 hover:underline'>
               Raise Dispute
             </a>
-          </Link>
-        </div>
+          </Link>        </div>
         <div className='overflow-auto border rounded'>
           <table className='min-w-full text-sm'>
             <thead className='bg-gray-50 dark:bg-gray-900'>
@@ -47,8 +45,7 @@ export default function DisputesIndexPage() {
                     className='px-3 py-6 text-center text-sm text-gray-500'
                   >
                     No disputes yet
-                  </td>                </tr>
-              )}
+                  </td>                </tr>              )}
             </tbody>
           </table>
         </div>

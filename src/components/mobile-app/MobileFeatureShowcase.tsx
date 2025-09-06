@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 };
 
-=======
-
-import React from "react";
-import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
     {
@@ -50,14 +44,8 @@ export const MobileFeatureShowcase: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index,) => (
             <div 
-<<<<<<< HEAD
               key={index} 
-              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"
-=======
-              key = {index,}
-              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            >
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"            >
               <div className="mb-4">
                 {feature.icon}
               </div>
@@ -69,13 +57,7 @@ export const MobileFeatureShowcase: React.FC = () => {
       </div>
     </section>
   )
-<<<<<<< HEAD
 };
-'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-},
+'"},
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+};

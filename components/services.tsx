@@ -54,8 +54,6 @@ and micro SAAS services designed to transform your business and drive innovation
 }<motion.div initial= {
   {
   opacity: 0, y: 20 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 }animate= {
   {
   opacity: 1, y: 0 
@@ -75,8 +73,7 @@ and micro SAAS services designed to transform your business and drive innovation
 }</div>) 
 }</motion.div> {
   /* Enhanced CTA Section */ 
-}<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) 
-  // Combine all services
+}<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)   // Combine all services
   const allServices = [
     ...enhancedRealMicroSaasServices;
     ...innovativeAIServices2029;
@@ -305,8 +302,7 @@ and micro SAAS services designed to transform your business and drive innovation
                         className={`p-3 rounded-xl transition-all duration-300 ${
                           viewMode === 'list' 
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
-                            : 'text-gray-400 hover: text-white hover:bg-gray-700/50',
-                        }`}
+                            : 'text-gray-400 hover: text-white hover:bg-gray-700/50',                        }`}
                       >
                         <List className="w-5 h-5" />
                       </button>
@@ -661,5 +657,3 @@ and micro SAAS services designed to transform your business and drive innovation
     </UltraFuturisticBackground2029>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

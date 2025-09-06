@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
   Shield,
@@ -13,8 +12,7 @@ import {
   Mail,
   Phone,
   MapPin,;
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
+} from 'lucide-react';import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function Security() {
   const securityMeasures = [
@@ -29,8 +27,7 @@ export default function Security() {
         'Secure data centers with 24/7 monitoring',
         'Data residency compliance for global clients',
       ],
-    },    {
-      id: 'access-control',
+    },    {      id: 'access-control',
       title: 'Access Control',
       icon: Key,
       features: [
@@ -40,8 +37,7 @@ export default function Security() {
         'Regular access reviews and deprovisioning',
         'Single sign-on (SSO) integration',
       ],
-    },    {
-      id: 'infrastructure',
+    },    {      id: 'infrastructure',
       title: 'Infrastructure Security',
       icon: Server,
       features: [
@@ -51,8 +47,7 @@ export default function Security() {
         'Automated security patching',
         'DDoS protection and rate limiting',
       ],
-    },    {
-      id: 'monitoring',
+    },    {      id: 'monitoring',
       title: 'Security Monitoring',
       icon: Eye,
       features: [
@@ -62,28 +57,10 @@ export default function Security() {
         'Security incident response team',
         'Continuous security monitoring tools',
       ],
-    },  ];
-=======
-export default function Security() {;
-  return (;
-    <>;
-      <Head>;
-        <title>Security — Zion Tech Group</title>;
-        <meta name="description" content="Comprehensive security information and practices for Zion Tech Group's autonomous systems and services." />;
-        <meta property="og:title" content="Security — Zion Tech Group" />;
-        <meta property="og:description" content="Comprehensive security information and practices for Zion Tech Group's autonomous systems and services." />;
-      </Head>;
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <section className="text-center mb-16">;
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
-              Security;
-            </h1>;
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">;
-              Protecting your data and systems with enterprise-grade security measures and autonomous threat detection.;
-            </p>;
-          </section>;
->>>>>>> origin/automation-fixes
+    },  ];        '24/7 security operations center (SOC)Real-time threat detection and responseComprehensive audit loggingSecurity incident response teamContinuous security monitoring tools'
+      ]
+    }
+  ];
 
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -91,8 +68,6 @@ export default function Security() {;
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' },  ];
-
-<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -104,39 +79,6 @@ export default function Security() {;
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-=======
-            {/* Security Features */}
-            <section className="mb-16">;
-              <h2 className="text-3xl font-bold mb-8 text-cyan-400">Security Features</h2>;
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-                {/* Authentication & Access Control */}
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10">;
-                  <h3 className="text-xl font-semibold mb-4 text-white">Authentication & Access Control</h3>;
-                  <ul className="space-y-3 text-white/80">;
-                    <li className="flex items-start">;
-                      <span className="text-green-400 mr-2">✓</span>;
-                      Multi-factor authentication (MFA) support;
-                    </li>;
-                    <li className="flex items-start">;
-                      <span className="text-green-400 mr-2">✓</span>;
-                      Role-based access control (RBAC);
-                    </li>;
-                    <li className="flex items-start">;
-                      <span className="text-green-400 mr-2">✓</span>;
-                      Single sign-on (SSO) integration;
-                    </li>;
-                    <li className="flex items-start">;
-                      <span className="text-green-400 mr-2">✓</span>;
-                      Session management and timeout controls;
-                    </li>;
-                    <li className="flex items-start">;
-                      <span className="text-green-400 mr-2">✓</span>;
-                      API key management and rotation;
-                    </li>;
-                  </ul>;
-                </div>;
->>>>>>> origin/automation-fixes
-
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
         <EnhancedNavigation />
 
@@ -150,6 +92,22 @@ export default function Security() {;
             >
               <Shield className='w-16 h-16 text-cyan-400' />
             </motion.div>
+      </Head>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <EnhancedNavigation />
+
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Shield className="w-16 h-16 text-cyan-400" />
+            </motion.div>
+            
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -157,16 +115,14 @@ export default function Security() {;
               className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6'
             >
               Security First
-            </motion.h1>
-            <motion.p
+            </motion.h1>            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
             >
               Your security and privacy are our top priorities. Learn about our
-              comprehensive security measures and industry-leading practices.            </motion.p>
-          </div>
+              comprehensive security measures and industry-leading practices.            </motion.p>          </div>
         </section>
 
         {/* Security Overview */}
@@ -186,9 +142,7 @@ export default function Security() {;
               </p>
             </motion.div>
 
-<<<<<<< HEAD
-            <div className='grid md:grid-cols-2 gap-8 mb-16'>              {securityMeasures.map((measure, index) => (
-                <motion.div
+            <div className='grid md:grid-cols-2 gap-8 mb-16'>              {securityMeasures.map((measure, index) => (                <motion.div
                   key={measure.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -208,13 +162,11 @@ export default function Security() {;
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
                         <span className='text-gray-300 leading-relaxed'>
                           {feature}
-                        </span>                      </li>
-                    ))}
+                        </span>                      </li>                    ))}
                   </ul>
                 </motion.div>
               ))}
             </div>
-=======
             {/* Compliance & Certifications */}
             <section className="mb-16 p-8 bg-white/5 rounded-2xl border border-white/10">;
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Compliance & Certifications</h2>;
@@ -274,7 +226,6 @@ export default function Security() {;
                     <li>• Automated security testing in CI/CD</li>;
                   </ul>;
                 </div>;
->>>>>>> origin/automation-fixes
 
             {/* Certifications */}
             <motion.div
@@ -287,8 +238,7 @@ export default function Security() {;
                 Security Certifications & Compliance
               </h3>
 
-              <div className='grid md:grid-cols-5 gap-6'>                {certifications.map((cert, index) => (
-                  <motion.div
+              <div className='grid md:grid-cols-5 gap-6'>                {certifications.map((cert, index) => (                  <motion.div
                     key={cert.name}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -299,8 +249,7 @@ export default function Security() {;
                     <h4 className='text-white font-semibold mb-1'>
                       {cert.name}
                     </h4>
-                    <p className='text-cyan-400 text-sm'>{cert.status}</p>                  </motion.div>
-                ))}
+                    <p className='text-cyan-400 text-sm'>{cert.status}</p>                  </motion.div>                ))}
               </div>
             </motion.div>
 
@@ -321,21 +270,18 @@ export default function Security() {;
                       <Eye className='w-5 h-5 text-cyan-400 mr-2' />
                       Detection & Response
                     </h4>
-                    <ul className='space-y-2 text-gray-300'>                      <li>• 24/7 security monitoring</li>
-                      <li>• Automated threat detection</li>
+                    <ul className='space-y-2 text-gray-300'>                      <li>• 24/7 security monitoring</li>                      <li>• Automated threat detection</li>
                       <li>• Rapid incident response team</li>
                       <li>• Regular security drills</li>
                     </ul>
                   </div>
 
-<<<<<<< HEAD
                   <div>
                     <h4 className='text-white font-semibold mb-4 flex items-center'>
                       <Lock className='w-5 h-5 text-cyan-400 mr-2' />
                       Business Continuity
                     </h4>
-                    <ul className='space-y-2 text-gray-300'>                      <li>• Disaster recovery plans</li>
-                      <li>• Regular backup testing</li>
+                    <ul className='space-y-2 text-gray-300'>                      <li>• Disaster recovery plans</li>                      <li>• Regular backup testing</li>
                       <li>• Redundant infrastructure</li>
                       <li>• Recovery time objectives (RTO)</li>
                     </ul>
@@ -394,8 +340,7 @@ export default function Security() {;
                     </h4>
                     <p className='text-gray-300 text-sm'>
                       Quick patching and vulnerability resolution
-                    </p>                  </div>
-                </div>
+                    </p>                  </div>                </div>
               </div>
             </motion.div>
 
@@ -439,8 +384,7 @@ export default function Security() {;
                   <Key className='w-5 h-5 text-red-400 mr-3' />
                   <div>
                     <p className='text-white font-semibold'>PGP Key</p>
-                    <p className='text-gray-300'>Available on request</p>                  </div>
-                </div>
+                    <p className='text-gray-300'>Available on request</p>                  </div>                </div>
               </div>
             </motion.div>
           </div>
@@ -449,95 +393,5 @@ export default function Security() {;
         <EnhancedFooter />
       </div>
     </>
-  );
-=======
-            {/* Security Dashboard */}
-            <section className="mb-16 p-8 bg-slate-900 rounded-2xl border border-white/10">;
-              <h2 className="text-3xl font-bold mb-6 text-blue-400">Live Security Status</h2>;
-              <p className="text-white/80 mb-6">;
-                Real-time security metrics and system health indicators from our autonomous monitoring systems.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-                <div className="text-center p-4 bg-green-500/20 rounded-lg border border-green-500/30">;
-                  <div className="text-2xl font-bold text-green-400">99.9%</div>;
-                  <div className="text-white/80 text-sm">Uptime</div>;
-                </div>;
-                <div className="text-center p-4 bg-blue-500/20 rounded-lg border border-blue-500/30">;
-                  <div className="text-2xl font-bold text-blue-400">0</div>;
-                  <div className="text-white/80 text-sm">Active Threats</div>;
-                </div>;
-                <div className="text-center p-4 bg-yellow-500/20 rounded-lg border border-yellow-500/30">;
-                  <div className="text-2xl font-bold text-yellow-400">24/7</div>;
-                  <div className="text-white/80 text-sm">Monitoring</div>;
-                </div>;
-                <div className="text-center p-4 bg-purple-500/20 rounded-lg border border-purple-500/30">;
-                  <div className="text-2xl font-bold text-purple-400">100%</div>;
-                  <div className="text-white/80 text-sm">Encrypted</div>;
-                </div>;
-              </div>;
-              <div className="mt-6 text-center">;
-                <a href="/reports/performance-metrics" className="text-cyan-400 hover:text-cyan-300 text-sm">;
-                  View detailed security metrics →;
-                </a>;
-              </div>;
-            </section>;
-
-            {/* Security Resources */}
-            <section className="mb-16 p-8 bg-white/5 rounded-2xl border border-white/10">;
-              <h2 className="text-3xl font-bold mb-6 text-indigo-400">Security Resources</h2>;
-              <p className="text-white/80 mb-6">;
-                Access our security documentation, best practices, and incident response procedures.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
-                <div className="bg-slate-900 p-6 rounded-lg">;
-                  <h3 className="text-lg font-semibold text-white mb-3">Security Documentation</h3>;
-                  <ul className="space-y-2 text-white/80">;
-                    <li><a href="/api-documentation" className="text-cyan-400 hover:text-cyan-300">API Security Guide</a></li>;
-                    <li><a href="/reports" className="text-cyan-400 hover:text-cyan-300">Security Reports</a></li>;
-                    <li><a href="/automation" className="text-cyan-400 hover:text-cyan-300">Automation Security</a></li>;
-                  </ul>;
-                </div>;
-                <div className="bg-slate-900 p-6 rounded-lg">;
-                  <h3 className="text-lg font-semibold text-white mb-3">Incident Response</h3>;
-                  <ul className="space-y-2 text-white/80">;
-                    <li><a href="/contact" className="text-cyan-400 hover:text-cyan-300">Report Security Issue</a></li>;
-                    <li><a href="/reports/automation-overview-2025" className="text-cyan-400 hover:text-cyan-300">Security Status</a></li>;
-                    <li><a href="/contact" className="text-cyan-400 hover:text-cyan-300">Emergency Contact</a></li>;
-                  </ul>;
-                </div>;
-              </div>;
-            </section>;
-
-            {/* Contact Security Team */}
-            <section className="p-8 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl border border-red-500/20">;
-              <h2 className="text-3xl font-bold mb-6 text-red-400">Report Security Issues</h2>;
-              <p className="text-white/80 mb-6">;
-                If you've discovered a security vulnerability or have security concerns, please report them immediately. ;
-                Our security team is available 24/7 to respond to security incidents.;
-              </p>;
-              <div className="flex flex-wrap gap-4">;
-                <a href="/contact" className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors">;
-                  Report Security Issue;
-                </a>;
-                <a href="mailto:security@zion.tech" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">;
-                  Email Security Team;
-                </a>;
-                <a href="/reports" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">;
-                  View Security Status;
-                </a>;
-              </div>;
-              <div className="mt-6 p-4 bg-slate-900 rounded-lg">;
-                <h3 className="text-lg font-semibold text-white mb-2">Emergency Contact</h3>;
-                <p className="text-white/80 text-sm">;
-                  For critical security incidents requiring immediate attention, contact our 24/7 security hotline: ;
-                  <span className="text-red-400 font-mono ml-2">+1-800-SECURITY</span>;
-                </p>;
-              </div>;
-            </section>;
-          </div>;
-        </main>;
-      </div>;
-    </>;
-  );
+  );  )
 }
->>>>>>> origin/automation-fixes

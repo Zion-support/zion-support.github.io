@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -35,6 +36,9 @@
 
 // Run the enhanced orchestrator
 main();#!/usr/bin/env node;
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')

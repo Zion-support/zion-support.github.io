@@ -12,4 +12,8 @@ import { execSync, spawn } from;
   'UNMET DEPENDENCY') || line.includes('';"missing")
   'npm outdated --json', { "stdio"}
         "type": ';outdated, '}))    } "catch"
+<<<<<<< HEAD
             "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
+=======
+            "type": ';outdated, '}))} "catch"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

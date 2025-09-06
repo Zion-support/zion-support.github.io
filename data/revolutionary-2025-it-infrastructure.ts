@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface Revolutionary2025ITService {
   id: string;
   name: string;
   tagline: string;
@@ -41,17 +39,12 @@ export interface Revolutionary2025ITService {
   reviews: number;
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   // 🔒 Next-Generation Cybersecurity Services
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   // 🔒 Next-Generation Cybersecurity Services
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'quantum-cybersecurity-platform',
     name: 'Quantum Cybersecurity Platform',
     tagline:
@@ -60,7 +53,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description:
       'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.',
-<<<<<<< HEAD
     features: [
       'Quantum encryption algorithms',
       'AI-powered threat detection',
@@ -107,8 +99,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     ],
     roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.',
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne'],
-    marketSize: '$200B cybersecurity market',
-    features: [
+    marketSize: '$200B cybersecurity market',    features: [
       'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
     ];
     popular: true;
@@ -1084,7 +1075,3 @@ export default revolutionary2025ITServices;
 ];
 
 export default revolutionary2025ITServices;
-=======
-export default revolutionary2025ITServices;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

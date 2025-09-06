@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-    
-=======
-import { useState } from "react";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { useRouter } from 'next/router';
+    import { useRouter } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useResume } from "@/hooks/useResume";
 import { useAuth } from "@/hooks/useAuth";
@@ -12,12 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-<<<<<<< HEAD
-import { AlertCircle, FileText, Loader2 } from 'lucide-react'
-=======
-import { AlertCircle, FileText, Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { formatDistanceToNow } from "date-fns";
+import { AlertCircle, FileText, Loader2 } from 'lucide-react'import { formatDistanceToNow } from "date-fns";
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
 interface ApplyToJobFormProps {
@@ -37,14 +27,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
-<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-=======
-  const handleSubmit = async (e: React.FormEvent,) => {
-    e.preventDefault(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    
+    e.preventDefault();    
     if (!user) {
       toast.error("You must be logged in to apply");
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`);
@@ -219,8 +203,4 @@ handleSubmit ;
 }</SelectContent> </Select> > Create Resume </Button> </div>) ";
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

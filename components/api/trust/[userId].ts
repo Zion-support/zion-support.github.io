@@ -4,7 +4,6 @@ import type {
   TrustMetricInputs,
   TrustScoreBreakdown,;
 } from '../../../utils/types/trust';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { supabase } from '../../../utils/supabase/client';
 
 async function analyzeWithGPT(
@@ -26,13 +25,14 @@ async function analyzeWithGPT(
     return {
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel'],
       reasonSummary: 'Heuristic classification (no OpenAI key set).',
-    };  }
-=======
+    };  }import { supabase } from '../../../utils/supabase/client';
+async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    // Fallback heuristic
     const heuristic = inputs.disputeFlags >= 3 ? 'Risk Alert' : (inputs.completionRate >= 0.8 && inputs.feedbackAverage >= 4 ? 'High Trust' : 'Moderate Trust');
     return { riskLevel: heuristic as TrustScoreBreakdown['riskLevel'], reasonSummary: 'Heuristic classification (no OpenAI key set).' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   try {
     const { OpenAI } = await import('openai');
@@ -52,8 +52,6 @@ async function analyzeWithGPT(
       temperature: 0.2,
       max_tokens: 200,
     });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
     const content = resp.choices?.[0]?.message?.content || '';
     const lower = content.toLowerCase();
     let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust';
@@ -75,12 +73,8 @@ export default async function handler(
 ) {
   const { userId } = req.query;
   if (!userId || Array.isArray(userId))
-    return res.status(400).json({ error: 'Invalid userId' });
-=======
-  if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    return res.status(400).json({ error: 'Invalid userId' });  if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   if (req.method === 'GET') {
     try {
       const analyze = req.query.analyze === 'true';
@@ -96,17 +90,12 @@ export default async function handler(
         if (data) inputs = data.values as TrustMetricInputs;      } catch {}
 
       if (!inputs) {
-        inputs = {
-=======
-        const { data } = await supabase.from('trust_inputs').select('*').eq('userId', userId).single();
+        inputs = {        const { data } = await supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data.values as TrustMetricInputs
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       } catch {}
 
       if (!inputs) {
         inputs = {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           completionRate: 0.88,
           onboardingCompletionRate: 0.9,
           feedbackAverage: 4.7,
@@ -119,9 +108,6 @@ export default async function handler(
           endorsements: 8,
           flags: 0,
         };
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      }
 
       let reasonSummary: string | undefined;
       let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined;
@@ -134,19 +120,14 @@ export default async function handler(
       const result: TrustScoreBreakdown = {
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown.riskLevel,
-      };
-=======
-        riskLevelOverride = analysis.riskLevel
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      };        riskLevelOverride = analysis.riskLevel
       }
 
       const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
-<<<<<<< HEAD
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown.riskLevel,
       };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Persist latest score when possible
       try {
@@ -164,12 +145,16 @@ export default async function handler(
         .status(500)
         .json({ error: e?.message || 'Failed to compute trust score' });
     }  }
-=======
+      // Persist latest score when possible
+      try {
+        await supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result.updatedAt }, { onConflict: 'userId' })
+      } catch {}
+
+      return res.status(200).json(result)
+    } catch (e: any) {
       return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (req.method === 'POST') {
     try {
@@ -189,7 +174,6 @@ export default async function handler(
             { userId, breakdown, updatedAt: breakdown.updatedAt },
             { onConflict: 'userId' }
           );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       } catch {}
 
       return res.status(200).json(breakdown);
@@ -201,10 +185,14 @@ export default async function handler(
   }
 
   res.setHeader('Allow', 'GET, POST');
-  return res.status(405).json({ error: 'Method not allowed' });
-=======
+  return res.status(405).json({ error: 'Method not allowed' });      } catch {}
+
+      return res.status(200).json(breakdown)
+    } catch (e: any) {
+      return res.status(500).json({ error: e?.message || 'Failed to save trust inputs' })
+    };
+  }
+
   res.setHeader('AllowGET, POST');
   return res.status(405).json({ error: 'Method not allowed' })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

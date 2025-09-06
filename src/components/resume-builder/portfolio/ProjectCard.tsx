@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useState } from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-<<<<<<< HEAD
 import {
   AlertDialog,
   AlertDialogAction,
@@ -22,25 +14,19 @@ import {
   AlertDialogTitle,;
 } from '@/components/ui/alert-dialog';
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void;
-=======
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
-import Image from 'next/image';
+  onDelete: (projectId: string) => void;import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
   project: PortfolioProject,
   onEdit: (project: PortfolioProject,) => void,
   onDelete: (projectId: string,) => void
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
@@ -59,27 +45,14 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             src={project.image_url}
             alt={project.title}
             className='object-cover'
-            loading='lazy'
-=======
-    <Card className="h-full flex flex-col">
+            loading='lazy'    <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         {project.image_url ? (
           <Image
-<<<<<<< HEAD
             src={project.image_url}
             alt={project.title}
-<<<<<<< HEAD
             className='object-cover'
             loading='lazy'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-            src = {project.image_url,}
-            alt = {project.title,}
-            className="object-cover"
-            loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          />
         ) : (
           <div className='w-full h-full flex items-center justify-center bg-muted'>
             <FileText className='h-12 w-12 text-muted-foreground/50' />
@@ -98,19 +71,30 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
 
           {project.technologies && project.technologies.length > 0 && (
-<<<<<<< HEAD
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
-                <Badge key={index} variant='secondary' className='text-xs'>                  {tech}
-=======
-=======
+                <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-muted">
+            <FileText className="h-12 w-12 text-muted-foreground/50" />
+          </div>
+        )}
+      </div>
+      
+      <CardContent className="flex-grow pt-6">
+        <div className="space-y-2">
+          <h3 className="font-semibold text-lg">{project.title}</h3>
+          
+          {project.description && (
+            <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
+          )}
+          
+          {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
-              {project.technologies.map((tech, index,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+              {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {tech}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </Badge>
               ))}
             </div>
@@ -120,22 +104,18 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
       <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
         <div className='flex gap-2'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {project.github_url && (
             <a
-<<<<<<< HEAD
               href={project.github_url}
               target='_blank'
               rel='noopener noreferrer'
               aria-label='GitHub'
               title='GitHub'
-=======
               href = {project.github_url,}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
               title="GitHub"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <Button variant='ghost' size='icon' aria-label='GitHub link'>
                 <Github className='h-4 w-4' />
@@ -145,35 +125,21 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
           {project.demo_url && (
             <a
-<<<<<<< HEAD
               href={project.demo_url}
               target='_blank'
               rel='noopener noreferrer'
               aria-label='Live demo'
-              title='Live demo'
-=======
-              href = {project.demo_url,}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Live demo"
-              title="Live demo"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            >
+              title='Live demo'            >
               <Button variant='ghost' size='icon' aria-label='Live demo link'>
                 <Link className='h-4 w-4' />              </Button>
             </a>
           )}
-        </div>
-=======
-              <Button variant="ghost" size="icon" aria-label="Live demo link">
+        </div>              <Button variant="ghost" size="icon" aria-label="Live demo link">
                 <Link className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </Button>
             </a>
           )}
         </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         <div className='flex gap-2'>
           <Button
@@ -183,9 +149,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             aria-label='Edit project'
           >
             <Edit className='h-4 w-4' />
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          </Button>
           <Button
             variant='ghost'
             size='icon'
@@ -196,10 +159,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </Button>
         </div>
       </CardFooter>
-=======
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -213,24 +173,16 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <AlertDialogAction
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
-            >              Delete
-=======
-              Are you sure you want to delete this project? This action cannot be undone.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            >              Delete              Are you sure you want to delete this project? This action cannot be undone.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-<<<<<<< HEAD
             <AlertDialogAction
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
-            >
-=======
-            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
               Delete
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -238,7 +190,3 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Code Quality Analyzer;
@@ -412,3 +413,5 @@ analyzer.run().catch(console.error);
 =======
 analyzer.run().catch(console.error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

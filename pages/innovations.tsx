@@ -22,8 +22,7 @@ import {
   Mail,
   MapPin,
   ExternalLink,
-  Sparkles,;} from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
+  Sparkles,;} from 'lucide-react';import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
@@ -32,8 +31,7 @@ import ComprehensiveServicesShowcase2029 from '../components/sections/Comprehens
 export default function InnovationsPage() {
   return (
     <UltraFuturisticBackground2029>
-      <div className='min-h-screen bg-black/90'>
-        <Head>
+      <div className='min-h-screen bg-black/90'>        <Head>
           <title>
             2029 Innovations - Zion Tech Group | AI, Quantum, Space Tech
             Breakthroughs
@@ -82,7 +80,6 @@ export default function InnovationsPage() {
             name='twitter:image'
             content='https://ziontechgroup.com/og-image.jpg'
           />        </Head>
-
         {/* Enhanced Navigation */}
         <UltraFuturisticNavigation2029V2 />
 
@@ -98,8 +95,7 @@ export default function InnovationsPage() {
                 <div className='inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6'>
                   <Sparkles className='w-12 h-12 text-white' />
                 </div>
-              </motion.div>
-              <motion.h1
+              </motion.div>              <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -110,8 +106,7 @@ export default function InnovationsPage() {
                 </span>
                 <br />
                 <span className='text-white'>Breakthrough</span>
-              </motion.h1>
-              <motion.p
+              </motion.h1>              <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -121,7 +116,6 @@ export default function InnovationsPage() {
                 in AI consciousness, quantum computing, space technology, and
                 enterprise solutions that are reshaping industries and unlocking
                 unprecedented possibilities.              </motion.p>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -140,8 +134,7 @@ export default function InnovationsPage() {
                   href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg'
                 >
-                  <Mail className='w-5 h-5 mr-2' />                  Partner With Us
-                </a>
+                  <Mail className='w-5 h-5 mr-2' />                  Partner With Us                </a>
               </motion.div>
             </div>
           </div>
@@ -149,8 +142,7 @@ export default function InnovationsPage() {
 
         {/* Innovation Categories Overview */}
         <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -221,8 +213,7 @@ export default function InnovationsPage() {
                     'HR Analytics',
                     'Cybersecurity',
                   ],
-                },              ].map((category, index) => (
-                <motion.div
+                },              ].map((category, index) => (                <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -253,8 +244,7 @@ export default function InnovationsPage() {
                           key={idx}
                           className='flex items-center gap-3 text-sm text-gray-300'
                         >
-                          <div className='w-2 h-2 bg-cyan-400 rounded-full'></div>                          {feature}
-                        </div>
+                          <div className='w-2 h-2 bg-cyan-400 rounded-full'></div>                          {feature}                        </div>
                       ))}
                     </div>
                   </div>
@@ -270,8 +260,7 @@ export default function InnovationsPage() {
 
         {/* Innovation Impact Section */}
         <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -310,8 +299,7 @@ export default function InnovationsPage() {
                   description:
                     'Solutions designed for the next decade of technological advancement',
                   stats: '2029+ Future-ready',
-                },              ].map((item, index) => (
-                <motion.div
+                },              ].map((item, index) => (                <motion.div
                   key={item.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -328,8 +316,7 @@ export default function InnovationsPage() {
                   <p className='text-gray-300 mb-6 leading-relaxed'>
                     {item.description}
                   </p>
-                  <div className='text-cyan-400 font-bold text-lg'>                    {item.stats}
-                  </div>
+                  <div className='text-cyan-400 font-bold text-lg'>                    {item.stats}                  </div>
                 </motion.div>
               ))}
             </div>
@@ -338,8 +325,7 @@ export default function InnovationsPage() {
 
         {/* Call to Action */}
         <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -373,8 +359,7 @@ export default function InnovationsPage() {
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2'>
-                      <Mail className='w-5 h-5 text-cyan-400' />                      <span>{contactInfo.email}</span>
-                    </div>
+                      <Mail className='w-5 h-5 text-cyan-400' />                      <span>{contactInfo.email}</span>                    </div>
                   </div>
                 </div>
               </div>

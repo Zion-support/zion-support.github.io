@@ -1,23 +1,13 @@
 
-<<<<<<< HEAD
 type MilestoneFormValues = z.infer<typeof formSchema>;
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-<<<<<<< HEAD
-import { CalendarIcon, Loader2 } from 'lucide-react'
-=======
-import { CalendarIcon, Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { format } from 'date-fns';
+import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import {
-<<<<<<< HEAD
   Form;
   FormControl;
   FormField;
@@ -29,22 +19,7 @@ import { Textarea } from '@/components/ui/textarea';
 import {
   Popover;
   PopoverContent;
-  PopoverTrigger} from '@/components/ui/popover';
-=======
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from '@/components/ui/form',
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger} from '@/components/ui/popover',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+  PopoverTrigger} from '@/components/ui/popover';import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required');
@@ -79,15 +54,8 @@ export function AddMilestoneForm({
       title: '',
       description: '',
       amount: 0}}),
-<<<<<<< HEAD
   const handleSubmit = (values: MilestoneFormValues) => {
-    onSubmit(values);
-=======
-
-  const handleSubmit = (values: MilestoneFormValues,) => {
-    onSubmit(values),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    form.reset()
+    onSubmit(values);    form.reset()
   };
 
   const handleAddMilestones = (milestones: GeneratedMilestone[],) => {
@@ -286,8 +254,4 @@ export function AddMilestoneForm({
 }> Cancel </Button>) ";
 }<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") ;
 }</Button> </div> </form> </Form> </div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useInterviews } from '@/hooks/useInterviews';
 import { Interview } from '@/types/interview';
@@ -10,31 +8,16 @@ import { InterviewCard } from '@/components/interviews/InterviewCard';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, Video } from 'lucide-react';
 import { format, isAfter, parseISO, startOfDay } from 'date-fns';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState('upcoming');
 
-  useEffect(() => {
-=======
-
-import React, { useEffect, useState } from "react";
-import { useInterviews } from "@/hooks/useInterviews";
-import { Interview } from "@/types/interview";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { InterviewCard } from "@/components/interviews/InterviewCard";
-import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Video } from 'lucide-react';
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
-function InterviewsContent() {
+  useEffect(() => {function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
   
   useEffect((,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
       await fetchInterviews();
@@ -48,7 +31,6 @@ function InterviewsContent() {
   const today = startOfDay(now);
 
   const upcomingInterviews = interviews
-<<<<<<< HEAD
     .filter(interview => {
       const interviewDate = parseISO(interview.scheduled_date);
       return (
@@ -65,22 +47,6 @@ function InterviewsContent() {
   const pendingInterviews = interviews.filter(
     interview => interview.status === 'requested'
   );
-
-=======
-    .filter((interview,) => {
-      const interviewDate = parseISO(interview.scheduled_date),
-      return isAfter(interviewDate, now) && 
-        ['confirmedrequested'].includes(interview.status)
-    })
-    .sort((a, b,) => 
-      parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
-    ),
-  
-  const pendingInterviews = interviews.filter(interview => 
-    interview.status === 'requested'
-  ),
-  
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date);
     return (
@@ -90,7 +56,6 @@ function InterviewsContent() {
   });
 
   // Group interviews by date
-<<<<<<< HEAD
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string, Interview[]> = {};
 
@@ -129,46 +94,7 @@ function InterviewsContent() {
                 key={interview.id}
                 interview={interview}
                 onRefresh={async () => {
-                  await fetchInterviews();
-=======
-  const groupInterviewsByDate = (interviews: Interview[],) => {
-    const grouped: Record<string, Interview[]> = {},
-    
-    interviews.forEach((interview,) => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd'),
-      if (!grouped[dateKey]) {
-        grouped[dateKey] = []
-      }
-      grouped[dateKey].push(interview)
-    }),
-    
-    return grouped
-  },
-  
-  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews),
-  const pendingGrouped = groupInterviewsByDate(pendingInterviews),
-  const pastGrouped = groupInterviewsByDate(pastInterviews),
-
-  const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>,) => {
-    return Object.entries(groupedInterviews)
-      .sort(([dateA], [dateB],) => 
-        parseISO(dateA).getTime() - parseISO(dateB).getTime()
-      )
-      .map(([date, interviews],) => (
-        <div key={date} className="mb-8">
-          <h3 className="text-lg font-medium text-white mb-4 flex items-center">
-            <Calendar className="h-5 w-5 mr-2" />
-            {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {interviews.map((interview,) => (
-              <InterviewCard 
-                key = {interview.id,}
-                interview = {interview,}
-                onRefresh={async (,) => {
-                  await fetchInterviews()
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                }}
+                  await fetchInterviews();                }}
               />
             ))}
           </div>
@@ -287,57 +213,5 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   );
-=======
-=======
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-const Interviews = () => {;
-  return (;
-    <>;
-      <Head>;
-        <title>Interviews - Zion Tech Group</title>;
-        <meta name="description" content="Professional Interviews services"  />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-              Interviews;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-12">;
-              Professional Interviews services and solutions;
-            </p>;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Professional Solutions</li>;
-                  <li>• Expert Implementation</li>;
-                  <li>• 24/7 Support</li>;
-                  <li>• Custom Development</li>;
-                </ul>;
-              </div>;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Industry Expertise</li>;
-                  <li>• Proven Results</li>;
-                  <li>• Scalable Solutions</li>;
-                  <li>• Competitive Pricing</li>;
-                </ul>;
-              </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-                View Pricing;
-              </Link>;
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
-                Contact Us;
-              </Link>;
-            </div>;
-    </>;
-  );
->>>>>>> origin/automation-fixes
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

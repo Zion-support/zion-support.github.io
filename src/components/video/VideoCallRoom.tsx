@@ -4,14 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-<<<<<<< HEAD
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
-import './video-call.css';
-=======
-import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
-import './video-call.css',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-interface Participant {
+import './video-call.css';interface Participant {
   id: string,
   name: string,
   avatar?: string;
@@ -23,35 +17,19 @@ interface Participant {
 
 interface VideoCallRoomProps {
   roomId: string,
-<<<<<<< HEAD
   participants?: Participant[];
   onLeave?: () => void;
   onToggleMute?: (isMuted: boolean) => void,
   onToggleVideo?: (isEnabled: boolean) => void,
-  onToggleScreenShare?: (isSharing: boolean) => void,
-=======
-  participants?: Participant[],
-  onLeave?: () => void,
-  onToggleMute?: (isMuted: boolean,) => void,
-  onToggleVideo?: (isEnabled: boolean,) => void,
-  onToggleScreenShare?: (isSharing: boolean,) => void,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  className?: string
+  onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
 }
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   roomId;
   participants = [], 
-<<<<<<< HEAD
     const secs = seconds % 60;
     
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  onLeave,
+};  onLeave,
   onToggleMute,
   onToggleVideo,
   onToggleScreenShare,
@@ -243,4 +221,3 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     </Card>
   )
 },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

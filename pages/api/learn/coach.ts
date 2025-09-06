@@ -7,7 +7,6 @@ export default async function handler(
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');  }
-
   const { prompt } = req.body || {};
   if (!prompt) return res.status($1).json({$2});
   try {
@@ -24,8 +23,7 @@ export default async function handler(
               'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.',
           },
           { role: 'user', content: String(prompt) },
-        ],
-      });
+        ],      });
       const text = resp.choices?.[0]?.message?.content || 'No response';
       return res.status(200).json({ text });
     }

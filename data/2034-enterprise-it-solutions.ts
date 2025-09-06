@@ -181,9 +181,7 @@ rating: 4.8
 };
 link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub';
 realService: true 
-}];
-=======
-	id: string;
+}];	id: string;
 	name: string;
 	tagline?: string;
 	description: string;
@@ -303,5 +301,3 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		realService: true
 	}
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

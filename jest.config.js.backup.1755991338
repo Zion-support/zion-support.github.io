@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -11,6 +12,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -36,27 +39,16 @@ module.exports = {
     **/?(*.)+(spec|test).(ts|tsx|js)
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-};
 =======
-/** @type {import('jest').Config} */
-module.exports = {
-  testEnvironment: 'jsdom',
-  roots: ['<rootDir>/'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-  },
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  testMatch: ['**/__tests__/**/*.(spec|test).(ts|tsx|js)'],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
+};
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
 =======
 };
@@ -67,3 +59,5 @@ module.exports = {
 };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

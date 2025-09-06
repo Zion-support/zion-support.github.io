@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -10,23 +6,12 @@ import { Job, JobStatus } from "@/types/jobs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { Loader2, Edit, X, Eye } from 'lucide-react'
-=======
-import { Loader2, Edit, X, Eye } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { format } from "date-fns";
+import { Loader2, Edit, X, Eye } from 'lucide-react'import { format } from "date-fns";
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
-<<<<<<< HEAD
   filter?: JobStatus;
-  onSelectJob?: (jobId: string, jobTitle: string) => void
-=======
-  filter?: JobStatus,
-  onSelectJob?: (jobId: string, jobTitle: string,) => void
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-}
+  onSelectJob?: (jobId: string, jobTitle: string) => void}
 
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth();
@@ -185,8 +170,4 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
   job.budget.max ";
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) ) ;
 }</div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

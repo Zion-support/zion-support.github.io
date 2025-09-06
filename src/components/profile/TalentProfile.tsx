@@ -13,25 +13,6 @@ import { ProfileRatings } from './ProfileRatings';
 import { TalentProfile as TalentProfileType } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
 import { Availability } from '@/types/profile';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { HireNowCTA } from "./HireNowCTA";
-import { ProfileHero } from "./ProfileHero";
-import { ProfileSkills } from "./ProfileSkills";
-import { ProfileExperience } from "./ProfileExperience";
-import { ProfileProjects } from "./ProfileProjects";
-import { ProfileAvailability } from "./ProfileAvailability";
-import { ProfileContact } from "./ProfileContact";
-import { ProfileRatings } from "./ProfileRatings";
-import { TalentProfile as TalentProfileType } from "@/types/talent";
-import { useAuth } from "@/hooks/useAuth";
-import { Availability } from "@/types/profile";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface TalentProfileProps {
   profile: TalentProfileType;
   onRequestHire: () => void;
@@ -63,7 +44,6 @@ export function TalentProfile({
     })) || [];
 
   // Create proper projects array for ProfileProjects component
-<<<<<<< HEAD
   const projectsArray =
     profile.key_projects?.map((proj, i) => ({
       id: `project-${i}`,
@@ -71,36 +51,16 @@ export function TalentProfile({
       description: proj.description,
       date: new Date().toISOString(), // Default date since we don't have this data
     })) || [];
-
-=======
-  const projectsArray = profile.key_projects?.map((proj, i,) => ({
-    id: `project-${i}`,
-    title: proj.title,
-    description: proj.description,
-    date: new Date().toISOString() // Default date since we don't have this data
-  })) || [],
-  
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   return (
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
       <ProfileHero
-<<<<<<< HEAD
         name={profile.full_name}
         title={profile.professional_title}
         avatarUrl={profile.profile_picture_url}
         profileType='talent'
         rating={profile.average_rating}
-        reviewCount={profile.rating_count}
-=======
-        name = {profile.full_name,}
-        title = {profile.professional_title,}
-        avatarUrl = {profile.profile_picture_url,}
-        profileType="talent"
-        rating = {profile.average_rating,}
-        reviewCount = {profile.rating_count,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      />
+        reviewCount={profile.rating_count}      />
 
       {/* Main content area */}
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>
@@ -108,18 +68,10 @@ export function TalentProfile({
         <div className='space-y-8'>
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
-<<<<<<< HEAD
           <ProfileContact
             email={profile.user_id}
             profileName={profile.full_name}
-            profileType='talent'
-=======
-          <ProfileContact 
-            email = {profile.user_id,}
-            profileName = {profile.full_name,}
-            profileType="talent"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          />
+            profileType='talent'          />
         </div>
 
         {/* Right Column - Bio & Projects */}
@@ -145,18 +97,10 @@ export function TalentProfile({
               <Star className='mr-2 h-5 w-5 text-yellow-400' />
               Reviews & Ratings
             </h2>
-<<<<<<< HEAD
             <ProfileRatings
               userId={profile.id}
               averageRating={profile.average_rating}
-              ratingCount={profile.rating_count}
-=======
-            <ProfileRatings 
-              userId = {profile.id,}
-              averageRating = {profile.average_rating,}
-              ratingCount = {profile.rating_count,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            />
+              ratingCount={profile.rating_count}            />
           </div>
 
           {/* Hire Now CTA */}
@@ -172,41 +116,22 @@ export function TalentProfile({
                   {profile.hourly_rate &&
                     ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
-<<<<<<< HEAD
 
                 <div className='flex flex-wrap gap-4 justify-center'>
                   <Button
                     size='lg'
                     className='bg-zion-purple text-white hover:bg-zion-purple-dark'
-                    onClick={onRequestHire}
-=======
-                
-                <div className="flex flex-wrap gap-4 justify-center">
-                  <Button 
-                    size="lg" 
-                    className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-                    onClick = {onRequestHire,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  >
+                    onClick={onRequestHire}                  >
                     <Handshake className='mr-2 h-5 w-5' />
                     Hire Now
                   </Button>
 
                   {onMessageTalent && (
-<<<<<<< HEAD
                     <Button
                       size='lg'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-                      onClick={onMessageTalent}
-=======
-                    <Button 
-                      size="lg" 
-                      variant="outline"
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick = {onMessageTalent,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    >
+                      onClick={onMessageTalent}                    >
                       <MessageSquare className='mr-2 h-5 w-5' />
                       Message
                     </Button>
@@ -219,7 +144,4 @@ export function TalentProfile({
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

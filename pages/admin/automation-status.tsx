@@ -13,7 +13,6 @@ const AutomationStatus: React.FC = () => {  return (
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default AutomationStatus;

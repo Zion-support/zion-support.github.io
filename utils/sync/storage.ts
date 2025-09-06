@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
-
 const defaultState: SyncState = {
   config: {
     instanceId: 'default-instance',
@@ -85,11 +83,6 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
-<<<<<<< HEAD
-  return events;
-=======
-export function resetState(): void {
+  return events;export function resetState(): void {
   state = { ...defaultState };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Loader2,
   AlertTriangle,
@@ -9,18 +8,10 @@ import {
   WifiOff,
   Clock,
   Zap,;
-} from 'lucide-react';
-=======
-import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { Button } from '@/components/ui/button';
+} from 'lucide-react';import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -34,14 +25,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   variant = 'default',
   className,
   showText = false,
-<<<<<<< HEAD
   text = 'Loading...',
-}) => {
-=======
-  text = 'Loading...'
-},) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  const sizeClasses = {
+}) => {  const sizeClasses = {
     sm: 'h-4 w-4',
     md: 'h-6 w-6',
     lg: 'h-8 w-8',
@@ -86,18 +71,10 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   steps,
   currentStep = 0,
   showProgress = true,
-<<<<<<< HEAD
   onComplete,
 }) => {
   const [activeStep, setActiveStep] = useState(0);
   const progress = ((activeStep + 1) / steps.length) * 100;
-=======
-  onComplete
-},) => {
-  const [activeStep, setActiveStep] = useState(0),
-  const progress = ((activeStep + 1) / steps.length) * 100,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   useEffect((,) => {
     if (currentStep !== undefined) {
       setActiveStep(currentStep);
@@ -122,16 +99,9 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
           />
         </div>
       )}
-<<<<<<< HEAD
 
       <div className='space-y-2'>
-        {steps.map((step, index) => (
-=======
-      
-      <div className="space-y-2">
-        {steps.map((step, index,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          <motion.div
+        {steps.map((step, index) => (          <motion.div
             key = {step.id,}
             className = {cn(
               'flex items-center gap-3 p-2 rounded-md',
@@ -169,17 +139,9 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   className,
   variant = 'rectangular',
   animation = 'pulse',
-<<<<<<< HEAD
   lines = 1,
 }) => {
   const baseClasses = 'bg-muted rounded';
-
-=======
-  lines = 1
-},) => {
-  const baseClasses = 'bg-muted rounded',
-  
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   const variantClasses = {
     text: 'h-4 w-full',
     circular: 'h-12 w-12 rounded-full',
@@ -195,14 +157,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
   if (variant === 'text' && lines > 1) {
     return (
-<<<<<<< HEAD
       <div className='space-y-2'>
-        {Array.from({ length: lines }).map((_, i) => (
-=======
-      <div className="space-y-2">
-        {Array.from({ length: lines }).map((_, i,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          <div
+        {Array.from({ length: lines }).map((_, i) => (          <div
             key = {i,}
             className = {cn(
               baseClasses,
@@ -217,19 +173,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     );
   }
 
-<<<<<<< HEAD
-  
-=======
-  return (
-    <div
-      className = {cn(
-        baseClasses,
-        variantClasses[variant],
-        animationClasses[animation],
-        className
-      ),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    />
+      />
   );
 };
 //Enhanced error state component ;
@@ -251,7 +195,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
   retryCount = 0,
   maxRetries = 3,
   onRetry,
-<<<<<<< HEAD
   className,
 }) => {
   const [isOnline, setIsOnline] = useState(true);
@@ -259,16 +202,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
-=======
-  className
-},) => {
-  const [isOnline, setIsOnline] = useState(true),
-
-  useEffect((,) => {
-    const handleOnline = () => setIsOnline(true),
-    const handleOffline = () => setIsOnline(false),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
     if (typeof window !== 'undefined') {
       setIsOnline(navigator.onLine);
       window.addEventListener('online', handleOnline);
@@ -397,14 +330,8 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
-<<<<<<< HEAD
   className,
-}) => {
-=======
-  className
-},) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  const gridClasses = {
+}) => {  const gridClasses = {
     card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
     list: 'space-y-4',
     table: 'space-y-2',
@@ -418,14 +345,8 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 
   return (
     <div className={cn(gridClasses[variant], className)}>
-<<<<<<< HEAD
       {Array.from({ length: count }).map((_, i) => (
-        <Card key={i} className='animate-pulse'>
-=======
-      {Array.from({ length: count }).map((_, i,) => (
-        <Card key={i} className="animate-pulse">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          <CardContent className={itemClasses[variant]}>
+        <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
             {variant === 'card' && (
               <>
                 <Skeleton variant='rectangular' className='h-32' />
@@ -476,7 +397,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
   loadTime,
   itemCount,
-<<<<<<< HEAD
   className,
 }) => {
   const getPerformanceColor = (time: number) => {
@@ -484,16 +404,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     if (time < 300) return 'text-yellow-500';
     return 'text-red-500';
   };
-=======
-  className
-},) => {
-  const getPerformanceColor = (time: number,) => {
-    if (time < 100) return 'text-green-500',
-    if (time < 300) return 'text-yellow-500',
-    return 'text-red-500'
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   if (isLoading) {
     return (
       <Badge variant='outline' className={cn('text-xs', className)}>
@@ -515,7 +425,5 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     </div>
   );
 };
-=======
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+};

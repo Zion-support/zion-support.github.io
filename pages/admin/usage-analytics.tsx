@@ -29,8 +29,7 @@ function PieChart({ data, size = 160 }: { data: Datum[]; size?: number }) {
     '#8b5cf6',
     '#ef4444',
     '#06b6d4',
-  ];
-  const slices = data.map((d, i) => {
+  ];  const slices = data.map((d, i) => {
     const start = (acc / total) * 2 * Math.PI;
     acc += d.value;
     const end = (acc / total) * 2 * Math.PI;
@@ -89,13 +88,11 @@ function Funnel({ data }: { data: Datum[] }) {
 export default function UsageAnalytics() {
   const [start, setStart] = useState<Date>(
     new Date(Date.now() - 29 * 24 * 3600 * 1000)
-  );  const [end, setEnd] = useState<Date>(new Date());
-  const [userType, setUserType] = useState<string>('all');
+  );  const [end, setEnd] = useState<Date>(new Date());  const [userType, setUserType] = useState<string>('all');
   const [loading, setLoading] = useState(false);
   const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]);
   const [events, setEvents] = useState<Datum[]>([]);
   const [line, setLine] = useState<{ date: string; value: number }[]>([]);  const [funnel, setFunnel] = useState<Datum[]>([]);
-
   const refresh = useCallback(async () => {
     setLoading(true);
     try {
@@ -110,8 +107,7 @@ export default function UsageAnalytics() {
       setPagesMostUsed(json.pagesMostUsed || []);
       setEvents(json.events || []);
       setLine(json.line || []);
-      setFunnel(json.funnel || []);
-    } finally {
+      setFunnel(json.funnel || []);    } finally {
       setLoading(false);
     }, 1000);
   }, []);
@@ -183,8 +179,7 @@ export default function UsageAnalytics() {
                   >
                     <span>{d.label}</span>
                     <span className='text-gray-500'>{d.value}</span>
-                  </li>                ))}
-              </ul>
+                  </li>                ))}              </ul>
             </div>
           </div>
 
@@ -198,8 +193,7 @@ export default function UsageAnalytics() {
                   className='flex justify-between border rounded px-2 py-1'
                 >
                   <span>{e.label}</span>
-                  <span className='text-gray-500'>{e.value}</span>                </div>
-              ))}
+                  <span className='text-gray-500'>{e.value}</span>                </div>              ))}
             </div>
           </div>
         </div>

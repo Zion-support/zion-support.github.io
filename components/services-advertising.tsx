@@ -1,8 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-const ext = (url: string) => (
   <a
     className='text-cyan-400 underline'
     href={`/out?u=${encodeURIComponent(url)}`}
@@ -3812,8 +3810,7 @@ export default function ServicesAdvertisingPage() {
   ext ('https://dmarcian.com/pricing') 
 }, {
   ext ('https://valimail.com/pricing/') 
-}</li> </ul> <div><a className=" text-cyan-400 underline"href=" /services/email-dmarc-monitor">Learn more</a></div> </section> </section> <a href="tel:+13024640950"className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com"className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a> <a href="/pricing"className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a> 
-				<section className="space-y-6">
+}</li> </ul> <div><a className=" text-cyan-400 underline"href=" /services/email-dmarc-monitor">Learn more</a></div> </section> </section> <a href="tel:+13024640950"className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com"className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a> <a href="/pricing"className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a> 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Employee Scheduling Suite</h2>
 					<p className="text-slate-300">Shift planning with availability, time-off, swap requests, and notifications.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -5022,5 +5019,3 @@ export default function ServicesAdvertisingPage() {
 		</div>
 	);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

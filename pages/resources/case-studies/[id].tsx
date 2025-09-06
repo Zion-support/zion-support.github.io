@@ -15,8 +15,7 @@ import { useRouter } from 'next/router';
         minimize human intervention, and provide real-time insights into their operations.</p>
         
         <h2>Solution</h2>
-        <p>We implemented a comprehensive AI automation system that included:</p>        <ul>
-          <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
+        <p>We implemented a comprehensive AI automation system that included:</p>        <ul>          <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
           <li><strong>Automated Quality Control:</strong> Computer vision systems for defect detection</li>
           <li><strong>Intelligent Scheduling:</strong> AI-powered production planning and optimization</li>
@@ -54,15 +53,13 @@ import { useRouter } from 'next/router';
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company 
         as a leader in smart manufacturing.</p>
       `,
-    },    {
-      id: 'content-generation-scale',
+    },    {      id: 'content-generation-scale',
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
       industry: 'Marketing',
       results: '10x increase in content output, 85% improvement in engagement',
       description:
-        'Transforming content creation through autonomous AI systems.',      fullContent: `
-        <h2>Executive Summary</h2>
+        'Transforming content creation through autonomous AI systems.',      fullContent: `        <h2>Executive Summary</h2>
         <p>This case study explores how autonomous AI systems can revolutionize content creation, enabling 
         marketing agencies to scale their operations dramatically while maintaining quality and creativity.</p>
         
@@ -117,15 +114,13 @@ import { useRouter } from 'next/router';
         while maintaining creative excellence. The system continues to learn and improve, positioning the agency 
         for continued growth and success.</p>
       `,
-    },    {
-      id: 'cloud-infrastructure-optimization',
+    },    {      id: 'cloud-infrastructure-optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E-commerce Platform',
       industry: 'Technology',
       results: '50% reduction in cloud costs, 99.9% uptime achieved',
       description: 'Building self-healing, auto-scaling cloud infrastructure.',
-      fullContent: `        <h2>Executive Summary</h2>
-        <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically 
+      fullContent: `        <h2>Executive Summary</h2>        <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically 
         reduce costs while improving performance and reliability for high-traffic applications.</p>
         
         <h2>Background</h2>
@@ -180,7 +175,6 @@ import { useRouter } from 'next/router';
         optimal performance and cost efficiency.</p>
       `,
     },  ];
-
   const caseStudy = caseStudies.find(study => study.id === id);
 
   if (!caseStudy) {
@@ -200,15 +194,13 @@ import { useRouter } from 'next/router';
               </p>
               <Link
                 href='/resources'
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >
-                ← Back to Resources
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >                ← Back to Resources
               </Link>
             </div>
           </main>
         </div>
       </>
     );  }
-
   return (
     <>
       <Head>
@@ -218,8 +210,7 @@ import { useRouter } from 'next/router';
           property='og:title'
           content={`${caseStudy.title} | Zion Tech Group`}
         />
-        <meta property='og:description' content={caseStudy.description} />
-      </Head>
+        <meta property='og:description' content={caseStudy.description} />      </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
@@ -267,8 +258,7 @@ import { useRouter } from 'next/router';
             <div className='text-center'>
               <Link
                 href='/contact'
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >
-                Get Started with Your Project
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >                Get Started with Your Project
               </Link>
             </div>
           </div>

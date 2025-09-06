@@ -43,22 +43,19 @@ const mockNotes: Note[] = [
     isPrivate: false
   }
 ];
-
 const AdminNotesPage: React.FC = () => {
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterTag, setFilterTag] = useState('');
   const [showPrivate, setShowPrivate] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(true);
-  useEffect(() => {
+  const [isAdmin, setIsAdmin] = useState(true);  useEffect(() => {
     async function load() {
       setLoading(true);
       try {
         const res = await fetch('/api/admin/notes-all', {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
-        });
-        if (!res.ok) return;
+        });        if (!res.ok) return;
         const data = await res.json();
         setNotes(data.notes || []);
       } finally {
@@ -77,8 +74,7 @@ const AdminNotesPage: React.FC = () => {
             type='checkbox'
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
-          />          <span>Admin</span>
-        </label>
+          />          <span>Admin</span>        </label>
       </div>
 
       {loading ? (

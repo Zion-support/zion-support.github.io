@@ -1,13 +1,10 @@
 
-<<<<<<< HEAD
-
 
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,
   location?: string;
   onSuggestionApplied: (value: number) => void,
-=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -25,12 +22,10 @@ interface TalentRateRecommenderProps {
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number,) => void,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   rateType: "hourly" | "fixed"
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
-<<<<<<< HEAD
   skills;
   yearsExperience;
   location;
@@ -39,17 +34,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
-=======
-  skills,
-  yearsExperience,
-  location,
-  onSuggestionApplied,
-  rateType},) => {
-  const [isLoading, setIsLoading] = useState(false),
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
       return
@@ -115,7 +99,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       </div>
     </div>
   )
-<<<<<<< HEAD
 };
 return (<div className="space-y-4" > <div> {";
   !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
@@ -131,11 +114,6 @@ return (<div className="space-y-4" > <div> {";
 }/>) ;
 }</div> </div>) ;
 };
-'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-},
+'"},
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+};

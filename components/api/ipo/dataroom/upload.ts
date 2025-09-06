@@ -8,12 +8,8 @@ export const config = { api: { bodyParser: false } };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-=======
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -21,7 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const file = files.file as formidable.File | undefined;
     if (!file || !file.filepath)
       return res.status(400).json({ error: 'File missing' });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const targetDir = resolveDataPath(path.join('dataroom', section));
     if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true });
@@ -36,11 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       name: path.basename(targetPath),
     });
     res.status(200).json({ ok: true });
-  });
-=======
-    appendAuditLog({ type: 'file_upload', section, name: path.basename(targetPath) });
+  });    appendAuditLog({ type: 'file_upload', section, name: path.basename(targetPath) });
     res.status(200).json({ ok: true })
   })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

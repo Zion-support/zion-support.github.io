@@ -1,16 +1,9 @@
         color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
         ...cat;
-
-<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
-<<<<<<< HEAD
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-=======
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 // This is the type definition copied from Categories.tsx for consistency.
@@ -23,7 +16,6 @@ interface CategoryType {
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
   link?: string
-=======
  * CategoriesSection function;
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
@@ -70,7 +62,6 @@ const specialServices = [{;
   {;
     title: "Services Comparison",
     link: "/services - comparison";
->>>>>>> origin/automation-fixes
 }
 
 // Default static categories with translation keys
@@ -121,7 +112,6 @@ const getSpecialServices = (t: any,) => [
     link: "/it-onsite-services"
   }
 ];
-<<<<<<< HEAD
 
 interface CategoriesSectionProps {
   showTitle?: boolean;
@@ -129,15 +119,6 @@ interface CategoriesSectionProps {
   style?: React.CSSProperties;
   categories?: CategoryType[], // Accept categories as a prop
 }
-=======
-interface CategoriesSectionProps {
-  // Add your props here;
-
-  showTitle?: boolean}
-
-export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
->>>>>>> origin/automation-fixes
-
 export function CategoriesSection({
   showTitle = true;
   className;
@@ -178,7 +159,6 @@ export function CategoriesSection({
     );
   }
 
-<<<<<<< HEAD
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -222,70 +202,7 @@ export function CategoriesSection({
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
-              </Link>
-=======
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
-          backgroundSize: '50px 50px';
-}}></div>;
-      </div>;
-
-      <div className="container mx - auto px-4 relative z -10">;
-        {showTitle && (<motion.div;
-            className="text-center mb-16"            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-";
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">;
-              Explore Categories;
-            </h2>";
-            <p className="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">;
-              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
-            </p>;
-          </motion.div>;) }
-
-        <motion.div;
-          className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap-6";
-          variants={containerVariants}          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-        >;
-          {categories.map((category, index) => (<motion.div;
-              key={category.title}
-              variants={itemVariants}";
-              className="group block">";
-              <Link to={category.link} className="block">";
-                <div className="rounded-lg overflow-hidden h-full border border-blue-600 bg-slate-800 p-6 transition-all duration-300 hover:border-purple-500/50 hover:translate-y-[-5px] hover:shadow-lg hover:shadow-blue-500/25">`;
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>";
-                    <div className="text-white text-2xl">;
-                      {category.icon}
-                    </div>;
-                  </div>";
-                  <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>";
-                  <p className="text-gray-300 text-sm">{category.description}</p>;
-                </div>;
-              </Link>;
-            </motion.div>) ) }
-        </motion.div>;
-
-        <motion.div;
-          className="mt-12"          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >";
-          <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>";
-          <div className="flex flex-wrap justify-center gap-4">;
-            {specialServices.map((service) => (;
-              <Link;
-                key={service.title}
-                to={service.link}";
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 border border-blue-500/20 hover:border-blue-400/50 rounded-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-2">;
-                {service.title}";
-                <span className="text-sm">→</span>;
-              </Link>;
->>>>>>> origin/automation-fixes
-            ))}
+              </Link>            ))}
           </div>
         </div>
         
@@ -351,8 +268,4 @@ icon: getIcon (cat.iconName) ;
 }</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
   t ('home.view all categories') ;
 }</Link> </div> </div> </section>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

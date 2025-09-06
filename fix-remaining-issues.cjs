@@ -86,6 +86,7 @@ function fixPropertyAssignmentErrors(filePath) {;
 ;
     // Fix object property syntax issues;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const patterns = [
     ;
 =======
@@ -96,10 +97,13 @@ function fixPropertyAssignmentErrors(filePath) {;
     const patterns = [;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       // Fix colon instead of equals;
       { fro:m:/(\w+):\s*(\w+)\s*=/g, t:o:'$1:$2' },;
       // Fix missing quotes around object keys;
       { fro:m:/(\w+):\s*(\w+)\s*:/g, t:o:'$1:$2:' },;
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Fix property assignment syntax,
     { fro:m:/(\w+)\s*=\s*(\w+)\s*:/g, t:o:'$1:$2:' },
@@ -115,6 +119,8 @@ function fixPropertyAssignmentErrors(filePath) {;
     ];
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ;
     for (const pattern of patterns) {;
       if (pattern.from.test(content)) {;

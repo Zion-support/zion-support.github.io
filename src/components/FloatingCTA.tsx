@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-=======
-import { Link  } from 'react-router-dom';
-export default function Page() {;
- from 'lucide-react';
-const FloatingCTA: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
   // TODO: Add dependencies if needed;
@@ -42,19 +31,16 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div className="text-sm text-gray-400">Explore solutions</div>;
                     </div>;
                   </Link>;
->>>>>>> origin/automation-fixes
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { X } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function FloatingCTA() {
 
   const [ isVisible, setIsVisible ] = useState(false),
   const [ isClosed, setIsClosed ] = useState(false),
 
-<<<<<<< HEAD
 
   useEffect((,) => {
     const handleScroll = () => {
@@ -75,22 +61,23 @@ export function FloatingCTA() {
 
   const handleClose = () => {
     setIsClosed(true);
-    setIsVisible(false);  };
-=======
+    setIsVisible(false);  };      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true)
+      } else {
+        setIsVisible(false)
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
       window.removeEventListener("scroll", handleScroll)
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, [isClosed]);
 
   const handleClose = () => {
     setIsClosed(true);
-<<<<<<< HEAD
-    setIsVisible(false);
-=======
-    setIsVisible(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    setIsVisible(false);    setIsVisible(false)
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (!isVisible) return null;
 
@@ -113,24 +100,14 @@ export function FloatingCTA() {
           >
             <Link href='/signup'>Register Now</Link>
           </Button>
-<<<<<<< HEAD
           <button
             onClick={handleClose}
             className='text-zion-slate hover:text-white p-1'
-            aria-label='Close'
-=======
-          <button 
-            onClick = {handleClose,}
-            className="text-zion-slate hover: text-white p-1"
-            aria-label="Close"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          >
+            aria-label='Close'          >
             <X className='w-5 h-5' />          </button>
-=======
             <X className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            <X className="w-5 h-5" />
           </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </div>
       </div>
     </div>
@@ -139,16 +116,7 @@ export function FloatingCTA() {
 };
 }, [isClosed]);
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>) ;
-}'"
-=======
-}
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-=======
+}'";
       {/* Backdrop */}
       <AnimatePresence>;
         {isExpanded && (;
@@ -168,4 +136,4 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
     </>;
   )}
 '";
->>>>>>> origin/automation-fixes
+}

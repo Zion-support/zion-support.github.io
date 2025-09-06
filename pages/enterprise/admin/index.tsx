@@ -23,8 +23,7 @@ const COMPANY_ID = 'cmp_acme';
 export default function CompanyAdmin() {
   const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
     'members'
-  );  const [members, setMembers] = useState<Member[]>([]);
-  const [usage, setUsage] = useState<Usage | null>(null);
+  );  const [members, setMembers] = useState<Member[]>([]);  const [usage, setUsage] = useState<Usage | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
 
@@ -41,7 +40,6 @@ export default function CompanyAdmin() {
     fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`)
       .then(r => r.json())
       .then(setInvoices);  }, []);
-
   const seatsUsed = members.length;
 
   return (
@@ -73,8 +71,7 @@ export default function CompanyAdmin() {
             }}
           >
             {t}
-          </button>        ))}
-      </nav>
+          </button>        ))}      </nav>
 
       {tab === 'members' && (
         <MembersTab members={members} setMembers={setMembers} />
@@ -96,8 +93,7 @@ function MembersTab({
 }: {
   members: Member[];
   setMembers: (m: Member[]) => void;
-}) {  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+}) {  const [name, setName] = useState('');  const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
 
   const add = async () => {
@@ -128,7 +124,6 @@ function MembersTab({
       body: JSON.stringify({ memberId: id, role: newRole }),
     });
     setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));  };
-
   return (
     <section>
       <h2>Team members</h2>
@@ -155,7 +150,6 @@ function MembersTab({
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>
           Add
         </button>      </div>
-
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
@@ -194,8 +188,7 @@ function MembersTab({
               }}
             >
               Actions
-            </th>          </tr>
-        </thead>
+            </th>          </tr>        </thead>
         <tbody>
           {members.map(m => (
             <tr key={m.id}>
@@ -230,8 +223,7 @@ function MembersTab({
                   style={{ color: '#b91c1c' }}
                 >
                   Remove
-                </button>              </td>
-            </tr>
+                </button>              </td>            </tr>
           ))}
         </tbody>
       </table>
@@ -259,7 +251,6 @@ function UsageTab({
       body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }),
     });
     setUsage({ monthlyJobPosts, budgetCapUsd });  };
-
   return (
     <section>
       <h2>Usage limits</h2>
@@ -302,8 +293,7 @@ function UsageTab({
         <span>Seats used: {seatsUsed}</span>
       </div>
     </section>
-  );
-function ActivityTab({ events }: { events: any[] }) {
+  );function ActivityTab({ events }: { events: any[] }) {
   return (
     <section>
       <h2>Team activity</h2>
@@ -312,13 +302,11 @@ function ActivityTab({ events }: { events: any[] }) {
           <li key={e.id}>
             <span style={{ color: '#6b7280' }}>
               {new Date(e.timestampIso).toLocaleString()} —{' '}
-            </span>            <strong>{e.actorEmail}</strong> {e.action}
-          </li>
+            </span>            <strong>{e.actorEmail}</strong> {e.action}          </li>
         ))}
       </ul>
     </section>
-  );
-function BillingTab({ invoices }: { invoices: Invoice[] }) {
+  );function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
     <section>
       <h2>Billing & invoices</h2>
@@ -369,8 +357,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
               }}
             >
               Actions
-            </th>          </tr>
-        </thead>
+            </th>          </tr>        </thead>
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
@@ -411,8 +398,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
                   rel='noreferrer'
                 >
                   Download PDF
-                </a>              </td>
-            </tr>
+                </a>              </td>            </tr>
           ))}
         </tbody>
       </table>

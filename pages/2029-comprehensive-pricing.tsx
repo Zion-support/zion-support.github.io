@@ -21,8 +21,7 @@ import {
   ArrowRight,
   TrendingUp,
   Users,
-  Briefcase,;} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+  Briefcase,;} from 'lucide-react';import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
@@ -98,7 +97,6 @@ export default function ComprehensivePricing2029() {
     return billingCycle === 'monthly'
       ? numericPrice
       : Math.round(numericPrice * 0.8);  };
-
   const getBillingText = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
     if (billingCycle === 'monthly') {
@@ -125,13 +123,11 @@ export default function ComprehensivePricing2029() {
           rel='canonical'
           href='https://ziontechgroup.com/2029-comprehensive-pricing'
         />      </Head>
-
       <UltraFuturisticNavigation2029 />
 
       {/* Hero Section */}
       <section className='relative overflow-hidden py-32'>
-        <div className='relative z-10 container mx-auto px-4 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='relative z-10 container mx-auto px-4 text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -151,8 +147,7 @@ export default function ComprehensivePricing2029() {
                   setBillingCycle(
                     billingCycle === 'monthly' ? 'annual' : 'monthly'
                   )
-                }                className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${
-                  billingCycle === 'annual' ? 'bg-purple-600' : ''
+                }                className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${                  billingCycle === 'annual' ? 'bg-purple-600' : ''
                 }`}
               >
                 <div
@@ -163,8 +158,7 @@ export default function ComprehensivePricing2029() {
                   }`}
                 />
               </button>
-              <span className='text-gray-400'>Annual (20% off)</span>            </div>
-          </motion.div>
+              <span className='text-gray-400'>Annual (20% off)</span>            </div>          </motion.div>
         </div>
       </section>
 
@@ -172,8 +166,7 @@ export default function ComprehensivePricing2029() {
       <section className='py-12 bg-gradient-to-b from-black to-gray-900'>
         <div className='container mx-auto px-4'>
           <div className='flex flex-wrap justify-center gap-4'>
-            {categories.map(category => (              <motion.button
-                key={category.id}
+            {categories.map(category => (              <motion.button                key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center gap-3 px-6 py-3 rounded-full border-2 transition-all duration-300 ${
                   selectedCategory === category.id
@@ -185,8 +178,7 @@ export default function ComprehensivePricing2029() {
               >
                 <category.icon className='w-5 h-5' />
                 <span>{category.name}</span>
-                <span className='px-2 py-1 bg-gray-700 rounded-full text-xs'>                  {category.count}
-                </span>
+                <span className='px-2 py-1 bg-gray-700 rounded-full text-xs'>                  {category.count}                </span>
               </motion.button>
             ))}
           </div>
@@ -212,8 +204,7 @@ export default function ComprehensivePricing2029() {
             </p>
           </motion.div>
 
-          <div className='grid lg:grid-cols-2 xl:grid-cols-3 gap-8'>            {filteredServices.map((service, index) => (
-              <motion.div
+          <div className='grid lg:grid-cols-2 xl:grid-cols-3 gap-8'>            {filteredServices.map((service, index) => (              <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -245,8 +236,7 @@ export default function ComprehensivePricing2029() {
                       {billingCycle === 'annual' && (
                         <span className='text-green-400'>
                           Save 20% with annual billing
-                        </span>                      )}
-                    </div>
+                        </span>                      )}                    </div>
                   </div>
 
                   {/* Categories */}
@@ -255,8 +245,7 @@ export default function ComprehensivePricing2029() {
                       <span
                         key={catIndex}
                         className='px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600'
-                      >                        {cat}
-                      </span>
+                      >                        {cat}                      </span>
                     ))}
                   </div>
 
@@ -326,8 +315,7 @@ export default function ComprehensivePricing2029() {
                     <Link
                       href='/contact'
                       className='flex-1 inline-flex items-center justify-center px-4 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-sm'
-                    >                      Get Started
-                    </Link>
+                    >                      Get Started                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -338,8 +326,7 @@ export default function ComprehensivePricing2029() {
 
       {/* Enterprise Solutions */}
       <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
-        <div className='container mx-auto px-4 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4 text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -412,8 +399,7 @@ export default function ComprehensivePricing2029() {
                 <Link
                   href='/contact'
                   className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'
-                >                  Contact Sales
-                </Link>
+                >                  Contact Sales                </Link>
               </div>
             </div>
           </motion.div>
@@ -422,8 +408,7 @@ export default function ComprehensivePricing2029() {
 
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
-        <div className='container mx-auto px-4 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4 text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -438,8 +423,7 @@ export default function ComprehensivePricing2029() {
 
             <div className='grid md:grid-cols-3 gap-8 mb-12'>
               <div className='flex items-center justify-center gap-4 text-gray-300'>
-                <Phone className='w-6 h-6 text-purple-400' />
-                <span>{contactInfo.mobile}</span>
+                <Phone className='w-6 h-6 text-purple-400' />                <span>{contactInfo.mobile}</span>
               </div>
               <div className='flex items-center justify-center gap-4 text-gray-300'>
                 <Mail className='w-6 h-6 text-blue-400' />
@@ -450,8 +434,7 @@ export default function ComprehensivePricing2029() {
               </div>
             </div>
 
-            <div className='flex flex-wrap justify-center gap-4'>              <motion.div
-                whileHover={{ scale: 1.05 }}
+            <div className='flex flex-wrap justify-center gap-4'>              <motion.div                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
@@ -459,8 +442,7 @@ export default function ComprehensivePricing2029() {
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg'
                 >
                   Contact Us Now
-                  <ArrowRight className='ml-2 h-5 w-5' />                </Link>
-              </motion.div>
+                  <ArrowRight className='ml-2 h-5 w-5' />                </Link>              </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -468,8 +450,7 @@ export default function ComprehensivePricing2029() {
                 <Link
                   href='/2029-innovative-services-showcase'
                   className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg'
-                >                  View All Services
-                </Link>
+                >                  View All Services                </Link>
               </motion.div>
             </div>
           </motion.div>

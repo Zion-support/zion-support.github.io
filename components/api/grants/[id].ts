@@ -8,19 +8,22 @@ import type {
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
 
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);
-=======
+  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);
+}
+
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
   const file = grantPath(id);
@@ -33,28 +36,19 @@ function writeGrant(record: GrantApplication) {
     grantPath(record.id),
     JSON.stringify(record, null, 2),
     'utf8'
-  );
-=======
-  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
+  );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
 
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string };
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
-    return;  }
-=======
-    return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    return;  }    return
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (req.method === 'GET') {
     const g = readGrant(id);
@@ -63,15 +57,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     res.status(200).json({ record: g });
-    return;  }
-=======
-      return
+    return;  }      return
     }
     res.status(200).json({ record: g });
     return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (req.method === 'PUT') {
     const existing = readGrant(id);
@@ -82,8 +71,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const payload = req.body as UpdateGrantPayload;
     const next: GrantApplication = {
       ...existing,
-      ...payload,
-    }
+      ...payload,    }
     const payload = req.body as UpdateGrantPayload;
     const next: GrantApplication = {
       ...existing;
@@ -106,10 +94,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.setHeader('Allow', 'GET, PUT');
-  res.status(405).end('Method Not Allowed');
-=======
-  res.setHeader('AllowGET, PUT');
+  res.status(405).end('Method Not Allowed');  res.setHeader('AllowGET, PUT');
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

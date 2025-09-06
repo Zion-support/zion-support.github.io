@@ -1,33 +1,23 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
 import { Bot, Users, TrendingUp } from 'lucide-react';
 export default function AITalentMatchingPage() {
   const benefits = [
-    {
-import React from "react";
+    {import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react'
 import { Star } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
-=======
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function AITalentMatchingPage() {
   const benefits = [
     {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       title: 'Precise Candidate Matching',
       description:
         'Leverage AI algorithms to pair your roles with the most qualified experts.',
       icon: <Bot className='h-8 w-8' />,
     },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       title: 'Streamlined Hiring Workflow',
       description:
@@ -57,10 +47,7 @@ export default function AITalentMatchingPage() {
     },
   ];
 
-<<<<<<< HEAD
-  
-=======
-  return (
+    return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
       subtitle="Find the perfect experts for your projects with intelligent matching."
@@ -70,10 +57,11 @@ export default function AITalentMatchingPage() {
       testimonials = {testimonials,}
       ctaText="Find Your AI Talent"
       ctaLink="/request-quote"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+    />
+  );      benefits={benefits}
+      testimonials={testimonials}
+      ctaText="Find Your AI Talent"
+      ctaLink="/request-quote"
     />
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

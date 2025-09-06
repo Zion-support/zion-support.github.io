@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {

@@ -1,12 +1,10 @@
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> </div>) 
-import fs from 'fs';
+}</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'datasite-map.json');
-  let routes: RouteInfo[] = [];
-  let generatedAt = '';
+  let routes: RouteInfo[] = [];  let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
@@ -42,5 +40,3 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

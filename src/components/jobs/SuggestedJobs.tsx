@@ -1,12 +1,6 @@
     updateJobMatchStatus, 
-
 import { useAuth } from "@/hooks/useAuth";
-<<<<<<< HEAD
-import { Loader2 } from 'lucide-react'
-=======
-import { Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { Badge } from "@/components/ui/badge";
+import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
@@ -27,26 +21,13 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     } 
   } = useJobSuggestions(currentTalentId);
 
-<<<<<<< HEAD
   const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-=======
-  const handleApply = (matchId: string, jobId: string,) => {
-    updateJobMatchStatus(matchId, 'applied'),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    // In a real app, this might redirect to application form or open a modal
+    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
   };
 
-<<<<<<< HEAD
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined');
   };
-=======
-  const handleDecline = (matchId: string,) => {
-    updateJobMatchStatus(matchId, 'declined')
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">
@@ -178,8 +159,4 @@ if (isLoading) {;
 }/>) ) ;
 }</div> </div>) ;
 }</div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

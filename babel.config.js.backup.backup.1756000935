@@ -2,6 +2,7 @@ module.exports = {
   presets: [
     ['@babel/preset-env', {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -14,10 +15,12 @@ module.exports = {
       targets: {
         esmodules: true,
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
-        node: '18'
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+        node: '18'
       modules: 'commonjs', // Use CommonJS instead of ESM
       targets: {        node: '18'
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -26,6 +29,10 @@ module.exports = {
       targets: {        node: '18'
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      modules: 'commonjs', // Use CommonJS instead of ESM
+      targets: {        node: '18'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
     }],
     ['@babel/preset-react', {
@@ -36,6 +43,7 @@ module.exports = {
   plugins: [
     ['@babel/plugin-transform-runtime', {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -45,17 +53,17 @@ module.exports = {
 =======
       useESModules: true,
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       corejs: false,
       helpers: true,
       regenerator: false
     }]
-<<<<<<< HEAD
-=======
-=======
       useESModules: false, // Use CommonJS      corejs: false,
       helpers: true,
       regenerator: false
     }]
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -66,6 +74,8 @@ module.exports = {
     }]
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   ],
   env: {
     test: {
@@ -102,6 +112,7 @@ module.exports = {
       ]
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -114,5 +125,7 @@ module.exports = {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   ]
 };

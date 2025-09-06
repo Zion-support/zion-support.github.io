@@ -42,8 +42,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }
 
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  return (
     <Image
       src={src}
       alt={alt}
@@ -56,10 +54,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       quality={quality}
       style={style}
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    />
   );
 };
 
 export default OptimizedImage;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

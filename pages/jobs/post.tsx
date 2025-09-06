@@ -83,7 +83,6 @@ import EnhancedButton from '../../components/ui/EnhancedButton';
         </aside>
       </div>
     </div>
-  );
-};
+  );};
 
 export default PostJob;

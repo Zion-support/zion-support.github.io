@@ -1,25 +1,15 @@
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { ChevronLeft, Bell, Settings } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-
-=======
-import React from "react";
 import { useRouter } from 'next/router';
 import { ChevronLeft, Bell, Settings } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface MobileHeaderProps {
-  title: string;  showBack?: boolean;
-=======
-  title: string,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  title: string;  showBack?: boolean;  title: string,
   showBack?: boolean;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
@@ -28,7 +18,6 @@ interface MobileHeaderProps {
 
 export function MobileHeader({
   title,
-
 export function MobileHeader({
   title;
   showBack = false;
@@ -112,24 +101,16 @@ export function MobileHeader({
           {showSettings && (
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>
               <Settings className='h-5 w-5' />
-              <span className='sr-only'>Settings</span>            </Button>
-            <Button 
+              <span className='sr-only'>Settings</span>            </Button>            <Button 
               variant="ghost" 
               size="icon"
               onClick = {onSettingsClick,}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           )}
         </div>
       </div>
     </header>
-  );
-=======
-  )
+  );  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 
-export default InstallPrompt;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React, { useEffect, useState } from 'react';
+export default InstallPrompt;import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 import { Button } from '@/components/ui/button';
 import { safeSessionStorage } from '@/utils/safeStorage';
@@ -129,4 +123,3 @@ export const InstallPrompt: React.FC = () => {
 },
 
 export default InstallPrompt,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

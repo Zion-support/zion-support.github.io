@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React, { useState } from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
@@ -19,20 +10,13 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
-import { Textarea } from '@/components/ui/textarea';
-=======
-  FormMessage} from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import {
+import { Textarea } from '@/components/ui/textarea';import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-<<<<<<< HEAD
   SelectValue,;
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
@@ -40,15 +24,6 @@ import { disputeReasonLabels } from '@/types/disputes';
 import { useDisputes } from '@/hooks/useDisputes';
 import { toast } from 'sonner';
 import { FileText } from 'lucide-react';
-
-=======
-  SelectValue} from "@/components/ui/select",
-import { Input } from "@/components/ui/input";
-import { disputeReasonLabels } from "@/types/disputes";
-import { useDisputes } from "@/hooks/useDisputes";
-import { toast } from "sonner";
-import { FileText } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 const formSchema = z.object({
   reason_code: z
     .string()
@@ -60,20 +35,11 @@ const formSchema = z.object({
 });
 
 type DisputeFormProps = {
-<<<<<<< HEAD
   projectId: string;
   milestoneId?: string;
   onDisputeCreated?: (disputeId: string) => void;
   onCancel?: () => void;
 };
-=======
-  projectId: string,
-  milestoneId?: string,
-  onDisputeCreated?: (disputeId: string,) => void,
-  onCancel?: () => void
-},
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export function DisputeForm({
   projectId,
   milestoneId,
@@ -101,22 +67,12 @@ export function DisputeForm({
     }
   };
 
-<<<<<<< HEAD
   const removeFile = (index: number) => {
     const newFiles = [...files];
     newFiles.splice(index, 1);
     setFiles(newFiles);
     form.setValue('attachments', newFiles);
   };
-=======
-  const removeFile = (index: number,) => {
-    const newFiles = [...files],
-    newFiles.splice(index, 1),
-    setFiles(newFiles),
-    form.setValue("attachments", newFiles)
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true);
@@ -159,7 +115,6 @@ export function DisputeForm({
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
           <FormField
-<<<<<<< HEAD
             control={form.control}
             name='reason_code'
             render={({
@@ -169,13 +124,7 @@ export function DisputeForm({
                 z.infer<typeof formSchema>,
                 'reason_code'
               >;
-            }) => (
-=======
-            control = {form.control,}
-            name="reason_code"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              <FormItem>
+            }) => (              <FormItem>
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select
                   onValueChange={field.onChange}
@@ -187,20 +136,13 @@ export function DisputeForm({
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-<<<<<<< HEAD
                     {Object.entries(disputeReasonLabels).map(
                       ([value, label]) => (
                         <SelectItem key={value} value={value}>
                           {label}
                         </SelectItem>
                       )
-                    )}
-=======
-                    {Object.entries(disputeReasonLabels).map(([value, label],) => (
-                      <SelectItem key={value} value={value}>{label}</SelectItem>
-                    ))}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  </SelectContent>
+                    )}                  </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
@@ -208,7 +150,6 @@ export function DisputeForm({
           />
 
           <FormField
-<<<<<<< HEAD
             control={form.control}
             name='description'
             render={({
@@ -218,13 +159,7 @@ export function DisputeForm({
                 z.infer<typeof formSchema>,
                 'description'
               >;
-            }) => (
-=======
-            control = {form.control,}
-            name="description"
-            render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "description"> },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              <FormItem>
+            }) => (              <FormItem>
                 <FormLabel>Describe the issue in detail</FormLabel>
                 <FormControl>
                   <Textarea
@@ -241,25 +176,14 @@ export function DisputeForm({
           <FormItem>
             <FormLabel>Attachments (optional)</FormLabel>
             <FormControl>
-<<<<<<< HEAD
               <div className='space-y-4'>
                 <Input
                   type='file'
                   multiple
                   onChange={handleFileChange}
-                  className='cursor-pointer'
-=======
-              <div className="space-y-4">
-                <Input 
-                  type="file" 
-                  multiple 
-                  onChange = {handleFileChange,}
-                  className="cursor-pointer"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                />
+                  className='cursor-pointer'                />
 
                 {files.length > 0 && (
-<<<<<<< HEAD
                   <div className='space-y-2'>
                     <p className='text-sm font-medium'>Selected files:</p>
                     <ul className='space-y-1'>
@@ -275,21 +199,7 @@ export function DisputeForm({
                             type='button'
                             variant='ghost'
                             size='sm'
-                            onClick={() => removeFile(index)}
-=======
-                  <div className="space-y-2">
-                    <p className="text-sm font-medium">Selected files:</p>
-                    <ul className="space-y-1">
-                      {files.map((file, index,) => (
-                        <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
-                          <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
-                          <Button 
-                            type="button" 
-                            variant="ghost" 
-                            size="sm" 
-                            onClick = {() => removeFile(index),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                          >
+                            onClick={() => removeFile(index)}                          >
                             Remove
                           </Button>
                         </li>
@@ -351,8 +261,4 @@ description: values.description ;
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

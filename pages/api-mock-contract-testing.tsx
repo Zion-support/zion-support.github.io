@@ -9,8 +9,7 @@ import {
   Mail,
   MapPin,
   Check,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+} from 'lucide-react';import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
 export default function ApiMockContractTestingPage() {
   const contactInfo = {
@@ -18,13 +17,11 @@ export default function ApiMockContractTestingPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',  };
-
   const adItems = [
     {
       title: '🧪 API Mock & Contract Testing Platform',
       description:
-        'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
-      price: 'Starting at $69/month',
+        'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',      price: 'Starting at $69/month',
       features: [
         'OpenAPI/GraphQL import and live mock server',
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)',
@@ -52,7 +49,6 @@ export default function ApiMockContractTestingPage() {
       price: 'Custom',
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support'],
     },  ];
-
   return (
     <Layout>
       <Head>
@@ -64,8 +60,7 @@ export default function ApiMockContractTestingPage() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/api-mock-contract-testing'
-        />
-      </Head>
+        />      </Head>
 
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds
@@ -95,8 +90,7 @@ export default function ApiMockContractTestingPage() {
                       className='flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400'
                     >
                       <Check /> <span>{i}</span>
-                    </li>                  ))}
-                </ul>
+                    </li>                  ))}                </ul>
               </div>
             ))}
           </div>
@@ -122,8 +116,7 @@ export default function ApiMockContractTestingPage() {
                 className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'
               >
                 Book a Demo
-              </a>            </div>
-          </div>
+              </a>            </div>          </div>
         </div>
       </div>
     </Layout>

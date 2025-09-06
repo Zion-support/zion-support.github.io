@@ -2,8 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-export default function MockCheckoutPage() {
+import { CheckCircle, ArrowRight } from 'lucide-react';export default function MockCheckoutPage() {
   const router = useRouter();
   const { mock } = router.query;
 
@@ -39,8 +38,7 @@ export default function MockCheckoutPage() {
               <li>
                 • Mock session ID generated: cs_test_mock_session_id_
                 {Date.now()}
-              </li>              <li>• Cart items would be processed</li>
-              <li>• Payment would be handled by Stripe</li>
+              </li>              <li>• Cart items would be processed</li>              <li>• Payment would be handled by Stripe</li>
               <li>• Order confirmation would be sent</li>
             </ul>
           </div>
@@ -51,8 +49,7 @@ export default function MockCheckoutPage() {
               <ol className='list-decimal list-inside space-y-1 mt-2'>
                 <li>
                   Configure real Stripe test keys in environment variables
-                </li>                <li>Set STRIPE_TEST_MODE=true for test environment</li>
-                <li>Use test card: 4242 4242 4242 4242</li>
+                </li>                <li>Set STRIPE_TEST_MODE=true for test environment</li>                <li>Use test card: 4242 4242 4242 4242</li>
               </ol>
             </div>
 
@@ -71,8 +68,7 @@ export default function MockCheckoutPage() {
               >
                 <Link href='/marketplace'>
                   Continue Shopping
-                  <ArrowRight className='h-4 w-4 ml-2' />                </Link>
-              </Button>
+                  <ArrowRight className='h-4 w-4 ml-2' />                </Link>              </Button>
             </div>
           </div>
         </div>

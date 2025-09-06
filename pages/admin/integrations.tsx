@@ -48,8 +48,7 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
 
   useEffect(() => {
     refresh();
-  }, []);
-  async function connect(providerId: string) {
+  }, []);  async function connect(providerId: string) {
     setLoading(true);
     try {
       // Open mock oauth popup
@@ -68,7 +67,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
     } finally {
       setLoading(false);
     }  }
-
   async function disconnect(providerId: string) {
     setLoading(true);
     try {
@@ -81,7 +79,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
     } finally {
       setLoading(false);
     }  }
-
   async function resync(providerId: string) {
     setLoading(true);
     try {
@@ -112,8 +109,7 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-3'>
             <div className='h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs'>
-              {p.name.slice(0, 2)}
-            </div>
+              {p.name.slice(0, 2)}            </div>
             <div>
               <div className='font-semibold'>{p.name}</div>
               <div className='text-xs text-gray-500'>{p.description}</div>            </div>
@@ -156,7 +152,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
         </div>
       </div>
     );  }
-
   function RulesModal() {
     if (!selected) return null;
     const provider = providers.find(p => p.id === selected)!;
@@ -165,8 +160,7 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
       <div className='fixed inset-0 bg-black/40 flex items-center justify-center'>
         <div className='w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800'>
           <div className='font-semibold mb-2'>Sync Rules — {provider.name}</div>
-          <div className='space-y-3 text-sm'>
-            {isCrm ? (
+          <div className='space-y-3 text-sm'>            {isCrm ? (
               <>
                 <label className='flex items-center gap-2'>
                   <input
@@ -208,8 +202,7 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
                         }
                       />{' '}
                       Manual only
-                    </label>                  </div>
-                </div>
+                    </label>                  </div>                </div>
               </>
             ) : (
               <>
@@ -273,7 +266,6 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
         <p className='text-sm text-gray-600 mb-6'>
           Connect your CRM and ATS to sync contacts, applicants, and activity.
         </p>
-
         <section className='mb-8'>
           <h2 className='text-lg font-semibold mb-3'>CRM</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -309,13 +301,11 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
         </section>
 
         <section>
-          <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />
-        </section>
+          <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />        </section>
       </main>
       <RulesModal />
     </>
-  );
-function ManualOverrideForm() {
+  );function ManualOverrideForm() {
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);

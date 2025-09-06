@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -14,6 +15,8 @@ Allow: /
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -36,6 +39,7 @@ Allow: /docs
 Allow: /community
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -48,9 +52,11 @@ Sitemap: https://zion.app/sitemap.txt
 
 # Crawl-delay
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-Crawl-delay: 1
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+Crawl-delay: 1
 # Crawl delayCrawl-delay: 1
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -58,3 +64,6 @@ Crawl-delay: 1
 # Crawl delayCrawl-delay: 1
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+# Crawl delayCrawl-delay: 1
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

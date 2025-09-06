@@ -11,18 +11,14 @@ interface ReportingData {
       costPerHireUsd?: number;
       updatedAt: string;
     }
-  >;
-=======
-  byTenant: Record<string, {
+  >;  byTenant: Record<string, {
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number;
     updatedAt: string
   }>
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} };
 
@@ -42,17 +38,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(entry);  }
 
   if (method === 'POST') {
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-=======
-    const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() };
+    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};    const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() };
     return res.status(200).json(entry)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const updated = updateJsonFile<ReportingData>(
       FILE,
       curr => {
@@ -76,10 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(updated.byTenant[tenantId]);
   }
 
-<<<<<<< HEAD
-  return res.status(405).json({ error: 'Method not allowed' });
-=======
-    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
+  return res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr.byTenant || {};
       next[tenantId] = {
         funnel: funnel || next[tenantId]?.funnel || [];
@@ -93,5 +81,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -17,7 +17,6 @@ export default function VectorSearchStarterPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/vector-search-starter')
   );  if (!service) return null;
-
   return (
     <Layout>
       <Head>
@@ -26,8 +25,7 @@ export default function VectorSearchStarterPage() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/vector-search-starter'
-        />
-      </Head>
+        />      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -103,8 +101,7 @@ export default function VectorSearchStarterPage() {
                   >
                     {service.contactInfo.address}
                   </a>
-                </div>              </div>
-            </div>
+                </div>              </div>            </div>
           </div>
         </div>
       </div>

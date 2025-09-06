@@ -36,8 +36,7 @@ import Link from 'next/link';
                     <div className='text-3xl font-bold text-purple-400'>
                       $200M+
                     </div>
-                    <div className='text-white/70'>Annual Budget</div>                  </div>
-                </div>
+                    <div className='text-white/70'>Annual Budget</div>                  </div>                </div>
               </div>
             </section>
 
@@ -71,8 +70,7 @@ import Link from 'next/link';
                     <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>
                     <span>
                       No predictive capabilities for patient care planning
-                    </span>                  </li>
-                </ul>
+                    </span>                  </li>                </ul>
               </div>
             </section>
 
@@ -89,8 +87,7 @@ import Link from 'next/link';
                   We built a comprehensive data analytics platform that provides
                   real-time insights, predictive modeling, and automated
                   reporting for improved patient care and operational
-                  efficiency.
-                </p>
+                  efficiency.                </p>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div className='bg-white/5 rounded-lg p-6 border border-white/10'>
@@ -130,8 +127,7 @@ import Link from 'next/link';
                     </h4>
                     <p className='text-white/80'>
                       Advanced predictive models forecast patient outcomes,
-                      readmission risks, and resource requirements.                    </p>
-                  </div>
+                      readmission risks, and resource requirements.                    </p>                  </div>
                 </div>
               </div>
             </section>
@@ -204,8 +200,7 @@ import Link from 'next/link';
                         <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>
                         <span>
                           Enhanced patient engagement and satisfaction
-                        </span>                      </li>
-                    </ul>
+                        </span>                      </li>                    </ul>
                   </div>
                 </div>
               </div>
@@ -230,8 +225,7 @@ import Link from 'next/link';
                     >
                       <span className='text-purple-400 font-semibold'>
                         {tech}
-                      </span>                    </div>
-                  ))}
+                      </span>                    </div>                  ))}
                 </div>
               </div>
             </section>
@@ -298,8 +292,7 @@ import Link from 'next/link';
                       <p className='text-white/70'>
                         Full deployment and staff training on new analytics
                         platform
-                      </p>                    </div>
-                  </div>
+                      </p>                    </div>                  </div>
                 </div>
               </div>
             </section>
@@ -324,8 +317,7 @@ import Link from 'next/link';
                   </Link>
                   <Link
                     href='/case-studies'
-                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300'                  >
-                    View All Case Studies
+                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300'                  >                    View All Case Studies
                   </Link>
                 </div>
               </div>

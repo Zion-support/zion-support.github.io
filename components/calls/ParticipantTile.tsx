@@ -5,7 +5,6 @@ import type {
   TrackPublication,
   Track,;
 } from 'livekit-client';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 type Props = {
   participant: RemoteParticipant | LocalParticipant;
@@ -18,11 +17,14 @@ export default function ParticipantTile({
   isLocal,
   displayName,
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
-=======
+type Props = {
+  participant: RemoteParticipant | LocalParticipant,
+  isLocal?: boolean;
+  displayName?: string
+};
+
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const videoRef = useRef<HTMLVideoElement | null>(null);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -38,40 +40,27 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
         track.detach(videoRef.current);
       }
       if (track.kind === 'audio' && audioRef.current) {
-        track.detach(audioRef.current);      }
-=======
-        track.attach(videoRef.current)
+        track.detach(audioRef.current);      }        track.attach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     };
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
-<<<<<<< HEAD
         track.detach(videoRef.current);
       }
       if (track.kind === 'audio' && audioRef.current) {
-        track.detach(audioRef.current);
-=======
-        track.detach(videoRef.current)
+        track.detach(audioRef.current);        track.detach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.detach(audioRef.current)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };
 
     participant.tracks.forEach(pub => {
       const track = pub.track;
-      if (track) handleTrackSubscribed(pub, track);    });
-=======
-      if (track) handleTrackSubscribed(pub, track)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      if (track) handleTrackSubscribed(pub, track);    });      if (track) handleTrackSubscribed(pub, track)
     });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
@@ -80,7 +69,6 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       participant.off('trackSubscribed', handleTrackSubscribed);
       participant.off('trackUnsubscribed', handleTrackUnsubscribed);
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [participant]);
 
   return (
@@ -99,8 +87,15 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
           (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
+  );  }, [participant]);
+
+  return (
+    <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
+      <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />
+      <audio ref={audioRef} autoPlay className="hidden" />
+      <div className="absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white">
+        {displayName || (participant as any).name || (isLocal ? 'You' : 'Participant')}
+      </div>
+    </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

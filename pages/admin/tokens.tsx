@@ -11,8 +11,7 @@ export default function AdminTokens() {
     const [txRes, cfgRes] = await Promise.all([
       fetch('/api/admin/tokens').then(r => r.json()),
       fetch('/api/admin/tokens/config').then(r => r.json()),
-    ]);
-    setTransactions(txRes.transactions || []);
+    ]);    setTransactions(txRes.transactions || []);
     setConfig(cfgRes);
   }
 ];

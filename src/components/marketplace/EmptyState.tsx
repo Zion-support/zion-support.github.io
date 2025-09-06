@@ -1,5 +1,4 @@
 import * as React from 'react';
-<<<<<<< HEAD
 import {
   RefreshCw,
   Wifi,
@@ -12,13 +11,6 @@ import {
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-
-=======
-import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export interface EmptyStateProps {
   type:
     | 'products'
@@ -96,6 +88,7 @@ export function EmptyState({
   icon,
 }: EmptyStateProps) {
   const { t } = useTranslation();  const content = defaultContent[type];
+  const content = defaultContent[type];
   const displayTitle = title || content.title;
   const displayDescription = description || content.description;
   const displayIcon = icon || content.icon;
@@ -114,16 +107,9 @@ export function EmptyState({
 
       {action && (
         <Button
-<<<<<<< HEAD
           onClick={action.onClick}
           variant='outline'
-          className='flex items-center gap-2'
-=======
-          onClick = {action.onClick,}
-          variant="outline"
-          className="flex items-center gap-2"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        >
+          className='flex items-center gap-2'        >
           <RefreshCw className='w-4 h-4' />
           {action.label}
         </Button>
@@ -155,16 +141,9 @@ export function ProductsEmptyState({
   onAddProduct,
   isAuthenticated = false,
 }: {
-<<<<<<< HEAD
   onRetry?: () => void;
   onAddProduct?: () => void;
-  isAuthenticated?: boolean;
-=======
-  onRetry?: (,) => void,
-  onAddProduct?: () => void,
-  isAuthenticated?: boolean
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-}) {
+  isAuthenticated?: boolean;}) {
   const action = onAddProduct
     ? {
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
@@ -178,96 +157,31 @@ export function ProductsEmptyState({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
 
-<<<<<<< HEAD
-  
-=======
-  return (
-    <EmptyState 
-      type="products" 
-      action = {action,}
-      description = {customDescription,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    />
+      />
   );
 
-<<<<<<< HEAD
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-  
-=======
-export function CategoriesEmptyState({ onRetry }: { onRetry?: (,) => void }) {
-  return (
-    <EmptyState
-      type="categories"
-      action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    />
+      />
   );
 
-<<<<<<< HEAD
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-  
-=======
-export function TalentEmptyState({ onRetry }: { onRetry?: (,) => void }) {
-  return (
-    <EmptyState
-      type="talent"
-      action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    />
+      />
   );
 
-<<<<<<< HEAD
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-  
-=======
-export function EquipmentEmptyState({ onRetry }: { onRetry?: (,) => void }) {
-  return (
-    <EmptyState
-      type="equipment"
-      action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    />
+      />
   );
 
-<<<<<<< HEAD
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-  
-=======
-export function SearchEmptyState({ onRetry }: { onRetry?: (,) => void }) {
-  return (
-    <EmptyState
-      type="search"
-      action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    />
+      />
   );
 
-<<<<<<< HEAD
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-  
-=======
-export function NetworkErrorState({ onRetry }: { onRetry?: (,) => void }) {
-  return (
-    <EmptyState
-      type="network"
-      action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    />
+      />
   );
 
-<<<<<<< HEAD
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-  
-=======
-export function ServerErrorState({ onRetry }: { onRetry?: (,) => void }) {
-  return (
-    <EmptyState
-      type="error"
-      action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    />
+      />
   );
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+} 

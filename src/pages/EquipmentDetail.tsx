@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
 import { Badge } from '@/components/ui/badge';
@@ -19,10 +17,7 @@ import {
 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
-import { getStripe } from '@/utils/getStripe';
-=======
-import { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
+import { getStripe } from '@/utils/getStripe';import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -32,23 +27,13 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, Arr
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { getStripe } from "@/utils/getStripe";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useCart } from '@/context/CartContext';
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
 import { equipmentListings } from '@/data/equipmentData';
 import { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
-<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface EquipmentSpecification {
-  name: string,
-  value: string
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 interface EquipmentSpecification {
   name: string;
 value: string ;
@@ -98,16 +83,9 @@ function convertProductListingToEquipmentDetails(
     reviewCount: item.reviewCount,
     inStock: item.availability === 'In Stock' || !item.availability,
     expectedShipping: item.availability || 'In Stock',
-<<<<<<< HEAD
     specifications: (item.specifications || []).map(spec => ({
       name: spec,
-      value: '',
-=======
-    specifications: (item.specifications || []).map((spec,) => ({ 
-      name: spec, 
-      value: '' 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    })),
+      value: '',    })),
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy',
@@ -115,7 +93,6 @@ function convertProductListingToEquipmentDetails(
 
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
-<<<<<<< HEAD
   equipmentListings.reduce(
     (acc, item) => {
       acc[item.id] = convertProductListingToEquipmentDetails(item);
@@ -123,13 +100,6 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
     },
     {} as { [key: string]: EquipmentDetails }
   );
-=======
-  equipmentListings.reduce((acc, item,) => {
-    acc[item.id] = convertProductListingToEquipmentDetails(item),
-    return acc
-  }, {} as { [key: string]: EquipmentDetails }),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export default function EquipmentDetail() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
@@ -292,33 +262,17 @@ export default function EquipmentDetail() {
                   : error ||
                     "We couldn't load the equipment details. Please try again."}
               </p>
-<<<<<<< HEAD
               <div className='space-x-4'>
                 <Button
                   onClick={() => router.back()}
                   variant='outline'
-                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'
-=======
-              <div className="space-x-4">
-                <Button 
-                  onClick = {(,) => router.back(),}
-                  variant="outline"
-                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                >
+                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'                >
                   <ArrowLeft className='h-4 w-4 mr-2' />
                   Go Back
                 </Button>
-<<<<<<< HEAD
                 <Button
                   onClick={() => router.push('/equipment')}
-                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'
-=======
-                <Button 
-                  onClick = {() => router.push('/equipment'),}
-                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                >
+                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >
                   Browse Equipment
                 </Button>
               </div>
@@ -352,14 +306,8 @@ export default function EquipmentDetail() {
             animate={{ opacity: 1, y: 0 }}
           >
             <button
-<<<<<<< HEAD
               onClick={() => router.push('/equipment')}
-              className='text-zion-cyan hover:text-white transition-colors'
-=======
-              onClick = {(,) => router.push('/equipment'),}
-              className="text-zion-cyan hover:text-white transition-colors"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            >
+              className='text-zion-cyan hover:text-white transition-colors'            >
               Equipment
             </button>
             <span className='mx-2 text-zion-slate-light'>/</span>
@@ -379,31 +327,18 @@ export default function EquipmentDetail() {
                 className='bg-zion-blue-light rounded-lg overflow-hidden'
               >
                 <ImageWithRetry
-<<<<<<< HEAD
                   src={
                     equipment.images[selectedImageIndex] ||
                     equipment.images[0] ||
                     'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
                   }
                   alt={equipment.name}
-                  className='object-cover'
-=======
-                  src = {equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',}
-                  alt = {equipment.name,}
-                  className="object-cover"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                />
+                  className='object-cover'                />
               </AspectRatio>
 
               {equipment.images.length > 1 && (
-<<<<<<< HEAD
                 <div className='grid grid-cols-4 gap-2'>
-                  {equipment.images.map((image, index) => (
-=======
-                <div className="grid grid-cols-4 gap-2">
-                  {equipment.images.map((image, index,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    <button
+                  {equipment.images.map((image, index) => (                    <button
                       key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
@@ -452,16 +387,9 @@ export default function EquipmentDetail() {
                 </h1>
 
                 {equipment.rating && (
-<<<<<<< HEAD
                   <div className='flex items-center gap-2'>
                     <div className='flex items-center'>
-                      {[...Array(5)].map((_, i) => (
-=======
-                  <div className="flex items-center gap-2">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                        <Star
+                      {[...Array(5)].map((_, i) => (                        <Star
                           key = {i,}
                           className={`h-4 w-4 ${
                             i < Math.floor(equipment.rating!)
@@ -508,7 +436,6 @@ export default function EquipmentDetail() {
 
               {/* Specifications */}
               {equipment.specifications.length > 0 && (
-<<<<<<< HEAD
                 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white'>
                     Specifications
@@ -524,17 +451,7 @@ export default function EquipmentDetail() {
                         </span>
                         <span className='text-white'>
                           {spec.value || 'Enterprise Grade'}
-                        </span>
-=======
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-white">Specifications</h3>
-                  <div className="grid gap-2">
-                    {equipment.specifications.map((spec, index,) => (
-                      <div key={index} className="flex justify-between py-2 border-b border-zion-blue-light">
-                        <span className="text-zion-slate-light">{spec.name}</span>
-                        <span className="text-white">{spec.value || 'Enterprise Grade'}</span>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      </div>
+                        </span>                      </div>
                     ))}
                   </div>
                 </div>
@@ -546,58 +463,32 @@ export default function EquipmentDetail() {
                   <label className='text-white font-medium'>Quantity:</label>
                   <div className='flex items-center gap-2'>
                     <Button
-<<<<<<< HEAD
                       variant='outline'
                       size='sm'
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className='h-8 w-8 p-0'
-=======
-                      variant="outline"
-                      size="sm"
-                      onClick = {() => setQuantity(Math.max(1, quantity - 1)),}
-                      className="h-8 w-8 p-0"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    >
+                      className='h-8 w-8 p-0'                    >
                       -
                     </Button>
                     <span className='text-white w-8 text-center'>
                       {quantity}
                     </span>
                     <Button
-<<<<<<< HEAD
                       variant='outline'
                       size='sm'
                       onClick={() => setQuantity(quantity + 1)}
-                      className='h-8 w-8 p-0'
-=======
-                      variant="outline"
-                      size="sm"
-                      onClick = {() => setQuantity(quantity + 1),}
-                      className="h-8 w-8 p-0"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    >
+                      className='h-8 w-8 p-0'                    >
                       +
                     </Button>
                   </div>
                 </div>
 
                 <Button
-<<<<<<< HEAD
                   onClick={handleAddToCart}
                   disabled={isAdding || !equipment.inStock}
                   size='lg'
                   variant='outline'
                   className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
-                  data-testid='add-to-cart-button'
-=======
-                  onClick = {handleAddToCart,}
-                  disabled = {isAdding || !equipment.inStock,}
-                  size="lg"
-                  variant="outline"
-                  className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-                  data-testid="add-to-cart-button"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                >
+                  data-testid='add-to-cart-button'                >
                   <ShoppingCart className='h-4 w-4 mr-2' />
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
                 </Button>
@@ -697,7 +588,5 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
   equipment.returnPolicy ;
 }</p> </div> </div>) ;
 }</div> </motion.div> </div> </div> </div> </>) ;
-}'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}
+

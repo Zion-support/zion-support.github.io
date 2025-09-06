@@ -20,7 +20,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
     const submitted = profile.status === 'submitted' ? 90 : 0;
     const approved = profile.status === 'approved' ? 100 : 0;
     return Math.max(base, submitted, approved);  }, [profile, requiredDocs]);
-
   async function start() {
     setBusy(true);
     setMessage('');
@@ -43,7 +42,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
       setMessage(data.error || 'Failed to start');
     }
     setBusy(false);  }
-
   async function upload(kind: KycDocumentMeta['kind']) {
     const filename = prompt(`Enter filename for ${kind}`) || '';
     if (!filename) return;
@@ -60,7 +58,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
       setMessage(data.error || 'Upload failed');
     }
     setBusy(false);  }
-
   async function submit() {
     setBusy(true);
     const res = await fetch('/api/kyc/submit', {
@@ -76,7 +73,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
       setMessage(data.error || 'Submit failed');
     }
     setBusy(false);  }
-
   const labels = getBadgeLabels(profile || undefined);
 
   return (
@@ -148,8 +144,7 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                   className='mt-1 w-full border rounded px-3 py-2'
                   value={businessReg}
                   onChange={e => setBusinessReg(e.target.value)}
-                />              </div>
-            </>
+                />              </div>            </>
           )}
         </div>
 
@@ -203,8 +198,7 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                         {hasIt ? 'Replace' : 'Upload'}
                       </button>
                     </div>
-                  );                })}
-              </div>
+                  );                })}              </div>
             </section>
 
             {optionalDocs.length > 0 && (
@@ -231,8 +225,7 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
                           {hasIt ? 'Replace' : 'Upload'}
                         </button>
                       </div>
-                    );                  })}
-                </div>
+                    );                  })}                </div>
               </section>
             )}
 

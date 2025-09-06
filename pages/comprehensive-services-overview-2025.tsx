@@ -24,8 +24,7 @@ import {
   List,
   BarChart3,
   DollarSign,
-  Target as TargetIcon,;
-} from 'lucide-react';
+  Target as TargetIcon,;} from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 export default function ComprehensiveServicesOverviewPage() {
@@ -35,7 +34,6 @@ export default function ComprehensiveServicesOverviewPage() {
   const [sortBy, setSortBy] = useState<
     'popularity' | 'price' | 'rating' | 'newest'
   >('popularity');
-
   // Combine all services
   const allServices = [
     ...comprehensiveMicroSaasServices,
@@ -144,7 +142,6 @@ export default function ComprehensiveServicesOverviewPage() {
       count: allServices.filter(s => s.category === 'Neuromorphic Computing')
         .length,
     },  ];
-
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
@@ -154,8 +151,7 @@ export default function ComprehensiveServicesOverviewPage() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;    })
-    .sort((a, b) => {
+      return matchesCategory && matchesSearch;    })    .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
           return b.popular ? 1 : -1;
@@ -171,13 +167,11 @@ export default function ComprehensiveServicesOverviewPage() {
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
         default:
-          return 0;      }
-    });
+          return 0;      }    });
 
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || '🚀';  };
-
   // Calculate market statistics
   const totalMarketSize = allServices.reduce((sum, service) => {
     const marketSize = service.marketSize.match(/\$([\d.]+)B/);
@@ -193,8 +187,7 @@ export default function ComprehensiveServicesOverviewPage() {
   const totalCustomers = allServices.reduce(
     (sum, service) => sum + service.customers,
     0
-  );
-  return (
+  );  return (
     <>
       <Head>
         <title>Comprehensive Services Overview 2025 - Zion Tech Group</title>
@@ -215,8 +208,7 @@ export default function ComprehensiveServicesOverviewPage() {
       <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
         {/* Hero Section */}
         <section className='py-20 px-6'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-7xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -266,8 +258,7 @@ export default function ComprehensiveServicesOverviewPage() {
                   <p className='text-white/70 text-sm'>
                     Revolutionary services that give you competitive advantages
                     in emerging markets
-                  </p>
-                </div>
+                  </p>                </div>
                 <div className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl p-6 border border-green-500/30'>
                   <div className='text-4xl mb-4'>⚡</div>
                   <h3 className='text-xl font-bold text-white mb-2'>
@@ -286,8 +277,7 @@ export default function ComprehensiveServicesOverviewPage() {
                   <p className='text-white/70 text-sm'>
                     Military-grade security with quantum-resistant encryption
                     and AI threat detection
-                  </p>                </div>
-              </div>
+                  </p>                </div>              </div>
             </motion.div>
           </div>
         </section>
@@ -342,8 +332,7 @@ export default function ComprehensiveServicesOverviewPage() {
                         : 'text-white/60 hover:text-white'
                     }`}
                   >
-                    <List className='w-5 h-5' />                  </button>
-                </div>
+                    <List className='w-5 h-5' />                  </button>                </div>
               </div>
             </motion.div>
           </div>
@@ -357,8 +346,7 @@ export default function ComprehensiveServicesOverviewPage() {
               transition={{ duration: 0.6 }}
               className='flex flex-wrap justify-center gap-3'
             >
-              {categories.map(category => (                <button
-                  key={category.id}
+              {categories.map(category => (                <button                  key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category.id
@@ -370,8 +358,7 @@ export default function ComprehensiveServicesOverviewPage() {
                   {category.name}
                   <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
                     {category.count}
-                  </span>                </button>
-              ))}
+                  </span>                </button>              ))}
             </motion.div>
           </div>
         </section>
@@ -381,8 +368,7 @@ export default function ComprehensiveServicesOverviewPage() {
           <div className='max-w-7xl mx-auto'>
             {viewMode === 'grid' ? (
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                <AnimatePresence mode='wait'>                  {filteredServices.map((service, index) => (
-                    <motion.div
+                <AnimatePresence mode='wait'>                  {filteredServices.map((service, index) => (                    <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -393,8 +379,7 @@ export default function ComprehensiveServicesOverviewPage() {
                       {/* Popular Badge */}
                       {service.popular && (
                         <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10'>
-                          <Star className='w-3 h-3' />                          Popular
-                        </div>
+                          <Star className='w-3 h-3' />                          Popular                        </div>
                       )}
 
                       {/* Service Content */}
@@ -425,8 +410,7 @@ export default function ComprehensiveServicesOverviewPage() {
                               key={idx}
                               className='flex items-center gap-2 text-sm text-white/60'
                             >
-                              <Check className='w-4 h-4 text-green-400' />                              {feature}
-                            </div>
+                              <Check className='w-4 h-4 text-green-400' />                              {feature}                            </div>
                           ))}
                         </div>
 
@@ -450,8 +434,7 @@ export default function ComprehensiveServicesOverviewPage() {
                             <div className='text-lg font-bold text-purple-400'>
                               {service.trialDays}d
                             </div>
-                            <div className='text-xs text-white/60'>Trial</div>                          </div>
-                        </div>
+                            <div className='text-xs text-white/60'>Trial</div>                          </div>                        </div>
 
                         {/* CTA */}
                         <a
@@ -461,16 +444,14 @@ export default function ComprehensiveServicesOverviewPage() {
                           className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
                         >
                           Learn More
-                          <ExternalLink className='w-4 h-4' />                        </a>
-                      </div>
+                          <ExternalLink className='w-4 h-4' />                        </a>                      </div>
                     </motion.div>
                   ))}
                 </AnimatePresence>
               </div>
             ) : (
               <div className='space-y-6'>
-                <AnimatePresence mode='wait'>                  {filteredServices.map((service, index) => (
-                    <motion.div
+                <AnimatePresence mode='wait'>                  {filteredServices.map((service, index) => (                    <motion.div
                       key={service.id}
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -483,8 +464,7 @@ export default function ComprehensiveServicesOverviewPage() {
                         <div className='flex-shrink-0'>
                           <div className='text-6xl mb-4'>{service.icon}</div>
                           {service.popular && (
-                            <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                              Popular
-                            </div>
+                            <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                              Popular                            </div>
                           )}
                         </div>
 
@@ -532,15 +512,13 @@ export default function ComprehensiveServicesOverviewPage() {
                               <Star className='w-4 h-4 text-yellow-400' />
                               <span>
                                 {service.rating} ({service.reviews} reviews)
-                              </span>
-                            </div>
+                              </span>                            </div>
                             <div className='flex items-center gap-2'>
                               <Users className='w-4 h-4 text-blue-400' />
                               <span>{service.customers}+ customers</span>
                             </div>
                             <div className='flex items-center gap-2'>
-                              <Clock className='w-4 h-4 text-green-400' />                              <span>{service.setupTime} setup</span>
-                            </div>
+                              <Clock className='w-4 h-4 text-green-400' />                              <span>{service.setupTime} setup</span>                            </div>
                           </div>
                         </div>
 
@@ -554,8 +532,7 @@ export default function ComprehensiveServicesOverviewPage() {
                               <span>{getCategoryIcon(service.category)}</span>
                               <span className='text-sm'>
                                 {service.category}
-                              </span>                            </div>
-                          </div>
+                              </span>                            </div>                          </div>
 
                           <a
                             href={service.link}
@@ -564,8 +541,7 @@ export default function ComprehensiveServicesOverviewPage() {
                             className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2'
                           >
                             Learn More
-                            <ArrowRight className='w-4 h-4' />                          </a>
-                        </div>
+                            <ArrowRight className='w-4 h-4' />                          </a>                        </div>
                       </div>
                     </motion.div>
                   ))}
@@ -586,15 +562,13 @@ export default function ComprehensiveServicesOverviewPage() {
                 </h3>
                 <p className='text-white/60'>
                   Try adjusting your search or filter criteria
-                </p>              </motion.div>
-            )}
+                </p>              </motion.div>            )}
           </div>
         </section>
 
         {/* Contact CTA */}
         <section className='px-6 pb-20'>
-          <div className='max-w-4xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-4xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -618,8 +592,7 @@ export default function ComprehensiveServicesOverviewPage() {
                   </a>
                   <a
                     href='tel:+13024640950'
-                    className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'                  >
-                    Call +1 302 464 0950
+                    className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'                  >                    Call +1 302 464 0950
                   </a>
                 </div>
               </div>

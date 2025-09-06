@@ -3,6 +3,7 @@
   <url>
     <loc>https://zion.app/</loc>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -15,6 +16,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -26,6 +29,7 @@
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1702,6 +1706,9 @@
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
+=======
+    <changefreq>weekly</changefreq>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1718,12 +1725,15 @@
     <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/services/website-analytics-small-business/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1744,6 +1754,7 @@
     <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1778,16 +1789,17 @@
     <loc>https://zion.app/resources</loc>
     <lastmod>2025-08-20</lastmod>
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-655c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-<<<<<<< HEAD
-=======
     <loc>https://ziontechgroup.com/smart-city-infrastructure/</loc>    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -1798,6 +1810,8 @@
   <url>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/automation</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -1806,15 +1820,16 @@
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 =======
-=======
-    <loc>https://ziontechgroup.com/contact</loc>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>
+<<<<<<< HEAD
 =======
     <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
@@ -48887,3 +48902,5 @@
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

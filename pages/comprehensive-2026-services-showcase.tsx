@@ -31,8 +31,7 @@ import {
   BarChart3,
   Award,
   Clock,
-  DollarSign,;} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+  DollarSign,;} from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
 import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026';
@@ -44,7 +43,6 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
     ...nextGenAIServices2026,
     ...revolutionaryITInfrastructure2026,
     ...innovativeMicroSaas2026,  ];
-
   // Categories for filtering
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
@@ -84,7 +82,6 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
       icon: Sparkles,
       count: allServices.filter(s => s.category.includes('Emerging')).length,
     },  ];
-
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
@@ -112,8 +109,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
         case 'customers':
           return b.customers - a.customers;
         default:
-          return a.popular ? -1 : 1;      }
-    });
+          return a.popular ? -1 : 1;      }    });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -123,7 +119,6 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
         staggerChildren: 0.1,
       },
     },  };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -132,8 +127,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
       transition: {
         duration: 0.5,
       },
-    },
-  };
+    },  };
 
   
     >
@@ -170,8 +164,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
       <div className='min-h-screen relative z-10'>
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-7xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -221,16 +214,14 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                 </h3>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                   <div className='flex items-center gap-3 text-gray-300'>
-                    <Phone className='w-5 h-5 text-cyan-400' />
-                    <span>{contactInfo.mobile}</span>
+                    <Phone className='w-5 h-5 text-cyan-400' />                    <span>{contactInfo.mobile}</span>
                   </div>
                   <div className='flex items-center gap-3 text-gray-300'>
                     <Mail className='w-5 h-5 text-purple-400' />
                     <span>{contactInfo.email}</span>
                   </div>
                   <div className='flex items-center gap-3 text-gray-300'>
-                    <MapPin className='w-5 h-5 text-green-400' />                    <span>{contactInfo.address}</span>
-                  </div>
+                    <MapPin className='w-5 h-5 text-green-400' />                    <span>{contactInfo.address}</span>                  </div>
                 </div>
               </div>
             </motion.div>
@@ -256,8 +247,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
               <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
                 {/* Category Filter */}
                 <div className='flex flex-wrap gap-3'>
-                  {categories.map(category => (                    <button
-                      key={category.id}
+                  {categories.map(category => (                    <button                      key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
                       className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all duration-300 ${
                         selectedCategory === category.id
@@ -267,8 +257,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                     >
                       <category.icon className='w-4 h-4' />
                       {category.name}
-                      <span className='bg-gray-700/50 px-2 py-1 rounded-lg text-xs'>                        {category.count}
-                      </span>
+                      <span className='bg-gray-700/50 px-2 py-1 rounded-lg text-xs'>                        {category.count}                      </span>
                     </button>
                   ))}
                 </div>
@@ -301,8 +290,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                         fill='currentColor'
                         viewBox='0 0 20 20'
                       >
-                        <path d='M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' />                      </svg>
-                    </button>
+                        <path d='M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' />                      </svg>                    </button>
                     <button
                       onClick={() => setViewMode('list')}
                       className={`p-2 rounded-lg transition-all duration-300 ${
@@ -320,8 +308,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                           fillRule='evenodd'
                           d='M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
                           clipRule='evenodd'
-                        />                      </svg>
-                    </button>
+                        />                      </svg>                    </button>
                   </div>
                 </div>
               </div>
@@ -343,8 +330,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
               }
             >
               <AnimatePresence>
-                {filteredServices.map(service => (                  <motion.div
-                    key={service.id}
+                {filteredServices.map(service => (                  <motion.div                    key={service.id}
                     variants={itemVariants}
                     layout
                     className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-600/30 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 group ${
@@ -396,8 +382,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                           {service.customers.toLocaleString()}
                         </div>
                         <div className='flex items-center gap-1'>
-                          <Clock className='w-4 h-4' />                          {service.setupTime}
-                        </div>
+                          <Clock className='w-4 h-4' />                          {service.setupTime}                        </div>
                       </div>
                     </div>
 
@@ -426,8 +411,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                               </div>
                             ))}
                           {service.features.length > 3 && (
-                            <div className='text-sm text-cyan-400'>                              +{service.features.length - 3} more features
-                            </div>
+                            <div className='text-sm text-cyan-400'>                              +{service.features.length - 3} more features                            </div>
                           )}
                         </div>
                       </div>
@@ -467,8 +451,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                           <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
                         </Link>
                         <button className='bg-gray-800/50 hover:bg-gray-700/50 text-white font-semibold py-3 px-6 rounded-xl border border-gray-600/30 transition-all duration-300 flex items-center justify-center gap-2'>
-                          <Phone className='w-4 h-4' />                          Contact
-                        </button>
+                          <Phone className='w-4 h-4' />                          Contact                        </button>
                       </div>
                     </div>
                   </motion.div>
@@ -491,8 +474,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
-                  className='bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors'                >
-                  Clear Filters
+                  className='bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors'                >                  Clear Filters
                 </button>
               </div>
             )}
@@ -501,8 +483,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
 
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -541,8 +522,7 @@ import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
                   >
                     {contactInfo.website}
                   </a>
-                </p>              </div>
-            </motion.div>
+                </p>              </div>            </motion.div>
           </div>
         </section>
       </div>

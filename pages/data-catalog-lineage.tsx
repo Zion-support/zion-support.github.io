@@ -17,7 +17,6 @@ export default function DataCatalogLineagePage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/data-catalog-lineage')
   );  if (!service) return null;
-
   return (
     <Layout>
       <Head>
@@ -26,8 +25,7 @@ export default function DataCatalogLineagePage() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/data-catalog-lineage'
-        />
-      </Head>
+        />      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -91,8 +89,7 @@ export default function DataCatalogLineagePage() {
                 <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>
                   <MapPin />
                   <span>{service.contactInfo.address}</span>
-                </div>              </div>
-            </div>
+                </div>              </div>            </div>
           </div>
         </div>
       </div>

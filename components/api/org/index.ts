@@ -4,14 +4,10 @@ import type { OrgFilters, RoleType } from '../../../types/org';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });  }
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    return res.status(405).json({ error: 'Method not allowed' });  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const data = readOrgData();
 
   const parseArray = (v?: string | string[]) => {
@@ -33,8 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     regions: parseArray(req.query.regions),
     countries: parseArray(req.query.countries),
     search: (req.query.search as string) || undefined,
-    teamOnly: req.query.teamOnly === 'true' ? true : undefined,
-  };
+    teamOnly: req.query.teamOnly === 'true' ? true : undefined,  };
 
   const filters: OrgFilters = {
     view: (req.query.view as OrgFilters['view']) || 'all';
@@ -52,9 +47,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   };
 
   const filtered = filterOrgData(data, filters);
-  return res.status(200).json(filtered);
-=======
-  return res.status(200).json(filtered)
+  return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

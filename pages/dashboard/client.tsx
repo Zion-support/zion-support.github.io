@@ -84,8 +84,7 @@ export default function ClientDashboard() {
                   className='text-xs py-1 px-2'
                 >
                   {s.key === 'job' ? 'Post a Job' : 'Mark done'}
-                </EnhancedButton>              )}
-            </li>
+                </EnhancedButton>              )}            </li>
           ))}
         </ul>
       </EnhancedCard>

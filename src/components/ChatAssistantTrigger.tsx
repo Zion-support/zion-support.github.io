@@ -1,11 +1,6 @@
 
 import { useState } from "react";
-<<<<<<< HEAD
-import { MessageSquare } from 'lucide-react'
-=======
-import { MessageSquare } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { Button } from "@/components/ui/button";
+import { MessageSquare } from 'lucide-react'import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function ChatAssistantTrigger() {
@@ -22,17 +17,9 @@ export function ChatAssistantTrigger() {
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })});
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       
-<<<<<<< HEAD
             avatarUrl: 'https://placehold.co/64x64?text=AI',
-            role: 'Virtual Assistant';
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      if (!response.ok) {
+            role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
       
@@ -72,4 +59,3 @@ export function ChatAssistantTrigger() {
   )
 }
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

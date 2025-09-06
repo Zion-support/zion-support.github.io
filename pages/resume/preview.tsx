@@ -24,7 +24,6 @@ export default function ResumePreviewPage({
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id || 'current'
   );  const targetRef = useRef<HTMLDivElement>(null);
-
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
@@ -56,8 +55,7 @@ export default function ResumePreviewPage({
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>
                     {v.label}
-                  </option>                ))}
-              </select>
+                  </option>                ))}              </select>
             </>
           )}
         </div>
@@ -75,8 +73,7 @@ export default function ResumePreviewPage({
   );
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
-  // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
-  const user = await (supabase as any).auth.getUser?.();
+  // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();  const user = await (supabase as any).auth.getUser?.();
 
   if (!user) {
     return {
@@ -85,7 +82,6 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
         permanent: false,
       },
     };  }
-
   // Placeholder: fetch resume data for the logged-in user and versions if any
   const initialData: ResumeData = {
     name: 'Your Name',
@@ -104,8 +100,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
       'Node.js',
       'Next.js',
     ],
-    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [
-      {
+    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [      {
         title: 'Senior AI Engineer',
         company: 'Zion AI',
         start: '2023',
@@ -116,8 +111,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
           'Designed AI-driven dashboards and PDF export workflows.',
         ],
       },
-    ],
-    education: [
+    ],    education: [
       {
         institution: 'University of Example',
         degree: 'B.Sc. Computer Science',
@@ -145,5 +139,4 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 
   const versions = [] as Array<{ id: string; label: string; data: ResumeData }>;
 
-  return { props: { initialData, versions } };
-};
+  return { props: { initialData, versions } };};

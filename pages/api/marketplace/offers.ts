@@ -24,8 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const offers = listOffers({ clientId: user.id });
         return res.json({ ok: true, offers });
       }
-      if (user.role === 'talent') {
-        const offers = listOffers({ talentSlug: user.talentSlug });
+      if (user.role === 'talent') {        const offers = listOffers({ talentSlug: user.talentSlug });
         return res.json({ ok: true, offers });
       }
       return bad(res, 'Unknown role', 403);
@@ -57,7 +56,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         agreementUrl,
         status: 'SENT',
       };
-
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer });
     }
@@ -97,8 +95,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 },
               ]
             : [],
-          notes: [],        };
-        saveProject(project);
+          notes: [],        };        saveProject(project);
         existing.projectId = project.id;
         saveOffer(existing);
         return res.json({ ok: true, offer: existing, project });

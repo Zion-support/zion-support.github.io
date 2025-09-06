@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -37,6 +38,9 @@
 }
 
 main();#!/usr/bin/env node;
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

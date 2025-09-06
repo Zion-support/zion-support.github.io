@@ -16,7 +16,6 @@ export class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();  }
-
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
   }
@@ -25,21 +24,15 @@ export class HealthChecker {
     const results = {};
     for (const [name, check] of this.checks) {
       try {
-        const result = await check();        results[name] = { status: 'healthy', result };
-=======
-    for (const [name, checkFunction] of this.checks) {
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
       try {
         const result = await checkFunction();
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         results[name] = { status: 'healthy', result };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       } catch (error) {
         results[name] = { status: 'unhealthy', error: error.message };
       }
     }
     this.results = results;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    return results;
   }
 
   getHealthStatus() {
@@ -115,13 +108,11 @@ export class ErrorTracker {
   constructor() {
     this.errors = [];
     this.errorCounts = new Map();  }
-
   trackError(error, context = {}) {
     const errorInfo = {
       message: error.message,
       stack: error.stack,
       context,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       timestamp: new Date().toISOString(),
       id: Math.random().toString(36).substr(2, 9)
     };
@@ -142,19 +133,30 @@ export class ErrorTracker {
     const recentErrors = this.errors.filter(e => 
       Date.now() - new Date(e.timestamp).getTime() < 3600000 // Last hour
     );
-        return {
-=======
+        return {      timestamp: new Date().toISOString(),
+      context,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+    };
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    this.errors.push(errorInfo);
+    
+    // Track error frequency
+    const errorKey = error.message;
+    this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) || 0) + 1);
+  }
+
+  getErrorStats() {
+    const recentErrors = this.errors.filter(
+      error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)
+    );
+
     return {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       total: this.errors.length,
       recent: recentErrors.length,
       topErrors: Array.from(this.errorCounts.entries())
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10)
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    };
   }
 
 export const errorTracker = new ErrorTracker();
@@ -583,19 +585,12 @@ async function main() {
     console.log('🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
 // Main execution
 async function main() {
   try {
-<<<<<<< HEAD
     console.log('🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    createAdvancedMonitoring();
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
@@ -646,12 +641,9 @@ async function main() {
     process.exit(1);
   }
 
-main();
-// Run if called directly
+main();// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

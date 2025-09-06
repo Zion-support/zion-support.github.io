@@ -5,35 +5,6 @@ import { ImageIcon, AlertTriangle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { imageOptimization } from '@/utils/performance';
 import { logWarn } from '@/utils/productionLogger';
-<<<<<<< HEAD
-=======
-interface OptimizedImageProps {
-  src: string,
-  alt: string,
-  width?: number,
-  height?: number,
-  className?: string,
-  placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty',
-  placeholderColor?: string,
-  priority?: boolean,
-  quality?: number,
-  sizes?: string,
-  onLoad?: () => void,
-  onError?: () => void,
-  fallbackSrc?: string,
-  aspectRatio?: string,
-  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down',
-  lazy?: boolean,
-  retryCount?: number,
-  showLoadingProgress?: boolean,
-  fill?: boolean,
-  blurDataURL?: string,
-  loading?: 'lazy' | 'eager',
-  style?: React.CSSProperties,
-  objectPosition?: string
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -84,7 +55,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   style,
   objectPosition = 'center',
   ...props
-<<<<<<< HEAD
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -103,29 +73,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
     observerRef.current = new IntersectionObserver(
       entries => {
-        const [entry] = entries;
-=======
-},) => {
-  const [isLoading, setIsLoading] = useState(true),
-  const [hasError, setHasError] = useState(false),
-  const [isInView, setIsInView] = useState(!lazy || priority),
-  const [currentSrc, setCurrentSrc] = useState(src),
-  const [retries, setRetries] = useState(0),
-  const [loadProgress, setLoadProgress] = useState(0),
-  const imgRef = useRef<HTMLImageElement>(null),
-  const observerRef = useRef<IntersectionObserver>(),
-  const [metrics, setMetrics] = useState<ImageMetrics | null>(null),
-  const loadStartTime = useRef<number>(0),
-
-  // Intersection Observer for lazy loading
-  useEffect((,) => {
-    if (!lazy || priority || isInView) return,
-
-    observerRef.current = new IntersectionObserver(
-      (entries,) => {
-        const [entry] = entries,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        if (entry && entry.isIntersecting) {
+        const [entry] = entries;        if (entry && entry.isIntersecting) {
           setIsInView(true);
           observerRef.current?.disconnect();
         }
@@ -146,29 +94,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, [lazy, priority, isInView]);
 
   // Start load time tracking
-<<<<<<< HEAD
   useEffect(() => {
     loadStartTime.current = performance.now();
   }, [src]);
-=======
-  useEffect((,) => {
-    loadStartTime.current = performance.now()
-  }, [src]),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   // Monitor image performance
   useEffect((,) => {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-<<<<<<< HEAD
       const observer = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach(entry => {
-=======
-      const observer = new PerformanceObserver((list,) => {
-        const entries = list.getEntries(),
-        entries.forEach((entry,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          if (entry.name === src && entry.entryType === 'resource') {
+        entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming;
             const fileSize =
               resourceEntry.transferSize || resourceEntry.encodedBodySize || 0;
@@ -234,19 +168,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     if (retries < retryCount) {
       setRetries(prev => prev + 1);
       // Retry with a slight delay
-<<<<<<< HEAD
       setTimeout(
         () => {
           setCurrentSrc(src + `?retry=${retries + 1}`);
         },
         1000 * (retries + 1)
-      );
-=======
-      setTimeout((,) => {
-        setCurrentSrc(src + `?retry=${retries + 1}`)
-      }, 1000 * (retries + 1))
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    } else if (fallbackSrc && currentSrc !== fallbackSrc) {
+      );    } else if (fallbackSrc && currentSrc !== fallbackSrc) {
       setCurrentSrc(fallbackSrc);
       setRetries(0);
     } else {
@@ -257,14 +184,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   // Simulate loading progress for demo purposes
-<<<<<<< HEAD
   useEffect(() => {
     if (!isLoading || !showLoadingProgress) return;
-=======
-  useEffect((,) => {
-    if (!isLoading || !showLoadingProgress) return,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
     const interval = setInterval((,) => {
       setLoadProgress(prev => {
         if (prev >= 90) {
@@ -291,15 +212,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
 
     if (placeholder === 'color') {
-<<<<<<< HEAD
-      
-=======
-      return (
-        <div 
-          className = {placeholderClassName,}
-          style={{ backgroundColor: placeholderColor }}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        />
+              />
       );
     }
 
@@ -318,16 +231,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     height: height ? `${height}px` : undefined,
   };
 
-<<<<<<< HEAD
-  
-=======
-  return (
-    <div 
-      ref = {imgRef,}
-      className = {cn('relative overflow-hidden', className),}
-      style = {containerStyle,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    >
+      >
       <AnimatePresence>
         {/* Placeholder */}
         {(isLoading || !isInView) && !hasError && (
@@ -389,7 +293,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         )}
       </AnimatePresence>
     </div>
-<<<<<<< HEAD
   );
 };
 //Container styles 
@@ -428,39 +331,14 @@ isLoading ? 'opacity-0' : 'opacity-100') ;
 }initial= {;
   {;
   opacity: 0 ;
-=======
-  )
-},
-
-// Gallery component with optimized loading
-interface ImageGalleryProps {
-  images: Array<{
-    src: string,
-    alt: string,
-    caption?: string
-  }>,
-  columns?: number,
-  aspectRatio?: string,
-  className?: string,
-  onImageClick?: (index: number,) => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
   aspectRatio = '16/9',
   className,
-<<<<<<< HEAD
   onImageClick,
 }) => {
   const [loadedCount, setLoadedCount] = useState(0);
-=======
-  onImageClick
-},) => {
-  const [loadedCount, setLoadedCount] = useState(0),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1);
   };
@@ -473,20 +351,11 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           {loadedCount}/{images.length} loaded
         </span>
       </div>
-<<<<<<< HEAD
 
       <div
         className={`grid gap-4`}
         style={{
-          gridTemplateColumns: `repeat(${columns}, 1fr)`,
-=======
-      
-      <div 
-        className = {`grid gap-4`,}
-        style={{ 
-          gridTemplateColumns: `repeat(${columns}, 1fr)` 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        }}
+          gridTemplateColumns: `repeat(${columns}, 1fr)`,        }}
       >
         {images.map((image, index,) => (
           <motion.div
@@ -494,30 +363,15 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-<<<<<<< HEAD
             className='group cursor-pointer'
-            onClick={() => onImageClick?.(index)}
-=======
-            className="group cursor-pointer"
-            onClick = {(,) => onImageClick?.(index),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          >
+            onClick={() => onImageClick?.(index)}          >
             <div className='relative'>
               <OptimizedImage
-<<<<<<< HEAD
                 src={image.src}
                 alt={image.alt}
                 aspectRatio={aspectRatio}
                 className='rounded-lg group-hover:scale-105 transition-transform duration-300'
-                onLoad={handleImageLoad}
-=======
-                src = {image.src,}
-                alt = {image.alt,}
-                aspectRatio = {aspectRatio,}
-                className="rounded-lg group-hover:scale-105 transition-transform duration-300"
-                onLoad = {handleImageLoad,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                priority={index < 3} // Prioritize first 3 images
+                onLoad={handleImageLoad}                priority={index < 3} // Prioritize first 3 images
               />
 
               {image.caption && (
@@ -545,14 +399,8 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
   alt,
   size = 'md',
   fallback,
-<<<<<<< HEAD
   className,
-}) => {
-=======
-  className
-},) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  const sizeClasses = {
+}) => {  const sizeClasses = {
     sm: 'h-8 w-8',
     md: 'h-10 w-10',
     lg: 'h-12 w-12',
@@ -572,7 +420,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     >
       {src ? (
         <OptimizedImage
-<<<<<<< HEAD
           src={src}
           alt={alt}
           aspectRatio='1/1'
@@ -581,19 +428,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
           placeholder='color'
           placeholderColor='#f3f4f6'
           priority={true}
-          className='rounded-full'
-=======
-          src = {src,}
-          alt = {alt,}
-          aspectRatio="1/1"
-          objectFit="cover"
-          fallbackSrc={`https://ui-avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
-          placeholder="color"
-          placeholderColor="#f3f4f6"
-          priority = {true,}
-          className="rounded-full"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        />
+          className='rounded-full'        />
       ) : (
         <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold'>
           {initials}
@@ -602,7 +437,5 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     </div>
   );
 };
-=======
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+},

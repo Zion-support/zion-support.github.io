@@ -12,7 +12,6 @@ export default async function handler(
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  }
-
   try {
     const { projectId, preferredName } = req.body || {};
 
@@ -21,7 +20,6 @@ export default async function handler(
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
       return res.status(500).json({ error: 'LiveKit env vars not configured' });    }
-
     const date = new Date();
     const pad = (n: number) => String(n).padStart(2, '0');
     const roomName = `${projectId}-${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
@@ -41,8 +39,7 @@ export default async function handler(
           createdBy: preferredName || 'host',
         }),
         metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })
-ursor/integrate-build-improve-and-re-verify-b76c
-      };
+ursor/integrate-build-improve-and-re-verify-b76c      };
       await roomService.createRoom(opts).catch(() => Promise.resolve());
     } catch (e) {
       // In some deployments without server access, proceed with computed room name

@@ -39,17 +39,12 @@ export interface ComprehensiveITService {
   reviews: number;
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'enterprise-it-infrastructure',
     name: 'Enterprise IT Infrastructure Management',
     tagline:
@@ -58,9 +53,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description:
       'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Network infrastructure management',
       'Server and storage management',
       'Security monitoring and management',
@@ -882,9 +874,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4.9,
     reviews: 156,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -897,5 +887,3 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     reviews: 156
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

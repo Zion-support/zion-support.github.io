@@ -53,7 +53,6 @@ export default async function handler(
     });
 
     if (error) return res.status(500).json({ error: error.message });
-
     return res.status(200).json({ ok: true, code, status: 'pending' });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });

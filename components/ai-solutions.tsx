@@ -1,14 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function AISolutionsPage() {
   const aiSolutions = [
     {
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
-<<<<<<< HEAD
       description:
         'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
       features: [
@@ -16,8 +13,7 @@ export default function AISolutionsPage() {
         'Pattern Recognition',
         'Anomaly Detection',
         'Recommendation Systems',
-      ],
-      icon: '🧠',
+      ],      icon: '🧠',
       category: 'Core AI',
       complexity: 'Advanced'
     };
@@ -56,12 +52,8 @@ export default function AISolutionsPage() {
       icon: '📊',
       category: 'Analytics',
       complexity: 'Intermediate',
-    },
-=======
-      complexity: 'Intermediate'
+    },      complexity: 'Intermediate'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       id: 'ai-automation',
       title: 'AI-Powered Automation',
@@ -75,16 +67,11 @@ export default function AISolutionsPage() {
       icon: '⚡',
       category: 'Automation',
       complexity: 'Intermediate',
-    },  ];
-=======
-      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows'],
+    },  ];      features: ['Process AutomationWorkflow OptimizationIntelligent RoutingAdaptive Workflows'],
       icon: '⚡',
       category: 'Automation',
       complexity: 'Intermediate'
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const useCases = [
     {
@@ -96,7 +83,6 @@ export default function AISolutionsPage() {
       ],
       icon: '🏭',
     },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       industry: 'Healthcare',
       solutions: [
@@ -130,12 +116,26 @@ export default function AISolutionsPage() {
     'BERT',
     'YOLO',
     'Keras',
-    'Pandas',  ];
-=======
-    'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    'Pandas',  ];    {
+      industry: 'Healthcare',
+      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery'],
+      icon: '🏥'
+    };
+    {
+      industry: 'Finance',
+      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading'],
+      icon: '💳'
+    };
+    {
+      industry: 'Retail',
+      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing'],
+      icon: '🛍️'
+    }
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+  const technologies = [
+    'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
+  ];
 
   return (
     <>
@@ -153,7 +153,6 @@ export default function AISolutionsPage() {
           content='Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems.'
         />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
@@ -203,27 +202,50 @@ export default function AISolutionsPage() {
                         </li>
                       ))}
                     </ul>
-                    <Link
-=======
+                    <Link      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              AI Solutions
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Cutting-edge artificial intelligence solutions that transform businesses and drive innovation
+            </p>
+          </section>
+
+          <section className="mx-auto max-w-7xl">
+            {/* AI Solutions Grid */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {aiSolutions.map((solution, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                    <div className="text-4xl mb-4">{solution.icon}</div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{solution.category}</span>
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{solution.complexity}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{solution.title}</h3>
+                    <p className="text-white/70 mb-4">{solution.description}</p>
+                    <ul className="space-y-1 mb-4">
+                      {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {feature}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                     <Link
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       href={`/services#${solution.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
-                      Learn More <span className='ml-1'>→</span>                    </Link>
-=======
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
                       Learn More <span className="ml-1">→</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </div>
                 ))}
               </div>
@@ -235,7 +257,6 @@ export default function AISolutionsPage() {
                 Industry Applications
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {useCases.map((useCase, index) => (
                   <div
                     key={index}
@@ -250,12 +271,14 @@ export default function AISolutionsPage() {
                         <li
                           key={solutionIndex}
                           className='text-sm text-white/70'
-                        >                          {solution}
-=======
+                        >                          {solution}                {useCases.map((useCase, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
+                    <div className="text-4xl mb-4">{useCase.icon}</div>
+                    <h3 className="text-xl font-bold mb-4 text-white">{useCase.industry}</h3>
+                    <ul className="space-y-2">
+                      {useCase.solutions.map((solution, solutionIndex) => (
                         <li key={solutionIndex} className="text-sm text-white/70">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {solution}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </li>
                       ))}
                     </ul>
@@ -271,16 +294,14 @@ export default function AISolutionsPage() {
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='flex flex-wrap justify-center gap-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   {technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >
-=======
+                      className='px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20'                    >                  {technologies.map((tech, index) => (
+                    <span 
+                      key={index}
                       className="px-4 py-2 bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 text-white rounded-lg border border-white/20"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       {tech}
                     </span>
                   ))}
@@ -307,9 +328,7 @@ export default function AISolutionsPage() {
                     className='text-fuchsia-400 hover:text-fuchsia-300 transition-colors'                  >
                     Read Case Study →
                   </Link>
-                </div>
-=======
-            <div className="mb-16">
+                </div>            <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-blue-400">AI Success Stories</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
@@ -320,13 +339,9 @@ export default function AISolutionsPage() {
                   <Link 
                     href="/case-studies#ai-automation-manufacturing"
                     className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  >
                     Read Case Study →
                   </Link>
                 </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>
                   <h3 className='text-xl font-bold mb-3 text-fuchsia-400'>
                     Content Generation Scale
@@ -337,10 +352,7 @@ export default function AISolutionsPage() {
                   </p>
                   <Link
                     href='/case-studies#content-generation-scale'
-<<<<<<< HEAD
-                    className='text-cyan-400 hover:text-cyan-300 transition-colors'                  >
-=======
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
+                    className='text-cyan-400 hover:text-cyan-300 transition-colors'                  >                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                   <h3 className="text-xl font-bold mb-3 text-fuchsia-400">Content Generation Scale</h3>
                   <p className="text-white/70 mb-4">
                     Built autonomous content generation systems that increased output by 10x while maintaining quality standards.
@@ -348,9 +360,6 @@ export default function AISolutionsPage() {
                   <Link 
                     href="/case-studies#content-generation-scale"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     Read Case Study →
                   </Link>
                 </div>
@@ -365,7 +374,6 @@ export default function AISolutionsPage() {
               <p className='text-xl text-white/80 mb-6'>
                 Let our AI experts help you implement intelligent solutions that
                 drive real business value
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
                 <Link
@@ -376,14 +384,18 @@ export default function AISolutionsPage() {
                 </Link>
                 <Link
                   href='/automation-insights'
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >
-=======
+                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link 
+                  href="/contact"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                >
+                  Start Your AI Journey
+                </Link>
                 <Link 
                   href="/automation-insights"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   Explore Insights
                 </Link>
               </div>
@@ -394,7 +406,3 @@ export default function AISolutionsPage() {
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

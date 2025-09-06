@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
         console.log(' Checking system health...')
@@ -278,3 +279,5 @@ const monitor = new EnhancedHealthMonitor();
 monitor.run().catch(console.error);
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

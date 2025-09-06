@@ -10,9 +10,14 @@ console.log('==');
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
+=======
+    .replace(/>>>>>>> [a-f0-9]+/g, '');
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {

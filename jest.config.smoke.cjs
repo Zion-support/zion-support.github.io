@@ -21,6 +21,7 @@ module.exports = {
     '^.+\\.module\\.(css|sass|scss)$',
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testPathIgnorePatterns: [
@@ -42,3 +43,5 @@ module.exports = {
 };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

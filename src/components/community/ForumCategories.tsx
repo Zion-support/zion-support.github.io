@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react';
-import { ForumCategoryInfo } from "@/types/community";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -62,14 +54,8 @@ export const ForumCategories = () => {
 
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-<<<<<<< HEAD
       {visibleCategories.map((category) => {
-        const Icon = iconMap[category.icon as keyof typeof iconMap];
-=======
-      {visibleCategories.map((category,) => {
-        const Icon = iconMap[category.icon as keyof typeof iconMap],
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        return (
+        const Icon = iconMap[category.icon as keyof typeof iconMap];        return (
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
@@ -95,6 +81,3 @@ export default ForumCategories;
 
 
 export default ForumCategories;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

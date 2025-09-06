@@ -5,8 +5,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
+    return res.status(405).json({ error: 'Method not allowed' })  }
   const { prompt, region, service } = req.body || {};
   if (!prompt) return res.status(400).json({ error: 'Missing prompt' });
   try {

@@ -17,7 +17,6 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false);  };
-
   const save = async () => {
     if (!userId) return;
     setLoading(true);

@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
-
-=======
-
-import React from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react';
-import { AppPlatform, AppMetadataValues } from "./MetadataManager";
-import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues
@@ -39,16 +28,9 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
         content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
         
         // Add keywords as additional rows
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         content += '\n\nKeywords:\n' + metadata.keywords.join();
         
-<<<<<<< HEAD
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
+};        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       
       // Create download link
@@ -112,4 +94,3 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     </Card>
   )
 },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

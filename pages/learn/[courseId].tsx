@@ -12,8 +12,7 @@ export default function CourseView() {
   const [progress, setProgress] = useState<any>({
     percent: 0,
     completedLessons: [],
-  });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
-  const [finalPassed, setFinalPassed] = useState(false);
+  });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);  const [finalPassed, setFinalPassed] = useState(false);
 
   useEffect(() => {
     if (!courseId) return;
@@ -37,8 +36,7 @@ export default function CourseView() {
   const currentLesson = useMemo(
     () => course?.lessons?.find((l: any) => l.id === currentLessonId),
     [course, currentLessonId]
-  );
-  async function markLessonComplete(lessonId: string) {
+  );  async function markLessonComplete(lessonId: string) {
     const completedCount = (progress.completedLessons || []).includes(lessonId)
       ? (progress.completedLessons || []).length
       : (progress.completedLessons || []).length + 1;
@@ -61,12 +59,10 @@ export default function CourseView() {
   function onModuleQuizComplete(score: number) {
     // For demo, simply mark as completed when quiz attempted
     if (currentLessonId) markLessonComplete(currentLessonId);  }
-
   async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold || 0;
     const passed = score >= needed;
     setFinalPassed(passed);  }
-
   if (!course) return <div>Loading...</div>;
 
   return (
@@ -94,8 +90,7 @@ export default function CourseView() {
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l.id)}
-                  >                    {l.title}
-                  </button>
+                  >                    {l.title}                  </button>
                 </li>
               ))}
             </ul>

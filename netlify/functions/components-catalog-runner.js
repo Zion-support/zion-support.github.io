@@ -1,7 +1,6 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
@@ -26,11 +25,7 @@ exports.handler = async () => {
   );
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') };
-};
-=======
-  step('components:catalog', () => runNode('automation/components-catalog.cjs')),
+};  step('components:catalog', () => runNode('automation/components-catalog.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
   return { statusCode: 200, body: logs.join('\n') }
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

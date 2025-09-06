@@ -9,7 +9,6 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-<<<<<<< HEAD
   DialogTitle,;
 } from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
@@ -19,17 +18,6 @@ interface GuestCheckoutModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onSubmit: (details: { email: string; address: string }) => void;
-=======
-  DialogTitle} from '@/components/ui/dialog',
-import { User, Mail, MapPin, CreditCard } from 'lucide-react';
-import { isProdDomain } from '@/utils/getStripe';
-interface GuestCheckoutModalProps {
-  open: boolean,
-  onOpenChange: (open: boolean,) => void,
-  onSubmit: (details: { email: string, address: string },) => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export default function GuestCheckoutModal({
   open,
   onOpenChange,
@@ -39,15 +27,8 @@ export default function GuestCheckoutModal({
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-=======
-  const handleSubmit = async (e: React.FormEvent,) => {
-    e.preventDefault(),
-    
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (!email || !address) {
       alert('Please fill in all required fields');
       return;
@@ -91,20 +72,11 @@ export default function GuestCheckoutModal({
               Email Address
             </Label>
             <Input
-<<<<<<< HEAD
               id='guest-email'
               type='email'
               value={email || ''}
               onChange={e => setEmail(e.target.value || '')}
-              placeholder='your.email@example.com'
-=======
-              id="guest-email"
-              type="email"
-              value = {email || '',}
-              onChange = {(e,) => setEmail(e.target.value || ''),}
-              placeholder="your.email@example.com"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              required
+              placeholder='your.email@example.com'              required
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light'
             />
           </div>
@@ -118,18 +90,10 @@ export default function GuestCheckoutModal({
               Shipping Address
             </Label>
             <Textarea
-<<<<<<< HEAD
               id='guest-address'
               value={address || ''}
               onChange={e => setAddress(e.target.value || '')}
-              placeholder='Enter your full shipping address...'
-=======
-              id="guest-address"
-              value = {address || '',}
-              onChange = {(e,) => setAddress(e.target.value || ''),}
-              placeholder="Enter your full shipping address..."
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              required
+              placeholder='Enter your full shipping address...'              required
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]'
             />
           </div>
@@ -143,31 +107,16 @@ export default function GuestCheckoutModal({
 
           <DialogFooter className='space-x-2'>
             <Button
-<<<<<<< HEAD
               type='button'
               variant='outline'
               onClick={() => onOpenChange(false)}
-              className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'
-=======
-              type="button"
-              variant="outline"
-              onClick = {() => onOpenChange(false),}
-              className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            >
+              className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'            >
               Cancel
             </Button>
             <Button
-<<<<<<< HEAD
               type='submit'
               disabled={isSubmitting || !email || !address}
-              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'
-=======
-              type="submit"
-              disabled = {isSubmitting || !email || !address,}
-              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            >
+              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -182,7 +131,5 @@ export default function GuestCheckoutModal({
       </DialogContent>
     </Dialog>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

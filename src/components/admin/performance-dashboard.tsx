@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-<<<<<<< HEAD
 import {
   Activity,
   Zap,
@@ -19,12 +18,6 @@ import {
 } from 'lucide-react';
 import { bundleMonitor } from '@/utils/bundleMonitor';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
-
-=======
-import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react';
-import { bundleMonitor } from '@/utils/bundleMonitor';
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface PerformanceMetrics {
   bundleSize: number;
   loadTime: number;
@@ -113,16 +106,9 @@ export function PerformanceDashboard() {
 
     // Use PerformanceObserver for more accurate metrics
     if ('PerformanceObserver' in window) {
-<<<<<<< HEAD
       return new Promise(resolve => {
         const observer = new PerformanceObserver(list => {
-          list.getEntries().forEach(entry => {
-=======
-      return new Promise((resolve,) => {
-        const observer = new PerformanceObserver((list,) => {
-          list.getEntries().forEach((entry,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            if (entry.entryType === 'paint') {
+          list.getEntries().forEach(entry => {            if (entry.entryType === 'paint') {
               if (entry.name === 'first-contentful-paint') {
                 vitals.fcp = entry.startTime;
               }
@@ -149,20 +135,11 @@ export function PerformanceDashboard() {
         });
 
         // Resolve after a short delay
-<<<<<<< HEAD
         setTimeout(() => {
           observer.disconnect();
           resolve(vitals);
         }, 2000);
-      });
-=======
-        setTimeout((,) => {
-          observer.disconnect(),
-          resolve(vitals)
-        }, 2000)
-      })
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    }
+      });    }
 
     return vitals;
   };
@@ -170,7 +147,6 @@ export function PerformanceDashboard() {
   const collectChunkData = async (): Promise<BundleChunk[]> => {
     if (typeof window === 'undefined') return [];
 
-<<<<<<< HEAD
     const resourceEntries = performance.getEntriesByType(
       'resource'
     ) as PerformanceResourceTiming[];
@@ -189,17 +165,6 @@ export function PerformanceDashboard() {
       }))
       .sort((a, b) => b.size - a.size);
   };
-=======
-    return scriptEntries.map(entry => ({
-      name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
-      size: entry.transferSize || entry.encodedBodySize || 0,
-      loadTime: entry.responseEnd - entry.requestStart,
-      cached: entry.transferSize === 0,
-      type: categorizeChunk(entry.name)
-    })).sort((a, b,) => b.size - a.size)
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const categorizeChunk = (filename: string): string => {
     if (filename.includes('framework')) return 'framework';
     if (filename.includes('vendor')) return 'vendor';
@@ -222,7 +187,6 @@ export function PerformanceDashboard() {
     return 'text-red-600';
   };
 
-<<<<<<< HEAD
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className='w-4 h-4 text-green-600' />;
     if (score >= 70)
@@ -233,18 +197,6 @@ export function PerformanceDashboard() {
   useEffect(() => {
     collectMetrics();
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
-=======
-  const getScoreIcon = (score: number,) => {
-    if (score >= 90) return <CheckCircle className="w-4 h-4 text-green-600" />,
-    if (score >= 70) return <AlertTriangle className="w-4 h-4 text-yellow-600" />,
-    return <AlertTriangle className="w-4 h-4 text-red-600" />
-  },
-
-  useEffect((,) => {
-    collectMetrics(),
-    const interval = setInterval(collectMetrics, 30000), // Update every 30 seconds
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
     return () => clearInterval(interval);
   }, []);
 
@@ -397,7 +349,6 @@ export function PerformanceDashboard() {
         </CardHeader>
         <CardContent>
           {chunks.length > 0 ? (
-<<<<<<< HEAD
             <div className='space-y-2'>
               {chunks.slice(0, 10).map((chunk, index) => (
                 <div
@@ -405,15 +356,7 @@ export function PerformanceDashboard() {
                   className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
                 >
                   <div className='flex items-center gap-3'>
-                    <span className='text-sm font-mono text-muted-foreground'>
-=======
-            <div className="space-y-2">
-              {chunks.slice(0, 10).map((chunk, index,) => (
-                <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm font-mono text-muted-foreground">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      {index + 1}
+                    <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
                     </span>
                     <div>
                       <p className='font-medium text-sm'>{chunk.name}</p>
@@ -507,7 +450,5 @@ export function PerformanceDashboard() {
       </Card>
     </div>
   );
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+} 

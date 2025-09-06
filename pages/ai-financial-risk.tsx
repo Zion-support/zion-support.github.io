@@ -3,7 +3,6 @@ import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { innovativeAIServices } from '../data/innovative-ai-services';
-
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s =>
     (s.link || '').endsWith('/ai-financial-risk')
@@ -104,8 +103,7 @@ const AIFinancialRisk: React.FC = () => {
                 <div className='flex items-center space-x-2'>
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{contactInfo.address}</span>
-                </div>              </div>
-            </div>
+                </div>              </div>            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -593,3 +594,5 @@ fixer.run().then(report => {;
   process.exit(1);,
 })
 >>>>>>> origin/automation-fixes
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

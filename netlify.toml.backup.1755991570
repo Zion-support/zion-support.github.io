@@ -12,6 +12,7 @@
   node_bundler = "esbuild"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -24,6 +25,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -75,6 +78,7 @@
   status = 301
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -87,6 +91,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 [[scheduled.functions]]
   name = "fast-front-promoter"
   schedule = "*/15 * * * *" # every 15 minutes
@@ -522,39 +528,16 @@
 [[scheduled.functions]]
   name = "ultra-innovation-accelerator"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-  schedule = "*/3 * * * *"
 =======
-[[redirects]]
-  from = "/ai-customer-success-automation"
-  to = "/ai-customer-success-platform"
-  status = 301
-
-[[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/intelligent-content-automation-platform"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
-  from = "/browser-automation-cloud/"
-  to = "/browser-automation-cloud"
-  status = 301
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7466
-=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   schedule = "*/3 * * * *"
+  schedule = "*/3 * * * *"
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -562,3 +545,5 @@
   schedule = "*/3 * * * *"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

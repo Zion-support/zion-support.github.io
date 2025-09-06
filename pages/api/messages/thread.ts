@@ -39,7 +39,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       attachmentName,
       context,
     });
-    res.status(200).json({ conversation, message });
-  } else {
+    res.status(200).json({ conversation, message });  } else {
     res.status(405).json({ error: 'Method not allowed' });
   }

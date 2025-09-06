@@ -1,14 +1,8 @@
       let fullMessage = message;
       
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Loader2 } from 'lucide-react'
-=======
-import { Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Loader2 } from 'lucide-react'import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useMessaging } from "@/context/MessagingContext";
 import { toast } from "@/hooks/use-toast";
@@ -35,14 +29,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
   
-<<<<<<< HEAD
   const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume(resume);
-=======
-  const handleResumeSelected = (resume: ResumeOption,) => {
-    setSelectedResume(resume),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    setSelectedResumeId(resume.id)
+    setSelectedResume(resume);    setSelectedResumeId(resume.id)
   };
   
   const handleApply = async () => {
@@ -241,8 +229,4 @@ return (<> <Tabs value= {;
 }/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'";
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
 }</Button> </div> </>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

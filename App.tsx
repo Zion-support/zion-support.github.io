@@ -235,8 +235,7 @@ export default function App(): JSX.Element {
         <Footer />
         <PerformanceMonitor />
       </div>
-    </AccessibilityProvider>
-  );
+    </AccessibilityProvider>  );
 }
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-=======
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Save } from 'lucide-react';
-import { TalentProfile } from "@/types/talent";
-import { ContractForm, ContractFormValues } from "./components/ContractForm";
-import { ContractPreview } from "./components/ContractPreview";
-import { TemplateManager } from "./templates/TemplateManager";
-import { SmartContractBuilder } from "./SmartContractBuilder";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -39,16 +25,9 @@ export function ContractBuilder({
     setFormValues(templateData)
   };
 
-<<<<<<< HEAD
   const handleContractGenerated = (contract: string) => {
     setGeneratedContract(contract);
-    setActiveTab("preview");
-=======
-  const handleContractGenerated = (contract: string,) => {
-    setGeneratedContract(contract),
-    setActiveTab("preview"),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    if (onContractGenerated) {
+    setActiveTab("preview");    if (onContractGenerated) {
       onContractGenerated(contract)
     }
   };
@@ -56,16 +35,9 @@ export function ContractBuilder({
   if (showSmartContractBuilder) {
     return (
       <SmartContractBuilder
-<<<<<<< HEAD
         isOpen={isOpen}
         onClose={() => {
-          setShowSmartContractBuilder(false);
-=======
-        isOpen = {isOpen,}
-        onClose={(,) => {
-          setShowSmartContractBuilder(false),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          onClose()
+          setShowSmartContractBuilder(false);          onClose()
         }}
         talent = {talent,}
         clientName = {clientName,}
@@ -163,8 +135,4 @@ export function ContractBuilder({
 }currentValues= {;
   formValues ;
 }/> </DialogContent> </Dialog>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

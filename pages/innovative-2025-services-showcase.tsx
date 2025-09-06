@@ -1,8 +1,7 @@
  const filteredServices = allInnovativeServices.filter (service => {
   const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase () .includes (selectedCategory) || (selectedCategory === 'ai' && (service.category.includes ('AI') || service.category.includes ('Machine Learning') ) ) || (selectedCategory === 'it' && (service.category.includes ('IT') || service.category.includes ('Infrastructure') ) ) || (selectedCategory === 'cybersecurity' && service.category.includes ('Security') ) || (selectedCategory === 'cloud' && (service.category.includes ('Cloud') || service.category.includes ('FinOps') ) ) || (selectedCategory === 'developer' && service.category.includes ('Developer') );
 const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || (service as any) .tagline?.toLowerCase () .includes (searchTerm.toLowerCase () );
-];
-};
+];};
   animate: {
   transition: {
   staggerChildren: 0.1 

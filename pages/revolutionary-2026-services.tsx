@@ -19,7 +19,6 @@ export default function Revolutionary2026ServicesPage() {
           content='AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -131,8 +130,7 @@ export default function Revolutionary2026ServicesPage() {
                   description:
                     'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500',
-                },
-                {
+                },                {
                   icon: '⚛️',
                   title: 'Quantum Technology',
                   description:
@@ -180,8 +178,7 @@ export default function Revolutionary2026ServicesPage() {
                     </h3>
                     <p className='text-gray-400 leading-relaxed'>
                       {feature.description}
-                    </p>                  </div>
-                </div>
+                    </p>                  </div>                </div>
               ))}
             </div>
 
@@ -208,8 +205,7 @@ export default function Revolutionary2026ServicesPage() {
                     href='mailto:kleber@ziontechgroup.com'
                     className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'
                   >
-                    <Mail className='w-5 h-5' />                    Email Us
-                  </a>
+                    <Mail className='w-5 h-5' />                    Email Us                  </a>
                 </div>
               </div>
             </div>

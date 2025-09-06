@@ -26,5 +26,3 @@ class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(pro
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

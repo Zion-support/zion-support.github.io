@@ -1,7 +1,5 @@
 import { Project } from '@/types/projects';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export const PROJECTS: Project[] = [
   {
     id: 'project-1',
     client_id: 'client-1',
@@ -23,7 +21,12 @@ export const PROJECTS: Project[] = [
     },
   },
 ];
-}];
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}];      title: "AI Dashboard Development";
+      description: "Develop dashboards using React and integrate ML models"
+    };
+    talent_profile: {
+      full_name: "Alexandra Chen";
+      professional_title: "Senior AI Engineer"
+    }
+  }
+];

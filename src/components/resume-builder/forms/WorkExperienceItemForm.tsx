@@ -1,5 +1,4 @@
 import { useState } from 'react';
-<<<<<<< HEAD
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -27,25 +26,6 @@ import { format } from 'date-fns';
 import { CalendarIcon, Loader2 } from 'lucide-react';
 import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton';
 import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog';
-
-=======
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { WorkExperience } from "@/types/resume";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Textarea } from "@/components/ui/textarea";
-import { cn } from "@/lib/utils";
-import { Switch } from "@/components/ui/switch";
-import { format } from "date-fns";
-import { CalendarIcon, Loader2 } from 'lucide-react';
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Define form schema
 const formSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),
@@ -62,17 +42,9 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 interface WorkExperienceItemFormProps {
-<<<<<<< HEAD
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>;
   onCancel: () => void;
-=======
-  initialData?: WorkExperience,
-  onSubmit: (data: WorkExperience,) => Promise<void>,
-  onCancel: () => void
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
@@ -119,18 +91,10 @@ export function WorkExperienceItemForm({
     await onSubmit(workExperience);
   };
 
-<<<<<<< HEAD
   const handleAIEnhancement = (content: string) => {
     form.setValue('description', content, { shouldDirty: true });
     setIsEnhancementDialogOpen(false);
   };
-=======
-  const handleAIEnhancement = (content: string,) => {
-    form.setValue("description", content, { shouldDirty: true }),
-    setIsEnhancementDialogOpen(false)
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   return (
     <>
       <Form {...form}>
@@ -140,16 +104,9 @@ export function WorkExperienceItemForm({
         >
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
-<<<<<<< HEAD
               control={form.control}
               name='company_name'
-              render={({ field }: { field: any }) => (
-=======
-              control = {form.control,}
-              name="company_name"
-              render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
                     <Input placeholder='e.g. Acme Corporation' {...field} />
@@ -160,16 +117,9 @@ export function WorkExperienceItemForm({
             />
 
             <FormField
-<<<<<<< HEAD
               control={form.control}
               name='role_title'
-              render={({ field }: { field: any }) => (
-=======
-              control = {form.control,}
-              name="role_title"
-              render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder='e.g. Senior Developer' {...field} />
@@ -182,16 +132,9 @@ export function WorkExperienceItemForm({
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
-<<<<<<< HEAD
               control={form.control}
               name='location'
-              render={({ field }: { field: any }) => (
-=======
-              control = {form.control,}
-              name="location"
-              render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input
@@ -205,32 +148,16 @@ export function WorkExperienceItemForm({
             />
 
             <FormField
-<<<<<<< HEAD
               control={form.control}
               name='is_current'
               render={({ field }: { field: any }) => (
-                <FormItem className='flex flex-col'>
-=======
-              control = {form.control,}
-              name="is_current"
-              render={({ field }: { field: any },) => (
-                <FormItem className="flex flex-col">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  <FormLabel>Current Position</FormLabel>
+                <FormItem className='flex flex-col'>                  <FormLabel>Current Position</FormLabel>
                   <div className='flex items-center gap-2 h-10'>
                     <Switch
-<<<<<<< HEAD
                       aria-label='Current position'
                       checked={field.value}
                       onCheckedChange={field.onChange}
-                      id='current-position'
-=======
-                      aria-label="Current position"
-                      checked = {field.value,}
-                      onCheckedChange = {field.onChange,}
-                      id="current-position"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    />
+                      id='current-position'                    />
                     <label
                       htmlFor='current-position'
                       className='text-sm text-muted-foreground'
@@ -246,36 +173,19 @@ export function WorkExperienceItemForm({
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
-<<<<<<< HEAD
               control={form.control}
               name='start_date'
               render={({ field }: { field: any }) => (
-                <FormItem className='flex flex-col'>
-=======
-              control = {form.control,}
-              name="start_date"
-              render={({ field }: { field: any },) => (
-                <FormItem className="flex flex-col">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  <FormLabel>Start Date</FormLabel>
+                <FormItem className='flex flex-col'>                  <FormLabel>Start Date</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
-<<<<<<< HEAD
                           variant={'outline'}
                           className={cn(
                             'w-full pl-3 text-left font-normal',
                             !field.value && 'text-muted-foreground'
-                          )}
-=======
-                          variant = {"outline",}
-                          className = {cn(
-                            "w-full pl-3 text-left font-normal",
-                            !field.value && "text-muted-foreground"
-                          ),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                        >
+                          )}                        >
                           {field.value ? (
                             format(field.value, 'MMM yyyy')
                           ) : (
@@ -290,24 +200,13 @@ export function WorkExperienceItemForm({
                     </PopoverTrigger>
                     <PopoverContent className='w-auto p-0' align='start'>
                       <Calendar
-<<<<<<< HEAD
                         mode='single'
                         selected={field.value}
                         onSelect={field.onChange}
                         initialFocus
                         captionLayout='dropdown-buttons'
                         fromYear={1990}
-                        toYear={new Date().getFullYear()}
-=======
-                        mode="single"
-                        selected = {field.value,}
-                        onSelect = {field.onChange,}
-                        initialFocus
-                        captionLayout="dropdown-buttons"
-                        fromYear = {1990,}
-                        toYear = {new Date().getFullYear(),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      />
+                        toYear={new Date().getFullYear()}                      />
                     </PopoverContent>
                   </Popover>
                   <FormMessage />
@@ -317,36 +216,19 @@ export function WorkExperienceItemForm({
 
             {!watchIsCurrent && (
               <FormField
-<<<<<<< HEAD
                 control={form.control}
                 name='end_date'
                 render={({ field }: { field: any }) => (
-                  <FormItem className='flex flex-col'>
-=======
-                control = {form.control,}
-                name="end_date"
-                render={({ field }: { field: any },) => (
-                  <FormItem className="flex flex-col">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    <FormLabel>End Date</FormLabel>
+                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
-<<<<<<< HEAD
                             variant={'outline'}
                             className={cn(
                               'w-full pl-3 text-left font-normal',
                               !field.value && 'text-muted-foreground'
-                            )}
-=======
-                            variant = {"outline",}
-                            className = {cn(
-                              "w-full pl-3 text-left font-normal",
-                              !field.value && "text-muted-foreground"
-                            ),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                          >
+                            )}                          >
                             {field.value ? (
                               format(field.value, 'MMM yyyy')
                             ) : (
@@ -361,7 +243,6 @@ export function WorkExperienceItemForm({
                       </PopoverTrigger>
                       <PopoverContent className='w-auto p-0' align='start'>
                         <Calendar
-<<<<<<< HEAD
                           mode='single'
                           selected={field.value || undefined}
                           onSelect={field.onChange}
@@ -369,18 +250,7 @@ export function WorkExperienceItemForm({
                           captionLayout='dropdown-buttons'
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
-                          disabled={date => date > new Date()}
-=======
-                          mode="single"
-                          selected = {field.value || undefined,}
-                          onSelect = {field.onChange,}
-                          initialFocus
-                          captionLayout="dropdown-buttons"
-                          fromYear = {1990,}
-                          toYear = {new Date().getFullYear(),}
-                          disabled = {(date,) => date > new Date(),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                        />
+                          disabled={date => date > new Date()}                        />
                       </PopoverContent>
                     </Popover>
                     <FormMessage />
@@ -391,16 +261,9 @@ export function WorkExperienceItemForm({
           </div>
 
           <FormField
-<<<<<<< HEAD
             control={form.control}
             name='description'
-            render={({ field }: { field: any }) => (
-=======
-            control = {form.control,}
-            name="description"
-            render={({ field }: { field: any },) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              <FormItem>
+            render={({ field }: { field: any }) => (              <FormItem>
                 <div className='flex justify-between items-center'>
                   <FormLabel>Description</FormLabel>
                   <div className='flex gap-2'>
@@ -410,7 +273,6 @@ export function WorkExperienceItemForm({
                         content: field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
                       }}
-<<<<<<< HEAD
                       onEnhanced={content =>
                         form.setValue('description', content, {
                           shouldDirty: true,
@@ -423,19 +285,7 @@ export function WorkExperienceItemForm({
                       variant='outline'
                       size='sm'
                       onClick={() => setIsEnhancementDialogOpen(true)}
-                      className='text-xs'
-=======
-                      onEnhanced={(content,) => form.setValue("description", content, { shouldDirty: true })}
-                      buttonText="Enhance with AI"
-                    />
-                    <Button
-                      type="button"
-                      variant="outline"
-                      size="sm"
-                      onClick = {() => setIsEnhancementDialogOpen(true),}
-                      className="text-xs"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                    >
+                      className='text-xs'                    >
                       AI Writer
                     </Button>
                   </div>
@@ -471,7 +321,6 @@ export function WorkExperienceItemForm({
       </Form>
 
       <AIEnhancementDialog
-<<<<<<< HEAD
         title='Enhance Work Experience Description'
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
@@ -481,19 +330,7 @@ export function WorkExperienceItemForm({
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
         }}
-        initialContent={form.getValues('description') || ''}
-=======
-        title="Enhance Work Experience Description"
-        isOpen = {isEnhancementDialogOpen,}
-        onClose = {() => setIsEnhancementDialogOpen(false),}
-        onApply = {handleAIEnhancement,}
-        defaultOptions={{
-          enhancementType: "work-description",
-          content: form.getValues("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent = {form.getValues("description") || "",}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      />
+        initialContent={form.getValues('description') || ''}      />
     </>
   );
 
@@ -524,7 +361,5 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) ;
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
 }"
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

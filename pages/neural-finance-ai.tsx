@@ -26,15 +26,13 @@ import {
   BarChart,
   PieChart,
   LineChart,
-  Activity,;
-} from 'lucide-react';
+  Activity,;} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
-
 const features = [
   {
     title: 'Real-time Market Sentiment Analysis',
@@ -78,7 +76,6 @@ const features = [
     icon: Globe,
     color: 'from-cyan-500 to-blue-600',
   },];
-
 const pricingPlans = [
   {
     name: 'Starter',
@@ -95,8 +92,7 @@ const pricingPlans = [
     ],
     popular: false,
     color: 'from-gray-500 to-gray-600',
-  },  {
-    name: 'Professional',
+  },  {    name: 'Professional',
     price: 499,
     period: 'month',
     description: 'Ideal for professional traders and growing investment firms',
@@ -112,8 +108,7 @@ const pricingPlans = [
     ],
     popular: true,
     color: 'from-cyan-500 to-purple-600',
-  },  {
-    name: 'Enterprise',
+  },  {    name: 'Enterprise',
     price: 1499,
     period: 'month',
     description: 'For large investment firms and institutional investors',
@@ -130,7 +125,6 @@ const pricingPlans = [
     popular: false,
     color: 'from-purple-500 to-pink-600',
   },];
-
 const useCases = [
   {
     title: 'Algorithmic Trading Strategy Development',
@@ -142,8 +136,7 @@ const useCases = [
       'Reduced emotional bias',
       '24/7 market monitoring',
     ],
-  },
-  {
+  },  {
     title: 'Portfolio Risk Management & Optimization',
     description:
       'Advanced risk modeling and portfolio optimization using neural networks and machine learning.',
@@ -172,7 +165,6 @@ const useCases = [
     icon: Activity,
     benefits: ['Time savings', 'Regulatory compliance', 'Accurate reporting'],
   },];
-
 const integrations = [
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
   { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' },
@@ -180,7 +172,6 @@ const integrations = [
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
   { name: 'TD Ameritrade', logo: '💼', category: 'Broker' },];
-
 const NeuralFinanceAI: React.FC = () => {
   return (
     <Layout>
@@ -209,8 +200,7 @@ const NeuralFinanceAI: React.FC = () => {
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]'></div>
 
         <div className='relative z-10 max-w-7xl mx-auto'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div
-              initial={{ opacity: 0, x: -30 }}
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -252,8 +242,7 @@ const NeuralFinanceAI: React.FC = () => {
 
               <div className='flex flex-wrap gap-6 text-sm text-gray-400'>
                 <div className='flex items-center space-x-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400' />
-                  <span>94% Market Prediction Accuracy</span>
+                  <CheckCircle className='w-4 h-4 text-green-400' />                  <span>94% Market Prediction Accuracy</span>
                 </div>
                 <div className='flex items-center space-x-2'>
                   <CheckCircle className='w-4 h-4 text-green-400' />
@@ -263,8 +252,7 @@ const NeuralFinanceAI: React.FC = () => {
                   <CheckCircle className='w-4 h-4 text-green-400' />                  <span>Multi-Asset Support</span>
                 </div>
               </div>
-            </motion.div>
-            <motion.div
+            </motion.div>            <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -307,8 +295,7 @@ const NeuralFinanceAI: React.FC = () => {
                       <span className='text-gray-300'>Trading Automation</span>
                       <span className='text-pink-400 font-semibold'>
                         Enabled
-                      </span>                    </div>
-                  </div>
+                      </span>                    </div>                  </div>
                 </div>
               </div>
             </motion.div>
@@ -318,8 +305,7 @@ const NeuralFinanceAI: React.FC = () => {
 
       {/* Features Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -336,8 +322,7 @@ const NeuralFinanceAI: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -353,8 +338,7 @@ const NeuralFinanceAI: React.FC = () => {
                 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
-                <p className='text-gray-400 leading-relaxed'>                  {feature.description}
-                </p>
+                <p className='text-gray-400 leading-relaxed'>                  {feature.description}                </p>
               </motion.div>
             ))}
           </div>
@@ -363,8 +347,7 @@ const NeuralFinanceAI: React.FC = () => {
 
       {/* Use Cases Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -381,8 +364,7 @@ const NeuralFinanceAI: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -407,8 +389,7 @@ const NeuralFinanceAI: React.FC = () => {
                           key={benefitIndex}
                           className='flex items-center space-x-2 text-sm text-gray-300'
                         >
-                          <CheckCircle className='w-4 h-4 text-violet-400 flex-shrink-0' />                          <span>{benefit}</span>
-                        </div>
+                          <CheckCircle className='w-4 h-4 text-violet-400 flex-shrink-0' />                          <span>{benefit}</span>                        </div>
                       ))}
                     </div>
                   </div>
@@ -421,8 +402,7 @@ const NeuralFinanceAI: React.FC = () => {
 
       {/* Pricing Section */}
       <section id='pricing' className='py-20 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -439,8 +419,7 @@ const NeuralFinanceAI: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -486,8 +465,7 @@ const NeuralFinanceAI: React.FC = () => {
                 </ul>
 
                 <Link
-                  href='/contact'                  className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
-                    plan.popular
+                  href='/contact'                  className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${                    plan.popular
                       ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
                       : 'bg-gray-800/50 text-white border border-gray-600 hover:bg-gray-700/50'
                   }`}
@@ -502,8 +480,7 @@ const NeuralFinanceAI: React.FC = () => {
 
       {/* Integrations Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -520,8 +497,7 @@ const NeuralFinanceAI: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>            {integrations.map((integration, index) => (
-              <motion.div
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>            {integrations.map((integration, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -533,8 +509,7 @@ const NeuralFinanceAI: React.FC = () => {
                 <h3 className='text-sm font-semibold text-white mb-1'>
                   {integration.name}
                 </h3>
-                <p className='text-xs text-gray-400'>{integration.category}</p>              </motion.div>
-            ))}
+                <p className='text-xs text-gray-400'>{integration.category}</p>              </motion.div>            ))}
           </div>
         </div>
       </section>
@@ -571,12 +546,10 @@ const NeuralFinanceAI: React.FC = () => {
               </p>
               <p className='mt-2'>
                 ✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure
-              </p>            </div>
-          </div>
+              </p>            </div>          </div>
         </div>
       </section>
     </Layout>
-  );
-};
+  );};
 
 export default NeuralFinanceAI;

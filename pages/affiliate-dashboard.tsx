@@ -61,7 +61,6 @@ const AffiliateDashboard: React.FC = () => {
       setReferrals(mockReferrals);
       setLoading(false);
     }, 1000);  }, []);
-
   useEffect(() => {
     if (!code) return;
     (async () => {
@@ -73,7 +72,6 @@ const AffiliateDashboard: React.FC = () => {
         setMetrics(json);
       } catch {}
     })();  }, [code]);
-
   async function requestPayout() {
     setMsg('');
     try {
@@ -98,7 +96,6 @@ const AffiliateDashboard: React.FC = () => {
       code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#',
     [code]
   );
-
   if (!code) {
     return (
       <div className='space-y-4'>

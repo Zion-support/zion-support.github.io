@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-};
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import React from 'react';
+};import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 import { EmptyState } from '@/components/ui/empty-state';
-<<<<<<< HEAD
 import { Bell } from 'lucide-react'
-
-=======
-import { Bell } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -77,6 +67,3 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   )
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

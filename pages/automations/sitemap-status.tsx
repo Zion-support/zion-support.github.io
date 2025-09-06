@@ -1,8 +1,7 @@
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
-type Props = { urlCount: number },
-const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
+type Props = { urlCount: number },const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
     <main className="space-y-4">
       <h1 className="text-2xl font-semibold">Sitemap Status</h1>

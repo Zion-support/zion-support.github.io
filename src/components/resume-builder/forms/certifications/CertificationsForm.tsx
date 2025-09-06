@@ -1,5 +1,3 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
@@ -10,26 +8,9 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { format } from 'date-fns';
 
-<<<<<<< HEAD
 import { CertificationsList } from './CertificationsList';
 import { CertificationFormFields } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
-
-=======
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { Button } from '@/components/ui/button';
-import { Form } from '@/components/ui/form';
-import { Certification } from '@/types/resume';
-import { Loader2 } from 'lucide-react';
-import { useResume } from '@/hooks/useResume';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { format } from 'date-fns';
-import { CertificationsList } from './CertificationsList';
-import { CertificationFormFields } from './CertificationFormFields';
-import { CertificationFormValues, certificationSchema } from './types';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface CertificationsFormProps {
   resumeId: string;
   certifications: Certification[];
@@ -104,19 +85,16 @@ export function CertificationsForm({
     } catch (err: any) {
       setError(err.message || 'An error occurred');
     }
-<<<<<<< HEAD
   };
   const handleEdit = (cert: Certification) => {
-    setEditingId(cert.id!);
-=======
-  },
-
-  const handleEdit = (cert: Certification,) => {
-    setEditingId(cert.id!),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    form.reset({
+    setEditingId(cert.id!);    form.reset({
       ...cert,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  };
+
+
+  const handleEdit = (cert: Certification) => {
+    setEditingId(cert.id!);
+    form.reset({
       issue_date: formatDateValue(cert.issue_date),
       expiration_date: formatDateValue(cert.expiration_date),
     });
@@ -141,18 +119,10 @@ export function CertificationsForm({
       </div>
 
       {certifications.length > 0 && (
-<<<<<<< HEAD
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
-          onDelete={handleDelete}
-=======
-        <CertificationsList 
-          certifications = {certifications,}
-          onEdit = {handleEdit,}
-          onDelete = {handleDelete,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        />
+          onDelete={handleDelete}        />
       )}
 
       <div className='bg-muted/40 p-6 rounded-lg'>
@@ -218,8 +188,4 @@ export function CertificationsForm({
 }> {;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

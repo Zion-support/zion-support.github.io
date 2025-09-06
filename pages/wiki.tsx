@@ -19,8 +19,7 @@ function CopyButton({ text, label }: { text: string; label: string }) {
     >
       {copied ? 'Copied' : label}
     </button>
-  );
-export default function WikiPage() {
+  );export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []);
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]);
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]);
@@ -35,8 +34,7 @@ export default function WikiPage() {
               <a
                 href={`#${slugify(s.title)}`}
                 className='opacity-80 hover:opacity-100'
-              >                {s.title}
-              </a>
+              >                {s.title}              </a>
             </li>
           ))}
           <li>
@@ -61,16 +59,14 @@ export default function WikiPage() {
         </div>
         <p>{wiki.intro}</p>
 
-        {wiki.sections.map(s => (          <section key={s.id} id={slugify(s.title)}>
-            <h2>{s.title}</h2>
+        {wiki.sections.map(s => (          <section key={s.id} id={slugify(s.title)}>            <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </section>
         ))}
 
-        <h2 id='references'>References</h2>        <ol>
-          {wiki.references.map((r, i) => (
+        <h2 id='references'>References</h2>        <ol>          {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
           ))}
         </ol>

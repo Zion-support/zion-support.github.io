@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -8,7 +7,6 @@ import { HelpArticleList } from './HelpArticleList';
 import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help-content';
 import { Search } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -23,18 +21,6 @@ export default function HelpCenter() {
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId);
   };
-
-=======
-
-import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
-import { Search } from 'lucide-react';
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
@@ -49,7 +35,6 @@ export default function HelpCenter() {
     setSelectedArticle(articleId)
   },
   
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   const handleBackToCategories = () => {
     setSelectedCategory(null);
     setSelectedArticle(null);
@@ -73,18 +58,10 @@ export default function HelpCenter() {
 
           <div className='relative mb-8'>
             <Input
-<<<<<<< HEAD
               placeholder='Search for help articles...'
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className='pl-10'
-=======
-              placeholder="Search for help articles..."
-              value = {searchQuery,}
-              onChange = {(e,) => setSearchQuery(e.target.value),}
-              className="pl-10"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            />
+              className='pl-10'            />
             <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />
           </div>
 
@@ -97,24 +74,15 @@ export default function HelpCenter() {
 
             <TabsContent value='articles'>
               {!selectedCategory && !selectedArticle && (
-<<<<<<< HEAD
                 <HelpCategoryList
                   categories={HELP_CATEGORIES}
                   onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-=======
-                <HelpCategoryList 
-                  categories = {HELP_CATEGORIES,}
-                  onCategorySelect = {handleCategorySelect,}
-                  searchQuery = {searchQuery,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                />
+                  searchQuery={searchQuery}                />
               )}
 
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
-<<<<<<< HEAD
                     variant='ghost'
                     onClick={handleBackToCategories}
                     className='mb-4'
@@ -124,36 +92,16 @@ export default function HelpCenter() {
                   <HelpArticleList
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
-                    searchQuery={searchQuery}
-=======
-                    variant="ghost"
-                    onClick = {handleBackToCategories,}
-                    className="mb-4"
-                  >
-                    ← All Categories
-                  </Button>
-                  <HelpArticleList 
-                    categoryId = {selectedCategory,}
-                    onArticleSelect = {handleArticleSelect,}
-                    searchQuery = {searchQuery,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  />
+                    searchQuery={searchQuery}                  />
                 </>
               )}
 
               {selectedArticle && (
                 <>
                   <Button
-<<<<<<< HEAD
                     variant='ghost'
                     onClick={handleBackToArticles}
-                    className='mb-4'
-=======
-                    variant="ghost"
-                    onClick = {handleBackToArticles,}
-                    className="mb-4"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  >
+                    className='mb-4'                  >
                     ← Back to Articles
                   </Button>
                   <HelpArticleView articleId={selectedArticle} />
@@ -309,7 +257,4 @@ export default function HelpCenter() {
       </div>
     </>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

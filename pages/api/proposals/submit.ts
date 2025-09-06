@@ -44,7 +44,7 @@ export default async function handler(
       await submitByEmail(to, subject, text);    }
 
     // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined,
+    let ensRecordHash: string | undefined;
     try {
       const hash = crypto
         .createHash('sha256')
@@ -58,8 +58,7 @@ export default async function handler(
       ...m,
       status: 'Submitted',
     }));
-    return res.status(200).json({ meta: updated });
-  } catch (error: any) {
+    return res.status(200).json({ meta: updated });  } catch (error: any) {
     return res
       .status(500)
       .json({ error: error?.message || 'Submission failed' });

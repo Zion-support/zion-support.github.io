@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface InnovativeMicroSaasService2026 {
   id: string;
   name: string;
   tagline: string;
@@ -711,10 +709,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
-};
-=======
-    return price >= minPrice && price <= maxPrice
+};    return price >= minPrice && price <= maxPrice
   })
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -3,10 +3,8 @@
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
   ];
 pricingAnalysis: {
-  lowEnd: '$0.005 per 1K tokens', midRange: '$0.015 per 1K tokens', highEnd: '$0.025 per 1K tokens', ourPosition: 'Mid-range with premium features' 
-  'ai-consciousness': {
+  lowEnd: '$0.005 per 1K tokens', midRange: '$0.015 per 1K tokens', highEnd: '$0.025 per 1K tokens', ourPosition: 'Mid-range with premium features'   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -23,7 +21,6 @@ export default function MarketPricing() {
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
     { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const marketData = {
@@ -878,7 +875,6 @@ export default function MarketPricing() {
 };
 
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 };
 'quantum-computing': {
@@ -903,12 +899,7 @@ pricingAnalysis: {
 
 };
 
-<<<<<<< HEAD
 };
 
 };
-export default MarketPricing;
-=======
-export default MarketPricing;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+export default MarketPricing;export default MarketPricing;

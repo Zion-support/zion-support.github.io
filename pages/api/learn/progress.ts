@@ -35,8 +35,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         completedLessons: [],
         percent: 0,
         completed: false,
-      };
-      if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
+      };      if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
         courseProgress.completedLessons.push(lessonId);
       }
       if (typeof percent === 'number') {

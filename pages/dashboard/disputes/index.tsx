@@ -49,8 +49,7 @@ export default function AdminDisputesDashboard() {
               <option key={s} value={s}>
                 {s}
               </option>
-            ))}
-          </select>
+            ))}          </select>
         </div>
         <div className='overflow-auto border rounded'>
           <table className='min-w-full text-sm'>
@@ -94,8 +93,7 @@ export default function AdminDisputesDashboard() {
                       <a className='text-gray-700 hover:underline'>
                         Download Evidence
                       </a>
-                    </Link>                  </td>
-                </tr>
+                    </Link>                  </td>                </tr>
               ))}
             </tbody>
           </table>

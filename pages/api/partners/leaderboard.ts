@@ -18,7 +18,7 @@ export default async function handler(
         ],
       });    }
 
-    const supabase = getServerSupabase(),
+    const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);

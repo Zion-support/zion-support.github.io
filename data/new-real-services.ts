@@ -7,20 +7,15 @@ const contact = {
   website: 'https://ziontechgroup.com',};
 
 export const newRealServices: EnhancedRealMicroSaasService[] = [
-  {
-=======
-const contact = {
+  {const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'llm-observability-suite',
     name: 'LLM Observability Suite',
     tagline: 'Track latency, cost, quality and drift across all prompts',
@@ -28,7 +23,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description:
       'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
-<<<<<<< HEAD
     features: [
       'Prompt and response tracing',
       'Cost and token analytics',
@@ -45,8 +39,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-observability-suite',
     marketPosition:
-      'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
-    features: [
+      'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',    features: [
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ];
     popular: true;
@@ -1525,7 +1518,3 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 3,
   },
 ];
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

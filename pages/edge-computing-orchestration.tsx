@@ -12,8 +12,7 @@ import {
   CheckCircle,
   Star,
   TrendingUp,
-  Users,;
-} from 'lucide-react';
+  Users,;} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function EdgeComputingPage() {
@@ -24,8 +23,7 @@ export default function EdgeComputingPage() {
       description:
         'Intelligent distribution and management of computing workloads across edge nodes for optimal performance.',
       color: 'from-blue-500 to-cyan-500',
-    },
-    {
+    },    {
       icon: Network,
       title: 'IoT Management',
       description:
@@ -76,8 +74,7 @@ export default function EdgeComputingPage() {
       description:
         'Real-time quality control, predictive maintenance, and production optimization',
       results: '30% reduction in downtime, 25% improvement in product quality',
-    },
-    {
+    },    {
       industry: 'Healthcare',
       description:
         'Patient monitoring, medical device management, and telemedicine support',
@@ -102,8 +99,7 @@ export default function EdgeComputingPage() {
       plan: 'Starter',
       price: '$399',
       period: '/month',
-      description: 'Basic edge computing for small deployments',
-      features: [
+      description: 'Basic edge computing for small deployments',      features: [
         'Up to 10 edge nodes',
         'Basic orchestration',
         'Standard monitoring',
@@ -147,7 +143,6 @@ export default function EdgeComputingPage() {
       ],
       popular: false,
     },  ];
-
   return (
     <>
       <Head>
@@ -173,7 +168,6 @@ export default function EdgeComputingPage() {
           property='og:url'
           content='https://ziontechgroup.com/edge-computing-orchestration'
         />      </Head>
-
       <EnhancedNavigation />
 
       {/* Hero Section */}
@@ -204,8 +198,7 @@ export default function EdgeComputingPage() {
               </a>
               <a
                 href='#demo'
-                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >
-                Watch Demo
+                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >                Watch Demo
               </a>
             </div>
           </motion.div>
@@ -229,8 +222,7 @@ export default function EdgeComputingPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (              <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -247,8 +239,7 @@ export default function EdgeComputingPage() {
                 </h3>
                 <p className='text-slate-600 leading-relaxed'>
                   {feature.description}
-                </p>              </motion.div>
-            ))}
+                </p>              </motion.div>            ))}
           </div>
         </div>
       </section>
@@ -256,8 +247,7 @@ export default function EdgeComputingPage() {
       {/* Benefits */}
       <section className='py-20 bg-slate-50'>
         <div className='max-w-7xl mx-auto px-6'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion.div
-              initial={{ opacity: 0, x: -20 }}
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion.div              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
@@ -269,8 +259,7 @@ export default function EdgeComputingPage() {
                 generated, enabling faster response times, reduced bandwidth
                 usage, and improved reliability for distributed applications.
               </p>
-              <div className='space-y-4'>                {benefits.map((benefit, index) => (
-                  <motion.div
+              <div className='space-y-4'>                {benefits.map((benefit, index) => (                  <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -278,8 +267,7 @@ export default function EdgeComputingPage() {
                     className='flex items-center space-x-3'
                   >
                     <CheckCircle className='w-6 h-6 text-green-500 flex-shrink-0' />
-                    <span className='text-slate-700'>{benefit}</span>                  </motion.div>
-                ))}
+                    <span className='text-slate-700'>{benefit}</span>                  </motion.div>                ))}
               </div>
             </motion.div>
 
@@ -309,8 +297,7 @@ export default function EdgeComputingPage() {
                   <div className='text-4xl font-bold text-purple-600 mb-2'>
                     99.9%
                   </div>
-                  <div className='text-slate-600'>Uptime Guarantee</div>                </div>
-              </div>
+                  <div className='text-slate-600'>Uptime Guarantee</div>                </div>              </div>
             </motion.div>
           </div>
         </div>
@@ -333,8 +320,7 @@ export default function EdgeComputingPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (              <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -350,8 +336,7 @@ export default function EdgeComputingPage() {
                 <div className='bg-green-50 border border-green-200 rounded-lg p-4'>
                   <p className='text-green-800 font-medium'>
                     Results: {useCase.results}
-                  </p>                </div>
-              </motion.div>
+                  </p>                </div>              </motion.div>
             ))}
           </div>
         </div>
@@ -388,7 +373,6 @@ export default function EdgeComputingPage() {
                 Distributed computing nodes deployed at strategic locations for
                 optimal performance
               </p>            </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -405,7 +389,6 @@ export default function EdgeComputingPage() {
                 Intelligent workload distribution and management across the edge
                 network
               </p>            </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -421,8 +404,7 @@ export default function EdgeComputingPage() {
               <p className='text-white/70 text-sm'>
                 Centralized control and monitoring with real-time insights and
                 analytics
-              </p>            </motion.div>
-          </div>
+              </p>            </motion.div>          </div>
         </div>
       </section>
 
@@ -443,8 +425,7 @@ export default function EdgeComputingPage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              <motion.div
                 key={plan.plan}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -462,8 +443,7 @@ export default function EdgeComputingPage() {
                   <h3 className='text-2xl font-bold text-slate-900 mb-2'>
                     {plan.plan}
                   </h3>
-                  <div className='text-4xl font-bold text-slate-900 mb-2'>
-                    {plan.price}
+                  <div className='text-4xl font-bold text-slate-900 mb-2'>                    {plan.price}
                     <span className='text-lg text-slate-600'>
                       {plan.period}
                     </span>
@@ -475,14 +455,12 @@ export default function EdgeComputingPage() {
                   {plan.features.map(feature => (
                     <li key={feature} className='flex items-center space-x-3'>
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
-                      <span className='text-slate-700'>{feature}</span>                    </li>
-                  ))}
+                      <span className='text-slate-700'>{feature}</span>                    </li>                  ))}
                 </ul>
 
                 <a
                   href='/contact'
-                  className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'                >
-                  Get Started
+                  className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'                >                  Get Started
                 </a>
               </motion.div>
             ))}
@@ -492,8 +470,7 @@ export default function EdgeComputingPage() {
 
       {/* CTA */}
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
-        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -512,8 +489,7 @@ export default function EdgeComputingPage() {
               </a>
               <a
                 href='/contact'
-                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >
-                Schedule Demo
+                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >                Schedule Demo
               </a>
             </div>
           </motion.div>

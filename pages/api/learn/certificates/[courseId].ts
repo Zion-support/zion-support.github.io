@@ -29,8 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader(
       'Content-Disposition',
       `attachment; filename="${courseId}-certificate.pdf"`
-    );
-    const doc = new PDFDocument({ size: 'A4', margin: 50 });
+    );    const doc = new PDFDocument({ size: 'A4', margin: 50 });
     // Pipe to response
     // @ts-ignore
     doc.pipe(res);
@@ -57,7 +56,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const date = new Date().toLocaleDateString();
     doc.moveDown(2);
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
-
     doc.end();
   } catch (e: any) {
     res

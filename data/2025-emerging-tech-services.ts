@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface EmergingTechService {
   id: string;
   name: string;
@@ -840,15 +839,7 @@ export const getEmergingTechServicesByPriceRange = (
     const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   });
-};
-=======
-    return price >= minPrice && price <= maxPrice
-  })
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
+};import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
 const contact = {;
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -1307,4 +1298,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     rating: 4.9,
     reviews: 7;
 ]}
->>>>>>> origin/automation-fixes
+export interface EmergingTechService {
+    return price >= minPrice && price <= maxPrice
+  })
+};

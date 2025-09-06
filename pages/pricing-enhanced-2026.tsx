@@ -68,8 +68,7 @@ import {
   enhancedRealMicroSaasServices,
   getServicesByCategory,
   getPopularServices,;
-} from '../data/enhanced-real-micro-saas-services';import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+} from '../data/enhanced-real-micro-saas-services';import { nextGenerationAIServices } from '../data/next-generation-ai-services';import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
@@ -82,13 +81,11 @@ export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
   );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com',  };
 
   const popularServices = getPopularServices();
 
@@ -104,7 +101,6 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3,  ];
-
   // Enhanced service categories with pricing for 2026
   const serviceCategories = [
     {
@@ -116,8 +112,7 @@ export default function PricingEnhanced2026Page() {
         'AI Autonomous Manufacturing',
         'AI Cybersecurity Threat Intelligence',
       ],
-      avgPrice: '$2,499/month',
-      savings: 'Save 60-80% vs. competitors',
+      avgPrice: '$2,499/month',      savings: 'Save 60-80% vs. competitors',
       icon: Brain,
       color: 'from-purple-500 to-indigo-600',
     },
@@ -193,7 +188,6 @@ export default function PricingEnhanced2026Page() {
       icon: DollarSign,
       color: 'from-green-500 to-emerald-600',
     },  ];
-
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -219,8 +213,7 @@ export default function PricingEnhanced2026Page() {
       popular: false,
       cta: 'Start Free Trial',
       color: 'from-blue-500 to-indigo-600',
-    },    {
-      name: 'Professional',
+    },    {      name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: billingCycle === 'monthly' ? 299 : 239,
       period: billingCycle === 'monthly' ? '/month' : '/month',
@@ -244,8 +237,7 @@ export default function PricingEnhanced2026Page() {
       popular: true,
       cta: 'Start Free Trial',
       color: 'from-purple-500 to-pink-600',
-    },    {
-      name: 'Enterprise',
+    },    {      name: 'Enterprise',
       description: 'For large organizations and enterprises',
       price: billingCycle === 'monthly' ? 999 : 799,
       period: billingCycle === 'monthly' ? '/month' : '/month',
@@ -272,7 +264,6 @@ export default function PricingEnhanced2026Page() {
       cta: 'Contact Sales',
       color: 'from-yellow-500 to-orange-600',
     },  ];
-
   // Featured services showcase
   const featuredServices = [
     {
@@ -407,8 +398,7 @@ export default function PricingEnhanced2026Page() {
                   setBillingCycle(
                     billingCycle === 'monthly' ? 'yearly' : 'monthly'
                   )
-                }                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
-                  billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
+                }                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${                  billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
                 }`}
               >
                 <span
@@ -441,8 +431,7 @@ export default function PricingEnhanced2026Page() {
                 </div>
                 <div className='flex items-center justify-center space-x-2'>
                   <MapPin className='w-4 h-4 text-purple-400' />
-                  <span className='text-center'>{contactInfo.address}</span>                </div>
-              </div>
+                  <span className='text-center'>{contactInfo.address}</span>                </div>              </div>
             </div>
           </motion.div>
         </div>
@@ -450,14 +439,12 @@ export default function PricingEnhanced2026Page() {
         {/* Enhanced Pricing Tiers */}
         <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (                <motion.div
                   key={tier.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className='relative'                >
-                  <UltraFuturisticCard
+                  className='relative'                >                  <UltraFuturisticCard
                     variant={tier.variant}
                     className={`h-full ${tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''}`}
                   >
@@ -472,8 +459,7 @@ export default function PricingEnhanced2026Page() {
                       <div className='flex justify-center mb-4'>
                         <div
                           className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}
-                        >
-                          {tier.icon}
+                        >                          {tier.icon}
                         </div>
                       </div>
 
@@ -522,8 +508,7 @@ export default function PricingEnhanced2026Page() {
                         }}
                       >
                         {tier.cta}
-                      </Button>                    </div>
-                  </UltraFuturisticCard>
+                      </Button>                    </div>                  </UltraFuturisticCard>
                 </motion.div>
               ))}
             </div>
@@ -532,8 +517,7 @@ export default function PricingEnhanced2026Page() {
 
         {/* Enhanced Service Categories */}
         <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -548,8 +532,7 @@ export default function PricingEnhanced2026Page() {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>              {serviceCategories.map((category, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>              {serviceCategories.map((category, index) => (                <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -608,8 +591,7 @@ export default function PricingEnhanced2026Page() {
                         }
                       >
                         View Services
-                        <ArrowRight className='w-4 h-4 ml-2' />                      </Button>
-                    </div>
+                        <ArrowRight className='w-4 h-4 ml-2' />                      </Button>                    </div>
                   </UltraFuturisticCard>
                 </motion.div>
               ))}
@@ -619,8 +601,7 @@ export default function PricingEnhanced2026Page() {
 
         {/* Featured Services Showcase */}
         <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -635,8 +616,7 @@ export default function PricingEnhanced2026Page() {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>              {featuredServices.map((service, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>              {featuredServices.map((service, index) => (                <motion.div
                   key={service.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -693,8 +673,7 @@ export default function PricingEnhanced2026Page() {
                               `mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`,
                               '_blank'
                             )
-                          }                        >
-                          Contact
+                          }                        >                          Contact
                         </Button>
                       </div>
                     </div>
@@ -707,8 +686,7 @@ export default function PricingEnhanced2026Page() {
 
         {/* Enhanced Footer CTA */}
         <div className='relative z-10 px-4 sm:px-6 lg:px-8 pb-20'>
-          <div className='max-w-4xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-4xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -750,8 +728,7 @@ export default function PricingEnhanced2026Page() {
               <div className='mt-8 text-sm text-gray-400'>
                 <p>
                   Contact: {contactInfo.mobile} | {contactInfo.email}
-                </p>                <p>{contactInfo.address}</p>
-              </div>
+                </p>                <p>{contactInfo.address}</p>              </div>
             </motion.div>
           </div>
         </div>

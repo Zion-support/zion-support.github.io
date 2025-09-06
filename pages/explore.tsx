@@ -31,8 +31,7 @@ import {
   Network,
   Lightbulb,
   Flame,
-  Zap as ZapIcon,;
-} from 'lucide-react';
+  Zap as ZapIcon,;} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {
@@ -50,72 +49,63 @@ export default function ExplorePage() {
       color: 'from-purple-500 to-pink-500',
       serviceCount: 25,
       featured: true,
-    },    {
-      id: 'quantum',
+    },    {      id: 'quantum',
       name: 'Quantum Computing',
       icon: Atom,
       description: 'Quantum-powered computing and consciousness simulation',
       color: 'from-blue-500 to-cyan-500',
       serviceCount: 18,
       featured: true,
-    },    {
-      id: 'cybersecurity',
+    },    {      id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
       description: 'Quantum-resistant security and AI threat detection',
       color: 'from-red-500 to-orange-500',
       serviceCount: 22,
       featured: true,
-    },    {
-      id: 'cloud',
+    },    {      id: 'cloud',
       name: 'Cloud & DevOps',
       icon: Cloud,
       description: 'Autonomous DevOps and cloud infrastructure',
       color: 'from-emerald-500 to-teal-500',
       serviceCount: 20,
       featured: false,
-    },    {
-      id: 'edge',
+    },    {      id: 'edge',
       name: 'Edge Computing',
       icon: Network,
       description: 'Edge computing orchestration and IoT management',
       color: 'from-yellow-500 to-orange-500',
       serviceCount: 15,
       featured: false,
-    },    {
-      id: 'space',
+    },    {      id: 'space',
       name: 'Space Technology',
       icon: Rocket,
       description: 'Space exploration and resource optimization',
       color: 'from-indigo-500 to-purple-500',
       serviceCount: 12,
       featured: true,
-    },    {
-      id: 'biotech',
+    },    {      id: 'biotech',
       name: 'Biotechnology',
       icon: ZapIcon,
       description: 'Neural interfaces and biomedical innovations',
       color: 'from-pink-500 to-rose-500',
       serviceCount: 16,
       featured: false,
-    },    {
-      id: 'blockchain',
+    },    {      id: 'blockchain',
       name: 'Blockchain',
       icon: Code,
       description: 'AI-powered blockchain governance and DeFi',
       color: 'from-green-500 to-emerald-500',
       serviceCount: 14,
       featured: false,
-    },    {
-      id: 'automation',
+    },    {      id: 'automation',
       name: 'Automation',
       icon: Zap,
       description: 'Business process automation and AI agents',
       color: 'from-cyan-500 to-blue-500',
       serviceCount: 19,
       featured: false,
-    },    {
-      id: 'fintech',
+    },    {      id: 'fintech',
       name: 'Financial Technology',
       icon: TrendingUp,
       description: 'Quantum financial trading and AI analytics',
@@ -123,7 +113,6 @@ export default function ExplorePage() {
       serviceCount: 17,
       featured: false,
     },  ];
-
   const featuredServices = [
     {
       id: 'ai-consciousness-evolution',
@@ -145,8 +134,7 @@ export default function ExplorePage() {
       price: '$1,299/month',
       icon: Atom,
       color: 'from-blue-500 to-cyan-500',
-    },    {
-      id: 'quantum-cybersecurity',
+    },    {      id: 'quantum-cybersecurity',
       title: 'Quantum Cybersecurity',
       category: 'cybersecurity',
       description: 'Future-proof security with quantum-resistant encryption',
@@ -154,8 +142,7 @@ export default function ExplorePage() {
       price: '$799/month',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
-    },    {
-      id: 'space-technology',
+    },    {      id: 'space-technology',
       title: 'Space Technology Innovation',
       category: 'space',
       description: 'AI-powered space exploration and resource optimization',
@@ -173,7 +160,6 @@ export default function ExplorePage() {
     const matchesFilter =
       selectedCategory === 'all' || category.id === selectedCategory;
     return matchesSearch && matchesFilter;  });
-
   // Sort categories
   const sortedCategories = [...filteredCategories].sort((a, b) => {
     switch (sortBy) {
@@ -204,13 +190,11 @@ export default function ExplorePage() {
           content='Comprehensive technology categories and innovative solutions.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/explore' />      </Head>
-
       <SmartHeader />
 
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -227,8 +211,7 @@ export default function ExplorePage() {
                 Start Exploring
                 <ArrowRight className='w-5 h-5 ml-2' />
               </button>
-              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                View All Services
-              </button>
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                View All Services              </button>
             </div>
           </motion.div>
         </div>
@@ -248,8 +231,7 @@ export default function ExplorePage() {
                     placeholder='Search categories...'
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
-                    className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'                  />
-                </div>
+                    className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all'                  />                </div>
               </div>
 
               {/* Sort Options */}
@@ -261,8 +243,7 @@ export default function ExplorePage() {
                 >
                   <option value='popularity'>Sort by Popularity</option>
                   <option value='name'>Sort by Name</option>
-                  <option value='featured'>Sort by Featured</option>                </select>
-              </div>
+                  <option value='featured'>Sort by Featured</option>                </select>              </div>
             </div>
           </div>
         </div>
@@ -283,8 +264,7 @@ export default function ExplorePage() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (              <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -312,8 +292,7 @@ export default function ExplorePage() {
                       {service.status}
                     </span>
                     <span className='text-xs text-white/40'>
-                      {service.category}
-                    </span>
+                      {service.category}                    </span>
                   </div>
 
                   <h3 className='text-lg font-bold mb-2 text-white'>
@@ -334,8 +313,7 @@ export default function ExplorePage() {
                     className='inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'
                   >
                     Learn More
-                    <ChevronRight className='w-4 h-4 ml-1' />                  </a>
-                </div>
+                    <ChevronRight className='w-4 h-4 ml-1' />                  </a>                </div>
               </motion.div>
             ))}
           </div>
@@ -357,8 +335,7 @@ export default function ExplorePage() {
             </p>
           </motion.div>
 
-          <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
-              <motion.div
+          <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -374,13 +351,11 @@ export default function ExplorePage() {
                 </p>
                 <button
                   onClick={() => setSearchTerm('')}
-                  className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'                >
-                  Clear Search
+                  className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'                >                  Clear Search
                 </button>
               </motion.div>
             ) : (
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {sortedCategories.map((category, index) => (
-                  <motion.div
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {sortedCategories.map((category, index) => (                  <motion.div
                     key={category.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -429,8 +404,7 @@ export default function ExplorePage() {
                           </div>
                           <div className='text-xs text-white/60'>                            {category.featured ? 'Featured' : 'Active'}
                           </div>
-                        </div>
-                      </div>
+                        </div>                      </div>
 
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
@@ -449,8 +423,7 @@ export default function ExplorePage() {
 
       {/* Technology Trends */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -473,8 +446,7 @@ export default function ExplorePage() {
                   'The evolution of AI towards true consciousness and emotional intelligence',
                 trend: 'Rising',
                 color: 'from-purple-500 to-pink-500',
-              },
-              {
+              },              {
                 icon: Atom,
                 title: 'Quantum Supremacy',
                 description:
@@ -513,8 +485,7 @@ export default function ExplorePage() {
                   'Self-improving AI systems and autonomous business operations',
                 trend: 'Growing',
                 color: 'from-emerald-500 to-green-500',
-              },            ].map((trend, index) => (
-              <motion.div
+              },            ].map((trend, index) => (              <motion.div
                 key={trend.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -553,16 +524,14 @@ export default function ExplorePage() {
 
                 <p className='text-white/70 leading-relaxed'>
                   {trend.description}
-                </p>              </motion.div>
-            ))}
+                </p>              </motion.div>            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className='py-20 px-6'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -584,8 +553,7 @@ export default function ExplorePage() {
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com'
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'              >
-                Get Expert Guidance
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'              >                Get Expert Guidance
               </a>
             </div>
           </motion.div>

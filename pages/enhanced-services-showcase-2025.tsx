@@ -25,7 +25,6 @@ import {
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
-
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
@@ -49,21 +48,18 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       icon: '🔒',
       count: cybersecurityCount,
     },  ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },
     { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },
     { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' },  ];
-
   const sortOptions = [
     { id: 'name', name: 'Name A-Z' },
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' },
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customer Count' },  ];
-
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
     const parsePriceToNumber = (price: string | number): number => {
@@ -109,7 +105,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
           parsePriceToNumber(service.price) >= 20000);
 
       return matchesSearch && matchesCategory && matchesPrice;    });
-
     // Sort services
     switch (sortBy) {
       case 'price-low':
@@ -120,8 +115,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       case 'price-high':
         filtered.sort(
           (a, b) => parsePriceToNumber(b.price) - parsePriceToNumber(a.price)
-        );        break;
-      case 'rating':
+        );        break;      case 'rating':
         filtered.sort((a, b) => b.rating - a.rating);
         break;
       case 'customers':
@@ -132,7 +126,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     }
 
     return filtered;  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -141,7 +134,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
         staggerChildren: 0.1,
       },
     },  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -191,8 +183,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
         {/* Hero Section */}
         <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-7xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -236,8 +227,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   <div className='text-3xl font-bold text-pink-400'>
                     {spaceCount + cybersecurityCount}
                   </div>
-                  <div className='text-gray-400'>Specialized</div>                </div>
-              </div>
+                  <div className='text-gray-400'>Specialized</div>                </div>              </div>
             </motion.div>
           </div>
         </section>
@@ -255,8 +245,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                     placeholder='Search services...'
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
-                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />
-                </div>
+                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />                </div>
 
                 {/* Category Filter */}
                 <select
@@ -264,8 +253,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
-                  {categories.map(category => (                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
+                  {categories.map(category => (                    <option key={category.id} value={category.id}>                      {category.name} ({category.count})
                     </option>
                   ))}
                 </select>
@@ -276,8 +264,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   onChange={e => setSelectedPriceRange(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
-                  {priceRanges.map(range => (                    <option key={range.id} value={range.id}>
-                      {range.name}
+                  {priceRanges.map(range => (                    <option key={range.id} value={range.id}>                      {range.name}
                     </option>
                   ))}
                 </select>
@@ -288,8 +275,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   onChange={e => setSortBy(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
-                  {sortOptions.map(option => (                    <option key={option.id} value={option.id}>
-                      {option.name}
+                  {sortOptions.map(option => (                    <option key={option.id} value={option.id}>                      {option.name}
                     </option>
                   ))}
                 </select>
@@ -320,8 +306,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <div className='text-3xl'>{service.icon}</div>
                       {service.popular && (
                         <div className='flex items-center space-x-1 text-yellow-400 text-sm'>
-                          <Star className='w-4 h-4 fill-current' />                          <span>Popular</span>
-                        </div>
+                          <Star className='w-4 h-4 fill-current' />                          <span>Popular</span>                        </div>
                       )}
                     </div>
 
@@ -341,8 +326,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                         </span>
                       </div>
                       <div className='flex items-center space-x-2 text-sm text-gray-400'>
-                        <Users className='w-4 h-4' />                        <span>{service.customers}</span>
-                      </div>
+                        <Users className='w-4 h-4' />                        <span>{service.customers}</span>                      </div>
                     </div>
 
                     {/* Key Features */}
@@ -357,8 +341,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                             className='flex items-center text-sm text-gray-300'
                           >
                             <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
-                            <span className='line-clamp-1'>{feature}</span>                          </li>
-                        ))}
+                            <span className='line-clamp-1'>{feature}</span>                          </li>                        ))}
                       </ul>
                     </div>
 
@@ -367,8 +350,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <div className='text-xs text-gray-400 mb-1'>
                         Market Position
                       </div>
-                      <div className='text-sm text-gray-300 line-clamp-2'>                        {service.marketPosition}
-                      </div>
+                      <div className='text-sm text-gray-300 line-clamp-2'>                        {service.marketPosition}                      </div>
                     </div>
 
                     {/* ROI and Setup Time */}
@@ -378,8 +360,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                         <span>Average ROI</span>
                       </div>
                       <div className='flex items-center space-x-1 text-blue-400'>
-                        <Clock className='w-4 h-4' />                        <span>{service.setupTime}</span>
-                      </div>
+                        <Clock className='w-4 h-4' />                        <span>{service.setupTime}</span>                      </div>
                     </div>
 
                     {/* Action Buttons */}
@@ -396,8 +377,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <a
                         href='/contact'
                         className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500'
-                      >                        Contact Us
-                      </a>
+                      >                        Contact Us                      </a>
                     </div>
 
                     {/* Contact Information */}
@@ -405,8 +385,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                       <div className='text-xs text-gray-400 mb-2'>
                         Contact Information:
                       </div>
-                      <div className='text-xs text-gray-300 space-y-1'>                        <div>📱 {service.contactInfo.mobile}</div>
-                        <div>✉️ {service.contactInfo.email}</div>
+                      <div className='text-xs text-gray-300 space-y-1'>                        <div>📱 {service.contactInfo.mobile}</div>                        <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
                     </div>
@@ -428,15 +407,13 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                 </h3>
                 <p className='text-gray-400'>
                   Try adjusting your search criteria or filters
-                </p>              </motion.div>
-            )}
+                </p>              </motion.div>            )}
           </div>
         </section>
 
         {/* Call to Action */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -487,8 +464,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline'
                 >
                   <span className='relative'>View Pricing</span>
-                  <DollarSign className='ml-2 w-6 h-6' />                </a>
-              </div>
+                  <DollarSign className='ml-2 w-6 h-6' />                </a>              </div>
             </motion.div>
           </div>
         </section>

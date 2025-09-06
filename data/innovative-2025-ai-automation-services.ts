@@ -361,8 +361,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       rating: 4.9,
       reviews: 28,
     },
-  ];
-    features: [
+  ];    features: [
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI, CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts';
       'Comprehensive medical reportsHIPAA-compliant security'
     ];
@@ -393,5 +392,3 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     reviews: 28
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

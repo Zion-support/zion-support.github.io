@@ -40,8 +40,7 @@ import { useRouter } from 'next/router';
               Or{' '}
               <Link
                 href='/auth/login'
-                className='font-medium text-blue-600 hover:text-blue-500 underline'              >
-                sign in if you already have an account
+                className='font-medium text-blue-600 hover:text-blue-500 underline'              >                sign in if you already have an account
               </Link>
             </p>
           </div>
@@ -76,8 +75,7 @@ import { useRouter } from 'next/router';
               <Link
                 href='/legal/privacy'
                 className='text-blue-600 hover:text-blue-500'
-              >                Privacy Policy
-              </Link>
+              >                Privacy Policy              </Link>
             </p>
           </div>
         </div>

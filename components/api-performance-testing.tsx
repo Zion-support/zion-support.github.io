@@ -70,8 +70,7 @@ export default function ApiPerformanceTestingPage() {
         </section>
       </main>
     </>
-  );
-	return (
+  );	return (
 		<>
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -101,5 +100,3 @@ export default function ApiPerformanceTestingPage() {
 		</>
 	);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ReferralStats as ReferralStatsType } from '@/types/referrals';
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
 
-<<<<<<< HEAD
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean;
@@ -10,32 +9,20 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
     {
       title: 'Total Referrals',
-=======
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 
-=======
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReferralStats as ReferralStatsType } from "@/types/referrals";
-import { Award, Share, Star, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ReferralStatsProps {
   stats: ReferralStatsType,
   isLoading: boolean
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
     {
-<<<<<<< HEAD
       title: 'Total Referrals',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      value: stats.totalReferrals,
       icon: <Share className='h-5 w-5 text-muted-foreground' />,
       description: "People you've invited",
     },
@@ -60,46 +47,35 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   ];
 
   return (
-<<<<<<< HEAD
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
-      {statCards.map((card, i) => (
-=======
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-      {statCards.map((card, i,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        <Card key={i}>
+      {statCards.map((card, i) => (        <Card key={i}>
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>{card.title}</CardTitle>            {card.icon}
           </CardHeader>
           <CardContent>
             {isLoading ? (
-=======
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      {statCards.map((card, i) => (
+        <Card key={i}>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
             {card.icon}
           </CardHeader>
           <CardContent>
             {isLoading ? (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <div className='h-6 w-20 bg-muted animate-pulse rounded' />
             ) : (
               <>
                 <div className='text-2xl font-bold'>{card.value}</div>
                 <p className='text-xs text-muted-foreground'>
                   {card.description}
-<<<<<<< HEAD
-                </p>              </>
-=======
-              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
+                </p>              </>              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              </>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             )}
           </CardContent>
         </Card>
@@ -107,7 +83,3 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

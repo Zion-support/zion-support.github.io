@@ -24,7 +24,6 @@ import {
   Server,
   Laptop,
   Smartphone,;} from 'lucide-react';
-
 const AIPoweredITAssetManagement = () => {
   const features = [
     {
@@ -33,8 +32,7 @@ const AIPoweredITAssetManagement = () => {
       description:
         'Intelligent detection and cataloging of all IT assets across your network',
       color: 'from-purple-500 to-pink-500',
-    },
-    {
+    },    {
       icon: Monitor,
       title: 'Real-Time Monitoring',
       description:
@@ -64,15 +62,13 @@ const AIPoweredITAssetManagement = () => {
     'Cloud resources and virtual machines',
     'Security devices and appliances',
     'Peripheral devices and accessories',  ];
-
   const benefits = [
     {
       icon: DollarSign,
       title: 'Cost Optimization',
       value: '35%',
       description: 'Reduction in IT asset costs',
-    },
-    {
+    },    {
       icon: Clock,
       title: 'Time Savings',
       value: '60%',
@@ -101,7 +97,6 @@ const AIPoweredITAssetManagement = () => {
     'Asset lifecycle optimization',
     'Cost allocation and tracking',
     'Integration with existing IT tools',  ];
-
   return (
     <>
       <Head>
@@ -133,8 +128,7 @@ const AIPoweredITAssetManagement = () => {
         {/* Hero Section */}
         <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>
           <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20'></div>
-          <div className='relative max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='relative max-w-7xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -165,8 +159,7 @@ const AIPoweredITAssetManagement = () => {
                 <Link
                   href='/services'
                   className='inline-flex items-center px-8 py-3 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200'
-                >                  Learn More
-                </Link>
+                >                  Learn More                </Link>
               </div>
             </motion.div>
           </div>
@@ -174,8 +167,7 @@ const AIPoweredITAssetManagement = () => {
 
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -190,8 +182,7 @@ const AIPoweredITAssetManagement = () => {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {features.map((feature, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {features.map((feature, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -207,16 +198,14 @@ const AIPoweredITAssetManagement = () => {
                   <h3 className='text-xl font-semibold text-white mb-3'>
                     {feature.title}
                   </h3>
-                  <p className='text-gray-400'>{feature.description}</p>                </motion.div>
-              ))}
+                  <p className='text-gray-400'>{feature.description}</p>                </motion.div>              ))}
             </div>
           </div>
         </section>
 
         {/* Asset Types Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -229,8 +218,7 @@ const AIPoweredITAssetManagement = () => {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>              {assetTypes.map((assetType, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>              {assetTypes.map((assetType, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -239,16 +227,14 @@ const AIPoweredITAssetManagement = () => {
                   className='flex items-center space-x-3'
                 >
                   <CheckCircle className='w-6 h-6 text-indigo-400 flex-shrink-0' />
-                  <span className='text-gray-300'>{assetType}</span>                </motion.div>
-              ))}
+                  <span className='text-gray-300'>{assetType}</span>                </motion.div>              ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -263,8 +249,7 @@ const AIPoweredITAssetManagement = () => {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {benefits.map((benefit, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {benefits.map((benefit, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -284,8 +269,7 @@ const AIPoweredITAssetManagement = () => {
                     </h3>
                     <p className='text-gray-400 text-sm'>
                       {benefit.description}
-                    </p>                  </div>
-                </motion.div>
+                    </p>                  </div>                </motion.div>
               ))}
             </div>
           </div>
@@ -293,8 +277,7 @@ const AIPoweredITAssetManagement = () => {
 
         {/* Capabilities Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -309,8 +292,7 @@ const AIPoweredITAssetManagement = () => {
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>              {capabilities.map((capability, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>              {capabilities.map((capability, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -319,16 +301,14 @@ const AIPoweredITAssetManagement = () => {
                   className='flex items-center space-x-3'
                 >
                   <CheckCircle className='w-6 h-6 text-indigo-400 flex-shrink-0' />
-                  <span className='text-gray-300'>{capability}</span>                </motion.div>
-              ))}
+                  <span className='text-gray-300'>{capability}</span>                </motion.div>              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -350,8 +330,7 @@ const AIPoweredITAssetManagement = () => {
                 <Link
                   href='/services'
                   className='inline-flex items-center px-8 py-4 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200 text-lg'
-                >                  Explore All Services
-                </Link>
+                >                  Explore All Services                </Link>
               </div>
             </motion.div>
           </div>

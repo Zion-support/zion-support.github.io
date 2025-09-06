@@ -5,7 +5,6 @@ import Link from 'next/link';
 export default function ToolPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});  const [showResults, setShowResults] = useState(false);
-
   const questions = [
     {
       id: 'current-automation',
@@ -58,8 +57,7 @@ export default function ToolPage() {
         'Strong support - actively championing automation',
         'Full support - automation is strategic priority',
       ],
-    },
-  ];
+    },  ];
 
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }));
@@ -104,14 +102,12 @@ export default function ToolPage() {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      setShowResults(true);    }
-  };
+      setShowResults(true);    }  };
 
   const resetAssessment = () => {
     setCurrentQuestion(0);
     setAnswers({});
     setShowResults(false);  };
-
   if (showResults) {
     const result = calculateScore();
     return (
@@ -178,8 +174,7 @@ export default function ToolPage() {
                   </button>
                   <Link
                     href='/contact'
-                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'                  >
-                    Get Personalized Recommendations
+                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'                  >                    Get Personalized Recommendations
                   </Link>
                 </div>
               </div>
@@ -188,7 +183,6 @@ export default function ToolPage() {
         </div>
       </>
     );  }
-
   const currentQ = questions[currentQuestion];
 
   return (
@@ -263,8 +257,7 @@ export default function ToolPage() {
                 >
                   {currentQuestion === questions.length - 1
                     ? 'Get Results'
-                    : 'Next'}                </button>
-              </div>
+                    : 'Next'}                </button>              </div>
             </div>
           </div>
         </main>

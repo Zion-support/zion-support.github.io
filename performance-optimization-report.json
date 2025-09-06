@@ -50,8 +50,7 @@
         "Remove unused CSS and JavaScript",
         "Optimize font loading and subsetting"
       ]
-    }
-  },
+    }  },
   "summary": {
     "bundleOptimized": false,
     "imagesOptimized": true,

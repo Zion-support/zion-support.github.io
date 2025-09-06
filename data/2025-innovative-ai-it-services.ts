@@ -808,9 +808,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     rating: 4.9,
     reviews: 189,
   },
-];
-=======
-      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
     ];
     integrations: ['EHR systems, Medical devices, Imaging equipment, Laboratory systems, Telemedicine platforms'];
     support: '24/7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.';
@@ -825,5 +823,3 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     reviews: 189
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

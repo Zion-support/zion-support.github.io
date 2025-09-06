@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { TUTORIALS } from '@/data/tutorials';
@@ -8,7 +7,6 @@ import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import type { Tutorial as TutorialType } from '@/types/tutorial';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface TutorialPageProps {
   tutorial?: TutorialType;
 
@@ -17,24 +15,13 @@ export default function Tutorial({
 }: TutorialPageProps) {
   const router = useRouter();
   const slug = router.query.slug as string | undefined;
-  const tutorial = initialTutorial || TUTORIALS.find(t => t.slug === slug);
-=======
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { TUTORIALS } from "@/data/tutorials";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from 'lucide-react';
-import ReactMarkdown from "react-markdown";
-import type { Tutorial as TutorialType } from "@/types/tutorial";
-interface TutorialPageProps {
+  const tutorial = initialTutorial || TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
   tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
   const router = useRouter(),
   const slug = router.query.slug as string | undefined,
   const tutorial = initialTutorial || TUTORIALS.find((t,) => t.slug === slug),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   if (!tutorial) {
     return (
@@ -77,11 +64,5 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>
     </>
   );
-=======
-}
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+}

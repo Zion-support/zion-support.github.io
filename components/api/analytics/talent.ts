@@ -4,12 +4,8 @@ import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {  try {
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const supabase = createServerClient();
     const talentId = (req.query.talentId as string) || null;
 
@@ -31,8 +27,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .select('talent_id, tag')
         .eq('talent_id', talentId),
     ]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
     const views =
       viewsR.status === 'fulfilled' && viewsR.value.data
         ? (viewsR.value.data as any[])
@@ -89,7 +83,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ],
     });
   }
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

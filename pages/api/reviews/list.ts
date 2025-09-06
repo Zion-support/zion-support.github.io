@@ -69,8 +69,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mostRecent: publicReviews.slice(0, 5)
     };
 
-    return res.status(200).json({ summary, reviews: publicReviews })
-  } catch (error: any) {
+    return res.status(200).json({ summary, reviews: publicReviews })  } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
   }
 }

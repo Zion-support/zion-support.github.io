@@ -8,17 +8,12 @@ import {
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
-  return !superToken || token === superToken;
-=======
-import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  return !superToken || token === superToken;import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
 
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
-<<<<<<< HEAD
   return !superToken || token === superToken;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req))
@@ -27,11 +22,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics || {} });  }
-=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
+
+  if (req.method === 'GET') {
+    const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics || {} })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (req.method === 'POST') {
     const started = Date.now();
@@ -63,20 +60,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-}
-=======
-      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
+}      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
       return res.status(200).json({ triggers })
     } catch (e: any) {
       appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
       return res.status(500).json({ error: 'Reflex failure' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    }
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

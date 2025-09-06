@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
-
-import React, { useState } from "react";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import {
+import React, { useState } from 'react';import {
   Table,
   TableBody,
   TableCell,
@@ -19,7 +13,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger,;
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
@@ -28,9 +21,6 @@ import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Trash, Mail, UserPlus } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -38,7 +28,6 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Trash, Mail, UserPlus } from 'lucide-react';
 import { toast } from "@/hooks/use-toast";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState('');
@@ -140,22 +129,12 @@ export function TeamManagement() {
                   Email
                 </Label>
                 <Input
-<<<<<<< HEAD
                   id='email'
                   type='email'
                   placeholder='colleague@company.com'
                   className='col-span-3'
                   value={newMemberEmail}
-                  onChange={e => setNewMemberEmail(e.target.value)}
-=======
-                  id="email"
-                  type="email"
-                  placeholder="colleague@company.com"
-                  className="col-span-3"
-                  value = {newMemberEmail,}
-                  onChange = {(e,) => setNewMemberEmail(e.target.value),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                />
+                  onChange={e => setNewMemberEmail(e.target.value)}                />
               </div>
               <div className='grid grid-cols-4 items-center gap-4'>
                 <Label htmlFor='role' className='text-right'>
@@ -197,27 +176,15 @@ export function TeamManagement() {
             </TableRow>
           </TableHeader>
           <TableBody>
-<<<<<<< HEAD
-            {teamMembers.map(member => (
-=======
-            {teamMembers.map((member,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              <TableRow key={member.id}>
+            {teamMembers.map(member => (              <TableRow key={member.id}>
                 <TableCell>
                   <div className='flex items-center gap-2'>
                     <div className='h-8 w-8 rounded-full bg-muted flex items-center justify-center'>
                       <span className='text-sm font-medium'>
                         {member.name
-<<<<<<< HEAD
                           .split(' ')
                           .map(n => n[0])
-                          .join('')}
-=======
-                          .split(" ")
-                          .map((n,) => n[0])
-                          .join("")}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      </span>
+                          .join('')}                      </span>
                     </div>
                     <div>
                       <div className='font-medium'>{member.name}</div>
@@ -230,12 +197,7 @@ export function TeamManagement() {
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
-<<<<<<< HEAD
-                    variant={member.status === 'active' ? 'default' : 'outline'}
-=======
-                    variant = {member.status === "active" ? "default" : "outline",}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  >
+                    variant={member.status === 'active' ? 'default' : 'outline'}                  >
                     {member.status}
                   </Badge>
                 </TableCell>
@@ -244,33 +206,18 @@ export function TeamManagement() {
                   <div className='flex justify-end gap-2'>
                     {member.status === 'pending' ? (
                       <Button
-<<<<<<< HEAD
                         variant='ghost'
                         size='sm'
-                        onClick={() => handleResendInvite(member.email)}
-=======
-                        variant="ghost"
-                        size="sm"
-                        onClick = {(,) => handleResendInvite(member.email),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      >
+                        onClick={() => handleResendInvite(member.email)}                      >
                         <Mail className='h-4 w-4 mr-1' />
                         Resend
                       </Button>
                     ) : (
                       <Button
-<<<<<<< HEAD
                         variant='ghost'
                         size='sm'
                         className='text-destructive hover:text-destructive'
-                        onClick={() => handleRemoveMember(member.id)}
-=======
-                        variant="ghost"
-                        size="sm"
-                        className="text-destructive hover:text-destructive"
-                        onClick = {(,) => handleRemoveMember(member.id),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                      >
+                        onClick={() => handleRemoveMember(member.id)}                      >
                         <Trash className='h-4 w-4' />
                       </Button>
                     )}
@@ -308,8 +255,4 @@ export function TeamManagement() {
 }> <Trash className="h-4 w-4" /> </Button>) ;
 }</div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { TalentProfile } from '@/components/profile/TalentProfile';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
@@ -17,9 +15,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { UserProfile } from '@/types/auth';
 import { toast } from '@/hooks/use-toast';
 import { SEO } from '@/components/SEO';
-
-=======
-import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { TalentProfile } from "@/components/profile/TalentProfile";
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
@@ -36,7 +31,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { UserProfile } from "@/types/auth";
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function TalentProfilePage() {
   const router = useRouter();
   // Get id from Next.js router query params
@@ -72,15 +66,13 @@ export default function TalentProfilePage() {
         role: '', // Default empty string since userDetails doesn't have this property
         name: '',
         points: 0,
-      };
-  const userProfile: UserProfile = user ? {
+      };  const userProfile: UserProfile = user ? {
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
     userType: user.userType || null,
     profileComplete: user.profileComplete || false,
-    created_at: user.created_at || new Date().toISOString(), updated_at: user.updatedAt || new Date().toISOString(),
-    role: user.role || '',
+    created_at: user.created_at || new Date().toISOString(), updated_at: user.updatedAt || new Date().toISOString(),    role: user.role || '',
     name: user.name || '',
     points: user.points || 0
   } : {
@@ -90,14 +82,10 @@ export default function TalentProfilePage() {
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
     created_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
-    updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property
-    role: '', // Default empty string since userDetails doesn't have this property
+    updated_at: new Date().toISOString(); // Default value since userDetails doesn't have this property    role: '', // Default empty string since userDetails doesn't have this property
     name: '',
     points: 0
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Handle loading error gracefully
   useEffect((,) => {
     if (error) {
@@ -106,14 +94,10 @@ export default function TalentProfilePage() {
         description:
           'There was a problem loading this talent profile. Please try again.',
         variant: 'destructive',
-      });    }
-=======
-        title: "Error loading profile",
+      });    }        title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"})
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [error]);
 
   if (isLoading) {
@@ -131,16 +115,14 @@ export default function TalentProfilePage() {
         description: 'Please sign in to hire this talent.',
         variant: 'default',
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return;
     }
-    setIsHireModalOpen(true);  };
-=======
+    setIsHireModalOpen(true);  };      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return
+    }
     setIsHireModalOpen(true)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
@@ -149,8 +131,6 @@ export default function TalentProfilePage() {
         description: 'Please sign in to message this talent.',
         variant: 'default',
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
       return;
     }
     setIsMessageModalOpen(true);
@@ -254,9 +234,7 @@ return (<> <SEO title= {;
 }onClose= {;
   () => setIsMessageModalOpen (false) ;
 }/> </div> </>) ;
-}'"
-=======
-      <div className="min-h-screen bg-zion-blue pb-12">
+}'"      <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile
         profile = {profile,}
         onRequestHire = {handleRequestHire,}
@@ -299,15 +277,8 @@ return (<> <SEO title= {;
       <MessageTalentModal
         talent = {profile,}
         isOpen = {isMessageModalOpen,}
-        onClose = {() => setIsMessageModalOpen(false),}
-      />
+        onClose = {() => setIsMessageModalOpen(false),}      />
     </div>
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

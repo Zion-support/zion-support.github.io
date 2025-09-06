@@ -1,75 +1,4 @@
-<<<<<<< HEAD
   const showTagline = router.pathname === '/';
-
-=======
-=======
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import { useMessaging } from '@/context/MessagingContext';
-import Link from 'next/link';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { Logo } from '@/components/header/Logo';
-import { useTranslation } from 'react-i18next';
-import { Menu, X } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { useAuth } from '@/hooks/useAuth';
-import { UserMenu } from '@/components/header/UserMenu';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
-import { cn } from '@/lib/utils', // Import cn utility
-import { useRouter } from 'next/router';
-export function AppHeader() {
-=======
-import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
-export function AppHeader() {;
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const handleSearch = (e: React.FormEvent) => {;
-    e.preventDefault();
-    if (searchQuery.trim()) {;
-      // Navigate to search results;
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-}
-  };
-  // Organized Services Categories;
-  const servicesCategories = [{;
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-zion-cyan to-zion-purple',
-      dropdown: [;
-        { name: 'Machine Learning', href: '/ai-solutions/machine-learning', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-        { name: 'Computer Vision', href: '/ai-solutions/computer-vision', icon: Eye, color: 'from-zion-purple to-zion-pink' },
-        { name: 'NLP & Chatbots', href: '/ai-solutions/nlp-chatbots', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' },
-        { name: 'Predictive Analytics', href: '/ai-solutions/predictive-analytics', icon: TrendingUp, color: 'from-zion-blue to-zion-green' },
-        { name: 'AI Consulting', href: '/ai-solutions/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
-        { name: 'Custom AI Models', href: '/ai-solutions/custom-models', icon: Code, color: 'from-zion-orange to-zion-purple' }
-      ];
-},
-    {;
-      name: 'Innovation Lab',
-      href: '/innovation-lab',
-      icon: Sparkles,
-      color: 'from-zion-purple to-zion-pink',
-      dropdown: [;
-        { name: 'Research & Development', href: '/innovation-lab/research', icon: Sparkles, color: 'from-zion-purple to-zion-pink' },
-        { name: 'Emerging Tech', href: '/innovation-lab/emerging-tech', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },
-        { name: 'Prototyping', href: '/innovation-lab/prototyping', icon: Code, color: 'from-zion-green to-zion-cyan' },
-        { name: 'Innovation Consulting', href: '/innovation-lab/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
-        { name: 'Tech Partnerships', href: '/innovation-lab/partnerships', icon: Handshake, color: 'from-zion-blue to-zion-green' }
-      ];
-}
-  ];
-        setServicesDropdownOpen(true);
-        setSolutionsDropdownOpen(false);
-        setCompanyDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if(nav.name === 'Solutions') {;
->>>>>>> origin/automation-fixes
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
@@ -83,7 +12,6 @@ export function AppHeader() {;
   // Messaging context (unread message count)
   const { unreadCount } = useMessaging(),
 
-<<<<<<< HEAD
   const openLoginModal = (returnToPath?: string,) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
     // using router.push with shallow:true before this function is called.
@@ -191,9 +119,6 @@ export function AppHeader() {;
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  )
-=======
       setActiveNav(null);
       setServicesDropdownOpen(false);
       setSolutionsDropdownOpen(false);
@@ -806,7 +731,4 @@ export function AppHeader() {;
         )}
       </AnimatePresence>;
     </header>  );
->>>>>>> origin/automation-fixes
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -24,17 +24,13 @@ const EnhancedFuturisticBackground: React.FC<
   intensity = 'medium',
   colorScheme = 'quantum',
   particleCount = 100,
-  animationSpeed = 1,}) => {
-const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
+  animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
   children;
   className = '';
   intensity = 'medium';
   colorScheme = 'quantum';
   particleCount = 100;
   animationSpeed = 1
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-}) => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
 
@@ -53,16 +49,11 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         '#ff0080',
         '#8000ff',
       ],
-      glow: '#00ffff',    },
-    },
-=======
+      glow: '#00ffff',    },    },
       background: 'rgba(0, 0, 0, 0.85)';
       particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
       glow: '#00ffff'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    cyberpunk: {
       primary: '#ff0080',
       secondary: '#00ffff',
       accent: '#ffff00',
@@ -79,19 +70,15 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     },
     holographic: {      primary: '#00ffff',
       secondary: '#ff00ff',
-      accent: '#ffff00',
-    holographic: {
-=======
+      accent: '#ffff00',    holographic: {
     particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
       glow: '#ff0080'
     };
     holographic: {
       
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       background: 'rgba(0, 20, 40, 0.85)',
       particles: [
         '#00ffff',
@@ -101,17 +88,11 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         '#ff8000',
         '#8000ff',
       ],
-<<<<<<< HEAD
-      glow: '#00ffff',    },
-    },
-=======
+      glow: '#00ffff',    },    },
       background: 'rgba(0, 20, 40, 0.85)';
       particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],
       glow: '#00ffff'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    neural: {
       primary: '#00ff80',
       secondary: '#ff0080',
       accent: '#ffff00',
@@ -128,18 +109,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     },    cosmic: {
       primary: '#ff6b6b',
       secondary: '#4ecdc4',
-      accent: '#45b7d1',
-=======
-      background: 'rgba(0, 40, 20, 0.9)';
+      accent: '#45b7d1',      background: 'rgba(0, 40, 20, 0.9)';
       particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],
       glow: '#00ff80'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     cosmic: {
       primary: '#ff6b6b',
       secondary: '#4ecdc4',
       accent: '#45b7d1',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       background: 'rgba(10, 10, 30, 0.9)',
       particles: [
         '#ff6b6b',
@@ -150,26 +127,17 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         '#ff9ff3',
       ],
       glow: '#4ecdc4',
-<<<<<<< HEAD
-    },  };
-=======
-      background: 'rgba(10, 10, 30, 0.9)';
+    },  };      background: 'rgba(10, 10, 30, 0.9)';
       particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
       glow: '#4ecdc4'
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const intensitySettings = {
     low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },
     medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  };
-=======
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  };    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -180,12 +148,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;    };
-=======
-      canvas.height = window.innerHeight
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -203,8 +167,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       color: string;
       opacity: number;
       life: number;
-      maxLife: number;
-      x: number,
+      maxLife: number;      x: number,
       y: number,
       vx: number,
       vy: number,
@@ -213,9 +176,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       opacity: number,
       life: number,
       maxLife: number,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * settings.speed * animationSpeed;
@@ -225,15 +185,10 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           colors.particles[Math.floor(Math.random() * colors.particles.length)];
         this.opacity = Math.random() * settings.opacity;
         this.life = Math.random() * 100;
-        this.maxLife = 100;      }
-=======
-        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
+        this.maxLife = 100;      }        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
         this.opacity = Math.random() * settings.opacity;
         this.life = Math.random() * 100;
         this.maxLife = 100
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       update() {
         this.x += this.vx;
@@ -248,19 +203,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
         // Fade out near end of life
         if (this.life < 20) {
-          this.opacity *= 0.95;        }
-=======
-          this.opacity *= 0.95
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          this.opacity *= 0.95;        }          this.opacity *= 0.95
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
 
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         // Create gradient for particle
         const gradient = ctx.createRadialGradient(
           this.x,
@@ -271,11 +221,11 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           this.size
         );
         gradient.addColorStop(0, this.color);
+        gradient.addColorStop(1, 'transparent');        // Create gradient for particle
+        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+        gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');
-=======
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -285,17 +235,12 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       }
 
       isDead() {
-        return this.life <= 0 || this.opacity < 0.01;      }
-=======
-        
+        return this.life <= 0 || this.opacity < 0.01;      }        
         ctx.restore()
       }
 
       isDead() {
         return this.life <= 0 || this.opacity < 0.01
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
 
     // Connection lines between particles
@@ -312,28 +257,19 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       draw() {
         const distance = Math.sqrt(
           Math.pow(this.p1.x - this.p2.x, 2) +
-            Math.pow(this.p1.y - this.p2.y, 2)        );
-=======
-      p1: Particle,
+            Math.pow(this.p1.y - this.p2.y, 2)        );      p1: Particle,
       p2: Particle,
       opacity: number,
       constructor(p1: Particle, p2: Particle) {
         this.p1 = p1;
         this.p2 = p2;
         this.opacity = 0.1
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      }
 
       draw() {
         const distance = Math.sqrt(
-<<<<<<< HEAD
           Math.pow(this.p1.x - this.p2.x, 2) +
-            Math.pow(this.p1.y - this.p2.y, 2)
-=======
-          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            Math.pow(this.p1.y - this.p2.y, 2)          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
         );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         if (distance < 150) {
           ctx.save();
@@ -347,57 +283,40 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           ctx.restore();        }
       }
     }
-
-=======
           ctx.restore()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         }
       }
     }
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     let particles: Particle[] = [];
     let connections: Connection[] = [];
 
     // Initialize particles
     for (let i = 0; i < settings.particleCount; i++) {
-<<<<<<< HEAD
       particles.push(new Particle());    }
 
     // Matrix rain effect
     const matrixRain = () => {
       const characters =
-        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const fontSize = 12;
-=======
-    let particles: Particle[] = [],
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const fontSize = 12;    let particles: Particle[] = [],
     let connections: Connection[] = [],
     // Initialize particles
     for (let i = 0, i < settings.particleCount, i++) {
       particles.push(new Particle())
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     // Matrix rain effect
     const matrixRain = () => {
-<<<<<<< HEAD
       const characters =
-        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-=======
-      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       const columns = canvas.width / fontSize;
       const drops: number[] = [];
 
       for (let i = 0; i < columns; i++) {
-        drops[i] = 1;      }
-=======
-      for (let i = 0, i < columns, i++) {
+        drops[i] = 1;      }      for (let i = 0, i < columns, i++) {
         drops[i] = 1
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       const drawMatrix = () => {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
@@ -409,7 +328,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         for (let i = 0; i < drops.length; i++) {
           const text =
             characters[Math.floor(Math.random() * characters.length)];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -419,12 +337,17 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         }
       };
 
-      return drawMatrix;    };
-=======
+      return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0
+          }
+          drops[i]++
+        }
+      };
+
       return drawMatrix
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const drawMatrix = matrixRain();
 
@@ -440,12 +363,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
-        particle.draw();      });
-=======
-        particle.draw()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        particle.draw();      });        particle.draw()
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Remove dead particles and add new ones
       particles = particles.filter(particle => !particle.isDead());
@@ -455,29 +374,25 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       // Create connections between nearby particles
       connections = [];
       for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-=======
-        particles.push(new Particle())
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        for (let j = i + 1; j < particles.length; j++) {        particles.push(new Particle())
       }
 
       // Create connections between nearby particles
       connections = [];
-<<<<<<< HEAD
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           const distance = Math.sqrt(
             Math.pow(particles[i].x - particles[j].x, 2) +
               Math.pow(particles[i].y - particles[j].y, 2)
           );
           if (distance < 150) {
-            connections.push(new Connection(particles[i], particles[j]));          }
-=======
+            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) + 
+            Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
             connections.push(new Connection(particles[i], particles[j]))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         }
       }
 
@@ -489,18 +404,12 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const size = Math.random() * 20 + 10;
-=======
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         ctx.save();
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
         ctx.lineWidth = 1;
-=======
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath();
@@ -509,7 +418,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
           ctx.stroke();
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         } else {
           // Draw square
           ctx.strokeRect(x - size, y - size, size * 2, size * 2);
@@ -528,12 +436,24 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           animationRef.current = requestAnimationFrame(animate);
         }, 100);
       } else {
-        animationRef.current = requestAnimationFrame(animate);      }
-=======
-        animationRef.current = requestAnimationFrame(animate)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        animationRef.current = requestAnimationFrame(animate);      }        } else {
+          // Draw square
+          ctx.strokeRect(x - size, y - size, size * 2, size * 2)
+        }
+        
+        ctx.restore()
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+
+      // Respect reduced motion
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      if (prefersReduced) {
+        // Slow down updates
+        setTimeout(() => {
+          animationRef.current = requestAnimationFrame(animate)
+        }, 100)
+      } else {
+        animationRef.current = requestAnimationFrame(animate)
+      }
     };
 
     animate();
@@ -543,25 +463,18 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener('resize', resizeCanvas);
-    };  }, [colorScheme, intensity, particleCount, animationSpeed]);
-=======
-        cancelAnimationFrame(animationRef.current)
+    };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  }, [colorScheme, intensity, particleCount, animationSpeed]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <div className={`relative min-h-screen ${className}`}>
       <canvas
         ref={canvasRef}
         className='fixed inset-0 w-full h-full pointer-events-none z-0'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         style={{ background: 'transparent' }}
       />
-
       {/* Overlay gradient */}
       <div
         className='fixed inset-0 pointer-events-none z-0'
@@ -577,7 +490,3 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 };
 
 export default EnhancedFuturisticBackground;
-=======
-export default EnhancedFuturisticBackground;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

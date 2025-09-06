@@ -6,6 +6,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log('🔧 Resolving all merge conflicts...');
 =======
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ class ConflictResolver {
   }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -97,6 +100,7 @@ function findFilesWithConflicts() {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Main execution
 try {
@@ -459,3 +463,6 @@ if (require.main === module) {;
 
 module.exports = ConflictResolver}
 >>>>>>> origin/automation-fixes
+=======
+module.exports = ConflictResolver;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

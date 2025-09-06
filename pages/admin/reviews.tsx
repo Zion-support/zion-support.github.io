@@ -84,8 +84,7 @@ const AdminReviewsPage: React.FC = () => {
 
   useEffect(() => {
     refresh();
-  }, []);
-  async function moderate(action: 'approve' | 'remove', reviewId: string) {
+  }, []);  async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST',
       headers: {
@@ -94,8 +93,7 @@ const AdminReviewsPage: React.FC = () => {
       },
       body: JSON.stringify({ action, reviewId }),
     });
-    if (res.ok) refresh();
-  }
+    if (res.ok) refresh();  }
 
   return (
     <main className='max-w-5xl mx-auto p-6 space-y-6'>
@@ -134,8 +132,7 @@ const AdminReviewsPage: React.FC = () => {
                   onClick={() => moderate('remove', r.id)}
                 >
                   Remove
-                </button>              </div>
-            </div>
+                </button>              </div>            </div>
           ))}
           {!pending.length && <div>No pending reviews.</div>}
         </div>
@@ -147,7 +144,6 @@ const AdminReviewsPage: React.FC = () => {
         </pre>
       </section>
     </main>
-  );
-};
+  );};
 
 export default AdminReviewsPage;

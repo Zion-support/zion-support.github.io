@@ -437,6 +437,7 @@
   },
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -449,9 +450,11 @@
     "codex:capture": "node scripts/codex-capture-log.mjs",
     "codex:run": "node scripts/codex-test-loop.mjs",
 >>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
-    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "automations": "node scripts/run-automations.mjs",    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -459,6 +462,9 @@
     "automations": "node scripts/run-automations.mjs",    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "automations": "node scripts/run-automations.mjs",    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "netlify:manifest": "node scripts/generate-netlify-functions-manifest.cjs",
@@ -692,6 +698,7 @@
     "auto:all": "npm run auto:intel && npm run auto:talent"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -704,6 +711,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "postautomation": "npm run automation:git-sync",
       "lint:staged": "lint-staged",
       "performance:audit": "node automation/performance-audit.cjs",
@@ -764,6 +773,7 @@
     "@eslint/js": "^9.32.0",
     "@testing-library/jest-dom": "^6.6.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -776,10 +786,13 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@testing-library/react": "^14.3.1",
     "@types/node": "24.2.1",
     "@types/node-cron": "^3.0.11",
     "@types/react": "18.3.23",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -797,9 +810,11 @@
     "@types/react-dom": "17.0.11",
     "@types/supertest": "^6.0.3",
 >>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@types/react-dom": "^18.3.0",    "@typescript-eslint/eslint-plugin": "^8.39.0",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -807,6 +822,9 @@
     "@types/react-dom": "^18.3.0",    "@typescript-eslint/eslint-plugin": "^8.39.0",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "@types/react-dom": "^18.3.0",    "@typescript-eslint/eslint-plugin": "^8.39.0",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@typescript-eslint/parser": "^8.39.0",
     "autoprefixer": "^10.4.16",
     "chai": "^5.2.1",

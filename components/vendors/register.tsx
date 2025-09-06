@@ -20,7 +20,6 @@ export default function VendorRegisterPage() {
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
             .split(',')
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             .map(s => s.trim())
             .filter(Boolean),
           teamSize: Number(payload.teamSize || 0),
@@ -42,24 +41,32 @@ export default function VendorRegisterPage() {
       setLoading(false);    }
   }
 
-  return (
-=======
+  return (            .map(s => s.trim())
+            .filter(Boolean);
+          teamSize: Number(payload.teamSize || 0),
+          about: String(payload.about || ''),
+          verificationDocs: String(payload.verificationDocs || '')
+            .split()
+            .map(s => s.trim())
+            .filter(Boolean);
+          caseStudies: []})}),
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Failed to submit');
+      setMessage('Application submitted. Await approval.');
+      form.reset()
+    } catch (err: any) {
+      setMessage(err.message)
+    } finally {
       setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
   return (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <div className='max-w-2xl mx-auto space-y-6'>
       <h1 className='text-2xl font-semibold'>
         Apply to become a Vendor Partner
       </h1>
       <form onSubmit={onSubmit} className='space-y-4'>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        <div>
           <label className='block text-sm mb-1'>Agency Name</label>
           <input
             name='name'
@@ -122,7 +129,4 @@ export default function VendorRegisterPage() {
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -47,8 +47,7 @@ export default function DocsIndex({
                     href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`}
                     target='_blank'
                     rel='noreferrer'
-                  >                    {it.rel}
-                  </a>
+                  >                    {it.rel}                  </a>
                 </li>
               ))}
             </ul>

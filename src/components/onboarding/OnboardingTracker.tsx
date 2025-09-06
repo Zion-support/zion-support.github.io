@@ -1,12 +1,6 @@
   title = "Complete Your Profile", 
-
 import React from "react";
-<<<<<<< HEAD
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
-=======
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { cn } from "@/lib/utils";
+import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export interface OnboardingStep {
@@ -91,8 +85,4 @@ export function OnboardingTracker({
 }> </Link> </Button>) ;
 }</div>) ) ;
 }</div> </div>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

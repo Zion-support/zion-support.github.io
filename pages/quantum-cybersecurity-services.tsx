@@ -13,8 +13,7 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
               <span className='bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent'>
                 Quantum Cybersecurity
               </span>
-            </motion.h1>
-            <motion.p
+            </motion.h1>            <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -22,7 +21,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
             >
               Unbreakable security powered by quantum computing and advanced AI
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -36,8 +34,7 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
               </a>
               <a
                 href='mailto:kleber@ziontechgroup.com'
-                className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'              >
-                Get Started
+                className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'              >                Get Started
               </a>
             </motion.div>
 
@@ -46,8 +43,7 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'
-            >
+              className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'            >
               <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>
                 <div className='text-4xl mb-4'>🔐</div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
@@ -75,8 +71,7 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   Instant threat response and automated incident resolution.
-                </p>              </div>
-            </motion.div>
+                </p>              </div>            </motion.div>
           </div>
         </section>
 
@@ -99,8 +94,7 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (                <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -110,8 +104,7 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                   <UltraFuturisticServiceCard2026
                     service={service}
                     variant='premium'
-                    theme='cyberpunk'                  />
-                </motion.div>
+                    theme='cyberpunk'                  />                </motion.div>
               ))}
             </div>
           </div>
@@ -126,13 +119,11 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Why Quantum Security?
-                </span>
+                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Why Quantum Security?                </span>
               </h2>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div
-                initial={{ opacity: 0, x: -30 }}
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
@@ -145,8 +136,7 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                   Quantum computers will eventually break current encryption
                   standards, making traditional security obsolete.
                 </p>
-                <ul className='text-gray-400 space-y-2'>                  <li>• RSA encryption will be vulnerable</li>
-                  <li>• Current SSL/TLS certificates at risk</li>
+                <ul className='text-gray-400 space-y-2'>                  <li>• RSA encryption will be vulnerable</li>                  <li>• Current SSL/TLS certificates at risk</li>
                   <li>• Blockchain security compromised</li>
                   <li>• Financial systems exposed</li>
                 </ul>
@@ -166,8 +156,7 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                   We provide quantum-resistant security that protects against
                   both current and future threats.
                 </p>
-                <ul className='text-gray-400 space-y-2'>                  <li>• Post-quantum cryptography</li>
-                  <li>• Quantum key distribution</li>
+                <ul className='text-gray-400 space-y-2'>                  <li>• Post-quantum cryptography</li>                  <li>• Quantum key distribution</li>
                   <li>• AI-enhanced threat detection</li>
                   <li>• Future-proof security architecture</li>
                 </ul>
@@ -185,13 +174,11 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Advanced Security Features
-                </span>
+                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Advanced Security Features                </span>
               </h2>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
-                initial={{ opacity: 0, y: 30 }}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
@@ -204,7 +191,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 <p className='text-gray-400 text-sm'>
                   Never trust, always verify approach to security.
                 </p>              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -219,7 +205,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 <p className='text-gray-400 text-sm'>
                   24/7 threat detection and response.
                 </p>              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -234,7 +219,6 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 <p className='text-gray-400 text-sm'>
                   Automated threat response and incident resolution.
                 </p>              </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -248,22 +232,19 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   Comprehensive security insights and reporting.
-                </p>              </motion.div>
-            </div>
+                </p>              </motion.div>            </div>
           </div>
         </section>
 
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>
-                  Secure Your Future Today
+                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Secure Your Future Today
                 </span>
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
@@ -316,8 +297,7 @@ import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServ
                 </a>
                 <a
                   href='https://ziontechgroup.com'
-                  className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                >
-                  Visit Our Website
+                  className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                >                  Visit Our Website
                 </a>
               </div>
             </motion.div>

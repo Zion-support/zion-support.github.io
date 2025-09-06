@@ -28,8 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!isClient(project, user)) {
       res
         .status(403)
-        .json({ error: 'Only client (or admin) can add milestones' });
-      return;
+        .json({ error: 'Only client (or admin) can add milestones' });      return;
     }
     const body = req.body as Partial<Milestone>;
     if (
@@ -48,8 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       description: body.description,
       dueDate: body.dueDate,
       amountUsd: body.amountUsd,
-      attachments: body.attachments || [],
-    });
+      attachments: body.attachments || [],    });
     res.status(201).json({ milestone: created });
     return;
   }

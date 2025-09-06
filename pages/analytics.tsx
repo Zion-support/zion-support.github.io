@@ -40,7 +40,6 @@ export default function AnalyticsPage() {
     'Monitor system health',
     'Track business metrics',
     'Generate actionable insights',  ];
-
   return (
     <>
       <Head>
@@ -83,8 +82,7 @@ export default function AnalyticsPage() {
               <a
                 href='/contact'
                 className='border-white/20 hover:border-white/40'
-              >                View Demo
-              </a>
+              >                View Demo              </a>
             </div>
           </div>
         </section>
@@ -112,8 +110,7 @@ export default function AnalyticsPage() {
                   <h3 className='text-xl font-bold text-white mb-4'>
                     {feature.title}
                   </h3>
-                  <p className='text-gray-400 leading-relaxed'>                    {feature.description}
-                  </p>
+                  <p className='text-gray-400 leading-relaxed'>                    {feature.description}                  </p>
                 </div>
               ))}
             </div>
@@ -151,8 +148,7 @@ export default function AnalyticsPage() {
                       understand
                     </p>
                     <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm'>
-                      <TrendingUp className='w-4 h-4 mr-2' />                      Interactive dashboards
-                    </div>
+                      <TrendingUp className='w-4 h-4 mr-2' />                      Interactive dashboards                    </div>
                   </div>
                 </div>
               </div>
@@ -179,8 +175,7 @@ export default function AnalyticsPage() {
               <a
                 href='/contact'
                 className='border-white text-white hover:bg-white hover:text-blue-600'
-              >                Schedule Demo
-              </a>
+              >                Schedule Demo              </a>
             </div>
           </div>
         </section>

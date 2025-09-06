@@ -9,7 +9,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');  }
-
   const { userId = 'demo-user', courseId, enableBoost } = req.body || {};
   if (!courseId) return res.status($1).json({$2});
   try {
@@ -30,8 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!user.certifications.includes(courseId))
       user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge))
-      user.badges.push(course.certificationBadge);
-    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
+      user.badges.push(course.certificationBadge);    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
     // Mark progress complete
     user.progress[courseId] = {
       completed: true,

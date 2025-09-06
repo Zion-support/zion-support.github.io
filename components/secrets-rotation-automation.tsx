@@ -70,8 +70,7 @@ export default function SecretsRotationAutomationPage() {
         </section>
       </main>
     </>
-  );
-	return (
+  );	return (
 		<>
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -101,5 +100,3 @@ export default function SecretsRotationAutomationPage() {
 		</>
 	);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

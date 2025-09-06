@@ -441,4 +441,8 @@ if (require.main === module) {}
   const seoAccessibility = new SEOAccessibility();
   seoAccessibility.start().catch(console.error);
 };
+<<<<<<< HEAD
 module.exports = SEOAccessibility;module.exports = SEOAccessibility;
+=======
+module.exports = SEOAccessibility;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

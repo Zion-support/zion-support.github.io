@@ -26,7 +26,6 @@ const AIEvals: React.FC = () => {
             </a>
           </div>
         </div>
-
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

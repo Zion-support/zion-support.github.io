@@ -11,7 +11,6 @@ type TalentItem = {
 };
 
 type Props = { items: TalentItem[] };
-
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className='space-y-6'>
@@ -48,7 +47,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     const data = JSON.parse(raw);
     items = data.items || [];
   } catch {}
-  return { props: { items } };
-};
+  return { props: { items } };};
 
 export default TopTalentsPage;

@@ -1,5 +1,4 @@
-);
-  /* New: Core micro SaaS and AI additions */ 
+);  /* New: Core micro SaaS and AI additions */ 
 }<section className="space-y-6" > <h2 className="text-2xl font-semibold text-white" >AI Social Media Manager</h2> <p className="text-slate-300" >Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p> <ul className="list-disc list-inside text-slate-300 space-y-1" > <li>Typical SMB budget: $20–$80/mo</li> </ul> </section> const pricingRefs = [ {
   title: 'AI Platforms', links: [ {
   name: 'OpenAI', href: 'https://openai.com/api/pricing' 

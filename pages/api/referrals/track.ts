@@ -34,8 +34,7 @@ export default async function handler(
         null,
     });
 
-    if (error) return res.status(500).json({ error: error.message });
-    return res.status(200).json({ saved: true });
+    if (error) return res.status(500).json({ error: error.message });    return res.status(200).json({ saved: true });
   } catch (e: any) {
     return res.status(200).json({ saved: false, error: e?.message });
   }

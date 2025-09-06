@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
         console.log(' Checking system health...')
@@ -10,3 +11,5 @@ const path = require('path')
             "message"
             "status"
             "message"
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

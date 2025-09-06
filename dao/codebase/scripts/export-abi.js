@@ -3,7 +3,6 @@
   console.warn ('Missing artifact for', name) 
 
 }main ();
-
 function main() {
   const outDir = path.join(__dirname, '../abi'),
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir),
@@ -28,8 +27,4 @@ function main() {
   }
 }
 
-}main ();
-=======
-main(),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}main ();main(),

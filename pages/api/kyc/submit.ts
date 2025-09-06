@@ -55,8 +55,7 @@ export default async function handler(
       ? 'clear'
       : amlResult.status === 'match'
         ? 'match'
-        : 'review';
-  // Flags and risk scoring
+        : 'review';  // Flags and risk scoring
   const flags = new Set<string>(profile.flags || []);
   if (amlResult.status !== 'clear') flags.add('aml_alert');
   const name = (

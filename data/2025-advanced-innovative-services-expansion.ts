@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface AdvancedInnovativeService {
   id: string;
   name: string;
   tagline: string;
@@ -48,15 +46,11 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-=======
-  mobile: '+1 302 464 0950';
+  website: 'https://ziontechgroup.com',};  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709';
   website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
@@ -69,8 +63,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     period: '/month',
     description:
       'Revolutionary DevOps platform that autonomously manages, optimizes, and heals your entire development and deployment pipeline using advanced AI and machine learning.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Autonomous CI/CD pipeline optimization',
       'Predictive infrastructure scaling',
       'Self-healing deployment failures',
@@ -791,11 +783,8 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     marketAdvantage:
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },
-];
-      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
+];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

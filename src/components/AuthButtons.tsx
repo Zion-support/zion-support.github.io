@@ -2,13 +2,8 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Facebook } from 'lucide-react';
 import { signIn } from 'next-auth/react';
-<<<<<<< HEAD
 
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-=======
-type Provider = 'google' | 'github' | 'facebook' | 'credentials',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 interface AuthButtonsProps {
   providers?: Provider[];
 
@@ -17,38 +12,21 @@ export function AuthButtons({
 }: AuthButtonsProps) {
   const [loadingProvider, setLoadingProvider] = useState<string | null>(null);
 
-<<<<<<< HEAD
   const handleSignIn = async (provider: Provider) => {
     setLoadingProvider(provider);
     await signIn(provider);
   };
-=======
-  const handleSignIn = async (provider: Provider,) => {
-    setLoadingProvider(provider),
-    await signIn(provider)
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const gridCols = `grid-cols-${providers.length}`;
 
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>
       {providers.includes('google') && (
         <Button
-<<<<<<< HEAD
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('google')}
-          disabled={loadingProvider !== null}
-=======
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick = {(,) => handleSignIn('google'),}
-          disabled = {loadingProvider !== null,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        >
+          disabled={loadingProvider !== null}        >
           <span className='sr-only'>Sign in with Google</span>
           {loadingProvider === 'google' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
@@ -81,20 +59,11 @@ export function AuthButtons({
       )}
       {providers.includes('github') && (
         <Button
-<<<<<<< HEAD
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('github')}
-          disabled={loadingProvider !== null}
-=======
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick = {(,) => handleSignIn('github'),}
-          disabled = {loadingProvider !== null,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        >
+          disabled={loadingProvider !== null}        >
           <span className='sr-only'>Sign in with GitHub</span>
           {loadingProvider === 'github' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
@@ -111,20 +80,11 @@ export function AuthButtons({
       )}
       {providers.includes('facebook') && (
         <Button
-<<<<<<< HEAD
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('facebook')}
-          disabled={loadingProvider !== null}
-=======
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick = {(,) => handleSignIn('facebook'),}
-          disabled = {loadingProvider !== null,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        >
+          disabled={loadingProvider !== null}        >
           <span className='sr-only'>Sign in with Facebook</span>
           {loadingProvider === 'facebook' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
@@ -135,20 +95,11 @@ export function AuthButtons({
       )}
       {providers.includes('credentials') && (
         <Button
-<<<<<<< HEAD
           type='button'
           variant='outline'
           className='col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('credentials')}
-          disabled={loadingProvider !== null}
-=======
-          type="button"
-          variant="outline"
-          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick = {(,) => handleSignIn('credentials'),}
-          disabled = {loadingProvider !== null,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-        >
+          disabled={loadingProvider !== null}        >
           {loadingProvider === 'credentials' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
           ) : (
@@ -158,11 +109,4 @@ export function AuthButtons({
       )}
     </div>
   );
-=======
 }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

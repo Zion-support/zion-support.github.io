@@ -8,7 +8,6 @@ import {
   ArrowRight,
   Smartphone,;
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
@@ -16,12 +15,12 @@ import { extraServices } from '../data/extra-services';
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
-  );  if (!service) return null;
-=======
+  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+export default function MDMPage() {
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   if (!service) return null;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -32,8 +31,6 @@ export default function MDMPage() {
           rel='canonical'
           href='https://ziontechgroup.com/mdm-mobile-device-management'
         />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -99,15 +96,11 @@ export default function MDMPage() {
                 <div className='flex items-center space-x-2'>
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
-                </div>              </div>
-              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
+                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </div>
           </div>
         </div>
@@ -116,8 +109,3 @@ export default function MDMPage() {
   );
 }
 
-=======
-}
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -12,9 +12,6 @@ import { Button } from '@/components/ui/button';
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-<<<<<<< HEAD
 interface JobMatchCardProps {
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
@@ -30,22 +27,6 @@ export function JobMatchesCard({
   const job = match.job;
 
   if (!job) return null;
-=======
-import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
-import { format } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-interface JobMatchCardProps {
-  match: JobMatch,
-  onApply: (matchId: string, jobId: string,) => void,
-  onDecline: (matchId: string,) => void,
-  showApplied?: boolean
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>
       <CardHeader className='p-4 pb-2'>
@@ -72,22 +53,13 @@ interface JobMatchCardProps {
         </p>
 
         {match.matched_skills?.length > 0 && (
-<<<<<<< HEAD
           <div className='mb-3'>
             <p className='text-xs text-muted-foreground mb-1'>
               Matched skills:
             </p>
             <div className='flex flex-wrap gap-1'>
               {match.matched_skills.slice(0, 5).map((skill, i) => (
-                <Badge key={i} variant='secondary' className='text-xs'>
-=======
-          <div className="mb-3">
-            <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>
-            <div className="flex flex-wrap gap-1">
-              {match.matched_skills.slice(0, 5).map((skill, i,) => (
-                <Badge key={i} variant="secondary" className="text-xs">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                  {skill}
+                <Badge key={i} variant='secondary' className='text-xs'>                  {skill}
                 </Badge>
               ))}
               {match.matched_skills.length > 5 && (
@@ -122,7 +94,6 @@ interface JobMatchCardProps {
             Declined
           </div>
         ) : (
-<<<<<<< HEAD
           <div className='flex gap-2 w-full'>
             <Button
               className='flex-1'
@@ -133,21 +104,7 @@ interface JobMatchCardProps {
             <Button
               variant='outline'
               className='flex-1'
-              onClick={() => onDecline(match.id)}
-=======
-          <div className="flex gap-2 w-full">
-            <Button 
-              className="flex-1" 
-              onClick = {(,) => onApply(match.id, job.id),}
-            >
-              Apply Now
-            </Button>
-            <Button 
-              variant="outline" 
-              className="flex-1"
-              onClick = {() => onDecline(match.id),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            >
+              onClick={() => onDecline(match.id)}            >
               Decline
             </Button>
           </div>
@@ -155,11 +112,5 @@ interface JobMatchCardProps {
       </CardFooter>
     </Card>
   );
-=======
-}
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+}

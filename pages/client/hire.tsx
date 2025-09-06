@@ -12,8 +12,7 @@ export default function ClientHirePage() {
   const [termsType, setTermsType] = useState('hourly');
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
   const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
-  const [agreementUrl, setAgreementUrl] = useState('');  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any | null>(null);
+  const [agreementUrl, setAgreementUrl] = useState('');  const [loading, setLoading] = useState(false);  const [result, setResult] = useState<any | null>(null);
   const [showFeedback, setShowFeedback] = useState(false);
 
   async function sendOffer() {
@@ -141,15 +140,13 @@ export default function ClientHirePage() {
             disabled={loading}
             className='px-4 py-2 rounded bg-indigo-600 text-white'
           >
-            {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
-        </div>
+            {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>        </div>
       </div>
 
       {result && (
         <div className='border rounded p-4 bg-emerald-50'>
           <div className='font-medium'>Offer sent</div>
-          <div className='text-sm'>Offer ID: {result.id}</div>        </div>
-      )}
+          <div className='text-sm'>Offer ID: {result.id}</div>        </div>      )}
 
       <FeedbackModal
         isOpen={showFeedback}

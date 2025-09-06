@@ -9,7 +9,6 @@ const ResumeBuilder: NextPage = () => {
   const [skills, setSkills] = useState(
     'Python, Machine Learning, Cloud Systems'
   );  const [tone, setTone] = useState('clear and concise');
-
   const [summary, setSummary] = useState('');
   const [experience, setExperience] = useState('');
   const [skillsText, setSkillsText] = useState('');
@@ -23,8 +22,7 @@ const ResumeBuilder: NextPage = () => {
   );
 
   const improveSectionPrompt = (sectionName: string, content: string) =>
-    `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`;
-  return (
+    `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`;  return (
     <div>
       <Head>
         <title>Resume Builder - Zion AI Marketplace</title>
@@ -76,8 +74,7 @@ const ResumeBuilder: NextPage = () => {
           <div className='flex gap-2'>
             <AIAssistant
               buttonLabel='Generate with AI'
-              title='Generate Resume Summary'              defaultPrompt={generateSummaryPrompt}
-              onAccept={setSummary}
+              title='Generate Resume Summary'              defaultPrompt={generateSummaryPrompt}              onAccept={setSummary}
               authorizationToken={operatorToken}
             />
             <AIAssistant
@@ -87,8 +84,7 @@ const ResumeBuilder: NextPage = () => {
                 'summary',
                 summary ||
                   'No content provided. Generate a summary based on role, years, and skills.'
-              )}              onAccept={setSummary}
-              authorizationToken={operatorToken}
+              )}              onAccept={setSummary}              authorizationToken={operatorToken}
             />
           </div>
         </div>
@@ -143,7 +139,6 @@ const ResumeBuilder: NextPage = () => {
         />
       </section>
     </div>
-  );
-};
+  );};
 
 export default ResumeBuilder;

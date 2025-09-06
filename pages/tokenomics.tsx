@@ -1,8 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 
-type DistributionItem = { label: string; percent: number };
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
+type DistributionItem = { label: string; percent: number };const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 
 export default function TokenomicsWhitepaperBuilder() {
   const [isAdmin, setIsAdmin] = useState(true);
@@ -16,8 +15,7 @@ export default function TokenomicsWhitepaperBuilder() {
   );
   const [rewardsLogic, setRewardsLogic] = useState<string>(
     'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
-  );  const [distribution, setDistribution] = useState<DistributionItem[]>([
-    { label: 'Ecosystem & Rewards', percent: 35 },
+  );  const [distribution, setDistribution] = useState<DistributionItem[]>([    { label: 'Ecosystem & Rewards', percent: 35 },
     { label: 'Community Treasury', percent: 20 },
     { label: 'Team & Contributors', percent: 15 },
     { label: 'Investors', percent: 15 },
@@ -66,8 +64,7 @@ export default function TokenomicsWhitepaperBuilder() {
     governance,
     jurisdiction,
     legalReview,
-  ]);
-  async function handleGenerate() {
+  ]);  async function handleGenerate() {
     try {
       setIsGenerating(true);
       const res = await fetch('/api/whitepaper/generate', {
@@ -95,15 +92,13 @@ export default function TokenomicsWhitepaperBuilder() {
       console.error(e);
       alert('Generation failed');
     } finally {
-      setIsGenerating(false);    }
-  }
+      setIsGenerating(false);    }  }
 
   async function handleDownload(ext: 'md' | 'pdf') {
     if (ext === 'md') {
       const blob = new Blob([previewMarkdown], {
         type: 'text/markdown;charset=utf-8',
-      });      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
+      });      const url = URL.createObjectURL(blob);      const a = document.createElement('a');
       a.href = url;
       a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
       document.body.appendChild(a);
@@ -129,8 +124,7 @@ export default function TokenomicsWhitepaperBuilder() {
     key: keyof DistributionItem,
     value: string
   ) {
-    setDistribution(prev => {      const copy = [...prev];
-      const item = { ...copy[index] };
+    setDistribution(prev => {      const copy = [...prev];      const item = { ...copy[index] };
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
@@ -144,7 +138,6 @@ export default function TokenomicsWhitepaperBuilder() {
 
   function removeDistributionItem(index: number) {
     setDistribution(prev => prev.filter((_, i) => i !== index));  }
-
   async function handleShareableLink() {
     const res = await fetch('/api/whitepaper/share', {
       method: 'POST',
@@ -168,8 +161,7 @@ export default function TokenomicsWhitepaperBuilder() {
     'Distribution',
     'Governance Model',
     'Risks + Disclaimers',
-  ];
-  return (
+  ];  return (
     <>
       <Head>
         <title>Tokenomics Whitepaper Generator</title>
@@ -339,8 +331,7 @@ export default function TokenomicsWhitepaperBuilder() {
                   disabled={!isAdmin || isGenerating}
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
-                >
-                  {isGenerating ? 'Generating…' : 'Generate with GPT'}
+                >                  {isGenerating ? 'Generating…' : 'Generate with GPT'}
                 </button>
                 <button
                   onClick={() => setGeneratedMarkdown('')}
@@ -392,7 +383,6 @@ export default function TokenomicsWhitepaperBuilder() {
       </div>
     </>
   );
-
 function buildLocalMarkdown(input: {
   tokenName: string;
   tokenSupply: string;
@@ -409,8 +399,7 @@ function buildLocalMarkdown(input: {
   const disclaimer = input.legalReview
     ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.`
     : '';
-  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
-function jurisdictionalNote(j: string) {
+  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;function jurisdictionalNote(j: string) {
   switch (j) {
     case 'US':
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
@@ -422,8 +411,7 @@ function jurisdictionalNote(j: string) {
       return 'Intended utility token within relevant UAE free zone guidance; not an investment product.';
     default:
       return 'Intended strictly for utility use.';
-  }
-function DistributionDonut({ data }: { data: DistributionItem[] }) {
+  }function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1;
   return (
@@ -450,8 +438,7 @@ function MarkdownPreview({
 }: {
   markdown: string;
   activeSection: string;
-}) {  // Very lightweight section filter: split by headings
-  const parts = useMemo(() => {
+}) {  // Very lightweight section filter: split by headings  const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g);
     const map: Record<string, string> = {};
     sections.forEach((s, i) => {
@@ -460,7 +447,6 @@ function MarkdownPreview({
       map[titleLine.trim()] = rest.join('\n');
     });
     return map;  }, [markdown]);
-
   const content = parts[activeSection] || '';
 
   return (

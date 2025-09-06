@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Link from 'next/link';import { motion } from 'framer-motion';
 import { 
   HelpCircle, 
   MessageCircle, 
@@ -69,8 +68,7 @@ export default function SupportPage() {
 
         {/* Support Channels */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
+          <div className="max-w-7xl mx-auto">            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -96,8 +94,7 @@ export default function SupportPage() {
                   <h3 className="text-xl font-semibold mb-2">{channel.title}</h3>
                   <p className="text-gray-600 mb-4">{channel.description}</p>
                   <div className="text-sm text-blue-600 font-medium">
-                    {channel.availability}                  </div>
-                </motion.div>
+                    {channel.availability}                  </div>                </motion.div>
               ))}
             </div>
           </div>
@@ -127,8 +124,7 @@ export default function SupportPage() {
                 <div className="text-center">
                   <Users className="w-8 h-8 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-2">Address</h3>
-                  <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                </div>
+                  <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>                </div>
               </div>
             </motion.div>
           </div>

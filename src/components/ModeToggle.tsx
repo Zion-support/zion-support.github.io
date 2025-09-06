@@ -1,5 +1,4 @@
 import { Moon, Sun } from 'lucide-react';
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {
   Tooltip,
@@ -12,14 +11,11 @@ import {
   darkModeMessages,
   lightModeMessages,;
 } from '@/utils/themeToggleMessages';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from '@/components/ThemeProvider';
 import { logIssue } from '@/utils/logIssue';
 import { useEffect, useState } from 'react';
 
-=======
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
@@ -29,13 +25,11 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
 import { useEffect, useState } from "react";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ModeToggle() {
   const { theme, toggleTheme } = useTheme();
   const [isClient, setIsClient] = useState(false);
 
   // Ensure we're on the client side to avoid hydration mismatches
-<<<<<<< HEAD
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -43,22 +37,6 @@ export function ModeToggle() {
   // Determine the actual resolved theme for display purposes
   const resolvedTheme = (() => {
     if (!isClient) return 'light'; // Default for SSR
-=======
-  useEffect((,) => {
-    setIsClient(true)
-  }, []),
-
-  // Determine the actual resolved theme for display purposes
-  const resolvedTheme = ((,) => {
-    if (!isClient) return 'light', // Default for SSR
-    
-    if (theme === "system") {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-    }
-    return theme
-  })(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
@@ -73,20 +51,14 @@ export function ModeToggle() {
       // Determine the new theme we are switching TO
       const newTheme = isDarkMode ? 'light' : 'dark';
 
-      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
-=======
-  const isDarkMode = resolvedTheme === "dark";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);  const isDarkMode = resolvedTheme === "dark";
 
   const handleToggle = () => {
     try {
       // Determine the new theme we are switching TO
-<<<<<<< HEAD
       const newTheme = isDarkMode ? 'light' : 'dark';
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
       // Apply the new theme via ThemeProvider
       toggleTheme();
 
@@ -111,17 +83,9 @@ export function ModeToggle() {
       document.body.appendChild(liveRegion);
 
       // Clean up the announcement after it's been read
-<<<<<<< HEAD
       setTimeout(() => {
         document.body.removeChild(liveRegion);
-      }, 1000);
-=======
-      setTimeout((,) => {
-        document.body.removeChild(liveRegion)
-      }, 1000)
-      
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    } catch (error) {
+      }, 1000);    } catch (error) {
       logErrorToProduction('Theme toggle error:', { data: error });
       logIssue('Theme switch failed', {
         error,
@@ -152,7 +116,6 @@ export function ModeToggle() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
-<<<<<<< HEAD
             variant='ghost'
             size='icon'
             onClick={handleToggle}
@@ -161,19 +124,7 @@ export function ModeToggle() {
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
             className='focus-visible:ring-ring relative group text-foreground' // Added text-foreground
             data-testid='theme-toggle'
-            data-theme={resolvedTheme}
-=======
-            variant="ghost"
-            size="icon"
-            onClick = {handleToggle,}
-            aria-pressed = {isDarkMode,}
-            aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
-            title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
-            className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
-            data-testid="theme-toggle"
-            data-theme = {resolvedTheme,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          >
+            data-theme={resolvedTheme}          >
             {isDarkMode ? (
               <Sun className='h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12' />
             ) : (
@@ -226,8 +177,4 @@ if (!isClient) {";
 }opacity-70 group-hover:opacity-100` ;
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

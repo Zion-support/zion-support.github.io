@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import {
@@ -10,25 +9,11 @@ import {
   Terminal,
   Webhook,;
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-<<<<<<< HEAD
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ApiKeysManager } from '@/components/developers/ApiKeysManager';
 import { WebhooksManager } from '@/components/developers/WebhooksManager';
 import { ApiDocumentation } from '@/components/developers/ApiDocumentation';
 import { ApiLogs } from '@/components/developers/ApiLogs';
-
-=======
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react';
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
-import { WebhooksManager } from "@/components/developers/WebhooksManager";
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
-import { ApiLogs } from "@/components/developers/ApiLogs";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface TabDefinition {
   id: string;
   label: string;
@@ -59,28 +44,17 @@ export function DeveloperPortal() {
       </div>
 
       {/* Tabs */}
-<<<<<<< HEAD
       <div className='border-b border-zinc-800 mb-8'>
         <div className='flex flex-wrap -mb-px'>
           {tabs.map(tab => {
             const Icon = tab.icon;
             
-                onClick={() => setActiveTab(tab.id)}
-=======
-      <div className="border-b border-zinc-800 mb-8">
-        <div className="flex flex-wrap -mb-px">
-          {tabs.map((tab,) => {
-            const Icon = tab.icon,
-            return (
-              <button
-                key = {tab.id,}
-                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
+                onClick={() => setActiveTab(tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
                 onClick = {(,) => setActiveTab(tab.id),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <Icon size={16} className='mr-2' />
                 {tab.label}
@@ -99,33 +73,34 @@ export function DeveloperPortal() {
       </div>
     </div>
   );
-=======
+                onClick={() => setActiveTab(tab.id)}
+              >
+                <Icon size={16} className="mr-2" />
+                {tab.label}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+      
+      {/* Tab content */}
+      <div>
+        {activeTab === "documentation" && <ApiDocumentation />}
+        {activeTab === "api-keys" && <ApiKeysManager />}
+        {activeTab === "webhooks" && <WebhooksManager />}
+        {activeTab === "logs" && <ApiLogs />}
+      </div>
+    </div>
+  );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
-=======
-import React from "react";
-import { SEO } from "@/components/SEO";"});"});
-}
-export default function DeveloperPortal() {return (";
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
-      <SEO title="DeveloperPortal - Zion Tech Group" description="Professional DeveloperPortal services by Zion Tech Group"  />";
-      <div className="container mx-auto px-4 py-20">";
-        <h1 className="text-4xl font-bold text-white mb-8">DeveloperPortal</h1>";
-        <p className="text-gray-300 text-lg">;
-          Professional DeveloperPortal services to help your business grow.;
-        </p>;
-      </div>;
->>>>>>> origin/automation-fixes
   );
 }
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );
+}

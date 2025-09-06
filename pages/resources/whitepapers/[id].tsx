@@ -8,8 +8,7 @@ import { useRouter } from 'next/router';
     publishDate: 'January 2025',
     content: {
       executiveSummary:
-        'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
-      keyTopics: [
+        'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',      keyTopics: [
         'Understanding Autonomous Systems',
         'Implementation Strategies',
         'Best Practices & Case Studies',
@@ -23,8 +22,7 @@ import { useRouter } from 'next/router';
     id: 'ai-ethics-framework',
     title: 'AI Ethics Framework for Business',
     description:
-      'Establishing ethical guidelines for AI implementation in enterprise environments.',    category: 'Ethics',
-    pages: '32',
+      'Establishing ethical guidelines for AI implementation in enterprise environments.',    category: 'Ethics',    pages: '32',
     author: 'Zion Tech Group Ethics Committee',
     publishDate: 'January 2025',
     content: {
@@ -44,8 +42,7 @@ import { useRouter } from 'next/router';
     id: 'automation-roi-calculator',
     title: 'Automation ROI Calculator Guide',
     description:
-      'How to calculate and maximize return on investment for automation initiatives.',    category: 'Business',
-    pages: '28',
+      'How to calculate and maximize return on investment for automation initiatives.',    category: 'Business',    pages: '28',
     author: 'Zion Tech Group Business Analytics Team',
     publishDate: 'January 2025',
     content: {
@@ -61,7 +58,6 @@ import { useRouter } from 'next/router';
         'Business analysts, project managers, and executives evaluating automation investments.',
     },
   },};
-
 export default function WhitepaperPage() {
   const router = useRouter();
   const { id } = router.query;
@@ -79,13 +75,11 @@ export default function WhitepaperPage() {
             <Link
               href='/resources'
               className='px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
-            >              Back to Resources
-            </Link>
+            >              Back to Resources            </Link>
           </div>
         </main>
       </div>
     );  }
-
   return (
     <>
       <Head>
@@ -102,8 +96,7 @@ export default function WhitepaperPage() {
             <Link
               href='/resources'
               className='text-cyan-400 hover:text-cyan-300 transition-colors'
-            >              ← Back to Resources
-            </Link>
+            >              ← Back to Resources            </Link>
           </nav>
 
           {/* Header */}
@@ -119,8 +112,7 @@ export default function WhitepaperPage() {
             <p className='text-xl text-white/80 max-w-3xl mx-auto mb-6'>
               {whitepaper.description}
             </p>
-            <div className='flex flex-wrap justify-center gap-6 text-sm text-white/60'>              <span>By {whitepaper.author}</span>
-              <span>•</span>
+            <div className='flex flex-wrap justify-center gap-6 text-sm text-white/60'>              <span>By {whitepaper.author}</span>              <span>•</span>
               <span>{whitepaper.pages} pages</span>
               <span>•</span>
               <span>{whitepaper.publishDate}</span>
@@ -135,8 +127,7 @@ export default function WhitepaperPage() {
               </h2>
               <p className='text-lg text-white/80'>
                 {whitepaper.content.executiveSummary}
-              </p>
-            </section>
+              </p>            </section>
 
             <section className='mb-12'>
               <h2 className='text-3xl font-bold mb-6 text-fuchsia-400'>
@@ -150,8 +141,7 @@ export default function WhitepaperPage() {
                   >
                     <div className='flex items-center gap-3'>
                       <div className='w-2 h-2 bg-fuchsia-400 rounded-full'></div>
-                      <span className='text-white/90'>{topic}</span>                    </div>
-                  </div>
+                      <span className='text-white/90'>{topic}</span>                    </div>                  </div>
                 ))}
               </div>
             </section>
@@ -178,8 +168,7 @@ export default function WhitepaperPage() {
                 <button className='px-8 py-4 bg-gradient-to-r from-fuchsia-400 to-purple-400 text-white rounded-lg font-semibold hover:from-fuchsia-500 hover:to-purple-500 transition-all duration-300 text-lg'>
                   Download {whitepaper.title}
                 </button>
-                <p className='text-white/60 text-sm mt-4'>                  PDF format • {whitepaper.pages} pages • Free download
-                </p>
+                <p className='text-white/60 text-sm mt-4'>                  PDF format • {whitepaper.pages} pages • Free download                </p>
               </div>
             </section>
 
@@ -204,8 +193,7 @@ export default function WhitepaperPage() {
                       <p className='text-white/70 text-sm mb-3'>
                         {relatedPaper.description}
                       </p>
-                      <span className='inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30'>                        {relatedPaper.category}
-                      </span>
+                      <span className='inline-block px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-xs rounded-full border border-fuchsia-400/30'>                        {relatedPaper.category}                      </span>
                     </Link>
                   ))}
               </div>
@@ -231,8 +219,7 @@ export default function WhitepaperPage() {
                   <Link
                     href='/services'
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'
-                  >                    Our Services
-                  </Link>
+                  >                    Our Services                  </Link>
                 </div>
               </div>
             </section>

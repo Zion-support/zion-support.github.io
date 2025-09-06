@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface InnovativeAIService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -42,17 +40,12 @@ export interface InnovativeAIService2025 {
   reviews: number;
 export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
   // AI Consciousness & Emotional Intelligence
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
   // AI Consciousness & Emotional Intelligence
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-consciousness-evolution',
     name: 'AI Consciousness Evolution Platform',
     tagline: 'Develop self-aware AI systems with emotional intelligence',
@@ -60,9 +53,6 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     period: '/month',
     description:
       'Revolutionary platform for developing AI systems with consciousness, emotional intelligence, and self-awareness. Enables creation of truly intelligent AI that understands context, emotions, and human behavior.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Consciousness development framework',
       'Emotional intelligence training',
       'Self-awareness algorithms',
@@ -396,9 +386,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     rating: 4.8,
     reviews: 89,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -411,5 +399,3 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     reviews: 89
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -4,14 +4,8 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-import { Plus, Trash2 } from 'lucide-react'
-=======
-import { Plus, Trash2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { AppPlatform } from "./MetadataManager";
+import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   platform: AppPlatform;
 }
 
@@ -22,35 +16,17 @@ type ChangelogEntry = {
   changes: string;
 };
 
-<<<<<<< HEAD
-=======
-export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform },) => {
-  const [entries, setEntries] = useState<ChangelogEntry[]>([
-    {
-      id: "1",
-      version: "1.0.0",
-      date: "2025-05-15",
-      changes: "Initial release of the Zion AI Marketplace app."
-    }
-  ]),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   
   
     });
   };
   
-<<<<<<< HEAD
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id));
   };
   
   );
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  const handleRemoveEntry = (id: string,) => {
+};  const handleRemoveEntry = (id: string,) => {
     setEntries(entries.filter(entry => entry.id !== id))
   },
   
@@ -131,4 +107,3 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform },)
     </Card>
   )
 },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

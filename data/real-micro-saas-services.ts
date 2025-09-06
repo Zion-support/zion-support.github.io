@@ -32,18 +32,13 @@ export interface RealMicroSaasService {
   };
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
-  {
-=======
-    website: string
+  {    website: string
   }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-legal-document-generator',
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
@@ -51,8 +46,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     period: '/month',
     description:
       'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     features: [
       '500+ legal document templates',
       'AI-powered compliance checking',
@@ -1378,9 +1371,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
 
 // Helper functions
 export const getServicesByCategory = (category: string) => {
-  return realMicroSaasServices.filter(service => service.category === category);
-=======
-    id: 'data-contracts-hub';
+  return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
@@ -1408,15 +1399,11 @@ export const getServicesByCategory = (category: string) => {
     rating: 4.6;
     reviews: 6
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 // Helper functions
 export const getServicesByCategory = (category: string) => {
-<<<<<<< HEAD
   return realMicroSaasServices.filter(service => service.category === category);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-};
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next.jsSupabaseVercel EdgeOpenAI'];
@@ -1482,11 +1469,8 @@ export const serviceCategories = [
   'Financial Technology',
   'Education Technology',
   'Enterprise IT',
-];
-  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT'
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

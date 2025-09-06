@@ -9,8 +9,7 @@ interface Talent {
   name: string;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
-  testimonial?: { quote: string; author: string };
-const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
+  testimonial?: { quote: string; author: string };const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   id: String(i + 1),
   name: `Talent ${i + 1}`,
   title: 'Full-Stack Developer',
@@ -23,8 +22,7 @@ const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
     i % 5 === 0
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined,
-}));
-const TalentDirectory: NextPage = () => {
+}));const TalentDirectory: NextPage = () => {
   const [page, setPage] = useState(1);
   const pageSize = 10;
   const total = mockTalent.length;
@@ -56,8 +54,7 @@ const TalentDirectory: NextPage = () => {
               <MicroTestimonial
                 quote={t.testimonial.quote}
                 author={t.testimonial.author}
-              />            )}
-          </article>
+              />            )}          </article>
         ))}
       </div>
 
@@ -68,7 +65,6 @@ const TalentDirectory: NextPage = () => {
         onChange={setPage}
       />
     </div>
-  );
-};
+  );};
 
 export default TalentDirectory;

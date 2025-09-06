@@ -80,14 +80,12 @@ const TalentProfile: NextPage = () => {
                   <span>{r.action}</span>
                   <span className='opacity-70'>
                     {new Date(r.at).toLocaleString()}
-                  </span>                </li>
-              ))}
+                  </span>                </li>              ))}
             </ul>
           </div>
         </aside>
       </section>
     </div>
-  );
-};
+  );};
 
 export default TalentProfile;

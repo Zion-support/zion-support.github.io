@@ -7,8 +7,7 @@ export default function ServiceDescriptionGeneratorPage() {
   const [additionalNotes, setAdditionalNotes] = useState('');
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
-  >('professional');
-  const [loading, setLoading] = useState(false);
+  >('professional');  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
@@ -18,7 +17,6 @@ export default function ServiceDescriptionGeneratorPage() {
       .split('\n')
       .map(f => f.trim())
       .filter(Boolean);  }, [featuresInput]);
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
@@ -82,8 +80,7 @@ export default function ServiceDescriptionGeneratorPage() {
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e.g., On-Demand Web Performance Audit'
             value={title}
-            onChange={e => setTitle(e.target.value)}            required
-          />
+            onChange={e => setTitle(e.target.value)}            required          />
         </div>
 
         <div>
@@ -95,8 +92,7 @@ export default function ServiceDescriptionGeneratorPage() {
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e.g., CTOs and product teams at growth-stage SaaS'
             value={targetAudience}
-            onChange={e => setTargetAudience(e.target.value)}            required
-          />
+            onChange={e => setTargetAudience(e.target.value)}            required          />
         </div>
 
         <div>
@@ -109,13 +105,11 @@ export default function ServiceDescriptionGeneratorPage() {
               'e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
             }
             value={featuresInput}
-            onChange={e => setFeaturesInput(e.target.value)}            required
-          />
+            onChange={e => setFeaturesInput(e.target.value)}            required          />
         </div>
 
         <div>
-          <label className='block text-sm font-medium mb-1'>Tone</label>
-          <select
+          <label className='block text-sm font-medium mb-1'>Tone</label>          <select
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             value={tone}
             onChange={e => setTone(e.target.value as any)}
@@ -156,13 +150,11 @@ export default function ServiceDescriptionGeneratorPage() {
             <div className='flex items-center gap-2'>
               <button
                 onClick={handleCopy}
-                className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'              >
-                Copy
+                className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'              >                Copy
               </button>
               <button
                 onClick={handleAccept}
-                className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'              >
-                Accept
+                className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'              >                Accept
               </button>
             </div>
           </div>

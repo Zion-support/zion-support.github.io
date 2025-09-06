@@ -13,8 +13,7 @@ import {
   Star,
   Users,
   Clock,
-  TrendingUp,;
-} from 'lucide-react';
+  TrendingUp,;} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
@@ -162,7 +161,6 @@ export default function PortfolioPage() {
           content='Explore our portfolio of innovative technology projects and solutions.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/portfolio' />      </Head>
-
       <EnhancedNavigation />
 
       {/* Hero Section */}
@@ -178,8 +176,7 @@ export default function PortfolioPage() {
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Innovative technology solutions that drive business transformation
-              and growth            </p>
-          </motion.div>
+              and growth            </p>          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -190,16 +187,14 @@ export default function PortfolioPage() {
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               Discover how we've helped organizations leverage cutting-edge
               technology to solve complex challenges and achieve remarkable
-              results.            </p>
-          </motion.div>
+              results.            </p>          </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
-              <motion.div
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (              <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -213,8 +208,7 @@ export default function PortfolioPage() {
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
-                <div className='text-white/70'>{stat.label}</div>              </motion.div>
-            ))}
+                <div className='text-white/70'>{stat.label}</div>              </motion.div>            ))}
           </div>
         </div>
       </section>
@@ -223,8 +217,7 @@ export default function PortfolioPage() {
       <section className='py-8 px-6'>
         <div className='max-w-7xl mx-auto'>
           <div className='flex flex-wrap justify-center gap-4'>
-            {categories.map(category => (              <button
-                key={category}
+            {categories.map(category => (              <button                key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category
@@ -242,15 +235,13 @@ export default function PortfolioPage() {
       {/* Projects Grid */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {filteredProjects.map((project, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {filteredProjects.map((project, index) => (              <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
-              >
+                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'              >
                 <div className='p-8'>
                   <div className='flex items-center gap-3 mb-4'>
                     <div
@@ -277,8 +268,7 @@ export default function PortfolioPage() {
                         <span
                           key={tech}
                           className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'
-                        >                          {tech}
-                        </span>
+                        >                          {tech}                        </span>
                       ))}
                     </div>
                   </div>
@@ -293,8 +283,7 @@ export default function PortfolioPage() {
                           key={result}
                           className='text-sm text-white/80 flex items-center'
                         >
-                          <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
-                        </li>
+                          <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2' />                          {result}                        </li>
                       ))}
                     </ul>
                   </div>
@@ -303,8 +292,7 @@ export default function PortfolioPage() {
                     <span className='text-sm text-white/60'>
                       Client: {project.client}
                     </span>
-                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>                      View Details
-                    </button>
+                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>                      View Details                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -315,8 +303,7 @@ export default function PortfolioPage() {
 
       {/* CTA Section */}
       <section className='py-20 px-6'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -332,8 +319,7 @@ export default function PortfolioPage() {
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>
                 Start Your Project
               </button>
-              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Schedule Consultation
-              </button>
+              <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>                Schedule Consultation              </button>
             </div>
           </motion.div>
         </div>

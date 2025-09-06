@@ -17,7 +17,6 @@ export default function QuantumFinancialTradingPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-financial-trading')
   );  if (!service) return null;
-
   return (
     <Layout>
       <Head>
@@ -26,8 +25,7 @@ export default function QuantumFinancialTradingPage() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/quantum-financial-trading'
-        />
-      </Head>
+        />      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -93,8 +91,7 @@ export default function QuantumFinancialTradingPage() {
                 <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>
                   <MapPin />
                   <span>{service.contactInfo.address}</span>
-                </div>              </div>
-            </div>
+                </div>              </div>            </div>
           </div>
         </div>
       </div>

@@ -11,8 +11,7 @@ import {
   Star,
   Phone,
   Mail,
-  MapPin,;} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+  MapPin,;} from 'lucide-react';import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
@@ -24,7 +23,6 @@ export default function InnovativeServicesShowcase2029() {
     ...aiAutonomousEcosystemServices2029,
     ...emergingTechBreakthroughServices2029,
     ...practicalBusinessSolutionServices2029,  ];
-
   const serviceCategories = [
     {
       title: '🚀 AI Autonomous Ecosystem',
@@ -42,7 +40,6 @@ export default function InnovativeServicesShowcase2029() {
       color: 'from-cyan-600 via-teal-600 to-emerald-600',
       services: practicalBusinessSolutionServices2029,
     },  ];
-
   return (
     <>
       <Head>
@@ -66,8 +63,7 @@ export default function InnovativeServicesShowcase2029() {
 
         {/* Hero Section */}
         <section className='py-32 bg-gradient-to-br from-black via-purple-900/20 to-black'>
-          <div className='container mx-auto px-4 text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='container mx-auto px-4 text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -90,8 +86,7 @@ export default function InnovativeServicesShowcase2029() {
                 <Link
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300'
-                >                  Get Started
-                </Link>
+                >                  Get Started                </Link>
               </div>
             </motion.div>
           </div>
@@ -119,8 +114,7 @@ export default function InnovativeServicesShowcase2029() {
               </p>
             </motion.div>
 
-            <div className='grid md:grid-cols-3 gap-8 mb-20'>              {serviceCategories.map((category, index) => (
-                <motion.div
+            <div className='grid md:grid-cols-3 gap-8 mb-20'>              {serviceCategories.map((category, index) => (                <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -152,8 +146,7 @@ export default function InnovativeServicesShowcase2029() {
                           parseInt(s.price.replace(/[^0-9]/g, ''))
                         )
                       )}
-                      /month                    </div>
-                  </div>
+                      /month                    </div>                  </div>
                 </motion.div>
               ))}
             </div>
@@ -179,8 +172,7 @@ export default function InnovativeServicesShowcase2029() {
               </p>
             </motion.div>
 
-            <div className='grid lg:grid-cols-2 gap-8'>              {allServices.slice(0, 4).map((service, index) => (
-                <motion.div
+            <div className='grid lg:grid-cols-2 gap-8'>              {allServices.slice(0, 4).map((service, index) => (                <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -217,8 +209,7 @@ export default function InnovativeServicesShowcase2029() {
                       <span
                         key={catIndex}
                         className='px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600'
-                      >                        {cat}
-                      </span>
+                      >                        {cat}                      </span>
                     ))}
                   </div>
 
@@ -233,8 +224,7 @@ export default function InnovativeServicesShowcase2029() {
                     <Link
                       href='/contact'
                       className='inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300'
-                    >                      Get Started
-                    </Link>
+                    >                      Get Started                    </Link>
                   </div>
                 </motion.div>
               ))}
@@ -252,15 +242,13 @@ export default function InnovativeServicesShowcase2029() {
                 className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg'
               >
                 View All Services
-                <ArrowRight className='ml-2 h-6 w-6' />              </Link>
-            </motion.div>
+                <ArrowRight className='ml-2 h-6 w-6' />              </Link>            </motion.div>
           </div>
         </section>
 
         {/* Contact CTA */}
         <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
-          <div className='container mx-auto px-4 text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
+          <div className='container mx-auto px-4 text-center'>            <motion.div              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -276,8 +264,7 @@ export default function InnovativeServicesShowcase2029() {
 
               <div className='grid md:grid-cols-3 gap-8 mb-12'>
                 <div className='flex items-center justify-center gap-4 text-gray-300'>
-                  <Phone className='w-6 h-6 text-purple-400' />
-                  <span>{contactInfo.mobile}</span>
+                  <Phone className='w-6 h-6 text-purple-400' />                  <span>{contactInfo.mobile}</span>
                 </div>
                 <div className='flex items-center justify-center gap-4 text-gray-300'>
                   <Mail className='w-6 h-6 text-blue-400' />
@@ -299,8 +286,7 @@ export default function InnovativeServicesShowcase2029() {
                 <Link
                   href='/pricing'
                   className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg'
-                >                  View Pricing
-                </Link>
+                >                  View Pricing                </Link>
               </div>
             </motion.div>
           </div>

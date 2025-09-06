@@ -15,8 +15,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { projectId, milestoneId } = req.query as {
     projectId: string;
     milestoneId: string;
-  };
-  const project = getProject(projectId);
+  };  const project = getProject(projectId);
   if (!project) {
     res.status(404).json({ error: 'Project not found' });
     return;
@@ -24,13 +23,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!assertParticipantOrAdmin(project, user)) {
     res.status(403).json({ error: 'Forbidden' });
     return;  }
-
   if (req.method === 'PATCH') {
     const body = req.body as any;
     if (body.status && !isMilestoneStatus(body.status)) {
       res.status(400).json({ error: 'Invalid status' });
       return;    }
-
     // Enforce status transition rules
     if (body.status) {
       const isClientUser = isClient(project, user);
@@ -44,7 +41,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (!allowed && user.role !== 'admin') {
         res.status(403).json({ error: 'Not allowed to set this status' });
         return;      }
-
       // Add side-effects
       if (status === 'Submitted') {
         body.submittedByUserId = user.userId;

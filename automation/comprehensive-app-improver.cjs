@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 <<<<<<< HEAD
 const fs = require("fs")
@@ -811,3 +812,5 @@ scanner.runSecurityScan().catch(console.error)`;
 const improver = new ComprehensiveAppImprover()
 improver.run().catch(console.error)
 >>>>>>> origin/automation-fixes
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

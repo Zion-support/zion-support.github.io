@@ -41,7 +41,6 @@ function generateStages({
     'Open Protocol Interfaces',
     'Governance & Ownership',
     'Global Scale',  ];
-
   return baseThemes.map((theme, index) => {
     const id = index + 1;
     const name = `Zion v${id}`;
@@ -81,8 +80,7 @@ function generateStages({
     ];
 
     return { id, name, theme, objective, highlights, metrics };
-  });
-function defaultOperatorPrompt(): string {
+  });function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
 
 Inputs you will receive:
@@ -123,8 +121,7 @@ export default function RoadmapPage(): JSX.Element {
   const [copied, setCopied] = useState(false);
 
   const stages = useMemo(
-    () => generateStages({ milestones, keywords, priorities }),    [milestones, keywords, priorities]
-  );
+    () => generateStages({ milestones, keywords, priorities }),    [milestones, keywords, priorities]  );
 
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), []);
 
@@ -134,8 +131,7 @@ export default function RoadmapPage(): JSX.Element {
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
     } catch {
-      setCopied(false);    }
-  };
+      setCopied(false);    }  };
 
   return (
     <>
@@ -197,8 +193,7 @@ export default function RoadmapPage(): JSX.Element {
                   value={priorities}
                   onChange={e => setPriorities(e.target.value)}
                   className='mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none'
-                  placeholder='e.g., governance, scale, regional expansion'                />
-              </div>
+                  placeholder='e.g., governance, scale, regional expansion'                />              </div>
             </div>
           </section>
 
@@ -233,15 +228,13 @@ export default function RoadmapPage(): JSX.Element {
                   </p>
                   <div className='mt-3'>
                     <p className='font-semibold'>Highlights</p>
-                    <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>                      {stage.highlights.map((h, i) => (
-                        <li key={i}>{h}</li>
+                    <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>                      {stage.highlights.map((h, i) => (                        <li key={i}>{h}</li>
                       ))}
                     </ul>
                   </div>
                   <div className='mt-3'>
                     <p className='font-semibold'>Metrics</p>
-                    <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>                      {stage.metrics.map((m, i) => (
-                        <li key={i}>{m}</li>
+                    <ul className='mt-1 list-disc space-y-1 pl-5 text-gray-800'>                      {stage.metrics.map((m, i) => (                        <li key={i}>{m}</li>
                       ))}
                     </ul>
                   </div>
@@ -261,8 +254,7 @@ export default function RoadmapPage(): JSX.Element {
                       <li>Faster time-to-hire and time-to-pay</li>
                       <li>
                         Positive contributor NPS and dispute resolution rates
-                      </li>                    </ul>
-                  </div>
+                      </li>                    </ul>                  </div>
                 </article>
               ))}
             </div>

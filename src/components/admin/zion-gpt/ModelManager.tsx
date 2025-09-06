@@ -1,73 +1,8 @@
-<<<<<<< HEAD
         .order('createdAt', { ascending: false }),
       
-
-=======
-import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { ModelConfig } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
-  errorMessage?: string
-}
-
-export function ZionGPTModelManager() {
-  const [models, setModels] = useState<ModelVersionData[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
-
-  // Fetch model data on component mount
-  useEffect((,) => {
-    fetchModels()
-  }, []),
-
-  const fetchModels = async () => {
-    try {
-      setIsLoading(true),
-      const { data, error } = await supabase
-        .from('model_versions')
-        .select('*')
-        .order('createdAt', { ascending: false }),
-      
-      if (error) throw error,
-      
-      // Map the data to our component state
-      setModels(data.map((model: any,) => ({
-        id: model.id,
-        version: model.version,
-        createdAt: model.created_at,
-        baseModel: model.base_model,
-        purpose: model.purpose,
-        active: model.active,
-        trainingStatus: model.training_status,
-        errorMessage: model.error_message
-      })))
-    } catch (error) {
-      logErrorToProduction('Error fetching models:', { data: error })
-    } finally {
-      setIsLoading(false)
-    }
-  },
-
-  const checkTrainingStatus = async (modelId: string,) => {
-    try {
-      setActiveJobs(prev => ({ ...prev, [modelId]: true })),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       
       
 
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
     try {
       // If activating, deactivate all other models with the same purpose
@@ -194,4 +129,4 @@ export function ZionGPTModelManager() {
   )
 }
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+}

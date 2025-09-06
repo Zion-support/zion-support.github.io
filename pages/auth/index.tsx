@@ -22,8 +22,7 @@ const Onboarding: NextPage = () => {
           <div
             key={label}
             className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}
-          >            {i + 1}. {label}
-          </div>
+          >            {i + 1}. {label}          </div>
         ))}
       </div>
 
@@ -49,7 +48,6 @@ const Onboarding: NextPage = () => {
         </EnhancedButton>
       </div>
     </div>
-  );
-};
+  );};
 
 export default Onboarding;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 
 export async function classifyWithGPT(
@@ -64,10 +63,7 @@ export async function classifyWithGPT(
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
-<<<<<<< HEAD
-  }
-=======
-export interface GptResult {
+  }export interface GptResult {
   label: string;
   confidence: number;
   reasoning: string;
@@ -83,5 +79,3 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

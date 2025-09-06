@@ -430,10 +430,13 @@ class $1 {
 
 // Run the performance optimizer
 if (require.main === module) {
+<<<<<<< HEAD
   const optimizer = new PerformanceOptimizer();
   optimizer.run().catch(console.error);
 }
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 module.exports = PerformanceOptimizer;
 =======

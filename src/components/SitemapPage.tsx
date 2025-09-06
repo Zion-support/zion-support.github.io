@@ -1,17 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const resolvePath = (path: string): string => pathMap[path] ?? path,
-import React from 'react';
+const resolvePath = (path: string): string => pathMap[path] ?? path,import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react'
-=======
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { SEO } from './SEO';
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
@@ -171,17 +166,9 @@ export const SitemapPage: React.FC = () => {
       </div>
     </>
   )
-<<<<<<< HEAD
 };
-'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-},
+'"},
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-=======
   const sitemapData = [{;
       title: 'Main Pages',
       links: [;
@@ -267,4 +254,4 @@ export const SitemapPage: React.FC = () => {
       </div>;
     </div>;) }
 '";
->>>>>>> origin/automation-fixes
+};

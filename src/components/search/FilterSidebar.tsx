@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface FilterSidebarProps {
   className?: string;
   children?: React.ReactNode
@@ -12,8 +7,7 @@ interface FilterSidebarProps {
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
   className;
   children 
-},) => {
-  return (
+},) => {  return (
     <div className={`filter-sidebar ${className || ''}`}>
       {children}
     </div>
@@ -21,11 +15,6 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
 };
 
 export default FilterSidebar;
-=======
-export default FilterSidebar;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 
 interface FilterOption {
   value: string;
@@ -94,4 +83,3 @@ export function FilterSidebar({;
     </>;
   )}
 '"`;
->>>>>>> origin/automation-fixes

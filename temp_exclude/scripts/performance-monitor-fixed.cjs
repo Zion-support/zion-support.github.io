@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;#!/usr/bin/env node;
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
       "application": {"buildSize": 0,        "bundleSize": 0,,"loadTime": 0,,"}
@@ -172,4 +176,8 @@ const { execSync } = require("child_process")
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
         "Optimize memory usage - check for memory leaks and optimize data structures"
+<<<<<<< HEAD
   console.error("Fatal "error": ")  console.error("Fatal "error": ")
+=======
+  console.error("Fatal "error": ")
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

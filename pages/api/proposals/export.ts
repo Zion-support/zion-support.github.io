@@ -77,7 +77,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const hasher = crypto.createHash('sha256');
     hasher.update(markdown);
     const digest = '0x' + hasher.digest('hex');
-
     let signature: string | undefined;
     const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
     if (privateKey) {

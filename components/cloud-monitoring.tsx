@@ -28,18 +28,12 @@ import {
 export default function CloudMonitoringPage() {
   const features = [
     {
-      icon: <Activity className='w-8 h-8 text-white' />,
-=======
-import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      icon: <Activity className='w-8 h-8 text-white' />,import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 
 export default function CloudMonitoringPage() {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Activity className='w-8 h-8 text-white' />,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      title: 'Real-time Monitoring',
       description:
         'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
@@ -131,14 +125,10 @@ export default function CloudMonitoringPage() {
         'Compliance Status',
         'Audit Trails',
       ],
-    },  ];
-=======
-      icon: <Shield className="w-6 h-6 text-red-400" />,
+    },  ];      icon: <Shield className="w-6 h-6 text-red-400" />,
       metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const pricingPlans = [
     {
@@ -157,17 +147,12 @@ export default function CloudMonitoringPage() {
       popular: false,
       color: 'border-gray-600',
       buttonColor: 'bg-gray-600 hover:bg-gray-700',
-    },    {
-=======
-        'Up to 10 serversBasic monitoringEmail alerts7-day data retentionCommunity supportMobile app access'
+    },    {        'Up to 10 serversBasic monitoringEmail alerts7-day data retentionCommunity supportMobile app access'
       ];
       popular: false,
       color: 'border-gray-600',
       buttonColor: 'bg-gray-600 hover:bg-gray-700'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       name: 'Professional',
       price: '$199',
       period: '/month',
@@ -185,17 +170,12 @@ export default function CloudMonitoringPage() {
       popular: true,
       color: 'border-blue-500',
       buttonColor: 'bg-blue-600 hover:bg-blue-700',
-    },    {
-=======
-        'Up to 100 serversAdvanced monitoringSMS & Slack alerts30-day data retentionPriority supportCustom dashboardsAPI accessTeam collaboration'
+    },    {        'Up to 100 serversAdvanced monitoringSMS & Slack alerts30-day data retentionPriority supportCustom dashboardsAPI accessTeam collaboration'
       ];
       popular: true,
       color: 'border-blue-500',
       buttonColor: 'bg-blue-600 hover:bg-blue-700'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       name: 'Enterprise',
       price: '$599',
       period: '/month',
@@ -213,17 +193,12 @@ export default function CloudMonitoringPage() {
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700',
-    },  ];
-=======
-        'Unlimited serversFull monitoring suiteCustom integrations1-year data retentionDedicated supportWhite-label solutionSLA guaranteeOn-premise option'
+    },  ];        'Unlimited serversFull monitoring suiteCustom integrations1-year data retentionDedicated supportWhite-label solutionSLA guaranteeOn-premise option'
       ];
       popular: false,
       color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const integrations = [
     { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' },
@@ -233,20 +208,14 @@ export default function CloudMonitoringPage() {
     { name: 'Kubernetes', icon: '☸️', description: 'K8s native support' },
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
-    { name: 'Jira', icon: '📋', description: 'Issue tracking' },  ];
-=======
-    { name: 'Jira', icon: '📋', description: 'Issue tracking' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    { name: 'Jira', icon: '📋', description: 'Issue tracking' },  ];    { name: 'Jira', icon: '📋', description: 'Issue tracking' }
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const useCases = [
     {
       title: 'DevOps Teams',
       description:
         'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      icon: '🔄',
       benefits: [
         'Faster deployments',
         'Reduced downtime',
@@ -289,13 +258,9 @@ export default function CloudMonitoringPage() {
         'Risk management',
         'Customer trust',
       ],
-    },  ];
-=======
-      benefits: ['Regulatory complianceFraud detectionRisk managementCustomer trust']
+    },  ];      benefits: ['Regulatory complianceFraud detectionRisk managementCustomer trust']
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -317,7 +282,6 @@ export default function CloudMonitoringPage() {
           content='Real-time infrastructure monitoring with advanced analytics, smart alerting, and multi-cloud support.'
         />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </Head>
 
       {/* Hero Section */}
@@ -358,12 +322,47 @@ export default function CloudMonitoringPage() {
               size='lg'
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
-              <Play className='w-5 h-5 mr-2' />              Watch Demo
-=======
+              <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]" />
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
+              <Eye className="w-4 h-4 mr-2" />
+              Real-time Infrastructure Monitoring
+            </div>
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight">
+            Cloud Monitoring & Analytics
+          </h1>
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
+            Monitor your entire infrastructure in real-time with AI-powered insights and intelligent alerting
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+            <Button
+              href="#pricing"
+              size="lg"
+              className="bg-green-600 hover:bg-green-700 shadow-2xl shadow-green-500/25"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button
+              href="#demo"
+              variant="outline"
+              size="lg"
+              className="border-white/20 hover:border-white/40 hover:bg-white/5"
+            >
               <Play className="w-5 h-5 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Watch Demo
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </Button>
           </div>
 
@@ -374,7 +373,6 @@ export default function CloudMonitoringPage() {
                 99.99%
               </div>
               <div className='text-gray-400'>Uptime</div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </div>
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400'>
@@ -392,14 +390,19 @@ export default function CloudMonitoringPage() {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400'>
                 &lt;100ms
               </div>
-              <div className='text-gray-400'>Latency</div>            </div>
-=======
+              <div className='text-gray-400'>Latency</div>            </div>            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400">1M+</div>
+              <div className="text-gray-400">Metrics Tracked</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400">50+</div>
+              <div className="text-gray-400">Integrations</div>
+            </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400">&lt,100ms</div>
               <div className="text-gray-400">Latency</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         </div>
       </section>
@@ -415,23 +418,17 @@ export default function CloudMonitoringPage() {
             </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Powerful Monitoring Features
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              Everything you need to monitor and optimize your infrastructure
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {features.map((feature, index) => (
               <Card
                 key={index}
@@ -448,12 +445,22 @@ export default function CloudMonitoringPage() {
                 <h3 className='text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
-                <p className='text-gray-400 leading-relaxed'>                  {feature.description}
-=======
+                <p className='text-gray-400 leading-relaxed'>                  {feature.description}            {features.map((feature, index) => (
+              <Card
+                key={index}
+                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="relative">
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
+                    {feature.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-400 leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {feature.description}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </p>
               </Card>
             ))}
@@ -466,7 +473,6 @@ export default function CloudMonitoringPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               Comprehensive Monitoring
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -493,13 +499,30 @@ export default function CloudMonitoringPage() {
                           key={metricIndex}
                           className='flex items-center text-sm text-gray-300'
                         >
-                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {metric}
-=======
+                          <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {metric}              Comprehensive Monitoring
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Monitor every aspect of your infrastructure with detailed metrics and insights
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {monitoringCapabilities.map((capability, index) => (
+              <Card
+                key={index}
+                className="group border border-gray-700 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">{capability.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300">
+                      {capability.category}
+                    </h3>
+                    <div className="grid grid-cols-1 gap-2">
+                      {capability.metrics.map((metric, metricIndex) => (
                         <div key={metricIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {metric}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </div>
                       ))}
                     </div>
@@ -516,7 +539,6 @@ export default function CloudMonitoringPage() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               Use Cases
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -546,13 +568,33 @@ export default function CloudMonitoringPage() {
                           key={benefitIndex}
                           className='flex items-center text-sm text-gray-300'
                         >
-                          <TrendingUp className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {benefit}
-=======
+                          <TrendingUp className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                          {benefit}              Use Cases
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Trusted by teams across industries for reliable infrastructure monitoring
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <Card
+                key={index}
+                className="group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="text-4xl">{useCase.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors duration-300">
+                      {useCase.title}
+                    </h3>
+                    <p className="text-gray-400 mb-4 leading-relaxed">
+                      {useCase.description}
+                    </p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {useCase.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {benefit}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </div>
                       ))}
                     </div>
@@ -575,27 +617,18 @@ export default function CloudMonitoringPage() {
             </p>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
-=======
-      <section id="pricing" className="py-24 bg-black relative overflow-hidden">
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              Choose the plan that fits your monitoring needs
             </p>
           </div>
 
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <Card
                 key={index}
                 className={`relative group ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''} border ${plan.color} hover:border-green-500/50 transition-all duration-300`}
@@ -605,17 +638,12 @@ export default function CloudMonitoringPage() {
                     <span className='bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular
                     </span>
                   </div>
-                )}
-=======
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       Most Popular
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -624,8 +652,6 @@ export default function CloudMonitoringPage() {
                   <div className='text-4xl font-bold text-white mb-2'>
                     {plan.price}
                     <span className='text-lg text-gray-400'>{plan.period}</span>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
@@ -636,30 +662,31 @@ export default function CloudMonitoringPage() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}
-=======
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
+                  <p className="text-gray-400">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {feature}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     </li>
                   ))}
                 </ul>
 
                 <Button
                   href='/contact'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   className={`w-full ${plan.buttonColor} text-white`}
                   size='lg'
                 >
                   Get Started
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
-=======
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan.buttonColor} text-white`}
+                  size="lg"
+                >
+                  Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </Card>
             ))}
           </div>
@@ -677,23 +704,17 @@ export default function CloudMonitoringPage() {
             </p>
           </div>
 
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
-=======
-      <section className="py-24 bg-gray-900 relative overflow-hidden">
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              Connect with your favorite tools and platforms
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {integrations.map((integration, index) => (
               <Card
                 key={index}
@@ -707,13 +728,17 @@ export default function CloudMonitoringPage() {
                 </h3>
                 <p className='text-sm text-gray-400'>
                   {integration.description}
-                </p>              </Card>
-=======
+                </p>              </Card>            {integrations.map((integration, index) => (
+              <Card
+                key={index}
+                className="text-center group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300"
+              >
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {integration.icon}
+                </div>
                 <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-sm text-gray-400">{integration.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </Card>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             ))}
           </div>
         </div>
@@ -724,7 +749,6 @@ export default function CloudMonitoringPage() {
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             Ready to Monitor Your Infrastructure?
           </h2>
           <p className='text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -747,12 +771,29 @@ export default function CloudMonitoringPage() {
               size='lg'
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
             >
-              <Play className='w-5 h-5 mr-2' />              Watch Demo
-=======
+              <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Monitor Your Infrastructure?
+          </h2>
+          <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Join thousands of DevOps teams who trust us to monitor their critical infrastructure.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button
+              href="/contact"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button
+              href="#demo"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
+            >
               <Play className="w-5 h-5 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Watch Demo
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </Button>
           </div>
         </div>
@@ -760,7 +801,3 @@ export default function CloudMonitoringPage() {
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

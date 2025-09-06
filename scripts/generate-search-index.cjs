@@ -244,6 +244,7 @@ class SearchIndexGenerator {
 // Run if called directly
 if (require.main === module) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const generator = new SearchIndexGenerator(),
     generator.generateSearchIndex().catch(console.error)
   }
@@ -258,5 +259,7 @@ if (require.main === module) {
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 module.exports = SearchIndexGenerator;

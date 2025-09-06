@@ -11,7 +11,6 @@ const hasSupabase =
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x.trim());
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default async function handler(
   req: NextApiRequest,
@@ -31,12 +30,19 @@ export default async function handler(
     } catch (e: any) {
       return res.status(500).json({ error: e.message });
     }  }
-=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    try {
+      if (hasSupabase) {
+        const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false });
+        if (error) throw error;
+        return res.status(200).json({ items: data as TalentProfile[] })
+      }
+      return res.status(200).json({ items: LOCAL })
+    } catch (e: any) {
       return res.status(500).json({ error: e.message })
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (req.method === 'POST') {
     try {
@@ -48,8 +54,6 @@ export default async function handler(
           .replace(/(^-|-$)/g, '') +
         '-' +
         uuid().slice(0, 6);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      const item: TalentProfile = {
         ...payload,
         id: uuid(),
         slug,
@@ -99,12 +103,8 @@ export default async function handler(
             item.category,
             lang,
             originalLang
-          );        }
-=======
-          translations.category[lang] = await translateText(item.category, lang, originalLang)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          );        }          translations.category[lang] = await translateText(item.category, lang, originalLang)
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
       item.originalLanguage = originalLang;
       item.translations = translations;
@@ -132,8 +132,6 @@ export default async function handler(
           rating: item.rating ?? null,
           reviews_count: item.reviewsCount ?? null,
           created_at: item.createdAt,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          // i18n
           original_language: item.originalLanguage,
           translations: item.translations as any,
         } as any);
@@ -151,9 +149,5 @@ export default async function handler(
   return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
-    .end('Method Not Allowed');
-=======
-  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

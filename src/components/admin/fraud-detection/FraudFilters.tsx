@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 };
 
-=======
-
-import React from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Filter } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string,) => void,
@@ -22,7 +13,6 @@ interface FraudFiltersProps {
 }
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-<<<<<<< HEAD
   searchQuery;
   setSearchQuery;
   statusFilter;
@@ -31,19 +21,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter;
   contentTypeFilter;
   setContentTypeFilter;
-  resetFilters}) => {
-=======
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  severityFilter,
-  setSeverityFilter,
-  contentTypeFilter,
-  setContentTypeFilter,
-  resetFilters},) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  return (
+  resetFilters}) => {  return (
     <div className="flex flex-col md: flex-row gap-4 mb-6">
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -99,13 +77,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
-<<<<<<< HEAD
 };
-'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-},
+'"},
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+};

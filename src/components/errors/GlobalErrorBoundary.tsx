@@ -15,19 +15,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import * as Sentry from '@sentry/nextjs';
 import { logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-<<<<<<< HEAD
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, Bug, Send, Clipboard } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import * as Sentry from '@sentry/nextjs';
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -38,24 +26,17 @@ interface ErrorBoundaryState {
   showDetails: boolean;
 
 interface ErrorBoundaryProps {
-<<<<<<< HEAD
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableRetry?: boolean;
   maxRetries?: number;
   showReportButton?: boolean;
-  context?: string;
-=======
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo,) => void
-  enableRetry?: boolean
+  context?: string;  enableRetry?: boolean
   maxRetries?: number
   showReportButton?: boolean
   context?: string
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export class GlobalErrorBoundary extends Component<
   ErrorBoundaryProps,
@@ -65,11 +46,12 @@ export class GlobalErrorBoundary extends Component<
 
   constructor(props: ErrorBoundaryProps) {
     super(props);
-=======
-    super(props)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  private retryTimeouts: NodeJS.Timeout[] = []
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
+
     this.state = {
       hasError: false,
       error: null,
@@ -78,17 +60,10 @@ export class GlobalErrorBoundary extends Component<
       retryCount: 0,
       userFeedback: '',
       showDetails: false,
-    };  }
-=======
+    };  }    ,}
       showDetails: false
-<<<<<<< HEAD
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
-    ,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
@@ -107,29 +82,17 @@ export class GlobalErrorBoundary extends Component<
     // Enhanced error logging
     const enhancedError = {
       ...error,
-
     // Enhanced error logging
     const enhancedError = {
-      ...error,      componentStack: errorInfo.componentStack,
-=======
-      ...error;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      ...error,      componentStack: errorInfo.componentStack,      ...error;
       componentStack: errorInfo.componentStack,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       errorBoundary: this.props.context || 'GlobalErrorBoundary',
       timestamp: new Date().toISOString(),
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',
       url: typeof window !== 'undefined' ? window.location.href : 'SSR',
       userId: this.getUserId(),
-<<<<<<< HEAD
       buildInfo: this.getBuildInfo(),
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-      buildInfo: this.getBuildInfo()
-    ,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
@@ -140,19 +103,12 @@ export class GlobalErrorBoundary extends Component<
     }
 
     // Report to Sentry
-<<<<<<< HEAD
     Sentry.withScope(scope => {
       scope.setTag(
         'errorBoundary',
         this.props.context || 'GlobalErrorBoundary'
       );
-      scope.setLevel('error');
-=======
-    Sentry.withScope((scope,) => {
-      scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary')
-      scope.setLevel('error')
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      scope.setContext('errorInfo', {
+      scope.setLevel('error');      scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack,
         retryCount: this.state.retryCount,
       });
@@ -172,32 +128,53 @@ export class GlobalErrorBoundary extends Component<
 
   componentWillUnmount() {
     // Clear any pending retry timeouts
-=======
       errorInfo;
       errorId
     })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.group('🚨 Error Boundary Caught Error')
+      logErrorToProduction('Error:', { data: error })
+      logErrorToProduction('Error Info:', { data: errorInfo })
+      logErrorToProduction('Enhanced Error:', { data: enhancedError })
+      console.groupEnd()
+    }
+
+    // Report to Sentry
+    Sentry.withScope((scope) => {
+      scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary')
+      scope.setLevel('error')
+      scope.setContext('errorInfo', {
+        componentStack: errorInfo.componentStack,
+        retryCount: this.state.retryCount
+      })
+      
+      Sentry.captureException(error)
+    })
+
+    // Custom error handler
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo)
+    }
+
+    this.setState({
+      errorInfo;
+      errorId
+    })
   }
 
   componentWillUnmount() {
     // Clear any pending retry timeouts
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     this.retryTimeouts.forEach(timeout => clearTimeout(timeout));
   }
 
   private generateErrorId(): string {
-<<<<<<< HEAD
-    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;  }
-=======
-    this.retryTimeouts.forEach(timeout => clearTimeout(timeout))
+    return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;  }    this.retryTimeouts.forEach(timeout => clearTimeout(timeout))
   }
 
   private generateErrorId(): string {
     return `err_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   private getUserId(): string | null {
     // Try to get user ID from various sources
@@ -209,17 +186,16 @@ export class GlobalErrorBoundary extends Component<
           sessionStorage.getItem('userId') ||
           null
         );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       } catch {
         return null;
       }
     }
-    return null;  }
-=======
+    return null;  }      } catch {
+        return null
+      }
+    }
     return null
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   private getBuildInfo() {
     return {
@@ -227,7 +203,6 @@ export class GlobalErrorBoundary extends Component<
       environment: process.env.NODE_ENV,
       buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 
   private getErrorSeverity(
@@ -274,35 +249,61 @@ export class GlobalErrorBoundary extends Component<
     return 'This appears to be a temporary issue. Please try again.';  }
 
   private retry = () => {
-    if (this.state.retryCount >= (this.props.maxRetries || 3)) {
-=======
+    if (this.state.retryCount >= (this.props.maxRetries || 3)) {  }
+
+  private getErrorSeverity(error: Error): 'low' | 'medium' | 'high' | 'critical' {
+    const message = error.message.toLowerCase()
+    const stack = error.stack?.toLowerCase() || ''
+
+    // Critical errors
+    if (message.includes('network') || message.includes('fetch')) {
+      return 'medium'
+    }
+    
+    if (message.includes('chunk') || message.includes('loading')) {
+      return 'medium'
+    }
+
+    if (stack.includes('auth') || stack.includes('payment')) {
+      return 'critical'
+    }
+
+    if (stack.includes('database') || stack.includes('api')) {
+      return 'high'
+    }
+
+    return 'low'
+  }
+
+  private getErrorSuggestion(error: Error): string {
+    const message = error.message.toLowerCase()
+
+    if (message.includes('network') || message.includes('fetch')) {
+      return 'Please check your internet connection and try again.'
+    }
+    
+    if (message.includes('chunk')) {
+      return 'The application was updated. Please refresh the page.'
+    }
+
+    if (message.includes('permission') || message.includes('unauthorized')) {
+      return 'You may need to log in again or check your permissions.'
+    }
+
     return 'This appears to be a temporary issue. Please try again.'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   private retry = () => {
     if (this.state.retryCount >= (this.props.maxRetries || 3)) {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       return;
     }
 
     const retryDelay = Math.pow(2, this.state.retryCount) * 1000; // Exponential backoff
-<<<<<<< HEAD
-=======
       return
     }
 
     const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    const timeout = setTimeout(() => {
-=======
-    const timeout = setTimeout((,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-      this.setState({
+    const timeout = setTimeout(() => {      this.setState({
         hasError: false,
         error: null,
         errorInfo: null,
@@ -313,17 +314,12 @@ export class GlobalErrorBoundary extends Component<
     }, retryDelay);
 
     this.retryTimeouts.push(timeout);
-  };
-=======
-        showDetails: false
+  };        showDetails: false
       })
     }, retryDelay)
 
     this.retryTimeouts.push(timeout)
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   private copyErrorDetails = async () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -332,16 +328,9 @@ export class GlobalErrorBoundary extends Component<
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-<<<<<<< HEAD
       userAgent:
         typeof window !== 'undefined' ? navigator.userAgent : 'unknown',
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-=======
-      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown'
-    ,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     try {
       await navigator.clipboard.writeText(
         JSON.stringify(errorDetails, null, 2)
@@ -354,11 +343,19 @@ export class GlobalErrorBoundary extends Component<
 
   private reportError = async () => {
     if (!this.state.error || !this.state.errorId) return;
-=======
     if (!this.state.error || !this.state.errorId) return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    try {
+      await navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
+      // Could show a toast notification here
+    } catch (err) {
+      logErrorToProduction('Failed to copy error details:', { data: err })
+    }
+  }
+
+  private reportError = async () => {
+    if (!this.state.error || !this.state.errorId) return
+
     try {
       // Report to your error reporting service
       const response = await fetch('/api/error-report', {
@@ -366,8 +363,6 @@ export class GlobalErrorBoundary extends Component<
         headers: {
           'Content-Type': 'application/json',
         },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        body: JSON.stringify({
           errorId: this.state.errorId,
           error: {
             message: this.state.error.message,
@@ -379,47 +374,35 @@ export class GlobalErrorBoundary extends Component<
           context: this.props.context,
           timestamp: new Date().toISOString(),
         }),
-      });
-=======
-          timestamp: new Date().toISOString()
+      });          timestamp: new Date().toISOString()
         })
       })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       if (response.ok) {
         // Show success message
       }
     } catch (err) {
       logErrorToProduction('Failed to report error:', { data: err });
-    }
-    }
+    }    }
   }
 
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/';
     }
-<<<<<<< HEAD
-  };
-=======
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  };  }
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   render() {
     if (this.state.hasError && this.state.error) {
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
 
       const severity = this.getErrorSeverity(this.state.error);
@@ -429,12 +412,16 @@ export class GlobalErrorBoundary extends Component<
         this.state.retryCount < (this.props.maxRetries || 3);
 
       return (
-        <div className='min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20'>          <motion.div
-=======
+        <div className='min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20'>          <motion.div      }
+
+      const severity = this.getErrorSeverity(this.state.error)
+      const suggestion = this.getErrorSuggestion(this.state.error)
+      const canRetry = this.props.enableRetry !== false && 
+                       this.state.retryCount < (this.props.maxRetries || 3)
+
+      return (
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
@@ -443,7 +430,6 @@ export class GlobalErrorBoundary extends Component<
               <CardHeader className='text-center'>
                 <div className='mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20'>
                   <AlertTriangle className='h-8 w-8 text-red-600 dark:text-red-400' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
                 <CardTitle className='text-2xl font-bold text-gray-900 dark:text-gray-100'>
                   Oops! Something went wrong
@@ -460,27 +446,20 @@ export class GlobalErrorBoundary extends Component<
                     {severity.toUpperCase()}
                   </Badge>
                   {this.state.errorId && (
-                    <Badge variant='outline' className='text-xs'>                      ID: {this.state.errorId.slice(-8)}
-=======
+                    <Badge variant='outline' className='text-xs'>                      ID: {this.state.errorId.slice(-8)}                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary',}
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                  Oops! Something went wrong
+                </CardTitle>
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
-<<<<<<< HEAD
                     variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
-                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary',}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     {severity.toUpperCase()}
                   </Badge>
                   {this.state.errorId && (
-<<<<<<< HEAD
-                    <Badge variant='outline' className='text-xs'>
-=======
-                    <Badge variant="outline" className="text-xs">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                    <Badge variant='outline' className='text-xs'>                    <Badge variant="outline" className="text-xs">
                       ID: {this.state.errorId.slice(-8)}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     </Badge>
                   )}
                 </div>
@@ -489,26 +468,24 @@ export class GlobalErrorBoundary extends Component<
               <CardContent className='space-y-6'>
                 <div className='text-center'>
                   <p className='text-gray-600 dark:text-gray-300 mb-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     {suggestion}
                   </p>
 
                   {this.state.retryCount > 0 && (
                     <p className='text-sm text-orange-600 dark:text-orange-400'>
                       Retry attempt: {this.state.retryCount}/
-                      {this.props.maxRetries || 3}                    </p>
-=======
+                      {this.props.maxRetries || 3}                    </p>                    {suggestion}
+                  </p>
+                  
+                  {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   )}
                 </div>
 
                 {/* Action Buttons */}
                 <div className='flex flex-col sm:flex-row gap-3 justify-center'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   {canRetry && (
                     <Button
                       onClick={this.retry}
@@ -536,12 +513,26 @@ export class GlobalErrorBoundary extends Component<
                     size='sm'
                     className='flex items-center gap-2'
                   >
-                    <Bug className='h-4 w-4' />                    {this.state.showDetails ? 'Hide' : 'Show'} Details
-=======
+                    <Bug className='h-4 w-4' />                    {this.state.showDetails ? 'Hide' : 'Show'} Details                  {canRetry && (
+                    <Button onClick={this.retry} className="flex items-center gap-2">
+                      <RefreshCw className="h-4 w-4" />
+                      Try Again
+                    </Button>
+                  )}
+                  
+                  <Button onClick={this.goHome} variant="outline" className="flex items-center gap-2">
+                    <Home className="h-4 w-4" />
+                    Go Home
+                  </Button>
+
+                  <Button 
+                    onClick={() => this.setState({ showDetails: !this.state.showDetails })}
+                    variant="ghost" 
+                    size="sm"
+                    className="flex items-center gap-2"
+                  >
                     <Bug className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </Button>
                 </div>
 
@@ -553,7 +544,6 @@ export class GlobalErrorBoundary extends Component<
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       className='border-t pt-4'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     >
                       <div className='space-y-4'>
                         <div>
@@ -563,17 +553,15 @@ export class GlobalErrorBoundary extends Component<
                           <code className='block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto'>                            {this.state.error.message}
                           </code>
                         </div>
-
-=======
+                    >
+                      <div className="space-y-4">
+                        <div>
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
                           <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                             {this.state.error.message}
                           </code>
                         </div>
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         {process.env.NODE_ENV === 'development' &&
                           this.state.error.stack && (
                             <div>
@@ -585,8 +573,6 @@ export class GlobalErrorBoundary extends Component<
                               </pre>
                             </div>
                           )}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
                         <div className='flex gap-2'>
                           <Button
@@ -605,12 +591,16 @@ export class GlobalErrorBoundary extends Component<
                               size='sm'
                             >
                               <Send className='h-4 w-4 mr-2' />                              Report Issue
-=======
+                        <div className="flex gap-2">
+                          <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
+                            <Clipboard className="h-4 w-4 mr-2" />
+                            Copy Details
+                          </Button>
+                          
+                          {this.props.showReportButton !== false && (
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                               Report Issue
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                             </Button>
                           )}
                         </div>
@@ -623,8 +613,6 @@ export class GlobalErrorBoundary extends Component<
           </motion.div>
         </div>
       );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    }
 
     return this.props.children;
   }
@@ -639,23 +627,13 @@ export const useErrorBoundary = () => {
     }
   }, [error]);
 
-<<<<<<< HEAD
   const captureError = React.useCallback((error: Error) => {
     setError(error);
   }, []);
-=======
-  const captureError = React.useCallback((error: Error,) => {
-    setError(error)
-  }, [])
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   return { captureError };
 };
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
@@ -668,13 +646,14 @@ export const withErrorBoundary = <P extends object>(
   );
 
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return WrappedComponent;
 };
 
 export default GlobalErrorBoundary;
-=======
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`
+  
+  return WrappedComponent;
+}
+
 export default GlobalErrorBoundary 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

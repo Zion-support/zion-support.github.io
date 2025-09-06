@@ -3,9 +3,7 @@ import React, {
   useContext,
   useEffect,
   useMemo,
-  useState,;} from 'react';
-} from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  useState,;} from 'react';} from 'react';
 
 export type UserRole = 'client' | 'talent';
 
@@ -21,10 +19,7 @@ export type UserContextValue = {
   user: User | null;
   setUser: (user: User | null) => void;
   logout: () => void;
-<<<<<<< HEAD
-  completeOnboarding: () => void;};
-};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  completeOnboarding: () => void;};};
 
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 
@@ -35,10 +30,7 @@ const DEFAULT_USER: User = {
   onboardingCompleted: false,
 };
 
-<<<<<<< HEAD
-export function UserProvider({ children }: { children: React.ReactNode }) {  const [user, setUser] = useState<User | null>(null);
-  const [user, setUser] = useState<User | null>(null);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+export function UserProvider({ children }: { children: React.ReactNode }) {  const [user, setUser] = useState<User | null>(null);  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     try {
@@ -57,10 +49,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
     try {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
-<<<<<<< HEAD
-    } catch {}  }, [user]);
-  }, [user]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    } catch {}  }, [user]);  }, [user]);
 
   const value = useMemo<UserContextValue>(
     () => ({
@@ -68,9 +57,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
       setUser,
       logout: () => setUser(null),
       completeOnboarding: () =>
-        setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),
-    }),
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+        setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),    }),
     [user]
   );
 
@@ -79,6 +66,4 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
 export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
-<<<<<<< HEAD
   return ctx;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

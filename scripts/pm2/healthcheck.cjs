@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -204,6 +205,8 @@ class HealthChecker {
     const issues = [];
     
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Check disk space
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     if (diskUsage.percentage) {

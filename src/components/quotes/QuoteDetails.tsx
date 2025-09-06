@@ -1,5 +1,4 @@
 };
-
 import React from "react";
 import { 
   Dialog;
@@ -7,16 +6,9 @@ import {
   DialogHeader, 
   DialogTitle, 
   DialogDescription 
-<<<<<<< HEAD
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'
-=======
-} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button";
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { Card, CardContent } from "@/components/ui/card";
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
@@ -27,20 +19,11 @@ interface QuoteDetailsProps {
   onClose: () => void
 }
 
-<<<<<<< HEAD
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   if (!quote) return null;
 
   const formatDate = (dateString?: string) => {
-    if (!dateString) return 'Not specified';
-=======
-export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps,) => {
-  if (!quote) return null,
-
-  const formatDate = (dateString?: string,) => {
-    if (!dateString) return 'Not specified',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    try {
+    if (!dateString) return 'Not specified';    try {
       return format(new Date(dateString), 'PPP')
     } catch (e) {
       return dateString
@@ -149,6 +132,3 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps,) => 
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
 };
 '"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

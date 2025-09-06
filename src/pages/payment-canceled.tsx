@@ -5,15 +5,11 @@ import { Button } from '@/components/ui/button';
 
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
-<<<<<<< HEAD
 import { XCircle } from 'lucide-react'
-
-=======
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
   
@@ -79,22 +75,13 @@ export default function PaymentCanceled() {
         </div>
       </div>
     </div>
-  );
-=======
-            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
             Return to Dashboard
           </Button>
         </div>
-<<<<<<< HEAD
+      </div>
+  );;
       </div>
   );
-=======
 }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

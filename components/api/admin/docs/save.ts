@@ -2,9 +2,7 @@
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });  }
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
+    return res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const DOCS_DIR = path.join(process.cwd(), 'datadocs');
@@ -20,9 +18,6 @@ function ensureDir(dir: string) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
@@ -36,12 +31,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const body = req.body;
 
     const jsonString =
-      typeof body === 'string' ? body : JSON.stringify(body, null, 2);
-=======
-    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      typeof body === 'string' ? body : JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const ts = new Date()
       .toISOString()
       .replace(/[-:T.Z]/g, '')
@@ -56,8 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   } catch (e) {
     res.status(500).json({ error: 'Failed to save content' })
+  }  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
   }
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

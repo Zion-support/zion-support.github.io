@@ -7,7 +7,6 @@ import {
   recordRequest,;
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const REDEMPTIONS_FILE = path.join(
   process.cwd(),
@@ -37,17 +36,25 @@ export default async function handler(
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });
-=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const started = Date.now();
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  if (!(await enforceRateLimit(auth.apiKey))) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
+    return res.status(429).json({ error: "Rate limit exceeded" })
+  }
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
     return res.status(405).json({ error: "Method Not Allowed" })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-<<<<<<< HEAD
     return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  }
   await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
   const records = (await fs.pathExists(REDEMPTIONS_FILE))
     ? await fs.readJSON(REDEMPTIONS_FILE)
@@ -64,9 +71,5 @@ export default async function handler(
   records.push(record);
   await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id, redeemedAt: now });
-=======
-  return res.status(201).json({ id: record.id, redeemedAt: now })
+  return res.status(201).json({ id: record.id, redeemedAt: now });  return res.status(201).json({ id: record.id, redeemedAt: now })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

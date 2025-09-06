@@ -38,8 +38,7 @@ import {
   Palette,;} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
-];
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';];
 
 export default function InnovativeMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -65,7 +64,6 @@ export default function InnovativeMicroSaasShowcase() {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
 
     return matchesCategory && matchesSearch;  });
-
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -88,8 +86,7 @@ export default function InnovativeMicroSaasShowcase() {
           new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
         );
       default:
-        return 0;    }
-  });
+        return 0;    }  });
 
   return (
     <Layout>
@@ -114,8 +111,7 @@ export default function InnovativeMicroSaasShowcase() {
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
-        <div className='relative z-10 container mx-auto px-4 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='relative z-10 container mx-auto px-4 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -127,8 +123,7 @@ export default function InnovativeMicroSaasShowcase() {
               solutions, AI platforms, quantum computing services, and emerging
               technology innovations designed to transform your business.
             </p>
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {stats.map((stat, index) => (
-                <motion.div
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {stats.map((stat, index) => (                <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -139,8 +134,7 @@ export default function InnovativeMicroSaasShowcase() {
                   <span className='text-white font-semibold'>
                     {stat.number}
                   </span>
-                  <span className='text-gray-300 text-sm'>{stat.label}</span>                </motion.div>
-              ))}
+                  <span className='text-gray-300 text-sm'>{stat.label}</span>                </motion.div>              ))}
             </div>
           </motion.div>
         </div>
@@ -162,8 +156,7 @@ export default function InnovativeMicroSaasShowcase() {
             </div>
             <div className='flex items-center space-x-4'>
               <MapPin className='w-5 h-5 text-white' />
-              <span className='text-white text-sm'>{contactInfo.address}</span>            </div>
-          </div>
+              <span className='text-white text-sm'>{contactInfo.address}</span>            </div>          </div>
         </div>
       </section>
 
@@ -184,8 +177,7 @@ export default function InnovativeMicroSaasShowcase() {
 
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>
-              {categories.map(category => (                <button
-                  key={category.value}
+              {categories.map(category => (                <button                  key={category.value}
                   onClick={() => setSelectedCategory(category.value)}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
                     selectedCategory === category.value
@@ -194,8 +186,7 @@ export default function InnovativeMicroSaasShowcase() {
                   }`}
                 >
                   <category.icon className='w-4 h-4' />
-                  <span className='text-sm font-medium'>{category.name}</span>                </button>
-              ))}
+                  <span className='text-sm font-medium'>{category.name}</span>                </button>              ))}
             </div>
 
             {/* View Mode and Sort */}
@@ -204,13 +195,11 @@ export default function InnovativeMicroSaasShowcase() {
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
-                  <Grid className='w-5 h-5' />                </button>
-                <button
+                  <Grid className='w-5 h-5' />                </button>                <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
-                  <List className='w-5 h-5' />                </button>
-              </div>
+                  <List className='w-5 h-5' />                </button>              </div>
 
               <select
                 value={sortBy}
@@ -221,8 +210,7 @@ export default function InnovativeMicroSaasShowcase() {
                 <option value='rating'>Highest Rated</option>
                 <option value='price-low'>Price: Low to High</option>
                 <option value='price-high'>Price: High to Low</option>
-                <option value='newest'>Newest First</option>              </select>
-            </div>
+                <option value='newest'>Newest First</option>              </select>            </div>
           </div>
         </div>
       </section>
@@ -236,13 +224,11 @@ export default function InnovativeMicroSaasShowcase() {
                 ? 'All Services'
                 : `${categories.find(c => c.value === selectedCategory)?.name}`}
             </h2>
-            <p className='text-gray-400'>              {filteredServices.length} services found
-            </p>
+            <p className='text-gray-400'>              {filteredServices.length} services found            </p>
           </div>
 
           {viewMode === 'grid' ? (
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>              {sortedServices.map((service, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>              {sortedServices.map((service, index) => (                <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -251,8 +237,7 @@ export default function InnovativeMicroSaasShowcase() {
                 >
                   {/* Popular Badge */}
                   {service.popular && (
-                    <div className='absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      Popular
-                    </div>
+                    <div className='absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      Popular                    </div>
                   )}
 
                   {/* Service Icon */}
@@ -267,8 +252,7 @@ export default function InnovativeMicroSaasShowcase() {
 
                   {/* Price */}
                   <div className='flex items-center justify-between mb-4'>
-                    <div className='text-2xl font-bold text-purple-400'>
-                      {service.price}
+                    <div className='text-2xl font-bold text-purple-400'>                      {service.price}
                       <span className='text-sm text-gray-400 font-normal'>
                         {service.period}
                       </span>
@@ -294,8 +278,7 @@ export default function InnovativeMicroSaasShowcase() {
                           key={idx}
                           className='flex items-center space-x-2 text-xs text-gray-300'
                         >
-                          <CheckCircle className='w-3 h-3 text-green-400' />                          <span>{feature}</span>
-                        </div>
+                          <CheckCircle className='w-3 h-3 text-green-400' />                          <span>{feature}</span>                        </div>
                       ))}
                     </div>
                   </div>
@@ -330,21 +313,18 @@ export default function InnovativeMicroSaasShowcase() {
                         className='inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors'
                       >
                         <span>View Details</span>
-                        <ArrowRight className='w-4 h-4' />                      </Link>
-                    </div>
+                        <ArrowRight className='w-4 h-4' />                      </Link>                    </div>
                   </div>
                 </motion.div>
               ))}
             </div>
           ) : (
-            <div className='space-y-4'>              {sortedServices.map((service, index) => (
-                <motion.div
+            <div className='space-y-4'>              {sortedServices.map((service, index) => (                <motion.div
                   key={service.id}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300'
-                >
+                  className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300'                >
                   <div className='flex items-start space-x-6'>
                     {/* Service Icon */}
                     <div className='text-4xl'>{service.icon}</div>
@@ -398,8 +378,7 @@ export default function InnovativeMicroSaasShowcase() {
                             Learn More
                           </Link>
                           <button className='p-2 bg-white/10 border border-white/20 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300'>
-                            <Heart className='w-4 h-4' />                          </button>
-                        </div>
+                            <Heart className='w-4 h-4' />                          </button>                        </div>
                       </div>
                     </div>
                   </div>
@@ -412,8 +391,7 @@ export default function InnovativeMicroSaasShowcase() {
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20'>
-        <div className='container mx-auto px-4 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='container mx-auto px-4 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -433,8 +411,7 @@ export default function InnovativeMicroSaasShowcase() {
               </Link>
               <Link
                 href='/pricing'
-                className='bg-white/10 border border-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300'              >
-                View Pricing
+                className='bg-white/10 border border-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300'              >                View Pricing
               </Link>
             </div>
           </motion.div>

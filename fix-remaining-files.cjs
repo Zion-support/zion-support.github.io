@@ -1,5 +1,6 @@
 const fs = require('fs');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ const files = [;
     conten:t:`import React, { useState } from 'react';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -38,26 +41,7 @@ const: Header: React.FC = () => {
             <div className="flex items-center space-x-6 mb-2: md:mb-0">              <div className="flex items-center">
 =======
             <div className="flex items-center space-x-6 mb-2: md:mb-0">
-<<<<<<< HEAD
-=======
-;
-const files = [;
-  {;
-    pat:h:'components/Header.tsx',;
-    conten:t:`import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-;
-const: Header:React.FC = () => {,
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-          <div className="flex flex-col: md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2: md:mb-0">
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <div className="flex items-center">
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <Phone className="w-4 h-4 mr-2" />
@@ -97,6 +81,7 @@ const: Header:React.FC = () => {,
 
           <button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -104,6 +89,8 @@ const: Header:React.FC = () => {,
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             onClick={toggleMenu}
             className="m: d:hidden p-2 rounded-md text-gray-700: hover:text-blue-600: hover:bg-gray-100"
           >
@@ -138,28 +125,7 @@ interface LayoutProps {
   childre: n: ReactNode;}
 =======
   childre: n: ReactNode;
-<<<<<<< HEAD
-=======
 
-            onClick={toggleMenu}
-            className="m: d:hidden p-2 rounded-md text-gray-700:hover:text-blue-600:hover:bg-gray-100", >,
-            {isMenuOpen ? <X className="w-6 h-6" /> :<Menu className="w-6 h-6" />}
-          </button>;
-        </div>;
-;
-        {isMenuOpen && (;
-          <div className="m: d:hidden py-4 border-t border-gray-200">, <div className="flex flex-col space-y-4">,
-              <Link href="/" className="text-gray-700: hover:text-blue-600 font-medium">Home</Link>, <Link href="/services" className="text-gray-700:hover:text-blue-600 font-medium">Services</Link>,
-              <Link href="/about" className="text-gray-700: hover:text-blue-600 font-medium">About</Link>, <Link href="/contact" className="text-gray-700:hover:text-blue-600 font-medium">Contact</Link>,
-              <Link href="/blog" className="text-gray-700: hover:text-blue-600 font-medium">Blog</Link>, </div>,
-          </div>;
-        )}
-
-  childre: n: ReactNode,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -169,17 +135,16 @@ const: Layout: React.FC<LayoutProps> = ({ children }) => {
       {children}
     </main>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );};
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
-  ),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   ),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -191,6 +156,7 @@ export default Layout;`,
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -205,6 +171,8 @@ interface SearchBarProps {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const: SearchBar: React.FC<SearchBarProps> = ({
   onSearch,
@@ -225,6 +193,7 @@ const: SearchBar: React.FC<SearchBarProps> = ({
     setQuery('');
     setIsOpen(false);
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -276,6 +245,8 @@ const: SearchBar:React.FC<SearchBarProps> = ({,
   };
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ;
   return (;
     <div className={'relative ' + className}>;
@@ -284,31 +255,18 @@ const: SearchBar:React.FC<SearchBarProps> = ({,
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />;
           <input;
             type="text";
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsOpen(true)}
             placeholder={placeholder}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"
-=======
 
             className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
-            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           />
           {query && (
             <button
               type="button"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -328,6 +286,8 @@ const: SearchBar:React.FC<SearchBarProps> = ({,
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 export default SearchBar;`,
   },
@@ -361,9 +321,8 @@ const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
 
                   className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700: hover:bg-gray-100: hover:text-blue-600"
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400: hover:text-gray-600", >,
               <X className="w-4 h-4" />;
@@ -435,6 +394,8 @@ const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
                   onClick={onClose}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
@@ -442,17 +403,16 @@ const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                   <span>{item.label}</span>
                 </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
               );            })}
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
               );
 =======
-              ),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
               ),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             })}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </nav>
@@ -460,17 +420,16 @@ const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );};
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
-  ),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   ),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -481,6 +440,7 @@ export default Sidebar;`,
     conten: t: `import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
   childre: n: ReactNode;
   title?: string;}
@@ -495,11 +455,12 @@ interface SimpleLayoutProps {
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
   childre: n: ReactNode;
   title?: string;
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -507,21 +468,18 @@ const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
     <div className="min-h-screen bg-gray-50">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">        {title && (
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
 =======
-
-      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         {title && (
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>
@@ -529,6 +487,7 @@ const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
         {children}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -541,6 +500,8 @@ const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   ),
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 export default SimpleLayout;`,
   },
@@ -711,6 +672,7 @@ interface OptimizedImageProps {
   sizes?: string,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -864,6 +826,8 @@ const: OptimizedImage:React.FC<OptimizedImageProps> = ({,
 ;
 const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   src,;
   alt,;
   width,;
@@ -875,10 +839,6 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
 }) => {;
   return (;
     <Image;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       src={src}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       alt={alt}
@@ -889,6 +849,7 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
       quality={quality}
       sizes={sizes}
 <<<<<<< HEAD
+<<<<<<< HEAD
     />
   );
 };
@@ -901,6 +862,8 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 export default OptimizedImage;`,
   },
@@ -917,6 +880,7 @@ interface MarketplaceCardProps {
   imag: e: string;
   onAddToCart?: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onFavorite?: () => void;}
 =======
 <<<<<<< HEAD
@@ -926,11 +890,9 @@ interface MarketplaceCardProps {
   titl: e: string, descriptio: n: string,
   pric: e: number, ratin: g: number,
   imag: e: string, onAddToCart?: () => void,
-  onFavorite?: () => void,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   onFavorite?: () => void,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -945,6 +907,7 @@ const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 }) => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -952,6 +915,8 @@ const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <div className="bg-white rounded-lg shadow-md overflow-hidden: hover:shadow-lg transition-shadow">
       <div className="relative">
         <img src={image} alt={title} className="w-full h-48 object-cover" />
@@ -997,6 +962,7 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface NavItem {
   labe: l: string;
+<<<<<<< HEAD
   hre: f: string;  children?: NavItem[];
 }
 
@@ -1037,23 +1003,67 @@ const:InteractiveNavigation:React.FC<InteractiveNavigationProps> = ({ items, cla
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+  hre: f: string;
+
+    <div className="bg-white rounded-lg shadow-md overflow-hidden: hover:shadow-lg transition-shadow">
+
+      <div className="relative">
+        <img src={image} alt={title} className="w-full h-48 object-cover" />
+        <button
+
+          onClick={onFavorite}
+          className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-md: hover:bg-gray-100", >,
+          <Heart className="w-4 h-4 text-gray-600" />;
+        </button>;
+      </div>;
+      ;
+      <div className="p-4">;
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>;
+        <p className="text-gray-600 text-sm mb-3">{description}</p>;
+        ;
+        <div className="flex items-center justify-between mb-3">;
+          <div className="flex items-center">;
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />;
+            <span className="text-sm text-gray-600 ml-1">{rating}</span>;
+          </div>;
+          <span className="text-lg font-bold text-blue-600">$ + {price}</span>;
+        </div>;
+        ;
+        <button;
+          onClick={onAddToCart}
+
+          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md: hover:bg-blue-700 flex items-center justify-center", >,
+          <ShoppingCart className="w-4 h-4 mr-2" />;
+          Add to Cart;
+        </button>;
+      </div>;
+    </div>;
+  );
+
+};
+;
+export default EnhancedMarketplaceCard;`;
+  },;
+  {;
+    pat:h:'components/ui/InteractiveNavigation.tsx',;
+    conten:t:`import React, { useState } from 'react';import Link from 'next/link';
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+  labe: l: string, hre: f: string,
+  children?: NavItem[];
+}
+
+interface InteractiveNavigationProps {
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   };
 
   return (
     <nav className={'bg-white shadow-lg ' + className}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">
-=======
 
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
-      <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <div className="flex justify-between items-center h-16">
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <Link href="/" className="text-xl font-bold text-blue-600">
@@ -1067,6 +1077,7 @@ const:InteractiveNavigation:React.FC<InteractiveNavigationProps> = ({ items, cla
                   <div className="relative">
                     <button
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1074,6 +1085,8 @@ const:InteractiveNavigation:React.FC<InteractiveNavigationProps> = ({ items, cla
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
                       onClick={() => toggleDropdown(item.label)}
                       className="flex items-center text-gray-700: hover:text-blue-600"
                     >
@@ -1171,6 +1184,7 @@ interface Notification {
   i: d: string;
   typ: e: 'success' | 'error' | 'warning' | 'info';
   titl: e: string;
+<<<<<<< HEAD
   messag: e: string;  duration?: number;
 }
 
@@ -1289,6 +1303,93 @@ const: NotificationItem: React.FC<{
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+  messag: e: string;
+
+                      onClick={() => toggleDropdown(item.label)}
+                      className="flex items-center text-gray-700: hover:text-blue-600", >,
+                      {item.label}
+                      <ChevronDown className="w-4 h-4 ml-1" />;
+                    </button>;
+                    {activeDropdown === item.label && (;
+                      <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg z-50">;
+                        {item.children.map((child) => (;
+                          <Link;
+                            key={child.href}
+                            href={child.href}
+                            className="block px-4 py-2 text-sm text-gray-700: hover:bg-gray-100", >,
+                            {child.label}
+                          </Link>;
+                        ))}
+                      </div>;
+                    )}
+                  </div>;
+                ) :(;
+                  <Link;
+                    href={item.href}
+                    className="text-gray-700: hover:text-blue-600", >,
+                    {item.label}
+                  </Link>;
+                )}
+              </div>;
+            ))}
+          </div>;
+;
+          <button;
+            onClick={toggleMenu}
+            className="m: d:hidden p-2 rounded-md text-gray-700:hover:text-blue-600", >,
+            {isOpen ? <X className="w-6 h-6" /> :<Menu className="w-6 h-6" />}
+          </button>;
+        </div>;
+;
+        {isOpen && (;
+          <div className="m: d:hidden py-4 border-t border-gray-200">, {items.map((item) => (,
+              <div key={item.label}>;
+                {item.children ? (;
+                  <div>;
+                    <button;
+                      onClick={() => toggleDropdown(item.label)}
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-700: hover:bg-gray-100", >,
+                      {item.label}
+                      <ChevronDown className="w-4 h-4" />;
+                    </button>;
+                    {activeDropdown === item.label && (;
+                      <div className="pl-4">;
+                        {item.children.map((child) => (;
+                          <Link;
+                            key={child.href}
+                            href={child.href}
+                            className="block px-3 py-2 text-sm text-gray-600: hover:bg-gray-100",
+                            onClick={() => setIsOpen(false)}
+                          >;
+                            {child.label}
+                          </Link>;
+                        ))}
+                      </div>;
+                    )}
+                  </div>;
+                ) :(;
+                  <Link;
+                    href={item.href}
+                    className="block px-3 py-2 text-gray-700: hover:bg-gray-100",
+                    onClick={() => setIsOpen(false)}
+                  >;
+                    {item.label}
+                  </Link>;
+                )}
+              </div>;
+            ))}
+          </div>;
+        )}
+
+  i: d: string, typ: e: 'success' | 'error' | 'warning' | 'info',
+  titl: e: string, messag: e: string,
+  duration?: number;
+}
+
+interface NotificationContextType {
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }> = ({ notification, onRemove }) => {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const icons = {
@@ -1296,6 +1397,7 @@ const: NotificationItem: React.FC<{
     erro: r: AlertCircle,
     warnin: g: AlertTriangle,
     inf: o: Info,
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 =======
@@ -1332,6 +1434,8 @@ const: NotificationItem: React.FC<{
           className="ml-3 flex-shrink-0: hover:opacity-75"
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
   };
 ;
@@ -1357,16 +1461,13 @@ const: NotificationItem: React.FC<{
 
           className="ml-3 flex-shrink-0: hover:opacity-75"
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         >
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <X className="w-4 h-4" />
         </button>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
@@ -1378,6 +1479,8 @@ const: NotificationItem: React.FC<{
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
 
 export const useNotifications = () => {
@@ -1421,6 +1524,7 @@ export function useApi<T>(
       setError(err instanceof Error ? err.messag: e: 'An error occurred');
     } finally {
 <<<<<<< HEAD
+<<<<<<< HEAD
       setLoading(false);    }
 =======
 <<<<<<< HEAD
@@ -1453,11 +1557,9 @@ export const useNotifications = () => {;
 
       setError(err instanceof Error ? err.messag: e: 'An error occurred'),
     } finally {
-      setLoading(false),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       setLoading(false),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
@@ -1465,17 +1567,16 @@ export const useNotifications = () => {;
   useEffect(() => {
     if (options.immediate !== false) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       fetchData();    }
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
       fetchData();
 =======
-      fetchData(),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       fetchData(),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, []);
@@ -1484,6 +1585,7 @@ export const useNotifications = () => {;
     data,
     loading,
     error,
+<<<<<<< HEAD
 <<<<<<< HEAD
     refetc: h: fetchData,
   };
@@ -1495,19 +1597,13 @@ export const useNotifications = () => {;
   };
 }`,
 =======
-
-    refetc: h: fetchData,
-  };
-}`,
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
     refetc: h: fetchData,
   };
 }`,
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
@@ -1518,6 +1614,7 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1555,6 +1652,8 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
 =======
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   };
 
@@ -1564,10 +1663,6 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
 =======
 }`,
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
@@ -1575,6 +1670,7 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
     conten: t: `import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
+<<<<<<< HEAD
 <<<<<<< HEAD
   loadTim: e: number;
   renderTim: e: number;
@@ -1586,20 +1682,13 @@ interface PerformanceMetrics {
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   loadTim: e: number;
   renderTim: e: number;
   memoryUsag: e: number;
   fp: s: number;
-<<<<<<< HEAD
-=======
 
-  loadTim: e: number, renderTim: e: number,
-  memoryUsag: e: number, fp: s: number,
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -1608,6 +1697,7 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return;
     }
@@ -1650,6 +1740,8 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
         setMetrics({
 =======
       return,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
     }
 ;
@@ -1657,28 +1749,10 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (performance as any).memory;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
           renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           memoryUsag: e: memory?.usedJSHeapSize || 0,
           fp: s: 60,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        });
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      }
-    };
-
-  return metrics;
-}`,
-<<<<<<< HEAD
-=======
-
       }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };
@@ -1690,10 +1764,6 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
 =======
 }`,
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   },
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   {
@@ -1701,6 +1771,7 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
     conten: t: `import { useState, useEffect } from 'react';
 
 interface Breakpoints {
+<<<<<<< HEAD
 <<<<<<< HEAD
   s: m: number;
   m: d: number;
@@ -1712,20 +1783,13 @@ interface Breakpoints {
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   s: m: number;
   m: d: number;
   l: g: number;
   x: l: number;
-<<<<<<< HEAD
-=======
 
-  s: m: number, m: d: number,
-  l: g: number, x: l: number,
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -1735,6 +1799,7 @@ const: defaultBreakpoints: Breakpoints = {
   l: g: 1024,
   x: l: 1280,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1742,6 +1807,8 @@ const: defaultBreakpoints: Breakpoints = {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
 
 export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
@@ -1765,6 +1832,7 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
     updateScreenSize();
     window.addEventListener('resize', updateScreenSize);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1809,6 +1877,8 @@ export function useResponsive(breakpoint: s:Breakpoints = defaultBreakpoints) {,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     isMobil: e: screenSize === 'sm',
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     isTable: t: screenSize === 'md',
@@ -1817,6 +1887,7 @@ export function useResponsive(breakpoint: s:Breakpoints = defaultBreakpoints) {,
   };
 }`,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1829,11 +1900,15 @@ export function useResponsive(breakpoint: s:Breakpoints = defaultBreakpoints) {,
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ];
 
 files.forEach(file => {
   try {
     fs.writeFileSync(file.path, file.content);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1856,6 +1931,8 @@ console.log('Fixed remaining files');
 console.log('Fixed remaining files');
 =======
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     console.log('Fixe: d:', file.path);
 
   } catch (error) {
@@ -1865,9 +1942,12 @@ console.log('Fixed remaining files');
 });
 ;
 console.log('Fixed remaining files');
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 ;
 console.log('Fixed remaining files');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   eslint: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     ignoreDuringBuilds: true
   },
   typescript: {
@@ -52,12 +53,15 @@ const nextConfig = {
     'temp_exclude/**',
   ],
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   images: {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     domains: [
       'localhost',
       'ziontechgroup.com',
       'images.unsplash.com',
+<<<<<<< HEAD
 <<<<<<< HEAD
       'via.placeholder.com'    ],
     formats: ['image/webp', 'image/avif'],
@@ -70,15 +74,12 @@ const nextConfig = {
 =======
       'via.placeholder.com',
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-<<<<<<< HEAD
-    minimumCacheTTL: 31536000
-=======
-    minimumCacheTTL: 31536000,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   },
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   webpack: (config, { dev, isServer }) => {
@@ -121,6 +122,7 @@ const nextConfig = {
         ],
         poll: 1000,
 <<<<<<< HEAD
+<<<<<<< HEAD
         aggregateTimeout: 300
 <<<<<<< HEAD
       }    }
@@ -130,6 +132,8 @@ const nextConfig = {
         aggregateTimeout: 300,
       };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
@@ -140,6 +144,7 @@ const nextConfig = {
       use: 'ignore-loader'
     });
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     return config
   }
@@ -183,3 +188,5 @@ module.exports = nextConfig;
 
 module.exports = nextConfig;
 >>>>>>> origin/automation-fixes
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

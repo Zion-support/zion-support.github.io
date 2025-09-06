@@ -5,8 +5,7 @@ export default function AccountSettingsPage() {
   const [user, setUser] = useState<{
     address: string;
     chain: 'evm' | 'sol';
-  } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-  const [ens, setEns] = useState('');
+  } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);  const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
   const [farcaster, setFarcaster] = useState('');
@@ -31,7 +30,6 @@ export default function AccountSettingsPage() {
     setDisplayWeb3(val);
     if (typeof window !== 'undefined')
       window.localStorage.setItem('zion-web3-display', String(val));  };
-
   const linkDID = async () => {
     if (!user) return;
     setLinking(true);
@@ -67,8 +65,7 @@ export default function AccountSettingsPage() {
             'utf8'
           );
           const bs58 = (await import('bs58')).default;
-          signature = bs58.encode(sig);        }
-      } catch {}
+          signature = bs58.encode(sig);        }      } catch {}
 
       const res = await fetch('/api/did/link', {
         method: 'POST',
@@ -80,15 +77,13 @@ export default function AccountSettingsPage() {
     } catch (e: any) {
       setStatus(e?.message || 'Linking failed');
     } finally {
-      setLinking(false);    }
-  };
+      setLinking(false);    }  };
 
   const doBackup = async () => {
     setStatus(null);
     try {
       const profile = {
-        user,
-        preferences: { displayWeb3 },
+        user,        preferences: { displayWeb3 },
         did: { ens, lens, ceramic, farcaster },
         resume: {},
         projects: [],
@@ -104,16 +99,14 @@ export default function AccountSettingsPage() {
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage');
     } catch (e: any) {
-      setStatus(e?.message || 'Backup failed');    }
-  };
+      setStatus(e?.message || 'Backup failed');    }  };
 
   const doRestore = async () => {
     setStatus(null);
     try {
       const res = await fetch(
         `/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`
-      );      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Restore failed');
+      );      const data = await res.json();      if (!res.ok) throw new Error(data?.error || 'Restore failed');
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
@@ -125,8 +118,7 @@ export default function AccountSettingsPage() {
       }
       setStatus('Profile restored from backup');
     } catch (e: any) {
-      setStatus(e?.message || 'Restore failed');    }
-  };
+      setStatus(e?.message || 'Restore failed');    }  };
 
   return (
     <>
@@ -140,8 +132,7 @@ export default function AccountSettingsPage() {
             Manage your Web3 identity and backups. Email is optional when using
             wallets.
           </p>
-          <div className='mt-4 flex items-center justify-between'>
-            <div>
+          <div className='mt-4 flex items-center justify-between'>            <div>
               <div className='text-sm font-medium'>Display Web3 identity</div>
               <div className='text-xs text-gray-500'>
                 Show ENS/Lens name instead of email
@@ -157,8 +148,7 @@ export default function AccountSettingsPage() {
               <span className='relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner'>
                 <span
                   className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}
-                ></span>              </span>
-            </label>
+                ></span>              </span>            </label>
           </div>
         </section>
 

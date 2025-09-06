@@ -8,7 +8,6 @@ const localeLabelKey: Record<string, string> = {
   es: 'lang.spanish',
   ar: 'lang.arabic'
 };
-
 export default function LanguageSwitchPrompt() {
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
@@ -22,8 +21,7 @@ export default function LanguageSwitchPrompt() {
     const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
     const normalized = detected.split('-')[0];
     const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
-    if (suggestion) setSuggested(suggestion);
-  }, []);
+    if (suggestion) setSuggested(suggestion);  }, []);
 
   if (!suggested) return null;
 
@@ -38,8 +36,7 @@ export default function LanguageSwitchPrompt() {
 
   const decline = () => {
     localStorage.setItem('langPromptShown1', 'true');
-    setSuggested(null);
-  };
+    setSuggested(null);  };
 
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">

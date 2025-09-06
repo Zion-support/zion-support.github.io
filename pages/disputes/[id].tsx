@@ -4,8 +4,7 @@ import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export default function DisputeDetailPage() {
+const fetcher = (url: string) => fetch(url).then(r => r.json());export default function DisputeDetailPage() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
@@ -14,8 +13,7 @@ export default function DisputeDetailPage() {
   const dispute = data?.dispute;
   const [activeTab, setActiveTab] = useState<
     'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'
-  >('Overview');  const [message, setMessage] = useState('');
-  const [resolutionSummary, setResolutionSummary] = useState('');
+  >('Overview');  const [message, setMessage] = useState('');  const [resolutionSummary, setResolutionSummary] = useState('');
 
   async function sendMessage() {
     if (!message.trim() || !id) return;
@@ -36,7 +34,6 @@ export default function DisputeDetailPage() {
     });
     setResolutionSummary('');
     mutate();  }
-
   return (
     <EnhancedLayout>
       {!dispute ? (
@@ -87,8 +84,7 @@ export default function DisputeDetailPage() {
                 <div className='text-sm'>
                   {dispute.reason}
                   {dispute.reasonDetails ? ` — ${dispute.reasonDetails}` : ''}
-                </div>
-              </div>
+                </div>              </div>
               <div className='p-4 border rounded'>
                 <div className='font-medium mb-2'>Description</div>
                 <div className='text-sm whitespace-pre-wrap'>
@@ -120,8 +116,7 @@ export default function DisputeDetailPage() {
                       <time className='text-xs text-gray-500'>
                         {new Date(dispute.resolvedAt).toLocaleString()}
                       </time>
-                      <div className='text-sm'>Case resolved</div>                    </li>
-                  )}
+                      <div className='text-sm'>Case resolved</div>                    </li>                  )}
                 </ol>
               </div>
             </div>
@@ -140,8 +135,7 @@ export default function DisputeDetailPage() {
                           {m.authorRole} •{' '}
                           {new Date(m.createdAt).toLocaleString()}
                         </div>
-                        <div className='whitespace-pre-wrap'>{m.body}</div>                      </li>
-                    ))}
+                        <div className='whitespace-pre-wrap'>{m.body}</div>                      </li>                    ))}
                   </ul>
                 )}
               </div>
@@ -158,8 +152,7 @@ export default function DisputeDetailPage() {
                     className='px-3 py-2 rounded bg-blue-600 text-white'
                   >
                     Send
-                  </button>                </div>
-              )}
+                  </button>                </div>              )}
             </div>
           )}
 
@@ -185,16 +178,14 @@ export default function DisputeDetailPage() {
                         href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}
                       >
                         Download
-                      </a>                    </li>
-                  ))}
+                      </a>                    </li>                  ))}
                 </ul>
               )}
             </div>
           )}
 
           {activeTab === 'Admin Notes' && (
-            <div className='space-y-4'>
-              {user.role !== 'admin' ? (
+            <div className='space-y-4'>              {user.role !== 'admin' ? (
                 <div className='text-sm text-gray-500'>
                   Admin access required
                 </div>
@@ -219,8 +210,7 @@ export default function DisputeDetailPage() {
                       className='px-3 py-2 rounded bg-green-600 text-white'
                     >
                       Resolve
-                    </button>                  </div>
-                </div>
+                    </button>                  </div>                </div>
               )}
             </div>
           )}

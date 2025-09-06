@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 
@@ -14,3 +15,5 @@ try {}
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
 	process.exit(1)};
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

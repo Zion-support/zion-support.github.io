@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -9,7 +8,6 @@ import {
   isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
-
 export interface Milestone {
   id: string;
   title: string;
@@ -63,10 +61,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   project.milestones[idx] = next;
   project.updatedAt = now;
   saveProject(project);
-<<<<<<< HEAD
-  return next;
-=======
-  
+  return next;  
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   
@@ -92,5 +87,3 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   
   return true;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

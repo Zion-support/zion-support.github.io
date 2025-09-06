@@ -72,8 +72,7 @@ export default function Innovations2034Page() {
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
-                  }}
-                  animate={{
+                  }}                  animate={{
                     y: [0, -100, 0],
                     opacity: [0.6, 1, 0.6],
                     scale: [1, 1.5, 1],
@@ -83,19 +82,16 @@ export default function Innovations2034Page() {
                     duration: 4 + Math.random() * 3,
                     repeat: Infinity,
                     delay: Math.random() * 2,
-                  }}                />
-              ))}
+                  }}                />              ))}
             </div>
           </div>
 
-          <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div
-              initial={{ opacity: 0, y: 50 }}
+          <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div              initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
               <motion.h1
-                className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight'                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight'                initial={{ opacity: 0, scale: 0.8 }}                animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2, delay: 0.2 }}
               >
                 2034
@@ -114,7 +110,6 @@ export default function Innovations2034Page() {
                 services, IT solutions, and AI platforms. From AI consciousness
                 to space mining automation, we're building tomorrow's technology
                 today.              </motion.p>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -133,8 +128,7 @@ export default function Innovations2034Page() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='border-2 border-cyan-500/50 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 text-lg'
-                >                  Contact Us
-                </motion.button>
+                >                  Contact Us                </motion.button>
               </motion.div>
             </motion.div>
           </div>
@@ -154,8 +148,7 @@ export default function Innovations2034Page() {
               <motion.div
                 animate={{ y: [0, 12, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className='w-1 h-3 bg-cyan-400 rounded-full mt-2'              />
-            </motion.div>
+                className='w-1 h-3 bg-cyan-400 rounded-full mt-2'              />            </motion.div>
           </motion.div>
         </section>
 
@@ -183,8 +176,7 @@ export default function Innovations2034Page() {
                   icon: '🧠',
                   title: 'AI Consciousness',
                   description:
-                    'Revolutionary AI consciousness and emotional intelligence platforms',
-                  color: 'from-violet-500 to-purple-600',
+                    'Revolutionary AI consciousness and emotional intelligence platforms',                  color: 'from-violet-500 to-purple-600',
                   count: '5+ Services',
                 },
                 {
@@ -234,14 +226,12 @@ export default function Innovations2034Page() {
                     'Fusion energy control and nanotechnology materials',
                   color: 'from-yellow-500 to-orange-600',
                   count: '3+ Services',
-                },                {
-                  icon: '🔄',
+                },                {                  icon: '🔄',
                   title: 'Digital Twins',
                   description: 'Digital twin simulation and edge AI computing',
                   color: 'from-teal-500 to-cyan-600',
                   count: '2+ Services',
-                },              ].map((category, index) => (
-                <motion.div
+                },              ].map((category, index) => (                <motion.div
                   key={category.title}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -261,8 +251,7 @@ export default function Innovations2034Page() {
                     <p className='text-gray-400 text-sm mb-4'>
                       {category.description}
                     </p>
-                    <div className='text-cyan-400 font-semibold text-sm'>                      {category.count}
-                    </div>
+                    <div className='text-cyan-400 font-semibold text-sm'>                      {category.count}                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -297,8 +286,7 @@ export default function Innovations2034Page() {
                   description:
                     "We're the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.",
                   color: 'from-cyan-500 to-blue-600',
-                },
-                {
+                },                {
                   icon: '🧠',
                   title: 'AI-First Approach',
                   description:
@@ -332,8 +320,7 @@ export default function Innovations2034Page() {
                   description:
                     '24/7 expert support from our team of technology pioneers and industry experts.',
                   color: 'from-indigo-500 to-purple-600',
-                },              ].map((feature, index) => (
-                <motion.div
+                },              ].map((feature, index) => (                <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -350,8 +337,7 @@ export default function Innovations2034Page() {
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                       {feature.title}
                     </h3>
-                    <p className='text-gray-400'>{feature.description}</p>                  </div>
-                </motion.div>
+                    <p className='text-gray-400'>{feature.description}</p>                  </div>                </motion.div>
               ))}
             </div>
           </div>
@@ -377,24 +363,21 @@ export default function Innovations2034Page() {
 
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
-                  <span className='text-cyan-400'>📱</span>
-                  <span>{contactInfo.mobile}</span>
+                  <span className='text-cyan-400'>📱</span>                  <span>{contactInfo.mobile}</span>
                 </div>
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
                   <span className='text-purple-400'>✉️</span>
                   <span>{contactInfo.email}</span>
                 </div>
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
-                  <span className='text-pink-400'>📍</span>                  <span>{contactInfo.address}</span>
-                </div>
+                  <span className='text-pink-400'>📍</span>                  <span>{contactInfo.address}</span>                </div>
               </div>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg'
-              >                Start Your Innovation Journey
-              </motion.button>
+              >                Start Your Innovation Journey              </motion.button>
             </motion.div>
           </div>
         </section>

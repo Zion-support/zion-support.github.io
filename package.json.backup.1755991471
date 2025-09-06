@@ -700,6 +700,7 @@
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "12.1.5",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -713,9 +714,11 @@
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.2.0",
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-    "@types/node-cron": "^3.0.11",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "@types/node-cron": "^3.0.11",
     "@types/node": "^24.2.1",    "@types/node-cron": "^3.0.11",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -723,6 +726,9 @@
     "@types/node": "^24.2.1",    "@types/node-cron": "^3.0.11",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "@types/node": "^24.2.1",    "@types/node-cron": "^3.0.11",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
@@ -742,6 +748,7 @@
     "tailwindcss": "^3.4.0",
     "ts-node": "^10.9.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -752,9 +759,11 @@
     "typechain": "^8.3.2",
     "typescript": "^5.6.3"
 >>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-  },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     "typescript": "^5.9.2"  },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -762,11 +771,15 @@
     "typescript": "^5.9.2"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "typescript": "^5.9.2"  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -779,6 +792,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",

@@ -1,5 +1,3 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -72,5 +70,3 @@ class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.log
 // Run the git workflow monitor;
 const gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error = > {; process.exit(1)});
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

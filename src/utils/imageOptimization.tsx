@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  const observer = new IntersectionObserver ( ([entry]) => {;
   if (entry && entry.isIntersecting) {;
   return () => observer.disconnect () ;
@@ -10,40 +9,12 @@
 <defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
 }` ;
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
-interface OptimizedImageProps {
-  src: string,
-  alt: string,
-  width?: number,
-  height?: number,
-  className?: string,
-  priority?: boolean,
-  placeholder?: 'blur' | 'empty',
-  blurDataURL?: string,
-  quality?: number,
-  sizes?: string,
-  onLoad?: () => void,
-  onError?: () => void,
-  fallbackSrc?: string,
-  lazy?: boolean
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const imgRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for lazy loading
-<<<<<<< HEAD
   useEffect(() => {
     if (!lazy || priority || isInView) return;
-=======
-  useEffect((,) => {
-    if (!lazy || priority || isInView) return,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
     const observer = new IntersectionObserver(
       ([entry],) => {
         if (entry && entry.isIntersecting) {
@@ -106,7 +77,6 @@ interface OptimizedImageProps {
     ).toString('base64')}`;
   };
 
-<<<<<<< HEAD
   
     >
       {isInView && !hasError && (
@@ -121,27 +91,7 @@ interface OptimizedImageProps {
           }
           onLoad={handleLoad}
           onError={handleError}
-          className={cn(
-=======
-  return (
-    <div
-      ref = {imgRef,}
-      className = {cn('relative overflow-hidden', className),}
-      style={{ width, height }}
-    >
-      {isInView && !hasError && (
-        <Image
-          src = {getOptimizedSrc(src),}
-          alt = {alt,}
-          width = {width,}
-          height = {height,}
-          priority = {priority,}
-          blurDataURL = {placeholder === 'blur' ? generateBlurDataURL() : undefined,}
-          onLoad = {handleLoad,}
-          onError = {handleError,}
-          className = {cn(
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            'transition-opacity duration-300',
+          className={cn(            'transition-opacity duration-300',
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
           {...props}
@@ -158,18 +108,10 @@ interface OptimizedImageProps {
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>
           {fallbackSrc ? (
             <img
-<<<<<<< HEAD
               src={fallbackSrc}
               alt={alt}
               className='max-w-full max-h-full object-contain'
-              onLoad={handleLoad}
-=======
-              src = {fallbackSrc,}
-              alt = {alt,}
-              className="max-w-full max-h-full object-contain"
-              onLoad = {handleLoad,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            />
+              onLoad={handleLoad}            />
           ) : (
             <div className='text-gray-400 text-center'>
               <svg
@@ -201,7 +143,6 @@ export function withImageOptimization<P extends { src: string; alt: string }>(
   Component: React.ComponentType<P>
 ) {
   return function OptimizedComponent(props: P) {
-<<<<<<< HEAD
     const { src, alt, ...otherProps } = props;
 
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />;
@@ -226,40 +167,10 @@ export function getImageDimensions(
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;
-  });
-=======
-=======
-    const { src, alt, ...otherProps } = props,
-    
-    return (
-      <OptimizedImage
-        src = {src,}
-        alt = {alt,}
-        {...(otherProps as any)}
-      />
-    )
-  }
-}
-
-// Utility to preload critical images
-export function preloadImage(src: string): Promise<void> {
-  return new Promise((resolve, reject,) => {
-    const img = new window.Image(),
-    img.onload = () => resolve(),
-    img.onerror = reject,
-    img.src = src
+  });    img.src = src
   })
-}
-
-// Utility to get image dimensions
-export function getImageDimensions(src: string): Promise<{ width: number, height: number }> {
-  return new Promise((resolve, reject,) => {
-    const img = new window.Image(),
-    img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight }),
-    img.onerror = reject,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+} 
+    img.onerror = reject;
     img.src = src
   })
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

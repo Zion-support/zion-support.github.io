@@ -12,7 +12,6 @@ export default function JobApplicantsPage() {
     id ? `/api/applications?jobId=${id}` : null,
     fetcher
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
-
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) || [];
 

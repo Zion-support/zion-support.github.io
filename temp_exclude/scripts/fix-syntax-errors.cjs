@@ -7,6 +7,7 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
   }
 
   log(message) {
@@ -56,6 +57,9 @@ const path = require('path')
     
     // Fix merge conflict markers
     content = content.replace(/[\s\S]*?[\s\S]*?    
+=======
+    
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     

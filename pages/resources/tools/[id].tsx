@@ -39,8 +39,7 @@ import { useRouter } from 'next/router';
         </ol>
         
         <h2>Next Steps After Assessment</h2>
-        <p>Once you complete the assessment, you'll receive:</p>        <ul>
-          <li>A detailed readiness score and analysis</li>
+        <p>Once you complete the assessment, you'll receive:</p>        <ul>          <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
@@ -58,8 +57,7 @@ import { useRouter } from 'next/router';
       id: 'ai-maturity-model',
       title: 'AI Maturity Model',
       description:
-        'Assess your current AI capabilities and plan your transformation journey.',      type: 'Framework',
-      estimatedTime: '30 minutes',
+        'Assess your current AI capabilities and plan your transformation journey.',      type: 'Framework',      estimatedTime: '30 minutes',
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your 
@@ -87,8 +85,7 @@ import { useRouter } from 'next/router';
         </ul>
         
         <h2>Using the Framework</h2>
-        <p>To effectively use this framework:</p>        <ol>
-          <li>Assess your current state across all dimensions</li>
+        <p>To effectively use this framework:</p>        <ol>          <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
           <li>Prioritize improvement areas based on business impact</li>
           <li>Develop a phased transformation roadmap</li>
@@ -117,8 +114,7 @@ import { useRouter } from 'next/router';
       id: 'performance-benchmark',
       title: 'Performance Benchmarking Tool',
       description:
-        'Compare your automation performance against industry standards.',      type: 'Analytics Tool',
-      estimatedTime: '20 minutes',
+        'Compare your automation performance against industry standards.',      type: 'Analytics Tool',      estimatedTime: '20 minutes',
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against 
@@ -165,8 +161,7 @@ import { useRouter } from 'next/router';
         </ul>
         
         <h2>Action Planning</h2>
-        <p>Based on benchmark results, develop action plans that include:</p>        <ul>
-          <li>Specific performance improvement targets</li>
+        <p>Based on benchmark results, develop action plans that include:</p>        <ul>          <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
           <li>Implementation timelines and milestones</li>
           <li>Success metrics and measurement approaches</li>
@@ -181,7 +176,6 @@ import { useRouter } from 'next/router';
         'Progress tracking',
       ],
     },  ];
-
   const tool = tools.find(t => t.id === id);
 
   if (!tool) {
@@ -201,23 +195,20 @@ import { useRouter } from 'next/router';
               </p>
               <Link
                 href='/resources'
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >
-                ← Back to Resources
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >                ← Back to Resources
               </Link>
             </div>
           </main>
         </div>
       </>
     );  }
-
   return (
     <>
       <Head>
         <title>{tool.title} | Zion Tech Group - Tool Resource</title>
         <meta name='description' content={tool.description} />
         <meta property='og:title' content={`${tool.title} | Zion Tech Group`} />
-        <meta property='og:description' content={tool.description} />
-      </Head>
+        <meta property='og:description' content={tool.description} />      </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
@@ -266,8 +257,7 @@ import { useRouter } from 'next/router';
                         key={index}
                         className='text-white/80 flex items-center gap-3'
                       >
-                        <div className='w-2 h-2 bg-green-400 rounded-full'></div>                        {feature}
-                      </li>
+                        <div className='w-2 h-2 bg-green-400 rounded-full'></div>                        {feature}                      </li>
                     ))}
                   </ul>
                 </div>
@@ -287,8 +277,7 @@ import { useRouter } from 'next/router';
                       </span>
                       <p className='text-white font-medium'>
                         {tool.estimatedTime}
-                      </p>                    </div>
-                  </div>
+                      </p>                    </div>                  </div>
                 </div>
               </div>
             </div>
@@ -296,8 +285,7 @@ import { useRouter } from 'next/router';
             <div className='text-center'>
               <Link
                 href='/contact'
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >
-                Get Started with Your Project
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >                Get Started with Your Project
               </Link>
             </div>
           </div>

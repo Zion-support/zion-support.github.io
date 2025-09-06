@@ -16,7 +16,6 @@ export const getStaticProps: GetStaticProps = async ctx => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find(a => a.slug === slug) || null;
   return { props: { article } };};
-
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   const [voted, setVoted] = useState<null | boolean>(null);
 

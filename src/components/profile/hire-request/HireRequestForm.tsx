@@ -9,22 +9,6 @@ import { PersonalInfoFields } from './PersonalInfoFields';
 import { ProjectDetailsField } from './ProjectDetailsField';
 import { TimelineField } from './TimelineField';
 import { BudgetFields } from './BudgetFields';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-<<<<<<< HEAD
-=======
-import React from "react";
-import { useHireRequestForm, FormValues } from "./useHireRequestForm";
-import { Button } from "@/components/ui/button";
-import { DialogFooter } from "@/components/ui/dialog";
-import { Form } from "@/components/ui/form";
-import { Loader2 } from 'lucide-react';
-import { TalentProfile } from "@/types/talent";
-import { PersonalInfoFields } from "./PersonalInfoFields";
-import { ProjectDetailsField } from "./ProjectDetailsField";
-import { TimelineField } from "./TimelineField";
-import { BudgetFields } from "./BudgetFields";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export interface HireRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
@@ -63,7 +47,6 @@ export function HireRequestForm({
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <BudgetFields form={form} talent={talent} />
         </div>
-<<<<<<< HEAD
 
         <DialogFooter className='pt-4'>
           <Button
@@ -80,12 +63,38 @@ export function HireRequestForm({
           >
             {isSubmitting ? (
               <>
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...
-=======
+                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void
+}
+
+export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
+  const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
+    talent, 
+    onClose: onSubmitSuccess || onClose, 
+    initialJobTitle;
+    userDetails 
+  });
+  
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <PersonalInfoFields form={form} />
+        </div>
+        
+        <ProjectDetailsField form={form} />
+        <TimelineField form={form} />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <BudgetFields form={form} talent={talent} />
+        </div>
+        
+        <DialogFooter className="pt-4">
+          <Button 
+            type="button" 
+            variant="outline" 
+            onClick={onClose}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             disabled={isSubmitting}
-=======
         
         <DialogFooter className="pt-4">
           <Button 
@@ -94,34 +103,21 @@ export function HireRequestForm({
             onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled = {isSubmitting,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             Cancel
           </Button>
-<<<<<<< HEAD
           <Button
             type='submit'
-            className='bg-zion-purple hover:bg-zion-purple-dark text-white'
-=======
-          <Button 
+            className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button 
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             disabled={isSubmitting}
-=======
             disabled = {isSubmitting,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             {isSubmitting ? (
               <>
-<<<<<<< HEAD
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />
-=======
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                <Loader2 className='mr-2 h-4 w-4 animate-spin' />                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Submitting...
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </>
             ) : (
               'Submit Request'
@@ -132,7 +128,3 @@ export function HireRequestForm({
     </Form>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

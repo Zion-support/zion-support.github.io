@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 
 export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
-=======
-
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React from 'react';
+TalentCard.displayName = 'TalentCard';import React from 'react';
 import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -179,4 +170,6 @@ const TalentCardComponent = ({
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+
+export const TalentCard = React.memo(TalentCardComponent);
+TalentCard.displayName = 'TalentCard';

@@ -36,8 +36,7 @@ import Link from 'next/link';
                     <div className='text-3xl font-bold text-green-400'>
                       $100M+
                     </div>
-                    <div className='text-white/70'>Annual Revenue</div>                  </div>
-                </div>
+                    <div className='text-white/70'>Annual Revenue</div>                  </div>                </div>
               </div>
             </section>
 
@@ -59,8 +58,7 @@ import Link from 'next/link';
                     </span>
                   </li>
                   <li className='flex items-start gap-3'>
-                    <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>
-                    <span>Long response times averaging 4-6 hours</span>
+                    <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>                    <span>Long response times averaging 4-6 hours</span>
                   </li>
                   <li className='flex items-start gap-3'>
                     <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>
@@ -70,8 +68,7 @@ import Link from 'next/link';
                     </span>
                   </li>
                   <li className='flex items-start gap-3'>
-                    <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>                    <span>Limited 24/7 support coverage</span>
-                  </li>
+                    <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>                    <span>Limited 24/7 support coverage</span>                  </li>
                 </ul>
               </div>
             </section>
@@ -89,8 +86,7 @@ import Link from 'next/link';
                   We implemented a comprehensive customer service automation
                   platform that combines intelligent chatbots, automated ticket
                   routing, and sentiment analysis for optimal customer
-                  experience.
-                </p>
+                  experience.                </p>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div className='bg-white/5 rounded-lg p-6 border border-white/10'>
@@ -129,8 +125,7 @@ import Link from 'next/link';
                       24/7 Support
                     </h4>
                     <p className='text-white/80'>
-                      Round-the-clock automated support with seamless escalation                      to human agents when needed.
-                    </p>
+                      Round-the-clock automated support with seamless escalation                      to human agents when needed.                    </p>
                   </div>
                 </div>
               </div>
@@ -186,8 +181,7 @@ import Link from 'next/link';
                         <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>
                         <span>
                           Improved agent productivity and job satisfaction
-                        </span>
-                      </li>
+                        </span>                      </li>
                       <li className='flex items-start gap-3'>
                         <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>
                         <span>
@@ -201,8 +195,7 @@ import Link from 'next/link';
                         </span>
                       </li>
                       <li className='flex items-start gap-3'>
-                        <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>                        <span>Scalable solution for business growth</span>
-                      </li>
+                        <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>                        <span>Scalable solution for business growth</span>                      </li>
                     </ul>
                   </div>
                 </div>
@@ -228,8 +221,7 @@ import Link from 'next/link';
                     >
                       <span className='text-green-400 font-semibold'>
                         {tech}
-                      </span>                    </div>
-                  ))}
+                      </span>                    </div>                  ))}
                 </div>
               </div>
             </section>
@@ -296,8 +288,7 @@ import Link from 'next/link';
                       </h4>
                       <p className='text-white/70'>
                         Full deployment and staff training on new systems
-                      </p>                    </div>
-                  </div>
+                      </p>                    </div>                  </div>
                 </div>
               </div>
             </section>
@@ -322,8 +313,7 @@ import Link from 'next/link';
                   </Link>
                   <Link
                     href='/case-studies'
-                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-green-400/50 transition-all duration-300'                  >
-                    View All Case Studies
+                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-green-400/50 transition-all duration-300'                  >                    View All Case Studies
                   </Link>
                 </div>
               </div>

@@ -59,7 +59,6 @@ export default async function handler(
         : 0,
       payout_amount,
       currency: 'USD',
-    });
-  } catch (e: any) {
+    });  } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }

@@ -20,7 +20,6 @@ const statuses: GrantStatus[] = [
   'Approved',
   'Rejected',
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
@@ -30,11 +29,12 @@ export default function GrantsPage() {
     region?: string;
     program?: string;
   }>({});
-=======
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
+export default function GrantsPage() {
+  const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   useEffect(() => {
     const params = new URLSearchParams();
     if (filters.sector) params.set('sector', filters.sector);
@@ -47,18 +47,13 @@ export default function GrantsPage() {
       .catch(() => setItems([]));  }, [filters]);
 
   return (
-    <EnhancedLayout>
-=======
-      .then((r) => r.json())
+    <EnhancedLayout>      .then((r) => r.json())
       .then((d) => setItems(d.items || []))
       .catch(() => setItems([]))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, [filters]);
 
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
@@ -70,9 +65,6 @@ export default function GrantsPage() {
               Incubator
             </a>
           </Link>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        </div>
       </div>
 
       <div className='grid md:grid-cols-4 gap-4 mb-6'>
@@ -173,7 +165,4 @@ export default function GrantsPage() {
       </div>
     </EnhancedLayout>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

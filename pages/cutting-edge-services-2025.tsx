@@ -31,8 +31,7 @@ import {
   Award,
   Clock,
   ExternalLink,;
-} from 'lucide-react';import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+} from 'lucide-react';import Layout from '../components/layout/Layout';import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
@@ -56,16 +55,14 @@ const serviceCategories = [
     color: 'from-indigo-500 to-blue-600',
     bgColor: 'from-indigo-900/20 to-blue-900/20',
     borderColor: 'border-indigo-500/30',
-  },  {
-    title: 'Enterprise IT',
+  },  {    title: 'Enterprise IT',
     description: 'Advanced enterprise infrastructure and security solutions',
     services: cuttingEdgeITServices2025,
     icon: Shield,
     color: 'from-blue-500 to-cyan-600',
     bgColor: 'from-blue-900/20 to-cyan-900/20',
     borderColor: 'border-blue-500/30',
-  },  {
-    title: 'Micro SAAS',
+  },  {    title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
     services: cuttingEdgeMicroSaasServices2025,
     icon: Rocket,
@@ -73,7 +70,6 @@ const serviceCategories = [
     bgColor: 'from-teal-900/20 to-emerald-900/20',
     borderColor: 'border-teal-500/30',
   },];
-
 export default function CuttingEdgeServices2025() {
   return (
     <Layout>
@@ -109,8 +105,7 @@ export default function CuttingEdgeServices2025() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(236,73,153,0.1),transparent_50%)]'></div>
         </div>
 
-        <div className='relative z-10 max-w-7xl mx-auto px-6 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='relative z-10 max-w-7xl mx-auto px-6 text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -141,8 +136,7 @@ export default function CuttingEdgeServices2025() {
                 whileTap={{ scale: 0.95 }}
                 className='inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
               >
-                <Phone className='mr-2 w-5 h-5' />                Call Now
-              </motion.a>
+                <Phone className='mr-2 w-5 h-5' />                Call Now              </motion.a>
             </div>
           </motion.div>
         </div>
@@ -150,8 +144,7 @@ export default function CuttingEdgeServices2025() {
 
       {/* Service Categories */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-        <div className='max-w-7xl mx-auto px-6'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto px-6'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -167,8 +160,7 @@ export default function CuttingEdgeServices2025() {
             </p>
           </motion.div>
 
-          <div className='space-y-16'>            {serviceCategories.map((category, index) => (
-              <motion.div
+          <div className='space-y-16'>            {serviceCategories.map((category, index) => (              <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -189,8 +181,7 @@ export default function CuttingEdgeServices2025() {
                   </p>
                 </div>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
-                    <motion.div
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (                    <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -264,8 +255,7 @@ export default function CuttingEdgeServices2025() {
                             href={service.website}
                             className='flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm'
                           >
-                            <ExternalLink className='w-4 h-4 mr-2' />                            Learn More
-                          </a>
+                            <ExternalLink className='w-4 h-4 mr-2' />                            Learn More                          </a>
                         </div>
                       </div>
                     </motion.div>
@@ -279,8 +269,7 @@ export default function CuttingEdgeServices2025() {
 
       {/* Pricing Comparison */}
       <section className='py-20 bg-black'>
-        <div className='max-w-7xl mx-auto px-6'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto px-6'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -296,8 +285,7 @@ export default function CuttingEdgeServices2025() {
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            {['Starter', 'Professional', 'Enterprise'].map((plan, index) => (              <motion.div
-                key={plan}
+            {['Starter', 'Professional', 'Enterprise'].map((plan, index) => (              <motion.div                key={plan}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -362,8 +350,7 @@ export default function CuttingEdgeServices2025() {
                     className='w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300'
                   >
                     Get Started
-                    <ArrowRight className='ml-2 w-4 h-4' />                  </a>
-                </div>
+                    <ArrowRight className='ml-2 w-4 h-4' />                  </a>                </div>
               </motion.div>
             ))}
           </div>
@@ -372,8 +359,7 @@ export default function CuttingEdgeServices2025() {
 
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20'>
-        <div className='max-w-4xl mx-auto text-center px-6'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-4xl mx-auto text-center px-6'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -423,8 +409,7 @@ export default function CuttingEdgeServices2025() {
                 whileTap={{ scale: 0.95 }}
                 className='inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
               >
-                <Phone className='mr-2 w-5 h-5' />                Call Now
-              </motion.a>
+                <Phone className='mr-2 w-5 h-5' />                Call Now              </motion.a>
             </div>
           </motion.div>
         </div>

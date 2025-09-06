@@ -1,25 +1,4 @@
-<<<<<<< HEAD
     onboardingStatus.responseReceived;
-
-=======
-import { useState, useEffect } from "react";
-import { JobsList } from "@/components/jobs/JobsList";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Link from "next/link";
-import { JobStatus } from "@/types/jobs";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from 'lucide-react';
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
-import { useJobs } from "@/hooks/useJobs";
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-import { useIsMobile } from "@/hooks/use-mobile";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -43,14 +22,8 @@ function ClientDashboardContent() {
     }
   }, [jobs, selectedJobId]);
 
-<<<<<<< HEAD
   const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId);
-=======
-  const handleJobSelect = (jobId: string, jobTitle: string,) => {
-    setSelectedJobId(jobId),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    setSelectedJobTitle(jobTitle)
+    setSelectedJobId(jobId);    setSelectedJobTitle(jobTitle)
   };
 
   return (
@@ -191,8 +164,4 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center"> <p className="text-muted-foreground"> Select a job to see AI-matched talent suggestions </p> </div>) ;
 }</div> </div> </div> </div> </main> </>) ;
 }export default function ClientDashboard () {;
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}

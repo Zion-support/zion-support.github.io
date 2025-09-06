@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -7,7 +6,6 @@ import { AIMatchingResults } from '@/components/AIMatchingResults';
 import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
 import { Textarea } from '@/components/ui/textarea';
 import { Sparkles, Search } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 interface AIMatchmakerProps {
@@ -28,23 +26,12 @@ serviceType;
 toast ({;
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
-  setIsMatchmaking (false) ;
-=======
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AIMatchingResults } from "@/components/AIMatchingResults";
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
-import { Textarea } from "@/components/ui/textarea";
-import { Sparkles, Search } from 'lucide-react';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+  setIsMatchmaking (false) ;import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any,) => void,
   className?: string
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function AIMatchmaker({
   serviceType = '',
@@ -95,16 +82,9 @@ export function AIMatchmaker({
     } finally {
       setIsMatchmaking(false);
     }
-<<<<<<< HEAD
   };
 
-  const handleItemSelect = (item: any) => {
-=======
-  },
-  
-  const handleItemSelect = (item: any,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    if (onMatchSelect) {
+  const handleItemSelect = (item: any) => {    if (onMatchSelect) {
       // Find the original MatchResult that contains this item
       const matchResult = matches.find(match => match.item.id === item.id);
       if (matchResult) {
@@ -133,7 +113,6 @@ export function AIMatchmaker({
           <div className='space-y-2'>
             <Textarea
               placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
-<<<<<<< HEAD
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
                 setQuery(e.target.value)
@@ -143,18 +122,7 @@ export function AIMatchmaker({
             <Button
               onClick={handleSearch}
               disabled={isMatchmaking}
-              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
-=======
-              value = {query,}
-              onChange = {(e: React.ChangeEvent<HTMLTextAreaElement>,) => setQuery(e.target.value),}
-              className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-            <Button 
-              onClick = {handleSearch,}
-              disabled = {isMatchmaking,}
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            >
+              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'            >
               {isMatchmaking ? (
                 <>Analyzing your needs...</>
               ) : (
@@ -167,28 +135,15 @@ export function AIMatchmaker({
           </div>
 
           {hasSearched && (
-<<<<<<< HEAD
             <AIMatchingResults
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
-              projectDescription={query}
-=======
-            <AIMatchingResults 
-              matches = {matchItems,}
-              onSelectMatch = {handleItemSelect,}
-              isLoading = {isMatchmaking,}
-              serviceType = {serviceType,}
-              projectDescription = {query,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            />
+              projectDescription={query}            />
           )}
         </div>
       </CardContent>
     </Card>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

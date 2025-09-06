@@ -11,7 +11,6 @@ import { newRealServices } from '../../data/new-real-services';
 import { marketReadyServices } from '../../data/market-ready-services';
 
 type Service = (typeof enhancedRealMicroSaasServices)[number];
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

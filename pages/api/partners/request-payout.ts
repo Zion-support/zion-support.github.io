@@ -26,7 +26,6 @@ export default async function handler(
       status: 'requested',
     });
     if (error) return res.status(500).json({ error: error.message });
-
     return res.status(200).json({ ok: true, status: 'requested' });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });

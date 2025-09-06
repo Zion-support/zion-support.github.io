@@ -1,13 +1,7 @@
 };
-
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-<<<<<<< HEAD
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
-=======
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { FraudStats } from "@/types/fraud";
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
@@ -69,6 +63,3 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
   )
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

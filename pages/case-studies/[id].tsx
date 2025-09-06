@@ -33,8 +33,7 @@ import { useRouter } from 'next/router';
         <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>
       `,
-    },    {
-      id: 'content-generation-scale',
+    },    {      id: 'content-generation-scale',
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
       industry: 'Marketing',
@@ -49,8 +48,7 @@ import { useRouter } from 'next/router';
       ],
       duration: '4 months',
       description:
-        'Transforming content creation through autonomous AI systems.',      fullContent: `
-        <h2>Background</h2>
+        'Transforming content creation through autonomous AI systems.',      fullContent: `        <h2>Background</h2>
         <p>A leading digital marketing agency was struggling to scale their content creation capabilities. 
         Their manual processes were limiting growth and preventing them from taking on new clients.</p>
         
@@ -80,8 +78,7 @@ import { useRouter } from 'next/router';
         <p>The system was deployed in 4 months with comprehensive training for the creative team. 
         The AI systems learned from human feedback and continuously improved over time.</p>
       `,
-    },    {
-      id: 'cloud-infrastructure-optimization',
+    },    {      id: 'cloud-infrastructure-optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E-commerce Platform',
       industry: 'Technology',
@@ -96,8 +93,7 @@ import { useRouter } from 'next/router';
       ],
       duration: '8 months',
       description: 'Building self-healing, auto-scaling cloud infrastructure.',
-      fullContent: `        <h2>Background</h2>
-        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
+      fullContent: `        <h2>Background</h2>        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
         Their infrastructure was not scaling efficiently with their business growth.</p>
         
         <h2>Challenge</h2>
@@ -105,8 +101,7 @@ import { useRouter } from 'next/router';
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
         
         <h2>Solution</h2>
-        <p>We designed and implemented a comprehensive cloud optimization system:</p>        <ul>
-          <li>Auto-scaling infrastructure with intelligent resource allocation</li>
+        <p>We designed and implemented a comprehensive cloud optimization system:</p>        <ul>          <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
           <li>Cost optimization algorithms</li>
           <li>Performance monitoring and alerting</li>
@@ -125,7 +120,6 @@ import { useRouter } from 'next/router';
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `,
     },  ];
-
   const caseStudy = caseStudies.find(study => study.id === id);
 
   if (!caseStudy) {
@@ -145,15 +139,13 @@ import { useRouter } from 'next/router';
               </p>
               <Link
                 href='/case-studies'
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >
-                ← Back to Case Studies
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >                ← Back to Case Studies
               </Link>
             </div>
           </main>
         </div>
       </>
     );  }
-
   return (
     <>
       <Head>
@@ -226,8 +218,7 @@ import { useRouter } from 'next/router';
                         key={index}
                         className='text-white/80 flex items-center gap-3'
                       >
-                        <div className='w-2 h-2 bg-green-400 rounded-full'></div>                        {result}
-                      </li>
+                        <div className='w-2 h-2 bg-green-400 rounded-full'></div>                        {result}                      </li>
                     ))}
                   </ul>
                 </div>
@@ -247,8 +238,7 @@ import { useRouter } from 'next/router';
                       <span className='text-white/60 text-sm'>Industry:</span>
                       <p className='text-white font-medium'>
                         {caseStudy.industry}
-                      </p>                    </div>
-                  </div>
+                      </p>                    </div>                  </div>
                 </div>
               </div>
             </div>
@@ -263,8 +253,7 @@ import { useRouter } from 'next/router';
             <div className='text-center'>
               <Link
                 href='/contact'
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >
-                Get Started with Your Project
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >                Get Started with Your Project
               </Link>
             </div>
           </div>

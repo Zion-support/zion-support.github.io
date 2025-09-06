@@ -42,8 +42,7 @@ import {
   Microscope,
   Phone,
   Mail,
-  MapPin,;
-} from 'lucide-react';
+  MapPin,;} from 'lucide-react';
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
 const contactInfo = {
@@ -57,7 +56,6 @@ export default function Pricing2033Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
   );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
   // Enhanced service categories with pricing
   const serviceCategories = [
     {
@@ -69,8 +67,7 @@ export default function Pricing2033Page() {
         'AI Creativity Orchestrator',
         'AI Autonomous Business Manager',
       ],
-      avgPrice: '$11,499/month',
-      savings: 'Save 60-80% vs. competitors',
+      avgPrice: '$11,499/month',      savings: 'Save 60-80% vs. competitors',
       icon: Brain,
       color: 'from-violet-500 to-purple-500',
     },
@@ -144,7 +141,6 @@ export default function Pricing2033Page() {
       icon: Microscope,
       color: 'from-orange-500 to-red-500',
     },  ];
-
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -167,8 +163,7 @@ export default function Pricing2033Page() {
       ],
       popular: false,
       color: 'from-gray-500 to-gray-600',
-    },    {
-      name: 'Professional',
+    },    {      name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: billingCycle === 'monthly' ? 299 : 239,
       period: billingCycle === 'monthly' ? '/month' : '/month',
@@ -189,8 +184,7 @@ export default function Pricing2033Page() {
       ],
       popular: true,
       color: 'from-purple-500 to-cyan-500',
-    },    {
-      name: 'Enterprise',
+    },    {      name: 'Enterprise',
       description: 'For large organizations and enterprises',
       price: billingCycle === 'monthly' ? 999 : 799,
       period: billingCycle === 'monthly' ? '/month' : '/month',
@@ -214,15 +208,13 @@ export default function Pricing2033Page() {
       popular: false,
       color: 'from-blue-500 to-indigo-500',
     },  ];
-
   // Popular services with pricing
   const popularServices = [
     {
       name: 'AI Consciousness Evolution Platform',
       price: '$24,999/month',
       description:
-        'Develop genuine AI consciousness through advanced neural architecture',
-      category: 'AI & Consciousness',
+        'Develop genuine AI consciousness through advanced neural architecture',      category: 'AI & Consciousness',
       features: [
         'Multi-dimensional consciousness mapping',
         'Emotional intelligence evolution',
@@ -269,7 +261,6 @@ export default function Pricing2033Page() {
       ],
       savings: 'Save 50% vs. competitors',
     },  ];
-
   return (
     <>
       <Head>
@@ -329,8 +320,7 @@ export default function Pricing2033Page() {
                 className='mb-6'
               >
                 <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium'>
-                  <Crown className='w-4 h-4' />                  <span>2033 Revolutionary Pricing</span>
-                </div>
+                  <Crown className='w-4 h-4' />                  <span>2033 Revolutionary Pricing</span>                </div>
               </motion.div>
 
               <motion.h1
@@ -344,7 +334,6 @@ export default function Pricing2033Page() {
                 </span>
                 <br />
                 <span className='text-white'>Pricing</span>              </motion.h1>
-
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -354,7 +343,6 @@ export default function Pricing2033Page() {
                 Experience the future of technology with our revolutionary AI
                 consciousness, quantum DNA computing, and space mining
                 automation solutions at competitive prices.              </motion.p>
-
               {/* Billing Toggle */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -387,8 +375,7 @@ export default function Pricing2033Page() {
                   className={`text-sm ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}
                 >
                   Yearly
-                  <span className='ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full'>                    Save 20%
-                  </span>
+                  <span className='ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full'>                    Save 20%                  </span>
                 </span>
               </motion.div>
             </div>
@@ -399,8 +386,7 @@ export default function Pricing2033Page() {
         <div className='relative py-20'>
           <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>
           <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (                <motion.div
                   key={tier.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -409,8 +395,7 @@ export default function Pricing2033Page() {
                 >
                   {tier.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                      <div className='px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full'>                        Most Popular
-                      </div>
+                      <div className='px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full'>                        Most Popular                      </div>
                     </div>
                   )}
 
@@ -445,8 +430,7 @@ export default function Pricing2033Page() {
                       {tier.features.map((feature, idx) => (
                         <li key={idx} className='flex items-start space-x-3'>
                           <Check className='w-5 h-5 text-green-400 flex-shrink-0 mt-0.5' />
-                          <span className='text-gray-300'>{feature}</span>                        </li>
-                      ))}
+                          <span className='text-gray-300'>{feature}</span>                        </li>                      ))}
                     </ul>
 
                     <button
@@ -480,8 +464,7 @@ export default function Pricing2033Page() {
               </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {serviceCategories.map((category, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {serviceCategories.map((category, index) => (                <motion.div
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -517,8 +500,7 @@ export default function Pricing2033Page() {
                     {category.services.map((service, idx) => (
                       <li key={idx} className='flex items-center space-x-2'>
                         <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
-                        <span className='text-sm text-gray-300'>{service}</span>                      </li>
-                    ))}
+                        <span className='text-sm text-gray-300'>{service}</span>                      </li>                    ))}
                   </ul>
 
                   <a
@@ -526,8 +508,7 @@ export default function Pricing2033Page() {
                     className='inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium'
                   >
                     <span>Learn More</span>
-                    <ArrowRight className='w-4 h-4' />                  </a>
-                </motion.div>
+                    <ArrowRight className='w-4 h-4' />                  </a>                </motion.div>
               ))}
             </div>
           </div>
@@ -547,8 +528,7 @@ export default function Pricing2033Page() {
               </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              {popularServices.map((service, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              {popularServices.map((service, index) => (                <motion.div
                   key={service.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -595,8 +575,7 @@ export default function Pricing2033Page() {
                     <a
                       href={`tel:${contactInfo.mobile}`}
                       className='px-4 py-2 bg-gray-800/50 border border-purple-500/30 text-purple-300 text-sm font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'
-                    >                      Call Now
-                    </a>
+                    >                      Call Now                    </a>
                   </div>
                 </motion.div>
               ))}
@@ -632,8 +611,7 @@ export default function Pricing2033Page() {
                   href={`tel:${contactInfo.mobile}`}
                   className='px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'
                 >
-                  <Phone className='w-5 h-5 mr-2 inline' />                  Call Now
-                </a>
+                  <Phone className='w-5 h-5 mr-2 inline' />                  Call Now                </a>
               </div>
 
               {/* Contact Info */}
@@ -648,8 +626,7 @@ export default function Pricing2033Page() {
                     <span>{contactInfo.email}</span>
                   </div>
                   <div className='flex items-center space-x-2'>
-                    <MapPin className='w-4 h-4 text-purple-400' />                    <span>{contactInfo.address}</span>
-                  </div>
+                    <MapPin className='w-4 h-4 text-purple-400' />                    <span>{contactInfo.address}</span>                  </div>
                 </div>
               </div>
             </div>

@@ -1,12 +1,6 @@
 };
-
 import React from "react";
-<<<<<<< HEAD
-import { QrCodeIcon } from 'lucide-react'
-=======
-import { QrCodeIcon } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { AppStoreButtons } from "./AppStoreButtons";
+import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons";
 import { logInfo } from '@/utils/productionLogger';
 export const DownloadSection: React.FC = () => {
 
@@ -53,6 +47,3 @@ export const DownloadSection: React.FC = () => {
   )
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

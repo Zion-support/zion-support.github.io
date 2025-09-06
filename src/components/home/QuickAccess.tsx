@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
@@ -13,16 +11,7 @@ import {
   MessageSquare,
   Smartphone,;
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-=======
-
-import React from "react";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { cn } from "@/lib/utils";
-import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface QuickAccessProps {
   className?: string;
   style?: React.CSSProperties;
@@ -82,24 +71,13 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
             )}
           </p>
         </div>
-<<<<<<< HEAD
 
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
           {quickLinks.map((link, index) => (
             <Link
               key={index}
               href={link.link}
-              className='group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20'
-=======
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
-          {quickLinks.map((link, index,) => (
-            <Link
-              key = {index,}
-              href = {link.link,}
-              className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-            >
+              className='group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20'            >
               <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110'>
                 {link.icon}
               </div>
@@ -112,7 +90,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
                 <ArrowRight className='ml-1 h-3 w-3 transition-transform group-hover:translate-x-1' />
               </div>
             </Link>
-=======
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 export default function Page() {;";
@@ -300,113 +277,13 @@ export default function Page() {;";
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
               </motion.div>;
             </motion.div>;
->>>>>>> origin/automation-fixes
           ))}
         </div>
       </div>
     </section>
   );
 
-<<<<<<< HEAD
+export default QuickAccess;}
+
 export default QuickAccess;
-=======
-        {/* Service Categories Overview */}
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >";
-          <div className="text-center mb-8">";
-            <h3 className="text-2xl font-bold text-white mb-2">Service Categories</h3>";
-            <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>;
-          </div>;
-";
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">;
-            {categories.map(category: unknown, index: unknown (;
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}";
-                className="text-center group cursor-pointer";
-`;
-                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>";
-                  <span className="text-white font-bold text-lg">{category.count}</span>;
-                </div>";
-                <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">;
-                  {category.name}
-                </div>;
-              </motion.div>;
-            ))}
-          </div>;
-        </motion.div>;
-        {/* CTA Section */}
-        <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}";
-          className="text-center mt-12";
-";
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'";
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>";
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
-              Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs;
-            </p>";
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link";
-                to="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">;
-                Contact Our Team;
-              </Link>;
-              <Link";
-                to="/services";
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">;
-                Browse All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </motion.div>;
 
-        {/* Enhanced CTA Section */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,
-  y: 30 ;
-}}          whileInView = {;
-
-  { opacity: 1,
-  y: 0 ;
-}}          transition = {;
-
-  { duration: 0.8,
-  delay: 0.4 ;
-}}
-          viewport={{ once: true }}
-          className="text-center">;
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
-              Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs;
-            </p>";
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link                to="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25";
-
-                Contact Our Team;
-              </Link>;
-              <Link";
-                to="/services";
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300";
-
-                Browse All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )};export { QuickAccess };
-'"`;
-)
->>>>>>> origin/automation-fixes

@@ -20,8 +20,12 @@ function runCommand(command, options = {}) {
 }
 
 function getRecentBranches() {
+<<<<<<< HEAD
   const branches = runCommand('git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdate:short) %(refname:short)"');
   if (!branches) return [];  
+=======
+  
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   return branches.split('\n')
     .filter(line => line.includes('cursor/') && !line.includes('main'))
     .slice(0, 20) // Get top 20 recent branches
@@ -81,7 +85,11 @@ function main() {
   
   // Get recent branches
   const recentBranches = getRecentBranches();
+<<<<<<< HEAD
   console.log(`\n📊 Found ${recentBranches.length} recent branches to check:`);  recentBranches.forEach((branch, index) => {
+=======
+  recentBranches.forEach((branch, index) => {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     console.log(`   ${index + 1}. ${branch}`);
   });
   
@@ -126,7 +134,11 @@ function main() {
   runCommand('git push origin main');
   
   // Summary
+<<<<<<< HEAD
   console.log('\n📊 Merge Summary:');  console.log(`   ✅ Successfully merged: ${mergedCount} branches`);
+=======
+  console.log(`   ✅ Successfully merged: ${mergedCount} branches`);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   console.log(`   ⚠️  Had conflicts but resolved: ${conflictCount} branches`);
   console.log(`   ❌ Failed to merge: ${errorCount} branches`);
   console.log(`   📊 Total processed: ${recentBranches.length} branches`);

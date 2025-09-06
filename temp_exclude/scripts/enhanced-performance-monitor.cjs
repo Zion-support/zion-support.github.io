@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -41,6 +42,9 @@
 
 // Run the enhanced performance monitor
 main();#!/usr/bin/env node;
+=======
+#!/usr/bin/env node;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

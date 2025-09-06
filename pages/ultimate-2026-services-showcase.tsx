@@ -15,8 +15,7 @@ import {
   Grid,
   List,
   ChevronDown,
-  Sparkles,;
-} from 'lucide-react';
+  Sparkles,;} from 'lucide-react';
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
 export default function Ultimate2026ServicesShowcase() {
@@ -58,7 +57,6 @@ export default function Ultimate2026ServicesShowcase() {
     service =>
       service.category?.includes('Emerging') ||
       service.category?.includes('Innovation')  ).length;
-
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
@@ -70,7 +68,6 @@ export default function Ultimate2026ServicesShowcase() {
       count: enterpriseCount,
     },
     { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount },  ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
@@ -115,7 +112,6 @@ export default function Ultimate2026ServicesShowcase() {
           service.price === 'Custom pricing');
 
       return matchesSearch && matchesCategory && matchesPrice;    });
-
     // Sort services
     switch (sortBy) {
       case 'name':
@@ -131,8 +127,7 @@ export default function Ultimate2026ServicesShowcase() {
             b.price === 'Custom pricing'
               ? 999999
               : parseInt(b.price.replace(/[^0-9]/g, ''));
-          return priceA - priceB;        });
-        break;
+          return priceA - priceB;        });        break;
       case 'popularity':
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
         break;
@@ -148,8 +143,7 @@ export default function Ultimate2026ServicesShowcase() {
 
   const featuredServices = allServices
     .filter(service => service.popular)
-    .slice(0, 6);
-  return (
+    .slice(0, 6);  return (
     <>
       <Head>
         <title>Ultimate 2026 Services Showcase | Zion Tech Group</title>
@@ -189,8 +183,7 @@ export default function Ultimate2026ServicesShowcase() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]'></div>
         </div>
 
-        <div className='relative z-10 text-center px-6 max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='relative z-10 text-center px-6 max-w-7xl mx-auto'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -245,8 +238,7 @@ export default function Ultimate2026ServicesShowcase() {
                 href='/contact'
                 className='inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300'
               >
-                <Phone className='w-5 h-5 mr-2' />                Get Started
-              </Link>
+                <Phone className='w-5 h-5 mr-2' />                Get Started              </Link>
             </div>
           </motion.div>
         </div>
@@ -281,8 +273,7 @@ export default function Ultimate2026ServicesShowcase() {
             <Link
               href='/contact'
               className='bg-white text-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors'
-            >              Contact Us
-            </Link>
+            >              Contact Us            </Link>
           </div>
         </div>
       </section>
@@ -308,8 +299,7 @@ export default function Ultimate2026ServicesShowcase() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredServices.map((service, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredServices.map((service, index) => (              <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -324,8 +314,7 @@ export default function Ultimate2026ServicesShowcase() {
                       <div className='text-4xl'>{service.icon}</div>
                       {service.popular && (
                         <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center'>
-                          <Star className='w-3 h-3 mr-1' />                          Popular
-                        </div>
+                          <Star className='w-3 h-3 mr-1' />                          Popular                        </div>
                       )}
                     </div>
 
@@ -361,8 +350,7 @@ export default function Ultimate2026ServicesShowcase() {
                         className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-200'
                       >
                         Learn More
-                        <ArrowRight className='w-4 h-4 ml-1' />                      </Link>
-                    </div>
+                        <ArrowRight className='w-4 h-4 ml-1' />                      </Link>                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -386,8 +374,7 @@ export default function Ultimate2026ServicesShowcase() {
                 Revolutionary Services
               </span>
             </h2>
-            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Explore our complete portfolio of cutting-edge 2026 innovations
-            </p>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Explore our complete portfolio of cutting-edge 2026 innovations            </p>
           </motion.div>
 
           {/* Filters and Search */}
@@ -412,8 +399,7 @@ export default function Ultimate2026ServicesShowcase() {
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all'
                 >
-                  {categories.map(category => (                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
+                  {categories.map(category => (                    <option key={category.id} value={category.id}>                      {category.name} ({category.count})
                     </option>
                   ))}
                 </select>
@@ -427,8 +413,7 @@ export default function Ultimate2026ServicesShowcase() {
                   onChange={e => setSelectedPriceRange(e.target.value)}
                   className='appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all'
                 >
-                  {priceRanges.map(range => (                    <option key={range.id} value={range.id}>
-                      {range.name}
+                  {priceRanges.map(range => (                    <option key={range.id} value={range.id}>                      {range.name}
                     </option>
                   ))}
                 </select>
@@ -455,13 +440,11 @@ export default function Ultimate2026ServicesShowcase() {
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
-                  <Grid className='w-4 h-4' />                </button>
-                <button
+                  <Grid className='w-4 h-4' />                </button>                <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
-                  <List className='w-4 h-4' />                </button>
-              </div>
+                  <List className='w-4 h-4' />                </button>              </div>
             </div>
           </div>
 
@@ -472,8 +455,7 @@ export default function Ultimate2026ServicesShowcase() {
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
             }
-          >            {filteredServices.map((service, index) => (
-              <motion.div
+          >            {filteredServices.map((service, index) => (              <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -493,8 +475,7 @@ export default function Ultimate2026ServicesShowcase() {
                         <div className='text-4xl'>{service.icon}</div>
                         {service.popular && (
                           <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center'>
-                            <Star className='w-3 h-3 mr-1' />                            Popular
-                          </div>
+                            <Star className='w-3 h-3 mr-1' />                            Popular                          </div>
                         )}
                       </div>
 
@@ -530,8 +511,7 @@ export default function Ultimate2026ServicesShowcase() {
                           className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-200'
                         >
                           Learn More
-                          <ArrowRight className='w-4 h-4 ml-1' />                        </Link>
-                      </div>
+                          <ArrowRight className='w-4 h-4 ml-1' />                        </Link>                      </div>
                     </div>
                   </div>
                 ) : (
@@ -571,8 +551,7 @@ export default function Ultimate2026ServicesShowcase() {
                         className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-200'
                       >
                         Learn More
-                        <ArrowRight className='w-4 h-4 ml-1' />                      </Link>
-                    </div>
+                        <ArrowRight className='w-4 h-4 ml-1' />                      </Link>                    </div>
                   </div>
                 )}
               </motion.div>
@@ -591,15 +570,13 @@ export default function Ultimate2026ServicesShowcase() {
               </h3>
               <p className='text-gray-400'>
                 Try adjusting your search criteria or filters
-              </p>            </motion.div>
-          )}
+              </p>            </motion.div>          )}
         </div>
       </section>
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600'>
-        <div className='max-w-4xl mx-auto text-center px-6'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-4xl mx-auto text-center px-6'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -640,8 +617,7 @@ export default function Ultimate2026ServicesShowcase() {
               </div>
               <div className='text-center'>
                 <div className='text-3xl font-bold text-white mb-2'>99.9%</div>
-                <div className='text-white/80'>Uptime Guarantee</div>              </div>
-            </div>
+                <div className='text-white/80'>Uptime Guarantee</div>              </div>            </div>
           </motion.div>
         </div>
       </section>
@@ -662,16 +638,14 @@ export default function Ultimate2026ServicesShowcase() {
 
               <div className='space-y-4'>
                 <div className='flex items-center text-gray-300'>
-                  <Phone className='w-5 h-5 mr-3 text-cyan-400' />
-                  <span>{contactInfo.mobile}</span>
+                  <Phone className='w-5 h-5 mr-3 text-cyan-400' />                  <span>{contactInfo.mobile}</span>
                 </div>
                 <div className='flex items-center text-gray-300'>
                   <Mail className='w-5 h-5 mr-3 text-cyan-400' />
                   <span>{contactInfo.email}</span>
                 </div>
                 <div className='flex items-center text-gray-300'>
-                  <MapPin className='w-5 h-5 mr-3 text-cyan-400' />                  <span>{contactInfo.address}</span>
-                </div>
+                  <MapPin className='w-5 h-5 mr-3 text-cyan-400' />                  <span>{contactInfo.address}</span>                </div>
               </div>
             </div>
 
@@ -721,8 +695,7 @@ export default function Ultimate2026ServicesShowcase() {
                     </h5>
                     <p className='text-gray-400'>
                       Built for the challenges and opportunities of tomorrow
-                    </p>                  </div>
-                </div>
+                    </p>                  </div>                </div>
               </div>
             </div>
           </div>

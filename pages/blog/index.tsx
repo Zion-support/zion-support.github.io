@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Card from '../../components/ui/Card';
-
 const posts = [
   {
     slug: 'ai-automation-trends-2025',
@@ -77,8 +76,7 @@ export default function BlogIndexPage() {
                 className='text-cyan-400 hover:text-white font-medium'
               >
                 Read →
-              </Link>            </div>
-          ))}
+              </Link>            </div>          ))}
         </div>
       </div>
     </UltraFuturisticBackground>

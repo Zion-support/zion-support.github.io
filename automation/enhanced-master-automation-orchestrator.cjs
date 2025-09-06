@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs');
 const path = require('path');
 
@@ -10,13 +13,19 @@ const path = require('path');
  * Enhanced Master Automation Orchestrator
  * Coordinates all automation tasks and provides intelligent scheduling
  */
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 class EnhancedMasterAutomationOrchestrator {
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     this.results = {
       "dependencyFix": { success: false, duration: 0, errors: [] },
       "mergeConflictFix": { success: false, duration: 0, errors: [] },
@@ -27,16 +36,20 @@ class EnhancedMasterAutomationOrchestrator {
       "buildTest": { success: false, duration: 0, errors: [] },
       "testSuite": { success: false, duration: 0, errors: [] }
     };
+<<<<<<< HEAD
     this.logFile = `enhanced-automation-log-${Date.now()}.txt`;  }
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const logMessage = `[${timestamp}] [${type}] ${message}`;
@@ -46,6 +59,8 @@ class EnhancedMasterAutomationOrchestrator {
     fs.appendFileSync(this.logFile, logMessage + '\n');
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   async runScript(scriptName, scriptPath, args = []) {
@@ -72,6 +87,7 @@ class EnhancedMasterAutomationOrchestrator {
       this.log(`❌ ${scriptName} failed: ${error.message}`, 'ERROR');
       return {
         success: false,
+<<<<<<< HEAD
         duration,
         errors: [error.message]      };
     }
@@ -85,10 +101,16 @@ class EnhancedMasterAutomationOrchestrator {
         output: error.stdout || error.stderr,
         duration: 0
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+        error: error.message,
+        output: error.stdout || error.stderr,
+        duration: 0
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       };
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   async runDependencyFix() {
     this.log('\n🔧 PHASE 1: DEPENDENCY FIXING');
@@ -100,6 +122,8 @@ class EnhancedMasterAutomationOrchestrator {
     return result;
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   async runMergeConflictFix() {
@@ -234,6 +258,7 @@ class EnhancedMasterAutomationOrchestrator {
   }
 
   async run() {
+<<<<<<< HEAD
     this.log('🎯 ENHANCED MASTER AUTOMATION ORCHESTRATOR');
     this.log('');
     this.log('Starting comprehensive automation workflow...');
@@ -270,14 +295,33 @@ class EnhancedMasterAutomationOrchestrator {
       this.log(`Fatal error: ${error.message}`, 'ERROR');
       process.exit(1);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+    try {
+      await this.runComprehensiveAutomation();
+    } catch (error) {
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+      process.exit(1);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   }
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 if (require.main === module) {
   const orchestrator = new EnhancedMasterAutomationOrchestrator();
   orchestrator.run().catch(console.error);
 }
+<<<<<<< HEAD
+=======
+// Run the enhanced master automation orchestrator
+if (require.main === module) {
+    const orchestrator = new EnhancedMasterAutomationOrchestrator(),
+    orchestrator.run().catch(console.error)
+  }
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 module.exports = EnhancedMasterAutomationOrchestrator;

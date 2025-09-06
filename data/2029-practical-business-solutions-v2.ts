@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import { ServiceVariant  } from "../types/service-variants";
->>>>>>> origin/automation-fixes
 export interface PracticalBusinessSolution2029 {
   id: string;
   name: string;
@@ -43,21 +38,15 @@ export interface PracticalBusinessSolution2029 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
   reviews: number;
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-business-intelligence-suite',
     name: 'AI Business Intelligence Suite',
     tagline:
@@ -66,7 +55,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     period: '/month',
     description:
       'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
-<<<<<<< HEAD
     features: [
       'Real-time data analytics',
       'Predictive business modeling',
@@ -100,8 +88,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     ],
     useCases: [
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making',
-    ],
-    features: [
+    ],    features: [
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
       'Market opportunity identificationCompetitive intelligence'
     ];
@@ -940,15 +927,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
-};
-=======
-    return price >= minPrice && price <= maxPrice
-  })
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
+};export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
   {;
     id: "ai-business-intelligence-suite",
@@ -1349,4 +1328,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     rating: 4.9,
     reviews: 198;
 ]}}
->>>>>>> origin/automation-fixes
+    return price >= minPrice && price <= maxPrice
+  })
+};

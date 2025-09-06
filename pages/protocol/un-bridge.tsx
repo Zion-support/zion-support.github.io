@@ -22,7 +22,6 @@ export default function UNBridge() {
   ) => {
     const { name, value } = e.target;
     setForm(f => ({ ...f, [name]: value }));  };
-
   async function generate() {
     setLoading(true);
     try {
@@ -42,7 +41,6 @@ export default function UNBridge() {
     } finally {
       setLoading(false);
     }  }
-
   async function translate(targetLanguage: string) {
     if (!result?.markdown) return;
     setLoading(true);
@@ -57,7 +55,6 @@ export default function UNBridge() {
     } finally {
       setLoading(false);
     }  }
-
   async function exportArtifacts() {
     if (!result?.meta?.id) return;
     setLoading(true);
@@ -75,7 +72,6 @@ export default function UNBridge() {
     } finally {
       setLoading(false);
     }  }
-
   async function submit(channels: string[]) {
     if (!result?.meta?.id) return;
     setLoading(true);
@@ -122,8 +118,7 @@ export default function UNBridge() {
               value={form.type}
               onChange={onChange}
               className='w-full border rounded p-2'
-            >              <option>Workforce Dev</option>
-              <option>AI Ethics</option>
+            >              <option>Workforce Dev</option>              <option>AI Ethics</option>
               <option>Digital ID</option>
               <option>Education</option>
             </select>
@@ -254,15 +249,13 @@ export default function UNBridge() {
                   >
                     PDF
                   </a>
-                </div>              )}
-              {result.meta.artifacts?.ipfsCid && (
+                </div>              )}              {result.meta.artifacts?.ipfsCid && (
                 <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
               )}
               {result.meta.artifacts?.signature && (
                 <div>
                   Signature: {result.meta.artifacts.signature.slice(0, 30)}…
-                </div>              )}
-            </div>
+                </div>              )}            </div>
           )}
         </div>
       </div>

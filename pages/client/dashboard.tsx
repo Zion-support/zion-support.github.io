@@ -7,7 +7,6 @@ export default function ClientDashboard() {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
 
   if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
-
   const jobs = data.jobs as any[];
 
   async function closeJob(id: string) {
@@ -70,8 +69,7 @@ export default function ClientDashboard() {
                   onClick={() => closeJob(job.id)}
                 >
                   Close Job
-                </button>              </div>
-            </div>
+                </button>              </div>            </div>
           </div>
         ))}
       </div>

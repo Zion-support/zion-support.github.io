@@ -51,8 +51,7 @@ export default function PitchGenerator() {
   const [versionTag, setVersionTag] = useState<string | null>(null);
   const [history, setHistory] = useState<
     { id: string; createdAt: string; version: string }[]
-  >([]);
-  const activeSlide = slides[activeIndex];
+  >([]);  const activeSlide = slides[activeIndex];
 
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
@@ -68,8 +67,7 @@ export default function PitchGenerator() {
     () =>
       `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,
     []
-  );
-  const autoFetchMetrics = useCallback(async () => {
+  );  const autoFetchMetrics = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
@@ -78,8 +76,7 @@ export default function PitchGenerator() {
     } catch (e) {
       return {};
     } finally {
-      setLoading(false);    }
-  }, []);
+      setLoading(false);    }  }, []);
 
   const buildDeck = useCallback(async () => {
     setLoading(true);
@@ -102,8 +99,7 @@ export default function PitchGenerator() {
       setHistory(h => [
         { id: uid(), createdAt: new Date().toISOString(), version: v },
         ...h,
-      ]);
-    } catch (e) {
+      ]);    } catch (e) {
       // noop
     } finally {
       setLoading(false);
@@ -155,8 +151,7 @@ export default function PitchGenerator() {
       setActiveIndex(slides.length);
     } catch (e) {
     } finally {
-      setLoading(false);    }
-  }, [slides.length]);
+      setLoading(false);    }  }, [slides.length]);
 
   const exportPdf = useCallback(async () => {
     setLoading(true);
@@ -165,8 +160,7 @@ export default function PitchGenerator() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slides, format: 'pdf', version: versionTag }),
-      });      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
+      });      const blob = await res.blob();      const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
       a.download = `pitch-deck-${versionTag || 'draft'}.pdf`;
@@ -174,8 +168,7 @@ export default function PitchGenerator() {
       URL.revokeObjectURL(url);
     } catch (e) {
     } finally {
-      setLoading(false);    }
-  }, [slides, versionTag]);
+      setLoading(false);    }  }, [slides, versionTag]);
 
   const exportGoogleSlides = useCallback(async () => {
     setLoading(true);
@@ -202,7 +195,6 @@ export default function PitchGenerator() {
     setSlides(arr =>
       arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
     );  };
-
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null;
     const { type, data } = slide.chart;
@@ -231,23 +223,20 @@ export default function PitchGenerator() {
                     style={{ width: `${100 - idx * 12}%` }}
                   >
                     {d.label}: {d.value}
-                  </div>                ))}
-              </div>
+                  </div>                ))}              </div>
             </div>
           )}
           {type === 'timeline' && (
             <div className='text-xs grid grid-cols-4 gap-2 w-full'>
               {data.map(d => (
                 <div key={d.label} className='border p-1 rounded'>
-                  <div className='font-medium'>{d.label}</div>                  <div>{d.value}</div>
-                </div>
+                  <div className='font-medium'>{d.label}</div>                  <div>{d.value}</div>                </div>
               ))}
             </div>
           )}
         </div>
       </div>
-    );
-  };
+    );  };
 
   return (
     <>
@@ -336,7 +325,6 @@ export default function PitchGenerator() {
                 }
                 className='w-full border rounded px-2 py-1 bg-transparent'
               />
-
               <div
                 onDrop={onAssetDrop}
                 onDragOver={prevent}
@@ -358,8 +346,7 @@ export default function PitchGenerator() {
               >
                 Refresh
               </button>
-              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
-                <li>GMV, MRR, YoY growth</li>
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>                <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
                 <li>Conversion funnel</li>
@@ -381,8 +368,7 @@ export default function PitchGenerator() {
                     <span>{h.version}</span>
                     <span className='text-gray-500 dark:text-gray-400'>
                       {new Date(h.createdAt).toLocaleString()}
-                    </span>                  </li>
-                ))}
+                    </span>                  </li>                ))}
               </ul>
             </div>
           </div>

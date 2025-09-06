@@ -1,18 +1,5 @@
-<<<<<<< HEAD
     
 
-
-=======
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles } from 'lucide-react';
-import { supabase } from "@/integrations/supabase/client";
-import { AIListingForm } from "./AIListingForm";
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -48,14 +35,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     category: string,
     keyFeatures: string,
     targetAudience: string
-<<<<<<< HEAD
   }) => {
-    setIsLoading(true);
-=======
-  },) => {
-    setIsLoading(true),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    
+    setIsLoading(true);    
     try {
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
@@ -190,12 +171,5 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   handleApply ;
 }/>) ;
 }</div>) ;
-}'"
-=======
+}'";
 }
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

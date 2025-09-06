@@ -19,8 +19,7 @@ export default async function handler(
   await ensureStore();
   if (req.method === 'GET') {
     const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);  }
-  if (req.method === 'POST') {
+    return res.status(200).json(data);  }  if (req.method === 'POST') {
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const item = {
@@ -30,8 +29,7 @@ export default async function handler(
       regionalScope: body.regionalScope,
       type: body.type,
       status: body.status || 'Draft',
-      createdAt: new Date().toISOString(),
-    };
+      createdAt: new Date().toISOString(),    };
     data.items.unshift(item);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(item);

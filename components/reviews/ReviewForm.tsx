@@ -4,9 +4,7 @@
 };
 
 type Props = {
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};
-=======
-import React, { useState } from 'react';
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {
   projectId: string,
@@ -25,9 +23,6 @@ export type ReviewFormValues = {
 
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [rating, setRating] = useState(0);
@@ -55,7 +50,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           rating,
           text,
           anonymous,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           categories: {
             communication,
             qualityOfWork,
@@ -80,30 +74,32 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       </div>
 
       <div>
-        <label className='block text-sm font-medium mb-2'>Your Review</label>
-=======
+        <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {
+            communication;
+            qualityOfWork;
+            timeliness;
+            wouldWorkWithAgain}})});
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to submit');
+      setMessage('Review submitted! Pending admin approval.')
+    } catch (err: any) {
+      setMessage(err.message)
+    } finally {
       setSubmitting(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
   return (
-<<<<<<< HEAD
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
-        <label className='block text-sm font-medium mb-2'>Overall Rating</label>
-=======
-    <form onSubmit={handleSubmit} className="space-y-6">
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <StarRating value={rating} onChange={setRating} />
       </div>
 
       <div>
-<<<<<<< HEAD
         <label className='block text-sm font-medium mb-2'>Your Review</label>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
@@ -111,16 +107,15 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           onChange={e => setText(e.target.value)}          required
         />
       </div>
-
-=======
+        <textarea
+          className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
+          rows={5}
+          value={text}
           onChange={(e) => setText(e.target.value)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           required
         />
       </div>
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <div className='flex items-center gap-3'>
         <input
           id='anonymous'
@@ -129,9 +124,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
           onChange={e => setAnonymous(e.target.checked)}
         />
         <label htmlFor='anonymous'>Submit anonymously</label>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </div>
 
       <div className='grid md:grid-cols-2 gap-4'>
         <div className='enhanced-card'>
@@ -178,35 +170,26 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 
       <button
         type='submit'
-        className='enhanced-button enhanced-button-primary'        disabled={submitting}
-=======
-          <span className="pill">Optional</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        className='enhanced-button enhanced-button-primary'        disabled={submitting}          <span className="pill">Optional</span>
         </div>
       </div>
 
       <button
-<<<<<<< HEAD
         type='submit'
-        className='enhanced-button enhanced-button-primary'
-=======
-        type="submit"
+        className='enhanced-button enhanced-button-primary'        type="submit"
         className="enhanced-button enhanced-button-primary"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         disabled={submitting}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
 
       {message && <p className='text-sm'>{message}</p>}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     </form>
   );
 };
 
+export default ReviewForm;    </form>
+  )
+};
+
 export default ReviewForm;
-=======
-export default ReviewForm;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

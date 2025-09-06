@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   Tooltip;
   TooltipContent;
@@ -17,12 +16,7 @@ import { Notification, NotificationType } from '@/context/notifications';
   onDismiss
 }) => {
       className={cn(
-                  onMarkAsRead(notification.id);
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React from 'react';
+                  onMarkAsRead(notification.id);import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -174,4 +168,3 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     </div>
   )
 },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

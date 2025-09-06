@@ -2,7 +2,6 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 type Experiment = {
   title: string;
 hypothesis?: string;
@@ -15,24 +14,25 @@ type Props = {
 items: Experiment[] };
 
 export default function CurationPage({ updatedAt, items }: Props) {
-  return (
-=======
+  return (type Experiment = {
+  title: string,
+  hypothesis?: string;
+  metric?: string;
+  effort?: number;
+  impact?: number
+};
+
+type Props = {
   updatedAt: string | null,
   items: Experiment[]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <main className='mx-auto max-w-4xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>
         AI Curated Growth Experiments
       </h1>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      {updatedAt ? (
         <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>
       ) : (
         <p className='mt-2 text-sm text-gray-600'>
@@ -68,23 +68,15 @@ export default function CurationPage({ updatedAt, items }: Props) {
             {(exp.effort || exp.impact) && (
               <div className='mt-2 text-xs text-gray-500'>
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
-                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}
-=======
-                {exp.effort && exp.impact ? " · " : null}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
             )}
           </div>
         ))}
         {!items.length && (
-          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
-=======
-          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
             Nothing to show yet.
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         )}
       </div>
@@ -109,44 +101,29 @@ export async function getStaticProps() {
     };  } catch {
     return {
       props: {
-        updatedAt: null,
-=======
-}
+        updatedAt: null,}
 
 export async function getStaticProps() {
   try {
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    const parsed = JSON.parse(raw);
     return {
       props: {
         updatedAt: parsed.updatedAt || null,
-<<<<<<< HEAD
         items: parsed.items || [],
       },
       revalidate: 300,
-    };
-=======
-        items: parsed.items || []},
+    };        items: parsed.items || []},
       revalidate: 300}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   } catch {
     return {
       props: {
         updatedAt: null,
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         items: [],
       },
       revalidate: 300,
     };
-<<<<<<< HEAD
-  }
-=======
-        items: []},
+  }        items: []},
       revalidate: 300}
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

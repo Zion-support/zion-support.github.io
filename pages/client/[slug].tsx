@@ -4,8 +4,7 @@ import ReviewSummary from '../../components/reviews/ReviewSummary';
 import ReviewCard from '../../components/reviews/ReviewCard';
 import type { PublicReview, ReviewsSummary } from '../../types/reviews';
 
-type Props = { clientId: string };
-const ClientPage: NextPage<Props> = ({ clientId }) => {
+type Props = { clientId: string };const ClientPage: NextPage<Props> = ({ clientId }) => {
   const [summary, setSummary] = useState<ReviewsSummary | null>(null);
   const [reviews, setReviews] = useState<PublicReview[]>([]);
 
@@ -49,7 +48,6 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const { slug } = ctx.query as { slug: string };
-  return { props: { clientId: slug } };
-};
+  return { props: { clientId: slug } };};
 
 export default ClientPage;

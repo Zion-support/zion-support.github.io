@@ -16,12 +16,10 @@ import {
   ArrowRight,
   CheckCircle,
   Zap,
-  Sparkles,;} from 'lucide-react';
-import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
+  Sparkles,;} from 'lucide-react';import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
-
 const Services2024Page: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -65,8 +63,7 @@ const Services2024Page: React.FC = () => {
 
     // Sort services
     filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
-      switch (sortBy) {
+      let aValue: any, bValue: any;      switch (sortBy) {
         case 'price':
           aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
           bValue = parseFloat(b.price.replace(/[^0-9.]/g, ''));
@@ -81,8 +78,7 @@ const Services2024Page: React.FC = () => {
           break;
         default:
           aValue = a.name.toLowerCase();
-          bValue = b.name.toLowerCase();
-      }
+          bValue = b.name.toLowerCase();      }
 
       if (sortOrder === 'asc') {
         return aValue > bValue ? 1 : -1;
@@ -149,7 +145,6 @@ const Services2024Page: React.FC = () => {
       icon: CheckCircle,
       count: allServices.filter(s => s.variant.includes('customer')).length,
     },  ];
-
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -160,7 +155,6 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('project')) return Users;
     if (variant.includes('customer')) return CheckCircle;
     return Sparkles;  };
-
   const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
     if (variant.includes('security')) return 'from-red-500 to-pink-500';
@@ -171,7 +165,6 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
     return 'from-gray-500 to-slate-500';  };
-
   return (
     <>
       <Head>
@@ -192,8 +185,7 @@ const Services2024Page: React.FC = () => {
       <div className='relative z-10 min-h-screen'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -242,8 +234,7 @@ const Services2024Page: React.FC = () => {
                   <div className='text-3xl font-bold text-green-400 mb-2'>
                     1000+
                   </div>
-                  <div className='text-gray-400'>Happy Customers</div>                </div>
-              </div>
+                  <div className='text-gray-400'>Happy Customers</div>                </div>              </div>
             </motion.div>
           </div>
         </section>
@@ -262,8 +253,7 @@ const Services2024Page: React.FC = () => {
                       placeholder='Search services by name, features, or description...'
                       value={searchQuery}
                       onChange={e => setSearchQuery(e.target.value)}
-                      className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'                    />
-                  </div>
+                      className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'                    />                  </div>
                 </div>
 
                 {/* Category Filter */}
@@ -273,8 +263,7 @@ const Services2024Page: React.FC = () => {
                     onChange={e => setSelectedCategory(e.target.value)}
                     className='w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
                   >
-                    {categories.map(category => (                      <option key={category.id} value={category.id}>
-                        {category.name} ({category.count})
+                    {categories.map(category => (                      <option key={category.id} value={category.id}>                        {category.name} ({category.count})
                       </option>
                     ))}
                   </select>
@@ -297,8 +286,7 @@ const Services2024Page: React.FC = () => {
                       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
                     }
                     className='px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200'
-                  >                    {sortOrder === 'asc' ? '↑' : '↓'}
-                  </button>
+                  >                    {sortOrder === 'asc' ? '↑' : '↓'}                  </button>
                 </div>
               </div>
             </div>
@@ -319,8 +307,7 @@ const Services2024Page: React.FC = () => {
                 </p>
               </div>
             ) : (
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices.map((service, index) => (
-                  <motion.div
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices.map((service, index) => (                  <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -372,8 +359,7 @@ const Services2024Page: React.FC = () => {
                               </div>
                             ))}
                           {service.features.length > 3 && (
-                            <div className='text-sm text-cyan-400'>                              +{service.features.length - 3} more features
-                            </div>
+                            <div className='text-sm text-cyan-400'>                              +{service.features.length - 3} more features                            </div>
                           )}
                         </div>
                       </div>
@@ -414,8 +400,7 @@ const Services2024Page: React.FC = () => {
                         <div className='text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded'>
                           {service.variant
                             .replace('-futuristic', '')
-                            .replace('-', ' ')}                        </div>
-                      </div>
+                            .replace('-', ' ')}                        </div>                      </div>
                     </div>
                   </motion.div>
                 ))}
@@ -454,14 +439,12 @@ const Services2024Page: React.FC = () => {
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'
                 >
                   <span>View Pricing Plans</span>
-                  <ArrowRight className='w-4 h-4' />                </Link>
-              </div>
+                  <ArrowRight className='w-4 h-4' />                </Link>              </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-  );
-};
+  );};
 
 export default Services2024Page;

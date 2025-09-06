@@ -17,7 +17,6 @@ import { JobPostingJsonLd } from 'next-seo';
         <p>{job.description}</p>
       </main>
     </div>
-  );
-};
+  );};
 
 export default Jobs;

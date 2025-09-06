@@ -53,7 +53,6 @@ const AdminKYCPage: React.FC = () => {
     });
     const data = await res.json();
     if (data.ok) load();  }
-
   return (
     <>
       <Head>
@@ -125,8 +124,7 @@ const AdminKYCPage: React.FC = () => {
                       <div>Filename: {d.filename}</div>
                       <div>
                         Uploaded: {new Date(d.uploadedAt).toLocaleString()}
-                      </div>                    </div>
-                  ))}
+                      </div>                    </div>                  ))}
                 </div>
               </div>
             </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 <<<<<<< HEAD
 const fs = require('fs')
@@ -466,3 +467,5 @@ if (require.main === module) {;
 
 module.exports = { fixFile, isCorrupted, createServiceTemplate })
 >>>>>>> origin/automation-fixes
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -11,6 +12,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 // netlify/functions/autonomous-cloud-brain.js
 // An intelligent, ultra-fast orchestrator that selectively triggers key automations
 // and ensures repository sync via build hook or GitHub API, fully cloud-native.
@@ -199,6 +202,7 @@ exports.handler = async function() {
       syncResult = { method: 'none', ok: false, error: 'No NETLIFY_BUILD_HOOK_URL or GITHUB_TOKEN' };
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -338,15 +342,16 @@ exports.handler = async function(event, context) {
     const heartbeat = { startAt, endAt: new Date().toISOString(), baseUrl, totals };
     const commitResult = await commitStamp(heartbeat);
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-=======
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -356,6 +361,8 @@ exports.handler = async function(event, context) {
       headers: { 'Content-Type': 'application/json' },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       body: JSON.stringify({
         ok: true,
         triggeredAt: new Date().toISOString(),
@@ -371,6 +378,7 @@ exports.handler = async function(event, context) {
   } catch (err) {
     log(String(err));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -383,9 +391,11 @@ exports.handler = async function(event, context) {
     log(String(err));
     return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-  }
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };  }
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -393,4 +403,7 @@ exports.handler = async function(event, context) {
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };  }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };

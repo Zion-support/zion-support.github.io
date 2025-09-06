@@ -23,8 +23,6 @@ export const useApi = <T = unknown>(
   apiFunction: (...args: unknown[]) => Promise<T>,
   options: UseApiOptions<T> = {}
 ) => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
@@ -41,8 +39,6 @@ export const useApi = <T = unknown>(
       setError(error);
       options.onError?.(error);
       throw error;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    } finally {
       setLoading(false);
     }
   }, [apiFunction, options]);
@@ -101,4 +97,3 @@ export function useApi<T>(
   return state;
 
 }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
@@ -46,12 +44,6 @@ import {
 import { useAuth } from '@/hooks/useAuth';
 import { useTalentProfileEnhancer } from '@/hooks/useTalentProfileEnhancer';
 import { supabase } from '@/integrations/supabase/client';
-
-=======
-import React, { useState } from "react";
-import { useForm, useFieldArray } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -70,7 +62,6 @@ import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upl
 import { useAuth } from "@/hooks/useAuth";
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Define the form schema with validation
 const talentSchema = z.object({
   // Step 1: Basic Info
@@ -181,19 +172,11 @@ export function TalentOnboardingForm() {
   });
 
   // Handle profile picture upload
-<<<<<<< HEAD
   const handleProfilePictureUpload = async (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const file = e.target.files?.[0];
     if (!file) return;
-
-=======
-  const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>,) => {
-    const file = e.target.files?.[0],
-    if (!file) return,
-    
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // Preview the image
     const reader = new FileReader();
     reader.onloadend = () => {
@@ -206,14 +189,8 @@ export function TalentOnboardingForm() {
   };
 
   // Handle CV upload
-<<<<<<< HEAD
   const handleCvUpload = async (file: File) => {
-    const fileName = `cv-${user?.id}-${Date.now()}`;
-=======
-  const handleCvUpload = async (file: File,) => {
-    const fileName = `cv-${user?.id}-${Date.now()}`,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    const { error: cvError } = await supabase.storage
+    const fileName = `cv-${user?.id}-${Date.now()}`;    const { error: cvError } = await supabase.storage
       .from('resumes')
       .upload(fileName, file);
 
@@ -263,8 +240,4 @@ reader.readAsDataURL (file);
 return publicUrl;
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
-}'
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'}

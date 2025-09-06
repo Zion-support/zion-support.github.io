@@ -27,7 +27,6 @@ export default async function handler(
       ],
       temperature: 0.2,
     });
-
     const translated = completion.choices?.[0]?.message?.content || markdown;
     return res.status(200).json({ translated });
   } catch (error: any) {

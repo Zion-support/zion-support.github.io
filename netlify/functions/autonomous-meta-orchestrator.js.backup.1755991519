@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -11,6 +12,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 exports.config = { schedule: '*/1 * * * *' };
 
 exports.handler = async function () {
@@ -157,6 +160,7 @@ exports.handler = async function () {
   const results = await runConcurrent(plan, maxConcurrent);
   const commitResult = await commitStatusArtifact(results);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -257,10 +261,14 @@ exports.handler = async () => {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   return {
     statusCode: 200,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -274,6 +282,8 @@ exports.handler = async () => {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       runAt: nowIso,
       baseUrl,
       planned: plan,
@@ -286,25 +296,16 @@ exports.handler = async () => {
     })
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-};
 =======
-      ok: true,
-      triggeredAt: new Date().toISOString(),
-      baseUrl,
-      totals: {
-        attempted: summary.triggers.length,
-        ok: summary.triggers.filter((r) => r.ok).length,
-        failed: summary.triggers.filter((r) => !r.ok).length,
-      },
-      summary,
-      logs: logs.slice(-2000),
-    }),
-  };
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
+};
+<<<<<<< HEAD
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-acae
 =======
 };
@@ -315,3 +316,5 @@ exports.handler = async () => {
 };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

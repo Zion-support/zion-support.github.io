@@ -7,20 +7,15 @@ const contact = {
   website: 'https://ziontechgroup.com',};
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {
-=======
-const contact = {
+  {const contact = {
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709';
 	website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'managed-ml-feature-store-starter',
     name: 'Managed ML Feature Store Starter',
     tagline: 'Production-ready feature store with governance and lineage',
@@ -28,7 +23,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description:
       'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.',
-<<<<<<< HEAD
     features: [
       'Online/offline consistency checks',
       'Schema/version governance',
@@ -46,8 +40,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'ML platform teams and data engineering',
     trialDays: 14,
     setupTime: '1-3 days',
-    category: 'AI & Data',
-    features: [
+    category: 'AI & Data',    features: [
       'Online/offline consistency checksSchema/version governanceBackfills and point-in-time joinsDrift alerts and quality testsRBAC and audit logs'
     ];
     popular: true;
@@ -3579,7 +3572,3 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 2,
   },
 ];
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

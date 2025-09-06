@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 Spinner.displayName = 'Spinner';
-export default Spinner;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-import React from 'react';
+export default Spinner;import React from 'react';
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
@@ -25,4 +19,3 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
 ),
 Spinner.displayName = 'Spinner',
 export default Spinner,
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

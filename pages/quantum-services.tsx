@@ -11,7 +11,6 @@ export default function QuantumServicesPage() {
     'Quantum-safe cryptography assessments and roadmaps',
     'R&D ideation for quantum-ready workloads',
   ];
-
   const solutions = [
     {
       name: 'Quantum Internet Security',
@@ -74,8 +73,7 @@ export default function QuantumServicesPage() {
                   className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60'
                 >
                   <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5' />
-                  <span className='text-gray-200'>{f}</span>                </div>
-              ))}
+                  <span className='text-gray-200'>{f}</span>                </div>              ))}
             </div>
           </section>
 
@@ -94,8 +92,7 @@ export default function QuantumServicesPage() {
                     <Sparkles className='w-5 h-5' />
                     <span className='font-semibold'>{s.name}</span>
                   </div>
-                  <p className='text-gray-300 text-sm'>Learn more</p>                </a>
-              ))}
+                  <p className='text-gray-300 text-sm'>Learn more</p>                </a>              ))}
             </div>
           </section>
 
@@ -104,8 +101,7 @@ export default function QuantumServicesPage() {
               <Shield className='w-5 h-5 text-purple-400' />
               <span>
                 Post-quantum readiness assessments and migration planning
-              </span>            </div>
-          </section>
+              </span>            </div>          </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>

@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import React from "react";
 import { format } from "date-fns";
 import { 
@@ -11,7 +7,6 @@ import {
   CardHeader, 
   CardTitle, 
   CardDescription
-<<<<<<< HEAD
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
@@ -23,20 +18,6 @@ type QuoteRequestCardProps = {
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 };
-=======
-} from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react';
-import type { QuoteRequest } from "@/types/quotes";
-type QuoteRequestCardProps = {
-  quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest,) => void,
-  onMarkAsResponded?: (id: string,) => void,
-  onToggleArchive: (id: string, isArchived: boolean,) => void
-},
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote;
   onViewDetails;
@@ -119,13 +100,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 };
-"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-},
+"},
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+};

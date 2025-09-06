@@ -1,37 +1,16 @@
-<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
-=======
-
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import { AppMetadataValues } from "./MetadataManager";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Badge } from "@/components/ui/badge";
-import { X } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
-<<<<<<< HEAD
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
   const keywords = watch("keywords");
-  const platform = watch("platform");
-=======
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form },) => {
-  const { control, register, watch, setValue } = form,
-  const keywords = watch("keywords"),
-  const platform = watch("platform"),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  
+  const platform = watch("platform");  
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>,) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault();
@@ -42,18 +21,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form },) => {
         e.currentTarget.value = ""
       }
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
   
-<<<<<<< HEAD
   
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  const removeKeyword = (keyword: string,) => {
+};  const removeKeyword = (keyword: string,) => {
     setValue(
       "keywords",
       keywords.filter((k,) => k !== keyword)
@@ -182,4 +154,3 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form },) => {
     </Card>
   )
 },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

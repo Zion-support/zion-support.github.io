@@ -1,32 +1,19 @@
-<<<<<<< HEAD
-  
-import { useState } from 'react';
+  import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
-=======
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
-<<<<<<< HEAD
   onEnhanced: (enhancedContent: string) => void,
   buttonText?: string;
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
-  size?: "default" | "sm" | "lg" | "icon";
-=======
-  onEnhanced: (enhancedContent: string,) => void,
-  buttonText?: string,
-  className?: string,
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
-  size?: "default" | "sm" | "lg" | "icon",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-  contentLength?: number
+  size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
 }
 
 export function AIEnhancementButton({
@@ -148,8 +135,4 @@ export function AIEnhancementButton({
 }Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
 }return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
 }</Button>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

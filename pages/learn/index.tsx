@@ -7,8 +7,7 @@ export default function LearnMarketplace() {
     category: '',
     level: '',
     isFree: '',
-  });  const [courses, setCourses] = useState<Course[]>([]);
-  const [loading, setLoading] = useState(true);
+  });  const [courses, setCourses] = useState<Course[]>([]);  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function load() {
@@ -32,8 +31,7 @@ export default function LearnMarketplace() {
           <h1 className='text-2xl font-semibold'>Zion Academy</h1>
           <div className='text-gray-500 text-sm'>
             Courses • Certifications • Career Boost
-          </div>        </div>
-      </div>
+          </div>        </div>      </div>
 
       <FilterBar {...filters} onChange={setFilters} />
 
@@ -41,8 +39,7 @@ export default function LearnMarketplace() {
         <div>Loading...</div>
       ) : (
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-          {courses.map(c => (            <CourseCard key={c.id} course={c} />
-          ))}
+          {courses.map(c => (            <CourseCard key={c.id} course={c} />          ))}
         </div>
       )}
     </div>

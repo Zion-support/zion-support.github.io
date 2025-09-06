@@ -41,8 +41,7 @@ export default function JobsListPage() {
                   subtitle={j.subtitle}
                   description={j.description}
                   footer={<span className='text-blue-600'>View Job →</span>}
-                />              </a>
-            </Link>
+                />              </a>            </Link>
           ))}
         </div>
       )}

@@ -19,8 +19,7 @@ import {
   Users,
   BarChart3,
   Settings,
-  Database,;
-} from 'lucide-react';
+  Database,;} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
 const contactInfo = {
@@ -28,7 +27,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
-
 const serviceHighlights = [
   {
     title: 'Zero Trust Security',
@@ -42,8 +40,7 @@ const serviceHighlights = [
       'Adaptive controls',
       'Real-time monitoring',
     ],
-  },  {
-    title: 'AI Threat Intelligence',
+  },  {    title: 'AI Threat Intelligence',
     description: 'Predict and prevent cyber threats with AI intelligence',
     icon: Eye,
     color: 'from-indigo-500 to-purple-600',
@@ -66,8 +63,7 @@ const serviceHighlights = [
       'Risk management',
       'Security analytics',
     ],
-  },  {
-    title: 'DevSecOps Security',
+  },  {    title: 'DevSecOps Security',
     description: 'Integrate security into your DevOps pipeline seamlessly',
     icon: Cpu,
     color: 'from-green-500 to-emerald-600',
@@ -77,8 +73,7 @@ const serviceHighlights = [
       'Compliance automation',
       'Security metrics',
     ],
-  },  {
-    title: 'IoT Security Platform',
+  },  {    title: 'IoT Security Platform',
     description: 'Secure your IoT ecosystem with comprehensive protection',
     icon: Globe,
     color: 'from-purple-500 to-violet-600',
@@ -89,7 +84,6 @@ const serviceHighlights = [
       'Automated response',
     ],
   },];
-
 const benefits = [
   {
     title: '99.99% Threat Detection',
@@ -97,8 +91,7 @@ const benefits = [
       'Advanced AI algorithms detect threats before they become incidents',
     icon: Shield,
     color: 'text-red-400',
-  },
-  {
+  },  {
     title: 'Zero False Positives',
     description:
       'AI-powered analysis eliminates false alarms and alert fatigue',
@@ -115,7 +108,6 @@ const benefits = [
     icon: BarChart3,
     color: 'text-purple-400',
   },];
-
 export default function CybersecurityServices() {
   return (
     <Layout>
@@ -134,7 +126,6 @@ export default function CybersecurityServices() {
         />
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -214,15 +205,13 @@ export default function CybersecurityServices() {
               <Link href='#services' className='group'>
                 <button className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
                   <span>Explore Services</span>
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-                </button>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
               </Link>
 
               <Link href='/contact' className='group'>
                 <button className='border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2'>
                   <span>Get Protected</span>
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>
-              </Link>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />                </button>              </Link>
             </div>
           </motion.div>
         </div>
@@ -249,8 +238,7 @@ export default function CybersecurityServices() {
         id='services'
         className='py-20 bg-gradient-to-b from-black to-gray-900'
       >
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -268,8 +256,7 @@ export default function CybersecurityServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (              <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -296,8 +283,7 @@ export default function CybersecurityServices() {
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
-                      <CheckCircle className='w-5 h-5 text-red-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>
-                    </li>
+                      <CheckCircle className='w-5 h-5 text-red-400 mr-3 flex-shrink-0' />                      <span>{feature}</span>                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -308,8 +294,7 @@ export default function CybersecurityServices() {
 
       {/* Detailed Services */}
       <section className='py-20 bg-black'>
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -328,8 +313,7 @@ export default function CybersecurityServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedCybersecurityServices2025.map((service, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedCybersecurityServices2025.map((service, index) => (              <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -420,8 +404,7 @@ export default function CybersecurityServices() {
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
-                    >                      Get Protected
-                    </Link>
+                    >                      Get Protected                    </Link>
                   </div>
                 </div>
               </motion.div>
@@ -432,8 +415,7 @@ export default function CybersecurityServices() {
 
       {/* Benefits Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-        <div className='container mx-auto px-4'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -450,8 +432,7 @@ export default function CybersecurityServices() {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (              <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -470,16 +451,14 @@ export default function CybersecurityServices() {
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {benefit.description}
-                </p>              </motion.div>
-            ))}
+                </p>              </motion.div>            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>
-        <div className='container mx-auto px-4 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='container mx-auto px-4 text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -530,8 +509,7 @@ export default function CybersecurityServices() {
               </div>
               <div>
                 <div className='text-3xl font-bold text-red-400 mb-2'>450%</div>
-                <div className='text-gray-300'>ROI Improvement</div>              </div>
-            </div>
+                <div className='text-gray-300'>ROI Improvement</div>              </div>            </div>
           </motion.div>
         </div>
       </section>

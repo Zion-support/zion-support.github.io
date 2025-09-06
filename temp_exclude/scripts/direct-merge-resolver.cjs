@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+<<<<<<< HEAD
     log("4. Continue with your workflow", "blue"),}
 }
 ;
@@ -14,6 +15,8 @@ if (require.main === module) {;
   main()}
 ;
 module.exports = { resolveMergeConflict, findConflictedFiles }
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

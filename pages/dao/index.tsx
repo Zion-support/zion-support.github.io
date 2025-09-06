@@ -30,16 +30,14 @@
                   <div
                     className='h-2 bg-emerald-600 rounded'
                     style={{ width: `${Math.min(100, d.percent)}%` }}
-                  />                </div>
-              </div>
+                  />                </div>              </div>
             ))}
           </div>
         </div>
 
         <div className='border rounded p-4'>
           <div className='font-medium mb-2'>Top Holders (approx)</div>
-          <table className='w-full text-sm'>
-            <thead>
+          <table className='w-full text-sm'>            <thead>
               <tr className='text-left text-gray-500'>
                 <th className='py-1'>Address</th>
                 <th className='py-1'>Net Delta</th>
@@ -54,8 +52,7 @@
                   <td className='py-1 pr-2 truncate max-w-[10rem]'>
                     {h.address}
                   </td>
-                  <td className='py-1'>{h.amount}</td>                </tr>
-              ))}
+                  <td className='py-1'>{h.amount}</td>                </tr>              ))}
             </tbody>
           </table>
         </div>
@@ -65,8 +62,7 @@
         <div className='border rounded p-4'>
           <div className='font-medium mb-2'>Active Proposals</div>
           {data.activeProposals.length ? (
-            <ul className='list-disc pl-5 text-sm'>              {data.activeProposals.map((p, i) => (
-                <li key={i}>{JSON.stringify(p)}</li>
+            <ul className='list-disc pl-5 text-sm'>              {data.activeProposals.map((p, i) => (                <li key={i}>{JSON.stringify(p)}</li>
               ))}
             </ul>
           ) : (

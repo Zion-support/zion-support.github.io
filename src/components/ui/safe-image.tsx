@@ -3,30 +3,24 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { ImageIcon } from 'lucide-react';
-<<<<<<< HEAD
 
 interface SafeImageProps {
   src: string;
-  alt: string;  width?: number;
-=======
+  alt: string;  width?: number;interface SafeImageProps {
+  src: string,
+  alt: string,
 import { ImageIcon } from 'lucide-react'
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface SafeImageProps {
   src: string,
   alt: string,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   width?: number;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   height?: number;
   className?: string;
   fallbackSrc?: string;
   priority?: boolean;
   sizes?: string;
   quality?: number;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export function SafeImage({
   src,
   alt,
@@ -44,8 +38,6 @@ export function SafeImage({
     if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
       setCurrentSrc(fallbackSrc);
       setHasError(true);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    } else if (!hasError && src.startsWith('/')) {
       // Try serving the image directly through our custom API route
       const fallbackUrl = `/api/image${src}`;
       setCurrentSrc(fallbackUrl);
@@ -57,16 +49,12 @@ export function SafeImage({
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
-<<<<<<< HEAD
-    
-=======
-    return (
+        return (
       <div 
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img"
         aria-label = {alt,}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <ImageIcon className='w-6 h-6' />      </div>
     );
@@ -74,20 +62,16 @@ export function SafeImage({
 
   
     />
-  );
-=======
+  );        aria-label={alt}
+      >
         <ImageIcon className="w-6 h-6" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </div>
     );
   }
 
-<<<<<<< HEAD
   
     />
-  );
-=======
-  return (
+  );  return (
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -101,5 +85,3 @@ export function SafeImage({
     />
   );
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

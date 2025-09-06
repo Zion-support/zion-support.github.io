@@ -25,8 +25,7 @@ import Link from 'next/link';
               <Link
                 href='/case-studies'
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
-              >                ← Back to Case Studies
-              </Link>
+              >                ← Back to Case Studies              </Link>
             </nav>
 
             {/* Header */}
@@ -43,8 +42,7 @@ import Link from 'next/link';
                 {caseStudy.company}
               </p>
               <div className='mt-4 text-white/60'>
-                <span className='mr-6'>Duration: {caseStudy.duration}</span>                <span>Team: {caseStudy.teamSize}</span>
-              </div>
+                <span className='mr-6'>Duration: {caseStudy.duration}</span>                <span>Team: {caseStudy.teamSize}</span>              </div>
             </header>
 
             {/* Challenge */}
@@ -76,8 +74,7 @@ import Link from 'next/link';
                     key={index}
                     className='bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center'
                   >
-                    <span className='text-blue-400 font-semibold'>{tech}</span>                  </div>
-                ))}
+                    <span className='text-blue-400 font-semibold'>{tech}</span>                  </div>                ))}
               </div>
             </section>
 
@@ -100,8 +97,7 @@ import Link from 'next/link';
                       </div>
                       <span className='text-white/90 font-semibold'>
                         {result}
-                      </span>                    </div>
-                  </div>
+                      </span>                    </div>                  </div>
                 ))}
               </div>
             </section>
@@ -126,8 +122,7 @@ import Link from 'next/link';
                   </Link>
                   <Link
                     href='/case-studies'
-                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'                  >
-                    View More Case Studies
+                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'                  >                    View More Case Studies
                   </Link>
                 </div>
               </div>

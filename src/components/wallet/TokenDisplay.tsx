@@ -10,17 +10,6 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
-<<<<<<< HEAD
-=======
-import React from "react";
-import { BadgeDollarSign } from 'lucide-react';
-import { useWallet } from "@/hooks/useWallet";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Skeleton from "@/components/ui/skeleton";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
 
@@ -47,13 +36,9 @@ export function TokenDisplay() {
               convert to credits.
             </p>
             <div className='mt-2'>
-              <Button variant='outline' size='sm'>                View Wallet
-=======
-            <div className="mt-2">
+              <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">
               <Button variant="outline" size="sm">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 View Wallet
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </Button>
             </div>
           </div>
@@ -62,7 +47,3 @@ export function TokenDisplay() {
     </Card>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

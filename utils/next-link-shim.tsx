@@ -25,8 +25,6 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href,
   children: React.ReactNode,
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname || (href as { href?: string })?.href || '#';
@@ -52,4 +50,3 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     </a>
   );
 }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

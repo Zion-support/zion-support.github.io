@@ -9,8 +9,7 @@ import Layout from '../components/layout/Layout';
           name='description'
           content='Zero Trust designs, cloud posture hardening, incident response, and compliance readiness.'
         />
-        <link rel='canonical' href='https://ziontechgroup.com/cybersecurity' />
-      </Head>
+        <link rel='canonical' href='https://ziontechgroup.com/cybersecurity' />      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto space-y-12'>
           <header className='text-center'>
@@ -47,8 +46,7 @@ import Layout from '../components/layout/Layout';
                   className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60'
                 >
                   <CheckCircle className='w-5 h-5 text-emerald-400 mt-0.5' />
-                  <span className='text-gray-200'>{f}</span>                </div>
-              ))}
+                  <span className='text-gray-200'>{f}</span>                </div>              ))}
             </div>
           </section>
 
@@ -85,8 +83,7 @@ import Layout from '../components/layout/Layout';
                 <div className='text-gray-200 font-semibold mb-2'>
                   Mobile Device Management (MDM)
                 </div>
-                <p className='text-gray-300 text-sm'>Learn more</p>              </a>
-            </div>
+                <p className='text-gray-300 text-sm'>Learn more</p>              </a>            </div>
           </section>
         </div>
       </div>

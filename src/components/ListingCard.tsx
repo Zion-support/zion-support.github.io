@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import Image from 'next/image';
-=======
-import React from "react";
-import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import Image from "next/image";
-interface ListingCardProps {
+import Image from 'next/image';interface ListingCardProps {
   id?: string,
   title: string,
   description: string,
@@ -21,10 +13,7 @@ interface ListingCardProps {
   className?: string,
   profileType?: 'service' | 'talent'
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface ListingCardProps {
   id?: string;
   title: string;
@@ -52,34 +41,14 @@ export function ListingCard({
   const profileId =
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
-<<<<<<< HEAD
-  
-=======
-  return (
-    <Link
-      href={`/profile/${profileId}`}
-      tabIndex = {0,}
-      className = {cn(
-        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
-        className
-      ),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    >
+      >
       {images && images.length > 0 && images[0] && (
         <div className='h-48 w-full overflow-hidden relative'>
           <Image
-<<<<<<< HEAD
             src={images[0]}
             alt={title}
             className='object-cover transition-transform duration-300 group-hover:scale-105'
-            loading='lazy'
-=======
-            src = {images[0],}
-            alt = {title,}
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-          />
+            loading='lazy'          />
         </div>
       )}
       <div className='flex flex-col p-4 flex-grow'>
@@ -97,29 +66,22 @@ export function ListingCard({
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
 
         {tags && tags.length > 0 && (
-<<<<<<< HEAD
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
               <Badge
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
-              >                {tag}
-=======
-=======
+              >                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
           <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+            {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {tag}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </Badge>
             ))}
           </div>
         )}
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {author && (
           <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
             {author.avatarUrl ? (
@@ -134,21 +96,18 @@ export function ListingCard({
             ) : (
               <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />
             )}
-            <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>
-=======
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>        {author && (
+          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
+            {author.avatarUrl ? (
+              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
+            ) : (
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
+            )}
             <span className="text-sm text-zion-slate-light">{author.name}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         )}
       </div>
     </Link>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 ;"});})";
->>>>>>> origin/automation-fixes

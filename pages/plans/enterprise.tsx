@@ -40,8 +40,7 @@ const tiers = [
       admin_dashboards: true,
     },
   },
-];
-export default function EnterprisePlans() {
+];export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
       <header style={{ textAlign: 'center', marginBottom: '2rem' }}>
@@ -67,8 +66,7 @@ export default function EnterprisePlans() {
               borderRadius: 12,
               padding: '1.25rem',
             }}
-          >            <h3 style={{ marginBottom: 4 }}>{t.name}</h3>
-            <div style={{ fontSize: 28, fontWeight: 700 }}>{t.price}</div>
+          >            <h3 style={{ marginBottom: 4 }}>{t.name}</h3>            <div style={{ fontSize: 28, fontWeight: 700 }}>{t.price}</div>
             <p style={{ color: '#4b5563' }}>{t.blurb}</p>
             <ul style={{ marginTop: 8 }}>
               {t.highlights.map(h => (
@@ -97,8 +95,7 @@ export default function EnterprisePlans() {
                 }}
               >
                 Schedule a Demo
-              </a>            </div>
-          </div>
+              </a>            </div>          </div>
         ))}
       </section>
 
@@ -127,8 +124,7 @@ export default function EnterprisePlans() {
                     }}
                   >
                     {t.name}
-                  </th>                ))}
-              </tr>
+                  </th>                ))}              </tr>
             </thead>
             <tbody>
               {features.map(f => (
@@ -144,8 +140,7 @@ export default function EnterprisePlans() {
                         padding: 8,
                         borderBottom: '1px solid #f3f4f6',
                       }}
-                    >                      {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}
-                    </td>
+                    >                      {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}                    </td>
                   ))}
                 </tr>
               ))}

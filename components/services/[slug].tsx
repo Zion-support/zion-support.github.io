@@ -5,8 +5,6 @@
   paths: Array.from (slugs) .map ( (slug) => ({
   params: {
   slug 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 }) );
 fallback: false 
 
@@ -60,9 +58,5 @@ null;
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> 
 };
 export default ServiceDetail 
-=======
-
 export default ServiceDetail
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

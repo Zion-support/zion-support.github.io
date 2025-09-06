@@ -29,16 +29,14 @@ import {
   List,
   Phone,
   Mail,
-  MapPin,;
-} from 'lucide-react';
+  MapPin,;} from 'lucide-react';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com',};
 
 const categories = [
   'All Services',
@@ -75,7 +73,6 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   Metaverse: <Globe className='w-5 h-5' />,
   'Autonomous Systems': <Rocket className='w-5 h-5' />,
   'Climate Technology': <Globe className='w-5 h-5' />,};
-
 export default function InnovativeServicesShowcase2036() {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [searchTerm, setSearchTerm] = useState('');
@@ -83,7 +80,6 @@ export default function InnovativeServicesShowcase2036() {
   const [sortBy, setSortBy] = useState<
     'name' | 'price' | 'rating' | 'marketSize'
   >('name');
-
   const allServices = [
     ...real2036InnovativeServices,
     ...real2036SpecializedServices,
@@ -98,7 +94,6 @@ export default function InnovativeServicesShowcase2036() {
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;  });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -114,8 +109,7 @@ export default function InnovativeServicesShowcase2036() {
           parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0')
         );
       default:
-        return a.name.localeCompare(b.name);    }
-  });
+        return a.name.localeCompare(b.name);    }  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -125,7 +119,6 @@ export default function InnovativeServicesShowcase2036() {
         staggerChildren: 0.1,
       },
     },  };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -161,8 +154,7 @@ export default function InnovativeServicesShowcase2036() {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-              }}
-              animate={{
+              }}              animate={{
                 y: [0, -100, 0],
                 opacity: [0.3, 1, 0.3],
               }}
@@ -176,8 +168,7 @@ export default function InnovativeServicesShowcase2036() {
 
         <div className='relative z-10 text-center max-w-6xl mx-auto'>
           <motion.h1
-            className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'            initial={{ opacity: 0, y: 30 }}            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             2036 Innovative Services
@@ -199,8 +190,7 @@ export default function InnovativeServicesShowcase2036() {
             <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'>
               Explore Services
             </button>
-            <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>              Contact Us
-            </button>
+            <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>              Contact Us            </button>
           </motion.div>
         </div>
       </section>
@@ -209,16 +199,14 @@ export default function InnovativeServicesShowcase2036() {
       <section className='py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>
         <div className='max-w-6xl mx-auto'>
           <motion.div
-            className='grid grid-cols-1 md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className='grid grid-cols-1 md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <div className='text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300'>
               <Phone className='w-8 h-8 mx-auto mb-4 text-cyan-400' />
               <h3 className='text-lg font-semibold mb-2'>Phone</h3>
-              <p className='text-gray-300'>{contactInfo.mobile}</p>
-            </div>
+              <p className='text-gray-300'>{contactInfo.mobile}</p>            </div>
             <div className='text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300'>
               <Mail className='w-8 h-8 mx-auto mb-4 text-cyan-400' />
               <h3 className='text-lg font-semibold mb-2'>Email</h3>
@@ -227,8 +215,7 @@ export default function InnovativeServicesShowcase2036() {
             <div className='text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300'>
               <MapPin className='w-8 h-8 mx-auto mb-4 text-cyan-400' />
               <h3 className='text-lg font-semibold mb-2'>Address</h3>
-              <p className='text-gray-300'>{contactInfo.address}</p>            </div>
-          </motion.div>
+              <p className='text-gray-300'>{contactInfo.address}</p>            </div>          </motion.div>
         </div>
       </section>
 
@@ -237,8 +224,7 @@ export default function InnovativeServicesShowcase2036() {
         <div className='max-w-7xl mx-auto'>
           {/* Section Header */}
           <motion.div
-            className='text-center mb-16'            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className='text-center mb-16'            initial={{ opacity: 0, y: 20 }}            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -253,8 +239,7 @@ export default function InnovativeServicesShowcase2036() {
 
           {/* Filters and Controls */}
           <motion.div
-            className='mb-12 space-y-6'            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className='mb-12 space-y-6'            initial={{ opacity: 0, y: 20 }}            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -271,8 +256,7 @@ export default function InnovativeServicesShowcase2036() {
                 />
               </div>
 
-              <div className='flex gap-4 items-center'>
-                <select
+              <div className='flex gap-4 items-center'>                <select
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value as any)}
                   className='px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300'
@@ -287,20 +271,17 @@ export default function InnovativeServicesShowcase2036() {
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
                   >
-                    <Grid className='w-5 h-5' />                  </button>
-                  <button
+                    <Grid className='w-5 h-5' />                  </button>                  <button
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
                   >
-                    <List className='w-5 h-5' />                  </button>
-                </div>
+                    <List className='w-5 h-5' />                  </button>                </div>
               </div>
             </div>
 
             {/* Category Filters */}
             <div className='flex flex-wrap gap-3 justify-center'>
-              {categories.map(category => (                <button
-                  key={category}
+              {categories.map(category => (                <button                  key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category
@@ -308,8 +289,7 @@ export default function InnovativeServicesShowcase2036() {
                       : 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400'
                   }`}
                 >
-                  {categoryIcons[category] || <Star className='w-4 h-4' />}                  {category}
-                </button>
+                  {categoryIcons[category] || <Star className='w-4 h-4' />}                  {category}                </button>
               ))}
             </div>
           </motion.div>
@@ -324,8 +304,7 @@ export default function InnovativeServicesShowcase2036() {
               viewMode === 'grid'
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
-            }          >
-            {sortedServices.map((service, index) => (
+            }          >            {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -381,8 +360,7 @@ export default function InnovativeServicesShowcase2036() {
                           <Star className='w-4 h-4 text-yellow-400 fill-current' />
                           <span className='text-sm text-gray-300'>
                             {service.rating}
-                          </span>                        </div>
-                      )}
+                          </span>                        </div>                      )}
                     </div>
 
                     {/* Market Size */}
@@ -391,8 +369,7 @@ export default function InnovativeServicesShowcase2036() {
                         Market Size:{' '}
                         <span className='text-green-400 font-medium'>
                           {service.marketSize}
-                        </span>                      </div>
-                    )}
+                        </span>                      </div>                    )}
 
                     {/* Features */}
                     <div>
@@ -409,8 +386,7 @@ export default function InnovativeServicesShowcase2036() {
                           </div>
                         ))}
                         {service.features.length > 4 && (
-                          <div className='text-xs text-gray-500 mt-1'>                            +{service.features.length - 4} more features
-                          </div>
+                          <div className='text-xs text-gray-500 mt-1'>                            +{service.features.length - 4} more features                          </div>
                         )}
                       </div>
                     </div>
@@ -423,8 +399,7 @@ export default function InnovativeServicesShowcase2036() {
                         </h4>
                         <p className='text-sm text-gray-400'>
                           {service.targetAudience}
-                        </p>                      </div>
-                    )}
+                        </p>                      </div>                    )}
 
                     {/* Competitive Advantage */}
                     {service.competitiveAdvantage && (
@@ -444,8 +419,7 @@ export default function InnovativeServicesShowcase2036() {
                         className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'
                       >
                         Learn More
-                        <ArrowRight className='w-4 h-4' />                      </a>
-                    </div>
+                        <ArrowRight className='w-4 h-4' />                      </a>                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -454,8 +428,7 @@ export default function InnovativeServicesShowcase2036() {
 
           {/* Results Summary */}
           <motion.div
-            className='mt-12 text-center text-gray-400'            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            className='mt-12 text-center text-gray-400'            initial={{ opacity: 0 }}            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -466,8 +439,7 @@ export default function InnovativeServicesShowcase2036() {
 
       {/* Call to Action */}
       <section className='py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -483,13 +455,11 @@ export default function InnovativeServicesShowcase2036() {
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href={`mailto:${contactInfo.email}`}
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'              >
-                Get Started Today
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'              >                Get Started Today
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'              >
-                Call Us Now
+                className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'              >                Call Us Now
               </a>
             </div>
           </motion.div>

@@ -18,7 +18,6 @@ export default function InfrastructureDriftDetectorPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/infrastructure-drift-detector')
   );  if (!service) return null;
-
   return (
     <Layout>
       <Head>
@@ -27,8 +26,7 @@ export default function InfrastructureDriftDetectorPage() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/infrastructure-drift-detector'
-        />
-      </Head>
+        />      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -104,8 +102,7 @@ export default function InfrastructureDriftDetectorPage() {
                   >
                     {service.contactInfo.address}
                   </a>
-                </div>              </div>
-            </div>
+                </div>              </div>            </div>
           </div>
         </div>
       </div>

@@ -65,5 +65,3 @@
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error = > {; process.exit(1)});
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

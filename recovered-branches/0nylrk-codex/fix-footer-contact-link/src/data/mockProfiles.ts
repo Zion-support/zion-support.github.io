@@ -1,6 +1,4 @@
 import { ProfileData } from '@/types/profile';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   'service-provider-1': {
     id: 'service-provider-1',
@@ -187,8 +185,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         { day: 'Friday', hours: '10:00 AM - 2:00 PM' },
       ],
     },
-  },};
-        { day: "Monday", hours: "10:00 AM - 6:00 PM" };
+  },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" };
         { day: "Tuesday", hours: "10:00 AM - 6:00 PM" };
         { day: "Wednesday", hours: "10:00 AM - 6:00 PM" };
         { day: "Thursday", hours: "10:00 AM - 6:00 PM" };
@@ -196,6 +193,3 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

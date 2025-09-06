@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -12,17 +11,7 @@ import {
   DollarSign,;
 } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-=======
-
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface BrowseItem {
   id: string;
   title: string;
@@ -36,7 +25,6 @@ interface BrowseItem {
   timePosted?: string;
 
 interface BrowseCardsProps {
-<<<<<<< HEAD
   items: BrowseItem[];
   type: 'jobs' | 'talents';
   onViewDetails: (id: string) => void;
@@ -59,35 +47,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               <div className='flex justify-between'>
                 <div className='flex items-center gap-3'>
                   {type === 'talents' ? (
-                    <Avatar className='h-12 w-12'>
-=======
-  items: BrowseItem[],
-  type: "jobs" | "talents",
-  onViewDetails: (id: string,) => void
-}
-
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]),
-  
-  const toggleSaved = (id: string,) => {
-    setSavedItems(prev => 
-      prev.includes(id) 
-        ? prev.filter(itemId => itemId !== id)
-        : [...prev, id]
-    )
-  },
-  
-  return (
-    <div className="space-y-4 pb-24">
-      {items.map((item,) => (
-        <Card key={item.id} className="overflow-hidden">
+                    <Avatar className='h-12 w-12'>        <Card key={item.id} className="overflow-hidden">
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   {type === "talents" ? (
                     <Avatar className="h-12 w-12">
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       <AvatarImage src={item.image} alt={item.title} />
                       <AvatarFallback>
                         {item.title.charAt(0).toUpperCase()}
@@ -105,18 +71,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD
 
                 <button
                   className='h-8 w-8 flex items-center justify-center'
-                  onClick={() => toggleSaved(item.id)}
-=======
-                
-                <button 
-                  className="h-8 w-8 flex items-center justify-center"
-                  onClick = {() => toggleSaved(item.id),}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-                >
+                  onClick={() => toggleSaved(item.id)}                >
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className='h-5 w-5 text-primary' />
                   ) : (
@@ -124,26 +82,44 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
-<<<<<<< HEAD
 
               <div className='mt-3 flex flex-wrap gap-1'>
                 {item.badges.map((badge, index) => (
                   <Badge
                     key={index}
                     variant='outline'
-                    className='text-xs font-normal'                  >
-=======
+                    className='text-xs font-normal'                  >                      <AvatarImage src={item.image} alt={item.title} />
+                      <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
+                    </Avatar>
+                  ) : (
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
+                      <span className="text-primary font-semibold">JOB</span>
+                    </div>
+                  )}
+                  <div>
+                    <h3 className="font-medium">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
+                  </div>
+                </div>
+                
+                <button 
+                  className="h-8 w-8 flex items-center justify-center"
+                  onClick={() => toggleSaved(item.id)}
+                >
+                  {savedItems.includes(item.id) ? (
+                    <BookmarkCheck className="h-5 w-5 text-primary" />
+                  ) : (
+                    <Bookmark className="h-5 w-5 text-muted-foreground" />
+                  )}
+                </button>
+              </div>
               
               <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index,) => (
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+                {item.badges.map((badge, index) => (
                   <Badge 
                     key = {index,}
                     variant="outline" 
                     className="text-xs font-normal"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     {badge}
                   </Badge>
                 ))}
@@ -152,7 +128,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
 
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {item.location && (
                   <div className='flex items-center gap-1'>
                     <MapPin className='h-3 w-3' />
@@ -175,39 +150,47 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 )}
 
                 {item.match && (
-                  <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>                    {item.match}% match
-=======
+                  <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>                    {item.match}% match                {item.location && (
+                  <div className="flex items-center gap-1">
+                    <MapPin className="h-3 w-3" />
+                    <span>{item.location}</span>
+                  </div>
+                )}
+                
+                {item.price && (
+                  <div className="flex items-center gap-1">
+                    <DollarSign className="h-3 w-3" />
+                    <span>{item.price}</span>
+                  </div>
+                )}
+                
+                {item.timePosted && (
+                  <div className="flex items-center gap-1">
+                    <Clock className="h-3 w-3" />
+                    <span>{item.timePosted}</span>
+                  </div>
+                )}
+                
+                {item.match && (
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     {item.match}% match
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </div>
                 )}
               </div>
             </div>
-<<<<<<< HEAD
 
             <div className='border-t border-border p-3 flex justify-end'>
               <Button
                 size='sm'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 onClick={() => onViewDetails(item.id)}
-                className='gap-1'
-=======
-            
-            <div className="border-t border-border p-3 flex justify-end">
-              <Button 
-                size="sm"
-                onClick = {() => onViewDetails(item.id),}
-                className="gap-1"
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-              >
+                className='gap-1'              >
                 View Details <ChevronRight className='h-4 w-4' />              </Button>
-=======
                 View Details <ChevronRight className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                onClick={() => onViewDetails(item.id)}
+                className="gap-1"
+              >
+                View Details <ChevronRight className="h-4 w-4" />
               </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </div>
           </CardContent>
         </Card>
@@ -215,7 +198,3 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

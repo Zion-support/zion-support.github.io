@@ -1,17 +1,14 @@
-<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react'
 import { SkillItemProps } from './types';
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
-=======
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react';
 import { SkillItemProps } from './types';
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   return (
     <Badge 
       key = {skill.id,}
@@ -33,7 +30,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
       </Button>
     </Badge>
   )
-<<<<<<< HEAD
 };
 "
 
@@ -63,11 +59,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       </Button>
     </Badge>
   )
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-},
+};},
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
+};

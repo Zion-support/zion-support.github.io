@@ -13,8 +13,7 @@ import {
   Globe,
   ArrowRight,
   CheckCircle,
-  Star,;
-} from 'lucide-react';
+  Star,;} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function AIBusinessIntelligencePage() {
@@ -25,8 +24,7 @@ export default function AIBusinessIntelligencePage() {
       description:
         'Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.',
       color: 'from-purple-500 to-pink-500',
-    },
-    {
+    },    {
       icon: BarChart3,
       title: 'Real-time Dashboards',
       description:
@@ -79,8 +77,7 @@ const AIBusinessIntelligence: React.FC = () => {
         'Customer segmentation, inventory optimization, and demand forecasting',
       results:
         '35% increase in conversion rates, 25% reduction in inventory costs',
-    },
-    {
+    },    {
       industry: 'Financial Services',
       description:
         'Risk assessment, fraud detection, and portfolio optimization',
@@ -105,8 +102,7 @@ const AIBusinessIntelligence: React.FC = () => {
       plan: 'Starter',
       price: '$499',
       period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      features: [
+      description: 'Perfect for small businesses getting started with AI',      features: [
         'Basic predictive analytics',
         '5 customizable dashboards',
         'Standard reporting',
@@ -174,7 +170,6 @@ const AIBusinessIntelligence: React.FC = () => {
           property='og:url'
           content='https://ziontechgroup.com/ai-business-intelligence'
         />      </Head>
-
       <EnhancedNavigation />
 
       {/* Hero Section */}
@@ -206,8 +201,7 @@ const AIBusinessIntelligence: React.FC = () => {
               </a>
               <a
                 href='#demo'
-                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >
-                Watch Demo
+                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >                Watch Demo
               </a>
             </div>
           </motion.div>
@@ -236,8 +230,7 @@ const AIBusinessIntelligence: React.FC = () => {
             </ul>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (              <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -262,8 +255,7 @@ const AIBusinessIntelligence: React.FC = () => {
       {/* Benefits */}
       <section className='py-20 bg-slate-50'>
         <div className='max-w-7xl mx-auto px-6'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion.div
-              initial={{ opacity: 0, x: -20 }}
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion.div              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
@@ -276,8 +268,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 reduced costs, see the difference data-driven decisions can
                 make.
               </p>
-              <div className='space-y-4'>                {benefits.map((benefit, index) => (
-                  <motion.div
+              <div className='space-y-4'>                {benefits.map((benefit, index) => (                  <motion.div
                     key={benefit}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -285,8 +276,7 @@ const AIBusinessIntelligence: React.FC = () => {
                     className='flex items-center space-x-3'
                   >
                     <CheckCircle className='w-6 h-6 text-green-500 flex-shrink-0' />
-                    <span className='text-slate-700'>{benefit}</span>                  </motion.div>
-                ))}
+                    <span className='text-slate-700'>{benefit}</span>                  </motion.div>                ))}
               </div>
             </motion.div>
 
@@ -316,8 +306,7 @@ const AIBusinessIntelligence: React.FC = () => {
                   <div className='text-4xl font-bold text-purple-600 mb-2'>
                     80%
                   </div>
-                  <div className='text-slate-600'>Time Saved on Reporting</div>                </div>
-              </div>
+                  <div className='text-slate-600'>Time Saved on Reporting</div>                </div>              </div>
             </motion.div>
           </div>
         </div>
@@ -340,8 +329,7 @@ const AIBusinessIntelligence: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (              <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -357,8 +345,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 <div className='bg-green-50 border border-green-200 rounded-lg p-4'>
                   <p className='text-green-800 font-medium'>
                     Results: {useCase.results}
-                  </p>                </div>
-              </motion.div>
+                  </p>                </div>              </motion.div>
             ))}
           </div>
         </div>
@@ -380,8 +367,7 @@ const AIBusinessIntelligence: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              <motion.div
                 key={plan.plan}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -391,8 +377,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 }`}
               >
                 {plan.popular && (
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>
-                    Most Popular
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                    Most Popular
                   </div>
                 )}
 
@@ -413,14 +398,12 @@ const AIBusinessIntelligence: React.FC = () => {
                   {plan.features.map(feature => (
                     <li key={feature} className='flex items-center space-x-3'>
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
-                      <span className='text-slate-700'>{feature}</span>                    </li>
-                  ))}
+                      <span className='text-slate-700'>{feature}</span>                    </li>                  ))}
                 </ul>
 
                 <a
                   href='/contact'
-                  className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'                >
-                  Get Started
+                  className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'                >                  Get Started
                 </a>
               </motion.div>
             ))}
@@ -430,8 +413,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
       {/* CTA */}
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
-        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -450,8 +432,7 @@ const AIBusinessIntelligence: React.FC = () => {
               </a>
               <a
                 href='/contact'
-                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >
-                Schedule Demo
+                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >                Schedule Demo
               </a>
             </div>
           </motion.div>

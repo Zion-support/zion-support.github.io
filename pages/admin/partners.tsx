@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
 interface Partner {
   id: string;
   code: string;
@@ -68,7 +67,6 @@ const AdminPartnersPage: React.FC = () => {
       setPartners(mockPartners);
       setLoading(false);
     }, 1000);  }, []);
-
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
       method: 'POST',
@@ -144,8 +142,7 @@ const AdminPartnersPage: React.FC = () => {
                     onClick={() => viewFlags(p.code)}
                   >
                     Fraud Flags
-                  </button>                </td>
-              </tr>
+                  </button>                </td>              </tr>
             ))}
           </tbody>
         </table>

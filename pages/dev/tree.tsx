@@ -40,8 +40,7 @@ export default function DevTreePage() {
   const onDeploy = async (p: string) => {
     try {
       const resp = await fetch('/api/dev/source-map', {
-        method: 'POST',
-        headers: {
+        method: 'POST',        headers: {
           'Content-Type': 'application/json',
           'x-admin-token': adminToken,
         },
@@ -78,16 +77,14 @@ export default function DevTreePage() {
           <button
             className='px-3 py-1 text-sm bg-blue-600 text-white rounded'
             onClick={handleSaveToken}
-          >            Save Token
-          </button>
+          >            Save Token          </button>
         </div>
       </div>
 
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
 
       {nodes ? (
-        <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />
-        </div>
+        <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />        </div>
       ) : (
         <div>Loading...</div>
       )}

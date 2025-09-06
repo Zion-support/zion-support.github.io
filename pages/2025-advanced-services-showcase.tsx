@@ -37,8 +37,7 @@ import {
   DollarSign,
   Calendar,
   Users as UsersIcon,
-  Zap as ZapIcon,;} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
+  Zap as ZapIcon,;} from 'lucide-react';import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
 import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
@@ -55,8 +54,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
         service.category.includes(selectedCategory);
       const price = parseFloat(service.price.replace('$', '').replace(',', ''));
       const matchesPrice = price >= priceRange[0] && price <= priceRange[1];
-      return matchesSearch && matchesCategory && matchesPrice;    })
-    .sort((a, b) => {
+      return matchesSearch && matchesCategory && matchesPrice;    })    .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
@@ -72,8 +70,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
         default:
-          return 0;      }
-    });
+          return 0;      }    });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -83,7 +80,6 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
         staggerChildren: 0.1,
       },
     },  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -96,8 +92,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
 
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon || '🚀';
-  };
+    return categoryData?.icon || '🚀';  };
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden'>
@@ -123,13 +118,11 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
           rel='canonical'
           href='https://ziontechgroup.com/2025-advanced-services-showcase'
         />      </Head>
-
       <EnhancedNavigation />
 
       {/* Hero Section */}
       <section className='relative py-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -167,8 +160,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                 <div className='text-3xl font-bold text-orange-400 mb-2'>
                   24/7
                 </div>
-                <div className='text-white/70'>Expert Support</div>              </div>
-            </div>
+                <div className='text-white/70'>Expert Support</div>              </div>            </div>
           </motion.div>
         </div>
       </section>
@@ -190,8 +182,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                   placeholder='Search services by name, description, or features...'
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-                  className='w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300'                />
-              </div>
+                  className='w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300'                />              </div>
             </div>
 
             {/* Filters Row */}
@@ -206,8 +197,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300'
                 >
-                  {categories.map(category => (                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
+                  {categories.map(category => (                    <option key={category.id} value={category.id}>                      {category.name} ({category.count})
                     </option>
                   ))}
                 </select>
@@ -217,8 +207,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
               <div className='flex-1'>
                 <label className='block text-sm font-medium text-white/70 mb-3'>
                   Sort By
-                </label>
-                <select
+                </label>                <select
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value as any)}
                   className='w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300'
@@ -257,8 +246,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                         parseInt(e.target.value) || 10000,
                       ])
                     }
-                    className='flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300'                  />
-                </div>
+                    className='flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300'                  />                </div>
               </div>
 
               {/* View Mode Toggle */}
@@ -281,8 +269,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                         : 'text-white/70 hover:text-white'
                     }`}
                   >
-                    <List className='w-5 h-5' />                  </button>
-                </div>
+                    <List className='w-5 h-5' />                  </button>                </div>
               </div>
             </div>
           </motion.div>
@@ -291,15 +278,13 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
 
       {/* Services Grid/List */}
       <section className='px-6 pb-20'>
-        <div className='max-w-7xl mx-auto'>          {/* Results Count */}
-          <motion.div
+        <div className='max-w-7xl mx-auto'>          {/* Results Count */}          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             className='mb-8'
           >
-            <p className='text-white/70'>              Showing {filteredServices.length} of {allServices.length} services
-            </p>
+            <p className='text-white/70'>              Showing {filteredServices.length} of {allServices.length} services            </p>
           </motion.div>
 
           {/* Services Display */}
@@ -342,8 +327,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                         </div>
                       </div>
                       {service.popular && (
-                        <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full'>                          Popular
-                        </span>
+                        <span className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full'>                          Popular                        </span>
                       )}
                     </div>
 
@@ -351,7 +335,6 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                     <p className='text-white/80 mb-4 leading-relaxed'>
                       {service.description}
                     </p>
-
                     {/* Price and Details */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='flex items-center gap-4'>
@@ -396,8 +379,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                           </div>
                         ))}
                         {service.features.length > 3 && (
-                          <div className='text-white/60 text-sm'>                            +{service.features.length - 3} more features
-                          </div>
+                          <div className='text-white/60 text-sm'>                            +{service.features.length - 3} more features                          </div>
                         )}
                       </div>
                     </div>
@@ -410,8 +392,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                         </span>
                       </div>
                       <div className='text-white/60 text-sm'>
-                        {service.technology.slice(0, 2).join(', ')}                        {service.technology.length > 2 && '...'}
-                      </div>
+                        {service.technology.slice(0, 2).join(', ')}                        {service.technology.length > 2 && '...'}                      </div>
                     </div>
 
                     {/* ROI and Benefits */}
@@ -428,8 +409,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                             <span
                               key={idx}
                               className='text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full'
-                            >                              {benefit}
-                            </span>
+                            >                              {benefit}                            </span>
                           ))}
                         </div>
                       </div>
@@ -449,8 +429,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                         href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
                         className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2'
                       >
-                        <ZapIcon className='w-4 h-4' />                        Contact
-                      </a>
+                        <ZapIcon className='w-4 h-4' />                        Contact                      </a>
                     </div>
                   </div>
                 </motion.div>
@@ -477,8 +456,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                   setSelectedCategory('all');
                   setPriceRange([0, 10000]);
                 }}
-                className='bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300'              >
-                Clear Filters
+                className='bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300'              >                Clear Filters
               </button>
             </motion.div>
           )}
@@ -487,8 +465,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
 
       {/* CTA Section */}
       <section className='px-6 py-20'>
-        <div className='max-w-4xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -510,8 +487,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
               </a>
               <a
                 href='tel:+13024640950'
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2'              >
-                Call +1 302 464 0950
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2'              >                Call +1 302 464 0950
               </a>
             </div>
           </motion.div>

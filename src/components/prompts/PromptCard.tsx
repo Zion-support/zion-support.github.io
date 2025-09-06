@@ -1,45 +1,28 @@
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { Button } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
 
-=======
 import { Button } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface PromptCardProps {
   prompt: Prompt;
 
 export function PromptCard({ prompt }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
-<<<<<<< HEAD
     navigator.clipboard.writeText(prompt.text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);  };
-=======
-    navigator.clipboard.writeText(prompt.text),
-    setCopied(true),
-    setTimeout((,) => setCopied(false), 2000)
-  },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-
   const handleSend = () => {
     const encoded = encodeURIComponent(prompt.text);
     window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
-=======
     setTimeout(() => setCopied(false), 2000)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    setTimeout(() => setCopied(false), 2000)
   };
 
   const handleSend = () => {
     const encoded = encodeURIComponent(prompt.text);
-<<<<<<< HEAD
     window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  };
 
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
@@ -63,17 +46,10 @@ export function PromptCard({ prompt }: PromptCardProps) {
       </div>
     </div>
   );
-}
-=======
-        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
+}        <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
           <Send className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </Button>
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

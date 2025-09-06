@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface AdvancedHealthcareBiotechService {
   id: string;
   name: string;
   tagline: string;
@@ -361,8 +359,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       rating: 4.8,
       reviews: 19,
     },
-  ];
-    features: [
+  ];    features: [
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
       'Mobile data collection appAPI for research platforms'
     ];
@@ -394,5 +391,3 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     reviews: 19
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,13 +1,7 @@
   
-
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-import { Bell, Calendar, X } from 'lucide-react'
-=======
-import { Bell, Calendar, X } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-import { Button } from "@/components/ui/button";
+import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
@@ -24,14 +18,8 @@ export function ProjectOfferBanner() {
     }
   }, [projects, isLoading]);
   
-<<<<<<< HEAD
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-    e.stopPropagation();
-=======
-  const handleDismiss = (projectId: string, e: React.MouseEvent,) => {
-    e.stopPropagation(),
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
-    setDismissed(prev => {
+    e.stopPropagation();    setDismissed(prev => {
       const updated = new Set(prev);
       updated.add(projectId);
       return updated
@@ -107,8 +95,4 @@ if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismiss
   pendingOffers offer.id ";
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) ;
 }</div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

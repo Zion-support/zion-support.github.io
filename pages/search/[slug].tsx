@@ -2,8 +2,7 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
+import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import ProductCard from '@/components/ProductCard';
 import { TalentCard } from '@/components/talent/TalentCard';
@@ -65,8 +64,7 @@ interface SearchResultsPageProps {
   initialResults: SearchResult[];
   query: string;
   slug: string;
-  totalCount: number;
-interface OfflineFilters {
+  totalCount: number;interface OfflineFilters {
   sortBy?: string;
   category?: string;
   minPrice?: number;
@@ -87,8 +85,7 @@ function offlineSearch(
       match(p.description) ||
       match(p.category) ||
       p.tags?.some(t => match(t))
-  ).map(p => ({    id: p.id,
-    title: p.title,
+  ).map(p => ({    id: p.id,    title: p.title,
     description: p.description || '',
     type: 'product' as const,
     slug: p.id,
@@ -109,8 +106,7 @@ function offlineSearch(
       match(t.professional_title) ||
       match(t.bio) ||
       t.skills?.some(s => match(s))
-  ).map(t => ({    id: t.id,
-    title: t.full_name,
+  ).map(t => ({    id: t.id,    title: t.full_name,
     description: t.professional_title || '',
     type: 'talent' as const,
     slug: t.id,
@@ -128,8 +124,7 @@ function offlineSearch(
       match(b.excerpt) ||
       match(b.content) ||
       b.tags?.some(t => match(t))
-  ).map(b => ({    id: b.slug,
-    title: b.title,
+  ).map(b => ({    id: b.slug,    title: b.title,
     description: b.excerpt,
     type: 'blog' as const,
     slug: b.slug,
@@ -163,15 +158,13 @@ function offlineSearch(
       }
       return true;
     });  }
-
   if (filters.sortBy && filters.sortBy !== 'relevance') {
     switch (filters.sortBy) {
       case 'price_asc':
         all.sort((a, b) => {
           const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
           const bPrice = b.type === 'product' ? (b.price ?? 0) : 0;
-          return aPrice - bPrice;        });
-        break;
+          return aPrice - bPrice;        });        break;
       case 'price_desc':
         all.sort((a, b) => {
           const aPrice = a.type === 'product' ? (a.price ?? 0) : 0;
@@ -184,8 +177,7 @@ function offlineSearch(
             a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
           const bRating =
             b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
-          return bRating - aRating;
-        });
+          return bRating - aRating;        });
         break;
       default:
         break;
@@ -202,8 +194,7 @@ export default function SearchResultsPage({
   query,
   slug,
   totalCount,
-}: SearchResultsPageProps) {  const router = useRouter();
-  const { isAuthenticated } = useAuth();
+}: SearchResultsPageProps) {  const router = useRouter();  const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState(query);
@@ -221,14 +212,12 @@ export default function SearchResultsPage({
   const fetchResults = async (searchTerm: string, page = 1) => {
     try {
       setLoading(true);
-      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
-      const params = new URLSearchParams({
+      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);      const params = new URLSearchParams({
         query: searchTerm,
         page: String(page),
         limit: '12',
         sort: sortBy,
-      });      if (categoryFilter !== 'all') params.append('category', categoryFilter);
-      if (minPrice) params.append('minPrice', minPrice);
+      });      if (categoryFilter !== 'all') params.append('category', categoryFilter);      if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
 
@@ -263,8 +252,7 @@ export default function SearchResultsPage({
         setResults(prev => [...prev, ...offline.results]);
       }
     } finally {
-      setLoading(false);    }
-  };
+      setLoading(false);    }  };
 
   // Handle search input change
   const handleSearch = (newQuery: string) => {
@@ -273,16 +261,14 @@ export default function SearchResultsPage({
       router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
         shallow: true,
       });
-      setCurrentPage(1);    }
-  };
+      setCurrentPage(1);    }  };
 
   useEffect(() => {
     if (debouncedQuery.trim()) {
       fetchResults(debouncedQuery, 1);
     } else {
       setResults([]);
-      setTotalResults(0);    }
-  }, [debouncedQuery]);
+      setTotalResults(0);    }  }, [debouncedQuery]);
 
   // Load more results
   const loadMore = () => {
@@ -295,8 +281,7 @@ export default function SearchResultsPage({
     new Set(results.map(r => r.category).filter(Boolean))
   );
 
-  const filteredResults = results.filter(r => {    if (
-      categoryFilter !== 'all' &&
+  const filteredResults = results.filter(r => {    if (      categoryFilter !== 'all' &&
       categoryFilter &&
       r.category !== categoryFilter
     ) {
@@ -316,7 +301,6 @@ export default function SearchResultsPage({
       }
     }
     return true;  });
-
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
@@ -325,14 +309,12 @@ export default function SearchResultsPage({
       return acc;
     },
     {} as Record<string, SearchResult[]>  );
-
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
       case 'equipment':
         return (
-          <div key={result.id} data-testid='result-card'>            <ProductCard
-              product={{
+          <div key={result.id} data-testid='result-card'>            <ProductCard              product={{
                 id: result.id,
                 name: result.title,
                 title: result.title,
@@ -347,14 +329,12 @@ export default function SearchResultsPage({
                 created_at: new Date().toISOString(),
                 updated_at: new Date().toISOString(),
                 stock: (result as any).stock,
-                in_stock: ((result as any).stock || 0) > 0,              }}
-            />
+                in_stock: ((result as any).stock || 0) > 0,              }}            />
           </div>
         );
       case 'talent':
         return (
-          <div key={result.id} data-testid='result-card'>            <TalentCard
-              talent={{
+          <div key={result.id} data-testid='result-card'>            <TalentCard              talent={{
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,
@@ -372,15 +352,13 @@ export default function SearchResultsPage({
                 router.push(`/talent/${id}`);
               }}
               onRequestHire={talent => {
-                router.push(`/talent/${talent.id}?action=hire`);              }}
-              isAuthenticated={isAuthenticated}
+                router.push(`/talent/${talent.id}?action=hire`);              }}              isAuthenticated={isAuthenticated}
             />
           </div>
         );
       case 'category':
         return (
-          <div key={result.id} data-testid='result-card'>            <CategoryCard
-              title={result.title}
+          <div key={result.id} data-testid='result-card'>            <CategoryCard              title={result.title}
               description={result.description || ''}
               icon={result.image || '📁'}
             />
@@ -394,8 +372,7 @@ export default function SearchResultsPage({
               {result.description}
             </p>
           </div>
-        );    }
-  };
+        );    }  };
 
   return (
     <>
@@ -420,8 +397,7 @@ export default function SearchResultsPage({
                 </h1>
                 <p
                   className='text-gray-600 dark:text-gray-200'
-                  data-testid='results-count'                >
-                  {filteredResults.length > 0
+                  data-testid='results-count'                >                  {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
                     : `No results found for "${query}"`}
                 </p>
@@ -435,8 +411,7 @@ export default function SearchResultsPage({
                   value={searchQuery}
                   onChange={e => handleSearch(e.target.value)}
                   placeholder='Search marketplace...'
-                  className='pl-10'                />
-              </div>
+                  className='pl-10'                />              </div>
             </div>
 
             {/* Controls */}
@@ -448,8 +423,7 @@ export default function SearchResultsPage({
                   className='flex items-center gap-2'
                   data-testid='filter-button'
                 >
-                  <Filter className='h-4 w-4' />                  Filters
-                </Button>
+                  <Filter className='h-4 w-4' />                  Filters                </Button>
 
                 <select
                   value={sortBy}
@@ -469,8 +443,7 @@ export default function SearchResultsPage({
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm'
                 >
                   <option value='all'>All Categories</option>
-                  {categories.map(c => (                    <option key={c} value={c}>
-                      {c}
+                  {categories.map(c => (                    <option key={c} value={c}>                      {c}
                     </option>
                   ))}
                 </select>
@@ -481,16 +454,14 @@ export default function SearchResultsPage({
                     placeholder='Min $'
                     value={minPrice}
                     onChange={e => setMinPrice(e.target.value)}
-                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
-                  />
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />
                   <span>-</span>
                   <input
                     type='number'
                     placeholder='Max $'
                     value={maxPrice}
                     onChange={e => setMaxPrice(e.target.value)}
-                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />
-                </div>
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />                </div>
 
                 <select
                   value={minRating}
@@ -521,21 +492,18 @@ export default function SearchResultsPage({
                   data-testid='view-mode-list'
                   className={viewMode === 'list' ? 'active' : ''}
                 >
-                  <List className='h-4 w-4' />                </Button>
-              </div>
+                  <List className='h-4 w-4' />                </Button>              </div>
             </div>
           </div>
 
           {/* Loading State */}
           {loading && results.length === 0 && (
             <div className='flex justify-center py-12'>
-              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>            </div>
-          )}
+              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>            </div>          )}
 
           {/* Empty State */}
           {!loading && filteredResults.length === 0 && (
-            <div data-testid='search-empty-state'>              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
-            </div>
+            <div data-testid='search-empty-state'>              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />            </div>
           )}
 
           {/* Results */}
@@ -543,8 +511,7 @@ export default function SearchResultsPage({
             <div className='space-y-8'>
               {Object.entries(groupedResults).map(([type, typeResults]) => (
                 <div key={type}>
-                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults.length})
-                  </h2>
+                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults.length})                  </h2>
 
                   <div
                     className={
@@ -568,8 +535,7 @@ export default function SearchResultsPage({
                   >
                     {loading ? (
                       <>
-                        <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>                        Loading...
-                      </>
+                        <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>                        Loading...                      </>
                     ) : (
                       'Load More Results'
                     )}
@@ -581,8 +547,7 @@ export default function SearchResultsPage({
         </div>
       </div>
     </>
-  );
-export const getServerSideProps: GetServerSideProps<
+  );export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
 > = async (context: any) => {
   const params = context.params;
@@ -600,7 +565,6 @@ export const getServerSideProps: GetServerSideProps<
 
     const response = await fetch(
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`    );
-
     let results = [];
     let totalCount = 0;
 
@@ -616,7 +580,6 @@ export const getServerSideProps: GetServerSideProps<
       const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
       results = offline.results;
       totalCount = offline.totalCount;    }
-
     return {
       props: {
         initialResults: results,
@@ -636,5 +599,4 @@ export const getServerSideProps: GetServerSideProps<
         slug,
         totalCount: offline.totalCount,
       },
-    };  }
-};
+    };  }};

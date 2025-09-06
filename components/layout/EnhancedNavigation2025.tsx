@@ -54,7 +54,6 @@
 }</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
 };export default EnhancedNavigation2025;
-
 export default function EnhancedNavigation2025() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
@@ -387,6 +386,3 @@ export default function EnhancedNavigation2025() {
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-export default EnhancedNavigation2025;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -15,7 +15,6 @@ import {
   AlertTriangle,
   CheckCircle,
   Mail,;} from 'lucide-react';
-
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
 
@@ -69,7 +68,6 @@ const PrivacyPage: React.FC = () => {
         'Incident response and breach notification procedures',
       ],
     },  ];
-
   const rights = [
     {
       title: 'Access',
@@ -80,8 +78,7 @@ const PrivacyPage: React.FC = () => {
       title: 'Correction',
       description: 'Request correction of inaccurate information',
       icon: <CheckCircle className='w-6 h-6' />,
-    },
-    {
+    },    {
       title: 'Deletion',
       description: 'Request deletion of your personal information',
       icon: <AlertTriangle className='w-6 h-6' />,
@@ -101,7 +98,6 @@ const PrivacyPage: React.FC = () => {
       description: 'Request restriction of processing activities',
       icon: <Settings className='w-6 h-6' />,
     },  ];
-
   return (
     <ErrorBoundary>
       <SEOOptimizer />
@@ -110,8 +106,7 @@ const PrivacyPage: React.FC = () => {
         <main className='relative z-10 pt-8'>
           {/* Hero Section */}
           <section className='py-20 px-4'>
-            <div className='max-w-6xl mx-auto text-center'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
+            <div className='max-w-6xl mx-auto text-center'>              <motion.div                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
@@ -123,8 +118,7 @@ const PrivacyPage: React.FC = () => {
                   your personal information.
                 </p>
                 <div className='flex items-center justify-center gap-4 text-gray-400'>
-                  <Shield className='w-6 h-6' />                  <span>Last updated: {lastUpdated}</span>
-                </div>
+                  <Shield className='w-6 h-6' />                  <span>Last updated: {lastUpdated}</span>                </div>
               </motion.div>
             </div>
           </section>
@@ -132,8 +126,7 @@ const PrivacyPage: React.FC = () => {
           {/* Overview */}
           <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
             <div className='max-w-6xl mx-auto'>
-              <div className='grid lg:grid-cols-2 gap-12 items-center'>                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
+              <div className='grid lg:grid-cols-2 gap-12 items-center'>                <motion.div                  initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -158,8 +151,7 @@ const PrivacyPage: React.FC = () => {
                       Your data is safe with us
                     </span>
                   </div>
-                </motion.div>
-                <motion.div
+                </motion.div>                <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -188,8 +180,7 @@ const PrivacyPage: React.FC = () => {
                           <div className='text-2xl font-bold text-purple-400'>
                             99.9%
                           </div>
-                          <div className='text-gray-400'>Uptime</div>                        </div>
-                      </div>
+                          <div className='text-gray-400'>Uptime</div>                        </div>                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -213,8 +204,7 @@ const PrivacyPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className='grid md:grid-cols-2 gap-8'>                {privacySections.map((section, index) => (
-                  <motion.div
+              <div className='grid md:grid-cols-2 gap-8'>                {privacySections.map((section, index) => (                  <motion.div
                     key={section.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -233,8 +223,7 @@ const PrivacyPage: React.FC = () => {
                       {section.content.map((item, itemIndex) => (
                         <li key={itemIndex} className='flex items-start gap-3'>
                           <div className='w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0'></div>
-                          <span className='text-gray-300'>{item}</span>                        </li>
-                      ))}
+                          <span className='text-gray-300'>{item}</span>                        </li>                      ))}
                     </ul>
                   </motion.div>
                 ))}
@@ -258,8 +247,7 @@ const PrivacyPage: React.FC = () => {
                 </p>
               </motion.div>
 
-              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>                {rights.map((right, index) => (
-                  <motion.div
+              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>                {rights.map((right, index) => (                  <motion.div
                     key={right.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -272,8 +260,7 @@ const PrivacyPage: React.FC = () => {
                     <h3 className='text-xl font-bold text-white mb-2'>
                       {right.title}
                     </h3>
-                    <p className='text-gray-300 text-sm'>{right.description}</p>                  </motion.div>
-                ))}
+                    <p className='text-gray-300 text-sm'>{right.description}</p>                  </motion.div>                ))}
               </div>
             </div>
           </section>
@@ -284,8 +271,7 @@ const PrivacyPage: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className='space-y-12'
-              >
+                className='space-y-12'              >
                 <div>
                   <h2 className='text-3xl font-bold text-white mb-6'>
                     Detailed Privacy Information
@@ -435,8 +421,7 @@ const PrivacyPage: React.FC = () => {
                       <p className='text-gray-300 leading-relaxed'>
                         Your continued use of our services after such changes
                         constitutes acceptance of the updated policy. We
-                        encourage you to review this policy periodically.                      </p>
-                    </div>
+                        encourage you to review this policy periodically.                      </p>                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -445,8 +430,7 @@ const PrivacyPage: React.FC = () => {
 
           {/* Contact Information */}
           <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
-            <div className='max-w-4xl mx-auto text-center'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
+            <div className='max-w-4xl mx-auto text-center'>              <motion.div                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
@@ -469,8 +453,7 @@ const PrivacyPage: React.FC = () => {
                     href='/contact'
                     className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2'
                   >
-                    <User className='w-5 h-5' />                    Contact Form
-                  </a>
+                    <User className='w-5 h-5' />                    Contact Form                  </a>
                 </div>
               </motion.div>
             </div>

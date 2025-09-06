@@ -35,8 +35,7 @@ import {
   X,
   Sliders,
   SortAsc,
-  SortDesc,;
-} from 'lucide-react';
+  SortDesc,;} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function SearchPage() {
@@ -48,8 +47,7 @@ export default function SearchPage() {
     category: 'all',
     status: 'all',
     priceRange: 'all',
-    technology: 'all',  });
-  const [sortBy, setSortBy] = useState('relevance');
+    technology: 'all',  });  const [sortBy, setSortBy] = useState('relevance');
   const [showFilters, setShowFilters] = useState(false);
 
   // Mock data for search
@@ -124,8 +122,7 @@ export default function SearchPage() {
         'IoT device management',
         'Real-time monitoring',
         'Auto-scaling',
-      ],
-      link: '/edge-computing-orchestration',
+      ],      link: '/edge-computing-orchestration',
       icon: Network,
       color: 'from-purple-500 to-pink-500',
       relevance: 85,
@@ -188,8 +185,7 @@ export default function SearchPage() {
       icon: Atom,
       color: 'from-blue-500 to-cyan-500',
       relevance: 75,
-    },    {
-      id: 'autonomous-devops',
+    },    {      id: 'autonomous-devops',
       title: 'Autonomous DevOps',
       description: 'AI-powered DevOps optimization and automation platform',
       category: 'Cloud & DevOps',
@@ -247,7 +243,6 @@ export default function SearchPage() {
       color: 'from-emerald-500 to-green-500',
       relevance: 68,
     },  ];
-
   const categories = [
     { id: 'all', name: 'All Categories', icon: '📂' },
     { id: 'AI & Machine Learning', name: 'AI & Machine Learning', icon: '🧠' },
@@ -258,20 +253,17 @@ export default function SearchPage() {
     { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },
     { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },  ];
-
   const statuses = [
     { id: 'all', name: 'All Statuses', icon: '📊' },
     { id: 'active', name: 'Active', icon: '✅' },
     { id: 'beta', name: 'Beta', icon: '🧪' },
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' },  ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', icon: '💰' },
     { id: 'under-500', name: 'Under $500/month', icon: '💵' },
     { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },
     { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' },  ];
-
   const technologies = [
     { id: 'all', name: 'All Technologies', icon: '🔧' },
     { id: 'AI/ML', name: 'AI/ML', icon: '🧠' },
@@ -280,13 +272,11 @@ export default function SearchPage() {
     { id: 'Space', name: 'Space', icon: '🚀' },
     { id: 'Biotech', name: 'Biotech', icon: '🧬' },
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' },  ];
-
   // Search function
   const performSearch = () => {
     if (!searchTerm.trim()) {
       setSearchResults([]);
-      return;
-    }
+      return;    }
 
     setIsSearching(true);
 
@@ -307,8 +297,7 @@ export default function SearchPage() {
           filters.status === 'all' || service.status === filters.status;
         const matchesTechnology =
           filters.technology === 'all' ||
-          service.technology === filters.technology;
-        let matchesPrice = true;
+          service.technology === filters.technology;        let matchesPrice = true;
         if (filters.priceRange !== 'all') {
           const price = parseInt(service.price.replace(/[^0-9]/g, ''));
           switch (filters.priceRange) {
@@ -334,7 +323,6 @@ export default function SearchPage() {
           matchesTechnology &&
           matchesPrice
         );      });
-
       // Sort results
       const sortedResults = results.sort((a, b) => {
         switch (sortBy) {
@@ -360,18 +348,15 @@ export default function SearchPage() {
       setSearchResults(sortedResults);
       setIsSearching(false);
     }, 500);  };
-
   // Handle search on Enter key
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      performSearch();    }
-  };
+      performSearch();    }  };
 
   // Update search when filters change
   useEffect(() => {
     if (searchTerm.trim()) {
-      performSearch();    }
-  }, [filters, sortBy]);
+      performSearch();    }  }, [filters, sortBy]);
 
   // Clear all filters
   const clearFilters = () => {
@@ -379,8 +364,7 @@ export default function SearchPage() {
       category: 'all',
       status: 'all',
       priceRange: 'all',
-      technology: 'all',
-    });
+      technology: 'all',    });
     setSortBy('relevance');
   };
 
@@ -398,13 +382,11 @@ export default function SearchPage() {
           content='Advanced search across all services and solutions.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/search' />      </Head>
-
       <SmartHeader />
 
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
-        <div className='max-w-7xl mx-auto text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
@@ -414,8 +396,7 @@ export default function SearchPage() {
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
               Find the perfect AI and technology solutions for your business
               needs. Search across our comprehensive service catalog with
-              advanced filtering options.            </p>
-          </motion.div>
+              advanced filtering options.            </p>          </motion.div>
         </div>
       </section>
 
@@ -438,8 +419,7 @@ export default function SearchPage() {
                   />
                   <button
                     onClick={performSearch}
-                    className='absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors'                  >
-                    Search
+                    className='absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors'                  >                    Search
                   </button>
                 </div>
               </div>
@@ -463,14 +443,12 @@ export default function SearchPage() {
                       : 'bg-white/10 text-white/60 hover:bg-white/20'
                   }`}
                 >
-                  <List className='w-5 h-5' />                </button>
-              </div>
+                  <List className='w-5 h-5' />                </button>              </div>
             </div>
 
             {/* Filters and Sort */}
             <div className='flex flex-col lg:flex-row gap-4 items-center justify-between'>
-              <div className='flex items-center gap-4'>
-                <button
+              <div className='flex items-center gap-4'>                <button
                   onClick={() => setShowFilters(!showFilters)}
                   className='flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors'
                 >
@@ -490,16 +468,14 @@ export default function SearchPage() {
                   <option value='price-low'>Sort by Price: Low to High</option>
                   <option value='price-high'>Sort by Price: High to Low</option>
                   <option value='name'>Sort by Name</option>
-                  <option value='status'>Sort by Status</option>                </select>
-              </div>
+                  <option value='status'>Sort by Status</option>                </select>              </div>
 
               {Object.values(filters).some(f => f !== 'all') && (
                 <button
                   onClick={clearFilters}
                   className='flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors'
                 >
-                  <X className='w-4 h-4' />                  Clear Filters
-                </button>
+                  <X className='w-4 h-4' />                  Clear Filters                </button>
               )}
             </div>
 
@@ -532,8 +508,7 @@ export default function SearchPage() {
                           key={category.id}
                           value={category.id}
                           className='bg-slate-800 text-white'
-                        >                          {category.icon} {category.name}
-                        </option>
+                        >                          {category.icon} {category.name}                        </option>
                       ))}
                     </select>
                   </div>
@@ -558,8 +533,7 @@ export default function SearchPage() {
                           key={status.id}
                           value={status.id}
                           className='bg-slate-800 text-white'
-                        >                          {status.icon} {status.name}
-                        </option>
+                        >                          {status.icon} {status.name}                        </option>
                       ))}
                     </select>
                   </div>
@@ -584,8 +558,7 @@ export default function SearchPage() {
                           key={range.id}
                           value={range.id}
                           className='bg-slate-800 text-white'
-                        >                          {range.icon} {range.name}
-                        </option>
+                        >                          {range.icon} {range.name}                        </option>
                       ))}
                     </select>
                   </div>
@@ -610,8 +583,7 @@ export default function SearchPage() {
                           key={tech.id}
                           value={tech.id}
                           className='bg-slate-800 text-white'
-                        >                          {tech.icon} {tech.name}
-                        </option>
+                        >                          {tech.icon} {tech.name}                        </option>
                       ))}
                     </select>
                   </div>
@@ -635,8 +607,7 @@ export default function SearchPage() {
             <p className='text-white/60'>
               {isSearching
                 ? 'Searching...'
-                : `${searchResults.length} services found`}              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
-            </p>
+                : `${searchResults.length} services found`}              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}            </p>
           </div>
 
           {/* Loading State */}
@@ -645,8 +616,7 @@ export default function SearchPage() {
               <div className='w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center'>
                 <div className='w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>
               </div>
-              <p className='text-white/60'>Searching our services...</p>            </div>
-          )}
+              <p className='text-white/60'>Searching our services...</p>            </div>          )}
 
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
@@ -661,8 +631,7 @@ export default function SearchPage() {
               </p>
               <button
                 onClick={clearFilters}
-                className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'              >
-                Clear All Filters
+                className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'              >                Clear All Filters
               </button>
             </div>
           )}
@@ -676,8 +645,7 @@ export default function SearchPage() {
                     ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                     : 'space-y-6'
                 }
-              >                {searchResults.map((service, index) => (
-                  <motion.div
+              >                {searchResults.map((service, index) => (                  <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -738,8 +706,7 @@ export default function SearchPage() {
                               key={idx}
                               className='flex items-center gap-2 text-sm text-white/70'
                             >
-                              <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>
-                            </div>
+                              <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>                            </div>
                           ))}
                         </div>
                       </div>
@@ -756,8 +723,7 @@ export default function SearchPage() {
                         </a>
                         <a
                           href='mailto:kleber@ziontechgroup.com'
-                          className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105'                        >
-                          Get Quote
+                          className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105'                        >                          Get Quote
                         </a>
                       </div>
                     </div>
@@ -793,8 +759,7 @@ export default function SearchPage() {
                       setSearchTerm(term);
                       performSearch();
                     }}
-                    className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'                  >
-                    {term}
+                    className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'                  >                    {term}
                   </button>
                 ))}
               </div>

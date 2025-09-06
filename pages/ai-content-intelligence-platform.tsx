@@ -25,15 +25,13 @@ import {
   Play,
   BookOpen,
   Code,
-  ShoppingCart,;
-} from 'lucide-react';
+  ShoppingCart,;} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
-
 const features = [
   {
     title: 'Real-time Content Analytics',
@@ -41,8 +39,7 @@ const features = [
       'Monitor content performance across all channels with live dashboards and insights',
     icon: BarChart3,
     color: 'from-blue-500 to-cyan-500',
-  },
-  {
+  },  {
     title: 'AI-Powered Optimization',
     description:
       'Get intelligent suggestions for content improvement based on performance data',
@@ -73,7 +70,6 @@ const features = [
     icon: Zap,
     color: 'from-yellow-500 to-orange-500',
   },];
-
 const pricingPlans = [
   {
     name: 'Starter',
@@ -90,8 +86,7 @@ const pricingPlans = [
     ],
     popular: false,
     color: 'from-gray-500 to-gray-600',
-  },  {
-    name: 'Professional',
+  },  {    name: 'Professional',
     price: '$5,000',
     period: '/month',
     description: 'Ideal for growing businesses and marketing teams',
@@ -106,8 +101,7 @@ const pricingPlans = [
     ],
     popular: true,
     color: 'from-blue-500 to-purple-600',
-  },  {
-    name: 'Enterprise',
+  },  {    name: 'Enterprise',
     price: '$10,000',
     period: '/month',
     description: 'For large organizations with complex content needs',
@@ -124,7 +118,6 @@ const pricingPlans = [
     popular: false,
     color: 'from-purple-500 to-pink-600',
   },];
-
 const useCases = [
   {
     title: 'Content Marketing Optimization',
@@ -172,7 +165,6 @@ const integrations = [
   'Slack',
   'Zapier',
   'API Access',];
-
 export default function AIContentIntelligencePlatform() {
   return (
     <Layout>
@@ -202,8 +194,7 @@ export default function AIContentIntelligencePlatform() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/ai-content-intelligence-platform'
-        />
-      </Head>
+        />      </Head>
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">AI Content Intelligence Platform</h1>
@@ -216,8 +207,7 @@ export default function AIContentIntelligencePlatform() {
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div
-              initial={{ opacity: 0, x: -30 }}
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -246,8 +236,7 @@ export default function AIContentIntelligencePlatform() {
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Link>
                 <button className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>
-                  <Play className='w-5 h-5 mr-2' />                  Watch Demo
-                </button>
+                  <Play className='w-5 h-5 mr-2' />                  Watch Demo                </button>
               </div>
             </motion.div>
             <motion.div
@@ -263,16 +252,14 @@ export default function AIContentIntelligencePlatform() {
                 </h3>
                 <div className='space-y-3'>
                   <div className='flex items-center text-green-400'>
-                    <CheckCircle className='w-5 h-5 mr-3' />
-                    <span>300%+ ROI improvement</span>
+                    <CheckCircle className='w-5 h-5 mr-3' />                    <span>300%+ ROI improvement</span>
                   </div>
                   <div className='flex items-center text-green-400'>
                     <CheckCircle className='w-5 h-5 mr-3' />
                     <span>80% faster content optimization</span>
                   </div>
                   <div className='flex items-center text-green-400'>
-                    <CheckCircle className='w-5 h-5 mr-3' />                    <span>Real-time performance insights</span>
-                  </div>
+                    <CheckCircle className='w-5 h-5 mr-3' />                    <span>Real-time performance insights</span>                  </div>
                 </div>
               </div>
             </motion.div>
@@ -281,8 +268,7 @@ export default function AIContentIntelligencePlatform() {
 
       {/* Features Section */}
       <section className='py-20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -296,8 +282,7 @@ export default function AIContentIntelligencePlatform() {
               to create, optimize, and scale your content strategy.
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -314,8 +299,7 @@ export default function AIContentIntelligencePlatform() {
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {feature.title}
                   </h3>
-                  <p className='text-gray-400'>{feature.description}</p>                </div>
-              </motion.div>
+                  <p className='text-gray-400'>{feature.description}</p>                </div>              </motion.div>
             ))}
           </div>
         </div>
@@ -323,8 +307,7 @@ export default function AIContentIntelligencePlatform() {
 
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -338,8 +321,7 @@ export default function AIContentIntelligencePlatform() {
               organization, our platform adapts to your specific requirements.
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -356,8 +338,7 @@ export default function AIContentIntelligencePlatform() {
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {useCase.title}
                   </h3>
-                  <p className='text-gray-400 text-lg'>{useCase.description}</p>                </div>
-              </motion.div>
+                  <p className='text-gray-400 text-lg'>{useCase.description}</p>                </div>              </motion.div>
             ))}
           </div>
         </div>
@@ -365,8 +346,7 @@ export default function AIContentIntelligencePlatform() {
 
       {/* Pricing Section */}
       <section className='py-20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -380,8 +360,7 @@ export default function AIContentIntelligencePlatform() {
               grow.
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
-              <motion.div
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -414,8 +393,7 @@ export default function AIContentIntelligencePlatform() {
                         key={featureIndex}
                         className='flex items-center text-gray-300'
                       >
-                        <Check className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
-                      </li>
+                        <Check className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}                      </li>
                     ))}
                   </ul>
                   <Link
@@ -423,8 +401,7 @@ export default function AIContentIntelligencePlatform() {
                     className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`}
                   >
                     Get Started
-                    <ArrowRight className='w-4 h-4 ml-2' />                  </Link>
-                </div>
+                    <ArrowRight className='w-4 h-4 ml-2' />                  </Link>                </div>
               </motion.div>
             ))}
           </div>
@@ -433,8 +410,7 @@ export default function AIContentIntelligencePlatform() {
 
       {/* Integrations Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -448,8 +424,7 @@ export default function AIContentIntelligencePlatform() {
               content management experience.
             </p>
           </motion.div>
-          <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>            {integrations.map((integration, index) => (
-              <motion.div
+          <div className='grid grid-cols-2 md:grid-cols-5 gap-6'>            {integrations.map((integration, index) => (              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -457,16 +432,14 @@ export default function AIContentIntelligencePlatform() {
                 viewport={{ once: true }}
                 className='bg-white/10 backdrop-blur-sm border border-gray-600 rounded-lg p-4 text-center hover:bg-white/20 transition-colors duration-300'
               >
-                <span className='text-white font-medium'>{integration}</span>              </motion.div>
-            ))}
+                <span className='text-white font-medium'>{integration}</span>              </motion.div>            ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className='py-20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -518,8 +491,7 @@ export default function AIContentIntelligencePlatform() {
               </Link>
               <Link
                 href='/2025-innovative-new-services-showcase'
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'              >
-                View All Services
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'              >                View All Services
               </Link>
             </div>
           </motion.div>

@@ -1,6 +1,4 @@
  
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 };
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
@@ -204,8 +202,4 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊' 
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) ) 
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>) 
-}export default Homepage2025;
-=======
-export default Homepage2025;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}export default Homepage2025;export default Homepage2025;

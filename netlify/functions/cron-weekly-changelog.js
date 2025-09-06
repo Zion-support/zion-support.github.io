@@ -1,7 +1,5 @@
 const { upsertFile } = require('./_lib/github');
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-async function fetchJson(url, token) {
   const resp = await fetch(url, {
     headers: token
       ? {
@@ -31,16 +29,12 @@ exports.handler = async function () {
 
     const byAuthor = {};
     const messages = [];
-    );    }
-    const byAuthor = {},
+    );    }    const byAuthor = {},
     const messages = [],
     for (const c of commits) {
       const author = c.commit?.author?.name || c.author?.login || 'unknown',
       byAuthor[author] = (byAuthor[author] || 0) + 1,
       messages.push({ sha: c.sha, message: c.commit?.message || '' })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const summary = {
       updatedAt: Date.now(),
@@ -51,7 +45,6 @@ exports.handler = async function () {
         .sort((a, b) => b.count - a.count),
       messages,
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     await upsertFile({
       owner,
@@ -69,7 +62,9 @@ exports.handler = async function () {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };
-=======
+    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

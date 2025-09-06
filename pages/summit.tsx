@@ -57,8 +57,7 @@ export default function SummitPage() {
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
-      title: 'Founder, Zion',
-      avatarUrl: '/favicon.svg',
+      title: 'Founder, Zion',      avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
       twitter: 'https://twitter.com',
       linkedin: 'https://www.linkedin.com',
@@ -68,8 +67,7 @@ export default function SummitPage() {
       title: 'Head of Protocol Engineering',
       avatarUrl: '/favicon.svg',
       bio: 'Leading the architecture of ZionDAO and trust rails.',
-    },    {
-      name: 'Jordan Lee',
+    },    {      name: 'Jordan Lee',
       title: 'Zion Alumni | AI Fellow',
       avatarUrl: '/favicon.svg',
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
@@ -81,8 +79,7 @@ export default function SummitPage() {
     { name: 'Gov Partner' },
     { name: 'Venture Partner' },
     { name: 'University Partner' },
-  ];
-  const onSubmit = async (e: React.FormEvent) => {
+  ];  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setResult(null);
@@ -99,8 +96,7 @@ export default function SummitPage() {
     } catch (err: any) {
       setResult({ error: err?.message || 'Unexpected error' });
     } finally {
-      setSubmitting(false);    }
-  };
+      setSubmitting(false);    }  };
 
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
@@ -116,7 +112,6 @@ export default function SummitPage() {
     
       />
     );  };
-
   return (
     <>
       <Head>
@@ -167,8 +162,7 @@ export default function SummitPage() {
           className='md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
         >
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
-          <ol className='space-y-3 list-decimal list-inside'>            <li>Opening Keynote — Launching Zion Protocol</li>
-            <li>Panel 1 — The Future of Digital Nations</li>
+          <ol className='space-y-3 list-decimal list-inside'>            <li>Opening Keynote — Launching Zion Protocol</li>            <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
@@ -210,8 +204,7 @@ export default function SummitPage() {
                   src={s.avatarUrl}
                   alt={s.name}
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
-                />
-                <div>
+                />                <div>
                   <div className='font-semibold'>{s.name}</div>
                   <div className='text-sm opacity-70'>{s.title}</div>
                 </div>
@@ -237,8 +230,7 @@ export default function SummitPage() {
                   >
                     LinkedIn
                   </a>
-                )}              </div>
-            </div>
+                )}              </div>            </div>
           ))}
         </div>
       </section>
@@ -266,8 +258,7 @@ export default function SummitPage() {
                 <img src={p.logoUrl} alt={p.name} className='max-h-12' />
               ) : (
                 p.name
-              )}            </div>
-          ))}
+              )}            </div>          ))}
         </div>
       </section>
 

@@ -123,8 +123,7 @@ import { useRouter } from 'next/router';
             type='submit'
             className='px-4 py-2 rounded bg-black text-white disabled:opacity-50'
             disabled={isSubmitting}
-          >            {isSubmitting ? 'Posting…' : 'Post Job'}
-          </button>
+          >            {isSubmitting ? 'Posting…' : 'Post Job'}          </button>
         </div>
       </form>
     </div>

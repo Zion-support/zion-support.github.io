@@ -4,8 +4,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     description: 'Self-managing DevOps automation platform',
     category: 'Cloud & FinOps',
     pricing: '$399/month',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Automated deployment',
       'Self-healing infrastructure',
       'Performance optimization',
@@ -624,11 +622,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Performance monitoring',
     ],
   },
-];
-      'Identity verificationAccess controlThreat detectionPerformance monitoring'
+];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

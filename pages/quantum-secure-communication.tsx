@@ -27,8 +27,7 @@ import {
   Key,;} from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-        </Head>
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';        </Head>
 
         <UltraAdvancedNavigation />
 
@@ -38,8 +37,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'            >
-              <motion.div
+              className='text-center mb-16'            >              <motion.div
                 initial={{ scale: 0.8, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -87,8 +85,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className='flex flex-col sm:flex-row gap-6 justify-center mb-16'              >
-                <motion.div
+                className='flex flex-col sm:flex-row gap-6 justify-center mb-16'              >                <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
@@ -108,8 +105,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                       <Button
                         href='/contact'
                         variant='primary'
-                        className='w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl'                      >
-                        Start Free Trial
+                        className='w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-xl'                      >                        Start Free Trial
                       </Button>
                     </div>
                   </div>
@@ -126,8 +122,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                     className='text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25'
                   >
                     <span className='flex items-center'>
-                      <Phone className='mr-3 w-5 h-5' />                      Talk to Expert
-                    </span>
+                      <Phone className='mr-3 w-5 h-5' />                      Talk to Expert                    </span>
                   </Button>
                 </motion.div>
               </motion.div>
@@ -162,16 +157,14 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                   </div>
                   <div className='text-gray-300'>
                     Active customers worldwide
-                  </div>                </div>
-              </motion.div>
+                  </div>                </div>              </motion.div>
             </motion.div>
           </div>
         </section>
 
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -188,8 +181,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -202,8 +194,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                     <div className='w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center'>
                       <CheckCircle className='w-5 h-5 text-white' />
                     </div>
-                    <h3 className='text-lg font-semibold text-white group-hover:text-purple-300 transition-colors'>                      {feature}
-                    </h3>
+                    <h3 className='text-lg font-semibold text-white group-hover:text-purple-300 transition-colors'>                      {feature}                    </h3>
                   </div>
                 </motion.div>
               ))}
@@ -213,8 +204,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 
         {/* Use Cases Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -231,8 +221,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
-                <motion.div
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -245,8 +234,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                     <div className='w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center'>
                       <Shield className='w-5 h-5 text-white' />
                     </div>
-                    <h3 className='text-lg font-semibold text-white group-hover:text-green-300 transition-colors'>                      {useCase}
-                    </h3>
+                    <h3 className='text-lg font-semibold text-white group-hover:text-green-300 transition-colors'>                      {useCase}                    </h3>
                   </div>
                 </motion.div>
               ))}
@@ -257,8 +245,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
         {/* Technology & Integrations */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-7xl mx-auto'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>              {/* Technology Stack */}
-              <motion.div
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>              {/* Technology Stack */}              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
@@ -269,8 +256,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                     Technology Stack
                   </span>
                 </h3>
-                <div className='grid grid-cols-2 gap-4'>                  {technology.map((tech, index) => (
-                    <motion.div
+                <div className='grid grid-cols-2 gap-4'>                  {technology.map((tech, index) => (                    <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -279,8 +265,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                       className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50'
                     >
                       <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
-                      <span className='text-gray-200'>{tech}</span>                    </motion.div>
-                  ))}
+                      <span className='text-gray-200'>{tech}</span>                    </motion.div>                  ))}
                 </div>
               </motion.div>
 
@@ -296,8 +281,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                     Integrations
                   </span>
                 </h3>
-                <div className='grid grid-cols-2 gap-4'>                  {integrations.map((integration, index) => (
-                    <motion.div
+                <div className='grid grid-cols-2 gap-4'>                  {integrations.map((integration, index) => (                    <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -306,8 +290,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                       className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border border-gray-700/50'
                     >
                       <div className='w-2 h-2 bg-cyan-400 rounded-full'></div>
-                      <span className='text-gray-200'>{integration}</span>                    </motion.div>
-                  ))}
+                      <span className='text-gray-200'>{integration}</span>                    </motion.div>                  ))}
                 </div>
               </motion.div>
             </div>
@@ -316,21 +299,18 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 
         {/* Market Position & ROI */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-7xl mx-auto'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent'>                  Market Position & ROI
-                </span>
+                <span className='bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent'>                  Market Position & ROI                </span>
               </h2>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div
-                initial={{ opacity: 0, y: 20 }}
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
@@ -353,8 +333,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                   </div>
                   <div className='flex items-center space-x-3'>
                     <CheckCircle className='w-5 h-5 text-yellow-400' />
-                    <span className='text-gray-200'>Enterprise features</span>
-                  </div>
+                    <span className='text-gray-200'>Enterprise features</span>                  </div>
                   <div className='flex items-center space-x-3'>
                     <CheckCircle className='w-5 h-5 text-yellow-400' />
                     <span className='text-gray-200'>Compliance tools</span>                  </div>
@@ -389,8 +368,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                     <TrendingUpIcon className='w-5 h-5 text-green-400' />
                     <span className='text-gray-200'>
                       Compliance cost savings
-                    </span>
-                  </div>
+                    </span>                  </div>
                   <div className='flex items-center space-x-3'>
                     <TrendingUpIcon className='w-5 h-5 text-green-400' />
                     <span className='text-gray-200'>Future-proof security</span>                  </div>
@@ -402,8 +380,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -416,8 +393,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                 communications with quantum cryptography.
               </p>
 
-              <div className='flex flex-col sm:flex-row gap-6 justify-center'>                <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }}
+              <div className='flex flex-col sm:flex-row gap-6 justify-center'>                <motion.div                  whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -429,8 +405,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                     <span className='flex items-center'>
                       <Rocket className='mr-3 w-5 h-5' />
                       Start Free Trial
-                      <ArrowRight className='ml-3 w-5 h-5' />                    </span>
-                  </Button>
+                      <ArrowRight className='ml-3 w-5 h-5' />                    </span>                  </Button>
                 </motion.div>
 
                 <motion.div
@@ -444,8 +419,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                     className='text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25'
                   >
                     <span className='flex items-center'>
-                      <Phone className='mr-3 w-5 h-5' />                      Talk to Expert
-                    </span>
+                      <Phone className='mr-3 w-5 h-5' />                      Talk to Expert                    </span>
                   </Button>
                 </motion.div>
               </div>
@@ -467,8 +441,7 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
                     {contactInfo.email}
                   </a>
                 </p>
-                <p className='mt-2'>{contactInfo.address}</p>              </div>
-            </motion.div>
+                <p className='mt-2'>{contactInfo.address}</p>              </div>            </motion.div>
           </div>
         </section>
       </div>

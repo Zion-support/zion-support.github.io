@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-    
-import React, { useEffect, useState } from 'react';
+    import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react'
-=======
 
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useMessaging } from '@/context/MessagingContext';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components/messaging';
@@ -141,8 +137,4 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }{;
   /* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

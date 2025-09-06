@@ -7,8 +7,7 @@ interface FraudItem {
   createdAt: string;
   heuristic: { reasons: string[]; severity: string };
   gpt?: { label: string; reason: string; confidence: number };
-  status: string;
-export default function FraudAdminPage() {
+  status: string;export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([]);
   const [adminToken, setAdminToken] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
@@ -17,7 +16,6 @@ export default function FraudAdminPage() {
   useEffect(() => {
     const saved = localStorage.getItem('admin-token') || '';
     setAdminToken(saved);  }, []);
-
   const fetchItems = async () => {
     setLoading(true);
     setError(null);
@@ -31,8 +29,7 @@ export default function FraudAdminPage() {
     } catch (e: any) {
       setError(e.message || 'Failed to load');
     } finally {
-      setLoading(false);    }
-  };
+      setLoading(false);    }  };
 
   useEffect(() => {
     fetchItems();
@@ -41,8 +38,7 @@ export default function FraudAdminPage() {
 
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken);
-    fetchItems();
-  };
+    fetchItems();  };
 
   const takeAction = async (
     id: string,
@@ -145,8 +141,7 @@ const FraudPage: React.FC = () => {
                       onClick={() => takeAction(it.id, 'IGNORE')}
                     >
                       Ignore
-                    </button>                  </div>
-                </td>
+                    </button>                  </div>                </td>
               </tr>
             ))}
           </tbody>

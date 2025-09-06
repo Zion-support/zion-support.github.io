@@ -22,15 +22,13 @@ import Link from 'next/link';
               <Link
                 href='/resources'
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
-              >                ← Back to Resources
-              </Link>
+              >                ← Back to Resources              </Link>
             </nav>
 
             {/* Header */}
             <header className='mb-12 text-center'>
               <div className='mb-4'>
-                <span className='px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
-                  {caseStudy.industry}
+                <span className='px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>                  {caseStudy.industry}
                 </span>
               </div>
               <h1 className='text-4xl font-bold text-white mb-4'>
@@ -68,8 +66,7 @@ import Link from 'next/link';
                     three key areas: predictive maintenance, quality control,
                     and production optimization. Each system was designed to
                     work independently while sharing data for comprehensive
-                    insights.
-                  </p>
+                    insights.                  </p>
                 </div>
 
                 <div className='bg-purple-500/10 rounded-lg p-6 border border-purple-500/20'>
@@ -93,8 +90,7 @@ import Link from 'next/link';
                     across all key metrics, with the most notable being the 40%
                     increase in production efficiency and 60% reduction in
                     unplanned downtime. These improvements directly translated
-                    to increased profitability and customer satisfaction.                  </p>
-                </div>
+                    to increased profitability and customer satisfaction.                  </p>                </div>
               </div>
             </section>
 
@@ -126,8 +122,7 @@ import Link from 'next/link';
                   </h3>
                   <p className='text-white/80 text-sm'>
                     Download our comprehensive guide to autonomous technology.
-                  </p>                </Link>
-              </div>
+                  </p>                </Link>              </div>
             </section>
 
             {/* Call to Action */}
@@ -150,8 +145,7 @@ import Link from 'next/link';
                   </Link>
                   <Link
                     href='/resources'
-                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'                  >
-                    Explore More Resources
+                    className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'                  >                    Explore More Resources
                   </Link>
                 </div>
               </div>
