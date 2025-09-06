@@ -39,13 +39,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
 
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
-  return (
-    <div 
-      data-testid="equipment-link" 
-      className={`bg-slate-800/70 backdrop-blur-md border border-slate-600/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 hover:border-cyan-500/50 transition-all duration-300`} 
-      onClick={handleViewListing} 
-      tabIndex={0} 
-      role="button" 
+  
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -91,7 +85,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             </div>
             {listing.rating && (
               <div className="flex items-center text-yellow-400">
-                {'★'.repeat(Math.floor(listing.rating))}
+                {''.repeat(Math.floor(listing.rating))}
                 <span className="text-slate-400 text-xs ml-1">({listing.reviewCount})</span>
               </div>
             )}
@@ -168,4 +162,3 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
       </div>
     </div>
   );
-}

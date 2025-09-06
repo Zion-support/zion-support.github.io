@@ -160,7 +160,7 @@ create_monitoring_script() {
 #!/bin/bash
 
 echo "🔍 PM2 Error Automation Monitor"
-echo "===="
+echo "================================"
 
 # Show PM2 status
 echo "📊 PM2 Status:"
@@ -192,7 +192,7 @@ create_maintenance_script() {
 #!/bin/bash
 
 echo "🔧 PM2 Error Automation Maintenance"
-echo ""
+echo "==================================="
 
 # Restart all services
 echo "🔄 Restarting all services..."

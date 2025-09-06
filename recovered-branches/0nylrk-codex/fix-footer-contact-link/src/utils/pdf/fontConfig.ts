@@ -1,48 +1,143 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-import { jsPDF } from 'jspdf',;
-;
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import {jsPDF} from 'jspdf';
 export interface FontConfig {;
-  regular:ArrayBuffer,;
-  bold?:ArrayBuffer,;
-  italic?:ArrayBuffer,;
-  boldItalic?:ArrayBuffer;
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import { jsPDF } from 'jspdf';
+export interface FontConfig {
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  regular: ArrayBuffer;
+  bold?: ArrayBuffer;
+
+  italic?: ArrayBuffer
+  boldItalic?: ArrayBuffer
 }
-;
-export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto',;
+export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
+/**
+ * Loads and registers custom fonts for PDF documents
+ */
+export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'default'): Promise<void> {
+  if (fontFamily === 'default') return
+  try {
+    // Font loading logic would go here
+    // For demonstration purposes, we'll just set up the font using standard fonts
+    switch (fontFamily) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      case 'montserrat':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'open-sans':
+        doc && doc.setFont('helvetica');
+        break;
+      case 'roboto':
+        doc && doc.setFont('helvetica');
+        break;
+      default: doc && doc.setFont('helvetica')
+    }
+  } catch (error) {
+
+    console && console.error('Error loading custom fonts:', error);
+
+    // Fall back to default font
+=======
+      case 'montserrat':;
+        doc.setFont('helvetica');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        break;
+      case 'open-sans':
+        doc.setFont('helvetica');
+        break;
+      case 'roboto':
+        doc.setFont('helvetica');
+        break;
+      default: doc.setFont('helvetica')
+    }
+  } catch (error) {
+
+    // Fall back to default font
+<<<<<<< HEAD
+    doc.setFont('helvetica')
+import { jsPDF } from 'jspdf',;
+export interface FontConfig {;
+  regular: ArrayBuffer,;
+  bold?: ArrayBuffer,;
+  italic?: ArrayBuffer,;
+  boldItalic?: ArrayBuffer;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    doc && doc.setFont('helvetica')
+=======
+import {jsPDF} from 'jspdf';
+export interface FontConfig {
+  regular: ArrayBuffer;
+  bold?: ArrayBuffer;
+  italic?: ArrayBuffer,
+  bold_italic?: ArrayBuffer;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
 ;
 /**;
- * Loads and registers custom fonts for PDF documents;
- */;
-export async function loadCustomFonts(doc:jsPDF, fontFamily:FontFamily = 'default'):Promise<void> {;
-  if (fontFamily === 'default') return,;
-  ;
-  try {;
+* Loads and registers custom fonts for PDF documents;
+*/;
+export async function loadCustomFonts (doc: jsPDF, font_family: FontFamily = 'default'): Promise < void> {
+  // Check condition
+if (return, ) {
+  $2
+}
+  try {
     // Font loading logic would go here;
     // For demonstration purposes, we'll just set up the font using standard fonts;
-    ;
-    switch (fontFamily) {;
+    switch (font_family) {
       case 'montserrat':;
-        doc.setFont('helvetica'),;
-        break,;
-      case 'open-sans':;
-        doc.setFont('helvetica'),;
-        break,;
+        doc.set_font ('helvetica');
+        break;
+      case 'open - sans':;
+        doc.set_font ('helvetica');
+        break;
       case 'roboto':;
-        doc.setFont('helvetica'),;
-        break,;
-      default:doc.setFont('helvetica');
+        doc.set_font ('helvetica');
+        break;
+      default: doc.set_font ('helvetica');
     }
-  } catch (error) {;
-    console.error('Error loading custom fonts:', error),;
+  } catch (error) {
+    console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
-    doc.setFont('helvetica'),;
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+    doc.setFont('helvetica');
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-} export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
-/** * Loads and registers custom fonts for PDF documents */ try {
-  // Font loading logic would go here // For demonstration purposes, we'll just set up the font using standard fonts switch (fontFamily) {
-  case 'montserrat': doc.setFont ('helvetica');
-break;
-case 'open-sans': doc.setFont ('helvetica');
-break;
-case 'roboto': 
 }
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    doc.set_font ('helvetica');
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

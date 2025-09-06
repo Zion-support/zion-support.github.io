@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Comprehensive File Fixer');
-console.log('');
+console.log('============================');
 
 // Function to check if a file is corrupted (minified or has syntax issues)
 function isCorruptedFile(filePath) {

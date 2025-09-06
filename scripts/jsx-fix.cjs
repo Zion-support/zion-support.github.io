@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 console.log('🔧 JSX Fix');
-console.log('===');
+console.log('==========');
 
 // Function to fix JSX syntax errors
 function fixJSX(content) {

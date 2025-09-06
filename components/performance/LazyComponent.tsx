@@ -1,21 +1,27 @@
-import React, { Suspense, ReactNode } from 'react';import LoadingSpinner from '../LoadingSpinner';
-import React, { Suspense, ComponentType, ReactNode } from 'react';
-import LoadingSpinner from '../LoadingSpinner';
+
+import React from 'react'
+}
+import React, { Suspense, lazy } from 'react';
 
 interface LazyComponentProps {
-  children: ReactNode;
+  component: ComponentType < Record < string, unknown>>;
   fallback?: ReactNode;
+  [key: string]: unknown
 }
 
-const LazyComponent: React.FC<LazyComponentProps> = ({ 
-  children, 
-  fallback = <LoadingSpinner text="Loading component..." /> 
-}) => {
-  return (
-    <Suspense fallback={fallback}>
-      {children}
-    </Suspense>
-  );
-};
+import React from 'react';
+}
 
+const LazyComponent: React.FC < LazyComponentProps> = ({
+  component: Component,
+  fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
+  ...props;
+  return (
+    <Suspense fallback={fallback}>;
+      <Component {...props} />;
+    </Suspense>);
+}
+;
 export default LazyComponent;
+import React from 'react',
+},

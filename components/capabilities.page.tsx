@@ -1,17 +1,89 @@
-import EnhancedLayout from '../components/layout/EnhancedLayout',
-const CAPABILITIES = [
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
-],
+];
 
-export default function CapabilitiesPage() {
+export default function CapabilitiesPage() {;
+  return (
+
+
+    <EnhancedLayout>;
+      <h1 className='text-2xl font-semibold'>Capabilities</h1>;
+      <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>;
+        {CAPABILITIES && CAPABILITIES.map(c => (;
+          <div
+            key={c}
+            className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'>            {c}      <h1 className="text-2xl font-semibold">Capabilities</h1>;
+      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">;
+        {CAPABILITIES && CAPABILITIES.map((c) => (;
+          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">;
+          </div>;
+        ))}
+  );
+}
+import EnhancedLayout from '../components / layout / EnhancedLayout';
+const CAPABILITIES = [;
+  'Full‑stack Web',
+  'Mobile (iOS / Android)',
+  'AI / ML',
+  'Cloud & DevOps',
+  'Data Engineering',
+  'Blockchain',
+  'IoT',
+  'Security', ];const CAPABILITIES = [;
+  'Full‑stack WebMobile (iOS / Android)AI / MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
+];
+;
+export default /**
+ * CapabilitiesPage - Function description
+ */
+function CapabilitiesPage() {
+  return (
+    <EnhancedLayout>;
+      <h1 className='text - 2xl font - semibold'>Capabilities</h1>;
+      <div className='mt - 6 grid md:grid - cols - 4 gap - 4 text - sm'>;
+        {CAPABILITIES.map (c => (
+          <div;
+            key={c}
+            className='rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg - gray - 950';
+          >            {c}      <h1 className="text - 2xl font - semibold">Capabilities</h1>;
+      <div className="mt - 6 grid md:grid - cols - 4 gap - 4 text - sm">;
+        {CAPABILITIES.map ((c) => (
+          <div key={c} className="rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg - gray - 950">;
+          </div>))}
+      </div>;
+    </EnhancedLayout>);
+const CAPABILITIES = [
+  'Full‑stack Web'
+  'Mobile (iOS/Android)'
+  'AI/ML'
+  'Cloud & DevOps'
+  'Data Engineering'
+  'Blockchain'
+  'IoT'
+  'Security',];const CAPABILITIES = [
+  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
+];
+
+export default function CapabilitiesPage() {;
   return (
     <EnhancedLayout>
-      <h1 className=&quot;text-2xl font-semibold&quot;>Capabilities</h1>
-      <div className=&quot;mt-6 grid md:grid-cols-4 gap-4 text-sm&quot;>
+      <h1 className='text-2xl font-semibold'>Capabilities</h1>
+      <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>
+        {CAPABILITIES.map(c => (
+          <div
+            key={c}
+            className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'
+          >            {c}      <h1 className="text-2xl font-semibold">Capabilities</h1>
+      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
         {CAPABILITIES.map((c) => (
-          <div key={c} className=&quot;rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950&quot;>
-            {c}          </div>
+          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
+          </div>
         ))}
       </div>
     </EnhancedLayout>
-  )}
+);
+}
+  );
+}
+    </EnhancedLayout>;
+);
+}
+

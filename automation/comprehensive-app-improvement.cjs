@@ -488,7 +488,7 @@ describe('Performance Tests', () => {
       const duration = endTime - this.startTime;
       
       this.log('\n📊 COMPREHENSIVE APP IMPROVEMENT REPORT');
-      this.log('==');
+      this.log('=====================================');
       this.log(`Duration: ${Math.round(duration / 1000)}s`);
       this.log(`Improvements applied: ${this.improvements.length}`);
       

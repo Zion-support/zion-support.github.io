@@ -1,305 +1,74 @@
+<<<<<<< HEAD
+=======
 
+
+=======
+import fs from './fs';
+import path from './path';
+import { exec_sync, spawn } from './child_process';
+import { fileURLToPath } from './url';
 ;
-#!/usr/bin/env node,;
-import fs from "fs",;
-import path from "path",;
-import { execSync, spawn } from "child_process",;
-import { fileURLToPath } from "url",;
-,;
-const __filename = fileURLToPath(import.meta.url),;
-const __dirname = path.dirname(__filename),;
-,;
-class ComprehensiveAutomationRunner {,;
-  constructor() {,;
-    this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"),;
-    this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"),;
-    this.ensureDirectories(),;
-    this.results = {,;
-      timestam:p:new Date().toISOString(),;
-      test:s:{},;
-      build:s:{},;
-      lintin:g:{},;
-      performanc:e:{},;
-      securit:y:{},;
-      overal:l:{ statu:s:"unknown", scor:e:0 };
-    };
-      };
-    }),;
-  };
-,;
-  log(message, level = "INFO") {,;
-    const timestamp = new Date().toISOString(),;
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`,;
-    console.log(`[${level}] ${message}`),;
-    fs.appendFileSync(this.logFile, logMessage),;
-  };
-,;
-  async runCommand(command, description) {,;
-    try {,;
-      this.log(`Runnin:g:${description}`),;
-      const startTime = Date.now(),;
-      const output = execSync(command, {,;
-        stdi:o:'pipe',;
-        cw:d:process.cwd(),;
-        timeou:t:300000 // 5 minutes,;
-      }),;
-      const duration = Date.now() - startTime,;
-      this.log(`✓ ${description} completed in ${duration}ms`),;
-      return { succes:s:true, outpu:t:output.toString(), duration };
+const __filename = fileURLToPath (import.meta.url);
+const __dirname = path.dirname (__filename);
+;
+class ComprehensiveAutomationRunner { constructor () { this.log_file = path.join (__dirname, "logs", "comprehensive - automation.log"); this.results_file = path.join (__dirname, "reports", "comprehensive - results.json"); this.ensure_directories (); this.results = { timestamp: new Date ().toISOString (),
+    tests: {} builds: {} linting: {} performance: {} security: {} overall: { status: "unknown", score: 0 }}}})}
+; log (message, level = "INFO") { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] [${level}] ${message}\n`; console.log (`[${level}] ${message}`); fs.appendFileSync (this.log_file, log_message)}
+; async run_command (command, description) { try { this.log (`Running: ${description}`); const start_time = Date.now (); const output = exec_sync (command, { stdio: 'pipe', cwd: process.cwd (), timeout: 300000 // 5 minutes}); const duration = Date.now () - start_time; this.log (`✓ ${description} completed in ${duration}ms`); return { success: true, output: output.to_string (), duration }} catch (error) { this.log (`✗ ${description} failed: ${error.message}`, "ERROR"); return { success: false, error: error.message, output: error.stdout?.to_string () || error.stderr?.to_string () || ""}}}
+; async runBuildTests () { this.log (" = = = RUNNING BUILD TESTS = = = ");
+; const build_tests = [;
+    ; { cmd:"npm run build", desc: "Production build" } { cmd:"npm run lint", desc: "Linting check" } { cmd:"npm run type - check", desc: "TypeScript type checking" },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    { cmd:"npm run test: smoke", desc: "Smoke tests" }
+  ];
+; for (const test of build_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.builds[test.desc] = result}}
+; async runPerformanceTests () { this.log (" = = = RUNNING PERFORMANCE TESTS = = = ");
+; const perf_tests = [;
+    ; { cmd:"npm run build: analyze", desc: "Bundle analysis" },
+    { cmd:"npm run perf: audit", desc: "Performance audit" }
+  ];
+; for (const test of perf_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.performance[test.desc] = result}}
+; async runSecurityTests () { this.log (" = = = RUNNING SECURITY TESTS = = = ");
+; const security_tests = [;
+    ; { cmd:"npm audit", desc: "Security audit" },
+    { cmd:"npm run security: audit", desc: "Enhanced security audit" }
+  ];
+; for (const test of security_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.security[test.desc] = result}}
+; async runQualityTests () { this.log (" = = = RUNNING QUALITY TESTS = = = ");
+; const quality_tests = [;
+    ; { cmd:"npm run lint: check", desc: "Lint check" } { cmd:"npm run format: check", desc: "Format check" },
+    { cmd:"npm run test: coverage", desc: "Test coverage" }
+<<<<<<< HEAD
+;
     } catch (error) {,;
-      this.log(`✗ ${description} faile:d:${error.message}`, "ERROR"),;
-      return {,;
-        succes:s:false,;
-        erro:r:error.message,;
-        outpu:t:error.stdout?.toString() || error.stderr?.toString() || "",;
-      };
-    };
-  };
-,;
-  async runBuildTests() {,;
-    this.log("=== RUNNING BUILD TESTS ==="),;
-,;
-    const buildTests = [,;
-      { cm:d:"npm run build", des:c:"Production build" },;
-      { cm:d:"npm run lint", des:c:"Linting check" },;
-      { cm:d:"npm run type-check", des:c:"TypeScript type checking" },;
-      { cm:d:"npm run:test:smoke", des:c:"Smoke tests" };
-    ],;
-,;
-    for (const test of buildTests) {,;
-      const result = await this.runCommand(test.cmd, test.desc),;
-      this.results.builds[test.desc] = result,;
-    };
-  };
-,;
-  async runPerformanceTests() {,;
-    this.log("=== RUNNING PERFORMANCE TESTS ==="),;
-,;
-    const perfTests = [,;
-      { cm:d:"npm run:build:analyze", des:c:"Bundle analysis" },;
-      { cm:d:"npm run:perf:audit", des:c:"Performance audit" };
-    ],;
-,;
-    for (const test of perfTests) {,;
-      const result = await this.runCommand(test.cmd, test.desc),;
-      this.results.performance[test.desc] = result,;
-    };
-  };
-,;
-  async runSecurityTests() {,;
-    this.log("=== RUNNING SECURITY TESTS ==="),;
-,;
-    const securityTests = [,;
-      { cm:d:"npm audit", des:c:"Security audit" },;
-      { cm:d:"npm run:security:audit", des:c:"Enhanced security audit" };
-    ],;
-,;
-    for (const test of securityTests) {,;
-      const result = await this.runCommand(test.cmd, test.desc),;
-      this.results.security[test.desc] = result,;
-    };
-  };
-,;
-  async runQualityTests() {,;
-    this.log("=== RUNNING QUALITY TESTS ==="),;
-,;
-    const qualityTests = [,;
-      { cm:d:"npm run:lint:check", des:c:"Lint check" },;
-      { cm:d:"npm run:format:check", des:c:"Format check" },;
-      { cm:d:"npm run:test:coverage", des:c:"Test coverage" };
-    ],;
-,;
-    for (const test of qualityTests) {,;
-      const result = await this.runCommand(test.cmd, test.desc),;
-      this.results.tests[test.desc] = result,;
-    };
-  };
-,;
-  calculateOverallScore() {,;
-    let totalScore = 0,;
-    let maxScore = 0,;
-,;
-    // Build tests (40% weight),;
-    const buildScore = this.calculateCategoryScore(this.results.builds),;
-    totalScore += buildScore * 0.4,;
-    maxScore += 100 * 0.4,;
-,;
-    // Performance tests (25% weight),;
-    const perfScore = this.calculateCategoryScore(this.results.performance),;
-    totalScore += perfScore * 0.25,;
-    maxScore += 100 * 0.25,;
-,;
-    // Security tests (20% weight),;
-    const securityScore = this.calculateCategoryScore(this.results.security),;
-    totalScore += securityScore * 0.2,;
-    maxScore += 100 * 0.2,;
-,;
-    // Quality tests (15% weight),;
-    const qualityScore = this.calculateCategoryScore(this.results.tests),;
-    totalScore += qualityScore * 0.15,;
-    maxScore += 100 * 0.15,;
-,;
-    const finalScore = Math.round((totalScore / maxScore) * 100),;
-    this.results.overall.score = finalScore,;
-    this.results.overall.status = finalScore >= 80 ? "excellent" :,;
-                                 finalScore >= 60 ? "good" :,;
-                                 finalScore >= 40 ? "fair" :"poor",;
-,;
-    return finalScore,;
-  };
-,;
-  calculateCategoryScore(category) {,;
-    if (!category || Object.keys(category).length === 0) return 0,;
-,;
-    const results = Object.values(category),;
-    const successCount = results.filter(r => r.success).length,;
-    return Math.round((successCount / results.length) * 100),;
-  };
-,;
-  generateRecommendations() {,;
-    const recommendations = [],;
-,;
-    // Build recommendations,;
-    Object.entries(this.results.builds).forEach(([test, result]) => {,;
-      if (!result.success) {,;
-        recommendations.push(`Fix ${test} ${result.error}`),;
-      };
-    }),;
-,;
-    // Performance recommendations,;
-    Object.entries(this.results.performance).forEach(([test, result]) => {,;
-      if (!result.success) {,;
-        recommendations.push(`Optimize ${test} ${result.error}`),;
-      };
-    }),;
-,;
-    // Security recommendations,;
-    Object.entries(this.results.security).forEach(([test, result]) => {,;
-      if (!result.success) {,;
-        recommendations.push(`Address security issue in ${test} ${result.error}`),;
-      };
-    }),;
-,;
-    // Quality recommendations,;
-    Object.entries(this.results.tests).forEach(([test, result]) => {,;
-      if (!result.success) {,;
-        recommendations.push(`Improve ${test} ${result.error}`),;
-      };
-    }),;
-,;
-    return recommendations,;
-  };
-,;
-  async saveResults() {,;
-    this.results.recommendations = this.generateRecommendations(),;
-    this.results.overall.score = this.calculateOverallScore(),;
-,;
-    fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),;
-    this.log(`Results saved:to:${this.resultsFile}`),;
-  };
-,;
-  async runAll() {,;
-    this.log("🚀 Starting Comprehensive Automation Runner"),;
-    this.log("=" * 50),;
-,;
-    try {,;
-      await this.runBuildTests(),;
-      await this.runPerformanceTests(),;
-      await this.runSecurityTests(),;
-      await this.runQualityTests(),;
-,;
-      const score = this.calculateOverallScore(),;
-      await this.saveResults(),;
-,;
-      this.log("=" * 50),;
-      this.log(`🎯 Overall:Score:${score}/100 (${this.results.overall.status})`),;
-      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),;
-,;
-      if (score < 80) {,;
-        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN"),;
-      } else {,;
-        this.log("✅ All systems performing well!", "SUCCESS"),;
-      };
-,;
-    } catch (error) {,;
-      this.log(`❌ Automation runner:failed:${error.message}`, "ERROR"),;
-      throw error,;
-    };
-  };
-};
+      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),;
+      throw error;
+    }
+  }
+},;
 ,;
 // Main execution,;
-if (import.meta.url === `fil:e://${process.argv[1]}`) {,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   const runner = new ComprehensiveAutomationRunner(),;
-  runner.runAll().catch(console.error),;
-};
+  runner.runAll().catch(console.error);
+},;
 ,;
-export default ComprehensiveAutomationRunner,;
-;#!/usr/bin/env node;
-import fs from "fs";
-import path from "path";
-import { execSync, spawn } from "child_process";
-import { fileURLToPath } from "url";
-;
-const filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(_filename);
-;
-class ComprehensiveAutomationRunner {_; constructor() {; this.logFile = path.join(_dirname, _"logs", _"comprehensive-automation.log"); this.resultsFile = path.join(_dirname, _"reports", _"comprehensive-results.json"); this.ensureDirectories(); this.results = {; timestamp: new Date().toISOString(); tests: {}; builds: {}; linting: {}; performance: {}; security: {}; overall: {status: "unknown", score: 0}}}})};
-; log(message, level = "INFO") {_; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;  fs.appendFileSync(this.logFile, logMessage)};
-; async runCommand(command, description) {_; try {; this.log(`Running: ${description}`); const startTime = Date.now(); const output = execSync(command, {_; stdio: 'pipe'; cwd: process.cwd(); timeout: 300000 // 5 minutes}); const duration = Date.now() - startTime; this.log(`✓ ${description} completed in ${duration}ms`); return {success: true, output: output.toString(), duration}} catch (error) {_; this.log(`✗ ${description} failed: ${error.message}`, "ERROR"); return {_; success: false, error: error.message; output: error.stdout?.toString() || error.stderr?.toString() || ""}}};
-; async runBuildTests() {_; this.log(" = = = RUNNING BUILD TESTS = = = ");
-; const buildTests = [; { cmd:"npm run build", desc: "Production build"}; {cmd:"npm run lint", desc: "Linting check"}; {cmd:"npm run type-check", desc: "TypeScript type checking"}; {cmd:"npm run test: smoke", desc: "Smoke tests"} ];
-; for (const test of buildTests) {_; const result = await this.runCommand(test.cmd, test.desc); this.results.builds[test.desc] = result}};
-; async runPerformanceTests() {_; this.log(" = = = RUNNING PERFORMANCE TESTS = = = ");
-; const perfTests = [; { cmd:"npm run build: analyze", desc: "Bundle analysis"}; {cmd:"npm run perf: audit", desc: "Performance audit"} ];
-; for (const test of perfTests) {_; const result = await this.runCommand(test.cmd, test.desc); this.results.performance[test.desc] = result}};
-; async runSecurityTests() {_; this.log(" = = = RUNNING SECURITY TESTS = = = ");
-; const securityTests = [; { cmd:"npm audit", desc: "Security audit"}; {cmd:"npm run security: audit", desc: "Enhanced security audit"} ];
-; for (const test of securityTests) {_; const result = await this.runCommand(test.cmd, test.desc); this.results.security[test.desc] = result}};
-; async runQualityTests() {_; this.log(" = = = RUNNING QUALITY TESTS = = = ");
-; const qualityTests = [; { cmd:"npm run lint: check", desc: "Lint check"}; {cmd:"npm run format: check", desc: "Format check"}; {cmd:"npm run test: coverage", desc: "Test coverage"} ];
-; for (const test of qualityTests) {_; const result = await this.runCommand(test.cmd, test.desc); this.results.tests[test.desc] = result}};
-; calculateOverallScore() {_; let totalScore = 0; let maxScore = 0;
-; // Build tests (40% weight); const buildScore = this.calculateCategoryScore(this.results.builds); totalScore + = buildScore * 0.4; maxScore + = 100 * 0.4;
-; // Performance tests (25% weight); const perfScore = this.calculateCategoryScore(this.results.performance); totalScore + = perfScore * 0.25; maxScore + = 100 * 0.25;
-; // Security tests (20% weight); const securityScore = this.calculateCategoryScore(this.results.security); totalScore + = securityScore * 0.2; maxScore + = 100 * 0.2;
-; // Quality tests (15% weight); const qualityScore = this.calculateCategoryScore(this.results.tests); totalScore + = qualityScore * 0.15; maxScore + = 100 * 0.15;
-; const finalScore = Math.round((totalScore / maxScore) * 100); this.results.overall.score = finalScore; this.results.overall.status = finalScore > = 80 ? "excellent": ; finalScore > = 60 ? "good": ; finalScore > = 40 ? "fair": "poor";
-; return finalScore};
-; calculateCategoryScore(category) {_; if (!category || Object.keys(category).length = = = 0) return 0;
-; const results = Object.values(category); const successCount = results.filter(r = > r.success).length; return Math.round((successCount / results.length) * 100)};
-; generateRecommendations() {_; const recommendations = [];
-; // Build recommendations; Object.entries(this.results.builds).forEach(([test, result]) = > {; if (!result.success) {; recommendations.push(`Fix ${test}: ${result.error}`)}});
-; // Performance recommendations; Object.entries(this.results.performance).forEach(([test, result]) = > {_; if (!result.success) {; recommendations.push(`Optimize ${test}: ${result.error}`)}});
-; // Security recommendations; Object.entries(this.results.security).forEach(([test, result]) = > {_; if (!result.success) {; recommendations.push(`Address security issue in ${test}: ${result.error}`)}});
-; // Quality recommendations; Object.entries(this.results.tests).forEach(([test, result]) = > {_; if (!result.success) {; recommendations.push(`Improve ${test}: ${result.error}`)}});
-; return recommendations};
-; async saveResults() {_; this.results.recommendations = this.generateRecommendations(); this.results.overall.score = this.calculateOverallScore();
-; fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)); this.log(`Results saved to: ${this.resultsFile}`)};
-; async runAll() {_; this.log("🚀 Starting Comprehensive Automation Runner"); this.log(" = " * 50);
-; try {; await this.runBuildTests(); await this.runPerformanceTests(); await this.runSecurityTests(); await this.runQualityTests();
-; const score = this.calculateOverallScore(); await this.saveResults();
-; this.log(" = " * 50); this.log(`🎯 Overall Score: ${score}/100 (${this.results.overall.status})`); this.log("📊 Detailed results saved to reports/comprehensive-results.json");
-; if (score < 80) {_; this.log("⚠️ Some improvements needed. Check recommendations.", _"WARN")} else {_; this.log("✅ All systems performing well!", _"SUCCESS")}
-} catch (error) {_; this.log(`❌ Automation runner failed: ${error.message}`, "ERROR"); throw error}}};
-;
-// Main execution;
-if (import.meta.url = = = `file: //${process.argv[1]}`) {_; const runner = new ComprehensiveAutomationRunner(); runner.runAll().catch(console.error)};
-;
 export default ComprehensiveAutomationRunner;
+
 
 #!/usr/bin/env node,
 import fs from "fs",
 import path from "path",
-import { execSync, spawn } from "childprocess",
+import { execSync, spawn } from "child_process",
 import { fileURLToPath } from "url",
-const filename = fileURLToPath(import.meta.url),
-const dirname = path.dirname(_filename),
+,
+const __filename = fileURLToPath(import.meta.url),
+const __dirname = path.dirname(__filename),
 ,
 class ComprehensiveAutomationRunner {,
   constructor() {,
-    this.logFile = path.join(_dirname, &quot;logs&quot;, &quot;comprehensive-automation.log&quot;),
-    this.resultsFile = path.join(_dirname, &quot;reports&quot;, &quot;comprehensive-results.json&quot;),
+    this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"),
+    this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"),
     this.ensureDirectories(),
     this.results = {,
       timestam: p: new Date().toISOString(),
@@ -310,10 +79,11 @@ class ComprehensiveAutomationRunner {,
       securit: y: {},
       overal: l: { statu: s: "unknown", scor: e: 0 }
     }
-      }    })
+      }
+    })
   },
 ,
-  log(message, level = &quot;INFO&quot;) {,
+  log(message, level = "INFO") {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] [${level}] ${message}\n`,
     // console.log(`[${level}] ${message}`),
@@ -341,56 +111,61 @@ class ComprehensiveAutomationRunner {,
       }
     }
   },
+,
   async runBuildTests() {,
-    this.log(&quot;=== RUNNING BUILD TESTS ===&quot;),
+    this.log("=== RUNNING BUILD TESTS ==="),
 ,
     const buildTests = [,
       { cm: d: "npm run build", des: c: "Production build" },
       { cm: d: "npm run lint", des: c: "Linting check" },
       { cm: d: "npm run type-check", des: c: "TypeScript type checking" },
-      { cm: d: "npm run: test:smoke", des: c: "Smoke tests" }    ],
-
-    for (const test of buildTests) {
+      { cm: d: "npm run: test:smoke", des: c: "Smoke tests" }
+    ],
+,
+    for (const test of buildTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.builds[test.desc] = result
     }
   },
 ,
   async runPerformanceTests() {,
-    this.log(&quot;=== RUNNING PERFORMANCE TESTS ===&quot;),
+    this.log("=== RUNNING PERFORMANCE TESTS ==="),
 ,
     const perfTests = [,
       { cm: d: "npm run: build:analyze", des: c: "Bundle analysis" },
-      { cm: d: "npm run: perf:audit", des: c: "Performance audit" }    ],
-
-    for (const test of perfTests) {
+      { cm: d: "npm run: perf:audit", des: c: "Performance audit" }
+    ],
+,
+    for (const test of perfTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.performance[test.desc] = result
     }
   },
 ,
   async runSecurityTests() {,
-    this.log(&quot;=== RUNNING SECURITY TESTS ===&quot;),
+    this.log("=== RUNNING SECURITY TESTS ==="),
 ,
     const securityTests = [,
       { cm: d: "npm audit", des: c: "Security audit" },
-      { cm: d: "npm run: security:audit", des: c: "Enhanced security audit" }    ],
-
-    for (const test of securityTests) {
+      { cm: d: "npm run: security:audit", des: c: "Enhanced security audit" }
+    ],
+,
+    for (const test of securityTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.security[test.desc] = result
     }
   },
 ,
   async runQualityTests() {,
-    this.log(&quot;=== RUNNING QUALITY TESTS ===&quot;),
+    this.log("=== RUNNING QUALITY TESTS ==="),
 ,
     const qualityTests = [,
       { cm: d: "npm run: lint:check", des: c: "Lint check" },
       { cm: d: "npm run: format:check", des: c: "Format check" },
-      { cm: d: "npm run: test:coverage", des: c: "Test coverage" }    ],
-
-    for (const test of qualityTests) {
+      { cm: d: "npm run: test:coverage", des: c: "Test coverage" }
+    ],
+,
+    for (const test of qualityTests) {,
       const result = await this.runCommand(test.cmd, test.desc),
       this.results.tests[test.desc] = result
     }
@@ -399,39 +174,39 @@ class ComprehensiveAutomationRunner {,
   calculateOverallScore() {,
     let totalScore = 0,
     let maxScore = 0,
-
-    // Build tests (40% weight)
+,
+    // Build tests (40% weight),
     const buildScore = this.calculateCategoryScore(this.results.builds),
     totalScore += buildScore * 0.4,
     maxScore += 100 * 0.4,
-
-    // Performance tests (25% weight)
+,
+    // Performance tests (25% weight),
     const perfScore = this.calculateCategoryScore(this.results.performance),
     totalScore += perfScore * 0.25,
     maxScore += 100 * 0.25,
-
-    // Security tests (20% weight)
+,
+    // Security tests (20% weight),
     const securityScore = this.calculateCategoryScore(this.results.security),
     totalScore += securityScore * 0.2,
     maxScore += 100 * 0.2,
-
-    // Quality tests (15% weight)
+,
+    // Quality tests (15% weight),
     const qualityScore = this.calculateCategoryScore(this.results.tests),
     totalScore += qualityScore * 0.15,
     maxScore += 100 * 0.15,
-
+,
     const finalScore = Math.round((totalScore / maxScore) * 100),
     this.results.overall.score = finalScore,
-    this.results.overall.status = finalScore >= 80 ? &quot;excellent&quot; :,
-                                 finalScore >= 60 ? &quot;good&quot; :,
-                                 finalScore >= 40 ? &quot;fair&quot; : &quot;poor&quot;,
+    this.results.overall.status = finalScore >= 80 ? "excellent" :,
+                                 finalScore >= 60 ? "good" :,
+                                 finalScore >= 40 ? "fair" : "poor",
 ,
     return finalScore
   },
 ,
   calculateCategoryScore(category) {,
     if (!category || Object.keys(category).length === 0) return 0,
-
+,
     const results = Object.values(category),
     const successCount = results.filter(r => r.success).length,
     return Math.round((successCount / results.length) * 100)
@@ -444,65 +219,11 @@ class ComprehensiveAutomationRunner {,
     Object.entries(this.results.builds).forEach(([test, result]) => {,
       if (!result.success) {,
         recommendations.push(`Fix ${test}: ${result.error}`)
-      }
-    }),
-,
-    // Performance recommendations,
-    Object.entries(this.results.performance).forEach(([test, result]) => {,
-      if (!result.success) {,
-        recommendations.push(`Optimize ${test}: ${result.error}`)
-      }
-    }),
-,
-    // Security recommendations,
-    Object.entries(this.results.security).forEach(([test, result]) => {,
-      if (!result.success) {,
-        recommendations.push(`Address security issue in ${test}: ${result.error}`)
-      }
-    }),
-,
-    // Quality recommendations,
-    Object.entries(this.results.tests).forEach(([test, result]) => {,
-      if (!result.success) {,
-        recommendations.push(`Improve ${test}: ${result.error}`)
-      }
-    }),
-,
-    return recommendations
-  },
-,
-  async saveResults() {,
-    this.results.recommendations = this.generateRecommendations(),
-    this.results.overall.score = this.calculateOverallScore(),
-
-    fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),
-    this.log(`Results saved: to: ${this.resultsFile}`)
-  },
-,
-  async runAll() {,
-    this.log(&quot;🚀 Starting Comprehensive Automation Runner&quot;),
-    this.log(&quot;=&quot; * 50),
-,
-    try {,
-      await this.runBuildTests(),
-      await this.runPerformanceTests(),
-      await this.runSecurityTests(),
-      await this.runQualityTests(),
-
-      const score = this.calculateOverallScore(),
-      await this.saveResults(),
-,
-      this.log("=" * 50),
-      this.log(`🎯 Overall: Score: ${score}/100 (${this.results.overall.status})`),
-      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),
-      if (score < 80) {,
-        this.log(&quot;⚠️  Some improvements needed. Check recommendations.&quot;, &quot;WARN&quot;)
-      } else {,
-        this.log("✅ All systems performing well!", "SUCCESS")
-      }
+;
 
     } catch (error) {,
-      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),      throw error
+      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),
+      throw error
     }
   }
 },
@@ -515,212 +236,111 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
 ,
 export default ComprehensiveAutomationRunner,
 
-const fs = require('fs');
-const path = require('path');
-const { execSync, spawn } = require('child_process');
-
-class ComprehensiveAutomationRunner {
-  constructor() {
-    this.logFile = path.join(__dirname, 'logs', 'comprehensive-automation.log');
-    this.resultsFile = path.join(__dirname, 'reports', 'comprehensive-results.json');
-    this.ensureDirectories();
-    this.results = {
-      timestamp: new Date().toISOString(),
-      tests: {},
-      builds: {},
-      linting: {},
-      security: {},
-      performance: {},
-      overall: 'pending'
-    };
-  }
-
-  ensureDirectories() {
-    const dirs = ['logs', 'reports'];
-    dirs.forEach(dir => {
-      const dirPath = path.join(__dirname, dir);
-      if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
+    }),;
+,;
+    return recommendations;
+  },;
+,;
+  async saveResults() {,;
+    this.results.recommendations = this.generateRecommendations(),;
+    this.results.overall.score = this.calculateOverallScore(),;
+,;
+    fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),;
+    this.log(`Results saved: to: ${this.resultsFile}`);
+  },;
+,;
+  async runAll() {,;
+    this.log("🚀 Starting Comprehensive Automation Runner"),;
+    this.log("=" * 50),;
+,;
+    try {,;
+      await this.runBuildTests(),;
+      await this.runPerformanceTests(),;
+      await this.runSecurityTests(),;
+      await this.runQualityTests(),;
+,;
+      const score = this.calculateOverallScore(),;
+      await this.saveResults(),;
+,;
+      this.log("=" * 50),;
+      this.log(`🎯 Overall: Score: ${score}/100 (${this.results.overall.status})`),;
+      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),;
+,;
+      if (score < 80) {,;
+        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN");
+      } else {,;
+        this.log("✅ All systems performing well!", "SUCCESS");
       }
-    });
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(`[${level}] ${message}`);
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  async runTests() {
-    try {
-      this.log('Running tests...');
-      const output = execSync('npm test -- --passWithNoTests --watchAll=false', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      this.results.tests = {
-        status: 'passed',
-        output: output,
-        timestamp: new Date().toISOString()
-      };
-      this.log('Tests completed successfully');
-    } catch (error) {
-      this.results.tests = {
-        status: 'failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      };
-      this.log(`Tests failed: ${error.message}`, 'ERROR');
+;
+    } catch (error) {,;
+      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),;
+      throw error;
     }
   }
+},;
+,;
+// Main execution,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const runner = new ComprehensiveAutomationRunner(),;
+  runner.runAll().catch(console.error);
+},;
+,;
+export default ComprehensiveAutomationRunner;
 
-  async runBuild() {
-    try {
-      this.log('Running build...');
-      const output = execSync('npm run build', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      this.results.builds = {
-        status: 'success',
-        output: output,
-        timestamp: new Date().toISOString()
-      };
-      this.log('Build completed successfully');
-    } catch (error) {
-      this.results.builds = {
-        status: 'failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      };
-      this.log(`Build failed: ${error.message}`, 'ERROR');
-    }
-  }
+=======
+  ];
+; for (const test of quality_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.tests[test.desc] = result}}
+; calculateOverallScore () { let total_score = 0; let max_score = 0;
+; // Build tests (40% weight); const build_score = this.calculateCategoryScore (this.results.builds); total_score + = build_score * 0.4; max_score + = 100 * 0.4;
+; // Performance tests (25% weight); const perf_score = this.calculateCategoryScore (this.results.performance); total_score + = perf_score * 0.25; max_score + = 100 * 0.25;
+; // Security tests (20% weight); const security_score = this.calculateCategoryScore (this.results.security); total_score + = security_score * 0.2; max_score + = 100 * 0.2;
+; // Quality tests (15% weight); const quality_score = this.calculateCategoryScore (this.results.tests); total_score + = quality_score * 0.15; max_score + = 100 * 0.15;
+; const final_score = Math.round ((total_score / max_score) * 100); this.results.overall.score = final_score; this.results.overall.status = final_score > = 80 ? "excellent": ; final_score > = 60 ? "good": ; final_score > = 40 ? "fair": "poor";
+; return final_score}
+; calculateCategoryScore (category) { if (.length = = = 0) return 0) {
+  $2
+} const results = Object.values (category); const success_count = results.filter (r = > r.success).length; return Math.round ((success_count / results.length) * 100)}
+; generate_recommendations () { const recommendations = [];
+; // Build recommendations; Object.entries (this.results.builds).for_each (([test, result]) = > { // Check condition
+if ( {) {
+  $2
+} recommendations.push (`Fix ${test}: ${result.error}`)}});
+; // Performance recommendations; Object.entries (this.results.performance).for_each (([test, result]) = > { // Check condition
+if ( {) {
+  $2
+} recommendations.push (`Optimize ${test}: ${result.error}`)}});
+; // Security recommendations; Object.entries (this.results.security).for_each (([test, result]) = > { // Check condition
+if ( {) {
+  $2
+} recommendations.push (`Address security issue in ${test}: ${result.error}`)}});
+; // Quality recommendations; Object.entries (this.results.tests).for_each (([test, result]) = > { // Check condition
+if ( {) {
+  $2
+} recommendations.push (`Improve ${test}: ${result.error}`)}});
+; return recommendations}
+; async save_results () { this.results.recommendations = this.generate_recommendations (); this.results.overall.score = this.calculateOverallScore ();
+; fs.writeFileSync (this.results_file, JSON.stringify (this.results, null, 2)); this.log (`Results saved to: ${this.results_file}`)}
+; async run_all () { this.log ("🚀 Starting Comprehensive Automation Runner"); this.log (" = " * 50);
+; try { await this.runBuildTests (); await this.runPerformanceTests (); await this.runSecurityTests (); await this.runQualityTests ();
+; const score = this.calculateOverallScore (); await this.save_results ();
+; this.log (" = " * 50); this.log (`🎯 Overall Score: ${score}/100 (${this.results.overall.status})`); this.log ("📊 Detailed results saved to reports / comprehensive - results.json");
+; // Check condition
+if ( {) {
+  $2
+} this.log ("⚠️ Some improvements needed. Check recommendations.", "WARN")} else { this.log ("✅ All systems performing well!", "SUCCESS")}
+} catch (error) { this.log (`❌ Automation runner failed: ${error.message}`, "ERROR"); throw error}}}
+;
+// Main execution;
+// Check condition
+if ( {) {
+  $2
+} const runner = new ComprehensiveAutomationRunner (); runner.run_all ().catch (console.error)}
+;
+export default ComprehensiveAutomationRunner;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-  async runLinting() {
-    try {
-      this.log('Running linting...');
-      const output = execSync('npm run lint', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      this.results.linting = {
-        status: 'passed',
-        output: output,
-        timestamp: new Date().toISOString()
-      };
-      this.log('Linting completed successfully');
-    } catch (error) {
-      this.results.linting = {
-        status: 'failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      };
-      this.log(`Linting failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async runSecurityAudit() {
-    try {
-      this.log('Running security audit...');
-      const output = execSync('npm audit --json', { stdio: 'pipe' });
-      const auditResult = JSON.parse(output.toString());
-      
-      this.results.security = {
-        status: 'completed',
-        vulnerabilities: auditResult.vulnerabilities || {},
-        timestamp: new Date().toISOString()
-      };
-      this.log('Security audit completed');
-    } catch (error) {
-      this.results.security = {
-        status: 'failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      };
-      this.log(`Security audit failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async runPerformanceCheck() {
-    try {
-      this.log('Running performance check...');
-      // Simple performance check - bundle size analysis
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const dependencies = Object.keys(packageJson.dependencies || {}).length;
-      const devDependencies = Object.keys(packageJson.devDependencies || {}).length;
-      
-      this.results.performance = {
-        status: 'completed',
-        dependencies: dependencies,
-        devDependencies: devDependencies,
-        timestamp: new Date().toISOString()
-      };
-      this.log('Performance check completed');
-    } catch (error) {
-      this.results.performance = {
-        status: 'failed',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      };
-      this.log(`Performance check failed: ${error.message}`, 'ERROR');
-    }
-  }
-
-  calculateOverallStatus() {
-    const statuses = [
-      this.results.tests.status,
-      this.results.builds.status,
-      this.results.linting.status,
-      this.results.security.status,
-      this.results.performance.status
-    ];
-    
-    if (statuses.every(status => status === 'passed' || status === 'success' || status === 'completed')) {
-      this.results.overall = 'success';
-    } else if (statuses.some(status => status === 'failed')) {
-      this.results.overall = 'failed';
-    } else {
-      this.results.overall = 'partial';
-    }
-  }
-
-  saveResults() {
-    try {
-      fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2));
-      this.log(`Results saved to ${this.resultsFile}`);
-    } catch (error) {
-      this.log(`Error saving results: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async run() {
-    try {
-      this.log('Starting comprehensive automation runner...');
-      
-      await this.runTests();
-      await this.runBuild();
-      await this.runLinting();
-      await this.runSecurityAudit();
-      await this.runPerformanceCheck();
-      
-      this.calculateOverallStatus();
-      this.saveResults();
-      
-      this.log(`Comprehensive automation completed with status: ${this.results.overall}`);
-      
-    } catch (error) {
-      this.log(`Comprehensive automation failed: ${error.message}`, 'ERROR');
-      this.results.overall = 'failed';
-      this.saveResults();
-    }
-  }
-}
-
-if (require.main === module) {
-  const runner = new ComprehensiveAutomationRunner();
-  runner.run();
-}
-
-module.exports = ComprehensiveAutomationRunner;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

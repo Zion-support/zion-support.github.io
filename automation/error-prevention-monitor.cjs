@@ -122,7 +122,7 @@ class ErrorPreventionMonitor {
         const content = fs.readFileSync(filePath, 'utf8');
         
         // Check for git merge conflict markers
-        if (content.includes('<<<<<<<') || content.includes('>>>>>>>') || content.includes('')) {
+        if (content.includes('<<<<<<<') || content.includes('>>>>>>>') || content.includes('=======')) {
           this.log(`Git merge conflict markers found in ${file}`, 'ERROR');
           errorCount++;
         }

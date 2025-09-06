@@ -1,37 +1,48 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+}};
+
 ;
-};
+
 ;
+<<<<<<< HEAD
+
+
+
+=======
+}};
+
+}}
+=======
+},;
 ,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
 ;
-};
+
+<<<<<<< HEAD
+;
+},;
+,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+;
 };
 ;
 
-// Environment security configuration,
-export const securityConfig = {,
-  // Ensure sensitive environment variables are not exposed,
-  validateEnvVars: () => {,
-    const requiredVars = ['NEXT_PUBLIC_API_URL],
-    const missingVars = requiredVars.filter(varName => !process.env[varName]),
-,
-    if (missingVars.length > 0) {,
-      console.warn('Missing required environment variables:', missingVars)
-    };
-    return missingVars.length === 0
-  },
-  // Sanitize environment variables for client-side use,
-  getClientEnvVars: () => {,
-    const clientVars = {};
-    const allowedClientVars = [NEXT_PUBLIC_API_URLNEXT_PUBLIC_APP_NAME'],
-,
-    allowedClientVars.forEach(varName => {,
-      if (process.env[varName]) {,
-        clientVars[varName] = process.env[varName]
-      };
-    }),
-,
-    return clientVars
-  };
-};
-,
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

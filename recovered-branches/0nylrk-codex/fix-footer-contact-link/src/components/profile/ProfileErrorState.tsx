@@ -1,24 +1,165 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
+=======
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { ArrowLeft } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+interface ProfileErrorStateProps {
+  error: string | null;
+}
+export function ProfileErrorState({ error }: ProfileErrorStateProps) {
+  return (
+    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
+      <div className="text-red-400 mb-4 text-xl">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {error |"Something went wrong"}
+=======
+        {error || "Something went wrong"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      </div>
+      <Button asChild>
+        <Link
+          to="/talents"
+          className="bg-zion-purple hover: bg-zion-purple-dark"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to Talent Directory
+        </Link>
+      </Button>
+    </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
+interface ProfileErrorStateProps {;
+  error: string | null;
+}
+
+export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
+  return (
+    <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
+      <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
+      <Button asChild>;
+        <Link to="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">;
+=======
+<<<<<<< HEAD
+  )
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
-import { ArrowLeft } from "lucide-react",;
-;
-interface ProfileErrorStateProps {;
-  error:string | null;
+import { ArrowLeft } from "lucide-react";
 }
-;
-export function ProfileErrorState({ error } ProfileErrorStateProps) {;
-  return (;
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
       <Button asChild>;
         <Link to="/talents" className="bg-zion-purple hover:bg-zion-purple-dark">;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ArrowLeft className="mr-2 h-4 w-4" />;
           Back to Talent Directory;
         </Link>;
       </Button>;
     </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+
+=======
+=======
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { Link  } from './react-router-dom';
+import { ArrowLeft  } from './lucide-react';
+interface ProfileErrorStateProps {
+  error: string | null;
+}
+export /**
+ * ProfileErrorState - Function description
+ */
+function ProfileErrorState() {
+  return (
+    <div className="min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4">;
+      <div className="text - red - 400 mb - 4 text - xl">;
+        {error || "Something went wrong"}
+      </div>;
+      <Button as_child>;
+        <Link;
+          to="/talents";
+          className="bg - zion - purple hover: bg - zion - purple - dark";
+        >;
+          <ArrowLeft className="mr - 2 h - 4 w - 4" />;
+          Back to Talent Directory;
+        </Link>;
+      </Button>;
+    </div>);
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+  )
+  )
+
+}
+
+;
+<<<<<<< HEAD
+
   );}
  interface ProfileErrorStateProps {
   error: string | null 
@@ -29,3 +170,19 @@ export function ProfileErrorState({ error } ProfileErrorStateProps) {;
   error || "Something went wrong" 
 }</div> 
 }
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  );
+}
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

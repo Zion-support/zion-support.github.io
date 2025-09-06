@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 console.log('🔧 Fixing Accessibility Page');
-console.log('');
+console.log('============================');
 
 let content = fs.readFileSync('pages/accessibility.tsx', 'utf8');
 

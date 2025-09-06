@@ -1,5 +1,6 @@
+<<<<<<< HEAD
 import React from 'react';
-:pages/ai-sales-intelligence-platform.tsx.backup.1755991630
+<<<<<<< HEAD:pages/ai-sales-intelligence-platform.tsx.backup.1755991630
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
@@ -219,7 +220,19 @@ const AISalesIntelligencePlatform: React.FC = () => {
         </section>
       </div>
     </>
-  );}
+  );
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-sales-intelligence-platform' } });
+}
+
+export default function AISalesIntelligencePlatform(props: any) {
+	return <ServicePage {...props} />;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e11d
+}
+=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIContentPersonalizationEngine() {
@@ -245,3 +258,4 @@ export default function AIContentPersonalizationEngine() {
 		/>
 	);
 }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e066:pages/ai-content-personalization-engine.tsx

@@ -185,7 +185,7 @@ class EnhancedGitAutomation {
       
       // Check for conflicts
       const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { encoding: 'utf8' });
-      const hasConflicts = conflictCheck.includes('<<<<<<<') || conflictCheck.includes('');
+      const hasConflicts = conflictCheck.includes('<<<<<<<') || conflictCheck.includes('=======');
       
       if (!hasConflicts) {
         console.log(`✅ Branch ${branchName} is ready for merge`);

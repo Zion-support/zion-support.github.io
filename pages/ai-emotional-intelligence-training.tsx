@@ -1,105 +1,175 @@
-import React from 'react',;
-import ServiceLanding from '../components/sections/ServiceLanding',;
-;
-export default function AIEmotionalIntelligenceTraining() {;
-	return (;
-		<ServiceLanding;
-			title="AI Emotional Intelligence Training";
-			slug="ai-emotional-intelligence-training";
-			description="Dynamic coaching that improves communication, empathy, and leadership. AI evaluates tone, clarity, and sentiment to deliver tailored practice scenarios and feedback.";
-			subtitle="Upgrade team EQ with measurable gains in manager effectiveness and CSAT.";
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+=======
+
+
+			pricePerMonthUSD={799  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+			implementationWeeks="Implementation: 1–2 weeks"
+			roiNote="Average ROI 2–5x within 60–90 days"
+			features={[
+				"Role-play simulators for negotiation, feedback, and escalation",
+				"Real-time tone and sentiment coaching",
+				"Personalized learning paths and certifications",
+				"Team dashboards and skill gap analysis",
+				"Integrations: LMS, Slack/Teams, Gmail/Outlook",
+				"Privacy-first voice and text processing"
+
+
+}
+import React from 'react',
+import ServiceLanding from '../components / sections / ServiceLanding',
+export default /**
+ * AIEmotionalIntelligenceTraining - Function description
+ */
+function AIEmotionalIntelligenceTraining() {
+return (
+  <ServiceLanding;
+  title="AI Emotional Intelligence Training";
+  slug="ai - emotional - intelligence - training";
+  description="Dynamic coaching that improves communication, empathy, and leadership. AI evaluates tone, clarity, and sentiment to deliver tailored practice scenarios and feedback.";
+  subtitle="Upgrade team EQ with measurable gains in manager effectiveness and CSAT.";
+  pricePerMonthUSD={799}
+    implementation_weeks="Implementation: 1–2 weeks";
+  roi_note="Average ROI 2–5x within 60–90 days";
+  features={[;
+    "Role - play simulators for negotiation, feedback, and escalation",
+    "Real - time tone and sentiment coaching",
+    "Personalized learning paths and certifications",
+    "Team dashboards and skill gap analysis",
+    "Integrations: LMS, Slack / Teams, Gmail / Outlook",
+    "Privacy - first voice and text processing";
+  ]}
+    industries={["Customer Support", "Sales", "HR & L & D", "Leadership"]}
+    canonical="https: //ziontechgroup.com / ai - emotional - intelligence - training";
+  />);
+		/>
+	)
+
+}
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIEmotionalIntelligenceTraining() {
+	return (
+		<ServiceLanding
+
+			title="AI Emotional Intelligence Training"
+			slug="ai-emotional-intelligence-training"
+			description="Dynamic coaching that improves communication, empathy, and leadership. AI evaluates tone, clarity, and sentiment to deliver tailored practice scenarios and feedback."
+			subtitle="Upgrade team EQ with measurable gains in manager effectiveness and CSAT."
 			pricePerMonthUSD={799}
-			implementationWeeks="Implementation:1–2 weeks";
-			roiNote="Average ROI 2–5x within 60–90 days";
-			features={[;
-				"Role-play simulators for negotiation, feedback, and escalation",;
-				"Real-time tone and sentiment coaching",;
-				"Personalized learning paths and certifications",;
-				"Team dashboards and skill gap analysis",;
-				"Integrations:LMS, Slack/Teams, Gmail/Outlook",;
-				"Privacy-first voice and text processing";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+			implementationWeeks="Implementation: 1–2 weeks"
+			roiNote="Average ROI 2–5x within 60–90 days"
+			features={[
+				"Role-play simulators for negotiation, feedback, and escalation"
+				"Real-time tone and sentiment coaching"
+				"Personalized learning paths and certifications"
+				"Team dashboards and skill gap analysis"
+				"Integrations: LMS, Slack/Teams, Gmail/Outlook"
+
+				"Privacy-first voice and text processing"
 			]}
 			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
-			canonical="https://ziontechgroup.com/ai-emotional-intelligence-training";
-		/>;
-	);}
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
-const AIEmotionalIntelligenceTraining: React.FC = () => {
-  return (
-    <Layout>
-      <Head>
-        <title>AI Emotional Intelligence Training - Zion Tech Group</title>
-        <meta name="description" content="Develop emotional intelligence skills with AI-powered training programs" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">AI Emotional Intelligence Training</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Develop emotional intelligence skills with our AI-powered training programs and assessments.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Skill Assessment</h3>
-            <p className="text-gray-600 mb-4">
-              Evaluate emotional intelligence skills with AI-powered assessments and feedback.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Self-awareness tests</li>
-              <li>• Empathy assessments</li>
-              <li>• Social skills evaluation</li>
-              <li>• Progress tracking</li>
-            </ul>
-          </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Personalized Training</h3>
-            <p className="text-gray-600 mb-4">
-              Receive customized training programs based on your emotional intelligence profile.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Adaptive learning paths</li>
-              <li>• Interactive exercises</li>
-              <li>• Real-world scenarios</li>
-              <li>• Skill development</li>
-            </ul>
-          </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Practice & Feedback</h3>
-            <p className="text-gray-600 mb-4">
-              Practice emotional intelligence skills with AI-powered feedback and coaching.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Role-playing exercises</li>
-              <li>• Instant feedback</li>
-              <li>• Performance analytics</li>
-              <li>• Improvement suggestions</li>
-            </ul>
-          </div>
-        </div>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+			pricePerMonthUSD={799  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-        <div className="bg-violet-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Develop Your Emotional Intelligence</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Enhance your emotional intelligence with AI-powered training and personalized development programs.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-violet-600 text-white px-6 py-3 rounded-lg hover:bg-violet-700">
-              Get Started
-            </a>
-            <a href="/about" className="border border-violet-600 text-violet-600 px-6 py-3 rounded-lg hover:bg-violet-50">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </main>
-    </Layout>
-  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+			implementationWeeks="Implementation: 1–2 weeks"
+			roiNote="Average ROI 2–5x within 60–90 days"
+			features={[
+				"Role-play simulators for negotiation, feedback, and escalation",
+				"Real-time tone and sentiment coaching",
+				"Personalized learning paths and certifications",
+				"Team dashboards and skill gap analysis",
+				"Integrations: LMS, Slack/Teams, Gmail/Outlook",
+				"Privacy-first voice and text processing"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+			]}
+			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
+			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
+		/>
+	)
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-export default AIEmotionalIntelligenceTraining;
+			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training";
+		/>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

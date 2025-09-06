@@ -28,9 +28,9 @@ find . -name "*.js" -size 0 -delete
 find . -name "*.jsx" -size 0 -delete
 
 # Remove files with only merge conflict markers
-find . -name "*.tsx" -exec grep -l "^" {} \; | xargs rm -f
-find . -name "*.ts" -exec grep -l "^" {} \; | xargs rm -f
-find . -name "*.js" -exec grep -l "^" {} \; | xargs rm -f
-find . -name "*.jsx" -exec grep -l "^" {} \; | xargs rm -f
+find . -name "*.tsx" -exec grep -l "^<<<<<<< HEAD" {} \; | xargs rm -f
+find . -name "*.ts" -exec grep -l "^<<<<<<< HEAD" {} \; | xargs rm -f
+find . -name "*.js" -exec grep -l "^<<<<<<< HEAD" {} \; | xargs rm -f
+find . -name "*.jsx" -exec grep -l "^<<<<<<< HEAD" {} \; | xargs rm -f
 
 echo "Cleanup completed!"

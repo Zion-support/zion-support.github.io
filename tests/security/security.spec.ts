@@ -1,9 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
+interface Security.specProps {
+  // Add props here as needed
+=======
 
 interface Security.specProps {
   // Add props here as needed
 }
 
+>>>>>>> main
 export default function Security.spec({ }: Security.specProps) {
   return (
     <div>
@@ -11,7 +16,10 @@ export default function Security.spec({ }: Security.specProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+
+
+
+=======
 }
-}
-}
-}
+>>>>>>> main

@@ -1,45 +1,151 @@
-import { useEffect, useMemo, useState } from 'react',;
-import { translateTextViaAI } from '../utils/translation',;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useMemo, useState } from 'react';
+import { translateTextViaAI } from '../utils / translation';
+=======
+
+import { useEffect, useMemo, useState } from 'react';
+import { translateTextViaAI } from '../utils / translation';
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export type UseAutoTranslateResult = {
+  translations: Record < string, string>;
+  loading: boolean;
+  error?: string;
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { useEffect, useMemo, useState } from 'react';
+import { translateTextViaAI } from '../utils/translation';
+export type UseAutoTranslateResult = {
+  translations: Record<string, string>;
+  loading: boolean,
+  error?: string
+};
+export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const [translations, setTranslations] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | undefined>(undefined);
+      setTranslations({});
 ;
-export type UseAutoTranslateResult = {;
-  translations:Record<string string>,;
-  loading:boolean,;
-  error?:string;
-},;
+export function useAutoTranslate (
+  text: string,
+  targets: string[],
+  debounce_ms = 600): UseAutoTranslateResult {  const [translations, set_translations] = useState < Record < string, string>>({});export function useAutoTranslate (text: string, targets: string[], debounce_ms = 600): UseAutoTranslateResult {
+  const [translations, set_translations] = useState < Record < string, string>>({});
+  const [loading, set_loading] = useState (false);
+  const [error, set_error] = useState < string | undefined>(undefined);
 ;
-export function useAutoTranslate(text:string, targets:string[], debounceMs = 600):UseAutoTranslateResult {;
-  const [translations, setTranslations] = useState<Record<string string>>({}),;
-  const [loading, setLoading] = useState(false),;
-  const [error, setError] = useState<string | undefined>(undefined),;
+  const key = useMemo (() => JSON.stringify ({ text, targets }), [text, targets]);
 ;
-  const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]),;
-;
-  useEffect(() => {;
-    if (!text || targets.length === 0) {;
-      setTranslations({}),;
-      return,;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_translations ({});
+      return;    }      return;
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  const [translations, setTranslations] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | undefined>(undefined);
+
+
+  const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
+  useEffect(() => {
+    if (!text || targets && targets.length === 0) {
+
+      setTranslations({});
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
-;
-    let cancelled = false,;
-    const timer = setTimeout(async () => {;
-      try {;
-        setLoading(true),;
-        setError(undefined),;
-        const res = await translateTextViaAI(text, targets),;
-        if (!cancelled) setTranslations(res),;
-      } catch (e:any) {;
-        if (!cancelled) setError(e?.message || 'Translation failed');
-      } finally {;
-        if (!cancelled) setLoading(false),;
+    let cancelled = false;
+    const timer = set_timeout (async () => {
+      try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        if (!cancelled) setTranslations(res)
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message || 'Translation failed')
+=======
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        set_loading (true);
+        set_error (undefined);
+        const res = await translateTextViaAI (text, targets);
+        if (set_translations (res)) {
+  $2
+}
+      } catch (e: any) {
+        if (set_error (e?.message || 'Translation failed')) {
+  $2
+}
+      } finally {
+        if (set_loading (false)) {
+  $2
+}      }      } catch (e: any) {
+        if (set_error (e?.message || 'Translation failed')) {
+  $2
+}
+      } finally {
+        if (set_loading (false)) {
+  $2
+}
       }
-    }, debounceMs),;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      clearTimeout(timer)
+    }, debounce_ms);
 ;
-    return () => {;
-      cancelled = true,;
-      clearTimeout(timer),;
-    },;
-  }, [key, debounceMs]),;
+    return () => {
+      cancelled = true;
+      clear_timeout (timer);
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    }
+  }, [key, debounce_ms]);
 ;
-  return { translations, loading, error },;
-} 
+  return { translations, loading, error }
+    }
+  }, [key, debounceMs]);
+  return { translations, loading, error }
+}
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    }
+  }, [key, debounce_ms]);
+;
+  return { translations, loading, error }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+    }
+  }, [key, debounce_ms]);
+;
+  return { translations, loading, error }
 }

@@ -170,7 +170,8 @@ handle_merge_conflicts() {
                 
                 # Remove conflict markers and keep our version
                 sed -i '/^<<<<<<< /d' "$file"
-                sed -i '/^/,/^                
+                sed -i '/^/,/^>>>>>>> /d' "$file"
+                
                 # Stage resolved file
                 git add "$file"
             fi

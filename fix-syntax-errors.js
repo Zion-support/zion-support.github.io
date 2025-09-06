@@ -1,4 +1,240 @@
-  },;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+#!/usr / bin / env node;
+import fs from './fs';
+import path from './path';
+import { glob  } from './glob';
+;
+// Find all TypeScript and JavaScript files;
+const files = glob.sync ("src/**/*.{ts, tsx, js, jsx}", { cwd: process.cwd () });
+;
+let total_fixed = 0;
+;
+files.for_each ((file) => {
+  try {
+    const file_path = path.join (process.cwd (), file);
+    let content = fs.readFileSync (file_path, "utf8");
+    let modified = false;
+;
+    // Fix import statements with double punctuation (comma + semicolon);
+    const original_content = content;
+    content = content.replace (
+      /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
+      (match) => {
+        modified = true;
+        return match.replace (",", ";");
+      },
+    );
+;
+    // Fix import statements missing semicolons;
+    content = content.replace (
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
+      (match) => {
+        // Check condition
+if (.ends_with (") {
+  $2
+}")) {
+          modified = true;
+          return match.trim () + ";";
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
+
+// Find all TypeScript and JavaScript files
+const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
+
+let totalFixed = 0;
+
+files.forEach((file) => {
+  try {
+    const filePath = path.join(process.cwd(), file);
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+
+    // Fix import statements with double punctuation (comma + semicolon);
+    const originalContent = content;
+    content = content.replace(
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+      (match) => {
+        modified = true;
+        return match.replace(",;", ";");
+      },
+    );
+
+    // Fix import statements missing semicolons
+    content = content.replace(
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
+        if (!match.trim().endsWith(";")) {
+          modified = true;
+          return match.trim() + ";";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+        }
+        return match;
+      },
+    );
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+;
+    // Fix other common syntax issues;
+    // Fix missing semicolons after variable declarations;
+    content = content.replace (
+      /(\w+)\s*=\s*[^;]+(?!)\s*$/gm,
+      (match, var_name) => {
+        // Check condition
+if (&&) {
+  $2
+}
+          !match.includes ("if") &&;
+          !match.includes ("for") &&;
+          !match.includes ("while") &&;
+          !match.includes ("switch") &&;
+          !match.includes ("try") &&;
+          !match.includes ("catch") &&;
+          !match.includes ("finally") &&;
+          !match.includes ("return") &&;
+          !match.includes ("throw") &&;
+          !match.includes ("break") &&;
+          !match.includes ("continue") &&;
+          !match.includes ("debugger") &&;
+          !match.includes ("export") &&;
+          !match.includes ("import")) {
+
+<<<<<<< HEAD
+=======
+    // Fix other common syntax issues
+    // Fix missing semicolons after variable declarations
+    content = content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+      (match, varName) => {
+        if (
+          !match.includes("function") &&
+          !match.includes("if") &&
+          !match.includes("for") &&
+          !match.includes("while") &&
+          !match.includes("switch") &&
+          !match.includes("try") &&
+          !match.includes("catch") &&
+          !match.includes("finally") &&
+          !match.includes("return") &&
+          !match.includes("throw") &&
+          !match.includes("break") &&
+          !match.includes("continue") &&
+          !match.includes("debugger") &&
+          !match.includes("export") &&
+          !match.includes("import")
+        ) {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+          modified = true;
+          return match + ";";
+        }
+        return match;
+      },
+    );
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      fs.writeFileSync (file_path, content, "utf8");
+      console.log (`Fixed: ${file}`);
+      total_fixed++;
+    }
+  } catch (error) {
+    console.error (`Error processing ${file}:`, error.message);
+
+  }
+
+});
+
+=======
+<<<<<<< HEAD
+=======
+    if (modified) {
+      fs.writeFileSync(filePath, content, "utf8");
+      console.log(`Fixed: ${file}`);
+      totalFixed++;
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+});
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+=======
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}},
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}},
+,
+// Run all fixes,
+fixFooter();
+fixAccessibility();
+fixAiServices();
+fixApiDocs();
+fixCareers();
+,
+console.log('🎉 Syntax error fixes completed');
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}},
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+// Run all fixes,
+fixFooter(),
+fixAccessibility(),
+fixAiServices(),
+fixApiDocs(),
+fixCareers(),
+// // // console.log('🎉 Syntax error fixes completed'),
 }},;
 // Run all fixes,;
 fixFooter(),;
@@ -6,120 +242,20 @@ fixAccessibility(),;
 fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
-// // // console.log('🎉 Syntax error fixes completed'),,
-// Run all fixes,
-fixFooter(),
-fixAccessibility(),
-fixAiServices(),
-fixApiDocs(),
-fixCareers(),
-,
-console.log('🎉 Syntax error fixes completed'),
-#!/usr/bin/env node
+// // // console.log('🎉 Syntax error fixes completed'),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-import fs from 'fs';
-import path from 'path';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}},
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Remove trailing commas before semicolons
-  content = content.replace(/;/g, ';');
-  
-  // Remove standalone commas
-  content = content.replace(/^;$/gm, '');
-  
-  // Fix malformed JSX attributes
-  content = content.replace(/\s+src={src};/g, '');
-  content = content.replace(/\s+alt={alt};/g, '');
-  content = content.replace(/\s+width={width};/g, '');
-  content = content.replace(/\s+height={height};/g, '');
-  content = content.replace(/\s+className={className};/g, '');
-  content = content.replace(/\s+priority={priority};/g, '');
-  content = content.replace(/\s+quality={quality};/g, '');
-  
-  // Fix malformed function declarations
-  content = content.replace(/^    };$/gm, '  };');
-  content = content.replace(/^  };$/gm, '};');
-  
-  // Fix malformed imports
-  content = content.replace(/import\s+React\s+from\s+'react';/g, "import React from 'react';");
-  content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+'([^']+)';/g, "import { $1 } from '$2';");
-  
-  // Fix malformed exports
-  content = content.replace(/export\s+default\s+([^;]+);/g, 'export default $1;');
-  
-  // Fix malformed JSX
-  content = content.replace(/<([^>]+)>;/g, '<$1>');
-  content = content.replace(/<\/([^>]+)>;/g, '</$1>');
-  
-  // Fix malformed object literals
-  content = content.replace(/{\s*([^}]+)\s*;/g, '{\n    $1\n  }');
-  
-  // Fix malformed function calls
-  content = content.replace(/\(\s*([^)]+)\s*;/g, '($1);');
-  
-  // Remove empty lines with just commas
-  content = content.replace(/^;$/gm, '');
-  
-  // Fix malformed CSS
-  content = content.replace(/,\s*};/g, ';');
-  content = content.replace(/,\s*}/g, '}');
-  
-  return content;
-}
-
-// Function to process a file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
-    
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const projectRoot = process.cwd();
-const files = findFiles(projectRoot);
-
-console.log(`Found ${files.length} files to process...`);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files`);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

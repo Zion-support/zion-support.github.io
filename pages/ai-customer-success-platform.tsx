@@ -1,104 +1,217 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
-export default function AICustomerSuccessPlatform() {;
-	return (;
-		<ServiceLanding;
-			title="AI Customer Success Platform";
-			slug="ai-customer-success-platform";
-			description="Predict churn, orchestrate proactive outreach, and increase lifetime value. Our AI monitors accounts across product usage, tickets, billing, and NPS to trigger playbooks that prevent churn and expand revenue.";
-			subtitle="Reduce churn by 20–45% and grow NRR with automated, data-driven customer health.";
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default function AICustomerSuccessPlatform() {
+	return (
+		<ServiceLanding
+
+			implementationWeeks="Implementation: 2–4 weeks"
+			roiNote="Average ROI 4–10x within 90 days"
+			features={[
+				"Unified customer health scoring (usage, support, sentiment, billing)"
+				"Churn risk prediction with explainable insights"
+				"Playbook automation (email, CS tasks, in-app guides, offers)"
+				"Expansion signals for upsell/cross-sell"
+				"Executive QBR reports and cohort analytics"
+
+
+=======
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
+export default /**
+ * AICustomerSuccessPlatform - Function description
+ */
+function AICustomerSuccessPlatform() {
+return (
+  <ServiceLanding;
+  title="AI Customer Success Platform";
+  slug="ai - customer - success - platform";
+  description="Predict churn, orchestrate proactive outreach, and increase lifetime value. Our AI monitors accounts across product usage, tickets, billing, and NPS to trigger playbooks that prevent churn and expand revenue.";
+  subtitle="Reduce churn by 20–45% and grow NRR with automated, data - driven customer health.";
+  pricePerMonthUSD={1999}
+    implementation_weeks="Implementation: 2–4 weeks";
+  roi_note="Average ROI 4–10x within 90 days";
+  features={[;
+    "Unified customer health scoring (usage, support, sentiment, billing)",
+    "Churn risk prediction with explainable insights",
+    "Playbook automation (email, CS tasks, in - app guides, offers)",
+    "Expansion signals for upsell / cross - sell",
+    "Executive QBR reports and cohort analytics",
+    "Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment";
+  ]}
+    industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
+    canonical="https: //ziontechgroup.com / ai - customer - success - platform";
+  />);
+<<<<<<< HEAD
+}
+
+
+<<<<<<< HEAD
+=======
+=======
+
+
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
+;
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+export default function AICustomerSuccessPlatform() {
+	return (
+		<ServiceLanding
+
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+export default function AICustomerSuccessPlatform() {
+	return (
+		<ServiceLanding
+			title="AI Customer Success Platform"
+			slug="ai-customer-success-platform"
+			description="Predict churn, orchestrate proactive outreach, and increase lifetime value. Our AI monitors accounts across product usage, tickets, billing, and NPS to trigger playbooks that prevent churn and expand revenue."
+			subtitle="Reduce churn by 20–45% and grow NRR with automated, data-driven customer health."
 			pricePerMonthUSD={1999}
-			implementationWeeks="Implementation:2–4 weeks";
-			roiNote="Average ROI 4–10x within 90 days";
-			features={[;
-				"Unified customer health scoring (usage, support, sentiment, billing)",;
-				"Churn risk prediction with explainable insights",;
-				"Playbook automation (email, CS tasks, in-app guides, offers)",;
-				"Expansion signals for upsell/cross-sell",;
-				"Executive QBR reports and cohort analytics",;
-				"Integrations:HubSpot, Salesforce, Zendesk, Intercom, Segment";
+			implementationWeeks="Implementation: 2–4 weeks"
+			roiNote="Average ROI 4–10x within 90 days"
+			features={[
+				"Unified customer health scoring (usage, support, sentiment, billing)"
+				"Churn risk prediction with explainable insights"
+				"Playbook automation (email, CS tasks, in-app guides, offers)"
+				"Expansion signals for upsell/cross-sell"
+				"Executive QBR reports and cohort analytics"
+
+				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
 			]}
 			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
-			canonical="https://ziontechgroup.com/ai-customer-success-platform";
-		/>;
-	);}
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
 
-const AICustomerSuccessPlatform: React.FC = () => {
-  return (
-    <Layout>
-      <Head>
-        <title>AI Customer Success Platform - Zion Tech Group</title>
-        <meta name="description" content="AI-powered customer success platform for retention and growth" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">AI Customer Success Platform</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Drive customer success and retention with our AI-powered platform that predicts and prevents churn.
-          </p>
-        </div>
+export default function AICustomerSuccessPlatform() {_return (
+		<ServiceLanding
+			title=&quot;AI Customer Success Platform&quot;
+			slug=&quot;ai-customer-success-platform&quot;
+			description=&quot;Predict churn, orchestrate proactive outreach, and increase lifetime value. Our AI monitors accounts across product usage, tickets, billing, and NPS to trigger playbooks that prevent churn and expand revenue.&quot;
+			subtitle=&quot;Reduce churn by 20–45% and grow NRR with automated, data-driven customer health.&quot;
+			pricePerMonthUSD={1999}
+			implementationWeeks=&quot;Implementation: 2–4 weeks&quot;
+			roiNote=&quot;Average ROI 4–10x within 90 days&quot;
+			features={[
+				&quot;Unified customer health scoring (usage, support, sentiment, billing)&quot;,
+				&quot;Churn risk prediction with explainable insights&quot;,
+				&quot;Playbook automation (email, CS tasks, in-app guides, offers)&quot;,
+				&quot;Expansion signals for upsell/cross-sell&quot;,
+				&quot;Executive QBR reports and cohort analytics&quot;,
+				&quot;Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment&quot;
+			]}
+		/>
+	)
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Churn Prediction</h3>
-            <p className="text-gray-600 mb-4">
-              Identify at-risk customers before they churn with advanced AI algorithms.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Risk scoring</li>
-              <li>• Early warning signals</li>
-              <li>• Behavioral analysis</li>
-              <li>• Predictive modeling</li>
-            </ul>
-          </div>
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Success Automation</h3>
-            <p className="text-gray-600 mb-4">
-              Automate customer success workflows and interventions based on AI insights.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Automated workflows</li>
-              <li>• Intervention triggers</li>
-              <li>• Task automation</li>
-              <li>• Follow-up scheduling</li>
-            </ul>
-          </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Growth Insights</h3>
-            <p className="text-gray-600 mb-4">
-              Get actionable insights to drive customer growth and expansion.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Expansion opportunities</li>
-              <li>• Usage analytics</li>
-              <li>• Success metrics</li>
-              <li>• Growth recommendations</li>
-            </ul>
-          </div>
-        </div>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+			pricePerMonthUSD={1999  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
 
-        <div className="bg-emerald-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Drive Customer Success</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Transform your customer success operations with AI-powered insights and automation.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700">
-              Get Started
-            </a>
-            <a href="/about" className="border border-emerald-600 text-emerald-600 px-6 py-3 rounded-lg hover:bg-emerald-50">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </main>
-    </Layout>
-  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+			implementationWeeks="Implementation: 2–4 weeks"
+			roiNote="Average ROI 4–10x within 90 days"
+			features={[
+				"Unified customer health scoring (usage, support, sentiment, billing)",
+				"Churn risk prediction with explainable insights",
+				"Playbook automation (email, CS tasks, in-app guides, offers)",
+				"Expansion signals for upsell/cross-sell",
+				"Executive QBR reports and cohort analytics",
+				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+			]}
+			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
+			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
+		/>
+	)
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["SaaS", "Fintech", "Media", "E‑commerce"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/ai-customer-success-platform";
+		/>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-export default AICustomerSuccessPlatform;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -142,6 +142,7 @@ const ServicesPage: NextPage = () => {
 };
 
 export default ServicesPage;
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, ArrowRight, Star, CheckCircle } from 'lucide-react';
@@ -328,6 +329,10 @@ export default function ServicesIndexPage() {
     );
     return acc;
   }, {} as Record<string, Service[]>);
+
+
+
+
 
   return (
     <Layout>

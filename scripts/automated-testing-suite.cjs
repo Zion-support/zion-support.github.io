@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 console.log('🧪 Automated Testing Suite');
-console.log('=====');
+console.log('==========================');
 
 async function runTests() {
   const tests = [

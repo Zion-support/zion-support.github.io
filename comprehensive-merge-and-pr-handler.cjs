@@ -111,7 +111,7 @@ class ComprehensiveMergeAndPRHandler {
       const mergeScript = `#!/bin/bash
 # Manual PR merge script
 echo "🚀 Manual PR Merge Script"
-echo "===="
+echo "========================="
 
 # Switch to main branch
 git checkout main

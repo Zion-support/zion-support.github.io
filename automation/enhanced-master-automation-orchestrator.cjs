@@ -62,7 +62,7 @@ class EnhancedMasterAutomationOrchestrator {
 
   async runDependencyFix() {
     this.log('\n🔧 PHASE 1: DEPENDENCY FIXING');
-    this.log('=');
+    this.log('=============================');
     
     const result = await this.runScript('Dependency Fixer', 'automation/dependency-fixer.cjs');
     this.results.dependencyFix = result;
@@ -71,7 +71,7 @@ class EnhancedMasterAutomationOrchestrator {
 
   async runMergeConflictFix() {
     this.log('\n🔀 PHASE 2: MERGE CONFLICT RESOLUTION');
-    this.log('==');
+    this.log('=====================================');
     
     const result = await this.runScript('Merge Conflict Resolver', 'scripts/fix-merge-conflicts.cjs');
     this.results.mergeConflictFix = result;
@@ -80,7 +80,7 @@ class EnhancedMasterAutomationOrchestrator {
 
   async runTypeScriptFix() {
     this.log('\n📝 PHASE 3: TYPESCRIPT FIXING');
-    this.log('==');
+    this.log('==============================');
     
     const result = await this.runScript('TypeScript Fixer', 'automation/typescript-fixer.cjs');
     this.results.typescriptFix = result;
@@ -89,7 +89,7 @@ class EnhancedMasterAutomationOrchestrator {
 
   async runLintingFix() {
     this.log('\n🧹 PHASE 4: LINTING FIXES');
-    this.log('=====');
+    this.log('==========================');
     
     try {
       // Run ESLint with auto-fix
@@ -111,7 +111,7 @@ class EnhancedMasterAutomationOrchestrator {
 
   async runSecurityScan() {
     this.log('\n🛡️ PHASE 5: SECURITY SCAN');
-    this.log('=====');
+    this.log('==========================');
     
     const result = await this.runScript('Security Scanner', 'automation/security-scanner.cjs');
     this.results.securityScan = result;
@@ -120,7 +120,7 @@ class EnhancedMasterAutomationOrchestrator {
 
   async runPerformanceOptimization() {
     this.log('\n⚡ PHASE 6: PERFORMANCE OPTIMIZATION');
-    this.log('==');
+    this.log('=====================================');
     
     const result = await this.runScript('Performance Optimizer', 'automation/performance-optimizer.cjs');
     this.results.performanceOptimize = result;
@@ -129,7 +129,7 @@ class EnhancedMasterAutomationOrchestrator {
 
   async runBuildTest() {
     this.log('\n🏗️ PHASE 7: BUILD TEST');
-    this.log('==');
+    this.log('=======================');
     
     try {
       const startTime = Date.now();
@@ -153,7 +153,7 @@ class EnhancedMasterAutomationOrchestrator {
 
   async runTestSuite() {
     this.log('\n🧪 PHASE 8: TEST SUITE');
-    this.log('==');
+    this.log('=======================');
     
     const result = await this.runScript('Test Suite', 'npm', ['run', 'test:smoke']);
     this.results.testSuite = result;
@@ -180,7 +180,7 @@ class EnhancedMasterAutomationOrchestrator {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
     this.log('\n📊 ENHANCED AUTOMATION ORCHESTRATOR REPORT');
-    this.log('');
+    this.log('==========================================');
     this.log(`Total Duration: ${Math.round(totalDuration / 1000)}s`);
     this.log(`Phases Completed: ${report.summary.successfulPhases}/${report.summary.totalPhases}`);
     this.log(`Overall Success: ${report.summary.overallSuccess ? '✅' : '❌'}`);
@@ -202,7 +202,7 @@ class EnhancedMasterAutomationOrchestrator {
 
   async run() {
     this.log('🎯 ENHANCED MASTER AUTOMATION ORCHESTRATOR');
-    this.log('');
+    this.log('==========================================');
     this.log('Starting comprehensive automation workflow...');
     
     try {

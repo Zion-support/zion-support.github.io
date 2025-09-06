@@ -145,7 +145,8 @@ class ErrorFixerAutomation {
 
       // Check for common corruption patterns
       const corruptionPatterns = [
-        /        /""',';';'/,
+        />>>>>>> cursor/,
+        /""',';';'/,
         /';';';'/,
         /""';';';'/,
         /,\s*$/,

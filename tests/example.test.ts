@@ -7,4 +7,3 @@ describe('Example Test Suite',() => { it('should pass basic test',() => { expect
 });''
 });''
 });''
-});''

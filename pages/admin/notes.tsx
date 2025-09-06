@@ -1,95 +1,182 @@
-import { useEffect, useState } from 'react',;
-;
-type Note = {;
-  id:string,;
-  targetType:string,;
-  targetId:string,;
-  text:string,;
-  authorId:string,;
-  createdAt:number;
-},;
-;
-export default function AdminNotesConsole() {;
-  const [isAdmin, setIsAdmin] = useState(true),;
-  const [notes, setNotes] = useState<Note[]>([]),;
-  const [loading, setLoading] = useState(false),;
-;
-  useEffect(() => {;
-    async function load() {;
-      setLoading(true),;
-      try {;
-        const res = await fetch('/api/admin/notes-all', { headers:{ 'X-Admin':isAdmin ? 'true' :'false' } }),;
+
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+
+
+  useEffect(() => {
+    async function load() {
+      setLoading(true)
+      try {
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  id: string,
+  target_type: string,
+  target_id: string,
+  text: string,
+  author_id: string,
+  created_at: number;
+},
+export default /**
+ * AdminNotesConsole - Function description
+ */
+function AdminNotesConsole() {
+  const [is_admin, setIsAdmin] = useState (true),
+  const [notes, set_notes] = useState < Note[]>([]),
+  const [loading, set_loading] = useState (false),
+  useEffect (() => {
+    async /**
+ * load - Function description
+ */
+function load() {
+      set_loading (true),
+      try {
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
         if (!res.ok) return,;
-        const data = await res.json(),;
-        setNotes(data.notes || []),;
+        const data = await res.json();
+        setNotes(data.notes || []);
       } finally {;
-        setLoading(false),;
+        setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } finally {
+        set_loading (false);
       }
     }
-    if (isAdmin) load(),;
-  }, [isAdmin]),;
-;
-  return (;
-    <div className="space-y-4">;
-      <div className="flex items-center justify-between">;
-        <h1 className="text-xl font-semibold">Admin Notes</h1>;
-        <label className="inline-flex items-center gap-2 text-sm">;
-          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />;
-          <span>Admin</span>;
-        </label>;
-      </div>;
-;
-      {loading ? (;
-        <div>Loading…</div>;
-      ) :notes.length === 0 ? (;
-        <div className="opacity-70">No notes found.</div>;
-      ) :(;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">;
-          {notes.map((n) => (;
-            <div key={n.id} className="rounded border p-3 text-sm">;
-              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>;
-              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>;
-              <div>{n.text}</div>;
-            </div>;
-interface Note {
-  id: string;
-  title: string;
-  content: string;
-  author: string;
-  createdAt: string;
-  updatedAt: string;
-  tags: string[];
-  isPrivate: boolean;
-}
 
-export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true),
-  const [notes, setNotes] = useState<Note[]>([]),
-  const [loading, setLoading] = useState(false),
-  useEffect_(() => {
-    async function load() {
-      setLoading(true),
+
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+type Note = {
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+};
+export default function AdminNotesConsole(req, res) {
+  try {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
       try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
-        if (!res.ok) return,
-        const data = await res.json(),
-        setNotes(data.notes || [])
-      } finally {
-        setLoading(false)
-      }    }
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
+        if (!res.ok) return,;
+        const data = await res.json();
+        setNotes(data.notes || []);
+      } finally {;
+        setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     if (isAdmin) load()
   }, [isAdmin]),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h1 className="text-xl font-semibold">Admin Notes</h1>
+        <label className="inline-flex items-center gap-2 text-sm">
+          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+          <span>Admin</span>
+        </label>
+      </div>
+      {loading ? (
+        <div>Loading…</div>
+      ) : notes.length === 0 ? (
+        <div className="opacity-70">No notes found.</div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {notes.map((n) => (
+            <div key={n.id} className="rounded border p-3 text-sm">
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+=======
+}
+<<<<<<< HEAD
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+
+=======
+    if (load ()) {
+  $2
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+  }, [is_admin]),
+  return (
+    <div className="space - y-4">;
+      <div className="flex items - center justify - between">;
+        <h1 className="text - xl font - semibold">Admin Notes</h1>;
+        <label className="inline - flex items - center gap - 2 text - sm">;
+          <input type="checkbox" checked={is_admin} on_change={(e) => setIsAdmin (e.target.checked)} />;
+          <span > Admin</span>;
+        </label>;
+      </div>;
+      {loading ? (
+        <div > Loading…</div>) : notes.length === 0 ? (
+        <div className="opacity - 70">No notes found.</div>) : (
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 3">;
+          {notes.map ((n) => (
+            <div key={n.id} className="rounded border p - 3 text - sm">;
+              <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
+              <div className="font - medium mb - 1">{n.target_type} • {n.target_id}</div>;
+              <div>{n.text}</div>;
+            </div>))}
+        </div>)}
+    </div>);
+<<<<<<< HEAD
+}
+
+
+=======
+    }
+    if (isAdmin) load()
+  }, [isAdmin]);
 
   return (
     <div className=&quot;space-y-4&quot;>
       <div className=&quot;flex items-center justify-between&quot;>
         <h1 className=&quot;text-xl font-semibold&quot;>Admin Notes</h1>
         <label className=&quot;inline-flex items-center gap-2 text-sm&quot;>
-          <input type=&quot;checkbox&quot; checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />          <span>Admin</span>
+          <input type=&quot;checkbox&quot; checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+          <span>Admin</span>
         </label>
       </div>
 
-      {loading ? (
+      {_loading ? (
         <div>Loading…</div>
       ) : notes.length === 0 ? (
         <div className=&quot;opacity-70&quot;>No notes found.</div>
@@ -99,189 +186,59 @@ export default function AdminNotesConsole() {
             <div key={n.id} className=&quot;rounded border p-3 text-sm&quot;>
               <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
               <div className=&quot;font-medium mb-1&quot;>{n.targetType} • {n.targetId}</div>
-              <div>{n.text}</div>            </div>
-          ))}
-        </div>;
-      )}
-    </div>;
-  ),;}
-const mockNotes: Note[] = [
-  {
-    id: '1',
-    title: 'Project Alpha Status Update',
-    content: 'The Alpha project is progressing well. We have completed 75% of the planned features and are on track for the Q1 release.',
-    author: 'John Doe',
-    createdAt: '2025-01-15T09:00:00Z',
-    updatedAt: '2025-01-15T09:00:00Z',
-    tags: ['project', 'alpha', 'status'],
-    isPrivate: false
-  },
-  {
-    id: '2',
-    title: 'Security Audit Findings',
-    content: 'Critical security vulnerabilities found in the authentication system. Immediate action required.',
-    author: 'Jane Smith',
-    createdAt: '2025-01-15T10:30:00Z',
-    updatedAt: '2025-01-15T10:30:00Z',
-    tags: ['security', 'audit', 'critical'],
-    isPrivate: true
-  },
-  {
-    id: '3',
-    title: 'Team Meeting Notes',
-    content: 'Discussed upcoming features and resource allocation. Need to hire 2 additional developers.',
-    author: 'Mike Johnson',
-    createdAt: '2025-01-15T14:00:00Z',
-    updatedAt: '2025-01-15T14:00:00Z',
-    tags: ['meeting', 'team', 'hiring'],
-    isPrivate: false
-  }
-];
+=======
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
+        if (!res.ok) return
+        const data = await res.json()
+        setNotes(data.notes |[])
+      } finally {
+        setLoading(false)
+      }
+    }
+    if (isAdmin) load()
+  }, [isAdmin])
 
-const AdminNotesPage: React.FC = () => {
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterTag, setFilterTag] = useState('');
-  const [showPrivate, setShowPrivate] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading notes
-    setTimeout(() => {
-      setNotes(mockNotes);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  const filteredNotes = notes.filter(note => {
-    const matchesSearch = note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         note.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         note.author.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTag = !filterTag || note.tags.includes(filterTag);
-    const matchesPrivacy = !note.isPrivate || showPrivate;
-    return matchesSearch && matchesTag && matchesPrivacy;
-  });
-
-  const allTags = Array.from(new Set(notes.flatMap(note => note.tags)));
-
-  return (
-    <>
-      <Head>
-        <title>Admin Notes - Zion Tech Group</title>
-        <meta name="description" content="Admin notes and documentation" />
-      </Head>
-      <main className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Admin Notes</h1>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-            Add New Note
-          </button>
-        </div>
-
-        {/* Filters */}
-        <div className="bg-white rounded-lg shadow p-6 mb-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <label className="block text-sm font-medium mb-2">Search</label>
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search notes..."
-                className="w-full p-2 border rounded-md"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Filter by Tag</label>
-              <select
-                value={filterTag}
-                onChange={(e) => setFilterTag(e.target.value)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="">All Tags</option>
-                {allTags.map(tag => (
-                  <option key={tag} value={tag}>{tag}</option>
-                ))}
-              </select>
-            </div>
-            <div className="flex items-center">
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  checked={showPrivate}
-                  onChange={(e) => setShowPrivate(e.target.checked)}
-                  className="mr-2"
-                />
-                <span>Show Private Notes</span>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        {/* Notes List */}
-        {loading ? (
-          <div className="text-center py-8">Loading notes...</div>
-        ) : filteredNotes.length === 0 ? (
-          <div className="text-center py-8 text-gray-500">
-            No notes found matching your criteria.
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {filteredNotes.map((note) => (
-              <div key={note.id} className="bg-white rounded-lg shadow p-6">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-semibold">{note.title}</h3>
-                  <div className="flex items-center gap-2">
-                    {note.isPrivate && (
-                      <span className="px-2 py-1 bg-red-100 text-red-800 rounded text-xs">
-                        Private
-                      </span>
-                    )}
-                    <span className="text-sm text-gray-500">
-                      {new Date(note.updatedAt).toLocaleDateString()}
-                    </span>
-                  </div>
-                </div>
-                
-                <p className="text-gray-700 mb-4">{note.content}</p>
-                
-                <div className="flex justify-between items-center">
-                  <div className="flex flex-wrap gap-2">
-                    {note.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs cursor-pointer hover:bg-blue-200"
-                        onClick={() => setFilterTag(tag)}
-                      >
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="text-sm text-gray-500">
-                    By {note.author}
-                  </div>
-                </div>
-                
-                <div className="mt-4 flex gap-2">
-                  <button className="text-blue-600 hover:text-blue-800 text-sm">
-                    Edit
-                  </button>
-                  <button className="text-red-600 hover:text-red-800 text-sm">
-                    Delete
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 text-sm">
-                    Share
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
-    </>
-  );
+=======
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react',;
+;
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+type Note = {
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
 };
+export default function AdminNotesConsole(req, res) {
+  try {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+      try {
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
+        if (!res.ok) return,;
+        const data = await res.json();
+        setNotes(data.notes || []);
+      } finally {;
+        setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-export default AdminNotesPage;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

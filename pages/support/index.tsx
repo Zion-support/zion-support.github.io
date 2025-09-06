@@ -1,20 +1,86 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/help',
+<<<<<<< HEAD
+=======
+      permanent: false}}
+},
+export default /**
+ * SupportRedirect - Function description
+ */
+function SupportRedirect() { return null }
+
+import { GetServerSideProps } from 'next';
+
 import { GetServerSideProps } from 'next',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/help'
+      permanent: false}}
+},
 ;
-export const getServerSideProps:GetServerSideProps = async () => {;
+export default function SupportRedirect() { return null };
+import { GetServerSideProps } from 'next';
+export const getServerSideProps: GetServerSideProps = async () => {;
   return {;
-    redirect:{;
-      destination:'/help',;
-      permanent:false}},;
-},;
-;
-export default function SupportRedirect() { return null, }import React from 'react';
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>support index</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
-  );
+    redirect: {;
+      destination: '/help';
+      permanent: false}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+};
+export default function SupportRedirect() { return null   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      permanent: false}}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/help',
+      permanent: false}}
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

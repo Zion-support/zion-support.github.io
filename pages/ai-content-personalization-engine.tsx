@@ -1,105 +1,175 @@
-import React from 'react',;
-import ServiceLanding from '../components/sections/ServiceLanding',;
-;
-export default function AIContentPersonalizationEngine() {;
-	return (;
-		<ServiceLanding;
-			title="AI Content Personalization Engine";
-			slug="ai-content-personalization-engine";
-			description="Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions.";
-			subtitle="Boost conversions 10–25% with context-aware personalization.";
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+=======
+
+
+			pricePerMonthUSD={1299  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+			implementationWeeks="Implementation: 2–4 weeks"
+			roiNote="Average ROI 3–6x within 90 days"
+			features={[
+				"Segmentation and propensity modeling",
+				"Real-time content and offer selection",
+				"A/B/n and multi-armed bandit experimentation",
+				"Journey orchestration across channels",
+				"Privacy-safe profiling and consent management",
+				"Integrations: CDP, ESP, CMS, Web SDK"
+
+
+}
+import React from 'react',
+import ServiceLanding from '../components / sections / ServiceLanding',
+export default /**
+ * AIContentPersonalizationEngine - Function description
+ */
+function AIContentPersonalizationEngine() {
+return (
+  <ServiceLanding;
+  title="AI Content Personalization Engine";
+  slug="ai - content - personalization - engine";
+  description="Deliver tailored content, offers, and UX per user in real - time. Optimize journeys across web, email, and in - app to maximize engagement and conversions.";
+  subtitle="Boost conversions 10–25% with context - aware personalization.";
+  pricePerMonthUSD={1299}
+    implementation_weeks="Implementation: 2–4 weeks";
+  roi_note="Average ROI 3–6x within 90 days";
+  features={[;
+    "Segmentation and propensity modeling",
+    "Real - time content and offer selection",
+    "A / B/n and multi - armed bandit experimentation",
+    "Journey orchestration across channels",
+    "Privacy - safe profiling and consent management",
+    "Integrations: CDP, ESP, CMS, Web SDK";
+  ]}
+    industries={["E‑commerce", "Media", "SaaS", "Education"]}
+    canonical="https: //ziontechgroup.com / ai - content - personalization - engine";
+  />);
+		/>
+	)
+
+}
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIContentPersonalizationEngine() {
+	return (
+		<ServiceLanding
+
+			title="AI Content Personalization Engine"
+			slug="ai-content-personalization-engine"
+			description="Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions."
+			subtitle="Boost conversions 10–25% with context-aware personalization."
 			pricePerMonthUSD={1299}
-			implementationWeeks="Implementation:2–4 weeks";
-			roiNote="Average ROI 3–6x within 90 days";
-			features={[;
-				"Segmentation and propensity modeling",;
-				"Real-time content and offer selection",;
-				"A/B/n and multi-armed bandit experimentation",;
-				"Journey orchestration across channels",;
-				"Privacy-safe profiling and consent management",;
-				"Integrations:CDP, ESP, CMS, Web SDK";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+			implementationWeeks="Implementation: 2–4 weeks"
+			roiNote="Average ROI 3–6x within 90 days"
+			features={[
+				"Segmentation and propensity modeling"
+				"Real-time content and offer selection"
+				"A/B/n and multi-armed bandit experimentation"
+				"Journey orchestration across channels"
+				"Privacy-safe profiling and consent management"
+
+				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
-			canonical="https://ziontechgroup.com/ai-content-personalization-engine";
-		/>;
-	);}
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
-const AIContentPersonalizationEngine: React.FC = () => {
-  return (
-    <Layout>
-      <Head>
-        <title>AI Content Personalization Engine - Zion Tech Group</title>
-        <meta name="description" content="Personalize content for each user with AI-powered personalization engine" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">AI Content Personalization Engine</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Deliver personalized content experiences to each user with our AI-powered personalization engine.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">User Profiling</h3>
-            <p className="text-gray-600 mb-4">
-              Build detailed user profiles based on behavior, preferences, and interactions.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Behavior analysis</li>
-              <li>• Preference learning</li>
-              <li>• Demographic insights</li>
-              <li>• Engagement patterns</li>
-            </ul>
-          </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Content Adaptation</h3>
-            <p className="text-gray-600 mb-4">
-              Automatically adapt content to match user preferences and context.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Dynamic content generation</li>
-              <li>• A/B testing</li>
-              <li>• Real-time adaptation</li>
-              <li>• Multi-variant content</li>
-            </ul>
-          </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Performance Optimization</h3>
-            <p className="text-gray-600 mb-4">
-              Continuously optimize personalization based on user engagement and feedback.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Engagement tracking</li>
-              <li>• Conversion optimization</li>
-              <li>• Machine learning</li>
-              <li>• Performance analytics</li>
-            </ul>
-          </div>
-        </div>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+			pricePerMonthUSD={1299  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-        <div className="bg-teal-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Personalize Your Content</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Create personalized experiences that engage and convert your audience.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700">
-              Get Started
-            </a>
-            <a href="/about" className="border border-teal-600 text-teal-600 px-6 py-3 rounded-lg hover:bg-teal-50">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </main>
-    </Layout>
-  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+			implementationWeeks="Implementation: 2–4 weeks"
+			roiNote="Average ROI 3–6x within 90 days"
+			features={[
+				"Segmentation and propensity modeling",
+				"Real-time content and offer selection",
+				"A/B/n and multi-armed bandit experimentation",
+				"Journey orchestration across channels",
+				"Privacy-safe profiling and consent management",
+				"Integrations: CDP, ESP, CMS, Web SDK"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+			]}
+			industries={["E‑commerce", "Media", "SaaS", "Education"]}
+			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
+		/>
+	)
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["E‑commerce", "Media", "SaaS", "Education"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-export default AIContentPersonalizationEngine;
+			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/ai-content-personalization-engine";
+		/>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

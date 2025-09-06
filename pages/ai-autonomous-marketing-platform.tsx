@@ -1,26 +1,69 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
+}
+export default /**
+ * AIAutonomousMarketingPlatform - Function description
+ */
+function AIAutonomousMarketingPlatform() {
+return <ServicePage {...props} />;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+}
+
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
+}
+export default function AIAutonomousMarketingPlatform(props: any) {
+	return <ServicePage {...props} />
+}
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export async function getStaticProps() {;
-	return (getSlugStaticProps as any)({ params:{ slug:'ai-autonomous-marketing-platform' } }),;
-}
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
-export default function AIAutonomousMarketingPlatform(props:any) {;
-	return <ServicePage {...props} />,;
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
 }
-const AIAutonomousMarketingPlatform: React.FC = () => {
-  return (
-    <Layout>
-      <Head>
-        <title>AI Autonomous Marketing Platform - Zion Tech Group</title>
-        <meta name="description" content="Fully autonomous marketing platform powered by AI" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">AI Autonomous Marketing Platform</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Run your entire marketing operation autonomously with AI that creates, optimizes, and manages campaigns.
-          </p>
-        </div>
-
-export default function AIAutonomousMarketingPlatform(props: any) {
-	return <ServicePage {...props} />}
+export default /**
+ * AIAutonomousMarketingPlatform - Function description
+ */
+function AIAutonomousMarketingPlatform() {
+return <ServicePage {...props} />;
+}
+<<<<<<< HEAD
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

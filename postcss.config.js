@@ -1,10 +1,11 @@
-},;
-module.exports = {;
-  plugins:{;
-    tailwindcss:{},;
-    autoprefixer:{}}},;module.exports = {
+<<<<<<< HEAD
+export default {
+  plugins: {
+=======
+module.exports = {
   plugins: {
     tailwindcss: {},
+>>>>>>> main
     autoprefixer: {},
   },
 }

@@ -6,7 +6,7 @@
 set -e
 
 echo "🚀 Starting Ultimate Intelligent PM2 System..."
-echo "===="
+echo "=============================================="
 
 # Colors for output
 RED='\033[0;31m'

@@ -20,7 +20,6 @@ module.exports = {}
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z',
       "merge_logs": true;
     },
-
     // Intelligent Error Fixer (runs every 3 minutes);
     {}
       "name": 'intelligent-error-fixer',
@@ -43,7 +42,6 @@ module.exports = {}
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z',
       "merge_logs": true;
     },
-
     // Syntax Error Monitor (runs every 2 minutes);
     {}
       "name": 'syntax-error-monitor',
@@ -65,7 +63,6 @@ module.exports = {}
       "out_file": './automation/logs/syntax-error-monitor-out.log',
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Build Error Detector (runs every 10 minutes);
     {}
       "name": 'build-error-detector',
@@ -87,7 +84,6 @@ module.exports = {}
       "out_file": './automation/logs/build-error-detector-out.log',
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Security Vulnerability Fixer (runs every 30 minutes);
     {}
       "name": 'security-fixer',
@@ -109,7 +105,6 @@ module.exports = {}
       "out_file": './automation/logs/security-fixer-out.log',
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Dependency Health Monitor (runs every hour);
     {}
       "name": 'dependency-health-monitor',
@@ -131,7 +126,6 @@ module.exports = {}
       "out_file": './automation/logs/dependency-health-out.log',
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Quality Assurance Monitor (runs every 15 minutes);
     {}
       "name": 'quality-monitor',
@@ -153,7 +147,6 @@ module.exports = {}
       "out_file": './automation/logs/quality-monitor-out.log',
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Performance Monitor (runs every 20 minutes);
     {}
       "name": 'performance-monitor',
@@ -175,7 +168,6 @@ module.exports = {}
       "out_file": './automation/logs/performance-monitor-out.log',
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Link Integrity Checker (runs every 4 hours);
     {}
       "name": 'link-integrity-checker',
@@ -197,7 +189,6 @@ module.exports = {}
       "out_file": './automation/logs/link-integrity-out.log',
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     },
-
     // Code Improvement Monitor (runs every 6 hours);
     {}
       "name": 'code-improvement-monitor',
@@ -220,7 +211,6 @@ module.exports = {}
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     };
   ],
-
   "deploy": {}
     production: {}
       user: 'node',

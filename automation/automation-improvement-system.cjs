@@ -10,7 +10,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Zion Tech Group - Automation Improvement System');
-console.log('=');
+console.log('==================================================');
 
 const improvements = {
     timestamp: new Date().toISOString(),
@@ -65,7 +65,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🔒 Zion Tech Group - Enhanced Security Scanner');
-console.log('====');
+console.log('==============================================');
 
 const securityReport = {
     timestamp: new Date().toISOString(),
@@ -196,7 +196,7 @@ const reportPath = 'enhanced-security-scan-report.json';
 fs.writeFileSync(reportPath, JSON.stringify(securityReport, null, 2));
 
 console.log('\\n📊 Enhanced Security Scan Summary');
-console.log('======');
+console.log('==================================');
 console.log(\`Total Checks: \${securityReport.summary.total}\`);
 console.log(\`✅ Passed: \${securityReport.summary.passed}\`);
 console.log(\`⚠️  Warnings: \${securityReport.summary.warnings}\`);
@@ -235,7 +235,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('⚡ Zion Tech Group - Performance Optimizer');
-console.log('');
+console.log('==========================================');
 
 const performanceReport = {
     timestamp: new Date().toISOString(),
@@ -341,7 +341,7 @@ const reportPath = 'performance-optimization-report.json';
 fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
 
 console.log('\\n📊 Performance Optimization Summary');
-console.log('=');
+console.log('====================================');
 console.log(\`Recommendations: \${performanceReport.recommendations.length}\`);
 console.log(\`High Priority: \${performanceReport.recommendations.filter(r => r.priority === 'high').length}\`);
 console.log(\`Medium Priority: \${performanceReport.recommendations.filter(r => r.priority === 'medium').length}\`);
@@ -371,7 +371,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Zion Tech Group - Deployment Automation');
-console.log('');
+console.log('==========================================');
 
 const deploymentReport = {
     timestamp: new Date().toISOString(),
@@ -522,7 +522,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('📊 Zion Tech Group - Monitoring Dashboard');
-console.log('======');
+console.log('=========================================');
 
 const monitoringData = {
     timestamp: new Date().toISOString(),
@@ -692,7 +692,7 @@ const reportPath = 'monitoring-data.json';
 fs.writeFileSync(reportPath, JSON.stringify(monitoringData, null, 2));
 
 console.log('\\n📊 Monitoring Summary');
-console.log('');
+console.log('=====================');
 console.log(\`Alerts: \${monitoringData.alerts.length}\`);
 console.log(\`System Status: \${monitoringData.alerts.length === 0 ? 'Healthy' : 'Needs Attention'}\`);
 
@@ -747,7 +747,7 @@ async function main() {
     fs.writeFileSync(reportPath, JSON.stringify(improvements, null, 2));
     
     console.log('\n📊 Automation Improvement Summary');
-    console.log('======');
+    console.log('==================================');
     console.log(`Scripts analyzed: ${improvements.analysis.scriptCount}`);
     console.log(`New scripts created: ${improvements.newScripts.length}`);
     console.log(`Recommendations: ${improvements.recommendations.length}`);

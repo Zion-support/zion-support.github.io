@@ -1,38 +1,66 @@
 const nextJest = require('next/jest');
-;
-const createJestConfig = nextJest({;
-  di:r:'./',;
+
+const createJestConfig = nextJest({
+  dir: './',
 });
-;
-const config = {;
-  testEnvironmen:t:'jsdom',;
-  setupFilesAfterEn:v:['<rootDir>/jest.setup.js'],;
-  testMatc:h:[;
-    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',;
-    '**/*.smoke.(test|spec).(js|jsx|ts|tsx)',;
-  ],;
-  collectCoverag:e:false,;
-  verbos:e:true,;
-  testTimeou:t:10000,;
-  transfor:m:{;
-    '^.+\\.(js|jsx|ts|tsx)$':['babel-jest', { preset:s:['next/babel'] }],;
-  },;
-  moduleFileExtension:s:['ts', 'tsx', 'js', 'jsx', 'json'],;
-  testPathIgnorePattern:s:['<rootDir>/.next/', '<rootDir>/node_modules/'],;  testMatch: [
-    '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
-    '**/*.smoke.(test|spec).(js|jsx|ts|tsx)'
-  ],
-  collectCoverage: false,
-  verbose: true,
-  testTimeout: 10000,
+
+<<<<<<< HEAD
+const customJestConfig = {
+=======
+const config = {
+  testEnvironment: 'jsdom',
+>>>>>>> main
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+  },
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' } }],
+        ['@babel/preset-react', { runtime: 'automatic' }],
+        '@babel/preset-typescript'
+      ]
+    }]
+  },
+  testMatch: [
+    '<rootDir>/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
+    '<rootDir>/**/*.smoke.test.(js|jsx|ts|tsx)'
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/build/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/temp_exclude/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/temp_backup/',
+    '<rootDir>/temp_components/',
+    '<rootDir>/temp_conflicts/',
+    '<rootDir>/temp_working/',
+  ],
+<<<<<<< HEAD
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  verbose: true,
+  collectCoverage: false,
+  testTimeout: 30000,
+};
+
+module.exports = createJestConfig(customJestConfig);
+=======
+  coverageThreshold: {
+    global: {
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70,
+    },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
-;
-module.exports = createJestConfig(config);
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
 };
 
 module.exports = createJestConfig(config);
+>>>>>>> main

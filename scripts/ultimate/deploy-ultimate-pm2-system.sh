@@ -225,7 +225,7 @@ EOF
 # Main deployment function
 main() {
     log "🚀 Starting Ultimate PM2 System Deployment"
-    log ""
+    log "=========================================="
     
     # Check if running as root
     if [ "$EUID" -eq 0 ]; then
@@ -257,7 +257,7 @@ main() {
     generate_report
     
     log "🎉 Ultimate PM2 System Deployment Completed Successfully!"
-    log ""
+    log "========================================================"
     
     # Display final status
     info "Final Status:"

@@ -1,195 +1,287 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
-;
-const ADMIN_KEY = typeof window === 'undefined' ? '' :(localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),;
-;
-const AdminReviewsPage:NextPage = () => {;
-  const [pending, setPending] = useState<Review[]>([]),;
-  const [all, setAll] = useState<Review[]>([]),;
-  const [adminKey, setAdminKey] = useState(''),;
-;
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
+
+const AdminReviewsPage: NextPage = () => {
+  const [pending, setPending] = useState<Review[]>([]),
+  const [all, setAll] = useState<Review[]>([]),
+  const [adminKey, setAdminKey] = useState(''),
+
+  async function refresh() {
+    const res = await fetch('/api/admin/debug/reviews'),
+    const data = await res.json(),
+    if (res.ok) {
+      setAll(data.reviews),
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
+    }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
+
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') |'dev-admin-key')
+const AdminReviewsPage: NextPage = () => {
+  const [pending, setPending] = useState<Review[]>([])
+  const [all, setAll] = useState<Review[]>([])
+  const [adminKey, setAdminKey] = useState('')
+  async function refresh() {
+    const res = await fetch('/api/admin/debug/reviews')
+    const data = await res.json()
+    if (res.ok) {
+      setAll(data.reviews)
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
+    }
+  }
+  useEffect(() => { refresh() }, [])
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {
+    const res = await fetch('/api/reviews/moderate', {
+      method: 'POST'
+      headers: {
+<<<<<<< HEAD
+        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'
+    },
+    body: JSON.stringify({ action, reviewId })});
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    if (res.ok) refresh()
+  }
+<<<<<<< HEAD
+=======
+=======
+        'Content-Type': 'application/jsonx-admin-key': adminKey |'dev-admin-key'}
+      body: JSON.stringify({ action, reviewId })})
+    if (res.ok) refresh()
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
+const AdminReviewsPage: NextPage = () => {;
+  const [pending, setPending] = useState<Review[]>([]);
+  const [all, setAll] = useState<Review[]>([]);
+  const [adminKey, setAdminKey] = useState('');
   async function refresh() {;
-    const res = await fetch('/api/admin/debug/reviews'),;
-    const data = await res.json(),;
+    const res = await fetch('/api/admin/debug/reviews');
+    const data = await res.json();
     if (res.ok) {;
-      setAll(data.reviews),;
-      setPending(data.reviews.filter((r:Review) => !r.approved && !r.removed));
-    }
+      setAll(data.reviews);
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed));
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+    if (res.ok) refresh()
   }
-;
-  useEffect(() => { refresh(), }, []),;
-;
-  async function moderate(action:'approve' | 'remove', reviewId:string) {;
-    const res = await fetch('/api/reviews/moderate', {;
-      method:'POST',;
-      headers:{;
-        'Content-Type':'application/jsonx-admin-key':adminKey || 'dev-admin-key'},;
-      body:JSON.stringify({ action, reviewId })}),;
-    if (res.ok) refresh(),;
-  }
-;
-  return (;
-    <main className="max-w-5xl mx-auto p-6 space-y-6">;
-      <h1 className="text-2xl font-semibold">Review Moderation</h1>;
-;
-      <div className="enhanced-card">;
-        <label className="block text-sm mb-2">Admin Key</label>;
-        <input className="border p-2 rounded w-full" value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder="Enter admin key" />;
-      </div>;
-;
-      <section className="enhanced-card">;
-        <h2 className="text-xl font-semibold mb-4">Pending Reviews</h2>;
-        <div className="space-y-4">;
-          {pending.map((r) => (;
-            <div key={r.id} className="border rounded p-3">;
-              <div className="text-sm text-gray-600 mb-1">Project:{r.projectId} • To:{r.toRole} {r.toId}</div>;
-              <div className="font-medium">{r.rating}★ — {r.text}</div>;
-              <div className="mt-2 flex gap-2">;
-                <button className="enhanced-button enhanced-button-primary" onClick={() => moderate('approve', r.id)}>Approve</button>;
-                <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>;
-              </div>;
-            </div>;
-          ))}
-          {!pending.length && <div>No pending reviews.</div>}
-        </div>;
-      </section>;
-;
-      <section className="enhanced-card">;
-        <h2 className="text-xl font-semibold mb-2">All Reviews</h2>;
-        <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>;
-      </section>;
-    </main>;
-  ),;
-},;
-;
-interface Review {
-  id: string;
-  userId: string;
-  userName: string;
-  rating: number;
-  comment: string;
-  status: 'pending' | 'approved' | 'rejected';
-  createdAt: string;
-  projectId?: string;
-  projectName?: string;
 }
-
-const mockReviews: Review[] = [
-  {
-    id: '1',
-    userId: 'user123',
-    userName: 'John Doe',
-    rating: 5,
-    comment: 'Excellent work! The team delivered exactly what we needed on time and within budget.',
-    status: 'pending',
-    createdAt: '2025-01-15T10:00:00Z',
-    projectId: 'proj1',
-    projectName: 'E-commerce Platform'
-  },
-  {
-    id: '2',
-    userId: 'user456',
-    userName: 'Jane Smith',
-    rating: 4,
-    comment: 'Good communication and quality work. Would recommend for future projects.',
-    status: 'approved',
-    createdAt: '2025-01-14T15:30:00Z',
-    projectId: 'proj2',
-    projectName: 'Mobile App Development'
-  },
-  {
-    id: '3',
-    userId: 'user789',
-    userName: 'Mike Johnson',
-    rating: 2,
-    comment: 'Project was delayed and had some issues with the final deliverable.',
-    status: 'pending',
-    createdAt: '2025-01-13T09:15:00Z',
-    projectId: 'proj3',
-    projectName: 'Web Application'
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-];
+}
+;
+  useEffect(() => { refresh() }, []),;
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {;
+    const res = await fetch('/api/reviews/moderate', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},;
+      body: JSON.stringify({ action, reviewId })}),;
+    if (res.ok) refresh();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
 
-const AdminReviewsPage: React.FC = () => {
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState<'all' | 'pending' | 'approved' | 'rejected'>('all');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-  useEffect(() => {
-    // Simulate loading reviews
-    setTimeout(() => {
-      setReviews(mockReviews);
-      setLoading(false);
-    }, 1000);
-  }, []);
+    if (res.ok) refresh()
+=======
 
-  const handleStatusChange = (reviewId: string, newStatus: Review['status']) => {
-    setReviews(prev => 
-      prev.map(review => 
-        review.id === reviewId 
-          ? { ...review, status: newStatus }
-          : review
-      )
-    );
-  };
 
-  const filteredReviews = reviews.filter(review => 
-    filter === 'all' || review.status === filter
-  );
-
-  const pendingReviews = reviews.filter(r => r.status === 'pending');
-  const approvedReviews = reviews.filter(r => r.status === 'approved');
-  const rejectedReviews = reviews.filter(r => r.status === 'rejected');
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'approved': return 'bg-green-100 text-green-800';
-      case 'rejected': return 'bg-red-100 text-red-800';
-      case 'pending': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span
-        key={i}
-        className={`text-lg ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
-      >
-        ★
-      </span>
-    ));
-  };
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
-    <main className=&quot;max-w-5xl mx-auto p-6 space-y-6&quot;>
-      <h1 className=&quot;text-2xl font-semibold&quot;>Review Moderation</h1>
-
-      <div className=&quot;enhanced-card&quot;>
-        <label className=&quot;block text-sm mb-2&quot;>Admin Key</label>
-        <input className=&quot;border p-2 rounded w-full&quot; value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder=&quot;Enter admin key&quot; />
+    <main className="max-w-5xl mx-auto p-6 space-y-6">
+      <h1 className="text-2xl font-semibold">Review Moderation</h1>
+      <div className="enhanced-card">
+        <label className="block text-sm mb-2">Admin Key</label>
+        <input className="border p-2 rounded w-full" value={adminKey} onChange={(e) => setAdminKey(e.target.value)} placeholder="Enter admin key" />
       </div>
-
-      <section className=&quot;enhanced-card&quot;>
-        <h2 className=&quot;text-xl font-semibold mb-4&quot;>Pending Reviews</h2>
-        <div className=&quot;space-y-4&quot;>
+      <section className="enhanced-card">
+        <h2 className="text-xl font-semibold mb-4">Pending Reviews</h2>
+        <div className="space-y-4">
           {pending.map((r) => (
-            <div key={r.id} className=&quot;border rounded p-3&quot;>
-              <div className=&quot;text-sm text-gray-600 mb-1&quot;>Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
-              <div className=&quot;font-medium&quot;>{r.rating}★ — {r.text}</div>
-              <div className=&quot;mt-2 flex gap-2&quot;>
-                <button className=&quot;enhanced-button enhanced-button-primary&quot; onClick={() => moderate('approve', r.id)}>Approve</button>
-                <button className=&quot;enhanced-button enhanced-button-secondary&quot; onClick={() => moderate('remove', r.id)}>Remove</button>              </div>
+            <div key={r.id} className="border rounded p-3">
+              <div className="text-sm text-gray-600 mb-1">Project: {r.projectId} • To: {r.toRole} {r.toId}</div>
+              <div className="font-medium">{r.rating}★ — {r.text}</div>
+              <div className="mt-2 flex gap-2">
+                <button className="enhanced-button enhanced-button-primary" onClick={() => moderate('approve', r.id)}>Approve</button>
+                <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
+              </div>
             </div>
           ))}
-          {_!pending.length && <div>No pending reviews.</div>}        </div>
+          {!pending.length && <div>No pending reviews.</div>}
+        </div>
+      </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-      <section className=&quot;enhanced-card&quot;>
-        <h2 className=&quot;text-xl font-semibold mb-2&quot;>All Reviews</h2>
-        <pre className=&quot;text-xs whitespace-pre-wrap&quot;>{JSON.stringify(all, null, 2)}</pre>      </section>
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+      <section className="enhanced-card">
+        <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
+        <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
+      </section>
     </main>
   )
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+<<<<<<< HEAD
+},
+export default AdminReviewsPage,
+},
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+},
+export default AdminReviewsPage,
+
+<<<<<<< HEAD
+=======
+=======
+},
+export default AdminReviewsPage,
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 },
 
 export default AdminReviewsPage,
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+export default AdminReviewsPage;
+import React, { useEffect, useState } from 'react',
+import type { NextPage } from 'next',
+import type { Review } from '../../types / reviews',
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (local_storage.get_item ('ADMIN_KEY') || 'dev - admin - key'),
+const AdminReviewsPage: NextPage = () => {
+  const [pending, set_pending] = useState < Review[]>([]),
+  const [all, set_all] = useState < Review[]>([]),
+  const [admin_key, setAdminKey] = useState (''),
+  async /**
+ * refresh - Function description
+ */
+function refresh() {
+    const res = await fetch ('/api / admin / debug / reviews'),
+    const data = await res.json (),
+    // Check condition
+if ( {) {
+  $2
+}
+      set_all (data.reviews),
+      set_pending (data.reviews.filter ((r: Review) => !r.approved && !r.removed));
+    }
+  }
+  useEffect (() => { refresh () }, []),
+  async /**
+ * moderate - Function description
+ */
+function moderate() {
+    const res = await fetch ('/api / reviews / moderate', {
+      method: 'POST',
+      headers: {
+        'Content - Type': 'application / jsonx - admin - key': admin_key || 'dev - admin - key'},
+      body: JSON.stringify ({ action, review_id })}),
+    if (refresh ()) {
+  $2
+}
+  }
+  return (
+    <main className="max - w-5xl mx - auto p - 6 space - y-6">;
+      <h1 className="text - 2xl font - semibold">Review Moderation</h1>;
+      <div className="enhanced - card">;
+        <label className="block text - sm mb - 2">Admin Key</label>;
+        <input className="border p - 2 rounded w - full" value={admin_key} on_change={(e) => setAdminKey (e.target.value)} placeholder="Enter admin key" />;
+      </div>;
+      <section className="enhanced - card">;
+        <h2 className="text - xl font - semibold mb - 4">Pending Reviews</h2>;
+        <div className="space - y-4">;
+          {pending.map ((r) => (
+            <div key={r.id} className="border rounded p - 3">;
+              <div className="text - sm text - gray - 600 mb - 1">Project: {r.project_id} • To: {r.to_role} {r.to_id}</div>;
+              <div className="font - medium">{r.rating}★ — {r.text}</div>;
+              <div className="mt - 2 flex gap - 2">;
+                <button className="enhanced - button enhanced - button - primary" on_click={() => moderate ('approve', r.id)}>Approve</button>;
+                <button className="enhanced - button enhanced - button - secondary" on_click={() => moderate ('remove', r.id)}>Remove</button>;
+              </div>;
+            </div>))}
+          {!pending.length && <div > No pending reviews.</div>}
+        </div>;
+      </section>;
+      <section className="enhanced - card">;
+        <h2 className="text - xl font - semibold mb - 2">All Reviews</h2>;
+        <pre className="text - xs whitespace - pre - wrap">{JSON.stringify (all, null, 2)}</pre>;
+      </section>;
+    </main>);
+},
+export default AdminReviewsPage,
+              </div>
+            </div>
+          ))}
+          {_!pending.length && <div>No pending reviews.</div>}
+        </div>
+      </section>
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+},
+export default AdminReviewsPage,
+},
+
+export default AdminReviewsPage,;
+export default AdminReviewsPage,
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

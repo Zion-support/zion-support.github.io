@@ -10,7 +10,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🧪 Zion Tech Group - Comprehensive Automation Test Suite');
-console.log('');
+console.log('========================================================');
 
 const testResults = {
     timestamp: new Date().toISOString(),
@@ -266,7 +266,7 @@ const reportPath = 'comprehensive-test-report.json';
 fs.writeFileSync(reportPath, JSON.stringify(testResults, null, 2));
 
 console.log('\n📊 Test Results Summary');
-console.log('===');
+console.log('========================');
 console.log(`Total Tests: ${testResults.summary.total}`);
 console.log(`✅ Passed: ${testResults.summary.passed}`);
 console.log(`⚠️  Warnings: ${testResults.summary.warnings}`);

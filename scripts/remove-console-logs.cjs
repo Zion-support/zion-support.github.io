@@ -82,6 +82,10 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 
 function main() {
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
@@ -112,6 +116,10 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-0033
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 }
 
 if (require.main === module) {
