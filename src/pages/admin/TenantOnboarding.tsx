@@ -29,13 +29,6 @@ import { supabase } from "@/integrations/supabase/client",
   });
   // Check if user has admin role
   const isAdmin = null;
-  })
-  // Check if user has admin role
-  const isAdmin = user?.role === "admin";
-      };
-  );
-};
-<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -247,7 +240,6 @@ import { supabase } from "@/integrations/supabase/client",
       </main>
     </>
   )
-<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
@@ -568,6 +560,7 @@ export default function TenantOnboarding() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useState } from './react';
@@ -611,5 +604,3 @@ function TenantOnboarding() {
 ;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

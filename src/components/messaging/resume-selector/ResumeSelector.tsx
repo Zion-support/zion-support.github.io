@@ -19,8 +19,3 @@ import { exportResumeToPDF } from "@/utils/pdfExport",
       } finally {
         setIsLoading(false)
 <<<<<<< HEAD
-  ;
-};
-  );
-};
-<<<<<<< HEAD

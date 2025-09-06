@@ -147,7 +147,6 @@ export default function EndpointDetail(): any ({;
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
             ))}
 
-<<<<<<< HEAD
 
 
 
@@ -185,14 +184,6 @@ export default function EndpointDetail(): any ({;
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
 
             ))}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-            ))}
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </ul>
         </div>

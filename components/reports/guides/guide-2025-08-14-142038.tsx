@@ -26,7 +26,6 @@
           className='mt-4'
           dangerouslySetInnerHTML={{
 =======
-<<<<<<< HEAD
             __html:
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></p><h2>Overview</h2><p>Focus: techcrunch, pebble, newsroomupdated, automatically, multiple, sources.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
             __html:;
@@ -57,10 +56,6 @@
 
 export default function Page() {
   return (
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className="min-h-screen bg-slate-950 text-white">
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

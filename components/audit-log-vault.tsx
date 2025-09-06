@@ -21,7 +21,6 @@ export default function AuditLogVaultPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com';
   };
-<<<<<<< HEAD
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -156,10 +155,6 @@ function AuditLogVaultPage() {
 }
 }
 
-=======
-;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

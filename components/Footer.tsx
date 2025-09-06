@@ -366,14 +366,8 @@ origin/automation-improvements-final
                   </Link>
                 </li>
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-=======
-
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
               {Object.entries(services).map(([category, links]) => (
@@ -528,7 +522,6 @@ origin/automation-improvements-final
               ))}
             </ul>
 
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -559,155 +552,6 @@ origin/automation-improvements-final
                 </li>
               ))}
 
-=======
-  }
-;
-  return (
-    <footer className="bg - gray - 900 text - white">;
-      {/* Main Footer Content */}
-      <div className="container mx - auto px - 4 py - 12">;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 5 gap - 8">;
-          {/* Company Info */}
-          <div className="lg:col - span - 2">;
-            <Link href="/" className="text - 2xl font - bold text - white mb - 4 block">;
-              Zion Tech Group;
-            </Link>;
-            <p className="text - gray - 300 mb - 6 max - w-md">;
-              Leading technology solutions provider specializing in AI,
-              cybersecurity, cloud infrastructure, quantum computing,
-              blockchain, IoT, and digital transformation services.;
-            </p>;
-            {/* Contact Info */}
-            <div className="space - y-3">;
-              <div className="flex items - center text - gray - 300">;
-                <Phone className="w - 4 h - 4 mr - 3" />;
-                <span>+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items - center text - gray - 300">;
-                <Mail className="w - 4 h - 4 mr - 3" />;
-                <span > kleber@ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items - start text - gray - 300">;
-                <MapPin className="w - 4 h - 4 mr - 3 mt - 1 flex - shrink - 0" />;
-                <span>;
-                  364 E Main St STE 1008;
-                  <br />;
-                  Middletown DE 19709;
-                </span>;
-              </div>;
-            </div>;
-          </div>;
-          {/* Services */}
-          <div>;
-            <h3 className="text - lg font - semibold mb - 4">Services</h3>;
-            <ul className="space - y-2">;
-              {footer_links.services.map ((link) => (
-                <li key={link.name}>;
-                  <Link;
-                    href={link.href}
-                    className="text - gray - 300 hover:text - white transition - colors";
-                  >;
-                    {link.name}
-                  </Link>;
-                </li>))}
-            </ul>;
-          </div>;
-          {/* Solutions */}
-          <div>;
-            <h3 className="text - lg font - semibold mb - 4">Solutions</h3>;
-            <ul className="space - y-2">;
-              {footer_links.solutions.map ((link) => (
-                <li key={link.name}>;
-                  <Link;
-                    href={link.href}
-                    className="text - gray - 300 hover:text - white transition - colors";
-                  >;
-                    {link.name}
-                  </Link>;
-                </li>))}
-            </ul>;
-          </div>;
-          {/* Company & Resources */}
-          <div>;
-            <h3 className="text - lg font - semibold mb - 4">Company</h3>;
-            <ul className="space - y-2 mb - 6">;
-              {footer_links.company.map ((link) => (
-                <li key={link.name}>;
-                  <Link;
-                    href={link.href}
-                    className="text - gray - 300 hover:text - white transition - colors";
-                  >;
-                    {link.name}
-                  </Link>;
-                </li>))}
-            </ul>;
-            <h3 className="text - lg font - semibold mb - 4">Resources</h3>;
-            <ul className="space - y-2">;
-              {footer_links.resources.map ((link) => (
-                <li key={link.name}>;
-                  <Link;
-                    href={link.href}
-                    className="text - gray - 300 hover:text - white transition - colors";
-                  >;
-                    {link.name}
-                  </Link>;
-                </li>))}
-
-            </ul>;
-          </div>;
-        </div>;
-      </div>;
-
-              />;
-              <button className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">;
-                Subscribe;
-                <ArrowRight className="w-4 h-4 ml-2" />;
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            {/* Social Links */}
-            <div className="flex space-x-4 mb-4 md:mb-0">
-              <a
-                href="https://linkedin.com/company/zion-tech-group"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="https://facebook.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://instagram.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* Social Links */}
             <div className=mt-6">
               <h4 className="text-sm font-medium text-blue-400 mb-3>Follow Us</h4>

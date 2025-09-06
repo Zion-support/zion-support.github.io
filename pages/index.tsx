@@ -910,7 +910,6 @@ origin/automation-improvements-final
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
           </div>
         </section>
-<<<<<<< HEAD
 
           </div>
         </section>
@@ -985,9 +984,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         <section className="py-20">
             </motion.div>
 
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Featured Services */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1138,7 +1134,6 @@ origin/automation-improvements-final
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1289,17 +1284,6 @@ origin/automation-improvements-final
         </section>
         {/* CTA Section */}
 
-=======
-        <section className="py-16 bg-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <section className="py-16 bg-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1347,7 +1331,6 @@ origin/automation-improvements-final
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1642,9 +1625,6 @@ origin/automation-improvements-final
                 </div>
               </div>
             </section>
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </section>
           </div>

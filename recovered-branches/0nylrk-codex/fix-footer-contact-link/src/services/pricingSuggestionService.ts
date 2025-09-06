@@ -80,7 +80,6 @@ export interface ClientBudgetParams {;
     }
   }
 }
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
@@ -149,31 +148,6 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-    }
-    // Generate explanation
-    let explanation = `Based on ${yearsExperience} years of experience`;
-    if (hasInDemandSkills) {
-      explanation += ` and your in-demand skills (${skills.join()})`
-;
-    const minRate = Math.round(baseRate * locationFactor * 0.9),;
-    const maxRate = Math.round(baseRate * locationFactor * 1.2),;
-    // Determine confidence;
-    let confidence: "High" | "Medium" | "Low" = "Medium",;
-    if (yearsExperience > 3 && hasInDemandSkills && location) {;
-      confidence = "High";
-    } else if (!location || yearsExperience < 1) {;
-      confidence = "Low";
-    }
-;
-    // Generate explanation;
-    let explanation = `Based on ${yearsExperience} years of experience`,;
-    if (hasInDemandSkills) {;
-      explanation += ` and your in-demand skills (${skills.join()})`;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }

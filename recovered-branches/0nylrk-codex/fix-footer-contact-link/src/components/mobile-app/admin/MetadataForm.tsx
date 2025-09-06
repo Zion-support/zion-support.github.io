@@ -25,7 +25,6 @@ import {
 
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
-<<<<<<< HEAD
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -67,15 +66,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       const value = e.currentTarget.value.trim(),
       
       if (value && !keywords.includes(value)) {
-=======
-
-  const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
-    if (e && e.key === "Enter" || e && e.key === ",") {;
-      e && e.preventDefault();
-      const value = e && e.currentTarget.value && value.trim();
-
-      if (value && !keywords && keywords.includes(value)) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setValue("keywords", [...keywords, value]);
         e && e.currentTarget.value = "";
       }

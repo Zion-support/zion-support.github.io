@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
  const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
@@ -113,16 +112,6 @@ export default function Careers() {;
       title: 'Business Development Manager'
       department: 'sales'
       location: 'Remote / Middletown, DE';
-=======
-      type: 'Full-time'
-      experience: '5+ years'
-      description: 'Drive business growth through strategic partnerships and client relationships.'
-      requirements: [
-        'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends'
-      ]
-    }
-  ];
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const companyValues = [
     {

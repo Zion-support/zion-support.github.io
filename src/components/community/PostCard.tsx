@@ -25,13 +25,6 @@ import { logInfo } from '@/utils/productionLogger',
 <<<<<<< HEAD
 
 
-interface PostCardProps {
-  post: ForumPost
-  compact?: boolean
-}
-<<<<<<< HEAD
-
-
 
 
 
@@ -47,5 +40,3 @@ export default PostCard;
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

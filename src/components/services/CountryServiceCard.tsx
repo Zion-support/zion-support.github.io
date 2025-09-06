@@ -46,7 +46,6 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Typical response time: {getResponseTime(country.country)}</span>
 <<<<<<< HEAD
-=======
           </div>
           <div className="flex items-start">
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />

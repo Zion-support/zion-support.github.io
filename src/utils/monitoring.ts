@@ -11,11 +11,14 @@ export const track_performance = () =>: any {
 // Monitoring utilities
 export const logEvent = (event: string) => {;
   console.log('Event logged:', event);
+<<<<<<< HEAD
 }
 export const trackPerformance = () => {
 };
 
 export const trackPerformance = () => {;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   console.log('Tracking performance...');
 

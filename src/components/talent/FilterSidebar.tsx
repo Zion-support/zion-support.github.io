@@ -58,7 +58,6 @@ export function FilterSidebar(): any ({;
   clearFilters;
 
 =======
-<<<<<<< HEAD
 import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 export function FilterSidebar({
@@ -80,27 +79,14 @@ export function FilterSidebar({
   sortOption
   setSortOption
   clearFilters
-export function FilterSidebar({
-  searchTerm,
-  setSearchTerm,
-  selectedSkills,
-  toggleSkill,
-  selectedAvailability,
-  toggleAvailability,
-  selectedRegions,
-  toggleRegion,
-  priceRange,
-  setPriceRange,
-  experienceRange,
-  setExperienceRange,
-  expandedSections,
-  toggleSection,
-  sortOption,
-  setSortOption,
-  clearFilters,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isMobileFilterOpen,}: FilterSidebarProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+  return (
+    <>
+      {/* Filter header */}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           Filters
         </h3>
         <Button
@@ -150,6 +136,10 @@ export function FilterSidebar({
   setSortOption,
   clearFilters,
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -158,6 +148,7 @@ export function FilterSidebar({
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+<<<<<<< HEAD
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -282,5 +273,20 @@ export function FilterSidebar({;
         toggleSection={() => toggleSection('price')}
 
 <<<<<<< HEAD
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+
+      {isMobileFilterOpen && (;
+        <Button;
+
+
+
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
+        >
+          Apply Filters
+        </Button>
+      )}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     </>;
   );

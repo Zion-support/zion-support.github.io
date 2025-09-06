@@ -33,20 +33,6 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
 ))
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-interface PaginationButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  page: number
-  isActive?: boolean
-}
-const PaginationLink = ({
-=======
-  className
-  isActive
-  size = &quot;icon&quot;
-  className,
-  isActive,
-<<<<<<< HEAD
-
   ...props
 }: PaginationLinkProps) => (
   <a

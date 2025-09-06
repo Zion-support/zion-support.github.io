@@ -47,6 +47,19 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+=======
+          <Button variant="outline" onClick={onStandardClick}>
+
+
+          <Button variant="outline" onClick={onStandardClick}>
+
+            Create Standard Contract
+          </Button>
+        </CardFooter>
+      </Card>
+      
+      <Card>
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -77,6 +90,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+<<<<<<< HEAD
 
     </div>;
   );

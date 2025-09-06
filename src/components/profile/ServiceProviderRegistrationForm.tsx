@@ -301,16 +301,7 @@ export function ServiceProviderRegistrationForm() {;
         title: 'Services required'
         description: 'Please add at least one service to your profile.'
         variant: 'destructive'
-        title: 'Services required',
-        description: 'Please add at least one service to your profile.',
-        variant: 'destructive',
-      });
-
-        title: 'Services required',
-        description: 'Please add at least one service to your profile.',
-        variant: 'destructive',
-
-=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       })
@@ -381,8 +372,9 @@ if ( {) {
         .select(),
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -485,132 +477,6 @@ if ( {) {
   }
               `
 ;
-      // Get user email for notification;
-      const { data: userData } = await supabase.auth.getUser(),;
-      const userEmail = (userData as any).user?.email,;
-      // Create the service profile;
-      const { data: profileData, error } = await supabase;
-        .from('profiles');
-        .update({;
-          display_name: values.name,;
-          bio: finalSummary,;
-          user_type: "creator", // Set as service provider;
-          profile_complete: true,;
-          updated_at: new Date().toISOString(),;
-          headline: values.title,;
-          // Additional fields that might be in profiles table;
-        });
-        .eq('id', user.id);
-        .select(),;
-      if (error) throw error,;
-      // Store service-specific data in service_profiles table;
-      // (This assumes you have a service_profiles table in your database);
-      /*;
-      const { error: serviceError } = await supabase;
-        .from('service_profiles');
-        .insert({;
-          user_id: user.id,;
-          services: finalServices,;
-          hourly_rate: Number(values.hourlyRate),;
-          availability_status: values.availability,;
-          location: values.location,;
-          website: values.website || null}),;
-      if (serviceError) throw serviceError,;
-      */;
-      // Send notification email if available;
-      if (userEmail && values.enhancedProfile) {;
-        try {;
-          await supabase.functions.invoke('send-email', {;
-            body: {;
-              to: userEmail,;
-              subject: "Your Zion Service Profile Is Ready",;
-              html: `;
-              <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">;
-                <h2 style="color: #6D28D9,">Service Profile Created!</h2>;
-                <p>Your service provider profile has been successfully created and published.</p>;
-                <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>;
-                <p>You can now start receiving service requests and connecting with clients.</p>;
-                <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">;
-                  <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
-                </div>;
-              </div>;
-              `;
-            }
-          });
-        } catch (emailError) {;
-          logErrorToProduction('Failed to send notification email:', { data: emailError }),;
-          // Continue with submission even if email fails;
-        }
-      }
-      
-      toast({
-        title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory."}),
-
-      toast({;
-        title: 'Profile Created Successfully',;
-        description:;
-          'Your service provider profile has been published and is now visible in the directory.',;
-      });
-
-      // Redirect to service provider dashboard or profile page;
-      setTimeout(() => {;
-        router && router.push('/service-dashboard');
-      }, 1500);    } catch (error: any) {;
-      logErrorToProduction('Error creating profile:', { data: error });
-      toast({;
-        title: 'Error Creating Profile',;
-        description:;
-          error && error.message ||;
-          'There was an error creating your profile. Please try again.',;
-        variant: 'destructive',;
-      });
-    } finally {;
-      setIsSubmitting(false);
-
-              to: user_email,
-              subject: 'Your Zion Service Profile Is Ready',
-              html: `;
-              <div style="font - family: Arial, sans - serif; max - width: 600px; margin: 0 auto;">;
-                <h2 style="color: #6D28D9;">Service Profile Created!</h2>;
-                <p > Your service provider profile has been successfully created and published.</p>;
-                <p > We've enhanced your profile with AI to help you stand out to potential clients.</p>;
-                <p > You can now start receiving service requests and connecting with clients.</p>;
-                <div style="margin - top: 30px; padding - top: 20px; border - top: 1px solid #eee;">;
-                  <p style="color: #666; font - size: 12px;">© ${new Date ().getFullYear ()} Zion Marketplace</p>;
-                </div>;
-              </div>;
-              `,
-            },
-          });
-        } catch (email_error) {
-          logErrorToProduction ('Failed to send notification email:', {
-            data: email_error,
-          });
-          // Continue with submission even if email fails;
-        }
-      }
-      toast ({
-        title: 'Profile Created Successfully',
-        description:;
-          'Your service provider profile has been published and is now visible in the directory.',
-      });
-      // Redirect to service provider dashboard or profile page;
-      set_timeout (() => {
-        router.push ('/service - dashboard');
-      }, 1500) } catch (error: any) {
-      logErrorToProduction ('Error creating profile:', { data: error });
-      toast ({
-        title: 'Error Creating Profile',
-        description:;
-          error.message ||;
-          'There was an error creating your profile. Please try again.',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSubmitting (false);
-    }
-  },
 
 
 
@@ -664,32 +530,136 @@ if ( {) {
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
-<<<<<<< HEAD
-
-                          <FormControl>
-                            <div className="relative">
-                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                              <Input
-                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-                                placeholder="e.g., Creative Design Studio"
-                                {...field}
-                              />
-                            </div>
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-
-=======
-                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
-                      <div className="space-y-0.5">
-                        <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                          AI Profile Enhancement
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                        </FormLabel>
+                        <FormDescription className="text-zion-slate-light">
+                          Let AI help optimize your service description for better visibility and client engagement
+                        </FormDescription>
+                      </div>
+                      <FormControl>
+                        <Switch
+                          aria-label='AI profile enhancement'
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          className='data-[state=checked]:bg-zion-purple'                        />
+                          aria-label="AI profile enhancement"
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                          className="data-[state=checked]:bg-zion-purple"
+                        />
+
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                    </Button>
+                  </div>
+                )}
+                {/* Generated Content Display */}
+                {generatedContent && (
+                  <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <h4 className="text-white font-medium flex items-center">
+                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
+                        AI-Generated Content
+                      </h4>
+                      <Button
+                        type='button'
+                        size='sm'
+                        className='bg-zion-purple hover:bg-zion-purple-dark text-white'
+                        onClick={applyGeneratedContent}                      >
+                        <Check className='mr-1 h-3 w-3' /> Apply
+                      </Button>
+                    </div>
+                    <div className='space-y-4'>
+                        type="button"
+                        size="sm"
+                        className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+                        onClick={applyGeneratedContent}
+                      >
+                        <Check className="mr-1 h-3 w-3" /> Apply
+                      </Button>
+                    </div>
+                    
+                    <div className="space-y-4">
+
+
+                      <div>
+                        <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>
+                        <p className="text-zion-slate italic">{generatedContent.summary}</p>
+                      </div>
+                      {generatedContent.services &&
+                        generatedContent.services.length > 0 && (
+                          <div>
+                            <h5 className='text-zion-slate-light text-sm mb-1'>
+                              Suggested Services
+                            </h5>
+                            <div className='flex flex-wrap gap-2 mt-1'>
+                              {generatedContent.services.map(
+                                (service, index) => (
+                                  <Badge
+                                    key={index}
+                                    className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'
+                                  >
+                                    {service}
+                                  </Badge>
+                                )
+                              )}
+                            </div>                          </div>
+                        )}
+
+                      
+                      {generatedContent.services && generatedContent.services.length > 0 && (
+                        <div>
+                          <h5 className="text-zion-slate-light text-sm mb-1">Suggested Services</h5>
+                          <div className="flex flex-wrap gap-2 mt-1">
+                            {generatedContent.services.map((service, index) => (
+                              <Badge
+                                key={index}
+                                className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
+                              >
+                                {service}
+                              </Badge>;
+                            ))}
+                          </div>;
+                        </div>;
+                      )}
+                    </div>;
+                  </div>;
+                )}
+
+              </div>;
+
+              <Separator className="bg-zion-blue-light/50" />
+
+
+
+              <Separator className="bg-zion-blue-light/50" />
+
+
+              {/* Services and Availability */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Services Section */}
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium text-white">Services Offered</h3>
+                  <FormField
+
+                    control={form.control}
+                    name='services'
+                    render={({ field }: { field: any }) => (                      <FormItem>
+                        <FormLabel className='text-zion-slate-light'>
+                          Services
+                        </FormLabel>
+                        <div className='flex gap-2'>
+                    name="services"
+                    render={({ field }: { field: any }) => (
+                      <FormItem>
+                        <FormLabel className="text-zion-slate-light">Services</FormLabel>
+                        <div className="flex gap-2">
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                           <FormControl>
                             <Input
 =======
@@ -867,7 +837,6 @@ if ( {) {
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                             onClick={handleAddService}
                           >
-<<<<<<< HEAD
                         </button>
                       </Badge>
                     ))}
@@ -906,30 +875,6 @@ if ( {) {
                         <FormLabel className="text-zion-slate-light">Starting Rate (USD)</FormLabel>
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                        <FormControl>
-                          <div className="relative">
-                            <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
-                            <Input
-                              className='pl-8 bg-zion-blue border-zion-blue-light text-white'
-                              placeholder='e && e.g., 85'
-                            <span className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate'>;
-                              $;
-                            </span>;
-                            <Input;
-                              className='pl - 8 bg - zion - blue border - zion - blue - light text - white';
-                              placeholder='e.g., 85';
-                              {...field}
-                            />
-                          </div>
-                        </FormControl>
-                        <FormDescription className="text-zion-slate">
-                          Your base hourly or project rate
-                        </FormDescription>
-                        <FormMessage className="text-red-400" />
-                      </FormItem>
-                    )}
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                 Currently Unavailable
                               </label>
                             </div>
@@ -951,6 +896,92 @@ if ( {) {
                 >
                   Save as Draft
                 </Button>
+<<<<<<< HEAD
+=======
+                <Button
+                  type='submit'
+                  className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
+                  disabled={isSubmitting}                >
+                  {isSubmitting
+                    ? 'Creating Profile...'
+                    : 'Create Service Profile'}
+                <Button 
+                  type="submit"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
+
+                </Button>
+              </div>
+            </CardFooter>
+          </form>
+        </Form>
+      </Card>
+    </div>
+  )
+}
+//Handle removing service tags const handleRemoveService = (service: string) => {
+  setServiceTags (serviceTags.filter ( (s) => s !== service) )
+}
+//Handle removing service tags const handleRemoveService = (service: string) =>: any {
+  setServiceTags (service_tags.filter ( (s) => s !== service) );
+
+}
+//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const file = e.target.files?.[0]
+if (file) {
+  const reader = new FileReader ()
+reader.onloadend = () => {
+
+  setUploadedAvatar (reader.result as string);
+}
+reader.readAsDataURL (file);
+
+}
+//Generate enhanced profile with AI return;
+}//Call the Supabase Edge Function const {
+
+  data, error;
+}= await supabase.functions.invoke ('service - profile - enhancer', {
+  body: {
+  provider_data: {
+  name: form_data.name, title: form_data.title, bio: form_data.bio,  services: service_tags, location: form_data.location;
+});
+}else {';
+  //Fallback for mock / development mode log_warn ('Mock AI response - using fallback content');
+
+setGeneratedContent ({
+}catch (error: any) {'
+  logErrorToProduction ('Error generating enhanced profile:', {
+
+  data: error;
+});
+toast ({
+}finally {
+  setIsGenerating (false);
+
+}
+//Apply generated content to form const applyGeneratedContent = () => {
+  if (generatedContent) {'
+  const newServices = generatedContent.services.filter (service => typeof service === 'string' && service && !serviceTags.includes (service) )
+if (newServices.length > 0) {
+}
+//Handle form submission const onSubmit = async (values: ServiceFormValues) => {
+  if (serviceTags.length === 0) {
+  toast ({
+  return;
+}setIsSubmitting (true)
+try {
+  //For actual implementation with Supabase if (!user?.id) {
+}//Enhance profile if not already done let finalSummary = values.bio
+let finalServices = serviceTags
+try {
+  const {
+  data: aiData '
+}= await supabase.functions.invoke ('service-profile-enhancer', {
+  body: {
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {'
   router.push ('/service-dashboard')
 }, 1500)

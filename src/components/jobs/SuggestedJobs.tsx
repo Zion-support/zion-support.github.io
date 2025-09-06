@@ -35,25 +35,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
 
 
-  if (isLoading) {
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-
-
-    updateJobMatchStatus, ;
-import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
-import { useJobSuggestions } from "@/hooks/useJobSuggestions";
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-      <div className="flex items-center justify-center p-6">
-        <Loader2 className="w-6 h-6 animate-spin text-primary" />
-      </div>
-    )
-<<<<<<< HEAD
 
 
 
@@ -76,12 +57,6 @@ import { NoJobsCard } from "./NoJobsCard";
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-              <JobMatchesCard
-                key={match.id}
-                match={match}
-                onApply={handleApply}
-                onDecline={handleDecline}
-
               />;
 
 
@@ -100,14 +75,6 @@ import { NoJobsCard } from "./NoJobsCard";
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      {/* Previously Viewed Section */}
-      {viewedMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">Previously Viewed</h3>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {viewedMatches.map(match => (
               <JobMatchesCard
                 key = {match && match.id,}
 
@@ -135,17 +102,8 @@ import { NoJobsCard } from "./NoJobsCard";
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      {/* Applied Jobs Section */}
-      {appliedMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">Applied Jobs</h3>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {appliedMatches.map(match => (
-              <JobMatchesCard
-              <JobMatchesCard 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                 key = {match.id,}
 
       {/* Applied Jobs Section */}

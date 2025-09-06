@@ -73,7 +73,6 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
     return <div>Redirecting...</div>
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -109,23 +108,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-              <p>To test with real Stripe: </p>
-              <ol className='list-decimal list-inside space-y-1 mt-2'>
-                <li>
-                  Configure real Stripe test keys in environment variables
-                </li>                <li>Set STRIPE_TEST_MODE=true for test environment</li>
-                <li>Use test card: 4242 4242 4242 4242</li>
-              </ol>
-            </div>
-
-
-          <div className="space-y-4">
-            <div className="text-zion-slate-light text-sm">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <p>To test with real Stripe: </p>
               <ol className="list-decimal list-inside space-y-1 mt-2">
                 <li>Configure real Stripe test keys in environment variables</li>
@@ -143,9 +126,6 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
               
               <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue">
                 <Link href="/marketplace">
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   Continue Shopping
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>

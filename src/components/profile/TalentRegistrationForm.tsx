@@ -269,9 +269,6 @@ if ( {) {
         toast({
           title: "Enhanced Profile Generated",
           description: "AI has created a professional bio and suggested additional skills for your profile."})
-      }
-
-    } catch (error: any) {
             ) {
               newSkills.push(skill)
 import {;
@@ -637,14 +634,6 @@ if ( {) {
     }
   },
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-  // Handle form submission
-  const onSubmit = async (values: TalentFormValues) => {
-    if (skillTags.length === 0) {
-      toast({
-        title: 'Skills required'
-        description: 'Please add at least one skill to your profile.'
-        variant: 'destructive'
         title: 'Skills required',
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
@@ -654,7 +643,7 @@ if ( {) {
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
 
-=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       })
@@ -667,7 +656,6 @@ if ( {) {
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error('User not authenticated')
-<<<<<<< HEAD
 
 
       }
@@ -692,56 +680,6 @@ if ( {) {
 <<<<<<< HEAD
           const { data: aiData } = await supabase.functions.invoke(
             'talent-profile-enhancer'
-  // Handle form submission;
-  const onSubmit = async (values: TalentFormValues) => {;
-    if (skillTags.length === 0) {;
-      toast({;
-        title: "Skills required",;
-        description: "Please add at least one skill to your profile.",;
-        variant: "destructive"}),;
-      return;
-    }
-;
-    setIsSubmitting(true),;
-    try {;
-      // For actual implementation with Supabase;
-      if (!user?.id) {;
-        throw new Error("User not authenticated");
-      }
-;
-      // Enhance profile if not already done;
-      let finalSummary = "",;
-      let finalSkills = skillTags,;
-      if (values.enhancedProfile && !generatedContent) {;
-        try {;
-          const { data: aiData } = await supabase && supabase.functions.invoke(;
-            'talent-profile-enhancer',;
-            {;
-              body: {;
-                talentData: {;
-                  name: values && values.name,;
-                  title: values && values.title,;
-                  bio: values && values.bio,;
-                  skills: skillTags,;
-                  location: values && values.location,;
-                },;
-              },;
-            }
-          );
-
-          if (aiData) {;
-            finalSummary = (aiData as EnhancedProfile).summary;
-            // Safely merge AI suggested skills with user-provided skills;
-            const categorizedSkills = (aiData as EnhancedProfile);
-              .categorizedSkills;
-            const aiSkills: string[] = [];
-
-            // Extract skills from each category and ensure they're strings;
-            Object && Object.values(categorizedSkills).forEach(categorySkills => {;
-              if (Array && Array.isArray(categorySkills)) {;
-                categorySkills && categorySkills.forEach(skill => {;
-                  if (typeof skill === 'string' && skill) {;
-<<<<<<< HEAD
             {
               body: {
                 talentData: {
@@ -811,26 +749,11 @@ if ( {) {
         toast({
           title: 'Profile Created Successfully'
           title: 'Profile Created Successfully',
-          description:
-            'Your talent profile has been published and is now visible in the directory.'
-        })
-          title: "Profile Created Successfully",
-          description: "Your talent profile has been published and is now visible in the directory."}),
-        
-<<<<<<< HEAD
 
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
           sendEnhancementNotification(user.id, userEmail)
         }
-<<<<<<< HEAD
-
-        setIsSubmitting(false)
-      }, 1500)
-        
-        setIsSubmitting(false)
-      }, 1500),
-
 <<<<<<< HEAD
 
       // Here would be the actual code to save the profile to Supabase
@@ -892,16 +815,9 @@ if ( {) {
                       <div className='space-y-0.5'>
                         <FormLabel className='text-white flex items-center'>
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
-                />;
-                {/* AI Enhancement Option */}
-                <FormField;
-                  control={form.control}
-                  name="enhancedProfile"
-                  render={({ field }: { field: any }) => (
-<<<<<<< HEAD
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
@@ -910,63 +826,6 @@ if ( {) {
                       </div>
                       <FormControl>
                         <Switch
-=======
-                          aria-label='AI profile enhancement'
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          className='data-[state=checked]:bg-zion-purple'                        />
-                          aria-label="AI profile enhancement"
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
-                          className="data-[state=checked]:bg-zion-purple"
-                        />
-<<<<<<< HEAD
-
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-                {form.watch('enhancedProfile') && (
-                  <div className='flex justify-end'>
-                    <Button
-                      type='button'
-                      variant='outline'
-                      className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}                    >
-                      <Sparkles className='mr-2 h-4 w-4' />
-                      {isGenerating
-                        ? 'Generating...'
-                        : 'Generate Enhanced Profile'}
-                
-                {form.watch("enhancedProfile") && (
-                  <div className="flex justify-end">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}
-                    >
-                      <Sparkles className="mr-2 h-4 w-4" />
-                      {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
-                    </Button>
-                  </div>
-                )}
-                {/* Generated Content Display */}
-                {generatedContent && (
-                  <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <h4 className="text-white font-medium flex items-center">
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                        AI-Generated Content
-                      </h4>
-                      <Button
-
-                                  className={`w-fit ${getCategoryColor(category as CategoryType)}`}
-                                >
-                                  {category}
-
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
@@ -1015,35 +874,6 @@ if ( {) {
                 >
                   Save as Draft
                 </Button>
-=======
-                <Button
-                  type='submit'
-                  className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
-                  disabled={isSubmitting}                >
-                  {isSubmitting ? 'Creating Profile...' : 'Create Profile'}
-                <Button 
-                  type="submit"
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Creating Profile..." : "Create Profile"}
-<<<<<<< HEAD
-
-                </Button>
-              </div>
-            </CardFooter>
-          </form>
-        </Form>
-      </Card>
-    </div>
-  )
-}
-//Generate enhanced profile with AI return
-//Generate enhanced profile with AI return;
-}
-
-//Generate enhanced profile with AI return;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 }//Call the Supabase Edge Function const {
   data, error '
@@ -1088,82 +918,5 @@ if (Array.isArray (categorySkills) ) {
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
   new Date () .getFullYear ()
   new Date () .getFullYear () 
-}Zion Marketplace</p>
-  //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generated_content.categorized_skills;
-const new_skills: string[] = [];
-if () {) {
-  $2
-}
-  category_skills.for_each (skill => {';
-  if () {) {
-  $2
-}
-});
-}
-//Get category color //Send notification email const sendEnhancementNotification = async (user_id: string, email: string) => {
-  try {';
-  await supabase.functions.invoke ('send - email', {
-  body: {'";
-  <p > Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p > We've added a professional summary and categorized your skills to help you stand out.</p> <p > You can review and edit these enhancements in your profile dashboard.</p> <div style="margin - top: 30px, padding - top: 20px, border - top: 1px solid #eee, "> <p style="color: #666,  font - size: 12px, ">© $ {
-  new Date () .getFullYear ();
-}Zion Marketplace</p>;
-}
-//Handle form submission const on_submit = async (values: TalentFormValues) => {
-  // Check condition
-if ( {) {
-  $2
-}
-//Handle form submission const onSubmit = async (values: TalentFormValues) => {
-  if (skillTags.length === 0) {
-  toast ({
-  return;
-}setIsSubmitting (true)
-try {
-  //For actual implementation with Supabase if (!user?.id) {
-  try {
-  const {
-  data: aiData '
-}= await supabase.functions.invoke ('talent-profile-enhancer', {
-  body: {
-  talentData: {
-  name: values.name, title: values.title, bio: values.bio,  skills: skillTags, location: values.location
-});'
-//Extract skills from each category and ensure they're strings Object.values (categorizedSkills) .forEach (categorySkills => {
-  if (Array.isArray (categorySkills) ) {
-  categorySkills.forEach (skill => {'
-  if (typeof skill === 'string'&& skill) {
-})
-//Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ]
-}//Continue with submission even if enhancement fails
-}//Send notification email if we have user email if (userEmail && values.enhancedProfile && user?.id) {
-  sendEnhancementNotification (user.id, userEmail)
-}, 1500)
-//Here would be the actual code to save the profile to Supabase /* const {
-  error '
-}= await supabase .from ('talent profiles') .insert ({
-  user id: user.id, name: values.name, title: values.title, bio: values.bio, summary: finalSummary, location: values.location,  skills: finalSkills.map (name => ({
-  name, level: 4
-}) ), //Default skill level hourly rate: Number (values.hourlyRate)
-availability status: values.availability
-//Other fields would be handled here
-})
-if (error) throw error
-*/ setIsSubmitting (false)
-};"
-return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {
-  ...form
-}> <form onSubmit= {
-  form.handleSubmit (onSubmit) "
-}> <CardContent className="space-y-8"> {
-  /* Basic Information */ "
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)
-}/> </div> </div> {
-  /* Upload Avatar */ "
-}<div className="space-y-2"> <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel> <div className="flex items-center gap-6"> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light"> {
-  uploadedAvatar ? (<AspectRatio ratio= {
-  1/1
 }> <img src= {
 <<<<<<< HEAD

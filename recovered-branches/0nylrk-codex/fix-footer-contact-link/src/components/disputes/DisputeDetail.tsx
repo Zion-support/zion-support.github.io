@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
   const [dispute, setDispute] = useState<any>(null),
   const [messages, setMessages] = useState<DisputeMessage[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -48,11 +47,6 @@
     if (!disputeId) return;
   };
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  };
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;

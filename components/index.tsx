@@ -31,7 +31,6 @@ import {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
 =======
 
 
@@ -279,13 +278,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
               </a>;
               <a
 
-=======
-
-        {/* Floating Elements */}
-
-=======
-            animate={{ y: [0, -20, 0] }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
@@ -829,14 +821,9 @@ function HomePage() {
       {/* Enhanced Services Showcase */}
       <div id='services'>        <EnhancedServicesShowcase />
 
-<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <EnhancedServicesShowcase />
       </div>
 

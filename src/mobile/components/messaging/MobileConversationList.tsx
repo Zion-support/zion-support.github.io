@@ -150,36 +150,6 @@ function MobileConversationList() {
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                <AvatarFallback>
-                  {conversation.name.charAt(0).toUpperCase()}
-                </AvatarFallback>
-              </Avatar>
-
-                    )}
-                  )}
-                </div>;
-              </div>;
-            </div>;
-            <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
-          </div>;
-
-
-
-              
-              <div className="flex-1 min-w-0">
-                <div className="flex justify-between items-baseline">
-                  <h3 className="font-medium truncate">{conversation.name}</h3>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
-                    {conversation.timestamp}
-                  </span>
-                </div>
-                
-                <div className="flex justify-between items-center">
-                  <p className="text-sm text-muted-foreground truncate">
-                    {conversation.isTyping 
-                      ? <em>Typing...</em> 
-                      : conversation.lastMessage}
-<<<<<<< HEAD
                   </p>
                   {conversation.unreadCount > 0 && (
 =======

@@ -146,7 +146,6 @@ const AIPoweredITAssetManagement = () => {
     "Peripheral devices and accessories",
     "Peripheral devices and accessories"
   ],
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const benefits = [
@@ -624,10 +623,6 @@ export default AIPoweredITAssetManagement,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <section className="py-20 px-4 sm:px-6 lg:px-8">

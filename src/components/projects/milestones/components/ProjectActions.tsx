@@ -48,11 +48,14 @@ export function ProjectActions(): any ({;
       ) : (
         <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
             <ShieldAlert className="h-4 w-4 mr-2" />
-            View Active Dispute
-          </Link>
-        </Button>
-      ) : (
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+    </div>;
+  );
+};
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -124,5 +127,3 @@ function ProjectActions() {
 ;
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

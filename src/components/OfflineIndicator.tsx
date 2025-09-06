@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
 
@@ -12,29 +11,16 @@ export const OfflineIndicator = () => {
     const updateOnlineStatus = () => {
       const online = navigator.onLine
       setIsOnline(online)
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import { WifiOff, Wifi } from 'lucide-react'
 
 import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
-
-  const [isOnline, setIsOnline] = useState(true),
-  const [showOfflineAlert, setShowOfflineAlert] = useState(false),
-
-  useEffect(() => {
-    const updateOnlineStatus = () => {
-      const online = navigator.onLine,
-      setIsOnline(online),
-
-  useEffect(() => {
-    const updateOnlineStatus = () => {
-      const online = navigator.onLine,
-      setIsOnline(online),
-      
-=======
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import { WifiOff, Wifi } from 'lucide-react'
+
+
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
@@ -153,6 +139,9 @@ export const OfflineIndicator = () => {;
     }
 <<<<<<< HEAD
 
+  }, [showOfflineAlert]),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
   if (!showOfflineAlert) return null;
 
@@ -186,6 +175,7 @@ export const OfflineIndicator = () => {;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 };
@@ -206,3 +196,5 @@ export const OfflineIndicator = () => {;
 } }
 };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

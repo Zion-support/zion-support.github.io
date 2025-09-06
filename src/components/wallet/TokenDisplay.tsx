@@ -2,7 +2,6 @@
 const { wallet, loading } = useWallet();
   return (
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -10,6 +9,11 @@ const { wallet, loading } = useWallet();
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -40,10 +44,6 @@ const { wallet, loading } = useWallet();
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 <<<<<<< HEAD
         )}

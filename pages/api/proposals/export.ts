@@ -57,7 +57,6 @@ function buildIpfsClient() {
   const maxWidth = page.getWidth() - margin * 2;
   const lines = markdown
   });
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const pdfDoc = await PDFDocument.create();
@@ -90,21 +89,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  for (const line of lines) {
-    if (y < margin + 12) {
-      y = page.getHeight() - margin;
-      pdfDoc.addPage()
-    }
-    page.drawText(line, { x: margin, y, size: fontSize, font });
-    y -= 14
-  }
-
-  return pdfDoc.save();
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default async function handler(
   req: NextApiRequest,

@@ -44,7 +44,6 @@ import {
   Star,
   TrendingUp,
   Zap,
-<<<<<<< HEAD
 
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
@@ -254,9 +253,6 @@ const Revolutionary2027Hero = () => {
               <span>Technology</span>;
             </div>;
           </motion && motion.div>;
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Subtitle */}
           <motion && motion.div variants={itemVariants} className='max-w-4xl mx-auto'>;
             <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed'>;

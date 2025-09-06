@@ -23,7 +23,6 @@ interface LazyLoadProps {
   className?: string
 }
 
-<<<<<<< HEAD
 export function LazyLoad({
 
   className}: LazyLoadProps) {
@@ -130,11 +129,6 @@ export function LazyLoad({;
   const defaultLoadingComponent = (;
 
     <Skeleton;
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"

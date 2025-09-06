@@ -94,23 +94,8 @@ const mockSentry = {;
   Integrations: {;
     BrowserTracing: class BrowserTracing {;
 <<<<<<< HEAD
-
-      constructor() {}
-    }
-    Http: class Http {
-      constructor() {}
-    },
-    OnUncaughtException: class OnUncaughtException {
-      constructor() {}
-    },
-    OnUnhandledRejection: class OnUnhandledRejection {
-      constructor() {}
-    }
-  }
-    },
-  },
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   // Transport
   makeBrowserOfflineTransport: noopReturn,
   makeFetchTransport: noopReturn,
@@ -217,11 +202,6 @@ const mockScope = {
   setFingerprint: noop
   clear: noop
   addEventProcessor: noop
-<<<<<<< HEAD
-// Additional exports for compatibility
-export { mockSentry as Sentry }
-// All exports are already defined above
-
 <<<<<<< HEAD
 
 // Mock scope;

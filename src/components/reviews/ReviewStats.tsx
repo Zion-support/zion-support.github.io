@@ -35,21 +35,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
-<<<<<<< HEAD
-
-
-  return (
-    <div className="bg-card border rounded-lg p-4">
-      <div className="flex items-center justify-between mb-4">
-        <div>
-
-                  }`}
-                />
-              ))}
-            </div>
-
-            <span className="text-sm text-muted-foreground">
-<<<<<<< HEAD
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
             </span>
           </div>
@@ -74,42 +59,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
         </div>;
       )}
 <<<<<<< HEAD
-}"}
-
-      {rating_distribution && (
-        <div className='space - y-2'>;
-          {[5, 4, 3, 2, 1].map (rating => (
-            <div key={rating} className='flex items - center gap - 2'>;
-              <div className='w - 6 text - sm text - right'>{rating}</div>;
-              <Star className='h - 3 w - 3 text - yellow - 400' />;
-              <Progress;
-                value={get_percentage (rating_distribution[rating] || 0)}
-                className='h - 2'        <div className="space - y-2">;
-          {[5, 4, 3, 2, 1].map ((rating, ) => (
-            <div key={rating} className="flex items - center gap - 2">;
-              <div className="w - 6 text - sm text - right">{rating}</div>;
-              <Star className="h - 3 w - 3 text - yellow - 400" />;
-              <Progress;
-                value = {get_percentage (rating_distribution[rating] || 0), }
-                className="h - 2";
-              />;
-              <div className='w - 8 text - xs text - muted - foreground'>                {rating_distribution[rating] || 0}              <div className="w - 8 text - xs text - muted - foreground">;
-                {rating_distribution[rating] || 0}
-              </div>;
-            </div>))}
-        </div>)}
-    </div>);
-}</div>);
-}</div>);
-}"}
-
-}</div>) ;
-}</div>) ;
-}"};
 <<<<<<< HEAD
-
-    </div>;
-  );
-}
-;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

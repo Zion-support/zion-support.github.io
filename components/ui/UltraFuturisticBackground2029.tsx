@@ -268,7 +268,6 @@ interface EnergyField {
             ease: 'easeInOut',            ease: "easeInOut"
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
 
           }}
             ease: 'easeInOut',            ease: "easeInOut"
@@ -279,16 +278,6 @@ interface EnergyField {
 
           }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-          }}
-
-
-            duration: 10,
-            repeat: Infinity,
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />

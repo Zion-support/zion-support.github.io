@@ -48,38 +48,6 @@ export function MainNavigation({
       e.preventDefault()
       setLoginOpen(true)
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      return;
-
-    }
-    setIsMobileMenuOpen(false)
-  }
-  const baseLinks = [
-    {
-      key: 'home'
-      href: '/'
-      matches: (path: string) => path === '/',    }
-    {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ]
   const links = baseLinks.map(link => ({
     ...link
@@ -104,7 +72,8 @@ class ErrorBoundary extends React.Component {
       href: '/analytics'
       matches: (path: string) => path.startsWith('/analytics')
     }) }
-<<<<<<< HEAD
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 interface MainNavigationProps {;
   isAdmin?: boolean,;
   unreadCount?: number,;
@@ -189,40 +158,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
+<<<<<<< HEAD
         aria-controls='main-navbar-collapse'
         aria-label='Toggle navigation'      >
         <span className='navbar-toggler-icon'></span>
       </button>
       <nav
-        className={cn('navbar', className)}
-        role='navigation'
-        aria-label='Main navigation'      >
-
-        <div
-          id="main-navbar-collapse"
-          className={cn(
-            'navbar-collapse'
-            { open: isMobileMenuOpen }
-            'w-full md:flex md:w-auto', // Handles visibility and desktop layout
-            !isMobileMenuOpen && 'hidden' // Explicitly hide when not open and on mobile
-          )}
-        >
-          <ul className='navbar-nav flex flex-col md:flex-row md:items-center md:gap-1'>
-            {' '}
-            {/* Added navbar-nav and flex direction classes */}
-            {links.map(link => (
-              <li key={link.name} className='nav-item'>
-                <Link
-            "navbar-collapse",
-            { "open": isMobileMenuOpen },
-            "w-full md:flex md:w-auto", // Handles visibility and desktop layout
-            !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
-          )}
-        >
-          <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
-            {links.map((link) => (
-              <li key={link.name} className="nav-item">
-                <Link 
                   href={link.href}
                   aria-label={link.name}
 
@@ -230,11 +171,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   className={cn(
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                    link.matches(router.pathname)
-                      ? 'bg-zion-purple/20 text-zion-cyan'
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
-                  )}                >
-
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
@@ -395,11 +331,6 @@ export default function Page() { [])
 }`}
                           {link.name}'`
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
-}`};
-;
-                          {link.name}'`;
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
-<<<<<<< HEAD
 
 
 
@@ -419,6 +350,7 @@ export default function Page() { [])
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -470,3 +402,5 @@ export default function Page() { [])
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

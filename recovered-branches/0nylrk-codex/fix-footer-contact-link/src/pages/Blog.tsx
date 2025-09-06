@@ -72,7 +72,6 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "optimize-ai-listings"
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
-<<<<<<< HEAD
 
       name: "Dr. Alicia Zhang"
       title: "AI Research Director"
@@ -405,25 +404,6 @@ const BLOG_POSTS: BlogPost[] = [
                       className="text-zion-cyan p-0 hover:text-zion-purple"
                       asChild>;
                       <Link to={`/blog/${post && post.slug}`}>;
-=======
-                    </p>;
-                    <div className="flex items - center">;
-                      <img;
-                        src={post.author.avatar_url}
-                        alt={post.author.name}
-                        className="w - 8 h - 8 rounded - full mr - 2";
-                      />;
-                      <span className="text - sm text - white">{post.author.name}</span>;
-                    </div>;
-                  </CardContent>;
-                  <CardFooter className="p - 6 pt - 0">;
-                    <Button;
-                      variant="link";
-                      className="text - zion - cyan p - 0 hover:text - zion - purple";
-                      as_child;
-                    >;
-                      <Link to={`/blog/${post.slug}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         Read More →;
                       </Link>;
                     </Button>;

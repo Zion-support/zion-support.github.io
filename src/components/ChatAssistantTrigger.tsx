@@ -17,13 +17,6 @@ import { Button } from "@/components/ui/button",
             avatarUrl: 'https://placehold.co/64x64?text=AI'
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
-        body: JSON.stringify({ ;
-          messages: [{ role: "user", content: message }] ;
-        })});
-            avatarUrl: 'https://placehold.co/64x64?text=AI';
-            role: 'Virtual Assistant';      if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant")
-      }
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -83,20 +76,6 @@ import { Button } from "@/components/ui/button",
         <MessageSquare className="h-5 w-5" />
       </Button>
       {isOpen && (
-        <ChatAssistant
-          isOpen = {isOpen,}
-          onClose = {(,) => setIsOpen(false),}
-
-            role: 'Virtual Assistant'
-          isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
-
-          recipient={{;
-            id: 'ai-assistant',;
-            name: 'AI Assistant',;
-            avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
-            role: 'Virtual Assistant';
-<<<<<<< HEAD
 
           }}
           onSendMessage = {handleSendMessage,}
@@ -107,12 +86,10 @@ import { Button } from "@/components/ui/button",
     </>;
   );
 }
-<<<<<<< HEAD
     </>;
   );
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
 <<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD

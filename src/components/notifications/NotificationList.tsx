@@ -1,5 +1,4 @@
 
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface NotificationListProps {
   loading: boolean,
@@ -36,24 +35,6 @@ import { NotificationItem } from './NotificationItem',;
 import { Notification } from '@/context/notifications',;
 import { EmptyState } from '@/components/ui/empty-state',;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-import { Bell } from 'lucide-react';
-interface NotificationListProps {;
-  loading: boolean,;
-  error: string | null,;
-  notifications: Notification[],;
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>,;
-  onRetry: () => void;
-}
-
-interface Notification {
-  id: string;
-  title: string;
-  message: string;
-  timestamp: string;
-  read: boolean;
-  type: 'info' | 'warning' | 'error' | 'success';
-}
   return (
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
       {error ? (;
@@ -177,6 +158,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         notifications.map((notification) => (
           <NotificationItem
 <<<<<<< HEAD
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
@@ -218,6 +200,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 };
 ";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             key={notification.id}
             notification={notification}
@@ -230,3 +213,5 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   );
 };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

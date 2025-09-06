@@ -19,37 +19,8 @@ export const preloadCriticalResources = null;
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
     document.head.appendChild(link);
-  });
-}
-export const optimizeBundleSize = () =>: any {
-  // Dynamic imports for non - critical components;
-  const load_component = component_name => {    return import (`./components/${component_name}`);
-
-  }
-  return { load_component }
-}
-
-  const loadComponent = componentName => {    return import(`./components/${componentName}`);
-
-export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...');
-};
-
-
-    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
-;
-  });
-};
-
-export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...')
-}
-
-export const optimizeBundleSize = () => {
-  // Dynamic imports for non-critical components
 =======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 

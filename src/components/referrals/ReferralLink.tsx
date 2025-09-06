@@ -36,66 +36,7 @@ export function ReferralLink(): any ({;
             </Button>
           </div>
           {copied && (
-            <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
-            <p className="text-sm text-green-600 dark:text-green-500">
-
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
-interface ReferralLinkProps {
-  referralLink: string,
-  onCopy: () => void,
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
-}
-
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-
-  const [ copied, setCopied ] = useState(false),
-
-  
-  const handleCopy = () => {
-    onCopy()
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-        <div className='flex flex - col space - y-3'>;
-          <div className='flex space - x-2'>;
-            <Input;
-              value = {referral_link, }
-              read_only;
-              className='font - mono text - sm';
-            />;
-            <Button;
-              variant='outline';
-              size='icon';
-              on_click={handle_copy}
-              aria - label='Copy referral link';
-            >;
-              <Copy className='h - 4 w - 4' />;
-              <span className='sr - only'>Copy</span>;
-            </Button>;
-          </div>;
-          {copied && (
-            <p className='text - sm text - green - 600 dark:text - green - 500'>              Copied to clipboard!;
-            <p className="text - sm text - green - 600 dark:text - green - 500">;
-  const handle_copy = () =>: any {
-    on_copy ();
-    set_copied (true);
-    set_timeout (() => set_copied (false), 2000);
-  }
-          {copied && (;
-            <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
-            <p className="text-sm text-green-600 dark:text-green-500">;
-
-
-
-
-  return (
-
-    <Card className="mt - 6">;
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
@@ -118,7 +59,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size="sm"
               className="flex items-center gap-2"
               onClick = {() => onShare('twitter'),}
-=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
@@ -134,14 +74,12 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size="sm"
               className="flex items-center gap-2"
               onClick = {() => onShare('facebook'),}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
               onClick={() => onShare('facebook')}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Facebook className="h-4 w-4" />
               Facebook
@@ -152,6 +90,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className='flex items-center gap-2'
               onClick={() => onShare('linkedin')}            >
               <Share className='h-4 w-4' />              LinkedIn              <Share className="h-4 w-4" />
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
               LinkedIn
             </Button>
           </div>
@@ -162,28 +101,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 };
 }
 }
-import { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
-interface ReferralLinkProps {;
-  referralLink: string,;
-  onCopy: () => void,;
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
-}
-;
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
-  const [copied, setCopied] = useState(false),;
-  const handleCopy = () => {;
-    onCopy(),;
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-  return (;
-    <Card className="mt-6">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
     <Card className="mt - 6">;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -348,5 +265,3 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   );
 }
 ;
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

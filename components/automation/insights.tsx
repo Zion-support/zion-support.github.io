@@ -12,7 +12,6 @@ return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Head from 'next/head';
 
 
@@ -26,25 +25,6 @@ export default function AutomationInsightsPage() {
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
-=======
-
-=======
-      </section>;
-      <section id="talent" className="mb-8">;
-        <h2 className="font-medium">Talent Highlights</h2>;
-        {!talentMd ? (;
-          <div className="text-sm text-gray-500">Loading…</div>;
-        ) : (;
-          <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd}</pre>;
-        )}
-      </section>
-    </div>
-);
-}
-  );
-}
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
                   <li key={k}>{k}: {v as any}</li>
                 ))}

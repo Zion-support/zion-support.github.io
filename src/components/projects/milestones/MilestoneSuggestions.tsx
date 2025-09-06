@@ -11,6 +11,7 @@ import { format, parseISO } from 'date-fns'
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 export function MilestoneSuggestions({
 import React, { useState } from 'react';
@@ -119,7 +120,20 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+
+export function MilestoneSuggestions({
+  projectName,
+  scopeSummary,
+  startDate,
+  endDate,
+  projectType,
+  onMilestonesGenerated
+}: MilestoneSuggestionsProps) {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
@@ -149,7 +163,6 @@ interface MilestoneSuggestionsProps {;
 
     const milestones = await generateMilestones(input),
 
-<<<<<<< HEAD
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
@@ -191,51 +204,6 @@ export function MilestoneSuggestions({;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-    const milestones = await generateMilestones(input),
-    
-    if (milestones.length > 0) {
-      setShowSuggestions(true),
-      if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones)
-;
-export function MilestoneSuggestions({;
-  projectName,;
-  scopeSummary,;
-  startDate,;
-  endDate,;
-  projectType,;
-  onMilestonesGenerated;
-}: MilestoneSuggestionsProps) {;
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
-  const [showSuggestions, setShowSuggestions] = useState(false),;
-  const handleGenerateMilestones = async () => {;
-    const input: MilestoneInput = {;
-      scope: `${projectName}: ${scopeSummary}`,;
-      startDate: startDate.toISOString(),;
-      endDate: endDate ? endDate.toISOString() : null,;
-      projectType: projectType || "Other";
-    },;
-    const milestones = await generateMilestones(input),;
-    if (milestones.length > 0) {;
-      setShowSuggestions(true),;
-      if (onMilestonesGenerated) {;
-        onMilestonesGenerated(milestones);
-      }
-    }
-  };
-  const formatDate = (dateString: string) => {;
-    try {;
-      return format(parseISO(dateString), 'MMM dd, yyyy');
-    } catch (error) {;
-      return dateString;
-    }
-  },
-
-  return (
-    <div className="space-y-4">
-      {!showSuggestions && (
-        <Button
-
             <CardTitle className="text-lg flex items-center">
               <Sparkles className="h-5 w-5 mr-2 text-primary" />
               AI-Suggested Milestones
@@ -243,20 +211,6 @@ export function MilestoneSuggestions({;
           </CardHeader>
           <CardContent>
 
-=======
-            <div className='space-y-3'>
-              {generatedMilestones.map((milestone, index) => (
-                <div key={index} className='p-3 border rounded-lg bg-muted/10'>
-                  <div className='flex items-center justify-between mb-1'>
-                    <div className='font-medium flex items-center'>                      {milestone.title}
-                      <Badge variant='secondary' className='ml-2 text-xs'>
-            <div className="space-y-3">
-              {generatedMilestones.map((milestone, index) => (
-                <div key={index} className="p-3 border rounded-lg bg-muted/10">
-                  <div className="flex items-center justify-between mb-1">
-                    <div className="font-medium flex items-center">
-                      {milestone.title}
-                      <Badge variant="secondary" className="ml-2 text-xs">
                         AI Suggested
                       </Badge>
                     </div>
@@ -272,17 +226,9 @@ export function MilestoneSuggestions({;
                 </div>
               ))}
 <<<<<<< HEAD
-
 <<<<<<< HEAD
 
-              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
-
-
-
-
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
               </div>
@@ -292,6 +238,7 @@ export function MilestoneSuggestions({;
       )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
 }"};

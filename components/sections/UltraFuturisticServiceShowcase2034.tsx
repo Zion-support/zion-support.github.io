@@ -244,7 +244,6 @@ export default function UltraFuturisticServiceShowcase2034() {
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
       {/* Animated Background */}
-<<<<<<< HEAD
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
       {/* Animated Background */}
@@ -259,14 +258,6 @@ export default function UltraFuturisticServiceShowcase2034() {
   };
   const itemVariants = {
 
-=======
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
-      </div>
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;

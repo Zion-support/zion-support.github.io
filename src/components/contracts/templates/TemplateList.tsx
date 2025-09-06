@@ -7,8 +7,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 import { useAuth } from "@/hooks/useAuth";
-import { useAuth } from "@/hooks/useAuth",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 // useRouter replaces the old useLocation hook from react-router
@@ -50,7 +48,6 @@ interface TemplateListProps {
     await setDefaultTemplate.mutateAsync(templateId)
   }
 
-=======
 
 // useRouter replaces the old useLocation hook from react-router;
 import { useRouter } from 'next/router';
@@ -121,7 +118,6 @@ export function TemplateList(): any ({;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
 
-<<<<<<< HEAD
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">;
@@ -162,7 +158,6 @@ export function TemplateList(): any ({;
               onClick={() => onSelect(template)}
               variant="outline"
 
-=======
 
             
             <Separator className="my-3" />
@@ -181,88 +176,5 @@ export function TemplateList(): any ({;
 <<<<<<< HEAD
       
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Delete Template</AlertDialogTitle>
-            <AlertDialogDescription>
-              Are you sure you want to delete this template? This action cannot be undone.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-              onClick = {handleDeleteConfirm,}
-            >
-              Delete
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
-    </div>
-  )
-}
-const handleSetDefault = async (templateId: string) => {
-  if (!user) {
-  const currentPath = router.asPath
-router.push (`/auth/login?returnTo=$ {
-  encodeURIComponent (currentPath)
-}`)
-return
-}await setDefaultTemplate.mutateAsync (templateId)
-return;
-}await setDefaultTemplate.mutateAsync (templateId) 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-}
-<CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
-  template.title
-}</h3> {"
-  template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) "
-}</div> <p className="text-xs text-muted-foreground"> Last updated: {
-  new Date (template.updated at) .toLocaleDateString () "
-}</p> </div> <div className="flex items-center gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> {"
-  !template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant="ghost" size="icon" onClick={
-  () => handleSetDefault (template.id) "
-}aria-label="Set as default" > <Star className="h-4 w-4" /> </Button> </TooltipTrigger> {
-  !user && (<TooltipContent> Please log in to use this feature </TooltipContent>) "
-}</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) "
-}<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) )
-}<AlertDialog open= {
-  !!templateToDelete
-}onOpenChange= {
-  () => setTemplateToDelete (null) "
-}> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-                  onClick = {() => handleDeleteClick(template && template.id),}
-                  aria-label="Delete template";
-                >;
-                  <Trash className="h-4 w-4 text-destructive" />;
-                </Button>;
-              </div>;
-            </div>;
-
-            <Separator className="my-3" />;
-
-            <Button
-              onClick = {() => onSelect(template),}
-              variant="outline" ;
-              className="w-full";
-            >;
-              Use This Template;
-            </Button>;
-          </CardContent>;
-        </Card>;
-      ))}
-
-
-  handleDeleteConfirm ;
-}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
-}'"};
-<<<<<<< HEAD
-
-}
-;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

@@ -17,7 +17,6 @@ import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
 
   buttonText?: string;
   className?: string;
@@ -35,7 +34,6 @@ interface PaymentButtonProps {
   onPaymentInitiated?: () => void,
   redirectUrl?: string
 }
-<<<<<<< HEAD
 
 export function PaymentButton({;
   amount;
@@ -193,25 +191,6 @@ export function PaymentButton({;
         onPaymentInitiated();
       }
 
-=======
-      // Reset button state after a short delay
-      setTimeout(() => {
-        setIsProcessing(false)
-      }, 1500)
-    }
-  }
-  return (
-    <Button
-      onClick={handlePaymentClick}
-      disabled={isProcessing}
-      className={cn(
-        "relative min-w-[120px]";
-
-
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
       // Call the create-checkout edge function;
@@ -251,11 +230,6 @@ export function PaymentButton({;
 
   return (;
     <Button;
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       onClick={handlePaymentClick}
       disabled={isProcessing}

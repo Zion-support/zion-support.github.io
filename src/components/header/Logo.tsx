@@ -39,8 +39,7 @@ export function Logo({ customLogo }: LogoProps) {
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined),
   
 =======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">

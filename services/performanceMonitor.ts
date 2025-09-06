@@ -158,7 +158,6 @@ export class PerformanceMonitorService {;
       return this && this.generateMockHistoricalData(url, days)
     }
   }
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
@@ -355,53 +354,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 149;
     period: '/month';
 
-=======
-;
-  private generateMockAlerts(url?: string): PerformanceAlert[] {;
-    const alerts: PerformanceAlert[] = [;
-      {;
-        id: '1',;
-        url: url || 'https://example.com',;
-        type: 'warning',;
-        message: 'Load time exceeded threshold',;
-        metric: 'loadTime',;
-        threshold: 2000,;
-        currentValue: 2500,;
-        timestamp: new Date(),;
-        resolved: false;
-      },;
-      {;
-        id: '2',;
-        url: url || 'https://example.com',;
-        type: 'info',;
-        message: 'Performance score improved',;
-        metric: 'performanceScore',;
-        threshold: 80,;
-        currentValue: 85,;
-        timestamp: new Date(),;
-        resolved: true;
-      }
-    ],;
-    return url ? alerts.filter(a => a.url === url) : alerts;
-  }
-}
-;
-// Pricing tiers for the Performance Monitor;
-export const PERFORMANCE_MONITOR_PRICING = {;
-  starter: {;
-    name: 'Starter',;
-    price: 19,;
-    period: '/month',;
-
-    features: [;
-      'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
-      'SLA guarantee';
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     ];

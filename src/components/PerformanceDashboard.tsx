@@ -381,27 +381,6 @@ const PerformanceDashboard: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-        <Card>
-
-                  <p className="text-sm text-gray-600 mt-1">
-  },;
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
-      case 'performance': return <Zap className="h-4 w-4" />,;
-      case 'security': return <Shield className="h-4 w-4" />,;
-      case 'ux': return <Search className="h-4 w-4" />,;
-      case 'build': return <TrendingUp className="h-4 w-4" />,;
-      default: return <CheckCircle className="h-4 w-4" />;
-          variant='outline';
-        >;
-          <TrendingUp className='h-4 w-4 mr-2' />;
-
-export default PerformanceDashboard;
-export default PerformanceDashboard, ;
-export default PerformanceDashboard;
-}
-<<<<<<< HEAD
-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 

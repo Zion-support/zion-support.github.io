@@ -1967,7 +1967,6 @@ const industries = [
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
 =======
 ];
-<<<<<<< HEAD
 
 export default function ITServices() {
 export default function ITServices() {;
@@ -2717,13 +2716,6 @@ export default function ITServices(req, res) {
                         strokeWidth={2}
                         d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
                       />
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                  </div>
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>

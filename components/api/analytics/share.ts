@@ -9,30 +9,11 @@ function ensure() {
     fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8');  if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')
 }
 =======
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (req.method !== 'POST') return res.status(405).end();
   ensure()
   const { url, title, network, utm } = req.body |{}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  if (req.method !== 'POST') return res.status(405).end();
-  ensure();
-  const { url, title, network, utm } = req.body || {};
-  const entry = { url, title, network, utm, ts: new Date().toISOString(), ua: req.headers['user-agent'] || '' };
-  const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
-  list.push(entry);
-  fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
-
-  const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
-  list.push(entry);
-  fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
-
-  res.status(200).json({ ok: true })
-}
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     ts: new Date ().toISOString (),
     ua: req.headers['user - agent'] || '',

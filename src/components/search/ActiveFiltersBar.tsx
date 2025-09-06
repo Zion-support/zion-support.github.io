@@ -319,7 +319,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 =======
         onClick = {onClearAll,}
         onClick={onClearAll}
-<<<<<<< HEAD
 
         className="text-xs h-6 px-2"
       >
@@ -343,8 +342,8 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
   filters: Filter[]
   onRemoveFilter: key: string void
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+<<<<<<< HEAD
       </button>
     </div>
   )}

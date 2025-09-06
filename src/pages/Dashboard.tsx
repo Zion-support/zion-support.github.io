@@ -54,7 +54,6 @@ export default function Dashboard() {
   const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
 
-<<<<<<< HEAD
     return (
       <div className='min - h-screen flex items - center justify - center'>;
         <div className='text - center'>;
@@ -95,37 +94,7 @@ if ( {) {
             </div>
 
 =======
-                    id='notifications-link'>;
-                    <Button variant='outline' className='w-full'>;
-                      <Bell className='mr-2 h-4 w-4' />;
-              {/* Notifications */}
-              <div className='bg - zion - blue - dark rounded - xl p - 6'>;
-                <h3 className='text - lg font - bold text - white mb - 4 flex items - center'>;
-                  <Bell size={18} className='mr - 2 text - zion - cyan' />;
-                  Recent Notifications;
-                </h3>;
-                <div className='space - y-4'>;
-                  <Link;
-                    href='/notifications';
-                    className='block';
-                    id='notifications - link';
-                  >;
-                    <Button variant='outline' className='w - full'>;
-                      <Bell className='mr - 2 h - 4 w - 4' />;
-
-                      View All Notifications;
-                    </Button>;
-                  </Link>;
-                </div>;
-              </div>;
-            </div>;
-
-                      onClick={logout}>;
-                      <LogOut size={16} className='mr-2' />;
-
-            
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
             {/* Main Content - Dashboard */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -160,58 +129,6 @@ if ( {) {
                 </div>
 =======
                 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                {/* Community Section */}
-                <div id="community-section">
-                  <h3 className="text-lg font-bold text-white mb-4">Community</h3>
-                  <CommunityDiscussion />
-                </div>
-                {/* User Overview */}
-                <div className="mt-8 space-y-8">
-                  <div className="bg-zion-blue-dark rounded-xl p-6">
-                    <h3 className="text-lg font-bold text-white mb-4 flex items-center">
-                      <FileText className="mr-2" size={18} /> Recent Orders
-                    </h3>
-                    {ordersLoading ? (
-                      <p className="text-zion-slate-light">Loading...</p>
-                    ) : orders.length === 0 ? (
-                      <EmptyState
-=======
-                        icon={<ShoppingBag className='h-8 w-8' />}
-                        title='No Orders'                        description="You haven't purchased anything yet."
-                        action={{
-                          text: 'Visit Marketplace'
-                          href: '/marketplace'
-                        }}
-                        className='border-none bg-transparent text-center'
-                      />
-                    ) : (
-                      <ul className='space-y-1'>
-                        {orders.slice(0, 3).map(o => (
-                          <li key={o.orderId} className='flex justify-between'>
-                            <span>#{o.orderId}</span>
-                            <Link
-                              href={`/orders/${o.orderId}`}
-                              className='text-zion-purple underline'
-                            >
-                              View
-                            </Link>
-                          </li>
-                        icon={<ShoppingBag className="h-8 w-8" />}
-                        title="No Orders"
-                        description="You haven't purchased anything yet."
-                        action={{ text: 'Visit Marketplace', href: '/marketplace' }}
-                        className="border-none bg-transparent text-center";
-                      />;
-                    ) : (;
-                      <ul className="space-y-1">;
-                        {orders.slice(0, 3).map(o => (;
-                          <li key={o.orderId} className="flex justify-between">;
-                            <span>#{o.orderId}</span>;
-                            <Link href={`/orders/${o.orderId}`} className="text-zion-purple underline">View</Link>;
-                          </li>;
 <<<<<<< HEAD
 <<<<<<< HEAD
 

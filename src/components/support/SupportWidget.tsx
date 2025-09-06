@@ -56,16 +56,5 @@ export function SupportWidget() {;
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />
               <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                Zion Support
-              </h3>
-            </div>
-            <div className="flex items-center gap-2">
-              <Button
-
-          <ChatBotPanel />
-        </div>
-      )}
-    </>;
-  );
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

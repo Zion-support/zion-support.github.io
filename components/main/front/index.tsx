@@ -585,7 +585,6 @@ export default function MainFrontIndex() {
       </header>
 
 =======
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Hero */}
@@ -595,10 +594,6 @@ export default function MainFrontIndex() {
           transition={{ duration: 0.6 }}
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-      {/* Hero */}
-      <div role="main" className="relative z-10">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -4493,7 +4488,6 @@ label: 'Live Dashboards',
           </div>
         </motion.section>
         {/* AUTO: catalog injection for automated advertising */}
-<<<<<<< HEAD
 
         {
           /* AUTO:FRONT_INDEX_DIRECTORY_START */
@@ -4574,9 +4568,6 @@ label: 'Live Dashboards',
           className='mx-auto max-w-7xl px-6 pb-14'
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Neural Feature Matrix
@@ -5987,7 +5978,6 @@ label: 'Live Dashboards',
                 </Link>
               )
             ))}
-<<<<<<< HEAD
 
           </div>
         </motion.section>
@@ -5998,16 +5988,6 @@ label: 'Live Dashboards',
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5 }}
-          className='mx-auto max-w-7xl px-6 pb-14'          id="capabilities"
-          className='mx-auto max-w-7xl px-6 pb-14'
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           initial={{ opacity: 0, y: 24 }}

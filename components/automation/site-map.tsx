@@ -42,16 +42,12 @@ import path from 'path';
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
 =======
-<<<<<<< HEAD
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datasite-map && map.json');
-=======
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';

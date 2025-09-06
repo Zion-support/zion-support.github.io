@@ -49,7 +49,6 @@ export const getEmergingTechServices2026ByPriceRange = (
 
   })
 }
-<<<<<<< HEAD
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -251,27 +250,6 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
 
   })
 };
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-}
-;
-export const getPopularEmergingTechServices2026 = () =>: any {
-  return emergingTechServices2026.filter (service => service.popular);
-}
-;
-export const getEmergingTechServices2026ByPriceRange = (
-  min_price: number,
-  max_price: number) =>: any {
-  return emergingTechServices2026.filter (service => {
-    const price = parse_int (service.price.replace ('$', ''));
-    return price >= min_price && price <= max_price;
-  });
-=======
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 };
 <<<<<<< HEAD

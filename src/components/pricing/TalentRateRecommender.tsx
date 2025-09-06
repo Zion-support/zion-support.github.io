@@ -24,11 +24,6 @@ interface TalentRateRecommenderProps {
   yearsExperience: number
   location?: string
   onSuggestionApplied: (value: number,) => void
-  skills: string[],
-  yearsExperience: number,
-  location?: string,
-  onSuggestionApplied: (value: number,) => void,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   rateType: "hourly" | "fixed"
 }
 

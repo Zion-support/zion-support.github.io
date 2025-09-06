@@ -34,24 +34,6 @@ const testimonials = [
     avatar: '/placeholder.svg',
   },]
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-export const AppTestimonials: React.FC = () => {
-  return (    avatar: "/placeholder.svg"
-  }
-]
-export const AppTestimonials: React.FC = () => {
-  return (
-    <section className='py-16 bg-zion-blue'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-12'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-            What Our Users Say
-          </h2>
-          <p className='text-lg text-gray-300 max-w-2xl mx-auto'>
-            Join thousands of satisfied users who have transformed their tech
-            careers with the Zion mobile app.
-          </p>
-        </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
   }
 ];
 
@@ -113,6 +95,15 @@ export const AppTestimonials: React.FC = () => {
                   </div>
                   <div>
 <<<<<<< HEAD
+
+
+}</div> </div> </section>) 
+}
+'"},
+
+  );
+};
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 import React from "react",;
 import { Star } from 'lucide-react';

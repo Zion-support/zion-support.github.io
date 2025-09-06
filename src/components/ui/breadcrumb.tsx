@@ -43,18 +43,6 @@ const Breadcrumb = React.forwardRef<
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      "inline-flex items-center gap-1 text-sm text-zion-slate-light",
-
-      className
-    )}
-    {...props}
-  />
-))
-
-const BreadcrumbSeparator = ({
-  children
-  className
-  ...props
 
 
 const BreadcrumbSeparator = ({
@@ -78,66 +66,6 @@ BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
     role="presentation"
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
-    {...props}
-  />;
-));
-Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
-
-  HTMLOListElement,;
-  React && React.ComponentPropsWithoutRef<'ol'>;
->(({ className, ...props }, ref) => (;
-
-import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { ChevronRight } from 'lucide-react'
- 
-const BreadcrumbEllipsis = ({
-  className
-  ...props
-}: React.ComponentProps<'span'>) => (  <span
-    role='presentation'
-    aria-hidden='true'
-    className={cn('[&>svg]:size-3 && 3.5 text-zion-slate-light/70', className)}    {...props}
-  >;
-    {children || <ChevronRight className='h-4 w-4' />}
-  </li>;
-);
-BreadcrumbSeparator && BreadcrumbSeparator.displayName = 'BreadcrumbSeparator';
-
-const BreadcrumbEllipsis = ({;
-  className,;
-  ...props;
-}: React && React.ComponentProps<'span'>) => (  <span
-    role='presentation'
-    aria-hidden='true'
-    className={cn('flex h-9 w-9 items-center justify-center', className)}    {...props}>;
-    &#8230,;
-  </span>;
-    role="presentation";
-    aria-hidden="true";
-    className={cn("flex h-9 w-9 items-center justify-center", className)}
-  <li
-    role="presentation"
-    aria-hidden="true"
-    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
-    {...props}
-
-  >;
-    {children || <ChevronRight className="h-4 w-4" />}
-  </li>;
-);
-BreadcrumbSeparator && BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
-
-const BreadcrumbEllipsis = ({;
-  className;
-  ...props;
-}: React && React.ComponentProps<"span">) => (;
-
-  <span
-    role="presentation"
-    aria-hidden="true"
-    className={cn("flex h-9 w-9 items-center justify-center", className)}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const BreadcrumbEllipsis = ({
   className
@@ -145,6 +73,7 @@ const BreadcrumbEllipsis = ({
 
 export {
 <<<<<<< HEAD
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 export {
   Breadcrumb
   BreadcrumbList
@@ -157,6 +86,14 @@ export {
 export {;
 
 <<<<<<< HEAD
+  BreadcrumbSeparator;
+  BreadcrumbEllipsis};
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
+const BreadcrumbEllipsis = ({
+  className,
+  ...props
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 }: React.ComponentProps<"span">) => (
   <span
     role="presentation"

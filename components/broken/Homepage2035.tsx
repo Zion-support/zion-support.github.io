@@ -73,7 +73,6 @@ const LoadingFallback = () => (;
   ];
   const allServices = [
 =======
-<<<<<<< HEAD
               service && service.category.includes('Financial') ||;
               service && service.category.includes('Trading');
             );
@@ -362,10 +361,6 @@ if ( {) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 
-=======
-                  className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 >
                   <Play className="w-5 h-5" />
                   <span>Watch Demo</span>
@@ -1127,10 +1122,6 @@ export default Homepage2035);
 }
 ;
 export default Homepage2035;
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

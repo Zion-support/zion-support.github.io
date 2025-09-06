@@ -42,7 +42,6 @@ interface GeneratedNewsletterContent {
   body: string
   cta: string
 }
-<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -91,13 +90,6 @@ serve(async (req) => {
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
 
-=======
-      title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`;
-      userPrompt = prompt |`Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone.
-      title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`,
-      
-      userPrompt = prompt || `Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone. 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`
     } else {
       systemPrompt = `You are an expert email newsletter writer for Zion, an AI freelancing marketplace.

@@ -36,7 +36,6 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       md: 16
       lg: 24
       xl: 32
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     };
@@ -70,11 +69,6 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
 
 
   const tokens = await buildTokenSet(fileId);
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-  const tokens = await buildTokenSet(fileId);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return {
     components: {
       button: {

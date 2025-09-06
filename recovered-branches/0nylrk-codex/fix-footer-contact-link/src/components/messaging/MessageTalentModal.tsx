@@ -38,7 +38,6 @@ export interface MessageTalentModalProps {
 
   jobTitle?: string
 }
-<<<<<<< HEAD
 
 export function MessageTalentModal({;
   talent;
@@ -140,11 +139,6 @@ function MessageTalentModal() {
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>

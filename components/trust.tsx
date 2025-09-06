@@ -91,27 +91,12 @@ export default function TrustPage() {;
     alert('Appeal submitted');
 
     form.reset()
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return (
-=======
-    <EnhancedLayout>
-      <div className='space-y-6'>
-        <div className='flex items-center justify-between'>
-          <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>
-          <div className='flex items-center gap-3'>
-            <label className='text-sm inline-flex items-center gap-2'>
-              <input
-                type='checkbox'
-                checked={showLogic}
-                onChange={() => setShowLogic(!showLogic)}
-              />{' '}
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <EnhancedLayout>
 
         <div className="flex items-center justify-between">
@@ -239,13 +224,9 @@ export default function TrustPage() {;
                 </div>
               )}
             </div>
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </div>;
           </div>;
         )}
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

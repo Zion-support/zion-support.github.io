@@ -42,7 +42,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 
   })
 =======
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
@@ -636,27 +635,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
   });
 
 };
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-}
-;
-export const getPopularSpecializedITSolutions2026 = () =>: any {
-  return specializedITSolutions2026.filter (solution => solution.popular);
-}
-;
-export const getSpecializedITSolutions2026ByPriceRange = (
-  min_price: number,
-  max_price: number) =>: any {
-  return specializedITSolutions2026.filter (solution => {
-    const price = parse_int (solution.price.replace ('$', ''));
-    return price >= min_price && price <= max_price;
-  });
-=======
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 };
 <<<<<<< HEAD

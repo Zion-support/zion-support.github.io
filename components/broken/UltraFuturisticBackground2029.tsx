@@ -436,7 +436,6 @@ if ( {) {
           y: [0, -20, 0];
           opacity: [0.2, 0.5, 0.2]
         transition={{
-<<<<<<< HEAD
           ease: 'linear',          ease: "linear"
         }}
 
@@ -573,9 +572,6 @@ if ( {) {
           animate={{
 
             scale: [1, 1.5, 1];
-=======
-            opacity: [0.1, 0.3, 0.1]
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }}
           transition={{
             duration: 8

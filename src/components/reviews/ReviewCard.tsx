@@ -37,7 +37,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
 
 <<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",
@@ -74,65 +73,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-} from '@/components/ui/dialog'
-import { Textarea } from '@/components/ui/textarea'
-interface ReviewCardProps {
-  review: Review
-onReport: (reviewId: string, reason: string) => Promise<boolean>
-}export function ReviewCard ({
-  review, onReport
-}: ReviewCardProps) {
-  const handleReport = async () => {
-  if (!reportReason.trim () ) return;
-setIsReporting (true)
-const success = await onReport (review.id, reportReason)
-setIsReporting (false)
-if (success) {
-export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState('')
-  const [isReporting, setIsReporting] = useState(false)
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false)
-  const handleReport = async () => {
-    if (!reportReason.trim()) return;
-    setIsReporting(true)
-    const success = await onReport(review.id, reportReason)
-    setIsReporting(false)
-    if (success) {
-      setReportReason('')
-      setIsReportDialogOpen(false)
-    }
-  }
-  const renderStars = (rating?: number) => {
-    if (!rating) return null
-    return (
-      <div className='flex'>
-        {[1, 2, 3, 4, 5].map(star => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
-
-          />
-        ))}
-      </div>
-    )
-
-  const getInitials = (name: string,) => {
-    return name
-      .split(" ")
-      .map((n,) => n[0])
-      .join("")
-      .toUpperCase()
-      .substring(0, 2)
-  }
-
-  return (
-    <div className="border rounded-lg p-4 bg-card">
-      <div className="flex justify-between items-start mb-3">
-        <div className="flex items-center gap-3">
-          {review.is_anonymous ? (
-            <Avatar>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <AvatarFallback className="bg-muted">
                 <User className="h-4 w-4" />
               </AvatarFallback>
@@ -142,6 +82,53 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
               ) : (
                 <AvatarFallback>
 
+=======
+    <div className='border rounded - lg p - 4 bg - card'>;
+      <div className='flex justify - between items - start mb - 3'>;
+        <div className='flex items - center gap - 3'>;
+          {review.is_anonymous ? (
+
+  }
+      </div>;
+    );
+  },;
+
+  const getInitials = (name: string,) => {;
+    return name;
+      .split(" ");
+      .map((n,) => n[0]);
+      .join("");
+      .toUpperCase();
+      .substring(0, 2);
+  };
+
+  return (
+
+
+              )}
+            </Avatar>;
+          )}
+
+    <div className="border rounded-lg p-4 bg-card">
+      <div className="flex justify-between items-start mb-3">
+        <div className="flex items-center gap-3">
+    <div className="border rounded - lg p - 4 bg - card">;
+      <div className="flex justify - between items - start mb - 3">;
+        <div className="flex items - center gap - 3">;
+
+          {review.is_anonymous ? (
+            <Avatar>;
+              <AvatarFallback className="bg - muted">;
+                <User className="h - 4 w - 4" />;
+              </AvatarFallback>;
+            </Avatar>) : (
+            <Avatar>;
+              {review.reviewer_profile?.avatar_url ? (
+
+                <AvatarImage src={review && review.reviewer_profile.avatar_url} alt={review && review.reviewer_profile.display_name} />;
+              ) : (;
+                <AvatarFallback>;
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                   {review && review.reviewer_profile?.display_name ? ;
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
@@ -228,18 +215,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 Timeliness
                 <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-              </Badge>
-            )}
-            {review.would_work_again !== undefined && (
-
-                variant={review.would_work_again ? "default" : "secondary"}
-                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
-              >
-                {review.would_work_again ? "Would work again" : "Would not work again"}
-              </Badge>
-            )}
-          </div>
-        </div>
             )}
 
             {review && review.quality_rating && (;
@@ -270,17 +245,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      <div className='mt-3 flex justify-end'>
-        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
-          <DialogTrigger asChild>
-            <Button variant='ghost' size='sm' className='text-muted-foreground'>
-              <Flag className='h-3 w-3 mr-1' />              Report
-      <div className="mt-3 flex justify-end">
-        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
-          <DialogTrigger asChild>
-            <Button variant="ghost" size="sm" className="text-muted-foreground">
-              <Flag className="h-3 w-3 mr-1" />
-
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -330,27 +294,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
 
               onChange = {(e,) => setReportReason(e.target.value),}
 
-=======
-
-
-                If you believe this review violates our community guidelines, please provide details below.
-              </DialogDescription>
-            </DialogHeader>
-            
-            <Textarea
-              placeholder="Why are you reporting this review?"
-              value={reportReason}
-              onChange={(e) => setReportReason(e.target.value)}
-<<<<<<< HEAD
-              className="min-h-[100px]"
-            />
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
               </Button>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
   review.reviewer profile.avatar url;
 }alt= {

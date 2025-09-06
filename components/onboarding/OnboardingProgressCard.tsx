@@ -173,28 +173,12 @@ function OnboardingProgressCard() {
           <PartyPopper size={18} />;
           <span className='text-sm'>All steps completed — great job!</span>        </div>;
       ) : null}
-<<<<<<< HEAD
       {/* Checklist */}        <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">;
           <PartyPopper size={18} />;
           <span className="text-sm">All steps completed — great job!</span>;
         </div>;
       ) : null}
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-              ) : (
-                <Circle className="text-gray-400" size={18} />
-              )}
-              <span className={step.completed ? 'line-through opacity-70' : ''}>{step.label}</span>
-            </div>
-            {!step.completed && step.ctaHref && step.ctaLabel ? (
-              <Link href={step.ctaHref}>
-                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-
-      {/* Checklist */}
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======

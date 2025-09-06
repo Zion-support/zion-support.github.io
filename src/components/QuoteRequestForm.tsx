@@ -44,21 +44,6 @@ export function QuoteRequestForm() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  const [formData, setFormData] = useState<QuoteFormData>({
-    serviceType: ""
-    serviceCategory: ""
-    specificItem: null
-    projectName: ""
-    projectDescription: ""
-    startDate: undefined
-    endDate: undefined
-    timeline: "flexible"
-    budget: {
-      amount: 0
-      type: "fixed"
-
-    },
-<<<<<<< HEAD
     contactInfo: {
       name: ""
       email: ""

@@ -21,31 +21,8 @@ import {
 
 interface SortDropdownProps {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-  sortOption: string
-
-  setSortOption: (option: string) => void
-}
-
-
-
-export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
-interface SortDropdownProps {;
-  sortOption: string,;
-  setSortOption: (option: string) => void;
-}
-
-export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdownProps) {;
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-
-        >
-          <div className="flex items-center gap-2">
-            <SortDesc className="h-4 w-4 text-zion-purple" />
-            {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>

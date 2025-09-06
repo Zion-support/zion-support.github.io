@@ -42,30 +42,9 @@ export default function ProductPage() {;
     };
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    // Only fetch if id is available (from router)
-    if (id) {
-      fetchProduct()
-
-    }
-  }, [id]), // id is now from router.query
-  if (!product && !id) { // If no id from router yet, it might still be loading
-    return <div className="p-6 text-white">Loading product details...</div>
-  }
-  if (!product) {
-
-      />
-      <div className="min-h-screen bg-zion-blue p-6 text-white">
-        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
-        {product.images?.length ? (
-          <div className="mb-4 relative w-full h-64">
-            <Image
-
-              className="object-cover rounded-md"
-=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

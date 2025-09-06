@@ -33,6 +33,10 @@ interface CategoryType {
     color: "from-purple-500 to-indigo-600", // Keep color for styling
 
   },
+=======
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   {
     id: "talents"
     name: t('categories.talents')
@@ -72,30 +76,9 @@ const getIcon = (iconName?: string,) => {
         ...cat,
         ...cat,
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-        title: cat.name,
-        icon: getIcon(cat.iconName)})),
-
-  // If fetchedCategories is an empty array, and we want to show nothing:
-  if (fetchedCategories && fetchedCategories.length === 0) {
-    return (
-      <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-white mb-4">{t('home.no_categories_title')}</h2>
-          <p className="text-zion-slate-light text-lg mb-2">
-            {t('home.no_categories_desc')}
-          </p>
-          <p className="text-zion-slate-light text-md">
-            {t('home.no_categories_support')}
-          </p>
-        </div>
-      </section>
-    )
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  }
-
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -134,16 +117,6 @@ const getIcon = (iconName?: string,) => {
               </div>
             </Link>
           ))}
-=======
-        </div>
-        </div>;
-<<<<<<< HEAD
-
-        {/* Special services section with translations */}
-        <div className="mt-8">
-          <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
-          <div className="flex flex-wrap justify-center gap-4">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {

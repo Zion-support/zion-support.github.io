@@ -45,7 +45,6 @@ export interface ServiceCategory {;
   features: string[];
   href: string;
   color: string;
-<<<<<<< HEAD
 }
 
 export interface SEOProps {;
@@ -87,17 +86,6 @@ export interface FormData {
   image?: string;
   project?: string;
 }
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-export interface BlogPost {
-
-  project?: string;
-}
-
-
-export interface BlogPost {;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   excerpt: string;
@@ -157,7 +145,6 @@ export interface TeamMember {;
   github?: string;
   twitter?: string;
 }
-<<<<<<< HEAD
 export interface Project {
   "id": string;
   name: string;
@@ -307,10 +294,6 @@ export interface Project {;
   name: string;
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
 =======
 ;

@@ -102,23 +102,6 @@ export function PartnerReferralLinks() {;
       // Add custom campaign parameter if selected
       if (selectedCampaign !== 'default') {
         url.searchParams.append('campaign', selectedCampaign)
-      }
-
-      // Add custom parameter if provided;
-      if (customParam) {;
-        url && url.searchParams.append('source', customParam);
-      }
-
-      const newLink = {;
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,;
-        link: url && url.toString(),;
-      };
-
-      setGeneratedLinks(prev => [...prev, newLink]);
-      setIsDialogOpen(false);
-      setCustomParam('');
-    }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   };
 
   const handleDownloadLinks = () => {;
@@ -215,7 +198,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
         link: url.toString()
       },
       
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -248,6 +230,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
+<<<<<<< HEAD
                   </Button>
                 </div>
               </CardContent>

@@ -37,19 +37,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     const fetchJobs = async () => {
       if (!user) return,
 
-<<<<<<< HEAD
-
-
-      try {
-        let query = supabase
-          .from("jobs")
-          .select("*")
-          .eq("client_id", user.id)
-          .order("created_at", { ascending: false })
-          .order("created_at", { ascending: false }),
-        if (filter) {
-          query = query.eq("status", filter)
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         }
         const { data, error } = await query;
         // Check condition
@@ -66,37 +55,10 @@ if (throw error) {
     }
     fetchJobs()
   }, [user, filter])
-}
-    return (
-      <div className="flex justify - center items - center p - 8">;
-        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
-      </div>);
-  }
-
-  // Check condition
-if ( {) {
-  $2
-}
-    return (<div className="text - center p - 8 border rounded - md bg - muted / 20">;
-        <p className="text - lg text - muted - foreground">;
-          {filter;
-            ? `No jobs with status "${filter}" found.`;
-
-            : "You haven't posted any jobs yet.", }
-        </p>;
-        <Button as_child className="mt - 4">;
-          <Link href="/post - job">Post Your First Job</Link>;
-        </Button>;
-      </div>);
-  }
-
-
-          .order("created_at", { ascending: false }),
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 <<<<<<< HEAD
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
     return (
@@ -132,48 +94,6 @@ if ( {) {
         return "bg-yellow-100 text-yellow-800",
       case "filled":
         return "bg-green-100 text-green-800",
-      case "closed":
-        return "bg-gray-100 text-gray-800"
-      default:
-        return "bg-gray-100 text-gray-800"
-
-interface JobsListProps {;
-  filter?: JobStatus;
-  onSelectJob?: (jobId: string, jobTitle: string) => void}
-
-export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect((,) => {;
-    const fetchJobs = async () => {;
-      if (!user) return;
-
-      try {;
-        let query = supabase;
-          .from("jobs");
-          .select("*");
-          .eq("client_id", user && user.id);
-          .order("created_at", { ascending: false }),;
-        if (filter) {;
-          query = query && query.eq("status", filter);
-        }
-
-        const { data, error } = await query;
-
-        if (error) throw error;
-        setJobs(data as Job[]);
-      } catch (error) {;
-        logErrorToProduction('Error fetching jobs:', { data: error });
-      } finally {;
-        setIsLoading(false);
-      }
-    };
-
-    }
-  }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (

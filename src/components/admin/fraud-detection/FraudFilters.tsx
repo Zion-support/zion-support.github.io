@@ -27,12 +27,6 @@ interface FraudFiltersProps {
         />
       </div>
 
-          value = {searchQuery,}
-
-
-
-      
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
         <SelectTrigger className="w-[180px]">
@@ -46,6 +40,23 @@ interface FraudFiltersProps {
           <SelectItem value="actioned">Actioned</SelectItem>
         </SelectContent>
       </Select>
+=======
+
+
+
+      
+      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
+        <SelectTrigger className="w-[180px]">
+          <SelectValue placeholder="Severity" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="">All Severities</SelectItem>
+          <SelectItem value="safe">Safe</SelectItem>
+          <SelectItem value="suspicious">Suspicious</SelectItem>
+          <SelectItem value="dangerous">Dangerous</SelectItem>
+        </SelectContent>
+      </Select>
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
 
@@ -65,3 +76,4 @@ interface FraudFiltersProps {
           <SelectItem value="review">Reviews</SelectItem>
         </SelectContent>
       </Select>
+<<<<<<< HEAD

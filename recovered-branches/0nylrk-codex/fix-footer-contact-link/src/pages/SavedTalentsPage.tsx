@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
@@ -50,14 +49,6 @@ if ( {) {
             `;
 
             talent_profile (
-=======
-
-        const { data, error } = await supabase;
-          .from("saved_talents");
-          .select(;
-            `;
-            talent_profile (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               id;
               user_id;
               full_name;

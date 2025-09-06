@@ -70,18 +70,6 @@ function generateInnovationListing (index: number): ProductListing {
       icon: <Code className="w-6 h-6" />
 
     },
-=======
-    }
-    'talents': {
-      title: "Talents",
-      description: "Connect with AI experts, developers, and tech specialists",
-      icon: <Brain className="w-6 h-6" />
-    },
-    'equipment': {
-      title: "Equipment",
-      description: "Rent or buy specialized hardware, servers, and devices",
-      icon: <Code className="w-6 h-6" />
-    },
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -95,6 +83,16 @@ function generateInnovationListing (index: number): ProductListing {
       icon: <Brain className="w-6 h-6" />
     }
     },
+=======
+
+
+    'content-creation': {
+      title: "Content Creation"
+      description: "Generate high-quality content for your projects"
+      icon: <PenLine className="w-6 h-6" />
+    }
+    },
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
     'data-analysis': {
@@ -123,6 +121,11 @@ function generateInnovationListing (index: number): ProductListing {
     },
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     },
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     'business-solutions': {
@@ -225,42 +228,12 @@ function generateInnovationListing (index: number): ProductListing {
     }
   },
 
-  const seoTitle = category.title
-    ? `${category.title} | Zion Marketplace`
-    : 'Category | Zion Marketplace',
-  const seoDescription =
-    category.description || 'Explore listings in this category.',
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-        setCategory(currentCategory)
-        innovationCounterRef.current = 0
-    : 'Category | Zion Marketplace'
-  const seoDescription = null;
-    category.description || 'Explore listings in this category.'
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  return (
-    <>
-      <NextSeo title={seoTitle} description={seoDescription} />
-      <Header />
-      <Suspense fallback={<ListingGridSkeleton />}>
-      <Suspense fallback={<ListingGridSkeleton />}> 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-        <div className="min-h-screen bg-zion-blue">
-          <div className="container mx-auto px-4 py-12">
-          <div className="mb-4">
-            <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
-              ← Back to Categories
-            </Link>
-          </div>
 
               ))}
             </div>
           )}
 <<<<<<< HEAD
-=======
+<<<<<<< HEAD
 
 
 
@@ -271,6 +244,7 @@ function generateInnovationListing (index: number): ProductListing {
     </>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -298,3 +272,5 @@ function generateInnovationListing (index: number): ProductListing {
 
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

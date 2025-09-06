@@ -5,7 +5,6 @@ import path from 'path';
 import { execSync } from 'child_process';
 import type { NextApiRequest, NextApiResponse } from 'next';
 export type DevRole = 'admin' | 'maintainer' | 'contributor';
-<<<<<<< HEAD
 
   isAuthenticated: boolean;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -49,9 +48,6 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   }
   return identity;
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

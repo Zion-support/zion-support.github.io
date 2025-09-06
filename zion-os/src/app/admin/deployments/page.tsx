@@ -580,7 +580,6 @@ export default function DeploymentsPage() {;
           >;
             {label} ({count});
           </button>;
-<<<<<<< HEAD
 
         ))}
       </div>;
@@ -617,93 +616,6 @@ export default function DeploymentsPage() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        ))}
-      </div>
-      {/* Deployments Grid */}
-      <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
-        {filteredDeployments.map(deployment => (
-          <div
-            key={deployment.id}
-            className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'
-          >
-            {/* Status Header */}
-            <div className='p-6 border-b border-white/10'>
-              <div className='flex items-start justify-between mb-4'>
-                <div className='flex items-center gap-3'>
-                  <div className='p-2 bg-white/10 rounded-lg'>
-                    {getVerticalIcon(deployment.vertical)}
-                  </div>
-                  <div>
-                    <h3 className='font-bold text-lg text-white group-hover:text-white/90 transition-colors'>
-                      {deployment.instanceName}
-                    </h3>
-                    <div className='flex items-center gap-2 mt-1'>
-                      <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80'>
-                        {deployment.vertical}
-                      </span>
-                      <span className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400'>                        {deployment.governanceType}          <div
-            key={deployment.id}
-            className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5"
-          >
-            {/* Status Header */}
-            <div className="p-6 border-b border-white/10">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-white/10 rounded-lg">
-                    {getVerticalIcon(deployment.vertical)}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg text-white group-hover:text-white/90 transition-colors">
-                      {deployment.instanceName}
-                    </h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80">
-                        {deployment.vertical}
-                      </span>
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
-                        {deployment.governanceType}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className='flex items-center gap-2'>
-                  {getStatusIcon(deployment.status)}
-                  <span
-                    className={`text-sm font-medium ${getStatusColor(deployment.status)}`}
-                  >
-                    {deployment.status.charAt(0).toUpperCase() +
-                      deployment.status.slice(1)}                  </span>                <div className="flex items-center gap-2">
-                  {getStatusIcon(deployment.status)}
-                  <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>
-                    {deployment.status.charAt(0).toUpperCase() + deployment.status.slice(1)}
-                </div>
-              </div>
-              {/* Progress Bar for Active Deployments */}
-              {deployment.status === 'deploying' && (
-                <div className='space-y-2'>
-                  <div className='flex justify-between text-sm text-white/70'>
-                    <span>Deployment Progress</span>
-                    <span>{deployment.progress}%</span>
-                  </div>
-                  <div className='w-full bg-white/10 rounded-full h-2'>
-                    <div
-                      className='bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out'                      style={{ width: `${deployment.progress}%` }}                    <span>Deployment Progress</span>
-                    <span>{deployment.progress}%</span>
-                  </div>
-                  <div className="w-full bg-white/10 rounded-full h-2">
-                    <div
-                      className="bg-blue-500 h-2 rounded-full transition-all duration-500 ease-out"
-                      style={{ width: `${deployment.progress}%` }}
-                    ></div>
-                  </div>
-                </div>
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
-        {filteredDeployments.map((deployment) => (;
-          <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
-            {/* Status Header */}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="p-6 border-b border-white/10">;
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex items-center gap-3">;

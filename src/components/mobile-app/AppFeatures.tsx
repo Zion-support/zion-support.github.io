@@ -28,6 +28,9 @@ import React from "react",
 import { Brain, Clock, Award, Zap } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,
     title: "1-Click Hiring",
@@ -35,7 +38,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -45,17 +47,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
   },
   }
   },
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    title: "Resume Builder",
-
-    description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
-
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   {
     icon: <Zap className="h-10 w-10 text-zion-cyan" />,
     title: "Real-time Notifications",
@@ -76,7 +67,6 @@ import React from "react",
 import { Brain, Clock, Award, Zap } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 
@@ -112,7 +102,6 @@ export const AppFeatures: React.FC = () => {
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
-<<<<<<< HEAD
 
 
 import React from 'react';
@@ -125,6 +114,7 @@ import React from 'react';
 }
 ";
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD

@@ -42,10 +42,6 @@ export function PaymentMethods() {
       isDefault: false
     }
   ]
-      id: 'pm-1',
-      type: 'credit_card',
-      brand: 'Visa',
-      last4: '4242',
 
 
 
@@ -90,10 +86,7 @@ export function PaymentMethods() {
             </div>
             <div className='flex gap-2'>                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
                     <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
-                      Default
-                    </span>
-                  )}
-                </p>
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         <Button className="gap-1">
 
           <Plus className="h-4 w-4" />
@@ -112,17 +105,11 @@ export function PaymentMethods() {
     </Card>
   )
 
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
 =======
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -162,4 +149,7 @@ export function PaymentMethods() {;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

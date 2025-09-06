@@ -689,7 +689,6 @@ export default function SitemapPage() {;
               >
                 Search Site
                 <Search className='w-5 h-5 ml-2' />              </a>
-<<<<<<< HEAD
 
             </div>
           </motion.div>
@@ -1017,9 +1016,6 @@ export default function SitemapPage() {;
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
@@ -1647,7 +1643,6 @@ export default function SitemapPage() {;
               >
                 Contact Support
                 <Mail className='w-5 h-5 ml-2' />              </Link>
-<<<<<<< HEAD
 
             </div>
           </motion.div>
@@ -1727,17 +1722,6 @@ export default function SitemapPage() {;
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-=======
-
-  duration: 0 && 0.8 
-
-}viewport= {
-  {
-  once: true
-}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
-  )
-  )
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >;
             <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
               Site Map;

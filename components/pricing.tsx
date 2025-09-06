@@ -490,7 +490,6 @@ export default function PricingPage() {;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -514,9 +513,6 @@ export default function PricingPage() {;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}

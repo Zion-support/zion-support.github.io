@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
@@ -72,26 +71,5 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { Link } from './react-router-dom';
-import { use_location } from './react-router-dom';
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from './lucide-react';
-import { cn } from '@/lib / utils';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-export interface MobileMenuProps {
-  unread_count?: number;
-  on_close: () => void;
-}
-export /**
- * MobileMenu - Function description
- */
-function MobileMenu() {
-  const location = use_location ();
-  const { user } = use_auth ();
-  const is_authenticated = !!user;
-;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -43,29 +43,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const query = useDebounce(searchQuery, 300)
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
-  "All Categories",
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
-  "Infrastructure"
-],
-
-export interface BlogProps {
-  posts?: BlogPost[]
-}
-
-export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
-  const query = useDebounce(searchQuery, 300),
-  const [isLoading, setIsLoading] = useState(false),
-  const router = useRouter(),
-
-<<<<<<< HEAD
 
         setPosts(data)
       } catch (err) {
@@ -76,30 +53,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     }
     fetchPosts()
   }, [query])
-    },
-
-    fetchPosts()
-  }, [query]),
-
-  // Filter blog posts based on selected category only.
-  // Search filtering is handled server-side.
-  const filteredPosts = posts.filter(post => {
-    const matchesCategory =
-      selectedCategory === 'All Categories' |
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory = null;
       selectedCategory === 'All Categories' ||
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      post.category === selectedCategory
-    return matchesCategory
-  })
-  // Get featured posts
-  const featuredPosts = posts.filter(post => post.isFeatured)
-  logInfo('BlogPage filteredPosts:', { data: filteredPosts })
-
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
 
@@ -121,19 +80,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  return (
-    <>
-      <SEO
-        title="Blog - Latest from Zion Tech Marketplace"
-        description="Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough."
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
-        canonical="https://app.ziontechgroup.com/blog"
-      />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <h1>Blog</h1>
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>AI & Tech Insights</GradientHeading>
             )
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
@@ -1202,6 +1148,7 @@ key = "{post && post.id}
                       </Link>;
                     ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   </div>;
                 {/* comment */}";
@@ -1578,3 +1525,5 @@ key = "{post.id}
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

@@ -20,7 +20,6 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
-<<<<<<< HEAD
 
             Reject
           </DropdownMenuItem>
@@ -33,19 +32,9 @@ interface ApplicationActionsProps {
         size="sm"
         asChild
       >
-      
-
-      
-      
-
-
-      <Button 
-        variant="default" 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         size="sm"
         asChild
       >
-<<<<<<< HEAD
 <<<<<<< HEAD
 import Link from "next/link",;
 import {;
@@ -55,8 +44,6 @@ import {;
   DropdownMenuTrigger;
 } from "@/components/ui/dropdown-menu",;
 import { Button } from "@/components/ui/button",;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;

@@ -102,7 +102,6 @@ import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-ad
 import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -130,44 +129,6 @@ function getAllServices(): Service[] {
 		.concat(realQ4Services2025 as unknown as Service[]);
 		.concat(real2025Q4Additions as unknown as Service[]);
 		.concat(realMarketServicesExtended as unknown as Service[]);
-=======
-		.concat(real2026Q1Additions as unknown as Service[]);
-		.concat(real2026Additions as unknown as Service[]);
-		.concat(added2026Q2Services as unknown as Service[]);
-		.concat(real2026Q3Additions as unknown as Service[]);
-		.concat(real2026Q4Additions as unknown as Service[]);
-		.concat(real2026Q4NewServices as unknown as Service[]);
-		.concat(real2027Q1Additions as unknown as Service[]);
-		.concat(newSaasItAiServices2025 as unknown as Service[]);
-function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-function getExistingRootPageSlugs(): Set<string> {
-	const pagesDir = path.join(process.cwd(), 'pages')
-	const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
-	const reserved = new Set<string>(['apireportsservices'])
-	const slugs = new Set<string>()
-		}
-		// Directories at root (folder routes);
-		if (entry.isDirectory()) {slugs.add(entry.name);
-	}
-	return slugs;
-export async function getStaticPaths() {
-	const services = getAllServices()
-	const slugs = new Set<string>()
-	 }))
-	const services = getAllServices(),
-	const slugs = new Set<string>(),
-	 })),;
-
-		.concat(real2026Additions as unknown as Service[]);
-		.concat(added2026Q2Services as unknown as Service[]);
-		.concat(real2026Q3Additions as unknown as Service[]);
-		.concat(real2026Q4Additions as unknown as Service[]);
-		.concat(real2026Q4NewServices as unknown as Service[]);
-		.concat(real2027Q1Additions as unknown as Service[]);
-		.concat(newSaasItAiServices2025 as unknown as Service[]);
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 		fallback: false;
 	}
 export async function getStaticProps() {

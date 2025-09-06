@@ -31,6 +31,30 @@ className
       <CardContent>
         <div>{reply.content}</div>
       </CardContent>
+<<<<<<< HEAD
+=======
+      
+
+
+      <CardFooter className="flex justify-between">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="sm" className="px-2">
+            <ThumbsUp className="h-4 w-4 mr-1" />
+            <span>{reply.upvotes}</span>
+          </Button>
+          <Button variant="ghost" size="sm" className="px-2">
+            <ThumbsDown className="h-4 w-4 mr-1" />
+            <span>{reply.downvotes}</span>
+          </Button>
+        </div>
+        {canMarkAnswer && !reply.isAnswer && (
+          <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
+            <CheckCircle className="h-4 w-4 mr-1" />
+            Mark as Answer
+          </Button>
+        )}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
           </div>;
         </div>;

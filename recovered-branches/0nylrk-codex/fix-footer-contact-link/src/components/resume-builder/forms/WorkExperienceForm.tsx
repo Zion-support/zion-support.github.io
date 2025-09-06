@@ -144,7 +144,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
-<<<<<<< HEAD
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
@@ -363,28 +362,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <Textarea
                       placeholder="Describe your responsibilities and accomplishments..."
                       className="min-h-[100px]"
-=======
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name="description";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel className="flex justify - between">;
-                    <span > Job Description</span>;
-                    <AIEnhancementButton;
-                      current_content={field.value || ''}
-                      enhancement_type="work - description";
-                      context={`Role: ${form.get_values ('role_title')} at ${form.get_values ('company_name')}`}
-                      on_enhanced={handleEnhanceDescription}
-                    />;
-                  </FormLabel>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder="Describe your responsibilities and accomplishments...";
-                      className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;

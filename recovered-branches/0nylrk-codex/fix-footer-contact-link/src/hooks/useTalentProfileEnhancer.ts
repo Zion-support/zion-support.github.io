@@ -48,7 +48,6 @@ export function useTalentProfileEnhancer() {;
       const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
-<<<<<<< HEAD
 
       if (error) {
         throw new Error(error.message)
@@ -88,11 +87,6 @@ export function useTalentProfileEnhancer() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }

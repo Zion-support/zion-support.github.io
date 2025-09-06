@@ -13,7 +13,6 @@
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {expanded && (
@@ -33,6 +32,7 @@ const REGION_OPTIONS = [
   { id: "Asia", label: "Asia" }
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from '@/components / ui / checkbox';
 import { RegionFilterProps } from '@/types / filters';
@@ -114,7 +114,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`region-${region.id}`}
-<<<<<<< HEAD
           ))}
         </div>
       )}
@@ -187,6 +186,7 @@ function RegionFilter() {
 }</button> {
   REGION OPTIONS.map (region => (<div key= {
 <<<<<<< HEAD
+<<<<<<< HEAD
   region.id "
 }className="flex items-center" > <Checkbox > {
   region.label
@@ -202,18 +202,5 @@ function RegionFilter() {
 }"};
 <<<<<<< HEAD
 
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
-              >;
-                {region.label}
-              </label>;
-            </div>;
-          ))}
-        </div>;
-      )}
-    </div>;
-  );
-}
-;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -39,7 +39,6 @@ export function CountryTabs(): any ({;
 
 import { Search } from 'lucide-react'
 
-<<<<<<< HEAD
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import {
@@ -60,20 +59,6 @@ import { CountryPricing } from '@/data/onsiteServicePricing'
   onQuote
   searchQuery
   setSearchQuery
-export function CountryTabs({
-  popularCountries,
-  filteredCountries,
-  handleCountrySelect,
-  onQuote,
-  searchQuery,
-  setSearchQuery,
-}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1)
-  const countriesPerPage = 50
-  useEffect(() => {
-    setCurrentPage(1)
-  }, [searchQuery])
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
   popularCountries,
   filteredCountries,
   handleCountrySelect,
@@ -84,9 +69,7 @@ export function CountryTabs({
     currentPage * countriesPerPage
   )
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -103,17 +86,3 @@ export function CountryTabs({
   )
   ),
 <<<<<<< HEAD
-
-  return (
-    <Tabs defaultValue='featured' className='w-full'>;
-      <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
-        <TabsTrigger
-          value="featured"
-          className="data-[state=active]:bg-zion-purple"
-        >
-          Featured Countries
-        </TabsTrigger>
-        <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">
-          All Countries
-        </TabsTrigger>
-      </TabsList>

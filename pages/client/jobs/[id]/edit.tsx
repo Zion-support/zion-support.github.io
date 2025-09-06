@@ -22,7 +22,6 @@ export default function EditJobPage(req, res) {
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
-<<<<<<< HEAD
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -91,9 +90,5 @@ export default function EditJobPage(req, res) {
   return (
 
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

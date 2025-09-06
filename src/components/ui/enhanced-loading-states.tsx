@@ -52,6 +52,9 @@ interface LoadingSpinnerProps {;
   text?: string;
 }
 
+=======
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
@@ -92,16 +95,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     warning: 'text-yellow-500'
     error: 'text-red-500'
   }
-  const variantClasses = {
-    default: 'text-muted-foreground',
-    primary: 'text-primary',
-    success: 'text-green-500',
-    warning: 'text-yellow-500',
-    error: 'text-red-500',
-  }
-    error: 'text-red-500'
-  },
-
 
   return (
     <div className={cn('flex items-center gap-2', className)}>
@@ -118,6 +111,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   )
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 }
 //Progressive loading component useEffect ( () => {
   // Check condition
@@ -149,11 +143,9 @@ export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({
   useEffect((,) => {
     if (activeStep === steps.length - 1 && onComplete) {
       setTimeout(onComplete, 500)
-    }
-  }, [activeStep, steps.length, onComplete])
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   return (
     <div className='space-y-4'>;
       {showProgress && (;
@@ -175,28 +167,6 @@ export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({
           />
         </div>
       )}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-          >
-            {index < activeStep ? (
-              <div className="h-4 w-4 rounded-full bg-green-500 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white" />
-              </div>
-            ) : index === activeStep ? (
-              <LoadingSpinner size="sm" variant="primary" />
-            ) : (
-              <div className="h-4 w-4 rounded-full border-2 border-muted" />
-            )}
-            <span className="text-sm font-medium">{step.label}</span>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  )
-}
-// Enhanced skeleton loader
-interface SkeletonProps {
         ))}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -364,7 +334,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
               </Button>
             )}
 
-=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {action && (
@@ -372,24 +342,11 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
                 onClick={action.onClick}
                 variant={canRetry ? 'outline' : 'default'}
               >
-=======
-            
-            {action && (
-              <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                {action.label}
-              </Button>
-            )}
-
-            {secondaryAction && (
-              <Button onClick={secondaryAction.onClick} variant='ghost'>
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
             
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant="ghost">
-<<<<<<< HEAD
 
                 {secondaryAction.label}
               </Button>
@@ -459,37 +416,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-export const LoadingGrid: React.FC<LoadingGridProps> = ({
-  count = 8,
-  columns = 4,
-  variant = 'card',
-<<<<<<< HEAD
-
-  className
-}) => {
-  const gridClasses = {
-    card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
-    list: 'space-y-4',
-    table: 'space-y-2'
-  },
-
-  const itemClasses = {
-    card: 'p-6 space-y-4',
-    list: 'p-4 space-y-3',
-    table: 'p-3 space-y-2'
-  },
-
-  return (
-    <div className={cn(gridClasses[variant], className)}>
-      {Array.from({ length: count }).map((_, i) => (
-        <Card key={i} className="animate-pulse">
-          <CardContent className={itemClasses[variant]}>
-
-  return (
-    <div className={cn(gridClasses[variant], className)}>
-      {Array.from({ length: count }).map((_, i) => (
-        <Card key={i} className="animate-pulse">
-          <CardContent className={itemClasses[variant]}>
             {variant === 'card' && (
               <>
                 <Skeleton variant="rectangular" className="h-32" />
@@ -536,24 +462,12 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     if (time < 300) return 'text-yellow-500'
     return 'text-red-500'
   }
-  className
-}) => {
-  const getPerformanceColor = (time: number) => {
-    if (time < 100) return 'text-green-500',
-    if (time < 300) return 'text-yellow-500',
-    return 'text-red-500'
-  },
-
-  className
-}) => {
-  const getPerformanceColor = (time: number) => {
-    if (time < 100) return 'text-green-500',
-    if (time < 300) return 'text-yellow-500',
-    return 'text-red-500'
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   if (isLoading) {
     return (
       <Badge variant="outline" className={cn('text-xs', className)}>
@@ -570,7 +484,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         </Badge>
       )}
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 }

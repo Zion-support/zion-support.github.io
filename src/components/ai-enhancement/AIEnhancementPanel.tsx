@@ -149,15 +149,6 @@ export function AIEnhancementPanel(): any ({;
       [field]: e.target.value})
   },
 
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent),
-    setCopied(true),
-    setTimeout(() => setCopied(false), 2000)
-  },
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -171,6 +162,77 @@ export function AIEnhancementPanel(): any ({;
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
+=======
+            placeholder='Enter your content to enhance...'
+            className='min-h-[100px]'
+            value={options.content}
+            onChange={e => handleInputChange(e, 'content')}          />
+        </div>
+        {/* Context input */}
+        <div className='space-y-2'>
+          <label className='text-sm font-medium'>Context (optional)</label>
+          <Textarea
+            placeholder='Add any relevant context to guide the AI...'
+            className='min-h-[60px]'
+            value={options.context}
+            onChange={e => handleInputChange(e, 'context')}          />
+        </div>
+            placeholder="Enter your content to enhance..."
+            className="min-h-[100px]"
+            value={options.content}
+            onChange={(e) => handleInputChange(e, 'content')}
+          />;
+        </div>;
+        {/* Context input */}
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Context (optional)</label>
+          <Textarea
+            placeholder="Add any relevant context to guide the AI..."
+            className="min-h-[60px]"
+            value={options.context}
+            onChange={(e) => handleInputChange(e, 'context')}
+          />;
+        </div>;
+
+        {/* Instructions input (optional) */}
+        {showInstructions && (;
+          <div className='space-y-2'>;
+            <label className='text-sm font-medium'>;
+              Special instructions (optional);
+            </label>;
+            <Input
+
+              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              value={options.instructions}
+          disabled={isEnhancing || (!options.content && !options.context)}        >
+
+              onChange={(e) => handleInputChange(e, 'instructions')}
+            />;
+          </div>;
+        )}
+
+        {/* Generate button */}
+        <Button 
+          onClick={handleGenerate} 
+          className="w-full" 
+          disabled={isEnhancing || !options.content && !options.context}
+        >
+
+
+
+          {isEnhancing ? (
+            <>
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+              Enhancing...
+            </>
+          ) : (
+            <>
+              <Sparkles className='mr-2 h-4 w-4' />
+              Generate Enhanced Content
+            </>
+          )}
+        </Button>
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
             <>;
@@ -187,6 +249,7 @@ export function AIEnhancementPanel(): any ({;
 
         {/* Output area */}
         {generatedContent && (
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {copied ? (

@@ -60,11 +60,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   )
 }
 
-};
-'"},;
-  );
-};
-
 
         variant="ghost"
         size="icon"

@@ -29,7 +29,6 @@ export default function ApiMockContractTestingPage() {
         'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
       price: 'Starting at $69/month'
       features: [
-<<<<<<< HEAD
 
   ];
   const tiers = [
@@ -83,16 +82,6 @@ export default function ApiMockContractTestingPage() {
         </div>
       </div>
     </Layout>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  )
-}
-
-    </Layout>);
-;
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

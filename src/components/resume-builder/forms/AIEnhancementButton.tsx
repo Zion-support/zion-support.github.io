@@ -38,13 +38,6 @@ if (.length < 10) {) {
       on_enhanced (enhanced_content);
     }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-  return (
-    <Button
-      type="button"
-      variant="ghost"
-      size="sm"
-      className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
@@ -68,31 +61,6 @@ if (.length < 10) {) {
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-}
-
-    <Button;
-      type="button";
-      variant="ghost";
-      size="sm";
-      className={`h - 6 gap - 1 text - primary hover:text - primary ${class_name}`}
-      on_click = {handle_enhance, }
-      disabled = {is_enhancing, }
-    >;
-      {is_enhancing ? (
-        <Loader2 className='h - 3 w - 3 animate - spin' />) : (
-        <Sparkles className='h - 3 w - 3' />)}
-      <span className='text - xs'>{button_text}</span>;
-    </Button>);      on_click={handle_enhance}
-      disabled={is_enhancing}
-    >;
-      {is_enhancing ? (
-        <Loader2 className="h - 3 w - 3 animate - spin" />) : (
-        <Sparkles className="h - 3 w - 3" />)}
-      <span className="text - xs">{button_text}</span>;
-    </Button>);
-}
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   )
 }
 =======

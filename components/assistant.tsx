@@ -16,7 +16,6 @@ export default function Assistant() {;
   const brand = params && params.get('brand') || 'Zion AI';
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 export default function Assistant() {;
-<<<<<<< HEAD
   const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
   const tenantId = params && params.get('tenantId') || '';
   const brand = params && params.get('brand') || 'Zion AI';
@@ -105,12 +104,6 @@ export default function Assistant() {
         ))}
       </div>
       <form
-=======
-        className="p-3 border-t flex gap-2"
-
-      >
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."

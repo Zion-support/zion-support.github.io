@@ -51,18 +51,17 @@ export function ApiPlayground({
       // Add timeout to prevent hanging
       signal: AbortSignal.timeout(15000)},
 
-      try {
-        options.body = JSON.stringify (JSON.parse (body));
-      } catch {
-        options.body = body
-
-
-
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className='space-y-4'>;
       <Input
         value={apiKey}
+=======
+        onChange={e => setApiKey(e.target.value)}
+        placeholder='API Key'
+        onChange={(e) => setApiKey(e.target.value)}
+        placeholder="API Key"
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           onChange={e => handleParamChange(p.name, e.target.value)}        />
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
@@ -179,3 +178,4 @@ if (contentType?.includes ('application/json') ) {;
 }</div>);
 }export default ApiPlayground;
 '";
+<<<<<<< HEAD

@@ -14,13 +14,8 @@ const Index: NextPage = () => {
       </main>
     </div>
   )
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
-},
-export default Index,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export default Index,;
 export default Index,

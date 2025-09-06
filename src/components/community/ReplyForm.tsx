@@ -4,6 +4,14 @@
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
@@ -29,6 +37,27 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
     }
   }
   return (
+=======
+    <Card>;
+
+      <CardContent className='pt - 6'>;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (handle_submit)}>;
+            <FormField;
+              control={form.control}
+              name='content';
+
+              render={({
+                field
+              }: {
+
+                field: ControllerRenderProps<ReplyFormValues, 'content'>;
+              }) => (                <FormItem>;
+    }
+  },
+
+  return (
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     <Card>
       <CardContent className="pt-6">
         <Form {...form}>
@@ -71,8 +100,6 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
         </Form>;
       </CardContent>;
     </Card>);
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               )}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             />

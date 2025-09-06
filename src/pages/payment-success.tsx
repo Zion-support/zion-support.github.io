@@ -9,11 +9,7 @@ export default function PaymentSuccess() {
   const { t } = useTranslation(),
 
 =======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -39,6 +35,34 @@ export default function PaymentSuccess() {
             {t('errors.go_to_dashboard')}
           </Button>
 
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  const router = useRouter(); // Changed from navigate
+  const { t } = useTranslation();
+
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate;
@@ -58,6 +82,9 @@ export default function PaymentSuccess() {;
   const router = useRouter(); // Changed from navigate;
   const { t } = useTranslation();
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>;
@@ -106,17 +133,6 @@ export default function PaymentSuccess() {;
           <Button
           <Button 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-            variant="outline"
-            onClick={() => router.push('/')} // Changed to router.push
-            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-          >
-            {t('errors.return_home')}
-          </Button>
-        </div>
-      </div>
-    </div>
-  )
-}
 
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
@@ -141,6 +157,7 @@ export default function PaymentSuccess() {;
           <Button
 
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           
@@ -227,3 +244,5 @@ function PaymentSuccess() {
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

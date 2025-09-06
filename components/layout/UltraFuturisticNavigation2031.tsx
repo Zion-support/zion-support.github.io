@@ -484,7 +484,6 @@ const mainNavigation = [
 
 ];
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function UltraFuturisticNavigation2031() {
 
@@ -543,9 +542,6 @@ export default function UltraFuturisticNavigation2031() {;
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <span>{contactInfo.mobile}</span>
@@ -690,7 +686,6 @@ className="relative group"
                   </Link>;
 
 =======
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 >
@@ -733,9 +728,6 @@ className="relative group"
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >            <div className="hidden lg:flex items-center space-x-4">
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -1042,7 +1034,6 @@ function UltraFuturisticNavigation2031() {
         </div>
       </nav>
 
-<<<<<<< HEAD
 
                   {/* Dropdown Menu */}
                   <AnimatePresence>
@@ -1123,9 +1114,6 @@ function UltraFuturisticNavigation2031() {
                     key={item.name}
                     href={item.href}
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;

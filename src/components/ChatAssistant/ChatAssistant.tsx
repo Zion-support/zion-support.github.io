@@ -334,71 +334,6 @@ if ( {) {
     } else {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      setLoggedInMessages(newMessages)
-    }
-  }
-  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000)
-  useEffect((,) => {
-    if (debouncedApiCallParams) {
-      onSendMessage(debouncedApiCallParams.message
-        debouncedApiCallParams.conversationId)
-    }
-  }, [debouncedApiCallParams, onSendMessage])
-  useEffect((,) => {
-    scrollToBottom()
-  }, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
-  const handleSendMessage = async (messageContent: string,) => {
-    if (!messageContent.trim()) return
-    if (!isGuest) {
-      // Logged-in user
-      const newMessage: Message = {
-        id: Date.now().toString()
-        role: 'user'
-        message: messageContent
-        timestamp: new Date()}
-      setCurrentMessages((prev: Message[],) => [...prev, newMessage])
-      setPendingApiCallParams({ message: messageContent, conversationId })
-    } else {
-      // Guest user
-      setGuestMessage(messageContent)
-      setShowGuestModal(true)
-    }
-  }
-  const handleModalSendConfirm = () => {
-    if (!guestMessage) return
-    const newMessage: Message = {
-      id: Date.now().toString()
-      role: 'user'
-      message: guestMessage
-      timestamp: new Date()}
-    setCurrentMessages((prev: Message[],) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages
-    setPendingApiCallParams({ message: guestMessage, conversationId })
-    setShowGuestModal(false)
-    setGuestMessage(null)
-  }
-  const handleModalCancel = () => {
-    setShowGuestModal(false)
-    setGuestMessage(null)
-  }
-  useEffect((,) => {
-    if (!isOpen) return
-    const handleKeyDown = (e: KeyboardEvent,) => {
-      if (e.key === 'Escape') {
-        e.preventDefault()
-        onClose()
-      }
-    }
-    document.addEventListener('keydown', handleKeyDown)
-    return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [isOpen, onClose])
-  if (!isOpen) return null
-  const isGuest = !auth?.isAuthenticated;
-
-  const handleSendMessage = async (messageContent: string) => {;
-    if (!messageContent && messageContent.trim()) return;
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
@@ -408,14 +343,3 @@ if ( {) {
                 onClick = {handleModalSendConfirm,}
                 onClick={handleModalSendConfirm}
 <<<<<<< HEAD
-
-                className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-              >
-                Send
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>;
-  );

@@ -28,19 +28,8 @@ document && document.addEventListener('DOMContentLoaded', () => {
   })
   document.getElementById('view-notifications')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
-<<<<<<< HEAD
   })
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  document.getElementById('resume-search')?.addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: 'resume-search' })
-  })
-  document.getElementById('view-notifications')?.addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: 'view-notifications' })
-  })
-
-});
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }),
 ;

@@ -93,13 +93,12 @@ export function ContactSection() {
           title: "Message Sent"
           description: "We've received your message and will get back to you soon."})
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
-        setIsSubmitting(false),
-        if (!res.ok) {
-          const data = await res.json().catch(() => ({})),
-          throw new Error(data.error || "Failed to send message")
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 2000)
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -111,6 +110,7 @@ export function ContactSection() {
           variant: "destructive"})
       })
   }
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
@@ -124,6 +124,15 @@ export function ContactSection() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+        setSubmitted(true),
+        setTimeout(() => setSubmitted(false), 2000),
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false),
+        toast({
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
           title: "Submission Error",
           description: err.message,
@@ -132,10 +141,7 @@ export function ContactSection() {
   }
   },
 
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   },
@@ -248,6 +254,9 @@ export function ContactSection() {
                   >;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>

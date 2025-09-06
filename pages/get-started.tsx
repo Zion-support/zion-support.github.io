@@ -500,7 +500,6 @@ export default function GetStarted() {
   }
 }
   },
-<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -874,14 +873,6 @@ export default function GetStarted() {
               <p className="text-xl text-gray-400">Help us understand your project goals and constraints</p>
             </motion.div>
 
-=======
-            <div className='max-w-4xl mx-auto'>
-              <div className='bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50'>
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-4'>
-                    Selected Path:{' '}
-                    {technologyPaths.find(p => p.id === selectedPath)?.name}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50">
                 <div className="text-center mb-8">

@@ -159,19 +159,7 @@ export default function ServiceDetailPage() {
 
 
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        {/* Related Services CTA */}
-        <section className='py-16 bg-gray-900/50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl font-bold text-white mb-6'>
-
-              Looking for Something Else?
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>

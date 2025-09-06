@@ -22,7 +22,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -69,10 +68,6 @@ export default function CaseStudiesPage() {
     </UltraFuturisticBackground>;
   );export default function CaseStudiesPage() {;
 
-=======
-export default function CaseStudiesPage() {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
 }

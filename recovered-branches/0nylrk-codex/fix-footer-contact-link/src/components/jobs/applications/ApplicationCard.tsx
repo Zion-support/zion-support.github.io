@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 interface ApplicationCardProps {
   application: JobApplication
 }
@@ -9,10 +8,6 @@ interface ApplicationCardProps {
   application: JobApplication
 }
 
-=======
-export function ApplicationCard({ application }: ApplicationCardProps) {;
-  const [expanded, setExpanded] = useState(false);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 

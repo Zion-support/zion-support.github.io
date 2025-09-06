@@ -795,7 +795,6 @@ export default function Revolutionary2025Pricing(req, res) {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="text-3xl">{service.icon}</div>
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       <div>
@@ -894,9 +893,6 @@ export default function Revolutionary2025Pricing(req, res) {
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                   <Phone className="w-5 h-5 mr-2" />
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   Get Custom Quote
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">

@@ -110,7 +110,6 @@ export default function MilestoneCard({
           className='text-sm text-blue-600'
           onClick={() => setExpanded(v => !v)}
         >          {expanded ? 'Hide' : 'Details'}
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
@@ -132,9 +131,6 @@ export default function MilestoneCard({
                 className={
                   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 }
                 title={step}
               />
@@ -299,79 +295,5 @@ export default function MilestoneCard({
     </div>
 );
   );
-<<<<<<< HEAD
 
 
-=======
-            <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
-      </div>;
-      {expanded && (
-        <div className="mt - 4 space - y-2 text - sm text - gray - 800">;
-          <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
-          {milestone.attachments && milestone.attachments.length > 0 && (
-            <div>;
-              <div className='font - medium'>Attachments</div>;
-              <ul className='list - disc ml - 5'>;
-                {milestone.attachments.map (array => (
-                  <li key={a.id}>;
-                    <a;
-                      className='text - blue - 600 underline';
-                      href={a.url}
-                      target='_blank';
-                      rel='noreferrer';
-                    >                      {a.label || a.url}              <div className="font - medium">Attachments</div>;
-              <ul className="list - disc ml - 5">;
-                {milestone.attachments.map ((a) => (
-                  <li key={a.id}>;
-                    <a className="text - blue - 600 underline" href={a.url} target="_blank" rel="noreferrer">;
-                    </a>;
-                  </li>))}
-              </ul>;
-            </div>)}
-        </div>)}
-      <div className='mt - 4 flex flex - wrap gap - 2'>;
-        {canClientMarkInProgress && (
-          <button;
-            className='px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700'            on_click={() => on_action ('in_progress', milestone.id)}      <div className="mt - 4 flex flex - wrap gap - 2">;
-        {canClientMarkInProgress && (
-          <button;
-            className="px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700";
-          >;
-            Mark In Progress;
-          </button>)}
-        {canTalentSubmit && (
-          <button;
-            className='px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700'            on_click={() => on_action ('submitted', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700";
-            on_click={() => on_action ('submitted', milestone.id)}
-          >;
-            Submit Work;
-          </button>)}
-        {canClientApprove && (
-          <button;
-            className='px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700'            on_click={() => on_action ('approved', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700";
-            on_click={() => on_action ('approved', milestone.id)}
-          >;
-            Approve;
-          </button>)}
-        {canClientMarkPaid && (
-          <button;
-            className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800";
-            on_click={() => on_action ('paid', milestone.id)}
-          >;
-            Mark as Paid;
-          </button>)}
-      </div>;
-    </div>);
-=======
-);
-<<<<<<< HEAD
-=======
-}
-
-}
-}
-}
-}
-  );
-}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -16,10 +16,6 @@ interface PaymentSummaryProps {
 
   milestones: Milestone[]
   paymentTerms: string | null
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const totalPayment = milestones.reduce(
@@ -36,19 +32,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     ).toFixed(2),
 
 =======
-=======
-
-import { CreditCard } from 'lucide-react';
-interface PaymentSummaryProps {;
-  milestones: Milestone[],;
-  paymentTerms: string | null;
-}
-
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {;
-  const totalPayment = milestones && milestones.reduce(;
-    (sum, m) => sum + parseFloat(m && m.amount.toString());    0;
-  ).toFixed(2);
-
   const paidAmount = milestones;
     .filter(m => m && m.status === 'paid');
     .reduce(;
@@ -60,24 +43,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  return (
-    <Card className="mb-8 bg-muted/30">;
-      <CardHeader className="pb-3">;
-        <CardTitle className="text-lg flex items-center">;
-          <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary;
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="grid grid-cols-1 md: grid-cols-3 gap-6">;
-          <div>;
-            <p className="text-sm text-muted-foreground mb-1">Total Payment</p>;
-            <p className="text-2xl font-semibold">;
-              ${totalPayment}
-            </p>
-          </div>
-=======
-          
-<<<<<<< HEAD
 
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
@@ -86,6 +51,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             </p>
           </div>
 =======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </p>;
           </div>;

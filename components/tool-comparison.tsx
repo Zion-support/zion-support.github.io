@@ -771,7 +771,6 @@ function ToolComparisonPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-<<<<<<< HEAD
 
               Explore All Tools
             </Button>
@@ -788,11 +787,6 @@ function ToolComparisonPage() {
       </section>;
 
 
-=======
-    </>);
-=======
-);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

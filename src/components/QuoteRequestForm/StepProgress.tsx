@@ -8,7 +8,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'timeline', label: 'Timeline' },
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
-<<<<<<< HEAD
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
@@ -24,30 +23,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     return 'upcoming'
   const getStepStatus = (stepId: QuoteRequestSteps,) => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    const stepOrder = steps.findIndex(s => s.id === stepId),
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep),
-
-    if (stepOrder < currentStepOrder) return "complete",
-    if (stepOrder === currentStepOrder) return "current",
-    return "upcoming"
-  },
-
-  return (
-    <div className="relative">
-      <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">
-        <div
-          className="absolute h-full bg-zion-purple transition-all duration-500"
-          style={{
-
-            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
-          }}
-        />
-      </div>
-
-                ) : (
-                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
-                )}
-              </div>
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -81,128 +56,5 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
 }%`
   (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
 }%` 
-}/> </div>
-}className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
-  steps.findIndex (s => s.id === step.id) + 1
-}</span>)
-}</div> <span)
-}> {
-  step.label
-}</span> </div>)
-})
-}</div> </div>)
-}"          )
-        })}
-      </div>
-    </div>
-  )
-}
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-
-                ),}>;
-                {step && step.label}
-
-;
-
-<<<<<<< HEAD
-
-
-  const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
-    const step_order = steps.find_index (string => s.id === step_id);
-    const currentStepOrder = steps.find_index (string => s.id === current_step);
-    // Check condition
-if (return 'complete') {
-  $2
-}
-    // Check condition
-if (return 'current') {
-  $2
-}
-    return 'upcoming';
-  const getStepStatus = (step_id: QuoteRequestSteps, ) =>: any {
-    const step_order = steps.find_index (string => s.id === step_id),
-    const currentStepOrder = steps.find_index (string => s.id === current_step),
-    // Check condition
-if (return "complete", ) {
-  $2
-}
-    // Check condition
-if (return "current", ) {
-  $2
-}
-    return "upcoming";
-  },
-  return (
-    <div className='relative'>;
-      <div className='absolute top - 4 left - 0 right - 0 h - 0.5 bg - zion - blue - light'>;
-        <div;
-          className='absolute h - full bg - zion - purple transition - all duration - 500';
-          style={{
-            width: `${(steps.find_index (string => s.id === current_step) / (steps.length - 1)) * 100}%`,
-          }}
-        />;
-      </div>;
-      <div className='flex justify - between relative'>;
-        {steps.map (step => {
-          const status = getStepStatus (step.id);
-          return (
-            <div key={step.id} className='flex flex - col items - center relative'>;
-              <div;
-                className={cn (
-                  'w - 8 h - 8 rounded - full flex items - center justify - center z - 10 transition - colors',
-                  status === 'complete';
-                    ? 'bg - zion - purple text - white';
-                    : status === 'current';
-                      ? 'bg - zion - cyan border - 2 border - zion - purple';
-                      : 'bg - zion - blue - light text - zion - slate - light')}              >;
-                {status === 'complete' ? (
-                  <CheckIcon className='h - 4 w - 4' />) : (
-                  <span className='text - xs'>;
-                    {steps.find_index (string => s.id === step.id) + 1}
-                  </span>)}
-              </div>;
-              <span;
-                className={cn (
-                  'text - xs mt - 2 font - medium',
-                  status === 'complete';
-                    ? 'text - zion - cyan';
-                    : status === 'current';
-                      ? 'text - white';
-                      : 'text - zion - slate - light'                )}                  "text - xs mt - 2 font - medium";
-                  status === "complete" ? "text - zion - cyan" :;
-                  status === "current" ? "text - white" :;
-                  "text - zion - slate - light")}
-              <span;
-                class_name = {cn (
-                  "text - xs mt - 2 font - medium",
-                  status === "complete" ? "text - zion - cyan" :;
-                  status === "current" ? "text - white" :;
-                  "text - zion - slate - light"), }
-              >;
-                {step.label}
-              </span>;
-            </div>);
-        })}
-      </div>;
-    </div>);
-  (steps.find_index (string => s.id === current_step) / (steps.length - 1) ) * 100;
-}%`;
-}/> </div>;
-}className=" flex flex - col items - center relative"> <div) : (<span className=" text - xs" > {
-  steps.find_index (string => s.id === step.id) + 1;
-}</span>);
-}</div> <span);
-}> {
-  step.label;
-}</span> </div>);
-});
-}</div> </div>);
-}"          );
-        })}
-      </div>;
-    </div>);
-}
-;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

@@ -143,35 +143,86 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-gray-500">📣</span>;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  }
-}
-interface NotificationItemProps {
-  notification: Notification
-  onMarkAsRead: (id: string,) => Promise<void>
-  onDismiss: (id: string,) => Promise<void>
-}
-export const NotificationItem: React.FC<NotificationItemProps> = ({
-  notification
-  onMarkAsRead
-  onDismiss},) => {
-  const router = useRouter(), // Changed from useNavigate to useRouter
-  const handleClick = () => {
-    if (!notification.read) {
-      onMarkAsRead(notification.id)
-    }
-    // If there's an action URL, navigate to it
-    if (notification.action_url) {
-      router.push(notification.action_url), // Changed to router.push
-    }
-  }
-  },
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   return (<div
       className = {cn(
         'p-3 border-b border-zion-blue-light relative group'
         !notification.read ? 'bg-zion-blue-dark/30' : ''),}
 
+=======
+  },;
+  return (;
+    <div;
+      className={cn(;
+        'p-3 border-b border-zion-blue-light relative group',;
+        !notification.read ? 'bg-zion-blue-dark/30' : '')}
+
+
+
+    >
+      <div className="flex items-start gap-2">
+        <div className="text-xl">{getTypeIcon(notification.type)}</div>
+        <div className="flex-1">
+          <div className="flex justify-between items-center mb-1">
+            <h4 className="font-medium text-white">
+              {notification.title |'Notification'}
+              {notification.title || 'Notification'}
+            </h4>
+            {!notification.read && (
+              <Badge className="bg-zion-cyan text-xs">New</Badge>
+            )}
+          </div>
+          <p className="text-sm text-zion-slate-light">
+            {notification.message |'You have a new notification'}
+            {notification.message || 'You have a new notification'}
+          </p>
+          <div className="flex justify-between items-center mt-1">
+            <p className="text-xs text-zion-slate">
+              {notification.created_at
+                ? formatDistanceToNow(new Date(notification.created_at), {
+                    addSuffix: true})
+                : 'Just now'}
+            </p>
+            {notification.action_url && notification.action_text && (
+  },;
+
+  return (<div
+      className = {cn(
+        'p-3 border-b border-zion-blue-light relative group',
+        !notification && notification.read ? 'bg-zion-blue-dark/30' : ''),}>;
+      <div className="flex items-start gap-2">;
+        <div className="text-xl">{getTypeIcon(notification && notification.type)}</div>;
+        <div className="flex-1">;
+          <div className="flex justify-between items-center mb-1">;
+            <h4 className="font-medium text-white">;
+              {notification && notification.title || 'Notification'}
+            </h4>;
+            {!notification && notification.read && (;
+              <Badge className="bg-zion-cyan text-xs">New</Badge>;
+            )}
+          </div>;
+          <p className="text-sm text-zion-slate-light">;
+            {notification && notification.message || 'You have a new notification'}
+          </p>;
+          <div className="flex justify-between items-center mt-1">;
+            <p className="text-xs text-zion-slate">;
+              {notification && notification.created_at;
+                ? formatDistanceToNow(new Date(notification && notification.created_at), {;
+                    addSuffix: true});
+                : 'Just now'}
+            </p>;
+
+            {notification && notification.action_url && notification && notification.action_text && (;
+              <Button
+                variant="link"
+                size="sm"
+                className="text-zion-cyan p-0 h-auto"
+                onClick = {handleClick,}
+              >
+                onClick={handleClick}
+              >;
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
@@ -188,37 +239,14 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
+<<<<<<< HEAD
                 onClick={(e,) => {
                   e.stopPropagation()
                 onClick={(e) => {
                 onClick={(e) => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                  e.stopPropagation(),
-
-                  onMarkAsRead(notification.id)
-                }}
-                aria-label="Mark as read"
-              >
-                <Check className="h-3.5 w-3.5 text-green-400" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Mark as read</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-6 w-6"
-                onClick={(e,) => {
-                  e.stopPropagation()
-                onClick={(e) => {
-                onClick={(e) => {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                   e.stopPropagation(),
 
                   onDismiss(notification.id)

@@ -369,7 +369,6 @@ if ( {) {
             hour: 95,
             day: 650;
 =======
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
@@ -437,16 +436,6 @@ if ( {) {
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-            burstLimit: 25
-            windowSize: 60
-          }
-          createdAt: new Date();
-          lastUsed: new Date()
-          isActive: true
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/violations?limit=${limit}`, {

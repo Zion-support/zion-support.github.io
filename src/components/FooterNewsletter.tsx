@@ -133,6 +133,19 @@ export function FooterNewsletter(): React.ReactElement {;
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
+=======
+        autoComplete='off';
+        style={{ display: 'none' }}
+      />;
+
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+
+        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
+
+        type="text"
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
@@ -160,4 +173,5 @@ export function FooterNewsletter(): React.ReactElement {;
   );
 
 } ;
+<<<<<<< HEAD
 <<<<<<< HEAD

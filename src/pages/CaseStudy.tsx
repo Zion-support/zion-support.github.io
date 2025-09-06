@@ -12,17 +12,8 @@ import {  Breadcrumb
 } from '@/components/ui/breadcrumb'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { getBreadcrumbsForPath } from '@/utils/routeUtils'
-<<<<<<< HEAD
-export default function CaseStudy() {;
-  const router = useRouter();
-  const slug = router.query.slug as string;
-  const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator} from '@/components/ui/breadcrumb',
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
@@ -77,12 +68,6 @@ export default function CaseStudy() {;
       <SEO title={study.title} description={study.excerpt} />
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-          <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
-          <Breadcrumb className="mb-4 text-sm text-muted-foreground">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -90,14 +75,13 @@ export default function CaseStudy() {;
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </p>;
         </div>;
       </div>;
     </>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -131,3 +115,5 @@ export default function CaseStudy() {;
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

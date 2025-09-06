@@ -137,12 +137,3 @@ export function TalentCardSaveButton({;
     </button>
   )
 <<<<<<< HEAD
-
-
-}variant: "default" 
-}) 
-};
-}/> </button>) ;
-}";
-};
-<<<<<<< HEAD

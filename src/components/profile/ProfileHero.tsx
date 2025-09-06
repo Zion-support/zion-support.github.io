@@ -87,6 +87,38 @@ export function ProfileHero({
             <img
               src = {coverImageUrl,}
               alt={`${name} cover`}
+=======
+              className='w-full h-full object-cover'
+              loading='lazy'
+            />
+          ) : (
+            <div className='w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark' />
+          )}
+        </AspectRatio>
+        <div className='container px-4 md:px-6'>
+          <div className='flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10'>
+            <Avatar className='h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30'>
+              {avatarUrl ? (
+                <AvatarImage src={avatarUrl} alt={name} />
+              ) : (
+                <AvatarFallback className='bg-zion-purple/20 text-zion-cyan text-xl'>                  {name.substring(0, 2).toUpperCase()}
+                </AvatarFallback>
+              )}
+            </Avatar>            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
+          )}
+        </AspectRatio>
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
+          )}
+
+        </AspectRatio>
+        
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -121,6 +153,7 @@ export function ProfileHero({
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan"
 
+<<<<<<< HEAD
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
@@ -157,6 +190,7 @@ export function ProfileHero({
                   <span className="text-sm text-zion-slate-light">{location}</span>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 {rating && (;
                   <div className="flex items-center gap-1">;
@@ -183,3 +217,5 @@ export function ProfileHero({
 };
 ;
 }
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

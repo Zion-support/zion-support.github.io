@@ -440,7 +440,6 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 </Link>
 origin/main
 </Link>;
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 </Link>;
@@ -452,15 +451,6 @@ import { motion } from 'framer-motion';
 
 
 export default function MicroSaaS() {
-=======
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer)
-  }, []);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> origin/automation-improvements-final
 

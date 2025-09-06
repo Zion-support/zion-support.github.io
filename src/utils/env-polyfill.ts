@@ -22,7 +22,6 @@ if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
     (globalThis as any).process = createProcessObject()
   } else if (typeof (globalThis as any).process.env === 'undefined') {
-=======
 
 console && console.log('✅ Environment polyfill loaded successfully');
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

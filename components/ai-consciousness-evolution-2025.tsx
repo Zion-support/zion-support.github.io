@@ -82,7 +82,6 @@ const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   website: 'https://ziontechgroup.com'
@@ -183,202 +182,6 @@ const features = [;
   'Spiritual growth pathways',
   'Personal transformation tracking',
 ];
-=======
-;
-const use_cases = [;
-  'Personal development and growth',
-  'Professional leadership training',
-  'Therapeutic and healing practices',
-  'Educational enhancement',
-  'Corporate wellness programs',
-  'Mental health support',
-  'Spiritual development',
-  'Creative arts enhancement',
-  'Relationship improvement',
-  'Stress management and resilience',
-];
-;
-const technology = [;
-  'Advanced AI algorithms',
-  'Machine learning models',
-  'Natural language processing',
-  'Emotional recognition systems',
-  'Biometric feedback integration',
-  'Virtual reality experiences',
-  'Augmented reality overlays',
-  'Brain - computer interfaces',
-  'Quantum computing integration',
-  'Blockchain security',
-];
-;
-const integrations = [;
-  'Wearable devices',
-  'Mobile applications',
-  'Web platforms',
-  'Smart home systems',
-  'Healthcare platforms',
-  'Educational systems',
-  'Corporate wellness platforms',
-  'Social media networks',
-  'Fitness trackers',
-  'Meditation apps', ];}
-;
-const features = [;
-  'Emotional intelligence training modules_consciousness expansion exercises_self - awareness development tools_empathy and compassion training_mindfulness and meditation guidance_cognitive enhancement techniques_social intelligence development_creative consciousness exploration';
-  'Spiritual growth pathways_personal transformation tracking';
-];
-;
-const use_cases = [;
-  'Personal development and growth_professional leadership training_therapeutic and healing practices_educational enhancement_corporate wellness programs_mental health support_spiritual development_creative arts enhancement';
-  'Relationship improvement_stress management and resilience';
-];
-;
-const technology = [;
-  'Advanced AI algorithms_machine learning models_natural language processing_emotional recognition systems_biometric feedback integration_virtual reality experiences_augmented reality overlays_brain - computer interfaces';
-  'Quantum computing integration_blockchain security';
-];
-;
-const integrations = [;
-  'Wearable devices_mobile applications_web platforms_smart home systems_healthcare platforms_educational systems_corporate wellness platforms_social media networks';
-  'Fitness trackers_meditation apps';
-];
-;
-const testimonials = [;
-
-  {
-
-    name: 'Dr. Sarah Chen',
-    role: 'Clinical Psychologist',
-    company: 'Mindful Wellness Center',
-content:;
-      'The AI Consciousness Evolution platform has revolutionized how we approach emotional intelligence training. Our clients show remarkable improvements in self - awareness and empathy.',
-    rating: 5,
-    avatar: '👩‍⚕️',
-  },  {
-
-  }
-    name: 'Michael Rodriguez',
-    role: 'CEO',
-    company: 'InnovateTech Solutions',
-    content:;
-      'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',
-    rating: 5,
-    avatar: '👨‍💼',
-  },  {
-    name: 'Dr. Emily Watson',
-    role: 'Research Director',
-    company: 'Consciousness Research Institute',    content: 'Implementing this platform in our leadership development program has transformed our company culture. Our executives are more emotionally intelligent and effective leaders.',
-    rating: 5,
-    avatar: '👨‍💼';
-  }
-    name: 'Dr. Emily Watson',
-    role: 'Research Director',
-    company: 'Consciousness Research Institute',
-    content:;
-      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",
-    rating: 5,
-    avatar: '👩‍🔬',
-  }, ];    content: 'This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.',
-    rating: 5,
-    avatar: '👩‍🔬';
-  }
-
-export default function AIConsciousnessEvolution2025() {
-
-  return (
-export default /**
- * AIConsciousnessEvolution2025 - Function description
- */
-function AIConsciousnessEvolution2025() {
-  return (
-
-
-    <Layout>;
-      <Head>;
-        <title>;
-          AI Consciousness Evolution Platform 2025 - Zion Tech Group;
-        </title>;
-
-        />;
-      </Head>;
-
-
-      {/* Hero Section */}
-      <div className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
-        {/* Animated Background */}
-
-        <div className='absolute inset-0 bg-gradient-to-br from-purple-900 via-black to-pink-900'>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(168,85,247,0 && 0.15),transparent_50%)]'></div>;
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(236,72,153,0 && 0.15),transparent_50%)]'></div>;
-        </div>;
-
-
-        {/* Floating Elements */}
-        <div className='absolute inset-0 overflow-hidden'>;
-          {[...Array(15)].map((_, i) => (;
-            <motion&& motion.div
-        <meta;
-          name='description';
-          content='Revolutionary AI - powered consciousness evolution platform that enhances emotional intelligence, self - awareness, and personal transformation through advanced technology.';
-        />;
-        <meta;
-          name='keywords';
-          content='AI consciousness, emotional intelligence, self - awareness, personal development, consciousness evolution, AI training, Zion Tech Group';
-        />;
-      </Head>;
-      {/* Hero Section */}
-      <div className='relative min - h-screen flex items - center justify - center overflow - hidden'>;
-        {/* Animated Background */}
-        <div className='absolute inset - 0 bg - gradient - to - br from - purple - 900 via - black to - pink - 900'>;
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_30%, rgba (168, 85, 247, 0.15), transparent_50%)]'></div>;
-          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_70%, rgba (236, 72, 153, 0.15), transparent_50%)]'></div>;
-        </div>;
-        {/* Floating Elements */}
-        <div className='absolute inset - 0 overflow - hidden'>;
-          {[...Array (15)].map ((_, i) => (
-            <motion.div;
-              key={i}
-              className='absolute w-2 h-2 bg-purple-400 rounded-full opacity-30'
-              animate={{
-
-              }}              transition={{
-                duration: 8 + i * 2
-                repeat: Infinity
-                delay: i * 0.3
-              }}
-              style={{
-    <Layout>
-      <Head>
-        <title>AI Consciousness Evolution Platform 2025 - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered consciousness evolution platform that enhances emotional intelligence, self-awareness, and personal transformation through advanced technology." />
-        <meta name="keywords" content="AI consciousness, emotional intelligence, self-awareness, personal development, consciousness evolution, AI training, Zion Tech Group" />
-      </Head>
-      {/* Hero Section */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-black to-pink-900">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(168,85,247,0.15),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(236,72,153,0.15),transparent_50%)]"></div>
-        </div>
-        {/* Floating Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(15)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-purple-400 rounded-full opacity-30"
-              animate={{
-                x: [0, 100, 0];
-                y: [0, -100, 0];
-                opacity: [0.3, 0.8, 0.3]}}
-              transition={{
-                duration: 8 + i * 2,
-                repeat: Infinity,
-                delay: i * 0.3}}
-              style={{
-                left: `${Math.random() * 100}%`,
-top: `${Math.random() * 100}%`}}
-            />
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           ))}
         </div>
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
@@ -711,7 +514,6 @@ label: 'Success Rate',
                 </h3>
                 <p className='text-gray-400'>
                   Advanced AI algorithms guide you through personalized
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -728,12 +530,6 @@ label: 'Success Rate',
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
-          </div>
-        </div>
-      </section>
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -1052,7 +848,6 @@ label: 'Success Rate',
                 </h3>
                 <p className='text-gray-400'>
                   Leverage AI-powered consciousness development for enhanced
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1069,12 +864,6 @@ label: 'Success Rate',
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
-          </div>
-        </div>
-      </section>
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* Technology Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -1554,7 +1343,6 @@ label: 'Success Rate',
                 period: '/month',                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access';
                 ];
 =======
-<<<<<<< HEAD
 
                 description:
                   'Advanced features for serious consciousness development'
@@ -1787,9 +1575,6 @@ label: 'Success Rate',
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

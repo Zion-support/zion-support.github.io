@@ -602,15 +602,7 @@ export default function CodeQualityCheckerPage() {
                       {feature.description}
 
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                    </p>
-                  </div>
-                </div>
-              </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
@@ -1006,20 +998,7 @@ export default function CodeQualityCheckerPage() {
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 =======
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-              Simple Pricing
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Choose the code quality analysis plan that best fits your
-              development needs.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
-            </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the code quality analysis plan that best fits your development needs.
             </p>
@@ -1376,7 +1355,6 @@ export default function CodeQualityCheckerPage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl"
-<<<<<<< HEAD
 
               Schedule Demo
             </Button>
@@ -1397,10 +1375,3 @@ export default function CodeQualityCheckerPage() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     </>);
-=======
-);
-=======
-}
-  );
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

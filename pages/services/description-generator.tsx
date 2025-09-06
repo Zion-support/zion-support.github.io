@@ -33,7 +33,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   const [accepted, setAccepted] = useState(false);
 
   const keyFeatures = useMemo(() => {
-<<<<<<< HEAD
   }
 
   const keyFeatures = useMemo(() => {;
@@ -249,30 +248,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   }
 }
 
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
-          >
-            {loading ? 'Generating…' : 'Generate Description'}
-          </button>
-
-        </div>
-      </form>
-
-      {generated && (
-        <div className="mt-8 space-y-3">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold">Generated Description</h2>
-            <div className="flex items-center gap-2">
-              <button
-
-                className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
-              >
-                Copy
-              </button>
-              <button
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Accept

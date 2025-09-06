@@ -40,7 +40,6 @@ import React, { useMemo, useState } from 'react';
 
 
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-<<<<<<< HEAD
 export default function TokenomicsWhitepaperBuilder() {
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
@@ -188,7 +187,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     { label: 'Team & Contributors', percent: 15 },;
     { label: 'Investors', percent: 15 },;
     { label: 'Liquidity & Market Making', percent: 10 },;
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const previewMarkdown = useMemo(() => {;
@@ -241,12 +239,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 
       const a = document.createElement('a');
       a.href = url;
-=======
-      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       const item = { ...copy[index] };
 
@@ -343,13 +335,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -607,7 +592,6 @@ function MarkdownPreview({
   const content = parts[activeSection] |'';
 
   return (
-<<<<<<< HEAD
     <pre className='whitespace-pre-wrap text-sm leading-6'>;
       {content || markdown}
     </pre>;
@@ -630,10 +614,6 @@ function MarkdownPreview({
 }
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const parts = useMemo(() => {

@@ -64,29 +64,3 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 ;
   return (;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    <Tooltip>;
-      <TooltipTrigger asChild>;
-        <Badge variant={variant} className='flex items-center gap-1'>;
-          <ShieldAlert className='h-3 w-3' />;
-          <span>Under Dispute</span>;
-  }
-  return (
-    <Tooltip>;
-      <TooltipTrigger as_child>;
-        <Badge variant={variant} className='flex items - center gap - 1'>;
-          <ShieldAlert className='h - 3 w - 3' />;
-          <span > Under Dispute</span>;
-
-        </Badge>;
-      </TooltipTrigger>;
-      <TooltipContent>;
-        <p>{message}</p>;
-      </TooltipContent>;
-<<<<<<< HEAD
-
-
-
-
-    </Tooltip>);
-}
-;

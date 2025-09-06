@@ -63,7 +63,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 };
 },
 
-<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -177,10 +176,6 @@ if ( {) {
 }
 ;
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
-=======
-
-export const timeAgo = (date: Date | string | number): string => {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

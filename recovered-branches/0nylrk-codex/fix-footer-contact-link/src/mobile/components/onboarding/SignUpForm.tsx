@@ -120,7 +120,6 @@ export function SignUpForm() {
           </svg>
           Continue with Google
         </Button>
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="w-full py-6 relative"
@@ -203,28 +202,6 @@ export function SignUpForm() {
         {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
-=======
-          />;
-        </div>;
-
-        <Button
-          type="submit" 
-          className="w-full py-6"
-          disabled={isLoading}>;
-          {isLoading ;
-            ? "Please wait..." ;
-            : signupMode ;
-              ? "Create Account" ;
-              : "Sign In";
-          }
-        </Button>;
-      </form>;
-
-      <p className="text-center text-sm">;
-        {signupMode;
-          ? "Already have an account? ";
-          : "Don't have an account? ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
         <Button
           variant="link"

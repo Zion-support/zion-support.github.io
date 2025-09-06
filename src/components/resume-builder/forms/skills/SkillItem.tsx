@@ -49,6 +49,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 } }
 }
 
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     </Badge>;
   );
 };

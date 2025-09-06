@@ -49,7 +49,6 @@ export function UsageStats() {
         </Card>
 =======
         
-<<<<<<< HEAD
 
         <Card>
           <CardHeader>
@@ -83,3 +82,4 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD

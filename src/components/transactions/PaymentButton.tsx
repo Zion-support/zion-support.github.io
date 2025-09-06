@@ -76,13 +76,8 @@ export function PaymentButton({;
         onPaymentInitiated();
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      }
-
-      // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: {
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
@@ -110,6 +105,7 @@ export function PaymentButton({;
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
+<<<<<<< HEAD
       }, 1500)
 
     >
@@ -123,3 +119,5 @@ export function PaymentButton({;
       )}
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

@@ -9,12 +9,10 @@ import { Menu } from 'lucide-react'
         <div className="flex items-center justify-between h-12">
           <button
 
-=======
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation";
             aria-expanded={open}
-<<<<<<< HEAD
           >
             <Menu className="h-6 w-6" />
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -33,28 +31,6 @@ import { Menu } from 'lucide-react'
 <<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-              <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-import { useState } from "react",;
-import { Menu } from 'lucide-react';
-import Link from "next/link",;
-export function EnterpriseStickyNav() {;
-  const [open, setOpen] = useState(false);
-  return (;
-    <nav className="sticky top-16 z-40 bg-card border-b border-border">;
-      <div className="container mx-auto px-4 md:px-6">;
-        <div className="flex items-center justify-between h-12">;
-          <button;
-            className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle navigation";
-            aria-expanded={open}
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >;
             <Menu className="h-6 w-6" />;
           </button>;

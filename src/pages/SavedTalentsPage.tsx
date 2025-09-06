@@ -115,12 +115,6 @@ import { TalentProfile } from "@/types/talent",
         if (error) {
           throw error
         }
-          .insert([{ user_id: user.id, talent_id: talentId }]),
-  
-          .insert([{ user_id: user.id, talent_id: talentId }]),
-  
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         if (error) {
           throw error
         }
@@ -172,16 +166,6 @@ import { TalentProfile } from "@/types/talent",
     }
   }
           return;
-          .single(),
-  
-        if (talentError) {
-          logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' }),
-          toast({
-            title: "Error",
-            description: "Failed to update saved talents. Please try again later.",
-            variant: "destructive"}),
-          return
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
 
         if (talentData) {
@@ -205,8 +189,6 @@ import { TalentProfile } from "@/types/talent",
       })
     }
   }
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>
       <SEO

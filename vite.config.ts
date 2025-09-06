@@ -133,7 +133,6 @@ export default defineConfig({
       'lucide-react',
       'clsx',
       'tailwind-merge'
-<<<<<<< HEAD
     ]
     exclude: ['@radix-ui/react-icons']
   }
@@ -199,9 +198,6 @@ export default defineConfig({
 
 >>>>>>> origin/automation-improvements-final
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
-					const name = assetInfo ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 =======

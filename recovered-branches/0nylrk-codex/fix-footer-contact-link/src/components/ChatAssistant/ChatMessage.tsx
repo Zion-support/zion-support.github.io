@@ -5,7 +5,6 @@ interface ChatMessageProps {
 import {cn} from "@/lib/utils";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 =======
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface ChatMessageProps {
@@ -45,16 +44,6 @@ interface ChatMessageProps {
         <div className="whitespace-pre-wrap">{message}</div>
         {timestamp && (
           <div className="text-xs text-zion-slate mt-1 text-right">
-=======
-<<<<<<< HEAD
-            {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-          </div>
-        )}
-      </div>
-    </div>
-  )
-};
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { cn } from "@/lib/utils",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 interface ChatMessageProps {;

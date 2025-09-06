@@ -636,7 +636,6 @@ export default function UltraFuturisticFooter2030() {
 
 ];
 
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </a>
@@ -671,11 +670,6 @@ export default function UltraFuturisticFooter2030() {
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Rocket className='w-5 h-5 text-purple-400' />
 
-=======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>

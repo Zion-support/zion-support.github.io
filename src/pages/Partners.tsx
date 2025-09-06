@@ -7,20 +7,6 @@ Card,
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-} from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { PartnerRegistrationForm } from '@/components/partners/PartnerRegistrationForm';
-import { PartnerReferralLinks } from '@/components/partners/PartnerReferralLinks';
-import { PartnerDashboard } from '@/components/partners/PartnerDashboard';
-import { PartnerLeaderboard } from '@/components/partners/PartnerLeaderboard';
-import { PartnerResources } from '@/components/partners/PartnerResources';
-import { useAuth } from '@/hooks/useAuth';
-import { useRouter } from 'next/router';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

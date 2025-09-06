@@ -164,6 +164,7 @@ const Categories: React.FC = () => {}
 export default Categories"";
 ";
   )}
+<<<<<<< HEAD
 export: default Categories
 export default Categories," ]
 
@@ -201,6 +202,8 @@ export interface CategoriesProps {;
   categories?: CategoryType[];
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
   const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {

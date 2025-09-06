@@ -111,7 +111,6 @@ export default function ComprehensivePricing2029() {
               2029 Comprehensive Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-<<<<<<< HEAD
 
               Transparent pricing for our revolutionary 2029 services. Choose the perfect plan
               for your business transformation journey.
@@ -135,17 +134,6 @@ export default function ComprehensivePricing2029() {
                 <div
                   className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
                     billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
-=======
-=======
-          >;
-            <h1 className="text - 6xl md:text - 8xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - blue - 400 bg - clip - text text - transparent mb - 8">;
-              2029 Comprehensive Pricing;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-4xl mx - auto">;
-              Transparent pricing for our revolutionary 2029 services. Choose the perfect plan;
-              for your business transformation journey.;
-            </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Billing Toggle */}
             <div className="flex items - center justify - center gap - 4 mb - 12">;
               <span className="text - gray - 400">Monthly</span>;
@@ -515,7 +503,6 @@ export default function ComprehensivePricing2029() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
 
               Contact our team to discuss your specific needs and get a personalized quote
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
@@ -544,9 +531,6 @@ export default function ComprehensivePricing2029() {
               </div>
             </div>
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div
                 whileHover={{ scale: 1.05 }}

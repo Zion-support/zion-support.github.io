@@ -13,7 +13,6 @@ import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -76,16 +75,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                  <div>
-                    <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
-                  </div>
-                </div>
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   className="h-8 w-8 flex items-center justify-center"

@@ -149,6 +149,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -168,9 +170,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         placeholder="Type your message..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-<<<<<<< HEAD
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onKeyDown={handleKeyPress}
         rows={1}
@@ -193,16 +194,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   }, []);
       >
         <Send className="h-5 w-5" />
-=======
-
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      </Button>
-    </form>
-  )
-}
-        disabled={!message.trim() |disabled}
         disabled={!message.trim() || disabled}
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

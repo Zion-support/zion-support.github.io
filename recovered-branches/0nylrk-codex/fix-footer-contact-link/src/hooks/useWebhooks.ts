@@ -309,7 +309,6 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to delete webhook')
       }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
       // Update the webhook in the list;
@@ -392,10 +391,6 @@ if ( {) {
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({ webhookId, eventType })
-=======
-        };
-        body: JSON && JSON.stringify({ webhookId, eventType })
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       });
 
       const result = await response && response.json();

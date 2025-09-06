@@ -15,7 +15,6 @@ import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Search } from "lucide-react",
-<<<<<<< HEAD
   avatar?: string;
   lastMessage: string,;
   timestamp: string,;
@@ -122,9 +121,6 @@ export function MobileConversationList({
                   <p className="text-sm text-muted-foreground truncate">
                     {conversation.isTyping
                     {conversation.isTyping 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>

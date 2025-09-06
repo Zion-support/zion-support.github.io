@@ -315,7 +315,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 
     reviews: 89
 =======
-<<<<<<< HEAD
   }
 ];
 
@@ -407,12 +406,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     rating: 4.6,
     reviews: 89;
 <<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }

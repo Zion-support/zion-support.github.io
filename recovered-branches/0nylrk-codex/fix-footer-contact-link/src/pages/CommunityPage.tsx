@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 
 import { useState } from "react",
 import { Link } from "react-router-dom",
@@ -174,56 +173,6 @@ export default function CommunityPage() {;
 
           <Button asChild>;
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
-=======
-import { useState } from './react';
-import { Link } from './react-router-dom';
-import { Button } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { SEO } from '@/components / SEO';
-import { AppLayout } from '@/layout / AppLayout';
-import ForumCategories from "@/components / community / ForumCategories";
-import PostCard from "@/components / community / PostCard";
-import { use_auth } from '@/hooks / use_auth';
-import { ForumPost } from '@/types / community';
-// Mock data for featured posts;
-const featured_posts: ForumPost[] = [;
-  {
-    id: "1",
-    title: "Best practices for AI model fine - tuning",
-    content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
-    author_id: "user1",
-    author_name: "Alex Johnson",
-    author_avatar: "https://i.pravatar.cc / 150?img = 3",
-    author_role: "Verified Talent",
-    category_id: "ai - tools",
-    tags: ["machine - learning", "fine - tuning", "gpt"];
-    created_at: "2025 - 04 - 01T12:00:00Z",
-    updated_at: "2025 - 04 - 01T12:00:00Z",
-    upvotes: 48,
-    downvotes: 2,
-    reply_count: 12,
-    is_answered: true,
-    is_featured: true;
-  }
-  {
-    id: "2",
-    title: "How to build an effective AI talent profile?",
-    content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
-    author_id: "user2",
-    author_name: "Sarah Chen",
-    author_avatar: "https://i.pravatar.cc / 150?img = 5",
-    category_id: "getting - hired",
-    tags: ["profile", "tips", "hiring"];
-    created_at: "2025 - 04 - 03T09:15:00Z",
-    updated_at: "2025 - 04 - 03T09:15:00Z",
-    upvotes: 32,
-    downvotes: 0,
-    reply_count: 8,
-    is_pinned: true,
-    is_featured: true;
-  }
-];
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
               Create New Post;
             </Link>;

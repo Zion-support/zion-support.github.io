@@ -43,15 +43,14 @@ function TestimonialCarousel() {
           <Carousel;
 
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             opts={{
               align: 'start'
               loop: true
             }}
 
-<<<<<<< HEAD
 
             className='w - full';
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           <Carousel
             opts={{
               align: "start",
@@ -61,45 +60,12 @@ function TestimonialCarousel() {
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
-=======
-                          <Image
-import {;
-  Carousel,;
-  CarouselContent,;
-  CarouselItem,;
-  CarouselNext,;
-  CarouselPrevious} from "@/components/ui/carousel",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-import { Avatar } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Quote } from 'lucide-react';
-import Link from "next/link",;
-import Image from "next/image",;
-import { CASE_STUDIES } from "@/data/case-studies",;
-const testimonials = CASE_STUDIES,;
-export function TestimonialCarousel() {;
-  return (;
-    <section className="py-20 bg-zion-blue-dark">;
-      <div className="container mx-auto px-4 sm: px-6 lg:px-8">;
-        <div className="text-center mb-12">;
-          <h3 className="text-3xl font-bold text-white mb-3">What Our Users Say</h3>;
-          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">;
-            Discover how Zion is transforming the tech and AI marketplace ecosystem;
-          </p>;
-        </div>;
-        <div className="max-w-5xl mx-auto px-8">;
-          <Carousel;
-            opts={{;
-              align: "start";
-              loop: true}}
-            className="w-full";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           >;
             <CarouselContent>;
               {testimonials.map ((testimonial, index) => (
@@ -136,10 +102,6 @@ export function TestimonialCarousel() {;
                             loading="lazy"
                           />
                           <Image;
-                            src={testimonial.avatar}
-                            alt={testimonial.author}
-                            width={80}
-                            height={80}
                         </div>
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
@@ -173,7 +135,6 @@ export function TestimonialCarousel() {;
           </Carousel>
         </div>
 
-<<<<<<< HEAD
 
 
             </CarouselContent>;
@@ -196,8 +157,6 @@ export function TestimonialCarousel() {;
                             loading="lazy";
                           />;
                           <span className="text-white font-semibold">{testimonial.company}</span>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         </div>;
                       </div>;
                       <div className='flex - 1'>;

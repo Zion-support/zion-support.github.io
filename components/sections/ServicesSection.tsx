@@ -46,7 +46,6 @@ import { motion } from 'framer-motion';
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
       {/* Background Elements */}
-<<<<<<< HEAD
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
       {/* Background Elements */}
@@ -60,13 +59,6 @@ import { motion } from 'framer-motion';
   };
   const cardVariants = {
 
-=======
-      <div className='absolute inset-0'>
-        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
-        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
-      </div>
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}  }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;

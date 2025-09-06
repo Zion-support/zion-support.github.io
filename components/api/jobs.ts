@@ -55,7 +55,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   };
 }
-<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -63,70 +62,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-;
-const JOBS_FILE = path.join (process.cwd (), 'data', 'jobs', 'jobs.json');
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('Allow', 'GET');
-    return res.status (405).json ({ error: 'Method Not Allowed' });
-  }
-  try {
-    const jobs = (await fs.path_exists (JOBS_FILE));
-      ? await fs.readJSON (JOBS_FILE);
-      : [];
-    return res.status (200).json ({ jobs });
-  } catch (e) {
-    return res.status (500).json ({ error: 'Failed to load jobs' });
-  }
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ("Allow", "GET");
-    return res.status (405).json ({ error: "Method Not Allowed" });
-  }
-  try {
-    const jobs = (await fs.path_exists (JOBS_FILE)) ? await fs.readJSON (JOBS_FILE) : [];
-    return res.status (200).json ({ jobs });
-  } catch (e) {
-    return res.status (500).json ({ error: "Failed to load jobs" });
-}
-  }
-  try {
-    const jobs = (await fs.pathExists(JOBS_FILE)) ? await fs.readJSON(JOBS_FILE) : []
-    return res.status(200).json({ jobs })
-  } catch (e) {
-    return res.status(500).json({ error: "Failed to load jobs" })
-import type {_NextApiRequest, _NextApiResponse} from "next";
-import fs from "fs-extra";
-import path from "path";
-
-const _JOBS_FILE = path.join(process.cwd(), "data", "jobs", "jobs.json");
-
-export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "GET") {
-    res.setHeader("Allow", _"GET");
-    return res.status(405).json({ error: "Method Not Allowed"});
-  }
-  try {_const _jobs = (await fs.pathExists(JOBS_FILE)) ? await fs.readJSON(JOBS_FILE) : [];
-    return res.status(200).json({ jobs});
-  } catch (e) {_return res.status(500).json({ error: "Failed to load jobs"});
-
-  }
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 

@@ -62,28 +62,16 @@ import React from 'react';
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-        )}
-      >
-        <div className="container flex h-16 items-center px-4 sm:px-6">
-          <Logo />
-          {showTagline && (
-            <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
-              {t('home.header_tagline')}
-            </span>
-          )}
-
-          <div className="ml-6 flex-1 hidden md:block">;
-            <nav role="navigation" aria-label="Main navigation">;
-              <ResponsiveNavigation openLoginModal={openLoginModal} />;
-            </nav>;
-          </div>;
-
-
-          {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">
-            <button
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+              onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
+              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-expanded = {mobileMenuOpen,}
+              aria-label = {t('general.toggle_mobile_menu'),}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-expanded={mobileMenuOpen}
+              aria-label={t('general.toggle_mobile_menu')}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
@@ -102,7 +90,6 @@ import React from 'react';
               <Link
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
@@ -145,9 +132,14 @@ import React from 'react';
       </header>;
 
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-<<<<<<< HEAD
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
+<<<<<<< HEAD
+            onClick = {(,) => setMobileMenuOpen(false),}
+            aria-hidden="true";
+          />;
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
             aria-hidden="true"
           />
@@ -162,11 +154,6 @@ import React from 'react';
         </div>;
 <<<<<<< HEAD
 
-            aria-hidden="true"
-          />
-          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
@@ -181,6 +168,15 @@ import React from 'react';
         </div>;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {openLoginModal,}
+            />;
+          </div>;
+        </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -1219,6 +1215,3 @@ import React from 'react';
       </AnimatePresence>
     </header>  )
 <<<<<<< HEAD
-
-;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

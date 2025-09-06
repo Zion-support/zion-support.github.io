@@ -276,7 +276,6 @@ export default function EnhancedHero2026(): any ({;
 
             }}
 
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           />
@@ -512,26 +511,6 @@ export default function EnhancedHero2026(): any ({;
             ))}
           </motion.div>
 
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-          {/* Enhanced CTA Section */}
-          <motion.div variants={itemVariants} className='space-y-6'>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-              <Button
-                href='/services'
-                variant='primary'
-                size='xl'
-                className='text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group'
-              >              >
-                <span className="flex items-center">
-                  <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
-                  Explore All Services
-                </span>
-                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-              </Button>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Enhanced CTA Section */}
 
               

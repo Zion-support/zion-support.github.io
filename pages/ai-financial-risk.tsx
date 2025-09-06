@@ -103,7 +103,6 @@ export default function AIFinancialRiskPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">Capabilities</h2>
-<<<<<<< HEAD
 
               </ul>
             </div>
@@ -126,9 +125,6 @@ export default function AIFinancialRiskPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
                 </div>              </div>;
-=======
-);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======

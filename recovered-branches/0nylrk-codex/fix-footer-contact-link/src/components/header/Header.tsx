@@ -52,7 +52,6 @@ export interface HeaderProps {
     textColor: string
   }
 }
-<<<<<<< HEAD
 
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
   const { user } = useAuth();
@@ -92,10 +91,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     backgroundColor: effectiveTheme.backgroundColor
     color: effectiveTheme.textColor
     borderColor: `${effectiveTheme.primaryColor}20`
-=======
-  } : {}
-  } : {},
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()

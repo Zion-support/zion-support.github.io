@@ -39,6 +39,12 @@ const Carousel = React.forwardRef<
 >(
   (
     {
+=======
+
+
+
+      orientation = "horizontal",
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       opts,
       setApi,
       plugins,
@@ -215,6 +221,7 @@ const CarouselNext = React.forward_ref<;
       onClick={scrollNext}
       {...props}
 
+<<<<<<< HEAD
     </Button>
   )
 })

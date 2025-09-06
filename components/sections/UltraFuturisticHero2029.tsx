@@ -45,7 +45,6 @@ import {
   Target,
   Shield,
   Cpu,
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
@@ -209,28 +208,6 @@ export default function UltraFuturisticHero2029() {;
               style={{
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'
-=======
-                x: [0, Math && Math.random() * 1000],
-                y: [0, Math && Math.random() * 1000],
-                opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2],
-              }}
-              transition={{
-                duration: Math && Math.random() * 10 + 10,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
-              style={{
-                left: Math && Math.random() * 100 + '%',
-                top: Math && Math.random() * 100 + '%',
-              }}            />  ];
-
-=======
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles } from 'lucide-react';
-import Link from 'next/link';
-export default function UltraFuturisticHero2029() {
-  const features = [
-    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' },
     { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' },
     { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' },
@@ -1003,11 +980,7 @@ export default function UltraFuturisticHero2029() {
     </section>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

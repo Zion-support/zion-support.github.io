@@ -31,6 +31,9 @@ import { logErrorToProduction } from '@/utils / production_logger';
 import { EmptyState  } from '@/components / ui / empty - state';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -39,6 +42,7 @@ interface PartnerProfile {
   created_at: string,
   niche: string,
   audience_size: string,
+<<<<<<< HEAD
 
   social_media?: Record<string string>,
   website?: string,
@@ -85,7 +89,6 @@ export default function PartnerManager() {
 
 }
 <<<<<<< HEAD
-=======
 
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

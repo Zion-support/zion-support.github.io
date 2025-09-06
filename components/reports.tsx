@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 import React from 'react';
@@ -474,9 +473,6 @@ icon: <Globe className="w - 8 h - 8" />,
           </div>
         </section>
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;

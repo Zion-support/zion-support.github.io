@@ -71,7 +71,6 @@ export function ChatAssistant({;
   useEffect(() => {
     if (initialMessages.length > 0) {
       setMessages(initialMessages)
-<<<<<<< HEAD
     }
   }, [initialMessages]);
   contextHeader;
@@ -84,7 +83,6 @@ export function ChatAssistant({;
       setMessages(initialMessages);
     }
   }, [initialMessages]),
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -135,55 +133,6 @@ export function ChatAssistant({;
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
-=======
-      id: Date.now().toString()
-      role: 'user'
-      message;
-      timestamp: new Date()
-    }
-  }, [initialMessages]);
-
-  useEffect(() => {;
-    scrollToBottom();
-  }, [messages]);
-
-  const scrollToBottom = () => {;
-    messagesEndRef && messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleSendMessage = async (message: string) => {;
-    if (!message && message.trim()) return,;
-
-    // Add user message to the chat;
-    const newMessage: Message = {;
-      id: Date && Date.now().toString(),;
-      role: 'user',;
-      message;
-      timestamp: new Date();
-    };
-
-    setMessages((prev: Message[]) => [...prev, newMessage]);
-
-    // Send message to recipient via the provided handler;
-    await onSendMessage(message, conversationId);
-  };
-
-
-  if (!isOpen) return null;
-      id: Date.now().toString(),
-      role: 'user',
-      message,
-      timestamp: new Date()
-    },
-    
-    setMessages((prev: Message[]) => [...prev, newMessage]),
-    
-    // Send message to recipient via the provided handler
-    await onSendMessage(message, conversationId)
-  },
-
-  if (!isOpen) return null,
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
@@ -367,16 +316,4 @@ if (return null) {
     </div>);
 
 }
-=======
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

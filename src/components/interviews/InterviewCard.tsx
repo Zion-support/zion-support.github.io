@@ -12,9 +12,6 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface InterviewCardProps {
 
   interview: Interview
@@ -42,3 +39,27 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   )
 }
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+=======
+import React, { useState } from './react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Badge  } from '@/components / ui / badge';
+import { Interview  } from '@/types / interview';
+import { use_auth  } from '@/hooks / use_auth';
+import { use_interviews  } from '@/hooks / use_interviews';
+import { format, formatDistanceToNow, is_past, parseISO  } from './date - fns';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger  } from '@/components / ui / alert - dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle  } from '@/components / ui / dialog';
+import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'import { toast  } from '@/components / ui / use - toast';
+import { InterviewResponseForm  } from './InterviewResponseForm';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+interface InterviewCardProps {
+  interview: Interview,
+  on_refresh: () => Promise < void>;
+}
+      default:;
+        return <Badge>{interview.status}</Badge>;
+}
+  );
+}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

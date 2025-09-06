@@ -170,12 +170,6 @@ export default function AllCategoriesPage() {;
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories.map((category) => (;
               <CategoryCard;
-                key={category.title}
-                title={category.title}
-                description={category.description}
-                icon={category.icon}
-
-<<<<<<< HEAD
 
                 // The CategoryCard itself is a Link to its specific category page;
                 // So we don't pass the category.link to a 'to' prop here directly;
@@ -189,6 +183,7 @@ export default function AllCategoriesPage() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <ErrorBoundary>;
@@ -228,3 +223,5 @@ export default function AllCategoriesPage() {;
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

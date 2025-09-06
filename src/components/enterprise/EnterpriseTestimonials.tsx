@@ -82,15 +82,6 @@ export function EnterpriseTestimonials() {
             <CarouselNext />
           </div>
         </Carousel>
-      </div>;
-    </section>;
-  );
-};
-}
-<<<<<<< HEAD
-            <CarouselNext />
-          </div>
-        </Carousel>
       </div>
     </section>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

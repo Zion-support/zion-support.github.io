@@ -4,24 +4,14 @@ import Link from "next/link";
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-
-import React from 'react',
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { ArrowLeft } from 'lucide-react'
-
-import { ArrowLeft } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { ArrowLeft } from 'lucide-react'
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 import { ArrowLeft } from 'lucide-react'
 import { Button } from "@/components/ui/button"
@@ -39,24 +29,13 @@ export function BackToDirectoryButton() {;
         <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
           <ArrowLeft className="mr-2 h-4 w-4" />
 <<<<<<< HEAD
-          Back to Talent Directory
-
-        </Link>
-      </Button>
-    </div>
-  );
-};
-  );
-};
-          Back to Talent Directory
-<<<<<<< HEAD
 
         </Link>
       </Button>
     </div>
   )
 <<<<<<< HEAD
-=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react',;
@@ -78,4 +57,7 @@ export function BackToDirectoryButton() {;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

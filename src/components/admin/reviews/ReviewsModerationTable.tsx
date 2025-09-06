@@ -94,30 +94,6 @@ interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,
   onRefresh: () => void
-      setViewDetailsOpen(false)
-    },
-    onError: (error: Error) => {
-      toast({
-        title: "Error",
-        description: `Failed to update review: ${error.message}`,
-        variant: 'destructive',
-      })
-    },
-  })
-  const getInitials = (name: string,) => {
-    return name
-      .split(' ')
-      .map(n => n[0])
-      .join('')
-      .toUpperCase()
-  }
-        variant: "destructive"})
-    }}),
-}
-      setViewDetailsOpen(false)
-    }
-    onError: (error: Error,) => {
-      toast({
 
         variant: "destructive"})
     }}),
@@ -295,7 +271,6 @@ export function ReviewsModerationTable({;
     )
   }
 
-<<<<<<< HEAD
     updateReviewStatus({ reviewId, status: 'approved' })
   }
   const handleReject = (reviewId: string) => {
@@ -339,10 +314,6 @@ export function ReviewsModerationTable({;
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
 
-
-  const handleApprove = (reviewId: string) => {
-                        alt={review.reviewer_profile.display_name || ''}                      />
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     updateReviewStatus({ reviewId, status: "approved" })
   },
 
@@ -415,6 +386,49 @@ export function ReviewsModerationTable({;
                       <span className="text-sm font-medium">Anonymous</span>
                     ) : (
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+                          onClick={() =>;
+                            updateReviewStatus({;
+                              reviewId: review && review.id,;
+                              status: 'rejected',;
+                            });
+
+                          }
+                        >;
+                          Mark as rejected;
+                        </DropdownMenuItem>;
+                      )}
+                      {review && review.status === 'rejected' && (;
+                        <DropdownMenuItem
+
+                          onClick={() =>;
+                            updateReviewStatus({;
+                              reviewId: review && review.id,;
+                              status: 'approved',;
+                            });
+
+                          }
+                        >                          Mark as approved;
+                        </DropdownMenuItem>;
+                      )}
+            <TableHead > Reviewer</TableHead>;
+            <TableHead > Rating</TableHead>;
+            <TableHead > Date</TableHead>;
+            <TableHead > Status</TableHead>;
+            <TableHead > Reports</TableHead>;
+            <TableHead className='text - right'>Actions</TableHead>;
+          </TableRow>;
+        </TableHeader>;
+        <TableBody>;
+          {reviews.map (review => (            <TableRow key={review.id}>;
+              <TableCell>;
+                <div className='flex items - center gap - 2'>;
+                  <Avatar className='h - 8 w - 8'>;
+                    {review.reviewer_profile?.avatar_url ? (
+                      <AvatarImage;
+                        src={review.reviewer_profile.avatar_url}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                     {review.is_anonymous ? (
                       <span className="text-sm font-medium">Anonymous</span>
                     ) : (
@@ -528,86 +542,6 @@ export function ReviewsModerationTable({;
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>
                         View details
                       </DropdownMenuItem>
-=======
-                      {review.status === 'approved' && (
-                        <DropdownMenuItem
-                          onClick={() =>
-                            updateReviewStatus({
-                              reviewId: review.id
-                              status: 'rejected'
-                            })
-                          }
-                        >
-                          Mark as rejected
-                        </DropdownMenuItem>
-                      )}
-                      {review.status === 'rejected' && (
-                        <DropdownMenuItem
-                          onClick={() =>
-                            updateReviewStatus({
-                              reviewId: review.id
-                              status: 'approved'
-                            })
-                          }
-                        >                          Mark as approved
-                        </DropdownMenuItem>
-                      {review.status === "approved" && (
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "rejected" })}>
-                          Mark as rejected
-                        </DropdownMenuItem>
-                      )}
-                      {review.status === "rejected" && (
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
-                          Mark as approved
-                        </DropdownMenuItem>
-<<<<<<< HEAD
-
-                      )}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-      {selectedReview && (
-        <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>
-          <DialogContent className="max-w-lg">
-            <DialogHeader>
-              <DialogTitle>Review Details</DialogTitle>
-              <DialogDescription>
-                Review submitted on{" "}
-                {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
-              </DialogDescription>
-            </DialogHeader>
-=======
-            <div className='space-y-4'>
-              <div className='flex items-center justify-between'>
-                <div className='flex items-center gap-2'>
-
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-<<<<<<< HEAD
-
-                  <Avatar>
-                    {selectedReview.reviewer_profile?.avatar_url ? (
-                      <AvatarImage
-                        src={selectedReview.reviewer_profile.avatar_url}
-                        alt={selectedReview.reviewer_profile.display_name |''}                      />
-                        alt={selectedReview.reviewer_profile.display_name || ''}                      />
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                    ) : (
-                      <AvatarFallback>
-                        {selectedReview.reviewer_profile?.display_name ? (
-                          getInitials(
-                            selectedReview.reviewer_profile.display_name
-                          )
-                        ) : (
-                          <User className='h-4 w-4' />
-                        )}
-                      </AvatarFallback>
 
 
 
@@ -625,6 +559,81 @@ export function ReviewsModerationTable({;
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
               </div>
+=======
+              <div className='border rounded-md p-3 bg-muted/20'>
+                <p className='whitespace-pre-wrap'>
+                  {selectedReview.review_text}
+                </p>
+              </div>
+              <div className='space-y-2'>
+                <h4 className='text-sm font-medium'>Additional Ratings</h4>
+                <div className='flex flex-wrap gap-2'>
+
+              <div className="border rounded-md p-3 bg-muted/20">
+                <p className="whitespace-pre-wrap">{selectedReview.review_text}</p>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="text-sm font-medium">Additional Ratings</h4>
+                <div className="flex flex-wrap gap-2">
+
+
+                  {selectedReview.communication_rating && (
+                    <Badge variant='outline'>
+                      Communication: {selectedReview.communication_rating}/5
+                    </Badge>
+                  </Avatar>;
+                  <div>;
+                    <div className='font-medium'>;
+                      {selectedReview && selectedReview.is_anonymous;
+                        ? 'Anonymous';
+                        : selectedReview && selectedReview.reviewer_profile?.display_name ||;
+                          'User'}
+                    </div>;
+                    <Badge variant='outline'>{selectedReview && selectedReview.status}</Badge>;
+                  </div>;
+                </div>;
+                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
+              </div>;
+
+              <div className='border rounded-md p-3 bg-muted/20'>;
+                <p className='whitespace-pre-wrap'>;
+                  {selectedReview && selectedReview.review_text}
+                </p>;
+              </div>;
+
+              <div className='space-y-2'>;
+                <h4 className='text-sm font-medium'>Additional Ratings</h4>;
+                <div className='flex flex-wrap gap-2'>;
+                  {selectedReview && selectedReview.communication_rating && (;
+                    <Badge variant='outline'>;
+                      Communication: {selectedReview && selectedReview.communication_rating}/5;
+                    </Badge>;
+                  )}
+                  {selectedReview.quality_rating && (
+                    <Badge variant="outline">
+                      Quality: {selectedReview.quality_rating}/5
+                    </Badge>
+                  )}
+                  {selectedReview.timeliness_rating && (
+                    <Badge variant="outline">
+                      Timeliness: {selectedReview.timeliness_rating}/5
+                    </Badge>
+                  )}
+                  {selectedReview.would_work_again !== undefined && (
+                    <Badge
+                      variant={
+                        selectedReview.would_work_again
+                          ? 'default'
+                          : 'secondary'
+                      }                    >
+                      {selectedReview.would_work_again
+                        ? 'Would work again'
+                        : 'Would not work again'}
+                      variant={selectedReview.would_work_again ? "default" : "secondary"}
+                    >
+                      {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                     </Badge>
                   )}
 
@@ -649,85 +658,6 @@ export function ReviewsModerationTable({;
                 <>;
 
                   <Button
-=======
-                    variant='destructive'
-                    onClick={() => handleReject(selectedReview && selectedReview.id)}
-                    disabled={isPending}                  >;
-                  <Button
-                    onClick = {() => handleApprove(selectedReview.id),}
-                    disabled = {isPending,}
-                  >
-                    Approve
-                  </Button>
-                </>
-              )}
-              {selectedReview.status === 'approved' && (
-                <Button
-                  variant='destructive'
-                  onClick={() =>
-                    updateReviewStatus({
-                      reviewId: selectedReview.id
-                      status: 'rejected'
-                    })
-                  }
-                  disabled={isPending}                >
-                  Mark as Rejected
-                </Button>
-              )}
-              {selectedReview.status === 'rejected' && (
-                <Button
-                  onClick={() =>
-                    updateReviewStatus({
-                      reviewId: selectedReview.id
-                      status: 'approved'
-                    })
-                  }
-                  disabled={isPending}                >
-                  Mark as Approved
-                </Button>
-                    variant="destructive"
-                    onClick={() => handleReject(selectedReview.id)}
-                    disabled={isPending}
-                  >;
-                    Reject;
-                  </Button>;
-                  <Button
-                    onClick = {() => handleApprove(selectedReview && selectedReview.id),}
-                    disabled = {isPending,}
-                  >;
-                    Approve;
-                  </Button>;
-                </>;
-              )}
-              {selectedReview && selectedReview.status === 'approved' && (;
-                <Button
-                  variant='destructive'
-
-                  onClick={() =>;
-                    updateReviewStatus({;
-                      reviewId: selectedReview && selectedReview.id,;
-                      status: 'rejected',;
-                    });
-
-                  }
-                  disabled={isPending}                >;
-                  Mark as Rejected;
-                </Button>;
-              )}
-              {selectedReview && selectedReview.status === 'rejected' && (;
-                <Button
-
-                  onClick={() =>;
-                    updateReviewStatus({;
-                      reviewId: selectedReview && selectedReview.id,;
-                      status: 'approved',;
-                    });
-
-                  }
-                  disabled={isPending}                >;
-                  Mark as Approved;
-                </Button>;
-<<<<<<< HEAD
 
               )}
             </DialogFooter>;
@@ -746,11 +676,8 @@ export function ReviewsModerationTable({;
   star
 }/>) )
 }</div>)
-  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
-  star ;
-}/>) ) ;
-}</div>) ;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
             </TableRow>))}
@@ -927,33 +854,3 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
   selectedReview.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
-}</Avatar> <div> </Badge> </div> </div> <div> {
-  renderStars (selectedReview.rating) "
-}</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
-  selectedReview.review text "
-}</p> </div> <div className="space-y-2"> <h4 className="text-sm font-medium">Additional Ratings</h4> Timeliness: {
-  selectedReview.timeliness rating
-}/5 </Badge>)
-}{
-  selectedReview.would work again !== undefined && (<Badge variant= {"
-  selectedReview.would work again ? " default": " secondary"
-}> </Badge>)
-}</div> </div> {"
-  selectedReview.report count > 0 && (<div className="bg-red-50 border border-red-200 rounded-md p-3"> <h4 className="text-sm font-medium text-red-800">Reports: {
-  selectedReview.report count "
-}</h4> <p className="text-sm text-red-700"> This review has been reported by users and may need investigation. </p> </div>) "
-}</div> <DialogFooter> <Button variant=" destructive" onClick={
-  () => handleReject (selectedReview.id)
-}disabled= {
-  isPending
-}> Reject </Button> <Button onClick={
-  () => handleApprove (selectedReview.id)
-}disabled= {
-  isPending
-}> Approve </Button> </>)
-}> Mark as Rejected </Button>)
-}> Mark as Approved </Button>)
-}</DialogFooter> </DialogContent> </Dialog>)
-}</>)
-}"}
-<<<<<<< HEAD

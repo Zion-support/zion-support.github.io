@@ -96,72 +96,6 @@ export function TeamManagement() {
       title: 'Invitation sent',
       description: `An invitation has been sent to ${newMemberEmail}`,
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    })
-    setNewMemberEmail('')
-    setIsAddingMember(false)
-  }
-  const handleRemoveMember = (_memberId: number,) => {
-    // In a real app, this would make an API call to remove the member
-    toast({
-      title: 'Team member removed'
-      description: 'The team member has been removed from your workspace.'
-    })
-  }
-  const handleResendInvite = (memberEmail: string,) => {
-    // In a real app, this would make an API call to resend the invitation
-    toast({
-      title: 'Invitation resent'
-      description: `A new invitation has been sent to ${memberEmail}`
-    })
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  // Mock team members data
-  const teamMembers = [
-    {
-      id: 1
-      name: 'Alex Johnson'
-      email: 'alex@example.com'
-      role: 'Admin'
-      status: 'active'
-      lastActive: '2 hours ago'
-    }
-    toast ({
-      title: 'Invitation sent',
-      description: `An invitation has been sent to ${newMemberEmail}`,
-    });
-    setNewMemberEmail ('');
-    setIsAddingMember (false);
-  }
-=======
-  const handleRemoveMember = (_memberId: number, ) =>: any {
-    // In a real app, this would make an API call to remove the member;
-    toast ({
-      title: 'Team member removed',
-      description: 'The team member has been removed from your workspace.',
-    });
-  }
-  const handleResendInvite = (member_email: string, ) =>: any {
-    // In a real app, this would make an API call to resend the invitation;
-    toast ({
-      title: 'Invitation resent',
-      description: `A new invitation has been sent to ${member_email}`,
-    });
-  }
-
-
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title: "Email required",
         description: "Please enter an email address for the new team member.",
@@ -191,7 +125,6 @@ import {
       description: `A new invitation has been sent to ${memberEmail}`})
   },
 
-<<<<<<< HEAD
 
   return (
     <div className="space-y-6">
@@ -217,3 +150,4 @@ import {
                   Email
                 </Label>
                 <Input
+<<<<<<< HEAD

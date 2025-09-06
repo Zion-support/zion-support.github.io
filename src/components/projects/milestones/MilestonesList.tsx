@@ -79,11 +79,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onClick: () => setShowAddForm(true)
           } : undefined
         }
-<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   }
 
   return (
@@ -108,77 +110,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             />
           </CardContent>
         </Card>
-=======
-
-
-      {showAddForm && (;
-        <Card>;
-          <CardContent className="pt-6">;
-            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
-
-            <AddMilestoneForm
-              onSubmit = {handleSubmit,}
-              isSubmitting = {isSubmitting,}
-              onCancel = {(,) => setShowAddForm(false),}
-            />;
-          </CardContent>;
-        </Card>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      )}
-
-
-      <div className="space-y-4">;
-        {milestones && milestones.map((milestone,) => (;
-
-          <MilestoneCard
-            key = {milestone.id,}
-            id = {milestone.id,}
-            projectId = {milestone.project_id,}
-            title = {milestone.title,}
-            description = {milestone.description,}
-            amount = {parseFloat(milestone.amount.toString()),}
-            status = {milestone.status,}
-            dueDate = {milestone.due_date,}
-            onApprove = {onApprove,}
-            onReject = {onReject,}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
-"
-
-              onSubmit={handleSubmit}
-              isSubmitting={isSubmitting}
-              onCancel={() => setShowAddForm(false)}
-            />;
-          </CardContent>;
-        </Card>;
-      )}
-
-      <div className="space-y-4">
-        {milestones.map((milestone) => (
-          <MilestoneCard
-            key={milestone.id}
-            id={milestone.id}
-            projectId={milestone.project_id}
-            title={milestone.title}
-            description={milestone.description}
-            amount={parseFloat(milestone.amount.toString())}
-            status={milestone.status}
-            dueDate={milestone.due_date}
-            onApprove={onApprove}
-            onReject={onReject}
-          />;
-        ))}
-      </div>;
-    </div>;
-  );
-};
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Check condition
 if ( {) {

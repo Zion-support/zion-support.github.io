@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -8,9 +7,6 @@ function ClientDashboardContent() {
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = useIsMobile(),
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)

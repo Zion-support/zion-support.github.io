@@ -143,7 +143,6 @@ export default function EquipmentDetail() {;
         setLoading(false)
       }
     }
-<<<<<<< HEAD
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
@@ -216,6 +215,12 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
     (acc, item) => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleAddToCart = async () => {
@@ -224,16 +229,6 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
         title: 'Authentication Required'
         description: 'Please log in to add items to cart'
         variant: 'destructive'
-        title: 'Authentication Required',
-        description: 'Please log in to add items to cart',
-        variant: 'destructive',
-
-      })
-      return;
-    }
-
-
-    setIsAdding(true),
 
     try {
       dispatch({
@@ -271,11 +266,7 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Loading state
   if (loading) {
@@ -468,15 +459,6 @@ if ( {) {
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
-                  Browse Equipment
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </>
-    )
-
 
           title: `${equipment && equipment.name} - Zion Marketplace`,
           description: equipment && equipment.description,
@@ -484,7 +466,6 @@ if ( {) {
             equipment && equipment.images.length> 0 && equipment && equipment.images[0];
               ? [{ url: equipment && equipment.images[0] }];
               : undefined,;
-=======
           title: `${equipment.name} - Zion Marketplace`
           description: equipment.description
           images:
@@ -795,9 +776,3 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }</p> </div> </div>)
 }</div> </motion.div> </div> </div> </div> </>)
 }'"}
-  equipment.returnPolicy 
-}</p> </div> </div>) 
-}</div> </motion.div> </div> </div> </div> </>) 
-}'"};
-;
-<<<<<<< HEAD

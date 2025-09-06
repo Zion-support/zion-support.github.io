@@ -45,7 +45,6 @@ export default function AboutPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com';
   };
-<<<<<<< HEAD
 
   return (
       {/* Mission & Vision */}
@@ -376,7 +375,4 @@ export default function AboutPage() {
         </section>
       </section>
     </>
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

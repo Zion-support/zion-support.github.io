@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 
 setIsMobile (isMobileDevice);
  setIsMobile (isMobileDevice);
@@ -314,7 +313,6 @@ children
 }</style> </>)
 }
 
-<<<<<<< HEAD
     checkDevice(),
     window.addEventListener('resize', checkDevice),
     return () => window.removeEventListener('resize', checkDevice)
@@ -856,11 +854,6 @@ if (img.loading = 'lazy') {
 // Check condition
 if (img.decoding = 'async') {
   $2
-=======
-setIsMobile (isMobileDevice);
-=======
- setIsMobile (isMobileDevice);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 setIsTablet (isTabletDevice);
@@ -923,9 +916,6 @@ if (return null) {
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

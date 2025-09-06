@@ -1,4 +1,20 @@
 
+=======
+
+
+
+
+
+import { Trophy } from 'lucide-react'
+import { Progress } from "@/components/ui/progress";
+interface ReputationDisplayProps {
+  reputation: number,
+  size?: 'sm' | 'md' | 'lg'
+}
+
+export const ReputationDisplay = ({ 
+  reputation,
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
 
@@ -15,18 +31,13 @@
   // Styling based on size
   const sizeClasses = {
     sm: {
+<<<<<<< HEAD
       container: 'text-xs'
       icon: 'w-3 h-3'
       container: 'text-xs',
       icon: 'w-3 h-3',
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      progress: 'h-1',  // Styling based on size
-  const sizeClasses = {
-    sm: {
-      container: "text-xs"
-      icon: "w-3 h-3"
-      progress: "h-1"
-
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 export const ReputationDisplay = ({;
   reputation,;

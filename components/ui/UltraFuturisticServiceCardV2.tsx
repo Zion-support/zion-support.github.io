@@ -547,7 +547,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
-<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -612,19 +611,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             </div>;
           </div>;
         )}
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-        {/* CTA Button */}
-        <div className='relative z-10'>          <motion.a
-            href={service.link}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className="relative z-10">
-            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <motion.a

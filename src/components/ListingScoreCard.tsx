@@ -3,8 +3,6 @@ import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
 import { Star } from 'lucide-react'
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ListingScoreCardProps {
   title: string;
   description: string;
@@ -27,25 +25,6 @@ export function ListingScoreCard({
   description,
   image,
   category,
-  tags,
-  author,
-  authorImage,
-  aiScore,
-  rating = 0,
-  reviewCount = 0,
-  className
-}: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false)
-  const [authorImageError, setAuthorImageError] = useState(false)
-    >
-  const [mainImageError, setMainImageError] = useState(false),
-  const [authorImageError, setAuthorImageError] = useState(false),
-
-  return (
-    <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
-      className
-    )}>
       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
@@ -134,8 +113,6 @@ export function ListingScoreCard({
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-              </Badge>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ))}
           </div>
         )}
@@ -144,49 +121,3 @@ export function ListingScoreCard({
         </Button>
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        {author && (
-          <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
-            {authorImage && !authorImageError ? (
-              <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>
-
-        <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
-          Request Quote;
-        </Button>;
-
-        {author && (;
-          <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>;
-            {authorImage && !authorImageError ? (;
-              <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>;
-                  className={cn (
-                    'h - 4 w - 4',
-                    star <= Math.round (rating);
-                      ? 'text - zion - cyan fill - zion - cyan';
-                      : 'text - zion - slate - light')}                />))}
-            </div>;
-            <span className='text - sm text - zion - slate - light ml - 1'>;
-              ({review_count});
-            </span>;
-          </div>)}
-        {tags && tags.length > 0 && (
-          <div className='flex flex - wrap gap - 2 mb - 4'>;
-            {tags.map ((tag, i) => (
-              <Badge;
-                key={i}
-                variant='outline';
-                className='border - zion - slate - dark text - zion - slate - light';
-              >                {tag}
-              </Badge>))}
-          </div>)}
-        <Button className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white'>;
-          Request Quote;
-        </Button>;
-        {author && (
-          <div className='flex items - center mt - 4 pt - 4 border - t border - zion - blue - light'>;
-            {author_image && !authorImageError ? (
-              <div className='relative h - 8 w - 8 rounded - full mr - 2 overflow - hidden'>;
-                {' '}
-                {/* Added relative and overflow - hidden */}
-                <Image;
-                  src={author_image}
-                  alt={author}
-

@@ -307,26 +307,6 @@ if ( {) {
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                </AlertTitle>
-              </div>
-              <AlertDescription className="mt-2">
-                {isNetworkError ? (
-                  !this.state.isOnline ? (
-                    'You appear to be offline. Please check your internet connection.'
-                  ) : (
-                    'Unable to connect to our servers. This might be a temporary network issue.'
-                  )
-                ) : (
-                  'An unexpected error occurred while loading the page.'
-                )}
-              </AlertDescription>
-            </Alert>
-            <div className='flex flex-col gap-2'>
-              <Button
-                onClick={this.handleRetry}
-                disabled={this.state.isRetrying}
-                className='w-full'              >
-
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -459,27 +439,4 @@ export const useApiErrorHandler = () =>: any {
                 </pre>
               </details>
             )}
-<<<<<<< HEAD
-
-}, ;
-  return { handleApiError };
-
-          </div>;
-        </div>;
-      );
-    }
-
-    return this && this.props.children;
-  }
-
-// Hook for accessing query client in function components;
-export const useApiErrorHandler = () => {;
-  const handleApiError = (error: Error) => {;
-    Sentry && Sentry.withScope(scope => {;
-      scope && scope.setTag('source', 'useApiErrorHandler');
-      scope && scope.setLevel('error');
-      Sentry && Sentry.captureException(error);
-    });
-  };
-  return { handleApiError }
 <<<<<<< HEAD

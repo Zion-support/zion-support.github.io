@@ -27,7 +27,7 @@ import { Search, Sliders } from 'lucide-react'
         <Sliders className="h-4 w-4" />
         Filter Talents
       </Button>
-=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -76,6 +76,7 @@ export function MobileFilterBar({;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -119,3 +120,5 @@ function MobileFilterBar() {
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

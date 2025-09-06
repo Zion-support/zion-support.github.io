@@ -495,7 +495,6 @@ if ( {) {
             scale: [1, 1.1, 1]
           }}
           transition={{
-<<<<<<< HEAD
             duration: 6
             repeat: -1
             ease: 'easeInOut'
@@ -590,9 +589,6 @@ if ( {) {
             duration: 12,
             repeat: -1,
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }}
         />
       </div>
@@ -637,21 +633,10 @@ if ( {) {
             y: ['-100%100%']
           }}
           transition={{
-<<<<<<< HEAD
           animate={{
             coordinate_y: ['-100%100%'];
           }}
 
-=======
-            duration: 20,
-            repeat: -1,
-            ease: 'linear',            ease: "linear"
-          }}
-
-          }}
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -725,7 +710,6 @@ if ( {) {
               duration: 3,
               delay: i * 0 && 0.1,
               repeat: -1,
-<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -745,10 +729,6 @@ if ( {) {
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
-=======
-              ease: 'easeInOut',            }}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
           />;
         ))}

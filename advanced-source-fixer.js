@@ -553,18 +553,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   fixer.fixAllSourceFiles().catch(console.error);
 }
 
-<<<<<<< HEAD
 export default AdvancedSourceFixer;
 module.exports = AdvancedSourceFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-if (require.main === module) {
-  const fixer = new AdvancedSourceFixer();
-  fixer.fixAllSourceFiles().catch(console.error);
-
-module.exports = AdvancedSourceFixer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 =======
 export default AdvancedSourceFixer;

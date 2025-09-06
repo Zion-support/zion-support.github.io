@@ -40,21 +40,9 @@ const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
     )}
     {...props}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  />;
-));
-Command.displayName = CommandPrimitive.displayName;
-interface CommandDialogProps;
-
-=======
-      'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground'
-      className
-    )}
-    {...props}
-<<<<<<< HEAD
-  />
-))
-Command.displayName = CommandPrimitive.displayName
-interface CommandDialogProps
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   extends React.ComponentPropsWithoutRef<typeof Dialog> {}
 const CommandDialog = ({ children, ...props }: CommandDialog</typeof>Props) => {
   />;
@@ -71,6 +59,9 @@ interface CommandDialogProps;
         </DialogHeader>
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
@@ -109,7 +100,6 @@ const CommandList = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <CommandPrimitive.List;
-<<<<<<< HEAD
 
     ref={ref}
     className={cn("max-h-[300px] overflow-y-auto overflow-x-hidden", className)}
@@ -119,7 +109,6 @@ const CommandList = React.forwardRef<;
     className={cn("-mx-1 h-px bg-border", className)}
     {...props}
 
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export {

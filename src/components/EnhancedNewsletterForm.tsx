@@ -114,6 +114,9 @@ export function EnhancedNewsletterForm() {
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   return (
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -126,4 +129,5 @@ export function EnhancedNewsletterForm() {
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
+<<<<<<< HEAD
 

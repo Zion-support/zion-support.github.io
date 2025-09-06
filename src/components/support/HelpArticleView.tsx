@@ -12,24 +12,8 @@ interface HelpArticleViewProps {
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  // Find the article in all categories
-  let article = null;
-  for (const category of HELP_CATEGORIES) {
-
-    const found = category.articles.find(a => a.id === articleId)
-    if (found) {
-      article = found
-      break
-    }
-  }
-  if (!article) {
-    return <div>Article not found</div>
-  }
-  const handleFeedback = (type: "helpful" | "not-helpful") => {
-    setFeedbackGiven(type)
-  return new Date(date).toLocaleDateString("en-US", {
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;

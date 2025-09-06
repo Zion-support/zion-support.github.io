@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -52,13 +51,6 @@ export default async function handler(
     ) {
       return res && res.status(400).json({ error: "Missing required fields" });
 
-=======
-      description} = req.body || {};
-
-    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
-      return res.status(400).json({ error: 'Missing required fields' })
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const id = generateCaseId();
 

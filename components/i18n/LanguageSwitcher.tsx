@@ -23,7 +23,6 @@ import { useTranslation  } from 'react-i18next';
 import i18n from '../../utils/i18n';
 import { supportedLocales, isRtl } from '../../utils/i18n';
 import {supportedLocales, isRtl} from '../../utils/i18n';
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -45,9 +44,6 @@ const localeLabelKey: Record<string, string> = {
   ar: 'lang.arabic',
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { t } = useTranslation();

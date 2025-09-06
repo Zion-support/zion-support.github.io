@@ -200,7 +200,6 @@ export function ChatBotPanel() {
         // After 3 failed attempts, suggest escalation;
         if (failedAttempts >= 2) {;
           suggestEscalation();
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -232,11 +231,6 @@ export function ChatBotPanel() {
   }
   },
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-  },
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   },
 

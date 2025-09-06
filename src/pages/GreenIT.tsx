@@ -31,7 +31,6 @@ import { Leaf, Server, Cloud } from 'lucide-react'
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<<<<<<< HEAD
 
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
@@ -654,41 +653,8 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 ))}
               </div>
             </div>
-              </div>;
-            </div>;
-                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
-                    <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
-                {greenITSolutions && greenITSolutions.map((solution, index) => (;
-                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
-                    <div className="flex justify-center mb-4">;
-                      <solution && solution.icon className="h-12 w-12 text-zion-cyan" />;
-                    </div>;
-                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
-                    <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
-                  </div>;
-                ))}
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
                 </div>
-=======
-                
-<<<<<<< HEAD
-
-                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
-                  <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
-                  <ul className="text-zion-slate-light space-y-2">
-                    <li>• Significant cost savings on energy and cooling</li>
-                    <li>• Enhanced brand reputation and stakeholder relations</li>
-                    <li>• Compliance with emerging environmental regulations</li>
-                    <li>• Improved operational efficiency and performance</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-

@@ -1,13 +1,5 @@
 
 
-import { SearchSuggestion } from "@/types/search";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Tabs;
-  TabsContent;
-  TabsList;
-  TabsTrigger} from "@/components/ui/tabs",
-import { Loader2 } from 'lucide-react'
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
@@ -23,6 +15,38 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Loader2 } from 'lucide-react'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+import { Loader2 } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+import { Loader2 } from 'lucide-react'
+  const pageKey = `search-${routeKey}-${router.asPath}`
+import { useRouter } from 'next/router'
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
+import { generateSearchSuggestions } from "@/data/marketplaceData"
+import { SearchSuggestion } from "@/types/search"
+import {logErrorToProduction} from '@/utils/productionLogger'
+import {
+  Tabs
+  TabsContent
+  TabsList
+  TabsTrigger} from "@/components/ui/tabs"
+import { useEffect, useState } from "react",
+import { useRouter } from 'next/router',
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search",
+import {logErrorToProduction} from '@/utils/productionLogger',
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
@@ -45,14 +69,6 @@ function highlight(text: string, term: string) {
         regex.test(part) ? (
           <mark key={i} className="bg-yellow-200 text-black">
 
-=======
-  const [loading, setLoading] = useState(false);
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
-  // Force re-render and reset state when route changes;
-  const routeKey = useRouteChange(() => {;
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setResults([]);    setLoading(false)
   })
   const productResults = results.filter(
@@ -67,6 +83,8 @@ function highlight(text: string, term: string) {
 
     if (urlQuery !== query) {
       setQuery(urlQuery)
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   },;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -125,6 +143,10 @@ function highlight(text: string, term: string) {
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
             searchSuggestions={suggestions}
+=======
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
@@ -169,3 +191,4 @@ function highlight(text: string, term: string) {
               {results
 
                   <div
+<<<<<<< HEAD

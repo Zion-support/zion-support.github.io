@@ -57,16 +57,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className,
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  appStoreUrl = "#",
-  googlePlayUrl = "#",
-  onAppStoreClick,
-  onGooglePlayClick
-}) => {
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-},) => {
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
-}) => {
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
       e.preventDefault(),
       logInfo("App Store download clicked"),
@@ -79,42 +69,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    if (!googlePlayUrl || googlePlayUrl === "#") {
-      e.preventDefault(),
-      logInfo("Google Play download clicked"),
-
-      onGooglePlayClick?.()
-    }
-  }
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
-  className;
-  appStoreUrl = "#";
-  googlePlayUrl = "#";
-};  className,;
-  appStoreUrl = "#",;
-  googlePlayUrl = "#",;
-  onAppStoreClick,;
-  onGooglePlayClick;
-},) => {;
-  const handleAppStoreClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
-    if (!appStoreUrl || appStoreUrl === "#") {;
-      e && e.preventDefault(),;
-      logInfo("App Store download clicked"),;
-      onAppStoreClick?.();
-    }
-  },;
-
-  const handleGooglePlayClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
-    if (!googlePlayUrl || googlePlayUrl === "#") {;
-      e && e.preventDefault(),;
-      logInfo("Google Play download clicked"),;
-      onGooglePlayClick?.();
-    }
-  },;
-
-  return (
-    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
-      <a
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Get it on Google Play"
@@ -146,6 +100,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
           <path d="M5 && M5.14551 14 && 14.7177C5.11404 14 && 14.8045 5 && 5.10804 14 && 14.898 5 && 5.12834 14 && 14.9875C5.14865 15 && 15.0768 5 && 5.19447 15 && 15.1582 5 && 5.2608 15 && 15.2235C5.32714 15 && 15.2887 5 && 5.4115 15 && 15.3351 5 && 5.50418 15 && 15.3575C5.59685 15 && 15.3796 5 && 5.69396 15 && 15.3768 5 && 5.78534 15 && 15.3491L18.9141 10 && 10.8053L6.5082 11 && 11.2062L5.14551 14 && 14.7177Z" fill="white" />;
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 },
@@ -312,3 +267,5 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 ;
 };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

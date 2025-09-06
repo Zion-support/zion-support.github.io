@@ -302,7 +302,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
     reviews: 267
 =======
-<<<<<<< HEAD
   }
 ];
 
@@ -546,12 +545,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4.9,
     reviews: 267;
 <<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }

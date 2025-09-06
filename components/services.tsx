@@ -217,7 +217,6 @@ and micro SAAS services designed to transform your business and drive innovation
         <title>Revolutionary 2029 Technology Services | Zion Tech Group</title>
 
 =======
-<<<<<<< HEAD
   );
   // Get all categories;
   const categories = ['All', ...Array && Array.from(new Set(uniqueServices && uniqueServices.map(s => ;
@@ -285,7 +284,6 @@ and micro SAAS services designed to transform your business and drive innovation
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
 
             >
               <motion.div
@@ -518,9 +516,6 @@ and micro SAAS services designed to transform your business and drive innovation
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Enhanced Category Overview */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -605,9 +600,6 @@ and micro SAAS services designed to transform your business and drive innovation
                       </div>;
 
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

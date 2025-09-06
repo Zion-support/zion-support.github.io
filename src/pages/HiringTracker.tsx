@@ -54,7 +54,6 @@ import { Briefcase } from 'lucide-react'
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
 <<<<<<< HEAD
-<<<<<<< HEAD
 
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
@@ -75,6 +74,7 @@ import { Briefcase } from 'lucide-react'
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <HiringTrackerContent />;
     </ProtectedRoute>;

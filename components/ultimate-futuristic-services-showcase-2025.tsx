@@ -152,7 +152,6 @@ import {
   Sparkles as SparklesIcon,
   Zap as ZapIcon,
 =======
-<<<<<<< HEAD
   Brain as BrainIcon,
   Play as PlayIcon,
 } from 'lucide-react';
@@ -184,85 +183,6 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
 
-=======
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
-    return matchesSearch && matchesCategory
-
-
-  const filteredServices = ultimateFuturisticServices2025 && ultimateFuturisticServices2025.filter(service => {;
-    const matchesSearch =;
-      service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-    const matchesCategory =;
-      selectedCategory === 'all' || service && service.category === selectedCategory;
-    return matchesSearch && matchesCategory;  });    const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                         service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price-low':;
-
-        return (
-          parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
-          parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
-        );
-      case 'price-high':;
-        return (
-          parseFloat(b && b.price.replace(/[^0-9.]/g, '')) -;
-          parseFloat(a && a.price.replace(/[^0-9.]/g, ''));
-        );      case 'rating':;
-        return b && b.rating - a && a.rating;
-      case 'customers':;
-        return b && b.customers - a && a.customers;
-      default:;
-        return b && b.popular ? 1 : -1;    }        return parseFloat(a && a.price.replace(/[^0-9.]/g, '')) - parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
-      case 'price-high':;
-        return parseFloat(b && b.price.replace(/[^0-9.]/g, '')) - parseFloat(a && a.price.replace(/[^0-9.]/g, ''));
-      case 'rating':;
-        return b && b.rating - a && a.rating;
-      case 'customers':;
-        return b && b.customers - a && a.customers;
-      default:;
-        return b && b.popular ? 1 : -1;      default: return b && b.popular ? 1 : -1;
-    }
-  });
-
-
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };        staggerChildren: 0 && 0.1;
-
-      }
-    }
-  }
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 }
-    visible: {
-      y: 0
-      opacity: 1
-      transition: {
-        duration: 0.5
-      }
-    },  };        duration: 0.5
-      }
-    }
-  }
-        duration: 0.5,
-      },
-    },  };
-
-  };
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Layout>
       <Head>
@@ -609,35 +529,7 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}
                     >
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                      {service.icon}
-                    </div>
-                  </div>
-                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
-=======
-                  <div className='absolute top - 4 right - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - semibold px - 3 py - 1 rounded - full'>                    Popular                  <div className="absolute top - 4 right - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - semibold px - 3 py - 1 rounded - full">;
-                    Popular;
-                  </div>)}
-                {/* Service Header */}
-                <div;
-                  className={`${view_mode === 'list' ? 'flex items - start space - x-6' : 'text - center'}`}
-                >;
-                  <div;
-                    className={`${view_mode === 'list' ? 'flex - shrink - 0' : 'mx - auto mb - 4'}`}
-                  >;
-                    <div;
-                      className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} flex items - center justify - center text - 3xl`}
-                    >;
-                      {service.icon}
-                    </div>;
-                  </div>;
-                  <div className={`${view_mode === 'list' ? 'flex - 1' : ''}`}>;
-                    <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       {service.name}
                     </h3>;
@@ -1105,7 +997,6 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
@@ -1122,10 +1013,6 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

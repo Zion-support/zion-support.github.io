@@ -389,7 +389,6 @@ interface UltraFuturisticBackground2035Props {
             animate={{
               y: [-100, 100, -100];
               opacity: [0, 0.3, 0]
-<<<<<<< HEAD
 
             duration: 8,
             repeat: Infinity,
@@ -424,15 +423,6 @@ interface UltraFuturisticBackground2035Props {
             animate={{
               y: [100, -100, 100];
               opacity: [0, 0.3, 0]
-=======
-            duration: 8,
-            repeat: Infinity,
-
-          }}
-        />
-
-        {/* Quantum energy waves */}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             }}
             transition={{

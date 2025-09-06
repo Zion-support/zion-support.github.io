@@ -73,7 +73,6 @@ export function ApiReference() {
   "description": "Looking for a UX designer with 3+ years experience...",
   "category": "design",
   "budget": {
-<<<<<<< HEAD
 
         "400": {
           description: "Bad request"
@@ -209,10 +208,6 @@ export function ApiReference() {;
       "field": "title",;
       "error": "Title is required";
 
-=======
-      "field": "title",
-      "error": "Title is required";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 }`;

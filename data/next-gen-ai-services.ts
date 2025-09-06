@@ -2461,7 +2461,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 45,
 =======
     rating: 4.9,
-<<<<<<< HEAD
 =======
     rating: 4.9,
 
@@ -2472,71 +2471,6 @@ export const nextGenAIServices: NextGenAIService[] = [
   },
 
     reviews: 38
-=======
-  }
-  {
-
-    id: 'ai-creative-intelligence-suite'
-    name: 'AI Creative Intelligence Suite'
-    tagline: 'AI-powered creative design and content generation'
-    price: '$3,999'
-    period: '/month'
-
-    description:
-      'Comprehensive AI suite for creative professionals. Generate designs, content, and creative assets with AI assistance while maintaining human creativity and artistic vision.'
-    features: [
-
-      'AI-powered design generation'
-      'Creative content creation'
-      'Brand identity development'
-      'Visual asset generation'
-      'Creative collaboration tools'
-      'Style transfer and adaptation'
-      'Creative analytics dashboard'
-      'API for integrations'
-      'Custom creative training'
-      'Multi-format output support',    ],    description: 'Comprehensive AI suite for creative professionals. Generate designs, content, and creative assets with AI assistance while maintaining human creativity and artistic vision.'
-    real_implementation: true,
-    implementation_details: 'Comprehensive autonomous decision platform with advanced AI algorithms, continuous learning, and enterprise - grade security.',
-    launch_date: '2024 - 10 - 01',
-    customers: 45,
-    rating: 4.9,
-    reviews: 38;
-  },
-  {
-
-    popular: true,
-    icon: '🎨',
-    color: 'from-pink-600 to-rose-700',
-    textColor: 'text-pink-400',
-
-
-    marketPosition:
-      'Advanced creative AI platform. Traditional creative tools cost $10K+ annually.'
-    targetAudience:
-
-      'Design agencies, Marketing firms, Creative professionals, E-commerce businesses, Content creators, Brand managers',    trialDays: 21
-    setupTime: '1 week'
-    category: 'AI & Creative Design'
-    realService: true,    marketPosition: 'Advanced creative AI platform. Traditional creative tools cost $10K+ annually.'
-    targetAudience: 'Design agencies, Marketing firms, Creative professionals, E-commerce businesses, Content creators, Brand managers'
-    trialDays: 21
-    setupTime: '1 week'
-    category: 'AI & Creative Design'
-    realService: true
-
-    technology: [
-
-      'Generative AI',
-      'Computer Vision',
-      'NLP',
-      'React',
-      'Node && Node.js',
-      'AWS',
-      'Docker',
-    ],
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     integrations: [
       'Adobe Creative Suite'
       'Figma'
@@ -4164,7 +4098,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     useCases: ['Medical imaging analysisPatient diagnosisTreatment planningRisk assessmentClinical researchPopulation health'],
     roi: 'Average customer sees 300% ROI within 12 months through improved diagnostic accuracy and patient outcomes.',
     competitors: ['IBM Watson HealthGoogle Health AIMicrosoft HealthcareSiemens HealthineersGE Healthcare'],
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4180,9 +4113,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {

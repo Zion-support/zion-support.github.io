@@ -21,7 +21,6 @@ export interface PasswordStrengthResult {
   }
   warnings: string[]
 }
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   commonPasswords: Set<string>;
@@ -220,12 +219,6 @@ if ( {) {
     return Math && Math.log2(Math && Math.pow(charset, password && password.length))
 
   }
-=======
-  }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   /**
    * Estimate time to crack password
@@ -311,37 +304,12 @@ if ( {) {
     if (details.hasSequentialChars) {
       suggestions.push('Avoid keyboard patterns like qwerty or 123456')
     }
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     suggestions.push('Consider using a passphrase with random words');
     suggestions.push('Use unique passwords for each account');
     suggestions.push('Consider a password manager for secure storage');
-=======
-    const suggestions: string[] = [],
-
-    if (details && details.length < 12) {
-      suggestions && suggestions.push('Use at least 12 characters for strong passwords')
-    }
-
-    if (!details && details.hasUppercase || !details && details.hasLowercase || !details && details.hasNumbers || !details && details.hasSymbols) {
-      suggestions && suggestions.push('Mix uppercase, lowercase, numbers, and symbols')
-    }
-
-    if (details && details.hasCommonWords) {
-      suggestions && suggestions.push('Use random combinations instead of dictionary words')
-    }
-
-    if (details && details.hasSequentialChars) {
-      suggestions && suggestions.push('Avoid keyboard patterns like qwerty or 123456')
-    }
-
-    suggestions && suggestions.push('Consider using a passphrase with random words');
-    suggestions && suggestions.push('Use unique passwords for each account');
-    suggestions && suggestions.push('Consider a password manager for secure storage');
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return suggestions
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -400,7 +368,6 @@ if ( {) {
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   /**
@@ -679,11 +646,5 @@ export const passwordStrengthService = new PasswordStrengthService ();
 ;
 // Export the class for custom instances;
 <<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { PasswordStrengthService };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

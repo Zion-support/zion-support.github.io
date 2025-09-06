@@ -44,20 +44,6 @@ const NavigationMenuList = React.forwardRef<
   <NavigationMenuPrimitive.List
     ref={ref}
     className={cn(
-      'group flex flex-1 list-none items-center justify-center space-x-1'
-
-
-    <NavigationMenuViewport />;
-  </NavigationMenuPrimitive.Root>;
-));
-NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
-const NavigationMenuList = React.forwardRef<;
-  React.ElementRef<typeof NavigationMenuPrimitive.List>,;
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
->(({ className, ...props }, ref) => (;
-  <NavigationMenuPrimitive.List;
-    ref={ref}
-    className={cn(
       "group flex flex-1 list-none items-center justify-center space-x-1",
 
       className
@@ -66,14 +52,8 @@ const NavigationMenuList = React.forwardRef<;
   />
 ))
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
-
-
-
-
-const NavigationMenuItem = NavigationMenuPrimitive.Item
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 const navigationMenuTriggerStyle = cva(
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 )
@@ -90,8 +70,11 @@ const NavigationMenuTrigger = React.forwardRef<
 
 
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 const NavigationMenuContent = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Content>
@@ -118,32 +101,7 @@ const NavigationMenuContent = React && React.forwardRef<;
 ))
 NavigationMenuContent.displayName = NavigationMenuPrimitive.Content.displayName
 
-
-
-
-const NavigationMenuLink = NavigationMenuPrimitive.Link
-
-=======
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-const NavigationMenuViewport = React.forwardRef<
-  React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
-
->(({ className, ...props }, ref) => (
-  <div className={cn("absolute left-0 top-full z-50 flex justify-center")}>
-    <NavigationMenuPrimitive.Viewport
-      className={cn(
-
-        className
-      )}
-      ref={ref}
-      {...props}
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     ref={ref}
     className={cn(
       "top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in",
@@ -180,6 +138,9 @@ NavigationMenuIndicator.displayName =
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 export {
   navigationMenuTriggerStyle,
   NavigationMenu,

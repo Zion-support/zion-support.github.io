@@ -10,6 +10,45 @@ import {
 =======
   FormMessage,
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  FormMessage} from "@/components/ui/form",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import Link from "next/link",
+import { Checkbox } from "@/components/ui/checkbox",
+// Form validation schema
+const loginSchema = z.object({
+  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
+  rememberMe: z.boolean()}),
+
+
+type LoginFormValues = z.infer<typeof loginSchema>,
+
+export function LoginForm() {
+  const { isLoading, login } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isResending, setIsResending] = useState(false),
+  const [verificationMessage, setVerificationMessage] = useState(''),
+  const router = useRouter(),
+  
+  const form = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema) as any
+    defaultValues: {
+      email: ''
+      password: ''
+      rememberMe: false
+    }
+  })
+  const onSubmit = async (data: LoginFormValues) => {
+    if (isSubmitting) return
+      email: "",
+      password: "",
+      rememberMe: false}}),
+
+  const onSubmit = async (data: LoginFormValues) => {
+    if (isSubmitting) return,
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
     try {
       setIsSubmitting(true)
@@ -29,7 +68,6 @@ import {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
@@ -75,7 +113,6 @@ import {
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
-<<<<<<< HEAD
               <FormControl>
                 <div className='relative'>
             field: ControllerRenderProps<LoginFormValues, 'email'>;
@@ -125,6 +162,7 @@ import {
 
                   checked={field.value}
                   onCheckedChange={field.onChange}
+<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </FormControl>
@@ -239,37 +277,8 @@ if (!email) {'
 return
 return;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-}setIsResending (true);'
-setVerificationMessage ('')
-try {'
-  const response = await fetch ('/api/auth/resend-verification-email', {'
-  method: 'POST'
-headers: {'
-  'Content-Type': 'application/json'
-}
-body: JSON.stringify ({
-  email
-})
-})
-const data = await response.json ()
-if (response.ok) {'
-  setVerificationMessage ('Verification email sent. Please check your inbox.')
-}else {'
-  setVerificationMessage (data.message |'Failed to resend verification email.')
-}catch (err) {'
-  setVerificationMessage ('Failed to resend verification email.')
-}finally {
-  setIsResending (false)
-}
-const handleCheckStatus = () => {'
-  const email = form.getValues ('email')
-if (!email) {'
-  form.setError ('root', {'
-  message: 'Please enter your email address.'
-})
-return
-return;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)

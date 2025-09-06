@@ -17,18 +17,9 @@ import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export function ApplicationRow({
-
-  application
-  processingId
-  onViewApplication
-  onStatusChange
-  onViewScore
-}: ApplicationRowProps) {
-  const [avatarError, setAvatarError] = useState(false)
-  const talentName = application.talent_profile?.full_name |'Unknown'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (

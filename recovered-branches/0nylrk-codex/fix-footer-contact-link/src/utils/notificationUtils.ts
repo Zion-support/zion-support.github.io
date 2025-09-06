@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 
@@ -418,11 +417,6 @@ export async function createTestNotification(userId: string) {;
     actionText: actions[randomType].text;
   });
 <<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -43,7 +43,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
     features: [;
       'Policy - based access',
       'Micro - segmentation',
-<<<<<<< HEAD
       'Device posture checks',
       'SSO & MFA integration',
     ],
@@ -196,30 +195,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
-    id: 'enterprise - data - mesh',
-    name: 'Enterprise Data Mesh',
-    description:;
-      'Domain - oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',
-    category: 'Data & Analytics',
-    pricing: { starter: '$5, 999 / mo' },
-    features: [;
-
-=======
-    useCases: ['Developer productivity', 'Standardized delivery'],
-    link: 'https://ziontechgroup.com/services/platform-engineering-foundation',
-    realService: true,
-    rating: 4.8,
-  },
-  {
-    id: 'enterprise-data-mesh',
-    name: 'Enterprise Data Mesh',
-    description:
-      'Domain-oriented data ownership with discoverability, governance, and product thinking for analytics at scale.',
-    category: 'Data & Analytics',
-    pricing: { starter: '$5,999/mo' },
-    features: [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Domain data products',
       'Catalog & lineage',
       'Access governance',

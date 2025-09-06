@@ -1,7 +1,6 @@
 import React from 'react';
 =======
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {;
   ArrowRight,;
   Star,;
@@ -20,21 +19,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-=======
-  const containerVariants = {
-    hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
-      transition: {
-        staggerChildren: 0.2
-        delayChildren: 0.1
-      }
-    },  }
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },  };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const itemVariants = {
     hidden: {

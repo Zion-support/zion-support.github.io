@@ -30,8 +30,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
     </Card>
   )
 <<<<<<< HEAD
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Card className='w-full max-w-2xl mx-auto'>;
       <CardContent className='py-8'>;
         <div className='text-center'>;

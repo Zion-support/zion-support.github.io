@@ -309,7 +309,6 @@ origin/automation-improvements-final
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
 =======
-<<<<<<< HEAD
 
 import React from 'react',
 import Head from 'next/head',
@@ -364,13 +363,6 @@ export default function ApiDocsPage(req, res) {
         <title>API Docs | Zion Tech Group</title>;
         <meta name='description' content='API reference and guides.' />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/api-docs' />;
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-    </>
-  )
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       </Head>;
       <div className="container mx-auto px-4 py-16 text-gray-200">;
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>;

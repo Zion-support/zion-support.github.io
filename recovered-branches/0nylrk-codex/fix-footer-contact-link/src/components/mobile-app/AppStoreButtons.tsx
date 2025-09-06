@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -25,38 +24,6 @@ interface AppStoreButtonsProps {
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className;
 
-=======
-  appStoreUrl = "#";
-  googlePlayUrl = "#";
-  onAppStoreClick
-  onGooglePlayClick
-}) => {
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!appStoreUrl |appStoreUrl === "#") {
-      e.preventDefault();
-      console.log("App Store download clicked")
-      onAppStoreClick?.()
-    }
-  }
-  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!googlePlayUrl |googlePlayUrl === "#") {
-      e.preventDefault();
-      console.log("Google Play download clicked")
-      onGooglePlayClick?.()
-    }
-  }
-
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
-
-  className;
-
-  appStoreUrl = "#";
-  googlePlayUrl = "#";
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-  className,
-  appStoreUrl = "#",
-  googlePlayUrl = "#",
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   onAppStoreClick,
   onGooglePlayClick
 }) => {

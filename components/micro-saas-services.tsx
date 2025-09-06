@@ -972,7 +972,6 @@ export default function MicroSaasServicesPage() {;
                     </div>;
                     <div className='text - green - 400 font - semibold'>;
                       {insight.growth}
-<<<<<<< HEAD
 
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -1073,20 +1072,9 @@ export default function MicroSaasServicesPage() {;
                   <p className="text-gray-400 text-sm">{insight.description}</p>
                 </div>
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-              </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-=======
-          </div>
-        </div>
-      </section>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>

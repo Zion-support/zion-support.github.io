@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
@@ -55,21 +54,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   {
 
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
-=======
-    id: 'candidate - screening - copilot',
-    name: 'Candidate Screening Copilot',
-    description:;
-      'Summarize resumes, score against job descriptions, and auto - generate interview question sets.',
-
-    category: 'Human Resources',
-    pricing: { starter: '$69/mo' },
-    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
-    integrations: ['Greenhouse', 'Lever'],
-    useCases: ['Faster hiring', 'Bias reduction'],
-    link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
-    realService: true,
-  },;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ];	id: string;
 

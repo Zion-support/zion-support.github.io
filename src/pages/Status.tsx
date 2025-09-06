@@ -12,8 +12,12 @@ import Link from "next/link",
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
 =======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  name: string
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance'
+  description: string
+  lastChecked: string
+}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,7 +39,8 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 }
 <<<<<<< HEAD
 
-=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 ;
 
@@ -354,4 +359,7 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

@@ -109,7 +109,6 @@ import {
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
-<<<<<<< HEAD
 
 
 const Homepage2043: React.FC = () => {
@@ -269,71 +268,6 @@ const Homepage2043: React.FC = () => {
     }
   ];
 
-=======
-    }
-  ];
-  const stats = [
-    {
-      number: '2000+'
-      label: 'Revolutionary Services'
-      icon: Star
-      color: 'from-yellow-400 to-orange-500'
-    }
-    {
-      number: '99.99%'
-      label: 'Uptime Guarantee'
-      icon: TrendingUp
-      color: 'from-green-400 to-emerald-500'
-    }
-    {
-      number: '24/7'
-      label: 'AI Support Available'
-      icon: Brain
-      color: 'from-purple-400 to-pink-500'
-    }
-    {
-      number: '150+'
-      label: 'Countries Served'
-      icon: Globe
-      color: 'from-blue-400 to-cyan-500'
-    },  ];
-  const testimonials = [
-    {    { number: "2000+", label: "Revolutionary Services", icon: Star, color: "from-yellow-400 to-orange-500" }
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-400 to-emerald-500" }
-    { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-400 to-pink-500" }
-    { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
-  const testimonials = [
-    {
-      name: 'Dr. Sarah Chen'
-      role: 'Chief AI Officer'
-      company: 'QuantumTech Industries'
-      content:
-        "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods."
-      rating: 5
-      avatar: '👩‍🔬'
-    }
-    {
-      name: 'Marcus Rodriguez'
-      role: 'CTO'
-      company: 'SpaceMining Corp'
-      content:
-        "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks."
-      rating: 5
-      avatar: '👨‍🚀'
-    }
-    {
-      name: 'Dr. Emily Watson'
-      role: 'Research Director'
-      company: 'Consciousness Research Institute'
-      content:
-        "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless."
-      rating: 5
-      avatar: '👩‍💻'
-    }
-  ];
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <section
@@ -1586,66 +1520,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 =======
 
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                  key={currentTestimonialIndex}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0.5 }}
-                  className='text-center max-w-4xl mx-auto'
-
-                >
-                  <div className='text-8xl mb-6'>💬</div>
-                  <blockquote className='text-2xl text-white mb-8 leading-relaxed italic'>
-                    "{testimonials[currentTestimonialIndex].content}"
-                  </blockquote>
-                  <div className='flex items-center justify-center gap-4 mb-6'>
-                    <div className='text-4xl'>
-=======
-                  <div className='text-8xl mb-6'>💬</div>;
-                  <blockquote className='text-2xl text-white mb-8 leading-relaxed italic'>;
-                    "{testimonials[currentTestimonialIndex].content}";
-                  </blockquote>;
-                  <div className='flex items-center justify-center gap-4 mb-6'>;
-                    <div className='text-4xl'>;
-                      {testimonials[currentTestimonialIndex].avatar}
-                    </div>;
-                    <div>;
-                      <div className='text-xl font-semibold text-white'>;
-                        {testimonials[currentTestimonialIndex].name}
-                      </div>;
-                      <div className='text-gray-400'>;
-                        {testimonials[currentTestimonialIndex].role} at{' '}
-                        {testimonials[currentTestimonialIndex].company}
-
-                      </div>;
-                    </div>;
-                  </div>;
-                  <div className='flex justify-center gap-1'>;
-                    {[;
-                      ...Array(testimonials[currentTestimonialIndex].rating),;
-                    ].map((_, i) => (;
-                      <Star
-                        key={i}
-                        className='w-6 h-6 text-yellow-400 fill-current'
-                      />                    ))}
-                  <div className="flex justify-center gap-1">
-                    {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
-                      <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-              {/* Testimonial Indicators */}
-              <div className='flex justify-center gap-2 mt-8'>                {testimonials.map((_, index) => (              <div className="flex justify-center gap-2 mt-8">
-              <div className='flex justify-center gap-2 mt-8'>                {testimonials.map((_, index) => (
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {testimonials.map((_, index) => (
@@ -1681,7 +1558,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 =======
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     }`}
@@ -1692,9 +1568,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
           </div>
         </section>
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Enhanced CTA Section */}
         <section className='py-20 px-4 relative'>
           <div className='max-w-6xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 relative">

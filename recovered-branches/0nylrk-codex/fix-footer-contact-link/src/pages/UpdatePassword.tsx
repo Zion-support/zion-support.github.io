@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -144,92 +143,6 @@ export default function UpdatePassword() {;
     }
 ;
     setIsLoading(true),;
-=======
-    try {;
-      // Set the session with the access token;
-      await supabase && supabase.auth.setSession({;
-        access_token: accessToken,;
-        refresh_token: ''}),;
-
-      // Update the password;
-      const { error } = await supabase && supabase.auth.updateUser({;
-        password: data && data.password}),;
-
-      if (error) {;
-        toast({;
-          title: "Password update failed",;
-          description: error && error.message,;
-          variant: "destructive"}),;
-        setError(error && error.message);
-        return;
-      }
-
-      // Show success message and clean up auth state;
-      setSuccess(true);
-      toast({;
-        title: "Password updated successfully",;
-        description: "You can now log in with your new password."}),;
-
-      // Clean auth state and redirect after a delay;
-      cleanupAuthState();
-      setTimeout(() => {;
-        navigate("/login");
-      }, 3000);
-    } catch (error: any) {;
-      console && console.error("Password update error:", error);
-      toast({;
-        title: "Password update failed",;
-        description: error && error.message || "An unexpected error occurred",;
-        variant: "destructive"}),;
-      setError(error && error.message || "An unexpected error occurred");
-    } finally {;
-      setIsLoading(false);
-
-    }
-  }
-
-  return (
-
-    <>;
-      <Header />;
-      <div className="flex min-h-screen bg-zion-blue">;
-        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">;
-          <div className="mx-auto w-full max-w-sm lg:w-96">;
-            <div className="text-center mb-10">;
-              <h2 className="text-3xl font-bold tracking-tight text-white">;
-                Update your password;
-              </h2>;
-              <p className="mt-2 text-sm text-zion-slate-light">;
-                Enter your new password below.;
-              </p>;
-            </div>;
-
-            <div className="bg-zion-blue-dark rounded-lg p-6">;
-              {error && (;
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
-                  <p className="text-sm">{error}</p>;
-                  <Button;
-                    className="mt-3 text-xs";
-                    variant="outline";
-
-                    onClick={() => navigate('/forgot-password')}
-                  >
-                    Request new reset link
-                  </Button>
-                </div>
-              )}
-
-                    onClick={() => navigate('/forgot-password')}
-                  >;
-                    Request new reset link;
-                  </Button>;
-                </div>;
-              )}
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {success ? (

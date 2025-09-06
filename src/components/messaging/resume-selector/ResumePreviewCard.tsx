@@ -39,18 +39,9 @@ import { Download } from 'lucide-react'
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
 
-                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
-
-
-        
-        {resume.skills && resume.skills.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-2">
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
             {resume.skills.slice(0, 5).map((skill, index) => (
               <Badge
                 key={index}
@@ -60,13 +51,6 @@ import { Download } from 'lucide-react'
               >
               >
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                {skill.name}
-              </Badge>
-            ))}
-            {resume.skills.length > 5 && (
-              <Badge
-                variant='outline'
-                className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge
               <Badge 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -82,3 +66,6 @@ import { Download } from 'lucide-react'
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

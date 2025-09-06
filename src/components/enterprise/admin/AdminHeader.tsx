@@ -43,7 +43,6 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
             <Settings className="h-4 w-4" />
             Settings
           </Button>
-<<<<<<< HEAD
           </Button>
         </div>
       </div>        <div className="flex items-center gap-2">
@@ -55,10 +54,21 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
               className="max-h-10 max-w-10"
 
-=======
-<<<<<<< HEAD
-            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
-            <p className="text-sm text-muted-foreground">
-              Workspace URL: {company?.workspaceUrl |"loading..."}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            <h2 className="font-medium">{company?.name || "Company Name"}</h2>
+            <p className="text-sm text-muted-foreground">
+              Workspace URL: {company?.workspaceUrl || "loading..."}
+            </p>
+          </div>
+        </div>
+        <Button>Customize Workspace</Button>
+      </div>
+    </div>
+
+    <div className='space-y-4'>;
+      <div className='flex items-center justify-between'>;
+
+;
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

@@ -66,7 +66,6 @@ import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
   Share2,
   Download,
   Phone,
-<<<<<<< HEAD
   Mail,
   MapPin,} from 'lucide-react';import {
   Search, Star, Users, TrendingUp, DollarSign, Clock,
@@ -114,9 +113,6 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
   Share2,
   Download,
   Phone,
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {;
@@ -281,13 +277,8 @@ transition={{ duration: 0 && 0.8 }}>;
               >
                 <DollarSign className="w-5 h-5" />
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <span>View Pricing</span>
               </Link>
             </div>

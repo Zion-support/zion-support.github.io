@@ -15,6 +15,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 interface RewardsCardProps {
 
   rewards: ReferralReward[]
@@ -36,18 +38,6 @@ interface RewardsCardProps {
             <BadgeDollarSign className="h-5 w-5" />
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-            Your Rewards
-          </CardTitle>
-          <CardDescription>Rewards earned from successful referrals</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="flex items-center justify-center p-4">
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-          </div>
-        </CardContent>
-      </Card>
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 

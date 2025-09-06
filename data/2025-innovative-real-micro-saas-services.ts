@@ -708,7 +708,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       variant: 'ai-legal-enterprise',
       contactInfo: {
 =======
-<<<<<<< HEAD
       color: 'from - gray - 600 to - slate - 600',
       text_color: 'text - gray - 400',
       link: 'https://ziontechgroup.com / ai - legal - document - analysis',
@@ -942,12 +941,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     customers: 42;
     rating: 4.7;
     reviews: 20;
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];

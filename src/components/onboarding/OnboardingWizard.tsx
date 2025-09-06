@@ -73,14 +73,23 @@ interface OnboardingWizardProps {;
   onSkip: () => void;
   className?: string
 
-<<<<<<< HEAD
 
 
-=======
-  const router = useRouter(); // Changed from useNavigate to useRouter
-  const { user } = useAuth()
+  onSkip,;
+  className,;
+}: OnboardingWizardProps) {;
+  const [currentStep, setCurrentStep] = useState(0);
+
+
+          </div>;
+        </div>;
+
+        <div className='flex flex-col items-center text-center p-4'>;
+          <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
@@ -111,54 +120,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
   const { user } = useAuth(),
-=======
-  
-
-  // Define steps based on user type
-  const clientSteps: WizardStep[] = [
-    {
-      title: "Post your first job",
-      description: "Describe the talent you need for your project",
-      icon: <FileText className="h-6 w-6 text-zion-purple" />,
-      action: {
-        text: "Post a Job",
-        url: "/post-job"
-      },
-      skipText: "I'll do this later"
-    },
-    {
-      title: "View suggested matches",
-      description: "Our AI system will find the best talent matches",
-      icon: <Users className="h-6 w-6 text-zion-cyan" />,
-      action: {
-        text: "View Matches",
-        url: "/talent"
-      },
-      skipText: "Skip for now"
-    },
-    {
-      title: "Contact talent",
-      description: "Reach out to the talent that fits your needs",
-      icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
-      action: {
-        text: 'Browse Talent',
-        url: '/talent',
-      },
-    },
-  ]
-        text: "Browse Talent",
-        url: "/talent"
-      }
-    }
-  ],
-
-        text: "Browse Talent",
-        url: "/talent"
-      }
-    }
-  ],
-
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
@@ -255,18 +221,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
-      <CardHeader>
-        <CardTitle className="text-center text-white">
-          {type === 'client' ? 
-            "Ready to find top IT talent?" : 
-            "Let's build your professional profile"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex items-center mb-6">
-          {/* Step dots */}
-          <div className='flex items-center justify-center flex-1'>
-          <div className="flex items-center justify-center flex-1">
             {steps.map((_, index) => (
               <div
                 key={index}
@@ -288,6 +242,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     </Card>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -461,3 +416,5 @@ if ( {) {
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

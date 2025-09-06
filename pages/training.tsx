@@ -423,7 +423,6 @@ export default Training;
                 </div>
                 <div className='flex items-center gap-2'>
                   <Users className='w-5 h-5' />                  <span>Global Community</span>
-<<<<<<< HEAD
 
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -603,13 +602,6 @@ export default Training;
 
   )
   );
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
-
-}  )
-ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 };
 
 export default Training;

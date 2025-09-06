@@ -12,25 +12,11 @@ export const dataStore = {
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
-<<<<<<< HEAD
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
-=======
-class DataStore {
-  private projects: Project[] = [];
-  private reviews: Review[] = [];
-
-  // Project methods
-  findProjectById(id: string): Project | undefined {
-    return this.projects.find(project => project.id === id);
-  }
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 export const findProjectById = (id: string) => store.findProjectById(id);
 export const createProject = (data: Partial<Project>) => store.createProject(data);

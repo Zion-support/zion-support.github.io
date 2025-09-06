@@ -16,7 +16,6 @@
     const { name, email, role } = req.body |{}
     if (!name |!email)
       return res.status(400).json({ error: "name and email required" });
-<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
@@ -79,10 +78,6 @@ export default function handler(req, res) {
   if (req.method === 'GET') {
     const { name, email, role } = req.body || {};
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

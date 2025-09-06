@@ -51,17 +51,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
     },
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    {
-      name: "Community",
-      href: "/community",
-      icon: MessageCircle,
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
-      matches: (path: string) =>
-        path.startsWith('/community') || path.startsWith('/forum'),    },
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     {
       name: "Wishlist",
       href: "/wishlist",
@@ -75,21 +66,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
       badge: favoritesCount,
       authRequired: true
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    },
-    {
-      name: "Messages",
-      href: "/messages",
-      icon: MessageSquare,
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
-      badge: unreadCount,
-      authRequired: true
-      matches: (path: string) =>
-        path.startsWith('/messages') || path.startsWith('/inbox'),      badge: unreadCount,
-      authRequired: true,
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
-      badge: unreadCount,
-      authRequired: true
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     },
     {
       name: "Cart",
@@ -104,37 +82,16 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
       badge: cartCount
     },
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    {
-      name: "Dashboard",
-      href: "/dashboard",
-      icon: User,
-      matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true,
-    },
-  ]
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(
-    item => !item.authRequired || (item.authRequired && isAuthenticated)
-  )
-      matches: (path: string) => path.startsWith("/dashboard"),
-      authRequired: true
-    }
-  ],
-
-      matches: (path: string) => path.startsWith("/dashboard"),
-      authRequired: true
-    }
-  ],
-
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item =>
-    !item.authRequired || (item.authRequired && isAuthenticated)
-  ),
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
       <div className="flex justify-around items-center h-16">
@@ -280,7 +237,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               <item.icon className="h-5 w-5 mb-1" aria-hidden="true" />;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-<<<<<<< HEAD
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
               )}
@@ -294,85 +250,3 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-;
-}
-
-
-<<<<<<< HEAD
-
-
-
-      name: 'Browse',
-      href: '/talent',
-      icon: Search,
-      matches: (path: string) =>;
-        path.starts_with ('/talent') ||;
-        path.starts_with ('/categories') ||;
-        path.starts_with ('/marketplace'),    },
-    {
-      name: 'Community',
-      href: '/community',
-      icon: MessageCircle,
-      matches: (path: string) =>;
-        path.starts_with ('/community') || path.starts_with ('/forum'),    },
-    {
-      name: 'Wishlist',
-      href: '/wishlist',
-      icon: Heart,
-      matches: (path: string) => path.starts_with ('/wishlist'),      badge: favorites_count,
-      auth_required: true,
-    },
-    {
-      name: 'Messages',
-      href: '/messages',
-      icon: MessageSquare,
-      matches: (path: string) =>;
-        path.starts_with ('/messages') || path.starts_with ('/inbox'),      badge: unread_count,
-      auth_required: true,
-    },
-    {
-      name: 'Cart',
-      href: '/cart',
-      icon: ShoppingCart,
-      matches: (path: string) => path.starts_with ('/cart'),
-      badge: cart_count,    },
-    {
-      name: 'Dashboard',
-      href: '/dashboard',
-      icon: User,
-      matches: (path: string) => path.starts_with ('/dashboard'),
-      auth_required: true,
-    },
-  ];
-  // Filter items based on auth status;
-  const visible_items = nav_items.filter (
-    item => !item.auth_required || (item.auth_required && is_authenticated));
-  return (
-    <nav className='md:hidden fixed bottom - 0 left - 0 right - 0 z - 50 bg - card / 90 backdrop - blur - md border - t border - primary / 20'>;
-      <div className='flex justify - around items - center h - 16'>;
-        {visible_items.map (item => (
-          <Link;
-            key={item.name}
-            href={item.href}
-            aria - label={item.name}
-            className={cn (
-              'flex flex - col items - center justify - center w - full h - full px - 1 py - 1 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary',
-              item.matches (router.pathname);
-                ? 'text - primary';
-                : 'text - foreground / 70 hover:text - foreground')}          >;
-            <div className='relative'>;
-              <item.icon className='h - 5 w - 5 mb - 1' aria - hidden='true' />;
-              {item.badge && item.badge > 0 && (
-                <span className='absolute -top - 2 -right - 2 bg - primary text - primary - foreground text - xs rounded - full h - 4 w - 4 flex items - center justify - center'>;
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>)}
-            </div>;
-            <span className='hidden sm:block text - xs font - medium'>;
-              {item.name}
-            </span>;
-          </Link>))}
-      </div>;
-    </nav>);
-}
-;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

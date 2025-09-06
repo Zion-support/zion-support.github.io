@@ -959,7 +959,6 @@ export default function JSONFormatterPage() {;
         </div>
       </section>
 =======
-<<<<<<< HEAD
 
               View Pricing
             </Button>
@@ -1359,10 +1358,6 @@ export default function JSONFormatterPage() {;
       </section>;
 
 
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
     </>);

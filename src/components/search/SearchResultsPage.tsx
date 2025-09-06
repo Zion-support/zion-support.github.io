@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
@@ -161,6 +160,42 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
         )
       )}
 
+=======
+    </span>;
+  );
+};
+
+// Search Result Card Component;
+const SearchResultCard: React.FC<{;
+  result: SearchResult;
+  searchTerm: string;
+  viewMode: 'grid' | 'list';
+}> = ({ result, searchTerm, viewMode }) => {;
+  const router = useRouter();
+  const handleClick = () => {;
+    if (result && result.url) {;
+      router && router.push(result && result.url);
+    }
+  };
+
+  const cardClass =;
+    viewMode === 'grid';
+      ? 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer';
+      : 'bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4';
+
+
+  return (
+    <div onClick={handleClick} className={cardClass}>
+      {result.image && (
+        <div className={viewMode === 'grid' ? 'mb-3' : 'flex-shrink-0'}>
+          <img
+            src={result.image}
+            alt={result.title}
+            className={
+              viewMode === 'grid'
+                ? 'w-full h-48 object-cover rounded'
+                : 'w-20 h-20 object-cover rounded'
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       )}
 
 
@@ -195,90 +230,6 @@ const SearchResultCard: React.FC<{;
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-        </div>
-      )}
-
-      <div className="flex-1">
-        <div className="flex items-start justify-between mb-2">
-
-          <div>
-            <h3 className='font-semibold text-lg mb-1'>
-              <HighlightText text={result.title} searchTerm={searchTerm} />
-            </h3>
-            <Badge variant='secondary' className='text-xs'>
-  const card_class =;
-    view_mode === 'grid';
-      ? 'bg - card border rounded - lg p - 4 hover:shadow - lg transition - shadow cursor - pointer';
-      : 'bg - card border rounded - lg p - 4 hover:shadow - lg transition - shadow cursor - pointer flex gap - 4';
-  return (
-    <div on_click={handle_click} className={card_class}>;
-      {result.image && (
-        <div className={view_mode === 'grid' ? 'mb - 3' : 'flex - shrink - 0'}>;
-          <img;
-            src={result.image}
-            alt={result.title}
-            className={
-              view_mode === 'grid';
-                ? 'w - full h - 48 object - cover rounded';
-                : 'w - 20 h - 20 object - cover rounded';
-            }          />;
-        </div>)}
-      <div className='flex - 1'>;
-        <div className='flex items - start justify - between mb - 2'>;
-          <div>;
-            <h3 className='font - semibold text - lg mb - 1'>;
-              <HighlightText text={result.title} search_term={search_term} />;
-            </h3>;
-            <Badge variant='secondary' className='text - xs'>;
-              {result.type}
-            </Badge>;
-          </div>;
-          {result.price && (
-
-
-      <div className='flex-1'>;
-        <div className='flex items-start justify-between mb-2'>;
-          <div>;
-            <h3 className='font-semibold text-lg mb-1'>;
-              <HighlightText text={result && result.title} searchTerm={searchTerm} />;
-            </h3>;
-            <Badge variant='secondary' className='text-xs'>;
-              {result && result.type}
-            </Badge>;
-          </div>;
-          {result && result.price && (;
-            <div className='text-right'>;
-              <span className='font-bold text-primary'>;
-                {result && result.currency === 'USD' ? '$' : ''}
-                {result && result.price}
-              </span>;
-              {result && result.type === 'talent' && (;
-                <span className='text-sm text-muted-foreground'>/hr</span>;
-
-              )}
-            </div>;
-          )}
-
-                <span className='text - sm text - muted - foreground'>/hr</span>)}
-            </div>)}
-            <div className="text-right">
-              <span className="font-bold text-primary">
-                {result.currency === 'USD' ? '$' : ''}{result.price}
-              </span>
-              {result.type === 'talent' && <span className="text-sm text-muted-foreground">/hr</span>}
-            </div>
-          )}
-        </div>
-
-
-        <p className="text-muted-foreground mb-3 line-clamp-2">
-          <HighlightText text={result.description} searchTerm={searchTerm} />
-        </p>
-
-        <div className="flex items-center justify-between">
-          <div className="flex gap-2 flex-wrap">
-            {result.category && (
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -335,6 +286,74 @@ const FilterSidebar: React.FC<{
             </div>;
           )}
             {result.tags?.slice(0, 3).map((tag, index) => (
+=======
+              <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />
+              </Badge>
+            ))}
+          </div>
+              <Badge key={index} variant="outline" className="text-xs">
+                <HighlightText text={tag} searchTerm={searchTerm} />
+              </Badge>
+            ))}
+          </div>
+          
+
+          {result.rating && (
+            <div className="flex items-center gap-1">
+              <span className="text-yellow-500">★</span>
+              <span className="text-sm">{result.rating.toFixed(1)}</span>
+            </div>
+          )}
+
+        </div>;
+      </div>;
+    </div>;
+  );
+},;
+// Filter Sidebar Component;
+const FilterSidebar: React.FC<{;
+  filters: SearchFilters,;
+  onFiltersChange: (filters: SearchFilters) => void,;
+  availableCategories: string[];
+}> = ({ filters, onFiltersChange, availableCategories }) => {;
+  const typeOptions = [;
+    { id: 'product', label: 'Products' },;
+    { id: 'talent', label: 'Talent' },;
+    { id: 'service', label: 'Services' },;
+    { id: 'blog', label: 'Blog Posts' }
+  ],
+
+  const handleTypeChange = (typeId: string, checked: boolean) => {
+    const newTypes = checked 
+      ? [...filters.types, typeId]
+      : filters.types.filter(t => t !== typeId),
+    
+    onFiltersChange({ ...filters, types: newTypes })
+  },
+
+  const handlePriceChange = (values: number[]) => {
+    onFiltersChange({ 
+      ...filters, 
+      minPrice: values[0] ?? 0, 
+      maxPrice: values[1] ?? 10000 
+    })
+  },
+
+
+
+
+  return (
+
+                id={option.id}
+                checked={filters.types.includes(option.id)}
+                onCheckedChange={checked =>
+                  handleTypeChange(option.id, !!checked)
+                }              />
+              <label htmlFor={option.id} className='text-sm'>
+                onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
+              />
+              <label htmlFor={option.id} className="text-sm">
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                 {option.label}
               </label>
             </div>
@@ -344,54 +363,7 @@ const FilterSidebar: React.FC<{
       <Separator />
       <div>
 =======
-        <h3 className='font-semibold mb-3'>Category</h3>
-        <Select
-          value={filters && filters.category}
-          onValueChange={value =>;
-            onFiltersChange({;
-              ...filters,;
-              category: value === 'all' ? '' : value,;
-            });
-
-    <div className='space - y-6'>;
-      <div>;
-        <h3 className='font - semibold mb - 3'>Content Type</h3>;
-        <div className='space - y-2'>;
-          {type_options.map (option => (
-            <div key={option.id} className='flex items - center space - x-2'>;
-              <Checkbox;
-                id={option.id}
-                checked={filters.types.includes (option.id)}
-                onCheckedChange={checked =>;
-                  handleTypeChange (option.id, !!checked);
-                }              />;
-              <label html_for={option.id} className='text - sm'>;
-                {option.label}
-              </label>;
-            </div>))}
-        </div>;
-      </div>;
-      <Separator />;
-      <div>;
-        <h3 className='font - semibold mb - 3'>Category</h3>;
-        <Select;
-          value={filters.category}
-          onValueChange={value =>;
-            onFiltersChange ({
-              ...filters,
-              category: value === 'all' ? '' : value,
-            });
-          }
-        >          <SelectTrigger>
-            <SelectValue placeholder='All Categories' />
-        <h3 className="font-semibold mb-3">Category</h3>
-        <Select value={filters.category} onValueChange={(value) => 
-          onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
-        }>
-          <SelectTrigger>
-            <SelectValue placeholder="All Categories" />
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -430,6 +402,80 @@ const FilterSidebar: React.FC<{
             min={0}
             max={10000}
             step={50}
+=======
+            className='mb-2'          />
+          <div className='flex justify-between text-sm text-muted-foreground'>
+            className="mb-2"
+          />
+          <div className="flex justify-between text-sm text-muted-foreground">
+
+
+            <span>${filters.minPrice}</span>
+            <span>${filters.maxPrice}</span>
+          </div>
+        </div>
+      </div>
+      <Separator />
+      <div>
+        <h3 className='font-semibold mb-3'>Minimum Rating</h3>
+        <Select
+          value={filters && filters.minRating.toString()}
+          onValueChange={value =>;
+            onFiltersChange({ ...filters, minRating: parseFloat(value) });
+          }
+        >          <SelectTrigger>
+        <h3 className="font-semibold mb-3">Minimum Rating</h3>
+        <Select value={filters.minRating.toString()} onValueChange={(value) => 
+          onFiltersChange({ ...filters, minRating: parseFloat(value) })
+        }>
+          <SelectTrigger>
+
+
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="0">Any Rating</SelectItem>
+            <SelectItem value="1">1+ Stars</SelectItem>
+            <SelectItem value="2">2+ Stars</SelectItem>
+            <SelectItem value="3">3+ Stars</SelectItem>
+            <SelectItem value="4">4+ Stars</SelectItem>
+            <SelectItem value="4.5">4.5+ Stars</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+    </div>
+  )
+}
+// No Results Component;
+const NoResultsState: React.FC<{
+  searchTerm: string
+  onNewSearch: (term: string) => void
+}> = ({ searchTerm, onNewSearch }) => {  const suggestions = [
+    'AI & Machine Learning'
+    'Web Development'
+    'Mobile App Development'
+    'Data Analysis'
+    'UI/UX Design'
+    'Blockchain Development'
+  ]
+},
+
+// No Results Component
+const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
+  searchTerm, 
+  onNewSearch 
+}) => {
+  const suggestions = [
+    "AI & Machine Learning",
+    "Web Development",
+    "Mobile App Development",
+    "Data Analysis",
+    "UI/UX Design",
+    "Blockchain Development"
+  ],
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
   return (
     <div className="text-center py-12">
@@ -441,90 +487,37 @@ const FilterSidebar: React.FC<{
         </p>
       </div>
 
-=======
-        >          <SelectTrigger>;
-
-
-      <div className="max-w-md mx-auto space-y-4">
-        <div>
-          <h3 className="font-semibold mb-3">Search Suggestions:</h3>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {suggestions.map((suggestion, index) => (
-              <Button
-                key={index}
-                variant="outline"
-                size="sm"
-            className="mb-2";
-          />;
-          <div className="flex justify-between text-sm text-muted-foreground">;
-            <span>${filters.minPrice}</span>;
-            <span>${filters.maxPrice}</span>;
-          </div>;
-        </div>;
-      </div>;
-      <Separator />;
-      <div>;
-        <h3 className="font-semibold mb-3">Minimum Rating</h3>;
-        <Select value={filters.minRating.toString()} onValueChange={(value) =>;
-          onFiltersChange({ ...filters, minRating: parseFloat(value) });
-        }>;
-          <SelectTrigger>;
-
-            <SelectValue />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="0">Any Rating</SelectItem>;
-            <SelectItem value="1">1+ Stars</SelectItem>;
-            <SelectItem value="2">2+ Stars</SelectItem>;
-            <SelectItem value="3">3+ Stars</SelectItem>;
-            <SelectItem value="4">4+ Stars</SelectItem>;
-            <SelectItem value="4.5">4.5+ Stars</SelectItem>;
-          </SelectContent>;
-        </Select>;
-      </div>;
-    </div>;
-  );
-},;
-// No Results Component;
-const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({;
-  searchTerm,;
-  onNewSearch;
-}) => {;
-  const suggestions = [;
-    "AI & Machine Learning",;
-    "Web Development",;
-    "Mobile App Development",;
-    "Data Analysis",;
-    "UI/UX Design",;
-    "Blockchain Development";
-  ],;
-  return (;
-    <div className="text-center py-12">;
-      <div className="mb-6">;
-        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />;
-        <h2 className="text-2xl font-semibold mb-2">No results found</h2>;
-        <p className="text-muted-foreground mb-6">;
-          We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.;
-        </p>;
-      </div>;
-      <div className="max-w-md mx-auto space-y-4">;
-        <div>;
-          <h3 className='font-semibold mb-3'>Search Suggestions:</h3>;
-          <div className='flex flex-wrap gap-2 justify-center'>;
-            {suggestions && suggestions.map((suggestion, index) => (;
-              <Button
-                key={index}
-
-                variant="outline";
-                size="sm";
-                onClick={() => onNewSearch(suggestion)}
-              >;
-<<<<<<< HEAD
                 {suggestion}
               </Button>;
             ))}
           </div>
         </div>
+=======
+        <div className='text-sm text-muted-foreground'>
+          <p>Tips for better results:</p>
+          <ul className='mt-2 space-y-1'>
+
+        <div className="text-sm text-muted-foreground">
+          <p>Tips for better results: </p>
+          <ul className="mt-2 space-y-1">
+
+
+            <li>• Try different keywords</li>
+            <li>• Check your spelling</li>
+            <li>• Use fewer filters</li>
+            <li>• Search for broader terms</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  )
+}
+// Main Search Results Page Component;
+export const SearchResultsPage: React.FC = () => {
+
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 },
 
 // Main Search Results Page Component
@@ -539,19 +532,8 @@ export const SearchResultsPage: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
   
-=======
-
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  const [filters, setFilters] = useState<SearchFilters>({
-    types: [],
-    category: '',
-    minPrice: 0,
-    maxPrice: 10000,
-    minRating: 0,
-<<<<<<< HEAD
     (filters.minRating > 0 ? 1 : 0)
           </div>;
         </div>;
@@ -733,6 +715,9 @@ export const SearchResultsPage: React.FC = () => {;
                 </SelectContent>
               </Select>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+          <div className="flex-1">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
@@ -811,57 +796,6 @@ setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-}> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
-  /* Mobile Filter Toggle */
-}<Sheet open= {
-  showFilters
-}onOpenChange= {
-  setShowFilters "
-}> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80" > <SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6" > <FilterSidebar filters= {
-  filters
-}onFiltersChange= {
-  handleFiltersChange
-}availableCategories= {
-  availableCategories
-}/> </div> </SheetContent> </Sheet> </div> </div>) "
-}</div> <Button variant="ghost" size="sm" onClick={
-  () => setFilters ({'
-  types: [], category: '', minPrice: 0, maxPrice: 10000,  minRating: 0, sort: 'relevance'
-})
-}> Clear All </Button>)
-}</div> <FilterSidebar filters= {
-  filters
-}onFiltersChange= {
-  handleFiltersChange
-}availableCategories= {
-  availableCategories
-}/> </div> </div> </div>) : results.length === 0 && searchTerm ? (<NoResultsState searchTerm= {
-  searchTerm
-}onNewSearch= {
-  handleSearch
-}/> <SearchResultCard key= {
-  `$ {
-  result.type
-}-$ {
-  result.id
-}`
-}result= {
-  result
-}searchTerm= {
-  searchTerm
-}viewMode= {
-  viewMode
-}/>) )
-}</div> > {'"
-  loading ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results')
-}</Button> </div>)
-}</>)
-}</div> </div>)
-}</div>)
-}
-export default SearchResultsPage
-'"
-<<<<<<< HEAD
 
 export default SearchResultsPage, ;
 export default SearchResultsPage;

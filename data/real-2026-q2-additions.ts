@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export const real2026Q2Additions = [
@@ -43,16 +42,6 @@ export const real2026Q2Additions = [
   },;
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
-=======
-    id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
-    category: 'AI & Data',
-    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
-    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',
-    features: [
-
-];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     ];
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];

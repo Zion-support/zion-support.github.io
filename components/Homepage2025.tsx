@@ -342,17 +342,7 @@ const Homepage2025: React.FC < Homepage2025Props> = ({ showInternalNav = true })
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                          key={section.id}
-                          onClick={() => scrollToSection(section.id)}
-                          className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
-                            activeSection === section.id
-                              ? 'bg-cyan-400/20 text-cyan-400'
-                              : 'text-gray-300 hover:bg-white/10'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           }`}
                         >;
@@ -435,7 +425,6 @@ const Homepage2025: React.FC < Homepage2025Props> = ({ showInternalNav = true })
 
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -504,9 +493,6 @@ const Homepage2025: React.FC < Homepage2025Props> = ({ showInternalNav = true })
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Features Section */}
       <section className="py-20 px-4 relative">

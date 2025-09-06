@@ -279,7 +279,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       },;
     },        ease: "easeOut" as const;
       }
-<<<<<<< HEAD
         onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
@@ -327,25 +326,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
       >
-=======
-        <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
-          {/* Header */}
-          <div className='flex items - start justify - between mb - 4'>;
-            <div className='flex items - center space - x-3'>;
-              <div className='text - 3xl'>{service.icon}</div>;
-              <div>;
-                <div className='flex items - center space - x-2'>;
-                  {getCategoryIcon (service.category)}
-                  <span className='text - xs text - gray - 400 uppercase tracking - wider'>;
-                    {service.category}
-                  </span>;
-                </div>;
-                <h3 className='text - xl font - bold text - white mt - 1'>;
-                  {service.name}
-
-        <div className="bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full">
-          {/* Header */}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center space-x-3">

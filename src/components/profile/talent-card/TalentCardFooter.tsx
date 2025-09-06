@@ -59,19 +59,8 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         </div>
         </div>
         </div>;
-        {/* Action Buttons */}
-        <div className="flex gap-2">
-          <Button
-            variant="default"
-            size="sm"
-            onClick = {handleRequestHire,}
-          <Button 
-            variant="default" 
-            size="sm" 
-            onClick={handleRequestHire}
-            onClick = {handleRequestHire,}
-            onClick={handleRequestHire}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
@@ -82,13 +71,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           <Button 
             variant="outline" 
             size="sm" 
-            onClick = {handleViewProfile,}
-          
-          <Button 
-            variant="outline" 
-            size="sm" 
-            onClick={handleViewProfile}
-<<<<<<< HEAD
 
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -97,7 +79,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
@@ -119,6 +100,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     </>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -225,5 +207,3 @@ if ( {) {
 }
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

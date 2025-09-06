@@ -16,7 +16,6 @@ export default function AISolutionsPage() {
       description:
         'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
       features: [
-<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         'Predictive Analytics',
@@ -204,14 +203,6 @@ export default function AISolutionsPage() {
             </div>
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-              </div>;
-            </div>;
-
-
-            {/* Industry Use Cases */}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Industry Use Cases */}

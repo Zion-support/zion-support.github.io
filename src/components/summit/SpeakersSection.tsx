@@ -8,16 +8,6 @@ import { Twitter, Linkedin } from 'lucide-react'
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import Image from "next/image",
-import { Twitter, Linkedin } from 'lucide-react'
-
-interface Speaker {
-  name: string,
-  title: string,
-  avatar: string,
-  twitter?: string,
-  linkedin?: string
-}
   linkedin?: string
 }
 
@@ -30,6 +20,7 @@ interface Speaker {
   linkedin?: string
 }
 const speakers: Speaker[] = [
+<<<<<<< HEAD
   {
 
     linkedin: '#'}],
@@ -67,3 +58,5 @@ export function SpeakersSection() {
             </div>
           ))}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

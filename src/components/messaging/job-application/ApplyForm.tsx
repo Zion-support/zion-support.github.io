@@ -67,16 +67,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     setSelectedResumeId(resume.id)
   },
   
-  const handleApply = async () => {
-    if (!message.trim()) {
-      toast({
-        title: "Message required"
-        description: "Please enter a message before applying."
-        variant: "destructive"
-      })
-      return
-      return;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     }
     try {
       setIsSubmitting(true)
@@ -279,20 +271,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 <<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      toast({
-        title: "Application sent",
-        description: `Your application for "${job.title}" has been sent.`}),
-
-      onClose()
-    } catch (error) {
-      logErrorToProduction('Failed to send application:', { data: error })
-      toast({
-        title: "Application failed"
-        description: "There was an error sending your application. Please try again."
-        variant: "destructive"
-      })
-    } finally {
-      setIsSubmitting(false)
             message = {message,}
             setMessage = {setMessage,}
             proposalLink = {proposalLink,}
@@ -324,6 +302,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           ) : (
             'Submit Application'
           )}
+<<<<<<< HEAD
         </Button>
       </div>
     </>
@@ -335,6 +314,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   return;
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId || undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message
 if (proposalLink) {'

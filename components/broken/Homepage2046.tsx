@@ -1022,29 +1022,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 =======
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
-                      {service.name}
-                    </h3>
-                    <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
-                      {service.description}
-                    </p>
-                    <div className='mb-4'>
-                      <div className='flex items-center gap-2 text-cyan-400 font-semibold'>
-                        <DollarSign className='w-4 h-4' />                        <span>{service.price}</span>
-                      </div>
-                    </div>
-=======
-
-                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         </div>
                       </div>

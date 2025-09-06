@@ -86,7 +86,6 @@ import Card from '../components/ui/Card';
       </div>
     </UltraFuturisticBackground>;
   );
-<<<<<<< HEAD
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
@@ -152,10 +151,6 @@ export default function ITAssetDiscoveryAgentPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
-=======
-}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

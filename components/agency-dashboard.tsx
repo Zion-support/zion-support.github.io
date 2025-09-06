@@ -243,7 +243,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           </div>
         </form>
       </section>
-<<<<<<< HEAD
 
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
@@ -299,10 +298,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       </section>
 
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -425,47 +420,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 };  )
 }
 
-<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } };
 };  );
-=======
-            defaultValue={item.status}
-            onChange={e => changeStatus(item.id, e.target.value)}
-            className='border rounded px-2 py-1 bg-transparent text-sm'
-          >
-            <option value='lead'>Lead</option>
-            <option value='qualified'>Qualified</option>
-            <option value='proposal'>Proposal</option>
-            <option value='in_progress'>In Progress</option>
-            <option value='complete'>Complete</option>
-            <option value='lost'>Lost</option>          </select>
-        </div>
-      ))}
-    </div>          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
-            <option value="lead">Lead</option>
-            <option value="qualified">Qualified</option>
-            <option value="proposal">Proposal</option>
-            <option value="in_progress">In Progress</option>
-            <option value="complete">Complete</option>
-            <option value="lost">Lost</option>
-        </div>
-      ))}
-    </div>
-  );
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] |null; // tie to auth later
-  return { props: { vendor } }
-};  )
-}
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] |null, // tie to auth later
-  return { props: { vendor } }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');

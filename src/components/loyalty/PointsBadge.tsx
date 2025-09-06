@@ -104,7 +104,6 @@ export function PointsBadge() {;
     }
   },
 
-<<<<<<< HEAD
   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
@@ -124,41 +123,7 @@ export function PointsBadge() {;
               <Button
 
 =======
-                <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
-                  Click to learn more and join!;
-                </p>;
-              </>)}
-          </TooltipContent>;
-        </Tooltip>;
-        {is_authenticated && (
-          <Tooltip>;
-            <TooltipTrigger as_child>;
-              <Button;
-                variant='ghost';
-                size='sm';
-                on_click={handle_refresh}
-                disabled={is_refreshing || loading}
-                className='p - 1 h - 6 w - 6 text - muted - foreground hover:text - foreground';
-                aria - label='Refresh points'              >;
-                <RefreshCw;
-                  className={`h - 3 w - 3 ${is_refreshing || loading ? 'animate - spin' : ''}`}
-                  aria - hidden='true';
-
-                />;
-              </Button>;
-            </TooltipTrigger>;
-            <TooltipContent>;
-
-
-
-                variant="ghost"
-                size="sm"
-                onClick={handleRefresh}
-                disabled={isRefreshing || loading}
-                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
-                aria-label="Refresh points"
-              >
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -172,28 +137,5 @@ export function PointsBadge() {;
           </Tooltip>
         )}
 <<<<<<< HEAD
-;
-
-      </div>;
-      {!isAuthenticated && (;
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-      )}
-    </TooltipProvider>;
-  );
-}
-<<<<<<< HEAD
-
-}
-
-
-              <p className='text - sm'>Refresh points balance</p>;
-            </TooltipContent>;
-          </Tooltip>)}
-      </div>;
-      {!is_authenticated && (
-        <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />)}
-    </TooltipProvider>);
-}
-}
-;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

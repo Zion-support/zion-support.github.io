@@ -40,8 +40,7 @@ interface ProjectDetailsFieldsProps {
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
 
@@ -62,8 +61,8 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Button } from "@/components/ui/button",
@@ -104,8 +103,8 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
             <FormLabel>Project Name</FormLabel>
             <FormControl>
               <Input placeholder="AI Website Development" {...field} />
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         )}
@@ -131,15 +130,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
             <FormItem className="flex flex-col">
               <FormLabel>Start Date</FormLabel>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <FormControl>
-                    <Button
-                      variant={'outline'}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
-                      variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
-                    >
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
@@ -151,3 +141,4 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
+<<<<<<< HEAD

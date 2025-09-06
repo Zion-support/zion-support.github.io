@@ -2279,7 +2279,6 @@ function Terms() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 =======
 
 
@@ -2292,9 +2291,6 @@ function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="space-y-12"
             >
               <div className="text-center mb-16">

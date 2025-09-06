@@ -186,7 +186,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   ];
 
   const performanceMetrics = [
@@ -240,11 +239,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
   };
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">

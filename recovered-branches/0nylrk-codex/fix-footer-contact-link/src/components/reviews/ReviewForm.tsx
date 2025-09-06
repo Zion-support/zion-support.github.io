@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReviewFormValues {
@@ -14,15 +13,6 @@ interface ReviewFormValues {
 }
 interface ReviewFormProps {
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-interface ReviewFormProps {;
-  projectId: string,;
-  revieweeId: string,;
-  revieweeName: string,;
-  onSubmit: (data: any) => Promise<boolean>, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   defaultValues?: Review;
   isSubmitting: boolean;
 }

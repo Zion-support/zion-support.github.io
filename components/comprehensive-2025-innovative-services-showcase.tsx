@@ -496,7 +496,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             {categories.map((category, index) => {
               const IconComponent = category.icon;
 =======
-<<<<<<< HEAD
 
               
 
@@ -536,9 +535,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services */}
       <section className='py-20 px-4'>
@@ -924,7 +920,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
-<<<<<<< HEAD
 
               
 
@@ -932,47 +927,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 >
                   <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>
                     <div className='flex items-start space-x-4'>
-=======
-            <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>;
-              Complete Service Portfolio;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-4xl mx-auto'>;
-              Explore our entire collection of innovative services designed for;
-              the future;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {innovative2025MicroSaasBatch && innovative2025MicroSaasBatch.map((service, index) => {;
-              const IconComponent = getCategoryIcon(service && service.category);
-                >;
-                  <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>;
-                    <div className='flex items-start space-x-4'>;
-                      <div
-                        className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service && service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>;
-                        {service && service.icon}
-                      </div>;
-                      <div className='flex-1 min-w-0'>;
-                        <h3 className='text-lg font-bold text-white mb-1 truncate'>;
-                          {service && service.name}
-                        </h3>;
-                        <p className='text-gray-400 text-sm mb-2 line-clamp-2'>;
-                          {service && service.tagline}
-                        </p>;
-                        <div className='text-cyan-400 font-semibold text-sm'>;
-                          {service && service.price}
-                          <span className='text-gray-400'>;
-                            /{service && service.period}
-                          </span>;
-                        </div>;
-                        <div className='text-xs text-gray-500 mt-2'>;
-                          {service && service.category}
-                        </div>                      </div>                      ))}
-
-
-                    {/* Market Info */}
-
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio

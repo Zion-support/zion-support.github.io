@@ -134,7 +134,6 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
           next run.
         </p>
       )}
-<<<<<<< HEAD
 
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
@@ -256,12 +255,6 @@ export async function getStaticProps() {
     const raw = fs.readFileSync(filePath, "utf8");
 
     const parsed = JSON.parse(raw);
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-    return {
-      props: {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       revalidate: 300}
   } catch {

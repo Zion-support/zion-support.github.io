@@ -51,9 +51,6 @@ export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }
     toast.success("Analytics tracking enabled")
   }
   return (
-=======
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">Export & Analytics</CardTitle>
@@ -88,7 +85,6 @@ export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
 
 import { toast } from "sonner",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',

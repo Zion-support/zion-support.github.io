@@ -96,7 +96,6 @@ import {
   Video,
   User,
   XCircle} from "lucide-react",
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 function ProjectDetailsContent() {
@@ -665,61 +664,6 @@ if ( {) {
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-=======
-                        <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
-                        />
-                      ) : (
-                        <User className="h-6 w-6" />
-                      )}
-                    </Avatar>
-                    <div>
-                      <h3 className="font-semibold">
-                        {project.talent_profile?.full_name |"Talent"}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {project.talent_profile?.professional_title |"Professional"}
-                      </p>
-                      {isClient && (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
-                          onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
-                        >
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message
-                        </Button>
-                      )}
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <Avatar className="h-10 w-10">
-                      {project.client_profile?.avatar_url ? (
-                        <img
-                          src={project.client_profile.avatar_url}
-                          alt={project.client_profile.display_name}
-                        />
-                      ) : (
-                        <User className="h-6 w-6" />
-                      )}
-                    </Avatar>
-                    <div>
-                      <h3 className="font-semibold">
-                        {project.client_profile?.display_name |"Client"}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">Project Owner</p>
-                      {isTalent && (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
-                          onClick={() => navigate(`/messages?clientId=${project.client_id}`)}
-                        >
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message
-                        </Button>
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         <img
                           src={project && project.talent_profile.profile_picture_url}
                           alt={project && project.talent_profile.full_name}

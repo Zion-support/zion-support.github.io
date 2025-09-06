@@ -3,27 +3,6 @@ import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-import ProductCard from '@/components/ProductCard';
-
-import { use_router } from 'next / router';
-import { useApiErrorHandling } from '@/hooks / useApiErrorHandling';
-import ProductCard from '@/components / ProductCard';
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import { AuthModal } from '@/components / auth / AuthModal';
-
-import {
-
-} from 'lucide-react';
-import { SkeletonCard } from '@/components/ui/skeleton';
-import { ErrorState } from '@/components/jobs/applications/ErrorState';
-import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
         ))}
       </select>;
     </div>;
@@ -49,24 +28,10 @@ import { Card, CardContent } from '@/components/ui/card';
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">Any Availability</option>
-        {availabilityOptions.map(opt => (
-          <option key={opt} value={opt as string}>{opt}</option>
-        ))}
-      </select>
-    </div>
-=======
-      <select
-
-        value={filterLocation}
-        onChange={(e) => setFilterLocation(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">All Locations</option>
-=======
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
         ))}
@@ -404,44 +369,6 @@ import { Card, CardContent } from '@/components/ui/card';
                   }
                   try {
                     await router.push(`/checkout/${product.id}`)
-                  } catch (error) {
-                    logErrorToProduction('Failed to navigate to checkout:', { data: error }),
-                    toast({
-                      title: "Navigation Error",
-                      description: "Could not navigate to checkout. Please try again.",
-                      variant: "destructive"}),
-                    // Re-throw to allow ProductCard's catch to also run if needed,
-                    // though ProductCard will reset its state in .finally() regardless.
-                    throw error;
-                  }
-                }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
-              />
-
-              {/* AI Score Badge */}
-              {product.aiScore && product.aiScore > 90 && (
-                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
-                  <Sparkles className='h-3 w-3 mr-1' />
-                    throw error
-                  try {;
-                    await router.push(`/checkout/${product.id}`);
-                  } catch (error) {;
-                    logErrorToProduction('Failed to navigate to checkout:', { data: error }),;
-                    toast({;
-                      title: "Navigation Error",;
-                      description: "Could not navigate to checkout. Please try again.",;
-                      variant: "destructive"});
-                    // Re-throw to allow ProductCard's catch to also run if needed;
-                    // though ProductCard will reset its state in .finally() regardless.;
-                    throw error;
-                  }
-                }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth;
-              />;
-              {/* AI Score Badge */}
-              {product.aiScore && product.aiScore > 90 && (;
-                <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">;
-                  <Sparkles className="h-3 w-3 mr-1" />;
                   AI {product.aiScore}
                 </Badge>
               )}
@@ -455,6 +382,15 @@ import { Card, CardContent } from '@/components/ui/card';
                   <Star className='h-3 w-3 mr-1' />
                   Featured
                 </Badge>
+=======
+;
+              {/* Featured Badge */}
+              {product.featured && (;
+                <Badge className="absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10">;
+                  <Star className="h-3 w-3 mr-1" />;
+                  Featured;
+                </Badge>;
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
 
@@ -463,33 +399,43 @@ import { Card, CardContent } from '@/components/ui/card';
               )}
             </motion && motion.div>;
           ))}
+<<<<<<< HEAD
         </AnimatePresence>
       </motion.div>
       {/* Loading More Indicator */}
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        <motion.div
-        </AnimatePresence>;
-      </motion && motion.div>;
-
-      {/* Loading More Indicator */}
-      {(isFetching || loading) && (;
-        <motion&& motion.div
-          className='mt-8'
-          initial={{ opacity: 0 }}
-
-          animate={{ opacity: 1 }}
-        >
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-            {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
 <<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+          >;
+            <ArrowUp className="h-5 w-5 text-primary-foreground" />;
+          </motion.button>;
+        )}
+      </AnimatePresence>;
+    </div>;
+  );
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 }
 }
 }

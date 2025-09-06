@@ -103,33 +103,6 @@ export function RedeemTokensCard() {
                         wallet && wallet.balance >= option.cost
                           ? 'default'
                           : 'outline'
-                      }
-
-                      disabled={!wallet || wallet.balance < option && option.cost}
-                      onClick={() => handleRedeem(option)}                    >;
-                      Redeem <ArrowRight className='ml-1 h-3 w-3' />;
-                    </Button>;
-                  </div>;
-                </div>;
-
-              ))}
-            </div>;
-            <div className='flex justify-between'>;
-              <Button
-                variant='outline'
-                size='sm'
-                onClick={() => setOpen(false)}
-
-
-
-
-
-import React, { useState } from "react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
-import {
 import {
   Card,
   CardContent,
@@ -146,60 +119,6 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogHeader
-  DialogTitle
-  DialogTrigger
-} from '@/components/ui/dialog'
-type RewardOption = {
-  id: string
-title: string;
-description: string;
-cost: number;'
-type: 'credit' | 'feature' | 'course'
-}
-const REWARD_OPTIONS: RewardOption[] = [
-  {
-    id: 'premium-week'
-    title: 'Premium Week'
-    description:
-      '7 days of premium features including top placement in search results'
-    cost: 100
-    type: 'feature'
-  }
-  {
-    id: 'resume-review'
-    title: 'AI Resume Review'
-    description: 'Get your resume analyzed and optimized by our AI'
-    cost: 50
-    type: 'feature'
-  }
-  {
-    id: 'platform-credit'
-    title: '$5 Platform Credit'
-    description: 'Get $5 credit to use on any paid service'
-    cost: 100
-    type: 'credit'
-  }
-]
-export function RedeemTokensCard() {
-  const { wallet, spendTokens } = useWallet()
-  const [open, setOpen] = useState(false)
-  const handleRedeem = async (option: RewardOption) => {
-    if (!wallet |wallet.balance < option.cost) return
-    await spendTokens(option.cost, `Redeemed: ${option.title}`)
-    setOpen(false)
-  }
   id: string,
   title: string,
   description: string,
@@ -207,6 +126,9 @@ export function RedeemTokensCard() {
   type: 'credit' | 'feature' | 'course'
 },
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week',
@@ -234,7 +156,8 @@ const REWARD_OPTIONS: RewardOption[] = [
 
 
 
-=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
 
@@ -291,22 +214,6 @@ const REWARD_OPTIONS: RewardOption[] = [
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                    </Button>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="flex justify-between">
-              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
-              <Button variant="ghost" size="sm">
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />
-              </Button>
-            </div>
-          </DialogContent>
-        </Dialog>
-      </CardContent>
-    </Card>
-
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -369,8 +276,6 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
@@ -426,5 +331,3 @@ export function RedeemTokensCard() {;
 <<<<<<< HEAD
 }
 ;
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -9,6 +9,10 @@ const ResizablePanelGroup = ({
     className={cn(
 
       "flex h-full w-full data-[panel-group-direction=vertical]:flex-col",
+=======
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       className
     )}
     {...props}
@@ -24,6 +28,7 @@ const ResizableHandle = ({
 }) => (
   <ResizablePrimitive.PanelResizeHandle
     className={cn(
+<<<<<<< HEAD
 
 import { GripVertical } from 'lucide-react';
 import * as ResizablePrimitive from &quot;react - resizable - panels & quot;

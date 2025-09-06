@@ -165,11 +165,6 @@ if ( {) {
   
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <FormField
-          control={form.control}
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;

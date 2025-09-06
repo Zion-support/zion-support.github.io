@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 export interface TreeNode {;
 
-<<<<<<< HEAD
   name: string;
   path: string;
 
@@ -113,10 +112,6 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
         )}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
         </div>
       )}

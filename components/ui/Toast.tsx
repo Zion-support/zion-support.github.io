@@ -134,7 +134,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           )}
 
         </div>
-<<<<<<< HEAD
         <button
           onClick={() => {
 
@@ -204,9 +203,6 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
         {toasts.map((toast) => (
   );};
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
           transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}

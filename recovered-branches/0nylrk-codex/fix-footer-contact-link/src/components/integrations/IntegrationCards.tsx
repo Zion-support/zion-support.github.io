@@ -26,7 +26,6 @@ interface IntegrationCardProps {
   href?: string,
   onConnect?: () => void
 }
-<<<<<<< HEAD
 
 export function IntegrationCard({;
   title;
@@ -151,11 +150,6 @@ export function IntegrationCard({;
             <span>Connect</span>;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
           </Button>;
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         )}
       </CardFooter>;

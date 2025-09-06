@@ -107,7 +107,6 @@ if (return) {
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();          }            ctx.stroke()
           }
-<<<<<<< HEAD
         }
       }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -116,10 +115,6 @@ if (return) {
 
           }
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
@@ -412,7 +407,6 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
             ease: "linear"
           }}
 
-<<<<<<< HEAD
             duration: 15,
             repeat: Infinity,
             ease: "linear"
@@ -515,9 +509,6 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
             repeat: Infinity,
 
 
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======

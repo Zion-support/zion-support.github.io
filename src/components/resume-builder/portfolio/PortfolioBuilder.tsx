@@ -35,22 +35,8 @@ export function PortfolioBuilder() {
   }
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-        <div>
-          <h1 className="text-2xl font-bold">Portfolio Projects</h1>
-          <p className="text-muted-foreground">Showcase your best work and projects</p>
-        </div>
-        <Button
-          onClick={() => setShowAddProject(true)}
-          className='gap-2'
-          disabled={showAddProject |!!editingProject}        >
-          <FilePlus className='h-4 w-4' />
-          Add Project
-        </Button>
-      </div>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -71,7 +57,6 @@ export function PortfolioBuilder() {
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
-<<<<<<< HEAD
             <ProjectForm              project={editingProject |undefined}
             <ProjectForm              project={editingProject || undefined}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -178,6 +163,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
 
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -192,10 +178,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       {(showAddProject || editingProject) && (
         <Card>
 =======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -256,18 +239,12 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         !showAddProject && (
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-            <CardContent>
-              <div className="flex flex-col items-center gap-4">
-                <div className="bg-muted/50 p-6 rounded-full">
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />
-                </div>
-                <h3 className="text-xl font-medium">No portfolio projects yet</h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
-                  Add your best work to showcase your skills and experience to potential employers.
-                </p>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                <Button 
+                  onClick={() => setShowAddProject(true)} 
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                   className="mt-2"
                 >
                   Add Your First Project
@@ -278,7 +255,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         )
       )}
 <<<<<<< HEAD
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 }

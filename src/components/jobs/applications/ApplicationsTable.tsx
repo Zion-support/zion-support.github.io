@@ -55,6 +55,33 @@ interface ApplicationsTableProps {
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
   onViewScore: (application: JobApplication) => void
 }
+=======
+
+// Sub-component for avatar to handle its own error state;
+const ApplicationAvatar = ({ application }: { application: JobApplication },) => {;
+  const [avatarError, setAvatarError] = useState(false),;
+  const talentName = application && application.talent_profile?.full_name || "Candidate",;
+
+
+const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
+  const [avatarError, setAvatarError] = useState(false)
+  const talentName = application.talent_profile?.full_name |"Candidate"
+  return (
+    <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
+      {application.talent_profile?.profile_picture_url && !avatarError ? (
+        <Image
+          src={application.talent_profile.profile_picture_url}
+          alt={talentName}
+          width={32} // for h-8 w-8
+          height={32} // for h-8 w-8
+          className='rounded-full object-cover'
+          onError={() => setAvatarError(true)}
+          priority={false}        />
+          className="rounded-full object-cover"
+          onError={() => setAvatarError(true)}
+          priority={false}
+        />
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       ) : (
         <User className="h-4 w-4" />
       )}
@@ -82,6 +109,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
       description: "Offer has been sent to the talent."
     })
   },
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   applications,
   processingId,
   onViewApplication,
@@ -108,7 +136,6 @@ export function ApplicationsTable({
     })
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
@@ -125,27 +152,13 @@ export function ApplicationsTable({
     })
   },
   
-=======
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  return (
-    <>
-      <div className="rounded-md border">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Candidate</TableHead>
-              <TableHead className="hidden md:table-cell">Applied</TableHead>
-              <TableHead className="hidden md:table-cell">Status</TableHead>
-              <TableHead className="hidden lg:table-cell">Match Score</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+            {applications.map(application => (              <TableRow key={application.id}>
+            {applications.map((application) => (
+              <TableRow key={application.id}>
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
                 <TableCell>
                   <div className="flex items-center gap-3">
@@ -162,6 +175,33 @@ export function ApplicationsTable({
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
+<<<<<<< HEAD
+=======
+                <TableCell className='hidden lg:table-cell'>
+                  {application.match_score !== undefined &&
+                  application.match_score !== null ? (
+                    <ClickableBadge
+                      variant='outline'
+                      className='cursor-pointer'
+                      onClick={() => onViewScore(application)}                    >
+                <TableCell className="hidden lg:table-cell">
+                  {application.match_score !== undefined && application.match_score !== null ? (
+                    <ClickableBadge 
+                      variant="outline"
+                      className="cursor-pointer"
+                      onClick={() => onViewScore(application)}
+                    >
+
+                      {application.match_score}%
+                    </ClickableBadge>
+                  ) : (
+                    <span className="text-muted-foreground text-sm">Not scored</span>
+                  )}
+                </TableCell>
+}h-4 w-4"/>) ;
+}</AvatarPrimitive>) ;
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {

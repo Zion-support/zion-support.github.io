@@ -258,6 +258,7 @@ export function DeveloperPortal() {;
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {activeTab === "documentation" && <ApiDocumentation />}
@@ -269,12 +270,6 @@ export function DeveloperPortal() {;
   )
 }
 <<<<<<< HEAD
-
-
-
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default function ProtectedDeveloperPortal() {
   return (
@@ -289,9 +284,4 @@ export default function ProtectedDeveloperPortal() {
 
   )
 <<<<<<< HEAD
-<<<<<<< HEAD
-};
-};
-  );
-};
 <<<<<<< HEAD

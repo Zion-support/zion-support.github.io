@@ -37,21 +37,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        ref={ref as SafeRef<HTMLDivElement>}
-        className={cn('px-3 py-2', className)}        {...props}
-      >
-        {title && (
-          <button
-            type='button'
-            className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30'
-            onClick={() => setExpanded(!expanded)}          >
-            <div className='flex items-center gap-2'>
-
-              {icon}
-              <span>{title}</span>
-            </div>
-            {showChevron && (
-              <ChevronDown
 
 import React, { forward_ref } from 'react';
 import { ChevronDown } from 'lucide-react';
@@ -104,6 +89,7 @@ SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
       </div>
@@ -121,3 +107,5 @@ export { SidebarGroup },
 SidebarGroup.displayName = "SidebarGroup",;
 export { SidebarGroup };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

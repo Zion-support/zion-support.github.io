@@ -86,19 +86,12 @@ import Link from 'next/link',
           </div>
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
-              <Link href="/open-app">Try ZionGPT Now</Link>
-            </Button>
-          </div>
-        </div>
-      </main>
-    </>
-  )
 
 
 
 ;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useEffect } from "react",;
@@ -243,3 +236,5 @@ function AIPoweredContent() {
 
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

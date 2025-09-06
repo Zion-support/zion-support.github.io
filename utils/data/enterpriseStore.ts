@@ -88,7 +88,6 @@ export const store = {getCompanyBySlug(slug: string) {;
     return true;
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
-<<<<<<< HEAD
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',
 const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
 const seed_company: CompanyRecord = {
@@ -105,11 +104,6 @@ const seed_company: CompanyRecord = {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
 
-=======
-const seedCompany: CompanyRecord = {;
-  id: 'cmp_acme';
-  name: 'Acme Corporation';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },

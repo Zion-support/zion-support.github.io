@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
@@ -234,30 +233,6 @@ function UltraFuturisticHero2032() {
                 repeat: Infinity
                 delay: Math.random() * 2
               }}            />                delay: Math.random() * 2}}
-=======
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        {/* Floating Particles */}
-        <div className="absolute inset-0">
-          {[...Array(50)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`}}
-              animate={{
-                y: [0, -20, 0];
-                opacity: [0.3, 0.8, 0.3]}}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2}}
-
-            />
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Gradient Orbs */}

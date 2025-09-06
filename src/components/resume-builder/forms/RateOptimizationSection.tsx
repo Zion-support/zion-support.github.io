@@ -41,7 +41,6 @@ import { Input } from "@/components/ui/input",
   location,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface RateOptimizationSectionProps {
   control: Control<any>,
@@ -49,25 +48,6 @@ interface RateOptimizationSectionProps {
   skills: string[],
   yearsExperience: number,
 <<<<<<< HEAD
-
-  },
-
-<<<<<<< HEAD
-  rateType: "hourly" | "fixed"
-}
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-
-  control
-  setValue
-  skills
-  yearsExperience
-
-  location,
-
-  rateType
-}) => {
-  const handleSuggestionApplied = (rate: number) => {
-    setValue("hourlyRate", rate)
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
@@ -76,6 +56,7 @@ interface RateOptimizationSectionProps {
   location?: string,
   rateType: "hourly" | "fixed"
 }
+<<<<<<< HEAD
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
 
   return (
@@ -106,3 +87,5 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
         <CardContent className="pt-4">
           <TalentRateRecommender
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

@@ -136,11 +136,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      })
-    } finally {
-      setIsLoading (false);
-    }
-
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -254,7 +249,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               className="bg-zion-blue border border-zion-blue-light text-white"
               disabled={isLoading}
             />
-<<<<<<< HEAD
 
           </div>
           <div className="space-y-2">
@@ -571,17 +565,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-            <div>
-              <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
-                Key Selling Points
-              </h3>
-              <ul className='list-disc pl-5 text-white space-y-1'>
-                {generatedContent.keyPoints.map((point, index) => (                  <li key={index}>{point}</li>
-                ))}
-              </ul>
-            </div>
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               Apply to My Listing
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -595,10 +578,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }, field: string) => {
   switch (field) {
   case 'title': setTitle (e.target.value)
-  value: string ;
-}, field: string) => {;
-  switch (field) {;
-  case 'title': setTitle (e.target.value);
 break;'
 case 'category': setCategory (e.target.value)
 break;'
@@ -638,68 +617,17 @@ if ( {) {
 <<<<<<< HEAD
   data: error
 })
-
-    </div>;
-  );
-
-  target: {;
-  value: string ;
-
-}, field: string) => {;
-  switch (field) {;
-  case 'title': setTitle (e && e.target.value);
-break;';
-case 'category': setCategory (e && e.target.value);
-break;';
-case 'keyFeatures': setKeyFeatures (e && e.target.value);
-break;';
-case 'targetAudience': const handleGenerate = async () => {;
-  if (!title || !category) {;
-  toast ({;
-  return;
-}setIsLoading (true);
-}catch (error) {';
-  logErrorToProduction ('Error generating content:', {;
-  data: error ;
-});
-toast ({;
-
-}finally {;
-  setIsLoading (false) ;
-
-};
-const handleApply = () => {;
-  if (generatedContent && onApplyGenerated) {;
-  onApplyGenerated (generatedContent);
-toast ({;
-
-
-};
-<CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
-  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ";
-}</Button> </CardContent> </Card> <CardHeader> <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) ) ;
-}</div> </CardContent> </Card>) ";
-}<CardHeader> <CardTitle className="text-white" >Generated Content</CardTitle> </CardHeader> <CardContent className="space-y-4" > <div> <h3 className="text-sm font-medium text-zion-slate-light mb-2" >Description</h3> <p className="text-white" > {;
-  generatedContent && generatedContent.description ;
-}</p> </div> <div>) ) ;
-}</div> </div> <div>) ) ";
-}</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) ;
-}</div>) ;
-}'"  );
-};
-  );
-
-  data: error;
-});
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 toast ({
 }finally {
   setIsLoading (false)
 }
+<<<<<<< HEAD
 const handleApply = () => {
   if (generatedContent && onApplyGenerated) {
   onApplyGenerated (generatedContent)
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 toast ({
 }
 <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"

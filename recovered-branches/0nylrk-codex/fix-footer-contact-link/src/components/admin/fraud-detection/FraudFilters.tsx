@@ -75,7 +75,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           className="pl-10"
         />
       </div>
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <SelectTrigger className="w-[180px]">
@@ -165,22 +164,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </div>;
 
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
-=======
-  setContentTypeFilter,
-  reset_filters}) => {
-  return (
-    <div className="flex flex - col md:flex - row gap - 4 mb - 6">;
-      <div className="relative flex - 1">;
-        <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400" />;
-        <Input;
-          placeholder="Search by user or content...";
-          value={search_query}
-          on_change={(e) => setSearchQuery (e.target.value)}
-          className="pl - 10";
-        />;
-      </div>;
-      <Select value={status_filter || ""} onValueChange={value => setStatusFilter (value || null)}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;

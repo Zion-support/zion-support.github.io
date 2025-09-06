@@ -954,7 +954,6 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
               </div>
               <div className='flex items-center space-x-6 text-sm text-gray-400'>                © {currentYear} Zion Tech Group. All rights reserved.
               </div>
-<<<<<<< HEAD
 
               <div className="flex items-center space-x-6 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
@@ -988,8 +987,5 @@ export default EnhancedFooter2025;
 
 }
 export default EnhancedFooter2025;
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

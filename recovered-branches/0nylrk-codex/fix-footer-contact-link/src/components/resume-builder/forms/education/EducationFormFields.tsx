@@ -150,7 +150,6 @@ export function EducationFormFields(): any ({ ;
     }
 
   },
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
@@ -357,20 +356,6 @@ export function EducationFormFields(): any ({ ;
                 <Textarea
                   placeholder="Notable achievements, courses, activities..."
                   className="min-h-[100px]"
-=======
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="description";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Description (Optional)</FormLabel>;
-              <FormControl>;
-                <Textarea;
-                  placeholder="Notable achievements, courses, activities...";
-                  className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;

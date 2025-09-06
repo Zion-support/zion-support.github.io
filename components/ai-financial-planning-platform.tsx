@@ -650,7 +650,6 @@ export default function AIFinancialPlanningPlatform() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 =======
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 >
@@ -710,45 +709,3 @@ export default function AIFinancialPlanningPlatform() {
       </div>
     </>
 <<<<<<< HEAD
-=======
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-                <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className='px - 8 py - 4 bg - gradient - to - r from - yellow - 500 to - amber - 600 text - white rounded - xl font - semibold text - lg hover:from - yellow - 600 hover:to - amber - 700 transition - all duration - 200 shadow - lg shadow - yellow - 500 / 25'                >                Ready to Transform Your Financial Planning?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of individuals that have already revolutionized their financial planning;
-                with AI automation. Start your free trial today.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className="px - 8 py - 4 bg - gradient - to - r from - yellow - 500 to - amber - 600 text - white rounded - xl font - semibold text - lg hover:from - yellow - 600 hover:to - amber - 700 transition - all duration - 200 shadow - lg shadow - yellow - 500 / 25";
-                >;
-                  Get Started Now;
-                </motion.button>;
-                <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className='px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover:bg - yellow - 500 / 10 transition - all duration - 200'                >                  className="px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover: bg - yellow - 500 / 10 transition - all duration - 200";
-                >;
-                  Contact Sales;
-                </motion.button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>);
-=======
-);
-<<<<<<< HEAD
-=======
-}
-}
-}
-  );
-}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -71,13 +71,5 @@
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-};
-}</div> </div> </div> </section>) ;
-}'";
-};
-<<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

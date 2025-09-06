@@ -117,7 +117,6 @@ export default function AccountSettings() {;
     setIsSubmitting(true);
   }, []),
   }, []),
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -125,96 +124,6 @@ export default function AccountSettings() {;
     setIsSubmitting(true),
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-          'account_settings',
-          JSON.stringify({ displayWeb3, didHandle, enableBackup })
-        ),
-        // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),
-        toast.success('Account settings updated successfully')
-      } catch (e) {
-        console.error('Failed to save settings', e),
-        toast.error('Failed to save settings')
-      } finally {
-        setIsSubmitting(false)
-      }
-    }, 1000)
-  }
-  const handleConnectWallet = async () => {
-    try {
-      // Check if wallet is available
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {
-        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
-        return
-      }
-      // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0];
-      // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
-      await ethereum.request({
-        method: 'personal_sign'
-        params: [address, message]
-      });
-      // Auto-set DID handle if ENS is available
-      try {
-        const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
-        const ensName = await provider.lookupAddress(address);
-        if (ensName) {
-          setDidHandle(ensName)
-  }, []),;
-  const handleSave = () => {;
-    setIsSubmitting(true),;
-    // Simulate API call;
-    setTimeout(() => {;
-      try {;
-        localStorage.setItem(;
-          'account_settings',;
-          JSON.stringify({ displayWeb3, didHandle, enableBackup });
-        ),;
-        // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),;
-        toast.success('Account settings updated successfully');
-      } catch (e) {;
-        console.error('Failed to save settings', e),;
-        toast.error('Failed to save settings');
-      } finally {;
-        setIsSubmitting(false);
-      }
-    }, 1000);
-  },;
-  const handleConnectWallet = async () => {;
-    try {;
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum,;
-      if (!ethereum) {;
-        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),;
-        return;
-      }
-;
-
-      // Request accounts;
-      const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
-      const address = accounts[0];
-
-      // Sign message to verify ownership;
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,;
-      await ethereum && ethereum.request({;
-        method: 'personal_sign',;
-        params: [address, message];
-      });
-
-      // Auto-set DID handle if ENS is available;
-      try {;
-        const provider = new (window as any).ethers && ethers.providers.Web3Provider(ethereum);
-        const ensName = await provider && provider.lookupAddress(address);
-        if (ensName) {;
-          setDidHandle(ensName);
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }

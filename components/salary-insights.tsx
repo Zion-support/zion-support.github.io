@@ -24,8 +24,6 @@ type InsightResponse = {;
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
@@ -43,10 +41,6 @@ type InsightResponse = {;
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
 
-=======
-  const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
@@ -55,79 +49,6 @@ type InsightResponse = {;
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-=======
-    // Lightweight login check via Supabase client if available, otherwise public mode
-  gpt_recommendation?: string;
-export default /**
- * SalaryInsightsPage - Function description
- */
-function SalaryInsightsPage() {
-  const [role_title, setRoleTitle] = useState ('Senior AI Engineer');
-  const [skills, set_skills] = useState ('OpenAI, RAG, TypeScript');
-  const [region, set_region] = useState ('Remote, Global');
-  const [experience_level, setExperienceLevel] = useState<;
-    'Junior' | 'Mid' | 'Senior' | 'Lead';
-  >('Senior');
-  const [remote, set_remote] = useState (true);
-  const [employment_type, setEmploymentType] = useState<;
-    'contract' | 'freelance' | 'full - time';
-  >('contract');  const [loading, set_loading] = useState (false);  const [experience_level, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
-  const [remote, set_remote] = useState (true);
-  const [employment_type, setEmploymentType] = useState<'contract' | 'freelance' | 'full - time'>('contract');
-  const [loading, set_loading] = useState (false);
-  const [data, set_data] = useState < InsightResponse | null>(null);
-  const [error, set_error] = useState < string | null>(null);
-  const [isLoggedIn, setIsLoggedIn] = useState (false);
-;
-  useEffect (() => {
-    // Lightweight login check via Supabase client if available; otherwise public mode    (async () => {
-      try {
-        const { supabase } = await import ('../utils / supabase / client');
-        const user = await supabase.auth.get_user ();
-        setIsLoggedIn (!!user.data.user);    // Lightweight login check via Supabase client if available, otherwise public mode;
-
-    (async () => {
-      try {
-
-
-  useEffect(() => {;
-    // Lightweight login check via Supabase client if available; otherwise public mode    (async () => {;
-      try {;
-
-        const { supabase } = await import('../utils/supabase/client');
-
-  }, []);
-
-
-  async function fetchInsights() {;
-    setLoading(true);
-    setError(null);
-    try {;
-      const res = await fetch('/api/salary-insights', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          roleTitle,;
-          skills: skills;
-            .split(',');
-            .map(s => s && s.trim());
-            .filter(Boolean),;
-          region,;
-          experienceLevel,;
-          remote,;
-          employmentType,;
-        }),;
-
-      });
-      if (!res && res.ok) throw new Error('Failed to fetch insights');
-      const json = (await res && res.json()) as InsightResponse;
-      setData(json);
-    } catch (e: any) {
-      setError(e.message |'Unexpected error');
-    } finally {
-      setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
-      const json = (await res.json()) as InsightResponse;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setData(json)
     } catch (e: any) {
       setError(e.message |'Unexpected error')

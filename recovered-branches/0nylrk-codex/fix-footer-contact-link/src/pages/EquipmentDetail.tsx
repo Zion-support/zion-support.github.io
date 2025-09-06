@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 }
 
 // Sample data - in a real app this would come from an API
@@ -13,69 +12,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     category: "Equipment",
     subcategory: "Cameras",
 
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    images: [
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
-      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
-      "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
-    ]
-    price: 6999
-    currency: "$"
-    rating: 4.9
-    reviewCount: 87
-    inStock: true
-    expectedShipping: "3-5 business days"
-    specifications: [
-
-      { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
-    ],
-    features: [
-
-    images: [
-      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
-    ]
-    price: 3499
-    currency: "$"
-    rating: 4.8
-    reviewCount: 42
-    inStock: true
-    expectedShipping: "5-7 business days"
-    specifications: [
-      { name: "Channels", value: "32 input channels" }
-      { name: "Faders", value: "16 motorized faders" }
-      { name: "Preamps", value: "24 premium mic preamps" }
-      { name: "Sampling Rate", value: "Up to 96kHz" }
-      { name: "EQ", value: "4-band parametric per channel" }
-      { name: "Dynamics", value: "Compressor/Gate on all channels" }
-      { name: "Effects", value: "8 stereo effects processors" }
-      { name: "Recording", value: "64-channel USB interface" }
-
-
-  if (!equipment) {
-    return (
-      <>
-        <Header />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
-              <h1 className="text-3xl font-bold text-white mb-4">Equipment Not Found</h1>
-              <p className="text-zion-slate-light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </>
-    )
-  }
-  const handleAddToCart = () => {
-
-=======
-    setIsAdding(true);
-    setIsAdding(true),
-    
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),

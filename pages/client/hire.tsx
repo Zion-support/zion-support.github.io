@@ -246,7 +246,6 @@ export default function ClientHirePage() {
             className='px-4 py-2 rounded bg-indigo-600 text-white'
           >
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       <FeedbackModal
@@ -283,9 +282,6 @@ export default function ClientHirePage() {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
           <div className="text-sm">Offer ID: {result.id}</div>

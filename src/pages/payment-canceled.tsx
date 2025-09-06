@@ -22,16 +22,9 @@ import { useRouter } from 'next/router'; // Changed from useNavigate
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 export default function PaymentCanceled() {
-          <Button 
-            variant="outline";
-            onClick={() => router.push('/dashboard')} // Changed to router.push;
-            className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';
-export default function PaymentCanceled() {;
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   const router = useRouter(); // Changed from navigate
   return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>

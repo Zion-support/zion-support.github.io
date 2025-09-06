@@ -14,39 +14,37 @@ export interface Testimonial {
 }
 =======
 interface ServiceLandingTemplateProps {
-  title: string;
-  subtitle: string;
-  heroImage?: string;
-  description: string;
-  benefits: Benefit[];
-  testimonials: Testimonial[];
-  ctaText: string;
-import React from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
-export interface Benefit {
-  title: string,
-  description: string,
-  icon?: React.ReactNode
-import React from 'react';
-export interface Benefit {
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
-}
-export interface Testimonial {
-
-  name: string;
-  role?: string;
-  text: string;
-  avatar?: string;
-
-}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ServiceLandingTemplateProps {
 
+=======
+  title: string;
+  subtitle: string;
+  description: string;
+  benefits: Benefit[];
+  features?: string[];
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
+  ctaLink: string
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+  icon?: React.ReactNode;
+}
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
+
+
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -74,9 +72,9 @@ interface ServiceLandingTemplateProps {;
   testimonials: Testimonial[],;
   ctaText: string,;
   ctaLink: string;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
@@ -110,8 +108,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 }) => {
   ctaLink}) => {
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">

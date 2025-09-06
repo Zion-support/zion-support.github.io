@@ -1037,7 +1037,6 @@ function UltraFuturisticNavigation2034() {
                     {link.name}
                   </Link>
                 ))}
-<<<<<<< HEAD
                 {/* Mobile Services Accordion */}
                 {serviceCategories.map(category => (
                   <div
@@ -1065,20 +1064,6 @@ function UltraFuturisticNavigation2034() {
                         activeDropdown === category.title ? 'rotate-180' : ''
                       }`} />
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
-            >
-              <div className="px-4 py-6 space-y-4">
-                {quickLinks.map((link) => (
-
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (

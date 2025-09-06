@@ -624,8 +624,6 @@ monitor.monitorPerformance();"
 =======
 
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
@@ -713,9 +711,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       this.log("✅ Changes committed successfully");
       return true} catch (error) {
@@ -756,9 +751,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
         this.log(`✅ Created feature branch: ${featureBranch}`);
       }
 
-=======
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

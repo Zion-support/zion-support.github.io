@@ -36,11 +36,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </DialogHeader>
         <Separator className="my-4" />
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-        
-        <Separator className="my-4" />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<<<<<<< HEAD
 
 
           <Card>
@@ -60,7 +55,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </Card>
 
           
-<<<<<<< HEAD
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -77,6 +71,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             </CardContent>
           </Card>
         </div>
+<<<<<<< HEAD
 
     <Dialog open={isOpen} onOpenChange={(open,) => !open && onClose()}>;
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;

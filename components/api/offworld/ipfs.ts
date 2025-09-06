@@ -6,7 +6,6 @@ import {
   publishManifesto,
   OFFWORLD_TOPICS,;
 } from '@/utils/offworld/ipfs';
-<<<<<<< HEAD
 
 import {
   addJSON
@@ -51,8 +50,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return res && res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -14,6 +14,10 @@ export function PartnerLeaderboard() {
 
 
     },
+=======
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     {
       id: "2"
       rank: 2
@@ -22,6 +26,7 @@ export function PartnerLeaderboard() {
       referrals: 145
       earnings: 3625
       badges: ["silver"]
+<<<<<<< HEAD
     {
       id: "5",
       rank: 5,

@@ -17,7 +17,6 @@ interface PricingSuggestionBoxProps {
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
 
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -109,17 +108,11 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </span>
         </div>
 
-
-
-          <span className="text-sm text-muted-foreground ml-1">
-            {rateType === "hourly" ? "/hour" : " total"}
-          </span>
-        </div>
-
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
         </div>
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   )
 
 
@@ -127,6 +120,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 };
 "  );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 

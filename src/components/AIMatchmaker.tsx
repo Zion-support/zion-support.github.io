@@ -8,14 +8,19 @@ import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
-interface AIMatchmakerProps {
-  serviceType?: string
-  onMatchSelect?: (match: any,) => void
-  className?: string
-}
+=======
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+
+
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
+  const [query, setQuery] = useState(""),
+  const [isMatchmaking, setIsMatchmaking] = useState(false),
+  const [matches, setMatches] = useState([] as MatchResult[]),
+  const [hasSearched, setHasSearched] = useState(false),
+
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -53,90 +58,6 @@ interface AIMatchmakerProps {
         variant: "destructive"}),
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      // Set empty matches to show no results found UI
-      setMatches([])
-import { useState } from 'react';
-import { toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { AIMatchingResults } from '@/components / AIMatchingResults';
-import { find_matches, MatchResult } from '@/lib / ai - matchmaking';
-import { Textarea } from '@/components / ui / textarea';
-import { Sparkles, Search } from 'lucide-react';
-import { log_info, logErrorToProduction } from '@/utils / production_logger';
-interface AIMatchmakerProps {
-  service_type?: string;
-onMatchSelect?: (match: any) => void;
-class_name?: string;
-}if () {) {
-  $2
-}
-  toast ({
-  return;
-}setIsMatchmaking (true);
-setHasSearched (true);
-service_type;
-3);
-}catch (error) {';
-  logErrorToProduction ('Error during AI matching:', {
-  data: error;
-});
-toast ({
-  //Set empty matches to show no results found UI set_matches ([]);
-}finally {
-  setIsMatchmaking (false) ; import { log_info, logErrorToProduction } from '@/utils / production_logger';
-interface AIMatchmakerProps {
-  service_type?: string,
-  onMatchSelect?: (match: any, ) => void,
-  class_name?: string;
-}
-export /**
- * AIMatchmaker - Function description
- */
-function AIMatchmaker() {
-  const [query, set_query] = useState ('');
-  const [is_matchmaking, setIsMatchmaking] = useState (false);
-  const [matches, set_matches] = useState ([] as MatchResult[]);
-  const [has_searched, setHasSearched] = useState (false);
-  const handle_search = async () => {
-    if () {) {
-  $2
-}
-      toast ({
-        title: 'Please enter a description',
-        description: "Tell us what you're looking for so we can find matches.",
-        variant: 'destructive',
-      });
-      return;
-      logErrorToProduction ('Error during AI matching:', { data: error });
-      toast ({
-        title: 'Matching Error',
-        description:;
-          "We couldn't find matches for your request. Please try again.",
-        variant: 'destructive',
-      });
-      // Set empty matches to show no results found UI;
-      set_matches ([]);
-    } finally {
-      setIsMatchmaking(false)
-    }
-  }
-  const handleItemSelect = (item: any) => {    if (onMatchSelect) {
-      // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id)
-      if (matchResult) {
-        onMatchSelect(matchResult)
-      }
-    }
-  }
-  // Extract just the items from each MatchResult
-  const matchItems = matches.map(match => match.item)
-    >
-      <CardHeader className='pb-2'>
-        <CardTitle className='flex items-center text-white'>
-          <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
-
-<<<<<<< HEAD
         variant: "destructive"}),
       return
     }
@@ -167,6 +88,7 @@ function AIMatchmaker() {
         description: "We couldn't find matches for your request. Please try again.",
         variant: "destructive"}),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       // Set empty matches to show no results found UI
       setMatches([])
     } finally {
@@ -189,6 +111,7 @@ function AIMatchmaker() {
 <<<<<<< HEAD
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
 
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
@@ -248,12 +171,6 @@ function AIMatchmaker() {
 
           {hasSearched && (;
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-              matches={matchItems}
-              onSelectMatch={handleItemSelect}
-              isLoading={isMatchmaking}
-              serviceType={serviceType}
 <<<<<<< HEAD
 
 

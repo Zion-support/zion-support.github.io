@@ -45,27 +45,22 @@ export function MobileHeader({
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      className
-    )}>
-      <div className="flex items-center justify-between h-14 px-4">
-        <div className="flex items-center">
-          {showBack && (
-
-            >
-              <ChevronLeft className="h-5 w-5" />
-              <span className="sr-only">Back</span>
-            </Button>
-interface MobileHeaderProps {;
-  title: string;  showBack?: boolean;  title: string,;
-            >
-              <Bell className="h-5 w-5" />
-              <span className="sr-only">Notifications</span>
-            </Button>
-          )}
-          {showSettings && (
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               variant="ghost"
+=======
+
+          {showSettings && (;
+            <Button variant='ghost' size='icon' onClick={onSettingsClick}>;
+              <Settings className='h-5 w-5' />;
+              <span className='sr-only'>Settings</span>;
+
+            <Button 
+              <span className='sr-only'>Settings</span>            </Button>            <Button 
+            <Button 
+            <Button 
+              <span className='sr-only'>Settings</span>            </Button>            <Button 
+            <Button 
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
               variant="ghost" 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -74,9 +69,4 @@ interface MobileHeaderProps {;
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
-<<<<<<< HEAD
-;
-}
-}
-}
 <<<<<<< HEAD

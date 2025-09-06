@@ -1143,7 +1143,6 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.'
     features: [
-<<<<<<< HEAD
 
       'AI suggestions and variants',
       'Tone and length tuning',
@@ -1225,9 +1224,6 @@ export const realMarketServices: RealMarketService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,

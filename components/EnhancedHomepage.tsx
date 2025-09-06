@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -44,11 +43,6 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 visible: {

@@ -206,7 +206,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           animate={{
             rotate: -360
             scale: [1, 0.9, 1];
-<<<<<<< HEAD
             opacity: [0.3, 0.6, 0.3]
           }}
           transition={{
@@ -225,16 +224,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             repeat: Infinity,
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        {/* Floating Circles */}
-        <motion&& motion.div
-          className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
-          animate={{
-
-            y: [0, -20, 0],
-            opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4],          }}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           }}
           transition={{

@@ -31,7 +31,6 @@ serve(async (req) => {
   try {
     const { applicationId } = await req.json();
 
-<<<<<<< HEAD
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
@@ -101,11 +100,6 @@ serve(async (req) => {
 
         .eq("id", application.resume_id)
 
-=======
-        .single();
-        .single(),
-        
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       if (resumeError) {
         console && console.error("Error fetching resume:", resumeError)
       } else if (resume) {

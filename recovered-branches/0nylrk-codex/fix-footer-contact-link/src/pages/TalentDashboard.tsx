@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
@@ -176,10 +175,6 @@ function TalentDashboardContent() {;
                 </div>;
               </CardContent>;
             </Card>;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />

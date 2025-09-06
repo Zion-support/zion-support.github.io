@@ -246,7 +246,6 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
               2025 Comprehensive Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -435,10 +434,6 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

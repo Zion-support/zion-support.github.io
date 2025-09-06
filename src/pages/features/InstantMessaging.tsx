@@ -1,5 +1,4 @@
 
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     '@type': 'WebPage',;
     name: 'Instant Messaging',;
@@ -18,12 +17,6 @@ import { GradientHeading } from "@/components/GradientHeading";
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
@@ -120,16 +113,6 @@ export default function InstantMessaging() {
             </div>
           </div>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
-              <Link href="/open-app">Start Chatting</Link>
-            </Button>
-          </div>
-        </div>
-      </main>
-    </>
-  )
-<<<<<<< HEAD
 ;
 
 import React from "react",;
@@ -178,7 +161,10 @@ export default function InstantMessaging() {;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

@@ -47,6 +47,34 @@ export function WorkExperienceItemForm({
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+=======
+
+import { useState } from 'react';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { use_form } from 'react - hook - form';
+import { z } from 'zod';
+import { WorkExperience } from '@/types / resume';
+import { Button } from '@/components / ui / button';
+import { Calendar } from '@/components / ui / calendar';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components / ui / popover';
+import { Textarea } from '@/components / ui / textarea';
+import { cn } from '@/lib / utils';
+import { Switch } from '@/components / ui / switch';
+import { format } from 'date - fns';
+
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -132,8 +160,8 @@ export function WorkExperienceItemForm({
   },
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
@@ -364,74 +392,27 @@ export function WorkExperienceItemForm({;
 
             <FormField
               control={form && form.control}
-=======
-              name='location'
-              render={({ field }: { field: any }) => (                <FormItem>;
-                  <FormLabel>Location</FormLabel>;
-                  <FormControl>;
-                    <Input
-                      placeholder='e && e.g. New York, NY (Remote)'
-  return (
-    <>;
-      <Form {...form}>;
-        <form;
-          on_submit={form.handle_submit (handleFormSubmit)}
-          className='space - y-6';
-        >;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-            <FormField;
-              control={form.control}
-              name='company_name';
-              render={({ field }: { field: any }) => (                <FormItem>;
-                  <FormLabel > Company Name</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder='e.g. Acme Corporation' {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-
-            />;
-              name="role_title"
-              render={({ field }: { field: any }) => (
-                <FormItem>
-                  <FormLabel>Role Title</FormLabel>
-                  <FormControl>
-                    <Input placeholder="e.g. Senior Developer" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <FormField
-              control={form.control}
-              name='location'
-              render={({ field }: { field: any }) => (                <FormItem>
-
-
-            <FormField
-
-                </FormItem>)}
-              control={form.control}
-              name="location"
-              render={({ field }: { field: any }) => (
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <FormItem>
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                  <FormLabel>Location</FormLabel>
-                  <FormControl>
-                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+=======
+            />;
+            <FormField;
+              control={form.control}
+              name="is_current"
+              render={({ field }: { field: any }) => (
+                <FormItem className="flex flex-col">
+                  <FormLabel>Current Position</FormLabel>
+                  <div className="flex items-center gap-2 h-10">
+                    <Switch
+                      aria-label="Current position"
+                      checked={field.value}
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+                      onCheckedChange={field.onChange}
+                      id="current-position"
+                    />
+                    <label htmlFor="current-position" className="text-sm text-muted-foreground">
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                       I currently work here
                     </label>
                   </div>
@@ -446,23 +427,118 @@ export function WorkExperienceItemForm({;
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
+=======
+                          variant={'outline'}
+                          className={cn(
+                            'w-full pl-3 text-left font-normal'
+                            !field.value && 'text-muted-foreground'
+                          )}                        >
+                          variant={"outline"}
+                          className={cn(
+                            "w-full pl-3 text-left font-normal",
+                            !field.value && "text-muted-foreground"
+                          )}
+                        >
+
+                          {field.value ? (
+                            format(field.value, "MMM yyyy")
+                          ) : (
+                            <span>Select date</span>
+                            'w-full pl-3 text-left font-normal',
+                            !field && field.value && 'text-muted-foreground'
+                          )}>;
+                          {field && field.value ? (;
+                            format(field && field.value, 'MMM yyyy');
+                          ) : (;
+                            <span>Select date</span>;
+                          )}
+
+                </FormItem>)}
+            />;
+          </div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+            <FormField;
+              control={form.control}
+              name='start_date';
+              render={({ field }: { field: any }) => (
+                <FormItem className='flex flex - col'>                  <FormLabel > Start Date</FormLabel>;
+                  <Popover>;
+                    <PopoverTrigger as_child>;
+                      <FormControl>;
+                        <Button;
+                          variant={'outline'}
+                          className={cn (
+                            'w - full pl - 3 text - left font - normal',
+                            !field.value && 'text - muted - foreground')}                        >;
+                          {field.value ? (
+                            format (field.value, 'MMM yyyy')) : (
+                            <span > Select date</span>)}
+                          <CalendarIcon;
+                            className='ml - auto h - 4 w - 4 opacity - 50';
+                            aria - hidden='true';
+
+                          />;
+                        </Button>;
+                      </FormControl>;
+                    </PopoverTrigger>;
+
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
+                        </Button>
+                      </FormControl>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <Calendar
+                        mode='single'
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        initialFocus
+                        captionLayout='dropdown-buttons'
+                        fromYear={1990}
+                        toYear={new Date().getFullYear()}                      />
+                    </PopoverContent>
+                  </Popover>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {!watchIsCurrent && (
+              <FormField
+                control={form.control}
+                name='end_date'
+                render={({ field }: { field: any }) => (
+                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>
+                        mode="single"
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        initialFocus
+                        captionLayout="dropdown-buttons"
+                        fromYear={1990}
+                        toYear={new Date().getFullYear()}
+                      />;
+
+                    </PopoverContent>;
+                  </Popover>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+
+            />;
+            {!watchIsCurrent && (;
+
+              <FormField
+                control={form && form.control}
+                name='end_date'
+                render={({ field }: { field: any }) => (;
+                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>;
+                    <Popover>;
+                      <PopoverTrigger asChild>;
+                        <FormControl>;
+                          <Button
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
-=======
-                            variant={'outline'}
-                            className={cn(
-                              'w-full pl-3 text-left font-normal'
-                              !field.value && 'text-muted-foreground'
-                            )}                          >
-                            variant={"outline"}
-                            className={cn(
-                              "w-full pl-3 text-left font-normal",
-                              !field.value && "text-muted-foreground"
-                            )}
-                          >
-<<<<<<< HEAD
 
                             {field.value ? (
                               format(field.value, "MMM yyyy")
@@ -694,13 +770,3 @@ setIsEnhancementDialogOpen (false);
   ...field
 }/> </FormControl> <FormMessage /> </FormItem>) "
 <<<<<<< HEAD
-          enhancementType: "work-description",
-          content: form.getValues("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent={form.getValues("description") || ""}
-      />
-    </>
-  )
-}
-;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

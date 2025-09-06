@@ -46,7 +46,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
 
   );
   const submit = async () => {;
@@ -107,16 +106,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 
   return (
 
-=======
-    <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
-      <div className="text-sm font-medium mb-2">Was this answer useful?</div>
-      {submitted ? (
-=======
-    }
-  }
-=======
-  };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (

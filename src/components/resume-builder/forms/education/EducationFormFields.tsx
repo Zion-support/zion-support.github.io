@@ -148,11 +148,17 @@ function EducationFormFields() {
             <FormItem>
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-              <FormLabel>Field of Study</FormLabel>
-          )}
-        />
+=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        />;
+
+
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          <FormField
+
+            control={form.control}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
@@ -176,16 +182,6 @@ function EducationFormFields() {
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                   <FormControl>
-                    <Checkbox
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
-                  </FormControl>
-                  <div className="space-y-1 leading-none">
-                    <FormLabel>I am currently studying here</FormLabel>
-                  </div>
-                </FormItem>
-              )}
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>

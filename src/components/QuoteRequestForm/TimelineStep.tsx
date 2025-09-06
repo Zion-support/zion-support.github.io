@@ -21,11 +21,6 @@ interface TimelineStepProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
-  return (
-
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -45,8 +40,3 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       initialFocus
                       className="p-3 pointer-events-auto"
 <<<<<<< HEAD
-
-                    />
-                  </PopoverContent>
-                </Popover>
-              </div>

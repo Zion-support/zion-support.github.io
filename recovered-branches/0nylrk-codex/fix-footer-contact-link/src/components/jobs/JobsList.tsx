@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
@@ -52,32 +51,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
   if (jobs && jobs.length === 0) {;
     return (
-=======
-          }
-        </p>
-        <Button asChild className="mt-4">
-          <Link to="/post-job">Post Your First Job</Link>
-        </Button>
-      </div>
-    )
-  }
-  const getStatusColor = (status: JobStatus) => {
-    switch (status) {
-      case "new": return "bg-blue-100 text-blue-800",
-      case "in_progress":
-        return "bg-yellow-100 text-yellow-800",
-      case "filled":
-        return "bg-green-100 text-green-800",
-      case "closed":
-        return "bg-gray-100 text-gray-800"
-      default:
-        return "bg-gray-100 text-gray-800"
-    }
-=======
-
-  },
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <div className="grid gap-6 md:grid-cols-2">

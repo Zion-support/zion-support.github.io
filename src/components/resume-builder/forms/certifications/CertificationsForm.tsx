@@ -220,12 +220,6 @@ export function CertificationsForm({
       {certifications.length > 0 && (
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      )}
-
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-<<<<<<< HEAD
-
 
 
 
@@ -252,16 +246,8 @@ export function CertificationsForm({
                     setEditingId(null),
                     setEditingId(null),
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                    form.reset({
-                      name: '',
-                      issuing_organization: '',
-                      issue_date: '',
-                      expiration_date: '',
-                      credential_id: '',
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
                   } else {
                     onBack()
 

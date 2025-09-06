@@ -11,13 +11,6 @@
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
-<<<<<<< HEAD
-        Contact;
-      </h3>;
-
-
-      
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       {email && (
         <div className="mb-4 text-zion-slate-light">

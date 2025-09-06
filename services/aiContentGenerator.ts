@@ -273,7 +273,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
     }
   }
 }
-<<<<<<< HEAD
 
 // Pricing tiers for the AI Content Generator
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -302,20 +301,6 @@ export const AI_CONTENT_PRICING = {
   enterprise: {
     name: 'Enterprise';
     price: 299;
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    period: '/month'
-    features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
-    ]
-<<<<<<< HEAD
-
-  }
-};
-  }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;
 // Pricing tiers for the AI Content Generator;

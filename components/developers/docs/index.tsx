@@ -98,7 +98,6 @@ export default function ApiDocsPage({ docs }: PageProps) {
     </DocsLayout>
   );
 }
-<<<<<<< HEAD
 
 ;
 type PageProps = {
@@ -139,15 +138,6 @@ function ApiDocsPage() {
             </div>)}
         </section>))}
     </DocsLayout>);
-=======
-            <div className='space-y-4 mt-4'>
-              {section.code.map((c, idx) => (
-                <CodeBlock key={idx} language={c.language}>
-                  {c.content}
-                </CodeBlock>              ))}            <div className="space-y-4 mt-4">
-              {section.code.map((c, idx) => (
-                <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

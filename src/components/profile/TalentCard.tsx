@@ -3,48 +3,6 @@ import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-      onViewProfile(talent.id)
-
-    }
-  }
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent) }
-      onRequestHire(talent)
-    if (onRequestHire) {
-      onRequestHire(talent)
-    }
-  }
-  const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved)
-    if (onToggleSave) {
-
-=======
-              {talent.profile_picture_url && !avatarError ? (
-                <Image
-                  src={talent.profile_picture_url}
-                  alt={talent.full_name |'Talent Avatar'}
-                  fill={true}                  style={{ objectFit: 'cover' }}
-                  className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
-                  priority={false}
-                />
-              ) : (
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
-                  onError={() => setAvatarError(true)}
-                  priority={false}                />
-              ) : (
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
-                  alt={talent.full_name |'Talent Avatar'}
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from "next/link",;
 import { TalentProfile } from "@/types/talent",;
@@ -108,9 +66,6 @@ export function TalentCard({;
                   priority={false}
                 />
               ) : (
-                />;
-              ) : (;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
                   onError={() => setAvatarError(true)}
@@ -172,19 +127,3 @@ export function TalentCard({;
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
-              >
-                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
-                <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
-              </Button>
-            </div>
-
-                size="sm"
-                variant="secondary"
-                onClick={handleRequestHire}
-<<<<<<< HEAD
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
-              >
-                Hire
-              </Button>
-            )}
-            <Button

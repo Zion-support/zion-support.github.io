@@ -659,60 +659,11 @@
     category: 'Robotics & Automation'
     price: {
 
-<<<<<<< HEAD
   return emergingTechServices2025.filter(service => service.popular);
 }
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
-=======
-    target_audience: [;
-      'Government agencies',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Defense contractors',
-      'Technology companies',
-      'Critical infrastructure',
-    ],
-    market_position:;
-      'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.',
-    competitors: [;
-      'Traditional communication security, Emerging quantum communication companies',
-    ],
-    tech_stack: [;
-      'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.',
-    roi: 'Organizations see 600% ROI through enhanced security and future - proof communications. Average payback period: 8 months.',
-    use_cases: [;
-      'Government communications',
-      'Financial transactions',
-      'Healthcare data transmission',
-      'Defense communications',
-      'Critical infrastructure',
-      'Research networks',
-    ],
-    integrations: [;
-      'Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure',
-    ],
-    support:;
-      '24 / 7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.',
-    compliance: [;
-      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
-    ],
-    link: 'https://ziontechgroup.com / quantum - communications',
-
-    icon: '📡',
-    color: 'from - blue - 500 to - indigo - 600',
-    popular: true,
-    launch_date: '2025 - 04 - 01',
-    customers: 150,
-    rating: 4 && 4.8,
-    reviews: 89,
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ];
 

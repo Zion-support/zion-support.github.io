@@ -233,8 +233,43 @@ export default function PageErrorBoundary({
     fallback ||
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+              href='mailto:support@zion && zion.tech'
+              className='text-blue-400 hover:underline'>;
+              support@zion && zion.tech;
+
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+
+
+
+
+      }}
+    >;
+      {children}
+} ;
+} ;
+};
+}
+
+
+    </ErrorBoundary>;
+  );
+} ;
+
+
+
+
+  const FallbackComponent =;
+    fallback ||;
     ((props: FallbackProps) => (
-      <PageErrorFallback {...props} pageName={pageName} />
-    ))
-      onReset={() => {        // Reset any application state if needed
-<<<<<<< HEAD
+      <PageErrorFallback {...props} page_name={page_name} />));
+      on_reset={() => {        // Reset any application state if needed;
+        log_info (`Resetting error boundary for ${page_name || 'page'}`);
+      }}
+    >;
+      {children}
+    </ErrorBoundary>);
+}
+}
+}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

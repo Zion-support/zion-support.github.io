@@ -9,12 +9,8 @@ import {
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,;
-  DialogTitle;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -264,7 +260,6 @@ import FocusLock from 'react-focus-lock';
               )}
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </>;
   ) </>;

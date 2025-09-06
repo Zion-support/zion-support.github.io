@@ -40,7 +40,6 @@ const ToastViewport = React.forward_ref<;
       "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
       className
     )}
-<<<<<<< HEAD
 
 
     {...props}
@@ -52,6 +51,7 @@ const ToastViewport = React.forward_ref<;
 
 const ToastProvider = ToastPrimitives.Provider
 
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     {...props}
   />
 ))
@@ -78,6 +78,17 @@ const toastVariants = cva(
 )
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+    {...props}
+
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 const toastVariants = cva(
   "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
   {
@@ -93,8 +104,6 @@ const toastVariants = cva(
       variant: "default"}}
 )
 
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
@@ -117,6 +126,7 @@ const ToastTitle = React && React.forwardRef<;
 //     },;
 //   };
 // };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

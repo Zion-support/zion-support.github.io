@@ -272,7 +272,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       console.error("Error submitting hire request:", error)
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
@@ -280,12 +279,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       console && console.error("Error submitting hire request:", error)
     } finally {
 
-=======
-      setIsSubmitting(false)
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;

@@ -118,9 +118,6 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-08T13:20:00Z",
     lastUpdated: "2023-12-15T08:30:00Z",
     category: "verification"
-  },
-  {
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
 import { Search, Filter } from 'lucide-react'
@@ -135,8 +132,6 @@ export default function SupportRequests() {
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
 
-  
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -264,14 +259,14 @@ export default function SupportRequests() {;
     if (categoryFilter && request.category !== categoryFilter) {;
       return false;
     }
-<<<<<<< HEAD
   // Count by status for the summary dashboard
   const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
   const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
   const totalCount = MOCK_SUPPORT_REQUESTS.length,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
@@ -353,14 +348,6 @@ export default function SupportRequests() {;
                 onValueChange={value => setPriorityFilter(value |null)}
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Priority' />
-              
-              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Priority" />
-<<<<<<< HEAD
 
                 </SelectTrigger>
                 <SelectContent>
@@ -375,14 +362,6 @@ export default function SupportRequests() {;
                 onValueChange={value => setCategoryFilter(value |null)}
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Category' />
-              
-              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category" />
-<<<<<<< HEAD
 
                 </SelectTrigger>
                 <SelectContent>
@@ -433,29 +412,3 @@ export default function SupportRequests() {;
               </CardContent>
             </Card>
           </TabsContent>
-=======
-          
-          <TabsContent value="ai-flagged" className="mt-6">
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
-              <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
-              <p className="text-zion-slate-light">
-                This tab shows issues that our AI system has identified as requiring human attention.
-              </p>
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="need-response" className="mt-6">
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
-              <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
-              <p className="text-zion-slate-light">
-                These support requests have been waiting for an agent response for over 24 hours.
-<<<<<<< HEAD
-
-              </p>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-    </>
-  )
-<<<<<<< HEAD

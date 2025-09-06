@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -178,11 +177,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-    res
-      .status(500)
-      .json({ error: "Internal error", details: e?.message |String(e) });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       status: 'PENDING'};
 

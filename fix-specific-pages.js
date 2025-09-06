@@ -114,7 +114,6 @@ function restorePage(pagePath) {;
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Function to fix specific corrupted pages
@@ -270,14 +269,6 @@ module.exports = {
 
 
   return results
-=======
-<<<<<<< HEAD
-module.exports = {
-
-  restorePage
-  fixSpecificPages
-  findBestBackup
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 ;

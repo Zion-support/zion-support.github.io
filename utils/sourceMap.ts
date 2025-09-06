@@ -2,7 +2,6 @@
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
-<<<<<<< HEAD
     nodes: []
     edges: []
   }
@@ -111,13 +110,6 @@ export function deployBasicTemplateForPath(
   }
 
   return { createdPaths, skippedPaths }
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { createdPaths, skippedPaths };
 
 }

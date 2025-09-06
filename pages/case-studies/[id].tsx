@@ -7,7 +7,6 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyPage() {
   const router = useRouter(),
   const { id } = router.query,
-<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -161,9 +160,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function CaseStudyPage(req, res) {
   try {

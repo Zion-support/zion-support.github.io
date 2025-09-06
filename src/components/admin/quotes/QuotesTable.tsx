@@ -41,13 +41,16 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  quotes
-  isArchived = false
-  isLoading
-  updateStatus
-  toggleArchive
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+
+
+  quotes,
+  isArchived = false,
+  isLoading,
+  updateStatus,
+  toggleArchive,
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   deleteQuote,
 
   onViewDetails
@@ -472,15 +475,3 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
   )
 }
 '"
-
-  );
-};
-'";
-
-
-        </TableBody>;
-      </Table>;
-    </div>;
-  );
-};
-<<<<<<< HEAD

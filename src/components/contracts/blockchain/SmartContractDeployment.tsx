@@ -123,7 +123,6 @@ export function SmartContractDeployment({;
     toast.success("Solidity contract downloaded")
   },
 
-<<<<<<< HEAD
 
   return (
     <Card className="w-full">
@@ -153,66 +152,6 @@ export function SmartContractDeployment({;
                 ...deploymentOptions;                deployToChain: checked
   },;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  const handleDownloadSolidity = () => {;
-    // Create a blob from the Solidity code;
-    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
-    const url = URL && URL.createObjectURL(blob);
-
-    // Create a temporary anchor to trigger download;
-    const a = document && document.createElement('a');
-    a && a.href = url;
-    a && a.download = 'ZionContract && ZionContract.sol';
-    document && document.body.appendChild(a);
-    a && a.click();
-
-    // Clean up;
-    URL && URL.revokeObjectURL(url);
-    document && document.body.removeChild(a);
-
-    toast && toast.success("Solidity contract downloaded");
-  };
-
-  return (
-    <Card className="w-full">;
-      <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <ShieldCheck className="h-5 w-5 text-primary" />;
-  const handleDownloadSolidity = () =>: any {
-    // Create a blob from the Solidity code;
-    const blob = new Blob ([solidity_code], { type: 'text / plain' }),
-    const url = URL.createObjectURL (blob);
-    // Create a temporary anchor to trigger download;
-    const array = document.create_element ('a');
-    a.href = url;
-    a.download = 'ZionContract.sol';
-    document.body.append_child (a);
-    a.click ();
-    // Clean up;
-    URL.revokeObjectURL (url);
-    document.body.remove_child (a);
-    toast.success ("Solidity contract downloaded");
-  }
-  return (
-    <Card className="w - full">;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <ShieldCheck className="h - 5 w - 5 text - primary" />;
-          Smart Contract Deployment;
-        </CardTitle>;
-        <CardDescription>;
-          Deploy your agreement as a smart contract for enhanced security and automation;
-        </CardDescription>;
-      </CardHeader>;
-      <CardContent className="space-y-6">;
-        <div className="space-y-4">;
-          <div className="flex items-center space-x-2">;
-            <Switch;
-              id="deploy-blockchain";
-              aria-label="Deploy to blockchain";
-              checked={deploymentOptions.deployToChain}
-              onCheckedChange={(checked) => setDeploymentOptions({;
-                ...deploymentOptions,;
-                deployToChain: checked;
 
 
       
@@ -237,6 +176,7 @@ export function SmartContractDeployment({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   })}
                 />
               </div>
@@ -260,7 +200,6 @@ export function SmartContractDeployment({;
                   value={deploymentOptions.walletAddress || ''}
 <<<<<<< HEAD
 
-=======
             />;
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
           </div>;

@@ -36,3 +36,9 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           />
         </Button>
       </div>
+      )}
+    </div>;
+  );
+};
+}
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

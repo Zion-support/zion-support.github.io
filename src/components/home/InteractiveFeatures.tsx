@@ -85,8 +85,6 @@ export function InteractiveFeatures({
                     : 'max-h-0 opacity-0 p-0'
                 )}              >
                 <CardContent className='text-sm text-zion-slate-light p-0'>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   'transition-all duration-300',
 
                   openIndex === index
@@ -115,17 +113,7 @@ export function InteractiveFeatures({
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                  <p>{feature.details}</p>
-                  <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
-                    <Link href={feature.link} className="flex items-center gap-1">
-                      Learn more <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </div>
-            </Card>
-          ))}
-<<<<<<< HEAD
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 export default InteractiveFeatures;
 ;
 }

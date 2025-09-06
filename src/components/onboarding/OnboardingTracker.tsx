@@ -1,3 +1,9 @@
+=======
+{/* Progress bar */}
+      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
+        <div 
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 import React from "react"
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils"
@@ -5,6 +11,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
   return (
+<<<<<<< HEAD
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-white">{title}</h3>
@@ -28,9 +35,9 @@ export function OnboardingTracker({;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Steps list */}
       <div className="space - y-3">;
@@ -75,9 +82,3 @@ export function OnboardingTracker({;
 }</div>) )
 }</div> </div>)
 }"}
-  step.link 
-}> </Link> </Button>) 
-}</div>) ) ;
-}</div> </div>) ;
-}"};
-<<<<<<< HEAD

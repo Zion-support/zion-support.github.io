@@ -16,15 +16,6 @@ export const optimizeHeadings = () => {
   console.log('Optimizing headings...');
 }
 origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-};
-};
-
-export const optimizeHeadings = () => {;
-  console.log('Optimizing headings...');
-};
-
-origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-
       telephone: '+1-555-0123',
       contactType: 'customer service'}};
 };

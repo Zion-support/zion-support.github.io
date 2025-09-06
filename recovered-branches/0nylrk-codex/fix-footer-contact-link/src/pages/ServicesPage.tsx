@@ -133,7 +133,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
@@ -142,12 +141,4 @@ import { TrustedBySection } from "@/components/TrustedBySection",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { Globe } from "lucide-react",;
-=======
-
-      <DynamicListingPage 
-        title="IT & AI Services"
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-        categorySlug="services"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -22,18 +22,8 @@ interface BundleInfo {
   const [shouldShow, setShouldShow] = useState(false)
   useEffect((,) => {
     // Only show in development or when explicitly enabled
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      localStorage.getItem('bundle-analyzer') === 'true'
-    setShouldShow(show)
-    if (!show) return;
-    setIsVisible(true)
-    collectBundleInfo()
-  }, [])
-      <div className="fixed bottom-20 right-4 z-50">
-        <Button
-
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
@@ -265,6 +255,7 @@ export function BundleAnalyzer() {;
 
             </>
           ) : (
+<<<<<<< HEAD
             <div className='text-xs text-muted-foreground'>
               {isCollecting
                 ? 'Analyzing bundle...'
@@ -278,10 +269,3 @@ export function BundleAnalyzer() {;
 } 
 
 }
-}
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-} ;
-<<<<<<< HEAD

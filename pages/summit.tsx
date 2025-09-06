@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 
 const partners: Partner[] = [ {
   name: 'Gov Partner'
@@ -231,43 +230,6 @@ setForm ({
       name: 'Alex Rivera',
       title: 'Head of Protocol Engineering',
 
-=======
-      avatar_url: '/favicon.svg',
-      bio: 'Leading the architecture of ZionDAO and trust rails.',
-    },    {
-
-      name: 'Jordan Lee',
-      title: 'Zion Alumni | AI Fellow',
-      avatar_url: '/favicon.svg',
-      bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
-
-
-    setResult(null),;
-    try {;
-      const res = await fetch('/api/summit/register', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
-      });
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data?.error || 'Failed');
-      setResult({ ok: true });
-      setForm({ name: '', email: '', role: '', country: '' });
-    } catch (err: any) {;
-      setResult({ error: err?.message || 'Unexpected error' });
-    } finally {;
-      setSubmitting(false);    }
-
-      setResult({ ok: true }),
-      setForm({ name: '', email: '', role: '', country: '' })
-    } catch (err: any) {
-      setResult({ error: err?.message || 'Unexpected error' })
-    } finally {
-      setSubmitting(false)
-=======
-    }
-  };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
@@ -445,7 +407,6 @@ setForm ({
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
 =======
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >;
@@ -479,13 +440,6 @@ setForm ({
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm mb-1'>Name</label>;
-=======
-
-      <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-        <h2 className="text-2xl font-bold mb-4">Register</h2>
-        <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <label className="block text-sm mb-1">Name</label>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

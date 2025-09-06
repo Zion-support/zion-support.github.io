@@ -26,8 +26,6 @@ export default function MarketPricing() {;
 pricingAnalysis: {
   lowEnd: '$0.005 per 1K tokens', midRange: '$0.015 per 1K tokens', highEnd: '$0.025 per 1K tokens', ourPosition: 'Mid-range with premium features'   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import React, { useState } from 'react';
@@ -594,52 +592,5 @@ export default function MarketPricing() {;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-=======
-
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className="text-4xl md: text-5xl font-bold mb-6">;
-              Ready to Compete in the Market?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8">;
-              Our competitive pricing and unique AI consciousness features give you the edge ;
-              you need to succeed in today's rapidly evolving technology landscape.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link
-                href="/pricing"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">;
-                View Our Pricing;
-                <ArrowRight className="w-5 h-5 ml-2" />;
-              </Link>;
-              <Link
-                href="/contact"
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300">;
-                Get Custom Quote;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-    </div>;
-  );
-};
-
-
-export default MarketPricing;export default MarketPricing;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-};
-
-=======
-  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
-
-
-};
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

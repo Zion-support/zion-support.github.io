@@ -876,7 +876,6 @@ origin/automation-improvements-final
                   <li>Improve our services and develop new features</li>
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
-<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -887,61 +886,6 @@ origin/automation-improvements-final
                   We do not sell, trade, or otherwise transfer your personal
                   information to third parties without your consent, except as
                   described in this policy.
-=======
-
-                <h2 className="text-2xl font-bold mb-6 mt-12">Information Sharing</h2>
-                <p className="mb-6">
-                  We do not sell, trade, or otherwise transfer your personal information to third parties 
-                  without your consent, except as described in this policy.
-origin/automation-improvements-final
-                </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
-                  We implement appropriate security measures to protect your
-                  personal information against unauthorized access, alteration
-                  disclosure, or destruction.
-                  We implement appropriate security measures to protect your personal information against 
-                  unauthorized access, alteration, disclosure, or destruction.
-origin/automation-improvements-final
-                </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
-                  You have the right to access, update, or delete your personal
-                  information. You may also opt out of certain communications
-                  from us.
-                  You have the right to access, update, or delete your personal information. You may also 
-                  opt out of certain communications from us.
-origin/automation-improvements-final
-                </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
-                <p className="mb-6">
-                  If you have any questions about this Privacy Policy, please
-                  contact us at:
-                </p>
-
-                  If you have any questions about this Privacy Policy, please contact us at:
-                </p>
-                
-origin/automation-improvements-final
-                </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
-                <p className="mb-6">
-                  We implement appropriate security measures to protect your
-                  personal information against unauthorized access, alteration,
-                  disclosure, or destruction.
-                </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
-                <p className="mb-6">
-                  You have the right to access, update, or delete your personal
-                  information. You may also opt out of certain communications
-                  from us.
-                </p>
-                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
-                <p className="mb-6">
-                  If you have any questions about this Privacy Policy, please
-                  contact us at:
-                </p>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -961,7 +905,6 @@ origin/automation-improvements-final
                   </div>
                 </div>
 =======
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 <p className="text-sm text-gray-600 mt-8">
@@ -1321,11 +1264,6 @@ origin/main
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
->>>>>>> origin/main
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

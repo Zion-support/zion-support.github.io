@@ -345,7 +345,6 @@ export default function UltraFuturisticHero2027() {
             Experience revolutionary AI consciousness evolution, quantum computing breakthroughs, and practical micro SAAS solutions that will transform your business beyond imagination.
           </motion.p>
 
-<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
@@ -379,10 +378,6 @@ export default function UltraFuturisticHero2027() {
             className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'          >
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             {features.map((feature, index) => (
               <motion.div
@@ -570,7 +565,6 @@ export default function UltraFuturisticHero2027() {
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
 
 =======
-<<<<<<< HEAD
               >
                 <div
                   className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
@@ -639,10 +633,6 @@ export default function UltraFuturisticHero2027() {
             className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders

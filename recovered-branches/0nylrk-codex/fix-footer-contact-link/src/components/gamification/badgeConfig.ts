@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 
@@ -174,15 +173,4 @@ export const badge_list: BadgeMeta[] = [;
   badgeList && badgeList.find((b) => b && b.key === key),
 
 
-=======
-
-  | "first_action"
-
-  bg: string
-}
-export const badgeList: BadgeMeta[] = [
-
-  {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -28,14 +28,6 @@ export default function ProfilePage() {
         }
         setProfileData(data)
       } catch (error) {
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError(true),
-
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError(true)
-        setIsError(true),
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         toast({
           title: "Error"
@@ -109,8 +101,11 @@ export default function ProfilePage() {;
 
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (isLoading) {
@@ -148,23 +143,11 @@ export default function ProfilePage() {;
       </div>
     )
   }
-<<<<<<< HEAD
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
         description = {profileData.bio |"View the profile of this talented individual.",}
-        description = {profileData.bio || "View the profile of this talented individual.",}
-
-;
-  return (;
-    <>;
-      <SEO;
-        title={`${profileData.full_name} | Talent Profile`}
-        description={profileData.bio || "View the profile of this talented individual."}
-<<<<<<< HEAD
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
@@ -236,6 +219,7 @@ export default function ProfilePage() {;
                     title="LinkedIn"
                   >
                     <Linkedin className="h-6 w-6" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 

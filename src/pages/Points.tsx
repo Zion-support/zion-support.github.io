@@ -6,18 +6,8 @@ import {
 =======
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-  CardDescription,;
-  CardHeader;
-  CardTitle;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -128,6 +118,59 @@ if (return) {
       await fetchLedger();
     } finally {
       setRedeeming(false);    }      });
+=======
+      await fetchLedger();
+    } finally {;
+
+      setRedeeming(false);
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
+      });
+      await fetchLedger()
+    } finally {
+      setRedeeming(false)
+
+
+
+    }
+  }
+
+
+      set_redeeming (false);    }      });
+      await fetch_ledger ();
+    } finally {
+      set_redeeming (false);
+    }
+  }
+  const earning_opportunities = [;
+    {
+      icon: <Users className='h - 5 w - 5' />,
+
+      title: 'Sign Up & Profile Setup',
+      description: 'Complete your profile and verify your email',
+      points: '50 pts',
+      action: is_authenticated ? '✓ Completed' : 'Get Started',
+    },
+
+      icon: <ShoppingBag className='h - 5 w - 5' />,
+
+
+      icon: <Users className='h-5 w-5' />,
+      title: 'Sign Up & Profile Setup',
+      description: 'Complete your profile and verify your email',
+      points: '50 pts',
+      action: isAuthenticated ? '✓ Completed' : 'Get Started',
+    },
+      icon: <ShoppingBag className='h-5 w-5' />,
+      title: 'First Purchase',
+      description: 'Make your first purchase on the marketplace',
+      points: '100 pts',
+      action: 'Browse Marketplace',
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
       icon: <Users className='h-5 w-5' />
       title: 'Sign Up & Profile Setup'
       description: 'Complete your profile and verify your email'
@@ -179,14 +222,6 @@ if (return) {
     },
     {
 
-=======
-      id: 'coupon25'
-      title: '$25 Off Coupon'
-      cost: 2000
-      category: 'Discount'
-    }
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },
     {
@@ -198,7 +233,6 @@ if (return) {
     },
     {
 =======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },  ];
 
   const upcomingRewards = [
@@ -263,11 +297,14 @@ if (return) {
     {
       icon: <Users className="h-5 w-5" />,
       title: "Refer Friends",
-      description: "Invite friends to join Zion marketplace",
-      points: "200 pts per referral",
-      action: "Share Referral Link"
-    }
-<<<<<<< HEAD
+
+
+
+  if (!isAuthenticated) {;
+    return (
+
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
   if (!isAuthenticated) {
     return (
@@ -283,7 +320,6 @@ if (return) {
             <p className="text-xl text-muted-foreground mb-6">
               Earn points for every action you take and redeem them for exclusive rewards!
             </p>
-<<<<<<< HEAD
 
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
@@ -310,35 +346,12 @@ if (return) {
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
-=======
-          <CardContent className='space-y-4'>
-            {earningOpportunities.map((opportunity, index) => (
-              <div
-                key={index}
-                className='flex items-start gap-3 p-3 rounded-lg border'
-              >
-                <div className='text-primary mt-1'>{opportunity.icon}</div>
-                <div className='flex-1'>
-                  <h4 className='font-medium'>{opportunity.title}</h4>
-                  <p className='text-sm text-muted-foreground'>
-                    {opportunity.description}
-                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-          <CardContent className="space-y-4">
-            {earningOpportunities.map((opportunity, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-
-          <CardContent className="space-y-4">
-            {earningOpportunities.map((opportunity, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                 <div className="text-primary mt-1">{opportunity.icon}</div>
                 <div className="flex-1">
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
-<<<<<<< HEAD
 
               <Gift className="h-5 w-5" />
               Available Rewards
@@ -353,9 +366,6 @@ if (return) {
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
 
-=======
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-                      {redeeming ? 'Processing...' : 'Redeem'}
 <<<<<<< HEAD
             ))}
           </CardContent>

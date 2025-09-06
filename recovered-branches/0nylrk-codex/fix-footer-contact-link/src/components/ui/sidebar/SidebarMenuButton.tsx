@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 import React, { forwardRef } from "react";
 import {Slot} from "@radix-ui/react-slot";
 import {cn} from "@/lib/utils";
@@ -19,13 +18,6 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
   asChild?: boolean
 }
 
-=======
-
-export const SidebarMenuButton = forwardRef<HTMLButtonElement SidebarMenuButtonProps>(
-  ({ className, children, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button",
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return (
       <Comp
         className={cn(

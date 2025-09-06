@@ -350,7 +350,6 @@ export default function UltraFuturisticBackground2035() {;
             }}
               ease: 'easeInOut',            }}
 
-<<<<<<< HEAD
               ease: 'easeInOut',            }}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -396,40 +395,6 @@ export default function UltraFuturisticBackground2035() {;
 
         />
 
-=======
-        />;
-
-        <motion&& motion.div
-
-          className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
-          animate={{
-
-            scaleX: [0, 1, 0]
-            opacity: [0, 1, 0],          }}          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent"
-          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
-
-          animate={{
-            scaleX: [0, 1, 0]
-            opacity: [0, 1, 0]
-          }}
-          transition={{
-
-        />;
-        <motion&& motion.div
-
-          className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'
-          animate={{
-            scaleX: [0, 1, 0]
-            opacity: [0, 1, 0],          className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"
-          animate={{
-            scaleX: [0, 1, 0]
-            opacity: [0, 1, 0]
-
-        />;
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -451,7 +451,6 @@ import {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
-<<<<<<< HEAD
 
               View Our Services
             </Button>
@@ -468,7 +467,3 @@ import {
       </section>;
 
 
-=======
-<<<<<<< HEAD
-    </>);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

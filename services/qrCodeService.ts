@@ -223,7 +223,6 @@ class QRCodeService {
         description: 'Quick dial with pre-filled number'
         options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'personal'
-<<<<<<< HEAD
 
       }
     ]
@@ -415,9 +414,6 @@ if (.length === 0) {) {
       wifiString += 'H: true,'
     }
     
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     wifiString += ;
     return wifiString
   }

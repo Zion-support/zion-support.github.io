@@ -1,5 +1,4 @@
 =======
-<<<<<<< HEAD
 export type CuttingEdgeAIService = {
       'CBT-guided prompts',
   launch_date?: string;
@@ -130,10 +129,6 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
 
 		realService: true
-=======
-<<<<<<< HEAD
-	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ];
 ;

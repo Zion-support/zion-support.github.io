@@ -364,30 +364,7 @@ if (break) {
                 {/* Time Window */}
 
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                {/* Time Window */}
-                <div>
-                  <label className='block text-sm font-medium text-gray-300 mb-3'>
-                    Time Window
-                  </label>
-                  <div className='grid grid-cols-2 gap-3'>
-                    {timeWindows.map(window => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
-                    Time Window
-                  ">
-                    Time Window
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    {timeWindows.map((window) => (
-                    {timeWindows.map(window => (                      <button
-
-                      <button
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         key={window.value}

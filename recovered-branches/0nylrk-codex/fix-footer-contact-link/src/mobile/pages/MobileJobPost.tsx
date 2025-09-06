@@ -335,7 +335,6 @@ function DetailsStep() {;
     </div>;
   );
 }
-<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
@@ -377,26 +376,6 @@ function DetailsStep() {;
           {skills.map((skill) => (
             <Badge
               key={skill}
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-              variant="secondary"
-              className="flex items-center gap-1 px-3 py-1"
-            >
-              {skill}
-<<<<<<< HEAD
-
-;
-function RequirementsStep() {;
-  const [skills, setSkills] = useState<string[]>([;
-    "React", "TypeScript", "Node.js";
-  ]),;
-  const [newSkill, setNewSkill] = useState(""),;
-  const addSkill = () => {;
-    if (newSkill && !skills.includes(newSkill)) {;
-      setSkills([...skills, newSkill]),;
-      setNewSkill("");
-    }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   };
 
   const removeSkill = (skill: string) => {;
@@ -494,86 +473,11 @@ function RequirementsStep() {;
           placeholder="List the key responsibilities for this role" 
 
           rows={4}
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />;
       </div>;
     </div>;
   );
-=======
-
-}
-
-function BudgetStep() {
-  return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">Budget & Timeline</h2>
-      <div className="space-y-2">
-        <Label htmlFor="paymentType">Payment Type</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder="Select payment type" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="hourly">Hourly Rate</SelectItem>
-            <SelectItem value="fixed">Fixed Price</SelectItem>
-            <SelectItem value="salary">Salary</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="space-y-2">
-        <Label>Salary Range</Label>
-        <div className="flex gap-4 items-center">
-          <Input placeholder="Min" type="number" className="w-full" />
-          <span>to</span>
-          <Input placeholder="Max" type="number" className="w-full" />
-          <Select defaultValue="usd">
-            <SelectTrigger className="w-24">
-              <SelectValue placeholder="Currency" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="usd">USD</SelectItem>
-              <SelectItem value="eur">EUR</SelectItem>
-              <SelectItem value="gbp">GBP</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="deadline">Application Deadline</Label>
-        <Input type="date" id="deadline" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="startDate">Expected Start Date</Label>
-        <Input type="date" id="startDate" />
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="duration">Project Duration</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder="Select project duration" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="ltw">Less than a week</SelectItem>
-            <SelectItem value="ltm">Less than a month</SelectItem>
-            <SelectItem value="1-3m">1-3 months</SelectItem>
-            <SelectItem value="3-6m">3-6 months</SelectItem>
-            <SelectItem value="6m+">6+ months</SelectItem>
-            <SelectItem value="ongoing">Ongoing</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="additionalInfo">Additional Budget Information</Label>
-
-          rows={3}
-        />
-      </div>
-    </div>
-  )
-}
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
 function BudgetStep() {

@@ -998,60 +998,7 @@ import { Zap } from 'lucide-react';
         </div>
       </section>
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-      {/* Pricing Strategies */}
-      <section className='section-padding bg-gradient-cursor-accent'>;
-        <div className='container-cursor'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-              Pricing Strategy Analysis;
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-              Analysis of different pricing strategies used in the micro SaaS;
-              market and their implications for business success.;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
-            {pricingStrategies && pricingStrategies.map((strategy, index) => (;
-              <Card
-                key={index}
-                className='card-hover border-gradient-blue'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className='p-6'>;
-                  <h3 className='text-xl font-bold text-white mb-3'>;
-                    {strategy && strategy.strategy}
-                  </h3>;
-                  <p className='text-gray-300 mb-6'>{strategy && strategy.description}</p>;
-
-                  {/* Pros */}
-                  <div className='mb-4'>;
-                    <h4 className='text-sm font-semibold text-green-400 mb-2'>;
-                      Pros:;
-                    </h4>;
-                    <ul className='space-y-1 text-xs text-gray-300'>;
-                      {strategy && strategy.pros.map((pro, proIndex) => (;
-                        <li key={proIndex} className='flex items-start'>;
-                          <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {pro}              Pricing Strategy Analysis;
-            </h2>;
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-              Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.;
-            </p>;
-          </div>;
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-            {pricingStrategies && pricingStrategies.map((strategy, index) => (;
-              <Card
-                key={index}
-                className="card-hover border-gradient-blue"
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className="p-6">;
-                  <h3 className="text-xl font-bold text-white mb-3">{strategy && strategy.strategy}</h3>;
-                  <p className="text-gray-300 mb-6">{strategy && strategy.description}</p>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Pros */}
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>;

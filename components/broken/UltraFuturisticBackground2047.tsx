@@ -20,7 +20,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -74,23 +73,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
 
   }
 
-=======
-
-
-
-
-  return (
-    <>;
-      {/* Background Gradient */}
-
-      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-
-
-
-  return (
-    <>
-      {/* Background Gradient */}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Floating Geometric Shapes */}
@@ -208,7 +190,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
                   repeat: Infinity as any,
                   delay: i * 0.1,
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               />
@@ -262,9 +243,6 @@ const UltraFuturisticBackground2047: React.FC = () => {
         {/* Scanning Lines */}
         <motion&& motion.div
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 8,
             repeat: Infinity as any,
             ease: "linear"

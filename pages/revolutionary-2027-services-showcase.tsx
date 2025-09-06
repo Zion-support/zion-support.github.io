@@ -519,7 +519,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 className='flex items-center gap-2 text-cyan-400'
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
@@ -559,9 +558,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
             {/* Search Bar */}
             <div className='relative mb-6'>
               <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <input

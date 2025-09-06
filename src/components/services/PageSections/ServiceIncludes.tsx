@@ -1,3 +1,18 @@
+=======
+</div>
+            <div>
+              <h3 className="text-white font-medium">Transportation to Site</h3>
+              <p className="text-zion-slate-light">All travel costs to your location are included in the base price.</p>
+            </div>
+          </div>
+          <div className='flex items-start'>
+            <div className='mt-1 mr-4'>
+              <Check className='h-5 w-5 text-zion-cyan' />
+          
+          <div className="flex items-start">
+            <div className="mt-1 mr-4">
+              <Check className="h-5 w-5 text-zion-cyan" />
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
             </div>
@@ -232,8 +247,5 @@ function ServiceIncludes() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
-
-    </div>);
-}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -180,6 +180,30 @@ import {
             </Table>
           </div>
 
+=======
+
+
+
+          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
+            <div className="flex items-start">
+              <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
+              <p className="text-white">
+                <span className="font-bold">Total Annual Savings: </span>
+                <span className="text-green-400 font-bold text-xl">Up to 65%</span>
+                <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>
+              </p>
+            </div>
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
+
+              Calculate Your Savings
+
+              Calculate Your Savings
+
+            </Button>
+          </div>
+        </div>
+      </div>
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 import { CheckCircle2 } from 'lucide-react';
 import {;
   Table,;
@@ -334,8 +358,5 @@ export function ComparisonSection() {;
 
   );
 }
+<<<<<<< HEAD
 ;
-
-    </section>);
-}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1085,20 +1085,7 @@ function APITestingSuitePage() {
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 =======
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-              Simple Pricing
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Choose the API testing plan that best fits your development and
-              testing needs.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
-            </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the API testing plan that best fits your development and testing needs.
             </p>
@@ -1501,7 +1488,6 @@ function APITestingSuitePage() {
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
-<<<<<<< HEAD
 
               Schedule Demo
             </Button>
@@ -1522,12 +1508,6 @@ function APITestingSuitePage() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-}
-
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

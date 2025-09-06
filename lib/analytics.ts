@@ -20,7 +20,6 @@ export const trackEvent = (
   if (typeof window !== 'undefined' && window.gtag) {;
     window.gtag('event', eventName, properties);
   }
-<<<<<<< HEAD
 }
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -28,12 +27,6 @@ export const trackPageView = (url: string) => {
 
       page_path: url,;
       page_path: url,
-=======
-
-    });
-  }
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     });
   }
 };

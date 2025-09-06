@@ -24,7 +24,6 @@ export default async function handler(
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
-<<<<<<< HEAD
 ;
 export default async /**
  * handler - Function description
@@ -90,9 +89,4 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

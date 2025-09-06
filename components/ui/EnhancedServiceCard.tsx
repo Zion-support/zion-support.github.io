@@ -45,7 +45,6 @@ import {
   TrendingUp,
   Users,
   Clock,
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
@@ -108,9 +107,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       transition: {
         duration: 0.6,
 
-=======
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     >
       {/* Background Glow */}
       <div
@@ -134,7 +130,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           </motion.div>
         </div>
       )}
-<<<<<<< HEAD
 
       {/* Card Content */}
       <div className='relative p-6'>
@@ -348,12 +343,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             </span>
             <span className='text-xs text-cyan-400'>{service.marketSize}</span>
 
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </div>
           <div className='flex items-center justify-between mb-2'>
@@ -389,7 +378,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 =======
             {service.setupTime}
 
-<<<<<<< HEAD
           </div>
         </div>
           </div>;
@@ -454,17 +442,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-          </div>
-        </div>
-        {/* Action Buttons */}
-        <div className='flex gap-3'>
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <motion.a

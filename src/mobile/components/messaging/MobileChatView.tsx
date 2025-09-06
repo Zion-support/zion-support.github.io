@@ -94,35 +94,28 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           
           <div className="flex items-center flex-1 gap-3 mx-2">
-<<<<<<< HEAD
+=======
+              aria-label='Start audio call'>;
+              <Phone className='h-5 w-5' />;
+            </Button>;
 
-            <Avatar>
-              <AvatarImage src={contact.avatar} alt={contact.name} />
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
-            </Avatar>
-            <div>
-
-              variant="ghost"
-              size="icon"
-              onClick={startAudioCall}
-              aria-label="Start audio call"
-            >
-              <Phone className="h-5 w-5" />
-            </Button>
 
             <Button
-              variant="ghost"
-              size="icon"
+              variant='ghost'
+              size='icon'
               onClick={startVideoCall}
-              aria-label="Start video call"
-            >
-              <Video className="h-5 w-5" />
+              aria-label='Start video call'            >
+              <Video className='h-5 w-5' />
             </Button>
-
-            <Button variant="ghost" size="icon" aria-label="More options">
-              <MoreVertical className="h-5 w-5" />
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            <Button variant='ghost' size='icon' aria-label='More options'>
+              <MoreVertical className='h-5 w-5' />
+              <h3 className="font-medium">{contact.name}</h3>
+              <p className="text-xs text-muted-foreground">
+                {contact.status || "Online"}
+              </p>
+            </div>
+          </div>
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
             </Button>
           </div>
         </div>
@@ -141,24 +134,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           <Input
             value={newMessage}
-=======
-
-            onChange={(e) => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Type a message..."
-            className="flex-1"
-          />
-
-          <Button
-            size="icon"
-            onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? "opacity-50" : ""}
-            aria-label="Send message"
-          >
-            <Send className="h-5 w-5" />
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </Button>
         </div>
       </div>

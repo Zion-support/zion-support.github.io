@@ -6,7 +6,6 @@ import {
   setTrustWeights,
   getDefaultWeights,;
 } from '../../../utils/trust/weights';
-<<<<<<< HEAD
 
 import {
   getTrustWeights
@@ -67,9 +66,4 @@ if ( {) {
   }
   res.set_header ('AllowGET, PUT');
   return res.status (405).json ({ error: 'Method not allowed' });
-=======
-
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

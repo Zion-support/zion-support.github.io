@@ -20,7 +20,6 @@ export default function TryItConsole({
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-<<<<<<< HEAD
 
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
@@ -114,9 +113,6 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
-=======
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
         <div>

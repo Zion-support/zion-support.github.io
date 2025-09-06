@@ -787,15 +787,11 @@ export default function CloudMonitoringPage() {
               href="#demo"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
 =======
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }

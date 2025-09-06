@@ -24,14 +24,6 @@ export interface BadgeMeta {
   color: string
   bg: string
 export const badgeList: BadgeMeta[] = [
-  {
-
-  badgeList && badgeList.find(b => b && b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList && badgeList.find((b) => b && b.key === key);
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     key: 'first_listing',
     name: 'First Listing',
     description: 'Published your first product, service, or listing.',
@@ -111,28 +103,6 @@ export const badgeList: BadgeMeta[] = [
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
   }],
-
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find((b) => b.key === key),
-
-import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react';
-export type BadgeKey =;
-  | "first_listing";
-  | "top_contributor";
-  | "profile_complete";
-  | "featured_creator";
-  | "first_action";
-  | "monetized",;
-export interface BadgeMeta {;
-  key: BadgeKey,;
-  name: string,;
-  description: string,;
-  icon: LucideIcon,;
-  color: string,;
-  bg: string;
-}
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 ;
 export const badgeList: BadgeMeta[] = [;
   {;

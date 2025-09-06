@@ -533,16 +533,11 @@ if ( {) {
             style={{
               left: `${20 + i * 10}%`
               top: `${30 + i * 5}%`
-<<<<<<< HEAD
         />
       </div>
       {/* Energy Orbs */}
       <div className='absolute inset-0'>
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {[...Array(8)].map((_, i) => (

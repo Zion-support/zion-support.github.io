@@ -29,7 +29,6 @@ class ErrorBoundary extends React.Component {
 ;
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 'use client';
 import React, { useState } from 'react';
@@ -40,11 +39,6 @@ import {
   Phone,
   MapPin,
   Send,
-=======
-<<<<<<< HEAD
-  CheckCircle,
-  AlertCircle,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -207,12 +201,7 @@ const ContactForm: React.FC = () => {
           viewport={{ once: true }}
           className='text-center mb-16'
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a

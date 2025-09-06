@@ -581,7 +581,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
-<<<<<<< HEAD
 
 
       const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
@@ -622,38 +621,3 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 };
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array.from (candidate_slugs).filter (
-    slug => !static_slugs.has (slug));
-;
-  return {
-    paths: uniqueNonConflicting.map (slug => ({ params: { slug } })),
-    fallback: true,
-  }
-}
-;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed; the component resolves the service client - side.;
-  return { props: {} }}
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array.from (candidate_slugs).filter ((slug) => !static_slugs.has (slug));
-;
-  return {
-    paths: uniqueNonConflicting.map ((slug) => ({ params: { slug } })),
-    fallback: true;
-  }
-}
-;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed, the component resolves the service client - side.;
-  return { props: {} }
-}
-
-
-};
-  return { props: {} };
-};
-
-};
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1136,7 +1136,6 @@ interface PartnerTableProps {
   getStatusBadge: (status: string) => JSX.Element
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
-<<<<<<< HEAD
 
 function PartnerTable({ 
   partners, 
@@ -1335,16 +1334,6 @@ if ( {) {
                   variant="ghost" 
                   size="sm"
                   onClick={() => onOpenSettings(partner)}
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                  className="text-zion-slate-light hover:text-white"
-                >
-                  <Settings className="h-4 w-4" />
-                  <span className="sr-only">Settings</span>
-                </Button>
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   variant="outline"
 

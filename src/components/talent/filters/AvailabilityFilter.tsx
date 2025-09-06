@@ -81,8 +81,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 =======
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -202,10 +200,4 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`availability-${option.id}`}
-<<<<<<< HEAD
-  option.label 
-}</label> </div>) ) 
-}</div>) ;
-}</div>) ;
-}"};
 <<<<<<< HEAD

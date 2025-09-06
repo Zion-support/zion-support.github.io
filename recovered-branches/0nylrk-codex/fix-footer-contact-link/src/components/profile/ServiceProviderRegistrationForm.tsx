@@ -1,6 +1,5 @@
 
 =======
-<<<<<<< HEAD
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -33,23 +32,6 @@ const serviceProfileSchema = z.object({
     const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {
 
-=======
-      setServiceTags([...serviceTags, serviceInput]),
-      form.setValue("services", "")
-    }
-=======
-  }
-  // Handle removing service tags
-  const handleRemoveService = (service: string) => {
-    setServiceTags(serviceTags.filter((s) => s !== service))
-  }
-  },
-
-  // Handle removing service tags
-  const handleRemoveService = (service: string) => {
-    setServiceTags(serviceTags.filter((s) => s !== service))
-  },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {

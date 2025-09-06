@@ -820,7 +820,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-<<<<<<< HEAD
 
   return (
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -831,33 +830,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
           </CardHeader>
           <CardContent>
 
-=======
-
-        />;
-      </Head>;
-
-      <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>;
-        <Card className='w-full max-w-md'>          <CardHeader>;
-            <CardTitle>Sign In</CardTitle>;
-            <CardDescription>;
-              Enter your email and password to access your account;
-            </CardDescription>;
-          </CardHeader>;
-          <CardContent>;
-            <form onSubmit={handleLogin} className='space-y-4'>;
-              {error && (;
-                <div className='p-3 bg-red-50 border border-red-200 rounded-md'>;
-                  <p className='text-sm text-red-600'>{error && error.message}</p>;
-                </div>;
-              )}
-
-              <div className='space-y-2'>;
-                <label htmlFor='email' className='text-sm font-medium'>;
-                  Email;
-                </label>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <Input
                   id='email'

@@ -132,7 +132,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ],
@@ -245,9 +244,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Transform your business with AI-powered autonomous operations that work 24/7,
                 Transform your business with AI-powered autonomous operations that work 24/7, 
                 Transform your business with AI-powered autonomous operations that work 24/7,
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 making intelligent decisions and optimizing every aspect of your business.
@@ -544,7 +540,6 @@ const AutonomousBusinessOperationsPlatform = () => {
 export default AutonomousBusinessOperationsPlatform;
 
 },
-<<<<<<< HEAD
 
 export default AutonomousBusinessOperationsPlatform,;
 ;
@@ -569,13 +564,5 @@ export default AutonomousBusinessOperationsPlatform,
           </div>;
         </section>;
       </div>;
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    </>;
-  );
-},;
-export default AutonomousBusinessOperationsPlatform;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

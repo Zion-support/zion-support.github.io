@@ -97,11 +97,6 @@ function ClientDashboardContent() {;
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),;
   const isMobile = useIsMobile(),;
   const onboardingStatus = useOnboardingStatus(),;
-  const showAdvanced =;
-    onboardingStatus && onboardingStatus.jobPosted &&;
-    onboardingStatus && onboardingStatus.inviteSent &&;
-    onboardingStatus && onboardingStatus.responseReceived;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import { useState, useEffect } from "react",
 import { JobsList } from "@/components/jobs/JobsList",
@@ -185,6 +180,29 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
                 <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
+<<<<<<< HEAD
+=======
+              
+
+
+              <TabsContent value="all" className="mt-0">
+                <JobsList onSelectJob={handleJobSelect} />
+              </TabsContent>
+              <TabsContent value="new" className="mt-0">
+                <JobsList filter="new" onSelectJob={handleJobSelect} />
+              </TabsContent>
+              <TabsContent value="in_progress" className="mt-0">
+                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />
+              </TabsContent>
+              <TabsContent value="filled" className="mt-0">
+                <JobsList filter="filled" onSelectJob={handleJobSelect} />
+              </TabsContent>
+              <TabsContent value="closed" className="mt-0">
+                <JobsList filter="closed" onSelectJob={handleJobSelect} />
+              </TabsContent>
+            </Tabs>
+          </div>
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
               {/* Upcoming Interviews Card */}

@@ -574,49 +574,7 @@ interface UltraFuturisticNavigationProps {
                 <div className='flex items-center space-x-3 text-gray-300'>
                   <Phone className='w-4 h-4 text-cyan-400' />
 
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                  <span>{contactInfo.mobile}</span>
-                </div>
-                <div className='flex items-center space-x-3 text-gray-300'>
-                  <Mail className='w-4 h-4 text-purple-400' />
-                  <span>{contactInfo.email}</span>
-                </div>
-                <div className='flex items-center space-x-3 text-gray-300'>
-                  <MapPin className='w-4 h-4 text-green-400' />
-                  <span className='text-sm'>{contactInfo.address}</span>                </div>
-              </div>
-              {/* Mobile CTA */}
-              <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
-=======
-                      className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}                      className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
-                      onClick={() => setIsOpen(false)}
-
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-
-              ))}
-
-              {/* Mobile Contact Info */}
-
-                  <span>{contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <span>{contactInfo.email}</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-green-400" />
-                  <span className="text-sm">{contactInfo.address}</span>
-                </div>
-              </div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <div className='pt-6 border-t border-gray-700/50 space-y-3'>;
                 <div className='flex items-center space-x-3 text-gray-300'>;
                   <Phone className='w-4 h-4 text-cyan-400' />;

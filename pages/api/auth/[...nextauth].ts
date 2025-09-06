@@ -10,7 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).end()
 
     return
-<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   // TODO: Implement authentication logic here
@@ -59,8 +58,5 @@ export default function handler(req, res) {
   // TODO: Implement authentication logic here;
   res.status(200).json({ message: 'Auth endpoint placeholder' });
 } ;
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

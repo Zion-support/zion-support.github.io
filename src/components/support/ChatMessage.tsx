@@ -43,6 +43,12 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       </Avatar>
       <div
         className={cn(
+=======
+          'max-w-[80%] rounded-lg px-4 py-2 text-sm'
+      </Avatar>
+
+          'max-w-[80%] rounded-lg px-4 py-2 text-sm',
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
 
       
@@ -65,6 +71,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               : "text-gray-500"
         )}>
           {format(timestamp, "h:mm a")}
+<<<<<<< HEAD
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
@@ -75,6 +82,7 @@ function escapeHtml(unsafe: string): string {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")

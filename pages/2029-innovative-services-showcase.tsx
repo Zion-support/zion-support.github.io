@@ -96,7 +96,6 @@ import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-bu
                 2029 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-<<<<<<< HEAD
 
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
@@ -130,13 +129,6 @@ import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-bu
 
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                Experience the future of technology with our revolutionary AI autonomous ecosystems, 
-                Experience the future of technology with our revolutionary AI autonomous ecosystems,
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
@@ -366,7 +358,6 @@ import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-bu
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
 
                 Join the future of technology with our innovative 2029 services.
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
@@ -395,9 +386,6 @@ import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-bu
                 </div>
               </div>
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">

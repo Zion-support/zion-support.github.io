@@ -8,7 +8,6 @@ import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Card,
@@ -32,6 +31,77 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
+=======
+
+import { logErrorToProduction } from '@/utils/productionLogger';import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { format } from "date-fns";
+import { useAuth } from "@/hooks/useAuth";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Project, ProjectStatus } from "@/types/projects";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {;
+  AlertDialog,;
+  AlertDialogAction,;
+  AlertDialogCancel,;
+  AlertDialogContent,;
+  AlertDialogDescription,;
+  AlertDialogFooter,;
+  AlertDialogHeader,;
+  AlertDialogTitle,;
+  AlertDialogTrigger,;
+
+} from '@/components/ui/alert-dialog';
+import { Avatar } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { Textarea } from '@/components/ui/textarea';
+import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { ProjectReviewSection } from '@/components/projects/reviews/ProjectReviewSection';
+
+} from '@/components / ui / alert - dialog';
+import { Avatar } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+import { Textarea } from '@/components / ui / textarea';
+import { toast } from '@/hooks / use - toast';
+import { supabase } from '@/integrations / supabase / client';
+import { ProjectReviewSection } from '@/components / projects / reviews / ProjectReviewSection';
+
+  AlertCircle,
+  Calendar,
+  CheckCircle2,
+  Clock,
+  FileText,
+  Layers,
+  MessageSquare,
+  Video,
+  User,
+  XCircle,
+} from 'lucide-react';
+
+import { useRouter  } from 'next/router';
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
 
   Card
   CardContent
@@ -51,432 +121,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
   AlertDialogTitle
   AlertDialogTrigger
   AlertDialogTrigger,
-} from '@/components/ui/alert-dialog'
-import { Avatar } from '@/components/ui/avatar'
-import { Badge } from '@/components/ui/badge'
-import { Textarea } from '@/components/ui/textarea'
-import { toast } from '@/hooks/use-toast'
-import { supabase } from '@/integrations/supabase/client'
-import { ProjectReviewSection } from '@/components/projects/reviews/ProjectReviewSection'
-  AlertCircle
-  Calendar
-  CheckCircle2
-  Clock
-  FileText
-  Layers
-  MessageSquare
-  Video
-  User
-  XCircle
-} from 'lucide-react'
-
-function ProjectDetailsContent() {
-
-  const router = useRouter(),
-  // Get projectId from Next.js router query params
-  const { projectId } = router.query as { projectId?: string },
-  const { user } = useAuth(),
-  const { getProjectById, updateProjectStatus } = useProjects(),
-
-  const [project, setProject] = useState<Project | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [notes, setNotes] = useState<any[]>([]),
-  const [newNote, setNewNote] = useState(""),
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false),
-  const [activeTab, setActiveTab] = useState("details"),
-
-  // Load project data
-  useEffect(() => {
-    async function loadProject() {
-
-      setIsLoading(true)
-      const projectData = await getProjectById(projectId)
-      if (projectData) {
-        setProject(projectData)
-
-        // Now fetch notes
-        fetchProjectNotes(projectId)
-      } else {
-        toast({
-
-      }
-      setIsLoading(false)
-    }
-
-      const { data, error } = await supabase
-        .from("project_notes")
-        .select(`
-          *,
-          created_by_profile:profiles!user_id(display_name, avatar_url)
-
-        `)
-        .eq("project_id", projectId)
-        .order("created_at", { ascending: false }),
-
-      if (error) throw error,
-
-      setNotes(data || [])
-    } catch (err: any) {
-      logErrorToProduction('Error fetching project notes:', { data: err }),
-      toast({
-        title: "Failed to load notes",
-        description: err.message || "An error occurred while loading project notes.",
-        variant: "destructive"})
-    }
-  },
-
-  const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return,
-
-    setIsSubmittingNote(true),
-
-    try {
-      const { data, error } = await supabase
-        .from("project_notes")
-        .insert({
-
-        })
-        .select()
-      if (error) throw error
-      // Refresh notes
-      fetchProjectNotes(project.id)
-      setNewNote('')
-      toast({
-        title: 'Note added'
-        description: 'Your note has been added to the project.'
-      })
-    } catch (err: any) {
-      logErrorToProduction('Error adding note:', { data: err })
-      toast({
-        title: 'Failed to add note'
-        description: err.message |'An error occurred while adding note.'
-        variant: 'destructive'
-      })
-    } finally {
-      setIsSubmittingNote(false)
-    }
-  }
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return;
-    const success = await updateProjectStatus(project.id, newStatus)
-    if (success) {
-      setProject({
-        ...project
-        status: newStatus
-      })
-
-      // If offer was accepted, show a special toast
-      if (newStatus === "offer_accepted") {
-        toast({
-
-        })
-      }
-    }
-  }
-  const getStatusBadge = (status: ProjectStatus) => {    switch (status) {
-      case 'offer_sent':
-        return <Badge variant='outline'>Offer Sent</Badge>
-      case 'offer_accepted':
-        return (
-          <Badge className='bg-green-100 text-green-800'>Offer Accepted</Badge>
-        )
-      case 'changes_requested':
-        return <Badge variant='secondary'>Changes Requested</Badge>
-      case 'in_progress':
-        return <Badge className='bg-blue-100 text-blue-800'>In Progress</Badge>
-      case 'completed':
-        return <Badge variant='default'>Completed</Badge>
-      case 'canceled':
-        return <Badge variant='destructive'>Canceled</Badge>
-      default:
-        return <Badge variant='outline'>{status}</Badge>
-    }
-  }
-
-  if (isLoading) {
-    return (
-      <div className="container mx-auto py-8">
-        <div className="flex justify-center items-center h-64">
-          <div className="text-center">
-            <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
-            <p>Loading project details...</p>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  if (!project) {
-    return (
-      <div className="container mx-auto py-8">
-        <Card>
-          <CardContent className="flex flex-col items-center justify-center py-10">
-            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />
-            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>
-            <p className="text-muted-foreground mb-4">
-              The project you're looking for doesn't exist or you don't have access to it.
-            </p>
-
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
-    )
-  }
-
-  const isClient = user?.id === project.client_id
-  const isTalent = user?.id === project.talent_id
-  if (!isClient && !isTalent) {
-    router.push('/unauthorized')
-    return null
-  }
-  const isOfferPending = project.status === 'offer_sent'
-  const isOfferAccepted = [
-    'offer_accepted'
-    'in_progress'
-    'completed'
-  ].includes(project.status)
-  const isActiveProject = ['offer_accepted', 'in_progress'].includes(
-    project.status
-  )
-
-  const isClient = user?.id === project.client_id,
-  const isTalent = user?.id === project.talent_id,
-
-  if (!isClient && !isTalent) {
-    router.push("/unauthorized"),
-    return null
-  }
-
-  const isOfferPending = project.status === "offer_sent",
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
-
-  return (
-    <>
-      <SEO
-        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`}
-        description="View and manage your project details and collaboration."
-
-      />
-      <main className="container mx-auto px-4 py-8">
-        <div className="mb-6">
-          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
-            <div>
-
-                {getStatusBadge(project.status)}
-                <span className="text-muted-foreground">
-                  Started on {format(new Date(project.start_date), "PPP")}
-                </span>
-              </div>
-            </div>
-
-            {/* Action Buttons Based on Role and Status */}
-            <div className="space-x-2">
-              {isTalent && isOfferPending && (
-                <>
-                  <AlertDialog>
-                    <AlertDialogTrigger asChild>
-                      <Button variant="default">
-                        <CheckCircle2 className="mr-2 h-4 w-4" /> Accept Offer
-                      </Button>
-                    </AlertDialogTrigger>
-                    <AlertDialogContent>
-                      <AlertDialogHeader>
-                        <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
-                        <AlertDialogDescription>
-                          By accepting this offer, you agree to the project terms and timeline.
-                          This will initiate the contract and start the project.
-                        </AlertDialogDescription>
-                      </AlertDialogHeader>
-                      <AlertDialogFooter>
-                        <AlertDialogCancel>Cancel</AlertDialogCancel>
-
-                        </AlertDialogAction>
-                      </AlertDialogFooter>
-                    </AlertDialogContent>
-                  </AlertDialog>
-
-                  </Button>
-                </>
-              )}
-
-              {(isClient || isTalent) && project.status === "in_progress" && (
-
-                <AlertDialog>
-                  <AlertDialogTrigger asChild>
-                    <Button variant="default">
-                      <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed
-                    </Button>
-                  </AlertDialogTrigger>
-                  <AlertDialogContent>
-                    <AlertDialogHeader>
-                      <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle>
-                      <AlertDialogDescription>
-                        This will finalize the project and mark it as complete.
-                        Make sure all deliverables have been provided and approved.
-                      </AlertDialogDescription>
-                    </AlertDialogHeader>
-                    <AlertDialogFooter>
-                      <AlertDialogCancel>Cancel</AlertDialogCancel>
-
-                      </AlertDialogAction>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialog>
-              )}
-
-              {isActiveProject && (
-                <Button variant="default" asChild>
-                  <Link href={`/project/[id]/milestones`}>
-                    <Layers className="mr-2 h-4 w-4" /> Milestones
-                  </Link>
-                </Button>
-              )}
-              {isActiveProject && (
-                <Button variant="outline" asChild>
-                  <Link href={`/project/[id]/room`}>
-                    <Video className="mr-2 h-4 w-4" /> Project Room
-                  </Link>
-                </Button>
-              )}
-
-                ['offer_sent', 'offer_accepted', 'in_progress'].includes(
-                  project.status
-                ) && (
-                  <Button
-                    variant='outline'
-                    onClick={() =>
-                      router.push(
-                        `/messages?talentId=${project.talent_id}&clientId=${project.client_id}`
-                      )
-                    }
-                  >
-                    <MessageSquare className='mr-2 h-4 w-4' /> Message
-                  </Button>
-                )}            </div>
-          </div>
-        </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-          <div className='order-2 lg:order-1 lg:col-span-2'>
-            <Tabs
-              defaultValue='details'
-              value={activeTab}
-              onValueChange={setActiveTab}
-            >
-              <TabsList className='mb-6'>
-                <TabsTrigger value='details'>Project Details</TabsTrigger>
-                <TabsTrigger value='timeline'>Timeline</TabsTrigger>
-                <TabsTrigger value='documents'>Documents</TabsTrigger>
-                <TabsTrigger value='notes'>Shared Notes</TabsTrigger>
-                {project.status === 'completed' && (
-                  <TabsTrigger value='reviews'>Reviews</TabsTrigger>
-                )}
-              </TabsList>
-              <TabsContent value='details'>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Project Scope</CardTitle>
-                    <CardDescription>
-                      Project details and expectations
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <div>
-                        <h3 className="font-semibold mb-2">Project Description</h3>
-                        <div className="bg-muted/30 p-4 rounded-md">
-                          <p className="whitespace-pre-wrap">{project.scope_summary}</p>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h3 className="font-semibold mb-2">Payment Terms</h3>
-                        <Badge variant="outline" className="capitalize">
-                          {project.payment_terms} Payment
-                        </Badge>
-                      </div>
-
-                      <div>
-                        <h3 className="font-semibold mb-2">Job Details</h3>
-                        <div className="bg-muted/30 p-4 rounded-md">
-                          <p className="whitespace-pre-wrap">{project.job?.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Project Timeline</CardTitle>
-                    <CardDescription>
-                      Key dates and milestones
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
-                        <Calendar className="h-5 w-5 text-primary mt-0.5" />
-                        <div>
-                          <h3 className="font-semibold">Start Date</h3>
-                          <p>{format(new Date(project.start_date), "PPP")}</p>
-                        </div>
-                      </div>
-
-                        <div>
-                          <h3 className="font-semibold">Project Status</h3>
-                          <div className="mt-1">
-                            {getStatusBadge(project.status)}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Project Documents</CardTitle>
-                    <CardDescription>
-                      Agreements and relevant files
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    {project.agreement_url ? (
-                      <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">
-                        <div className="flex items-center gap-3">
-                          <FileText className="h-5 w-5 text-primary" />
-                          <div>
-                            <h3 className="font-semibold">Project Agreement</h3>
-                            <p className="text-sm text-muted-foreground">
-                              Uploaded when project was created
-                            </p>
-                          </div>
-                        </div>
-                        <Button variant="outline" size="sm" asChild>
-                          <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
-                            View
-                          </Link>
-                        </Button>
-                      </div>
-                    ) : (
-                      <div className="text-center py-8">
-                        <FileText className="h-10 w-10 text-muted-foreground mx-auto mb-2" />
-                        <h3 className="font-semibold">No Documents Yet</h3>
-                        <p className="text-sm text-muted-foreground">
-                          No documents have been uploaded to this project.
-                        </p>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              </TabsContent>
-                        )}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                 <Card>
                   <CardHeader>
@@ -517,42 +161,12 @@ function ProjectDetailsContent() {
                           </div>
                         )}
                       </div>
-<<<<<<< HEAD
 
 
                           <Button
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                          >
-                            {isSubmittingNote ? "Posting..." : "Post Note"}
-                          </Button>
-                        </div>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-
-
-        title={`Project: ${project && project.job?.title || 'Project Details'} | Zion AI Marketplace`}
-        description='View and manage your project details and collaboration.'
-      />;
-      <main className='container mx-auto px-4 py-8'>;
-        <div className='mb-6'>;
-          <div className='flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2'>;
-            <div>;
-              <h1 className='text-3xl font-bold'>;
-                {project && project.job?.title || 'Project'}
-              </h1>;
-              <div className='flex items-center gap-2 mt-1'>;
-                {getStatusBadge(project && project.status)}
-                <span className='text-muted-foreground'>;
-                  Started on {format(new Date(project && project.start_date), 'PPP')}
-                </span>;
-              </div>;
-            </div>;
-
 
 
                 <ProjectReviewSection project={project} />
@@ -563,9 +177,6 @@ function ProjectDetailsContent() {
           
           <div className="order-1 lg:order-2 lg:col-span-1">
 <<<<<<< HEAD
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <Card>
               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
@@ -622,31 +233,6 @@ function ProjectDetailsContent() {
                       )}
                     </div>
                   </div>
-                  <div className='flex items-start gap-4'>
-                    <Avatar className='h-10 w-10'>
-                        <Button variant='outline' size='sm' as_child>;
-                          <a;
-                            href={project.agreement_url}
-                            target='_blank';
-                            rel='noopener noreferrer';
-                          >;
-                            View;
-                          </a>;
-                        </Button>;
-                      </div>) : (
-                      <div className='text - center py - 8'>;
-                        <FileText className='h - 10 w - 10 text - muted - foreground mx - auto mb - 2' />;
-                        <h3 className='font - semibold'>No Documents Yet</h3>;
-                        <p className='text - sm text - muted - foreground'>;
-                          No documents have been uploaded to this project.;
-                        </p>;
-                      </div>)}
-                  </CardContent>;
-                </Card>;
-              </TabsContent>;
-              <TabsContent value='notes'>;
-                <Card>;
-                  <CardHeader>;
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
@@ -675,6 +261,55 @@ function ProjectDetailsContent() {
         </div>
       </main>
     </>
+<<<<<<< HEAD
+  )
+    </>);
+
+}
+setIsSubmittingNote (true)
+try {
+
+  // Check condition
+if (throw error) {
+  $2
+}
+//Refresh notes;
+}catch (err: any) {';
+  logErrorToProduction ('Error adding note:', {
+  data: err;
+});
+toast ({
+}finally {
+  setIsSubmittingNote (false);
+}
+const handleStatusChange = async (new_status: ProjectStatus) => {
+  // Check condition
+if (return) {
+  $2
+}
+const success = await updateProjectStatus (project.id, new_status);
+// Check condition
+if ( {) {
+  $2
+}
+  set_project ({
+  ...project;
+status: new_status;
+});
+//If offer was accepted, show a special toast // Check condition
+if ( {) {
+  $2
+}
+
+  toast ({
+}";
+case "offer accepted": return <Badge className="bg - green - 100 text - green - 800">Offer Accepted</Badge>;";
+case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;";
+case "in progress": return <Badge className="bg - blue - 100 text - blue - 800">In Progress</Badge>;";
+case "completed": return <Badge variant="default">Completed</Badge>;";
+case "canceled": return <Badge variant="destructive">Canceled</Badge>;";
+default: return <Badge variant="outline"> {
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168
   `/project/[id]/milestones` "
 }> <Layers className=" mr-2 h-4 w-4"/> Milestones </Link> </Button>) ;
 }<Linkhref= {
@@ -815,6 +450,7 @@ const ProjectDetails = () => {
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
+<<<<<<< HEAD
               </Link>
 <<<<<<< HEAD
 
@@ -835,3 +471,5 @@ export default function ProjectDetails() {;
 }
 ;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> a59e23947e86217473fca4eca4cd277149ff0168

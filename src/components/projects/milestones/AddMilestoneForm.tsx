@@ -246,20 +246,6 @@ export function AddMilestoneForm({
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-  const handleAddMilestone = (milestone: GeneratedMilestone,) => {;
-    onSubmit({;
-      title: milestone && milestone.title,;
-      description: milestone && milestone.description,;
-      due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-      amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-    });
-  };
-
-  return (
-
-
-  },
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     onSubmit({
       title: milestone.title
@@ -273,22 +259,6 @@ export function AddMilestoneForm({
       {/* AI Milestone Generator */}
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-  },
-
-  return (
-    <div className="space-y-6">
-      {/* AI Milestone Generator */}
-      {projectScope && projectStartDate && (;
-        <AIMilestoneGenerator;
-          scope={projectScope}
-          startDate={projectStartDate}
-          endDate={projectEndDate}
-          projectType={projectType}
-          onAddMilestones={handleAddMilestones}
-          onAddMilestone={handleAddMilestone}
-        />;
-<<<<<<< HEAD
 <<<<<<< HEAD
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>

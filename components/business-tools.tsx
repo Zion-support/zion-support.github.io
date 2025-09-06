@@ -784,7 +784,6 @@ import React from 'react';
                   {insight.trend}
                 </div>
               </Card>
-<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ))}
           </div>
@@ -1159,9 +1158,6 @@ import React from 'react';
           </div>
         </div>
       </section>
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
