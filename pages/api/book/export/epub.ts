@@ -4,17 +4,17 @@ import { promises as fs } from 'fs';
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '10mb'}}},
+      sizeLimit: '10mb'}}};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' }),
-    return
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
   }
 
-  const { project } = req.body as { project: any },
+  const { project } = req.body as { project: any };
   if (!project?.meta || !Array.isArray(project?.chapters)) {
-    res.status(400).json({ error: 'Invalid payload' }),
-    return
+    res.status(400).json({ error: 'Invalid payload' });
+    return;
   }
 
   const tmpPath = `/tmp/${randomUUID()}.epub`;
@@ -22,7 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     title: project.meta.title,
     author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
-    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},
+    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
   try {
     await new Epub(options, tmpPath).promise;
     const buf = await fs.readFile(tmpPath);
@@ -37,11 +37,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 function chapterToHtml(text: string): string {
-  if (!text) return '',
+  if (!text) return '';
   return text
     .split(/\n\n+/)
     .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n')
+    .join('\n');
 }
 
 function escapeHtml(s: string): string {
