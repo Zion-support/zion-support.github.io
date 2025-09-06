@@ -5,19 +5,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group - Technology Solutions" />
+        <title>Zion Tech Group - AI-Powered IT Services</title>
+        <meta name="description" content="Leading provider of AI-powered IT services and solutions" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Welcome to Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600">
-            Technology solutions for the future
-          </p>
+      <main>
+        <div className="hero">
+          <h1>Zion Tech Group</h1>
+          <p>AI-Powered IT Services</p>
+          <div className="cta-buttons">
+            <button className="btn-primary">Get Started</button>
+            <button className="btn-secondary">Learn More</button>
+          </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }
