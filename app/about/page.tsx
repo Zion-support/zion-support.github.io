@@ -29,14 +29,14 @@ export default function AboutPage() {
             </p>
             <p className="text-gray-300 text-lg">
               Our team of experts is dedicated to delivering solutions that not
-              only meet today's challenges but also prepare our clients for
-              tomorrow's opportunities.
+              only meet today&apos;s challenges but also prepare our clients for
+              tomorrow&apos;s opportunities.
             </p>
           </div>
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
             <p className="text-gray-300 text-lg mb-6">
-              To be the world's most trusted technology partner, known for
+              To be the world&apos;s most trusted technology partner, known for
               delivering innovative solutions that transform businesses and
               create lasting value.
             </p>
