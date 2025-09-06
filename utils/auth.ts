@@ -18,13 +18,13 @@ export function createAuthSession(user: User, token: string): AuthSession {
 }
 
 export function isAuthenticated(session: AuthSession | null): boolean {
-    if (!session) return false,
-    return Date.now() < session.expiresAt
+    if (!session) return false;
+    return Date.now() < session.expiresAt;
   }
 
 export function hasRole(session: AuthSession | null, role: string): boolean {
-    if (!session || !isAuthenticated(session)) return false,
-    return session.user.role === role
+    if (!session || !isAuthenticated(session)) return false;
+    return session.user.role === role;
   }
 
 export function isAdmin(session: AuthSession | null): boolean {

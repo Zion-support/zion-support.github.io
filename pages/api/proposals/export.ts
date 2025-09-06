@@ -85,7 +85,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       signature = await wallet.signMessage(ethers.getBytes(digest))
     }
 
-    let ipfsCid: string | undefined, const ipfs = buildIpfsClient(),
+    let ipfsCid: string | undefined;
+    const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
         const { cid } = await ipfs.add(markdown);

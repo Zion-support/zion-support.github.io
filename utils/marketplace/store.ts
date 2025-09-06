@@ -428,7 +428,7 @@ export async function deleteMessage(id: string): Promise<boolean> {
 }
 
 // Utility functions
-export function createProject(
+export function createProjectData(
   title: string,
   summary: string,
   clientId: string,
@@ -446,7 +446,7 @@ export function createProject(
   };
 }
 
-export function createOffer(
+export function createOfferData(
   clientId: string,
   talentSlug: string,
   scopeSummary: string,
@@ -464,7 +464,7 @@ export function createOffer(
   };
 }
 
-export function createApplication(
+export function createApplicationData(
   projectId: string,
   talentSlug: string,
   additionalData?: Partial<Application>
@@ -477,7 +477,7 @@ export function createApplication(
   };
 }
 
-export function createMessage(
+export function createMessageData(
   conversationId: string,
   senderId: string,
   recipientId: string,
