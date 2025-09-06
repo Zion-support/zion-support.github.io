@@ -11,7 +11,7 @@ const Services: React.FC = () => {
             Our Services
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Comprehensive technology solutions designed to transform your business 
+            Comprehensive technology solutions designed to transform your business
             and drive innovation across all sectors.
           </p>
         </div>
