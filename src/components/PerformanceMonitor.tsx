@@ -1,7 +1,11 @@
-
 import React from 'react';
 
-=======
-import React from 'react';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+const PerformanceMonitor: React.FC = () => {
+  return (
+    <div className="performance-monitor">
+      {/* Performance monitoring component */}
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
