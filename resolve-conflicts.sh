@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "Resolving merge conflicts..."
 
 # Get list of conflicted files
