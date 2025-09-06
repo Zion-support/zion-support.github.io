@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Gitleaks
 
 on:
@@ -17,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+<<<<<<< HEAD
       - name: Checkout repository
 =======
 name: Secret scan (Gitleaks)
@@ -48,6 +52,12 @@ jobs:
           fetch-depth: 0
 
 <<<<<<< HEAD
+=======
+      - name: Checkout repository        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -60,6 +70,7 @@ jobs:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+<<<<<<< HEAD
 
 =======
       - name: Run Gitleaks
@@ -80,3 +91,5 @@ concurrency:
         with:
           sarif_file: gitleaks.sarif
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-c342
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

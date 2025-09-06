@@ -1,5 +1,6 @@
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 const os = require('os');
 
 const nextConfig = {
@@ -9,6 +10,12 @@ const nextConfig = {
 const nextConfig = {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
   poweredByHeader: false,
+=======
+const os = require('os');
+
+const nextConfig = {
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',  poweredByHeader: false,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
@@ -62,11 +69,15 @@ const nextConfig = {
     largePageDataBytes: 128 * 1000, // Reduced to 128KB for better performance
     workerThreads: false, // Disable worker threads to reduce memory usage
 <<<<<<< HEAD
+<<<<<<< HEAD
     cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit
 =======
     cpus: Math.min(2, 2), // Adaptive CPU limit
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     // Bundle analysis optimizations moved to root level
+=======
+    cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit    // Bundle analysis optimizations moved to root level
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     // Disable profiling for faster builds
     swcTraceProfiling: false,
   },

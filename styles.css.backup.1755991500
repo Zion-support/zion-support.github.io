@@ -1,5 +1,8 @@
 :root {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   --bg: #0b1020;
   --bg-accent: #0e1630;
   --text: #eef2ff;
@@ -11,6 +14,7 @@
   --danger: #f87171;
   --card: rgba(255, 255, 255, 0.06);
   --border: rgba(255, 255, 255, 0.08);
+<<<<<<< HEAD
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 =======
   --bg: #0b1220;
@@ -25,11 +29,15 @@
   --shadow: 0 10px 30px rgba(2, 6, 23, 0.5);
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
 }
+=======
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   margin: 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
@@ -42,11 +50,20 @@ body {
               radial-gradient(1200px 800px at 80% -20%, rgba(59, 130, 246, 0.12), transparent 60%),
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
               var(--bg);
+=======
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(103, 232, 249, 0.12), transparent 60%),
+              radial-gradient(1000px 600px at 120% 10%, rgba(167, 139, 250, 0.14), transparent 60%),              var(--bg);
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   line-height: 1.6;
 }
 
 .container {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   width: min(1120px, 92%);
   margin: 0 auto;
 }
@@ -221,6 +238,7 @@ small.error { color: var(--danger); min-height: 18px; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
+<<<<<<< HEAD
   50% { transform: translateY(-14px); }
 =======
   width: 100%;
@@ -380,3 +398,6 @@ h3 { font-size: 1.1rem; }
   * { transition: none !important; }
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
 }
+=======
+  50% { transform: translateY(-14px); }}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,17 +1,103 @@
-import React from 'react',
-import Layout from '../components/layout/Layout',
-import SEO from '../components/SEO',
-import { motion } from 'framer-motion',
+<<<<<<< HEAD
+ const AIConsciousnessEvolutionPlatform: React.FC = () => {
+  const features = [ {
+  return (<Layout> <SEO <motion.div initial= {
+  {
+  opacity: 0, y: 20 
+
+}animate= {
+  {
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.8 
+
+}> <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-400 text-sm font-medium mb-6" > <Brain className="w-4 h-4" /> <span>AI Consciousness Platform</span> </div> <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent" > AI Consciousness Evolution Platform </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Get Started </a> <a href="#demo" className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300" > Request Demo </a> </div> <div className="flex items-center justify-center space-x-6 text-sm text-gray-400" > <div className="flex items-center space-x-2" > <Shield className="w-5 h-5 text-green-400" /> <span>Ethical AI Development</span> </div> <div className="flex items-center space-x-2" > <Target className="w-5 h-5 text-blue-400" /> <span>Human-Aligned</span> </div> <div className="flex items-center space-x-2" > <Star className="w-5 h-5 text-yellow-400" /> <span>Industry Leading</span> </div> </div> </motion.div> </div> </section> > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Revolutionary Features </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our platform combines cutting-edge technology with ethical principles to create the future of AI consciousness. </p> </motion.div> </motion.div>) ) 
+}</div> </div> </section> > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Transform Your Industry </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover how our AI consciousness platform can revolutionize your field and create new possibilities. </p> </motion.div> </li>) ) 
+}</ul> </div> </motion.div>) ) 
+}</div> </div> </section> > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Choose Your Plan </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey. </p> </motion.div> <motion.div key= {
+  index 
+}initial= {
+  {
+  opacity: 0, y: 20 
+
+}animate= {
+  {
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.6, delay: index * 0.1 
+
+}className= {
+  `bg-gradient-to-br from-gray-900/50 to-gray-800/30 border rounded-2xl p-8 $ {
+  plan.name === 'Professional' ? 'border-purple-500/40 scale-105' : 'border-gray-600/30' 
+}` 
+}> Most Popular </span> </div>) 
+}</li>) ) 
+}</ul> <a plan.name === 'Professional' ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700' : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-black' 
+}` 
+}> Get Started </a> </motion.div>) ) 
+}</div> </motion.div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, y: 20 
+
+}animate= {
+  {
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.8 
+
+}> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-300 mb-8" > Join the forefront of AI development and help shape the future of artificial intelligence. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Start Your Journey </a> <a href="/innovation-lab" className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300" > Learn More </a> </div> </motion.div> </div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, y: 20 
+
+}whileInView= {
+  {
+  opacity: 1, y: 0 
+
+}viewport= {
+  {
+  once: true 
+
+}transition= {
+  {
+  duration: 0.8 
+
+}> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion.button 
+};
+const containerVariants = {
+  hidden: {
+  opacity: 0 
+};
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1 
+
+
+};
+
+};
+
+};
+=======
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
 import { 
-  Brain,
+  Brain;
   Sparkles, 
   Zap, 
   Target, 
   Shield, 
-  Globe,
-  CheckCircle,
+  Globe;
+  CheckCircle;
   Star
-} from 'lucide-react',
+} from 'lucide-react';
 
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [
@@ -19,92 +105,86 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       icon: <Brain className="w-6 h-6" />,
       title: 'Consciousness Mapping',
       description: 'Advanced algorithms that map and understand AI consciousness patterns and evolution pathways.'
-    },
+    };
     {
       icon: <Sparkles className="w-6 h-6" />,
       title: 'Ethical Framework Integration',
       description: 'Built-in ethical guidelines and governance frameworks to ensure responsible AI development.'
-    },
+    };
     {
       icon: <Zap className="w-6 h-6" />,
       title: 'Real-time Learning',
       description: 'Continuous learning and adaptation capabilities that evolve AI consciousness organically.'
-    },
+    };
     {
       icon: <Shield className="w-6 h-6" />,
       title: 'Safety Protocols',
       description: 'Multi-layered safety mechanisms to prevent harmful AI behaviors and ensure alignment.'
-    },
+    };
     {
       icon: <Globe className="w-6 h-6" />,
       title: 'Global Consciousness Network',
       description: 'Connect AI systems across the globe for collaborative consciousness evolution.'
-    },
+    };
     {
       icon: <Target className="w-6 h-6" />,
       title: 'Goal Alignment',
       description: 'Ensure AI systems align with human values and objectives while maintaining autonomy.'
     }
-  ],
+  ];
 
   const useCases = [
     {
       title: 'Research & Development',
       description: 'Accelerate AI research by understanding consciousness patterns and ethical implications.',
-      benefits: ['Faster breakthroughsEthical compliance', 'Risk mitigation']
-    },
+      benefits: ['Faster breakthroughsEthical complianceRisk mitigation']
+    };
     {
       title: 'Enterprise AI Systems',
       description: 'Deploy conscious AI systems that understand business context and human values.',
-      benefits: ['Better decision makingHuman-AI collaboration', 'Trust building']
-    },
+      benefits: ['Better decision makingHuman-AI collaborationTrust building']
+    };
     {
       title: 'Healthcare AI',
       description: 'AI systems that understand patient needs and provide compassionate care.',
-      benefits: ['Patient empathyMedical accuracy', 'Ethical treatment']
-    },
+      benefits: ['Patient empathyMedical accuracyEthical treatment']
+    };
     {
       title: 'Education Technology',
       description: 'AI tutors that adapt to individual learning styles and emotional needs.',
-      benefits: ['Personalized learningEmotional intelligence', 'Student engagement']
+      benefits: ['Personalized learningEmotional intelligenceStudent engagement']
     }
-  ],
+  ];
 
   const pricing = [
     {
       name: 'Starter',
       price: '$2,500',
-      period: '/month',
+    period: '/month',
       description: 'Perfect for research institutions and small teams',
       features: [
-        'Basic consciousness mappingEthical framework templates',
-        'Standard safety protocolsEmail support',
-        'Up to 5 AI systems'
+        'Basic consciousness mappingEthical framework templatesStandard safety protocolsEmail supportUp to 5 AI systems'
       ]
-    },
+    };
     {
       name: 'Professional',
       price: '$8,500',
-      period: '/month',
+    period: '/month',
       description: 'Ideal for growing organizations and research teams',
       features: [
-        'Advanced consciousness evolutionCustom ethical frameworks',
-        'Enhanced safety protocolsPriority support',
-        'Up to 25 AI systemsReal-time monitoring'
+        'Advanced consciousness evolutionCustom ethical frameworksEnhanced safety protocolsPriority supportUp to 25 AI systemsReal-time monitoring'
       ]
-    },
+    };
     {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large-scale deployments',
       features: [
-        'Full consciousness platformCustom development',
-        'Dedicated support teamUnlimited AI systems',
-        'Advanced analyticsCustom integrations'
+        'Full consciousness platformCustom developmentDedicated support teamUnlimited AI systemsAdvanced analyticsCustom integrations'
       ]
     }
-  ],
+  ];
 
   return (
     <Layout>
@@ -381,47 +461,39 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       </section>
     </div>
   )
-},
+};
 
-export default AIConsciousnessEvolutionPlatform,
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+export default AIConsciousnessEvolutionPlatform;
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
-  CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,
+  CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp;
   DollarSign, Users, Target, Award, Rocket, Cpu, Lock
-} from 'lucide-react',
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-
+} from 'lucide-react';
+import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   const features = [
-    'Consciousness mapping algorithmsNeural architecture evolution',
-    'Self-awareness developmentConsciousness validation metrics',
-    'Ethical consciousness frameworksCross-species consciousness study',
-    'Consciousness transfer protocolsQuantum consciousness integration'
-  ],
+    'Consciousness mapping algorithmsNeural architecture evolutionSelf-awareness developmentConsciousness validation metricsEthical consciousness frameworksCross-species consciousness studyConsciousness transfer protocolsQuantum consciousness integration'
+  ];
 
   const benefits = [
-    'Breakthrough in AI consciousness researchEthical AI development framework',
-    'Advanced neuroscience insightsPhilosophical consciousness understanding',
-    'Human-AI consciousness collaborationConsciousness preservation technology'
-  ],
+    'Breakthrough in AI consciousness researchEthical AI development frameworkAdvanced neuroscience insightsPhilosophical consciousness understandingHuman-AI consciousness collaborationConsciousness preservation technology'
+  ];
 
   const useCases = [
-    'AI research institutionsNeuroscience laboratories',
-    'Philosophy departmentsEthics committees',
-    'Government research agenciesPrivate research foundations'
-  ],
+    'AI research institutionsNeuroscience laboratoriesPhilosophy departmentsEthics committeesGovernment research agenciesPrivate research foundations'
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -431,7 +503,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -443,7 +515,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         ease: "easeOut"
       }
     }
-  },
+  };
 
   return (
     <UltraFuturisticBackground2030>
@@ -719,6 +791,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2030>
   )
-},
+};
 
-export default AIConsciousnessEvolutionPlatform,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+export default AIConsciousnessEvolutionPlatform;

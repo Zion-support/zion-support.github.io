@@ -1,30 +1,39 @@
-import React from 'react',
-import { Button } from '@/components/ui/button',
+import React from 'react';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
-import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext',
-import { DollarSign } from 'lucide-react',
+  DropdownMenuTrigger,;
+} from '@/components/ui/dropdown-menu';
+import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext';
+import { DollarSign } from 'lucide-react';
 
-const SUPPORTED: { code: SupportedCurrency, symbol: string }[] = [
+const SUPPORTED: { code: SupportedCurrency; symbol: string }[] = [
   { code: 'USD', symbol: '$' },
   { code: 'EUR', symbol: '€' },
-  { code: 'GBP', symbol: '£' }],
+  { code: 'GBP', symbol: '£' },
+];
 
 export function CurrencySelector() {
-  const { currency, setCurrency } = useCurrency(),
+  const { currency, setCurrency } = useCurrency();
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
-          <DollarSign className="h-5 w-5" />
-          <span className="sr-only">Select currency</span>
+        <Button
+          variant='ghost'
+          size='icon'
+          className='text-white hover:bg-zion-purple/10'
+        >
+          <DollarSign className='h-5 w-5' />
+          <span className='sr-only'>Select currency</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
+      <DropdownMenuContent
+        align='end'
+        className='bg-zion-blue-dark border border-zion-purple/20'
+      >
         {SUPPORTED.map(c => (
           <DropdownMenuItem
             key={c.code}
@@ -36,5 +45,4 @@ export function CurrencySelector() {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  ),
-}
+  );

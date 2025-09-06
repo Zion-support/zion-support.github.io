@@ -37,7 +37,7 @@ class ContentQualityFixer {
     for (const file of markdownFiles) {
       try {
         let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
+        const originalContent = content;
         
         // Fix common markdown issues
         content = this.fixMarkdownContent(content);
@@ -58,7 +58,7 @@ class ContentQualityFixer {
     for (const file of htmlFiles) {
       try {
         let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
+        const originalContent = content;
         
         // Fix common HTML issues
         content = this.fixHTMLContent(content);
@@ -79,7 +79,7 @@ class ContentQualityFixer {
     for (const file of textFiles) {
       try {
         let content = fs.readFileSync(file, 'utf8');
-        let originalContent = content;
+        const originalContent = content;
         
         // Fix common text issues
         content = this.fixTextContent(content);
@@ -96,10 +96,10 @@ class ContentQualityFixer {
 
   fixMarkdownContent(content) {
     // Fix multiple spaces
-    content = content.replace(/[ ]{2,}/g, ' ');
+    content = content.replace(/[ ]{2}/g, ' ');
     
     // Fix line breaks
-    content = content.replace(/\n{3,}/g, '\n\n');
+    content = content.replace(/\n{3}/g, '\n\n');
     
     // Fix list formatting
     content = content.replace(/^\s*[-*+]\s+/gm, '- ');
@@ -122,10 +122,10 @@ class ContentQualityFixer {
 
   fixTextContent(content) {
     // Fix multiple spaces
-    content = content.replace(/[ ]{2,}/g, ' ');
+    content = content.replace(/[ ]{2}/g, ' ');
     
     // Fix line breaks
-    content = content.replace(/\n{3,}/g, '\n\n');
+    content = content.replace(/\n{3}/g, '\n\n');
     
     return content;
   }

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 exports.handler = async function(event, context) {
   const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
   const githubToken = process.env.GITHUB_TOKEN || '';
@@ -132,6 +135,7 @@ exports.handler = async function(event, context) {
 
     const heartbeat = { startAt, endAt: new Date().toISOString(), baseUrl, totals };
     const commitResult = await commitStamp(heartbeat);
+<<<<<<< HEAD
 =======
 // netlify/functions/autonomous-cloud-brain.js
 // An intelligent, ultra-fast orchestrator that selectively triggers key automations
@@ -326,10 +330,16 @@ exports.handler = async function() {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
 <<<<<<< HEAD
+=======
+    return {
+      statusCode: 200,
+      headers: { 'Content-Type': 'application/json' },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       body: JSON.stringify({ heartbeat, results: invoked, commitResult })
     };
   } catch (err) {
     log(String(err));
+<<<<<<< HEAD
     return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };
 =======
       body: JSON.stringify({
@@ -349,4 +359,7 @@ exports.handler = async function() {
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-8ac2
   }
+=======
+    return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 };

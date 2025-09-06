@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "generatedAt": "2025-08-14T09:38:10.923Z",
   "pagesScanned": 2974,
 =======
@@ -7,6 +8,10 @@
   "pagesScanned": 7808,
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
   "items": [
+=======
+  "generatedAt": "2025-08-14T09:38:10.923Z",
+  "pagesScanned": 2974,  "items": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     {
       "route": "/404",
       "missing": [
@@ -108,6 +113,7 @@
     {
       "route": "/reports/ai-lab",
       "missing": [
+<<<<<<< HEAD
 <<<<<<< HEAD
         "description",
 =======
@@ -496,6 +502,9 @@
       "missing": [
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
         "og:title",
+=======
+        "description",        "og:title",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "og:description",
         "og:image",
         "twitter:card"
@@ -506,6 +515,7 @@
       }
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/ai-trends",
 =======
@@ -705,6 +715,9 @@
       "route": "/reports/blueprints/blueprint-2025-08-18-123649",
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
+=======
+      "route": "/reports/ai-trends",      "missing": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "og:image"
       ],
       "suggestion": {
@@ -2231,7 +2244,10 @@
         "title": "Reference Architecture — Autonomous Content Mesh",
         "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       }
     },
     {
@@ -21681,7 +21697,10 @@
       "suggestion": {
         "title": "Guide — Cloud Improving Implementation",
         "description": "Guide — Cloud Improving Implementation — auto-suggested description"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       }
     },
     {
@@ -21926,6 +21945,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "route": "/reports/blueprints/blueprint-2025-08-14-083015",
 =======
       "route": "/reports/guides/guide-2025-08-19-034110",
@@ -22101,6 +22121,9 @@
       "route": "/reports/guides/ultra-1755539341010-vsuyr3",
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
+=======
+      "route": "/reports/blueprints/blueprint-2025-08-14-083015",      "missing": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "og:image"
       ],
       "suggestion": {
@@ -26793,7 +26816,10 @@
       "missing": [
         "og:image"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       ],
       "suggestion": {
         "title": "Ultra-Fast Guide: Real-time collaboration tools",
@@ -27097,7 +27123,10 @@
         "og:description",
         "og:image",
         "twitter:card"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       ],
       "suggestion": {
         "title": "Guide — Techcrunch Pebble Implementation",
@@ -27105,6 +27134,7 @@
       }
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/guides/guide-2025-08-14-093804",
 =======
@@ -27135,6 +27165,14 @@
         "description": "Ultra-Fast Guide: Lightning-fast development — auto-suggested description"
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       }
+=======
+      "route": "/reports/guides/guide-2025-08-14-093804",      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Guide — Techcrunch Pebble Implementation",
+        "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"      }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     },
     {
       "route": "/reports/",
@@ -27167,6 +27205,7 @@
       }
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/innovations/insight-2025-08-13-2021",
 =======
@@ -29993,6 +30032,9 @@
       "route": "/reports/innovations/insight-2025-08-18-1315",
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
+=======
+      "route": "/reports/innovations/insight-2025-08-13-2021",      "missing": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "og:image"
       ],
       "suggestion": {
@@ -34442,6 +34484,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "route": "/reports/patterns/pattern-2025-08-14-093258",
 =======
       "route": "/reports/innovations/insight-2025-08-19-0340",
@@ -34537,6 +34580,9 @@
       "route": "/reports/insights/cloud-computing-2025-trends",
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
+=======
+      "route": "/reports/patterns/pattern-2025-08-14-093258",      "missing": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "og:image"
       ],
       "suggestion": {
@@ -34740,6 +34786,7 @@
         "og:image"
       ],
       "suggestion": {
+<<<<<<< HEAD
 <<<<<<< HEAD
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
@@ -48407,6 +48454,10 @@
         "description": "Pattern: Lightning-fast development Architecture — auto-suggested description"
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       }
+=======
+        "title": "Playbook — Autonomous Delivery",
+        "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     },
     {
       "route": "/reports/playbooks/playbook-2025-08-13-223717",
@@ -49913,7 +49964,10 @@
       "missing": [
         "og:image"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       ],
       "suggestion": {
         "title": "Pattern: Real-time collaboration tools Architecture",
@@ -50247,7 +50301,10 @@
         "og:description",
         "og:image",
         "twitter:card"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       ],
       "suggestion": {
         "title": "Playbook — Autonomous Delivery",
@@ -50255,6 +50312,7 @@
       }
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/playbooks/playbook-2025-08-14-040018",
 =======
@@ -50265,11 +50323,18 @@
       ],
       "suggestion": {
 <<<<<<< HEAD
+=======
+      "route": "/reports/playbooks/playbook-2025-08-14-040018",      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
       }
     },
     {
+<<<<<<< HEAD
       "route": "/reports/playbooks/playbook-2025-08-14-041113",
 =======
         "title": "Pattern: Instant feedback loops Architecture",
@@ -50284,6 +50349,12 @@
       ],
       "suggestion": {
 <<<<<<< HEAD
+=======
+      "route": "/reports/playbooks/playbook-2025-08-14-041113",      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
       }
@@ -50305,12 +50376,16 @@
       ],
       "suggestion": {
         "title": "Playbook — Autonomous Delivery",
+<<<<<<< HEAD
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
 =======
         "title": "Pattern: Lightning deployment pipelines Architecture",
         "description": "Pattern: Lightning deployment pipelines Architecture — auto-suggested description"
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       }
+=======
+        "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     },
     {
       "route": "/reports/playbooks/playbook-2025-08-14-043123",
@@ -55484,6 +55559,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-13-0544",
 =======
       "route": "/reports/playbooks/playbook-2025-08-19-034110",
@@ -55659,6 +55735,9 @@
       "route": "/reports/tutorials/",
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
+=======
+      "route": "/reports/updates/update-2025-08-13-0544",      "missing": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "og:image"
       ],
       "suggestion": {
@@ -60361,7 +60440,10 @@
       "missing": [
         "og:image"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       ],
       "suggestion": {
         "title": "Rapid Technology Advancement",
@@ -60685,7 +60767,10 @@
         "og:description",
         "og:image",
         "twitter:card"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       ],
       "suggestion": {
         "title": "Autonomous Update — 2025-08-13 19:45",
@@ -60693,6 +60778,7 @@
       }
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-13-1946",
 =======
@@ -60703,11 +60789,18 @@
       ],
       "suggestion": {
 <<<<<<< HEAD
+=======
+      "route": "/reports/updates/update-2025-08-13-1946",      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "title": "Autonomous Update — 2025-08-13 19:46",
         "description": "Autonomous Update — 2025-08-13 19:46 — auto-suggested description"
       }
     },
     {
+<<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-13-1947",
 =======
         "title": "Real-Time Innovation Hub",
@@ -60729,6 +60822,14 @@
         "description": "Lightning Innovation Cycle — auto-suggested description"
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       }
+=======
+      "route": "/reports/updates/update-2025-08-13-1947",      "missing": [
+        "og:image"
+      ],
+      "suggestion": {
+        "title": "Autonomous Update — 2025-08-13 19:47",
+        "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"      }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     },
     {
       "route": "/reports/updates/update-2025-08-13-1948",
@@ -67662,6 +67763,7 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-14T09-30",
 =======
       "route": "/reports/updates/update-2025-08-19-0040",
@@ -67810,6 +67912,9 @@
       "route": "/reports/whitepapers/enterprise-ai-strategy-framework",
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
+=======
+      "route": "/reports/updates/update-2025-08-14T09-30",      "missing": [
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "og:image"
       ],
       "suggestion": {
@@ -67881,6 +67986,9 @@
       "route": "/services/",
       "missing": [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         "description",
         "og:title",
         "og:description",
@@ -67889,6 +67997,7 @@
       ],
       "suggestion": {
         "title": "Services",
+<<<<<<< HEAD
         "description": "Services — auto-suggested description"
 =======
         "og:image"
@@ -69467,6 +69576,9 @@
         "description": "Training Service — auto-suggested description"
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
       }
+=======
+        "description": "Services — auto-suggested description"      }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     },
     {
       "route": "/site-health",
@@ -69478,7 +69590,10 @@
         "description": "Site Health — auto-suggested description"
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     },
     {
       "route": "/sitemap",
@@ -72212,7 +72327,10 @@
         "title": "User Management",
         "description": "User Management — auto-suggested description"
       }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-fix-and-push-changes-8412
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
   ]
 }

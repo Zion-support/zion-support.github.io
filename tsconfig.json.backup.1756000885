@@ -95,13 +95,20 @@
     "zion.app/recovered-content/**",
     "apps/**",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "browserstack.config.ts",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
+<<<<<<< HEAD
     "**/*.spec.tsx"
 =======
     "apps.backup/**"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
   ]
+=======
+    "**/*.spec.tsx"  ]
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }

@@ -6,11 +6,15 @@
   "license": "MIT",
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "build": "hardhat compile",
     "clean": "hardhat clean && rimraf ./artifacts ./cache",
     "deploy": "ts-node --transpile-only scripts/deploy/deployZion.ts",
     "publish-abi": "ts-node --transpile-only scripts/utils/publishAbi.ts",
     "lint": "eslint --ext .ts ./scripts",
+<<<<<<< HEAD
     "typecheck": "tsc -p tsconfig.json --noEmit"
 =======
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
@@ -256,6 +260,9 @@
     "uuid": "^11.1.0"
 >>>>>>> origin/cursor/deploy-zion-protocol-metrics-dashboard-eac6
   },
+=======
+    "typecheck": "tsc -p tsconfig.json --noEmit"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
     "@nomicfoundation/hardhat-ethers": "^3.1.0",
@@ -271,7 +278,10 @@
     "@types/mocha": "^10.0.10",
   },
   "type": "module"
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",

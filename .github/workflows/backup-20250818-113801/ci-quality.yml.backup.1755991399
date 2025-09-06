@@ -6,10 +6,15 @@ on:
     - cron: '0 */6 * * *'
 permissions:
   contents: write
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/backup-20250818-113801/ci-quality.yml
 =======
   pull-requests: write
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2:.github/workflows/broken_workflows_backup_1755470975/dependencies.yml
+=======
+:.github/workflows/backup-20250818-113801/ci-quality.yml
+  pull-requests: write
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   actions: read
   pull-requests: write
 concurrency:

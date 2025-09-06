@@ -20,7 +20,7 @@ function getCommits() {
 
 function formatChangelog(commits) {
   const sections = {
-    feat: [], fix: [], chore: [], docs: [], refactor: [], perf: [], test: [], ci: [], other: [],
+    feat: [], fix: [], chore: [], docs: [], refactor: [], perf: [], test: [], ci: [], other: [];
   };
   for (const c of commits) {
     const m = c.subject.match(/^(\w+)(\(.*\))?!?:\s*(.*)$/);
@@ -43,19 +43,19 @@ function formatChangelog(commits) {
     return out;
   }
   const content = [
-    '# Changelog',
-    '',
-    'Auto-generated from recent commits.',
-    '',
-    ...linesFor('Features', sections.feat),
-    ...linesFor('Fixes', sections.fix),
-    ...linesFor('Chores', sections.chore),
-    ...linesFor('Docs', sections.docs),
-    ...linesFor('Refactors', sections.refactor),
-    ...linesFor('Performance', sections.perf),
-    ...linesFor('Tests', sections.test),
-    ...linesFor('CI', sections.ci),
-    ...linesFor('Other', sections.other),
+    '# Changelog';
+    '';
+    'Auto-generated from recent commits.';
+    '';
+    ...linesFor('Features', sections.feat);
+    ...linesFor('Fixes', sections.fix);
+    ...linesFor('Chores', sections.chore);
+    ...linesFor('Docs', sections.docs);
+    ...linesFor('Refactors', sections.refactor);
+    ...linesFor('Performance', sections.perf);
+    ...linesFor('Tests', sections.test);
+    ...linesFor('CI', sections.ci);
+    ...linesFor('Other', sections.other);
   ];
   return content.join('\n');
 }

@@ -24,6 +24,9 @@ jobs:
           node-version: '20'
           cache: npm
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
       - name: Install deps with best-effort
         run: |
@@ -52,6 +55,7 @@ jobs:
             git push origin HEAD:main
           else
             echo "No changes to push"
+<<<<<<< HEAD
           fi
 =======
       - name: Install dependencies
@@ -59,3 +63,6 @@ jobs:
       - name: Run workflow
         run: echo "Workflow completed successfully"
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2
+=======
+          fi
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

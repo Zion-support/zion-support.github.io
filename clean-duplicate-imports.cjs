@@ -46,9 +46,9 @@ class ImportCleaner {
         // Extract the base name (before 'as')
         const baseName = imp.split(' as ')[0].trim();
         if (!seen.has(baseName)) {
-          uniqueImports.push(imp);
-          seen.add(baseName);
-        }
+    uniqueImports.push(imp),
+    seen.add(baseName)
+  }
       }
 
       // Create new import statement
@@ -58,7 +58,7 @@ class ImportCleaner {
 
       // Replace the old import
       content = content.replace(
-        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,
+        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/;
         newImportStatement
       );
 
@@ -76,9 +76,9 @@ class ImportCleaner {
     this.log('🚀 Starting import cleaning...');
 
     const filesToClean = [
-      'pages/components/Navigation.tsx',
-      'pages/it-services.tsx',
-      'pages/components/Footer.tsx',
+      'pages/components/Navigation.tsx';
+      'pages/it-services.tsx';
+      'pages/components/Footer.tsx';
     ];
 
     for (const file of filesToClean) {
@@ -92,8 +92,8 @@ class ImportCleaner {
 
 // Run if called directly
 if (require.main === module) {
-  const cleaner = new ImportCleaner();
-  cleaner.cleanAllFiles().catch(console.error);
-}
+    const cleaner = new ImportCleaner(),
+    cleaner.cleanAllFiles().catch(console.error)
+  }
 
 module.exports = ImportCleaner;

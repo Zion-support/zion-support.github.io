@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Issue Triage
 
 on:
@@ -7,6 +10,7 @@ on:
 
 permissions:
   issues: write
+<<<<<<< HEAD
 =======
 name: AI Issue & PR Triage
 
@@ -22,11 +26,16 @@ permissions:
   pull-requests: write
 >>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       - uses: actions/github-script@v7
         with:
           script: |
@@ -40,6 +49,7 @@ jobs:
             if (title.includes('dependency') || title.includes('bump')) labels.push('dependencies');
             if (labels.length > 0) {
               await github.rest.issues.addLabels({ owner, repo, issue_number: issue.number, labels });
+<<<<<<< HEAD
             }
 =======
       - name: Triage with OpenAI
@@ -77,3 +87,6 @@ jobs:
             }
             core.info('Triage complete');
 >>>>>>> origin/cursor/build-zion-ai-marketplace-service-listing-9ebf
+=======
+            }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

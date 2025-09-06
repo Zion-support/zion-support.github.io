@@ -37,6 +37,9 @@
   --holographic-glow: 0 0 30px rgba(139, 92, 246, 0.6);
   --cyberpunk-glow: 0 0 25px rgba(236, 73, 153, 0.7);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
   --futuristic-shadow: 0 0 60px rgba(0, 255, 255, 0.3);
@@ -138,6 +141,7 @@
 
   .form-label {
     @apply block text-sm font-medium text-gray-700 mb-2;
+<<<<<<< HEAD
   }
 =======
   --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
@@ -172,6 +176,17 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
 <<<<<<< HEAD
+=======
+  }}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
+  border-radius: 4px;
+  transition: all 0.3s ease;}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   box-shadow: var(--quantum-glow);
 }
 
@@ -230,6 +245,7 @@ h2 {
   background: linear-gradient(135deg, #ec4899, #f97316);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+<<<<<<< HEAD
   background-clip: text;
 =======
   box-shadow: var(--holographic-glow);
@@ -248,6 +264,9 @@ h2 {
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
 }
+=======
+  background-clip: text;}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 /* Enhanced Body Styles */
 body {
@@ -297,6 +316,9 @@ body::after {
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   background-image: 
     radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.8), transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.8), transparent),
@@ -312,6 +334,7 @@ body::after {
   background-size: 400px 100px;
   pointer-events: none;
   z-index: -1;
+<<<<<<< HEAD
   animation: particleFloat 30s linear infinite;
 =======
   background: 
@@ -324,6 +347,9 @@ body::after {
   animation: backgroundFloat 25s ease-in-out infinite;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
 }
+=======
+  animation: particleFloat 30s linear infinite;}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 /* Enhanced Quantum Grid */
 .quantum-grid {
@@ -451,6 +477,9 @@ body::after {
 /* Enhanced Animations */
 @keyframes backgroundFloat {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   25% { transform: translateY(-10px) rotate(1deg); }
   50% { transform: translateY(-5px) rotate(-1deg); }
@@ -528,6 +557,7 @@ body::after {
     linear-gradient(45deg, transparent 40%, rgba(16, 185, 129, 0.05) 50%, transparent 60%),
     linear-gradient(-45deg, transparent 40%, rgba(239, 68, 68, 0.05) 50%, transparent 60%);
   background-size: 100px 100px, 100px 100px, 200px 200px, 200px 200px;
+<<<<<<< HEAD
   animation: neuralPulse 20s ease-in-out infinite;
 =======
   0%, 100% { 
@@ -644,6 +674,12 @@ body::after {
 @keyframes neuralPulse {
   0%, 100% { 
 <<<<<<< HEAD
+=======
+  animation: neuralPulse 20s ease-in-out infinite;}
+
+@keyframes neuralPulse {
+  0%, 100% { 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     background-size: 100px 100px, 100px 100px, 200px 200px, 200px 200px;
     opacity: 0.5;
   }
@@ -795,6 +831,7 @@ body::after {
     opacity: 0.9;
   }
   75% { 
+<<<<<<< HEAD
     transform: translateX(-20px) scale(1.1);
 =======
     box-shadow: var(--neural-glow);
@@ -829,6 +866,12 @@ body::after {
 }
 
 <<<<<<< HEAD
+=======
+    transform: translateX(-20px) scale(1.1);    opacity: 1;
+  }
+}
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 @keyframes quantumEntanglement {
   0%, 100% { 
     transform: translateY(0) scale(1);
@@ -849,6 +892,7 @@ body::after {
 }
 
 /* Enhanced Button Effects */
+<<<<<<< HEAD
 .quantum-button {
 =======
 /* Enhanced Particle Effects */
@@ -898,6 +942,9 @@ body::after {
 .btn-futuristic {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
   position: relative;
+=======
+.quantum-button {  position: relative;
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -950,11 +997,15 @@ body::after {
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
 =======
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
   transition: left 0.5s ease;
+=======
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);  transition: left 0.5s ease;
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }
 
 .futuristic-card:hover::before {
@@ -962,6 +1013,9 @@ body::after {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 .futuristic-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 
@@ -1107,6 +1161,7 @@ body::after {
 .quantum-entanglement::after {
   bottom: -50px;
   right: -50px;
+<<<<<<< HEAD
   animation-delay: 3s;
 =======
 .btn-futuristic:hover {
@@ -1201,6 +1256,9 @@ body::after {
   filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5));
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
 }
+=======
+  animation-delay: 3s;}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 @keyframes entanglement {
   0%, 100% { 
@@ -1751,6 +1809,9 @@ body::after {
 /* Enhanced responsive design */
 @media (max-width: 768px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   .mobile-optimized {
     padding: 1rem;
     margin: 0.5rem;
@@ -1762,6 +1823,7 @@ body::after {
   }
 }
 
+<<<<<<< HEAD
 /* Enhanced accessibility */
 =======
   .futuristic-heading {
@@ -1780,6 +1842,9 @@ body::after {
 /* Enhanced Accessibility */
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
 @media (prefers-reduced-motion: reduce) {
+=======
+/* Enhanced accessibility */@media (prefers-reduced-motion: reduce) {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   *,
   *::before,
   *::after {
@@ -1787,6 +1852,9 @@ body::after {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }
 }
 
@@ -1808,6 +1876,7 @@ body::after {
     color: #000000 !important;
     background: #ffffff !important;
   }
+<<<<<<< HEAD
 }
 =======
   }
@@ -1834,3 +1903,6 @@ body::after {
   }
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-dc1e
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

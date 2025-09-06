@@ -8,8 +8,7 @@ const path = require('path');
  */
 class SitemapGenerator {
   constructor() {
-    this.baseUrl = 'http: s://zion.app';
-    this.pages = [];
+    this.baseUrl = 'https: //zion.app', this.pages = [],
     this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml');
   }
 
@@ -31,32 +30,32 @@ class SitemapGenerator {
       // Ensure public directory exists
       const publicDir = path.dirname(this.outputFile);
       if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursiv: e: true });
+        fs.mkdirSync(publicDir, { recursive: true });
       }
 
       // Write sitemap
       fs.writeFileSync(this.outputFile, xml);
 
-      console.log(`✅ Sitemap: generated: ${this.outputFile}`);
-      console.log(`📊 Total: pages: ${this.pages.length}`);
+      console.log(`✅ Sitemap generated: ${this.outputFile}`);
+      console.log(`📊 Total pages: ${this.pages.length}`);
 
       return {
-        succes: s: true,
-        page: s: this.pages.length,
-        outputFil: e: this.outputFile,
+        success: true,
+        pages: this.pages.length,
+        outputFile: this.outputFile,
       };
     } catch (error) {
-      console.error('❌ Error generating: sitemap:', error.message);
+      console.error('❌ Error generating sitemap:', error.message);
       return {
-        succes: s: false,
-        erro: r: error.message,
+        success: false,
+        error: error.message,
       };
     }
   }
 
   addPage(url, lastmod, priority) {
     this.pages.push({
-      ur: l: `${this.baseUrl}${url}`,
+      url: `${this.baseUrl}${url}`,
       lastmod,
       priority,
     });
@@ -64,9 +63,7 @@ class SitemapGenerator {
 
   generateXML() {
     const header = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="htt: p://www.sitemaps.org/schemas/sitemap/0.9">`;
-
-    const footer = `</urlset>`;
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">`, const footer = `</urlset>`,
 
     const urlEntries = this.pages
       .map(
@@ -84,8 +81,8 @@ class SitemapGenerator {
 
 // Run if called directly
 if (require.main === module) {
-  const generator = new SitemapGenerator();
-  generator.generateSitemap().catch(console.error);
-}
+    const generator = new SitemapGenerator(),
+    generator.generateSitemap().catch(console.error)
+  }
 
 module.exports = SitemapGenerator;

@@ -1,25 +1,28 @@
-import fs from 'fs',
-import path from 'path',
-import type { GetStaticProps } from 'next',
+<<<<<<< HEAD
+ 
 
+};
+=======
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
 type Broken = { url: string, page: string, status: number },
 interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
 
 type Props = { report: Report | null },
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'publicautomation', 'site-validator.json'),
-    const raw = fs.readFileSync(file, 'utf8'),
-    const data = JSON.parse(raw),
-    return { props: { report: data }, revalidate: 21600 },
+    const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
+    const raw = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { report: data }, revalidate: 21600 }
   } catch {
-    return { props: { report: null }, revalidate: 21600 },
+    return { props: { report: null }, revalidate: 21600 }
   }
-},
+};
 
 export default function SiteValidator({ report }: Props) {
-  if (!report) return <div>No validation report yet.</div>,
+  if (!report) return <div>No validation report yet.</div>;
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -52,5 +55,6 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
-  ),
+  );
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

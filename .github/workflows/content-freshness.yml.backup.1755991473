@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Content Freshness Auditor
 
 on:
@@ -9,6 +12,7 @@ on:
       - 'pages/**'
       - 'docs/**'
   workflow_dispatch: {}
+<<<<<<< HEAD
 
 =======
 name: Content Freshness Monitor
@@ -23,11 +27,16 @@ concurrency:
   cancel-in-progress: true
 
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-4fee
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 permissions:
   contents: write
 
 jobs:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   freshness:
     runs-on: ubuntu-latest
     steps:
@@ -50,6 +59,7 @@ jobs:
             git commit -m "chore(automation): update content freshness report [skip ci]"
             git push
           else
+<<<<<<< HEAD
             echo "No changes to commit"
 =======
   scan-and-sync:
@@ -84,3 +94,6 @@ jobs:
             echo "No content freshness changes to commit"
 >>>>>>> origin/cursor/deploy-autonomous-cloud-automations-and-sync-4fee
           fi
+=======
+            echo "No changes to commit"          fi
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

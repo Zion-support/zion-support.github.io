@@ -1,4 +1,3 @@
-
 // Add basic type definitions for Node.js globals used in the project
 interface Process {
   env: {
@@ -9,8 +8,7 @@ interface Process {
     SLACK_BOT_TOKEN?: string;
     OPENAI_API_KEY?: string;
   };
-}
 
-declare let process: Process;
-declare let console: Console;
-declare let __dirname: string;
+declare var process: Process;
+declare var console: Console;
+declare var __dirname: string;

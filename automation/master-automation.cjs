@@ -10,7 +10,7 @@ class MasterAutomation {
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursiv: e: true });
+      fs.mkdirSync(this.logsDir, { recursive: true });
     }
   }
 
@@ -26,17 +26,17 @@ class MasterAutomation {
 
   async runCommand(command, description) {
     try {
-      this.log(`Runnin: g: ${description}`);
+      this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encodin: g: 'utf8',
-        cw: d: '/workspace',
-        stdi: o: 'pipe',
+        encoding: 'utf8',
+        cwd: '/workspace',
+        stdio: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, output };
+      return { success: true, output };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
-      return { succes: s: false, erro: r: error.message };
+      this.log(`❌ ${description} failed: ${error.message}`, 'error');
+      return { success: false, error: error.message };
     }
   }
 
@@ -44,9 +44,9 @@ class MasterAutomation {
     this.log('🚀 Starting build process...');
 
     const steps = [
-      { comman: d: 'npm install', descriptio: n: 'Installing dependencies' },
-      { comman: d: 'npm run build', descriptio: n: 'Building application' },
-      { comman: d: 'npm run: test:smoke', descriptio: n: 'Running smoke tests' },
+      { command: 'npm install', description: 'Installing dependencies' },
+      { command: 'npm run build', description: 'Building application' },
+      { command: 'npm run test:smoke', description: 'Running smoke tests' },
     ];
 
     const results = [];
@@ -55,21 +55,21 @@ class MasterAutomation {
       results.push({ ...step, result });
 
       if (!result.success) {
-        this.log(`❌ Build process failed: at: ${step.description}`, 'error');
-        return { succes: s: false, results };
+        this.log(`❌ Build process failed at: ${step.description}`, 'error');
+        return { success: false, results };
       }
     }
 
     this.log('✅ Build process completed successfully');
-    return { succes: s: true, results };
+    return { success: true, results };
   }
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
 
     const checks = [
-      { comman: d: 'npm run lint', descriptio: n: 'Linting check' },
-      { comman: d: 'npm run type-check', descriptio: n: 'TypeScript type check' },
+      { command: 'npm run lint', description: 'Linting check' },
+      { command: 'npm run type-check', description: 'TypeScript type check' },
     ];
 
     const results = [];
@@ -79,7 +79,7 @@ class MasterAutomation {
     }
 
     this.log('✅ Quality checks completed');
-    return { succes: s: true, results };
+    return { success: true, results };
   }
 
   async runAutomationScripts() {
@@ -87,16 +87,28 @@ class MasterAutomation {
 
     const scripts = [
       {
-        comman: d: 'node scripts/automation/ai-intelligent-code-analyzer.cjs',
-        descriptio: n: 'AI Code Analyzer',
+        command: 'node automation/ai-intelligent-code-analyzer.cjs',
+        description: 'AI Code Analyzer',
       },
       {
-        comman: d: 'node scripts/automation/intelligent-git-workflow.cjs',
-        descriptio: n: 'Git Workflow Automation',
+        command: 'node automation/intelligent-git-workflow.cjs',
+        description: 'Git Workflow Automation',
       },
       {
-        comman: d: 'node scripts/automation/advanced-performance-optimizer.cjs',
-        descriptio: n: 'Performance Optimizer',
+        command: 'node automation/advanced-performance-optimizer.cjs',
+        description: 'Performance Optimizer',
+      },
+      {
+        command: 'node automation/automated-test-runner.cjs',
+        description: 'Automated Test Runner',
+      },
+      {
+        command: 'node automation/security-auditor.cjs',
+        description: 'Security Auditor',
+      },
+      {
+        command: 'node automation/performance-monitor.cjs',
+        description: 'Performance Monitor',
       },
     ];
 
@@ -107,21 +119,21 @@ class MasterAutomation {
     }
 
     this.log('✅ Automation scripts completed');
-    return { succes: s: true, results };
+    return { success: true, results };
   }
 
   async generateReport() {
     this.log('📊 Generating automation report...');
 
     const report = {
-      timestam: p: new Date().toISOString(),
-      buil: d: await this.runBuildProcess(),
-      qualit: y: await this.runQualityChecks(),
-      automatio: n: await this.runAutomationScripts(),
-      summar: y: {
-        totalScript: s: 3,
-        successfulScript: s: 0,
-        failedScript: s: 0,
+      timestamp: new Date().toISOString(),
+      build: await this.runBuildProcess(),
+      quality: await this.runQualityChecks(),
+      automation: await this.runAutomationScripts(),
+      summary: {
+        totalScripts: 6,
+        successfulScripts: 0,
+        failedScripts: 0,
       },
     };
 
@@ -142,7 +154,7 @@ class MasterAutomation {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Report saved: to: ${reportFile}`);
+    this.log(`📄 Report saved to: ${reportFile}`);
     return report;
   }
 
@@ -157,17 +169,17 @@ class MasterAutomation {
     this.log('📊 Checking automation status...');
 
     const status = {
-      timestam: p: new Date().toISOString(),
-      buildStatu: s: 'unknown',
-      gitStatu: s: 'unknown',
-      dependenciesStatu: s: 'unknown',
+      timestamp: new Date().toISOString(),
+      buildStatus: 'unknown',
+      gitStatus: 'unknown',
+      dependenciesStatus: 'unknown',
     };
 
     // Check build status
     try {
       const buildResult = await this.runCommand('npm run build', 'Build check');
       status.buildStatus = buildResult.success ? 'healthy' : 'failed';
-    } catch (error) {
+    } catch (_error) {
       status.buildStatus = 'error';
     }
 
@@ -178,7 +190,7 @@ class MasterAutomation {
         'Git status check'
       );
       status.gitStatus = gitResult.success ? 'clean' : 'dirty';
-    } catch (error) {
+    } catch (_error) {
       status.gitStatus = 'error';
     }
 
@@ -189,7 +201,7 @@ class MasterAutomation {
         'Dependencies check'
       );
       status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
-    } catch (error) {
+    } catch (_error) {
       status.dependenciesStatus = 'error';
     }
 
@@ -208,11 +220,11 @@ if (require.main === module) {
       automation
         .start()
         .then(report => {
-          console.log('Automation: completed:', report.summary);
+          console.log('Automation completed:', report.summary);
           process.exit(0);
         })
         .catch(error => {
-          console.error('Automation: failed:', error);
+          console.error('Automation failed:', error);
           process.exit(1);
         });
       break;
@@ -220,17 +232,15 @@ if (require.main === module) {
       automation
         .status()
         .then(status => {
-          console.log('Statu: s:', status);
+          console.log('Status:', status);
           process.exit(0);
         })
         .catch(error => {
-          console.error('Status check: failed:', error);
+          console.error('Status check failed:', error);
           process.exit(1);
         });
       break;
-    defaul: t:
-      console.log('Usag: e: node master-automation.cjs [start|status]');
-      process.exit(1);
+    default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
   }
 }
 

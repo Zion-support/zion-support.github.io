@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+ 
+}else {
+  console.warn ('Missing artifact for', name) 
+
+
+}main ();
+=======
 const fs = require('fs'),
 const path = require('path'),
 
@@ -18,11 +26,12 @@ function main() {
     if (fs.existsSync(p)) {
       const json = JSON.parse(fs.readFileSync(p, 'utf8')),
       fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2)),
-      // // // console.log('Exported ABI for', name),
+      console.log('Exported ABI for', name)
     } else {
-      console.warn('Missing artifact for', name),
+      console.warn('Missing artifact for', name)
     }
   }
 }
 
 main(),
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

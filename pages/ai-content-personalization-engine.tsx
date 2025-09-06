@@ -1,6 +1,14 @@
-import React from 'react',
-import ServiceLanding from '../components/sections/ServiceLanding',
+import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
+export default function AIContentPersonalizationEngine() {
+  
+    />
+  );
+=======
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIContentPersonalizationEngine() {
 	return (
 		<ServiceLanding
@@ -12,11 +20,11 @@ export default function AIContentPersonalizationEngine() {
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 3–6x within 90 days"
 			features={[
-				"Segmentation and propensity modeling",
-				"Real-time content and offer selection",
-				"A/B/n and multi-armed bandit experimentation",
-				"Journey orchestration across channels",
-				"Privacy-safe profiling and consent management",
+				"Segmentation and propensity modeling";
+				"Real-time content and offer selection";
+				"A/B/n and multi-armed bandit experimentation";
+				"Journey orchestration across channels";
+				"Privacy-safe profiling and consent management";
 				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}
@@ -24,3 +32,4 @@ export default function AIContentPersonalizationEngine() {
 		/>
 	)
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

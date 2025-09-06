@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 name: Scheduled Automations
 =======
 name: Autonomous Automations
@@ -8,10 +9,17 @@ on:
   schedule:
     - cron: '*/30 * * * *'
 <<<<<<< HEAD
+=======
+name: Scheduled Automations
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   workflow_dispatch:
 
 permissions:
   contents: write
+<<<<<<< HEAD
 =======
   push:
     branches: [ main ]
@@ -26,11 +34,21 @@ jobs:
     permissions:
       contents: write
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+jobs:
+  run-automations:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -69,6 +87,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "chore(automation): scheduled automations artifacts [skip ci]" || echo "No changes"
+<<<<<<< HEAD
           git push origin HEAD:${GITHUB_REF#refs/heads/}
 =======
           persist-credentials: true
@@ -100,3 +119,6 @@ jobs:
           git pull --rebase origin main || true
           git push origin HEAD:main || true
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+          git push origin HEAD:${GITHUB_REF#refs/heads/}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

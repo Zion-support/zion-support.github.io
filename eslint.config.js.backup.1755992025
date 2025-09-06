@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 =======
@@ -11,6 +12,13 @@ export default [
   {
 <<<<<<< HEAD
 =======
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+export default [
+  js.configs.recommended,
+  {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -43,7 +51,10 @@ export default [
     }
   },
   {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-005b
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     ignores: [
       'node_modules/',
       '.next/',
@@ -58,6 +69,7 @@ export default [
       'netlify/',
       'ecosystem*.cjs',
 <<<<<<< HEAD
+<<<<<<< HEAD
       '**/*.cjs',
       'components/**',
       'pages/**',
@@ -66,5 +78,11 @@ export default [
       '**/*.cjs'
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-005b
     ]
+=======
+      '**/*.cjs',
+      'components/**',
+      'pages/**',
+      'services/**'    ]
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }
 ];

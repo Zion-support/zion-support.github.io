@@ -1,6 +1,14 @@
-import React from 'react',
-import ServiceLanding from '../components/sections/ServiceLanding',
+import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
+export default function AIEthicsGovernanceFramework() {
+  
+    />
+  );
+=======
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEthicsGovernanceFramework() {
 	return (
 		<ServiceLanding
@@ -12,11 +20,11 @@ export default function AIEthicsGovernanceFramework() {
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Reduce compliance risk and accelerate approvals"
 			features={[
-				"AI risk register and DPIA templates",
-				"Bias/fairness tests, red-teaming workflows",
-				"Model cards, data sheets, and change logs",
-				"Prompt governance and access controls",
-				"Regulatory mapping (EU AI Act, NIST AI RMF)",
+				"AI risk register and DPIA templates";
+				"Bias/fairness tests, red-teaming workflows";
+				"Model cards, data sheets, and change logs";
+				"Prompt governance and access controls";
+				"Regulatory mapping (EU AI Act, NIST AI RMF)";
 				"Training and incident response runbooks"
 			]}
 			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
@@ -24,3 +32,4 @@ export default function AIEthicsGovernanceFramework() {
 		/>
 	)
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

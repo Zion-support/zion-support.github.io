@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "extends": [],
   "rules": {
     "@typescript-eslint/no-explicit-any": "off",
@@ -8,6 +11,7 @@
     "react-hooks/rules-of-hooks": "off",
     "@typescript-eslint/parser": "off"
   }
+<<<<<<< HEAD
 }
 =======
   "extends": ["next/core-web-vitals"],
@@ -17,3 +21,6 @@
   }
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-ffd4
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

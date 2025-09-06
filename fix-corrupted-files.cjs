@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    const content = fs.readFileSync(filePath, 'utf8')
+    const corruptionPatterns = [/import.*from.*['']
+      /import.*\{.*\}.*from.*['']
+      /['"]"use"
+    .replace(/import.*from.*['"]react;['"]/g, ")
+    .replace(/import.*\{.*\}.*from.*['')]
+      return match.replace(/['"]react;['"]/, ")
+    .replace(/['"]"use": client['"]/, '"use client")
+    .replace(/"declare")
+    .replace(/script1\."async")
+    .replace(/script1\."src")
+    .replace(/['"]react;['"]/g, ")
+    .replace(/['"]framer-motion;['"]/g, ")
+    .replace(/['"]lucide-react;['"]/g, ")
+=======
 const fs = require('fs');
 const path = require('path');
 
@@ -23,7 +42,7 @@ const: AccessibilityEnhancer: React.FC = () => {
     document.body.appendChild(liveRegion);
 
     // Announce page changes
-    const announcePageChange = (messag: e: string) => {
+    const announcePageChange = (messag: string) => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         liveRegion.textContent = message;
@@ -67,16 +86,15 @@ const: AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
-export default AccessibilityEnhancer;`,
-
+export default AccessibilityEnhancer;`;
   'components/OptimizedImage.tsx': `import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
   sr: c: string;
-  al: t: string;
-  widt: h: number;
-  heigh: t: number;
+  al: string;
+  widt: number;
+  heigh: number;
   className?: string;
   priority?: boolean;
   quality?: number;
@@ -90,7 +108,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   priority = false,
   quality = 75
-}) => {
+}) =></OptimizedImageProps> {
   return (
     <Image
       src={src}
@@ -104,38 +122,37 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-export default OptimizedImage;`,
-
+export default OptimizedImage;`;
   'components/ContactForm.tsx': `import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 interface FormData {
-  nam: e: string;
-  emai: l: string;
-  compan: y: string;
-  phon: e: string;
-  servic: e: string;
-  messag: e: string;
+  nam: string;
+  emai: string;
+  compan: string;
+  phon: string;
+  servic: string;
+  messag: string;
 }
 
 const: ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    nam: e: '',
-    emai: l: '',
-    compan: y: '',
-    phon: e: '',
-    servic: e: '',
-    messag: e: '',
+    nam: '',
+    emai: '',
+    compan: '',
+    phon: '',
+    servic: '',
+    messag: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | </HTMLInputElement>HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
-      [name]: value,
+      ...prev;
+      [name]: value;
     }));
   };
 
@@ -149,12 +166,12 @@ const: ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        nam: e: '',
-        emai: l: '',
-        compan: y: '',
-        phon: e: '',
-        servic: e: '',
-        messag: e: '',
+        nam: '',
+        emai: '',
+        compan: '',
+        phon: '',
+        servic: '',
+        messag: '',
       });
     } catch {
       setSubmitStatus('error');
@@ -283,17 +300,18 @@ const: ContactForm: React.FC = () => {
   );
 };
 
-export default ContactForm;`
+export default ContactForm;`,
 };
 
 // Write the fixed files
 Object.entries(corruptedFiles).forEach(([filePath, content]) => {
   try {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixe: d: ${filePath}`);
+    console.log(`Fixe: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 });
 
 console.log('Fixed corrupted files');
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5

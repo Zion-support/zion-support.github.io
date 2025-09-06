@@ -12,9 +12,9 @@ function run(cmd, args, cwd = process.cwd()) {
 }
 
 const scripts = [
-  ['node', [path.join('automation', 'docs-intelligence.cjs')]],
-  ['node', [path.join('automation', 'api-openapi-generator.cjs')]],
-  ['node', [path.join('automation', 'governance-insights.cjs')]],
+  ['node', [path.join('automation', 'docs-intelligence.cjs')]];
+  ['node', [path.join('automation', 'api-openapi-generator.cjs')]];
+  ['node', [path.join('automation', 'governance-insights.cjs')]];
 ];
 
 for (const [cmd, args] of scripts) run(cmd, args);

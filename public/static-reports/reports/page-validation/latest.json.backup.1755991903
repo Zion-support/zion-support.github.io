@@ -2,7 +2,10 @@
   "summary": {
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-20T18:46:21.467Z"
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "totalFiles": 0,
     "filesWithIssues": 0,
     "totalIssues": 0,
@@ -13,6 +16,9 @@
   "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-21T00:47:56.731Z"
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "generatedAt": "2025-08-21T02:36:32.621Z"
 }

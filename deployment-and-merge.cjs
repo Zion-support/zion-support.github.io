@@ -5,8 +5,8 @@ const fs = require('fs');
 
 class DeploymentAndMerge {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.startTime = new Date();
+    this.projectRoot = process.cwd(),
+    this.startTime = new Date()
   }
 
   log(message, type = 'INFO') {
@@ -23,21 +23,21 @@ class DeploymentAndMerge {
   }
 
   async runCommand(command, description) {
-    this.log(`Runnin: g: ${description}`);
+    this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
-        cw: d: this.projectRoot,
-        stdi: o: 'pipe',
-        encodin: g: 'utf8',
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, outpu: t: result };
+      return { success: true, output: result };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'ERROR');
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return {
-        succes: s: false,
-        erro: r: error.message,
-        outpu: t: error.stdout || error.stderr,
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
       };
     }
   }
@@ -49,7 +49,7 @@ class DeploymentAndMerge {
       'Get Current Branch'
     );
     if (result.success) {
-      this.log(`Current: branch: ${result.output.trim()}`);
+      this.log(`Current branch: ${result.output.trim()}`);
       return result.output.trim();
     }
     return null;
@@ -64,13 +64,12 @@ class DeploymentAndMerge {
     if (statusResult.success) {
       const changes = statusResult.output.trim();
       if (changes) {
-        this.log('Uncommitted changes: detected:');
-        console.log(changes);
+        this.log('Uncommitted changes detected: '), console.log(changes),
         return false;
       } else {
-        this.log('No uncommitted changes');
-        return true;
-      }
+    this.log('No uncommitted changes'),
+    return true
+  }
     }
     return false;
   }
@@ -80,7 +79,7 @@ class DeploymentAndMerge {
 
     // Run smoke tests
     const smokeTests = await this.runCommand(
-      'npm run: test:smoke',
+      'npm run test:smoke',
       'Smoke Tests'
     );
 
@@ -120,7 +119,7 @@ class DeploymentAndMerge {
 
       return false;
     } catch (error) {
-      this.log(`Merge: failed: ${error.message}`, 'ERROR');
+      this.log(`Merge failed: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -129,16 +128,16 @@ class DeploymentAndMerge {
     this.log('\n📄 CREATING DEPLOYMENT SUMMARY');
 
     const summary = {
-      deploymentDat: e: new Date().toISOString(),
-      branc: h: await this.checkCurrentBranch(),
-      change: s: {
-        buildFixe: d: true,
-        testsPassin: g: true,
-        syntaxErrorsFixe: d: true,
-        automationScriptsCreate: d: true,
-        codeQualityImprove: d: true,
+      deploymentDate: new Date().toISOString(),
+      branch: await this.checkCurrentBranch(),
+      changes: {
+        buildFixed: true,
+        testsPassing: true,
+        syntaxErrorsFixed: true,
+        automationScriptsCreated: true,
+        codeQualityImproved: true,
       },
-      filesModifie: d: [
+      filesModified: [
         'pages/index.tsx',
         'components/PerformanceMonitor.tsx',
         'eslint.config.js',
@@ -148,8 +147,8 @@ class DeploymentAndMerge {
         'enhanced-automation-suite.cjs',
         'deployment-and-merge.cjs',
       ],
-      statu: s: 'Ready for Production',
-      nextStep: s: [
+      status: 'Ready for Production',
+      nextSteps: [
         'Monitor application performance',
         'Address remaining linting warnings',
         'Implement continuous integration',
@@ -161,7 +160,7 @@ class DeploymentAndMerge {
       'deployment-summary.json',
       JSON.stringify(summary, null, 2)
     );
-    this.log('Deployment summary: created: deployment-summary.json');
+    this.log('Deployment summary created: deployment-summary.json'),
   }
 
   async run() {
@@ -204,15 +203,15 @@ class DeploymentAndMerge {
       const totalDuration = Date.now() - this.startTime;
       this.log(`\n🎉 DEPLOYMENT PROCESS COMPLETED in ${totalDuration}ms`);
     } catch (error) {
-      this.log(`Deployment process: failed: ${error.message}`, 'ERROR');
+      this.log(`Deployment process failed: ${error.message}`, 'ERROR');
     }
   }
 }
 
 // Run the deployment and merge process
 if (require.main === module) {
-  const deployment = new DeploymentAndMerge();
-  deployment.run().catch(console.error);
-}
+    const deployment = new DeploymentAndMerge(),
+    deployment.run().catch(console.error)
+  }
 
 module.exports = DeploymentAndMerge;

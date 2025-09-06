@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Cloud Automations
 
 on:
   workflow_dispatch:
   schedule:
     - cron: '*/30 * * * *' # every 30 minutes
+<<<<<<< HEAD
 =======
 name: Autonomous Automations
 
@@ -14,6 +18,8 @@ on:
   workflow_dispatch: {}
 >>>>>>> origin/cursor/create-dynamic-listing-pages-with-filters-fc72
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 permissions:
   contents: write
 
@@ -22,6 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -34,6 +43,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run workflow
+<<<<<<< HEAD
         run: echo "Workflow completed successfully"
 =======
       - name: Checkout repository
@@ -60,3 +70,6 @@ jobs:
             git push
           fi
 >>>>>>> origin/cursor/create-dynamic-listing-pages-with-filters-fc72
+=======
+        run: echo "Workflow completed successfully"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

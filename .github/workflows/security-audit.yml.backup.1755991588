@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Security Audit
 
 on:
   schedule:
     - cron: '30 2 * * *'
   workflow_dispatch:
+<<<<<<< HEAD
 
 =======
 name: Weekly Security Audit
@@ -19,11 +23,16 @@ permissions:
   pull-requests: write
 
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -43,6 +52,7 @@ jobs:
             git push
           else
             echo "No changes to commit"
+<<<<<<< HEAD
           fi
 =======
       - name: Checkout
@@ -68,3 +78,6 @@ jobs:
           delete-branch: true
           labels: automation, security
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+          fi
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

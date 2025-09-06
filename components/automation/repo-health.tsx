@@ -1,30 +1,33 @@
-import fs from 'fs',
-import path from 'path',
-import type { GetStaticProps } from 'next',
+<<<<<<< HEAD
+ 
 
+};
+=======
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
 interface Report {
   generatedAt: string,
   commits: { last7d: number, last30d: number },
   changes: { last7dFiles: string[] },
   largestFiles: { file: string, bytes: number }[],
-  stalePages: { file: string, lastCommitAt: string }[],
+  stalePages: { file: string, lastCommitAt: string }[]
 }
 
 type Props = { report: Report | null },
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'publicautomation', 'repo-health.json'),
-    const raw = fs.readFileSync(file, 'utf8'),
-    const data = JSON.parse(raw),
-    return { props: { report: data }, revalidate: 3600 },
+    const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
+    const raw = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { report: data }, revalidate: 3600 }
   } catch {
-    return { props: { report: null }, revalidate: 3600 },
+    return { props: { report: null }, revalidate: 3600 }
   }
-},
+};
 
 export default function RepoHealth({ report }: Props) {
-  if (!report) return <div>No report yet. Check back soon.</div>,
+  if (!report) return <div>No report yet. Check back soon.</div>;
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -54,5 +57,6 @@ export default function RepoHealth({ report }: Props) {
         </ul>
       </section>
     </div>
-  ),
+  );
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

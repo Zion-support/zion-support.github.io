@@ -10,17 +10,20 @@
   `typeRoots` are merged with normal type resolution.
 */
 
-declare module "react" {
+declare module 'react' {
   // Basic ReactElement stub (JSX trees ultimately compile into this).
-   
-  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+  export interface ReactElement<
+    P = any,
+    T extends string | React.JSXElementConstructor<any> = any,
+  > {
     type: T;
     props: P;
     key: React.Key | null;
   }
 
   // Function Component (very trimmed-down).
-   
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   export interface FC<P = Record<string, unknown>> {
     (props: P): ReactElement | null;
   }
@@ -32,18 +35,16 @@ declare module "react" {
 
   // Default export so `import React from 'react'` keeps working even without
   // the real react package being installed.
-  const React: {
+  const React: {;
     useMemo: typeof useMemo;
   } & Record<string, unknown>;
 
   export default React;
-}
 
 declare namespace React {
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements"
   // errors when `@types/react` is not present.
-   
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   export interface IntrinsicElements {
     [elemName: string]: any;
   }
-}

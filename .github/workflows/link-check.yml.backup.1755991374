@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 name: Link Check
 
 on:
@@ -43,6 +46,7 @@ jobs:
           FAILS=$(cat data/reports/broken-links.json | jq '.links | map(select(.state!="OK")) | length')
           if [ "$FAILS" -gt 0 ]; then
             gh issue create -t "Link check: $FAILS failures" -b "Automated link check found $FAILS failing links. See data/reports/broken-links.json." || true
+<<<<<<< HEAD
           fi
 =======
 name: Link Checker
@@ -93,3 +97,6 @@ jobs:
               core.warning('Failed to create issue: ' + e.message);
             }
 >>>>>>> origin/cursor/build-zion-marketplace-landing-page-edf0
+=======
+          fi
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

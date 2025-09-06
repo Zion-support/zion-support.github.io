@@ -1,9 +1,12 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+// @ts-ignore </li>) ) 
+}</ul> </div> </EnhancedLayout>) 
+=======
 // @ts-ignore
-import data from '../../data/hf-models.json',
-
+import data from '../../data/hf-models.json';
 export default function HfModelsPage() {
-  const items: any[] = (data?.items || []).slice(0, 60),
+  const items: any[] = (data?.items || []).slice(0, 60);
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -19,5 +22,6 @@ export default function HfModelsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

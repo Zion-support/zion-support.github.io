@@ -1,9 +1,13 @@
 const nextConfig = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 	reactStrictMode: true,
 	swcMinify: true,
 	optimizeFonts: false,
 	output: 'export',
+<<<<<<< HEAD
 	trailingSlash: true
 =======
   compiler: {
@@ -33,5 +37,8 @@ const nextConfig = {
   },
 >>>>>>> origin/cursor/build-nextjs-app-with-react-version-check-7756
 };
+=======
+	trailingSlash: true};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 module.exports = withSentryConfig(baseConfig);

@@ -38,7 +38,7 @@ function jsonFeed(items) {
 function writeIfChanged(file, content) {
   const before = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : ''
   if (before !== content) {
-    fs.mkdirSync(path.dirname(file), { recursive: true })
+    fs.mkdirSync(path.dirname(file) { recursive: true })
     fs.writeFileSync(file, content)
     return true
   }
@@ -46,8 +46,8 @@ function writeIfChanged(file, content) {
 }
 
 const changed = [
-  writeIfChanged(outXml, xmlFeed(items)),
-  writeIfChanged(outJson, jsonFeed(items)),
+  writeIfChanged(outXml, xmlFeed(items));
+  writeIfChanged(outJson, jsonFeed(items));
 ].some(Boolean)
 
 if (changed) {

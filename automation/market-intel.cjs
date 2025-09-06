@@ -7,9 +7,9 @@ const OpenAI = require('openai');
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const SOURCES = [
-  'https://news.ycombinator.com/',
-  'https://www.reddit.com/r/MachineLearning/',
-  'https://www.techmeme.com/',
+  'https://news.ycombinator.com/';
+  'https://www.reddit.com/r/MachineLearning/';
+  'https://www.techmeme.com/';
 ];
 
 async function fetchText(url) {

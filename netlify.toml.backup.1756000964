@@ -1,10 +1,14 @@
 [build]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   command = "npm ci && npm run build"
   publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
+<<<<<<< HEAD
 =======
   functions = "netlify/functions"
 
@@ -13,6 +17,8 @@
   NODE_ENV = "production"
 >>>>>>> origin/cursor/install-dependencies-and-build-185d
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 

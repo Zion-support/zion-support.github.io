@@ -1,9 +1,12 @@
 const nextConfig = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   assetPrefix,
   poweredByHeader: false,
   trailingSlash: false,
@@ -62,6 +65,7 @@ const nextConfig = {
     // Disable profiling for faster builds
     swcTraceProfiling: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
     // Removed esmExternals to prevent external module dynamic import issues
@@ -73,6 +77,9 @@ const nextConfig = {
     // Partial Prerendering currently requires canary – disabled for now
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   },
+=======
+      },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   images: {
     unoptimized: isNetlify, // Disable optimization on Netlify to prevent 404s
@@ -230,6 +237,7 @@ const nextConfig = {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-project-with-netlify-9d19
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
@@ -365,11 +373,14 @@ const nextConfig = {
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     'lodash',
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     'lodash-es',
     'lodash/isPlainObject',
     'lodash/cloneDeep',
     'lodash/clone',
     'lodash/toPath',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-project-with-netlify-9d19
 =======
@@ -463,6 +474,8 @@ const nextConfig = {
         config.devtool = false;
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
       }
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
       // Alias react-router-dom to a lightweight stub to avoid build errors
       config.resolve.alias = {
@@ -713,6 +726,7 @@ const nextConfig = {
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     // CRITICAL FIX: Ensure usedExports is disabled globally to avoid conflicts with cacheUnaffected
@@ -722,6 +736,8 @@ const nextConfig = {
     };
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     // PHASE 2: Enhanced Bundle Splitting for Performance Optimization
     if (!isServer) {
       config.optimization = {
@@ -1036,6 +1052,7 @@ const nextConfig = {
     return config;
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   async rewrites() {
     return [
@@ -1105,6 +1122,14 @@ const nextConfig = {
       { source: '/Zion-Holdings/zion.app/tree/main/docs', destination: '/', permanent: true }
 >>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-1131
     ];
+=======
+  async rewrites() {
+    return [
+      {
+        source: '/docs/zion-protocol.pdf',
+        destination: '/api/zion-whitepaper-pdf?edition=full',
+      },    ];
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   },
   
   // Skip ESLint during build for faster deployment  
@@ -1115,7 +1140,10 @@ const nextConfig = {
   // Enable SWC minification explicitly (already default in Next 15)
   swcMinify: true,
 
+<<<<<<< HEAD
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 };
 
 module.exports = withSentryConfig(baseConfig);

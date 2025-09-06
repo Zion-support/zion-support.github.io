@@ -242,11 +242,15 @@
   {
     "route": "/careers",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "title": "Careers - Zion Tech Group",
 =======
     "title": "Careers - Zion Tech Group | Join Our Revolutionary Technology Team",
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "h1": "Join Our Team"
+=======
+    "title": "Careers - Zion Tech Group",    "h1": "Join Our Team"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   },
   {
     "route": "/case-studies",
@@ -280,13 +284,19 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/comprehensive-2025-services-showcase",
     "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
     "h1": "2025 Innovative Services Showcase"
   },
   {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/comprehensive-pricing",
     "title": "Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans",
     "h1": ""
@@ -509,11 +519,15 @@
   {
     "route": "/news",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "title": "News & Press - Zion Tech Group",
 =======
     "title": "News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates",
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "h1": "News & Press"
+=======
+    "title": "News & Press - Zion Tech Group",    "h1": "News & Press"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   },
   {
     "route": "/notifications",
@@ -533,6 +547,7 @@
   {
     "route": "/partners",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "title": "Partners - Zion Tech Group",
     "h1": "Strategic Partners"
 =======
@@ -540,6 +555,10 @@
     "h1": "Partners"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
   },
+=======
+    "title": "Partners - Zion Tech Group",
+    "h1": "Strategic Partners"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   {
     "route": "/password-checker",
     "title": "Password Strength Checker - Zion Tech Group",
@@ -552,6 +571,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "route": "/portfolio",
     "title": "Our Work - Zion Tech Group",
     "h1": "Our Work"
@@ -561,6 +581,11 @@
     "h1": "2025 Pricing & Services"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
   },
+=======
+    "route": "/portfolio",
+    "title": "Our Work - Zion Tech Group",
+    "h1": "Our Work"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   {
     "route": "/pricing-comparison",
     "title": "Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition",
@@ -674,11 +699,15 @@
   {
     "route": "/services",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
 =======
     "title": "Revolutionary 2025 Technology Services | Zion Tech Group",
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "h1": ""
+=======
+    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",    "h1": ""
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   },
   {
     "route": "/site-health",
@@ -817,10 +846,14 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/services/ai-ml",
     "title": "AI & Machine Learning Services - Zion Tech Group",
     "h1": "AI & Machine Learning"
   },
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
@@ -843,6 +876,9 @@
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "route": "/services/api-development-chat",
+=======
+  {    "route": "/services/api-development-chat",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "title": "ApiDevelopmentChat - Zion Tech Solutions",
     "h1": "ApiDevelopmentChat"
   },
@@ -858,10 +894,14 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/services/cloud",
     "title": "Cloud Infrastructure Services - Zion Tech Group",
     "h1": "Cloud Infrastructure"
   },
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
@@ -879,6 +919,9 @@
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "route": "/services/data-pipeline-engineering-chat",
+=======
+  {    "route": "/services/data-pipeline-engineering-chat",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "title": "DataPipelineEngineeringChat - Zion Tech Solutions",
     "h1": "DataPipelineEngineeringChat"
   },
@@ -929,10 +972,14 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "route": "/services/quantum",
     "title": "Quantum Computing Services - Zion Tech Group",
     "h1": "Quantum Computing"
   },
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
@@ -960,6 +1007,9 @@
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-b716
     "route": "/services/ui-ux-design-chat",
+=======
+  {    "route": "/services/ui-ux-design-chat",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "title": "UiUxDesignChat - Zion Tech Solutions",
     "h1": "UiUxDesignChat"
   },

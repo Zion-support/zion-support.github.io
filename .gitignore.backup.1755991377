@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 node_modules
 .DS_Store
 .env
 server/.env
 npm-debug.log*
+<<<<<<< HEAD
 yarn-error.log
 =======
 # Node
@@ -43,3 +47,6 @@ Thumbs.db
 .vscode/
 .idea/
 >>>>>>> origin/cursor/build-zion-os-developer-sdk-83c5
+=======
+yarn-error.log
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,24 +1,26 @@
-import fs from 'fs',
-import path from 'path',
-import { TALENT_PROFILES } from '../../data/talent',
-
+<<<<<<< HEAD
+ </div>) ) 
+}</div> </div>) 
+=======
+import fs from 'fs';
+import path from 'path';
+import { TALENT_PROFILES } from '../../data/talent';
 type TalentSummary = { slug: string, summary: string },
-
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datatalent_ai.json'),
-  let generatedAt = '',
-  let summaries: TalentSummary[] = [],
+  const file = path.join(process.cwd(), 'datatalent_ai.json');
+  let generatedAt = '';
+  let summaries: TalentSummary[] = [];
   try {
-    const raw = fs.readFileSync(file, 'utf-8'),
-    const json = JSON.parse(raw),
-    generatedAt = json.generatedAt || '',
-    summaries = json.summaries || [],
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+    generatedAt = json.generatedAt || '';
+    summaries = json.summaries || []
   } catch {}
-  return { props: { generatedAt, summaries } },
+  return { props: { generatedAt, summaries } };
 }
 
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
-  const map = new Map(summaries.map(s => [s.slug, s.summary])),
+  const map = new Map(summaries.map(s => [s.slug, s.summary]));
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
@@ -33,5 +35,6 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
         ))}
       </div>
     </div>
-  ),
+  );
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

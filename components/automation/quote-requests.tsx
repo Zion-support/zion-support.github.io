@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+ 
+=======
 export default function QuoteRequestsPage() {
   return (
     <div className="py-10">
@@ -5,5 +8,6 @@ export default function QuoteRequestsPage() {
       <p className="text-white/80 mt-2">Recent quote requests are synced to <code className="text-white/90">data/quote-requests/log.json</code>.</p>
       <p className="text-white/70 mt-2">This runs hourly and auto-PRs updates.</p>
     </div>
-  ),
+  );
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

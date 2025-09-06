@@ -691,11 +691,15 @@
     "react-dom": "^17.0.2",
     "uuid": "^11.1.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "web3.storage": "^4.6.0"
 =======
     "ethers": "^5.7.2"
 >>>>>>> origin/cursor/deploy-zion-omnichain-bridge-and-depin-integration-3253
   },
+=======
+    "web3.storage": "^4.6.0"  },
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
@@ -759,7 +763,10 @@
   "devDependencies": {
     "rimraf": "^6.0.1"
   }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   },
   "type": "module"
 }

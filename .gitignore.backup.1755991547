@@ -35,7 +35,10 @@ Thumbs.db
 .vscode/
 .idea/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 *.swp
 *.swo
 *~
@@ -55,4 +58,7 @@ automation/logs/autonomous-system.log .next/
 !/.vscode
 !/.vscode/extensions.json
 !/.vscode/settings.json
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-and-automate-with-cursor-extensions-bb30
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

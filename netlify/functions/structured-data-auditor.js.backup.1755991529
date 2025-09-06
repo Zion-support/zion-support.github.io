@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -30,6 +31,10 @@ function scanForJsonLd(dir) {
 }
 
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
+=======
+const path = require('path');
+const { spawnSync } = require('child_process');
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
@@ -37,6 +42,9 @@ function runNode(relPath, args = []) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 exports.config = {
   schedule: '*/30 * * * *',
 };
@@ -55,6 +63,7 @@ exports.handler = async () => {
   step('structured-data:audit', 'automation/structured-data-auditor.cjs');
   step('git:sync', 'automation/advanced-git-sync.cjs');
 
+<<<<<<< HEAD
   return { statusCode: 200, body: logs.join('\n') };
 =======
 exports.config = { schedule: '0 */6 * * *' };
@@ -79,3 +88,6 @@ exports.handler = async () => {
   return { statusCode: 200, body: JSON.stringify({ ok: true, total: findings.length }) };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-ded0
 };
+=======
+  return { statusCode: 200, body: logs.join('\n') };};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -895,6 +895,9 @@ body::after {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 .quantum-loader::before {
   top: 0;
   left: 0;
@@ -911,6 +914,7 @@ body::after {
   bottom: 10px;
   border-bottom-color: rgba(147, 51, 234, 0.8);
   animation-duration: 2s;
+<<<<<<< HEAD
   animation-direction: reverse;
 =======
 /* Print styles */
@@ -1030,6 +1034,9 @@ body::after {
   animation: quantumSpin 8s linear infinite;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
 }
+=======
+  animation-direction: reverse;}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 @keyframes quantumSpin {
   0% { transform: rotate(0deg); }
@@ -1037,6 +1044,9 @@ body::after {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 /* Enhanced Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -1103,6 +1113,7 @@ body::after {
 @keyframes cyberMove {
   0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
+<<<<<<< HEAD
 }
 =======
 .biomedical-pulse {
@@ -1191,3 +1202,6 @@ body::after {
   }
 }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
+=======
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

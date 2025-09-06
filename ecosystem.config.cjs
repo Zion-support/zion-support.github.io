@@ -1,7 +1,6 @@
 module.exports = {
   apps: [
     {
-<<<<<<< HEAD
       name: 'ci-cd-pipeline',
       script: 'npm',
       args: 'run build',
@@ -125,13 +124,9 @@ module.exports = {
       error_file: './logs/lint-checker-error.log',
       out_file: './logs/lint-checker-out.log',
       log_file: './logs/lint-checker-combined.log',
-<<<<<<< HEAD
       time: true,
     },
-  ],
-};
-=======
-=======
+    {
       name: "zion-app",
       script: "npm",
       args: "start",
@@ -186,9 +181,7 @@ module.exports = {
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
->>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
       time: true
     }
   ]
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-85f4

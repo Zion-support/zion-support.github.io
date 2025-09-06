@@ -34,16 +34,25 @@ resolve_conflicts() {
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
+<<<<<<< HEAD
     if grep -q "<<<<<<< HEAD" "$file"; then
+=======
+    if grep -q "" "$file"; then
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         log_message "⚠️  Found conflicts in $file, resolving..."
         
         # Create a backup of the conflicted file
         cp "$file" "${file}.backup.$(date +%s)"
         
         # Remove conflict markers
+<<<<<<< HEAD
         sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
         sed -i '/>>>>>>> /d' "$file"
         
+=======
+        sed -i '//,//d' "$file"
+        sed -i '/        
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         log_message "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi

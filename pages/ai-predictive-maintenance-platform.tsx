@@ -1,6 +1,12 @@
-import React from 'react',
-import ServiceLanding from '../components/sections/ServiceLanding',
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+<<<<<<< HEAD
 
+export default function AIPredictiveMaintenancePlatform() {
+  
+    />
+  );
+=======
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
@@ -11,13 +17,13 @@ export default function AIPredictiveMaintenancePlatform() {
 			implementationWeeks="2-4 weeks"
 			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%"
 			features={[
-				"Sensor ingestion and anomaly detection",
-				"Remaining useful life (RUL) predictions",
-				"Work order automation and CMMS integration",
-				"Root cause analysis",
-				"Digital twin modeling",
-				"Edge and cloud deployment",
-				"Visualizations and alerting",
+				"Sensor ingestion and anomaly detection";
+				"Remaining useful life (RUL) predictions";
+				"Work order automation and CMMS integration";
+				"Root cause analysis";
+				"Digital twin modeling";
+				"Edge and cloud deployment";
+				"Visualizations and alerting";
 				"APIs and event webhooks"
 			]}
 			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
@@ -25,3 +31,4 @@ export default function AIPredictiveMaintenancePlatform() {
 		/>
 	)
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

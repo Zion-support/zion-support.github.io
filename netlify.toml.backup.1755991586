@@ -11,7 +11,10 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -159,6 +162,9 @@
 
 [[redirects]]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   from = "/events"
   to = "/news"
   status = 301
@@ -199,6 +205,7 @@
   from = "/:splat"
   to = "/:splat/"
   status = 301
+<<<<<<< HEAD
   force = true
 =======
   from = "/ai-autonomous-ecosystem"
@@ -270,3 +277,6 @@
   to = "/quantum-internet-security-platform"
   status = 301
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b433
+=======
+  force = true
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

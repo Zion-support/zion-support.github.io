@@ -1,22 +1,66 @@
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+<<<<<<< HEAD
+import React from 'react';
+import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
+import { Phone, ShieldCheck, Clock } from 'lucide-react';
+=======
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 export default function ITSupportPage() {
   const benefits = [
     {
+<<<<<<< HEAD
+      title: '24/7 Assistance',
+      description:
+        'Our experts are available around the clock to keep your systems running.',
+      icon: <Clock className='h-8 w-8' />,
+    },
+    {
+      title: 'Certified Professionals',
+      description:
+        'Work with seasoned technicians experienced in modern IT infrastructures.',
+      icon: <ShieldCheck className='h-8 w-8' />,
+    },
+    {
+      title: 'Multi-Channel Support',
+      description:
+        'Get help via phone, chat, or onsite visits tailored to your needs.',
+      icon: <Phone className='h-8 w-8' />,
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: 'Lisa Wong',
+      role: 'Operations Manager',
+      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",
+      avatar: '/placeholder.svg',
+    },
+    {
+      name: 'Carlos Diaz',
+      role: 'IT Lead',
+      text: 'Professional and responsive. Their technicians feel like an extension of our own team.',
+      avatar: '/placeholder.svg',
+    },
+  ];
+
+  
+    />
+  );
+=======
       title: "24/7 Assistance",
       description: "Our experts are available around the clock to keep your systems running.",
-      icon: <Clock className="h-8 w-8" />},
+      icon: <Clock className = "h-8 w-8" />},
     {
       title: "Certified Professionals",
       description: "Work with seasoned technicians experienced in modern IT infrastructures.",
-      icon: <ShieldCheck className="h-8 w-8" />},
+      icon: <ShieldCheck className = "h-8 w-8" />},
     {
       title: "Multi-Channel Support",
-      description: "Get help via phone, chat, or onsite visits tailored to your needs.",
-      icon: <Phone className="h-8 w-8" />}],
-
+      description: "Get help via phone, chat, or onsite visits tailored to your needs.";
+      icon: <Phone className = "h-8 w-8" />}],
   const testimonials = [
     {
       name: "Lisa Wong",
@@ -27,7 +71,8 @@ export default function ITSupportPage() {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
-      avatar: "/placeholder.svg"}],
+
+      avatar: "/placeholder.svg"}];
 
   return (
     <ServiceLandingTemplate
@@ -40,5 +85,6 @@ export default function ITSupportPage() {
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
-  ),
+  );
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

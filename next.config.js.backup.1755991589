@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
 const isIpfs = process.env.NEXT_PUBLIC_ASSET_PREFIX?.includes('/ipfs/');
 
+<<<<<<< HEAD
 module.exports = {
 =======
 const nextConfig = {
@@ -12,6 +16,9 @@ const nextConfig = {
   trailingSlash: false,
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   reactStrictMode: true,
+=======
+module.exports = {  reactStrictMode: true,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   bundlePagesRouterDependencies: true,
 
   // Optimized for fast builds (hanging issue SOLVED)
@@ -167,7 +174,10 @@ const nextConfig = {
         })
       );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -751,6 +761,9 @@ const nextConfig = {
     return config;
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   async rewrites() {
     return [
       { source: '/main', destination: '/', permanent: true },
@@ -827,8 +840,11 @@ const nextConfig = {
     config.resolve.alias['@'] = path.resolve(__dirname);
     return config;
   },
+<<<<<<< HEAD
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 };
 
 module.exports = withSentryConfig(baseConfig);

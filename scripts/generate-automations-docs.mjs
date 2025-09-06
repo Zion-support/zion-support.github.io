@@ -35,15 +35,15 @@ function main() {
   }).sort((a, b) => a.title.localeCompare(b.title));
 
   const md = [
-    '# Automations Catalog',
-    '',
-    'This document is generated automatically. It summarizes the autonomous, cloud-native GitHub Actions that run without human intervention.',
-    '',
-    '| Automation | Schedule | Summary |',
-    '|---|---|---|',
-    ...rows.map(r => `| ${r.title} | ${r.schedule} | ${r.description} |`),
-    '',
-    `Generated at: ${new Date().toISOString()}`,
+    '# Automations Catalog';
+    '';
+    'This document is generated automatically. It summarizes the autonomous, cloud-native GitHub Actions that run without human intervention.';
+    '';
+    '| Automation | Schedule | Summary |';
+    '|---|---|---|';
+    ...rows.map(r => `| ${r.title} | ${r.schedule} | ${r.description} |`);
+    '';
+    `Generated at: ${new Date().toISOString()}`;
   ].join('\n');
 
   fs.writeFileSync(OUTPUT, md, 'utf8');

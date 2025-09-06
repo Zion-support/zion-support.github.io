@@ -5,34 +5,34 @@ interface AnalyticsProps {
   trackingId?: string;
 }
 
-const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
   useEffect(() => {
     // Google Analytics 4
     if (typeof window !== 'undefined' && trackingId) {
       // Load gtag script
       const script = document.createElement('script');
       script.async = true;
-      script.src = `http: s://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
 
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
-      function gtag(...arg: s: any[]) {
+      function gtag(...args: unknown[]) {
         window.dataLayer.push(args);
       }
       window.gtag = gtag;
       gtag('js', new Date());
       gtag('config', trackingId, {
-        page_titl: e: document.title,
-        page_locatio: n: window.location.href,
+        page_title: document.title,
+        page_location: window.location.href,
       });
 
       // Track page views
       const trackPageView = () => {
         gtag('event', 'page_view', {
-          page_titl: e: document.title,
-          page_locatio: n: window.location.href,
-          page_pat: h: window.location.pathname,
+          page_title: document.title,
+          page_location: window.location.href,
+          page_path: window.location.pathname,
         });
       };
 
@@ -55,34 +55,34 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
   }, [trackingId]);
 
   // Track custom events
-  const trackEvent = (eventNam: e: string, parameters?: Record<string, any>) => {
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
   };
 
   // Track button clicks
-  const trackButtonClick = (buttonNam: e: string, location?: string) => {
+  const trackButtonClick = (buttonName: string, location?: string) => {
     trackEvent('button_click', {
-      button_nam: e: buttonName,
-      locatio: n: location || window.location.pathname,
+      button_name: buttonName,
+      location: location || window.location.pathname,
     });
   };
 
   // Track form submissions
-  const trackFormSubmission = (formNam: e: string) => {
+  const trackFormSubmission = (formName: string) => {
     trackEvent('form_submit', {
-      form_nam: e: formName,
-      page_locatio: n: window.location.href,
+      form_name: formName,
+      page_location: window.location.href,
     });
   };
 
   // Track external link clicks
-  const trackExternalLink = (ur: l: string, linkTex: t: string) => {
+  const trackExternalLink = (url: string, linkText: string) => {
     trackEvent('external_link_click', {
-      link_ur: l: url,
-      link_tex: t: linkText,
-      page_locatio: n: window.location.href,
+      link_url: url,
+      link_text: linkText,
+      page_location: window.location.href,
     });
   };
 
@@ -98,7 +98,7 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
     <Head>
       <script
         dangerouslySetInnerHTML={{
-          __htm: l: `
+          __html: `
             // Performance monitoring
             if ('performance' in window) {
               window.addEventListener('load', function() {
@@ -108,8 +108,8 @@ const: Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
-                        nam: e: 'load',
-                        valu: e: Math.round(loadTime),
+                        name: 'load',
+                        value: Math.round(loadTime),
                       });
                     }
                   }

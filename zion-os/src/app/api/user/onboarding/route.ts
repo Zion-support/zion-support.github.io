@@ -1,40 +1,73 @@
-import { NextRequest, NextResponse } from "next/server",
-import { getServerSession } from "next-auth",
-import { prisma } from "@/lib/prisma",
+import { NextRequest, NextResponse } from 'next/server';
+<<<<<<< HEAD
+import { getServerSession } from 'next-auth';
+import { prisma } from '@/lib/prisma';
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession(),
-    
+    const session = await getServerSession();
+
     if (!session?.user?.email) {
-      return NextResponse.json(
-        { error: "Unauthorized" },
-        { status: 401 }
-      ),
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
     // Update user's onboarding status
     const updatedUser = await prisma.user.update({
       where: { email: session.user.email },
-      data: { onboardingCompleted: true }}),
+      data: { onboardingCompleted: true },
+    });
 
     return NextResponse.json(
-      { 
-        message: "Onboarding completed successfully",
+      {
+        message: 'Onboarding completed successfully',
         user: {
           id: updatedUser.id,
           name: updatedUser.name,
           email: updatedUser.email,
           role: updatedUser.role,
-          onboardingCompleted: updatedUser.onboardingCompleted}
+          onboardingCompleted: updatedUser.onboardingCompleted,
+        },
       },
       { status: 200 }
-    ),
+    );
   } catch (error) {
-    console.error("Onboarding completion error:", error),
+    console.error('Onboarding completion error:', error);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: 'Internal server error' },
       { status: 500 }
-    ),
+    );
+  }
+=======
+
+export async function POST(request: NextRequest) { try {
+    const body = await request.json();
+    const { userId, preferences  } = body;
+
+    // Mock user update - replace with actual database operation
+    const updatedUser = {
+      id: userId,
+      name: 'John Doe',
+      email: 'john@example.com',
+      role: 'user',
+      onboardingCompleted: true,
+      preferences
+    };
+
+    return NextResponse.json({
+      message: "Onboarding completed successfully",
+      user: {
+        id: updatedUser.id,
+        name: updatedUser.name,
+        email: updatedUser.email,
+        role: updatedUser.role,
+        onboardingCompleted: updatedUser.onboardingCompleted
+      }
+    });
+  } catch (_error) {
+    return NextResponse.json(
+      { error: 'Failed to complete onboarding' },
+      { status: 500 }
+    );
   }
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

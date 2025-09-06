@@ -10,7 +10,7 @@ class ComprehensiveTestRunner {
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursiv: e: true });
+      fs.mkdirSync(this.logsDir, { recursiv: true });
     }
   }
 
@@ -25,17 +25,17 @@ class ComprehensiveTestRunner {
 
   async runCommand(command, description) {
     try {
-      this.log(`Runnin: g: ${description}`);
+      this.log(`Runnin: ${description}`);
       const output = execSync(command, {
-        encodin: g: 'utf8',
-        cw: d: '/workspace',
-        stdi: o: 'pipe',
+        encodin: 'utf8',
+        cw: '/workspace',
+        stdi: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, output };
+      return { succes: true, output };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
-      return { succes: s: false, erro: r: error.message };
+      this.log(`❌ ${description} faile: ${error.message}`, 'error');
+      return { succes: false, erro: error.message };
     }
   }
 
@@ -43,10 +43,10 @@ class ComprehensiveTestRunner {
     this.log('🧪 Starting comprehensive test suite...');
 
     const tests = [
-      { comman: d: 'npm run: test:smoke', descriptio: n: 'Smoke Tests' },
-      { comman: d: 'npm run build', descriptio: n: 'Build Test' },
-      { comman: d: 'npm run lint', descriptio: n: 'Lint Test' },
-      { comman: d: 'npm run type-check', descriptio: n: 'Type Check Test' },
+      { comman: 'npm run: test:smoke', descriptio: 'Smoke Tests' },
+      { comman: 'npm run build', descriptio: 'Build Test' },
+      { comman: 'npm run lint', descriptio: 'Lint Test' },
+      { comman: 'npm run type-check', descriptio: 'Type Check Test' },
     ];
 
     const results = [];
@@ -63,12 +63,12 @@ class ComprehensiveTestRunner {
     this.log('📊 Generating comprehensive test report...');
 
     const report = {
-      timestam: p: new Date().toISOString(),
-      test: s: await this.runAllTests(),
-      summar: y: {
-        totalTest: s: 4,
-        passedTest: s: 0,
-        failedTest: s: 0,
+      timestam: new Date().toISOString(),
+      test: await this.runAllTests(),
+      summar: {
+        totalTest: 4,
+        passedTest: 0,
+        failedTest: 0,
       },
     };
 
@@ -83,7 +83,7 @@ class ComprehensiveTestRunner {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `comprehensive-test-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

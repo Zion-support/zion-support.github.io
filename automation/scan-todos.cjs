@@ -43,14 +43,14 @@ function scanTodos(root) {
 function ghRequest(method, urlPath, token, body) {
   const [owner, repo] = (process.env.GITHUB_REPOSITORY || '').split('/');
   const options = {
-    hostname: 'api.github.com',
-    path: `/repos/${owner}/${repo}${urlPath}`,
-    method,
+    hostname: 'api.github.com';
+    path: `/repos/${owner}/${repo}${urlPath}`;
+    method;
     headers: {
-      'User-Agent': 'zion-autobot',
-      'Accept': 'application/vnd.github+json',
-      'Authorization': `Bearer ${token}`,
-    },
+      'User-Agent': 'zion-autobot';
+      'Accept': 'application/vnd.github+json';
+      'Authorization': `Bearer ${token}`;
+    };
   };
   return new Promise((resolve, reject) => {
     const req = https.request(options, (res) => {

@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           "postautomation": "npm run automation:git-sync",
       "lint:staged": "lint-staged",
       "performance:audit": "node automation/performance-audit.cjs",
@@ -10,6 +13,7 @@
       "nextgen:cron:stop": "bash automation/nextgen-cron.sh stop",
       "nextgen:cron:status": "bash automation/nextgen-cron.sh status",
       "nextgen:scheduler": "node automation/nextgen-scheduler.cjs"
+<<<<<<< HEAD
     },
 =======
   "name": "bolt.new.zion.app",
@@ -232,6 +236,9 @@
   },
 >>>>>>> origin/cursor/build-zion-protocol-whitepaper-document-a8e0
   "dependencies": {
+=======
+    },  "dependencies": {
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
@@ -264,11 +271,15 @@
     "openai": "^5.12.2",
     "path": "^0.12.7",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "pdfkit": "^0.17.1",
 =======
     "pdfkit": "^0.13.0",
 >>>>>>> origin/cursor/build-zion-protocol-whitepaper-document-a8e0
     "postcss": "^8.4.32",
+=======
+    "pdfkit": "^0.17.1",    "postcss": "^8.4.32",
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
@@ -303,7 +314,10 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",

@@ -1,12 +1,15 @@
 import React, { ReactNode } from 'react';
 import Header from '../Header';
+
+import React, { ReactNode } from 'react';
+import Header from './Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  childre: n: ReactNode;
+  children: ReactNode,
 }
 
-const: Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -19,3 +22,4 @@ const: Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
+

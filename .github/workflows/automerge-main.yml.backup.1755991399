@@ -29,6 +29,7 @@ jobs:
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
 <<<<<<< HEAD
+<<<<<<< HEAD
           token: ${{ secrets.GITHUB_TOKEN }}
           pull-request-number: ${{ github.event.pull_request.number }}
           merge-method: squash
@@ -40,3 +41,8 @@ jobs:
       - name: Run workflow
         run: echo "Workflow completed successfully"
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2
+=======
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ github.event.pull_request.number }}
+          merge-method: squash
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

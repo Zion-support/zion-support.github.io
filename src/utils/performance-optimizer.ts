@@ -1,4 +1,3 @@
-
 // Performance optimization utilities
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
@@ -32,4 +31,5 @@ export const optimizeBundleSize = () => {
 
   return { loadComponent };
 };
-
+    link.rel = 'preload';
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';

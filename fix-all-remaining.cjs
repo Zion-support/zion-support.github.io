@@ -13,30 +13,30 @@ import Layout from '../components/Layout';
 
 const helpCategories = [
   {
-    titl: e: "Getting Started",
-    ico: n: BookOpen,
-    descriptio: n: "Learn the basics and get up and running quickly",
-    article: s: [
+    titl: "Getting Started",
+    ico: BookOpen,
+    descriptio: "Learn the basics and get up and running quickly",
+    article: [
       "Welcome to Zion Tech Group",
       "Setting up your account",
       "First steps with our platform"
     ]
-  },
+  };
   {
-    titl: e: "Account & Billing",
-    ico: n: MessageCircle,
-    descriptio: n: "Manage your account, billing, and subscription",
-    article: s: [
+    titl: "Account & Billing",
+    ico: MessageCircle,
+    descriptio: "Manage your account, billing, and subscription",
+    article: [
       "Managing your subscription",
       "Billing and payments",
       "Account settings"
     ]
-  },
+  };
   {
-    titl: e: "Technical Support",
-    ico: n: Phone,
-    descriptio: n: "Get help with technical issues and troubleshooting",
-    article: s: [
+    titl: "Technical Support",
+    ico: Phone,
+    descriptio: "Get help with technical issues and troubleshooting",
+    article: [
       "Common troubleshooting",
       "API documentation",
       "Integration guides"
@@ -46,19 +46,19 @@ const helpCategories = [
 
 const popularArticles = [
   {
-    titl: e: "How to get started with our AI solutions",
-    categor: y: "Getting Started",
-    readTim: e: "5 min"
+    titl: "How to get started with our AI solutions",
+    categor: "Getting Started",
+    readTim: "5 min"
   },
   {
-    titl: e: "Setting up cloud migration",
-    categor: y: "Technical Support",
-    readTim: e: "10 min"
+    titl: "Setting up cloud migration",
+    categor: "Technical Support",
+    readTim: "10 min"
   },
   {
-    titl: e: "Understanding your billing",
-    categor: y: "Account & Billing",
-    readTim: e: "3 min"
+    titl: "Understanding your billing",
+    categor: "Account & Billing",
+    readTim: "3 min"
   }
 ];
 
@@ -75,9 +75,9 @@ export default function Help() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center"
-              initial={{ opacit: y: 0, y: 30 }}
-              animate={{ opacit: y: 1, y: 0 }}
-              transition={{ duratio: n: 0.8 }}
+              initial={{ opacit: 0, y: 30 }}
+              animate={{ opacit: 1, y: 0 }}
+              transition={{ duratio: 0.8 }}
             >
               <h1 className="text-4xl: md:text-6xl font-bold mb-6">
                 Help Center
@@ -113,10 +113,10 @@ export default function Help() {
                     <motion.div
                       key={index}
                       className="bg-white rounded-xl shadow-lg p-8: hover:shadow-xl transition-shadow duration-300"
-                      initial={{ opacit: y: 0, y: 30 }}
-                      whileInView={{ opacit: y: 1, y: 0 }}
-                      transition={{ duratio: n: 0.8, dela: y: index * 0.1 }}
-                      viewport={{ onc: e: true }}
+                      initial={{ opacit: 0, y: 30 }}
+                      whileInView={{ opacit: 1, y: 0 }}
+                      transition={{ duratio: 0.8, dela: index * 0.1 }}
+                      viewport={{ onc: true }}
                     >
                       <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                         <IconComponent className="w-8 h-8 text-blue-600" />
@@ -151,10 +151,10 @@ export default function Help() {
                   <motion.div
                     key={index}
                     className="bg-white rounded-lg p-6: hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                    initial={{ opacit: y: 0, y: 20 }}
-                    whileInView={{ opacit: y: 1, y: 0 }}
-                    transition={{ duratio: n: 0.8, dela: y: index * 0.1 }}
-                    viewport={{ onc: e: true }}
+                    initial={{ opacit: 0, y: 20 }}
+                    whileInView={{ opacit: 1, y: 0 }}
+                    transition={{ duratio: 0.8, dela: index * 0.1 }}
+                    viewport={{ onc: true }}
                   >
                     <div className="flex items-center justify-between">
                       <div>
@@ -184,14 +184,14 @@ export default function Help() {
               </p>
               <div className="flex flex-col: sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailt: o:support@ziontechgroup.com"
+                  href="mailt: support@ziontechgroup.com"
                   className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium: hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Email Support
                 </a>
                 <a
-                  href="te: l:+15551234567"
+                  href="te: +15551234567"
                   className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-medium: hover:bg-gray-50 transition-colors duration-300 flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -213,58 +213,58 @@ console.log('✅ Fixed help.tsx');
 const educationContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  GraduationCap, 
-  BookOpen, 
-  Users, 
-  Building, 
-  TrendingUp, 
-  CheckCircle,
-  Clock,
+  GraduationCap;
+  BookOpen;
+  Users;
+  Building;
+  TrendingUp;
+  CheckCircle;
+  Clock;
   Shield
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const educationSolutions = [
   {
-    titl: e: 'Student Information System',
-    descriptio: n: 'Comprehensive platform for managing student data and academic records',
-    ico: n: Building,
-    feature: s: ['Enrollment Management', 'Grade Management', 'Scheduling', 'Communication Tools'],
-    benefit: s: ['50% time savings', 'Reduced errors', 'Better organization', 'Improved efficiency']
+    titl: 'Student Information System',
+    descriptio: 'Comprehensive platform for managing student data and academic records',
+    ico: Building,
+    feature: ['Enrollment Management', 'Grade Management', 'Scheduling', 'Communication Tools'],
+    benefit: ['50% time savings', 'Reduced errors', 'Better organization', 'Improved efficiency']
   },
   {
-    titl: e: 'Learning Management System',
-    descriptio: n: 'Modern LMS with AI-powered personalized learning experiences',
-    ico: n: BookOpen,
-    feature: s: ['Course Creation', 'Assessment Tools', 'Progress Tracking', 'Collaboration Features'],
-    benefit: s: ['40% better engagement', 'Personalized learning', 'Real-time analytics', 'Mobile access']
+    titl: 'Learning Management System',
+    descriptio: 'Modern LMS with AI-powered personalized learning experiences',
+    ico: BookOpen,
+    feature: ['Course Creation', 'Assessment Tools', 'Progress Tracking', 'Collaboration Features'],
+    benefit: ['40% better engagement', 'Personalized learning', 'Real-time analytics', 'Mobile access']
   },
   {
-    titl: e: 'Campus Management',
-    descriptio: n: 'Integrated solution for managing all campus operations',
-    ico: n: Building,
-    feature: s: ['Resource Scheduling', 'Facility Management', 'Event Planning', 'Financial Management'],
-    benefit: s: ['Streamlined operations', 'Cost reduction', 'Better resource utilization', 'Improved planning']
+    titl: 'Campus Management',
+    descriptio: 'Integrated solution for managing all campus operations',
+    ico: Building,
+    feature: ['Resource Scheduling', 'Facility Management', 'Event Planning', 'Financial Management'],
+    benefit: ['Streamlined operations', 'Cost reduction', 'Better resource utilization', 'Improved planning']
   }
 ];
 
 const educationBenefits = [
   {
-    ico: n: GraduationCap,
-    titl: e: 'Student Success',
-    descriptio: n: 'Improve student outcomes with personalized learning and analytics.',
+    ico: GraduationCap,
+    titl: 'Student Success',
+    descriptio: 'Improve student outcomes with personalized learning and analytics.',
     metri: c: '40%'
   },
   {
-    ico: n: TrendingUp,
-    titl: e: 'Efficiency Gains',
-    descriptio: n: 'Streamline administrative processes and reduce manual work.',
+    ico: TrendingUp,
+    titl: 'Efficiency Gains',
+    descriptio: 'Streamline administrative processes and reduce manual work.',
     metri: c: '60%'
   },
   {
-    ico: n: Shield,
-    titl: e: 'Data Security',
-    descriptio: n: 'Protect sensitive student and institutional data with enterprise-grade security.',
+    ico: Shield,
+    titl: 'Data Security',
+    descriptio: 'Protect sensitive student and institutional data with enterprise-grade security.',
     metri: c: '99.9%'
   }
 ];
@@ -282,9 +282,9 @@ export default function Education() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center"
-              initial={{ opacit: y: 0, y: 30 }}
-              animate={{ opacit: y: 1, y: 0 }}
-              transition={{ duratio: n: 0.8 }}
+              initial={{ opacit: 0, y: 30 }}
+              animate={{ opacit: 1, y: 0 }}
+              transition={{ duratio: 0.8 }}
             >
               <h1 className="text-4xl: md:text-6xl font-bold mb-6">
                 Education Solutions
@@ -310,10 +310,10 @@ export default function Education() {
                     <motion.div
                       key={index}
                       className="bg-white rounded-xl shadow-lg p-8: hover:shadow-xl transition-shadow duration-300"
-                      initial={{ opacit: y: 0, y: 30 }}
-                      whileInView={{ opacit: y: 1, y: 0 }}
-                      transition={{ duratio: n: 0.8, dela: y: index * 0.1 }}
-                      viewport={{ onc: e: true }}
+                      initial={{ opacit: 0, y: 30 }}
+                      whileInView={{ opacit: 1, y: 0 }}
+                      transition={{ duratio: 0.8, dela: index * 0.1 }}
+                      viewport={{ onc: true }}
                     >
                       <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                         <IconComponent className="w-8 h-8 text-blue-600" />
@@ -334,7 +334,7 @@ export default function Education() {
                       </div>
 
                       <div className="space-y-3">
-                        <h4 className="font-semibold text-gray-900">Benefit: s:</h4>
+                        <h4 className="font-semibold text-gray-900">Benefit: </h4>
                         <ul className="space-y-2">
                           {solution.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
@@ -366,10 +366,10 @@ export default function Education() {
                     <motion.div
                       key={index}
                       className="bg-white rounded-lg p-8 text-center: hover:shadow-lg transition-shadow duration-300"
-                      initial={{ opacit: y: 0, y: 30 }}
-                      whileInView={{ opacit: y: 1, y: 0 }}
-                      transition={{ duratio: n: 0.8, dela: y: index * 0.1 }}
-                      viewport={{ onc: e: true }}
+                      initial={{ opacit: 0, y: 30 }}
+                      whileInView={{ opacit: 1, y: 0 }}
+                      transition={{ duratio: 0.8, dela: index * 0.1 }}
+                      viewport={{ onc: true }}
                     >
                       <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <IconComponent className="w-8 h-8 text-green-600" />

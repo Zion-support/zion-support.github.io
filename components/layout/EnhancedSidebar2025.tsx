@@ -1,25 +1,58 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+<<<<<<< HEAD
+ ] 
+}];
+];
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const filteredServices = sidebarItems.flatMap (item => item.children?.filter (child => child.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || child.description?.toLowerCase () .includes (searchQuery.toLowerCase () ) ) || []);
+</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
+  section.badge 
+}</span>) 
+}</div>) : (<ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />) 
+}</button> <AnimatePresence> > <CloseIcon className="w-5 h-5" /> </button> </div> </div> </a>) ) 
+}+ {
+  filteredServices.length - 5 
+}more results </div>) 
+}</div>) : (<div className="text-sm text-gray-500 text-center py-2" > No services found </div>) 
+}</div>) 
+}</div> </div> </div> </div> </motion.div>) ) 
+}</div> </div> </span> </a>) ) 
+}</div> </div> </span> </div> <ChevronRight className= {
+  `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
+  expandedCategory === item.name ? 'rotate-90' : '' 
+}` 
+}/> </button> <AnimatePresence> > {
+  item.children?.map ( (child) => (<Link key= {
+  child.name 
+}{
+  child.badge 
+}</span>) 
+}</a>) ) 
+}</motion.div>) 
+}</AnimatePresence> </div>) ) 
+}</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>) 
+};
+=======
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, ChevronRight, Home, Star, Users, 
-  Settings, HelpCircle, Mail, Phone, MapPin,
-  Brain, Atom, Shield, Rocket, DollarSign,
-  Globe, Cpu, Database, Lock, Zap,
-  TrendingUp, Award, CheckCircle, Clock,
-  ArrowRight, Search, Menu, X as CloseIcon,
-  Target, BookOpen, Truck, BarChart3,
+  Settings, HelpCircle, Mail, Phone, MapPin;
+  Brain, Atom, Shield, Rocket, DollarSign;
+  Globe, Cpu, Database, Lock, Zap;
+  TrendingUp, Award, CheckCircle, Clock;
+  ArrowRight, Search, Menu, X as CloseIcon;
+  Target, BookOpen, Truck, BarChart3;
   Sparkles, Eye, Lightbulb, Palette, Code
-} from 'lucide-react',
+} from 'lucide-react';
 
 interface SidebarItem {
   name: string,
   href: string,
-  icon?: React.ReactNode,
-  description?: string,
-  children?: SidebarItem[],
-  badge?: string,
-  isNew?: boolean,
+  icon?: React.ReactNode;
+  description?: string;
+  children?: SidebarItem[];
+  badge?: string;
+  isNew?: boolean;
   isHot?: boolean
 }
 
@@ -28,7 +61,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const sidebarItems: SidebarItem[] = [
   {
@@ -47,7 +80,7 @@ const sidebarItems: SidebarItem[] = [
       { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
     ]
-  },
+  };
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
@@ -71,7 +104,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' }
     ]
-  },
+  };
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
@@ -94,7 +127,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Quantum IoT Platform', href: '/quantum-iot', description: 'Quantum-secured IoT' },
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading', description: 'Quantum trading algorithms' }
     ]
-  },
+  };
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
@@ -113,7 +146,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
       { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
     ]
-  },
+  };
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
@@ -132,7 +165,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' },
       { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
     ]
-  },
+  };
   {
     name: 'Creative & Design',
     href: '/creative-services',
@@ -146,7 +179,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'AI Video Generation', href: '/ai-video-generation', description: 'Automated video content' },
       { name: 'AI Music Composition', href: '/ai-music-composition', description: 'AI-generated music' }
     ]
-  },
+  };
   {
     name: 'Research & Development',
     href: '/research-development',
@@ -160,7 +193,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Neuroscience Research', href: '/neuroscience-research-platform', description: 'Brain research tools' },
       { name: 'Climate Research AI', href: '/climate-research-ai', description: 'Environmental research automation' }
     ]
-  },
+  };
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
@@ -174,7 +207,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Education AI', href: '/education-ai-solutions', description: 'Educational technology' },
       { name: 'Transportation AI', href: '/transportation-ai-solutions', description: 'Smart transportation' }
     ]
-  },
+  };
   {
     name: 'Pricing & Plans',
     href: '/pricing',
@@ -188,7 +221,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
       { name: 'ROI Calculator', href: '/roi-calculator', description: 'Calculate your return on investment' }
     ]
-  },
+  };
   {
     name: 'Resources',
     href: '/resources',
@@ -202,7 +235,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
       { name: 'Research Papers', href: '/research-papers', description: 'Academic publications' }
     ]
-  },
+  };
   {
     name: 'Support',
     href: '/support',
@@ -217,7 +250,7 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ]
   }
-],
+];
 
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
@@ -226,7 +259,7 @@ const resources = [
   { name: 'Blog & News', href: '/blog', icon: <FileText className="w-4 h-4" /> },
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
-],
+];
 
 
 const supportLinks = [
@@ -236,24 +269,24 @@ const supportLinks = [
   { name: 'Status Page', href: '/status', description: 'Service status' },
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
   { name: 'Community', href: '/community', description: 'Connect with users' }
-],
+];
 
   const toggleSection = (title: string) => {
-    const newExpanded = new Set(expandedSections),
+    const newExpanded = new Set(expandedSections);
     if (newExpanded.has(title)) {
       newExpanded.delete(title)
     } else {
-      newExpanded.add(title),
+      newExpanded.add(title)
     }
-    setExpandedSections(newExpanded),
-  },
+    setExpandedSections(newExpanded)
+  };
 
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
-  ),
+  );
 
   return (
     <motion.aside
@@ -589,7 +622,8 @@ const supportLinks = [
       <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
       <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
     </motion.aside>
-  ),
-},
+  )
+};
 
-export default EnhancedSidebar2025,
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+export default EnhancedSidebar2025;

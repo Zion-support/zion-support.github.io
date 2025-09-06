@@ -1,6 +1,9 @@
 legacy-peer-deps=true
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 strict-peer-dependencies=false
 auto-install-peers=true
 
@@ -10,4 +13,7 @@ react-dom@18.2.0
 
 # Use npm's legacy peer dependency resolution
 legacy-peer-deps=true
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-nextjs-app-with-react-version-check-7756
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

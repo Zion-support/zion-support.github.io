@@ -1102,7 +1102,10 @@ body::after {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 .futuristic-text-gradient {
   background: linear-gradient(
@@ -1456,4 +1459,7 @@ body::after {
     background: #ffffff !important;
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d240
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -20,11 +20,6 @@
     "NextAuth",
     "monorepo"
   ],
-  "dictionaries": [
-    "softwareTerms",
-    "typescript",
-    "node",
-    "npm"
-  ],
+  "dictionaries": ["softwareTerms", "typescript", "node", "npm"],
   "dictionaryDefinitions": []
 }

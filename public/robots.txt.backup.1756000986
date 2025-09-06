@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -23,6 +26,7 @@ Allow: /multiverse/launch
 Allow: /docs
 Allow: /community
 
+<<<<<<< HEAD
 # Crawl delay
 =======
 # Sitemaps
@@ -32,3 +36,6 @@ Sitemap: https://zion.app/sitemap.txt
 # Crawl-delay
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 Crawl-delay: 1
+=======
+# Crawl delayCrawl-delay: 1
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -14,11 +14,11 @@ class EnhancedGitHubActionsRedundancy {
     this.ensureLogDir();
     this.config = this.loadConfig();
     this.healthMetrics = {
-      totalChecks: 0,
-      successfulChecks: 0,
-      failedChecks: 0,
-      workflowsTriggered: 0,
-      lastCheck: null,
+      totalChecks: 0;
+      successfulChecks: 0;
+      failedChecks: 0;
+      workflowsTriggered: 0;
+      lastCheck: null;
       uptime: Date.now()
     };
     this.workflowCache = new Map();
@@ -42,18 +42,18 @@ class EnhancedGitHubActionsRedundancy {
     
     return {
       githubActions: {
-        enabled: true,
-        checkInterval: 60000,
-        maxFailures: 3,
-        retryDelay: 30000,
+        enabled: true;
+        checkInterval: 60000;
+        maxFailures: 3;
+        retryDelay: 30000;
         workflows: [
-          "marketing-sync.yml",
+          "marketing-sync.yml";
           "sync-health.yml"
-        ],
-        autoTrigger: true,
-        healthCheckWorkflow: "sync-health.yml",
-        validateSyntax: true,
-        checkDependencies: true,
+        ];
+        autoTrigger: true;
+        healthCheckWorkflow: "sync-health.yml";
+        validateSyntax: true;
+        checkDependencies: true;
         monitorRuns: true
       }
     };
@@ -83,19 +83,19 @@ class EnhancedGitHubActionsRedundancy {
   async runCommand(command, args = [], options = {}) {
     return new Promise((resolve) => {
       const result = spawnSync(command, args, {
-        cwd: this.workspace,
-        env: process.env,
-        shell: false,
-        encoding: "utf8",
-        maxBuffer: 1024 * 1024 * 10,
-        timeout: options.timeout || 30000,
+        cwd: this.workspace;
+        env: process.env;
+        shell: false;
+        encoding: "utf8";
+        maxBuffer: 1024 * 1024 * 10;
+        timeout: options.timeout || 30000;
         ...options
       });
       
       resolve({
-        status: result.status,
-        stdout: result.stdout || "",
-        stderr: result.stderr || "",
+        status: result.status;
+        stdout: result.stdout || "";
+        stderr: result.stderr || "";
         error: result.error
       });
     });
@@ -297,12 +297,12 @@ class EnhancedGitHubActionsRedundancy {
   async generateHealthReport() {
     const workflowsDir = await this.checkWorkflowsDirectory();
     const report = {
-      timestamp: new Date().toISOString(),
-      workflowsDirectory: workflowsDir.exists,
-      totalWorkflows: workflowsDir.workflows.length,
-      configuredWorkflows: this.config.workflows,
-      workflowHealth: {},
-      issues: [],
+      timestamp: new Date().toISOString();
+      workflowsDirectory: workflowsDir.exists;
+      totalWorkflows: workflowsDir.workflows.length;
+      configuredWorkflows: this.config.workflows;
+      workflowHealth: {};
+      issues: [];
       recommendations: []
     };
 
@@ -313,10 +313,10 @@ class EnhancedGitHubActionsRedundancy {
       );
       
       report.workflowHealth[workflowName] = {
-        healthy: health.healthy,
-        reason: health.reason || null,
-        dependencies: dependencies.dependencies,
-        lastRun: this.lastRunTimes.get(workflowName) || null,
+        healthy: health.healthy;
+        reason: health.reason || null;
+        dependencies: dependencies.dependencies;
+        lastRun: this.lastRunTimes.get(workflowName) || null;
         failureCount: this.failureCounts.get(workflowName) || 0
       };
 
@@ -379,11 +379,11 @@ class EnhancedGitHubActionsRedundancy {
 
       // Check for deprecated actions
       const deprecatedActions = [
-        "actions/checkout@v1",
-        "actions/checkout@v2",
-        "actions/checkout@v3",
-        "actions/setup-node@v1",
-        "actions/setup-node@v2",
+        "actions/checkout@v1";
+        "actions/checkout@v2";
+        "actions/checkout@v3";
+        "actions/setup-node@v1";
+        "actions/setup-node@v2";
         "actions/setup-node@v3"
       ];
 
@@ -413,8 +413,8 @@ class EnhancedGitHubActionsRedundancy {
     }
 
     return {
-      healthy: issues.length === 0,
-      critical,
+      healthy: issues.length === 0;
+      critical;
       issues
     };
   }
@@ -477,9 +477,9 @@ class EnhancedGitHubActionsRedundancy {
 
       // Check for required environment variables
       const requiredEnvVars = [
-        "LINKEDIN_ACCESS_TOKEN",
-        "LINKEDIN_URN",
-        "IG_USER_ID",
+        "LINKEDIN_ACCESS_TOKEN";
+        "LINKEDIN_URN";
+        "IG_USER_ID";
         "IG_ACCESS_TOKEN"
       ];
 
@@ -667,9 +667,9 @@ class EnhancedGitHubActionsRedundancy {
       
       // Create a report
       const report = {
-        timestamp: new Date().toISOString(),
-        workflow,
-        issues: health.issues,
+        timestamp: new Date().toISOString();
+        workflow;
+        issues: health.issues;
         severity: "non-critical"
       };
       
@@ -743,13 +743,13 @@ permissions:
     try {
       // Create syntax validation report
       const report = {
-        timestamp: new Date().toISOString(),
-        type: "syntax_issues",
-        issues: health.issues,
+        timestamp: new Date().toISOString();
+        type: "syntax_issues";
+        issues: health.issues;
         recommendations: [
-          "Review workflow indentation",
-          "Check YAML syntax",
-          "Validate step structure",
+          "Review workflow indentation";
+          "Check YAML syntax";
+          "Validate step structure";
           "Ensure proper quoting"
         ]
       };
@@ -768,13 +768,13 @@ permissions:
     try {
       // Create run monitoring report
       const report = {
-        timestamp: new Date().toISOString(),
-        type: "run_issues",
-        issues: health.issues,
+        timestamp: new Date().toISOString();
+        type: "run_issues";
+        issues: health.issues;
         recommendations: [
-          "Review timeout configurations",
-          "Check job dependencies",
-          "Validate error handling",
+          "Review timeout configurations";
+          "Check job dependencies";
+          "Validate error handling";
           "Monitor resource usage"
         ]
       };
@@ -793,13 +793,13 @@ permissions:
     try {
       // Create permission audit report
       const report = {
-        timestamp: new Date().toISOString(),
-        type: "permission_issues",
-        issues: health.issues,
+        timestamp: new Date().toISOString();
+        type: "permission_issues";
+        issues: health.issues;
         recommendations: [
-          "Review workflow permissions",
-          "Use least privilege principle",
-          "Check GITHUB_TOKEN usage",
+          "Review workflow permissions";
+          "Use least privilege principle";
+          "Check GITHUB_TOKEN usage";
           "Validate security settings"
         ]
       };
@@ -818,10 +818,10 @@ permissions:
     try {
       // Create incident report
       const incidentReport = {
-        timestamp: new Date().toISOString(),
-        workflow,
-        issues: health.issues,
-        severity: "critical",
+        timestamp: new Date().toISOString();
+        workflow;
+        issues: health.issues;
+        severity: "critical";
         requiresManualIntervention: true
       };
       
@@ -857,9 +857,9 @@ permissions:
       : 0;
     
     return {
-      ...this.healthMetrics,
-      uptime,
-      successRate: successRate.toFixed(2),
+      ...this.healthMetrics;
+      uptime;
+      successRate: successRate.toFixed(2);
       healthStatus: successRate > 80 ? "HEALTHY" : successRate > 60 ? "DEGRADED" : "CRITICAL"
     };
   }

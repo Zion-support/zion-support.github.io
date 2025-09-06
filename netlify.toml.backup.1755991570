@@ -11,7 +11,10 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -63,6 +66,9 @@
   status = 301
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 [[scheduled.functions]]
   name = "fast-front-promoter"
   schedule = "*/15 * * * *" # every 15 minutes
@@ -497,6 +503,7 @@
 
 [[scheduled.functions]]
   name = "ultra-innovation-accelerator"
+<<<<<<< HEAD
   schedule = "*/3 * * * *"
 =======
 [[redirects]]
@@ -524,3 +531,6 @@
   to = "/browser-automation-cloud"
   status = 301
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7466
+=======
+  schedule = "*/3 * * * *"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

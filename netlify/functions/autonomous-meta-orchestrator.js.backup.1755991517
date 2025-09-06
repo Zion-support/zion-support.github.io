@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -53,6 +56,7 @@ exports.handler = async () => {
   ]);
 
   return { statusCode: 200, body: logs.join('\n') };
+<<<<<<< HEAD
 };
 =======
 exports.config = { schedule: '*/1 * * * *' };
@@ -218,3 +222,6 @@ exports.handler = async function () {
   };
 };
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-a23d
+=======
+};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

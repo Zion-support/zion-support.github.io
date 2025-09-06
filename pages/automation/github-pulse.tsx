@@ -1,10 +1,13 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+// @ts-ignore </div> </div> </EnhancedLayout>) 
+}</div>) 
+=======
 // @ts-ignore
-import data from '../../data/github-pulse.json',
-
+import data from '../../data/github-pulse.json';
 export default function GithubPulsePage() {
-  const repo = data?.repo || {},
-  const last24h = data?.last24h || {},
+  const repo = data?.repo || {};
+  const last24h = data?.last24h || {};
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -20,7 +23,7 @@ export default function GithubPulsePage() {
         </div>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }
 
 function Metric({ label, value }: { label: string, value: any }) {
@@ -29,5 +32,6 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
-  ),
+  )
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

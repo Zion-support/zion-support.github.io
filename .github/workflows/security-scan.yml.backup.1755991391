@@ -8,14 +8,20 @@ on:
 permissions:
   contents: write
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   pull-requests: write
   actions: read
 
 concurrency:
   group: "security-scan"
   cancel-in-progress: true
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 jobs:
   security:

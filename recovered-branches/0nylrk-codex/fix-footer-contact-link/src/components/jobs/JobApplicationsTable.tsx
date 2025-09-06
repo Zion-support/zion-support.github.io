@@ -1,70 +1,72 @@
-
-import { useState } from "react",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { useJobApplications } from "@/hooks/useJobApplications",
+import { useState } from 'react';
+import { JobApplication, ApplicationStatus } from '@/types/jobs';
+import { useJobApplications } from '@/hooks/useJobApplications';
 import {
   ApplicationsTable,
   EmptyState,
   ErrorState,
   LoadingState,
-  ScoreDialog
-} from "./applications",
+  ScoreDialog,;
+} from './applications';
 
 interface JobApplicationsTableProps {
-  jobId: string
-}
+  jobId: string;
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
-  const { 
-    applications, 
-    isLoading, 
-    error, 
-    updateApplicationStatus, 
+  const {
+    applications,
+    isLoading,
+    error,
+    updateApplicationStatus,
     markApplicationAsViewed,
-    refetch
-  } = useJobApplications(jobId),
+    refetch,
+  } = useJobApplications(jobId);
 
-  const [processingId, setProcessingId] = useState<string | null>(null),
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
-  const [showScoreDialog, setShowScoreDialog] = useState(false),
-  
-  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
-    setProcessingId(applicationId),
+  const [processingId, setProcessingId] = useState<string | null>(null);
+  const [selectedApplication, setSelectedApplication] =
+    useState<JobApplication | null>(null);
+  const [showScoreDialog, setShowScoreDialog] = useState(false);
+
+  const handleStatusChange = async (
+    applicationId: string,
+    newStatus: ApplicationStatus
+  ) => {
+    setProcessingId(applicationId);
     try {
-      await updateApplicationStatus(applicationId, newStatus),
+      await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed
-      const application = applications.find(app => app.id === applicationId),
+      const application = applications.find(app => app.id === applicationId);
       if (application && !application.viewed_at) {
-        await markApplicationAsViewed(applicationId),
+        await markApplicationAsViewed(applicationId);
       }
     } finally {
-      setProcessingId(null),
+      setProcessingId(null);
     }
-  },
+  };
 
   const handleViewScore = (application: JobApplication) => {
-    setSelectedApplication(application),
-    setShowScoreDialog(true)
-  },
+    setSelectedApplication(application);
+    setShowScoreDialog(true);
+  };
 
   const handleViewApplication = async (applicationId: string) => {
-    await markApplicationAsViewed(applicationId)
-  },
+    await markApplicationAsViewed(applicationId);
+  };
 
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
-    refetch()
-  },
+    refetch();
+  };
 
   if (isLoading) {
-    return <LoadingState />,
+    return <LoadingState />;
   }
 
   if (error) {
-    return <ErrorState error={error} />,
+    return <ErrorState error={error} />;
   }
 
   if (applications.length === 0) {
-    return <EmptyState />,
+    return <EmptyState />;
   }
 
   return (
@@ -84,5 +86,4 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
         onScoreUpdated={handleScoreUpdated}
       />
     </>
-  ),
-}
+  );

@@ -7,11 +7,11 @@ const { execSync } = require('child_process');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      buildTim: e: 0,
-      bundleSiz: e: 0,
-      memoryUsag: e: 0,
-      cpuUsag: e: 0,
-      lastUpdate: d: new Date().toISOString(),
+      buildTime: 0,
+      bundleSize: 0,
+      memoryUsage: 0,
+      cpuUsage: 0,
+      lastUpdated: new Date().toISOString(),
     };
     this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
     this.ensureLogDirectory();
@@ -20,7 +20,7 @@ class PerformanceMonitor {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
@@ -59,7 +59,7 @@ class PerformanceMonitor {
       this.log('Performance monitoring completed');
       return this.metrics;
     } catch (error) {
-      this.log(`Performance monitoring: failed: ${error.message}`, 'ERROR');
+      this.log(`Performance monitoring failed: ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -67,7 +67,7 @@ class PerformanceMonitor {
   async measureBuildTime() {
     const startTime = Date.now();
     try {
-      execSync('npm run build', { stdi: o: 'pipe', cw: d: process.cwd() });
+      execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
       return Date.now() - startTime;
     } catch (error) {
       return -1; // Build failed
@@ -111,14 +111,14 @@ class PerformanceMonitor {
       'reports',
       'performance-metrics.json'
     );
-    fs.mkdirSync(path.dirname(metricsFile), { recursiv: e: true });
+    fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 
   async generatePerformanceReport() {
     const report = {
       ...this.metrics,
-      recommendation: s: this.generateRecommendations(),
+      recommendations: this.generateRecommendations(),
     };
 
     const reportFile = path.join(
@@ -128,7 +128,7 @@ class PerformanceMonitor {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`Performance report: generated: ${reportFile}`);
+    this.log(`Performance report generated: ${reportFile}`);
   }
 
   generateRecommendations() {
@@ -159,8 +159,8 @@ class PerformanceMonitor {
 
 // Run if called directly
 if (require.main === module) {
-  const monitor = new PerformanceMonitor();
-  monitor.monitorPerformance().catch(console.error);
-}
+    const monitor = new PerformanceMonitor(),
+    monitor.monitorPerformance().catch(console.error)
+  }
 
 module.exports = PerformanceMonitor;

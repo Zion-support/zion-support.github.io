@@ -2,10 +2,14 @@ module.exports = {
   extends: ['next/core-web-vitals'],
   rules: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     'react/no-unescaped-entities': 'off',
     'no-unused-vars': 'warn',
     '@next/next/no-img-element': 'warn'
   }
+<<<<<<< HEAD
 };
 =======
     'react-hooks/rules-of-hooks': 'error',
@@ -34,3 +38,6 @@ module.exports = {
   ]
 };
 >>>>>>> origin/cursor/website-audit-and-enhancement-e549
+=======
+};
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

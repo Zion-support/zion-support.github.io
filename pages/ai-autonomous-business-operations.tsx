@@ -1,6 +1,14 @@
-import React from 'react',
-import ServiceLanding from '../components/sections/ServiceLanding',
+import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
+export default function AIAutonomousBusinessOperations() {
+  
+    />
+  );
+=======
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousBusinessOperations() {
 	return (
 		<ServiceLanding
@@ -12,11 +20,11 @@ export default function AIAutonomousBusinessOperations() {
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
-				"Autonomous KPI monitoring and anomaly detection",
-				"Agentic workflows for ticket triage, billing, collections, and renewals",
-				"Human-in-the-loop approvals and audit trails",
-				"Playbooks for incident response and customer recovery",
-				"Compliance logging and role-based access",
+				"Autonomous KPI monitoring and anomaly detection";
+				"Agentic workflows for ticket triage, billing, collections, and renewals";
+				"Human-in-the-loop approvals and audit trails";
+				"Playbooks for incident response and customer recovery";
+				"Compliance logging and role-based access";
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
 			]}
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
@@ -24,3 +32,4 @@ export default function AIAutonomousBusinessOperations() {
 		/>
 	)
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

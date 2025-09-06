@@ -1,5 +1,8 @@
 [build]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   command = "chmod +x scripts/pre-build-check.sh && ./scripts/pre-build-check.sh && npm ci && npm run export"
   publish = "out"
 
@@ -16,6 +19,7 @@
   package = "./.scripts/netlify-rollback-monitor"
   [plugins.inputs]
     monitorMinutes = 20
+<<<<<<< HEAD
     intervalSeconds = 60 
 =======
   command = "npm ci && npm install react@18.3.1 react-dom@18.3.1 && npm run build"
@@ -29,3 +33,6 @@
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 >>>>>>> origin/cursor/build-nextjs-app-and-handle-errors-5869
+=======
+    intervalSeconds = 60 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

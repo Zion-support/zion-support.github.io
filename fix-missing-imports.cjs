@@ -9,8 +9,8 @@ const path = require('path');
 
 class ImportFixer {
   constructor() {
-    this.lucideIcons = new Set();
-    this.fixedFiles = [];
+    this.lucideIcons = new Set(),
+    this.fixedFiles = []
   }
 
   log(message) {
@@ -19,11 +19,10 @@ class ImportFixer {
 
   // Get all Lucide React icons from the file
   findLucideIcons(content) {
-    const iconMatches = content.match(/ico: n:\s*([A-Z][a-zA-Z0-9]+)/g);
-    if (!iconMatches) return [];
+    const iconMatches = content.match(/icon: \s*([A-Z][a-zA-Z0-9]+)/g), if (!iconMatches) return [],
 
     return iconMatches.map(match => {
-      const iconName = match.replace('ico: n:', '').trim();
+      const iconName = match.replace('icon:', '').trim();
       return iconName;
     });
   }
@@ -50,7 +49,7 @@ class ImportFixer {
       let content = fs.readFileSync(filePath, 'utf8');
 
       // Skip if not a React component file
-      if (!content.includes('lucide-react') && !content.includes('ico: n:')) {
+      if (!content.includes('lucide-react') && !content.includes('icon:')) {
         return true;
       }
 
@@ -104,7 +103,7 @@ class ImportFixer {
       }
 
       fs.writeFileSync(filePath, content);
-      this.fixedFiles.push({ fil: e: filePath, addedIcon: s: missingIcons });
+      this.fixedFiles.push({ file: filePath, addedIcons: missingIcons });
       return true;
     } catch (error) {
       this.log(`❌ Failed to fix ${filePath}: ${error.message}`);
@@ -135,8 +134,8 @@ class ImportFixer {
       }
     }
 
-    this.log('\n📊 Import Fixing: Summary:');
-    this.log(`- Files: fixed: ${this.fixedFiles.length}`);
+    this.log('\n📊 Import Fixing Summary: '),
+    this.log(`- Files fixed: ${this.fixedFiles.length}`);
 
     this.fixedFiles.forEach(fix => {
       this.log(`  - ${fix.file}: Added ${fix.addedIcons.join(', ')}`);
@@ -166,8 +165,8 @@ class ImportFixer {
 
 // Run if called directly
 if (require.main === module) {
-  const fixer = new ImportFixer();
-  fixer.fixAllFiles().catch(console.error);
-}
+    const fixer = new ImportFixer(),
+    fixer.fixAllFiles().catch(console.error)
+  }
 
 module.exports = ImportFixer;

@@ -1,11 +1,17 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   images: {
@@ -16,9 +22,13 @@ const nextConfig = {
       'via.placeholder.com',
     ],
     formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -55,14 +65,26 @@ const nextConfig = {
           '**/performance-*.sh',
           '**/performance-*.html',
           '**/performance-*.md',
-          '**/performance-*.txt'
+          '**/performance-*.txt',
         ],
         poll: 1000,
-        aggregateTimeout: 300
-      }
+        aggregateTimeout: 300,
+      };
     }
-    return config
-  }
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

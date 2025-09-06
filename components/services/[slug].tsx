@@ -1,36 +1,99 @@
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../../components/layout/Layout',
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react',
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',
-import { extraServices } from '../../data/extra-services',
-import { additionalEnhancedServices } from '../../data/additional-real-services',
-import { newlyAddedServices } from '../../data/newly-added-services',
-import { curatedMarketServices } from '../../data/curated-market-services',
-import { new2025Services } from '../../data/new-2025-services',
-import { marketValidatedServices } from '../../data/market-validated-services',
-import { moreRealServices2025 } from '../../data/more-real-services-2025',
-import { verified2025Additions } from '../../data/verified-2025-additions',
-import { realServicesQ12025 } from '../../data/real-services-q1-2025',
-import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025',
+<<<<<<< HEAD
+ 
+}function getAllServices () : Service[] {
+  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) 
+}return {
+  paths: Array.from (slugs) .map ( (slug) => ({
+  params: {
+  slug 
 
-type Service = typeof enhancedRealMicroSaasServices[number],
+}) );
+fallback: false 
+
+
+}export default function ServiceDetailPage ({
+  service 
+}: {
+  service: Service 
+}) {
+  return (<Layout> <Head> <title> {
+  service.name 
+}| Zion Tech Group</title> 
+};
+null;
+2) 
+
+}/> </Head> </li>) ) 
+}</ul> </div>) ) 
+}</ul> </div> <div>) ) 
+}</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
+  `tel:$ {
+  contactInfo.mobile.replace (/[^+\\d]/g, '') 
+}` 
+}className="hover:underline" > {
+  contactInfo.mobile 
+}</a></div> <div className="flex items-center gap-2 text-purple-400" ><Mail className="w-4 h-4" /><a href= {
+  `mailto:$ {
+  contactInfo.email 
+}` 
+}className="hover:underline" > {
+  contactInfo.email 
+}</a></div> <div className="flex items-center gap-2 text-green-400" ><MapPin className="w-4 h-4" /><a href= {
+  `https://maps.google.com/?q=$ {
+  encodeURIComponent (contactInfo.address) 
+}` 
+}target="blank" rel="noopener noreferrer" className="hover:underline" > {
+  contactInfo.address 
+}</a></div> </div> </div> {
+  /* Market Position & ROI */ 
+}<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
+  service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
+  service.marketPosition 
+}</p> 
+}{
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi 
+}</p> 
+}{
+  service.competitors?.length ? () : null 
+}<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
+  service.name 
+}- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> 
+};
+export default ServiceDetail 
+=======
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../../data/extra-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { newlyAddedServices } from '../../data/newly-added-services';
+import { curatedMarketServices } from '../../data/curated-market-services';
+import { new2025Services } from '../../data/new-2025-services';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { moreRealServices2025 } from '../../data/more-real-services-2025';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025';
+import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
+type Service = typeof enhancedRealMicroSaasServices[number];
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+};
 
 function getPriceValue(price: Service['price']): string {
 	if (price && typeof price === 'object' && 'monthly' in price) {
 		return price.monthly.toString()
 	}
 	if (typeof price === 'string') {
-		return price,
+		return price
 	}
-	return '99',
+	return '99';
 }
 
 function getAllServices(): Service[] {
@@ -43,88 +106,86 @@ function getAllServices(): Service[] {
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realServicesQ32025 as unknown as Service[]),
-		.concat(newVerifiedServicesQ22025 as unknown as Service[]),
+		.concat(realServicesQ32025 as unknown as Service[]);
+		.concat(newVerifiedServicesQ22025 as unknown as Service[])
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link),
-		const path = url.pathname.replace(/^\/+|\/+$/g, ''),
+		const url = new URL(link);
+		const path = url.pathname.replace(/^\/+|\/+$/g, '');
 		if (path.startsWith('services/')) {
-			return path.substring('services/'.length),
+			return path.substring('services/'.length)
 		}
-		return null,
+		return null
 	} catch {
-		return null,
-	}
+		return null
+	};
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices(),
-	const slugs = new Set<string>(),
+	const services = getAllServices();
+	const slugs = new Set<string>();
 
 	// Define static service slugs that should not be handled by this dynamic route
 	const staticServiceSlugs = [
-		'ai-evaluation-orchestratorai-support-triage-router', 
-		'ai-code-review-assistant-proai-revenue-forecasting-copilot'
-	],
+		'ai-evaluation-orchestratorai-support-triage-routerai-code-review-assistant-proai-revenue-forecasting-copilot'
+	];
 
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
-		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,
+		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
 		if (fromLink && !staticServiceSlugs.includes(fromLink)) {
-			slugs.add(fromLink),
-			continue,
+			slugs.add(fromLink);
+			continue
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-		const idSlug = s.id ? toSlug(s.id) : '',
-		const nameSlug = s.name ? toSlug(s.name) : '',
+		const idSlug = s.id ? toSlug(s.id) : '';
+		const nameSlug = s.name ? toSlug(s.name) : '';
 		
 		if (idSlug && !staticServiceSlugs.includes(idSlug)) {
-			slugs.add(idSlug),
+			slugs.add(idSlug)
 		}
 		if (nameSlug && !staticServiceSlugs.includes(nameSlug)) {
-			slugs.add(nameSlug),
+			slugs.add(nameSlug)
 		}
 	}
 
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
-	},
+	};
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices(),
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
+	const services = getAllServices();
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
 	let service: Service | undefined = services.find((s) => {
-		if (!s.link) return false,
-		const fromLink = extractServiceSlugFromLink(s.link),
+		if (!s.link) return false;
+		const fromLink = extractServiceSlugFromLink(s.link);
 		return fromLink === incomingSlug
-	}),
+	});
 
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
+		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
 	}
 
 	if (!service) {
-		return { notFound: true },
+		return { notFound: true }
 	}
 
 	return {
 		props: { service }
-	},
+	};
 }
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
-	return (
-		<Layout>
+	return(<Layout>
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
@@ -134,24 +195,25 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify(
 							{
-								"@context": "https://schema.org",
-								"@type": "Service",
+								"@context": "https: //schema.org", "@type": "Service",
 								name: service.name,
 								description: service.tagline || service.description,
 								url: service.link,
 								provider: {
-									"@type": "Organization",
+      
+									"@type": "Organization";
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
-								},
-								offers: {
-									"@type": "Offer",
+								
+    },
+    offers: {
+									"@type": "Offer";
 									        price: "99",
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
 								}
-							},
-							null,
+							};
+							null;
 							2
 							)
 						}}
@@ -245,19 +307,18 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</Layout>
-	),
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import EnhancedLayout from '@/components/layout/EnhancedLayout',
-import services from '@/data/services/services.json',
-
+	);
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import EnhancedLayout from '@/components/layout/EnhancedLayout';
+import services from '@/data/services/services.json';
 const ServiceDetail: NextPage = () => {
-  const router = useRouter(),
-  const { slug } = router.query as { slug?: string },
-  const items = services as any[],
-  const service = items.find((s) => s.slug === slug),
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string };
+  const items = services as any[];
+  const service = items.find((s) => s.slug === slug);
 
   if (!service) {
     return (
@@ -273,14 +334,14 @@ const ServiceDetail: NextPage = () => {
     )
   }
 
-  const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`,
+  const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`;
 
   return (
     <EnhancedLayout>
       <Head>
         <title>{service.name} - Zion Tech Solutions</title>
       </Head>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
           <img src={`https://picsum.photos/seed/${encodeURIComponent(service.slug)}/1200/600`} alt={service.name} className="w-full rounded-lg border border-gray-200 dark:border-gray-800" />
           <div>
@@ -303,7 +364,8 @@ const ServiceDetail: NextPage = () => {
       </div>
     </EnhancedLayout>
   )
-},
+};
 
-export default ServiceDetail,
+export default ServiceDetail
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

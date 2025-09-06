@@ -16,6 +16,7 @@ class User(db.Model):
     enrollments = db.relationship('Enrollment', back_populates='user', cascade="all, delete-orphan")
     certificates = db.relationship('Certificate', backref='user', lazy=True, cascade="all, delete-orphan")
 <<<<<<< HEAD
+<<<<<<< HEAD
     analytics_events = db.relationship('AnalyticsEvent', backref='user', lazy='dynamic', cascade="all, delete-orphan")
     feedback_submissions = db.relationship('FeedbackSubmission', backref='user', lazy='dynamic', cascade="all, delete-orphan")
 =======
@@ -23,6 +24,10 @@ class User(db.Model):
     update_comments = db.relationship('UpdateComment', backref='user', lazy=True, cascade="all, delete-orphan")
 >>>>>>> origin/cursor/add-context-and-interaction-to-updates-4760
 
+=======
+    analytics_events = db.relationship('AnalyticsEvent', backref='user', lazy='dynamic', cascade="all, delete-orphan")
+    feedback_submissions = db.relationship('FeedbackSubmission', backref='user', lazy='dynamic', cascade="all, delete-orphan")
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     def __repr__(self):
         return f'<User {self.username}>'
 
@@ -129,6 +134,9 @@ class Certificate(db.Model):
 
     def __repr__(self):
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         return f'<Certificate {self.id} - User {self.user_id} for Course {self.course_id}>'
 
 # New Analytics Models
@@ -212,6 +220,7 @@ class ContentAnalytics(db.Model):
     )
     
     def __repr__(self):
+<<<<<<< HEAD
         return f'<ContentAnalytics {self.content_type} {self.content_id} on {self.date}>'
 =======
         return f'<Certificate {self.id} for U{self.user_id} - C{self.course_id}>'
@@ -266,3 +275,6 @@ class UpdateComment(db.Model):
     def __repr__(self):
         return f'<UpdateComment {self.id} by User {self.user_id} on Update {self.update_id}>'
 >>>>>>> origin/cursor/add-context-and-interaction-to-updates-4760
+=======
+        return f'<ContentAnalytics {self.content_type} {self.content_id} on {self.date}>'
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -2,6 +2,7 @@ module.exports = {
   presets: [
     ['@babel/preset-env', {
 <<<<<<< HEAD
+<<<<<<< HEAD
       modules: 'commonjs', // Use CommonJS instead of ESM
       targets: {
 =======
@@ -10,6 +11,10 @@ module.exports = {
         esmodules: true,
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
         node: '18'
+=======
+      modules: 'commonjs', // Use CommonJS instead of ESM
+      targets: {        node: '18'
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       }
     }],
     ['@babel/preset-react', {
@@ -19,6 +24,7 @@ module.exports = {
   ],
   plugins: [
     ['@babel/plugin-transform-runtime', {
+<<<<<<< HEAD
 <<<<<<< HEAD
       useESModules: false, // Use CommonJS
 =======
@@ -30,6 +36,12 @@ module.exports = {
     }]
 <<<<<<< HEAD
 =======
+=======
+      useESModules: false, // Use CommonJS      corejs: false,
+      helpers: true,
+      regenerator: false
+    }]
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   ],
   env: {
     test: {
@@ -65,6 +77,9 @@ module.exports = {
         }]
       ]
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-751f
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   ]
 };

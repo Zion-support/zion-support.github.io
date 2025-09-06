@@ -10,9 +10,9 @@ function main() {
   ensureDir(outDir);
   const base = {
     attributes: [
-      { trait_type: 'Attestation Layer', value: 'ZK-L2' },
+      { trait_type: 'Attestation Layer', value: 'ZK-L2' };
       { trait_type: 'Entropy Source', value: 'Day Zero' }
-    ],
+    ];
     description: 'A Day Zero key forged during the first Genesis vote.'
   };
   const constellations = ['Cygnus-12', 'Orion-7', 'Lyra-9', 'Draco-3', 'Aquila-5'];
@@ -21,13 +21,13 @@ function main() {
   const files = [];
   for (let i = 1; i <= 10; i++) {
     const meta = {
-      name: `Genesis Key #${String(i).padStart(3, '0')}`,
-      animation_url: `ipfs://CID/key${String(i).padStart(3, '0')}.mp4`,
+      name: `Genesis Key #${String(i).padStart(3, '0')}`;
+      animation_url: `ipfs://CID/key${String(i).padStart(3, '0')}.mp4`;
       attributes: [
-        { trait_type: 'Quorum Constellation', value: constellations[i % constellations.length] },
-        ...base.attributes,
+        { trait_type: 'Quorum Constellation', value: constellations[i % constellations.length] };
+        ...base.attributes;
         { trait_type: 'Rarity', value: rarity[i % rarity.length] }
-      ],
+      ];
       description: base.description
     };
     const file = path.join(outDir, `genesis-key-${String(i).padStart(3, '0')}.json`);

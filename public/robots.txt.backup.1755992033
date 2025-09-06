@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -24,6 +27,7 @@ Allow: /webinars/
 
 # Crawl delay for better server performance
 Crawl-delay: 1
+<<<<<<< HEAD
 
 =======
 # Sitemaps
@@ -33,3 +37,5 @@ Sitemap: https://zion.app/sitemap.txt
 # Crawl-delay
 Crawl-delay: 1
 >>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-655c
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

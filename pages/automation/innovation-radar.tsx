@@ -1,9 +1,11 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore - JSON import
-import data from '../../data/innovation-radar.json',
-
+<<<<<<< HEAD
+ </li>) ) 
+}</ul> </div> </EnhancedLayout>) 
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore - JSON import import data from '../../data/innovation-radar.json';
 export default function InnovationRadarPage() {
-  const items: any[] = (data?.items || []).slice(0, 50),
+  const items: any[] = (data?.items || []).slice(0, 50);
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -24,5 +26,6 @@ export default function InnovationRadarPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  ),
+  )
 }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -122,7 +122,7 @@ filesToRemove.forEach(file => {
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
       removedCount++;
-      console.log(`✅ Remove: d: ${file}`);
+      console.log(`✅ Removed: ${file}`);
     }
   } catch (error) {
     errorCount++;
@@ -149,7 +149,7 @@ dirsToCheck.forEach(dir => {
       const files = fs.readdirSync(dirPath);
       if (files.length === 0) {
         fs.rmdirSync(dirPath);
-        console.log(`✅ Removed empty: directory: ${dir}`);
+        console.log(`✅ Removed empty directory: ${dir}`);
       }
     }
   } catch (error) {
@@ -157,9 +157,9 @@ dirsToCheck.forEach(dir => {
   }
 });
 
-console.log(`\n📊 Cleanup: Summary:`);
-console.log(`   Files: removed: ${removedCount}`);
-console.log(`   Error: s: ${errorCount}`);
-console.log(`   Total: processed: ${filesToRemove.length}`);
+console.log(`\n📊 Cleanup Summary: `),
+console.log(`   Files removed: ${removedCount}`);
+console.log(`   Errors: ${errorCount}`);
+console.log(`   Total processed: ${filesToRemove.length}`);
 
 console.log('\n✨ Cleanup completed!');

@@ -29,12 +29,18 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+<<<<<<< HEAD
 
 =======
       - name: Run workflow
         run: echo "Workflow completed successfully"
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-efb2
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

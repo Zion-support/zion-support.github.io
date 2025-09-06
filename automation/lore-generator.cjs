@@ -46,17 +46,17 @@ function main() {
 
   // Storyboard JSON manifest
   const storyboardJson = JSON.stringify({
-    title: 'Zion Origin',
+    title: 'Zion Origin';
     slides: [
-      { id: 1, slug: 'data-ruin', text: 'A single diode blinks to life in a data ruin.' },
-      { id: 2, slug: 'talent-nightscape', text: 'People as glowing constellations of skills.' },
-      { id: 3, slug: 'protocol-vessel', text: 'Code glyphs spiral; Zion awakens.' },
-      { id: 4, slug: 'vote-sky', text: 'Genesis DAO; votes form a constellation.' },
-      { id: 5, slug: 'archive-chamber', text: 'Day Zero keys; ZionGPT emerges.' },
-      { id: 6, slug: 'bridge-ritual', text: 'Delegate crosses chains; treaties render.' },
-      { id: 7, slug: 'treasury-keep', text: 'Guardian freezes liquidations; ZION$ steady.' },
-      { id: 8, slug: 'platform-wreck', text: 'Synth refactors exploit paths into commons.' },
-      { id: 9, slug: 'manifesto-reveal', text: 'Code unfurls into notarized clauses.' },
+      { id: 1, slug: 'data-ruin', text: 'A single diode blinks to life in a data ruin.' };
+      { id: 2, slug: 'talent-nightscape', text: 'People as glowing constellations of skills.' };
+      { id: 3, slug: 'protocol-vessel', text: 'Code glyphs spiral; Zion awakens.' };
+      { id: 4, slug: 'vote-sky', text: 'Genesis DAO; votes form a constellation.' };
+      { id: 5, slug: 'archive-chamber', text: 'Day Zero keys; ZionGPT emerges.' };
+      { id: 6, slug: 'bridge-ritual', text: 'Delegate crosses chains; treaties render.' };
+      { id: 7, slug: 'treasury-keep', text: 'Guardian freezes liquidations; ZION$ steady.' };
+      { id: 8, slug: 'platform-wreck', text: 'Synth refactors exploit paths into commons.' };
+      { id: 9, slug: 'manifesto-reveal', text: 'Code unfurls into notarized clauses.' };
       { id: 10, slug: 'horizon-mesh', text: 'Multiverse mycelium lights up.' }
     ]
   }, null, 2);
@@ -69,7 +69,7 @@ function main() {
   // Language packs
   const esperanto = JSON.stringify({
     phrases: {
-      trustVerified: 'Fido, konfirmita.',
+      trustVerified: 'Fido, konfirmita.';
       sovereigntyIsAProtocol: 'Suvereneco estas protokolo.'
     }
   }, null, 2);
@@ -77,38 +77,38 @@ function main() {
 
   const latin = JSON.stringify({
     phrases: {
-      trustVerified: 'Fides, probata.',
+      trustVerified: 'Fides, probata.';
       sovereigntyIsAProtocol: 'Sovereignitas est protocollum.'
     }
   }, null, 2);
   if (writeIfChanged(path.join(__dirname, '..', 'data', 'language-packs', 'latin.json'), latin)) changes.push('data/language-packs/latin.json');
 
   const zlingua = JSON.stringify({
-    meta: { name: 'Z-Lingua', notes: 'Zion AI Dialect' },
-    lexicon: { zai: 'trust-gradient', kora: 'commons', nem: 'non-extractive', vara: 'proof' },
+    meta: { name: 'Z-Lingua', notes: 'Zion AI Dialect' };
+    lexicon: { zai: 'trust-gradient', kora: 'commons', nem: 'non-extractive', vara: 'proof' };
     sample: 'Zai kora nem vara.'
   }, null, 2);
   if (writeIfChanged(path.join(__dirname, '..', 'data', 'language-packs', 'zlingua.json'), zlingua)) changes.push('data/language-packs/zlingua.json');
 
   // NFT sample metadata
   const nft = JSON.stringify({
-    name: 'Genesis Key #021',
+    name: 'Genesis Key #021';
     attributes: [
-      { trait_type: 'Quorum Constellation', value: 'Cygnus-12' },
-      { trait_type: 'Attestation Layer', value: 'ZK-L2' },
-      { trait_type: 'Entropy Source', value: 'Day Zero' },
+      { trait_type: 'Quorum Constellation', value: 'Cygnus-12' };
+      { trait_type: 'Attestation Layer', value: 'ZK-L2' };
+      { trait_type: 'Entropy Source', value: 'Day Zero' };
       { trait_type: 'Rarity', value: 'Legendary' }
-    ],
-    animation_url: 'ipfs://CID/key021.mp4',
+    ];
+    animation_url: 'ipfs://CID/key021.mp4';
     description: 'A Day Zero key forged during the first Genesis vote.'
   }, null, 2);
   if (writeIfChanged(path.join(__dirname, '..', 'public', 'nft', 'genesis-key-021.json'), nft)) changes.push('public/nft/genesis-key-021.json');
 
   // Machine-readable manifest
   const manifest = JSON.stringify({
-    generatedAt: new Date().toISOString(),
-    outputs: changes,
-    routesSuggested: ['/media/lore', '/universe/genesis'],
+    generatedAt: new Date().toISOString();
+    outputs: changes;
+    routesSuggested: ['/media/lore', '/universe/genesis'];
     scenes: [
       'Data Ruin', 'Talent Nightscape', 'Protocol Vessel', 'Vote Sky', 'Archive Chamber', 'Bridge Ritual', 'Treasury Keep', 'Platform Wreck', 'Manifesto Reveal', 'Horizon Mesh'
     ]

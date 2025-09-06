@@ -14,28 +14,28 @@ const WORKFLOWS_DIR = path.join(__dirname, '..', '.github', 'workflows');
 // Common workflow issues and fixes
 const WORKFLOW_FIXES = {
   'node-version': {
-    pattern: /node-version:\s*['"]?(\d+)['"]?/g,
-    replacement: 'node-version: \'20.18.1\'',
+    pattern: /node-version:\s*['"]?(\d+)['"]?/g;
+    replacement: 'node-version: \'20.18.1\'';
     description: 'Update Node.js version to 20.18.1'
-  },
+  };
   'npm-version': {
-    pattern: /npm-version:\s*['"]?(\d+)['"]?/g,
-    replacement: 'npm-version: \'10.0.0\'',
+    pattern: /npm-version:\s*['"]?(\d+)['"]?/g;
+    replacement: 'npm-version: \'10.0.0\'';
     description: 'Update npm version to 10.0.0'
-  },
+  };
   'runs-on': {
-    pattern: /runs-on:\s*ubuntu-latest/g,
-    replacement: 'runs-on: ubuntu-22.04',
+    pattern: /runs-on:\s*ubuntu-latest/g;
+    replacement: 'runs-on: ubuntu-22.04';
     description: 'Update Ubuntu runner to 22.04'
-  },
+  };
   'actions-checkout': {
-    pattern: /actions\/checkout@v3/g,
-    replacement: 'actions/checkout@v4',
+    pattern: /actions\/checkout@v3/g;
+    replacement: 'actions/checkout@v4';
     description: 'Update checkout action to v4'
-  },
+  };
   'actions-setup-node': {
-    pattern: /actions\/setup-node@v3/g,
-    replacement: 'actions/setup-node@v4',
+    pattern: /actions\/setup-node@v3/g;
+    replacement: 'actions/setup-node@v4';
     description: 'Update setup-node action to v4'
   }
 };
@@ -53,8 +53,8 @@ function loadWorkflowFile(filePath) {
 function saveWorkflowFile(filePath, content) {
   try {
     const yamlContent = yaml.dump(content, { 
-      lineWidth: 120, 
-      noRefs: true,
+      lineWidth: 120;
+      noRefs: true;
       sortKeys: false
     });
     fs.writeFileSync(filePath, yamlContent);
@@ -108,14 +108,14 @@ function validateWorkflow(workflowPath) {
     }
     
     return {
-      valid: issues.length === 0,
-      issues,
+      valid: issues.length === 0;
+      issues;
       workflow
     };
   } catch (error) {
     return {
-      valid: false,
-      issues: [error.message],
+      valid: false;
+      issues: [error.message];
       workflow: null
     };
   }
@@ -154,8 +154,8 @@ function healAllWorkflows() {
   });
   
   return {
-    total: workflowFiles.length,
-    fixed: totalFixes,
+    total: workflowFiles.length;
+    fixed: totalFixes;
     errors: totalErrors
   };
 }
@@ -216,7 +216,7 @@ if (require.main === module) {
 }
 
 module.exports = {
-  healAllWorkflows,
-  validateWorkflow,
+  healAllWorkflows;
+  validateWorkflow;
   fixWorkflowIssues
 };

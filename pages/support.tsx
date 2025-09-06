@@ -1,15 +1,84 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  HelpCircle, 
+  MessageCircle, 
+  Mail, 
+  Phone, 
+  Clock, 
+  CheckCircle, 
+  ArrowRight, 
+  FileText, 
+  Video, 
+  Users ;
+} from 'lucide-react';
+
+const supportChannels = [
+  {
+    icon: MessageCircle,
+    title: 'Live Chat',
+    description: 'Get instant help with our 24/7 live chat support',
+    availability: '24/7'
+  },
+  {
+    icon: Phone,
+    title: 'Phone Support',
+    description: 'Speak directly with our technical experts',
+    availability: 'Mon-Fri 9AM-6PM EST'
+  },
+  {
+    icon: Mail,
+    title: 'Email Support',
+    description: 'Send us detailed questions and get comprehensive answers',
+    availability: '24/7'
+  },
+  {
+    icon: Video,
+    title: 'Video Calls',
+    description: 'Schedule screen sharing sessions for complex issues',
+    availability: 'By appointment'
+  }
+];
+
+export default function SupportPage() {
+  return (
+    <>
+      <Head>
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for all your technology needs." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Support Center</h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                We're here to help you succeed with comprehensive support options.
+              </p>
+            </motion.div>
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   HelpCircle, MessageCircle, Phone, Mail, Clock, 
-  BookOpen, Video, FileText, Search, Filter,
+  BookOpen, Video, FileText, Search, Filter;
   CheckCircle, ArrowRight, Brain, Atom, Rocket, 
   Shield, Zap, Users, Star, TrendingUp, Code
-} from 'lucide-react',
+} from 'lucide-react';
 
 export default function Support() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const supportCategories = [
     {
@@ -18,35 +87,35 @@ export default function Support() {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       description: 'Support for AI consciousness and autonomous systems',
       articles: 25
-    },
+    };
     {
       id: 'quantum-solutions',
       name: 'Quantum Solutions',
       icon: <Atom className="w-8 h-8 text-purple-400" />,
       description: 'Help with quantum computing and cryptography',
       articles: 18
-    },
+    };
     {
       id: 'autonomous-systems',
       name: 'Autonomous Systems',
       icon: <Rocket className="w-8 h-8 text-green-400" />,
       description: 'Support for self-managing business operations',
       articles: 32
-    },
+    };
     {
       id: 'enterprise-it',
       name: 'Enterprise IT',
       icon: <Shield className="w-8 h-8 text-blue-400" />,
       description: 'Infrastructure and security support',
       articles: 28
-    },
+    };
     {
       id: 'billing',
       name: 'Billing & Account',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       description: 'Payment, invoices, and account management',
-      articles: 15
-    },
+    articles: 15
+    };
     {
       id: 'technical',
       name: 'Technical Issues',
@@ -54,7 +123,7 @@ export default function Support() {
       description: 'Bug reports and technical troubleshooting',
       articles: 42
     }
-  ],
+  ];
 
   const quickActions = [
     {
@@ -64,7 +133,7 @@ export default function Support() {
       action: 'Start Chat',
       color: 'from-cyan-500 to-blue-600',
       available: true
-    },
+    };
     {
       title: 'Phone Support',
       description: 'Speak directly with our experts',
@@ -72,7 +141,7 @@ export default function Support() {
       action: 'Call Now',
       color: 'from-green-500 to-emerald-600',
       available: true
-    },
+    };
     {
       title: 'Email Support',
       description: 'Send us a detailed message',
@@ -80,7 +149,7 @@ export default function Support() {
       action: 'Send Email',
       color: 'from-purple-500 to-pink-600',
       available: true
-    },
+    };
     {
       title: 'Video Call',
       description: 'Screen share and visual assistance',
@@ -89,7 +158,7 @@ export default function Support() {
       color: 'from-orange-500 to-red-600',
       available: true
     }
-  ],
+  ];
 
   const popularArticles = [
     {
@@ -98,28 +167,28 @@ export default function Support() {
       readTime: '5 min read',
       views: '2.4k',
       helpful: '98%'
-    },
+    };
     {
       title: 'Setting Up Quantum-Secure Infrastructure',
       category: 'Quantum Solutions',
       readTime: '8 min read',
       views: '1.8k',
       helpful: '95%'
-    },
+    };
     {
       title: 'Troubleshooting Autonomous System Errors',
       category: 'Autonomous Systems',
       readTime: '6 min read',
       views: '3.1k',
       helpful: '92%'
-    },
+    };
     {
       title: 'API Integration Best Practices',
       category: 'Technical Issues',
       readTime: '7 min read',
       views: '4.2k',
       helpful: '96%'
-    },
+    };
     {
       title: 'Understanding Your Invoice and Billing',
       category: 'Billing & Account',
@@ -127,29 +196,29 @@ export default function Support() {
       views: '1.5k',
       helpful: '89%'
     }
-  ],
+  ];
 
   const supportHours = [
     {
       day: 'Monday - Friday',
       hours: '9:00 AM - 8:00 PM EST',
       status: 'Available'
-    },
+    };
     {
       day: 'Saturday',
       hours: '10:00 AM - 6:00 PM EST',
       status: 'Available'
-    },
+    };
     {
       day: 'Sunday',
       hours: '12:00 PM - 6:00 PM EST',
       status: 'Limited'
     }
-  ],
+  ];
 
   const filteredCategories = selectedCategory === 'all' 
     ? supportCategories 
-    : supportCategories.filter(cat => cat.id === selectedCategory),
+    : supportCategories.filter(cat => cat.id === selectedCategory);
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -167,7 +236,7 @@ export default function Support() {
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Get the support you need for our AI consciousness, quantum computing, 
+              Get the support you need for our AI consciousness, quantum computing;
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
             
@@ -319,10 +388,42 @@ export default function Support() {
                 </div>
               </motion.div>
             ))}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           </div>
         </section>
 
         {/* Support Channels */}
+<<<<<<< HEAD
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Support</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Choose the support channel that works best for you.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {supportChannels.map((channel, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <channel.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{channel.title}</h3>
+                  <p className="text-gray-600 mb-4">{channel.description}</p>
+                  <div className="text-sm text-blue-600 font-medium">
+                    {channel.availability}
+=======
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -366,6 +467,7 @@ export default function Support() {
                       <span className="text-gray-400">Priority:</span>
                       <span className="text-purple-400">{channel.priority}</span>
                     </div>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   </div>
                 </motion.div>
               ))}
@@ -373,6 +475,67 @@ export default function Support() {
           </div>
         </section>
 
+<<<<<<< HEAD
+        {/* Contact Info */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">Contact Information</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Phone</h3>
+                  <p className="text-gray-600">+1 302 464 0950</p>
+                </div>
+                <div className="text-center">
+                  <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Email</h3>
+                  <p className="text-gray-600">kleber@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <Users className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Address</h3>
+                  <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Need Immediate Help?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Contact us now for urgent support needs.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Contact Us
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/help"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  Help Center
+                </Link>
+=======
         {/* Search and Filter */}
         <section className="py-12 px-4">
           <div className="max-w-6xl mx-auto">
@@ -386,7 +549,7 @@ export default function Support() {
                     placeholder="Search for help topics, questions, or solutions..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -419,23 +582,23 @@ export default function Support() {
               {
                 question: "What is AI Consciousness Evolution?",
                 answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self-aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence."
-              },
+              };
               {
                 question: "How does Quantum Neural Ecosystem work?",
                 answer: "Our Quantum Neural Ecosystem combines quantum computing with neural networks to solve previously impossible problems, leveraging quantum superposition and entanglement for exponential computational power."
-              },
+              };
               {
                 question: "What makes Space Resource Intelligence unique?",
                 answer: "Our space technology uses AI-powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization."
-              },
+              };
               {
                 question: "How secure is your Quantum Cybersecurity platform?",
                 answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations."
-              },
+              };
               {
                 question: "Can I integrate your AI with my existing systems?",
                 answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure."
-              },
+              };
               {
                 question: "What support do you offer for enterprise deployments?",
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
@@ -651,7 +814,7 @@ export default function Support() {
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
-                  For urgent technical issues or critical support needs, 
+                  For urgent technical issues or critical support needs,
                   our team is available around the clock.
                 </p>
                 
@@ -720,9 +883,9 @@ export default function Support() {
       </section>
     </div>
   )
-},
+};
 
-export default Support,
+export default Support;
           </div>
         </section>
 
@@ -762,13 +925,20 @@ export default Support,
                   For critical issues affecting production systems, contact our emergency support line: </p>
                 <div className="text-2xl font-bold text-cyan-400">+1 (302) 464-0950</div>
                 <p className="text-sm text-gray-400 mt-2">Available 24/7 for enterprise clients</p>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+      </div>
+    </>
+  );
+=======
       </main>
     </Layout>
   )
-},
+};
 
-export default SupportPage,
+export default SupportPage;
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
