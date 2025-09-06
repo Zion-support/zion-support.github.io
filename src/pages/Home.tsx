@@ -6,6 +6,10 @@ import { usePerformance } from '../hooks/usePerformance';
 import Testimonials from '../components/Testimonials';
 import BlogSection from '../components/BlogSection';
 import { trackScrollDepth, trackButtonClick } from '../utils/analytics';
+import ScrollAnimation from '../components/ScrollAnimation';
+import ParallaxSection from '../components/ParallaxSection';
+import TypingAnimation from '../components/TypingAnimation';
+import ParticleBackground from '../components/ParticleBackground';
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -123,7 +127,10 @@ const Home: React.FC = () => {
         keywords="AI, artificial intelligence, technology solutions, digital transformation, enterprise software, cloud computing, cybersecurity, automation"
         url="/"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative">
+        {/* Particle Background */}
+        <ParticleBackground particleCount={30} />
+        
         {/* Hero Section */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -142,7 +149,12 @@ const Home: React.FC = () => {
               >
                 Transform Your Business with{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
-                  AI-Powered Solutions
+                  <TypingAnimation
+                    text="AI-Powered Solutions"
+                    speed={100}
+                    delay={1000}
+                    className="inline-block"
+                  />
                 </span>
               </motion.h1>
               <motion.p 
@@ -203,30 +215,24 @@ const Home: React.FC = () => {
         {/* Services Section */}
         <div className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-              </p>
-            </motion.div>
+            <ScrollAnimation animation="slideUp" delay={0.2}>
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Services</span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
+                </p>
+              </div>
+            </ScrollAnimation>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <motion.div
+                <ScrollAnimation
                   key={index}
+                  animation="scale"
+                  delay={index * 0.1}
                   className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300 border border-gray-700/50 hover:border-cyan-400/50"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                 >
                   <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
@@ -244,7 +250,7 @@ const Home: React.FC = () => {
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
-                </motion.div>
+                </ScrollAnimation>
               ))}
             </div>
           </div>
@@ -253,30 +259,26 @@ const Home: React.FC = () => {
         {/* Features Section */}
         <div className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div 
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Zion Tech</span>?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We combine cutting-edge technology with proven expertise to deliver exceptional results.
-              </p>
-            </motion.div>
+            <ParallaxSection speed={0.3} direction="up">
+              <ScrollAnimation animation="slideUp" delay={0.2}>
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Zion Tech</span>?
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                    We combine cutting-edge technology with proven expertise to deliver exceptional results.
+                  </p>
+                </div>
+              </ScrollAnimation>
+            </ParallaxSection>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <motion.div
+                <ScrollAnimation
                   key={index}
+                  animation="scale"
+                  delay={index * 0.1}
                   className="text-center group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <div className="text-black">
@@ -289,7 +291,7 @@ const Home: React.FC = () => {
                   <p className="text-gray-300 leading-relaxed">
                     {feature.description}
                   </p>
-                </motion.div>
+                </ScrollAnimation>
               ))}
             </div>
           </div>
