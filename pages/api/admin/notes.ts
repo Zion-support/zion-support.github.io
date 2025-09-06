@@ -1,1 +1,0 @@
- const notesStore: Note[] = [];

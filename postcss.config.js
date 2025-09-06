@@ -1,8 +1,0 @@
- tailwindcss: {
-  
-};
-autoprefixer: {
-  
-}
-}
-};

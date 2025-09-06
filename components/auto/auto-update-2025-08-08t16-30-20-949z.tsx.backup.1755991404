@@ -6,7 +6,6 @@ export default function AutoUpdate_2025_08_08T16_30_20_949Z() {
     </div>
   );
 }
-=======
 export default function AutoUpdate_163020949Z() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -15,5 +14,4 @@ export default function AutoUpdate_163020949Z() {
     </div>
   );
 }
-=======
 export default function AutoUpdate_4() { return <div className="py-10 text-white">Auto Update Snapshot</div>; }

@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { JSX } from 'react';
-=======
 import React from 'react';
 
-export default function App(): JSX.Element {
+export default function App(): React.JSX.Element {
   return (
     <main>
-      <h1>Hello App</h1>
+      <h1>Zion Tech Group</h1>
+      <p>Welcome to our application</p>
     </main>
   );
-<<<<<<< HEAD
 }
-=======
-}
-=======
- 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

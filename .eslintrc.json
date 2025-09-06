@@ -1,25 +1,30 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "next/core-web-vitals",
+    "@typescript-eslint/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
   "rules": {
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
     "react/no-unescaped-entities": "off",
-    "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "off"
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
   },
   "ignorePatterns": [
     "node_modules/",
     ".next/",
     "out/",
     "dist/",
-    "build/",
-    "coverage/",
     "*.config.js",
+<<<<<<< HEAD
     "*.config.cjs",
     "*.config.mjs",
     "fix-critical-files.js",
@@ -165,11 +170,21 @@
     "build-verification.js",
     "check-syntax.js",
     "clean-conflicts.js",
-    "commit-and-push.js"
+    "commit-and-push.js",
+    "advanced-automation-improvements.cjs",
+    "analyze_links.cjs",
+    "app-enhancement-suite.cjs",
+    "app-optimizer.js",
+    "apps.backup/**",
+    "automated-merge-conflict-resolver.cjs",
+    "automation/**",
+    "backup-problematic-files/**"
   ]
 }
-  "extends": ["next/core-web-vitals", "next/typescript"],
-  "rules": {
-    "react/no-unescaped-entities": "off"
-  }
+=======
+    "*.config.ts",
+    "advanced-*.js",
+    "aggressive-fix.js"
+  ]
 }
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358

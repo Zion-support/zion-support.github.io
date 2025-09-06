@@ -136,7 +136,6 @@ export default function ServicesPage() {
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, blockchain, fintech, healthcare AI, supply chain optimization" />
         <meta property="og:title" content="Innovative Micro SAAS Services | Zion Tech Group" />
         <meta property="og:description" content="Cutting-edge micro SAAS services with real implementations and proven ROI." />
-=======
     <UltraAdvancedFuturisticBackground variant="quantum">
       <Head>
         <title>Revolutionary Micro SaaS Services - Zion Tech Group</title>
@@ -164,7 +163,6 @@ export default function ServicesPage() {
     </QuantumNeuralBackground>
   );
 }
-=======
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -1092,7 +1090,6 @@ export default function Services() {
         <UltraFuturisticFooter2046 />
       </div>
     </UltraFuturisticMatrixBackground>
-=======
       {/* Hero Section */}
       <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

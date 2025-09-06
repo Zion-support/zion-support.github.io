@@ -134,7 +134,6 @@ function getAllServices(): Service[] {
 	allServices.push(...(real2036ServiceExpansions as unknown as Service[]));
 	
 	return allServices;
-=======
 		.concat(real2032ServiceExpansions as unknown as Service[])
 		.concat(real2025Q4FreshAdditions as unknown as Service[]);
 }
@@ -341,7 +340,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	);
 }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

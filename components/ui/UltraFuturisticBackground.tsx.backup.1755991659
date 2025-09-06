@@ -44,12 +44,10 @@ export default function UltraFuturisticBackground({
         canvas.width = rect.width;
         canvas.height = rect.height;
       }
-=======
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-=======
     };
 
     resizeCanvas();
@@ -631,7 +629,6 @@ export default function UltraFuturisticBackground({
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-=======
       
       // Update and draw particles
               particles = particles.filter(particle => {
@@ -792,7 +789,6 @@ export default function UltraFuturisticBackground({
     initConnections();
     animate();
 
-=======
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -827,7 +823,6 @@ export default function UltraFuturisticBackground({
           100% { transform: translateY(100%); opacity: 0; }
         }
       `}</style>
-=======
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rotate-45 animate-pulse"></div>
@@ -887,7 +882,6 @@ const getOverlayGradient = (variant: string) => {
 };
 
 export default UltraFuturisticBackground;
-=======
     </div>
   );
 }

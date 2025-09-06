@@ -1,11 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-<<<<<<< HEAD
-export default class MyDocument extends Document {
-=======
-class MyDocument extends Document {
->>>>>>> origin/cursor/build-zion-ai-blog-and-content-system-cb83
-  render() {
+export default class MyDocument extends Document {  render() {
     return (
       <Html lang="en">
         <Head />
@@ -17,8 +12,5 @@ class MyDocument extends Document {
     );
   }
 }
-<<<<<<< HEAD
-=======
 
 export default MyDocument;
->>>>>>> origin/cursor/build-zion-ai-blog-and-content-system-cb83

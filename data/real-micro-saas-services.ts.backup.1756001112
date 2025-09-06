@@ -348,8 +348,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     tagline: 'Discover market opportunities with AI-powered research',
     price: '$159',
     period: '/month',
-<<<<<<< HEAD
-=======
     description: 'Intelligent market research platform that automatically analyzes market trends, competitor activities, and customer behavior. Provides actionable insights for strategic decision-making.',
     features: [
       'AI market analysis',
@@ -504,7 +502,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     popular: false,
     launchDate: '2024-03-05',
     customers: 1100,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     rating: 4.6,
     reviews: 134
   },

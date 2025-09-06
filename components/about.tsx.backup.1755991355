@@ -18,5 +18,4 @@ const About: NextPage = () => {
 };
 
 export default About;
-=======
 export default function AboutPage() { return null; }
