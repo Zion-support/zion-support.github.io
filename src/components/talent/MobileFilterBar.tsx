@@ -1,48 +1,14 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Search, Sliders } from 'lucide-react';
-import { Input } from '@/components/ui/input';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { Search, Sliders } from 'lucide-react'
-import { Input } from '@/components/ui/input'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Search, Sliders } from 'lucide-react'
-<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
-=======
-import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MobileFilterBarProps {
   searchTerm: string;
   setSearchTerm: (value: string) => void;
-<<<<<<< HEAD
   setIsMobileFilterOpen: (isOpen: boolean) => void
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  setIsMobileFilterOpen: (isOpen: boolean) => void;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-<<<<<<< HEAD
 export function MobileFilterBar({
   searchTerm
   setSearchTerm
@@ -50,21 +16,11 @@ export function MobileFilterBar({
 
 }: MobileFilterBarProps) {
   return (
-=======
-<<<<<<< HEAD
-export function MobileFilterBar({
-=======
-}
-
-export function MobileFilterBar({ 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   searchTerm,
   setSearchTerm, 
   setIsMobileFilterOpen 
 }: MobileFilterBarProps) {
   return (
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className='lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4'>
       <Button
         onClick={() => setIsMobileFilterOpen(true)}
@@ -75,16 +31,6 @@ export function MobileFilterBar({
       </Button>
       <div className='relative mt-4'>
         <label htmlFor='mobile-talent-search' className='sr-only'>
-=======
-<<<<<<< HEAD
-export function MobileFilterBar({ 
-  searchTerm,
-  setSearchTerm, 
-  setIsMobileFilterOpen 
-}: MobileFilterBarProps) {
-  return (
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
       <Button 
         onClick={() => setIsMobileFilterOpen(true)} 
@@ -97,16 +43,10 @@ export function MobileFilterBar({
       
       <div className="relative mt-4">
         <label htmlFor="mobile-talent-search" className="sr-only">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Search talents
         </label>
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />
         <Input
-<<<<<<< HEAD
           id='mobile-talent-search'
           placeholder='Search talents...'
           value={searchTerm}
@@ -114,47 +54,12 @@ export function MobileFilterBar({
           aria-describedby='mobile-talent-search-help'
           className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />
         <p id='mobile-talent-search-help' className='sr-only'>
-<<<<<<< HEAD
-=======
-          Search by name or skill
-        </p>
-      </div>
-    </div>;
-  );
-};
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-          id="mobile-talent-search"
-          placeholder="Search talents..."
-          value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
-          aria-describedby="mobile-talent-search-help"
-          className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate"
-        />
-        <p id="mobile-talent-search-help" className="sr-only">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Search by name or skill
         </p>
       </div>
     </div>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from 'lucide-react';
@@ -201,9 +106,3 @@ export function MobileFilterBar({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

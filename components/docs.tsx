@@ -2,16 +2,9 @@ import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function DocsPage() {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function DocsPage() {
   const contact = {
     mobile: '+1 302 464 0950',
@@ -19,7 +12,6 @@ export default function DocsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const contact = {
     mobile: '+1 302 464 0950'
@@ -27,57 +19,28 @@ export default function DocsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
-}
-
-export default function DocsPage() {
-  const contact = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const sections = [
     {
       title: 'Getting Started'
       links: [
-<<<<<<< HEAD
         { name: 'Overview', href: '/enhanced-services-showcase' }
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' }
         { name: 'Contact Sales', href: '/contact' }
       ]
     },    {        { name: 'Contact Sales', href: '/contact' }]
     }
-=======
-        { name: 'Overview', href: '/enhanced-services-showcase' },
-        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
-        { name: 'Contact Sales', href: '/contact' },
-      ],
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       title: 'AI Services Docs'
       links: [
-<<<<<<< HEAD
         { name: 'AI Guardrails', href: '/ai-guardrails' }
         { name: 'AI Evals', href: '/ai-evals' }
         { name: 'Agentic RAG', href: '/agentic-rag' }
       ]
     },    {        { name: 'Agentic RAG', href: '/agentic-rag' }]
     }
-=======
-        { name: 'AI Guardrails', href: '/ai-guardrails' },
-        { name: 'AI Evals', href: '/ai-evals' },
-        { name: 'Agentic RAG', href: '/agentic-rag' },
-      ],
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       title: 'IT & Platform Docs'
       links: [
-<<<<<<< HEAD
         { name: 'API Observability', href: '/api-observability' }
         { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
         { name: 'Status Pages & SLO', href: '/status-pages-slo' }
@@ -113,21 +76,12 @@ export default function DocsPage() {
       color: 'text-purple-400'
     }
     {
-<<<<<<< HEAD
       title: 'Community Forum'
       description: 'Connect with other developers and users'
       icon: <ExternalLink className='w-6 h-6' />
       href: '/community'
       color: 'text-yellow-400'
     }
-=======
-      title: 'Community Forum',
-      description: 'Connect with other developers and users',
-      icon: <ExternalLink className='w-6 h-6' />,
-      href: '/community',
-      color: 'text-yellow-400',
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =
@@ -141,65 +95,8 @@ export default function DocsPage() {
                          doc.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' |doc.category === selectedCategory;
     return matchesSearch && matchesCategory
-=======
-        { name: 'API Observability', href: '/api-observability' },
-        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-        { name: 'Status Pages & SLO', href: '/status-pages-slo' },
-      ],
-    },
-  ];
-
-  const external = [
-    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
-    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
-    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
-    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' },
-  ];
-
-  const quickLinks = [
-    {
-      title: 'API Status',
-      description: 'Check service availability and performance',
-      icon: <CheckCircle className='w-6 h-6' />,
-      href: '/status',
-      color: 'text-green-400',
-    },
-    {
-      title: 'SDK Downloads',
-      description: 'Get the latest SDKs and client libraries',
-      icon: <Download className='w-6 h-6' />,
-      href: '/downloads',
-      color: 'text-blue-400',
-    },
-    {
-      title: 'Support Portal',
-      description: 'Get help from our technical support team',
-      icon: <ExternalLink className='w-6 h-6' />,
-      href: '/support',
-      color: 'text-purple-400',
-    },
-    {
-      title: 'Community Forum',
-      description: 'Connect with other developers and users',
-      icon: <ExternalLink className='w-6 h-6' />,
-      href: '/community',
-      color: 'text-yellow-400',
-    },
-  ];
-
-  const filteredDocs = documentationItems.filter(doc => {
-    const matchesSearch =
-      doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      doc.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory =
-      selectedCategory === 'all' || doc.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-<<<<<<< HEAD
       case 'Beginner':
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':
@@ -207,19 +104,12 @@ export default function DocsPage() {
       case 'Advanced':
         return 'bg-red-500/20 text-red-400';
       default:
-<<<<<<< HEAD
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
       case 'Advanced': return 'bg-red-500/20 text-red-400'
       default: return 'bg-gray-500/20 text-gray-400'
-<<<<<<< HEAD
   }
-=======
-  };
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric'
@@ -228,29 +118,7 @@ export default function DocsPage() {
     });  };      day: 'numeric'
     })
   }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-        return 'bg-gray-500/20 text-gray-400';
-    }
-  };
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    });
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-
-  };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -288,7 +156,6 @@ export default function DocsPage() {
                         className='text-cyan-400 hover:underline'
                       >
                         {l.name}
-<<<<<<< HEAD
                       </a>                    </li>      </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
@@ -304,29 +171,12 @@ export default function DocsPage() {
                   {s.links.map((l) => (
                     <li key={l.name}>
                       <a href={l.href} className="text-cyan-400 hover:underline">{l.name}</a>
-=======
-                      </a>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </li>
-=======
-                      </a>                    </li>
-
-                    </li>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </ul>
               </Card>
             ))}
           </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <Card className='p-6 bg-black/40 border border-gray-700/50'>
             <h2 className='text-xl font-semibold mb-4 text-white'>
               External References
@@ -342,7 +192,6 @@ export default function DocsPage() {
                   >
                     {e.name}
                   </a>
-<<<<<<< HEAD
                 </li>              ))}
             </ul>
           </Card>
@@ -351,16 +200,8 @@ export default function DocsPage() {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
               {external.map((e) => (
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
-<<<<<<< HEAD
             </ul>
           </Card>
-=======
-                </li>
-              ))}
-            </ul>
-          </Card>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <Card className='p-6 bg-black/40 border border-gray-700/50'>
             <h2 className='text-xl font-semibold mb-4 text-white'>
               Need help?
@@ -387,7 +228,6 @@ export default function DocsPage() {
               </a>
               <a className='text-purple-400' href={`mailto:${contact.email}`}>
                 {contact.email}
-<<<<<<< HEAD
               </a>            </div>          <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">Need help?</h2>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -395,35 +235,9 @@ export default function DocsPage() {
               <Button href={contact.website} variant="outline" className="border-gray-600 text-gray-200">Visit Website</Button>
               <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
               <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
-=======
-              </a>
-            </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Card>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-}
-<<<<<<< HEAD
-=======
-;
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-              ))}
-            </ul>
-          </Card>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

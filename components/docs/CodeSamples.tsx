@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const tabs: Array<{
   key: Props['samples'][number]['language'];
   label: string;
@@ -13,42 +9,19 @@ const tabs: Array<{
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function CodeSamples({ samples }: Props) {
-=======
-
-export default function CodeSamples({ samples }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
     <div className='w-full'>
       <div className='flex gap-2 mb-2'>
-<<<<<<< HEAD
         {tabs.map(t => (          <button
-<<<<<<< HEAD
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
-<<<<<<< HEAD
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }]
 export default function CodeSamples({ samples }: Props) {
-=======
-<<<<<<< HEAD
-const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
-  { key: 'curl', label: 'cURL' },
-  { key: 'javascript', label: 'JavaScript' },
-  { key: 'python', label: 'Python' }],
-export default function CodeSamples({ samples }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map((s) => [s.language, s.code]));
 
@@ -56,21 +29,7 @@ export default function CodeSamples({ samples }: Props) {;
     <div className="w-full">
       <div className="flex gap-2 mb-2">
         {tabs.map((t) => (
-=======
-        {tabs.map(t => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <button
-=======
-<<<<<<< HEAD
-          <button
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-          <button
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             key={t.key}
             className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
             onClick={() => setActive(t.key)}
@@ -79,7 +38,6 @@ export default function CodeSamples({ samples }: Props) {;
           </button>
         ))}
       </div>
-<<<<<<< HEAD
       <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>        <code>{sampleMap[active] |''}</code>
       </pre>
     </div>
@@ -88,28 +46,5 @@ export default function CodeSamples({ samples }: Props) {;
         <code>{sampleMap[active] |''}</code>
       </pre>
     </div>
-<<<<<<< HEAD
 );
 }
-<<<<<<< HEAD
-=======
-      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>
-        <code>{sampleMap[active] || ''}</code>
-      </pre>
-    </div>
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-}
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

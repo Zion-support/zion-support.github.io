@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
-import Link from 'next/link';
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge";
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
-<<<<<<< HEAD
 
 import Link from 'next/link'
 import React from "react"
@@ -32,20 +11,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-=======
-<<<<<<< HEAD
-import Link from "next/link",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
-import Link from "next/link",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -54,14 +19,6 @@ export function ClientDashboard() {
           <Plus className="mr-2 h-5 w-5" /> Post a New Job
         </Button>
       </section>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Active Projects</h2>
@@ -71,14 +28,6 @@ export function ClientDashboard() {
             </Button>
           </Link>
         </div>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardContent className="p-4">
             <div className="space-y-4">
@@ -89,18 +38,8 @@ export function ClientDashboard() {
                 </div>
                 <Badge>3 Milestones</Badge>
               </div>
-<<<<<<< HEAD
               <div className='space-y-1'>
                 <div className='flex justify-between text-sm'>
-=======
-              
-              <div className="space-y-1">
-                <div className="flex justify-between text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Progress</span>
                   <span className="font-medium">60%</span>
                 </div>
@@ -108,31 +47,17 @@ export function ClientDashboard() {
                   <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className='flex justify-between items-center'>
                 <div className='flex -space-x-2'>
                   <div className='w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center'>
                     <UserCheck className='h-4 w-4' />
-=======
-              
-              <div className="flex justify-between items-center">
-                <div className="flex -space-x-2">
-                  <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
-                    <UserCheck className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
-<<<<<<< HEAD
                 <Button size='sm' variant='outline'>
                   View Details
-<<<<<<< HEAD
                 </Button>              </div>import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
 
 export function ClientDashboard() {
@@ -180,34 +105,12 @@ export function ClientDashboard() {
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button size="sm" variant="outline">View Details</Button>
-=======
-                </Button>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Suggested Talents</h2>
@@ -217,16 +120,7 @@ export function ClientDashboard() {
             </Button>
           </Link>
         </div>
-<<<<<<< HEAD
         <div className='space-y-3'>
-=======
-        
-        <div className="space-y-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between">
@@ -254,14 +148,6 @@ export function ClientDashboard() {
               </div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
-=======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between">
@@ -278,7 +164,6 @@ export function ClientDashboard() {
                   89% match
                 </div>
               </div>
-<<<<<<< HEAD
               <div className='mt-3 flex gap-1 flex-wrap'>
                 <Badge variant='outline' className='text-xs'>
                   React
@@ -288,15 +173,7 @@ export function ClientDashboard() {
                 </Badge>
                 <Badge variant='outline' className='text-xs'>
                   AWS
-<<<<<<< HEAD
                 </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
-=======
-              <div className="mt-3 flex gap-1 flex-wrap">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Badge variant="outline" className="text-xs">React</Badge>
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
                 <Badge variant="outline" className="text-xs">AWS</Badge>
@@ -304,45 +181,15 @@ export function ClientDashboard() {
               <div className="flex gap-2 mt-3">
                 <Button size="sm">View Profile</Button>
                 <Button size="sm" variant="outline">Message</Button>
-=======
-                </Badge>
-              </div>
-              <div className='flex gap-2 mt-3'>
-                <Button size='sm'>View Profile</Button>
-                <Button size='sm' variant='outline'>
-                  Message
-                </Button>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardContent className="p-4 space-y-4">
             <div className="flex gap-3 items-start">
@@ -356,20 +203,9 @@ export function ClientDashboard() {
                 <p className="text-xs text-muted-foreground">2 hours ago</p>
               </div>
             </div>
-<<<<<<< HEAD
             <div className='flex gap-3 items-start'>
               <div className='bg-primary/10 p-2 rounded-full'>
                 <FileText className='h-5 w-5 text-primary' />
-=======
-            
-            <div className="flex gap-3 items-start">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <FileText className="h-5 w-5 text-primary" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <div>
                 <p className="text-sm">
@@ -378,10 +214,8 @@ export function ClientDashboard() {
                 <p className="text-xs text-muted-foreground">1 day ago</p>
               </div>
             </div>
-<<<<<<< HEAD
             <Button variant='outline' className='w-full'>
               View All Notifications
-<<<<<<< HEAD
             </Button>          </CardContent>      <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
@@ -410,41 +244,14 @@ export function ClientDashboard() {
                 <p className="text-xs text-muted-foreground">1 day ago</p>
               </div>
             </div>
-=======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Button variant="outline" className="w-full">View All Notifications</Button>
-=======
-            </Button>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
     </div>;
   );
 };
 }
-=======
-    </div>
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-}
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -604,9 +411,3 @@ export function ClientDashboard() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

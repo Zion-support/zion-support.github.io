@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {GradientHeading} from "./GradientHeading";
 import {Check, Handshake, Search, Send} from "lucide-react";
@@ -9,24 +7,11 @@ const steps = [
     title: "Post"
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
     icon: Send}
-=======
-import {GradientHeading} from "./GradientHeading";
-import {Check, Handshake, Search, Send} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from "lucide-react",
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const steps = [
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.",
     icon: Send},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
     title: "Match"
     description: "Our AI automatically matches your needs with the perfect providers or opportunities."
@@ -36,25 +21,9 @@ const steps = [
     description: "Connect directly with matched providers and complete your transaction securely."
     icon: Handshake}
   {
-<<<<<<< HEAD
     title: "Done"
     description: "Enjoy hassle-free delivery and support for your technology solutions."
     icon: Check}]
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-    title: 'Done',
-    description:
-      'Enjoy hassle-free delivery and support for your technology solutions.',
-    icon: Check,
-  },
-];
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export function HowItWorksSection() {
   return (
     <section className="py-20 bg-zion-blue">
@@ -74,51 +43,6 @@ export function HowItWorksSection() {
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
-<<<<<<< HEAD
-=======
-import { GradientHeading } from "./GradientHeading",;
-import { Check, Handshake, Search, Send } from "lucide-react",;
-const steps = [;
-  {;
-    title: "Post",;
-    description: "Publish your service, job, or equipment in minutes with our AI-powered form.",;
-    icon: Send},;
-  {;
-    title: "Match",;
-    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",;
-    icon: Search},;
-  {;
-    title: "Hire/Buy",;
-    description: "Connect directly with matched providers and complete your transaction securely.",;
-    icon: Handshake},;
-  {;
-    title: "Done",;
-    description: "Enjoy hassle-free delivery and support for your technology solutions.",;
-    icon: Check}];
-export function HowItWorksSection() {;
-  return (;
-    <section className="py-20 bg-zion-blue">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-16">;
-          <GradientHeading>How It Works</GradientHeading>;
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
-            A simple four-step process to connect technology providers with clients;
-          </p>;
-        </div>;
-        <div className="relative">;
-          {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
-          <div className="space-y-12 md:space-y-0">;
-            {steps.map((step, index) => (;
-              <div;
-                key={step.title}
-                className={`flex flex-col md:flex-row items-center ${;
-                  index % 2 === 0 ? "md:flex-row-reverse" : "";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -147,9 +71,4 @@ export function HowItWorksSection() {;
       </div>
     </section>
   )
-<<<<<<< HEAD
 }
-=======
-};
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

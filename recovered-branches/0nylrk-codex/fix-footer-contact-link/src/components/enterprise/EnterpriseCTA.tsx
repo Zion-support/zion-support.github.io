@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Calendar, ArrowRight } from 'lucide-react';
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseCTA() {
   return (
     <section className="py-20 px-4 md: px-6">
@@ -30,23 +16,11 @@ export function EnterpriseCTA() {
                 <p className="text-xl text-muted-foreground mb-8">
                   Schedule a personalized demo with our enterprise team to see
                   how Zion AI can help you build your dream team.
-=======
-<<<<<<< HEAD
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from "lucide-react",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="gap-2">
@@ -92,20 +66,9 @@ import { Calendar, ArrowRight } from "lucide-react",
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </section>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
-    </section>;
-  );
-}
-=======
-    </section>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -172,8 +135,3 @@ export function EnterpriseCTA() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

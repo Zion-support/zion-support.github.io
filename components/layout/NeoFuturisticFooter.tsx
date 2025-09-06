@@ -1,17 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 const contactInfo = null;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -20,69 +12,17 @@ import {
   Linkedin
   ExternalLink;
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-=======
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Github,
-  Linkedin,;
-  ExternalLink,;
-<<<<<<< HEAD
-} from 'lucide-react';
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-=======
-} from 'lucide-react';
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export default function NeoFuturisticFooter() {
-<<<<<<< HEAD
   return (  website: 'https://ziontechgroup.com'
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-import { motion } from 'framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Github,
-  Linkedin,
-  ExternalLink,;
-} from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-<<<<<<< HEAD
-  return (  website: 'https://ziontechgroup.com';
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function NeoFuturisticFooter() {
   return (
-<<<<<<< HEAD
     <footer className='relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden'>
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl' />
@@ -176,7 +116,6 @@ export default function NeoFuturisticFooter() {
                 className='text-slate-400 hover:text-white'
               >
                 <Linkedin className='w-5 h-5' />
-<<<<<<< HEAD
               </a>            </div>
           </div>
         </div>
@@ -190,13 +129,6 @@ export default function NeoFuturisticFooter() {
               <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
           </div>
         </div>
-=======
-              </a>
-            </div>
-          </div>
-        </div>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>
           <div className='text-xs text-slate-500'>
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
@@ -207,43 +139,18 @@ export default function NeoFuturisticFooter() {
             </a>
             <a href='/terms' className='hover:text-slate-300'>
               Terms
-<<<<<<< HEAD
             </a>          </div>        <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6">
           <div className="text-xs text-slate-500">© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</div>
           <div className="text-xs text-slate-500 flex gap-4">
             <a href="/privacy" className="hover: text-slate-300">Privacy</a>
             <a href="/terms" className="hover:text-slate-300">Terms</a>
-=======
-            </a>
-          </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </div>
     </footer>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-}
-<<<<<<< HEAD
-=======
-=======
-
-;
-=======
-  return (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 };
 
 export default function NeoFuturisticFooter() {
   return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

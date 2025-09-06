@@ -2,10 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -20,7 +16,6 @@ function fixSyntaxErrors(filePath) {;
     // Fix shebang issues;
     if (content.includes('#!/usr/bin/env node') && !content.startsWith('#!/usr/bin/env node')) {;
       content = content.replace(/.*#!/usr\/bin\/env node.*\n/g, '#!/usr/bin/env node\n');
-<<<<<<< HEAD
     }
     ;
     // Fix missing commas in object literals;
@@ -97,22 +92,10 @@ for (const file of files) {;
     fixedCount++;
   }
 }
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
 ;
 console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
 console.log('🎉 Syntax error fixing complete!');console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
 console.log('🎉 Syntax error fixing complete!');
-=======
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 const { execSync } = require('child_process');
 // Files with critical syntax errors that need immediate fixing
 const criticalFiles = [
@@ -195,44 +178,6 @@ console.log(' Starting comprehensive syntax fixer...')
   fixed = fixed.replace(/className="([^"]*)"([^>]*?)>/g, 'className="$1"
   fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2"
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = 0;
-    this.totalErrors = 0;
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
-
-  async fixAllSyntaxErrors() {
-    this.log('🔧 Starting comprehensive syntax error fixing...');
-    
-    try {
-      // Get all TypeScript and JavaScript files
-      const files = this.getAllCodeFiles();
-      this.log(`Found ${files.length} files to check`);
-      
-      for (const file of files) {
-        await this.fixFileSyntax(file);
-      }
-      
-      this.log(`✅ Fixed syntax errors in ${this.fixedFiles} files`);
-      this.log(`📊 Total errors fixed: ${this.totalErrors}`);
-      
-    } catch (error) {
-      this.log(`❌ Error during syntax fixing: ${error.message}`);
-      throw error;
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     }
   }
 
@@ -331,19 +276,10 @@ class ComprehensiveSyntaxFixer {
     return fixed;
   }
 }
-=======
->>>>>>> origin/main
 
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 
     this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
@@ -441,10 +377,3 @@ if (require.main === module) {;
 }
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

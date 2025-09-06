@@ -1,88 +1,9 @@
 // Polyfill fetch and enable fetch mocks;
 import 'whatwg-fetch';
 import fetchMock from 'jest-fetch-mock';
-<<<<<<< HEAD
 fetchMock.enableMocks();
 // Reset fetch mocks before each test to ensure isolation;
 beforeEach(() => {fetchMock.resetMocks();
-=======
-fetchMock.enableMocks ();
-//Reset fetch mocks before each test to ensure isolation //Polyfill TextEncoder and TextDecoder for JSDOM environment global.TextEncoder = TextEncoder;
-//@ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests global.TextDecoder = TextDecoder;
-//Set up a mock for Vite environment variables accessed via import.meta.env //This assumes that Babel (via babel-plugin-transform-import-meta or similar) //will transform import.meta.env.VITE SOME VAR to something like process.env.VITE SOME VAR //or that import.meta itself is transformed into an object where 'env'can be populated.process.env.VITE REOWN PROJECT ID = 'test project id from jest setup';
-process.env.NEXT PUBLIC SUPABASE URL = 'http: //localhost:54321';
-process.env.NEXT PUBLIC SUPABASE ANON KEY = 'test anon key';
-//Jest-axe matchers for accessibility //Mock import.meta.env for Jest - This was ineffective for the SyntaxError //global.import = {
-  // //@ts-expect-error //meta: {
-  //env: {
-  //VITE SUPABASE URL: 'mock supabase url', //VITE SUPABASE ANON KEY: 'mock supabase anon key', //MODE: 'test', // ;
-};
-// 
-};
-// 
-};
-//Mock the supabase client module to prevent import.meta.env parsing errors jest.mock ('@/integrations/supabase/client', () => ({
-  supabase: {
-  auth: {
-  onAuthStateChange: jest.fn ( () => ({
-  data: {
-  subscription: {
-  unsubscribe: jest.fn () 
-
-}) );
-//Add any other specific methods from supabase.auth if they get called 
-};
-//Add other top-level Supabase client methods if they get called //e.g., from: jest.fn (), rpc: jest.fn (), etc. //For now, keeping it minimal. 
-
-}) );
-//Mock Firebase/Firestore jest.mock ('firebase/firestore', () => {
-  //Mock collection function to be available on the db instance (for v8 style) //and as a top-level export (for v9 style) . return {
-  path: actualPath, doc: jest.fn ( (docId) => ({
-  id: docId, path: `$ {
-  actualPath 
-}/$ {
-  docId 
-}`, get: jest.fn ( () => Promise.resolve ({
-  exists: () => false, data: () => undefined 
-}) );
-set: jest.fn ( () => Promise.resolve () );
-update: jest.fn ( () => Promise.resolve () );
-delete: jest.fn ( () => Promise.resolve () );
-onSnapshot: jest.fn ( () => jest.fn () ), //Returns an unsubscribe function 
-}) );
-
-}) );
-//For v9 style: collection (db, 'path') collection: mockCollection;
-//For v9 style: doc (db, 'pathdocId') doc: mockDoc;
-getDoc: jest.fn ( () => Promise.resolve ({
-  exists: () => false, data: () => undefined 
-}) );
-setDoc: jest.fn ( () => Promise.resolve () );
-updateDoc: jest.fn ( () => Promise.resolve () );
-deleteDoc: jest.fn ( () => Promise.resolve () );
-onSnapshot: jest.fn ( () => jest.fn () ), //Returns an unsubscribe function for document/query snapshots query: jest.fn ( (collectionRef, ...constraints) => ({
-  ref: collectionRef, constraints 
-}) );
-where: jest.fn ( (fieldPath, opStr, value) => ({
-  type: 'where', fieldPath, opStr, value 
-}) );
-orderBy: jest.fn ( (fieldPath, directionStr) => ({
-  type: 'orderBy', fieldPath, directionStr 
-}) );
-limit: jest.fn ( (count) => ({
-  type: 'limit', count 
-}) );
-Timestamp: {
-  now: jest.fn ( () => ({
-  toDate: () => new Date () 
-}) );
-fromDate: jest.fn ( (date) => ({
-  toDate: () => date 
-}) ) 
-};
-//Add other Firestore exports your code uses 
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 // Jest-DOM matchers;
 import '@testing-library/jest-dom';

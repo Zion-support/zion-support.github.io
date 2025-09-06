@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react',
-=======
-import React, { useState, useMemo } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Search
   Filter
   Star
@@ -24,85 +19,26 @@ import {
   Atom
   Sparkles
   Target;
-=======
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  Atom,
-  Sparkles,;
-  Target,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
-=======
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  Atom,
-  Sparkles,
-  Target,;
-} from 'lucide-react';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServicesShowcase2026() {
-=======
-export default function ServicesShowcase2026() {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
   // Combine all 2026 services
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   const allServices = null;
                 emerging technologies, and comprehensive IT solutions
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const allServices = [
     ...revolutionary2026Services
     ...emergingTech2026Services
     ...comprehensiveIT2026Services,    ...revolutionary2026Services;
     ...emergingTech2026Services;
     ...comprehensiveIT2026Services
-=======
-  const allServices = [
-    ...revolutionary2026Services,
-    ...emergingTech2026Services,
-    ...comprehensiveIT2026Services,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   // Filter and sort services
   const filteredServices = allServices
@@ -114,19 +50,13 @@ export default function ServicesShowcase2026() {;
       const matchesCategory =
         selectedCategory === 'all' |
         service.category.includes(selectedCategory);
-<<<<<<< HEAD
       return matchesSearch && matchesCategory;    })
-=======
-      return matchesSearch && matchesCategory;
-    })
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
           return (
             parseFloat(a.price.replace(/[^0-9.]/g, '')) -
             parseFloat(b.price.replace(/[^0-9.]/g, ''))
-<<<<<<< HEAD
           );        case 'rating':
           return b.rating - a.rating;
         case 'customers':
@@ -144,27 +74,16 @@ export default function ServicesShowcase2026() {;
             parseFloat(a.price.replace(/[^0-9.]/g, '')) -
             parseFloat(b.price.replace(/[^0-9.]/g, ''))
           );          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-=======
-          );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         case 'rating':
           return b.rating - a.rating;
         case 'customers':
           return b.customers - a.customers;
         default:
-<<<<<<< HEAD
           return a.name.localeCompare(b.name);        default: return a.name.localeCompare(b.name)
-=======
-          return a.name.localeCompare(b.name);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     });
   const categories = [
-<<<<<<< HEAD
     { id: 'all', name: 'All Services', icon: Globe, count: allServices.length }
-=======
-    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       id: 'AI'
       name: 'AI & Machine Learning'
@@ -202,7 +121,6 @@ export default function ServicesShowcase2026() {;
       name: 'Cloud & DevOps'
       icon: Cloud
       count: allServices.filter(
-<<<<<<< HEAD
         s => s.category.includes('Cloud') |s.category.includes('DevOps')
       ).length
     },  ];    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length }
@@ -216,20 +134,6 @@ export default function ServicesShowcase2026() {;
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
-=======
-        s => s.category.includes('Cloud') || s.category.includes('DevOps')
-      ).length,
-    },
-  ];
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <div className='min-h-screen'>
         <Head>
@@ -263,7 +167,6 @@ export default function ServicesShowcase2026() {;
           <link
             rel='canonical'
             href='https://ziontechgroup.com/2026-services-showcase'
-<<<<<<< HEAD
           />        </Head>          <title>Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+ Solutions</title>
           <meta name="description" content="Explore Zion Tech Group's revolutionary 2026 services including AI, quantum computing, emerging technologies, and comprehensive IT solutions. Contact: +1 302 464 0950" />
           <meta name="keywords" content="2026 services, AI services, quantum computing, emerging technology, IT solutions, cybersecurity, cloud computing, autonomous systems, neuromorphic computing, DNA computing, photonic computing, holographic display, swarm robotics, zero trust architecture, edge computing, 5G networks" />
@@ -274,37 +177,12 @@ export default function ServicesShowcase2026() {;
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
-<<<<<<< HEAD
-=======
-          />
-        </Head>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Navigation */}
         <UltraAdvancedNavigation />
-=======
-
-        </Head>
-
-        {/* Navigation */}
-        <UltraAdvancedNavigation />
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
-<<<<<<< HEAD
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-=======
-          <div className='max-w-7xl mx-auto text-center'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -350,7 +228,6 @@ export default function ServicesShowcase2026() {;
                         .length
                     }
                   </div>
-<<<<<<< HEAD
                   <div className='text-gray-400 text-sm'>Emerging Tech</div>                </div>                  2026 Revolutionary Services
                 </span>
               </h1>
@@ -375,9 +252,6 @@ export default function ServicesShowcase2026() {;
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
                   <div className="text-3xl font-bold text-green-400 mb-2">{allServices.filter(s => s.category.includes('Emerging')).length}</div>
                   <div className="text-gray-400 text-sm">Emerging Tech</div>
-=======
-                  <div className='text-gray-400 text-sm'>Emerging Tech</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             </motion.div>
@@ -396,7 +270,6 @@ export default function ServicesShowcase2026() {;
                     placeholder='Search services...'
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />
                 </div>
                 {/* Category Filter */}                {/* Search */}
@@ -408,9 +281,6 @@ export default function ServicesShowcase2026() {;
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   />
                 </div>
                 {/* Category Filter */}
@@ -419,17 +289,12 @@ export default function ServicesShowcase2026() {;
                   <select
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none'                  >                <div className="relative">
                   <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
-=======
-                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none'
-                  >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {categories.map(category => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
@@ -437,14 +302,6 @@ export default function ServicesShowcase2026() {;
                     ))}
                   </select>
                 </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Sort By */}
                 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -455,15 +312,10 @@ export default function ServicesShowcase2026() {;
                     <option value='name'>Sort by Name</option>
                     <option value='price'>Sort by Price</option>
                     <option value='rating'>Sort by Rating</option>
-<<<<<<< HEAD
                     <option value='customers'>Sort by Customers</option>                  </select>                    <option value="name">Sort by Name</option>
                     <option value="price">Sort by Price</option>
                     <option value="rating">Sort by Rating</option>
                     <option value="customers">Sort by Customers</option>
-=======
-                    <option value='customers'>Sort by Customers</option>
-                  </select>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             </div>
@@ -472,13 +324,9 @@ export default function ServicesShowcase2026() {;
         {/* Services Grid */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices.map((service, index) => (        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -492,7 +340,6 @@ export default function ServicesShowcase2026() {;
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
                       {service.popular && (
-<<<<<<< HEAD
                         <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                     {/* Service Header */}
@@ -500,23 +347,11 @@ export default function ServicesShowcase2026() {;
                       <div className="text-4xl">{service.icon}</div>
                       {service.popular && (
                         <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
-=======
-                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           Popular
                         </span>
                       )}
                     </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Service Title */}
-<<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
                     {/* Tagline */}
@@ -525,23 +360,15 @@ export default function ServicesShowcase2026() {;
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-=======
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {service.name}
                     </h3>
                     {/* Tagline */}
-<<<<<<< HEAD
                     <p className='text-gray-300 text-sm mb-4'>                    <p className="text-gray-300 text-sm mb-4">
-=======
-                    <p className='text-gray-300 text-sm mb-4'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {service.tagline}
                     </p>
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
-<<<<<<< HEAD
                         <span className='text-gray-400 text-lg font-normal'>
                           {service.period}
                         </span>
@@ -553,7 +380,6 @@ export default function ServicesShowcase2026() {;
                         </span>
                         <span className='text-gray-400 text-sm'>
                           ({service.reviews})
-<<<<<<< HEAD
                         </span>                      </div>
                     </div>
                     {/* Description */}
@@ -563,17 +389,9 @@ export default function ServicesShowcase2026() {;
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-white text-sm">{service.rating}</span>
                         <span className="text-gray-400 text-sm">({service.reviews})</span>
-=======
-                        </span>
-                      </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                     {/* Description */}
-<<<<<<< HEAD
                     <p className='text-gray-400 text-sm mb-4 line-clamp-3'>                    <p className="text-gray-400 text-sm mb-4 line-clamp-3">
-=======
-                    <p className='text-gray-400 text-sm mb-4 line-clamp-3'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {service.description}
                     </p>
                     {/* Features */}
@@ -587,95 +405,32 @@ export default function ServicesShowcase2026() {;
                             key={idx}
                             className='text-gray-400 text-xs flex items-center'
                           >
-<<<<<<< HEAD
                             <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                            {feature}                    <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-=======
-<<<<<<< HEAD
-                            <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />
-                            {feature}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-                      {service.name}
-                    </h3>
-
-                    {/* Tagline */}
-
-                      {service.tagline}
-                    </p>
-
-                    {/* Price */}
-
-                      {service.description}
-                    </p>
-
-                    {/* Features */}
-
-                            {feature}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                           </li>
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
                         {service.category}
                       </span>
-<<<<<<< HEAD
                       <span className='text-xs text-gray-500'>                        {service.customers}+ customers                    <div className="flex items-center justify-between mb-4">
                       <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
                         {service.category}
                       </span>
                       <span className="text-xs text-gray-500">
-=======
-                      <span className='text-xs text-gray-500'>
-                        {service.customers}+ customers
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </span>
                     </div>
-<<<<<<< HEAD
                     {/* CTA Button */}
                     <a
                       href={service.link}
-<<<<<<< HEAD
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
-=======
-<<<<<<< HEAD
-                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-                    {/* CTA Button */}
-                    <a
-                      href={service.link}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     >
                       Learn More
                     </a>
@@ -683,14 +438,6 @@ export default function ServicesShowcase2026() {;
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -704,50 +451,19 @@ export default function ServicesShowcase2026() {;
                 </h3>
                 <p className='text-gray-400'>
                   Try adjusting your search terms or filters
-<<<<<<< HEAD
                 </p>              </motion.div>                className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search terms or filters</p>
-=======
-                </p>
-              </motion.div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             )}
           </div>
         </section>
-=======
-                </p>              </motion.div>
-
-              </motion.div>
-
-            )}
-          </div>
-        </section>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
-<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-=======
-          <div className='max-w-4xl mx-auto text-center'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -780,7 +496,6 @@ export default function ServicesShowcase2026() {;
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
-<<<<<<< HEAD
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'                >
                   Contact Us Now
                 </a>
@@ -809,20 +524,13 @@ export default function ServicesShowcase2026() {;
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-=======
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Contact Us Now
                 </a>
                 <a
                   href='/pricing'
-<<<<<<< HEAD
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                  href="/pricing"
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-=======
-                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   View Pricing
                 </a>
@@ -832,28 +540,6 @@ export default function ServicesShowcase2026() {;
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-}
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
-
 }
 }
-}
-}
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

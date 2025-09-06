@@ -1,47 +1,19 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function GrantsAdminPage() {
   const [token, setToken] = useState('');
-<<<<<<< HEAD
   const [items, setItems] = useState<GrantApplication[]>([]),
   const [selected, setSelected] = useState<GrantApplication | null>(null),
   const [milestones, setMilestones] = useState<Milestone[]>([]),
 
   const headers = null;
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-import {useEffect, useMemo, useState} from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GrantApplication, Milestone } from '../../types/grants';
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-export default function GrantsAdminPage() {;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function GrantsAdminPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [token, setToken] = useState('');
 
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const headers = useMemo(
     () =>
       token
@@ -69,7 +41,6 @@ export default function GrantsAdminPage() {
       headers
       body: JSON.stringify({ status })
     });
-<<<<<<< HEAD
     load();  }
   const saveMilestones = async () => {
     if (!selected) return;
@@ -83,11 +54,6 @@ export default function GrantsAdminPage() {
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })
     load()
   }
-=======
-    load();
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const saveMilestones = async () => {
     if (!selected) return;
     await fetch(`/api/grants/${selected.id}/milestones`, {
@@ -95,17 +61,11 @@ export default function GrantsAdminPage() {
       headers
       body: JSON.stringify({ milestones })
     });
-<<<<<<< HEAD
     alert('Milestones saved');  }
   const markComplete = async (milestoneId: string) => {
     if (!selected) return;    await fetch(`/api/grants/${selected.id}/milestones`, { method: 'POST', headers, body: JSON.stringify({ milestones }) })
     alert('Milestones saved')
   }
-=======
-    alert('Milestones saved');
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const markComplete = async (milestoneId: string) => {
     if (!selected) return;
     await fetch(
@@ -113,26 +73,14 @@ export default function GrantsAdminPage() {
       { method: 'POST', headers }
     );
     const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
-<<<<<<< HEAD
     setSelected(r.record);  }
   return (
     <EnhancedLayout>    await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
     const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
     setSelected(r.record)
   }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-    setSelected(r.record);
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
       <div className='grid md:grid-cols-3 gap-6'>
         <div className='md:col-span-2'>
@@ -181,7 +129,6 @@ export default function GrantsAdminPage() {
                       onClick={() => setSelected(g)}
                     >
                       Milestones
-<<<<<<< HEAD
                     </button>                  </div>
                 </div>
               </div>
@@ -190,10 +137,6 @@ export default function GrantsAdminPage() {
                     <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g.id, 'Approved')}>Approve</button>
                     <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g.id, 'Rejected')}>Reject</button>
                     <button className="px-2 py-1 border rounded" onClick={() => setSelected(g)}>Milestones</button>
-=======
-                    </button>
-                  </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             ))}
@@ -321,7 +264,6 @@ export default function GrantsAdminPage() {
             ) : (
               <div className='text-sm text-gray-600'>
                 Select a grant to plan milestones.
-<<<<<<< HEAD
               </div>            )}          </div>
         </div>
         <div>
@@ -349,41 +291,11 @@ export default function GrantsAdminPage() {
               </div>
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
-=======
-              </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             )}
-=======
-
-            )}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

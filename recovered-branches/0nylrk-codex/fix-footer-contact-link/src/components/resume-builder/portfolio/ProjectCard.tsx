@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -18,78 +16,27 @@ import {
 import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
 import { PortfolioProject } from "@/types/resume";
 
-=======
-import {useState} from 'react';
-import {Card, CardContent, CardFooter} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Badge} from '@/components/ui/badge';
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
-import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
-import {PortfolioProject} from '@/types/resume';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
-<<<<<<< HEAD
   onDelete: (projectId: string) => void
 }
-<<<<<<< HEAD
-=======
-  onDelete: (projectId: string) => void;
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-<<<<<<< HEAD
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-=======
-
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
-<<<<<<< HEAD
       onDelete(project.id);
     }
     setDeleteDialogOpen(false);
   }
 
-=======
-      onDelete(project.id)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from 'react',;
-import { Card, CardContent, CardFooter } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',;
-import { PortfolioProject } from '@/types/resume',;
-interface ProjectCardProps {;
-  project: PortfolioProject,;
-  onEdit: (project: PortfolioProject) => void,;
-  onDelete: (projectId: string) => void;
-}
-;
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-  const handleDelete = () => {;
-    if (project.id) {;
-      onDelete(project.id);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     setDeleteDialogOpen(false)
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -118,19 +65,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
-<<<<<<< HEAD
                 </Badge>
               ))}
             </div>
-=======
-                </Badge>;
-              ))}
-            </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </div>
       </CardContent>
@@ -193,11 +130,5 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-<<<<<<< HEAD
   );
 }
-=======
-  )
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

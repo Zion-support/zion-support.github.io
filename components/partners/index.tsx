@@ -1,19 +1,7 @@
-<<<<<<< HEAD
 import { useState } from "react";
 import Head from "next/head";
-=======
-import { useState } from 'react';
-import Head from 'next/head';
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Partners() {
   const [form, setForm] = useState({
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Partners() {
   const [form, setForm] = useState({
     name: '',
@@ -27,7 +15,6 @@ export default function Partners() {
     pocEmail: "",
     useCaseType: "Education Partnership"}),
   const [loading, setLoading] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     name: ''
     entityType: ''
@@ -39,39 +26,12 @@ export default function Partners() {
     pocName: ""
     pocEmail: ""
     useCaseType: "Education Partnership"})
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-import { useState } from 'react';
-import Head from 'next/head';
-}
-
-export default function Partners() {
-  const [form, setForm] = useState({
-    name: '',
-    entityType: '',
-    pocName: '',
-    pocEmail: '',
-    useCaseType: 'Education Partnership',
-  });
-  const [result, setResult] = useState<any>(null);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setResult(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const res = null;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const res = await fetch('/api/partners/register', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' },      body: JSON.stringify({
@@ -89,17 +49,6 @@ export default function Partners() {
         useCaseType: form.useCaseType
         pointOfContact: { name: form.pocName, email: form.pocEmail }
       })
-=======
-    const res = await fetch('/api/partners/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: form.name,
-        entityType: form.entityType,
-        useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail },
-      }),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     const data = await res.json();
     setLoading(false);
@@ -156,7 +105,6 @@ export default function Partners() {
               className='w-full border rounded px-3 py-2 mb-6'
               value={form.useCaseType}
               onChange={e => setForm({ ...form, useCaseType: e.target.value })}
-<<<<<<< HEAD
             >              <option>Education Partnership</option>    const data = await res.json();
     setLoading(false);
 
@@ -184,9 +132,6 @@ export default function Partners() {
             </div>
             <label className="block text-sm mb-2" htmlFor="input-Use Case">Use Case</label>
             <select className="w-full border rounded px-3 py-2 mb-6" value={form.useCaseType} onChange={(e) => setForm({ ...form, useCaseType: e.target.value })}>
-=======
-            >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <option>Education Partnership</option>
               <option>Workforce Development</option>
               <option>Token Integration</option>
@@ -201,16 +146,11 @@ export default function Partners() {
           </form>
           <div className='bg-white p-6 rounded-lg shadow'>
             <h2 className='text-xl font-medium mb-4'>Available Endpoints</h2>
-<<<<<<< HEAD
             <ul className='list-disc ml-6 space-y-1 text-sm'>              <li>POST /talents</li>            <button disabled={loading} className="bg-black text-white px-4 py-2 rounded disabled:opacity-50">{loading ? "Submitting..." : "Register"}</button>
           </form>
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-medium mb-4">Available Endpoints</h2>
             <ul className="list-disc ml-6 space-y-1 text-sm">
-=======
-            <ul className='list-disc ml-6 space-y-1 text-sm'>
-              <li>POST /talents</li>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <li>GET /jobs</li>
               <li>GET /certifications</li>
               <li>POST /verify-student</li>
@@ -238,16 +178,12 @@ export default function Partners() {
                 </span>
                 <span className='inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded'>
                   Government API Active
-<<<<<<< HEAD
                 </span>              </div>            </div>
             <div className="mt-6 text-sm text-gray-600">
               <p>Badges:</p>
               <div className="flex gap-2 mt-2">
                 <span className="inline-flex items-center bg-green-100 text-green-800 px-2 py-1 rounded">Verified Partner</span>
                 <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded">Government API Active</span>
-=======
-                </span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </div>
@@ -266,44 +202,18 @@ export default function Partners() {
               className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'
             >
               Go to Dashboard
-<<<<<<< HEAD
             </a>          </div>          <div className="mt-8 bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-medium mb-2">Registration Successful</h3>
             <p className="text-sm">Your API Key:</p>
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
-<<<<<<< HEAD
         )}
       </div>
     </div>
 );
-<<<<<<< HEAD
 }
-=======
-            </a>
-          </div>
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-          </div>
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         )}
       </div>
     </div>
   );
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

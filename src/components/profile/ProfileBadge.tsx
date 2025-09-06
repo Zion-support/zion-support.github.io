@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
 import React from 'react'
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from '@/lib/utils'
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated'
-<<<<<<< HEAD
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string;  type: BadgeType
@@ -39,12 +33,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const { icon: Icon, text, colors } = badgeConfig[type]
     >
       <Icon className='w-3 h-3' />
-=======
-interface ProfileBadgeProps {;
-  type: BadgeType;
-  className?: string;  type: BadgeType,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
       <span>{text}</span>
     </div>
@@ -61,38 +49,13 @@ interface ProfileBadgeProps {;
 }</span>
 }'"  )
 }
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
-import { cn } from '@/lib/utils';
-
-type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
-
-interface ProfileBadgeProps {
-  type: BadgeType;
-  className?: string;
-=======
-import React from "react",
-import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
-import { cn } from "@/lib/utils",
-type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
-
-interface ProfileBadgeProps {
-  type: BadgeType,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className?: string
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 }
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
       icon: BadgeCheck,
-<<<<<<< HEAD
       text: 'Verified',
       colors: 'bg-blue-500/20 text-blue-400',
     },
@@ -115,22 +78,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
 
   const { icon: Icon, text, colors } = badgeConfig[type];
 
-=======
-<<<<<<< HEAD
-      text: "Verified",
-      colors: "bg-blue-500/20 text-blue-400"},
-    featured: {
-=======
-<<<<<<< HEAD
-      text: 'Verified',
-      colors: 'bg-blue-500/20 text-blue-400',
-    },
-=======
-      text: "Verified",
-      colors: "bg-blue-500/20 text-blue-400"},
-    featured: {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       icon: Star,
       text: "Featured",
       colors: "bg-yellow-500/20 text-yellow-400"},
@@ -140,20 +87,10 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       colors: "bg-green-500/20 text-green-400"},
     "top-rated": {
       icon: Award,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      text: 'Top Rated',
-      colors: 'bg-purple-500/20 text-purple-400',
-    },
-  }
-  const { icon: Icon, text, colors } = badgeConfig[type]
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     >
       <Icon className='w-3 h-3' />
       <span>{text}</span>
     </div>
-<<<<<<< HEAD
   );
 
   type, className ;
@@ -168,23 +105,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   text ;
 }</span> ;
 }'"
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  )
-  type, className 
-}: ProfileBadgeProps) {
-  const badgeConfig = {
-  verified: {
-  const {
-  icon: Icon,  text, colors 
-}= badgeConfig[type]
-}> <Icon className="w-3 h-3" /> <span> {
-  text 
-}</span>
-}'"  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
 
@@ -240,9 +160,3 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
@@ -62,13 +54,8 @@ if (require.main === module) {
 
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
@@ -124,11 +111,6 @@ if (require.main === module) {
   optimizer.generateReport();
 }
 module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const fs = // // require('fs');
 const path = // // require('path');
 const glob = // // require('glob');
@@ -137,33 +119,12 @@ class PerformanceOptimizer {
     this.projectRoot = process.cwd();
     this.srcDir = path.join(this.projectRoot, 'src');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     this.ensureDirectories();
   }
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -171,26 +132,8 @@ class PerformanceOptimizer {
   }
   log(message) {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     console.log(`[${timestamp}] ${message}`);
   }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log(`[${timestamp}] ${message}`);
-  }
-=======
-<<<<<<< HEAD
-=======
-    console.log(`[${timestamp}] ${message}`);
-  }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-    console.log(`[${timestamp}] ${message}`);
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     console.log(`[${timestamp}] ${message}`)}
   async optimizePerformance() {
     this.log('⚡ Starting performance optimization');
@@ -203,67 +146,14 @@ class PerformanceOptimizer {
       "optimizations": 0,
       "errors": []
     };
-<<<<<<< HEAD
     
-=======
-<<<<<<< HEAD
-    for (const file of files) {
-      const filePath = path.join(this.srcDir, file);
-      try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        let newContent = content;
-        let fileOptimizations = 0;
-        // Fix potential infinite re-renders by adding useCallback and useMemo
-        if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-          // Add React.memo to components that don't have it
-          if (content.includes('export default function') && !content.includes('React.memo')) {
-            newContent = newContent.replace(
-              /export default function (\w+)/g,
-              'export default React.memo(function $1'
-            );
-            newContent = newContent.replace(
-              /export default function (\w+)/g,
-              'export default React.memo(function $1'
-            );
-<<<<<<< HEAD
-            fileOptimizations++;
-          }
-=======
-<<<<<<< HEAD
-=======
-            fileOptimizations++;
-          }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             fileOptimizations++}
           // Add useCallback to event handlers
           if (content.includes('onClick') && !content.includes('useCallback')) {
             // This is a complex optimization that would need more context
             // For now, we'll just log it as a potential optimization
-<<<<<<< HEAD
             fileOptimizations++;
           }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            fileOptimizations++;
-          }
-=======
-<<<<<<< HEAD
-=======
-            fileOptimizations++;
-          }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-            fileOptimizations++;
-          }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             fileOptimizations++}
           // Add useMemo to expensive calculations
           if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {
@@ -298,17 +188,6 @@ class PerformanceOptimizer {
         }
         if (newContent !== content) {
           fs.writeFileSync(filePath, newContent, 'utf8');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
         }
         results.processed++;
@@ -317,16 +196,6 @@ class PerformanceOptimizer {
         results.errors.push({ file, error: error.message });
         this.log(`❌ Error optimizing ${file}: ${error.message}`);
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
         results.optimizations += fileOptimizations} catch (error) {
@@ -345,31 +214,10 @@ class PerformanceOptimizer {
     };
     const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     this.log(`📊 Report generated: ${reportPath}`);
     this.log(`✅ Performance optimization completed: ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report;
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     this.log(`📊 Report "generated": ${reportPath}`);
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report}
@@ -381,17 +229,6 @@ const path = // // require('path');
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       pageLoadTime: 0,
       firstContentfulPaint: 0,
       largestContentfulPaint: 0,
@@ -399,16 +236,6 @@ class PerformanceMonitor {
       firstInputDelay: 0
     };
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       "pageLoadTime": 0,
       "firstContentfulPaint": 0,
       "largestContentfulPaint": 0,
@@ -420,26 +247,8 @@ class PerformanceMonitor {
       // Monitor page load time
       window.addEventListener('load', () => {
         this.metrics.pageLoadTime = performance.now();
-<<<<<<< HEAD
         this.reportMetrics();
       });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.reportMetrics();
-      });
-=======
-<<<<<<< HEAD
-=======
-        this.reportMetrics();
-      });
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-        this.reportMetrics();
-      });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         this.reportMetrics()});
       // Monitor Web Vitals
       if ('PerformanceObserver' in window) {
@@ -463,124 +272,43 @@ class PerformanceMonitor {
             }
           }
         });
-<<<<<<< HEAD
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
-=======
-<<<<<<< HEAD
-=======
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
-      }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
     }
   }
   reportMetrics() {
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
       console.log('Performance Metrics:', this.metrics);
     }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.log('Performance Metrics:', this.metrics);
-    }
-=======
-<<<<<<< HEAD
-=======
-      console.log('Performance Metrics:', this.metrics);
-    }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-      console.log('Performance Metrics:', this.metrics);
-    }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       console.log('Performance "Metrics": ', this.metrics)}
     // Send to analytics in production
     if (typeof gtag !== 'undefined') {
       Object.entries(this.metrics).forEach(([key, value]) => {
         gtag('event', key, {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           event_category: 'Performance',
           value: Math.round(value),
           non_interaction: true
         });
       });
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           "event_category": 'Performance',
           "value": Math.round(value),
           "non_interaction": true
         })})}
   }
-<<<<<<< HEAD
 }
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export default PerformanceMonitor;";
     const scriptPath = path.join(this.srcDir, 'utils', 'PerformanceMonitor.js');
     const utilsDir = path.dirname(scriptPath);
     if (!fs.existsSync(utilsDir)) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       fs.mkdirSync(utilsDir, { recursive: true });
     }
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       fs.mkdirSync(utilsDir, { "recursive": true })}
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
@@ -595,14 +323,6 @@ if (require.main === module) {
       process.exit(0);
     })
     .catch((error) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       console.error('❌ Performance optimization failed:', error);
       process.exit(1);
     });
@@ -612,18 +332,10 @@ module.exports = PerformanceOptimizer;
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       console.error('❌ Performance optimization failed:', error);
       process.exit(1);
     });
@@ -632,10 +344,4 @@ module.exports = PerformanceOptimizer;
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
-=======
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

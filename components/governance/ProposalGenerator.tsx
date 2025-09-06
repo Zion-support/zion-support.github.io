@@ -1,58 +1,28 @@
 import React, { useState } from 'react';
 import EnhancedLayout from '../layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = any;
-=======
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export type ProposalType =
   | 'Workforce Dev'
   | 'AI Ethics'
   | 'Digital ID';
   | 'Education';
-<<<<<<< HEAD
 export type ProposalForm = {
-=======
-
-export type ProposalForm = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   targetInstitution: string;
   type: ProposalType;
   regionalScope: string;
   budgetOrGoals: string;
   supportingMultiverses: string;
   language?: string;
-<<<<<<< HEAD
   customPrompt?: string;};export type ProposalForm = {
-<<<<<<< HEAD
   targetInstitution: string
   type: ProposalType
   regionalScope: string
   budgetOrGoals: string
   supportingMultiverses: string
-=======
-  targetInstitution: string,
-  type: ProposalType,
-  regionalScope: string,
-  budgetOrGoals: string,
-  supportingMultiverses: string,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   language?: string;
   customPrompt?: string
 }
-=======
-  customPrompt?: string;
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
     targetInstitution: 'UNDP'
@@ -62,16 +32,7 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
-<<<<<<< HEAD
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
-=======
-<<<<<<< HEAD
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -86,7 +47,6 @@ export default function ProposalGenerator() {
     key: K
     value: ProposalForm[K]
   ) {
-<<<<<<< HEAD
     setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
@@ -94,24 +54,15 @@ export default function ProposalGenerator() {
   const [statusMessage, setStatusMessage] = useState('');
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
-=======
-    setForm(prev => ({ ...prev, [key]: value }));
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function handleGenerate() {
     setIsGenerating(true);
     setStatusMessage('Generating draft...');
     try {
       const res = await fetch('/api/proposals/generate', {
-<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify(form)
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = await res.json();
       setDraftMarkdown(data.markdown |'');
@@ -121,7 +72,6 @@ export default function ProposalGenerator() {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
-<<<<<<< HEAD
       setIsGenerating(false);    }      const data = await res.json();
       setDraftMarkdown(data.markdown |'');
       setDraftJson(data.json |null);
@@ -131,25 +81,8 @@ export default function ProposalGenerator() {
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
-=======
-<<<<<<< HEAD
-      setIsGenerating(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-      setIsGenerating(false);    }
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -157,17 +90,10 @@ export default function ProposalGenerator() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
           markdown: draftMarkdown
           json: draftJson
           meta: form
         })
-=======
-          markdown: draftMarkdown,
-          json: draftJson,
-          meta: form,
-        }),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = await res.json();
       setExportLinks({
@@ -178,44 +104,22 @@ export default function ProposalGenerator() {
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);
-<<<<<<< HEAD
       setStatusMessage('Export failed');    }      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed')
-=======
-      setStatusMessage('Export failed');
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      setStatusMessage('Export failed');    }
-
-    }
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
       const res = await fetch('/api/proposals/submit', {
-<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         body: JSON.stringify({
           markdown: draftMarkdown
           json: draftJson
@@ -228,42 +132,23 @@ export default function ProposalGenerator() {
       );
     } catch (e) {
       console.error(e);
-<<<<<<< HEAD
       setStatusMessage('Submission failed');    }
   }
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className='space-y-4'>      const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
     } catch (e) {
       console.error(e);
-<<<<<<< HEAD
 
       setStatusMessage('Submission failed')
-=======
-<<<<<<< HEAD
-      setStatusMessage('Submission failed');
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-      setStatusMessage('Submission failed')
-=======
-        <div className='space-y-4'>
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
   }
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='space-y-4'>
-<<<<<<< HEAD
           <div>
             <label className='block text-sm font-medium'>
               Target institution
@@ -282,7 +167,6 @@ export default function ProposalGenerator() {
               value={form.type}
               onChange={e =>
                 handleChange('type', e.target.value as ProposalType)
-<<<<<<< HEAD
               }            >          <div>
             <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
             <input
@@ -298,19 +182,6 @@ export default function ProposalGenerator() {
               className="w-full border rounded px-3 py-2"
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
-=======
-<<<<<<< HEAD
-              }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-    }
-  }
-
-  return (
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -374,7 +245,6 @@ export default function ProposalGenerator() {
           </div>
           <div className='flex gap-2'>
             <button
-<<<<<<< HEAD
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
@@ -422,41 +292,20 @@ export default function ProposalGenerator() {
           <div className="flex gap-2">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-=======
-<<<<<<< HEAD
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               onClick={handleGenerate}
               disabled={isGenerating}
             >
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>
             <button
-<<<<<<< HEAD
               className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
-=======
-              className='px-4 py-2 bg-emerald-600 text-white rounded'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               onClick={handleExport}
               disabled={!draftMarkdown}
             >
               Export (PDF/JSON/MD)
             </button>
             <button
-<<<<<<< HEAD
               className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
-=======
-              className='px-4 py-2 bg-purple-600 text-white rounded'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
             >
@@ -477,7 +326,6 @@ export default function ProposalGenerator() {
                     rel='noreferrer'
                   >
                     PDF
-<<<<<<< HEAD
                   </a>                </div>
               )}
               {exportLinks.mdUrl && (
@@ -486,9 +334,6 @@ export default function ProposalGenerator() {
               {exportLinks.pdfUrl && (
                 <div>
                   <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
-=======
-                  </a>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               )}
               {exportLinks.mdUrl && (
@@ -500,14 +345,10 @@ export default function ProposalGenerator() {
                     rel='noreferrer'
                   >
                     Markdown
-<<<<<<< HEAD
                   </a>                </div>
               )}
               {exportLinks.jsonUrl && (
                 <div>                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
-=======
-                  </a>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               )}
               {exportLinks.jsonUrl && (
@@ -519,20 +360,8 @@ export default function ProposalGenerator() {
                     rel='noreferrer'
                   >
                     JSON
-<<<<<<< HEAD
                   </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
-=======
-                  </a>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
           )}
@@ -542,36 +371,14 @@ export default function ProposalGenerator() {
           <textarea
             className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
             value={draftMarkdown}
-<<<<<<< HEAD
             onChange={e => setDraftMarkdown(e.target.value)}          />          <textarea
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
             onChange={(e) => setDraftMarkdown(e.target.value)}
-=======
-            onChange={e => setDraftMarkdown(e.target.value)}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           />
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

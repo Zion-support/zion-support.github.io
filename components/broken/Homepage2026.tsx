@@ -1,26 +1,13 @@
-<<<<<<< HEAD
 import React from 'react',
 import Layout from './layout/Layout',
-=======
-import React from 'react';
-import Layout from './layout/Layout';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ArrowRight, Star;
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail
  } from 'lucide-react';
 const Homepage2026: React.FC;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   ArrowRight
   Star
   Brain
@@ -37,59 +24,13 @@ import {
   Phone
   Mail;} from 'lucide-react';import {
   ArrowRight, Star
-=======
-  ArrowRight,
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  TrendingUp,
-  Globe,
-  MapPin,
-  Users,
-  Building,
-  Rocket,
-  CheckCircle,
-  Phone,;
-  Mail,;} from 'lucide-react';import {
-  ArrowRight, Star, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail
-=======
-import {
-  ArrowRight,
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  TrendingUp,
-  Globe,
-  MapPin,
-  Users,
-  Building,
-  Rocket,
-  CheckCircle,
-  Phone,
-  Mail,;
-} from 'lucide-react';
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const Homepage2026: React.FC = () => {
   return (
     <Layout>
       {/* Main Content */}
       <main className='relative z-10'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
           {/* Background Elements */}
@@ -98,7 +39,6 @@ const Homepage2026: React.FC = () => {
             <div className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full animate-pulse delay-1000'></div>
             <div className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000'></div>
           </div>
-<<<<<<< HEAD
           <div className='text-center max-w-4xl mx-auto relative z-10'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -112,42 +52,18 @@ const Homepage2026: React.FC = () => {
             <div className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45 animate-pulse delay-2000"></div>
           </div>
           <div className="text-center max-w-4xl mx-auto relative z-10">
-=======
-
-          <div className='text-center max-w-4xl mx-auto relative z-10'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='space-y-6'              className="space-y-6"
-=======
-              className='space-y-6'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Company Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
@@ -176,7 +92,6 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </Link>
                 <a href='mailto:kleber@ziontechgroup.com'>
-<<<<<<< HEAD
                   <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started
                   </button>
                 </a>
@@ -207,25 +122,10 @@ const Homepage2026: React.FC = () => {
                 </Link>
                 <a href="mailto:kleber@ziontechgroup.com">
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-=======
-                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Get Started
                   </button>
                 </a>
               </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -250,12 +150,8 @@ const Homepage2026: React.FC = () => {
                   <span>Global Reach</span>
                 </div>
                 <div className='flex items-center space-x-2'>
-<<<<<<< HEAD
                   <TrendingUp className='w-4 h-4 text-purple-400' />                  <span>Proven Results</span>                <div className="flex items-center space-x-2">
                   <TrendingUp className="w-4 h-4 text-purple-400" />
-=======
-                  <TrendingUp className='w-4 h-4 text-purple-400' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>Proven Results</span>
                 </div>
               </motion.div>
@@ -265,7 +161,6 @@ const Homepage2026: React.FC = () => {
         {/* Company Stats */}
         <section className='py-20 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
-<<<<<<< HEAD
           <div className='max-w-6xl mx-auto relative z-10'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -273,9 +168,6 @@ const Homepage2026: React.FC = () => {
               className='text-center mb-16'        <section className="py-20 px-4 bg-black/30 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
           <div className="max-w-6xl mx-auto relative z-10">
-=======
-          <div className='max-w-6xl mx-auto relative z-10'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -290,7 +182,6 @@ const Homepage2026: React.FC = () => {
                 transformation
               </p>
             </motion.div>
-<<<<<<< HEAD
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -301,10 +192,6 @@ const Homepage2026: React.FC = () => {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-
-            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -315,16 +202,11 @@ const Homepage2026: React.FC = () => {
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Micro SAAS Solutions
                 </h3>
-<<<<<<< HEAD
                 <p className='text-gray-300 text-sm'>                  Starting at $69/month for specialized business solutions                className="text-center"
               >
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 text-sm">
-=======
-                <p className='text-gray-300 text-sm'>
-                  Starting at $69/month for specialized business solutions
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </p>
               </motion.div>
               <motion.div
@@ -337,16 +219,11 @@ const Homepage2026: React.FC = () => {
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   IT Infrastructure
                 </h3>
-<<<<<<< HEAD
                 <p className='text-gray-300 text-sm'>                  Starting at $499/month for robust infrastructure solutions                className="text-center"
               >
                 <div className="text-4xl mb-4">🏗️</div>
                 <h3 className="text-xl font-semibold text-white mb-2">IT Infrastructure</h3>
                 <p className="text-gray-300 text-sm">
-=======
-                <p className='text-gray-300 text-sm'>
-                  Starting at $499/month for robust infrastructure solutions
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </p>
               </motion.div>
               <motion.div
@@ -359,16 +236,11 @@ const Homepage2026: React.FC = () => {
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   AI Automation
                 </h3>
-<<<<<<< HEAD
                 <p className='text-gray-300 text-sm'>                  Starting at $199/month for intelligent automation                className="text-center"
               >
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>
                 <p className="text-gray-300 text-sm">
-=======
-                <p className='text-gray-300 text-sm'>
-                  Starting at $199/month for intelligent automation
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </p>
               </motion.div>
               <motion.div
@@ -381,16 +253,11 @@ const Homepage2026: React.FC = () => {
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Cutting-Edge AI
                 </h3>
-<<<<<<< HEAD
                 <p className='text-gray-300 text-sm'>                  Starting at $179/month for next-generation AI                className="text-center"
               >
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>
                 <p className="text-gray-300 text-sm">
-=======
-                <p className='text-gray-300 text-sm'>
-                  Starting at $179/month for next-generation AI
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </p>
               </motion.div>
             </div>
@@ -398,21 +265,16 @@ const Homepage2026: React.FC = () => {
         </section>
         {/* Service Categories */}
         <section className='py-20 px-4'>
-<<<<<<< HEAD
           <div className='max-w-6xl mx-auto'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'        <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-=======
-          <div className='max-w-6xl mx-auto'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center mb-16'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
@@ -423,7 +285,6 @@ const Homepage2026: React.FC = () => {
                 technology needs
               </p>
             </motion.div>
-<<<<<<< HEAD
             <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>              {/* AI Automation Services */}            >
               <h2 className="text-4xl font-bold text-white mb-6">Our Service Portfolio</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -431,33 +292,12 @@ const Homepage2026: React.FC = () => {
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-=======
-
-            <div className='grid md:grid-cols-2 lg:grid-cols-2 gap-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {/* AI Automation Services */}
-=======
-
-              {/* AI Automation Services */}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-5xl mb-6'>🤖</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -483,7 +323,6 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-<<<<<<< HEAD
                   <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>                    Learn More              >
                 <div className="text-5xl mb-6">🤖</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Automation Services</h3>
@@ -507,35 +346,16 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-=======
-                  <button className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Learn More
                   </button>
                 </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* IT Infrastructure Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-8 hover:border-green-400/50 transition-all duration-300'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-5xl mb-6'>🏗️</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -561,7 +381,6 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-<<<<<<< HEAD
                   <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>                    Learn More              >
                 <div className="text-5xl mb-6">🏗️</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>
@@ -585,35 +404,16 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
-=======
-                  <button className='w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Learn More
                   </button>
                 </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Micro SAAS Solutions */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-5xl mb-6'>🚀</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -639,7 +439,6 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-<<<<<<< HEAD
                   <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors'>                    Learn More              >
                 <div className="text-5xl mb-6">🚀</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Micro SAAS Solutions</h3>
@@ -663,35 +462,16 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
-=======
-                  <button className='w-full px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Learn More
                   </button>
                 </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Cutting-Edge AI Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-5xl mb-6'>🧠</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -717,7 +497,6 @@ const Homepage2026: React.FC = () => {
                   </div>
                 </div>
                 <Link href='/comprehensive-2025-services-showcase'>
-<<<<<<< HEAD
                   <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>                    Learn More              >
                 <div className="text-5xl mb-6">🧠</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>
@@ -741,9 +520,6 @@ const Homepage2026: React.FC = () => {
                 </div>
                 <Link href="/comprehensive-2025-services-showcase">
                   <button className="w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors">
-=======
-                  <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Learn More
                   </button>
                 </Link>
@@ -753,16 +529,12 @@ const Homepage2026: React.FC = () => {
         </section>
         {/* Contact Section */}
         <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
-<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='space-y-6'        <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
           <div className="max-w-4xl mx-auto text-center">
-=======
-          <div className='max-w-4xl mx-auto text-center'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -789,7 +561,6 @@ const Homepage2026: React.FC = () => {
                       <a
                         href='https://ziontechgroup.com'
                         className='text-cyan-400 hover:underline font-medium'
-<<<<<<< HEAD
                       >                        ziontechgroup.com
                       </a>
                     </div>
@@ -809,9 +580,6 @@ const Homepage2026: React.FC = () => {
                     <div>
                       <div className="text-sm text-gray-400">Website</div>
                       <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
-=======
-                      >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         ziontechgroup.com
                       </a>
                     </div>
@@ -823,7 +591,6 @@ const Homepage2026: React.FC = () => {
                       <a
                         href='tel:+13024640950'
                         className='text-cyan-400 hover:underline font-medium'
-<<<<<<< HEAD
                       >                        +1 302 464 0950
                       </a>
                     </div>
@@ -832,10 +599,6 @@ const Homepage2026: React.FC = () => {
                     <div>
                       <div className="text-sm text-gray-400">Phone</div>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:underline font-medium">
-=======
-                      >
-                        +1 302 464 0950
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </a>
                     </div>
                   </div>
@@ -846,7 +609,6 @@ const Homepage2026: React.FC = () => {
                       <a
                         href='mailto:kleber@ziontechgroup.com'
                         className='text-cyan-400 hover:underline font-medium'
-<<<<<<< HEAD
                       >                        kleber@ziontechgroup.com
                       </a>
                     </div>
@@ -855,10 +617,6 @@ const Homepage2026: React.FC = () => {
                     <div>
                       <div className="text-sm text-gray-400">Email</div>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
-=======
-                      >
-                        kleber@ziontechgroup.com
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </a>
                     </div>
                   </div>
@@ -868,26 +626,17 @@ const Homepage2026: React.FC = () => {
                       <div className='text-sm text-gray-400'>Address</div>
                       <div className='text-white font-medium'>
                         364 E Main St STE 1008
-<<<<<<< HEAD
                         <br />                        Middletown DE 19709                  <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-purple-400" />
                     <div>
                       <div className="text-sm text-gray-400">Address</div>
                       <div className="text-white font-medium">
                         364 E Main St STE 1008<br />
-=======
-                        <br />
-                        Middletown DE 19709
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='mailto:kleber@ziontechgroup.com'
@@ -898,7 +647,6 @@ const Homepage2026: React.FC = () => {
                 </a>
                 <a
                   href='tel:+13024640950'
-<<<<<<< HEAD
                   className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300'                >                <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -909,9 +657,6 @@ const Homepage2026: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-=======
-                  className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Call Now
                 </a>
@@ -922,34 +667,7 @@ const Homepage2026: React.FC = () => {
       </main>
     </Layout>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Homepage2026;  )
 }
 export default Homepage2026;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
-}
-
-export default Homepage2026;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
-=======
-export default Homepage2026;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default Homepage2026;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

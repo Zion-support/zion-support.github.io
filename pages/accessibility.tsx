@@ -1,20 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Eye
   Ear
   Hand
@@ -27,20 +15,6 @@ import {
   Zap
   FileText
   Settings
-=======
-  Eye, 
-  Ear, 
-  Hand, 
-  Brain, 
-  CheckCircle, 
-  AlertTriangle,
-  Globe,
-  Users,
-  Shield,
-  Zap,
-  FileText,
-  Settings;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 const accessibilityFeatures = [
   {
@@ -186,42 +160,9 @@ const accessibilityGuidelines = [
     ]
   }
 ];
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-import Layout from '../components/Layout';
-}
 
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import Head from 'next/head';
-import Layout from '../components/Layout';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function AccessibilityPage() {
-=======
-interface AccessibilityProps {
-  className?: string;
-}
-
-const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -244,14 +185,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Ensuring digital inclusion for everyone
               </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             </motion.div>
           </div>
         </section>
@@ -501,18 +434,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-=======
-            </div>
-          </div>
-        </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </MainLayout>;
   );

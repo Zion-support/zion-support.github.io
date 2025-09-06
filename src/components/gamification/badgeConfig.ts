@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import {
-  LucideIcon,
-  BadgeCheck,
-  Award,
-  Star,
-  Trophy,
-  BadgePlus,
-  BadgeDollarSign,;
-} from 'lucide-react';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   LucideIcon
   BadgeCheck
@@ -26,42 +8,20 @@ import {
   BadgePlus
   BadgeDollarSign
 } from 'lucide-react'
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export type BadgeKey =
   | 'first_listing'
   | 'top_contributor'
   | 'profile_complete'
   | 'featured_creator'
   | 'first_action'
-<<<<<<< HEAD
   | 'monetized'
 export interface BadgeMeta {
-<<<<<<< HEAD
   key: BadgeKey
   name: string
   description: string
   icon: LucideIcon
   color: string
   bg: string
-<<<<<<< HEAD
-=======
-  key: BadgeKey;
-  name: string;
-  description: string;
-  icon: LucideIcon;
-  color: string;
-  bg: string;
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export const badgeList: BadgeMeta[] = [
   {
     key: 'first_listing'
@@ -110,53 +70,12 @@ export const badgeList: BadgeMeta[] = [
     icon: BadgeDollarSign
     color: '#22C55E', // Soft Green
     bg: '#F2FCE2', // Soft Green
-<<<<<<< HEAD
   }
 ]
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find(b => b.key === key)
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key)
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  },
-];
-}
-
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find(b => b.key === key);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  | 'monetized';
-
-import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
-
-export type BadgeKey =
-  | "first_listing"
-  | "top_contributor"
-  | "profile_complete"
-  | "featured_creator"
-  | "first_action"
-  | "monetized",
-
-export interface BadgeMeta {
-  key: BadgeKey,
-  name: string,
-  description: string,
-  icon: LucideIcon,
-  color: string,
-  bg: string
-}
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const badgeList: BadgeMeta[] = [
   {
     key: "first_listing",
@@ -203,20 +122,6 @@ export const badgeList: BadgeMeta[] = [
     name: "Monetized",
     description: "Earned your first AI dollar in the marketplace.",
     icon: BadgeDollarSign,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    color: '#22C55E', // Soft Green
-    bg: '#F2FCE2', // Soft Green
-  },
-]
-export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find(b => b.key === key);
-export const getBadgeMeta = (key: BadgeKey) =>;
-  badgeList.find((b) => b.key === key);
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
   }],
@@ -292,9 +197,3 @@ export const badgeList: BadgeMeta[] = [;
   }];
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

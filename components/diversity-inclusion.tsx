@@ -1,19 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-import React from "react";
-import Head from "next/head";
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function DiversityInclusionPage() {
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -44,7 +30,6 @@ export default function DiversityInclusionPage() {
       </div>
     </div>;
   );
-<<<<<<< HEAD
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
       <Head>
@@ -74,14 +59,4 @@ export default function DiversityInclusionPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

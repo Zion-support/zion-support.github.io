@@ -7,16 +7,8 @@ interface SidebarProps {
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   onChangeVisibility: (v: Visibility | 'all') => void
-=======
-  onChangeVisibility: (v: Visibility | 'all') => void;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
   onChangeVisibility: (v: Visibility | 'all') => void;
 
@@ -42,16 +34,11 @@ export default function Sidebar({
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
             >
               {v}
-<<<<<<< HEAD
             </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>
         <div className="text-xs text-high-contrast-muted">Version</div>
         <div className="flex gap-2 mt-2 flex-wrap">
           {spec.versions.map((v) => (
             <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
-=======
-            </button>
-          ))}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </div>
       <div>
@@ -81,7 +68,6 @@ export default function Sidebar({
                     ? true
                     : e.visibility === visibilityFilter
                 )
-<<<<<<< HEAD
                 .map(e => (                  <li key={e.id}>        </select>
       </div>
       <nav className="space-y-3">
@@ -93,9 +79,6 @@ export default function Sidebar({
                 .filter((e) => e.versions.includes(selectedVersion))
                 .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
                 .map((e) => (
-=======
-                .map(e => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <li key={e.id}>
                     <button
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
@@ -104,12 +87,8 @@ export default function Sidebar({
                       <span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'>
                         {e.method}
                       </span>
-<<<<<<< HEAD
                       <span className='font-mono'>{e.path}</span>                    </button>                      <span className="mr-2 inline-block w-10 text-center text-[10px] opacity-80">{e.method}</span>
                       <span className="font-mono">{e.path}</span>
-=======
-                      <span className='font-mono'>{e.path}</span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </button>
                   </li>
                 ))}
@@ -117,7 +96,6 @@ export default function Sidebar({
           </div>
         ))}
       </nav>
-<<<<<<< HEAD
     </aside>;
   );
 }
@@ -126,20 +104,3 @@ export default function Sidebar({
 }
 }
 }
-=======
-    </aside>
-  );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

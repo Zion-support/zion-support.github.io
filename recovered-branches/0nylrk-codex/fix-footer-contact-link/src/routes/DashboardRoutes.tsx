@@ -1,31 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Fragment} from "react";
-import {Route, Routes} from "react-router-dom";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import Dashboard from "@/pages/Dashboard";
-import ClientDashboard from "@/pages/ClientDashboard";
-import TalentDashboard from "@/pages/TalentDashboard";
-import CreatorDashboard from "@/pages/CreatorDashboard";
-import Analytics from "@/pages/Analytics";
-import ProjectMilestones from "@/pages/ProjectMilestones";
-import ProjectDetails from "@/pages/ProjectDetails";
-import ProjectRoom from "@/pages/ProjectRoom";
-import MessagingInbox from "@/pages/MessagingInbox";
-import Payments from "@/pages/Payments";
-import Interviews from "@/pages/Interviews";
-import Notifications from "@/pages/Notifications";
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
-import HiringTracker from "@/pages/HiringTracker";
-import PortfolioBuilder from "@/pages/PortfolioBuilder";
-import Referrals from "@/pages/Referrals";
-import DeveloperPortal from "@/pages/DeveloperPortal";
-import WalletPage from "@/pages/Wallet";
-import ContractBuilder from "@/pages/ContractBuilder";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -46,18 +19,9 @@ import HiringTracker from "@/pages/HiringTracker",
 import PortfolioBuilder from "@/pages/PortfolioBuilder",
 import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
-<<<<<<< HEAD
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
 
-=======
-import WalletPage from "@/pages/Wallet",
-import ContractBuilder from "@/pages/ContractBuilder",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const DashboardRoutes = () => {
   return (
     <Routes>
@@ -231,26 +195,10 @@ const DashboardRoutes = () => {
         }
       />
     </Routes>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
 }
-=======
-  );
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default DashboardRoutes;
 
-=======
-},
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default DashboardRoutes,
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -449,9 +397,4 @@ const DashboardRoutes = () => {;
     </Routes>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default DashboardRoutes;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

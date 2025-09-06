@@ -1,21 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from "@/components/ui/card";
-import {Loader, Sparkles} from "lucide-react";
-import {supabase} from "@/integrations/supabase/client";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {useForm} from "react-hook-form";
-import z from "zod";
-import {zodResolver} from "@hookform/resolvers/zod";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -26,7 +9,6 @@ import { Loader, Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { useForm } from "react-hook-form",
-<<<<<<< HEAD
 import z from "zod";
 
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -35,13 +17,6 @@ const formSchema = z.object({
   keyFeatures: z.string()
   targetAudience: z.string()})
 type FormData = z.infer<typeof formSchema>;
-=======
-import z from "zod",
-import { zodResolver } from "@hookform/resolvers/zod",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -49,42 +24,16 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ServiceDescriptionFormProps {
-<<<<<<< HEAD
   onDescriptionGenerated: (description: string) => void
 }
-<<<<<<< HEAD
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-=======
-  onDescriptionGenerated: (description: string) => void;
-}
-
-export function ServiceDescriptionForm({
-  onDescriptionGenerated,
-}: ServiceDescriptionFormProps) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-<<<<<<< HEAD
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
-=======
-  const { toast } = useToast(),
-  const [isLoading, setIsLoading] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -95,7 +44,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     setIsLoading(true)
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
-<<<<<<< HEAD
         body: {
           title: data.title
           keyFeatures: data.keyFeatures
@@ -104,21 +52,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       });
       if (error) {
         throw new Error(error.message)
-=======
-        body: { 
-          title: data.title, 
-          keyFeatures: data.keyFeatures, 
-          targetAudience: data.targetAudience 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        }
-      });
-
-      if (error) {
-        throw new Error(error.message)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -161,22 +94,11 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       if (response.error) {
         throw new Error(response.error)
       }
-<<<<<<< HEAD
       onDescriptionGenerated(response.description);
-=======
-
-      onDescriptionGenerated(response.description),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Description Generated"
         description: "Your professional service description has been created."
@@ -191,11 +113,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -218,15 +136,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
                     <Input
                       {...field}
                       placeholder="e.g. Professional Web Design Services"
                       className="bg-zion-blue border border-zion-blue-light text-white"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       disabled={isLoading}
                     />
                   </FormControl>
@@ -235,14 +148,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
               )}
             />
             <FormField
-=======
-<<<<<<< HEAD
-                    <Input 
-                      {...field} 
-                      placeholder="e.g. Professional Web Design Services"
-                      className="bg-zion-blue border border-zion-blue-light text-white"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       onDescriptionGenerated(response.description),;
       toast({;
@@ -293,11 +198,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
               )}
             />;
             <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               control={form.control}
               name="keyFeatures"
               render={({ field }) => (
@@ -322,13 +222,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
                     <Input
                       {...field}
-=======
-                    <Input 
-                      {...field} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
@@ -338,12 +233,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                 </FormItem>
               )}
             />
-<<<<<<< HEAD
             <Button
-=======
-            
-            <Button 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               type="submit"
               disabled={isLoading}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -359,7 +249,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                   Generate Description
                 </>
               )}
-<<<<<<< HEAD
             </Button>
           </form>
         </Form>
@@ -367,13 +256,3 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     </Card>
   )
 }
-=======
-            </Button>;
-          </form>;
-        </Form>;
-      </CardContent>;
-    </Card>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

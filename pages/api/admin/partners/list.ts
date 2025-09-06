@@ -1,30 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
-<<<<<<< HEAD
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const usingPlaceholder = true; // Mock implementation
     const supabase = getServerSupabase();
     const { data } = await supabase.from('partners').select();
-=======
-<<<<<<< HEAD
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
   const usingPlaceholder =
-<<<<<<< HEAD
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
       "placeholder-key";
@@ -49,11 +36,7 @@ export default async function handler(
     }
     const supabase = getServerSupabase();
     const { data, error } = await supabase
-<<<<<<< HEAD
       .from("partners")
-=======
-      .from('partners')
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       .select(
         "code, name, status, commission_rate, payout_method, niche, socials, created_at"
       )
@@ -63,16 +46,6 @@ export default async function handler(
     return res.status(200).json({ partners: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
-      "placeholder-key";
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -94,35 +67,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.setHeader('Allow', 'GET');
       res.status(405).end('Method Not Allowed');
     }
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-    const supabase = getServerSupabase();
-    const { data, error } = await supabase
-      .from("partners")
-      .select(
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
-      )
-      .order("created_at", { ascending: false });
-
-    if (error) return res.status(500).json({ error: error.message });
-    return res.status(200).json({ partners: data });
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -1,23 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Fragment} from "react";
-import {Route, Routes, Navigate} from "react-router-dom";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Blog from "@/pages/Blog";
-import BlogPost from "@/pages/BlogPost";
-import GreenIT from "@/pages/GreenIT";
-import Careers from "@/pages/Careers";
-import SearchPage from "@/pages/SearchPage";
-import {SitemapPage} from "@/components/SitemapPage";
-import HelpCenterPage from "@/pages/HelpCenterPage";
-import AccountSettings from "@/pages/AccountSettings";
-import ProjectRoom from "@/pages/ProjectRoom";
-import VideoCall from "@/pages/VideoCall";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Fragment } from "react",
 import { Route, Routes, Navigate } from "react-router-dom",
 import Home from "@/pages/Home",
@@ -30,18 +11,9 @@ import SearchPage from "@/pages/SearchPage",
 import { SitemapPage } from "@/components/SitemapPage",
 import HelpCenterPage from "@/pages/HelpCenterPage",
 import AccountSettings from "@/pages/AccountSettings",
-<<<<<<< HEAD
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 
-=======
-import ProjectRoom from "@/pages/ProjectRoom",
-import VideoCall from "@/pages/VideoCall",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const ContentRoutes = () => {
   return (
     <Routes>
@@ -70,26 +42,10 @@ const ContentRoutes = () => {
       {/* Sitemap Page */}
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
 }
-=======
-  );
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ContentRoutes;
 
-=======
-},
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ContentRoutes,
 import { Fragment } from "react",;
 import { Route, Routes, Navigate } from "react-router-dom",;
@@ -135,9 +91,4 @@ const ContentRoutes = () => {;
     </Routes>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ContentRoutes;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

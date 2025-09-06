@@ -1,42 +1,16 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {Search} from "lucide-react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CountryServiceCard} from "@/components/services/CountryServiceCard";
-import {CountryPricing} from "@/data/onsiteServicePricing";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-<<<<<<< HEAD
 import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
-<<<<<<< HEAD
 interface CountryTabsProps {
-<<<<<<< HEAD
   popularCountries: string[];
   filteredCountries: CountryPricing[];
   handleCountrySelect: (country: CountryPricing) => void;
   searchQuery: string;
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-import { CountryServiceCard } from "@/components/services/CountryServiceCard",
-import { CountryPricing } from "@/data/onsiteServicePricing",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -46,15 +20,6 @@ interface CountryTabsProps {
 
   setSearchQuery: (query: string) => void
 }
-<<<<<<< HEAD
-=======
-  setSearchQuery: (query: string) => void;
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export function CountryTabs({
   popularCountries;
 
@@ -63,20 +28,10 @@ export function CountryTabs({
   searchQuery
   setSearchQuery
 
-=======
-
-<<<<<<< HEAD
-export function CountryTabs({ ;
-  popularCountries;
-=======
-export function CountryTabs({ 
-  popularCountries,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   filteredCountries, 
   handleCountrySelect, 
   searchQuery, 
   setSearchQuery 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">
@@ -99,19 +54,9 @@ export function CountryTabs({
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
-<<<<<<< HEAD
               <CountryServiceCard
                 key={country.country}
                 country={country}
-=======
-              <CountryServiceCard 
-                key={country.country} 
-                country={country} 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { Search } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -158,11 +103,6 @@ export function CountryTabs({;
               <CountryServiceCard;
                 key={country.country} ;
                 country={country} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />
@@ -185,15 +125,9 @@ export function CountryTabs({;
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {filteredCountries.slice(0, 12).map(country => (
-<<<<<<< HEAD
             <CountryServiceCard
               key={country.country}
               country={country}
-=======
-            <CountryServiceCard 
-              key={country.country} 
-              country={country} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               onSelect={handleCountrySelect}
               isPopular={popularCountries.includes(country.country)}
             />

@@ -1,46 +1,18 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type ModerationModalProps = any;
-=======
-=======
 
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-<<<<<<< HEAD
-export type ModerationModalProps = {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export type ModerationModalProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   flag: any | null;
   onClose: () => void;
   onAction: (
     action: 'approve' | 'remove' | 'warn' | 'ban'
     adminNotes?: string
   ) => Promise<void>;
-<<<<<<< HEAD
-=======
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ModerationModal({
-<<<<<<< HEAD
   flag
   onClose
   onAction
 }: ModerationModalProps) {
-=======
-  flag,
-  onClose,
-  onAction,
-}: ModerationModalProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -137,7 +109,6 @@ export default function ModerationModal({
             className='px-3 py-2 rounded bg-gray-800 text-white'
           >
             Ban User
-<<<<<<< HEAD
           </button>        </div>
       </div>
     </div>
@@ -149,22 +120,5 @@ export default function ModerationModal({
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
-<<<<<<< HEAD
 );
 }
-=======
-<<<<<<< HEAD
-          </button>
-        </div>
-      </div>
-    </div>
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

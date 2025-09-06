@@ -1,22 +1,9 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {DynamicListingPage} from "@/components/DynamicListingPage";
-import {ProductListing} from "@/types/listings";
-import {AppLayout} from "@/layout/AppLayout";
-import {TrustedBySection} from "@/components/TrustedBySection";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import {Globe} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 // Sample service listings
@@ -30,13 +17,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 5000
     currency: "$"
     tags: ["AI Integration", "Machine Learning", "Enterprise"];
-=======
-import { Link } from "react-router-dom",
-import { Globe } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -47,7 +27,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 5000,
     currency: "$",
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"
@@ -58,7 +37,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 124}
   {
-<<<<<<< HEAD
     id: "service-2"
     title: "Cloud Infrastructure Management"
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
@@ -66,15 +44,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 3000
     currency: "$"
     tags: ["Cloud", "DevOps", "Security"];
-=======
-    id: "service-2",
-    title: "Cloud Infrastructure Management",
-    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
-    category: "Management",
-    price: 3000,
-    currency: "$",
-    tags: ["Cloud", "DevOps", "Security"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     author: {
       name: "CloudPro Experts"
       id: "cloud-pro"}
@@ -84,7 +53,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.7
     reviewCount: 92}
   {
-<<<<<<< HEAD
     id: "service-3"
     title: "Big Data Analysis & Insights"
     description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services."
@@ -92,15 +60,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 4500
     currency: "$"
     tags: ["Big Data", "Analytics", "Business Intelligence"];
-=======
-    id: "service-3",
-    title: "Big Data Analysis & Insights",
-    description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
-    category: "Analytics",
-    price: 4500,
-    currency: "$",
-    tags: ["Big Data", "Analytics", "Business Intelligence"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     author: {
       name: "DataMind Solutions"
       id: "datamind"
@@ -111,7 +70,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8
     reviewCount: 78}
   {
-<<<<<<< HEAD
     id: "service-4"
     title: "Cybersecurity Assessment & Protection"
     description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats."
@@ -119,15 +77,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 6000
     currency: "$"
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
-=======
-    id: "service-4",
-    title: "Cybersecurity Assessment & Protection",
-    description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
-    category: "Security",
-    price: 6000,
-    currency: "$",
-    tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     author: {
       name: "SecureNet Team"
       id: "secure-net"}
@@ -137,7 +86,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 103}
   {
-<<<<<<< HEAD
     id: "service-5"
     title: "IT Infrastructure Modernization"
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
@@ -145,15 +93,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 8500
     currency: "$"
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
-=======
-    id: "service-5",
-    title: "IT Infrastructure Modernization",
-    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
-    category: "Consulting",
-    price: 8500,
-    currency: "$",
-    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
@@ -163,7 +102,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.6
     reviewCount: 67}
   {
-<<<<<<< HEAD
     id: "service-6"
     title: "AI Strategy & Implementation"
     description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage."
@@ -171,15 +109,6 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 7500
     currency: "$"
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"];
-=======
-    id: "service-6",
-    title: "AI Strategy & Implementation",
-    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
-    category: "Strategy",
-    price: 7500,
-    currency: "$",
-    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     author: {
       name: "AI Future Consulting"
       id: "ai-future"
@@ -191,29 +120,12 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 85}]
 // Filter options specific to services
 const SERVICE_FILTERS = [
-<<<<<<< HEAD
   { label: 'Development', value: 'development' }
   { label: 'Management', value: 'management' }
   { label: 'Security', value: 'security' }
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  { label: 'Development', value: 'development' },
-  { label: 'Management', value: 'management' },
-  { label: 'Security', value: 'security' },
-  { label: 'Analytics', value: 'analytics' },
-  { label: 'Consulting', value: 'consulting' },
-  { label: 'Strategy', value: 'strategy' },
-];
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function ServicesPage() {
   return (
     <AppLayout>
@@ -235,7 +147,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <DynamicListingPage
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
@@ -246,48 +157,8 @@ export default function ServicesPage() {
       />
       <TrustedBySection />
     </AppLayout>
-<<<<<<< HEAD
   )
 }
-=======
-<<<<<<< HEAD
-  );
-rating: 4.8;
-reviewCount: 85 
-}];
-//Filter options specific to services
-}
-
-export default function ServicesPage () {
-  return (<AppLayout> <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light" > <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4" > <h2 className="text-white text-lg font-medium" >Featured Services</h2> <div className="flex flex-wrap gap-2" > <Link to="/it-onsite-services" > <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10" > <Globe className="h-4 w-4 mr-2" /> Global IT Onsite Services </Button> </Link> <Link to="/request-quote" > <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Request a Quote </Button> </Link> </div> </div> </div> <DynamicListingPage listings= {
-  SERVICE LISTINGS 
-}categoryFilters= {
-  SERVICE FILTERS 
-}initialPrice= {
-  {
-  min: 3000, max: 10000 
-
-}/> <TrustedBySection /> </AppLayout>) 
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-      <DynamicListingPage 
-        title="IT & AI Services"
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-        categorySlug="services"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        listings={SERVICE_LISTINGS}
-        categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 3000, max: 10000 }}
-      />
-      <TrustedBySection />
-    </AppLayout>
-  )
-};
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -438,9 +309,3 @@ export default function ServicesPage() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

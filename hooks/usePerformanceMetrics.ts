@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { PerformanceMetrics } from "../types";
-=======
-import { useEffect, useState } from 'react';
-import { PerformanceMetrics } from '../types';
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
@@ -45,11 +38,5 @@ export function usePerformanceMetrics() {
     const timer = setTimeout(measurePerformance, 1000);
     return () => clearTimeout(timer);
   }, []);
-<<<<<<< HEAD
   return { metrics, isSupported }
 }
-=======
-
-  return { metrics, isSupported };
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

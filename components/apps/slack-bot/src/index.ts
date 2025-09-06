@@ -1,19 +1,8 @@
-<<<<<<< HEAD
 import { App  } from '@slack/bolt';
-=======
-import { App } from '@slack/bolt';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 dotenv.config();
 const apiBase = null;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const apiBase = process.env.API_ORIGIN |'http://localhost:4000';
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN
@@ -25,22 +14,9 @@ function helpText(): string {
   signingSecret: process.env.SLACK_SIGNING_SECRET;
   appToken: process.env.SLACK_APP_LEVEL_TOKEN;
   socketMode: true
-=======
-
-dotenv.config();
-
-const apiBase = process.env.API_ORIGIN || 'http://localhost:4000';
-
-const app = new App({
-  token: process.env.SLACK_BOT_TOKEN,
-  signingSecret: process.env.SLACK_SIGNING_SECRET,
-  appToken: process.env.SLACK_APP_LEVEL_TOKEN,
-  socketMode: true,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 function helpText(): string {
   return [
-<<<<<<< HEAD
     '*Zion Assistant Commands*'
     '`/zion post-job [role]` – generate a job post'
     '`/zion suggest-talent [query]` – AI match talent'
@@ -50,15 +26,6 @@ function helpText(): string {
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
   ].join('\n');
 }
-=======
-    '*Zion Assistant Commands*',
-    '`/zion post-job [role]` – generate a job post',
-    '`/zion suggest-talent [query]` – AI match talent',
-    '`/zion track-project [name]` – milestone status',
-    '`/zion help` – command list',
-  ].join('\n');
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 app.command('/zion', async ({ command, ack, respond }) => {
   await ack();
   const text = (command.text |'').trim();
@@ -67,27 +34,17 @@ app.command('/zion', async ({ command, ack, respond }) => {
   try {
     if (!sub |sub.toLowerCase() === 'help') {
       await respond({ response_type: 'ephemeral', text: helpText() });
-<<<<<<< HEAD
       return;    }
     if (sub === 'post-job') {
       const role = rest.join(' ') |'Cloud Engineer';
       const res = await fetch(`${apiBase}/jobs/generate`, {      return
-=======
-      return;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     if (sub === 'post-job') {
       const role = rest.join(' ') |'Cloud Engineer';
       const res = await fetch(`${apiBase}/jobs/generate`, {
-<<<<<<< HEAD
         method: 'POST'
         headers: { 'content-type': 'application/json', 'x-user-id': userId }
         body: JSON.stringify({ role })
-=======
-        method: 'POST',
-        headers: { 'content-type': 'application/json', 'x-user-id': userId },
-        body: JSON.stringify({ role }),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = (await res.json()) as any;
       await respond({
@@ -142,7 +99,6 @@ app.command('/zion', async ({ command, ack, respond }) => {
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {
     await respond({
-<<<<<<< HEAD
       response_type: 'ephemeral'
       text: `Error: ${err.message |'unknown'}`
     });  }      });
@@ -176,42 +132,12 @@ app.command('/zion', async ({ command, ack, respond }) => {
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message |'unknown'}` })
-=======
-      response_type: 'ephemeral',
-      text: `Error: ${err.message || 'unknown'}`,
-    });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 (async () => {
   const port = Number(process.env.SLACK_PORT |3001);
   await app.start(port);
   // eslint-disable-next-line no-console
-<<<<<<< HEAD
 console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();  console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  console.log(`⚡️ Zion Slack bot running on port ${port}`);
-})();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-=======
-  console.log(`⚡️ Zion Slack bot running on port ${port}`);
-})();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-  console.log(`⚡️ Zion Slack bot running on port ${port}`);
-})();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

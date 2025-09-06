@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { store } from "../../../../../utils/data/enterpriseStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { companyId } = req.query;
 
   if (!companyId |typeof companyId !== "string") {
@@ -21,27 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
   if (req.method === "PATCH") {
     const { monthlyJobPosts, budgetCapUsd } = req.body |{}
-=======
-import { store } from '../../../../../utils/data/enterpriseStore';
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { companyId } = req.query;
-  if (!companyId || typeof companyId !== 'string') {
-    return res.status(400).json({ error: 'companyId required' });
- 
-}
-  const company = store.getCompanyById(companyId);
-  if (!company) return res.status(404).json({ error: 'company_not_found' });
-
-  if (req.method === 'GET') {
-    return res.status(200).json(company.plan.usageLimits);
- 
-}
-
-  if (req.method === 'PATCH') {
-    const { monthlyJobPosts, budgetCapUsd } = req.body || {};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (
       typeof monthlyJobPosts !== "number" |
       typeof budgetCapUsd !== "number"
@@ -55,24 +26,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .status(ok ? 200 : 404)
       .json(ok ? { success: true } : { error: "company_not_found" });
 
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
   return res.status(405).json({ error: "method_not_allowed" });
-<<<<<<< HEAD
 }
-=======
-
-  return res.status(405).json({ error: 'method_not_allowed' });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-=======
-return res.status(405).json({ error: "method_not_allowed" });
-}
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ usage: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -157,11 +113,4 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

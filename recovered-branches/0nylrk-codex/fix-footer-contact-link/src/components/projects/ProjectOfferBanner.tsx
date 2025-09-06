@@ -1,38 +1,9 @@
-<<<<<<< HEAD
-=======
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Bell, Calendar, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { useProjects } from '@/hooks/useProjects';
-import { Project } from '@/types/projects';
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {Bell, Calendar, X} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent} from "@/components/ui/card";
-import {useProjects} from "@/hooks/useProjects";
-import {Project} from "@/types/projects";
-export function ProjectOfferBanner() {;
-  const navigate = useNavigate();
-  const { projects, isLoading } = useProjects();
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ProjectOfferBanner() {
@@ -41,22 +12,11 @@ export function ProjectOfferBanner() {
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-=======
-import { useProjects } from "@/hooks/useProjects",
-import { Project } from "@/types/projects",
-export function ProjectOfferBanner() {
-  const navigate = useNavigate(),
-  const { projects, isLoading } = useProjects(),
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
       setPendingOffers(offers)
-<<<<<<< HEAD
     }
   }, [projects, isLoading]);
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
@@ -73,49 +33,9 @@ export function ProjectOfferBanner() {
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
 
     return null
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useEffect, useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { Bell, Calendar, X } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { useProjects } from "@/hooks/useProjects",;
-import { Project } from "@/types/projects",;
-export function ProjectOfferBanner() {;
-  const navigate = useNavigate(),;
-  const { projects, isLoading } = useProjects(),;
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),;
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),;
-  useEffect(() => {;
-    if (projects && !isLoading) {;
-      const offers = projects.filter(p => p.status === 'offer_sent'),;
-      setPendingOffers(offers);
-    }
-  }, [projects, isLoading]),;
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
-    e.stopPropagation(),;
-    setDismissed(prev => {;
-      const updated = new Set(prev),;
-      updated.add(projectId),;
-      return updated;
-    });
-  };
-  const handleViewOffer = (projectId: string) => {;
-    navigate(`/project/${projectId}`);
-  };
-  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
-    return null;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -153,13 +73,6 @@ export function ProjectOfferBanner() {;
             </CardContent>
           </Card>
         ))}
-<<<<<<< HEAD
     </div>
   )
 }
-=======
-    </div>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

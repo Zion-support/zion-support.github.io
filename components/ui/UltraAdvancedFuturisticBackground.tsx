@@ -1,28 +1,15 @@
-<<<<<<< HEAD
 let animationFrameId: number;
-=======
- let animationFrameId: number;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 let particles: Array< {
   resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 //Color schemes Math.random () > 0.5 ? 'holographic' : Math.random () > 0.3 ? 'neon' : 'fusion';
 particles.push ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic : 
-=======
-  x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
   x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :
 const UltraAdvancedFuturisticBackground: React.FC<
   UltraAdvancedFuturisticBackgroundProps
 > = ({
-<<<<<<< HEAD
   intensity = 'high'
   colorScheme = 'quantum-fusion'
   particleCount = 300
@@ -48,16 +35,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
   enableHolographic = true
   enableQuantumEffects = true
   children
-=======
-  intensity = 'high',
-  colorScheme = 'quantum-fusion',
-  particleCount = 300,
-  animationSpeed = 1.5,
-  enableHolographic = true,
-  enableQuantumEffects = true,
-  children,
-}) => {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -65,10 +42,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     let animationFrameId: number;
     let particles: Array<{
       x: number;
@@ -78,7 +51,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       size: number;
       opacity: number;
       color: string;
-<<<<<<< HEAD
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number
       y: number
       vx: number
@@ -87,21 +59,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       opacity: number
       color: string
       type: 'quantum' | 'holographic' | 'neon' | 'fusion'
-=======
-      type: 'quantum' | 'holographic' | 'neon' | 'fusion';
-    }> = [];
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Set canvas size
     const resizeCanvas = () => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
         canvas.width = rect.width;
-<<<<<<< HEAD
         canvas.height = rect.height;      }        canvas.height = rect.height
-=======
-        canvas.height = rect.height;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     resizeCanvas();
@@ -109,7 +72,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     // Color schemes
     const colorSchemes = {
       'quantum-fusion': {
-<<<<<<< HEAD
         primary: '#00ffff'
         secondary: '#ff00ff'
         accent: '#ffff00'
@@ -148,37 +110,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       },    };        holographic: '#ff0088'
       }
     }
-=======
-        primary: '#00ffff',
-        secondary: '#ff00ff',
-        accent: '#ffff00',
-        quantum: '#00ff88',
-        holographic: '#ff0088',
-      },
-      'neon-cyber': {
-        primary: '#00ff41',
-        secondary: '#ff0080',
-        accent: '#00d4ff',
-        quantum: '#ff6b35',
-        holographic: '#9d4edd',
-      },
-      holographic: {
-        primary: '#ff00ff',
-        secondary: '#00ffff',
-        accent: '#ffff00',
-        quantum: '#00ff88',
-        holographic: '#ff0088',
-      },
-      'quantum-ai': {
-        primary: '#00d4ff',
-        secondary: '#ff6b35',
-        accent: '#9d4edd',
-        quantum: '#00ff88',
-        holographic: '#ff0088',
-      },
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const colors = colorSchemes[colorScheme];
     // Initialize particles
     const initParticles = () => {
@@ -191,7 +122,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
               ? 'holographic'
               : Math.random() > 0.3
                 ? 'neon'
-<<<<<<< HEAD
                 : 'fusion';      for (let i = 0, i < particleCount, i++) {
         const type = Math.random() > 0.7 ? 'quantum' :
                     Math.random() > 0.5 ? 'holographic' :
@@ -202,17 +132,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           vy: (Math.random() - 0.5) * 2 * animationSpeed
           size: Math.random() * 3 + 1
           opacity: Math.random() * 0.8 + 0.2
-=======
-                : 'fusion';
-
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2 * animationSpeed,
-          vy: (Math.random() - 0.5) * 2 * animationSpeed,
-          size: Math.random() * 3 + 1,
-          opacity: Math.random() * 0.8 + 0.2,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           color:
             type === 'quantum'
               ? colors.quantum
@@ -220,7 +139,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
                 ? colors.holographic
                 : type === 'neon'
                   ? colors.primary
-<<<<<<< HEAD
                   : colors.secondary
           type
         });      }          color: type === 'quantum' ? colors.quantum :
@@ -232,18 +150,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     // Quantum entanglement effect
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return;
-=======
-                  : colors.secondary,
-          type,
-        });
-      }
-    };
-
-    // Quantum entanglement effect
-    const createQuantumEntanglement = () => {
-      if (!enableQuantumEffects) return;
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -253,7 +159,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             distance < 100 &&
             particles[i].type === 'quantum' &&
             particles[j].type === 'quantum'
-<<<<<<< HEAD
           ) {            ctx.beginPath();
       for (let i = 0, i < particles.length, i++) {
         for (let j = i + 1, j < particles.length, j++) {
@@ -261,45 +166,18 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
-=======
-          ) {
-            ctx.beginPath();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
-=======
-<<<<<<< HEAD
-            ctx.stroke();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            ctx.stroke();          }
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }
         }
       }
-<<<<<<< HEAD
     }
-=======
-    };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Holographic grid effect
     const createHolographicGrid = () => {
       if (!enableHolographic) return;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const gridSize = 50;
       const offset = (Date.now() * 0.001) % gridSize;
       ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
@@ -315,23 +193,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
-<<<<<<< HEAD
         ctx.stroke();      }        ctx.stroke()
       }
     }
     // Neural network effect
     const createNeuralNetwork = () => {
       if (!enableQuantumEffects) return;
-=======
-        ctx.stroke();
-      }
-    };
-
-    // Neural network effect
-    const createNeuralNetwork = () => {
-      if (!enableQuantumEffects) return;
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const nodes = particles.filter(
         p => p.type === 'quantum' |p.type === 'holographic'
       );
@@ -341,48 +208,24 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           const dy = nodes[i].y - nodes[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 150) {
-<<<<<<< HEAD
             const strength = 1 - distance / 150;            ctx.beginPath();          const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 150) {
             const strength = 1 - (distance / 150);
-=======
-            const strength = 1 - distance / 150;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ctx.beginPath();
             ctx.strokeStyle = `rgba(0, 212, 255, ${0.2 * strength})`;
             ctx.lineWidth = strength * 2;
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
-=======
-<<<<<<< HEAD
-            ctx.stroke();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            ctx.stroke();          }
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }
         }
       }
-<<<<<<< HEAD
     }
-=======
-    };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-<<<<<<< HEAD
       // Create background gradient
       const gradient = ctx.createRadialGradient(
         canvas.width / 2
@@ -395,60 +238,30 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0;
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
-=======
-
-      // Create background gradient
-      const gradient = ctx.createRadialGradient(
-        canvas.width / 2,
-        canvas.height / 2,
-        0,
-        canvas.width / 2,
-        canvas.height / 2,
-        Math.max(canvas.width, canvas.height) / 2
-      );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
       gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.6)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Create effects
       createHolographicGrid();
       createQuantumEntanglement();
       createNeuralNetwork();
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
-<<<<<<< HEAD
         // Bounce off edges
         if (particle.x < 0 |particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 |particle.y > canvas.height) particle.vy *= -1;
         // Bounce off edges
         if (particle.x < 0 |particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 |particle.y > canvas.height) particle.vy *= -1;
-=======
-
-        // Bounce off edges
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
-
-        // Wrap around edges
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-<<<<<<< HEAD
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);        // Draw particle
@@ -475,48 +288,19 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         );
         glowGradient.addColorStop(
           0
-=======
-
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-
-        // Create glow effect
-        const glowGradient = ctx.createRadialGradient(
-          particle.x,
-          particle.y,
-          0,
-          particle.x,
-          particle.y,
-          particle.size * 3
-        );
-        glowGradient.addColorStop(
-          0,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           `${particle.color}${Math.floor(particle.opacity * 255)
             .toString(16)
             .padStart(2, '0')}`
         );
         glowGradient.addColorStop(
-<<<<<<< HEAD
           0.5
-=======
-          0.5,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           `${particle.color}${Math.floor(particle.opacity * 0.5 * 255)
             .toString(16)
             .padStart(2, '0')}`
         );
         glowGradient.addColorStop(1, 'transparent');
-<<<<<<< HEAD
         ctx.fillStyle = glowGradient;
         ctx.fill();
-=======
-
-        ctx.fillStyle = glowGradient;
-        ctx.fill();
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         // Add sparkle effect for holographic particles
         if (particle.type === 'holographic' && Math.random() > 0.95) {
           ctx.beginPath();
@@ -529,15 +313,10 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.lineWidth = 2;
           ctx.stroke();
         }
-<<<<<<< HEAD
       });          ctx.lineWidth = 2;
           ctx.stroke()
         }
       });
-=======
-      });
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Add intensity-based effects
       if (intensity === 'high') {
         // Add energy waves
@@ -558,7 +337,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.stroke();
         }
       }
-<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);    };          ctx.beginPath();
           ctx.arc(canvas.width / 2, canvas.height / 2, waveRadius, 0, Math.PI * 2);
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`;
@@ -568,12 +346,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       }
       animationFrameId = requestAnimationFrame(animate)
     }
-=======
-
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     initParticles();
     animate();
     return () => {
@@ -588,10 +360,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     enableHolographic
     enableQuantumEffects
   ]);
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>
       <canvas
@@ -613,10 +381,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             <div className='absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700'></div>
           </>
         )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Holographic elements */}
         {enableHolographic && (
           <>
@@ -637,13 +401,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       {children}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
@@ -679,24 +437,3 @@ export default UltraAdvancedFuturisticBackground;
   )
 }
 export default UltraAdvancedFuturisticBackground;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
-}
-
-export default UltraAdvancedFuturisticBackground;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
-=======
-export default UltraAdvancedFuturisticBackground;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default UltraAdvancedFuturisticBackground;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

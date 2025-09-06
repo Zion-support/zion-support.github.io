@@ -43,15 +43,7 @@ const ModernLayout = ({
       <div className="min-h-screen bg-white text-gray-900">
         {children}
       </div>
-<<<<<<< HEAD
 </>
   );
 }
-=======
-    </>
-  ),;
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ModernLayout;

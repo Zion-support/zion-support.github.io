@@ -1,52 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 type RouteInfo = any;
     generatedAt = json.generatedAt || ''
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
-=======
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string }
 export async function getServerSideProps() {
-=======
-<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
-=======
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },
 export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'datasite-map.json');
   let routes: RouteInfo[] = [];  let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-<<<<<<< HEAD
     routes = json.routes |[];
     generatedAt = json.generatedAt |''
 
   } catch {}
   return { props: { routes, generatedAt } }
 }
-=======
-    routes = json.routes || [];
-    generatedAt = json.generatedAt || ''
-  } catch {}
-  return { props: { routes, generatedAt } }
-}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
   return (
     <div className="space-y-6">
@@ -70,21 +45,6 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
           </tbody>
         </table>
       </div>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
-    </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 }
-=======
-<<<<<<< HEAD
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
-}</tbody> </table> </div> </div>)
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  );
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Layout from '../components/Layout';
-
-export default function MicroSAAS() {
-  return (
-    <Layout
-      title="Micro SaaS Solutions - Zion Tech Group"
-      description="Innovative micro SaaS solutions for modern businesses across all industries."
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export default function MicroSAAS() {
   const microSAASServices = [
@@ -73,7 +57,6 @@ export default function MicroSAAS() {
   ];
 
   
-<<<<<<< HEAD
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -201,8 +184,6 @@ export default function MicroSAAS() {
       </div>
     </Layout>
   );
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -219,8 +200,4 @@ export default function MicroSAAS() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

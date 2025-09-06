@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { usePoints  } from '@/hooks/usePoints';
 import { useAuth  } from '@/hooks/useAuth';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
 import { LoginModal  } from '@/components/auth/LoginModal';
 import { Button  } from '@/components/ui/button';
 import {logErrorToProduction} from '@/utils/productionLogger';
-=======
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PointsBadge() {
 
   const { isAuthenticated } = useAuth();
@@ -28,13 +12,6 @@ export function PointsBadge() {
   const [loginOpen, setLoginOpen] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const points = null;
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-import React, { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Gift, RefreshCw } from 'lucide-react'
 
 import { usePoints } from '@/hooks/usePoints'
@@ -81,63 +58,13 @@ export function PointsBadge() {
       setIsRefreshing(false)
     }
   }
-=======
-import React, { useState } from 'react',;
-import { Gift, RefreshCw } from 'lucide-react';
-import { usePoints } from '@/hooks/usePoints',;
-import { useAuth } from '@/hooks/useAuth',;
-import Link from 'next/link',;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
-import { LoginModal } from '@/components/auth/LoginModal',;
-import { Button } from '@/components/ui/button',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-export function PointsBadge() {;
-  const { isAuthenticated } = useAuth(),;
-  const { ledger, balance, loading, fetchLedger } = usePoints(),;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const [isRefreshing, setIsRefreshing] = useState(false),;
-  const points = balance,;
-  const breakdown = ledger.reduce(;
-    (acc, e) => {;
-      if (e.reason === 'purchase') acc.purchase += e.delta,;
-      if (e.reason === 'post') acc.post += e.delta,;
-      if (e.reason === 'referral') acc.referral += e.delta,;
-      return acc;
-    },;
-    { purchase: 0, post: 0, referral: 0 }
-  ),;
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
-    if (!isAuthenticated) {;
-      e.preventDefault(),;
-      setLoginOpen(true);
-    }
-  },;
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (!isAuthenticated) return,;
-    setIsRefreshing(true);
-    try {;
-      await fetchLedger();
-    } catch (error) {;
-      logErrorToProduction('Failed to refresh points:', { data: error });
-    } finally {;
-      setIsRefreshing(false);
-    }
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <TooltipProvider>
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
-<<<<<<< HEAD
               href={isAuthenticated ? '/points' : '#'}
               onClick={handleClick}
               title={
@@ -145,18 +72,6 @@ export function PointsBadge() {;
               }
               className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
               <Gift className='h-4 w-4' aria-hidden='true' />
-=======
-              href={isAuthenticated ? "/points" : "#"}
-              onClick={handleClick}
-              title={isAuthenticated ? "View points" : "Earn points by participating"}
-              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
-            >
-              <Gift className="h-4 w-4" aria-hidden="true" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
@@ -194,47 +109,22 @@ export function PointsBadge() {;
             )}
           </TooltipContent>
         </Tooltip>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-<<<<<<< HEAD
                 variant='ghost'
                 size='sm'
                 onClick={handleRefresh}
                 disabled={isRefreshing |loading}
                 className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
                 aria-label='Refresh points'              >
-<<<<<<< HEAD
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                variant="ghost"
-                size="sm"
-                onClick={handleRefresh}
-                disabled={isRefreshing || loading}
-                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
-                aria-label="Refresh points"
-              >
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 />
               </Button>
             </TooltipTrigger>
@@ -243,37 +133,11 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
-<<<<<<< HEAD
       </div>
       {!isAuthenticated && (
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       )}
     </TooltipProvider>
-<<<<<<< HEAD
   )
 }
 }
-<<<<<<< HEAD
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      </div>;
-      {!isAuthenticated && (;
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
-      )}
-    </TooltipProvider>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

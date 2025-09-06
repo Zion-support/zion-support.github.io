@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 async function fetchFromGitHub(): Promise<any[]> {;
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-async function fetchFromGitHub(): Promise<any[]> {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {
-<<<<<<< HEAD
 
     const repoUrl = require('../../../package.json').repository?.url |''
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i)
@@ -64,50 +55,8 @@ const dir = path.join(process.cwd(), 'automation_logs')
   }
 const remote = await fetchFromGitHub()
 
-<<<<<<< HEAD
   return res.status(200).json({ logs: remote })
-<<<<<<< HEAD
 }
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (req.method !== 'GET') {
-      res.setHeader('Allow', ['GET']);
-      return res.status(405).end('Method Not Allowed');
-    }
-
-    const files: string[] = [];
-    if (files.length > 0) {
-      const logs = files.slice(0, 50).map((f) => {
-        try {
-          return { file: f, content: 'log content' };
-        } catch {
-          return { file: f, error: 'Failed to read' };
-        }
-      });
-      res.status(200).json({ logs });
-    } else {
-      res.status(200).json({ logs: [] });
-    }
-  } catch {
-    // fall through to GitHub
-    res.status(200).json({ logs: [] });
-  }
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-=======
-const remote = await fetchFromGitHub(),
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-async function fetchFromGitHub(): Promise<any[]> {;
-  try {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const repoUrl = require('../../../package.json').repository?.url || '';
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
@@ -205,12 +154,5 @@ export default async function handler(req, res) {
   }
 
   const remote = await fetchFromGitHub();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return res.status(200).json({ logs: remote });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

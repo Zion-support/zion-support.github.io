@@ -1,22 +1,9 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
-=======
-import React from 'react';
-import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   CheckCircle
   ArrowRight
   Star
@@ -51,111 +38,22 @@ import {
   Globe2;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
 
-=======
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Sparkles,
-  Globe,
-  Atom,
-  Heart,
-  Leaf,
-  Car,
-  GraduationCap,
-  Scale,
-  Building,
-  Factory,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Crown,
-  Award,
-  Target,
-  Users,
-  Clock,;
-  Globe2,;} from 'lucide-react';import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
  } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
-=======
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Sparkles,
-  Globe,
-  Atom,
-  Heart,
-  Leaf,
-  Car,
-  GraduationCap,
-  Scale,
-  Building,
-  Factory,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Crown,
-  Award,
-  Target,
-  Users,
-  Clock,
-  Globe2,;
-} from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const contactInfo = null;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com'
 }
-=======
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const pricingTiers = [
   {
     name: 'Starter'
@@ -163,7 +61,6 @@ const pricingTiers = [
     period: '/month'
     description: 'Perfect for small businesses and startups'
     features: [
-<<<<<<< HEAD
       'Basic AI integration'
       'Standard support'
       'Core features access'
@@ -240,69 +137,6 @@ const servicePricing = [
     category: '🚀 2028 Futuristic Innovations'
     services: futuristic2028Services.slice(0, 6)
   }
-=======
-      'Basic AI integration',
-      'Standard support',
-      'Core features access',
-      'Email support',
-      'Basic analytics',
-      'Mobile app access',
-    ],
-    popular: false,
-    color: 'from-blue-600 to-cyan-600',
-    cta: 'Get Started',
-    href: '/contact',
-  },
-  {
-    name: 'Professional',
-    price: '$999',
-    period: '/month',
-    description: 'Ideal for growing businesses and enterprises',
-    features: [
-      'Advanced AI capabilities',
-      'Priority support',
-      'Full feature access',
-      'Phone & email support',
-      'Advanced analytics',
-      'API access',
-      'Custom integrations',
-      'Training & onboarding',
-    ],
-    popular: true,
-    color: 'from-purple-600 to-pink-600',
-    cta: 'Start Free Trial',
-    href: '/contact',
-  },
-  {
-    name: 'Enterprise',
-    price: 'Custom',
-    period: '',
-    description: 'Tailored solutions for large organizations',
-    features: [
-      'Custom AI development',
-      'Dedicated support team',
-      'White-label solutions',
-      '24/7 phone support',
-      'Custom analytics',
-      'Full API access',
-      'Custom integrations',
-      'Dedicated account manager',
-      'SLA guarantees',
-      'On-premise deployment',
-    ],
-    popular: false,
-    color: 'from-indigo-600 to-purple-600',
-    cta: 'Contact Sales',
-    href: '/contact',
-  },
-];
-
-const servicePricing = [
-  {
-    category: '🚀 2028 Futuristic Innovations',
-    services: futuristic2028Services.slice(0, 6),
-  },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   {
     category: '🏙️ Smart City & Infrastructure'
     services: emergingTech2028Services
@@ -323,7 +157,6 @@ const servicePricing = [
     category: '🤖 AI & Machine Learning'
     services: emergingTech2028Services
       .filter(s => s.category.includes('AI'))
-<<<<<<< HEAD
       .slice(0, 4)
   },];  {
     category: '🏙️ Smart City & Infrastructure'
@@ -338,20 +171,6 @@ const servicePricing = [
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
   }
 ];
-<<<<<<< HEAD
-=======
-      .slice(0, 4),
-  },
-];
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function Revolutionary2028Pricing() {
   return (
     <>
@@ -381,7 +200,6 @@ export default function Revolutionary2028Pricing() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/revolutionary-2028-pricing'
-<<<<<<< HEAD
         />      </Head>        <meta name="description" content="Competitive pricing for our cutting-edge 2028 services. Transparent pricing with flexible plans for AI, quantum computing, and futuristic technology solutions." />
         <meta name="keywords" content="2028 pricing, AI services pricing, quantum computing pricing, technology pricing, Zion Tech Group pricing" />
         <meta property="og:title" content="2028 Revolutionary Pricing - Zion Tech Group" />
@@ -389,11 +207,6 @@ export default function Revolutionary2028Pricing() {
         <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2028-pricing" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2028-pricing" />
-=======
-        />
-      </Head>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <UltraFuturisticNavigation2028 />
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden'>
@@ -403,7 +216,6 @@ export default function Revolutionary2028Pricing() {
           <div className='absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
           <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>
         </div>
-<<<<<<< HEAD
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -415,10 +227,6 @@ export default function Revolutionary2028Pricing() {
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
-
-        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -454,7 +262,6 @@ export default function Revolutionary2028Pricing() {
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'
               >
                 <span>View Services</span>
-<<<<<<< HEAD
                 <Rocket className='w-5 h-5' />              </Link>
             </div>
             {/* Pricing Stats */}          >
@@ -487,9 +294,6 @@ export default function Revolutionary2028Pricing() {
               >
                 <span>View Services</span>
                 <Rocket className="w-5 h-5" />
-=======
-                <Rocket className='w-5 h-5' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
             </div>
             {/* Pricing Stats */}
@@ -508,7 +312,6 @@ export default function Revolutionary2028Pricing() {
               </div>
               <div className='text-center'>
                 <div className='text-3xl font-bold text-cyan-400'>30-Day</div>
-<<<<<<< HEAD
                 <div className='text-cyan-300'>Free Trial</div>              </div>              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400">99.9%</div>
@@ -521,9 +324,6 @@ export default function Revolutionary2028Pricing() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">30-Day</div>
                 <div className="text-cyan-300">Free Trial</div>
-=======
-                <div className='text-cyan-300'>Free Trial</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </motion.div>
@@ -544,17 +344,12 @@ export default function Revolutionary2028Pricing() {
               small and grow with us.
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingTiers.map((tier, index) => (            </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Flexible pricing plans designed to scale with your business. Start small and grow with us.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
@@ -567,21 +362,13 @@ export default function Revolutionary2028Pricing() {
                 {tier.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <div className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2'>
-<<<<<<< HEAD
                       <Crown className='w-4 h-4' />                      <span>Most Popular</span>                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium flex items-center space-x-2">
                       <Crown className="w-4 h-4" />
-=======
-                      <Crown className='w-4 h-4' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <span>Most Popular</span>
                     </div>
                   </div>
                 )}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div
                   className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-2 ${tier.popular ? 'border-purple-500/60' : 'border-purple-500/30'} rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105`}
                 >
@@ -611,9 +398,7 @@ export default function Revolutionary2028Pricing() {
                           className='flex items-center space-x-3'
                         >
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-<<<<<<< HEAD
                           <span className='text-purple-200'>{feature}</span>                        </li>
-<<<<<<< HEAD
                     <div className="mb-8">
                       <div className="flex items-baseline space-x-2">
                         <span className="text-4xl font-bold text-white">{tier.price}</span>
@@ -628,24 +413,9 @@ export default function Revolutionary2028Pricing() {
                         <li key={featureIndex} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200">{feature}</span>
-=======
-                          <span className='text-purple-200'>{feature}</span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </li>
                       ))}
                     </ul>
-=======
-
-                        </li>
-
-                      ))}
-                    </ul>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Link
                       href={tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
@@ -659,14 +429,6 @@ export default function Revolutionary2028Pricing() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Pricing */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -679,7 +441,6 @@ export default function Revolutionary2028Pricing() {
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               Detailed pricing for our individual services. Mix and match to
-<<<<<<< HEAD
               create your perfect solution.            </p>
           </div>
           {servicePricing.map((category, categoryIndex) => (      <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
@@ -690,13 +451,8 @@ export default function Revolutionary2028Pricing() {
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Detailed pricing for our individual services. Mix and match to create your perfect solution.
-=======
-              create your perfect solution.
-            </p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
           {servicePricing.map((category, categoryIndex) => (
-<<<<<<< HEAD
             <div key={category.category} className='mb-16'>
               <h3 className='text-3xl font-bold text-white mb-8 text-center'>
                 {category.category}
@@ -760,7 +516,6 @@ export default function Revolutionary2028Pricing() {
                             <div className='text-xs text-purple-300'>Trial</div>
                             <div className='text-white font-medium'>
                               {service.trialDays} days
-<<<<<<< HEAD
                             </div>                          </div>                {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
@@ -802,18 +557,6 @@ export default function Revolutionary2028Pricing() {
                           <div className="text-right">
                             <div className="text-xs text-purple-300">Trial</div>
                             <div className="text-white font-medium">{service.trialDays} days</div>
-=======
-<<<<<<< HEAD
-                            </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                           </div>
                         </div>
                       </div>
@@ -825,14 +568,6 @@ export default function Revolutionary2028Pricing() {
           ))}
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Value Proposition */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -842,53 +577,24 @@ export default function Revolutionary2028Pricing() {
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Our Pricing
               </span>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               We offer the best value in the market with transparent pricing and
               unmatched features.
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               We offer the best value in the market with transparent pricing and unmatched features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -899,7 +605,6 @@ export default function Revolutionary2028Pricing() {
                 superior technology and features.
               </p>
               <div className='text-3xl font-bold text-green-400'>30%</div>
-<<<<<<< HEAD
               <div className='text-purple-300'>Lower than Market</div>            </motion.div>            >
               <Target className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Pricing</h3>
@@ -909,9 +614,6 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-green-400">30%</div>
               <div className="text-purple-300">Lower than Market</div>
-=======
-              <div className='text-purple-300'>Lower than Market</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -919,14 +621,6 @@ export default function Revolutionary2028Pricing() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -937,7 +631,6 @@ export default function Revolutionary2028Pricing() {
                 you pay, with clear value for every dollar.
               </p>
               <div className='text-3xl font-bold text-blue-400'>100%</div>
-<<<<<<< HEAD
               <div className='text-blue-300'>Transparent Pricing</div>            </motion.div>            >
               <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
@@ -948,9 +641,6 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
               <div className="text-blue-300">Transparent Pricing</div>
-=======
-              <div className='text-blue-300'>Transparent Pricing</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -958,14 +648,6 @@ export default function Revolutionary2028Pricing() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -976,7 +658,6 @@ export default function Revolutionary2028Pricing() {
                 that justify every penny of investment.
               </p>
               <div className='text-3xl font-bold text-pink-400'>5x</div>
-<<<<<<< HEAD
               <div className='text-pink-300'>ROI Guarantee</div>            </motion.div>            >
               <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Premium Quality</h3>
@@ -986,43 +667,20 @@ export default function Revolutionary2028Pricing() {
               </p>
               <div className="text-3xl font-bold text-pink-400">5x</div>
               <div className="text-pink-300">ROI Guarantee</div>
-=======
-              <div className='text-pink-300'>ROI Guarantee</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
           </div>
         </div>
       </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
-<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -1060,12 +718,8 @@ export default function Revolutionary2028Pricing() {
                 <span>No Credit Card Required</span>
               </div>
               <div className='flex items-center space-x-2'>
-<<<<<<< HEAD
                 <CheckCircle className='w-5 h-5 text-green-400' />                <span>Cancel Anytime</span>              <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
-=======
-                <CheckCircle className='w-5 h-5 text-green-400' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <span>Cancel Anytime</span>
               </div>
             </div>
@@ -1073,30 +727,7 @@ export default function Revolutionary2028Pricing() {
         </div>
       </section>
       <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-}
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </>;
 );
 }
-
 }
-=======
-    </>
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

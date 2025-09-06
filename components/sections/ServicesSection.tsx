@@ -1,10 +1,8 @@
 'use client';
 
-<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Brain;
   Cloud;
   RefreshCw;
@@ -15,14 +13,10 @@ import { Brain;
   Zap
  } from 'lucide-react';
 const ServicesSection: React.FC;
-=======
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Brain
   Cloud
   RefreshCw
@@ -31,16 +25,6 @@ import {
   BarChart3
   ArrowRight
   Zap;} from 'lucide-react';import {
-=======
-  Brain,
-  Cloud,
-  RefreshCw,
-  Wifi,
-  Shield,
-  BarChart3,
-  ArrowRight,;
-  Zap,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain;
   Cloud
   RefreshCw
@@ -54,28 +38,9 @@ const ServicesSection: React.FC = () => {
     {
       icon: Brain
       title: 'AI Development'
-=======
-import {
-  Brain,
-  Cloud,
-  RefreshCw,
-  Wifi,
-  Shield,
-  BarChart3,
-  ArrowRight,
-  Zap,;
-} from 'lucide-react';
-
-const ServicesSection: React.FC = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI Development',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Custom AI solutions and machine learning models tailored to your business needs.'
       features: [
-<<<<<<< HEAD
         'Machine Learning Models'
         'Natural Language Processing'
         'Computer Vision'
@@ -104,64 +69,9 @@ const ServicesSection: React.FC = () => {
     {
       icon: Cloud
       title: 'Cloud Architecture'
-=======
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-      ],
-      color: 'from-blue-500 to-cyan-500',
-      href: '/services/ai-development',
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description:
-        'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: [
-        'AWS/Azure/GCP',
-        'Microservices',
-        'Serverless Architecture',
-        'DevOps Automation',
-      ],
-      color: 'from-purple-500 to-pink-500',
-      href: '/services/cloud-architecture',
-    },
-    {
-      icon: RefreshCw,
-      title: 'Digital Transformation',
-      description:
-        'End-to-end digital transformation services to modernize your business.',
-      features: [
-        'Process Automation',
-        'Legacy System Migration',
-        'Change Management',
-        'Digital Strategy',
-      ],
-      color: 'from-green-500 to-emerald-500',
-      href: '/services/digital-transformation',
-    },
-    {
-      icon: Wifi,
-      title: 'IoT Platforms',
-      description: 'Connected device solutions and IoT platform development.',
-      features: [
-        'Sensor Networks',
-        'Real-time Monitoring',
-        'Data Analytics',
-        'Edge Computing',
-      ],
-      color: 'from-orange-500 to-red-500',
-      href: '/services/iot-platforms',
-    },
-    {
-      icon: Shield,
-      title: 'Blockchain Solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Scalable cloud solutions and infrastructure design for modern applications.'
       features: [
-<<<<<<< HEAD
         'AWS/Azure/GCP'
         'Microservices'
         'Serverless Architecture'
@@ -244,43 +154,15 @@ const ServicesSection: React.FC = () => {
       color: 'from-teal-500 to-blue-500'
       href: '/services/data-analytics'
     }
-=======
-        'Smart Contracts',
-        'DeFi Applications',
-        'NFT Platforms',
-        'Supply Chain Solutions',
-      ],
-      color: 'from-indigo-500 to-purple-500',
-      href: '/services/blockchain-solutions',
-    },
-    {
-      icon: BarChart3,
-      title: 'Data Analytics',
-      description: 'Advanced analytics and business intelligence solutions.',
-      features: [
-        'Big Data Processing',
-        'Real-time Dashboards',
-        'Predictive Modeling',
-        'Data Visualization',
-      ],
-      color: 'from-teal-500 to-blue-500',
-      href: '/services/data-analytics',
-    },
-  ];
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  }
   const cardVariants = {
-<<<<<<< HEAD
-<<<<<<< HEAD
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
       }
@@ -290,22 +172,6 @@ const ServicesSection: React.FC = () => {
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 }
   }
-=======
-<<<<<<< HEAD
-        staggerChildren: 0.1,
-      },
-    },
-=======
-    hidden: { opacity: 0, y: 20 },
-<<<<<<< HEAD
-    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
-      }
-    }
-=======
-    visible: { opacity: 1, y: 0 },
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   };
 
   const cardVariants = {
@@ -313,12 +179,6 @@ const ServicesSection: React.FC = () => {
     visible: { opacity: 1, y: 0 },
   };
 
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>
       {/* Background Elements */}
@@ -326,15 +186,8 @@ const ServicesSection: React.FC = () => {
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
       </div>
-<<<<<<< HEAD
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  }
-=======
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
-=======
-        {/* Section Header */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
       {/* Background Elements */}
@@ -343,43 +196,13 @@ const ServicesSection: React.FC = () => {
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]" />
       </div>
       <div className="relative container mx-auto px-4">
-=======
-
-      <div className='relative container mx-auto px-4'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Section Header */}
-=======
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-
-        {/* Section Header */}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='text-center mb-16'        >          className="text-center mb-16"
-=======
-<<<<<<< HEAD
-          className='text-center mb-16'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-          className='text-center mb-16'        >
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -387,15 +210,6 @@ const ServicesSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
             className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
-<<<<<<< HEAD
-=======
-
-          >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
@@ -406,44 +220,22 @@ const ServicesSection: React.FC = () => {
             </span>
           </h2>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-<<<<<<< HEAD
             We deliver cutting-edge technology solutions that drive innovation
-=======
-            We deliver cutting-edge technology solutions that drive innovation,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             efficiency, and growth for businesses across all industries.          </p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth
             for businesses across all industries.
-=======
-            We deliver cutting-edge technology solutions that drive innovation,
-            efficiency, and growth for businesses across all industries.
-          </p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'        >          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-=======
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
-        >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -466,7 +258,6 @@ const ServicesSection: React.FC = () => {
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
                   {service.title}
                 </h3>
-<<<<<<< HEAD
                 <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
                 </p>
                 {/* Features */}            >
@@ -482,10 +273,6 @@ const ServicesSection: React.FC = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-=======
-
-                <p className='text-gray-300 mb-6 leading-relaxed'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {service.description}
                 </p>
                 {/* Features */}
@@ -496,16 +283,11 @@ const ServicesSection: React.FC = () => {
                       className='flex items-center space-x-3 text-gray-400'
                     >
                       <div className='w-2 h-2 bg-blue-400 rounded-full' />
-<<<<<<< HEAD
                       <span className='text-sm'>{feature}</span>                    </li>                <ul className="space-y-2 mb-8">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3 text-gray-400">
                       <div className="w-2 h-2 bg-blue-400 rounded-full" />
                       <span className="text-sm">{feature}</span>
-=======
-                      <span className='text-sm'>{feature}</span>
-                    </li>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   ))}
                 </ul>
                 {/* CTA */}
@@ -517,47 +299,16 @@ const ServicesSection: React.FC = () => {
                   <ArrowRight className='w-4 h-4' />
                 </Link>
                 {/* Hover Effect */}
-<<<<<<< HEAD
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />              </div>                >
                   <span className="font-medium">Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 {/* Hover Effect */}
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
-=======
-<<<<<<< HEAD
-                <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-                <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
-                </p>
-
-                {/* Features */}
-
-                  {service.description}
-                </p>
-
-                {/* Features */}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               </div>
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -565,14 +316,6 @@ const ServicesSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
           className='text-center'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -587,7 +330,6 @@ const ServicesSection: React.FC = () => {
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
             >
               <span>Get Started Today</span>
-<<<<<<< HEAD
               <ArrowRight className='w-5 h-5' />            </Link>        >
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -602,43 +344,13 @@ const ServicesSection: React.FC = () => {
             >
               <span>Get Started Today</span>
               <ArrowRight className="w-5 h-5" />
-=======
-              <ArrowRight className='w-5 h-5' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </Link>
           </div>
         </motion.div>
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ServicesSection;  )
 }
 export default ServicesSection;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
-}
-
-export default ServicesSection;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
-=======
-export default ServicesSection;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default ServicesSection;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

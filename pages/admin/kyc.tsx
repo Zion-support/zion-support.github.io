@@ -1,28 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
-=======
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-import type { KycProfile } from '../../utils/kyc';
-=======
-import React, { useEffect, useState } from 'react',;
-import Head from 'next/head',;
-import type { KycProfile } from '../../utils/kyc',;
-=======
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AdminKycPage() {
-<<<<<<< HEAD
   const [queue, setQueue] = useState<KycProfile[]>([])
   const [reason, setReason] = useState<string>('')
   async function load() {
@@ -41,97 +22,11 @@ export default function AdminKycPage() {
     const data = await res.json()
 
     if (data.ok) load()
-=======
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
-interface KYCSubmission {
-  id: string;
-  userId: string;
-  status: 'pending' | 'approved' | 'rejected' | 'needs_info';
-  submittedAt: string;
-  documents: Array<{
-    id: string;
-    kind: string;
-    filename: string;
-    uploadedAt: string;
-  }>;
-
-const mockKYCData: KYCSubmission[] = [
-  {
-    id: '1',
-    userId: 'user123',
-    status: 'pending',
-    submittedAt: '2025-01-15T10:00:00Z',
-    documents: [
-      {
-        id: 'doc1',
-        kind: 'passport',
-        filename: 'passport.pdf',
-        uploadedAt: '2025-01-15T10:00:00Z'
-      }
-    ]
   }
-];
-
-const AdminKYCPage: React.FC = () => {
-  const [submissions, setSubmissions] = useState<KYCSubmission[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading data
-    setTimeout(() => {
-      setSubmissions(mockKYCData);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  async function act(
-    userId: string,
-    action: 'approve' | 'reject' | 'needs_more_info'
-  ) {
-    const res = await fetch('/api/admin/kyc-queue', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, action, reason: reason || undefined }),
-    });
-    const data = await res.json();
-    if (data.ok) load();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-  }
-=======
-  const [queue, setQueue] = useState<KycProfile[]>([]);
-  const [reason, setReason] = useState<string>('');
-  async function load() {
-    const res = await fetch('/api/admin/kyc-queue');
-    const data = await res.json();
-    if (data.ok) setQueue(data.queue);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  useEffect(() => {
-    load();
-  }, []);
-  async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
-    const res = await fetch('/api/admin/kyc-queue', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, action, reason: reason || undefined })}),
-    const data = await res.json(),
-    if (data.ok) load(),
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
         <title>Admin KYC Queue - Zion</title>
-<<<<<<< HEAD
         <meta name="description" content="Review and approve or reject KYC submissions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -146,33 +41,16 @@ const AdminKYCPage: React.FC = () => {
             <div key={p.userId} className="border rounded p-4">
               <div className="flex items-center justify-between">
                 <div>
-<<<<<<< HEAD
                   <div className="font-semibold">{p.fullLegalName |p.businessName |p.userId}</div>
                   <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
                   )}
-=======
-                  <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>
-                  <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
-                  {p.flags && p.flags.length > 0 && (
-                    <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="flex gap-2">
                   <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-600 text-white">Approve</button>
@@ -183,85 +61,11 @@ const AdminKYCPage: React.FC = () => {
               <div className="mt-3">
                 <div className="font-medium text-sm mb-1">Documents</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-<<<<<<< HEAD
                   {(p.documents |[]).map((d) => (
-=======
-                  {(p.documents || []).map((d) => (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
                       <div>Uploaded: {new Date(d.uploadedAt).toLocaleString()}</div>
-=======
-        <meta
-          name='description'
-          content='Review and approve or reject KYC submissions'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-      </Head>
-      <main className='max-w-5xl mx-auto px-4 py-8'>
-        <h1 className='text-2xl font-bold mb-4'>KYC Review Queue</h1>
-
-        <div className='mb-4'>
-          <label className='block text-sm font-medium'>
-            Reason/Note (optional)
-          </label>
-          <input
-            className='mt-1 w-full border rounded px-3 py-2'
-            value={reason}
-            onChange={e => setReason(e.target.value)}
-          />
-        </div>
-
-        <div className='grid gap-4'>
-          {queue.map(p => (
-            <div key={p.userId} className='border rounded p-4'>
-              <div className='flex items-center justify-between'>
-                <div>
-                  <div className='font-semibold'>
-                    {p.fullLegalName || p.businessName || p.userId}
-                  </div>
-                  <div className='text-xs text-gray-500'>
-                    Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}
-                  </div>
-                  {p.flags && p.flags.length > 0 && (
-                    <div className='text-xs mt-1'>
-                      Flags: {p.flags.join(', ')}
-                    </div>
-                  )}
-                </div>
-                <div className='flex gap-2'>
-                  <button
-                    onClick={() => act(p.userId, 'approve')}
-                    className='px-3 py-1 rounded bg-green-600 text-white'
-                  >
-                    Approve
-                  </button>
-                  <button
-                    onClick={() => act(p.userId, 'needs_more_info')}
-                    className='px-3 py-1 rounded bg-yellow-600 text-white'
-                  >
-                    Need Info
-                  </button>
-                  <button
-                    onClick={() => act(p.userId, 'reject')}
-                    className='px-3 py-1 rounded bg-red-600 text-white'
-                  >
-                    Reject
-                  </button>
-                </div>
-              </div>
-              <div className='mt-3'>
-                <div className='font-medium text-sm mb-1'>Documents</div>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
-                  {(p.documents || []).map(d => (
-                    <div key={d.id} className='border rounded p-2 text-xs'>
-                      <div>Kind: {d.kind}</div>
-                      <div>Filename: {d.filename}</div>
-                      <div>
-                        Uploaded: {new Date(d.uploadedAt).toLocaleString()}
-                      </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -279,29 +83,11 @@ const AdminKYCPage: React.FC = () => {
         </div>
       </main>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-<<<<<<< HEAD
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

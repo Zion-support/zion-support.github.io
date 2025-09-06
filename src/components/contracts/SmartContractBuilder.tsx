@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -10,45 +9,14 @@ import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager",
 import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts",
-<<<<<<< HEAD
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
-<<<<<<< HEAD
-=======
-import { useState } from 'react';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,;
-} from '@/components/ui/dialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Button } from '@/components/ui/button';
-import { Save } from 'lucide-react';
-import { TalentProfile } from '@/types/talent';
-import { ContractForm, ContractFormValues } from './components/ContractForm';
-import { ContractPreview } from './components/ContractPreview';
-import { TemplateManager } from './templates/TemplateManager';
-import { DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts';
-import { useSmartContracts } from '@/hooks/useSmartContracts';
-import { toast } from 'sonner';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface SmartContractBuilderProps {
-<<<<<<< HEAD
   isOpen: boolean;
   onClose: () => void;
   talent: TalentProfile;
   clientName: string;
-<<<<<<< HEAD
   onContractGenerated?: (contractContent: string) => void
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -58,11 +26,6 @@ interface SmartContractBuilderProps {
   onContractGenerated?: (contractContent: string,) => void
 
 }
-=======
-  onContractGenerated?: (contractContent: string) => void;
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function SmartContractBuilder({
   isOpen;
   onClose;
@@ -163,15 +126,9 @@ export function SmartContractBuilder({
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false)
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum', // Default network
-<<<<<<< HEAD
     useEscrow: true
     deployToChain: false // Default to not deploying to chain immediately
 })
-=======
-    useEscrow: true,
-    deployToChain: false // Default to not deploying to chain immediately;
-});
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part
   // States for on-chain agreement UI and deployment
@@ -435,7 +392,6 @@ export function SmartContractBuilder({
               onContractGenerated = {handleFormSubmit,}
             />
           </TabsContent>
-<<<<<<< HEAD
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
@@ -510,21 +466,6 @@ setActiveTab ("preview")
           </TabsContent>
         </Tabs>
         <TemplateManager
-=======
-=======
-=======
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
-import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager",
-import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
-import { useSmartContracts } from "@/hooks/useSmartContracts",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
@@ -562,103 +503,18 @@ import {logErrorToProduction} from '@/utils/productionLogger',
             />
           </TabsContent>
           
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
                 <ContractPreview 
-<<<<<<< HEAD
-                  generatedContract={generatedContract}
-                  talent={talent}
-                  onClose={onClose}
-                  deploymentInfo={deploymentInfo}
-=======
-<<<<<<< HEAD
-                  generatedContract = {generatedContract,}
-                  talent = {talent,}
-                  onClose = {onClose,}
-                  deploymentInfo = {deploymentInfo,}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                />
-                {!deploymentInfo && deployOptions.deployToChain && (
-                  <div className="mt-6 flex justify-center">
-                    <Button 
-<<<<<<< HEAD
-=======
-                      onClick = {handleDeployContract,}
-                      disabled = {deployStatus === 'deploying',}
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                    >
-                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
-                    </Button>
-                  </div>                )}
-              </div>
-            )}
-          </TabsContent>
-        </Tabs>
-        <TemplateManager
-          isOpen = {templateManagerOpen,}
-          onClose = {() => setTemplateManagerOpen(false),}
-          onSelectTemplate = {handleLoadTemplate,}
-          currentValues = {formValues,}
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}
-//Modified to match the expected interface const handleFormSubmit = (contract: string) => {'
-  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {
-  setGeneratedContract (contract);"
-setActiveTab ("preview")
-};"
-  talent 
-}clientName= {
-  clientName 
-}initialValues= {
-  formValues 
-}onFormValuesChange= {
-  setFormValues 
-}onContractGenerated= {
-  handleFormSubmit 
-}/> </TabsContent> <div> <ContractPreview generatedContract= {
-  generatedContract 
-}talent= {
-  talent 
-}onClose= {
-  onClose 
-}deploymentInfo= {
-  deploymentInfo 
-}/> > {'
-  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' 
-}</Button> </div>) 
-}</div>) 
-}</TabsContent> </Tabs> <TemplateManager isOpen= {
-  templateManagerOpen 
-}onClose= {
-  () => setTemplateManagerOpen (false) 
-}onSelectTemplate= {
-  handleLoadTemplate 
-}currentValues= {
-  formValues 
-}/> </DialogContent> </Dialog>) 
-}'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
-
-            {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
-            {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
-          </TabsContent>
-        </Tabs>
-        <TemplateManager
-=======
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
                   deploymentInfo={deploymentInfo}
                 />
-                
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
@@ -673,79 +529,12 @@ setActiveTab ("preview")
           </TabsContent>;
         </Tabs>;
         <TemplateManager;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
-<<<<<<< HEAD
   )}
 }
-<<<<<<< HEAD
-=======
-  );
-
-};
-//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
-  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
-  setGeneratedContract (contract);";
-setActiveTab ("preview");
-};";
-  talent ;
-}clientName= {;
-  clientName ;
-}initialValues= {;
-  formValues ;
-}onFormValuesChange= {;
-  setFormValues ;
-}onContractGenerated= {;
-  handleFormSubmit ;
-}/> </TabsContent> <div> <ContractPreview generatedContract= {;
-  generatedContract ;
-}talent= {;
-  talent ;
-}onClose= {;
-  onClose ;
-}deploymentInfo= {;
-  deploymentInfo ;
-}/> > {';
-  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
-}</Button> </div>) ;
-}</div>) ;
-}</TabsContent> </Tabs> <TemplateManager isOpen= {;
-  templateManagerOpen ;
-}onClose= {;
-  () => setTemplateManagerOpen (false) ;
-}onSelectTemplate= {;
-  handleLoadTemplate ;
-}currentValues= {;
-  formValues ;
-}/> </DialogContent> </Dialog>) ;
-}'"
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

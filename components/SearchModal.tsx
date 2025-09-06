@@ -125,12 +125,7 @@ const searchData: SearchResult[] = [
     category: "Company"
   }
 ];
-<<<<<<< HEAD
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
-=======
-
-export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);

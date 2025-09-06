@@ -1,21 +1,11 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles  } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
 type Service = any;
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   ChevronDown
   Star
   TrendingUp
@@ -31,23 +21,6 @@ import {
   Eye
   Timer
   Sparkles;
-=======
-  ChevronDown,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  Eye,
-  Timer,;
-  Sparkles,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
@@ -57,10 +30,6 @@ interface UltraFuturistic2029ServiceShowcaseProps {
   title?: string;
   subtitle?: string;
   maxServices?: number;
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-600 to-pink-600'
   'Quantum & Neuroscience': 'from-indigo-600 to-purple-600'
@@ -104,7 +73,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<
   const filteredServices = services
     .filter(
       service =>
-<<<<<<< HEAD
         selectedCategory === 'all' |service.category === selectedCategory
     )    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
@@ -142,21 +110,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   // Filter and sort services
   const filteredServices = services
     .filter(service => selectedCategory === 'all' |service.category === selectedCategory)
-=======
-        selectedCategory === 'all' || service.category === selectedCategory
-    )
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     .sort((a, b) => {
       switch (sortBy) {
         case 'innovation':
           // Default to 'Advanced' if innovationLevel is not available
-<<<<<<< HEAD
           const aLevel = (a as any).innovationLevel |'Advanced';
           const bLevel = (b as any).innovationLevel |'Advanced';
-=======
-          const aLevel = (a as any).innovationLevel || 'Advanced';
-          const bLevel = (b as any).innovationLevel || 'Advanced';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           const innovationOrder = {
             Revolutionary: 4
             Breakthrough: 3
@@ -174,15 +133,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         case 'rating':
           return b.rating - a.rating;
         default:
-<<<<<<< HEAD
           return 0;      }        case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
           return b.rating - a.rating;
         default: return 0
-=======
-          return 0;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     })
     .slice(0, maxServices);
@@ -191,48 +146,23 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
       }
     }
   }
-=======
-        staggerChildren: 0.1,
-      },
-<<<<<<< HEAD
-    },
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-    },  };
-
-  };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
-<<<<<<< HEAD
         duration: 0.6
         ease: 'easeOut' as const
       }
     }
   }
-=======
-        duration: 0.6,
-        ease: 'easeOut' as const,
-      },
-    },
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <section className='py-20 relative overflow-hidden'>
       {/* Background Elements */}
@@ -241,17 +171,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
         <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
-=======
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -261,92 +181,34 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
-
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Header */}
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
         {/* Header */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-<<<<<<< HEAD
           className='text-center mb-16'        >          className="text-center mb-16"
-=======
-<<<<<<< HEAD
-          className='text-center mb-16'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-          className='text-center mb-16'        >
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-<<<<<<< HEAD
             className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'          >            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
-=======
-            className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-=======
-            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           >
             {subtitle}
           </motion.p>
         </motion.div>
-=======
-            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >
-
-          >
-
-            {subtitle}
-          </motion.p>
-        </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Filters and Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -360,28 +222,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               Filter by:
             </span>
             <div className='flex flex-wrap gap-2'>
-<<<<<<< HEAD
               {categories.map(category => (                <button          <div className="flex items-center space-x-2">
             <span className="text-gray-300 text-sm font-medium">Filter by:</span>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
-<<<<<<< HEAD
-=======
-              {categories.map(category => (
-                <button
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-
-                <button
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
@@ -395,21 +239,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               ))}
             </div>
           </div>
-<<<<<<< HEAD
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
-=======
-
-          {/* Sort Options */}
-          <div className='flex items-center space-x-2'>
-            <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -417,7 +249,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             >
               <option value='innovation'>Innovation Level</option>
               <option value='price'>Price</option>
-<<<<<<< HEAD
               <option value='rating'>Rating</option>            </select>            <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
@@ -426,40 +257,19 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               <option value="innovation">Innovation Level</option>
               <option value="price">Price</option>
               <option value="rating">Rating</option>
-=======
-              <option value='rating'>Rating</option>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </select>
           </div>
         </motion.div>
-=======
-              <option value='rating'>Rating</option>            </select>
-
-            </select>
-
-          </div>
-        </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-        >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -468,47 +278,20 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             >
               <UltraFuturisticServiceCard
                 service={service}
-<<<<<<< HEAD
                 className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group"
             >
               <UltraFuturisticServiceCard
                 service={service}
                 className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
-=======
-                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'
-              />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
           ))}
         </motion.div>
-=======
-                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />
-
-              />
-
-            </motion.div>
-          ))}
-        </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className='text-center mt-16'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -521,7 +304,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
               <a
                 href='/contact'
-<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
                 Get Started Today
               </a>
@@ -539,49 +321,25 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
-=======
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Get Started Today
               </a>
               <a
                 href='/pricing'
-<<<<<<< HEAD
                 className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'                href="/pricing"
                 className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
-=======
-                className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 View Pricing
               </a>
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className='mt-20'
-<<<<<<< HEAD
-=======
-
-        >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
@@ -610,7 +368,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
-<<<<<<< HEAD
                 ).toFixed(1)
                 icon: TrendingUp
                 color: 'from-green-500 to-teal-500'
@@ -618,47 +375,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-=======
-                ).toFixed(1),
-                icon: TrendingUp,
-                color: 'from-green-500 to-teal-500',
-<<<<<<< HEAD
-              },
-            ].map((stat, index) => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
-              { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-<<<<<<< HEAD
-
-            ].map((stat, index) => (
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-
-            ].map((stat, index) => (
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='text-center'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
@@ -668,59 +390,20 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.value}
                 </div>
-<<<<<<< HEAD
                 <div className='text-gray-400'>{stat.label}</div>              </motion.div>              >
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
-=======
-                <div className='text-gray-400'>{stat.label}</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </motion.div>
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturistic2029ServiceShowcase;  )
 }
 export default UltraFuturistic2029ServiceShowcase;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
-}
-
-export default UltraFuturistic2029ServiceShowcase;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
-=======
-export default UltraFuturistic2029ServiceShowcase;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default UltraFuturistic2029ServiceShowcase;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

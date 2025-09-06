@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer  } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-=======
-import React from 'react',
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Rocket
   Brain
   Atom
@@ -28,36 +18,7 @@ import {
   TrendingUp
   Eye
   Timer;
-=======
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Star,
-  TrendingUp,
-  Eye,;
-  Timer,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
-=======
-import { motion } from 'framer-motion';
-import {
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Star,
-  TrendingUp,
-  Eye,
-  Timer,;
-} from 'lucide-react';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
@@ -65,47 +26,20 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 import { cuttingEdge2029Services  } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
-<<<<<<< HEAD
 export default function UltraFuturistic2029InnovationsPage() {
 
   const contactInfo = {
-<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
-=======
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',;
-  };
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const all2029Services = [
     ...cuttingEdgeInnovations2029
     ...spaceColonization2029Services
   ];    website: 'https://ziontechgroup.com'
   }
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
-=======
-}
-
-export default function UltraFuturistic2029InnovationsPage() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
-
-  const all2029Services = [
-    ...cuttingEdgeInnovations2029,
-    ...spaceColonization2029Services,
-  ];
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       <Head>
@@ -134,7 +68,6 @@ export default function UltraFuturistic2029InnovationsPage() {
         <link
           rel='canonical'
           href='https://ziontechgroup.com/2029-ultra-futuristic-innovations'
-<<<<<<< HEAD
         />      </Head>
       {/* Background */}
       <UltraFuturisticBackground2029 />        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />
@@ -146,31 +79,12 @@ export default function UltraFuturistic2029InnovationsPage() {
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
       {/* Background */}
       <UltraFuturisticBackground2029 />
-<<<<<<< HEAD
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
-=======
-<<<<<<< HEAD
-        />
-      </Head>
-
-      {/* Background */}
-      <UltraFuturisticBackground2029 />
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
 
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -187,10 +101,6 @@ export default function UltraFuturistic2029InnovationsPage() {
               </span>
             </div>
           </motion.div>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -201,10 +111,6 @@ export default function UltraFuturistic2029InnovationsPage() {
             <br />
             <span className='text-white'>Innovations</span>
           </motion.h1>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -215,10 +121,6 @@ export default function UltraFuturistic2029InnovationsPage() {
             that push the boundaries of what's possible. From AI consciousness
             simulation to Mars colonization automation.
           </motion.p>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -228,10 +130,6 @@ export default function UltraFuturistic2029InnovationsPage() {
             <a
               href='#services'
               className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
-<<<<<<< HEAD
-=======
-            >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Explore Innovations
             </a>
             <a
@@ -243,10 +141,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Innovation Categories Overview */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
         <div className='max-w-7xl mx-auto'>
@@ -264,7 +158,6 @@ export default function UltraFuturistic2029InnovationsPage() {
               domains
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {[
               {
@@ -334,78 +227,6 @@ export default function UltraFuturistic2029InnovationsPage() {
                   s.category.includes('Time')
                 )
               }
-=======
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {[
-              {
-                title: '🧠 AI Consciousness & Innovation',
-                description:
-                  'Revolutionary AI systems with human-like consciousness and reasoning capabilities',
-                icon: Brain,
-                color: 'from-purple-600 to-pink-600',
-                services: cuttingEdge2029Services.filter(
-                  s =>
-                    s.category.includes('Consciousness') ||
-                    s.category.includes('Business')
-                ),
-              },
-              {
-                title: '⚛️ Quantum & Neuroscience',
-                description:
-                  'Quantum computing meets brain-computer interfaces for unprecedented capabilities',
-                icon: Atom,
-                color: 'from-indigo-600 to-purple-600',
-                services: cuttingEdge2029Services.filter(
-                  s =>
-                    s.category.includes('Neuroscience') ||
-                    s.category.includes('Time')
-                ),
-              },
-              {
-                title: '🚀 Space Colonization & Mining',
-                description:
-                  'Automated space exploration, colonization, and resource extraction systems',
-                icon: Rocket,
-                color: 'from-red-600 to-orange-600',
-                services: cuttingEdge2029Services.filter(
-                  s =>
-                    s.category.includes('Space') || s.category.includes('Time')
-                ),
-              },
-              {
-                title: '🏠 Space Architecture & Energy',
-                description:
-                  'Advanced habitat design and space-based energy harvesting platforms',
-                icon: Globe,
-                color: 'from-green-600 to-teal-600',
-                services: cuttingEdge2029Services.filter(
-                  s =>
-                    s.category.includes('Architecture') ||
-                    s.category.includes('Energy')
-                ),
-              },
-              {
-                title: '👁️ AI Reality Augmentation',
-                description:
-                  'Real-time AI-powered reality enhancement and content generation',
-                icon: Eye,
-                color: 'from-orange-600 to-red-600',
-                services: cuttingEdge2029Services.filter(s =>
-                  s.category.includes('Augmented Reality')
-                ),
-              },
-              {
-                title: '⏰ Quantum Time Manipulation',
-                description:
-                  'Quantum-based time perception manipulation and optimization',
-                icon: Timer,
-                color: 'from-green-600 to-emerald-600',
-                services: cuttingEdge2029Services.filter(s =>
-                  s.category.includes('Time')
-                ),
-              },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ].map((category, index) => (
               <motion.div
                 key={index}
@@ -449,10 +270,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Services Showcase */}
       <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
         <UltraFuturistic2029ServiceShowcase
@@ -462,10 +279,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           maxServices={20}
         />
       </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Innovation Stats */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
         <div className='max-w-7xl mx-auto'>
@@ -483,7 +296,6 @@ export default function UltraFuturistic2029InnovationsPage() {
               creating new possibilities
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
@@ -517,42 +329,6 @@ export default function UltraFuturistic2029InnovationsPage() {
                 icon: TrendingUp
                 color: 'from-green-500 to-teal-500'
               }
-=======
-
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
-            {[
-              {
-                label: 'Revolutionary Services',
-                value: all2029Services.filter(
-                  s => (s as any).innovationLevel === 'Revolutionary'
-                ).length,
-                icon: Rocket,
-                color: 'from-purple-500 to-pink-500',
-              },
-              {
-                label: 'Patent Pending',
-                value: all2029Services.filter(
-                  s => (s as any).patentStatus === 'Patent Pending'
-                ).length,
-                icon: Shield,
-                color: 'from-blue-500 to-cyan-500',
-              },
-              {
-                label: 'Total Customers',
-                value: all2029Services.reduce((sum, s) => sum + s.customers, 0),
-                icon: Star,
-                color: 'from-yellow-500 to-orange-500',
-              },
-              {
-                label: 'Average Rating',
-                value: (
-                  all2029Services.reduce((sum, s) => sum + s.rating, 0) /
-                  all2029Services.length
-                ).toFixed(1),
-                icon: TrendingUp,
-                color: 'from-green-500 to-teal-500',
-              },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -563,12 +339,6 @@ export default function UltraFuturistic2029InnovationsPage() {
               >
                 <div
                   className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-6`}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 >
                   Call Now
                 </a>
@@ -578,21 +348,6 @@ export default function UltraFuturistic2029InnovationsPage() {
 
         </div>
       </section>
-=======
-                >
-                  <stat.icon className='w-10 h-10 text-white' />
-                </div>
-                <div className='text-4xl font-bold text-white mb-2'>
-                  {stat.value}
-                </div>
-                <div className='text-gray-400'>{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Contact CTA */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -627,7 +382,6 @@ export default function UltraFuturistic2029InnovationsPage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Footer */}
       <UltraFuturisticFooter2029 />
 
@@ -666,64 +420,11 @@ export default function UltraFuturistic2029InnovationsPage() {
 }transition= {
   {
   duration: 0.8, delay: 0.3
-=======
-
-      {/* Footer */}
-      <UltraFuturisticFooter2029 />
-    </>
-  );
-
-}animate= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8
-
-}className="mb-8" > <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-full px-6 py-3 mb-8"> <Rocket className="w-5 h-5 text-purple-400" /> <span className="text-purple-400 font-medium">2029 Technology Preview</span> </div> </motion.div> <motion.h1 initial= {
-  {
-  opacity: 0, y: 30
-
-}animate= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8, delay: 0.1
-
-}className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8 leading-tight" > 2029 Ultra-Futuristic <br /> <span className="text-white">Innovations</span> </motion.h1> <motion.p initial= {
-  {
-  opacity: 0, y: 30
-
-}animate= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8, delay: 0.2
-
-}className="text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed" > Experience the future of technology with our revolutionary services that push the boundaries of what's possible. From AI consciousness simulation to Mars colonization automation. </motion.p> <motion.div initial= {
-  {
-  opacity: 0, y: 30
-
-}animate= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8, delay: 0.3
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25" > Explore Innovations </a> <a href="/contact" className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Get Started </a> </motion.div> </div> </section> {
   /* Innovation Categories Overview */
 }<section className="py-20 px-4 sm:px-6 lg:px-8 relative"> <div className="max-w-7xl mx-auto"> <motion.div initial= {
   {
   opacity: 0, y: 30
-<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -746,33 +447,6 @@ export default function UltraFuturistic2029InnovationsPage() {
 {
   title: '👁️ AI Reality Augmentation', description: 'Real-time AI-powered reality enhancement and content generation', icon: Eye, color: 'from-orange-600 to-red-600', services: cuttingEdge2029Services.filter (s => s.category.includes ('Augmented Reality') )
 }
-=======
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8
-
-}className="text-center mb-16" > <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"> Innovation Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Our 2029 innovations span across multiple cutting-edge technology domains </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {
-  [ {
-  title: '🧠 AI Consciousness & Innovation', description: 'Revolutionary AI systems with human-like consciousness and reasoning capabilities', icon: Brain, color: 'from-purple-600 to-pink-600', services: cuttingEdge2029Services.filter (s => s.category.includes ('Consciousness') || s.category.includes ('Business') )
-};
-{
-  title: '⚛️ Quantum & Neuroscience', description: 'Quantum computing meets brain-computer interfaces for unprecedented capabilities', icon: Atom, color: 'from-indigo-600 to-purple-600', services: cuttingEdge2029Services.filter (s => s.category.includes ('Neuroscience') || s.category.includes ('Time') )
-};
-{
-  title: '🚀 Space Colonization & Mining', description: 'Automated space exploration, colonization, and resource extraction systems', icon: Rocket, color: 'from-red-600 to-orange-600', services: cuttingEdge2029Services.filter (s => s.category.includes ('Space') || s.category.includes ('Time') )
-};
-{
-  title: '🏠 Space Architecture & Energy', description: 'Advanced habitat design and space-based energy harvesting platforms', icon: Globe, color: 'from-green-600 to-teal-600', services: cuttingEdge2029Services.filter (s => s.category.includes ('Architecture') || s.category.includes ('Energy') )
-};
-{
-  title: '👁️ AI Reality Augmentation', description: 'Real-time AI-powered reality enhancement and content generation', icon: Eye, color: 'from-orange-600 to-red-600', services: cuttingEdge2029Services.filter (s => s.category.includes ('Augmented Reality') )
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   title: '⏰ Quantum Time Manipulation', description: 'Quantum-based time perception manipulation and optimization', icon: Timer, color: 'from-green-600 to-emerald-600', services: cuttingEdge2029Services.filter (s => s.category.includes ('Time') )
 }].map ( (category, index) => (<motion.div key= {
@@ -780,24 +454,12 @@ export default function UltraFuturistic2029InnovationsPage() {
 }initial= {
   {
   opacity: 0, y: 20
-<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
   {
   duration: 0.6, delay: index * 0.1
-=======
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.6, delay: index * 0.1
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 group" > <div className= {
   `w-16 h-16 bg-gradient-to-br $ {
   category.color
@@ -830,7 +492,6 @@ export default function UltraFuturistic2029InnovationsPage() {
 }<section className="py-20 px-4 sm:px-6 lg:px-8 relative"> <div className="max-w-7xl mx-auto"> <motion.div initial= {
   {
   opacity: 0, y: 30
-<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -847,27 +508,6 @@ export default function UltraFuturistic2029InnovationsPage() {
 {
   label: 'Total Customers', value: all2029Services.reduce ( (sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500'
 }
-=======
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8
-
-}className="text-center mb-16" > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> Innovation Impact </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Our 2029 innovations are already transforming industries and creating new possibilities </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-4 gap-8"> {
-  [ {
-  label: 'Revolutionary Services', value: all2029Services.filter (s => (s as any) .innovationLevel === 'Revolutionary') .length, icon: Rocket, color: 'from-purple-500 to-pink-500'
-};
-{
-  label: 'Patent Pending', value: all2029Services.filter (s => (s as any) .patentStatus === 'Patent Pending') .length, icon: Shield, color: 'from-blue-500 to-cyan-500'
-};
-{
-  label: 'Total Customers', value: all2029Services.reduce ( (sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500'
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   label: 'Average Rating', value: (all2029Services.reduce ( (sum, s) => sum + s.rating, 0) / all2029Services.length) .toFixed (1), icon: TrendingUp, color: 'from-green-500 to-teal-500'
 }].map ( (stat, index) => (<motion.div key= {
@@ -875,24 +515,12 @@ export default function UltraFuturistic2029InnovationsPage() {
 }initial= {
   {
   opacity: 0, y: 20
-<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
   {
   duration: 0.6, delay: index * 0.1
-=======
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.6, delay: index * 0.1
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }className="text-center" > <div className= {
   `w-20 h-20 bg-gradient-to-br $ {
   stat.color
@@ -907,75 +535,17 @@ export default function UltraFuturistic2029InnovationsPage() {
 }<section className="py-20 px-4 sm:px-6 lg:px-8 relative"> <div className="max-w-4xl mx-auto text-center"> <motion.div initial= {
   {
   opacity: 0, y: 30
-<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
   {
   duration: 0.8
-=======
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-12 backdrop-blur-sm" > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> Ready to Experience 2029? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Join the future of technology with our revolutionary 2029 innovations. Contact us today to discover how we can transform your business. </p> <div className="flex flex-col sm:flex-row items-center justify-center gap-4"> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25" > Get Started Today </a> <a href= {
   `tel:$ {
   contactInfo.mobile
 }`
 }className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
-<<<<<<< HEAD
-<<<<<<< HEAD
   /* Footer */
-<<<<<<< HEAD
 }<UltraFuturisticFooter2029 /> </>)   )
 }
-=======
-<<<<<<< HEAD
-}<UltraFuturisticFooter2029 /> </>)
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  /* Footer */ 
-}<UltraFuturisticFooter2029 /> </>)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  /* Footer */ 
-<<<<<<< HEAD
-}<UltraFuturisticFooter2029 /> </>)   )
-}
-;
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-=======
-}<UltraFuturisticFooter2029 /> </>)
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

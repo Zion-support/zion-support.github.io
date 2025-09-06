@@ -1,34 +1,17 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TechnologyInsightsPage() {
 
   const technologyTrends = [
     {
-<<<<<<< HEAD
       id: 'quantum-computing'
       title: 'Quantum Computing in 2025'
       description:
-<<<<<<< HEAD
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
       readTime: '15 min read'
       featured: true
     }
-=======
-        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
-      readTime: '15 min read',
-      featured: true;
-    };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -46,46 +29,13 @@ export default function TechnologyInsightsPage() {
       featured: false
     },      featured: false
     }
-=======
-      id: 'quantum-computing',
-      title: 'Quantum Computing in 2025',
-      description:
-        'Exploring the latest developments in quantum computing and their implications for AI and automation.',
-      category: 'Emerging Tech',
-      readTime: '15 min read',
-      featured: true,
-    },
-    {
-      id: 'edge-ai',
-      title: 'Edge AI Revolution',
-      description:
-        'How edge computing is transforming AI deployment and enabling real-time intelligent applications.',
-      category: 'AI/ML',
-      readTime: '12 min read',
-      featured: false,
-    },
-    {
-      id: 'autonomous-vehicles',
-      title: 'Autonomous Vehicle Technology',
-      description:
-        'The current state and future of autonomous vehicle technology and its broader applications.',
-      category: 'Autonomy',
-      readTime: '18 min read',
-      featured: false,
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const researchAreas = [
     {
-<<<<<<< HEAD
       title: 'Autonomous Systems Research'
-=======
-      title: 'Autonomous Systems Research',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'Pioneering research in building truly autonomous systems that can operate independently.'
       focus: [
-<<<<<<< HEAD
         'Decision Making'
         'Self-Learning'
         'Adaptive Behavior'
@@ -161,69 +111,7 @@ export default function TechnologyInsightsPage() {
       downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     },  ];      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     }
-=======
-        'Decision Making',
-        'Self-Learning',
-        'Adaptive Behavior',
-        'System Integration',
-      ],
-      icon: '🔬',
-    },
-    {
-      title: 'AI Ethics & Governance',
-      description:
-        'Research into responsible AI development and ethical considerations for autonomous systems.',
-      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],
-      icon: '⚖️',
-    },
-    {
-      title: 'Human-AI Collaboration',
-      description:
-        'Exploring how humans and AI can work together effectively and safely.',
-      focus: [
-        'Human-AI Interface',
-        'Collaborative Decision Making',
-        'Safety Protocols',
-        'Trust Building',
-      ],
-      icon: '🤝',
-    },
   ];
-
-  const whitepapers = [
-    {
-      id: 'autonomous-systems-whitepaper',
-      title: 'The Future of Autonomous Systems',
-      description:
-        'A comprehensive analysis of autonomous technology trends and implementation strategies.',
-      pages: '45',
-      category: 'Technology',
-      downloadUrl: '/whitepapers/autonomous-systems-future.pdf',
-    },
-    {
-      id: 'ai-ethics-framework',
-      title: 'AI Ethics Framework for Business',
-      description:
-        'Establishing ethical guidelines for AI implementation in enterprise environments.',
-      pages: '32',
-      category: 'Ethics',
-      downloadUrl: '/whitepapers/ai-ethics-framework.pdf',
-    },
-    {
-      id: 'automation-roi-guide',
-      title: 'Automation ROI Guide',
-      description:
-        'How to calculate and maximize return on investment for automation initiatives.',
-      pages: '28',
-      category: 'Business',
-      downloadUrl: '/whitepapers/automation-roi-guide.pdf',
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-  ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -283,7 +171,6 @@ export default function TechnologyInsightsPage() {
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
-<<<<<<< HEAD
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
@@ -313,46 +200,17 @@ export default function TechnologyInsightsPage() {
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Read More <span className="ml-1">→</span>
-=======
-                      Read More <span className='ml-1'>→</span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </Link>
-=======
-                      Read More <span className='ml-1'>→</span>                    </Link>
-
-                    </Link>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Research Areas */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Research Focus Areas
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {researchAreas.map((area, index) => (
                   <div
                     key={index}
@@ -369,7 +227,6 @@ export default function TechnologyInsightsPage() {
                           key={focusIndex}
                           className='text-sm text-white/60 flex items-center'
                         >
-<<<<<<< HEAD
                           <span className='text-cyan-400 mr-2'>•</span>                          {focus}                {researchAreas.map((area, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="text-4xl mb-4">{area.icon}</div>
@@ -379,9 +236,6 @@ export default function TechnologyInsightsPage() {
                       {area.focus.map((focus, focusIndex) => (
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
-=======
-                          <span className='text-cyan-400 mr-2'>•</span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {focus}
                         </li>
                       ))}
@@ -390,28 +244,12 @@ export default function TechnologyInsightsPage() {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Whitepapers */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
                 Research Whitepapers
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {whitepapers.map((paper, index) => (
                   <div
                     key={index}
@@ -433,7 +271,6 @@ export default function TechnologyInsightsPage() {
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
-<<<<<<< HEAD
                       Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
@@ -447,32 +284,11 @@ export default function TechnologyInsightsPage() {
                       className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                     >
                       Download PDF <span className="ml-1">→</span>
-=======
-                      Download PDF <span className='ml-1'>→</span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </Link>
-=======
-                      Download PDF <span className='ml-1'>→</span>                    </Link>
-
-                    </Link>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -480,14 +296,6 @@ export default function TechnologyInsightsPage() {
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -499,7 +307,6 @@ export default function TechnologyInsightsPage() {
                       leading institutions and industry partners to advance the
                       state of the art.
                     </p>
-<<<<<<< HEAD
                     <ul className='space-y-2 text-white/70'>                      <li>• Advanced AI research and development</li>                  <div>
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
@@ -507,9 +314,6 @@ export default function TechnologyInsightsPage() {
 
                     </p>
                     <ul className="space-y-2 text-white/70">
-=======
-                    <ul className='space-y-2 text-white/70'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <li>• Advanced AI research and development</li>
                       <li>• Autonomous system prototyping</li>
                       <li>• Ethical AI framework development</li>
@@ -518,13 +322,9 @@ export default function TechnologyInsightsPage() {
                   </div>
                   <div className='text-center'>
                     <div className='text-6xl mb-4'>🧪</div>
-<<<<<<< HEAD
                     <p className='text-white/60 text-sm'>Innovation Lab</p>                  </div>                  <div className="text-center">
                     <div className="text-6xl mb-4">🧪</div>
                     <p className="text-white/60 text-sm">Innovation Lab</p>
-=======
-                    <p className='text-white/60 text-sm'>Innovation Lab</p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </div>
@@ -547,7 +347,6 @@ export default function TechnologyInsightsPage() {
                 </Link>
                 <Link
                   href='/blog'
-<<<<<<< HEAD
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -559,9 +358,6 @@ export default function TechnologyInsightsPage() {
                 <Link
                   href="/blog"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
-=======
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Read Our Blog
                 </Link>
@@ -571,24 +367,6 @@ export default function TechnologyInsightsPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

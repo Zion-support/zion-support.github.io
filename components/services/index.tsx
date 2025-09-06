@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import React from 'react',
@@ -21,54 +18,23 @@ import { realOperationalServices } from '../../data/real-operational-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export default function ServicesIndexPage () {
-=======
- export default function ServicesIndexPage () {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServicesIndexPage () {
-=======
- export default function ServicesIndexPage () {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handleSubmit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api/quote-request', {
   method: 'POST', headers: {
-<<<<<<< HEAD
   'Content-Type': 'application/json'
-<<<<<<< HEAD
 }
-=======
-  'Content-Type': 'application/json' ;
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
 }
 budgetRange: values.budgetRange;
 }
-=======
-};
-body: JSON.stringify ({
-  service: values.serviceTitle, description: values.projectDescription, timeline: {
-  start: values.timelineStart, end: values.timelineEnd
-};
-budgetRange: values.budgetRange;
-
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
 }</div> </div> </div> </div> <QuoteRequestModal open= {
   modalOpen
@@ -79,7 +45,6 @@ budgetRange: values.budgetRange;
 }onSubmit= {
   handleSubmit
 }/> </div>)
-<<<<<<< HEAD
 };export default ServicesPage;
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug
@@ -162,12 +127,7 @@ export default function ServicesIndexPage() {
       const err = await res.json().catch(() => ({}));
       throw new Error(err?.message |'Failed to submit')
     }
-<<<<<<< HEAD
   }
-=======
-  };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
       <Head>
@@ -185,24 +145,12 @@ export default function ServicesIndexPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {filtered.map((service) => (
-<<<<<<< HEAD
                 <EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
-=======
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ))}
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -212,21 +160,5 @@ export default function ServicesIndexPage() {
     </div>
   )
 }
-=======
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ServicesPage;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
-}
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

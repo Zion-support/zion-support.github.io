@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -15,22 +10,6 @@ import { DropdownMenu;
   DropdownMenuRadioGroup;
   DropdownMenuRadioItem;
   DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
-=======
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-  DropdownMenuSeparator,
-  DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuCheckboxItem,;
-} from '@/components/ui/dropdown-menu';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download } from 'lucide-react'
 import { Resume  } from '@/types/resume';
@@ -38,49 +17,8 @@ import { exportResumeToPDF, ExportOptions  } from '@/utils/pdfExport';
 import { toast  } from '@/hooks/use-toast';
 import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
-<<<<<<< HEAD
   resume: Resume
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  resume: Resume;
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-}
-
-=======
-
-}
-}
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger,;
-  DropdownMenuSeparator,;
-  DropdownMenuLabel,;
-  DropdownMenuRadioGroup,;
-  DropdownMenuRadioItem,;
-  DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',;
-// Use the centralized icon wrapper to avoid missing icon issues;
-import { FileText, ChevronDown, Loader2, Download } from 'lucide-react';
-import { Resume } from '@/types/resume',;
-import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport',;
-import { toast } from '@/hooks/use-toast',;
-import { FontFamily } from '@/utils/pdf/fontConfig',;
-interface PdfExportButtonProps {;
-  resume: Resume;
-}
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false),
@@ -181,7 +119,6 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-<<<<<<< HEAD
   )
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
@@ -274,25 +211,3 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  );
-
-};
-h-4 w-4"/>) ";
-}Export PDF <ChevronDown className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"className=" w-56" > <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel> <DropdownMenuSeparator /> </DropdownMenuRadioGroup> <DropdownMenuSeparator /> <DropdownMenuCheckboxItem checked= {;
-  includePortfolio ;
-}onCheckedChange= {;
-  setIncludePortfolio ;
-}> Include Portfolio Projects </DropdownMenuCheckboxItem> <DropdownMenuSeparator /> Download PDF </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) ;
-}'"
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

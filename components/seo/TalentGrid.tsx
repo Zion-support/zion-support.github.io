@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';
-<<<<<<< HEAD
 type Props = any;
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
@@ -17,23 +9,11 @@ type Props = {
   region?: string;
   service?: string;
 }
-=======
-
-type Props = {
-  region?: string;
-  service?: string;
-};
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function matchesRegion(profile: TalentProfile, region?: string) {
   if (!region) return true;
   const r = region.toLowerCase();
   return profile.location.toLowerCase().includes(r);
-<<<<<<< HEAD
 }
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function matchesService(profile: TalentProfile, service?: string) {
   if (!service) return true;
   const s = service.toLowerCase();
@@ -42,31 +22,13 @@ function matchesService(profile: TalentProfile, service?: string) {
     profile.skills.some((sk) => sk.toLowerCase().includes(s))
   );
 }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
-<<<<<<< HEAD
         (p) => matchesRegion(p, region) && matchesService(p, service)
       )
-=======
-        p => matchesRegion(p, region) && matchesService(p, service)
-      ),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     [region, service]
-=======
-        (p) => matchesRegion(p, region) && matchesService(p, service),
-      ),
-    [region, service],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 
   if (items.length === 0) {
@@ -114,12 +76,4 @@ export default function TalentGrid({ region, service }: Props) {
       ))}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,28 +1,8 @@
-<<<<<<< HEAD
 import { useState  } from 'react';
 import Head from 'next/head',
-=======
-<<<<<<< HEAD
-import { useState } from 'react';
-import Head from 'next/head';
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-import {useState} from 'react';
-import Head from 'next/head';
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function OffworldDeploy() {
   const [cid, setCid] = useState<string | null>(null),
   const [status, setStatus] = useState<string>(''),
-=======
-export default function OffworldDeploy() {;
-  const [cid, setCid] = useState<string | null>(null);
-  const [status, setStatus] = useState<string>('');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [error, setError] = useState<string>('');
   const [provider, setProvider] = useState<string>('');
   async function handleDeploy() {
@@ -31,24 +11,13 @@ export default function OffworldDeploy() {;
     setCid(null);
     setProvider('');
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       const res = null;
       setStatus('')
     }
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       const res = await fetch('/api/offworld/deploy', { method: 'POST' });      const res = await fetch('/api/offworld/deploy', { method: 'POST' })
-=======
-      const res = await fetch('/api/offworld/deploy', { method: 'POST' });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Deploy failed');
       setCid(data.cid);
-<<<<<<< HEAD
       setProvider(data.provider |'');
       setStatus('Deployed successfully');
     } catch (e: any) {
@@ -57,26 +26,13 @@ export default function OffworldDeploy() {;
 
   }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
     } catch (e: any) {
       setError(e.message)
       setStatus('')
-=======
-      setProvider(data.provider || '');
-      setStatus('Deployed successfully');
-    } catch (e: any) {
-      setError(e.message);
-      setStatus('');
-    }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   return (
     <div className='min-h-screen p-8'>
-<<<<<<< HEAD
       <Head>
         <title>Zion Offworld Deploy</title>
       </Head>
@@ -100,7 +56,6 @@ export default function OffworldDeploy() {;
           {provider && <div>Provider: {provider}</div>}
           <div className='text-sm text-gray-600'>
             You can open via any IPFS gateway or offline node.
-<<<<<<< HEAD
           </div>        </div>
       )}
     </div>
@@ -123,31 +78,13 @@ export default function OffworldDeploy() {;
     </div>
 );
 }
-=======
-<<<<<<< HEAD
-          </div>
-=======
-<<<<<<< HEAD
-=======
-    <div className='min-h-screen p-8'>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     }
   }
 
   return (
 
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         </div>
       )}
     </div>
   );
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

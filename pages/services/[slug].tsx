@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
 import Button from '../../components/ui/Button',
 import Card from '../../components/ui/Card';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Check, Mail, MapPin, Phone, ExternalLink  } from 'lucide-react';
 import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices  } from '../../data/extra-services';
@@ -17,20 +13,7 @@ type Service = any;
 	if (!service) {
 		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
 	}
-=======
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../../data/extra-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newRealServices } from '../../data/new-real-services';
-import { marketReadyServices } from '../../data/market-ready-services';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
 import {extraServices} from '../../data/extra-services';
@@ -67,35 +50,18 @@ function extractServiceSlugFromLink(link: string): string | null {
   } catch {
     return null;
   }
-<<<<<<< HEAD
 export async function getStaticPaths() {
-=======
-
-export async function getStaticPaths() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const services = getAllServices();
   const slugs = new Set<string>();
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Fall back to normalized id or name to provide a stable URL under /services/*
     if (s.id) slugs.add(toSlug(s.id));
     else if (s.name) slugs.add(toSlug(s.name));
   }
   return {
-<<<<<<< HEAD
     paths: Array.from(slugs).map(slug => ({ params: { slug } }))
     fallback: false
   }
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-=======
-    paths: Array.from(slugs).map(slug => ({ params: { slug } })),
-    fallback: false,
-  };
-
-export async function getStaticProps({ params }: { params: { slug: string } }) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const services = getAllServices();
   const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '');
   let service: Service | undefined = services.find(s => {
@@ -115,15 +81,8 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     return { notFound: true }
   }
   return {
-<<<<<<< HEAD
     props: { service }
   }
-=======
-    props: { service },
-  };
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ServiceDetailPage({ service }: { service: Service }) {
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
@@ -234,32 +193,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </UltraFuturisticBackground>
-<<<<<<< HEAD
   );
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-    </UltraFuturisticBackground>;
-  );
-<<<<<<< HEAD
-=======
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import Button from '../../components/ui/Button';
-import Card from '../../components/ui/Card';
-=======
-
-}
-}
-}
-}
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -446,9 +381,3 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

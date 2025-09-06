@@ -1,25 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
-<<<<<<< HEAD
 import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '[^']*';
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '[^']*';
-=======
-import {
-  ensureDisputeUploadDir,
-  getDisputeById,
-  upsertDispute,;
-} from '../../../../utils/fsdb';
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
-} from '../../../../utils/auth';
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -33,76 +15,29 @@ import {
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
 export const config = {
-<<<<<<< HEAD
   api: { bodyParser: { sizeLimit: "20mb" } }
 }
-=======
-  api: { bodyParser: { sizeLimit: '20mb' } },
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
-import {
-  ensureDisputeUploadDir,
-  getDisputeById,
-  upsertDispute,;
-} from "../../../../utils/fsdb";
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
-} from "../../../../utils/auth";
-export const config = {
-  api: { bodyParser: { sizeLimit: "20mb" } },;
-};
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { id } = req.query;
-<<<<<<< HEAD
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
   if (req.method === "POST") {
-=======
-  if (typeof id !== 'string')
-    return res.status(400).json({ error: 'Invalid id' });
-  
-}
-
-const user = parseUserFromRequest(req);
-
-  if (req.method === 'POST') {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
     } catch (e: any) {
-<<<<<<< HEAD
       return res.status(e.statusCode |403).json({ error: "Forbidden" });
     }
-=======
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
-   
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const { files } =
       req.body |
       ({} as {
         files: { fileName: string; mimeType: string; base64: string }[];
       });
-<<<<<<< HEAD
     if (!Array.isArray(files) |files.length === 0)
       return res.status(400).json({ error: "No files" });
     const now = new Date().toISOString();
@@ -121,42 +56,15 @@ const user = parseUserFromRequest(req);
         path: filePath
         uploadedAt: now
         uploadedByUserId: user.id
-=======
-    if (!Array.isArray(files) || files.length === 0)
-      return res.status(400).json({ error: 'No files' });
-
-    
-}
-
-const now = new Date().toISOString();
-    const dir = await ensureDisputeUploadDir(dispute.id);
-
-    -${safeName}`,
-        fileName: safeName,
-        fileSize: buffer.length,
-        mimeType: f.mimeType || 'application/octet-stream',
-        path: filePath,
-        uploadedAt: now,
-        uploadedByUserId: user.id,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
     }
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
-<<<<<<< HEAD
   }
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
-=======
- 
-}
-
-  res.setHeader('Allow', 'POST');
-  return res.status(405).end('Method Not Allowed');
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
   await new Promise<void>((resolve, reject) => {
@@ -171,137 +79,4 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
       }
     );
   });
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['POST']);
-  return res.status(405).end('Method Not Allowed');
-import type { NextApiRequest, NextApiResponse } from 'next';
-import path from 'path';
-import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-export const config = {;
-  api: { bodyParser: { sizeLimit: '20mb' } }};
-export default async function handler(req, res) {
-  try {
-  const { id } = req.query;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
-    } catch (error) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },;
-    if (!Array.isArray(files) || files.length === 0) return res.status( error: 'No files' ).json({$2});
-    const now = new Date().toISOString();
-    const dir = await ensureDisputeUploadDir(dispute.id);
-    for (const f of files) {;
-      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
-      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64'),;
-      const filePath = path.join(dir, safeName);
-      await fsPromisesWrite(filePath, buffer);
-      dispute.attachments.push({;
-        id: `${Date.now()}-${safeName}`,;
-        fileName: safeName,;
-        fileSize: buffer.length,;
-        mimeType: f.mimeType || 'application/octet-stream',;
-        path: filePath,;
-        uploadedAt: now,;
-        uploadedByUserId: user.id});
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    dispute.updatedAt = now;
-    await upsertDispute(dispute);
-    return res.status(201).json({ dispute });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  res.setHeader('Allow', 'POST');
-  return res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
-  const fs = await import('fs');
-  await new Promise<void>((resolve, reject) => {;
-    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {;
-      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()));
-    });
-  });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

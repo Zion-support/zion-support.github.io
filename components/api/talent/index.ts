@@ -2,33 +2,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { v4 as uuid } from 'uuid';
 import { translateText, detectLanguageSimple } from '@/utils/api/translate';
-<<<<<<< HEAD
 const hasSupabase = null;
         return res.status(201).json({ slug: item.slug })
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {v4, as, uuid} from 'uuid';
 import {translateText, detectLanguageSimple} from '@/utils/api/translate';
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const hasSupabase =
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x.trim());
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -48,7 +33,6 @@ export default async function handler(
    
 } catch (e: any) {
       return res.status(500).json({ error: e.message });
-<<<<<<< HEAD
     }  }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -62,10 +46,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
       return res.status(500).json({ error: e.message })
     }
-=======
-   
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   if (req.method === 'POST') {
     try {
@@ -124,18 +104,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             item.category
             lang
             originalLang
-<<<<<<< HEAD
           );        }          translations.category[lang] = await translateText(item.category, lang, originalLang)
-=======
-          );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
       }
       item.originalLanguage = originalLang;
       item.translations = translations;
       if (hasSupabase) {
         const { error } = await supabaseClient.from('talent_profiles').insert({
-<<<<<<< HEAD
           id: item.id
           slug: item.slug
           name: item.name
@@ -164,38 +139,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(201).json({ slug: item.slug });
 
       }
-=======
-          id: item.id,
-          slug: item.slug,
-          name: item.name,
-          title: item.title,
-          category: item.category,
-          location: item.location,
-          timezone: item.timezone,
-          region: item.region,
-          skills: item.skills,
-          summary: item.summary,
-          bio: item.bio,
-          hourly_rate_usd: item.hourlyRateUsd ?? null,
-          request_quote: item.requestQuote ?? null,
-          availability: item.availability,
-          profile_image_url: item.profileImageUrl ?? null,
-          video_url: item.videoUrl ?? null,
-          portfolio: item.portfolio ?? null,
-          verified: item.verified ?? null,
-          rating: item.rating ?? null,
-          reviews_count: item.reviewsCount ?? null,
-          created_at: item.createdAt,
-          // i18n
-          original_language: item.originalLanguage,
-          translations: item.translations as any,
-        } as any);
-        if (error) throw error;
-        return res.status(201).json({ slug: item.slug });
-     
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Fallback: return the slug as if saved
       return res.status(201).json({ slug: item.slug });
    
@@ -207,17 +150,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
-<<<<<<< HEAD
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-<<<<<<< HEAD
 }
-=======
-    .end('Method Not Allowed');
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

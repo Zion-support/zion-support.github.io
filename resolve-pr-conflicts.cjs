@@ -29,11 +29,7 @@ for (const file of conflictedFiles) {
     let content = fs.readFileSync(file, 'utf8');
     
     // Remove conflict markers and keep our changes (HEAD)
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> main/g, '$1');
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [a-f0-9]+/g, '$1');
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    
-    // Write the resolved content
+    content = content.replace(/    // Write the resolved content
     fs.writeFileSync(file, content);
     console.log(`  ✅ Resolved: ${file}`);
     

@@ -1,42 +1,18 @@
 import React, { useEffect, useRef } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
   colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
-=======
-import { motion } from 'framer-motion';
-
-interface UltraAdvancedFuturisticBackground2026Props {
-  intensity?: 'low' | 'medium' | 'high' | 'extreme';
-  colorScheme?:
-    | 'neural-network'
-    | 'quantum-field'
-    | 'cyberpunk'
-    | 'holographic'
-    | 'multidimensional';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
   enableNeuralNetworks?: boolean;
   enableMultidimensional?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   children?: React.ReactNode
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
   children?: React.ReactNode;
 const UltraAdvancedFuturisticBackground2026: React.FC<
@@ -60,23 +36,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
   enableNeuralNetworks = true;
   enableMultidimensional = true
   children
-=======
-  children?: React.ReactNode;
-
-const UltraAdvancedFuturisticBackground2026: React.FC<
-  UltraAdvancedFuturisticBackground2026Props
-> = ({
-  intensity = 'high',
-  colorScheme = 'neural-network',
-  particleCount = 300,
-  animationSpeed = 2.0,
-  enableHolographic = true,
-  enableQuantumEffects = true,
-  enableNeuralNetworks = true,
-  enableMultidimensional = true,
-  children,
-}) => {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -84,7 +43,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-<<<<<<< HEAD
     let animationFrameId: number;    let particles: Particle[] = [];
     let neuralNodes: NeuralNode[] = [];
     let quantumFields: QuantumField[] = [];
@@ -97,25 +55,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     let neuralNodes: NeuralNode[] = []
     let quantumFields: QuantumField[] = []
     let holographicLayers: HolographicLayer[] = []
-=======
-
-    let animationFrameId: number;
-    let particles: Particle[] = [];
-    let neuralNodes: NeuralNode[] = [];
-    let quantumFields: QuantumField[] = [];
-    let holographicLayers: HolographicLayer[] = [];
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Set canvas size
     const resizeCanvas = () => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
         canvas.width = rect.width;
-<<<<<<< HEAD
         canvas.height = rect.height;        canvas.height = rect.height
-=======
-        canvas.height = rect.height;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     resizeCanvas();
@@ -130,7 +75,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       color: string;
       alpha: number;
       life: number;
-<<<<<<< HEAD
       maxLife: number;      x: number
       y: number
       vx: number
@@ -140,11 +84,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       alpha: number
       life: number
       maxLife: number
-=======
-      maxLife: number;
-
-      constructor(x: number, y: number) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         this.x = x;
         this.y = y;
         this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
@@ -153,11 +92,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         this.color = getColorSchemeColor();
         this.alpha = Math.random() * 0.8 + 0.2;
         this.life = Math.random() * 100 + 50;
-<<<<<<< HEAD
         this.maxLife = this.life;      }        this.maxLife = this.life
-=======
-        this.maxLife = this.life;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       update() {
         this.x += this.vx;
@@ -172,11 +107,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
         // Fade out
-<<<<<<< HEAD
         this.alpha = this.life / this.maxLife;      }        this.alpha = this.life / this.maxLife
-=======
-        this.alpha = this.life / this.maxLife;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       draw() {
         ctx.save();
@@ -185,62 +116,30 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
         ctx.restore();      }        ctx.restore()
-=======
-<<<<<<< HEAD
-        ctx.restore();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-        ctx.restore();      }
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       }
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Neural network node class
     class NeuralNode {
       x: number;
       y: number;
       connections: NeuralNode[];
       activation: number;
-<<<<<<< HEAD
       pulse: number;      x: number
       y: number
       connections: NeuralNode[]
       activation: number
       pulse: number
-=======
-      pulse: number;
-
-      constructor(x: number, y: number) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         this.x = x;
         this.y = y;
         this.connections = [];
         this.activation = Math.random();
-<<<<<<< HEAD
         this.pulse = 0;      }        this.pulse = 0
-=======
-        this.pulse = 0;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       update() {
         this.activation += (Math.random() - 0.5) * 0.1;
         this.activation = Math.max(0, Math.min(1, this.activation));
-<<<<<<< HEAD
         this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5;      }        this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5
-=======
-        this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       draw() {
         ctx.save();
@@ -253,11 +152,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         this.connections.forEach(connection => {
           const distance = Math.sqrt(
             Math.pow(this.x - connection.x, 2) +
-<<<<<<< HEAD
               Math.pow(this.y - connection.y, 2)          );            Math.pow(this.x - connection.x, 2) + Math.pow(this.y - connection.y, 2)
-=======
-              Math.pow(this.y - connection.y, 2)
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           );
           if (distance < 150) {
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * this.activation * connection.activation})`;
@@ -268,51 +163,24 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
             ctx.stroke();
           }
         });
-<<<<<<< HEAD
         ctx.restore();      }            ctx.stroke()
           }
         });
         ctx.restore()
-<<<<<<< HEAD
-=======
-        ctx.restore();
-      }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        ctx.restore();      }
-
-      }
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Quantum field class
     class QuantumField {
       x: number;
       y: number;
       radius: number;
       intensity: number;
-<<<<<<< HEAD
       phase: number;      x: number
       y: number
       radius: number
       intensity: number
       phase: number
-=======
-      phase: number;
-
-      constructor(x: number, y: number) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         this.x = x;
         this.y = y;
         this.radius = Math.random() * 100 + 50;
@@ -320,7 +188,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         this.phase = Math.random() * Math.PI * 2;
       }
       update() {
-<<<<<<< HEAD
         this.phase += 0.02 * animationSpeed;      }        this.phase = Math.random() * Math.PI * 2
       }
       update() {
@@ -328,69 +195,31 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       draw() {
         ctx.save();
         ctx.globalAlpha = 0.1;
-=======
-        this.phase += 0.02 * animationSpeed;
-      }
-
-      draw() {
-        ctx.save();
-        ctx.globalAlpha = 0.1;
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         for (let i = 0; i < 3; i++) {
           const waveRadius =
             this.radius + Math.sin(this.phase + (i * Math.PI) / 3) * 20;
           const alpha = this.intensity * (1 - i / 3);
-<<<<<<< HEAD
         for (let i = 0, i < 3, i++) {
           const waveRadius = this.radius + Math.sin(this.phase + i * Math.PI / 3) * 20;
           const alpha = this.intensity * (1 - i / 3);
-=======
-
-          ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
           ctx.stroke();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         ctx.restore();      }          ctx.stroke()
         }
         ctx.restore()
-=======
-
-        ctx.restore();
-      }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
         ctx.restore();      }          ctx.stroke()
         }
         ctx.restore()
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
-=======
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore();      }
 
       }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Holographic layer class
     class HolographicLayer {
       x: number;
@@ -399,7 +228,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       height: number;
       rotation: number;
       alpha: number;
-<<<<<<< HEAD
       color: string;      x: number
       y: number
       width: number
@@ -407,18 +235,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       rotation: number
       alpha: number
       color: string
-=======
-      color: string;
-
-      constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.width = Math.random() * 200 + 100;
         this.height = Math.random() * 200 + 100;
         this.rotation = Math.random() * Math.PI * 2;
         this.alpha = Math.random() * 0.3 + 0.1;
-<<<<<<< HEAD
         this.color = getColorSchemeColor();      }
       update() {
         this.rotation += 0.005 * animationSpeed;
@@ -427,14 +249,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       update() {
         this.rotation += 0.005 * animationSpeed;
         this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2
-=======
-        this.color = getColorSchemeColor();
-      }
-
-      update() {
-        this.rotation += 0.005 * animationSpeed;
-        this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       draw() {
         ctx.save();
@@ -444,69 +258,26 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]);
-<<<<<<< HEAD
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-        ctx.restore();      }        
-        ctx.beginPath();
-        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
-        ctx.stroke();
-        
-        ctx.restore()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore();      }
-<<<<<<< HEAD
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         ctx.restore()
-=======
-
-        ctx.beginPath();
-        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
-        ctx.stroke();
-
-        ctx.restore();
-      }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
-=======
-
-      }
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
-<<<<<<< HEAD
         'neural-network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080']
         'quantum-field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080']
         cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600']
         holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000']
         multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff']
       const schemeColors = colors[colorScheme] |colors['neural-network'];
-=======
-        'neural-network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080'],
-        'quantum-field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080'],
-        cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600'],
-        holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'],
-        multidimensional: ['#8000ff', '#00ff80', '#ff8000', '#0080ff'],
-      };
-
-      const schemeColors = colors[colorScheme] || colors['neural-network'];
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       return schemeColors[Math.floor(Math.random() * schemeColors.length)];
     }
     // Initialize particles
@@ -516,7 +287,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
           Math.random() * canvas.width
           Math.random() * canvas.height
         )
-<<<<<<< HEAD
       );    }
     // Initialize neural network
     if (enableNeuralNetworks) {    for (let i = 0, i < particleCount, i++) {
@@ -524,11 +294,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         Math.random() * canvas.width;
         Math.random() * canvas.height
       ))
-=======
-      );
-    }
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Initialize neural network
     if (enableNeuralNetworks) {
       for (let i = 0; i < 20; i++) {
@@ -537,17 +302,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
             Math.random() * canvas.width
             Math.random() * canvas.height
           )
-<<<<<<< HEAD
         );      }      for (let i = 0, i < 20, i++) {
         neuralNodes.push(new NeuralNode(
           Math.random() * canvas.width;
           Math.random() * canvas.height
         ))
-=======
-        );
-      }
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Create connections
       neuralNodes.forEach(node => {
         neuralNodes.forEach(otherNode => {
@@ -555,18 +314,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
             node.connections.push(otherNode);
           }
         });
-<<<<<<< HEAD
       });    }
     // Initialize quantum fields
     if (enableQuantumEffects) {            node.connections.push(otherNode)
           }
         })
       })
-=======
-      });
-    }
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Initialize quantum fields
     if (enableQuantumEffects) {
       for (let i = 0; i < 8; i++) {
@@ -575,26 +328,18 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
             Math.random() * canvas.width
             Math.random() * canvas.height
           )
-<<<<<<< HEAD
         );      }      for (let i = 0, i < 8, i++) {
         quantumFields.push(new QuantumField(
           Math.random() * canvas.width;
           Math.random() * canvas.height
         ))
-=======
-        );
-      }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     // Initialize holographic layers
     if (enableHolographic) {
       for (let i = 0; i < 5; i++) {
         holographicLayers.push(new HolographicLayer());
-<<<<<<< HEAD
       }    }      for (let i = 0, i < 5, i++) {
         holographicLayers.push(new HolographicLayer())
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     // Animation loop
@@ -602,7 +347,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-<<<<<<< HEAD
         canvas.width / 2
         canvas.height / 2
         0
@@ -653,50 +397,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
       gradient.addColorStop(0, currentBgColors[0]);
       gradient.addColorStop(0.5, currentBgColors[1]);
       gradient.addColorStop(1, currentBgColors[2]);
-=======
-        canvas.width / 2,
-        canvas.height / 2,
-        0,
-        canvas.width / 2,
-        canvas.height / 2,
-        Math.max(canvas.width, canvas.height) / 2
-      );
-
-      const bgColors = {
-        'neural-network': [
-          'rgba(0, 0, 20, 0.8)',
-          'rgba(0, 20, 40, 0.6)',
-          'rgba(20, 0, 40, 0.4)',
-        ],
-        'quantum-field': [
-          'rgba(0, 20, 0, 0.8)',
-          'rgba(20, 40, 0, 0.6)',
-          'rgba(40, 0, 20, 0.4)',
-        ],
-        cyberpunk: [
-          'rgba(40, 0, 20, 0.8)',
-          'rgba(20, 0, 40, 0.6)',
-          'rgba(0, 20, 40, 0.4)',
-        ],
-        holographic: [
-          'rgba(40, 0, 40, 0.8)',
-          'rgba(0, 40, 40, 0.6)',
-          'rgba(40, 40, 0, 0.4)',
-        ],
-        multidimensional: [
-          'rgba(20, 0, 40, 0.8)',
-          'rgba(0, 40, 20, 0.6)',
-          'rgba(40, 20, 0, 0.4)',
-        ],
-      };
-
-      const currentBgColors =
-        bgColors[colorScheme] || bgColors['neural-network'];
-      gradient.addColorStop(0, currentBgColors[0]);
-      gradient.addColorStop(0.5, currentBgColors[1]);
-      gradient.addColorStop(1, currentBgColors[2]);
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw quantum fields
@@ -704,36 +404,24 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         quantumFields.forEach(field => {
           field.update();
           field.draw();
-<<<<<<< HEAD
         });      }          field.draw()
         })
-=======
-        });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       // Update and draw holographic layers
       if (enableHolographic) {
         holographicLayers.forEach(layer => {
           layer.update();
           layer.draw();
-<<<<<<< HEAD
         });      }          layer.draw()
         })
-=======
-        });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       // Update and draw neural network
       if (enableNeuralNetworks) {
         neuralNodes.forEach(node => {
           node.update();
           node.draw();
-<<<<<<< HEAD
         });      }          node.draw()
         })
-=======
-        });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       // Update and draw particles
       particles.forEach((particle, index) => {
@@ -742,17 +430,11 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
           particles[index] = new Particle(
-<<<<<<< HEAD
             Math.random() * canvas.width
             Math.random() * canvas.height
           );        }            Math.random() * canvas.width;
             Math.random() * canvas.height
           )
-=======
-            Math.random() * canvas.width,
-            Math.random() * canvas.height
-          );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
       });
       // Draw particle connections
@@ -765,14 +447,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
             );
             if (distance < 100) {
               ctx.save();
-<<<<<<< HEAD
               ctx.globalAlpha = ((100 - distance) / 100) * 0.3;              ctx.strokeStyle = getColorSchemeColor();            );
             if (distance < 100) {
               ctx.save();
               ctx.globalAlpha = (100 - distance) / 100 * 0.3;
-=======
-              ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               ctx.strokeStyle = getColorSchemeColor();
               ctx.lineWidth = 1;
               ctx.beginPath();
@@ -780,39 +458,16 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
               ctx.restore();
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           });
         });
       }
-<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);    };            }
           })
         })
       }
       animationFrameId = requestAnimationFrame(animate)
     }
-=======
-
-<<<<<<< HEAD
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-      animationFrameId = requestAnimationFrame(animate);    };
-
-    };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -828,35 +483,18 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
     enableNeuralNetworks
     enableMultidimensional
   ]);
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     >
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
       />
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className='absolute inset-0 pointer-events-none'>
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full'
             animate={{
-<<<<<<< HEAD
               scale: [1, 1.2, 1]
               rotate: [0, 180, 360]
               opacity: [0.1, 0.3, 0.1],            }}
@@ -885,27 +523,15 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
               duration: 8
               repeat: Infinity
               ease: 'easeInOut'
-=======
-              scale: [1, 1.2, 1],
-              rotate: [0, 180, 360],
-              opacity: [0.1, 0.3, 0.1],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }}
           />
           <motion.div
             className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
             animate={{
-<<<<<<< HEAD
               scale: [1.2, 1, 1.2]
               rotate: [360, 180, 0]
               opacity: [0.1, 0.3, 0.1],            }}
             transition={{
-<<<<<<< HEAD
               duration: 10
               repeat: Infinity
               ease: 'easeInOut',            }}
@@ -922,30 +548,13 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
               opacity: [0.1, 0.3, 0.1]
             }}
             transition={{
-<<<<<<< HEAD
               duration: 10
               repeat: Infinity
-=======
-              duration: 10,
-              repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',              ease: "easeInOut"
-=======
-              scale: [1.2, 1, 1.2],
-              rotate: [360, 180, 0],
-              opacity: [0.1, 0.3, 0.1],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: 'easeInOut',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }}
           />
         </div>
       )}
-<<<<<<< HEAD
       {children}
     </div>
   );
@@ -955,35 +564,8 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
   )
 }
 export default UltraAdvancedFuturisticBackground2026;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-
-      {children}
-    </div>
-  );
-};
-}
-
-export default UltraAdvancedFuturisticBackground2026;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-=======
-              duration: 10,
-              repeat: Infinity,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
             }}
           />
         </div>
       )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

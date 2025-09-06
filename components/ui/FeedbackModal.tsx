@@ -1,46 +1,19 @@
 import { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type FeedbackContext = any;
     onClose(true)
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export type FeedbackContext = { actionType?: string; metadata?: any }
-=======
-
-export type FeedbackContext = { actionType?: string; metadata?: any };
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function FeedbackModal({
-<<<<<<< HEAD
   isOpen
   onClose
   defaultContext
   defaultKind = 'general'
   userHeaders
 }: {
-=======
-  isOpen,
-  onClose,
-  defaultContext,
-  defaultKind = 'general',
-  userHeaders,
-}: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
-<<<<<<< HEAD
-<<<<<<< HEAD
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal({
-=======
-  userHeaders?: Record<string, string>;}) {export default function FeedbackModal({;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   isOpen;
   onClose;
   defaultContext;
@@ -51,9 +24,6 @@ export default function FeedbackModal({
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>
-=======
-  userHeaders?: Record<string, string>;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }) {
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
@@ -66,13 +36,8 @@ export default function FeedbackModal({
     setLoading(true);
     try {
       await fetch('/api/feedback', {
-<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json', ...(userHeaders |{}) }
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         body: JSON.stringify({
           rating
           comment
@@ -80,23 +45,11 @@ export default function FeedbackModal({
           context: defaultContext |{}
         })
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
     setLoading(false);
     onClose(true);
-=======
-
-    } catch {}
-=======
-=======
-
-    } catch {}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setLoading(false);
     onClose(true);
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   }
   return (
@@ -104,29 +57,11 @@ export default function FeedbackModal({
       <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>
         <div className='text-lg font-medium'>Was this helpful?</div>
         <div className='flex gap-2'>
-<<<<<<< HEAD
           {[1, 2, 3, 4, 5].map(n => (            <button    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
       <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
         <div className="text-lg font-medium">Was this helpful?</div>
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
-<<<<<<< HEAD
-=======
-          {[1, 2, 3, 4, 5].map(n => (
-            <button
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-
-            <button
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -191,7 +126,6 @@ export default function FeedbackModal({
             className='px-3 py-2 rounded bg-gray-900 text-white'
           >
             {loading ? 'Submitting…' : 'Submit'}
-<<<<<<< HEAD
           </button>        </div>
       </div>
     </div>
@@ -218,27 +152,5 @@ export default function FeedbackModal({
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 );
 }
-<<<<<<< HEAD
-=======
-          </button>
-        </div>
-      </div>
-    </div>
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

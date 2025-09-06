@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string}
 }
 }
 
 export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body;  res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
-=======
-import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body;  res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface PerformanceMetrics {
   lcp?: number;
@@ -17,12 +13,9 @@ interface PerformanceMetrics {
   "timestamp": string;
   url: string;
   userAgent: string}
-<<<<<<< HEAD
 }
 }
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function handler("req": NextApiRequest, "res": NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' })}
@@ -46,7 +39,6 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
     console.error('Error processing performance "metrics": ', error);
     res.status(500).json({ "message": 'Internal server error' })}
 
-<<<<<<< HEAD
 import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: 'string; url: string; userAgent: string;' } }
 }
 }
@@ -72,17 +64,3 @@ import type { NextApiRequest,NextApiResponse } from 'next'; interface Performanc
 }
 
 export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: metrics.lcp,fid: metrics.fid,cls: metrics.cls,fcp: metrics.fcp,ttfb: metrics.ttfb,timestamp: metrics.timestamp,url: metrics.url,userAgent: metrics.userAgent }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
-=======
-import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: 'string; url: string; userAgent: string;' } } export default function handler(req: 'NextApiRequest',res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: 'metrics.lcp',fid: 'metrics.fid',cls: 'metrics.cls',fcp: 'metrics.fcp',ttfb: 'metrics.ttfb',timestamp: 'metrics.timestamp',url: 'metrics.url',userAgent: 'metrics.userAgent' }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
-<<<<<<< HEAD
-import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: metrics.lcp,fid: metrics.fid,cls: metrics.cls,fcp: metrics.fcp,ttfb: metrics.ttfb,timestamp: metrics.timestamp,url: metrics.url,userAgent: metrics.userAgent }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
-<<<<<<< HEAD
-=======
-import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: metrics.lcp,fid: metrics.fid,cls: metrics.cls,fcp: metrics.fcp,ttfb: metrics.ttfb,timestamp: metrics.timestamp,url: metrics.url,userAgent: metrics.userAgent }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
-import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: metrics.lcp,fid: metrics.fid,cls: metrics.cls,fcp: metrics.fcp,ttfb: metrics.ttfb,timestamp: metrics.timestamp,url: metrics.url,userAgent: metrics.userAgent }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
-import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: metrics.lcp,fid: metrics.fid,cls: metrics.cls,fcp: metrics.fcp,ttfb: metrics.ttfb,timestamp: metrics.timestamp,url: metrics.url,userAgent: metrics.userAgent }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
-import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: metrics.lcp,fid: metrics.fid,cls: metrics.cls,fcp: metrics.fcp,ttfb: metrics.ttfb,timestamp: metrics.timestamp,url: metrics.url,userAgent: metrics.userAgent }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

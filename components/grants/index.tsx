@@ -1,29 +1,10 @@
-<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-import {useEffect, useState} from 'react';
-import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type {
-  GrantApplication,
-  GrantCategory,;
-  GrantStatus,;
-} from '../../types/grants';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import type {
   GrantApplication
   GrantCategory
@@ -42,18 +23,7 @@ const statuses: GrantStatus[] = [
   'Approved'
   'Rejected'
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function GrantsPage() {
-=======
-
-export default function GrantsPage() {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{
     sector?: string;
@@ -61,20 +31,11 @@ export default function GrantsPage() {;
     region?: string;
     program?: string;
   }>({});
-<<<<<<< HEAD
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 export default function GrantsPage() {
-=======
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
-export default function GrantsPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
 
     const params = new URLSearchParams();
@@ -84,26 +45,16 @@ export default function GrantsPage() {;
     if (filters.program) params.set('program', filters.program);
     fetch(`/api/grants?${params.toString()}`)
       .then(r => r.json())
-<<<<<<< HEAD
       .then(d => setItems(d.items |[]))
       .catch(() => setItems([]));  }, [filters]);
   return (
     <EnhancedLayout>      .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
-=======
-      .then(d => setItems(d.items || []))
-      .catch(() => setItems([]));
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [filters]);
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <EnhancedLayout>
-<<<<<<< HEAD
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
@@ -212,23 +163,5 @@ export default function GrantsPage() {;
         )}
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
 );
 }
-=======
-<<<<<<< HEAD
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-  }, [filters]);
-
-  return (
-    <EnhancedLayout>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-    <EnhancedLayout>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

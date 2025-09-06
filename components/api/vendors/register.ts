@@ -1,13 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   if (req.method !== 'POST')
-=======
-  if (req.method !== 'POST');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(405).json({ error: 'Method not allowed' });
   const {
     slug
@@ -19,26 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     caseStudies
   } = req.body |{}
   if (!slug |!name)
-=======
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-  
-}
-
-const {
-    slug,
-    name,
-    servicesOffered,
-    teamSize,
-    about,
-    verificationDocs,
-    caseStudies,
-  } = req.body || {};
-  if (!slug || !name)
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     return res.status(400).json({ error: 'Missing required fields' });
   if (getVendorBySlug(slug))
     return res.status(409).json({ error: 'Slug already taken' });
@@ -70,7 +45,4 @@ verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
     res.status(500).json({ error: e.message });
   }    res.status(500).json({ error: e.message })
   }
-<<<<<<< HEAD
 }
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

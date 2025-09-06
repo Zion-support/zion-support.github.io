@@ -56,7 +56,6 @@ export async function fetchOnboardingProgress(userId: string, role: 'talent' | '
     return null;
   }
 }
-<<<<<<< HEAD
 export function fallbackTalentProgress(): TalentOnboarding {return {;
     profile_complete: true;
     skills_added: true;
@@ -69,24 +68,3 @@ export function fallbackClientProgress(): ClientOnboarding {return {;
     quote_received: false;
     first_hire_complete: false}
 }
-=======
-}
-
-export function fallbackTalentProgress(): TalentOnboarding {
-  return {
-    profile_complete: true,
-    skills_added: true,
-    availability_set: false,
-    first_job_applied: false,
-  };
-}
-}
-
-export function fallbackClientProgress(): ClientOnboarding {
-  return {
-    job_posted: true,
-    talent_invited: false,
-    quote_received: false,
-    first_hire_complete: false,
-  };
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

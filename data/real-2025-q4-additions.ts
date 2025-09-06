@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 export interface Q4Service {;
-=======
-export interface Q4Service {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   id: string;
   name: string;
   tagline: string;
@@ -23,11 +19,7 @@ export interface Q4Service {
   realService: boolean;
   technology?: string[];
   integrations?: string[];
-<<<<<<< HEAD
   useCases?: string[],
-=======
-  useCases?: string[];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -46,17 +38,10 @@ export interface Q4Service {
   launchDate?: string;
   customers?: number;
   rating?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   reviews?: number
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
   reviews?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -780,14 +765,6 @@ export const real2025Q4Additions = [
     reviews: 9
   }
 ];
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  reviews?: number;
-=======
-
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -795,10 +772,7 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
 };
-<<<<<<< HEAD
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export const realQ4Services2025: RealQ4Service[] = [
   {
@@ -822,11 +796,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-fuchsia-400',
     link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
-<<<<<<< HEAD
     marketPosition:
-=======
-    marketPosition:;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       'Comparable to Refersion and LeadDyno; stronger fraud prevention and flexible payouts.',
     targetAudience: 'E-commerce stores, marketplaces, media sites',
     trialDays: 14,
@@ -920,11 +890,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/services/micro-crm-local-business',
-<<<<<<< HEAD
     marketPosition:
-=======
-    marketPosition:;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       'Simpler than HubSpot/Zoho; fast and focused for local SMBs.',
     targetAudience: 'Local businesses, consultants, freelancers',
     trialDays: 14,
@@ -1013,11 +979,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
-<<<<<<< HEAD
     marketPosition:
-=======
-    marketPosition:;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       'Simpler than Zendesk/Freshdesk; MSP-first workflows and pricing.',
     targetAudience: 'Managed service providers, internal IT teams',
     trialDays: 14,
@@ -1042,15 +1004,8 @@ export const realQ4Services2025: RealQ4Service[] = [
     reviews: 28,
   },
 ];
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -1058,7 +1013,6 @@ export const real2025Q4Additions = [
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
     features: [
@@ -1068,30 +1022,14 @@ export const real2025Q4Additions = [
       'Human-in-the-loop approvals',
       'Observability and cost caps',
       'SDKs for Node/Python',
-=======
-    description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
-    features: [
-      'Document sync and chunking pipelinesMetadata and policy guardrails',
-      'Evals and drift trackingHuman-in-the-loop approvals',
-      'Observability and cost capsSDKs for Node/Python'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     popular: true,
     icon: '🧠',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
-<<<<<<< HEAD
     marketPosition:
       'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
-=======
-<<<<<<< HEAD
-    marketPosition:;
-      'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
-=======
-    marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -1107,20 +1045,12 @@ export const real2025Q4Additions = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails:
       'Pipelines, policies, eval harness, cost and latency budgets.',
     launchDate: '2025-03-01',
     customers: 18,
     rating: 4.8,
     reviews: 11,
-=======
-    implementationDetails: 'Pipelines, policies, eval harness, cost and latency budgets.',
-    launchDate: '2025-03-01',
-    customers: 18,
-    rating: 4.8,
-    reviews: 11
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'edge-personalization-engine',
@@ -1128,7 +1058,6 @@ export const real2025Q4Additions = [
     tagline: 'Real-time content and pricing personalization at the edge',
     price: '$249',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.',
     features: [
@@ -1137,25 +1066,14 @@ export const real2025Q4Additions = [
       'A/B and holdout tests',
       'Privacy-first scoring',
       'Dashboards and exports',
-=======
-    description: 'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.',
-    features: [
-      'Audience builder and traitsEdge functions and KV cache',
-      'A/B and holdout testsPrivacy-first scoring',
-      'Dashboards and exports'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     popular: true,
     icon: '⚡',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
-<<<<<<< HEAD
     marketPosition:
       'Simpler alternative to enterprise CDPs for SMBs; edge-native.',
-=======
-    marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     targetAudience: 'Growth and eCommerce teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -1171,20 +1089,12 @@ export const real2025Q4Additions = [
     variant: 'edge-futuristic',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails:
       'Rules engine, audience traits, edge execution and analytics.',
     launchDate: '2025-03-10',
     customers: 42,
     rating: 4.6,
     reviews: 23,
-=======
-    implementationDetails: 'Rules engine, audience traits, edge execution and analytics.',
-    launchDate: '2025-03-10',
-    customers: 42,
-    rating: 4.6,
-    reviews: 23
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'devx-preview-environments',
@@ -1192,7 +1102,6 @@ export const real2025Q4Additions = [
     tagline: 'On-demand ephemeral previews with seeded data and checks',
     price: '$199',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.',
     features: [
@@ -1201,24 +1110,13 @@ export const real2025Q4Additions = [
       'Smoke tests and screenshots',
       'Secrets and policies as code',
       'Cost and TTL controls',
-=======
-    description: 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.',
-    features: [
-      'One-PR one-env automationSeed data and fixtures',
-      'Smoke tests and screenshotsSecrets and policies as code',
-      'Cost and TTL controls'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     icon: '🚀',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
     link: `https://ziontechgroup.com/services/${toSlug('devx-preview-environments')}`,
-<<<<<<< HEAD
     marketPosition:
       'Faster than DIY scripts; comparable to Uffizzi/Gitpod previews.',
-=======
-    marketPosition: 'Faster than DIY scripts, comparable to Uffizzi/Gitpod previews.',
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     targetAudience: 'Platform and app teams',
     trialDays: 14,
     setupTime: '1–3 days',
@@ -1238,11 +1136,7 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-05',
     customers: 27,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 16,
-=======
-    reviews: 16
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'real-time-log-anomaly-guard',
@@ -1250,7 +1144,6 @@ export const real2025Q4Additions = [
     tagline: 'Detect anomalies and regressions with LLM-assisted alerts',
     price: '$129',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
     features: [
@@ -1259,24 +1152,13 @@ export const real2025Q4Additions = [
       'LLM summaries and hints',
       'Slack/Email alerts and tickets',
       'Dashboards and exports',
-=======
-    description: 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
-    features: [
-      'Streaming ingestion and rulesAnomaly detection and drift',
-      'LLM summaries and hintsSlack/Email alerts and tickets',
-      'Dashboards and exports'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     icon: '📈',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
     link: `https://ziontechgroup.com/services/${toSlug('real-time-log-anomaly-guard')}`,
-<<<<<<< HEAD
     marketPosition:
       'Adds AI summaries to classic log alerts; vendor-agnostic ingestion.',
-=======
-    marketPosition: 'Adds AI summaries to classic log alerts, vendor-agnostic ingestion.',
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     targetAudience: 'SREs and platform teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -1296,11 +1178,7 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-08',
     customers: 33,
     rating: 4.5,
-<<<<<<< HEAD
     reviews: 19,
-=======
-    reviews: 19
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'governed-feature-flags',
@@ -1308,7 +1186,6 @@ export const real2025Q4Additions = [
     tagline: 'Audit-ready flags with policies, approvals, and rollbacks',
     price: '$99',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
     features: [
@@ -1317,13 +1194,6 @@ export const real2025Q4Additions = [
       'SLO-based rollbacks',
       'SDKs and edge eval',
       'Experiments and cohorts',
-=======
-    description: 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
-    features: [
-      'Policies and approvalsChange logs and RBAC',
-      'SLO-based rollbacksSDKs and edge eval',
-      'Experiments and cohorts'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     icon: '🏳️',
     color: 'from-amber-600 to-orange-700',
@@ -1349,11 +1219,7 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-02',
     customers: 21,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 12,
-=======
-    reviews: 12
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'email-sequence-copilot',
@@ -1361,7 +1227,6 @@ export const real2025Q4Additions = [
     tagline: 'On-brand outbound with warm-up, scoring, and safety',
     price: '$79',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.',
     features: [
@@ -1370,23 +1235,12 @@ export const real2025Q4Additions = [
       'Reply intent and routing',
       'Blacklist monitoring',
       'CRM sync',
-=======
-    description: 'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.',
-    features: [
-      'Sequence composer and AI draftWarm-up and safety checks',
-      'Reply intent and routingBlacklist monitoring',
-      'CRM sync'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     icon: '✉️',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
     link: `https://ziontechgroup.com/services/${toSlug('email-sequence-copilot')}`,
-<<<<<<< HEAD
     marketPosition: 'Safer than generic sequencers; deliverability-first.',
-=======
-    marketPosition: 'Safer than generic sequencers, deliverability-first.',
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     targetAudience: 'Sales and growth teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -1406,11 +1260,7 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-12',
     customers: 38,
     rating: 4.5,
-<<<<<<< HEAD
     reviews: 20,
-=======
-    reviews: 20
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'data-contracts-guardrails',
@@ -1418,7 +1268,6 @@ export const real2025Q4Additions = [
     tagline: 'Schema governance, lineage, and backward-compat checks',
     price: '$299',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.',
     features: [
@@ -1427,13 +1276,6 @@ export const real2025Q4Additions = [
       'Lineage and ownership',
       'Alerts and SLOs',
       'CI/CD integrations',
-=======
-    description: 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.',
-    features: [
-      'Schema registry and versioningBack/forward compatibility checks',
-      'Lineage and ownershipAlerts and SLOs',
-      'CI/CD integrations'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     icon: '🧮',
     color: 'from-sky-600 to-indigo-700',
@@ -1459,11 +1301,7 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-03',
     customers: 12,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 9,
-=======
-    reviews: 9
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'managed-sso-fast-track',
@@ -1471,7 +1309,6 @@ export const real2025Q4Additions = [
     tagline: 'IdP mappings, SCIM, SAML/OIDC with enterprise checklist',
     price: '$4,500',
     period: '/fixed',
-<<<<<<< HEAD
     description:
       'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.',
     features: [
@@ -1479,12 +1316,6 @@ export const real2025Q4Additions = [
       'SAML/OIDC + SCIM',
       'Security test plans',
       'Customer enablement kit',
-=======
-    description: 'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.',
-    features: [
-      'Okta/Entra app configsSAML/OIDC + SCIM',
-      'Security test plansCustomer enablement kit'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     icon: '🔐',
     color: 'from-slate-600 to-gray-700',
@@ -1510,11 +1341,7 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-06',
     customers: 9,
     rating: 4.7,
-<<<<<<< HEAD
     reviews: 7,
-=======
-    reviews: 7
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'ai-sales-pipeline-insights',
@@ -1522,7 +1349,6 @@ export const real2025Q4Additions = [
     tagline: 'Forecast hygiene, stage risks, and next-best actions',
     price: '$149',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Connect CRM to compute forecast hygiene, risk scores, and next-best actions with weekly reports and alerts.',
     features: [
@@ -1530,12 +1356,6 @@ export const real2025Q4Additions = [
       'Stage SLAs and alerts',
       'Next-best action copilot',
       'Reporting and dashboards',
-=======
-    description: 'Connect CRM to compute forecast hygiene, risk scores, and next-best actions with weekly reports and alerts.',
-    features: [
-      'Risk scoring and hygiene checksStage SLAs and alerts',
-      'Next-best action copilotReporting and dashboards'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     icon: '📊',
     color: 'from-amber-600 to-orange-700',
@@ -1561,11 +1381,7 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-04',
     customers: 14,
     rating: 4.5,
-<<<<<<< HEAD
     reviews: 10,
-=======
-    reviews: 10
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'secure-webhook-relay',
@@ -1573,7 +1389,6 @@ export const real2025Q4Additions = [
     tagline: 'Replay, signature verification, retries, and audit logs',
     price: '$59',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.',
     features: [
@@ -1582,13 +1397,6 @@ export const real2025Q4Additions = [
       'Retries and backoff',
       'Fan-out and transformations',
       'Audit logs and RBAC',
-=======
-    description: 'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.',
-    features: [
-      'Signature verification and secretsReplay and DLQs',
-      'Retries and backoffFan-out and transformations',
-      'Audit logs and RBAC'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     icon: '🔁',
     color: 'from-cyan-600 to-blue-700',
@@ -1614,11 +1422,7 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-09',
     customers: 31,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 18,
-=======
-    reviews: 18
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   },
   {
     id: 'managed-postgres-ha-lite',
@@ -1626,7 +1430,6 @@ export const real2025Q4Additions = [
     tagline: 'Backups, failover, and performance baselines for SMEs',
     price: '$129',
     period: '/month',
-<<<<<<< HEAD
     description:
       'Hands-off Postgres ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.',
     features: [
@@ -1634,12 +1437,6 @@ export const real2025Q4Additions = [
       'Failover drills and runbooks',
       'Index and bloat maintenance',
       'Performance dashboards',
-=======
-    description: 'Hands-off Postgres ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.',
-    features: [
-      'Automated backups and PITRFailover drills and runbooks',
-      'Index and bloat maintenancePerformance dashboards'
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     ],
     icon: '🗄️',
     color: 'from-emerald-600 to-teal-700',
@@ -1665,14 +1462,6 @@ export const real2025Q4Additions = [
     launchDate: '2025-03-11',
     customers: 17,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 9,
   },
 ];
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-    reviews: 9
-  }
-];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

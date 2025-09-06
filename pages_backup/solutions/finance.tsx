@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
 import React from 'react';
@@ -38,10 +30,6 @@ const features = [;
     description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -56,10 +44,6 @@ import {
   ArrowRight ;
 } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
 import React from 'react';
@@ -92,11 +76,6 @@ const features = [;
     description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
 import Layout from '../../components/Layout';
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const features = [
   {
     icon: DollarSign,
@@ -115,14 +94,6 @@ const features = [
   },
   {
     icon: Users,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
   },
@@ -149,11 +120,8 @@ const solutions = [;
   'Cryptocurrency Solutions',',
   'Financial Mobile Applications'';
 ;];
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function FinanceSolutionsPage() {
   return (;
     <Layout );
@@ -217,29 +185,17 @@ const benefits = [
   'Reduced operational costs',
   'Faster transaction processing'
 ];
-<<<<<<< HEAD
 }
 
 export default function FinanceSolutions() {
-=======
-export default function FinanceSolutions() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     title: 'User Management',
     description: 'Secure user management with role-based access control',
     benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs']
   }
 ];
-<<<<<<< HEAD
 }
 
 export default function FinanceSolutionsPage() {
-=======
-
-export default function FinanceSolutionsPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     title: 'Customer Portal',
     description: 'Secure customer-facing applications and services'
   },
@@ -330,10 +286,6 @@ const benefits = [
   'Faster transaction processing'
 ];
 export default function FinanceSolutions() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
@@ -342,16 +294,10 @@ export default function FinanceSolutions() {
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         <section className="bg-gradient-to-r from-blue-600 to-green-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -373,10 +319,7 @@ export default function FinanceSolutions() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -387,48 +330,21 @@ export default function FinanceSolutions() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Built for financial institutions with security, compliance, and performance as top priorities.
               </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -553,10 +469,6 @@ export default function FinanceSolutions() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -569,14 +481,10 @@ export default function FinanceSolutions() {
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -701,14 +609,9 @@ export default function FinanceSolutions() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -730,26 +633,9 @@ export default function FinanceSolutions() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </Layout>
     </Layout>
     </>
     </>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
-=======
-    </Layout>
-    </Layout>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    </>
-=======
-    </Layout>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   );

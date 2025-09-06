@@ -1,28 +1,14 @@
-<<<<<<< HEAD:pages-disabled/quantum-energy.tsx
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function QuantumAIBCIPage() {
   const service = null;
-=======
-<<<<<<< HEAD:pages-disabled/quantum-energy.tsx
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
 import React from "react";
 import Head from "next/head";
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -30,26 +16,13 @@ import {
   ArrowRight
   Brain
   Star
-=======
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Brain,
-  Star,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
-<<<<<<< HEAD
     s.link.endsWith("/quantum-ai-brain-computer-interface")
-=======
-    s.link.endsWith("/quantum-ai-brain-computer-interface"),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
   if (!service) return null;
 
@@ -88,7 +61,6 @@ export default function QuantumAIBCIPage() {
                     <span>{feat}</span>
                   </li>
                 ))}
-<<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">;
@@ -111,66 +83,5 @@ export default function QuantumAIBCIPage() {
       </div>;
     </UltraAdvancedFuturisticBackground>;
   ),;
-=======
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-                  <div className="text-3xl font-bold text-white">
-                    {service.price}
-                    <span className="text-slate-400 text-base">
-                      {service.period}
-                    </span>
-                  </div>
-                  <div className="text-slate-400">
-                    {service.trialDays}-day free trial • Setup:{" "}
-                    {service.setupTime}
-                  </div>
-                </div>
-                <div className="flex items-center text-yellow-400">
-                  <Star className="w-4 h-4 mr-1" />
-                  {service.rating.toFixed(1)}
-                </div>
-              </div>
-              <Button
-                href="/contact"
-                variant="quantum"
-                size="lg"
-                className="w-full"
-              >
-                Book a Demo
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>{service.contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <span>{service.contactInfo.email}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-green-400" />
-                  <span className="text-xs">{service.contactInfo.address}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  );
-<<<<<<< HEAD:pages-disabled/quantum-energy.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main:pages-disabled/quantum-energy.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
->>>>>>> main:pages-disabled/quantum-energy.tsx
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx

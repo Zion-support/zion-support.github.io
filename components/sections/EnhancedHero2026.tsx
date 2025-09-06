@@ -1,31 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle  } from 'lucide-react';
-=======
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  CheckCircle,;
-} from 'lucide-react';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import Button from '../ui/Button';
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   ArrowRight
   Star
   TrendingUp
@@ -35,17 +13,6 @@ import {
   Brain
   Rocket
   CheckCircle;
-=======
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,;
-  CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface EnhancedHero2026Props {
@@ -63,14 +30,9 @@ interface EnhancedHero2026Props {
     emergingTech: number;
     itSolutions: number;
     microSaas: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     revolutionaryServices: number
   }
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
     revolutionaryServices: number;
   }
@@ -83,67 +45,18 @@ export default function EnhancedHero2026({
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         staggerChildren: 0.2
       }
-=======
-        staggerChildren: 0.2,
-      },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },  };        staggerChildren: 0.2
       }
     }
   }
-=======
-        staggerChildren: 0.2,
-      },
-    },  };
-
-  };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: { y: 30, opacity: 0 }
-=======
-    revolutionaryServices: number;
-  };
-}
-
-export default function EnhancedHero2026({
-  contactInfo,
-  serviceStats,
-}: EnhancedHero2026Props) {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: 'easeOut' as const,
-      },
-    },
-  };
-
-  const statsVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     visible: {
       y: 0
       opacity: 1
       transition: {
-<<<<<<< HEAD
         duration: 0.8
         ease: 'easeOut' as const
       }
@@ -162,14 +75,6 @@ export default function EnhancedHero2026({
       }
     }
   }
-=======
-        duration: 0.6,
-        ease: 'easeOut' as const,
-      },
-    },
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Enhanced Background Elements */}
@@ -183,34 +88,18 @@ export default function EnhancedHero2026({
             key={i}
             className='absolute w-2 h-2 bg-cyan-400/30 rounded-full'
             style={{
-<<<<<<< HEAD
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
-=======
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}
             animate={{
-<<<<<<< HEAD
               y: [0, -30, 0]
               opacity: [0.3, 0.8, 0.3]
               scale: [1, 1.5, 1],            }}
             transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
               duration: 3 + Math.random() * 2
               repeat: Infinity
               ease: 'easeInOut'
               delay: Math.random() * 2,            }}  }
-=======
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: Math.random() * 2,            }}  };
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Elements */}
@@ -230,7 +119,6 @@ export default function EnhancedHero2026({
               y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
-<<<<<<< HEAD
             }}
             transition={{
               duration: 3 + Math.random() * 2
@@ -238,56 +126,17 @@ export default function EnhancedHero2026({
               ease: 'easeInOut'
               delay: Math.random() * 2,              ease: "easeInOut"
               delay: Math.random() * 2
-=======
-              y: [0, -30, 0],
-              opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.5, 1],
+            }}
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-              ease: 'easeInOut',
-              delay: Math.random() * 2,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-            }}
-=======
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: Math.random() * 2,            }}
-
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-<<<<<<< HEAD
 
             }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-              ease: 'easeInOut',
-              delay: Math.random() * 2,              ease: "easeInOut",
-              delay: Math.random() * 2
-            }}
-=======
-
-            }}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         ))}
       </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           variants={containerVariants}
           initial='hidden'
@@ -319,7 +168,6 @@ export default function EnhancedHero2026({
                 {' '}
                 1000+ cutting-edge solutions
               </span>{' '}
-<<<<<<< HEAD
               delivering unprecedented ROI.            </p>
           </motion.div>
           {/* Enhanced Stats Grid */}
@@ -327,12 +175,7 @@ export default function EnhancedHero2026({
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services.
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
-=======
-              delivering unprecedented ROI.
-            </p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
-<<<<<<< HEAD
           {/* Enhanced Stats Grid */}
           <motion.div
             className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'
@@ -369,7 +212,6 @@ export default function EnhancedHero2026({
                 color: 'from-yellow-500 to-orange-500'
               }
               {
-<<<<<<< HEAD
                 label: 'Revolutionary'
                 value: serviceStats.revolutionaryServices
                 icon: Star
@@ -381,14 +223,6 @@ export default function EnhancedHero2026({
               { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' }
 
               { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
-=======
-                label: 'Revolutionary',
-                value: serviceStats.revolutionaryServices,
-                icon: Star,
-                color: 'from-pink-500 to-purple-500',
-              },
-            ].map((stat, index) => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={stat.label}
                 variants={statsVariants}
@@ -403,7 +237,6 @@ export default function EnhancedHero2026({
                 <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
                   {stat.value.toLocaleString()}+
                 </div>
-<<<<<<< HEAD
                 <div className='text-xs text-gray-400 leading-tight'>                  {stat.label}              >
                 <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-6 h-6 text-white" />
@@ -412,33 +245,11 @@ export default function EnhancedHero2026({
                   {stat.value.toLocaleString()}+
                 </div>
                 <div className="text-xs text-gray-400 leading-tight">
-=======
-                <div className='text-xs text-gray-400 leading-tight'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {stat.label}
-=======
-
-          {/* Enhanced Stats Grid */}
-
-                  {stat.label}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </motion.div>
             ))}
           </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -454,13 +265,8 @@ export default function EnhancedHero2026({
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
-<<<<<<< HEAD
               <Button
                 href="/contact"
-=======
-              <Button 
-                href="/contact" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
@@ -478,12 +284,8 @@ export default function EnhancedHero2026({
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'
               >
                 <span className='flex items-center'>
-<<<<<<< HEAD
                   <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">
                   <Shield className="mr-3 w-7 h-7" />
-=======
-                  <Shield className='mr-3 w-7 h-7' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Get Expert Consultation
                 </span>
               </Button>
@@ -504,24 +306,12 @@ export default function EnhancedHero2026({
                 <span>99.9% Uptime Guarantee</span>
               </div>
               <div className='flex items-center space-x-2'>
-<<<<<<< HEAD
                 <CheckCircle className='w-5 h-5 text-green-400' />                <span>24/7 Expert Support</span>              <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
-=======
-                <CheckCircle className='w-5 h-5 text-green-400' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <span>24/7 Expert Support</span>
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}
@@ -546,7 +336,6 @@ export default function EnhancedHero2026({
               </div>
               <div className='text-center'>
                 <div className='text-cyan-400 font-medium'>Website</div>
-<<<<<<< HEAD
                 <div className='text-white'>{contactInfo.website}</div>              </div>            variants={itemVariants}
             className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
           >
@@ -566,26 +355,11 @@ export default function EnhancedHero2026({
               <div className="text-center">
                 <div className="text-cyan-400 font-medium">Website</div>
                 <div className="text-white">{contactInfo.website}</div>
-=======
-                <div className='text-white'>{contactInfo.website}</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           </motion.div>
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
 );  )
 }
-=======
-  );
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

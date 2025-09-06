@@ -1,34 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { GradientHeading } from '@/components/GradientHeading';
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 import React from "react",
-=======
-<<<<<<< HEAD
-import React from "react";
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
-=======
-import { Button } from "@/components/ui/button",
-import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseHero() {
   return (
     <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">
@@ -39,12 +16,8 @@ export function EnterpriseHero() {
               Enterprise <GradientHeading className="inline">Talent Solutions</GradientHeading>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-<<<<<<< HEAD
               Scale your talent acquisition with a custom-branded hiring portal
               dedicated talent pool, and powerful admin controls.
-=======
-              Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
             <div className="flex flex-col sm: flex-row gap-4">
               <Button size="lg" className="w-full sm:w-auto">
@@ -79,20 +52,9 @@ export function EnterpriseHero() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </section>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
-    </section>;
-  );
-}
-=======
-    </section>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -146,8 +108,3 @@ export function EnterpriseHero() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,54 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '[^']*';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = null;
     return res.status(200).send(csv)
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../utils/supabase/server";
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const code = (req.query.code as string)?.toLowerCase();
-<<<<<<< HEAD
   if (!code) return res.status(400).json({ error: "Missing code" });
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
       "placeholder-key";
-=======
-  if (!code) return res.status(400).json({ error: 'Missing code' });
-
-  
-}
-
-const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
-      'placeholder-key';
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     if (usingPlaceholder) {
       const csv =
@@ -62,7 +28,6 @@ const usingPlaceholder =
     }
     const supabase = getServerSupabase();
     const { data, error } = await supabase
-<<<<<<< HEAD
       .from("referral_events")
       .select("event, created_at")
       .eq("partner_code", code)
@@ -71,21 +36,6 @@ const usingPlaceholder =
     const rows = [
       ["eventtimestamp"]
       ...(data |[]).map((r: any) => [r.event, r.created_at])
-=======
-      .from('referral_events')
-      .select('event, created_at')
-      .eq('partner_code', code)
-      .order('created_at', { ascending: false });
-
-    if (error) return res.status(500).json({ error: error.message });
-
-    
-}
-
-const rows = [
-      ['event', 'timestamp'],
-      ...(data || []).map((r: any) => [r.event, r.created_at]),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     ];
     const csv = rows.map((r) => r.join()).join("\n");
     res.setHeader("Content-Type", "text/csv");
@@ -97,96 +47,9 @@ const rows = [
 
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 }
-=======
- 
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = (req.query.code as string)?.toLowerCase();
-  if (!code) return res.status(400).json({ error: 'Code required' });
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-  try {
-    if (usingPlaceholder) {
-      const csv = 'event;timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z';
-      res.setHeader('Content-Type', 'text/csv');
-      res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`);
-      return res.status(200).send(csv)
-    }
-
-    const supabase = getServerSupabase();
-    const { data, error } = await supabase
-      .from('referral_events')
-      .select('event, created_at')
-      .eq('partner_code', code)
-      .order('created_at', { ascending: false });
-    if (error) return res.status(500).json({ error: 'Database error' });
-    const rows = [['eventtimestamp'], ...(data || []).map((r: any) => [r.event, r.created_at])];
-    const csv = rows.map(r => r.join()).join('\n');
-    res.setHeader('Content-Type', 'text/csv');
-    res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`);
-    return res.status(200).send(csv)
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  }
-<<<<<<< HEAD
-}
-=======
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-    const supabase = getServerSupabase();
-    const { data, error } = await supabase;
-      .from('referral_events');
-      .select('event, created_at');
-      .eq('partner_code', code);
-      .order('created_at', { ascending: false });
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    const rows = [['eventtimestamp'], ...(data || []).map((r: any) => [r.event, r.created_at])],;
-    const csv = rows.map(r => r.join()).join('\n');
-    res.setHeader('Content-Typetext/csv');
-    res.setHeader('Content-Disposition', `attachment, filename="${code}-referrals.csv"`);
-    return res.status(200).send(csv);
-  } catch (error) {
-    return res.status(500).json({ error: e?.message });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  }
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

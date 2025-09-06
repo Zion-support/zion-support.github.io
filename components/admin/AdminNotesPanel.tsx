@@ -1,19 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type AdminNotesPanelProps = any;
-=======
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export type AdminNotesPanelProps = {
-=======
-export type AdminNotesPanelProps = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
 }
@@ -24,19 +11,11 @@ type Note = {
   text: string;
   authorId: string;
   createdAt: number;
-<<<<<<< HEAD
 }
 export default function AdminNotesPanel({
-<<<<<<< HEAD
   targetType
   targetId
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
-=======
-  targetType,
-  targetId,;
-}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Note = {
   id: string
   targetType: string
@@ -44,25 +23,8 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
-<<<<<<< HEAD
 }
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-=======
-};
-<<<<<<< HEAD
-}
-}
-
-export default function AdminNotesPanel({
-  targetType,
-  targetId,
-}: AdminNotesPanelProps) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -82,7 +44,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         setNotes([]);
         return;
       }
-<<<<<<< HEAD
       const data = await res.json();
       setNotes(data.notes |[]);
     } finally {
@@ -97,33 +58,17 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setNotes(data.notes |[])
     } finally {
       setLoading(false)
-=======
-}
-
-const data = await res.json();
-      setNotes(data.notes || []);
-    } finally {
-      setLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   useEffect(() => {
-<<<<<<< HEAD
     if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
-=======
-    if (isAdmin) fetchNotes();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [isAdmin, targetType, targetId]);
   async function addNote() {
     if (!text.trim()) return;
     setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
-<<<<<<< HEAD
         method: 'POST'
-=======
-        method: 'POST',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Content-Type': 'application/json'
           'X-Admin': isAdmin ? 'true' : 'false'
@@ -138,42 +83,17 @@ const data = await res.json();
       setText('');
       await fetchNotes();
     } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
         return
       }
       setText('');
 
-<<<<<<< HEAD
       await fetchNotes()
     } finally {
       setAdding(false)
-=======
-<<<<<<< HEAD
-      setAdding(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-      setAdding(false);    }
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
@@ -240,39 +160,16 @@ const data = await res.json();
               <li key={n.id} className='rounded border p-2 text-sm'>
                 <div className='opacity-60 text-xs mb-1'>
                   {new Date(n.createdAt).toLocaleString()} • {n.authorId}
-<<<<<<< HEAD
                 </div>                <div>{n.text}</div>          <ul className="space-y-2">
             {notes.map((n) => (
               <li key={n.id} className="rounded border p-2 text-sm">
                 <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-=======
-                </div>
-                <div>{n.text}</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </li>
             ))}
           </ul>
         )}
       </div>
     </div>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

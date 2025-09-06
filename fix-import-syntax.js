@@ -13,12 +13,7 @@ function fixImportSyntax(filePath) {
       const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
-<<<<<<< HEAD
     // Fix missing commas in import statements
-=======
-
-    // Fix missing commas in import statements;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items

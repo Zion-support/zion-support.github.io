@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = any;
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 useEffect ( () => {
-=======
- useEffect ( () => {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const load = async () => {
   try {
   if (loading) return <div>Loading episodes…</div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='space-y-6'>
       <div className='flex items-center justify-between'>
@@ -49,7 +34,6 @@ useEffect ( () => {
                     href={ep.audio.mp3Url}
                     className='px-3 py-2 bg-blue-600 text-white rounded'
                     download
-<<<<<<< HEAD
                   >                    MP3
                   </a>
                 )}
@@ -74,9 +58,6 @@ useEffect ( () => {
               <div className="flex gap-3">
                 {ep.audio?.mp3Url && (
                   <a href={ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>
-=======
-                  >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     MP3
                   </a>
                 )}
@@ -85,14 +66,10 @@ useEffect ( () => {
                     href={ep.audio.wavUrl}
                     className='px-3 py-2 bg-gray-700 text-white rounded'
                     download
-<<<<<<< HEAD
                   >                    WAV
                   </a>
                 )}
                 {ep.audio?.mp4Url && (                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
-=======
-                  >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     WAV
                   </a>
                 )}
@@ -101,11 +78,7 @@ useEffect ( () => {
                     href={ep.audio.mp4Url}
                     className='px-3 py-2 bg-purple-700 text-white rounded'
                     download
-<<<<<<< HEAD
                   >                    MP4                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
-=======
-                  >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     MP4
                   </a>
                 )}
@@ -117,33 +90,13 @@ useEffect ( () => {
                 className='text-blue-600 underline'
               >
                 View Transcript
-<<<<<<< HEAD
               </Link>            </div>            <div className="mt-3 flex gap-4">
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
-=======
-              </Link>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </li>
         ))}
       </ul>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-<<<<<<< HEAD
-}
-;
 }
 }
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

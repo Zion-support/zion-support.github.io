@@ -437,12 +437,5 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
       )}
     </div>;
   );
-<<<<<<< HEAD
 }
 export default ContentCategorizer;
-=======
-};
-}
-
-export default ContentCategorizer;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

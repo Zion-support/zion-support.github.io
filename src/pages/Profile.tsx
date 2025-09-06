@@ -12,11 +12,5 @@ const Profile = () => {
       </div>
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default Profile;

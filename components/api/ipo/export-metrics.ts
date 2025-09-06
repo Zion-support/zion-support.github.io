@@ -1,27 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireSuperadminApi } from '../../../utils/api/auth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [
@@ -39,7 +20,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     'Content-Disposition'
     'attachment; filename="ipo-metrics.csv"'
   );
-<<<<<<< HEAD
   res.status(200).send(csv);    ['MetricValueTrend%'];
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
@@ -50,15 +30,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
 
   res.status(200).send(csv)
-<<<<<<< HEAD
 }
-=======
-  res.status(200).send(csv);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

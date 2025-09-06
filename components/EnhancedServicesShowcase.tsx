@@ -1,18 +1,8 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Brain, Shield, Rocket, Cpu, Database, Atom, Users;
   CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
  } from 'lucide-react';
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   Brain
   Shield
   Rocket
@@ -26,21 +16,6 @@ import {
   Star
   Filter
   ChevronDown;
-=======
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Atom,
-  Users,
-  CheckCircle,
-  TrendingUp,
-  Clock,
-  Star,
-  Filter,;
-  ChevronDown,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface Service {
@@ -59,16 +34,8 @@ interface Service {
   growthRate: string;
   popular?: boolean;
   icon: React.ComponentType<any>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   color: string
 }
-=======
-  color: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
   color: string;} from 'lucide-react';
 interface Service {
@@ -94,7 +61,6 @@ const EnhancedServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const services: Service[] = [
     {
-<<<<<<< HEAD
       id: 'ai-bi'
       name: 'AI Business Intelligence'
       tagline:
@@ -104,17 +70,6 @@ const EnhancedServicesShowcase: React.FC = () => {
       period: '/month'
       setupTime: '2-3 weeks'
       customers: '150+'
-=======
-      id: 'ai-bi',
-      name: 'AI Business Intelligence',
-      tagline:
-        'Transform data into actionable insights with AI-powered analytics',
-      category: 'AI & Analytics',
-      price: '$499',
-      period: '/month',
-      setupTime: '2-3 weeks',
-      customers: '150+',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       features: [
         'AI-powered dashboards'
         'Predictive analytics'
@@ -122,7 +77,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Custom reporting'
       ]
       benefits: [
-<<<<<<< HEAD
         '30% faster decision making'
         'Improved data accuracy'
         'Cost reduction'
@@ -171,78 +125,6 @@ const EnhancedServicesShowcase: React.FC = () => {
     {
       id: 'edge-computing'
       name: 'Edge Computing Orchestration'
-=======
-        '30% faster decision making',
-        'Improved data accuracy',
-        'Cost reduction',
-      ],
-      roi: 'Average 3.2x ROI within 6 months',
-      marketSize: '$25B',
-      growthRate: '25% YoY',
-      popular: true,
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-    },
-    {
-      id: 'quantum-cyber',
-      name: 'Quantum Cybersecurity',
-      tagline:
-        'Future-proof security with quantum-resistant encryption and AI threat detection',
-      category: 'Security',
-      price: '$799',
-      period: '/month',
-      setupTime: '4-6 weeks',
-      customers: '75+',
-      features: [
-        'Quantum-resistant encryption',
-        'AI threat detection',
-        'Zero-trust architecture',
-        '24/7 monitoring',
-      ],
-      benefits: [
-        '99.99% threat prevention',
-        'Compliance ready',
-        'Reduced security incidents',
-      ],
-      roi: 'Average 4.1x ROI within 8 months',
-      marketSize: '$18B',
-      growthRate: '32% YoY',
-      popular: false,
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-    },
-    {
-      id: 'edge-computing',
-      name: 'Edge Computing Orchestration',
-      tagline:
-        'Deploy and manage applications at the edge with intelligent orchestration',
-      category: 'Infrastructure',
-      price: '$349',
-      period: '/month',
-      setupTime: '1-2 weeks',
-      customers: '200+',
-      features: [
-        'Edge node management',
-        'IoT device management',
-        'Real-time monitoring',
-        'Auto-scaling',
-      ],
-      benefits: [
-        '50% latency reduction',
-        'Improved reliability',
-        'Cost optimization',
-      ],
-      roi: 'Average 2.8x ROI within 4 months',
-      marketSize: '$12B',
-      growthRate: '28% YoY',
-      popular: false,
-      icon: Cpu,
-      color: 'from-emerald-500 to-teal-500',
-    },
-    {
-      id: 'space-tech',
-      name: 'Space Technology Innovation',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       tagline:
         'Deploy and manage applications at the edge with intelligent orchestration',      category: 'Infrastructure',      color: 'from-red-500 to-orange-500'
     }
@@ -261,7 +143,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Auto-scaling'
       ]
       benefits: [
-<<<<<<< HEAD
         '50% latency reduction'
         'Improved reliability'
         'Cost optimization'
@@ -316,29 +197,6 @@ const EnhancedServicesShowcase: React.FC = () => {
       period: '/month'
       setupTime: '6-8 weeks'
       customers: '40+'
-=======
-        'Mission success rate 95%+',
-        'Reduced launch costs',
-        'Advanced capabilities',
-      ],
-      roi: 'Average 5.2x ROI within 12 months',
-      marketSize: '$8B',
-      growthRate: '45% YoY',
-      popular: true,
-      icon: Rocket,
-      color: 'from-violet-500 to-purple-500',
-    },
-    {
-      id: 'neural-interface',
-      name: 'Neural Interface Development',
-      tagline:
-        'Build the future of human-computer interaction with neural interfaces',
-      category: 'Emerging Tech',
-      price: '$899',
-      period: '/month',
-      setupTime: '6-8 weeks',
-      customers: '40+',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       features: [
         'BCI development tools'
         'Neural signal processing'
@@ -346,7 +204,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Safety protocols'
       ]
       benefits: [
-<<<<<<< HEAD
         'Revolutionary UX'
         'Accessibility improvements'
         'Research advancement'
@@ -369,28 +226,6 @@ const EnhancedServicesShowcase: React.FC = () => {
       period: '/month'
       setupTime: '10-14 weeks'
       customers: '15+'
-=======
-        'Revolutionary UX',
-        'Accessibility improvements',
-        'Research advancement',
-      ],
-      roi: 'Average 6.8x ROI within 18 months',
-      marketSize: '$3B',
-      growthRate: '67% YoY',
-      popular: false,
-      icon: Brain,
-      color: 'from-pink-500 to-rose-500',
-    },
-    {
-      id: 'quantum-ai',
-      name: 'Quantum AI Neural Networks',
-      tagline: 'Quantum-powered AI with advanced consciousness capabilities',
-      category: 'Quantum AI',
-      price: '$1,299',
-      period: '/month',
-      setupTime: '10-14 weeks',
-      customers: '15+',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       features: [
         'Quantum neural networks'
         'Consciousness simulation'
@@ -398,7 +233,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         'Quantum optimization'
       ]
       benefits: [
-<<<<<<< HEAD
         'Unprecedented AI capabilities'
         'Breakthrough research'
         'Competitive advantage'
@@ -417,24 +251,8 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
   ];
   const categories = [
-<<<<<<< HEAD
     'all'
     ...Array.from(new Set(services.map(s => s.category)))
-=======
-    'all',
-    ...Array.from(new Set(services.map(s => s.category))),
-
-<<<<<<< HEAD
-  ];
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-  ];
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const filteredServices = services.filter(service => {
     const matchesCategory =
       selectedCategory === 'all' |service.category === selectedCategory;
@@ -458,47 +276,6 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
     return iconMap[category] |Brain;
   }
-=======
-        'Unprecedented AI capabilities',
-        'Breakthrough research',
-        'Competitive advantage',
-      ],
-      roi: 'Average 8.5x ROI within 24 months',
-      marketSize: '$2B',
-      growthRate: '89% YoY',
-      popular: true,
-      icon: Atom,
-      color: 'from-blue-500 to-cyan-500',
-    },
-  ];
-
-  const categories = [
-    'all',
-    ...Array.from(new Set(services.map(s => s.category))),
-  ];
-
-  const filteredServices = services.filter(service => {
-    const matchesCategory =
-      selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
-      'AI & Analytics': Brain,
-      Security: Shield,
-      Infrastructure: Cpu,
-      'Space Tech': Rocket,
-      'Emerging Tech': Brain,
-      'Quantum AI': Atom,
-    };
-    return iconMap[category] || Brain;
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>
       {/* Background */}
@@ -516,7 +293,6 @@ const EnhancedServicesShowcase: React.FC = () => {
           </h2>
           <p className='text-xl text-white/70 max-w-3xl mx-auto leading-relaxed'>
             Cutting-edge technology solutions designed to transform your
-<<<<<<< HEAD
             business and accelerate innovation          </p>
         </div>
         {/* Filters */}
@@ -540,13 +316,9 @@ const EnhancedServicesShowcase: React.FC = () => {
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
             Cutting-edge technology solutions designed to transform your business and accelerate innovation
-=======
-            business and accelerate innovation
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </div>
         {/* Filters */}
-<<<<<<< HEAD
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}
           <div className='relative'>
@@ -560,7 +332,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   key={category}
                   value={category}
                   className='bg-slate-800 text-white'
-<<<<<<< HEAD
                 >                  {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -574,25 +345,12 @@ const EnhancedServicesShowcase: React.FC = () => {
             >
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
-=======
-<<<<<<< HEAD
-                >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
             </select>
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
           </div>
-<<<<<<< HEAD
           {/* Search */}
           <div className='relative'>
             <input
@@ -602,7 +360,6 @@ const EnhancedServicesShowcase: React.FC = () => {
               onChange={e => setSearchTerm(e.target.value)}
               className='px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64'
             />
-<<<<<<< HEAD
             <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />          </div>
         </div>
         {/* Services Grid */}
@@ -617,9 +374,6 @@ const EnhancedServicesShowcase: React.FC = () => {
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
             />
             <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
-=======
-            <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
         {/* Services Grid */}
@@ -633,7 +387,6 @@ const EnhancedServicesShowcase: React.FC = () => {
               {service.popular && (
                 <div className='absolute top-4 right-4 z-20'>
                   <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
-<<<<<<< HEAD
                     <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
             <div
               key={service.id}
@@ -644,38 +397,12 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <div className="absolute top-4 right-4 z-20">
                   <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
                     <Star className="w-3 h-3" />
-=======
-                    <Star className='w-3 h-3' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Popular
                   </div>
                 </div>
               )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Service Content */}
               <div className='p-8'>
-=======
-        </div>
-
-        {/* Services Grid */}
-
-                    Popular
-
-                  </div>
-                </div>
-              )}
-
-              {/* Service Content */}
-              <div className='p-8'>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>
                   <div
@@ -691,7 +418,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     </div>
                     <div className='text-xs text-white/40'>
                       {service.category}
-<<<<<<< HEAD
                     </div>                  </div>
                 </div>
                 {/* Service Info */}                {/* Icon and Category */}
@@ -702,9 +428,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <div className="text-right">
                     <div className="text-xs text-white/60 mb-1">{getCategoryIcon(service.category)({ className: 'w-3 h-3' })}</div>
                     <div className="text-xs text-white/40">{service.category}</div>
-=======
-                    </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
                 {/* Service Info */}
@@ -728,12 +451,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                       {service.setupTime}
                     </span>
                     <span className='flex items-center gap-1'>
-<<<<<<< HEAD
                       <Users className='w-3 h-3' />                      {service.customers} customers                    <span className="flex items-center gap-1">
                       <Users className="w-3 h-3" />
-=======
-                      <Users className='w-3 h-3' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {service.customers} customers
                     </span>
                   </div>
@@ -749,29 +468,16 @@ const EnhancedServicesShowcase: React.FC = () => {
                         key={idx}
                         className='flex items-center gap-2 text-xs text-white/70'
                       >
-<<<<<<< HEAD
                         <CheckCircle className='w-3 h-3 text-green-400' />                        {feature}                <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
                   <div className="space-y-2">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <CheckCircle className="w-3 h-3 text-green-400" />
-=======
-                        <CheckCircle className='w-3 h-3 text-green-400' />
-                        {feature}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Benefits */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -783,29 +489,16 @@ const EnhancedServicesShowcase: React.FC = () => {
                         key={idx}
                         className='flex items-center gap-2 text-xs text-white/70'
                       >
-<<<<<<< HEAD
                         <TrendingUp className='w-3 h-3 text-blue-400' />                        {benefit}                <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-3">Key Benefits:</h4>
                   <div className="space-y-2">
                     {service.benefits.slice(0, 2).map((benefit, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <TrendingUp className="w-3 h-3 text-blue-400" />
-=======
-                        <TrendingUp className='w-3 h-3 text-blue-400' />
-                        {benefit}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>
                   <div className='text-xs text-white/60 mb-2'>
@@ -814,15 +507,10 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <div className='text-xs text-white/80 leading-relaxed'>
                     {service.roi}
                   </div>
-<<<<<<< HEAD
                   <div className='mt-2 text-xs text-white/60'>                    Market: {service.marketSize} • Growth: {service.growthRate}                <div className="mb-6 p-4 bg-white/5 rounded-lg">
                   <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>
                   <div className="text-xs text-white/80 leading-relaxed">{service.roi}</div>
                   <div className="mt-2 text-xs text-white/60">
-=======
-                  <div className='mt-2 text-xs text-white/60'>
-                    Market: {service.marketSize} • Growth: {service.growthRate}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
                 {/* Action Buttons */}
@@ -831,7 +519,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     onClick={() =>
                       (window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`)
                     }
-<<<<<<< HEAD
                     className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105'                  >
                     Get Started
                   </button>
@@ -843,9 +530,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <button
                     onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}
                     className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105"
-=======
-                    className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     Get Started
                   </button>
@@ -853,12 +537,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                     onClick={() =>
                       (window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`)
                     }
-<<<<<<< HEAD
                     className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                    onClick={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject=Demo request for ${service.name}`}
                     className="px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
-=======
-                    className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     Demo
                   </button>
@@ -867,26 +547,10 @@ const EnhancedServicesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Transform Your Business?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -896,7 +560,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
                 href='mailto:kleber@ziontechgroup.com?subject=Consultation Request'
-<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'              >
                 Schedule Consultation
               </a>
@@ -911,20 +574,13 @@ const EnhancedServicesShowcase: React.FC = () => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Consultation Request"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-=======
-                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Schedule Consultation
               </a>
               <a
                 href='tel:+13024640950'
-<<<<<<< HEAD
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
-=======
-                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Call Now
               </a>
@@ -934,37 +590,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedServicesShowcase;  )
 }
 export default EnhancedServicesShowcase;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
-}
-
-export default EnhancedServicesShowcase;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
-=======
-export default EnhancedServicesShowcase;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-}
-=======
-export default EnhancedServicesShowcase;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

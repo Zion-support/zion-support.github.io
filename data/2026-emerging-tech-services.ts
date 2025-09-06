@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface EmergingTechService2026 {
-=======
-export interface EmergingTechService2026 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -43,13 +37,8 @@ export interface EmergingTechService2026 {;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   reviews: number
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
   reviews: number;
 const contact = {
@@ -66,23 +55,6 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
   {
     id: 'quantum-computing-as-a-service'
     name: 'Quantum Computing as a Service (QCaaS)'
-=======
-  reviews: number;
-
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-}
-
-export const emergingTechServices2026: EmergingTechService2026[] = [
-  // Quantum Computing Services
-  {
-    id: 'quantum-computing-as-a-service',
-    name: 'Quantum Computing as a Service (QCaaS)',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     tagline:
       'Access quantum computing power through the cloud with AI-optimized algorithms'
     price: '$999'
@@ -582,51 +554,21 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
     launchDate: '2024-06-25'
     customers: 56
     rating: 4.4
     reviews: 29
   }
-=======
-      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
-    launchDate: '2024-06-25',
-    customers: 56,
-    rating: 4.4,
-    reviews: 29,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
-<<<<<<< HEAD
 }
 export const getPopularEmergingTechServices2026 = () => {
-=======
-};
-
-export const getPopularEmergingTechServices2026 = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return emergingTechServices2026.filter(service => service.popular);
 }
-=======
-};
-}
-
-export const getPopularEmergingTechServices2026 = () => {
-  return emergingTechServices2026.filter(service => service.popular);
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -635,23 +577,9 @@ export const getEmergingTechServices2026ByPriceRange = (
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
   })
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-export interface EmergingTechService2026 {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -976,10 +904,4 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
     const price = parseInt(service.price.replace('$', '')),;
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedQuantumBackgroundProps {
   children: React.ReactNode;
   className?: string
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 canvas.width = window.innerWidth;
-=======
- canvas.width = window.innerWidth;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 canvas.height = window.innerHeight;
 let animationFrameId: number;
 let particles: Particle[] = [];
@@ -41,13 +31,8 @@ this.color = `hsl ($ {
 }, 70%, 60%) `;
 this.life = Math.random () * 100;
 this.maxLife = 100
-<<<<<<< HEAD
 }if (this.x < 0 |this.x > canvas.width) this.vx *= -1;
 if (this.y < 0 |this.y > canvas.height) this.vy *= -1;
-=======
-}if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 if (this.life <= 0) {
   constructor () {
   this.x = Math.random () * canvas.width;
@@ -58,21 +43,12 @@ this.phase = Math.random () * Math.PI * 2;
 this.color = `hsl ($ {
   200 + Math.random () * 60
 }, 80%, 60%) `
-<<<<<<< HEAD
 const UltraAdvancedQuantumBackground: React.FC<
   UltraAdvancedQuantumBackgroundProps
 > = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({
   children;
   className = ''
 }) => {
-=======
-
-const UltraAdvancedQuantumBackground: React.FC<
-  UltraAdvancedQuantumBackgroundProps
-> = ({ children, className = '' }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -80,10 +56,6 @@ const UltraAdvancedQuantumBackground: React.FC<
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     let animationFrameId: number;
     let particles: Particle[] = [];
     let quantumFields: QuantumField[] = [];
@@ -96,7 +68,6 @@ const UltraAdvancedQuantumBackground: React.FC<
       size: number;
       color: string;
       life: number;
-<<<<<<< HEAD
       maxLife: number;      x: number
       y: number
       vx: number
@@ -105,11 +76,6 @@ const UltraAdvancedQuantumBackground: React.FC<
       color: string
       life: number
       maxLife: number
-=======
-      maxLife: number;
-
-      constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 2;
@@ -117,11 +83,7 @@ const UltraAdvancedQuantumBackground: React.FC<
         this.size = Math.random() * 3 + 1;
         this.color = `hsl(${Math.random() * 360}, 70%, 60%)`;
         this.life = Math.random() * 100;
-<<<<<<< HEAD
         this.maxLife = 100;      }        this.maxLife = 100
-=======
-        this.maxLife = 100;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       update() {
         this.x += this.vx;
@@ -132,27 +94,9 @@ const UltraAdvancedQuantumBackground: React.FC<
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
-<<<<<<< HEAD
           this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
-=======
-<<<<<<< HEAD
-          this.y = Math.random() * canvas.height;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-          this.y = Math.random() * canvas.height;        }
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         }
       }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         if (!ctx) return;
         ctx.save();
@@ -161,13 +105,9 @@ const UltraAdvancedQuantumBackground: React.FC<
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
         ctx.restore();      }
     }
     class QuantumField {        ctx.restore()
-=======
-        ctx.restore();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     class QuantumField {
@@ -177,17 +117,12 @@ const UltraAdvancedQuantumBackground: React.FC<
       intensity: number;
       phase: number;
       color: string;
-<<<<<<< HEAD
       x: number
       y: number
       radius: number
       intensity: number
       phase: number
       color: string
-=======
-
-      constructor() {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.radius = Math.random() * 100 + 50;
@@ -196,16 +131,10 @@ const UltraAdvancedQuantumBackground: React.FC<
         this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`;
       }
       update() {
-<<<<<<< HEAD
         this.phase += 0.02;      }        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
       }
       update() {
         this.phase += 0.02
-=======
-        this.phase += 0.02;
-      }
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       draw() {
         if (!ctx) return;
         ctx.save();
@@ -215,16 +144,12 @@ const UltraAdvancedQuantumBackground: React.FC<
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.stroke();
-<<<<<<< HEAD
         ctx.restore();      }
     }
     class NeuralNetwork {
       nodes: { x: number; y: number; connections: number[] }[];
       connections: { from: number; to: number; weight: number }[];
         ctx.restore()
-=======
-        ctx.restore();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     class NeuralNetwork {
@@ -254,7 +179,6 @@ const UltraAdvancedQuantumBackground: React.FC<
             }
             nodeIndex++;
           }
-<<<<<<< HEAD
         });      }      constructor() {
         this.nodes = [];
         this.connections = [];
@@ -280,29 +204,18 @@ const UltraAdvancedQuantumBackground: React.FC<
             nodeIndex++
           }
         })
-=======
-        });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       update() {
         // Animate neural network
         this.nodes.forEach((node, index) => {
           node.x += (Math.random() - 0.5) * 0.5;
           node.y += (Math.random() - 0.5) * 0.5;
-<<<<<<< HEAD
         });      }          node.y += (Math.random() - 0.5) * 0.5
         })
-=======
-        });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       draw() {
         if (!ctx) return;
         ctx.save();
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         // Draw connections
         ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)';
         ctx.lineWidth = 1;
@@ -312,11 +225,7 @@ const UltraAdvancedQuantumBackground: React.FC<
           ctx.beginPath();
           ctx.moveTo(from.x, from.y);
           ctx.lineTo(to.x, to.y);
-<<<<<<< HEAD
           ctx.stroke();        });          ctx.stroke()
-=======
-          ctx.stroke();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         });
         // Draw nodes
         ctx.fillStyle = 'rgba(100, 200, 255, 0.8)';
@@ -325,16 +234,11 @@ const UltraAdvancedQuantumBackground: React.FC<
           ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
           ctx.fill();
         });
-<<<<<<< HEAD
         ctx.restore();      }
     }
     // Initialize          ctx.fill()
         });
         ctx.restore()
-=======
-
-        ctx.restore();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
     }
     // Initialize
@@ -342,17 +246,11 @@ const UltraAdvancedQuantumBackground: React.FC<
       particles.push(new Particle());
     }
     for (let i = 0; i < 8; i++) {
-<<<<<<< HEAD
       quantumFields.push(new QuantumField());    }    for (let i = 0, i < 100, i++) {
       particles.push(new Particle())
     }
     for (let i = 0, i < 8, i++) {
       quantumFields.push(new QuantumField())
-=======
-      quantumFields.push(new QuantumField());
-    }
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     neuralNetworks.push(new NeuralNetwork());
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
@@ -360,39 +258,23 @@ const UltraAdvancedQuantumBackground: React.FC<
       // Update and draw quantum fields
       quantumFields.forEach(field => {
         field.update();
-<<<<<<< HEAD
         field.draw();      });        field.draw()
-=======
-        field.draw();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       // Update and draw neural networks
       neuralNetworks.forEach(network => {
         network.update();
-<<<<<<< HEAD
         network.draw();      });        network.draw()
-=======
-        network.draw();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
-<<<<<<< HEAD
         particle.draw();      });        particle.draw()
-=======
-        particle.draw();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       // Draw quantum entanglement effects
       ctx.save();
       ctx.strokeStyle = 'rgba(255, 100, 255, 0.3)';
       ctx.lineWidth = 1;
-<<<<<<< HEAD
       for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {      for (let i = 0, i < particles.length, i += 2) {
-=======
-      for (let i = 0; i < particles.length; i += 2) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         if (i + 1 < particles.length) {
           const p1 = particles[i];
           const p2 = particles[i + 1];
@@ -401,55 +283,24 @@ const UltraAdvancedQuantumBackground: React.FC<
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
-=======
-<<<<<<< HEAD
-            ctx.stroke();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            ctx.stroke();          }
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }
         }
       }
       ctx.restore();
-<<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate)
     }
-=======
-
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     animate();
     const handleResize = () => {
       canvas.width = window.innerWidth;
-<<<<<<< HEAD
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     }
-=======
-      canvas.height = window.innerHeight;
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
-<<<<<<< HEAD
     };  }, []);      cancelAnimationFrame(animationFrameId)
     }
-=======
-    };
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
@@ -462,7 +313,6 @@ const UltraAdvancedQuantumBackground: React.FC<
       {/* Animated Quantum Grid */}
       <div className='absolute inset-0 opacity-20'>
         <div className='absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />
-<<<<<<< HEAD
         <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />      </div>
       {/* Floating Quantum Elements */}
       <motion.div
@@ -470,11 +320,6 @@ const UltraAdvancedQuantumBackground: React.FC<
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
         <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
-=======
-        <div className='absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]' />
-      </div>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       {/* Floating Quantum Elements */}
       <motion.div
         className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'
@@ -483,7 +328,6 @@ const UltraAdvancedQuantumBackground: React.FC<
           opacity: [0.2, 0.4, 0.2]
         }}
         transition={{
-<<<<<<< HEAD
           duration: 4
           repeat: Infinity
           ease: 'easeInOut',        animate={{
@@ -505,29 +349,9 @@ const UltraAdvancedQuantumBackground: React.FC<
           repeat: Infinity
           ease: "easeInOut"
           delay: 1
-=======
-          duration: 4,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
-
-      <motion.div
-        className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl'
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.5, 0.2],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 1,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }}
       />
       <motion.div
-<<<<<<< HEAD
         className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl'
         animate={{
           scale: [1, 1.3, 1]
@@ -535,32 +359,15 @@ const UltraAdvancedQuantumBackground: React.FC<
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
-<<<<<<< HEAD
           duration: 6
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,          ease: "easeInOut"
           delay: 2
-=======
-<<<<<<< HEAD
-        className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl'
-        animate={{
-          scale: [1, 1.4, 1],
-          opacity: [0.2, 0.6, 0.2],
-        }}
-        transition={{
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           duration: 6,
           repeat: Infinity,
           ease: 'easeInOut',
           delay: 2,
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         }}
         transition={{
           duration: 5
@@ -580,30 +387,17 @@ const UltraAdvancedQuantumBackground: React.FC<
           ease: 'easeInOut'
           delay: 2,        }}
       />
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
-<<<<<<< HEAD
         className='absolute inset-0 w-full h-full opacity-60'        style={{ zIndex: 1 }}
       />
       {/* Content Layer */}
       <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60"
-=======
-        className='absolute inset-0 w-full h-full opacity-60'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         style={{ zIndex: 1 }}
       />
       {/* Content Layer */}
       <div className='relative z-10'>{children}</div>
-<<<<<<< HEAD
       {/* Quantum Energy Waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
         <motion.div
@@ -622,7 +416,6 @@ const UltraAdvancedQuantumBackground: React.FC<
             x: [0, 100, 0]
           }}
           transition={{
-<<<<<<< HEAD
             duration: 10
             repeat: Infinity
             ease: 'linear'
@@ -631,68 +424,17 @@ const UltraAdvancedQuantumBackground: React.FC<
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 export default UltraAdvancedQuantumBackground;            ease: "linear"
-=======
-};
-=======
-
-        style={{ zIndex: 1 }}
-      />
-
-      {/* Content Layer */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             delay: 2
-=======
-            duration: 10,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 2,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>
   );
-<<<<<<< HEAD
 }
 export default UltraAdvancedQuantumBackground;  )
 }
 export default UltraAdvancedQuantumBackground;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
-}
-
-export default UltraAdvancedQuantumBackground;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-=======
-
-        style={{ zIndex: 1 }}
-      />
-
-      {/* Content Layer */}
-
-          }}
-        />
-      </div>
-    </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-    </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

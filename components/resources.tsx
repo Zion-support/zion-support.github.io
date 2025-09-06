@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
-=======
-import React from 'react';
-<<<<<<< HEAD
-import SEO from '../components/SEO';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ResourcesPage() {
   return (
 
@@ -74,7 +62,6 @@ export default function ResourcesPage() {
               <div className='text-sm text-gray-400'>Resource</div>
               <h3 className='text-xl font-semibold text-white'>{it.name}</h3>
               <p className='mt-1 text-gray-300'>{it.blurb}</p>
-<<<<<<< HEAD
               <div className='mt-3 text-cyan-300'>Open →</div>            </Link>            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' }
             { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' }
             { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' }
@@ -87,30 +74,14 @@ export default function ResourcesPage() {
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
               <div className="mt-3 text-cyan-300">Open →</div>
-=======
-              <div className='mt-3 text-cyan-300'>Open →</div>
-            </Link>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
   );  )
 }
-=======
-  );
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default ResourcesPage;
-<<<<<<< HEAD
 
-=======
-import React from 'react';
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
  </div> <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > {
   [ {
@@ -130,8 +101,3 @@ import React from 'react';
 };
 
 export default Resources;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

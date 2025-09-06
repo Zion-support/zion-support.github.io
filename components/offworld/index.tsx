@@ -1,19 +1,6 @@
-<<<<<<< HEAD
 import { useState  } from 'react';
-=======
-import {useState} from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function OffworldConsole() {
-=======
-export default function OffworldConsole() {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
@@ -22,22 +9,9 @@ export default function OffworldConsole() {;
   const [status, setStatus] = useState('');
   async function sendChat() {
     setStatus('Sending chat...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const res = null;
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
-=======
-    const res = await fetch('/api/offworld/orbit?action=chat', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ from: 'anon', text: chat }),
-    });
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
     const res = await fetch('/api/offworld/orbit?action=chat', {
       method: 'POST'
@@ -54,14 +28,10 @@ export default function OffworldConsole() {;
       headers: { 'content-type': 'application/json' }
       body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice })
     });
-<<<<<<< HEAD
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');  }
   async function syncProfile() {
     setStatus('Pinning profile...');    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) })
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
-=======
-    setStatus(res.ok ? 'Vote recorded' : 'Vote failed');
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function syncProfile() {
     setStatus('Pinning profile...');
@@ -73,18 +43,13 @@ export default function OffworldConsole() {;
       })
     });
     const data = await res.json();
-<<<<<<< HEAD
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');  }
   async function broadcast() {
     setStatus('Broadcasting manifesto...');    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) })
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
-=======
-    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function broadcast() {
-<<<<<<< HEAD
     setStatus('Broadcasting manifesto...');
     const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       method: 'POST'
@@ -170,23 +135,5 @@ export default function OffworldConsole() {;
       </section>
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
-<<<<<<< HEAD
 );
 }
-<<<<<<< HEAD
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-    setStatus('Broadcasting manifesto...');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-=======
-    setStatus('Broadcasting manifesto...');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

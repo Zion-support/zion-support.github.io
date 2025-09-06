@@ -1,49 +1,16 @@
-<<<<<<< HEAD
 'use client'
-=======
-import React from 'react';
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
-<<<<<<< HEAD
   { name: 'Home', href: '/' }
   { name: 'About', href: '/about' }
   { name: 'Services', href: '/services' }
   { name: 'Solutions', href: '/solutions' }
   { name: 'Research', href: '/research' }
   { name: 'Contact', href: '/contact' }]
-=======
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Solutions', href: '/solutions' },
-  { name: 'Research', href: '/research' },
-  { name: 'Contact', href: '/contact' },
-];
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
-  return (;
-    <header className=&quot;fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10&quot;>
-      <nav className=&quot;flex items-center justify-between p-6 lg:px-8&quot; aria-label=&quot;Global&quot;>
-        <div className=&quot;flex lg:flex-1&quot;>
-          <a href=&quot;/&quot; className=&quot;-m-1.5 p-1.5&quot;>
-            <span className=&quot;sr-only&quot;>Zion Tech Group</span>
-            <div className=&quot;text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200&quot;>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-const Navigation: React.FC<NavigationProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -51,7 +18,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Zion Tech Group</span>
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Zion Tech Group
             </div>
           </Link>

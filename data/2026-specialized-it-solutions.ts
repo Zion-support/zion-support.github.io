@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface SpecializedITSolution2026 {
-=======
-export interface SpecializedITSolution2026 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -43,13 +37,8 @@ export interface SpecializedITSolution2026 {;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   reviews: number
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
   reviews: number;
 const contact = {
@@ -66,23 +55,6 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   {
     id: 'cloud-infrastructure-automation'
     name: 'Cloud Infrastructure Automation Platform'
-=======
-  reviews: number;
-
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-}
-
-export const specializedITSolutions2026: SpecializedITSolution2026[] = [
-  // Cloud Infrastructure & DevOps
-  {
-    id: 'cloud-infrastructure-automation',
-    name: 'Cloud Infrastructure Automation Platform',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     tagline:
       'Automate cloud infrastructure deployment and management with intelligent orchestration'
     price: '$399'
@@ -623,51 +595,21 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDate: '2024-05-25'
     customers: 67
     rating: 4.4
     reviews: 33
   }
-=======
-      'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
-    launchDate: '2024-05-25',
-    customers: 67,
-    rating: 4.4,
-    reviews: 33,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(
     solution => solution.category === category;
   );
-<<<<<<< HEAD
 }
 export const getPopularSpecializedITSolutions2026 = () => {
-=======
-};
-
-export const getPopularSpecializedITSolutions2026 = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
-=======
-};
-}
-
-export const getPopularSpecializedITSolutions2026 = () => {
-  return specializedITSolutions2026.filter(solution => solution.popular);
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -676,23 +618,9 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     const price = parseInt(solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
 };    return price >= minPrice && price <= maxPrice
   })
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-export interface SpecializedITSolution2026 {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1055,10 +983,4 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
     const price = parseInt(solution.price.replace('$', '')),;
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

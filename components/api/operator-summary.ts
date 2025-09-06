@@ -1,29 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const r = null;
     res.status(200).json({ summary, timestamp: new Date().toISOString() })
-=======
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
     const r = await fetch(
-<<<<<<< HEAD
       `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
-=======
-      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     );
     const metrics = await r.json();
     const jobs24 =
@@ -50,7 +35,4 @@ export default async function handler(
   } catch (e) {
     res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
-<<<<<<< HEAD
 }
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

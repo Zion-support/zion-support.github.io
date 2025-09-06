@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps {
@@ -19,15 +16,8 @@ interface SEOProps {
   noindex?: boolean;
   nofollow?: boolean
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 {
-=======
- {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   /* Robots Meta */
 }{
   noindex && <meta name="robots" content="noindex" />
@@ -60,7 +50,6 @@ interface SEOProps {
 }{
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
-<<<<<<< HEAD
   publishedTime
 }/>
 }{
@@ -74,43 +63,18 @@ interface SEOProps {
 }{
   section && <meta property="article:section" content= {
   section
-=======
-  publishedTime 
-}/>
-}{
-  modifiedTime && <meta property="article:modified time" content= {
-  modifiedTime 
-}/>
-}{
-  author && <meta property="article:author" content= {
-  author 
-}/>
-}{
-  section && <meta property="article:section" content= {
-  section 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }/>
 }{
   tags.map ( (tag, index) => (<meta key= {
   index
 }property="article:tag" content= {
-<<<<<<< HEAD
   tag
 }/>
 }</>)
-=======
-  tag 
-}/>
-}</>) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }{
   /* Structured Data */
 }<script
 }]
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions'
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.'
@@ -135,7 +99,6 @@ const SEO: React.FC<SEOProps> = ({
     : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http')
     ? image
-<<<<<<< HEAD
     : `https://ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
@@ -151,10 +114,6 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-=======
-    : `https://ziontechgroup.com${image}`;
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -201,10 +160,6 @@ const SEO: React.FC<SEOProps> = ({
           ))}
         </>
       )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Additional Meta Tags */}
       <meta
         name='viewport'
@@ -218,14 +173,6 @@ const SEO: React.FC<SEOProps> = ({
         content='black-translucent'
       />
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Structured Data */}
       <script
         type='application/ld+json'
@@ -260,28 +207,12 @@ const SEO: React.FC<SEOProps> = ({
                 {
                   '@type': 'Offer'
                   itemOffered: {
-<<<<<<< HEAD
                     '@type': 'Service'
                     name: 'AI & Machine Learning Solutions'
                   }
                 }
                 {
                   '@type': 'Offer'
-=======
-                    '@type': 'Service',
-                    name: 'AI & Machine Learning Solutions',
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Quantum Computing Services',
-                  },
-                },
-                {
-                  '@type': 'Offer',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -301,14 +232,6 @@ const SEO: React.FC<SEOProps> = ({
       />
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -349,7 +272,6 @@ const SEO: React.FC<SEOProps> = ({
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
-<<<<<<< HEAD
             __html: JSON.stringify(structuredData),          }}
         />
       )}
@@ -357,37 +279,12 @@ const SEO: React.FC<SEOProps> = ({
   );
 }
 export default SEO;            __html: JSON.stringify(structuredData)
-=======
-            __html: JSON.stringify(structuredData),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
       )}
-<<<<<<< HEAD
     </Head>
   );
-<<<<<<< HEAD
 }
 export default SEO;  )
 }
 export default SEO;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
-}
-
-export default SEO;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-=======
-    </Head>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-    </Head>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

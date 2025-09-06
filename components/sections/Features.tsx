@@ -1,23 +1,7 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface Feature {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   icon: React.ReactNode;
   title: string;
   description: string;
@@ -30,10 +14,6 @@ interface FeaturesProps {
   title: string;
   subtitle: string;
   features: Feature[];
-<<<<<<< HEAD
-=======
-  columns?: 2 | 3 | 4;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   columns?: 2 | 3 | 4;
 const Features: React.FC<FeaturesProps> = ({
@@ -60,22 +40,10 @@ const Features: React.FC<FeaturesProps> = ({
           <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
             {title}
           </h2>
-<<<<<<< HEAD
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-=======
-          <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {subtitle}
           </p>
         </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>
           {features.map((feature, index) => (
@@ -95,7 +63,6 @@ const Features: React.FC<FeaturesProps> = ({
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
                 {feature.title}
               </h3>
-<<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>                {feature.description}            >
               <div className="relative">
                 <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
@@ -107,9 +74,6 @@ const Features: React.FC<FeaturesProps> = ({
                 {feature.title}
               </h3>
               <p className="text-gray-400 leading-relaxed">
-=======
-              <p className='text-gray-400 leading-relaxed'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {feature.description}
               </p>
             </Card>
@@ -118,22 +82,7 @@ const Features: React.FC<FeaturesProps> = ({
       </div>
     </section>
   );
-<<<<<<< HEAD
 }
 export default Features;  )
 }
 export default Features;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
-}
-
-export default Features;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

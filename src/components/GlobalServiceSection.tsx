@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { GradientHeading } from './GradientHeading';
-import {
-  Server,
-  HardDrive,
-  Network,
-  Clock,
-  Recycle,
-  Truck,;
-} from 'lucide-react';
-import { Button } from './ui/button';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 import { GradientHeading } from './GradientHeading'
 import {
-<<<<<<< HEAD
   Server
   HardDrive
   Network
@@ -61,36 +43,10 @@ const services = [
   {
     title: 'Equipment Rentals'
     description:
-<<<<<<< HEAD
       'Flexible rental options for temporary projects and scaling requirements'
     icon: <Truck className='h-10 w-10' />
   }
 ]
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-      'Flexible rental options for temporary projects and scaling requirements',
-    icon: <Truck className='h-10 w-10' />,
-  },
-];
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-  Server,
-  HardDrive,
-  Network,
-  Clock,
-  Recycle,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Truck,
-} from 'lucide-react'
-import { Button } from './ui/button'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Truck,;
 } from 'lucide-react';
 import { Button } from './ui/button';
@@ -98,10 +54,6 @@ import { Button } from './ui/button';
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
 import { Button } from "./ui/button",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const services = [
   {
     title: "Servers",
@@ -124,27 +76,10 @@ const services = [
     description: "Sustainable disposal and recycling of IT equipment following eco-friendly practices",
     icon: <Recycle className="h-10 w-10" />},
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    title: 'Equipment Rentals',
-    description:
-      'Flexible rental options for temporary projects and scaling requirements',
-    icon: <Truck className='h-10 w-10' />,
-  },
-]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export function GlobalServiceSection() {
   return (
     <section className="py-20 bg-zion-blue" id="global-services">
@@ -155,7 +90,6 @@ export function GlobalServiceSection() {
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes
           </p>
         </div>
-<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.map((service, index) => (
             <div
@@ -168,20 +102,11 @@ export function GlobalServiceSection() {
               </h3>
               <p className='text-zion-slate-light mb-4'>
                 {service.description}
-<<<<<<< HEAD
               </p>            </div>
           ))}
         </div>
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
@@ -189,57 +114,18 @@ export function GlobalServiceSection() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
-<<<<<<< HEAD
           ))}
         </div>
         <div className='flex justify-center mt-12'>
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">
-=======
-            </div>
-          ))}
-        </div>
-
-        <div className="flex justify-center mt-12">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
-=======
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className='flex justify-center mt-12'>
-          <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             Get Your Free Commercial Proposal
           </Button>
         </div>
-<<<<<<< HEAD
       </div>;
     </section>;
   );
 };
-=======
-      </div>
-    </section>
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-}
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
 import { Button } from "./ui/button",;
@@ -300,9 +186,3 @@ export function GlobalServiceSection() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

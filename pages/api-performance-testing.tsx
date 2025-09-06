@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
 export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
 	const features = null;
 							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
@@ -19,30 +10,7 @@ export default function ApiPerformanceTestingPage() {
 							</div>
 						))}
 					</div>
-=======
-}
 
-export default function ApiPerformanceTestingPage() {
-  const features = [
-    'k6/Gatling-compatible test runner',
-    'SLO-aware latency reports',
-    'Regression baselines per endpoint',
-    'CI checks and PR annotations',
-    'Synthetic traffic for staging',
-  ];
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-  const features = [
-    'k6/Gatling-compatible test runner',
-    'SLO-aware latency reports',
-    'Regression baselines per endpoint',
-    'CI checks and PR annotations',
-    'Synthetic traffic for staging',;
-  ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const features = [
     'k6/Gatling-compatible test runner'
@@ -184,22 +152,7 @@ export default function ApiPerformanceTestingPage() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  );
-<<<<<<< HEAD
-=======
-=======
-
-}
-=======
-import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
 export default function ApiPerformanceTestingPage() {
@@ -327,9 +280,3 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

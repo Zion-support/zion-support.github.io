@@ -4,10 +4,7 @@ import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import React from 'react';
-<<<<<<< HEAD
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export default function About() {
     return (
@@ -428,10 +425,7 @@ const Collaboration = ({className}: {className ?  : string}) => (
 const Integrity = ({className}: {className ?  : string}) => (
   <Shield className={className}/>
 );
-<<<<<<< HEAD
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export default About;
     </></></></></></>);

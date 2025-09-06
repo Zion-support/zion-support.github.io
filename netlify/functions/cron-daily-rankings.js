@@ -1,10 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 exports.handler = async function () {
   try {
     // Demo ranking: based on certifications and progress
@@ -42,7 +38,6 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 };  try {
     // Demo ranking: based on certifications and progress
     const usersPath = path.join(process.cwd(), 'datalearnusers.json')
@@ -62,25 +57,9 @@ exports.handler = async function () {
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily.json', content, message: 'chore(automation): daily rankings update', token })
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return { statusCode: 200, body: JSON.stringify({ ok: true, topCount: top.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

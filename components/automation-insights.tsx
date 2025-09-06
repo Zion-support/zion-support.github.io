@@ -1,34 +1,17 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function AutomationInsightsPage() {
 
   const automationTrends = [
     {
-<<<<<<< HEAD
       id: 'ai-automation-2025'
       title: 'AI Automation Trends 2025'
       description:
-<<<<<<< HEAD
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
       readTime: '8 min read'
       featured: true
     }
-=======
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
-      readTime: '8 min read',
-      featured: true;
-    };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -46,38 +29,9 @@ export default function AutomationInsightsPage() {
       featured: false
     },      featured: false
     }
-=======
-      id: 'ai-automation-2025',
-      title: 'AI Automation Trends 2025',
-      description:
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',
-      category: 'Trends',
-      readTime: '8 min read',
-      featured: true,
-    },
-    {
-      id: 'autonomous-systems',
-      title: 'Building Autonomous Systems',
-      description:
-        'Learn how to design and implement truly autonomous systems that operate independently.',
-      category: 'Implementation',
-      readTime: '12 min read',
-      featured: false,
-    },
-    {
-      id: 'automation-roi',
-      title: 'Calculating Automation ROI',
-      description:
-        'A comprehensive guide to measuring and maximizing return on investment for automation projects.',
-      category: 'Business',
-      readTime: '10 min read',
-      featured: false,
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const automationTools = [
     {
-<<<<<<< HEAD
       id: 'automation-framework'
       title: 'Zion Automation Framework'
       description:
@@ -110,34 +64,9 @@ export default function AutomationInsightsPage() {
       complexity: 'Beginner'
     },  ];      complexity: 'Beginner'
     }
-=======
-      id: 'automation-framework',
-      title: 'Zion Automation Framework',
-      description:
-        'Our proprietary framework for building scalable automation solutions.',
-      type: 'Framework',
-      complexity: 'Advanced',
-    },
-    {
-      id: 'performance-monitor',
-      title: 'Performance Monitoring Suite',
-      description:
-        'Comprehensive tools for monitoring and optimizing automation performance.',
-      type: 'Tool',
-      complexity: 'Intermediate',
-    },
-    {
-      id: 'deployment-automation',
-      title: 'Deployment Automation',
-      description: 'Streamlined deployment processes for automation systems.',
-      type: 'Process',
-      complexity: 'Beginner',
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const successMetrics = [
     {
-<<<<<<< HEAD
       metric: '227'
       label: 'Active Automations'
       description: 'Successfully deployed and running'
@@ -171,27 +100,6 @@ export default function AutomationInsightsPage() {
       description: 'Content created autonomously'
     },  ];      description: 'Content created autonomously'
     }
-=======
-      metric: '227',
-      label: 'Active Automations',
-      description: 'Successfully deployed and running',
-    },
-    {
-      metric: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable automation performance',
-    },
-    {
-      metric: '40%',
-      label: 'Efficiency Gain',
-      label: 'Average improvement across projects',
-    },
-    {
-      metric: '2,960+',
-      label: 'Pages Generated',
-      description: 'Content created autonomously',
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
 
   return (
@@ -241,49 +149,19 @@ export default function AutomationInsightsPage() {
                     </div>
                     <div className='text-sm text-white/70'>
                       {item.description}
-<<<<<<< HEAD
                     </div>                  </div>                  <div key={index} className="text-center">
                     <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
                     <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-sm text-white/70">{item.description}</div>
-<<<<<<< HEAD
-=======
-                    </div>
-                  </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 ))}
               </div>
             </div>
-=======
-
-                  </div>
-
-                ))}
-              </div>
-            </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {automationTrends.map((trend, index) => (
                   <div
                     key={index}
@@ -305,7 +183,6 @@ export default function AutomationInsightsPage() {
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
-<<<<<<< HEAD
                       Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
@@ -319,32 +196,11 @@ export default function AutomationInsightsPage() {
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Read More <span className="ml-1">→</span>
-=======
-                      Read More <span className='ml-1'>→</span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </Link>
-=======
-                      Read More <span className='ml-1'>→</span>                    </Link>
-
-                    </Link>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -367,7 +223,6 @@ export default function AutomationInsightsPage() {
                       </span>
                       <span className='px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full'>
                         {tool.complexity}
-<<<<<<< HEAD
                       </span>                    </div>                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
                     <div className="text-4xl mb-4">🔧</div>
                     <h3 className="text-xl font-bold mb-3 text-white">{tool.title}</h3>
@@ -375,22 +230,10 @@ export default function AutomationInsightsPage() {
                     <div className="flex justify-center gap-2">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
                       <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
-=======
-                      </span>
-                    </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -399,14 +242,6 @@ export default function AutomationInsightsPage() {
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
                 <Link
@@ -417,7 +252,6 @@ export default function AutomationInsightsPage() {
                 </Link>
                 <Link
                   href='/case-studies'
-<<<<<<< HEAD
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -429,9 +263,6 @@ export default function AutomationInsightsPage() {
                 <Link
                   href="/case-studies"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
-=======
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   View Case Studies
                 </Link>
@@ -441,24 +272,6 @@ export default function AutomationInsightsPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

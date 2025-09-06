@@ -1,20 +1,10 @@
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type FeedbackWidgetProps = any;
-=======
-export type FeedbackWidgetProps = {
-=======
-
-export type FeedbackWidgetProps = {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   responseId?: string;
   aiModel?: string;
 }
 export default function FeedbackWidget({
-<<<<<<< HEAD
   responseId
   aiModel
 }: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
@@ -22,45 +12,15 @@ export default function FeedbackWidget({
   aiModel?: string
 }
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
-=======
-<<<<<<< HEAD
-
-export type FeedbackWidgetProps = {
-  responseId?: string;
-  aiModel?: string;
-};
-}
-
-export default function FeedbackWidget({
-  responseId,
-  aiModel,
-}: FeedbackWidgetProps) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  responseId,
-  aiModel,;
-}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
-  responseId?: string;
-  aiModel?: string
-};
-
-export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const effectiveResponseId = useMemo(
     () => responseId |uuidv4()
     [responseId]
   );
-<<<<<<< HEAD
   const submit = async () => {
     if (!rating) {
       setError('Please choose 👍 or 👎');
@@ -69,13 +29,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     if (!rating) {
       setError('Please choose 👍 or 👎');
       return;      return
-=======
-
-  const submit = async () => {
-    if (!rating) {
-      setError('Please choose 👍 or 👎');
-      return;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
     setError(null);
     setSubmitting(true);
@@ -84,15 +37,9 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
           responseId: effectiveResponseId
           rating
           comment: comment.trim()
-=======
-          responseId: effectiveResponseId,
-          rating,
-          comment: comment.trim(),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           pagePath:
             typeof window !== 'undefined'
               ? window.location.pathname
@@ -105,9 +52,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     } catch (e: any) {
       setError(e?.message |'Something went wrong');
     } finally {
-<<<<<<< HEAD
       setSubmitting(false);    }
-<<<<<<< HEAD
   }
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -120,14 +65,8 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError(e?.message |'Something went wrong')
     } finally {
       setSubmitting(false)
-=======
-      setSubmitting(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
-=======
-  };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -140,7 +79,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         <div className='space-y-3'>
           <div className='flex items-center gap-2'>
             <button
-<<<<<<< HEAD
               type='button'              onClick={() => setRating(rating === 'up' ? null : 'up')}      {submitted ? (
         <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
       ) : (
@@ -148,9 +86,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           <div className="flex items-center gap-2">
             <button
               type="button"
-=======
-              type='button'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
@@ -159,11 +94,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
               <span>Yes</span>
             </button>
             <button
-<<<<<<< HEAD
               type='button'              onClick={() => setRating(rating === 'down' ? null : 'down')}              type="button"
-=======
-              type='button'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               onClick={() => setRating(rating === 'down' ? null : 'down')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}
@@ -185,7 +116,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
               onClick={submit}
               disabled={submitting}
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm'
-<<<<<<< HEAD
             >              {submitting ? 'Submitting…' : 'Submit feedback'}            value={comment}
             onChange={(e) => setComment(e.target.value.slice(0, 2000))}
             className="w-full rounded-md border px-3 py-2 text-sm"
@@ -194,33 +124,12 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           {error && <div className="text-xs text-red-600">{error}</div>}
           <div>
             <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
-=======
-            >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>
         </div>
       )}
     </div>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

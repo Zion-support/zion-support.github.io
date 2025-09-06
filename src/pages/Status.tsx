@@ -1,90 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import { logWarn } from '@/utils/productionLogger'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-=======
-import { SEO } from '@/components/SEO';
-import { useState, useEffect } from 'react';
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import { logWarn } from '@/utils/productionLogger';
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { logWarn } from '@/utils/productionLogger',
-<<<<<<< HEAD
-<<<<<<< HEAD
-  name: string;
-<<<<<<< HEAD
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance';
-  description: string;
-  lastChecked: string
-}
-=======
-status: 'operational' | 'degraded' | 'outage' | 'maintenance';
-description: string;
-lastChecked: string ;
-}const FALLBACK SERVICES: ServiceStatus[] = [ {;
-  name: "Marketplace API";";
-status: "operational";";
-description: "Product listings and search functionality";
-lastChecked: new Date () .toISOString () ;
-};
-{";
-  name: "Authentication Service";";
-status: "operational";";
-description: "User login and registration";
-lastChecked: new Date () .toISOString () ;
-};
-{";
-  name: "Payment Processing";";
-status: "operational";";
-description: "Checkout and payment handling";
-lastChecked: new Date () .toISOString () ;
-};
-{";
-  name: "Talent Directory";";
-status: "operational";";
-description: "AI talent profiles and matching";
-lastChecked: new Date () .toISOString () ;
-}];
-}
-
-export default function Status () {;
-  //Try to load external status page, fallback after timeout const timeout = setTimeout ( () => {;
-  if (!externalStatusLoaded) {;
-  return () => clearTimeout (timeout) ;
-}, [externalStatusLoaded]);
-useEffect ( () => {;
-  async function fetchUptime () {;
-  try {;
-  ;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ServiceStatus {
 
   name: string
@@ -92,12 +12,7 @@ interface ServiceStatus {
   description: string
   lastChecked: string
 }
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
         return <CheckCircle className="h-5 w-5 text-green-500" />
         return <Clock className="h-5 w-5 text-blue-500" />
       default:;
@@ -107,13 +22,6 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
   )
 }
-<<<<<<< HEAD
-=======
-
-=======
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -134,28 +42,12 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     lastChecked: new Date().toISOString()
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
     name: "Talent Directory";
     status: "operational";
     description: "AI talent profiles and matching";
-=======
-    name: "Talent Directory",
-    status: "operational",
-    description: "AI talent profiles and matching",
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     lastChecked: new Date().toISOString()
   }
 ],
-=======
-    name: 'Talent Directory',
-    status: 'operational',
-    description: 'AI talent profiles and matching',
-    lastChecked: new Date().toISOString(),
-  },
-];
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 export default function Status() {
   const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
@@ -450,114 +342,5 @@ export default function Status() {;
         </div>
       </main>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  name: string
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance'
-  description: string
-  lastChecked: string
-}
-        return <CheckCircle className="h-5 w-5 text-green-500" />
-        return <Clock className="h-5 w-5 text-blue-500" />
-      default:
-        return <AlertCircle className="h-5 w-5 text-gray-500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   )
 }
-=======
-  );
-
-};
-switch (status) {';
-  case 'operational': return 'Operational';';
-case 'degraded': return 'Degraded Performance';';
-case 'outage': return 'Service Outage';';
-case 'maintenance': return 'Scheduled Maintenance';';
-default: const getStatusColor = (status: ServiceStatus['status']) => {;
-  switch (status) {';
-  case 'operational': return 'text-green-500';';
-case 'degraded': return 'text-yellow-500';';
-case 'outage': return 'text-red-500';';
-case 'maintenance': return 'text-blue-500';";
-default: return (<> <SEO title="API Status" description="View real-time service availability and uptime statistics." canonical="https://app.ziontechgroup.com/status" /> <main className="min-h-screen bg-zion-blue pt-24 pb-20" > <div className="container mx-auto px-4" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-white mb-4" >System Status</h1> <p className="text-zion-slate-light text-lg" > Real-time monitoring of Zion platform services </p> <CardHeader> <CardTitle className="text-white flex items-center gap-2" > <ExternalLink className="h-5 w-5" /> Live Status Dashboard </CardTitle> <CardDescription> Loading detailed status information... </CardDescription> </CardHeader> <CardContent> <iframe src= {;
-  statusUrl ";
-}/> <div className="mt-4 text-center" > <Button > View Simplified Status </Button> </div> </CardContent> </Card> </div>) ";
-}<CardHeader> <CardTitle className="text-white" >Service Status Overview</CardTitle> <CardDescription> Current status of core platform services </CardDescription> </CardHeader> <CardContent className="space-y-4" > {;
-  FALLBACK SERVICES.map ( (service) => (</div> </div> </div>) ) ";
-}</CardContent> </Card> </div> <div className="text-center" > <p className="text-zion-slate-light mb-4" > For detailed incident history and real-time updates: </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <a > <ExternalLink className="h-4 w-4" /> Visit Full Status Page </Link> </Button> </div> </>) '";
-}<div className="mt-12 text-center" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle className="text-white" >Need Help?</CardTitle> </CardHeader> <CardContent className="space-y-4" > <p className="text-zion-slate-light" > If you're experiencing issues not reflected here, please contact our support team. </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <Link href="/contact" >Contact Support</Link> </Button> <Button variant="outline" asChild className="text-zion-purple border-zion-purple hover:bg-zion-purple/10" > <a href="https://twitter.com/ZionTechGroup" target="blank" rel="noopener noreferrer" > @ZionTechGroup </Link> </Button> </div> </CardContent> </Card> </div> </div> </main> </>) ;
-}'"
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  )
-                  </CardContent>;
-                </Card>;
-              </div>;
-              <div className="text-center">;
-                <p className="text-zion-slate-light mb-4">;
-                  For detailed incident history and real-time updates:;
-                </p>;
-                <Button;
-                  variant="outline";
-                  asChild;
-                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
-                >;
-                  <a;
-                    href={statusUrl} ;
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="flex items-center gap-2";
-                  >;
-                    <ExternalLink className="h-4 w-4" />;
-                    Visit Full Status Page;
-                  </a>;
-                </Button>;
-              </div>;
-            </>;
-          )}
-;
-          <div className="mt-12 text-center">;
-            <Card className="bg-zion-blue-dark border-zion-blue-light">;
-              <CardHeader>;
-                <CardTitle className="text-white">Need Help?</CardTitle>;
-              </CardHeader>;
-              <CardContent className="space-y-4">;
-                <p className="text-zion-slate-light">;
-                  If you're experiencing issues not reflected here, please contact our support team.;
-                </p>;
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-                  <Button;
-                    variant="outline";
-                    asChild;
-                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
-                  >;
-                    <Link href="/contact">Contact Support</Link>;
-                  </Button>;
-                  <Button;
-                    variant="outline";
-                    asChild;
-                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10";
-                  >;
-                    <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">;
-                      @ZionTechGroup;
-                    </a>;
-                  </Button>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </div>;
-        </div>;
-      </main>;
-    </>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

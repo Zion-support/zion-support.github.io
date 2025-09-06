@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -14,11 +8,8 @@ import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function SMBSolutionsPage() {
   const smbServices = [;
     {}
@@ -56,28 +47,13 @@ export default function SMBSolutionsPage() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { 
   Building2, 
   Users, 
@@ -109,17 +85,10 @@ const smbServices = [
     description: 'Grow with your business as it expands'
   }
 ];
-<<<<<<< HEAD
 }
 
 export default function SMBSolutionsPage() {
   
-=======
-
-export default function SMBSolutionsPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
   const smbServices = [;
@@ -155,18 +124,10 @@ export default function SMBSolutionsPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
       description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
-=======
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -176,17 +137,6 @@ export default function SMBSolutionsPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -199,16 +149,6 @@ export default function SMBSolutionsPage() {
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -221,14 +161,6 @@ export default function SMBSolutionsPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -270,10 +202,6 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
         {/* Services Section */}
         <section className="py-16 px-4">
@@ -309,11 +237,6 @@ export default function SMBSolutionsPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -355,13 +278,6 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

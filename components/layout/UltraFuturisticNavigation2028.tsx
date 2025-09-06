@@ -1,22 +1,10 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
-=======
-import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -73,63 +61,6 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
-=======
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Earth,
-  Factory,
-  Car,
-  Building,
-  GraduationCap,
-  Scale,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Code,
-  Wrench,
-  Smartphone,;
-  BarChart3,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -143,70 +74,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
-=======
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Earth,
-  Factory,
-  Car,
-  Building,
-  GraduationCap,
-  Scale,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const serviceCategories = [
   {
     title: '🚀 2028 Futuristic Innovations'
@@ -233,7 +100,6 @@ const serviceCategories = [
         price: '$1,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'AI Healthcare Diagnosis Platform'
         href: '/ai-healthcare-diagnosis-platform'
         description: 'Revolutionary medical diagnosis'
@@ -250,20 +116,6 @@ const serviceCategories = [
     icon: Building
     color: 'from-blue-600 to-cyan-600'
     description: 'Intelligent urban solutions'
-=======
-        name: 'AI Healthcare Diagnosis Platform',
-        href: '/ai-healthcare-diagnosis-platform',
-        description: 'Revolutionary medical diagnosis',
-        price: '$3,999/month',
-      },
-    ],
-  },
-  {
-    title: '🏙️ Smart City & Infrastructure',
-    icon: Building,
-    color: 'from-blue-600 to-cyan-600',
-    description: 'Intelligent urban solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Smart City Infrastructure Management'
@@ -284,7 +136,6 @@ const serviceCategories = [
         price: '$4,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'Autonomous Manufacturing AI'
         href: '/autonomous-manufacturing-ai'
         description: 'Self-optimizing factories'
@@ -301,20 +152,6 @@ const serviceCategories = [
     icon: Atom
     color: 'from-indigo-600 to-blue-600'
     description: 'Quantum computing and beyond'
-=======
-        name: 'Autonomous Manufacturing AI',
-        href: '/autonomous-manufacturing-ai',
-        description: 'Self-optimizing factories',
-        price: '$6,999/month',
-      },
-    ],
-  },
-  {
-    title: '⚛️ Quantum & Advanced Tech',
-    icon: Atom,
-    color: 'from-indigo-600 to-blue-600',
-    description: 'Quantum computing and beyond',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Quantum Financial Trading Platform'
@@ -335,7 +172,6 @@ const serviceCategories = [
         price: '$3,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'Quantum Internet Protocol'
         href: '/quantum-internet-protocol'
         description: 'Next-generation internet'
@@ -352,20 +188,6 @@ const serviceCategories = [
     icon: Brain
     color: 'from-emerald-600 to-teal-600'
     description: 'Next-generation AI solutions'
-=======
-        name: 'Quantum Internet Protocol',
-        href: '/quantum-internet-protocol',
-        description: 'Next-generation internet',
-        price: '$5,999/month',
-      },
-    ],
-  },
-  {
-    title: '🤖 AI & Machine Learning',
-    icon: Brain,
-    color: 'from-emerald-600 to-teal-600',
-    description: 'Next-generation AI solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'AI Customer Service Automation'
@@ -386,7 +208,6 @@ const serviceCategories = [
         price: '$1,299/month'
       }
       {
-<<<<<<< HEAD
         name: 'AI Legal Research Platform'
         href: '/ai-legal-research-platform'
         description: 'Intelligent legal research'
@@ -403,20 +224,6 @@ const serviceCategories = [
     icon: Layers
     color: 'from-orange-600 to-red-600'
     description: 'Decentralized solutions'
-=======
-        name: 'AI Legal Research Platform',
-        href: '/ai-legal-research-platform',
-        description: 'Intelligent legal research',
-        price: '$2,999/month',
-      },
-    ],
-  },
-  {
-    title: '⛓️ Blockchain & Web3',
-    icon: Layers,
-    color: 'from-orange-600 to-red-600',
-    description: 'Decentralized solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Blockchain Supply Chain Transparency'
@@ -437,7 +244,6 @@ const serviceCategories = [
         price: '$3,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'NFT Marketplace Platform'
         href: '/nft-marketplace-platform'
         description: 'Complete NFT ecosystem'
@@ -454,20 +260,6 @@ const serviceCategories = [
     icon: Car
     color: 'from-red-600 to-pink-600'
     description: 'Self-driving and mobility solutions'
-=======
-        name: 'NFT Marketplace Platform',
-        href: '/nft-marketplace-platform',
-        description: 'Complete NFT ecosystem',
-        price: '$2,999/month',
-      },
-    ],
-  },
-  {
-    title: '🚗 Autonomous & Mobility',
-    icon: Car,
-    color: 'from-red-600 to-pink-600',
-    description: 'Self-driving and mobility solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Autonomous Vehicle Fleet Management'
@@ -488,7 +280,6 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'Mobility as a Service Platform'
         href: '/mobility-as-a-service'
         description: 'Integrated mobility solutions'
@@ -505,20 +296,6 @@ const serviceCategories = [
     icon: Heart
     color: 'from-pink-600 to-rose-600'
     description: 'Advanced healthcare solutions'
-=======
-        name: 'Mobility as a Service Platform',
-        href: '/mobility-as-a-service',
-        description: 'Integrated mobility solutions',
-        price: '$1,999/month',
-      },
-    ],
-  },
-  {
-    title: '🏥 Healthcare & Biotech',
-    icon: Heart,
-    color: 'from-pink-600 to-rose-600',
-    description: 'Advanced healthcare solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'AI Drug Discovery Platform'
@@ -539,7 +316,6 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'Medical Imaging AI'
         href: '/medical-imaging-ai'
         description: 'Advanced diagnostic imaging'
@@ -556,20 +332,6 @@ const serviceCategories = [
     icon: GraduationCap
     color: 'from-green-600 to-emerald-600'
     description: 'Next-generation learning'
-=======
-        name: 'Medical Imaging AI',
-        href: '/medical-imaging-ai',
-        description: 'Advanced diagnostic imaging',
-        price: '$3,999/month',
-      },
-    ],
-  },
-  {
-    title: '🎓 Education & Training',
-    icon: GraduationCap,
-    color: 'from-green-600 to-emerald-600',
-    description: 'Next-generation learning',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Virtual Reality Learning Platform'
@@ -590,7 +352,6 @@ const serviceCategories = [
         price: '$2,499/month'
       }
       {
-<<<<<<< HEAD
         name: 'Language Learning AI'
         href: '/language-learning-ai'
         description: 'AI-powered language acquisition'
@@ -607,20 +368,6 @@ const serviceCategories = [
     icon: Scale
     color: 'from-slate-600 to-gray-600'
     description: 'Legal technology solutions'
-=======
-        name: 'Language Learning AI',
-        href: '/language-learning-ai',
-        description: 'AI-powered language acquisition',
-        price: '$1,299/month',
-      },
-    ],
-  },
-  {
-    title: '⚖️ Legal & Compliance',
-    icon: Scale,
-    color: 'from-slate-600 to-gray-600',
-    description: 'Legal technology solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Contract Analysis AI'
@@ -641,7 +388,6 @@ const serviceCategories = [
         price: '$1,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'Regulatory Change Tracker'
         href: '/regulatory-change-tracker'
         description: 'Monitor regulatory updates'
@@ -658,20 +404,6 @@ const serviceCategories = [
     icon: Leaf
     color: 'from-emerald-600 to-green-600'
     description: 'Environmental solutions'
-=======
-        name: 'Regulatory Change Tracker',
-        href: '/regulatory-change-tracker',
-        description: 'Monitor regulatory updates',
-        price: '$1,499/month',
-      },
-    ],
-  },
-  {
-    title: '🌍 Sustainability & Green Tech',
-    icon: Leaf,
-    color: 'from-emerald-600 to-green-600',
-    description: 'Environmental solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Carbon Footprint Tracking'
@@ -692,7 +424,6 @@ const serviceCategories = [
         price: '$1,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'Sustainable Supply Chain'
         href: '/sustainable-supply-chain'
         description: 'Green supply chain solutions'
@@ -705,55 +436,16 @@ const serviceCategories = [
       { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
     ]
   }
-=======
-        name: 'Sustainable Supply Chain',
-        href: '/sustainable-supply-chain',
-        description: 'Green supply chain solutions',
-        price: '$3,999/month',
-      },
-    ],
-  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' };
-      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' };
-      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' };
-      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
-    ]
-  }
-<<<<<<< HEAD
 
-];
-=======
-<<<<<<< HEAD
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
-=======
-        name: 'Sustainable Supply Chain',
-        href: '/sustainable-supply-chain',
-        description: 'Green supply chain solutions',
-        price: '$3,999/month',
-      },
-    ],
-  },
-];
-
-const companyLinks = [
-  { name: '🏠 Home', href: '/', icon: Home },
-  { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   {
     name: '⭐ Ultimate 2028'
     href: '/ultimate-2028-services-showcase'
     icon: Star
   }
   {
-<<<<<<< HEAD
     name: '💰 2028 Pricing'
     href: '/revolutionary-2028-pricing'
     icon: DollarSign
@@ -768,20 +460,8 @@ const companyLinks = [
   { name: '🎯 About Us', href: '/about', icon: Users }
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }
   { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-=======
-    name: '💰 2028 Pricing',
-    href: '/revolutionary-2028-pricing',
-    icon: DollarSign,
-  },
-  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: '🎯 About Us', href: '/about', icon: Users },
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle },
-  { name: '🔒 Support', href: '/support', icon: ShieldCheck },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 const resourceLinks = [
-<<<<<<< HEAD
   { name: '📖 Documentation', href: '/docs', icon: BookOpen }
   { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video }
   { name: '💡 API Reference', href: '/api', icon: Code }
@@ -791,31 +471,7 @@ const resourceLinks = [
   { name: '🔐 Security Center', href: '/security', icon: Shield }
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 },];  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
 ];
-<<<<<<< HEAD
-=======
-  { name: '📖 Documentation', href: '/docs', icon: BookOpen },
-  { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
-  { name: '💡 API Reference', href: '/api', icon: Code },
-  { name: '🛠️ Developer Tools', href: '/dev-tools', icon: Wrench },
-  { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },
-  { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
-  { name: '🔐 Security Center', href: '/security', icon: Shield },
-  { name: '📊 Analytics', href: '/analytics', icon: BarChart3 },
-];
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function UltraFuturisticNavigation2028() {
-=======
-export default function UltraFuturisticNavigation2028() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -830,21 +486,12 @@ export default function UltraFuturisticNavigation2028() {;
   const filteredServices = serviceCategories.flatMap(category =>
     category.services.filter(
       service =>
-<<<<<<< HEAD
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
         service.description.toLowerCase().includes(searchQuery.toLowerCase())    )
   );
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
-=======
-    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
-=======
-    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleCategoryLeave = () => {
     setActiveCategory(null)
   }
@@ -852,16 +499,6 @@ export default function UltraFuturisticNavigation2028() {;
     category.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
-=======
-<<<<<<< HEAD
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase())
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     )
   );
 
@@ -889,7 +526,6 @@ export default function UltraFuturisticNavigation2028() {;
               <a
                 href={contactInfo.website}
                 className='text-purple-300 hover:text-white transition-colors'
-<<<<<<< HEAD
               >                {contactInfo.website}      {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -910,9 +546,6 @@ export default function UltraFuturisticNavigation2028() {;
             </div>
             <div className="flex items-center space-x-4">
               <a href={contactInfo.website} className="text-purple-300 hover:text-white transition-colors">
-=======
-              >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {contactInfo.website}
               </a>
             </div>
@@ -922,14 +555,6 @@ export default function UltraFuturisticNavigation2028() {;
       {/* Main Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Logo */}
           <div className='flex items-center'>
             <Link href='/' className='flex items-center space-x-3 group'>
@@ -945,7 +570,6 @@ export default function UltraFuturisticNavigation2028() {;
                 </h1>
                 <p className='text-xs text-purple-300'>
                   2028 Future Technology
-<<<<<<< HEAD
                 </p>              </div>          {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
@@ -960,9 +584,6 @@ export default function UltraFuturisticNavigation2028() {;
                   Zion Tech Group
                 </h1>
                 <p className="text-xs text-purple-300">2028 Future Technology</p>
-=======
-                </p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </Link>
           </div>
@@ -1010,7 +631,6 @@ export default function UltraFuturisticNavigation2028() {;
                                 </div>
                                 <span className='text-xs text-purple-400 font-medium'>
                                   {service.price}
-<<<<<<< HEAD
                                 </span>                              </div>            {/* Service Categories */}
             <div className="relative group">
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
@@ -1044,20 +664,7 @@ export default function UltraFuturisticNavigation2028() {;
                                   <p className="text-xs text-purple-300">{service.description}</p>
                                 </div>
                                 <span className="text-xs text-purple-400 font-medium">{service.price}</span>
-=======
-                                </span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                               </div>
-=======
-                                </span>                              </div>
-
-                              </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </Link>
                           ))}
                         </div>
@@ -1071,17 +678,12 @@ export default function UltraFuturisticNavigation2028() {;
                       </p>
                       <Link
                         href='/services'
-<<<<<<< HEAD
                         className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                      >                  <div className="mt-6 pt-6 border-t border-purple-500/20">
                     <div className="flex items-center justify-between">
                       <p className="text-purple-300">Explore all our cutting-edge services</p>
                       <Link
                         href="/services"
                         className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-=======
-                        className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
-                      >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         View All Services
                       </Link>
                     </div>
@@ -1089,14 +691,6 @@ export default function UltraFuturisticNavigation2028() {;
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Company Links */}
             {companyLinks.slice(1, 5).map(link => (
               <Link
@@ -1107,7 +701,6 @@ export default function UltraFuturisticNavigation2028() {;
                 <link.icon className='w-4 h-4' />
                 <span>
                   {link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
-<<<<<<< HEAD
                 </span>              </Link>              <Link
                 key={link.name}
                 href={link.href}
@@ -1115,28 +708,11 @@ export default function UltraFuturisticNavigation2028() {;
               >
                 <link.icon className="w-4 h-4" />
                 <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
-=======
-                </span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
-<<<<<<< HEAD
             ))}
           </div>
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>
-=======
-
-            ))}
-          </div>
-
-          {/* Search and Actions */}
-          <div className='hidden lg:flex items-center space-x-4'>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />
@@ -1145,7 +721,6 @@ export default function UltraFuturisticNavigation2028() {;
                 placeholder='Search services...'
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
                 className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />            {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
@@ -1155,20 +730,13 @@ export default function UltraFuturisticNavigation2028() {;
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
-                className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               />
             </div>
             {/* CTA Button */}
             <Link
               href='/contact'
-<<<<<<< HEAD
               className='px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25'            >              href="/contact"
               className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25"
-=======
-              className='px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-purple-500/25'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               Get Started
             </Link>
@@ -1183,27 +751,15 @@ export default function UltraFuturisticNavigation2028() {;
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
-<<<<<<< HEAD
               )}            </button>            <button
               onClick={toggleMenu}
               className="text-purple-200 hover:text-white transition-colors p-2"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
-              )}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -1212,14 +768,6 @@ export default function UltraFuturisticNavigation2028() {;
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='px-4 py-6 space-y-6'>
               {/* Mobile Search */}
@@ -1230,7 +778,6 @@ export default function UltraFuturisticNavigation2028() {;
                   placeholder='Search services...'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
                   className='w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'                />
               </div>
               {/* Mobile Service Categories */}
@@ -1246,9 +793,6 @@ export default function UltraFuturisticNavigation2028() {;
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
-                  className='w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 />
               </div>
               {/* Mobile Service Categories */}
@@ -1263,7 +807,6 @@ export default function UltraFuturisticNavigation2028() {;
                       <span className='font-medium'>{category.title}</span>
                     </div>
                     <div className='ml-8 space-y-2'>
-<<<<<<< HEAD
                       {category.services.map(service => (                        <Link
                           key={service.name}
                           href={service.href}
@@ -1277,14 +820,10 @@ export default function UltraFuturisticNavigation2028() {;
                     </div>
                     <div className="ml-8 space-y-2">
                       {category.services.map((service) => (
-=======
-                      {category.services.map(service => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         <Link
                           key={service.name}
                           href={service.href}
                           onClick={closeMenu}
-<<<<<<< HEAD
                           className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                         >
                           <h4 className='text-sm font-medium text-white'>
@@ -1295,47 +834,22 @@ export default function UltraFuturisticNavigation2028() {;
                           </p>
                           <span className='text-xs text-purple-400 font-medium'>
                             {service.price}
-<<<<<<< HEAD
                           </span>                        </Link>                          className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                         >
                           <h4 className="text-sm font-medium text-white">{service.name}</h4>
                           <p className="text-xs text-purple-300">{service.description}</p>
                           <span className="text-xs text-purple-400 font-medium">{service.price}</span>
-=======
-<<<<<<< HEAD
-                          </span>
-                        </Link>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-                        </Link>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
                   Company
                 </h3>
                 <div className='grid grid-cols-2 gap-4'>
-<<<<<<< HEAD
                   {companyLinks.map(link => (                    <Link
                       key={link.name}
                       href={link.href}
@@ -1345,60 +859,30 @@ export default function UltraFuturisticNavigation2028() {;
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
                   {companyLinks.map((link) => (
-=======
-                  {companyLinks.map(link => (
-                    <Link
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
-<<<<<<< HEAD
                       className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                     >
                       <link.icon className='w-5 h-5 text-purple-400' />
                       <span className='text-purple-200'>
                         {link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}
-<<<<<<< HEAD
                       </span>                    </Link>                      className="flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                     >
                       <link.icon className="w-5 h-5 text-purple-400" />
                       <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
-=======
-                      </span>
-                    </Link>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   ))}
                 </div>
               </div>
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
-=======
-
-                    </Link>
-
-                  ))}
-                </div>
-              </div>
-
-              {/* Mobile CTA */}
-              <div className='pt-4 border-t border-purple-500/30'>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Link
                   href='/contact'
                   onClick={closeMenu}
-<<<<<<< HEAD
                   className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'                >                <Link
                   href="/contact"
                   onClick={closeMenu}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
-=======
-                  className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Get Started
                 </Link>
@@ -1407,14 +891,6 @@ export default function UltraFuturisticNavigation2028() {;
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
@@ -1437,7 +913,6 @@ export default function UltraFuturisticNavigation2028() {;
                     </div>
                     <span className='text-xs text-purple-400 font-medium'>
                       {service.price}
-<<<<<<< HEAD
                     </span>                  </div>                <Link
                   key={service.name}
                   href={service.href}
@@ -1449,20 +924,7 @@ export default function UltraFuturisticNavigation2028() {;
                       <p className="text-xs text-purple-300">{service.description}</p>
                     </div>
                     <span className="text-xs text-purple-400 font-medium">{service.price}</span>
-=======
-                    </span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
-=======
-                    </span>                  </div>
-
-                  </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Link>
               ))}
             </div>
@@ -1470,24 +932,6 @@ export default function UltraFuturisticNavigation2028() {;
         </div>
       )}
     </nav>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
@@ -24,20 +22,6 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
-=======
-import {GradientHeading} from "./GradientHeading";
-import {Link} from "react-router-dom";
-import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { GradientHeading } from "./GradientHeading",
-import { Link } from "react-router-dom",
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const categories = [
   {
     title: "Services",
@@ -57,7 +41,6 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -66,27 +49,14 @@ const categories = [
     color: "from-emerald-500 to-green-600"}]
 const specialServices = [
   {
-<<<<<<< HEAD
     title: "IT Onsite Services"
     link: "/it-onsite-services"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
 
 interface CategoriesSectionProps {
-<<<<<<< HEAD
   showTitle?: boolean
-<<<<<<< HEAD
 }
-=======
-    title: "IT Onsite Services",
-    link: "/it-onsite-services"
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { GradientHeading } from "./GradientHeading",;
 import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
@@ -123,22 +93,9 @@ const specialServices = [;
 ];
 interface CategoriesSectionProps {;
   showTitle?: boolean;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-=======
-  showTitle?: boolean;
-}
-
-export function CategoriesSection({
-  showTitle = true,
-}: CategoriesSectionProps) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -194,31 +151,5 @@ export function CategoriesSection({
       </div>
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-          </div>;
-        </div>;
-        <div className="mt-12 flex justify-center">;
-          <Link;
-            to="/categories";
-            className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors";
-          >;
-            View All Categories →;
-          </Link>;
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

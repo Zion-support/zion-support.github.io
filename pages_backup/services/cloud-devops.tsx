@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -18,20 +10,12 @@ const features = [;
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -44,23 +28,10 @@ const features = [;
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
   {}
@@ -94,11 +65,8 @@ const services = [;
   'Cost Optimization',',
   'Security Hardening'';
 ;];
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function CloudDevOpsPage() {
   return (;
     <Layout );
@@ -203,19 +171,13 @@ export default function CloudDevOpsPage() {
     description: 'Automated infrastructure provisioning and management'
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-<<<<<<< HEAD
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
   },
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
-<<<<<<< HEAD
   {}
     icon: Server,
     title: 'Infrastructure as Code,',
@@ -349,14 +311,7 @@ export default function CloudDevOpsPage() {
     </Layout>;
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   },
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   {
     icon: GitBranch,
     title: 'CI/CD Pipelines',
@@ -378,14 +333,6 @@ export default function CloudDevOpsPage() {
     description: '24/7 monitoring and proactive alerting systems'
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -394,14 +341,9 @@ const benefits = [
   'Better disaster recovery capabilities',
   'Faster time-to-market for applications'
 ];
-<<<<<<< HEAD
 }
 
 export default function CloudDevOpsServices() {
-=======
-export default function CloudDevOpsServices() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -413,17 +355,10 @@ const tools = [
   { name: 'Jenkins', description: 'CI/CD automation' },
   { name: 'Prometheus', description: 'Monitoring and alerting' }
 ];
-<<<<<<< HEAD
 }
 
 export default function CloudDevOpsPage() {
   
-=======
-
-export default function CloudDevOpsPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -433,19 +368,11 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
       description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
       keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization"
-=======
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -470,10 +397,7 @@ export default function CloudDevOpsServices() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -485,28 +409,11 @@ export default function CloudDevOpsServices() {
                 Comprehensive cloud and DevOps services designed to modernize your infrastructure
                 and accelerate your development processes.
               </p>
-<<<<<<< HEAD
             </div>
             </div>
             </motion.div>
             </motion.div>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-=======
-<<<<<<< HEAD
-=======
-            </div>
-            </div>
             </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-            </motion.div>
-=======
-            </div>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -524,14 +431,6 @@ export default function CloudDevOpsServices() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -564,10 +463,6 @@ export default function CloudDevOpsServices() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -635,14 +530,10 @@ export default function CloudDevOpsServices() {
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -675,14 +566,9 @@ export default function CloudDevOpsServices() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -704,26 +590,9 @@ export default function CloudDevOpsServices() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </Layout>
     </Layout>
     </>
     </>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
-=======
-    </Layout>
-    </Layout>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    </>
-=======
-    </Layout>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   );

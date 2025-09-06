@@ -1,27 +1,14 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
-=======
-import React from 'react';
-import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Code;
   GitBranch;
   Database;
   Cloud;
   Shield;
   Zap;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   Code
   GitBranch
   Database
@@ -34,25 +21,6 @@ import {
   TrendingUp
   Cpu
   Globe;} from 'lucide-react';import {
-=======
-  Code,
-  GitBranch,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-<<<<<<< HEAD
-  Cpu,
-  Globe,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  Cpu,;
-  Globe,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Code;
   GitBranch
   Database
@@ -72,33 +40,9 @@ export default function DeveloperToolsPage() {
     {
       icon: <Code className='w-8 h-8 text-white' />
       title: 'GitHub Copilot'
-=======
-import {
-  Code,
-  GitBranch,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Cpu,
-  Globe,;
-} from 'lucide-react';
-}
-
-export default function DeveloperToolsPage() {
-  const developerTools = [
-    {
-      icon: <Code className='w-8 h-8 text-white' />,
-      title: 'GitHub Copilot',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       description:
         'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
       features: [
-<<<<<<< HEAD
         'Intelligent code completion'
         'Multi-language support'
         'IDE integration'
@@ -207,7 +151,6 @@ export default function DeveloperToolsPage() {
       description:
         'Complete API development platform for building, testing, and documenting APIs with team collaboration.'
       features: [
-<<<<<<< HEAD
         'API design & testing'
         'Team collaboration'
         'API documentation'
@@ -225,129 +168,13 @@ export default function DeveloperToolsPage() {
       category: 'API Development'
     },  ];      category: 'API Development'
     }
-=======
-<<<<<<< HEAD
-        'Intelligent code completion',
-        'Multi-language support',
-        'IDE integration',
-        'Code explanation',
-        'Security vulnerability detection',
-      ],
-      pricing: '$10/month',
-      marketPrice: '$10-20/month',
-      website: 'https://github.com/features/copilot',
-      color: 'bg-gradient-to-br from-gray-500 to-black',
-      textColor: 'text-gray-400',
-      gradient: 'from-gray-400 to-black',
-      popular: true,
-      category: 'Code Generation',
-    },
-    {
-      icon: <GitBranch className='w-8 h-8 text-white' />,
-      title: 'GitHub Pro',
-      description:
-        'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
-      features: [
-        'Unlimited private repositories',
-        'Advanced code review tools',
-        'Priority support',
-        'Advanced insights',
-        'Team management features',
-      ],
-      pricing: '$4/month',
-      marketPrice: '$4/month',
-      website: 'https://github.com/pricing',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500',
-      popular: true,
-      category: 'Version Control',
-    },
-    {
-      icon: <Database className='w-8 h-8 text-white' />,
-      title: 'MongoDB Atlas',
-      description:
-        'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
-      features: [
-        'Fully managed MongoDB',
-        'Auto-scaling & optimization',
-        'Global distribution',
-        'Advanced security',
-        'Real-time analytics',
-      ],
-      pricing: '$9/month',
-      marketPrice: '$9-57/month',
-      website: 'https://www.mongodb.com/atlas',
-      color: 'bg-gradient-to-br from-green-500 to-blue-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-blue-500',
-      popular: false,
-      category: 'Database',
-    },
-    {
-      icon: <Cloud className='w-8 h-8 text-white' />,
-      title: 'Vercel Pro',
-      description:
-        'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
-      features: [
-        'Zero-config deployments',
-        'Preview deployments',
-        'Advanced analytics',
-        'Team collaboration',
-        'Custom domains',
-      ],
-      pricing: '$20/month',
-      marketPrice: '$20/month',
-      website: 'https://vercel.com/pricing',
-      color: 'bg-gradient-to-br from-black to-gray-600',
-      textColor: 'text-gray-400',
-      gradient: 'from-black to-gray-500',
-      popular: false,
-      category: 'Deployment',
-    },
-    {
-      icon: <Shield className='w-8 h-8 text-white' />,
-      title: 'Snyk',
-      description:
-        'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
-      features: [
-        'Vulnerability scanning',
-        'Dependency monitoring',
-        'Container security',
-        'Infrastructure as Code',
-        'CI/CD integration',
-      ],
-      pricing: '$25/month',
-      marketPrice: '$25-100/month',
-      website: 'https://snyk.io/pricing',
-      color: 'bg-gradient-to-br from-red-500 to-pink-600',
-      textColor: 'text-red-400',
-      gradient: 'from-red-400 to-pink-500',
-      popular: false,
-      category: 'Security',
-    },
-    {
-      icon: <Zap className='w-8 h-8 text-white' />,
-      title: 'Postman',
-      description:
-        'Complete API development platform for building, testing, and documenting APIs with team collaboration.',
-      features: [
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         'API design & testing',
         'Team collaboration',
         'API documentation',
         'Mock servers',
         'Monitoring & analytics',
-<<<<<<< HEAD
       ],
       pricing: '$12/month',
-=======
-      ],      pricing: '$12/month',
-
-      pricing: '$12/month',
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       marketPrice: '$12-99/month',
       website: 'https://www.postman.com/pricing',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
@@ -355,18 +182,10 @@ export default function DeveloperToolsPage() {
       gradient: 'from-orange-400 to-red-500',
       popular: false,
       category: 'API Development',
-<<<<<<< HEAD
     },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-    },  ];
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   ];
   const devMarketStats = [
     {
-<<<<<<< HEAD
       title: 'Dev Tools Market'
       value: '$8.2B'
       growth: '+24% YoY'
@@ -409,35 +228,9 @@ export default function DeveloperToolsPage() {
       description: 'Average productivity improvement'
     },      description: 'Average productivity improvement'
     }
-=======
-      title: 'Dev Tools Market',
-      value: '$8.2B',
-      growth: '+24% YoY',
-      description: 'Global developer tools market size',
-    },
-    {
-      title: 'AI Code Tools',
-      value: '$2.1B',
-      growth: '+45% YoY',
-      description: 'AI-powered development tools market',
-    },
-    {
-      title: 'Cloud Dev Tools',
-      value: '$4.8B',
-      growth: '+32% YoY',
-      description: 'Cloud-based development platforms',
-    },
-    {
-      title: 'Dev Productivity',
-      value: '35%',
-      growth: '+18% YoY',
-      description: 'Average productivity improvement',
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const devCategories = [
     {
-<<<<<<< HEAD
       name: 'Code Generation'
       description: 'AI-powered coding assistants and code completion tools'
       tools: 1
@@ -503,47 +296,9 @@ export default function DeveloperToolsPage() {
       avgPrice: '$55/month'
     },      avgPrice: '$55/month'
     }
-=======
-      name: 'Code Generation',
-      description: 'AI-powered coding assistants and code completion tools',
-      tools: 1,
-      avgPrice: '$10/month',
-    },
-    {
-      name: 'Version Control',
-      description: 'Git platforms and collaboration tools for code management',
-      tools: 1,
-      avgPrice: '$4/month',
-    },
-    {
-      name: 'Database',
-      description: 'Managed database services and database tools',
-      tools: 1,
-      avgPrice: '$33/month',
-    },
-    {
-      name: 'Deployment',
-      description: 'Platforms for deploying and hosting applications',
-      tools: 1,
-      avgPrice: '$20/month',
-    },
-    {
-      name: 'Security',
-      description: 'Security scanning and vulnerability detection tools',
-      tools: 1,
-      avgPrice: '$62/month',
-    },
-    {
-      name: 'API Development',
-      description: 'Tools for building, testing, and managing APIs',
-      tools: 1,
-      avgPrice: '$55/month',
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const devWorkflow = [
     {
-<<<<<<< HEAD
       phase: 'Development'
       tools: ['GitHub Copilot', 'VS Code', 'Git']
       description: 'Write and manage code with AI assistance'
@@ -577,27 +332,6 @@ export default function DeveloperToolsPage() {
       tools: ['VercelGitHub ActionsDocker']
       description: 'Deploy and host applications'
     }
-=======
-      phase: 'Development',
-      tools: ['GitHub Copilot', 'VS Code', 'Git'],
-      description: 'Write and manage code with AI assistance',
-    },
-    {
-      phase: 'Testing',
-      tools: ['Jest', 'Cypress', 'Postman'],
-      description: 'Test code quality and API functionality',
-    },
-    {
-      phase: 'Security',
-      tools: ['Snyk', 'GitHub Advanced Security'],
-      description: 'Scan for vulnerabilities and security issues',
-    },
-    {
-      phase: 'Deployment',
-      tools: ['Vercel', 'GitHub Actions', 'Docker'],
-      description: 'Deploy and host applications',
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
 
   return (
@@ -637,7 +371,6 @@ export default function DeveloperToolsPage() {
           <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed'>
             Curated developer tools and services that professionals use daily.
             Each tool has been tested and verified to provide real value for
-<<<<<<< HEAD
             developers and development teams.          </p>      </Head>
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
@@ -655,9 +388,6 @@ export default function DeveloperToolsPage() {
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Curated developer tools and services that professionals use daily. Each tool has been tested and verified
             to provide real value for developers and development teams.
-=======
-            developers and development teams.
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </div>
       </section>
@@ -689,42 +419,21 @@ export default function DeveloperToolsPage() {
                   <div className='text-sm text-green-400 mb-3'>
                     {stat.growth}
                   </div>
-<<<<<<< HEAD
                   <p className='text-sm text-gray-400'>{stat.description}</p>                </div>                <div className="p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
                   <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
                   <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
                   <p className="text-sm text-gray-400">{stat.description}</p>
-=======
-                  <p className='text-sm text-gray-400'>{stat.description}</p>
-                </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Curated Developer Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -732,7 +441,6 @@ export default function DeveloperToolsPage() {
               reliability, and real-world developer usage.
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {developerTools.map((tool, index) => (              Curated Developer Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -740,10 +448,6 @@ export default function DeveloperToolsPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-=======
-
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {developerTools.map((tool, index) => (
               <Card
                 key={index}
@@ -755,21 +459,13 @@ export default function DeveloperToolsPage() {
                 {tool.popular && (
                   <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>
                     <div className='inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium'>
-<<<<<<< HEAD
                       <Star className='w-3 h-3 mr-1' />                      Most Popular                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium">
                       <Star className="w-3 h-3 mr-1" />
-=======
-                      <Star className='w-3 h-3 mr-1' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       Most Popular
                     </div>
                   </div>
                 )}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <div className='flex items-start space-x-6'>
                   <div className='relative'>
                     <div
@@ -817,7 +513,6 @@ export default function DeveloperToolsPage() {
                           key={featureIndex}
                           className='flex items-center text-gray-300'
                         >
-<<<<<<< HEAD
                           <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />                          {feature}                      {tool.icon}
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
@@ -848,17 +543,10 @@ export default function DeveloperToolsPage() {
                       {tool.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-=======
-                          <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {feature}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <div className='flex items-center justify-between'>
                       <Button
                         href={tool.website}
@@ -873,7 +561,6 @@ export default function DeveloperToolsPage() {
                         <div className='text-xs text-gray-500'>Direct Link</div>
                         <div className='text-xs text-cursor-blue font-mono'>
                           {tool.website}
-<<<<<<< HEAD
                         </div>                      </div>                      <Button
                         href={tool.website}
                         variant="primary"
@@ -886,9 +573,6 @@ export default function DeveloperToolsPage() {
                       <div className="text-right">
                         <div className="text-xs text-gray-500">Direct Link</div>
                         <div className="text-xs text-cursor-blue font-mono">{tool.website}</div>
-=======
-                        </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
                     </div>
                   </div>
@@ -898,27 +582,11 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -946,7 +614,6 @@ export default function DeveloperToolsPage() {
                       <div
                         key={toolIndex}
                         className='text-sm text-cursor-blue font-medium'
-<<<<<<< HEAD
                       >                        {tool}              Complete Developer Workflow
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -969,9 +636,6 @@ export default function DeveloperToolsPage() {
                   <div className="space-y-1">
                     {phase.tools.map((tool, toolIndex) => (
                       <div key={toolIndex} className="text-sm text-cursor-blue font-medium">
-=======
-                      >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         {tool}
                       </div>
                     ))}
@@ -982,28 +646,11 @@ export default function DeveloperToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
-
-              Developer Tool Categories
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of developer tools helps you
@@ -1029,44 +676,22 @@ export default function DeveloperToolsPage() {
                     </span>
                     <span className='text-cursor-blue font-semibold'>
                       {category.avgPrice}
-<<<<<<< HEAD
                     </span>                  </div>                <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
                   <p className="text-gray-400 mb-4">{category.description}</p>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
                     <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
-=======
-                    </span>
-                  </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
-
-            Ready to Level Up Your Development?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
             Start with one tool or build a complete development stack. Each tool
@@ -1078,26 +703,19 @@ export default function DeveloperToolsPage() {
               href='/ai-tools'
               variant='primary'
               size='lg'
-<<<<<<< HEAD
               className='bg-cursor-blue hover:bg-cursor-blue-dark'            >
-=======
-              className='bg-cursor-blue hover:bg-cursor-blue-dark'
-            >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Explore AI Tools
             </Button>
             <Button
               href='/contact'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools"
               variant="primary"
               size="lg"
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore AI Tools
             </Button>
-<<<<<<< HEAD
             <Button
               href='/contact'
               variant='outline'
@@ -1106,28 +724,11 @@ export default function DeveloperToolsPage() {
               variant="outline"
               size="lg"
               className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
-=======
-              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'
-            >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               Get Dev Consultation
             </Button>
           </div>
         </div>
       </section>
     </>
-<<<<<<< HEAD
 );
 }
-=======
-<<<<<<< HEAD
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

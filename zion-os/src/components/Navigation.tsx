@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-=======
-"use client",;
-import { useState, useEffect, useRef } from "react",;
-import Link from "next/link",;
-export function Navigation() {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
-  const [isSearchOpen, setIsSearchOpen] = useState(false),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
@@ -196,10 +187,6 @@ export function Navigation() {;
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (;
           <div className="lg:hidden animate-fade-in">;
@@ -278,8 +265,5 @@ export function Navigation() {;
       </div>;
     </nav>;
   );
-<<<<<<< HEAD
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

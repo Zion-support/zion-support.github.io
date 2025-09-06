@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
-<<<<<<< HEAD
   TrendingUp
   BarChart3
   DollarSign
@@ -21,60 +20,8 @@ import {
 } from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap } from 'lucide-react';
-<<<<<<< HEAD
-=======
-  TrendingUp,
-  BarChart3,
-  DollarSign,
-  Users,
-  Globe,
-  Target,
-  Clock,
-  Award,
-  ArrowRight,
-  ExternalLink,
-  PieChart,
-  LineChart,
-  Activity,
-  Zap,;
-} from 'lucide-react';
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function MarketResearchPage() {
-<<<<<<< HEAD
   const marketSegments = null;
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-  TrendingUp,
-  BarChart3,
-  DollarSign,
-  Users,
-  Globe,
-  Target,
-  Clock,
-  Award,
-  ArrowRight,
-  ExternalLink,
-  PieChart,
-  LineChart,
-  Activity,;
-  Zap,;
-<<<<<<< HEAD
-} from 'lucide-react';
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
-=======
-} from 'lucide-react';
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function MarketResearchPage() {
 
   const marketSegments = [
@@ -83,7 +30,6 @@ export default function MarketResearchPage() {
       marketSize: '$15.7B'
       growthRate: '23.4% CAGR'
       keyTrends: [
-<<<<<<< HEAD
         'Generative AI adoption accelerating'
         'AI-powered automation increasing'
         'Natural language processing growth'
@@ -91,7 +37,6 @@ export default function MarketResearchPage() {
       ]
       topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI']
       opportunities: [
-<<<<<<< HEAD
         'AI content generation tools'
         'Predictive analytics platforms'
         'Automated customer service'
@@ -105,29 +50,11 @@ export default function MarketResearchPage() {
       color: 'from-fuchsia-500 to-purple-600'
       icon: <Zap className="w-8 h-8 text-white" />
     }
-=======
-        'Generative AI adoption accelerating',
-        'AI-powered automation increasing',
-        'Natural language processing growth',
-        'Computer vision applications expanding',
-      ],
-      topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI'],
-      opportunities: [
-        'AI content generation tools',
-        'Predictive analytics platforms',
-        'Automated customer service',
-        'Intelligent process automation',
-      ],
-      color: 'from-fuchsia-500 to-purple-600',
-      icon: <Zap className='w-8 h-8 text-white' />,
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       name: 'Database & Analytics'
       marketSize: '$8.9B'
       growthRate: '18.7% CAGR'
       keyTrends: [
-<<<<<<< HEAD
         'Real-time analytics demand'
         'Cloud database migration'
         'Data privacy regulations'
@@ -148,29 +75,11 @@ export default function MarketResearchPage() {
       color: 'from-cyan-500 to-blue-600'
       icon: <BarChart3 className="w-8 h-8 text-white" />
     }
-=======
-        'Real-time analytics demand',
-        'Cloud database migration',
-        'Data privacy regulations',
-        'Performance optimization focus',
-      ],
-      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
-      opportunities: [
-        'Database performance monitoring',
-        'Real-time analytics dashboards',
-        'Data visualization tools',
-        'Query optimization platforms',
-      ],
-      color: 'from-cyan-500 to-blue-600',
-      icon: <BarChart3 className='w-8 h-8 text-white' />,
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       name: 'Security & Identity'
       marketSize: '$12.3B'
       growthRate: '21.2% CAGR'
       keyTrends: [
-<<<<<<< HEAD
         'Zero-trust security adoption'
         'Multi-factor authentication growth'
         'API security concerns'
@@ -191,29 +100,11 @@ export default function MarketResearchPage() {
       color: 'from-green-500 to-emerald-600'
       icon: <Target className="w-8 h-8 text-white" />
     }
-=======
-        'Zero-trust security adoption',
-        'Multi-factor authentication growth',
-        'API security concerns',
-        'Compliance requirements increasing',
-      ],
-      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
-      opportunities: [
-        'Identity verification platforms',
-        'API security gateways',
-        'Compliance monitoring tools',
-        'Threat detection systems',
-      ],
-      color: 'from-green-500 to-emerald-600',
-      icon: <Target className='w-8 h-8 text-white' />,
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       name: 'Business Intelligence'
       marketSize: '$22.1B'
       growthRate: '19.8% CAGR'
       keyTrends: [
-<<<<<<< HEAD
         'Self-service BI adoption'
         'Real-time data integration'
         'Mobile BI growth'
@@ -234,29 +125,11 @@ export default function MarketResearchPage() {
       color: 'from-orange-500 to-red-600'
       icon: <Activity className="w-8 h-8 text-white" />
     }
-=======
-        'Self-service BI adoption',
-        'Real-time data integration',
-        'Mobile BI growth',
-        'Predictive analytics demand',
-      ],
-      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
-      opportunities: [
-        'Custom dashboard builders',
-        'Data integration platforms',
-        'Mobile analytics solutions',
-        'Predictive modeling tools',
-      ],
-      color: 'from-orange-500 to-red-600',
-      icon: <Activity className='w-8 h-8 text-white' />,
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       name: 'API Management'
       marketSize: '$6.8B'
       growthRate: '24.1% CAGR'
       keyTrends: [
-<<<<<<< HEAD
         'Microservices architecture growth'
         'API-first development'
         'Rate limiting importance'
@@ -277,29 +150,11 @@ export default function MarketResearchPage() {
       color: 'from-indigo-500 to-purple-600'
       icon: <Globe className="w-8 h-8 text-white" />
     }
-=======
-        'Microservices architecture growth',
-        'API-first development',
-        'Rate limiting importance',
-        'Developer experience focus',
-      ],
-      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
-      opportunities: [
-        'API rate limiting services',
-        'Developer portal platforms',
-        'API analytics tools',
-        'Webhook management systems',
-      ],
-      color: 'from-indigo-500 to-purple-600',
-      icon: <Globe className='w-8 h-8 text-white' />,
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     {
       name: 'User Experience Analytics'
       marketSize: '$9.4B'
       growthRate: '20.5% CAGR'
       keyTrends: [
-<<<<<<< HEAD
         'Privacy-compliant tracking'
         'Real-time user insights'
         'Conversion optimization focus'
@@ -320,27 +175,6 @@ export default function MarketResearchPage() {
       color: 'from-teal-500 to-cyan-600'
       icon: <Users className="w-8 h-8 text-white" />
     }
-=======
-<<<<<<< HEAD
-=======
-        'AI content generation tools',
-        'Predictive analytics platforms',
-        'Automated customer service',
-        'Intelligent process automation',
-      ],
-      color: 'from-fuchsia-500 to-purple-600',
-      icon: <Zap className='w-8 h-8 text-white' />,
-<<<<<<< HEAD
-    },    {
-
-=======
-    },    {      opportunities: [
-        'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
-      ];
-      color: 'from-fuchsia-500 to-purple-600',
-      icon: <Zap className="w-8 h-8 text-white" />
-    };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
 
       name: 'Database & Analytics',
@@ -439,17 +273,12 @@ export default function MarketResearchPage() {
       marketSize: '$9.4B',
       growthRate: '20.5% CAGR',
       keyTrends: [
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         'Privacy-compliant tracking',
         'Real-time user insights',
         'Conversion optimization focus',
         'Mobile app analytics growth',
       ],
       topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
-<<<<<<< HEAD
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       opportunities: [
         'Heatmap and session recording',
         'A/B testing platforms',
@@ -458,24 +287,12 @@ export default function MarketResearchPage() {
       ],
       color: 'from-teal-500 to-cyan-600',
       icon: <Users className='w-8 h-8 text-white' />,
-<<<<<<< HEAD
     },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-    },  ];
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   ];
   const competitiveAnalysis = [
     {
-<<<<<<< HEAD
       company: 'Enterprise Giants'
       examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP']
-=======
-      company: 'Enterprise Giants',
-      examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       strengths: [
         'Extensive resources and R&D'
         'Established customer base'
@@ -483,7 +300,6 @@ export default function MarketResearchPage() {
         'Global presence and support'
       ]
       weaknesses: [
-<<<<<<< HEAD
         'High pricing and complexity'
         'Slow innovation cycles'
         'Difficult customization'
@@ -528,52 +344,6 @@ export default function MarketResearchPage() {
       pricing: 'Low ($10-100/month)'
     },  ];      pricing: 'Low ($10-100/month)'
     }
-=======
-        'High pricing and complexity',
-        'Slow innovation cycles',
-        'Difficult customization',
-        'Long implementation times',
-      ],
-      marketShare: '45-60%',
-      pricing: 'High ($1000+/month)',
-    },
-    {
-      company: 'Mid-Market Leaders',
-      examples: ['HubSpot', 'Atlassian', 'Slack', 'Zoom'],
-      strengths: [
-        'Balanced features and pricing',
-        'Strong user experience',
-        'Active community support',
-        'Regular feature updates',
-      ],
-      weaknesses: [
-        'Limited customization options',
-        'Growing complexity over time',
-        'Dependency on integrations',
-        'Scalability challenges',
-      ],
-      marketShare: '25-35%',
-      pricing: 'Medium ($100-500/month)',
-    },
-    {
-      company: 'Micro SaaS Innovators',
-      examples: ['Zapier', 'Notion', 'Airtable', 'Linear'],
-      strengths: [
-        'Focused feature sets',
-        'Fast innovation cycles',
-        'Affordable pricing',
-        'Easy implementation',
-      ],
-      weaknesses: [
-        'Limited feature scope',
-        'Smaller support teams',
-        'Integration dependencies',
-        'Market volatility risk',
-      ],
-      marketShare: '15-25%',
-      pricing: 'Low ($10-100/month)',
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const marketTrends = [
     {
@@ -582,7 +352,6 @@ export default function MarketResearchPage() {
       impact: 'High'
       timeline: '2024-2026'
       examples: [
-<<<<<<< HEAD
         'AI-powered content generation'
         'Intelligent automation'
         'Predictive analytics'
@@ -641,77 +410,16 @@ export default function MarketResearchPage() {
       ];
       opportunities: 'Real-time platforms, streaming services, live collaboration tools'
     }
-=======
-        'AI-powered content generation',
-        'Intelligent automation',
-        'Predictive analytics',
-        'Natural language interfaces',
-      ],
-      opportunities: 'AI integration services, custom AI models, AI consulting',
-    },
-    {
-      trend: 'Privacy-First Design',
-      description: 'Growing focus on data privacy and compliance',
-      impact: 'High',
-      timeline: '2024-2027',
-      examples: [
-        'GDPR compliance tools',
-        'Privacy analytics platforms',
-        'Data anonymization services',
-        'Consent management systems',
-      ],
-      opportunities:
-        'Privacy compliance tools, data governance platforms, audit services',
-    },
-    {
-      trend: 'API-First Architecture',
-      description: 'Shift towards API-centric application development',
-      impact: 'Medium',
-      timeline: '2024-2026',
-      examples: [
-        'API management platforms',
-        'Developer experience tools',
-        'API analytics and monitoring',
-        'Integration platforms',
-      ],
-      opportunities:
-        'API development tools, integration services, developer portals',
-    },
-    {
-      trend: 'Real-Time Everything',
-      description: 'Demand for real-time data and analytics',
-      impact: 'Medium',
-      timeline: '2024-2025',
-      examples: [
-        'Real-time dashboards',
-        'Live collaboration tools',
-        'Instant notifications',
-        'Streaming analytics',
-      ],
-      opportunities:
-        'Real-time platforms, streaming services, live collaboration tools',
-    },
-  ];
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const pricingStrategies = [
     {
       strategy: 'Value-Based Pricing'
       description: 'Pricing based on customer value and ROI'
       pros: [
-<<<<<<< HEAD
         'Higher profit margins'
         'Customer alignment'
         'Scalable pricing model'
         'Competitive differentiation'
       ]
-=======
-        'Higher profit margins',
-        'Customer alignment',
-        'Scalable pricing model',
-        'Competitive differentiation',
-      ],
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       cons: [
         'Complex pricing structure'
         'Customer education required'
@@ -719,7 +427,6 @@ export default function MarketResearchPage() {
         'Pricing optimization needed'
       ]
       bestFor:
-<<<<<<< HEAD
         'Enterprise solutions, high-value services, ROI-focused products'
     },    {
       strategy: 'Usage-Based Pricing'
@@ -815,72 +522,6 @@ export default function MarketResearchPage() {
       description: 'Average time for SaaS companies to reach profitability'
     },      description: 'Average time for SaaS companies to reach profitability'
     }
-=======
-        'Enterprise solutions, high-value services, ROI-focused products',
-    },
-    {
-      strategy: 'Usage-Based Pricing',
-      description: 'Pricing based on actual usage or consumption',
-      pros: [
-        'Fair pricing model',
-        'Easy to understand',
-        'Scalable with growth',
-        'Low barrier to entry',
-      ],
-      cons: [
-        'Revenue predictability challenges',
-        'Complex billing systems',
-        'Usage optimization needed',
-        'Customer cost management',
-      ],
-      bestFor: 'API services, storage platforms, compute resources',
-    },
-    {
-      strategy: 'Freemium Model',
-      description: 'Free basic tier with paid premium features',
-      pros: [
-        'Low customer acquisition cost',
-        'Viral growth potential',
-        'Large user base',
-        'Easy market entry',
-      ],
-      cons: [
-        'Low conversion rates',
-        'Revenue per user challenges',
-        'Support cost management',
-        'Feature differentiation needed',
-      ],
-      bestFor: 'Consumer tools, productivity apps, collaboration platforms',
-    },
-  ];
-
-  const investmentInsights = [
-    {
-      metric: 'Total VC Investment',
-      value: '$45.2B',
-      change: '+18.7% YoY',
-      description: 'Venture capital investment in SaaS companies in 2024',
-    },
-    {
-      metric: 'Average Series A',
-      value: '$12.8M',
-      change: '+22.3% YoY',
-      description: 'Average Series A funding round for SaaS startups',
-    },
-    {
-      metric: 'Exit Valuations',
-      value: '8.2x ARR',
-      change: '+15.4% YoY',
-      description:
-        'Average exit valuation multiple based on annual recurring revenue',
-    },
-    {
-      metric: 'Time to Profitability',
-      value: '3.2 years',
-      change: '-0.8 years YoY',
-      description: 'Average time for SaaS companies to reach profitability',
-    },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
 
   return (
@@ -917,7 +558,6 @@ export default function MarketResearchPage() {
           <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed'>
             Data-driven market intelligence, competitive analysis, and industry
             trends to help you make informed decisions about your micro SaaS
-<<<<<<< HEAD
             business strategy and market positioning.          </p>      </Head>
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
@@ -934,9 +574,6 @@ export default function MarketResearchPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Data-driven market intelligence, competitive analysis, and industry trends to help you make informed decisions about your micro SaaS business strategy and market positioning.
-=======
-            business strategy and market positioning.
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </div>
       </section>
@@ -969,17 +606,12 @@ export default function MarketResearchPage() {
                     {insight.description}
                   </div>
                   <div className='inline-flex items-center text-sm text-green-400'>
-<<<<<<< HEAD
                     <TrendingUp className='w-4 h-4 mr-1' />                    {insight.change}                <div className="p-6">
                   <div className="text-3xl font-bold text-white mb-2">{insight.value}</div>
                   <div className="text-sm text-gray-400 mb-3">{insight.metric}</div>
                   <div className="text-sm text-gray-300 mb-4">{insight.description}</div>
                   <div className="inline-flex items-center text-sm text-green-400">
                     <TrendingUp className="w-4 h-4 mr-1" />
-=======
-                    <TrendingUp className='w-4 h-4 mr-1' />
-                    {insight.change}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </Card>
@@ -987,27 +619,11 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Market Segments */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Market Segment Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1047,7 +663,6 @@ export default function MarketResearchPage() {
                             <span className='text-gray-400'>Growth Rate:</span>
                             <span className='text-green-400 font-semibold'>
                               {segment.growthRate}
-<<<<<<< HEAD
                             </span>                          </div>              Market Segment Analysis
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -1081,9 +696,6 @@ export default function MarketResearchPage() {
                           <div className="flex items-center justify-between">
                             <span className="text-gray-400">Growth Rate:</span>
                             <span className="text-green-400 font-semibold">{segment.growthRate}</span>
-=======
-                            </span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </div>
                         </div>
                       </div>
@@ -1103,7 +715,6 @@ export default function MarketResearchPage() {
                                 key={trendIndex}
                                 className='flex items-start text-gray-300 text-sm'
                               >
-<<<<<<< HEAD
                                 <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />                                {trend}                        {/* Key Trends */}
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -1114,22 +725,11 @@ export default function MarketResearchPage() {
                             {segment.keyTrends.map((trend, trendIndex) => (
                               <li key={trendIndex} className="flex items-start text-gray-300 text-sm">
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
-=======
-                                <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                 {trend}
                               </li>
                             ))}
                           </ul>
                         </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {/* Top Players */}
                         <div>
                           <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -1142,30 +742,18 @@ export default function MarketResearchPage() {
                                 key={playerIndex}
                                 className='flex items-start text-gray-300 text-sm'
                               >
-<<<<<<< HEAD
                                 <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />                                {player}                            Top Players
                           </h4>
                           <ul className="space-y-2">
                             {segment.topPlayers.map((player, playerIndex) => (
                               <li key={playerIndex} className="flex items-start text-gray-300 text-sm">
                                 <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
-=======
-                                <span className='w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                 {player}
                               </li>
                             ))}
                           </ul>
                         </div>
                       </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Opportunities */}
                       <div className='mt-8 pt-6 border-t border-gray-700'>
                         <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -1183,7 +771,6 @@ export default function MarketResearchPage() {
                                 {opportunity}
                               </div>
                             )
-<<<<<<< HEAD
                           )}                        </div>                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {segment.opportunities.map((opportunity, oppIndex) => (
                             <div key={oppIndex} className="flex items-start text-gray-300 text-sm">
@@ -1191,23 +778,6 @@ export default function MarketResearchPage() {
                               {opportunity}
                             </div>
                           ))}
-<<<<<<< HEAD
-=======
-                          )}
-                        </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-
-                        </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                       </div>
                     </div>
                   </div>
@@ -1217,27 +787,11 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Competitive Analysis */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Competitive Landscape Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1277,7 +831,6 @@ export default function MarketResearchPage() {
                       <span className='text-gray-400'>Pricing:</span>
                       <div className='text-white font-semibold'>
                         {analysis.pricing}
-<<<<<<< HEAD
                       </div>                    </div>
                   </div>
                   {/* Strengths */}              Competitive Landscape Analysis
@@ -1309,13 +862,9 @@ export default function MarketResearchPage() {
                     <div>
                       <span className="text-gray-400">Pricing:</span>
                       <div className="text-white font-semibold">{analysis.pricing}</div>
-=======
-                      </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                   {/* Strengths */}
-<<<<<<< HEAD
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-green-400 mb-2'>
                       Strengths:
@@ -1323,40 +872,16 @@ export default function MarketResearchPage() {
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {analysis.strengths.map((strength, strengthIndex) => (
                         <li key={strengthIndex} className='flex items-start'>
-<<<<<<< HEAD
                           <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {strength}                  <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
                       {analysis.strengths.map((strength, strengthIndex) => (
                         <li key={strengthIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
-<<<<<<< HEAD
-                          <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />
-                          {strength}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-                          {strength}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Weaknesses */}
                   <div>
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -1365,16 +890,11 @@ export default function MarketResearchPage() {
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {analysis.weaknesses.map((weakness, weaknessIndex) => (
                         <li key={weaknessIndex} className='flex items-start'>
-<<<<<<< HEAD
                           <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {weakness}                    <h4 className="text-sm font-semibold text-red-400 mb-2">Weaknesses:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
                       {analysis.weaknesses.map((weakness, weaknessIndex) => (
                         <li key={weaknessIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
-                          <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />
-                          {weakness}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </li>
                       ))}
                     </ul>
@@ -1385,27 +905,11 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Market Trends */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1437,7 +941,6 @@ export default function MarketResearchPage() {
                       >
                         {trend.impact} Impact
                       </span>
-<<<<<<< HEAD
                       <span className='px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400'>                        {trend.timeline}
                       </span>
                     </div>
@@ -1466,20 +969,10 @@ export default function MarketResearchPage() {
                         {trend.impact} Impact
                       </span>
                       <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400">
-=======
-                      <span className='px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         {trend.timeline}
                       </span>
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   <p className='text-gray-300 mb-4'>{trend.description}</p>
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-gray-400 mb-2'>
@@ -1488,7 +981,6 @@ export default function MarketResearchPage() {
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {trend.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className='flex items-start'>
-<<<<<<< HEAD
                           <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {example}
                   <p className="text-gray-300 mb-4">{trend.description}</p>
                   <div className="mb-4">
@@ -1497,21 +989,6 @@ export default function MarketResearchPage() {
                       {trend.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
-<<<<<<< HEAD
-                          <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />
-                          {example}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-                          {example}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                         </li>
                       ))}
                     </ul>
@@ -1522,12 +999,8 @@ export default function MarketResearchPage() {
                     </h4>
                     <p className='text-xs text-gray-300'>
                       {trend.opportunities}
-<<<<<<< HEAD
                     </p>                  </div>                    <h4 className="text-sm font-semibold text-green-400 mb-2">Opportunities:</h4>
                     <p className="text-xs text-gray-300">{trend.opportunities}</p>
-=======
-                    </p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </Card>
@@ -1535,27 +1008,11 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Pricing Strategy Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1583,7 +1040,6 @@ export default function MarketResearchPage() {
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {strategy.pros.map((pro, proIndex) => (
                         <li key={proIndex} className='flex items-start'>
-<<<<<<< HEAD
                           <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {pro}              Pricing Strategy Analysis
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -1607,22 +1063,11 @@ export default function MarketResearchPage() {
                       {strategy.pros.map((pro, proIndex) => (
                         <li key={proIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
-                          <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {pro}
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Cons */}
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -1631,40 +1076,23 @@ export default function MarketResearchPage() {
                     <ul className='space-y-1 text-xs text-gray-300'>
                       {strategy.cons.map((con, conIndex) => (
                         <li key={conIndex} className='flex items-start'>
-<<<<<<< HEAD
                           <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {con}                  <div className="mb-4">
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
                       {strategy.cons.map((con, conIndex) => (
                         <li key={conIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
-                          <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />
-                          {con}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Best For */}
                   <div>
                     <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                       Best For:
                     </h4>
-<<<<<<< HEAD
                     <p className='text-xs text-gray-300'>{strategy.bestFor}</p>                  </div>                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
                     <p className="text-xs text-gray-300">{strategy.bestFor}</p>
-=======
-                    <p className='text-xs text-gray-300'>{strategy.bestFor}</p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </Card>
@@ -1672,27 +1100,11 @@ export default function MarketResearchPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Apply This Market Intelligence?
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1703,7 +1115,6 @@ export default function MarketResearchPage() {
             <Button
               href='/contact'
               size='lg'
-<<<<<<< HEAD
               className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'            >
               Get Strategic Consultation
             </Button>
@@ -1721,44 +1132,22 @@ export default function MarketResearchPage() {
               href="/contact"
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
-=======
-              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             >
               Get Strategic Consultation
             </Button>
-<<<<<<< HEAD
             <Button
               href='/services'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'              href="/services"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
-=======
-              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'
-            >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Our Services
             </Button>
           </div>
         </div>
       </section>
     </>
-<<<<<<< HEAD
 );
 }
-=======
-<<<<<<< HEAD
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

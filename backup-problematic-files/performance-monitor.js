@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
@@ -53,32 +52,3 @@ const report = monitor.generateReport();
 const reportPath = path.join(process.cwd(), "performance-report.json");
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 console.log("Performance report generated:", reportPath);
-=======
-// Performance monitoring utility
-export class PerformanceMonitor {
-  constructor() {
-    this.metrics = new Map();
-  }
-
-  startTiming(name) {
-    this.metrics.set(name, { start: performance.now() }
-});
-  }
-
-  endTiming(name) {
-    const metric = this.metrics.get(name);
-    if (metric) {
-      metric.end = performance.now();
-      metric.duration = metric.end - metric.start;
-      console.log(`⏱️ ${name}: ${metric.duration.toFixed(2)}ms`);
-    }
-  }
-
-  getMetrics() {
-    return Object.fromEntries(this.metrics);
-  }
-}
-}
-
-export const performanceMonitor = new PerformanceMonitor();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

@@ -104,10 +104,8 @@ class ComprehensiveFixScript {
           
           // Fix common syntax issues
           content = content
-            .replace(/<<<<<<< HEAD/g, '')
-            .replace(/=======/g, '')
-            .replace(/>>>>>>> [a-f0-9]+/g, '')
-            .replace(/^\s*$/gm, '')
+            .replace(/            .replace(/=======/g, '')
+            .replace(/            .replace(/^\s*$/gm, '')
             .replace(/\n\s*\n\s*\n/g, '\n\n');
 
           // Ensure proper React component structure

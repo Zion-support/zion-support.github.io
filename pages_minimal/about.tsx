@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from "react";
-=======
-import React from 'react';
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function About() {
   return (
     <div>

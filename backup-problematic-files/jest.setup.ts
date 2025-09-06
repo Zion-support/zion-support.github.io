@@ -1,33 +1,13 @@
-<<<<<<< HEAD:jest.setup.ts
 // Jest setup file for testing environment
 import '@testing-library/jest-dom';
-=======
-// Jest.setup utility
-export const Jest.setup = () => {
-  // Implementation here
-  return null;
-};
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/jest.setup.ts
 // Mock global objects that might not be available in test environment
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
-<<<<<<< HEAD
   observe: jest.fn()
   unobserve: jest.fn()
   disconnect: jest.fn(),}));}));
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true
-=======
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
-
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   value: jest.fn().mockImplementation(query => ({
     matches: false
     media: query
@@ -57,12 +37,7 @@ beforeAll(() => {
       return;
     }
     originalConsoleError.call(console, ...args);
-<<<<<<< HEAD
   }
-=======
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   console.warn = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
@@ -76,8 +51,4 @@ beforeAll(() => {
 afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

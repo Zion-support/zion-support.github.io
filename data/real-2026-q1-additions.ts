@@ -1,12 +1,6 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const contact = null;
-=======
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -926,32 +920,6 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		reviews: 6
 	}
 ];
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-}
-
-export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
-=======
-
-=======
-const contact = {
-	mobile: '+1 302 464 0950',
-	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
-};
-
-export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   {
     id: 'affiliate-analytics-starter',
     name: 'Affiliate Analytics Starter',
@@ -1443,18 +1411,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     customers: 9,
     rating: 4.7,
     reviews: 6,
-<<<<<<< HEAD
   },
 ];
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  },;
-];	{
-		id: 'affiliate-analytics-starter';
-=======
-	{
-		id: 'affiliate-analytics-starter',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 		name: 'Affiliate Analytics Starter',
 		tagline: 'Attribution, fraud detection and automated payouts for SMBs',
 		price: '$129',
@@ -1874,5 +1832,3 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		reviews: 6
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -21,14 +13,7 @@ export default function RAGEvaluationLabPage() {
 							</div>
 						))}
 					</div>
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-=======
-import React from 'react';
-import SEO from '../components/SEO';
-import Link from 'next/link';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
@@ -166,7 +151,6 @@ import Link from 'next/link';
         </div>
       </section>
     </>
-<<<<<<< HEAD
   );					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
@@ -176,15 +160,4 @@ import Link from 'next/link';
 			</section>
 		</>
 	)
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -31,12 +31,8 @@ if (stat.isDirectory () && !item.startsWith ('.') && item !== 'node modules') {
   files = files.concat (getAllFiles (fullPath, extensions) );
 }else if (extensions.some (ext => item.endsWith (ext) ) ) {
   files.push (fullPath);
-<<<<<<< HEAD
 }
 }
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }catch (error) {
   //Skip directories that can't be read
 }return files;

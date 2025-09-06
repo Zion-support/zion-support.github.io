@@ -1,45 +1,16 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Activity  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PerformanceOptimizationSREPage() {
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function PerformanceOptimizationSREPage() {
 
   const service = extraServices.find(s =>
-<<<<<<< HEAD
     s.link.endsWith('/performance-optimization-sre')
-<<<<<<< HEAD
   );  if (!service) return null;export default function PerformanceOptimizationSREPage() {
-=======
-    s.link.endsWith('/performance-optimization-sre');
-  );  if (!service) return null;export default function PerformanceOptimizationSREPage() {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const service = extraServices.find(s => s.link.endsWith('/performance-optimization-sre'));
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!service) return null;
 
   return (
@@ -116,37 +87,15 @@ export default function PerformanceOptimizationSREPage() {
                 <div className='flex items-center space-x-2'>
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
-<<<<<<< HEAD
                 </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Request Proposal<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-=======
-                </div>
-              </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-;
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useCallback } from "react";
 // Define MessageEvent if not available
 interface Event {
@@ -30,11 +29,7 @@ interface MessageChannelHandlerProps {
   onError?: (error: Error) => void;
 }
 export function useMessageChannelHandler({
-<<<<<<< HEAD
   onMessage;
-=======
-  onMessage
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(
@@ -58,20 +53,3 @@ export function useMessageChannelHandler({
     }
   }, [handleMessage]);
 }
-=======
-import { useState, useEffect, useCallback } from 'react';
-}
-
-export const useMessageChannelHandler = () => {
-  const [state, setState] = useState(null);
-
-  useEffect(() => {
-    // Hook implementation
-  }, []);
-
-  return { state, setState };
-};
-}
-
-export default useMessageChannelHandler;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

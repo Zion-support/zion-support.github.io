@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 // Define RequestInit if not available
 interface File extends Blob {
   name: string;
   lastModified: number;
 }
-=======
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Blob {
   size: number;
   type: string;
@@ -76,25 +65,6 @@ interface AbortSignal extends EventTarget {
   aborted: boolean;
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
 }
-<<<<<<< HEAD
-=======
-}};
-}
-}
-
-export const apiClient = new ApiClient();
-};
-}
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
 };
@@ -104,12 +74,8 @@ export const apiClient = new ApiClient(),;
 export type { ApiResponse, RequestOptions };;
 
 };
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }};
 export const apiClient = new ApiClient();
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
@@ -118,13 +84,6 @@ interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
   success: boolean,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-// Define RequestInit if not available
-interface File extends Blob {
-  name: string;
-  lastModified: number;
->>>>>>> origin/main
 }
 interface Blob {
   size: number;
@@ -183,7 +142,6 @@ interface AbortController {
   signal: AbortSignal;
   abort(): void;
 }
-<<<<<<< HEAD
 
 class AbortController {
   signal: AbortSignal, abort(): void,
@@ -199,7 +157,6 @@ class ApiClient {
 
   private async request<T>(
     endpoint: string,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const { timeout = this.defaultTimeout, ...fetchOptions } = options;
@@ -215,7 +172,6 @@ class ApiClient {
     'Content-Type': 'application/json',
     ...fetchOptions.headers
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       });
 
       clearTimeout(timeoutId);
@@ -231,7 +187,6 @@ class ApiClient {
       console.error('API request failed:', error);
       return {
         error: error instanceof Error ? error.message : 'Unknown error occurred', success: false,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -244,7 +199,6 @@ class ApiClient {
     return this.request<T>(endpoint, {
       ...options;
       method: 'POST', body: data ? JSON.stringify(data) : undefined,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     });
   }
 
@@ -252,34 +206,17 @@ class ApiClient {
     return this.request<T>(endpoint, {
       ...options;
       method: 'PUT', body: data ? JSON.stringify(data) : undefined,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     });
   }
 
   async delete<T>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 }
 
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
-<<<<<<< HEAD
 ;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
 export class ApiClient {
   private baseURL: string;
@@ -340,14 +277,7 @@ export class ApiClient {
     });
   }
 }
-<<<<<<< HEAD
-=======
-=======
-}};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 export const apiClient = new ApiClient();
-<<<<<<< HEAD
 export default apiClient;
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https: export class ApiClient { private baseURL: string; private defaultHeaders: Record<string,string> constructor(baseURL: string = API_BASE_URL) { this.baseURL = baseURL; this.defaultHeaders = { 'Content-Type': 'application/json',}} private async request<T>( endpoint: 'string',options: RequestInit = {} ): Promise<T> { const url = `${this.baseURL}${endpoint}`; const config: RequestInit = { ...options,headers: { ...this.defaultHeaders,...options.headers,},}; try { const response = await fetch(url,config); if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`)} return await response.json()} catch (error) { console.error('API request failed:',error); throw error} } async get<T>(endpoint: 'string',options?: RequestInit): Promise<T> { return this.request<T>(endpoint,{ ...options,method: 'GET' })} async post<T>(endpoint: 'string',data?: any,options?: RequestInit): Promise<T> { return this.request<T>(endpoint,{ ...options,method: 'POST',body: data ? JSON.stringify(data) : undefined,})} async put<T>(endpoint: 'string',data?: any,options?: RequestInit): Promise<T> { return this.request<T>(endpoint,{ ...options,method: 'PUT',body: data ? JSON.stringify(data) : undefined,})} async delete<T>(endpoint: 'string',options?: RequestInit): Promise<T> { return this.request<T>(endpoint,{ ...options,method: 'DELETE' })} } export const apiClient = new ApiClient(); export default apiClient;
 declare global { interface RequestInit { timeout?: number} } interface ApiResponse<T = unknown> { data?: T; error?: string; success: boolean} interface RequestOptions extends RequestInit { timeout?: number} class ApiClient { private baseUrl: string; private defaultTimeout: number; constructor(baseUrl: string = &apos;',defaultTimeout: number = 10000) { this.baseUrl = baseUrl; this.defaultTimeout = defaultTimeout} private async request<T>( endpoint: string,options: RequestOptions = {} ): Promise<ApiResponse<T>> { const { timeout = this.defaultTimeout,...fetchOptions } = options; try { const controller = new AbortController(); const timeoutId = setTimeout(() => controller.abort(),timeout); const response = await fetch(`${this.baseUrl}${endpoint}`,{ ...fetchOptions,signal: controller.signal,headers: { &apos;Content-Type&apos;: &apos;application/json&apos;,...fetchOptions.headers,},}); clearTimeout(timeoutId); if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`)} const data = await response.json(); return { data,success: true }} catch (error) { return { error: error instanceof Error ? error.message : &apos;Unknown error occurred&apos;,success: false,}} } async get<T>(endpoint: string,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: &apos;GET&apos; })} async post<T>(endpoint: string,data?: unknown,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: &apos;POST&apos;,body: data ? JSON.stringify(data) : undefined,})} async put<T>(endpoint: string,data?: unknown,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: &apos;PUT&apos;,body: data ? JSON.stringify(data) : undefined,})} async delete<T>(endpoint: string,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: &apos;DELETE&apos; })} } export const apiClient = new ApiClient(); export type { ApiResponse,RequestOptions };
@@ -356,23 +286,7 @@ declare global {
   interface RequestInit {
     timeout?: number;
   }
-=======
-// Define AbortSignal if not available
-interface AbortSignal extends EventTarget {
-  aborted: boolean;
-  onabort: ((this: AbortSignal, ev: Event) => any) | null;
->>>>>>> origin/main
 }
-=======
-};
-export const apiClient = new ApiClient();
-export type { ApiResponse, RequestOptions };
-;
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
@@ -467,62 +381,6 @@ class ApiClient {
     return this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
 }
-<<<<<<< HEAD
-=======
-}
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const apiClient = new ApiClient();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export type { ApiResponse, RequestOptions };
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-export type { ApiResponse, RequestOptions };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
 declare global { interface RequestInit { timeout?: number} } interface ApiResponse<T = unknown> { data?: T; error?: string; success: boolean} interface RequestOptions extends RequestInit { timeout?: number} class ApiClient { private baseUrl: string; private defaultTimeout: number; constructor(baseUrl: string = '',defaultTimeout: number = 10000) { this.baseUrl = baseUrl; this.defaultTimeout = defaultTimeout} private async request<T>( endpoint: string,options: RequestOptions = {} ): Promise<ApiResponse<T>> { const { timeout = this.defaultTimeout,...fetchOptions } = options; try { const controller = new AbortController(); const timeoutId = setTimeout(() => controller.abort(),timeout); const response = await fetch(`${this.baseUrl}${endpoint}`,{ ...fetchOptions,signal: controller.signal,headers: { 'Content-Type': 'application/json',...fetchOptions.headers,},}); clearTimeout(timeoutId); if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`)} const data = await response.json(); return { data,success: true }} catch (error) { console.error('API request failed:',error); return { error: error instanceof Error ? error.message : 'Unknown error occurred',success: false,}} } async get<T>(endpoint: string,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'GET' })} async post<T>(endpoint: string,data?: unknown,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'POST',body: data ? JSON.stringify(data) : undefined,})} async put<T>(endpoint: string,data?: unknown,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'PUT',body: data ? JSON.stringify(data) : undefined,})} async delete<T>(endpoint: string,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'DELETE' })} } export const apiClient = new ApiClient(); export type { ApiResponse,RequestOptions };
-=======
-<<<<<<< HEAD
-declare global { interface RequestInit { timeout?: number} } interface ApiResponse<T = unknown> { data?: T; error?: string; success: boolean} interface RequestOptions extends RequestInit { timeout?: number} class ApiClient { private baseUrl: string; private defaultTimeout: number; constructor(baseUrl: string = '',defaultTimeout: number = 10000) { this.baseUrl = baseUrl; this.defaultTimeout = defaultTimeout} private async request<T>( endpoint: string,options: RequestOptions = {} ): Promise<ApiResponse<T>> { const { timeout = this.defaultTimeout,...fetchOptions } = options; try { const controller = new AbortController(); const timeoutId = setTimeout(() => controller.abort(),timeout); const response = await fetch(`${this.baseUrl}${endpoint}`,{ ...fetchOptions,signal: controller.signal,headers: { 'Content-Type': 'application/json',...fetchOptions.headers,},}); clearTimeout(timeoutId); if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`)} const data = await response.json(); return { data,success: true }} catch (error) { console.error('API request failed:',error); return { error: error instanceof Error ? error.message : 'Unknown error occurred',success: false,}} } async get<T>(endpoint: string,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'GET' })} async post<T>(endpoint: string,data?: unknown,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'POST',body: data ? JSON.stringify(data) : undefined,})} async put<T>(endpoint: string,data?: unknown,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'PUT',body: data ? JSON.stringify(data) : undefined,})} async delete<T>(endpoint: string,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'DELETE' })} } export const apiClient = new ApiClient(); export type { ApiResponse,RequestOptions };
-=======
-declare global { interface RequestInit { timeout?: number} } interface ApiResponse<T = unknown> { data?: T; error?: string; success: boolean} interface RequestOptions extends RequestInit { timeout?: number} class ApiClient { private baseUrl: string; private defaultTimeout: number; constructor(baseUrl: string = '',defaultTimeout: number = 10000) { this.baseUrl = baseUrl; this.defaultTimeout = defaultTimeout} private async request<T>( endpoint: string,options: RequestOptions = {} ): Promise<ApiResponse<T>> { const { timeout = this.defaultTimeout,...fetchOptions } = options; try { const controller = new AbortController(); const timeoutId = setTimeout(() => controller.abort(),timeout); const response = await fetch(`${this.baseUrl}${endpoint}`,{ ...fetchOptions,signal: controller.signal,headers: { 'Content-Type': 'application/json',...fetchOptions.headers,},}); clearTimeout(timeoutId); if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`)} const data = await response.json(); return { data,success: true }} catch (error) { console.error('API request failed:',error); return { error: error instanceof Error ? error.message : 'Unknown error occurred',success: false,}} } async get<T>(endpoint: string,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'GET' })} async post<T>(endpoint: string,data?: unknown,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'POST',body: data ? JSON.stringify(data) : undefined,})} async put<T>(endpoint: string,data?: unknown,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'PUT',body: data ? JSON.stringify(data) : undefined,})} async delete<T>(endpoint: string,options?: RequestOptions): Promise<ApiResponse<T>> { return this.request<T>(endpoint,{ ...options,method: 'DELETE' })} } export const apiClient = new ApiClient(); export type { ApiResponse,RequestOptions };
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-export type { ApiResponse, RequestOptions };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-export type { ApiResponse, RequestOptions }
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-export type { ApiResponse, RequestOptions }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-export type { ApiResponse, RequestOptions };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

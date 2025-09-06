@@ -1,38 +1,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function InteractiveSearch({ placeholder;
-=======
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function InteractiveSearch({
-<<<<<<< HEAD
   placeholder = 'Search talent, skills, or jobs...'
 }: {
-=======
-  placeholder = 'Search talent, skills, or jobs...',
-}: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   placeholder?: string;
 }) {
   const [value, setValue] = useState('');
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     >
       <input
         value={value}
         onChange={e => setValue(e.target.value)}
         placeholder={placeholder}
-<<<<<<< HEAD
         className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'      />
       {value && (
         <button
@@ -46,24 +25,16 @@ export default function InteractiveSearch({
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-=======
-        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       />
       {value && (
         <button
           onClick={() => setValue('')}
-<<<<<<< HEAD
           className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-=======
-          className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
           ✕
         </button>
       )}
     </motion.div>
-<<<<<<< HEAD
 );
 }
 import React from "react";
@@ -92,20 +63,9 @@ export default function InteractiveSearch() {export default function Interactive
         </button>;
       </div>;
     </form>;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }}
-=======
-<<<<<<< HEAD
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }}
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

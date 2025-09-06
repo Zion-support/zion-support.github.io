@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\';
 }
 
@@ -11,23 +10,3 @@ import _React from 'react'; import type { AppProps } from 'next/app'; import Lay
 }
 
 export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
-const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''"
-import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
-=======
-<<<<<<< HEAD
-=======
-import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
-const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''"
-import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
-const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''"
-import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

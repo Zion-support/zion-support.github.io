@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 "use client";
 import { useWalkthroughTarget } from "./OnboardingWalkthrough";
 import { useAuth } from "@/contexts/AuthContext";
 import Link from "next/link";
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {const { user, isAuthenticated, logout } = useAuth();
-=======
-"use client",;
-import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
-import { useAuth } from "@/contexts/AuthContext",;
-import Link from "next/link",;
-export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
-  const { user, isAuthenticated, logout } = useAuth();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <>;
       <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur" {...useWalkthroughTarget("nav-menu")}>;
@@ -41,72 +32,9 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                 </Link>;
                 <div className="flex items-center gap-3">;
                   <span className="text-sm text-zinc-400">;
-<<<<<<< HEAD
                     Welcome, {user?.name |user?.email}
-=======
-                    Welcome, {user?.name || user?.email}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </span>;
                   <button;
-=======
-'use client';
-
-import { useWalkthroughTarget } from './OnboardingWalkthrough';
-import { useAuth } from '@/contexts/AuthContext';
-import Link from 'next/link';
-}
-
-export function LayoutWrapper({ children }: { children: React.ReactNode }) {
-  const { user, isAuthenticated, logout } = useAuth();
-
-  return (
-    <>
-      <nav
-        className='border-b border-white/10 sticky top-0 z-50 bg-zinc-900/50 backdrop-blur'
-        {...useWalkthroughTarget('nav-menu')}
-      >
-        <div className='max-w-6xl mx-auto px-4 py-3 flex items-center justify-between'>
-          <div className='flex items-center gap-6'>
-            <Link href='/' className='font-semibold text-lg'>
-              Zion OS
-            </Link>
-            <div className='hidden md:flex items-center gap-4'>
-              <Link
-                href='/multiverse/launch'
-                className='text-sm opacity-80 hover:opacity-100 transition-opacity'
-              >
-                Launch
-              </Link>
-              <Link
-                href='/admin/os-deploy'
-                className='text-sm opacity-80 hover:opacity-100 transition-opacity'
-              >
-                Admin Deploy
-              </Link>
-              <Link
-                href='/admin/instances'
-                className='text-sm opacity-80 hover:opacity-100 transition-opacity'
-              >
-                Instances
-              </Link>
-            </div>
-          </div>
-
-          <div className='flex items-center gap-4'>
-            {isAuthenticated ? (
-              <>
-                <Link
-                  href='/dashboard'
-                  className='text-sm text-zinc-300 hover:text-white transition-colors'
-                >
-                  Dashboard
-                </Link>
-                <div className='flex items-center gap-3'>
-                  <span className='text-sm text-zinc-400'>
-                    Welcome, {user?.name || user?.email}
-                  </span>
-                  <button
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     onClick={logout}
                     className="text-sm text-zinc-400 hover:text-white transition-colors";
                   >;

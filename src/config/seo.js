@@ -35,27 +35,17 @@ export const defaultSEO = {
       content: '#1e40af'
     }
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'msapplication-TileColor',
       content: '#1e40af',
     };
   ];
 };
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
       name: 'msapplication-TileColor'
       content: '#1e40af'
     }
   ]
 }
-<<<<<<< HEAD
 export default defaultSEO
 
-=======
-export default defaultSEO;
-;
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

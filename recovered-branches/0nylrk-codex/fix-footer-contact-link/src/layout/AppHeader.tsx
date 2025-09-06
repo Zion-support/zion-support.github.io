@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-=======
-import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import { MainNavigation } from './MainNavigation';
-import { Logo } from '@/components/header/Logo';
-import { ModeToggle } from '@/components/ModeToggle';
-import { Menu, X } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { MainNavigation  } from './MainNavigation';
@@ -24,18 +9,6 @@ import { MobileMenu  } from '@/components/header/MobileMenu';
 import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
-=======
-import {useState} from 'react';
-import {useMessaging} from '@/context/MessagingContext';
-import {MainNavigation} from './MainNavigation';
-import {Logo} from '@/components/header/Logo';
-import {ModeToggle} from '@/components/ModeToggle';
-import {Menu, X} from 'lucide-react';
-import {MobileMenu} from '@/components/header/MobileMenu';
-import {useIsMobile} from '@/hooks/use-mobile';
-import {MobileBottomNav} from '@/components/header/MobileBottomNav';
-export function AppHeader() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -47,37 +20,9 @@ export function AppHeader() {;
     unreadCount = count
   } catch (error) {
     console.warn('Messaging context not available')
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from 'react',;
-import { useMessaging } from '@/context/MessagingContext',;
-import { MainNavigation } from './MainNavigation',;
-import { Logo } from '@/components/header/Logo',;
-import { ModeToggle } from '@/components/ModeToggle',;
-import { Menu, X } from 'lucide-react',;
-import { MobileMenu } from '@/components/header/MobileMenu',;
-import { useIsMobile } from '@/hooks/use-mobile',;
-import { MobileBottomNav } from '@/components/header/MobileBottomNav',;
-export function AppHeader() {;
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
-  const isMobile = useIsMobile(),;
-  // Try to access the messaging context, but provide a fallback value if it's not available;
-  let unreadCount = 0;
-  try {;
-    const { unreadCount: count } = useMessaging();
-    unreadCount = count;
-  } catch (error) {;
-    console.warn('Messaging context not available');
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
@@ -121,10 +66,6 @@ export function AppHeader() {;
           </div>
         </div>
       )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>

@@ -1,44 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import Head from 'next/head',
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
-=======
- return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }</ul> </div> </div>)
-=======
- return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
-=======
-return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
-=======
- return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</ul> </div> </div>) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
-<<<<<<< HEAD
 }</section> </div>) import { useEffect, useState } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-export default function AutomationInsightsPage() {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AutomationInsightsPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
   useEffect(() => {
@@ -84,15 +55,5 @@ export default function AutomationInsightsPage() {
         )}
       </section>
     </div>
-<<<<<<< HEAD
 );
 }
-=======
-<<<<<<< HEAD
-}</section> </div>)
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  );
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

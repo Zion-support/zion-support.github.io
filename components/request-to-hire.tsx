@@ -1,18 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function RequestToHirePage() {
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-<<<<<<< HEAD
 export default function RequestToHirePage() {
 
-=======
-
-export default function RequestToHirePage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(
@@ -28,71 +19,32 @@ export default function RequestToHirePage() {;
     budget: ''
     timeline: ''
     description: ''
-=======
-}
-}
-
-export default function RequestToHirePage() {
-  const router = useRouter();
-  const { talent } = router.query as { talent?: string };
-  const selected = useMemo(
-    () => TALENT_PROFILES.find(t => t.slug === talent),
-    [talent]
-  );
-
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    budget: '',
-    timeline: '',
-    description: '',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   });
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string; message: string }>(
     null
-<<<<<<< HEAD
   );  const [error, setError] = useState<string | null>(null);    description: ''})
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null)
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [error, setError] = useState<string | null>(null);
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null)
     if (!form.name |!form.email |!form.description) {
       setError('Please fill in name, email, and description.');
-<<<<<<< HEAD
       return;    }      return
     }
     const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
-=======
-      return;
-    }
-}
-
-const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     setSubmitting(true);
     try {
       const res = await fetch('/api/requests/create', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
           ...form
           budget: normalizedBudget
           talentSlug: selected?.slug |null
         })
-=======
-          ...form,
-          budget: normalizedBudget,
-          talentSlug: selected?.slug || null,
-        }),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
@@ -100,7 +52,6 @@ const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
     } catch (err: any) {
       setError(err.message |'Something went wrong');
     } finally {
-<<<<<<< HEAD
       setSubmitting(false);    }          budget: normalizedBudget
           talentSlug: selected?.slug |null})})
       const data = await res.json();
@@ -110,15 +61,8 @@ const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
       setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
-=======
-      setSubmitting(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
-<<<<<<< HEAD
   }
-=======
-  };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   if (result) {
     return (
@@ -189,7 +133,6 @@ const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
         <button
           disabled={submitting}
           className='px-4 py-2 rounded bg-black text-white'
-<<<<<<< HEAD
         >          {submitting ? 'Submitting…' : 'Submit Request'}      </div>
     )
   }
@@ -219,21 +162,9 @@ const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
         </div>
         {error && <div className="text-sm text-red-600">{error}</div>}
         <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
-=======
-        >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>
       </form>
     </div>
-<<<<<<< HEAD
 );
 }
-=======
-  );
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

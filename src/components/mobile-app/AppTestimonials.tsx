@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react";
 import { Star } from 'lucide-react'
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
-=======
-<<<<<<< HEAD
-import React from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Star } from 'lucide-react'
 
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
-<<<<<<< HEAD
 const testimonials = [
   {
     name: 'Alex Johnson'
@@ -26,14 +15,6 @@ const testimonials = [
     avatar: '/placeholder.svg'
   }
 const testimonials = [
-=======
-=======
-
-import React from "react",
-import { Star } from 'lucide-react'
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const testimonials = [
   {
     name: "Alex Johnson",
@@ -42,11 +23,7 @@ const testimonials = [
     rating: 5,
     avatar: "/placeholder.svg"
   },
-<<<<<<< HEAD
 const testimonials = [
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     name: 'Sarah Williams'
     role: 'Tech Recruiter'
@@ -55,56 +32,16 @@ const testimonials = [
     avatar: '/placeholder.svg'
   }
   {
-<<<<<<< HEAD
     name: 'Michael Chen'
     role: 'Full Stack Developer'
     text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.'
     rating: 4
     avatar: '/placeholder.svg'
-=======
-    name: "Michael Chen",
-    role: "Full Stack Developer",
-    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
-    rating: 4,
-<<<<<<< HEAD
-    avatar: '/placeholder.svg',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },]
 export const AppTestimonials: React.FC = () => {
   return (    avatar: "/placeholder.svg"
   }
 ]
-=======
-import React from 'react';
-import { Star } from 'lucide-react';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-
-const testimonials = [
-  {
-    name: 'Alex Johnson',
-    role: 'AI Developer',
-    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
-    rating: 5,
-    avatar: '/placeholder.svg',
-  },
-  {
-    name: 'Sarah Williams',
-    role: 'Tech Recruiter',
-    text: 'As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.',
-    rating: 5,
-    avatar: '/placeholder.svg',
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Full Stack Developer',
-    text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.',
-    rating: 4,
-    avatar: '/placeholder.svg',
-  },
-];
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const AppTestimonials: React.FC = () => {
   return (
     <section className='py-16 bg-zion-blue'>
@@ -130,34 +67,6 @@ export const AppTestimonials: React.FC = () => {
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}                    />
-=======
-<<<<<<< HEAD
-import React from "react",
-import { Star } from 'lucide-react'
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-
-const testimonials = [
-  {
-    name: "Alex Johnson",
-    role: "AI Developer",
-    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
-    rating: 5,
-    avatar: "/placeholder.svg"
-  },
-  {
-    name: "Sarah Williams",
-    role: "Tech Recruiter",
-    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
-    rating: 5,
-    avatar: "/placeholder.svg"
-  },
-  {
-    name: "Michael Chen",
-    role: "Full Stack Developer",
-    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
-    rating: 4,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     avatar: "/placeholder.svg"
   }
 ],
@@ -183,11 +92,6 @@ export const AppTestimonials: React.FC = () => {
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
                 <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
@@ -198,11 +102,9 @@ export const AppTestimonials: React.FC = () => {
                     <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />
                   </div>
                   <div>
-<<<<<<< HEAD
                     <p className='font-semibold text-white'>
                       {testimonial.name}
                     </p>
-<<<<<<< HEAD
                     <p className='text-sm text-gray-400'>{testimonial.role}</p>                  </div>
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
@@ -228,37 +130,19 @@ export const AppTestimonials: React.FC = () => {
                     <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />
                   </div>
                   <div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
-=======
-                    <p className='text-sm text-gray-400'>{testimonial.role}</p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </CardFooter>
             </Card>
-<<<<<<< HEAD
           ))}
         </div>
       </div>
-<<<<<<< HEAD
     </section>
-<<<<<<< HEAD
   )
 }
 {"
-=======
-    </section>;
-  );
-};
-{";
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   name: "Sarah Williams";"
 role: "Tech Recruiter";"
 text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive."
@@ -274,121 +158,8 @@ avatar: "/placeholder.svg"
 }]
 export const AppTestimonials: React.FC = () => {"
   return (<section className="py-16 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold mb-4" >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" >
-<<<<<<< HEAD
 }</div> </div> </section>)
 }
 '"}
   )
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  );
-};
-{";
-  name: "Sarah Williams";";
-role: "Tech Recruiter";";
-text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
-rating: 5;";
-avatar: "/placeholder.svg" ;
-};
-{";
-  name: "Michael Chen";";
-role: "Full Stack Developer";";
-text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.";
-rating: 4;";
-avatar: "/placeholder.svg" ;
-}];
-}
-
-export const AppTestimonials: React.FC = () => {";
-  return (<section className="py-16 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold mb-4" >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" > ;
-}</div> </div> </section>) ;
-};
-'"
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-}</div> </div> </section>) 
-}
-'"},
-
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from "react",;
-import { Star } from 'lucide-react';
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-const testimonials = [;
-  {;
-    name: "Alex Johnson",;
-    role: "AI Developer",;
-    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",;
-    rating: 5,;
-    avatar: "/placeholder.svg";
-  },;
-  {;
-    name: "Sarah Williams",;
-    role: "Tech Recruiter",;
-    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",;
-    rating: 5,;
-    avatar: "/placeholder.svg";
-  },;
-  {;
-    name: "Michael Chen",;
-    role: "Full Stack Developer",;
-    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",;
-    rating: 4,;
-    avatar: "/placeholder.svg";
-  }
-],;
-export const AppTestimonials: React.FC = () => {;
-  return (;
-    <section className="py-16 bg-zion-blue">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-12">;
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>;
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">;
-            Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.;
-          </p>;
-        </div>;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-          {testimonials.map((testimonial, index) => (;
-            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">;
-              <CardContent className="pt-6">;
-                <div className="flex mb-4">;
-                  {Array.from({ length: 5 }).map((_, i) => (;
-                    <Star;
-                      key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
-                    />;
-                  ))}
-                </div>;
-                <p className="text-gray-200 mb-6">"{testimonial.text}"</p>;
-              </CardContent>;
-              <CardFooter className="border-t border-zion-purple/20 pt-4">;
-                <div className="flex items-center">;
-                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">;
-                    <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />;
-                  </div>;
-                  <div>;
-                    <p className="font-semibold text-white">{testimonial.name}</p>;
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>;
-                  </div>;
-                </div>;
-              </CardFooter>;
-            </Card>;
-          ))}
-        </div>;
-      </div>;
-    </section>;
-  );
-};
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

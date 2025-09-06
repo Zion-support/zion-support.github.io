@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-06T04:57:30.817Z",
   "issues": [],
   "optimizations": [
@@ -53,41 +52,5 @@
     "codeSplittingImplemented": true,
     "cachingConfigured": true,
     "compressionSetup": true
-=======
-  "timestamp": "2025-09-06T01:32:26.433Z",
-  "optimizations": [
-    "Use WebP format for images",
-    "Implement lazy loading for images",
-    "Add proper alt text for accessibility",
-    "Use responsive images with srcset",
-    "Compress images before upload",
-    "Implement React.memo for expensive components",
-    "Use useMemo and useCallback for expensive calculations",
-    "Implement code splitting with dynamic imports",
-    "Optimize bundle size with tree shaking",
-    "Use production builds for deployment",
-    "Implement service worker for caching",
-    "Use CDN for static assets",
-    "Enable gzip compression",
-    "Implement HTTP/2",
-    "Use resource hints (preload, prefetch)"
-  ],
-  "categories": {
-    "images": [
-      "Use WebP format for images",
-      "Implement lazy loading for images",
-      "Use responsive images with srcset",
-      "Compress images before upload"
-    ],
-    "code": [
-      "Implement React.memo for expensive components",
-      "Optimize bundle size with tree shaking"
-    ],
-    "network": [
-      "Implement service worker for caching",
-      "Use CDN for static assets",
-      "Enable gzip compression"
-    ]
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }

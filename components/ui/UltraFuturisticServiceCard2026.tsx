@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
@@ -31,15 +30,7 @@ interface Service {
   integration?: string[],
   benefits?: string[]
 }
-<<<<<<< HEAD
 interface ServiceCardProps {
-=======
-
-interface ServiceCardProps {
-  service: Service,
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   service: Service
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
@@ -149,14 +140,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">
         {/* Enhanced Background Glow */}
         <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Popular Badge */}
         {service.popular && (
           <motion.div
@@ -169,10 +152,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Popular
           </motion.div>
         )}
-<<<<<<< HEAD
-=======
-        
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Service Header */}
         <div className="text-center mb-8 relative z-10">
           <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles.iconBg} flex items-center justify-center border ${styles.iconBorder} text-4xl backdrop-blur-sm`}>
@@ -213,14 +192,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             </motion.div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -235,10 +206,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             )}
           </div>
         )}
-<<<<<<< HEAD
-=======
-        
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Target Market & Use Cases */}
         {service.targetMarket && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -254,10 +221,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             )}
           </div>
         )}
-<<<<<<< HEAD
-=======
-        
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Benefits Section */}
         {service.benefits && (
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">
@@ -275,10 +238,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             </div>
           </div>
         )}
-<<<<<<< HEAD
-=======
-        
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.button
@@ -289,14 +248,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Get Started
           </motion.button>
         </div>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -305,61 +256,3 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 });
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
- const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({
-  service, variant = 'default'
-}) => {
-  const getVariantStyles = () => {
-  switch (variant) {
-  case 'ai': return {
-
-};
-{
-  /* Popular Badge */
-}{
-  service.popular && (<motion.div > <Star className="w-4 h-4 inline mr-1" /> Popular </motion.div>)
-}Key Features </h4> {
-  service.features.slice (0, 6) .map ( (feature, idx) => (<motion.div key= {
-  idx
-}</motion.div>) )
-}</div>
-}</div>)
-
-}</div>)
-}</div>) )
-}</div> </div>)
-}<motion.button whileHover= {
-  {
-  scale: 1.02
-
-}whileTap= {
-  {
-  scale: 0.98
-
-}className= {
-  `w-full py-3 px-6 rounded-lg bg-gradient-to-r $ {
-  styles.gradient
-}text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-$ {
-  styles.textColor
-}/25 border border-white/20 hover:border-white/40`
-}> Get Started </motion.button> </div>
-}
-
-export default UltraFuturisticServiceCard2026;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default UltraFuturisticServiceCard2026;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-export default UltraFuturisticServiceCard2026;
-=======
-export default UltraFuturisticServiceCard2026;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,25 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumInternetSecurityPage() {
   const service = null;
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -27,30 +14,10 @@ import {
   ArrowRight
   Shield
   Star;
-=======
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Shield,;
-  Star,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-internet-security-platform');
@@ -59,14 +26,6 @@ import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumInternetSecurityPage() {;
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform'));
-=======
-}
-
-export default function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-internet-security-platform')
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!service) return null;
 
   return (
@@ -147,37 +106,15 @@ export default function QuantumInternetSecurityPage() {
                 <div className='flex items-center space-x-2'>
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
-<<<<<<< HEAD
                 </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Security Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-=======
-                </div>
-              </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-;
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

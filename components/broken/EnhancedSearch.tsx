@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
@@ -18,36 +15,15 @@ interface SearchResult {
     enterprise?: string
   }
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-=======
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-=======
-//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-=======
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-<<<<<<< HEAD
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 }];
 setIsSearching (true);
 //Simulate API call delay setTimeout ( () => {
   const filteredResults = mockSearchResults.filter (result => {
-<<<<<<< HEAD
   const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.category.toLowerCase () .includes (searchQuery.toLowerCase () );
 const matchesFilters = selectedFilters.length === 0 |selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) |result.type.toLowerCase () .includes (filter.toLowerCase () ) );
-=======
-  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.category.toLowerCase () .includes (searchQuery.toLowerCase () );
-const matchesFilters = selectedFilters.length === 0 || selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 setResults (sortedResults);
 setShowResults (true);
 setIsSearching (false)
@@ -58,10 +34,6 @@ setIsSearching (false)
 //Close search on outside click useEffect ( () => {
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }, []);
 //Handle filter toggle const toggleFilter = (filterId: string) => {
   setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId)
@@ -83,42 +55,15 @@ setIsSearching (false)
   showResults && (<motion.div initial= {
   {
   opacity: 0, y: -10, scale: 0.95
-<<<<<<< HEAD
 }animate= {
   {
   opacity: 1, y: 0, scale: 1
 }exit= {
   {
-<<<<<<< HEAD
   opacity: 0, y: -10, scale: 0.95
 }transition= {
   {
   duration: 0.2
-=======
-<<<<<<< HEAD
-
-}animate= {
-  {
-  opacity: 1, y: 0, scale: 1
-
-}exit= {
-  {
-  opacity: 0, y: -10, scale: 0.95
-
-}transition= {
-  {
-  duration: 0.2
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  opacity: 0, y: -10, scale: 0.95 
-
-}transition= {
-  {
-  duration: 0.2 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */
 }{
@@ -139,11 +84,7 @@ setIsSearching (false)
 }<div className="flex-shrink-0 pr-4"> <button onClick= {
   () => handleSearch ()
 }disabled= {
-<<<<<<< HEAD
   isSearching |!query.trim ()
-=======
-  isSearching || !query.trim ()
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" > {
   isSearching ? 'Searching...' : 'Search'
 }</button> </div> </div> {
@@ -152,24 +93,12 @@ setIsSearching (false)
   showSuggestions && suggestions.length > 0 && (<motion.div initial= {
   {
   opacity: 0, y: -10
-<<<<<<< HEAD
 }animate= {
   {
   opacity: 1, y: 0
 }exit= {
   {
   opacity: 0, y: -10
-=======
-
-}animate= {
-  {
-  opacity: 1, y: 0
-
-}exit= {
-  {
-  opacity: 0, y: -10
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {
   /* Quick Actions */
 }<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3> <div className="grid grid-cols-2 gap-2"> {
@@ -209,10 +138,6 @@ setIsSearching (false)
 }whileHover= {
   {
   scale: 1.02
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30" onClick= {
   () => handleResultSelect (result)
 }> <div className="flex items-start justify-between"> <div className="flex-1"> <h4 className="font-medium text-white mb-1"> {
@@ -253,7 +178,6 @@ setIsSearching (false)
 }</div> </div> </div>)
 }</div> </motion.div>)
 }</AnimatePresence> </div>)
-<<<<<<< HEAD
 }
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number
@@ -270,30 +194,3 @@ function debounce<T extends (...args: any[]) => any>(
   }
 }
 export default EnhancedSearch;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
-// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
-wait: number
-}export default EnhancedSearch;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
-}
-}
-}
-}
-}
-}
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,32 +1,13 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
 import * as RechartsPrimitive from "recharts"
-<<<<<<< HEAD
 import {useReactId} from "@/hooks/useReactId"
 import {cn} from "@/lib/utils"
-<<<<<<< HEAD
-=======
-// Format: { THEME_NAME: CSS_SELECTOR }
-const THEMES = { light: "", dark: ".dark" } as const
-
-export type ChartConfig = Record<;
-  string;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useReactId } from "@/hooks/useReactId"
-
-import { cn } from "@/lib/utils"
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
   string,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   {
     label?: React.ReactNode
     icon?: React.ComponentType
@@ -43,10 +24,6 @@ const ChartContext = React.createContext<ChartContextProps>({
 function useChart(): ChartContextProps {
   return React.useContext(ChartContext)
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const ChartContainer = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & {
@@ -121,7 +98,6 @@ const ChartTooltipContent = React.forwardRef<
 >(
   (
     {
-<<<<<<< HEAD
       active;
       payload;
       className;
@@ -135,21 +111,6 @@ const ChartTooltipContent = React.forwardRef<
       color;
       nameKey;
       labelKey}
-=======
-      active,
-      payload,
-      className,
-      indicator = "dot",
-      hideLabel = false,
-      hideIndicator = false,
-      label,
-      labelFormatter,
-      labelClassName,
-      formatter,
-      color,
-      nameKey,
-      labelKey},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     ref
   ) => {
     const { config } = useChart()
@@ -157,17 +118,9 @@ const ChartTooltipContent = React.forwardRef<
       if (hideLabel |!payload?.length) {
         return null
       }
-<<<<<<< HEAD
       const [item] = payload
       const key = `${labelKey |item.dataKey |item.name |"value"}`
       const itemConfig = getPayloadConfigFromPayload(config, item, key)
-=======
-}
-
-const [item] = payload;
-      const key = `${labelKey || item.dataKey || item.name || 'value'}`;
-      const itemConfig = getPayloadConfigFromPayload(config, item, key);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const value =
         !labelKey && typeof label === "string"
           ? config[label as keyof typeof config]?.label |label
@@ -182,10 +135,6 @@ const [item] = payload;
       if (!value) {
         return null
       }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, [
       label,
@@ -198,7 +147,6 @@ const [item] = payload;
     if (!active |!payload?.length) {
       return null
     }
-<<<<<<< HEAD
     const nestLabel = payload.length === 1 && indicator !== "dot"
     return (
       <div
@@ -207,13 +155,6 @@ const [item] = payload;
           "grid min-w-[8rem] items-start gap-1.5 rounded-lg border border-border/50 bg-background px-2.5 py-1.5 text-xs shadow-xl",
           className
         )}
-=======
-}
-
-const nestLabel = payload.length === 1 && indicator !== 'dot';
-
-    
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       >
         {!nestLabel ? tooltipLabel : null}
         <div className="grid gap-1.5">
@@ -249,15 +190,7 @@ const nestLabel = payload.length === 1 && indicator !== 'dot';
                           )}
                             style={
                               {
-<<<<<<< HEAD
                                 "--color-bg": indicatorColor;
-=======
-                                "--color-bg": indicatorColor,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />
@@ -278,15 +211,7 @@ const nestLabel = payload.length === 1 && indicator !== 'dot';
                       {item.value && (
                         <span className="font-mono font-medium tabular-nums text-foreground">
                           {item.value.toLocaleString()}
-<<<<<<< HEAD
                         </span>
-=======
-                        </span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                     </div>
                   </>
@@ -311,21 +236,13 @@ const ChartLegendContent = React.forwardRef<
     }
 >(
   (
-<<<<<<< HEAD
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey }
-=======
-    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     ref
   ) => {
     const { config } = useChart()
     if (!payload?.length) {
       return null
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <div
         ref={ref}
@@ -372,17 +289,9 @@ function getPayloadConfigFromPayload(
   if (typeof payload !== "object" |payload === null) {
     return undefined
   }
-<<<<<<< HEAD
   const payloadPayload =
     "payload" in payload &&
     typeof payload.payload === "object" &&
-=======
-}
-
-const payloadPayload =
-    'payload' in payload &&
-    typeof payload.payload === 'object' &&
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     payload.payload !== null
       ? payload.payload
       : undefined
@@ -401,16 +310,10 @@ const payloadPayload =
       key as keyof typeof payloadPayload
     ] as string
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
 }
-<<<<<<< HEAD
 export {
   ChartContainer;
   ChartTooltip;
@@ -419,30 +322,7 @@ export {
   ChartLegendContent;
   ChartStyle}
 
-=======
-
-export {;
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-;
-  return configLabelKey in config;
-    ? config[configLabelKey];
-    : config[key as keyof typeof config];
-}
-;
-export {;
-  ChartContainer,;
-  ChartTooltip,;
-  ChartTooltipContent,;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ChartLegend;
   ChartLegendContent;
   ChartStyle}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

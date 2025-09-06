@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Calendar, RefreshCw } from 'lucide-react'
 
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-=======
-import React from 'react';
-import { Calendar, RefreshCw } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Select
   SelectContent
@@ -26,27 +19,7 @@ import { Calendar as CalendarComponent } from '@/components/ui/calendar'
 import { format } from 'date-fns'
 import type { DateRange } from 'react-day-picker'
 import type { QuoteStatus } from '@/types/quotes'
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from "react",
-import { Calendar, RefreshCw } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Button } from "@/components/ui/button",
-import { Calendar as CalendarComponent } from "@/components/ui/calendar",
-import { format } from "date-fns",
-import type { DateRange } from "react-day-picker",
-import type { QuoteStatus } from "@/types/quotes",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -56,18 +29,8 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
-<<<<<<< HEAD
   onReset: () => void
-<<<<<<< HEAD
-=======
-  onReset: () => void;
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-<<<<<<< HEAD
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
   searchQuery
@@ -141,11 +104,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                         {format(dateRange.to, 'LLL dd, y')}
                       </>
                     ) : (
-<<<<<<< HEAD
                       format(dateRange.from, 'LLL dd, y')                    )                      format(dateRange.from, "LLL dd, y")
-=======
-                      format(dateRange.from, 'LLL dd, y')
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     )
                   ) : (
                     <span>Date range</span>
@@ -158,15 +117,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               >
                 <CalendarComponent
                   initialFocus
-<<<<<<< HEAD
                   mode='range'                  defaultMonth={dateRange?.from}              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
                 <CalendarComponent
                   initialFocus
                   mode="range"
-=======
-                  mode='range'
-                  defaultMonth={dateRange?.from}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
@@ -179,15 +133,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Popover>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <div className='mt-4 flex justify-end'>
           <Button
             variant='outline'
             onClick={onReset}
-<<<<<<< HEAD
             className='border-zion-blue-light text-zion-slate-light'          >
             <RefreshCw className='mr-2 h-4 w-4' /> Reset Filters          </Button>
         </div>
@@ -200,42 +149,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             className="border-zion-blue-light text-zion-slate-light"
           >
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
-=======
-            className='border-zion-blue-light text-zion-slate-light'
-          >
-            <RefreshCw className='mr-2 h-4 w-4' /> Reset Filters
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Button>
-<<<<<<< HEAD
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   )
-=======
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 };  )
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  );
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-}
-=======
-}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

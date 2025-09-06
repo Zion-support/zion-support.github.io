@@ -8,20 +8,12 @@ function resolveConflicts() {
   try {
     // Get list of conflicted files
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-<<<<<<< HEAD
     console.log(`Found ${conflictedFiles.length} conflicted files: `)
     conflictedFiles.forEach(file => console.log(`  - ${file}`));
-=======
-
-    console.log(`Found ${conflictedFiles.length} conflicted files: `),
-    conflictedFiles.forEach(file => console.log(`  - ${file}`));
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // For each conflicted file, accept the incoming changes (from the PR)
     conflictedFiles.forEach(file => {
       if (fs.existsSync(file)) {
         console.log(`Resolving conflicts in ${file}...`);
-<<<<<<< HEAD
         // Read the file content
         let content = fs.readFileSync(file, 'utf8');
 ([\s\S]*?)
@@ -36,36 +28,11 @@ function resolveConflicts() {
     });
     // Handle deleted files (modify/delete conflicts)
     const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-=======
-
-        // Read the file content
-        let content = fs.readFileSync(file, 'utf8');
-
-        // Remove conflict markers and keep the incoming changes (after )
-        content = content.replace(/[\s\S]*?([\s\S]*?)
-        // Write the resolved content back
-        fs.writeFileSync(file, content);
-
-        // Add the file to staging
-        execSync(`git add "${file}"`, { stdio: 'inherit' });
-
-        console.log(`✅ Resolved conflicts in ${file}`);
-      }
-    });
-
-    // Handle deleted files (modify/delete conflicts)
-    const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     deletedFiles.forEach(file => {
       console.log(`Handling deleted file: ${file}`);
       // Remove from index to accept the deletion
       execSync(`git rm "${file}"`, { stdio: 'inherit' });
     });
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     console.log('✅ All conflicts resolved!');
     return true;
   } catch (error) {
@@ -77,20 +44,12 @@ function resolveConflicts() {
 function mergePR(prBranch) {
   try {
     console.log(`\n🔄 Attempting to merge ${prBranch}...`);
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Try to merge
     execSync(`git merge origin/${prBranch} --no-ff`, { stdio: 'pipe' });
     console.log(`✅ Successfully merged ${prBranch}`);
     return true;
   } catch (error) {
     console.log(`⚠️  Merge conflicts detected in ${prBranch}`);
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Resolve conflicts
     if (resolveConflicts()) {
       // Commit the merge
@@ -115,21 +74,11 @@ async function main() {
     'cursor/fix-lint-push-and-merge-to-main-592f'
     'cursor/fix-lint-push-and-merge-to-main-1370'
   ];
-<<<<<<< HEAD
   console.log('🚀 Starting PR merge process...');
-=======
-
-  console.log('🚀 Starting PR merge process...');
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   for (const branch of prBranches) {
     try {
       // Fetch the latest changes
       execSync('git fetch origin', { stdio: 'inherit' });
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Check if branch exists
       try {
         execSync(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, { stdio: 'pipe' });
@@ -137,15 +86,8 @@ async function main() {
         console.log(`⚠️  Branch ${branch} not found, skipping...`);
         continue;
       }
-<<<<<<< HEAD
       // Attempt to merge
       const success = mergePR(branch);
-=======
-
-      // Attempt to merge
-      const success = mergePR(branch);
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       if (success) {
         console.log(`✅ Successfully processed ${branch}`);
       } else {
@@ -161,13 +103,7 @@ async function main() {
       console.error(`❌ Error processing ${branch}:`, error.message);
     }
   }
-<<<<<<< HEAD
   console.log('\n🎉 PR merge process completed!');
-=======
-
-  console.log('\n🎉 PR merge process completed!');
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Show final status
   try {
     console.log('\n📊 Final git status: ')

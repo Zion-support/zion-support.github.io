@@ -1,38 +1,10 @@
-<<<<<<< HEAD
 import Link from "next/link";
 export const metadata = {title: "AI Autonomous Business Manager - Zion Tech Group";
   description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.";
   keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"}
 export default function AIBusinessManagerPage() {return (;
-=======
-import Link from "next/link",;
-export const metadata = {;
-  title: "AI Autonomous Business Manager - Zion Tech Group",;
-  description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",;
-  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},;
-export default function AIBusinessManagerPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
-=======
-import Link from 'next/link';
-}
-
-export const metadata = {
-  title: 'AI Autonomous Business Manager - Zion Tech Group',
-  description:
-    'Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.',
-  keywords:
-    'AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group',
-};
-}
-
-export default function AIBusinessManagerPage() {
-  return (
-    <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Hero Section */}
         <div className="text-center mb-16">;
           <h1 className="text-5xl md:text-6xl font-bold mb-6">;
@@ -55,11 +27,7 @@ export default function AIBusinessManagerPage() {
                 with unprecedented efficiency and intelligence.;
               </p>;
               <p className="text-lg text-gray-300 leading-relaxed">;
-<<<<<<< HEAD
                 From strategic planning to daily operations, the system continuously learns;
-=======
-                From strategic planning to daily operations, the system continuously learns,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 adapts, and optimizes every aspect of your business, ensuring maximum;
                 performance and growth potential.;
               </p>;
@@ -112,11 +80,7 @@ export default function AIBusinessManagerPage() {
               </div>;
               <h3 className="text-xl font-semibold mb-2">Strategic Planning</h3>;
               <p className="text-gray-400">;
-<<<<<<< HEAD
                 AI-powered strategic planning that analyzes market conditions;
-=======
-                AI-powered strategic planning that analyzes market conditions,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 competitive landscape, and internal capabilities to develop optimal strategies.;
               </p>;
             </div>;
@@ -176,11 +140,7 @@ export default function AIBusinessManagerPage() {
               </div>;
               <h3 className="text-xl font-semibold mb-2">Growth Optimization</h3>;
               <p className="text-gray-400">;
-<<<<<<< HEAD
                 Data-driven growth strategies with market expansion analysis;
-=======
-                Data-driven growth strategies with market expansion analysis,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 customer acquisition optimization, and revenue maximization.;
               </p>;
             </div>;
@@ -201,11 +161,7 @@ export default function AIBusinessManagerPage() {
               </div>;
               <h3 className="text-lg font-semibold mb-2">Data Collection</h3>;
               <p className="text-gray-400 text-sm">;
-<<<<<<< HEAD
                 Continuously gathers data from all business systems;
-=======
-                Continuously gathers data from all business systems,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 market sources, and external factors.;
               </p>;
             </div>;
@@ -215,11 +171,7 @@ export default function AIBusinessManagerPage() {
               </div>;
               <h3 className="text-lg font-semibold mb-2">Analysis & Learning</h3>;
               <p className="text-gray-400 text-sm">;
-<<<<<<< HEAD
                 AI algorithms analyze patterns, learn from outcomes;
-=======
-                AI algorithms analyze patterns, learn from outcomes,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and identify optimization opportunities.;
               </p>;
             </div>;
@@ -229,11 +181,7 @@ export default function AIBusinessManagerPage() {
               </div>;
               <h3 className="text-lg font-semibold mb-2">Decision Making</h3>;
               <p className="text-gray-400 text-sm">;
-<<<<<<< HEAD
                 Autonomous decisions are made based on data analysis;
-=======
-                Autonomous decisions are made based on data analysis,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 business rules, and predictive models.;
               </p>;
             </div>;
@@ -261,44 +209,28 @@ export default function AIBusinessManagerPage() {
             <div className="card">;
               <h3 className="text-lg font-semibold mb-2">E-commerce & Retail</h3>;
               <p className="text-gray-400 text-sm">;
-<<<<<<< HEAD
                 Inventory management, pricing optimization, customer service automation;
-=======
-                Inventory management, pricing optimization, customer service automation,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and supply chain optimization.;
               </p>;
             </div>;
             <div className="card">;
               <h3 className="text-lg font-semibold mb-2">Financial Services</h3>;
               <p className="text-gray-400 text-sm">;
-<<<<<<< HEAD
                 Risk assessment, portfolio management, fraud detection;
-=======
-                Risk assessment, portfolio management, fraud detection,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and regulatory compliance automation.;
               </p>;
             </div>;
             <div className="card">;
               <h3 className="text-lg font-semibold mb-2">Manufacturing</h3>;
               <p className="text-gray-400 text-sm">;
-<<<<<<< HEAD
                 Production optimization, quality control, predictive maintenance;
-=======
-                Production optimization, quality control, predictive maintenance,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and supply chain management.;
               </p>;
             </div>;
             <div className="card">;
               <h3 className="text-lg font-semibold mb-2">Healthcare</h3>;
               <p className="text-gray-400 text-sm">;
-<<<<<<< HEAD
                 Patient scheduling, resource allocation, treatment optimization;
-=======
-                Patient scheduling, resource allocation, treatment optimization,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and administrative efficiency.;
               </p>;
             </div>;

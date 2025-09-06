@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smartphone, Tablet, Monitor, RotateCcw;
@@ -8,23 +5,8 @@ import { Smartphone, Tablet, Monitor, RotateCcw;
   Mouse, Hand
  } from 'lucide-react';
 // TouchEvent types are already defined in DOM
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 setIsMobile (isMobileDevice);
-=======
- setIsMobile (isMobileDevice);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-setIsMobile (isMobileDevice);
-=======
- setIsMobile (isMobileDevice);
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();
@@ -36,28 +18,15 @@ window.addEventListener ('resize', checkOrientation);
 const handleTouchStart = (e: TouchEvent) => {
   if (e.touches.length === 1) {
   touchStartRef.current = {
-<<<<<<< HEAD
 }
 const handleTouchMove = (e: TouchEvent) => {
   if (e.touches.length === 1 && touchStartRef.current) {
   touchMoveRef.current = {
-=======
-
-};
-const handleTouchMove = (e: TouchEvent) => {
-  if (e.touches.length === 1 && touchStartRef.current) {
-  touchMoveRef.current = {
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 const handleTouchEnd = (e: TouchEvent) => {
   if (touchStartRef.current && touchMoveRef.current) {
   touchStartRef.current = null;
 touchMoveRef.current = null
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 //Optimize fonts for high DPI fonts.forEach (font => {
   font.setAttribute ('crossoriginanonymous')
@@ -71,19 +40,10 @@ if (currentTime - lastTimeRef.current >= 1000) {
 frameCountRef.current = 0;
 lastTimeRef.current = currentTime;
 //Update performance metrics setPerformanceMetrics (prev => ({
-<<<<<<< HEAD
 }animationFrameId = requestAnimationFrame (measurePerformance)
 }
 animationFrameId = requestAnimationFrame (measurePerformance);
 //Monitor memory usage
-=======
-
-}animationFrameId = requestAnimationFrame (measurePerformance)
-};
-animationFrameId = requestAnimationFrame (measurePerformance);
-//Monitor memory usage
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }, 2000);
 //Monitor battery level if ('getBattery' in navigator) {
   (navigator as any) .getBattery () .then ( (battery: unknown) => {
@@ -96,27 +56,14 @@ connection.addEventListener ('change', updateNetworkSpeed);
 }//Minimum distance and duration thresholds if (distance < 50 |duration < 100) return null;
 //Determine direction if (Math.abs (deltaX) > Math.abs (deltaY) ) {
   return {
-<<<<<<< HEAD
 }
-=======
-
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const handleGestureAction = (gesture: TouchGesture) => {
   switch (gesture.type) {
   case 'swipe': if (gesture.direction === 'left') {
   //Navigate forward if (window.history.length > 1) {
-<<<<<<< HEAD
 }break;
 case 'longPress': //Show context menu or additional options break;
 }
-=======
-
-}break;
-case 'longPress': //Show context menu or additional options break;
-
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 if (viewport) {
   viewport.setAttribute ('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
 }//Add touch-action CSS const style = document.createElement ('style');
@@ -133,11 +80,7 @@ min-width: 44px
   font-size: 16px, /* Prevents zoom on iOS */
 }`;
 document.head.appendChild (style)
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const enableMobilePerformanceMode = () => {
   //Reduce animations on mobile document.documentElement.classList.add ('mobile-performance-mode');
 //Optimize images const images = document.querySelectorAll ('img');
@@ -147,12 +90,7 @@ img.decoding = 'async'
 });
 //Reduce motion for better performance if (window.matchMedia (' (prefers-reduced-motion: reduce) ') .matches) {
   document.documentElement.classList.add ('reduced-motion')
-<<<<<<< HEAD
 }
-=======
-
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const applyLandscapeOptimizations = () => {
   //Landscape-specific optimizations document.documentElement.classList.add ('landscape-mode');
 //Adjust layout for landscape const style = document.createElement ('style');
@@ -161,17 +99,10 @@ style.textContent = `.landscape-mode .mobile-panel {
 height: 100vh
 }`;
 document.head.appendChild (style)
-<<<<<<< HEAD
 }
 const applyPortraitOptimizations = () => {
   //Portrait-specific optimizations document.documentElement.classList.remove ('landscape-mode')
 }
-=======
-};
-const applyPortraitOptimizations = () => {
-  //Portrait-specific optimizations document.documentElement.classList.remove ('landscape-mode')
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const optimizeForMobile = useCallback ( () => {
   if (!isMobile) return;
 //Optimize images const images = document.querySelectorAll ('img');
@@ -183,18 +114,10 @@ if (!img.decoding) img.decoding = 'async'
   font.setAttribute ('crossoriginanonymous')
 });
 //Add mobile-specific event listeners document.addEventListener ('touchstart', () => {
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }, {
   passive: true
 });
 document.addEventListener ('touchmove', () => {
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }, {
   passive: true
 })
@@ -208,39 +131,14 @@ useEffect ( () => {
 window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {
-<<<<<<< HEAD
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
-<<<<<<< HEAD
 }
 if (!showPanel |!isVisible) return null;
 }
 const getStatusIcon = (status: string) => {
   switch (status) {
 }
-=======
-};
-if (!showPanel || !isVisible) return null;
-
-};
-const getStatusIcon = (status: string) => {
-  switch (status) {
-
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 children
-=======
-  setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
-};
-if (!showPanel || !isVisible) return null;
-
-};
-const getStatusIcon = (status: string) => {
-  switch (status) {
-  
-
-};
-children 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }{
   /* Mobile Optimization Panel */
 }<AnimatePresence> {
@@ -252,39 +150,8 @@ children
   /* Global Mobile Styles */
 }<style jsx global> {
   `.mobile-optimized * {
-<<<<<<< HEAD
 }`
 }</style> </>)
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-
-}`
-}</style> </>)
-};
-}
-
-export default MobileOptimizer;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
-}
-}
-}
-}
-}
-}
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

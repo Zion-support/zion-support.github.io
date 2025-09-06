@@ -99,9 +99,6 @@ const NotFound = () => {
       </div>
     </div>);
 };
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default NotFound;

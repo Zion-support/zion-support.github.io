@@ -28,7 +28,6 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
 }</ul> </div>) )
 }</div> </div> </div> Market Analysis </h4> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" > <div> </div> </div> </div> </span>) )
 }</div> </div> > View Pricing & Start Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div>) )
-<<<<<<< HEAD
 }</div> </div> </section> <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /pricing"variant=" secondary"size=" lg"className=" bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"> View Pricing <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl" > Contact Sales </Button> </div> </div> </section> </>) import React from 'react';
 import Head from 'next/head';
 import {Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target} from 'lucide-react';
@@ -1240,10 +1239,6 @@ export default function MicroSaasPage() {;
       impact: 'High'
     }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const categories = [...new Set(microSaasServices.map(service => service.category))];
   const competitiveAdvantages = [
     {
@@ -1437,14 +1432,6 @@ export default function MicroSaasPage() {;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -1504,14 +1491,6 @@ export default function MicroSaasPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1544,14 +1523,6 @@ export default function MicroSaasPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1593,14 +1564,6 @@ export default function MicroSaasPage() {;
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Pricing */}
                   <div>
                     <h4 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -1627,14 +1590,6 @@ export default function MicroSaasPage() {;
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
                   <h4 className="text-xl font-bold text-blue-400 mb-4 flex items-center">
@@ -1674,14 +1629,6 @@ export default function MicroSaasPage() {;
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* CTA */}
                 <div className="mt-8 text-center">
                   <Button
@@ -1698,14 +1645,6 @@ export default function MicroSaasPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -1738,23 +1677,6 @@ export default function MicroSaasPage() {;
         </div>
       </section>
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-}</div> </div> </section> <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /pricing"variant=" secondary"size=" lg"className=" bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"> View Pricing <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl" > Contact Sales </Button> </div> </div> </section> </>)
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
-  );
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,36 +1,12 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
-=======
-<<<<<<< HEAD
-import { useState, useEffect } from 'react'
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react'; import { ProjectCard } from './ProjectCard'
-import { ProjectForm } from './ProjectForm'
-import { PortfolioProject } from '@/types/resume'
-import { usePortfolio } from '@/hooks/usePortfolio'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { FilePlus, Loader2 } from 'lucide-react'
 import { ProjectCard  } from './ProjectCard';
 import { ProjectForm  } from './ProjectForm';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
-=======
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FilePlus, Loader2 } from 'lucide-react';
-import { ProjectCard } from './ProjectCard';
-import { ProjectForm } from './ProjectForm';
-import { PortfolioProject } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function PortfolioBuilder() {
 
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio()
@@ -52,11 +28,6 @@ export function PortfolioBuilder() {
       fetchProjects()
     }
   }
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -87,11 +58,6 @@ export function PortfolioBuilder() {;
     }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -99,10 +65,6 @@ export function PortfolioBuilder() {;
       </div>
     )
   }
-<<<<<<< HEAD
-=======
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -110,49 +72,22 @@ export function PortfolioBuilder() {;
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
-<<<<<<< HEAD
         <Button
           onClick={() => setShowAddProject(true)}
           className='gap-2'
           disabled={showAddProject |!!editingProject}        >
           <FilePlus className='h-4 w-4' />
-<<<<<<< HEAD
           Add Project
         </Button>
       </div>
-=======
-        <Button 
-          onClick={() => setShowAddProject(true)} 
-          className="gap-2"
-          disabled={showAddProject || !!editingProject}
-        >
-          <FilePlus className="h-4 w-4" />
-          Add Project
-        </Button>
-      </div>
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-          Add Project
-        </Button>
-      </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
-<<<<<<< HEAD
             <ProjectForm              project={editingProject |undefined}
-=======
-            <ProjectForm              project={editingProject || undefined}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
@@ -164,21 +99,11 @@ export function PortfolioBuilder() {;
                 setEditingProject(null);                setEditingProject(null)
 
                 setEditingProject(null)
-=======
-
-            <ProjectForm
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {
-                setShowAddProject(false);
-                setEditingProject(null);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               }}
             />
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -187,32 +112,6 @@ export function PortfolioBuilder() {;
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-=======
-<<<<<<< HEAD
-
-      {/* Projects List */}
-      {projects.length > 0 ? (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-          {projects.map(project => (
-            <ProjectCard
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-        <Button 
-          onClick={() => setShowAddProject(true)} 
-          className="gap-2"
-          disabled={showAddProject || !!editingProject}
-        >
-          <FilePlus className="h-4 w-4" />
-          Add Project
-        </Button>
-      </div>
-      
-      {/* Edit or Add Form */}
-      {(showAddProject || editingProject) && (
-        <Card>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -234,12 +133,6 @@ export function PortfolioBuilder() {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               key={project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
@@ -255,15 +148,7 @@ export function PortfolioBuilder() {;
         </div>
       ) : (
         !showAddProject && (
-<<<<<<< HEAD
           <Card className='text-center py-12'>
-=======
-          <Card className="text-center py-12">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -273,10 +158,8 @@ export function PortfolioBuilder() {;
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-<<<<<<< HEAD
                 <Button
                   onClick={() => setShowAddProject(true)}
-<<<<<<< HEAD
                   className='mt-2'                >            <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -286,21 +169,11 @@ export function PortfolioBuilder() {;
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-<<<<<<< HEAD
                 <Button
                   onClick={() => setShowAddProject(true)}
-=======
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button 
                   onClick={() => setShowAddProject(true)} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   className="mt-2"
-=======
-                  className='mt-2'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 >
                   Add Your First Project
                 </Button>
@@ -309,31 +182,6 @@ export function PortfolioBuilder() {;
           </Card>
         )
       )}
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
   )
 }
-<<<<<<< HEAD
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-;
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-    </div>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

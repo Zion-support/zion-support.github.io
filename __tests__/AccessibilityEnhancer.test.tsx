@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
@@ -66,30 +65,4 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
-<<<<<<< HEAD
 });
-=======
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
-import { describe, it, expect, vi } from 'vitest'
-describe('AccessibilityEnhancer'
-  it('renders children correctly'
-    expect(screen.getByTestId('test-child'
-    expect(screen.getByText('Test Content'
-  it('applies accessibility props correctly'
-    const element = screen.getByRole('button'
-    expect(element).toHaveAttribute('aria-label', 'Test Button'
-    expect(element).toHaveAttribute('tabindex', '0'
-  it('handles keyboard events correctly'
-    const element = screen.getByRole('button'
-    fireEvent.keyDown(element, { "key"
-    fireEvent.keyDown(element, { "key"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

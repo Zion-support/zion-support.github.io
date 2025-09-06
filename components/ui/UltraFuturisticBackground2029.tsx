@@ -1,9 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface Particle {
   x: number;
   y: number;
@@ -25,21 +21,10 @@ interface EnergyField {
   color: string;
 
   pulse: number;
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UltraFuturisticBackground2029({
-<<<<<<< HEAD
   children
 }: {
-=======
-  children,
-}: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   children: React.ReactNode;
-<<<<<<< HEAD
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -65,29 +50,14 @@ interface EnergyField {
 
   pulse: number
 }
-<<<<<<< HEAD
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
 
-=======
-<<<<<<< HEAD
-=======
-}) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-<<<<<<< HEAD
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -95,32 +65,19 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
     if (!ctx) return;
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-<<<<<<< HEAD
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     }
-=======
-      canvas.height = window.innerHeight;
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Mouse move handler for interactive effects
     const handleMouseMove = (e: MouseEvent) => {
-<<<<<<< HEAD
       setMousePosition({ x: e.clientX, y: e.clientY });    };      setMousePosition({ x: e.clientX, y: e.clientY })
     }
-=======
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     window.addEventListener('mousemove', handleMouseMove);
     // Initialize particles with different types
     const initParticles = () => {
       const particles: Particle[] = [];
       const colors = {
-<<<<<<< HEAD
         energy: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00']
         data: ['#0080ff', '#8000ff', '#ff0080', '#80ff00']
         quantum: ['#ff8000', '#8000ff', '#00ffff', '#ff0080']
@@ -156,35 +113,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
       }
       particlesRef.current = particles
     }
-=======
-        energy: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00'],
-        data: ['#0080ff', '#8000ff', '#ff0080', '#80ff00'],
-        quantum: ['#ff8000', '#8000ff', '#00ffff', '#ff0080'],
-        neon: ['#ff0066', '#00ffff', '#ffff00', '#ff00ff'],
-      };
-
-      for (let i = 0; i < 150; i++) {
-        const type = ['energy', 'data', 'quantum', 'neon'][
-          Math.floor(Math.random() * 4)
-        ] as keyof typeof colors;
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.8,
-          vy: (Math.random() - 0.5) * 0.8,
-          size: Math.random() * 4 + 1,
-          opacity: Math.random() * 0.8 + 0.2,
-          color: colors[type][Math.floor(Math.random() * colors[type].length)],
-          type,
-          life: Math.random() * 100,
-          maxLife: 100,
-        });
-      }
-
-      particlesRef.current = particles;
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Initialize energy fields
     const initEnergyFields = () => {
       const fields: EnergyField[] = [];
@@ -195,7 +123,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         '#00ff00'
         '#ff8000'
       ];
-<<<<<<< HEAD
       for (let i = 0; i < 8; i++) {        fields.push({      const fields: EnergyField[] = []
       const fieldColors = ['#00ffff#ff00ff#ffff00#00ff00#ff8000'];
       for (let i = 0, i < 8, i++) {
@@ -212,23 +139,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         })
       }
       energyFieldsRef.current = fields
-=======
-
-      for (let i = 0; i < 8; i++) {
-        fields.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          radius: Math.random() * 200 + 100,
-          intensity: Math.random() * 0.5 + 0.3,
-          color: fieldColors[Math.floor(Math.random() * fieldColors.length)],
-          pulse: Math.random() * Math.PI * 2,
-        });
-      }
-
-      energyFieldsRef.current = fields;
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     initParticles();
     initEnergyFields();
     // Animation loop
@@ -265,7 +175,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(field.x, field.y, field.radius, 0, Math.PI * 2);
-<<<<<<< HEAD
         ctx.fill();      });        field.pulse += 0.02;
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
         // Create radial gradient for energy field
@@ -277,9 +186,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         ctx.beginPath();
         ctx.arc(field.x, field.y, field.radius, 0, Math.PI * 2);
         ctx.fill()
-=======
-        ctx.fill();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
@@ -287,17 +193,12 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         if (particle.life <= 0) {
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
-<<<<<<< HEAD
           particle.y = Math.random() * canvas.height;        }          particle.y = Math.random() * canvas.height
-=======
-          particle.y = Math.random() * canvas.height;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         }
         // Interactive particle behavior based on mouse position
         const dx = mousePosition.x - particle.x;
         const dy = mousePosition.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-<<<<<<< HEAD
         if (distance < 200) {
           const force = (200 - distance) / 200;
           particle.vx += (dx / distance) * force * 0.01;
@@ -306,15 +207,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           const force = (200 - distance) / 200;
           particle.vx += (dx / distance) * force * 0.01;
           particle.vy += (dy / distance) * force * 0.01
-=======
-
-        if (distance < 200) {
-          const force = (200 - distance) / 200;
-          particle.vx += (dx / distance) * force * 0.01;
-          particle.vy += (dy / distance) * force * 0.01;
-        }
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges
@@ -324,10 +216,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         if (particle.y > canvas.height) particle.y = 0;
         // Draw particle with type-specific effects
         ctx.save();
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         switch (particle.type) {
           case 'energy':
             // Energy particles with glow effect
@@ -350,7 +238,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             ctx.shadowColor = particle.color;
             ctx.shadowBlur = 20;
             ctx.globalCompositeOperation = 'lighter';
-<<<<<<< HEAD
             break;        }
         const lifeRatio = particle.life / particle.maxLife;
         const currentOpacity = particle.opacity * lifeRatio;
@@ -358,14 +245,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         }
         const lifeRatio = particle.life / particle.maxLife;
         const currentOpacity = particle.opacity * lifeRatio;
-=======
-            break;
-        }
-
-        const lifeRatio = particle.life / particle.maxLife;
-        const currentOpacity = particle.opacity * lifeRatio;
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle =
@@ -373,23 +252,14 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           Math.floor(currentOpacity * 255)
             .toString(16)
             .padStart(2, '0');
-<<<<<<< HEAD
         ctx.fill();        ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
-=======
-        ctx.fill();
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         ctx.restore();
         // Draw connections between nearby particles
         particlesRef.current.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) +
               Math.pow(particle.y - otherParticle.y, 2)
@@ -400,7 +270,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
               particle.color +
               Math.floor(opacity * 255)
                 .toString(16)
-<<<<<<< HEAD
                 .padStart(2, '0');            ctx.lineWidth = 0.8;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -423,35 +292,23 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           if (distance < 120) {
             const opacity = (1 - distance / 120) * 0.3;
             ctx.strokeStyle = particle.color + Math.floor(opacity * 255).toString(16).padStart(2, '0');
-=======
-                .padStart(2, '0');
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ctx.lineWidth = 0.8;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.stroke();
           }
-<<<<<<< HEAD
         });            ctx.stroke()
           }
         })
-=======
-        });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       // Draw quantum wave interference patterns
       const time = Date.now() * 0.001;
-<<<<<<< HEAD
       for (let i = 0; i < 5; i++) {      for (let i = 0, i < 5, i++) {
-=======
-      for (let i = 0; i < 5; i++) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         const waveX = (canvas.width / 6) * (i + 1);
         const waveY = canvas.height / 2;
         const amplitude = 50;
         const frequency = 0.01;
-<<<<<<< HEAD
         ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
         ctx.lineWidth = 2;
         ctx.beginPath();
@@ -463,64 +320,37 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             ctx.lineTo(x, y)
           }
         }
-=======
-
-        ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         for (let x = 0; x < canvas.width; x += 2) {
           const y =
             waveY +
             amplitude *
               Math.sin(frequency * x + time + i) *
-<<<<<<< HEAD
               Math.sin(frequency * x * 0.5 + time * 0.7);          if (x === 0) {
-=======
-              Math.sin(frequency * x * 0.5 + time * 0.7);
-          if (x === 0) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ctx.moveTo(x, y);
           } else {
             ctx.lineTo(x, y);
           }
         }
-<<<<<<< HEAD
         ctx.stroke();      }
         ctx.stroke()
-=======
-
-        ctx.stroke();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
       // Draw neural network connections
       ctx.strokeStyle = 'rgba(255, 0, 255, 0.1)';
       ctx.lineWidth = 1;
-<<<<<<< HEAD
       for (let i = 0; i < 20; i++) {        const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
         const x2 = Math.random() * canvas.width;
         const y2 = Math.random() * canvas.height;
       for (let i = 0, i < 20, i++) {
-=======
-
-      for (let i = 0; i < 20; i++) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
         const x2 = Math.random() * canvas.width;
         const y2 = Math.random() * canvas.height;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
         ctx.stroke();
       }
-<<<<<<< HEAD
       animationRef.current = requestAnimationFrame(animate);    };        ctx.beginPath();
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
@@ -528,12 +358,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
       }
       animationRef.current = requestAnimationFrame(animate)
     }
-=======
-
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -556,7 +380,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
         <motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
           animate={{
-<<<<<<< HEAD
             rotate: 360
             scale: [1, 1.2, 1]
             opacity: [0.2, 0.4, 0.2],          }}
@@ -587,22 +410,11 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             duration: 8
             repeat: Infinity
             ease: 'easeInOut'
-=======
-            rotate: 360,
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
           animate={{
-<<<<<<< HEAD
             y: [0, -20, 0]
             opacity: [0.2, 0.5, 0.2],          }}
           transition={{
@@ -620,21 +432,11 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
-=======
-            y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: 'easeInOut',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         <motion.div
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45'
           animate={{
-<<<<<<< HEAD
             rotate: [45, 405]
             scale: [1, 1.1, 1],          }}
           transition={{
@@ -652,21 +454,11 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             duration: 12
             repeat: Infinity
             ease: 'easeInOut'
-=======
-            rotate: [45, 405],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: 'easeInOut',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
         />
         <motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20'
           animate={{
-<<<<<<< HEAD
             rotate: [-45, 315]
             opacity: [0.2, 0.6, 0.2],          }}
           transition={{
@@ -681,40 +473,11 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             opacity: [0.2, 0.6, 0.2]
           }}
           transition={{
-<<<<<<< HEAD
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-            rotate: [-45, 315],
-            opacity: [0.2, 0.6, 0.2],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-            duration: 10,
-            repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-          }}
-=======
-<<<<<<< HEAD
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-=======
 
           }}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -723,7 +486,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
       {/* Content */}
       <div className='relative z-10'>{children}</div>
     </div>
-<<<<<<< HEAD
   );      {/* Content */}
       <div className="relative z-10">
         {children}
@@ -731,14 +493,3 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
     </div>
   )
 }
-=======
-  );
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

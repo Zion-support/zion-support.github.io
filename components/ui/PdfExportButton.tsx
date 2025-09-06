@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 export type PdfExportButtonProps = any;
   return (
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 html2pdf () .set (opt) .from (element) .save ()
 }
 export default function PdfExportButton({
@@ -20,22 +13,10 @@ export type PdfExportButtonProps = {
   theme?: 'light' | 'dark'
 }
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {
-=======
- html2pdf () .set (opt) .from (element) .save ()
-};
-}
-
-export default function PdfExportButton({
-  targetRef,
-  fileName = 'resume.pdf',
-}: PdfExportButtonProps) {
-  const onClick = async () => {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     if (!targetRef.current) return;
     const element = targetRef.current;
     const html2pdf = (await import('html2pdf.js')).default;
     const opt = {
-<<<<<<< HEAD
       margin: [10, 10, 10, 10]
       image: { type: 'jpeg', quality: 0.98 }
       html2canvas: { scale: 2, useCORS: true }
@@ -43,29 +24,6 @@ export default function PdfExportButton({
     } as any;
     html2pdf().set(opt).from(element).save();
   }
-=======
-html2pdf () .set (opt) .from (element) .save () 
-};
-
-export default function PdfExportButton({
-  targetRef,
-<<<<<<< HEAD
-  fileName = 'resume.pdf',
-}: PdfExportButtonProps) {  const onClick = async () => {
-
-  const onClick = async () => {
-
-=======
-  fileName = 'resume.pdf',;
-}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
-export type PdfExportButtonProps = {
-  targetRef: React.RefObject<HTMLDivElement>,;
-  fileName?: string;
-  theme?: 'light' | 'dark'
-};
-
-export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (!targetRef.current) return;
     const element = targetRef.current;
 
@@ -83,7 +41,6 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     html2pdf().set(opt).from(element).save();
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       >
       Download as PDF
     </button>
@@ -96,31 +53,5 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       aria-label="Download as PDF"
       Download as PDF
     </button>
-<<<<<<< HEAD
 );
 }
-=======
-<<<<<<< HEAD
-      margin: [10, 10, 10, 10],
-      filename: fileName,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    } as any;
-
-    html2pdf().set(opt).from(element).save();
-  };
-
-    >
-      Download as PDF
-    </button>
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

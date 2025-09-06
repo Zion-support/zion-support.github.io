@@ -2,65 +2,23 @@ import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 type Props = any;
-=======
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-=======
-
-type Props = { vendor: Vendor | null };
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-=======
-type Props = { vendor: Vendor | null };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
-export default function AgencyDashboardPage({ vendor }: Props) {;
-=======
-type Props = { vendor: Vendor | null };
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function AgencyDashboardPage({ vendor }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
-<<<<<<< HEAD
   if (!activeVendor)
     return (
       <div className='text-gray-500'>No vendor found. Please apply first.</div>
     );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
-=======
-
-  if (!activeVendor)
-    return (
-      <div className='text-gray-500'>No vendor found. Please apply first.</div>
-    );
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function saveProfile(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const updated = {
-<<<<<<< HEAD
       ...activeVendor
       name: String(formData.get('name') |activeVendor.name)
       about: String(formData.get('about') |activeVendor.about |'')
-=======
-      ...activeVendor,
-      name: String(formData.get('name') || activeVendor.name),
-      about: String(formData.get('about') || activeVendor.about || ''),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       servicesOffered: String(
         formData.get('servicesOffered') |
           activeVendor.servicesOffered?.join(',') |
@@ -68,14 +26,9 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       )
         .split(',')
         .map(s => s.trim())
-<<<<<<< HEAD
         .filter(Boolean)
-=======
-        .filter(Boolean),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only
-<<<<<<< HEAD
     setActiveVendor(updated);  }
   function addPackage() {
     if (!pkgTitle |!pkgPrice |!activeVendor) return;      name: String(formData.get('name') |activeVendor.name)
@@ -86,25 +39,9 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only
     setActiveVendor(updated)
-=======
-    setActiveVendor(updated);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   function addPackage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (!pkgTitle |!pkgPrice |!activeVendor) return;
-=======
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-    if (!pkgTitle |!pkgPrice |!activeVendor) return;
-=======
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const packages = [
       ...(activeVendor.packages |[])
       {
@@ -119,12 +56,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setPkgDesc('');
     setPkgPrice('');
   }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className='space-y-8'>
       <div className='flex items-center justify-between'>
@@ -169,7 +101,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           <div className='md:col-span-2'>
             <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>
               Save
-<<<<<<< HEAD
             </button>          </div>
         </form>
       </section>
@@ -206,20 +137,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           </div>
         </form>
       </section>
-<<<<<<< HEAD
-=======
-            </button>
-          </div>
-        </form>
-      </section>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -259,7 +176,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
             >
               Add
-<<<<<<< HEAD
             </button>          </div>
         </div>
       </section>
@@ -272,45 +188,19 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>
         </div>
       </section>
-=======
-            </button>
-          </div>
-        </div>
-      </section>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Project Pipeline</h2>
         <Pipeline vendorId={activeVendor.id} />
       </section>
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
-<<<<<<< HEAD
   );        <Pipeline vendorId={activeVendor.id} />
       </section>
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
   );
 }
-=======
-<<<<<<< HEAD
-  );
 
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;
-
-          </div>
-        </form>
-      </section>
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
@@ -318,41 +208,17 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
     );
     const data = await res.json();
-<<<<<<< HEAD
     setItems(data.items |[]);  }    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
     const data = await res.json();
     setItems(data.items |[])
-=======
-    setItems(data.items || []);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
-<<<<<<< HEAD
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ itemId, status })
-=======
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ itemId, status }),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     fetchItems();
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  }
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-  }
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   useEffect(() => {
     fetchItems();
   }, []);
@@ -382,7 +248,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <option value='proposal'>Proposal</option>
             <option value='in_progress'>In Progress</option>
             <option value='complete'>Complete</option>
-<<<<<<< HEAD
             <option value='lost'>Lost</option>          </select>
         </div>
       ))}
@@ -393,57 +258,18 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <option value="in_progress">In Progress</option>
             <option value="complete">Complete</option>
             <option value="lost">Lost</option>
-=======
-            <option value='lost'>Lost</option>
-          </select>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       ))}
-<<<<<<< HEAD
     </div>
   );
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-=======
-
-export const getServerSideProps: GetServerSideProps<Props> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
 };  )
 }
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-=======
-
-export const getServerSideProps: GetServerSideProps<Props> = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-}
-
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] || null; // tie to auth later
-  return { props: { vendor } };
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-    </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-};
-=======
-    </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

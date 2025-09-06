@@ -3,33 +3,16 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [data, setData] = useState<any>(null),
-=======
-export default function TrustPage() {;
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [data, setData] = useState<any>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
 
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
-<<<<<<< HEAD
     if (u) setUserId(u);    if (u) setUserId(u)
-=======
-    if (u) setUserId(u);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, []);
   useEffect(() => {
     async function load() {
@@ -49,7 +32,6 @@ export default function TrustPage() {;
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type })
     });
-<<<<<<< HEAD
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res.json();
       setData(json);
       setLoading(false)
@@ -59,9 +41,6 @@ export default function TrustPage() {;
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged')
-=======
-    alert(type === 'endorse' ? 'Endorsed' : 'Flagged');
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function submitAppeal(e: React.FormEvent) {
     e.preventDefault();
@@ -75,35 +54,15 @@ export default function TrustPage() {;
       body: JSON.stringify({ userId, message, contactEmail })
     });
     alert('Appeal submitted');
-<<<<<<< HEAD
     form.reset();  }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
 
-<<<<<<< HEAD
     form.reset()
-<<<<<<< HEAD
-=======
-    form.reset();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-=======
-    <EnhancedLayout>
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   }
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
       <div className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>
@@ -115,16 +74,11 @@ export default function TrustPage() {;
                 onChange={() => setShowLogic(!showLogic)}
               />{' '}
               Transparent logic
-<<<<<<< HEAD
             </label>          </div>      <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
           <div className="flex items-center gap-3">
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
-=======
-            </label>
-          </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
         {loading && <div>Loading...</div>}
         {!loading && data && (
@@ -157,7 +111,6 @@ export default function TrustPage() {;
                         <span>
                           {Math.round(c.raw * 100)} / weighted{' '}
                           {c.weighted.toFixed(3)}
-<<<<<<< HEAD
                         </span>                      </li>                <RiskIndicator status={data.riskLevel} />
               </div>
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
@@ -172,40 +125,16 @@ export default function TrustPage() {;
                       <li key={c.key} className="flex justify-between">
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
-=======
-                        </span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </li>
-=======
-<<<<<<< HEAD
-  }
-
-  return (
-    <EnhancedLayout>
-
-                      </li>
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-                      </li>
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </ul>
                 </div>
               )}
               {data.reasonSummary && (
-<<<<<<< HEAD
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
-<<<<<<< HEAD
             </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
-=======
-                <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
@@ -248,17 +177,12 @@ export default function TrustPage() {;
                       type='submit'
                     >
                       Submit Appeal
-<<<<<<< HEAD
                     </button>                  </form>                <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">
                   <h3 className="font-medium">Appeal Score</h3>
                   <form onSubmit={submitAppeal} className="space-y-2">
                     <input name="email" type="email" placeholder="Contact email" className="w-full border rounded px-2 py-1 text-sm" />
                     <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w-full border rounded px-2 py-1 text-sm" rows={4} required />
                     <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>
-=======
-                    </button>
-                  </form>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               )}
             </div>
@@ -266,23 +190,5 @@ export default function TrustPage() {;
         )}
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
 );
 }
-=======
-<<<<<<< HEAD
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            </div>
-
-                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
-                </div>
-              )}
-            </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

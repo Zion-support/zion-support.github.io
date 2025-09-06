@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
-=======
-import {useEffect, useMemo, useState} from 'react';
-import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function useFavorites() {
 
   const storageKey = 'zion_favorites';
@@ -18,61 +9,23 @@ function useFavorites() {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
-<<<<<<< HEAD
       if (raw) setFavorites(JSON.parse(raw));    } catch {}
   }, []);
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
   return { favorites, remove }
 }
-<<<<<<< HEAD
-=======
-      if (raw) setFavorites(JSON.parse(raw));
-    } catch {}
-  }, []);
-  const remove = (slug: string) =>
-    setFavorites(prev => prev.filter(s => s !== slug));
-  return { favorites, remove };
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function FavoritesPage() {
-=======
-
-export default function FavoritesPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
-<<<<<<< HEAD
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  );
 
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <div>
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
         <nav aria-label='Breadcrumb'>
           <ol className='flex items-center gap-2'>
@@ -87,7 +40,6 @@ export default function FavoritesPage() {;
               aria-current='page'
             >
               Favorites
-<<<<<<< HEAD
             </li>          </ol>
         </nav>
       </div>
@@ -97,16 +49,8 @@ export default function FavoritesPage() {;
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
-<<<<<<< HEAD
         </nav>
       </div>
-=======
-            </li>
-          </ol>
-        </nav>
-      </div>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
       {profiles.length === 0 ? (
         <div className='rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center'>
@@ -165,37 +109,16 @@ export default function FavoritesPage() {;
                     <a className='px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600'>
                       Request to Hire
                     </a>
-<<<<<<< HEAD
                   </Link>                </div>              <div className="mt-4 flex items-center justify-between text-sm">
                 <div className="font-medium">${t.hourlyRateUsd}/hr</div>
                 <div className="flex items-center gap-3">
                   <Link href={`/talent/${t.slug}`}><a className="px-3 py-1.5 rounded-md bg-indigo-600 text-white">View Profile</a></Link>
                   <Link href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>
-=======
-                  </Link>
-                </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
           ))}
         </div>
       )}
     </div>
-<<<<<<< HEAD
 );
 }
-=======
-<<<<<<< HEAD
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-          </ol>
-        </nav>
-      </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

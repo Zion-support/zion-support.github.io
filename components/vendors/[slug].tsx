@@ -2,43 +2,12 @@ import type { GetServerSideProps } from 'next';
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 type Props = any;
-=======
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
-=======
-type Props = { vendor: Vendor | null };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
-export default function VendorProfilePage({ vendor }: Props) {;
-=======
-type Props = { vendor: Vendor | null };
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function VendorProfilePage({ vendor }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   if (!vendor) return <div className='text-gray-500'>Vendor not found.</div>;  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
-=======
-
-type Props = { vendor: Vendor | null };
-}
-
-export default function VendorProfilePage({ vendor }: Props) {
-  const [message, setMessage] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-
-  if (!vendor) return <div className='text-gray-500'>Vendor not found.</div>;
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function submitLead(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
@@ -48,15 +17,9 @@ export default function VendorProfilePage({ vendor }: Props) {
     setMessage(null)
     try {
       const res = await fetch('/api/vendors/lead', {
-<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ vendorId: vendor.id, title })
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ vendorId: vendor.id, title }),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       if (!res.ok) throw new Error('Failed to submit');
       setMessage('Thanks! We will contact you soon.');
@@ -64,7 +27,6 @@ export default function VendorProfilePage({ vendor }: Props) {
     } catch (e: any) {
       setMessage(e.message);
     } finally {
-<<<<<<< HEAD
       setLoading(false);    }
   }
   return (
@@ -76,16 +38,11 @@ export default function VendorProfilePage({ vendor }: Props) {
       setMessage(e.message)
     } finally {
       setLoading(false)
-=======
-      setLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
   return (
-<<<<<<< HEAD
     <div className='space-y-8'>
       <div className='flex items-center gap-4'>
-<<<<<<< HEAD
         {vendor.logoUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -107,7 +64,6 @@ export default function VendorProfilePage({ vendor }: Props) {
           </div>
           <div className='text-sm text-gray-500'>
             {vendor.servicesOffered?.join(', ')}
-<<<<<<< HEAD
           </div>        </div>
       </div>
       <div>
@@ -128,22 +84,14 @@ export default function VendorProfilePage({ vendor }: Props) {
             {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
           </div>
           <div className="text-sm text-gray-500">{vendor.servicesOffered?.join()}</div>
-=======
-          </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       </div>
       <div>
         <h2 className='text-lg font-medium mb-2'>About</h2>
         <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>
-<<<<<<< HEAD
           {vendor.about |'No description provided.'}
         </p>        <h2 className="text-lg font-medium mb-2">About</h2>
         <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">{vendor.about |'No description provided.'}</p>
-=======
-          {vendor.about || 'No description provided.'}
-        </p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </div>
       {vendor.packages && vendor.packages.length > 0 && (
         <div>
@@ -158,15 +106,10 @@ export default function VendorProfilePage({ vendor }: Props) {
                 <div className='text-sm text-gray-500'>{p.description}</div>
                 <div className='mt-2 text-sm'>
                   ${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` : ''}
-<<<<<<< HEAD
                 </div>              </div>              <div key={p.id} className="border border-gray-200 dark:border-gray-800 rounded p-4">
                 <div className="font-medium">{p.title}</div>
                 <div className="text-sm text-gray-500">{p.description}</div>
                 <div className="mt-2 text-sm">${p.priceUsd} {p.timeframe ? `/ ${p.timeframe}` : ''}</div>
-=======
-                </div>
-              </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
           </div>
         </div>
@@ -192,7 +135,6 @@ export default function VendorProfilePage({ vendor }: Props) {
                 )}
                 <div className='p-3'>
                   <div className='font-medium'>{sp.title}</div>
-<<<<<<< HEAD
                   <div className='text-sm text-gray-500'>{sp.description}</div>                </div>            {vendor.sampleProjects.map(sp => (
               <div key={sp.id} className="border border-gray-200 dark:border-gray-800 rounded overflow-hidden">
                 {sp.imageUrl ? (
@@ -204,20 +146,7 @@ export default function VendorProfilePage({ vendor }: Props) {
                 <div className="p-3">
                   <div className="font-medium">{sp.title}</div>
                   <div className="text-sm text-gray-500">{sp.description}</div>
-=======
-                  <div className='text-sm text-gray-500'>{sp.description}</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
-=======
-
-<<<<<<< HEAD
-    }
-  }
-
-  return (
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </div>
 
@@ -230,20 +159,11 @@ export default function VendorProfilePage({ vendor }: Props) {
 
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             ))}
           </div>
         </div>
       )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
         <form onSubmit={submitLead} className='space-y-3'>
@@ -265,31 +185,11 @@ export default function VendorProfilePage({ vendor }: Props) {
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
-<<<<<<< HEAD
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
-=======
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
-  const slug = String(ctx.params?.slug || '');
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
@@ -299,35 +199,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
     </div>
   );
 }
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug |'');
-=======
-
-export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
-  const slug = String(ctx.params?.slug || '');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-  const vendor = slug ? getVendorBySlug(slug) || null : null;
-  return { props: { vendor } };
-};
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

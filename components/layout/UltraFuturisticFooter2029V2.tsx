@@ -1,21 +1,9 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Globe, ArrowRight;
   Brain, Rocket, Target, Shield, Cpu;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -69,60 +57,6 @@ import {
   Phone, Mail, MapPin, Globe, ArrowRight
   Brain, Rocket, Target, Shield, Cpu
 
-=======
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  ArrowRight,
-  Brain,
-  Rocket,
-  Target,
-  Shield,
-  Cpu,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Github,
-  MessageCircle,
-  Star,
-  Zap,
-  Sparkles,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  TrendingUp,
-  MessageSquare,
-  Calendar,
-  GraduationCap,
-  ShieldCheck,
-  Eye,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Globe2,
-  Bot,
-  Crown,;
-  Infinity,;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight, 
-  Brain, Rocket, Target, Shield, Cpu, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -186,115 +120,6 @@ const contactInfo = {
 {
   name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system'
 }
-=======
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  ArrowRight,
-  Brain,
-  Rocket,
-  Target,
-  Shield,
-  Cpu,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Github,
-  MessageCircle,
-  Star,
-  Zap,
-  Sparkles,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  TrendingUp,
-  MessageSquare,
-  Calendar,
-  GraduationCap,
-  ShieldCheck,
-  Eye,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Globe2,
-  Bot,
-  Crown,
-  Infinity,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-{
-  name: 'AI Emotional Intelligence', href: '/services/ai-emotional-intelligence-platform'
-};
-{
-  name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator'
-};
-{
-  name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager'
-}]
-};
-{
-  title: 'Quantum Technology', icon: Globe, color: 'from-indigo-600 via-blue-600 to-cyan-600', services: [ {
-  name: 'Quantum Internet Security', href: '/services/quantum-internet-security-gateway'
-};
-{
-  name: 'Biotech DNA Computing', href: '/services/biotech-dna-computing-platform'
-};
-{
-  name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading-platform'
-};
-{
-  name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio'
-}]
-};
-{
-  title: 'Space & Metaverse', icon: Rocket, color: 'from-teal-600 via-emerald-600 to-green-600', services: [ {
-  name: 'Space Mining Automation', href: '/services/space-mining-automation-platform'
-};
-{
-  name: 'Metaverse Digital Reality', href: '/services/metaverse-digital-reality-platform'
-};
-{
-  name: 'AI Predictive Health', href: '/services/ai-predictive-health-analytics'
-};
-{
-  name: 'Virtual Event Holograms', href: '/services/virtual-event-hologram-platform'
-}]
-};
-{
-  title: 'Enterprise IT', icon: Cpu, color: 'from-blue-600 via-cyan-600 to-teal-600', services: [ {
-  name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite'
-};
-{
-  name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization'
-};
-{
-  name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system'
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   name: 'Smart Financial Management', href: '/services/smart-financial-management-platform'
 }]
@@ -302,7 +127,6 @@ const contactInfo = {
 const footerSections = [ {
   title: 'Services', links: [ {
   name: 'AI & Machine Learning', href: '/services/ai-ml'
-<<<<<<< HEAD
 }
 {
   name: 'Quantum Computing', href: '/services/quantum-computing'
@@ -376,99 +200,16 @@ const footerSections = [ {
 {
   name: 'Blog', href: '/blog'
 }
-=======
-};
-{
-  name: 'Quantum Computing', href: '/services/quantum-computing'
-};
-{
-  name: 'Space Technology', href: '/services/space-technology'
-};
-{
-  name: 'Enterprise IT', href: '/services/enterprise-it'
-};
-{
-  name: 'Micro SAAS', href: '/services/micro-saas'
-};
-{
-  name: 'Cybersecurity', href: '/services/cybersecurity'
-}]
-};
-{
-  title: 'Solutions', links: [ {
-  name: 'AI Consciousness', href: '/solutions/ai-consciousness'
-};
-{
-  name: 'Quantum Security', href: '/solutions/quantum-security'
-};
-{
-  name: 'Space Mining', href: '/solutions/space-mining'
-};
-{
-  name: 'Metaverse Platform', href: '/solutions/metaverse'
-};
-{
-  name: 'Business Intelligence', href: '/solutions/business-intelligence'
-};
-{
-  name: 'Supply Chain AI', href: '/solutions/supply-chain-ai'
-}]
-};
-{
-  title: 'Industries', links: [ {
-  name: 'Healthcare', href: '/industries/healthcare'
-};
-{
-  name: 'Finance', href: '/industries/finance'
-};
-{
-  name: 'Manufacturing', href: '/industries/manufacturing'
-};
-{
-  name: 'Retail', href: '/industries/retail'
-};
-{
-  name: 'Education', href: '/industries/education'
-};
-{
-  name: 'Government', href: '/industries/government'
-}]
-};
-{
-  title: 'Resources', links: [ {
-  name: 'Documentation', href: '/docs'
-};
-{
-  name: 'API Reference', href: '/api'
-};
-{
-  name: 'Case Studies', href: '/case-studies'
-};
-{
-  name: 'White Papers', href: '/white-papers'
-};
-{
-  name: 'Blog', href: '/blog'
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   name: 'Research', href: '/research'
 }]
 }];
-<<<<<<< HEAD
 <motion.div initial= {  {  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
     title: 'AI & Consciousness'
     icon: Brain
     color: 'from-violet-600 via-purple-600 to-indigo-600'
-=======
-<motion.div initial= {
-  {
-    title: 'AI & Consciousness',
-    icon: Brain,
-    color: 'from-violet-600 via-purple-600 to-indigo-600',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'AI Consciousness Evolution'
@@ -483,7 +224,6 @@ const serviceCategories = [
         href: '/services/ai-creativity-orchestrator'
       }
       {
-<<<<<<< HEAD
         name: 'AI Autonomous Business Manager'
         href: '/services/ai-autonomous-business-manager'
       }
@@ -497,17 +237,6 @@ const serviceCategories = [
     title: 'Quantum Technology'
     icon: Globe
     color: 'from-indigo-600 via-blue-600 to-cyan-600'
-=======
-        name: 'AI Autonomous Business Manager',
-        href: '/services/ai-autonomous-business-manager',
-      },
-    ],
-  },
-  {
-    title: 'Quantum Technology',
-    icon: Globe,
-    color: 'from-indigo-600 via-blue-600 to-cyan-600',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Quantum Internet Security'
@@ -522,7 +251,6 @@ const serviceCategories = [
         href: '/services/quantum-financial-trading-platform'
       }
       {
-<<<<<<< HEAD
         name: 'Quantum Creativity Studio'
         href: '/services/quantum-creativity-studio'
       }
@@ -536,17 +264,6 @@ const serviceCategories = [
     title: 'Space & Metaverse'
     icon: Rocket
     color: 'from-teal-600 via-emerald-600 to-green-600'
-=======
-        name: 'Quantum Creativity Studio',
-        href: '/services/quantum-creativity-studio',
-      },
-    ],
-  },
-  {
-    title: 'Space & Metaverse',
-    icon: Rocket,
-    color: 'from-teal-600 via-emerald-600 to-green-600',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Space Mining Automation'
@@ -561,7 +278,6 @@ const serviceCategories = [
         href: '/services/ai-predictive-health-analytics'
       }
       {
-<<<<<<< HEAD
         name: 'Virtual Event Holograms'
         href: '/services/virtual-event-hologram-platform'
       }
@@ -575,17 +291,6 @@ const serviceCategories = [
     title: 'Enterprise IT'
     icon: Cpu
     color: 'from-blue-600 via-cyan-600 to-teal-600'
-=======
-        name: 'Virtual Event Holograms',
-        href: '/services/virtual-event-hologram-platform',
-      },
-    ],
-  },
-  {
-    title: 'Enterprise IT',
-    icon: Cpu,
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'AI Business Intelligence'
@@ -600,7 +305,6 @@ const serviceCategories = [
         href: '/services/intelligent-hr-management-system'
       }
       {
-<<<<<<< HEAD
         name: 'Smart Financial Management'
         href: '/services/smart-financial-management-platform'
       }
@@ -611,29 +315,7 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
-=======
-        name: 'Smart Financial Management',
-        href: '/services/smart-financial-management-platform',
-      },
-    ],
-  },];      { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-suite' },
-      { name: 'Smart Supply Chain', href: '/services/smart-supply-chain-optimization' },
-      { name: 'Intelligent HR Management', href: '/services/intelligent-hr-management-system' },
-      { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
-    ]
-  }
-<<<<<<< HEAD
 
-];
-=======
-<<<<<<< HEAD
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -645,46 +327,16 @@ const mainNavigation = [
   { name: 'Innovations', href: '/innovations', icon: Sparkles }
   { name: 'About', href: '/about', icon: Users }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-=======
-        name: 'Smart Financial Management',
-        href: '/services/smart-financial-management-platform',
-      },
-    ],
-  },
-];
-
-const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe },
-  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu },
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
-  { name: 'Micro SAAS', href: '/micro-saas', icon: Target },
-  { name: 'Innovations', href: '/innovations', icon: Sparkles },
-  { name: 'About', href: '/about', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 const quickLinks = [
-<<<<<<< HEAD
   { name: 'About Us', href: '/about', icon: Users }
   { name: 'Case Studies', href: '/case-studies', icon: BookOpen }
   { name: 'Blog', href: '/blog', icon: BookOpen }
   { name: 'News', href: '/news', icon: TrendingUp }
   { name: 'Careers', href: '/careers', icon: GraduationCap }
   { name: 'Support', href: '/support', icon: MessageCircle },];  { name: 'Support', href: '/support', icon: MessageCircle }
-=======
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
-  { name: 'Support', href: '/support', icon: MessageCircle },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 const resources = [
-<<<<<<< HEAD
   { name: 'Documentation', href: '/docs', icon: BookOpen }
   { name: 'API Reference', href: '/api', icon: Code }
   { name: 'Case Studies', href: '/case-studies', icon: BookOpen }
@@ -693,19 +345,8 @@ const resources = [
   { name: 'News', href: '/news', icon: TrendingUp }
   { name: 'Events', href: '/events', icon: Calendar }
   { name: 'Webinars', href: '/webinars', icon: Video },];  { name: 'Webinars', href: '/webinars', icon: Video }
-=======
-  { name: 'Documentation', href: '/docs', icon: BookOpen },
-  { name: 'API Reference', href: '/api', icon: Code },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-  { name: 'White Papers', href: '/white-papers', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Events', href: '/events', icon: Calendar },
-  { name: 'Webinars', href: '/webinars', icon: Video },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 ];
 const company = [
-<<<<<<< HEAD
   { name: 'About Us', href: '/about', icon: Users }
   { name: 'Our Team', href: '/team', icon: Users }
   { name: 'Careers', href: '/careers', icon: GraduationCap }
@@ -757,62 +398,10 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' }
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
-=======
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Our Team', href: '/team', icon: Users },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
-  { name: 'Partners', href: '/partners', icon: Users },
-  { name: 'Investors', href: '/investors', icon: Star },
-  { name: 'Press', href: '/press', icon: BookOpen },
-  { name: 'Legal', href: '/legal', icon: Shield },
-  { name: 'Privacy', href: '/privacy', icon: ShieldCheck },
-];
-
-const socialLinks = [
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin,
-    color: 'hover:text-blue-500',
-  },
-  {
-    name: 'Twitter',
-    href: 'https://twitter.com/ziontechgroup',
-    icon: Twitter,
-    color: 'hover:text-blue-400',
-  },
-  {
-    name: 'Facebook',
-    href: 'https://facebook.com/ziontechgroup',
-    icon: Facebook,
-    color: 'hover:text-blue-600',
-  },
-  {
-    name: 'Instagram',
-    href: 'https://instagram.com/ziontechgroup',
-    icon: Instagram,
-    color: 'hover:text-pink-500',
-  },
-  {
-    name: 'YouTube',
-    href: 'https://youtube.com/@ziontechgroup',
-    icon: Youtube,
-    color: 'hover:text-red-500',
-  },
-  {
-    name: 'GitHub',
-    href: 'https://github.com/Zion-Holdings',
-    icon: Github,
-    color: 'hover:text-gray-400',
-  },
-];
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const footerSections = [
   {
     title: 'Services'
     links: [
-<<<<<<< HEAD
       { name: 'AI & Machine Learning', href: '/services/ai-ml' }
       { name: 'Quantum Computing', href: '/services/quantum-computing' }
       { name: 'Space Technology', href: '/services/space-technology' }
@@ -863,10 +452,6 @@ const footerSections = [
       { name: 'Research', href: '/research' }
     ]
   },];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function UltraFuturisticFooter2029V2() {
   return (
@@ -874,96 +459,20 @@ export default function UltraFuturisticFooter2029V2() {
     ]
   };
 ];
-<<<<<<< HEAD
-=======
-      { name: 'AI & Machine Learning', href: '/services/ai-ml' },
-      { name: 'Quantum Computing', href: '/services/quantum-computing' },
-      { name: 'Space Technology', href: '/services/space-technology' },
-      { name: 'Enterprise IT', href: '/services/enterprise-it' },
-      { name: 'Micro SAAS', href: '/services/micro-saas' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity' },
-    ],
-  },
-  {
-    title: 'Solutions',
-    links: [
-      { name: 'AI Consciousness', href: '/solutions/ai-consciousness' },
-      { name: 'Quantum Security', href: '/solutions/quantum-security' },
-      { name: 'Space Mining', href: '/solutions/space-mining' },
-      { name: 'Metaverse Platform', href: '/solutions/metaverse' },
-      {
-        name: 'Business Intelligence',
-        href: '/solutions/business-intelligence',
-      },
-      { name: 'Supply Chain AI', href: '/solutions/supply-chain-ai' },
-    ],
-  },
-  {
-    title: 'Industries',
-    links: [
-      { name: 'Healthcare', href: '/industries/healthcare' },
-      { name: 'Finance', href: '/industries/finance' },
-      { name: 'Manufacturing', href: '/industries/manufacturing' },
-      { name: 'Retail', href: '/industries/retail' },
-      { name: 'Education', href: '/industries/education' },
-      { name: 'Government', href: '/industries/government' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Research', href: '/research' },
-    ],
-  },
-];
-}
 
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
-<<<<<<< HEAD
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12'>
           {/* Company Info */}
-<<<<<<< HEAD
           <div className='lg:col-span-2 xl:col-span-1'>            <motion.div      {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2 xl:col-span-1">
-=======
-          <div className='lg:col-span-2 xl:col-span-1'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
-=======
-
-];
-
-export default function UltraFuturisticFooter2029V2() {
-  return (
-
-            <motion.div
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -1006,7 +515,6 @@ export default function UltraFuturisticFooter2029V2() {
                 </div>
                 <div className='flex items-center space-x-3 text-gray-300'>
                   <Globe className='w-4 h-4 text-cyan-400' />
-<<<<<<< HEAD
                   <span className='text-sm'>{contactInfo.website}</span>                </div>                  </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
                 </div>
@@ -1038,21 +546,10 @@ export default function UltraFuturisticFooter2029V2() {
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Globe className="w-4 h-4 text-cyan-400" />
                   <span className="text-sm">{contactInfo.website}</span>
-=======
-                  <span className='text-sm'>{contactInfo.website}</span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Service Categories */}
           {footerSections.map((section, index) => (
             <motion.div
@@ -1073,7 +570,6 @@ export default function UltraFuturisticFooter2029V2() {
                       href={link.href}
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
                     >
-<<<<<<< HEAD
                       <ArrowRight className='w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />                      {link.name}                {section.title}
               </h4>
               <ul className="space-y-3">
@@ -1084,9 +580,6 @@ export default function UltraFuturisticFooter2029V2() {
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-=======
-                      <ArrowRight className='w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {link.name}
                     </Link>
                   </li>
@@ -1095,14 +588,6 @@ export default function UltraFuturisticFooter2029V2() {
             </motion.div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Service Showcase */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1110,27 +595,15 @@ export default function UltraFuturisticFooter2029V2() {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           className='mt-16 pt-12 border-t border-gray-800'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h3 className='text-2xl font-bold text-white text-center mb-8'>
             Featured 2029 Services
           </h3>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {serviceCategories.map((category, index) => (        >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Featured 2029 Services
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
@@ -1139,14 +612,6 @@ export default function UltraFuturisticFooter2029V2() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div
                   className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
@@ -1166,7 +631,6 @@ export default function UltraFuturisticFooter2029V2() {
                       <li key={service.name}>
                         <Link
                           href={service.href}
-<<<<<<< HEAD
                           className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'                        >              >
                 <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
                   <div className="flex items-center space-x-3 mb-3">
@@ -1181,9 +645,6 @@ export default function UltraFuturisticFooter2029V2() {
                         <Link
                           href={service.href}
                           className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block"
-=======
-                          className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         >
                           {service.name}
                         </Link>
@@ -1196,24 +657,12 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-<<<<<<< HEAD
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>            {/* Copyright */}      <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-=======
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {/* Copyright */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -1234,29 +683,11 @@ export default function UltraFuturisticFooter2029V2() {
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'
               >
                 Terms of Service
-<<<<<<< HEAD
               </Link>            </motion.div>              className="text-gray-400 text-sm"
             >
               © 2025 Zion Tech Group. All rights reserved.
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
-=======
-<<<<<<< HEAD
-              </Link>
-            </motion.div>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-              </Link>            </motion.div>
-
-            </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -1264,14 +695,6 @@ export default function UltraFuturisticFooter2029V2() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className='flex items-center space-x-4'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {socialLinks.map(social => (
                 <Link
@@ -1281,7 +704,6 @@ export default function UltraFuturisticFooter2029V2() {
                   rel='noopener noreferrer'
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
                 >
-<<<<<<< HEAD
                   <social.icon className='w-4 h-4' />                </Link>            >
               {socialLinks.map((social) => (
                 <Link
@@ -1292,33 +714,12 @@ export default function UltraFuturisticFooter2029V2() {
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
                 >
                   <social.icon className="w-4 h-4" />
-=======
-                  <social.icon className='w-4 h-4' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Link>
-=======
-                  <social.icon className='w-4 h-4' />                </Link>
-
-                </Link>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </motion.div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Newsletter Signup */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -1326,14 +727,6 @@ export default function UltraFuturisticFooter2029V2() {
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
         className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='text-center'>
@@ -1351,7 +744,6 @@ export default function UltraFuturisticFooter2029V2() {
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50'
               />
-<<<<<<< HEAD
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>                Subscribe      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
@@ -1368,38 +760,13 @@ export default function UltraFuturisticFooter2029V2() {
                 className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-=======
-              <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Subscribe
               </button>
             </div>
           </div>
         </div>
       </motion.div>
-<<<<<<< HEAD
     </footer>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-}
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-<<<<<<< HEAD
-    </footer>;
 );
 }
-=======
-    </footer>
-  );
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

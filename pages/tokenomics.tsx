@@ -1,50 +1,17 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 type DistributionItem = any;
-=======
-type DistributionItem = { label: string; percent: number }
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-=======
-
-type DistributionItem = { label: string; percent: number };
-
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-}
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-type DistributionItem = { label: string; percent: number }
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function TokenomicsWhitepaperBuilder() {
-=======
-type DistributionItem = { label: string, percent: number };
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
-export default function TokenomicsWhitepaperBuilder(req, res) {
-  try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-export default function TokenomicsWhitepaperBuilder() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-<<<<<<< HEAD
   const [useCases, setUseCases] = useState<string>(
     'Access to premium AI agents, marketplace discounts, reputation staking, governance participation'
   );
   const [rewardsLogic, setRewardsLogic] = useState<string>(
     'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
-<<<<<<< HEAD
   );  const [distribution, setDistribution] = useState<DistributionItem[]>([
     { label: 'Ecosystem & Rewards', percent: 35 }
     { label: 'Community Treasury', percent: 20 }
@@ -52,16 +19,6 @@ export default function TokenomicsWhitepaperBuilder() {;
     { label: 'Investors', percent: 15 }
     { label: 'Liquidity & Market Making', percent: 10 }
     { label: 'Advisors & Partnerships', percent: 5 }
-=======
-  );
-  const [distribution, setDistribution] = useState<DistributionItem[]>([
-    { label: 'Ecosystem & Rewards', percent: 35 },
-    { label: 'Community Treasury', percent: 20 },
-    { label: 'Team & Contributors', percent: 15 },
-    { label: 'Investors', percent: 15 },
-    { label: 'Liquidity & Market Making', percent: 10 },
-    { label: 'Advisors & Partnerships', percent: 5 },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ]);
   const [governance, setGovernance] = useState<string>(
     'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
@@ -74,15 +31,8 @@ export default function TokenomicsWhitepaperBuilder() {;
     () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
     [distribution]
   );
-<<<<<<< HEAD
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
-=======
-
-  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [activeSection, setActiveSection] =
     useState<string>('Executive Summary');
   const previewMarkdown = useMemo(() => {
@@ -110,19 +60,11 @@ export default function TokenomicsWhitepaperBuilder() {;
     jurisdiction
     legalReview
   ]);
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   async function handleGenerate() {
     try {
       setIsGenerating(true);
       const res = await fetch('/api/whitepaper/generate', {
-<<<<<<< HEAD
         method: 'POST'
-=======
-        method: 'POST',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         headers: {
           'Content-Type': 'application/json'
           'X-Admin': isAdmin ? 'true' : 'false'
@@ -146,44 +88,24 @@ export default function TokenomicsWhitepaperBuilder() {;
       console.error(e);
       alert('Generation failed');
     } finally {
-<<<<<<< HEAD
       setIsGenerating(false);    }
-=======
-      setIsGenerating(false);
-    }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function handleDownload(ext: 'md' | 'pdf') {
     if (ext === 'md') {
       const blob = new Blob([previewMarkdown], {
-<<<<<<< HEAD
         type: 'text/markdown;charset=utf-8'
       });      const url = URL.createObjectURL(blob);
-=======
-        type: 'text/markdown;charset=utf-8',
-      });
-      const url = URL.createObjectURL(blob);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       const a = document.createElement('a');
       a.href = url;
       a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-<<<<<<< HEAD
       URL.revokeObjectURL(url);    } else {
       const res = await fetch('/api/whitepaper/export', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ markdown: previewMarkdown, tokenName })
-=======
-      URL.revokeObjectURL(url);
-    } else {
-      const res = await fetch('/api/whitepaper/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName }),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       });
       if (!res.ok) {
         alert('PDF export failed');
@@ -200,29 +122,8 @@ const { url } = await res.json();
     key: keyof DistributionItem
     value: string
   ) {
-<<<<<<< HEAD
     setDistribution(prev => {      const copy = [...prev];
-<<<<<<< HEAD
       const item = { ...copy[index] }
-=======
-<<<<<<< HEAD
-    setDistribution(prev => {
-      const copy = [...prev];
-      const item = { ...copy[index] };
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-=======
-type DistributionItem = { label: string, percent: number };
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
-export default function TokenomicsWhitepaperBuilder(req, res) {
-  try {
-  const [isAdmin, setIsAdmin] = useState(true);
-  const [publicPreview, setPublicPreview] = useState(false);
-  const [legalReview, setLegalReview] = useState(false);
-  const [tokenName, setTokenName] = useState('ZION$');
-  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
   const [distribution, setDistribution] = useState<DistributionItem[]>([;
@@ -325,103 +226,37 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const item = { ...copy[index] };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
       return copy;
     });
-<<<<<<< HEAD
   }
   function addDistributionItem() {
     setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
   }
   function removeDistributionItem(index: number) {
-<<<<<<< HEAD
     setDistribution(prev => prev.filter((_, i) => i !== index));  }
   async function handleShareableLink() {
     const res = await fetch('/api/whitepaper/share', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })
-=======
-    setDistribution(prev => prev.filter((_, i) => i !== index));
-  }
-
-  async function handleShareableLink() {
-    const res = await fetch('/api/whitepaper/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     if (!res.ok) {
-=======
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function addDistributionItem() {;
-    setDistribution((prev) => [...prev, { label: 'New Allocation', percent: 0 }]);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function removeDistributionItem(index: number) {;
-    setDistribution((prev) => prev.filter((_, i) => i !== index));
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function handleShareableLink() {;
-    const res = await fetch('/api/whitepaper/share', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),;
-    if (!res.ok) {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       alert('Failed to create share link');
       return;
-<<<<<<< HEAD
     }
 }
 
 const { url } = await res.json();
-=======
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    const { url } = await res.json();
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     await navigator.clipboard.writeText(url);
     alert('Shareable link copied to clipboard');
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -431,21 +266,6 @@ const { url } = await res.json();
     'Governance Model'
     'Risks + Disclaimers'
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-}
-  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <>
       <Head>
@@ -466,23 +286,11 @@ const { url } = await res.json();
             <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
           </div>
         </div>
-<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <div className='space-y-6'>
             <div className='rounded-lg border p-4 space-y-4'>
               <h2 className='font-medium'>Builder Inputs</h2>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="space-y-6">
-            <div className="rounded-lg border p-4 space-y-4">
-              <h2 className="font-medium">Builder Inputs</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -512,7 +320,6 @@ const { url } = await res.json();
                     <option value="AE">UAE</option>
                   </select>
                 </div>
-<<<<<<< HEAD
                 <div className='flex items-center gap-2'>
                   <input
                     id='legalReview'
@@ -522,17 +329,9 @@ const { url } = await res.json();
                   />
                   <label htmlFor='legalReview' className='text-sm'>
                     Submit to Counsel
-<<<<<<< HEAD
                   </label>                </div>
               </div>
             </div>
-=======
-                  </label>
-                </div>
-              </div>
-            </div>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <div className='rounded-lg border p-4 space-y-3'>
               <h3 className='font-medium'>Distribution</h3>
               <div className='space-y-2'>
@@ -574,56 +373,11 @@ const { url } = await res.json();
                   >
                     Add allocation
                   </button>
-=======
-                <div className="flex items-center gap-2">
-                  <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
-                  <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='mt-3'>                <DistributionDonut data={distribution} />
               </div>
             </div>
-=======
-              <div className='mt-3'>
-                <DistributionDonut data={distribution} />
-              </div>
-            </div>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            </div>
-            <div className="rounded-lg border p-4 space-y-3">
-              <h3 className="font-medium">Distribution</h3>
-              <div className="space-y-2">
-                {distribution.map((item, idx) => (
-                  <div key={idx} className="grid grid-cols-12 gap-2 items-center">
-                    <input className="col-span-6 border rounded-md px-3 py-2" value={item.label} onChange={(e) => updateDistribution(idx, 'label', e.target.value)} />
-                    <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
-                    <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
-                  </div>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <div className="flex items-center justify-between text-xs opacity-70">
-                  <span>Total: {totalPercent}%</span>
-                  <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
-                </div>
-              </div>
-              <div className="mt-3">
-                <DistributionDonut data={distribution} />
-              </div>
-            </div>
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <div className='rounded-lg border p-4 space-y-3'>
               <h3 className='font-medium'>Operator Prompt</h3>
               <textarea
@@ -634,11 +388,7 @@ const { url } = await res.json();
               />
               <div className='flex gap-3'>
                 <button
-<<<<<<< HEAD
                   disabled={!isAdmin |isGenerating}
-=======
-                  disabled={!isAdmin || isGenerating}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >
@@ -649,27 +399,10 @@ const { url } = await res.json();
                   className='px-4 py-2 rounded-md border'
                 >
                   Clear AI Draft
-=======
-            <div className="rounded-lg border p-4 space-y-3">
-              <h3 className="font-medium">Operator Prompt</h3>
-              <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
-              <div className="flex gap-3">
-                <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50">
-                  {isGenerating ? 'Generating…' : 'Generate with GPT'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
             </div>
-<<<<<<< HEAD
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
@@ -684,17 +417,9 @@ const { url } = await res.json();
                   className='px-3 py-2 rounded-md border'
                 >
                   Download PDF
-<<<<<<< HEAD
                 </button>              </div>
             </div>
           </div>
-=======
-                </button>
-              </div>
-            </div>
-          </div>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <div className='rounded-lg border p-4'>
             <div className='flex items-center justify-between mb-3'>
               <div className='flex gap-2 overflow-x-auto'>
@@ -707,67 +432,16 @@ const { url } = await res.json();
                     {s}
                   </button>
                 ))}
-=======
-            <div className="rounded-lg border p-4 space-y-2">
-              <h3 className="font-medium">Output</h3>
-              <div className="flex gap-3">
-                <button onClick={() => handleDownload('md')} className="px-3 py-2 rounded-md border">Download .md</button>
-                <button onClick={() => handleDownload('pdf')} className="px-3 py-2 rounded-md border">Download PDF</button>
-              </div>
-            </div>
-<<<<<<< HEAD
-            <MarkdownPreview
-              markdown={previewMarkdown}
-              activeSection={activeSection}
-<<<<<<< HEAD
-            />          </div>
-=======
-            />
-          </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-          </div>
-          <div className="rounded-lg border p-4">
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex gap-2 overflow-x-auto">
-                {sections.map((s) => (
-                  <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
           </div>
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 function buildLocalMarkdown(input: {
-=======
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-function buildLocalMarkdown(input: {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   tokenName: string;
   tokenSupply: string;
   useCases: string;
@@ -780,11 +454,6 @@ function buildLocalMarkdown(input: {;
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function jurisdictionalNote(j: string) {
   switch (j) {
     case 'US':
@@ -798,56 +467,12 @@ function jurisdictionalNote(j: string) {
     default:
       return 'Intended strictly for utility use.';
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) |1;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-}
-;
-function jurisdictionalNote(j: string) {;
-  switch (j) {;
-    case 'US':;
-      return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
-    case 'EU':;
-      return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.',;
-    case 'SG':;
-      return 'Intended utility token under MAS guidance, prospective purchasers should not view it as capital markets products.',;
-    case 'AE':;
-      return 'Intended utility token within relevant UAE free zone guidance, not an investment product.',;
-    default:;
-      return 'Intended strictly for utility use.';
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-1 text-sm">
       {data.map((d, idx) => (
@@ -857,7 +482,6 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
           </div>
           <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
         </div>
-<<<<<<< HEAD
       ))}
     </div>
   );
@@ -867,16 +491,7 @@ function MarkdownPreview({
 }: {
   markdown: string;
   activeSection: string;
-<<<<<<< HEAD
 }) {  // Very lightweight section filter: split by headings
-<<<<<<< HEAD
-=======
-}) {
-  // Very lightweight section filter: split by headings
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g)
     const map: Record<string, string> = {}
@@ -885,7 +500,6 @@ function MarkdownPreview({
       const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
     });
-<<<<<<< HEAD
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
 
@@ -894,40 +508,6 @@ function MarkdownPreview({
       {content |markdown}
     </pre>
   );
-=======
-<<<<<<< HEAD
-    return map;
-  }, [markdown]);
-
-  const content = parts[activeSection] || '';
-
-  return (
-    <pre className='whitespace-pre-wrap text-sm leading-6'>
-      {content || markdown}
-    </pre>
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
-  // Very lightweight section filter: split by headings
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -940,21 +520,6 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }, [markdown]),
   const content = parts[activeSection] || '',
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<pre className='whitespace-pre-wrap text-sm leading-6'>
-      {content || markdown}
-    </pre>
-  );
-
-}
-}
-}
-}
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
 ;
@@ -979,9 +544,3 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface ShortUrl {
-=======
-export interface ShortUrl {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   originalUrl: string;
   shortCode: string;
@@ -16,12 +10,7 @@ export interface ShortUrl {;
 
   userId?: string
 }
-<<<<<<< HEAD
 export interface UrlAnalytics {
-=======
-
-export interface UrlAnalytics {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   totalClicks: number;
   uniqueVisitors: number;
   referrers: string[];
@@ -33,12 +22,7 @@ export interface UrlAnalytics {;
 
   clickHistory: ClickEvent[]
 }
-<<<<<<< HEAD
 export interface ClickEvent {
-=======
-
-export interface ClickEvent {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   timestamp: Date;
   ipAddress: string;
@@ -52,12 +36,7 @@ export interface ClickEvent {;
 
   os: string
 }
-<<<<<<< HEAD
 export interface CreateShortUrlRequest {
-=======
-
-export interface CreateShortUrlRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   originalUrl: string;
   customCode?: string;
 
@@ -105,11 +84,6 @@ class UrlShortenerService {
     if (url.expiresAt && url.expiresAt < new Date()) {
       url.isActive = false
       return null
-=======
-<<<<<<< HEAD
-export interface ShortUrl {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   originalUrl: string,;
   shortCode: string,;
@@ -192,19 +166,9 @@ class UrlShortenerService {;
     if (url.expiresAt && url.expiresAt < new Date()) {;
       url.isActive = false,;
       return null;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return url
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this.urls.get(shortCode);
     if (!url) return;
@@ -221,29 +185,6 @@ class UrlShortenerService {;
       analytics.lastClicked = new Date();
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer)
-=======
-;
-  async trackClick(shortCode: string, clickData: Omit<ClickEvent 'id'>): Promise<void> {;
-    const url = this.urls.get(shortCode),;
-    if (!url) return,;
-    const clickEvent: ClickEvent = {;
-      id: this.generateId(),;
-      ...clickData;
-    },;
-    const urlClicks = this.clicks.get(shortCode) || [],;
-    urlClicks.push(clickEvent),;
-    this.clicks.set(shortCode, urlClicks),;
-    const analytics = this.analytics.get(shortCode),;
-    if (analytics) {;
-      analytics.totalClicks++,;
-      analytics.lastClicked = new Date(),;
-      if (!analytics.referrers.includes(clickData.referrer)) {;
-        analytics.referrers.push(clickData.referrer);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       if (!analytics.countries.includes(clickData.country)) {
         analytics.countries.push(clickData.country)
@@ -262,11 +203,6 @@ class UrlShortenerService {;
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array.from(this.urls.values()).filter(url => url.userId === userId)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
     const url = this.urls.get(shortCode);
     if (!url |(userId && url.userId !== userId)) return false;
@@ -284,43 +220,12 @@ class UrlShortenerService {;
     let result = '';
     for (let i = 0, i < 6, i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length))
-=======
-;
-  async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {;
-    const url = this.urls.get(shortCode),;
-    if (!url || (userId && url.userId !== userId)) return false,;
-    url.isActive = false,;
-    return true;
-  }
-;
-  async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {;
-    const url = this.urls.get(shortCode),;
-    if (!url || (userId && url.userId !== userId)) return false,;
-    Object.assign(url, updates),;
-    return true;
-  }
-;
-  private generateShortCode(): string {;
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',;
-    let result = '',;
-    for (let i = 0, i < 6, i++) {;
-      result += chars.charAt(Math.floor(Math.random() * chars.length));
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return result
   }
   private generateId(): string {
     return Math.random().toString(36).substr(2, 9)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
@@ -335,34 +240,6 @@ class UrlShortenerService {;
     this.clicks = new Map(data.clicks)
   }
 }
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const urlShortenerService = new UrlShortenerService();
 
-=======
-;
-  // Utility methods for data persistence (in a real app, this would use a database);
-  async exportData(): Promise<any> {;
-    return {;
-      urls: Array.from(this.urls.entries()),;
-      analytics: Array.from(this.analytics.entries()),;
-      clicks: Array.from(this.clicks.entries());
-    }
-  }
-;
-  async importData(data: any): Promise<void> {;
-    this.urls = new Map(data.urls),;
-    this.analytics = new Map(data.analytics),;
-    this.clicks = new Map(data.clicks);
-  }
-}
-;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const urlShortenerService = new UrlShortenerService();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

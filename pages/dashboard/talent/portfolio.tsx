@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
@@ -8,18 +6,12 @@ import ResumePreview, {
   ResumeData;
 } from '../../../components/ui/ResumePreview';
 import { createServerClient } from '../../../utils/supabase/server';
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const ref = useRef<HTMLDivElement>(null);
   const data: ResumeData = {
     name: 'Your Name'
     contact: {
-<<<<<<< HEAD
       email: 'you@example.com'
       phone: '+1 555-123-4567'
       location: 'City, Country'
@@ -27,15 +19,6 @@ export default function TalentPortfolio() {
     summary: 'AI talent focused on LLM apps and marketplaces.'
     skills: ['AI', 'TypeScript', 'Next.js']
     technologies: ['OpenAI', 'Supabase']
-=======
-      email: 'you@example.com',
-      phone: '+1 555-123-4567',
-      location: 'City, Country',
-    },
-    summary: 'AI talent focused on LLM apps and marketplaces.',
-    skills: ['AI', 'TypeScript', 'Next.js'],
-    technologies: ['OpenAI', 'Supabase'],
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     experience: [
       {
         title: 'AI Engineer'
@@ -56,29 +39,6 @@ export default function TalentPortfolio() {
     certifications: ['AWS SAA-C03']
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]
   }
-=======
-import {GetServerSideProps} from 'next';
-import React, { useRef, useState } from 'react';
-import PdfExportButton from '../../../components/ui/PdfExportButton';
-import ResumePreview, {;
-  ResumeData,;
-} from '../../../components/ui/ResumePreview';
-import { createServerClient } from '../../../utils/supabase/server';
-export default function TalentPortfolio() {;
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const ref = useRef<HTMLDivElement>(null);
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { GetServerSideProps } from 'next',
-import React, { useRef, useState } from 'react',
-import PdfExportButton from '../../../components/ui/PdfExportButton',
-import ResumePreview, { ResumeData } from '../../../components/ui/ResumePreview',
-import { createServerClient } from '../../../utils/supabase/server',
-export default function TalentPortfolio() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const ref = useRef<HTMLDivElement>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const data: ResumeData = {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' },
@@ -89,7 +49,6 @@ export default function TalentPortfolio() {
     education: [{ institution: 'University of Example', degree: 'B.Sc.', start: '2016', end: '2020' }],
     certifications: ['AWS SAA-C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="relative">
       <div className="flex items-center gap-3 mb-4">
@@ -111,7 +70,6 @@ export default function TalentPortfolio() {
           <option value="dark">Dark</option>
         </select>
       </div>
-<<<<<<< HEAD
       <PdfExportButton
         targetRef={ref}
         fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
@@ -119,68 +77,11 @@ export default function TalentPortfolio() {
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getServerSideProps: GetServerSideProps = async () => {
-=======
-export const getServerSideProps: GetServerSideProps = async () => {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const supabase = createServerClient();
   const user = await (supabase as any).auth.getUser?.()
   if (!user) {
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
-<<<<<<< HEAD
 return { props: {} }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  return { props: {} };
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-return { props: {} };
-};
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
-      <ResumePreview ref={ref} data={data} theme={theme} />
-    </div>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export const getServerSideProps: GetServerSideProps = async () => {;
-  const supabase = createServerClient();
-  const user = await (supabase as any).auth.getUser?.();
-  if (!user) {;
-    return { redirect: { destination: '/auth', permanent: false } } as any;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return { props: {}   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

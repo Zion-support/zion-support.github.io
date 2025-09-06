@@ -1,25 +1,13 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
-=======
-import React, { useState, useEffect } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
   BookOpen, MessageCircle 
  } from 'lucide-react';
 const contactInfo = null;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -49,73 +37,8 @@ const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,;
-  MessageCircle,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
-  BookOpen, MessageCircle 
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
-=======
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const serviceCategories = [
   {
     title: 'AI & Machine Learning 2026'
@@ -142,7 +65,6 @@ const serviceCategories = [
         price: '$399/month'
       }
       {
-<<<<<<< HEAD
         name: 'AI Content Creation Revolution'
         href: '/ai-content-creation-revolution'
         description: 'Unlimited AI content generation'
@@ -159,20 +81,6 @@ const serviceCategories = [
     icon: Atom
     color: 'from-blue-600 to-cyan-600'
     description: 'Quantum-powered solutions'
-=======
-        name: 'AI Content Creation Revolution',
-        href: '/ai-content-creation-revolution',
-        description: 'Unlimited AI content generation',
-        price: '$599/month',
-      },
-    ],
-  },
-  {
-    title: 'Quantum Computing & Security',
-    icon: Atom,
-    color: 'from-blue-600 to-cyan-600',
-    description: 'Quantum-powered solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Quantum Neural Interface'
@@ -193,7 +101,6 @@ const serviceCategories = [
         price: '$12,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'Quantum Internet Infrastructure'
         href: '/quantum-internet-infrastructure-platform'
         description: 'Build the quantum internet'
@@ -210,20 +117,6 @@ const serviceCategories = [
     icon: Sparkles
     color: 'from-green-600 to-emerald-600'
     description: 'Cutting-edge innovations'
-=======
-        name: 'Quantum Internet Infrastructure',
-        href: '/quantum-internet-infrastructure-platform',
-        description: 'Build the quantum internet',
-        price: '$15,999/month',
-      },
-    ],
-  },
-  {
-    title: 'Emerging Technologies 2026',
-    icon: Sparkles,
-    color: 'from-green-600 to-emerald-600',
-    description: 'Cutting-edge innovations',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Holographic Metaverse'
@@ -244,7 +137,6 @@ const serviceCategories = [
         price: '$1,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'Autonomous Manufacturing'
         href: '/autonomous-manufacturing-ai-platform'
         description: 'Self-optimizing manufacturing'
@@ -261,20 +153,6 @@ const serviceCategories = [
     icon: Shield
     color: 'from-red-600 to-orange-600'
     description: 'Enterprise-grade solutions'
-=======
-        name: 'Autonomous Manufacturing',
-        href: '/autonomous-manufacturing-ai-platform',
-        description: 'Self-optimizing manufacturing',
-        price: '$3,499/month',
-      },
-    ],
-  },
-  {
-    title: 'Enterprise IT Solutions 2026',
-    icon: Shield,
-    color: 'from-red-600 to-orange-600',
-    description: 'Enterprise-grade solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Zero Trust Architecture'
@@ -295,7 +173,6 @@ const serviceCategories = [
         price: 'Custom pricing'
       }
       {
-<<<<<<< HEAD
         name: 'Blockchain Infrastructure'
         href: '/blockchain-infrastructure-platform-2026'
         description: 'Enterprise blockchain'
@@ -312,20 +189,6 @@ const serviceCategories = [
     icon: Microscope
     color: 'from-teal-600 to-cyan-600'
     description: 'Healthcare innovation'
-=======
-        name: 'Blockchain Infrastructure',
-        href: '/blockchain-infrastructure-platform-2026',
-        description: 'Enterprise blockchain',
-        price: 'Custom pricing',
-      },
-    ],
-  },
-  {
-    title: 'Healthcare & Life Sciences',
-    icon: Microscope,
-    color: 'from-teal-600 to-cyan-600',
-    description: 'Healthcare innovation',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'AI Drug Discovery'
@@ -346,7 +209,6 @@ const serviceCategories = [
         price: '$6,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'AI Legal Research'
         href: '/ai-legal-research-platform'
         description: 'Revolutionary legal tech'
@@ -363,20 +225,6 @@ const serviceCategories = [
     icon: DollarSign
     color: 'from-emerald-600 to-green-600'
     description: 'Fintech solutions'
-=======
-        name: 'AI Legal Research',
-        href: '/ai-legal-research-platform',
-        description: 'Revolutionary legal tech',
-        price: '$899/month',
-      },
-    ],
-  },
-  {
-    title: 'Financial Technology',
-    icon: DollarSign,
-    color: 'from-emerald-600 to-green-600',
-    description: 'Fintech solutions',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: [
       {
         name: 'Autonomous Supply Chain'
@@ -397,7 +245,6 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
-<<<<<<< HEAD
         name: 'AI Business Intelligence'
         href: '/autonomous-business-intelligence-network'
         description: 'Self-evolving BI'
@@ -410,50 +257,11 @@ const serviceCategories = [
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ]
   }
-=======
-        name: 'AI Business Intelligence',
-        href: '/autonomous-business-intelligence-network',
-        description: 'Self-evolving BI',
-        price: '$1,299/month',
-      },
-    ],
-  },];      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization-ai', description: 'AI supply chain optimization', price: '$899/month' },
-      { name: 'Autonomous Marketing AI', href: '/autonomous-marketing-ai-platform', description: 'Self-optimizing marketing', price: '$1,499/month' };
-      { name: 'AI Cybersecurity', href: '/ai-cybersecurity-platform', description: 'Next-gen security', price: '$2,999/month' };
-      { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
-    ]
-  }
-<<<<<<< HEAD
 
-];
-=======
-<<<<<<< HEAD
-=======
-
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'About Us', href: '/about', icon: Users }
   { name: '2026 Services', href: '/2026-services-showcase', icon: Rocket }
-=======
-        name: 'AI Business Intelligence',
-        href: '/autonomous-business-intelligence-network',
-        description: 'Self-evolving BI',
-        price: '$1,299/month',
-      },
-    ],
-  },
-];
-
-const companyLinks = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: '2026 Services', href: '/2026-services-showcase', icon: Rocket },
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   {
     name: 'Innovative 2026'
     href: '/2026-innovative-services-showcase'
@@ -465,7 +273,6 @@ const companyLinks = [
     icon: Sparkles
   }
   {
-<<<<<<< HEAD
     name: '2026 Pricing'
     href: '/revolutionary-2026-pricing'
     icon: DollarSign
@@ -480,18 +287,6 @@ const companyLinks = [
   { name: 'Blog & Resources', href: '/blog', icon: BookOpen }
   { name: 'Careers', href: '/careers', icon: Users }
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-=======
-    name: '2026 Pricing',
-    href: '/revolutionary-2026-pricing',
-    icon: DollarSign,
-  },
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: 'Careers', href: '/careers', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
-];
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -501,16 +296,10 @@ const UltraAdvancedNavigation2026 = () => {
       setIsScrolled(window.scrollY > 20);
     }
     window.addEventListener('scroll', handleScroll);
-<<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-=======
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const navigationItems = [
     {
       name: 'AI Services'
@@ -545,7 +334,6 @@ const UltraAdvancedNavigation2026 = () => {
           description: 'Legal AI and compliance'
         }
         {
-<<<<<<< HEAD
           name: 'AI Creative'
           href: '/services?category=ai-creative'
           description: 'Creative AI and content generation'
@@ -564,20 +352,6 @@ const UltraAdvancedNavigation2026 = () => {
       icon: Atom
       color: 'from-purple-500 to-indigo-500'
       description: 'Quantum computing and space technology'
-=======
-          name: 'AI Creative',
-          href: '/services?category=ai-creative',
-          description: 'Creative AI and content generation',
-        },
-      ],
-    },
-    {
-      name: 'Quantum Tech',
-      href: '/services?category=quantum',
-      icon: Atom,
-      color: 'from-purple-500 to-indigo-500',
-      description: 'Quantum computing and space technology',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       subItems: [
         {
           name: 'Quantum Space Tech'
@@ -595,7 +369,6 @@ const UltraAdvancedNavigation2026 = () => {
           description: 'Quantum-powered AI'
         }
         {
-<<<<<<< HEAD
           name: 'Quantum Security'
           href: '/services?category=quantum-security'
           description: 'Quantum encryption and security'
@@ -612,20 +385,6 @@ const UltraAdvancedNavigation2026 = () => {
       icon: Globe
       color: 'from-pink-500 to-rose-500'
       description: 'Virtual worlds and digital reality'
-=======
-          name: 'Quantum Security',
-          href: '/services?category=quantum-security',
-          description: 'Quantum encryption and security',
-        },
-      ],
-    },
-    {
-      name: 'Metaverse',
-      href: '/services?category=metaverse',
-      icon: Globe,
-      color: 'from-pink-500 to-rose-500',
-      description: 'Virtual worlds and digital reality',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       subItems: [
         {
           name: 'Metaverse Platforms'
@@ -643,7 +402,6 @@ const UltraAdvancedNavigation2026 = () => {
           description: '3D holographic systems'
         }
         {
-<<<<<<< HEAD
           name: 'Consciousness Interface'
           href: '/services?category=consciousness-interface'
           description: 'Brain-computer interfaces'
@@ -660,20 +418,6 @@ const UltraAdvancedNavigation2026 = () => {
       icon: Zap
       color: 'from-green-500 to-emerald-500'
       description: 'Enterprise solutions and infrastructure'
-=======
-          name: 'Consciousness Interface',
-          href: '/services?category=consciousness-interface',
-          description: 'Brain-computer interfaces',
-        },
-      ],
-    },
-    {
-      name: 'Enterprise IT',
-      href: '/services?category=enterprise',
-      icon: Zap,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Enterprise solutions and infrastructure',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       subItems: [
         {
           name: 'Cloud Solutions'
@@ -691,7 +435,6 @@ const UltraAdvancedNavigation2026 = () => {
           description: 'Business intelligence and analytics'
         }
         {
-<<<<<<< HEAD
           name: 'DevOps'
           href: '/services?category=devops'
           description: 'Development and operations'
@@ -703,51 +446,12 @@ const UltraAdvancedNavigation2026 = () => {
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
     }
-=======
-          name: 'DevOps',
-          href: '/services?category=devops',
-          description: 'Development and operations',
-        },
-      ],
-    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },
-        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },
-        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
-        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
-      ]
-    }
-<<<<<<< HEAD
 
-  ];
-=======
-<<<<<<< HEAD
-=======
-
-  ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-=======
-          name: 'DevOps',
-          href: '/services?category=devops',
-          description: 'Development and operations',
-        },
-      ],
-    },
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
     <>
       {/* Enhanced Navigation Bar */}
@@ -760,14 +464,6 @@ const UltraAdvancedNavigation2026 = () => {
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Logo */}
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -782,7 +478,6 @@ const UltraAdvancedNavigation2026 = () => {
                 </div>
                 <div className='text-xs text-gray-400'>
                   Revolutionary Technology Solutions
-<<<<<<< HEAD
                 </div>              </div>
             </Link>
             {/* Desktop Navigation */}
@@ -801,16 +496,12 @@ const UltraAdvancedNavigation2026 = () => {
                   Zion Tech Group
                 </div>
                 <div className="text-xs text-gray-400">Revolutionary Technology Solutions</div>
-=======
-                </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </Link>
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>
-<<<<<<< HEAD
                     onClick={() =>
                       setActiveDropdown(
                         activeDropdown === item.name ? null : item.name
@@ -824,17 +515,11 @@ const UltraAdvancedNavigation2026 = () => {
                       className={`w-4 h-4 transition-transform duration-200 ${
                         activeDropdown === item.name ? 'rotate-180' : ''
                       }`}
-<<<<<<< HEAD
                     />                  </button>                    <item.icon className="w-5 h-5" />
                     <span className="font-medium">{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
-=======
-                    />
-                  </button>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -872,7 +557,6 @@ const UltraAdvancedNavigation2026 = () => {
                                 <div className='text-white font-medium group-hover:text-purple-300 transition-colors duration-200'>
                                   {subItem.name}
                                 </div>
-<<<<<<< HEAD
                                 <div className='text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200'>                                  {subItem.description}                      >
                         <div className="p-4">
                           <div className="flex items-center space-x-3 mb-4">
@@ -896,42 +580,17 @@ const UltraAdvancedNavigation2026 = () => {
                                   {subItem.name}
                                 </div>
                                 <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
-=======
-<<<<<<< HEAD
-                                <div className='text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-              </div>
-            </Link>
-
-            {/* Desktop Navigation */}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                                   {subItem.description}
                                 </div>
                               </Link>
                             ))}
                           </div>
-<<<<<<< HEAD
                           <Link
                             href={item.href}
                             className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                            onClick={() => setActiveDropdown(null)}
                           <Link
                             href={item.href}
                             className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-=======
-
-                          <Link
-                            href={item.href}
-                            className='block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'
-                            onClick={() => setActiveDropdown(null)}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           >
                             View All {item.name}
                           </Link>
@@ -941,24 +600,12 @@ const UltraAdvancedNavigation2026 = () => {
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Quick Links */}
               <div className='flex items-center space-x-6'>
                 <Link
                   href='/services'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
                 >
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   All Services
                 </Link>
                 <Link
@@ -970,16 +617,12 @@ const UltraAdvancedNavigation2026 = () => {
                 <Link
                   href='/contact'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
-<<<<<<< HEAD
                 >                  Contact                  All Services
                 </Link>
                 <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
                   Pricing
                 </Link>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
-=======
-                >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   Contact
                 </Link>
               </div>
@@ -992,7 +635,6 @@ const UltraAdvancedNavigation2026 = () => {
               </div>
               <Link
                 href='/contact'
-<<<<<<< HEAD
                 className='px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105'              >            <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
                 <Phone className="w-4 h-4" />
@@ -1001,21 +643,9 @@ const UltraAdvancedNavigation2026 = () => {
               <Link
                 href="/contact"
                 className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
-=======
-                className='px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105'
-              >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 Get Started
               </Link>
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1025,25 +655,13 @@ const UltraAdvancedNavigation2026 = () => {
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
-<<<<<<< HEAD
               )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
-              )}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </button>
           </div>
         </div>
       </nav>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -1052,22 +670,8 @@ const UltraAdvancedNavigation2026 = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-<<<<<<< HEAD
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
-=======
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             onClick={() => setIsOpen(false)}
-=======
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
-
-            onClick={() => setIsOpen(false)}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
               initial={{ x: '100%' }}
@@ -1089,7 +693,6 @@ const UltraAdvancedNavigation2026 = () => {
                   onClick={() => setIsOpen(false)}
                   className='p-2 text-gray-300 hover:text-white transition-colors duration-200'
                 >
-<<<<<<< HEAD
                   <X className='w-6 h-6' />                </button>
               </div>
               {/* Mobile Navigation Items */}            >
@@ -1106,13 +709,9 @@ const UltraAdvancedNavigation2026 = () => {
                   className="p-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   <X className="w-6 h-6" />
-=======
-                  <X className='w-6 h-6' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </button>
               </div>
               {/* Mobile Navigation Items */}
-<<<<<<< HEAD
               <div className='space-y-4'>
                 {navigationItems.map(item => (
                   <div
@@ -1136,21 +735,8 @@ const UltraAdvancedNavigation2026 = () => {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-<<<<<<< HEAD
                           className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'                          onClick={() => setIsOpen(false)}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
-=======
-                          className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           onClick={() => setIsOpen(false)}
-=======
-
-                          onClick={() => setIsOpen(false)}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         >
                           {subItem.name}
                         </Link>
@@ -1158,46 +744,29 @@ const UltraAdvancedNavigation2026 = () => {
                     </div>
                   </div>
                 ))}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Quick Links */}
                 <div className='space-y-3 pt-4'>
                   <Link
                     href='/services'
-<<<<<<< HEAD
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                <div className="space-y-3 pt-4">
                   <Link
                     href="/services"
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-=======
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'
-                    onClick={() => setIsOpen(false)}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     All Services
                   </Link>
                   <Link
                     href='/pricing'
-<<<<<<< HEAD
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                    href="/pricing"
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-=======
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     onClick={() => setIsOpen(false)}
                   >
                     Pricing
                   </Link>
                   <Link
                     href='/contact'
-<<<<<<< HEAD
                     className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'                    onClick={() => setIsOpen(false)}                    href="/contact"
                     className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium"
-=======
-                    className='block text-gray-300 hover:text-white transition-colors duration-200 font-medium'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     onClick={() => setIsOpen(false)}
                   >
                     Contact
@@ -1215,7 +784,6 @@ const UltraAdvancedNavigation2026 = () => {
                   </div>
                   <div className='flex items-center space-x-3 text-gray-300'>
                     <MapPin className='w-4 h-4' />
-<<<<<<< HEAD
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>
                 </div>
                 {/* Get Started Button - Mobile */}
@@ -1230,24 +798,16 @@ const UltraAdvancedNavigation2026 = () => {
                   <div className="flex items-center space-x-3 text-gray-300">
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.address}</span>
-=======
-                    <span className='text-sm'>{contactInfo.address}</span>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
                 {/* Get Started Button - Mobile */}
                 <div className='pt-4'>
                   <Link
                     href='/contact'
-<<<<<<< HEAD
                     className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'                <div className="pt-4">
                   <Link
                     href="/contact"
                     className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-=======
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200'
-                    onClick={() => setIsOpen(false)}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   >
                     Get Started Today
                   </Link>
@@ -1257,47 +817,12 @@ const UltraAdvancedNavigation2026 = () => {
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraAdvancedNavigation2026;    </>
   );
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 export default UltraAdvancedNavigation2026;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
-=======
-export default UltraAdvancedNavigation2026;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default UltraAdvancedNavigation2026;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,19 +1,5 @@
-<<<<<<< HEAD
 import _React from';react' "export": const InstallPrompt = () => {
 }
 
 export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e.preventDefault() setDeferred(e)} window.addEventListener('beforeinstallprompt',handler) return () => window.removeEventListener('beforeinstallprompt',handler)},[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== 'accepted') {''';
-=======
-<<<<<<< HEAD:src.disabled/components/InstallPrompt.jsx
-<<<<<<< HEAD
-import React from\';react\' \"export\": const InstallPrompt = () => { export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e.preventDefault() setDeferred(e)} window.addEventListener(\'beforeinstallprompt\',handler) return () => window.removeEventListener(\'beforeinstallprompt\',handler)},[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== \'accepted\') {\''\';
-const React from";react" export: const InstallPrompt = () => { export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e.preventDefault() setDeferred(e)} window.addEventListener("beforeinstallprompt",handler) return () => window.removeEventListener("beforeinstallprompt",handler)},[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== "accepted") {""";"""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-import React from\';react\' \"export\": const InstallPrompt = () => { export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e.preventDefault() setDeferred(e)} window.addEventListener(\'beforeinstallprompt\',handler) return () => window.removeEventListener(\'beforeinstallprompt\',handler)},[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== \'accepted\') {\''\';
-const React from";react" export: const InstallPrompt = () => { export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e.preventDefault() setDeferred(e)} window.addEventListener("beforeinstallprompt",handler) return () => window.removeEventListener("beforeinstallprompt",handler)},[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== "accepted") {""";"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/InstallPrompt.jsx
 import _React from';react' "export": const InstallPrompt = () => { export default InstallPrompt const [deferred,setDeferred] = useState (null) useEffect ( () => { const handler = (e) => { e.preventDefault() setDeferred(e)} window.addEventListener('beforeinstallprompt',handler) return () => window.removeEventListener('beforeinstallprompt',handler)},[]) if (!deferred) return null const onClick = async () => { deferred.prompt() const result = await deferred.userChoice if (result.outcome !== 'accepted') {''';
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

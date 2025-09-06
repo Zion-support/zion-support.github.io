@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
@@ -13,30 +9,14 @@ interface Service {
   price: string;
   description: string;
   features: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   link: string
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
   link: string;
-=======
-  link: string;
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string;
   subtitle?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function UltraFuturisticServiceShowcase2029({
   services
   title = '2029 Cutting-Edge Services'
@@ -50,11 +30,7 @@ export default function UltraFuturisticServiceShowcase2029({
           transition={{ duration: 0.6 }}
           className='text-center mb-16'
 interface UltraFuturisticServiceShowcase2029Props {
-<<<<<<< HEAD
   services: Service[]
-=======
-  services: Service[],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title?: string;
   subtitle?: string
 }
@@ -65,23 +41,10 @@ export default function UltraFuturisticServiceShowcase2029({
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
-}
-
-export default function UltraFuturisticServiceShowcase2029({
-  services,
-  title = '2029 Cutting-Edge Services',
-  subtitle = 'Experience the future of technology with our revolutionary solutions',
-}: UltraFuturisticServiceShowcase2029Props) {
-  return (
-    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
           className='text-center mb-16'
         >
           <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
@@ -89,7 +52,6 @@ export default function UltraFuturisticServiceShowcase2029({
           </h2>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto'>{subtitle}</p>
         </motion.div>
-<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          {services.slice(0, 6).map((service, index) => (        >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
             {title}
@@ -99,35 +61,13 @@ export default function UltraFuturisticServiceShowcase2029({
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           {services.slice(0, 6).map((service, index) => (
-=======
-
-          {services.slice(0, 6).map((service, index) => (
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
-<<<<<<< HEAD
-=======
-
-            >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -152,63 +92,36 @@ export default function UltraFuturisticServiceShowcase2029({
                 <div className='flex items-center space-x-2'>
                   <Zap className='w-4 h-4 text-yellow-400' />
                   <Shield className='w-4 h-4 text-green-400' />
-<<<<<<< HEAD
                   <Brain className='w-4 h-4 text-purple-400' />                </div>              <div className="flex items-center justify-between mb-4">
                 <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                 <div className="flex items-center space-x-2">
                   <Zap className="w-4 h-4 text-yellow-400" />
                   <Shield className="w-4 h-4 text-green-400" />
                   <Brain className="w-4 h-4 text-purple-400" />
-=======
-                  <Brain className='w-4 h-4 text-purple-400' />
-                </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
               <Link
                 href={service.link}
                 className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'
               >
                 Get Started
-<<<<<<< HEAD
                 <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />              </Link>                className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-=======
-                <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
-              </Link>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </motion.div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className='text-center mt-12'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <Link
             href='/services'
             className='inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105'
           >
             View All Services
-<<<<<<< HEAD
             <ArrowRight className='w-4 h-4 ml-2' />          </Link>        >
           <Link
             href="/services"
@@ -216,13 +129,9 @@ export default function UltraFuturisticServiceShowcase2029({
           >
             View All Services
             <ArrowRight className="w-4 h-4 ml-2" />
-=======
-            <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </Link>
         </motion.div>
       </div>
-<<<<<<< HEAD
     </section>;
   );
 }
@@ -230,17 +139,4 @@ export default function UltraFuturisticServiceShowcase2029({
 }
 }
 }
-=======
-    </section>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,27 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  trace: on-first-retry'
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
- trace: on-first-retry' 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-// Playwright.config utility
-export const Playwright.config = () => {
-  // Implementation here
-  return null;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 reporter: [ ['list'], ['json', {
   outputFile: playwright-logs/test-results.json'
 }], ['html', {
@@ -29,34 +8,21 @@ reporter: [ ['list'], ['json', {
 }]];
 // Configure the web server to be started by Playwright webServer: {
   command: npm run dev', url: http://localhost:3000', reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI timeout: 120 * 1000, // 2 minutes timeout for server to start stdout: pipe', // Pipe stdout to the console' stderr: pipe', // Pipe stderr to the console'
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Optional: Define projects for different browsers // projects: [ // {
   // name: chromium', // use: {
   ...devices['Desktop Chrome']
 }, //
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // {
   // name: firefox', // use: {
   ...devices['Desktop Firefox']
 }, //
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // {
   // name: webkit', // use: {
   ...devices['Desktop Safari']
 }, //
-<<<<<<< HEAD
 }
 // ] });    ['list'],    ['json', { outputFile: playwright-logs/test-results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
   // Configure the web server to be started by Playwright
@@ -71,22 +37,9 @@ reporter: [ ['list'], ['json', {
   //   {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
-<<<<<<< HEAD
-<<<<<<< HEAD
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
   // ]
-=======
-};
-// ]
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
   // ]
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,32 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
-<<<<<<< HEAD
   Users
   MapPin
   Clock
@@ -42,23 +20,6 @@ import {
   GraduationCap
   Globe
   CheckCircle
-=======
-  Users,
-  MapPin,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  Coffee,
-  Zap,
-  Shield,
-  Briefcase,
-  GraduationCap,
-  Globe,
-  CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -188,26 +149,7 @@ const values = [
       "We conduct business with honesty, transparency, and ethical practices."
   }
 ];
-<<<<<<< HEAD
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function CareersPage() {
-=======
-
-interface CareersProps {
-  className?: string;
-}
-
-const Careers: React.FC<CareersProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -228,25 +170,6 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-<<<<<<< HEAD
-=======
-=======
-import Head from 'next/head';
-import Layout from '../components/Layout';
-
-export default function CareersPage() {
-  
-    >
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Join Our{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -487,22 +410,6 @@ export default function CareersPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </MainLayout>
-=======
-<<<<<<< HEAD
-    </MainLayout>
-=======
-    </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-    </MainLayout>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }

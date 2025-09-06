@@ -1,52 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 type NewsItem = any;
     generatedAt = json.generatedAt || ''
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 </div> </div>) )
-=======
- </div> </div>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
 export async function getServerSideProps() {
-=======
-</div> </div>) ) 
-=======
- </div> </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'datanews-digest.json');
   let items: NewsItem[] = [];  let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-<<<<<<< HEAD
     items = json.items |[];
     generatedAt = json.generatedAt |''
 
   } catch {}
   return { props: { items, generatedAt } }
 }
-=======
-    items = json.items || [];
-    generatedAt = json.generatedAt || ''
-  } catch {}
-  return { props: { items, generatedAt } }
-}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
   return (
     <div className="space-y-6">
@@ -66,21 +41,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
           </div>
         ))}
       </div>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
-    </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 }
-=======
-<<<<<<< HEAD
- </div> </div>) )
-}</div> </div>)
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  );
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

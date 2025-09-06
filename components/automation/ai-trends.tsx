@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 export type Trend = any;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 </div> </div>) )
-=======
- </div> </div>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -23,11 +13,6 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
-=======
-</div> </div>) ) 
-=======
- </div> </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -40,7 +25,6 @@ export type Trend = {
 };
 
 export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'dataai-trends.json');
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
@@ -50,10 +34,6 @@ export async function getServerSideProps() {;
 
   return { props: { items } }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (
     <div className="space-y-6">
@@ -76,21 +56,6 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
-    </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
 }
-=======
-<<<<<<< HEAD
- </div> </div>) )
-}</div> </div>)
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  );
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

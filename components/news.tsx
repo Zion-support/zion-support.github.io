@@ -1,30 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
   const featuredNews = null;
-=======
-featured: true
-}
-=======
- featured: true
 };
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-featured: true
-}
-=======
- featured: true 
-=======
-featured: true 
-=======
- featured: true 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 {
   title: 'Cybersecurity Partnership with Global Tech Leaders';
 excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
@@ -35,7 +11,6 @@ const [selectedCategory, setSelectedCategory] = useState ('all');
 const [selectedYear, setSelectedYear] = useState ('all');
 const categories = [ {
   id: 'all', name: 'All News', icon: Newspaper, count: 45
-<<<<<<< HEAD
 }
 {
   id: 'ai', name: 'AI & Technology', icon: Brain, count: 18
@@ -46,24 +21,11 @@ const categories = [ {
 {
   id: 'space', name: 'Space Technology', icon: Rocket, count: 8
 }
-=======
-};
-{
-  id: 'ai', name: 'AI & Technology', icon: Brain, count: 18
-};
-{
-  id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12
-};
-{
-  id: 'space', name: 'Space Technology', icon: Rocket, count: 8
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 'security', name: 'Cybersecurity', icon: Shield, count: 7
 }];
 const years = [ {
   id: 'all', name: 'All Years'
-<<<<<<< HEAD
 }
 {
   id: '2025', name: '2025'
@@ -71,15 +33,6 @@ const years = [ {
 {
   id: '2024', name: '2024'
 }
-=======
-};
-{
-  id: '2025', name: '2025'
-};
-{
-  id: '2024', name: '2024'
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: '2023', name: '2023'
 }];
@@ -95,13 +48,7 @@ date: "2025-01-15";
 readTime: "5 min read";
 image: "/images/news/quantum-ai-launch.jpg";
 tags: ["Quantum Computing", "AI", "Product Launch" ]
-<<<<<<< HEAD
 }
-=======
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function News () {
   const featuredNews = [ {
 }
@@ -131,34 +78,21 @@ export default function NewsPage () {
 }</span>) )
 }</div> <Link > Read More <ArrowRight className="w-4 h-4 ml-1" /> </a> </div> <section className="py-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-7xl mx-auto" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6" > <Newspaper className="w-4 h-4 mr-2" /> <section className="relative py-20 px-4" > <div className="container mx-auto max-w-6xl" > <motion.div > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6" > Latest News & Updates </div> <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6" > News & Press </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Stay updated with the latest developments, breakthroughs, and innovations from Zion Tech Group and the technology industry. </p> </motion.div> > {
   categories.map ( (category, index) => (<button key= {
-<<<<<<< HEAD
   category
 }import {
   {
   {Search, Calendar, Clock, User, Tag;
-=======
-  category 
-}import {;
-  {;
-  {;
-  Search, Calendar, Clock, User, Tag;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ArrowRight, ExternalLink, TrendingUp;
 BookOpen, Globe, Video
 }from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
 }
 
 export default function News () {
-=======
-export default function News () {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [searchTerm, setSearchTerm] = useState ('');
 const [selectedCategory, setSelectedCategory] = useState ('all');
 const categories = [ {
   id: 'all', name: 'All News', count: 24
-<<<<<<< HEAD
 }
 {
   id: 'ai', name: 'AI & Consciousness', count: 8
@@ -172,21 +106,6 @@ const categories = [ {
 {
   id: 'research', name: 'Research & Development', count: 3
 }
-=======
-};
-{
-  id: 'ai', name: 'AI & Consciousness', count: 8
-};
-{
-  id: 'quantum', name: 'Quantum Computing', count: 6
-};
-{
-  id: 'enterprise', name: 'Enterprise IT', count: 5
-};
-{
-  id: 'research', name: 'Research & Development', count: 3
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 'industry', name: 'Industry Insights', count: 2
 }];
@@ -201,11 +120,7 @@ readTime: '5 min read';
 image: '/images/news/ai-consciousness-launch.jpg';
 featured: true;
 tags: ['AI ConsciousnessPlatform LaunchInnovation']
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 2;
 title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability';
@@ -228,11 +143,7 @@ date: '2024-01-10';
 readTime: '4 min read';
 image: '/images/news/enterprise-ai-trends.jpg';
 tags: ['Enterprise AIBest Practices2024 Trends']
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 4;
 title: 'The Future of Autonomous Business Systems';
@@ -243,11 +154,7 @@ date: '2024-01-08';
 readTime: '6 min read';
 image: '/images/news/autonomous-systems.jpg';
 tags: ['Autonomous SystemsFuture of WorkInnovation']
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 5;
 title: 'Cybersecurity in the Age of AI: New Threats and Solutions';
@@ -258,11 +165,7 @@ date: '2024-01-05';
 readTime: '5 min read';
 image: '/images/news/ai-cybersecurity.jpg';
 tags: ['CybersecurityAI SecurityDigital Protection']
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 6;
 title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies';
@@ -283,11 +186,7 @@ author: 'Dr. Robert Chang';
 date: '2024-01-01';
 readTime: '6 min read';
 tags: ['AI EthicsBusiness ImpactConsciousness']
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 8;
 title: 'Micro-SaaS Revolution: How Small Teams Are Building Big Solutions';
@@ -307,11 +206,7 @@ time: '9:00 AM - 6:00 PM';
 location: 'San Francisco, CA';
 description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
 registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024'
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 2;
 title: 'Quantum Computing Workshop';
@@ -322,11 +217,7 @@ location: 'Virtual';
 description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.';
 registration: 'https://ziontechgroup.com/events/quantum-workshop'
 }];
-<<<<<<< HEAD
 const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLowerCase () ) |article.excerpt.toLowerCase () .includes (searchTerm.toLowerCase () ) |> Latest News & Insights </motion.h1> <motion.p > Stay updated with the latest developments in AI consciousness, quantum computing, and emerging technologies from Zion Tech Group. </motion.p> {
-=======
-const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLowerCase () ) || article.excerpt.toLowerCase () .includes (searchTerm.toLowerCase () ) || > Latest News & Insights </motion.h1> <motion.p > Stay updated with the latest developments in AI consciousness, quantum computing, and emerging technologies from Zion Tech Group. </motion.p> {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   /* Search and Filter */
 }<motion.div > <div className="relative mb-8" > <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input key= {
   category.id
@@ -359,188 +250,70 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20
-<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
   duration: 0.8
-=======
-  duration: 0.8 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}viewport= {
-  {
-<<<<<<< HEAD
-  once: true
-=======
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8
-
 }viewport= {
   {
   once: true
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500" /> <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </section>
 }</span> </div> <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.article>) )
 }</div> </div> </section> > Latest News </motion.h2> > <div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300" > <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center" > <BookOpen className="w-12 h-12 text-cyan-400" /> </div> </span> </div> </div> </div> </motion.article>) )
 }</div> </div> </section> > Upcoming Events </motion.h2> </div> </div> <a > Register Now <ExternalLink className="w-4 h-4" /> </a> </div> </div> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8" > Get the latest news, insights, and updates delivered directly to your inbox. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300" /> <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Subscribe </button> </div> <p className="text-sm text-gray-400 mt-4" > No spam, unsubscribe at any time. We respect your privacy. </p> </motion.div> </div> </section> <div className="max-w-7xl mx-auto" > <motion.div > <h2 className="text-4xl font-bold mb-4" >Latest News</h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Stay updated with our most recent developments and announcements </p> </motion.div> </div> </div> <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2" > Read More <ArrowRight className="w-4 h-4" /> </button> </motion.article>) )
-=======
-  once: true 
-
-}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Subscribe to our newsletter for the latest news, insights, and updates from Zion Tech Group. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500" /> <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </section>
-}</span> </div> <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.article>) ) 
-}</div> </div> </section> > Latest News </motion.h2> > <div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300" > <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center" > <BookOpen className="w-12 h-12 text-cyan-400" /> </div> </span> </div> </div> </div> </motion.article>) ) 
-}</div> </div> </section> > Upcoming Events </motion.h2> </div> </div> <a > Register Now <ExternalLink className="w-4 h-4" /> </a> </div> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8" > Get the latest news, insights, and updates delivered directly to your inbox. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300" /> <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Subscribe </button> </div> <p className="text-sm text-gray-400 mt-4" > No spam, unsubscribe at any time. We respect your privacy. </p> </motion.div> </div> </section> <div className="max-w-7xl mx-auto" > <motion.div > <h2 className="text-4xl font-bold mb-4" >Latest News</h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Stay updated with our most recent developments and announcements </p> </motion.div> </div> </div> <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2" > Read More <ArrowRight className="w-4 h-4" /> </button> </motion.article>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> Stay Updated </h2> <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8" > Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing. <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30" > <div className="max-w-4xl mx-auto text-center" > <motion.div initial= {
   {
-<<<<<<< HEAD
   opacity: 0, y: 20
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  opacity: 0, y: 20 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 }animate= {
   {
   opacity: 1, y: 0
 }transition= {
   {
   duration: 0.6, delay: 0.8
-=======
-
-}animate= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.6, delay: 0.8
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }> <h2 className="text-4xl font-bold mb-6" >Stay Updated</h2> <p className="text-xl text-gray-400 mb-8" > Subscribe to our newsletter for the latest news, insights, and technology updates </p> <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" > <input type="email" placeholder="Enter your email" className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50" /> <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300" > Subscribe </button> </div> </motion.div> </div> </motion.article>) )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > News Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore news by category to find updates in your areas of interest. </p> </motion.div> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > Recent News </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Stay updated with our latest announcements and developments. </p> </motion.div> </div> </div> </motion.article>) )
 }</div> </div> </section> <motion.div initial= {
   {
-<<<<<<< HEAD
   opacity: 0, y: 30
-<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
-=======
-  opacity: 0, y: 30 
-
-}whileInView= {
-  {
-  opacity: 1, y: 0 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8
 }viewport= {
   {
   once: true
-=======
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8
-
-}viewport= {
-  {
-  once: true
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }> <h2 className="text-4xl font-bold text-white mb-4" > Media Inquiries </h2> <p className="text-xl text-gray-300 mb-8" > For press inquiries, media interviews, or additional information;
 please contact our communications team. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105" > Contact Media Team <Mic className="ml-2 w-5 h-5" /> </a> <a href="/press" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300" > Press Kit </a> </div> </motion.div> </div> </section> </div> </Layout> <motion.div initial= {
   {
   opacity: 0, y: 20
-<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
   duration: 0.8
-=======
-  duration: 0.8 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }viewport= {
   {
   once: true
-=======
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8
-
-}viewport= {
-  {
-  once: true
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Stay Informed? </h2> <p className="text-xl text-gray-300 mb-8" > Explore our latest research, industry insights, and technology breakthroughs that are shaping the future of AI and quantum computing. </p> <Link href="/blog" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Explore Our Blog <ArrowRight className="w-5 h-5 ml-2" /> </a> <Link href="/contact" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Contact Our Team </a> </div> </motion.div> </div> </section> </div>)
 }<motion.div initial= {
   {
   opacity: 0, y: 20
-<<<<<<< HEAD
 }whileInView= {
   {
-<<<<<<< HEAD
   opacity: 1, y: 0
-=======
-  opacity: 1, y: 0 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8
 }viewport= {
   {
   once: true
-=======
-
-}whileInView= {
-  {
-  opacity: 1, y: 0
-
-}transition= {
-  {
-  duration: 0.8
-
-}viewport= {
-  {
-  once: true
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Get in Touch </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span>Contact Us</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" > About Zion Tech Group </a> </div> </motion.div> </div> </section> </div>)
 }title: "Partnership with TechCorp Announced for Cloud Infrastructure";
 excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.";
@@ -549,13 +322,8 @@ category: "Partnerships";
 author: "Sarah Chen";
 readTime: "2 min read";
 image: "🤝"
-<<<<<<< HEAD
 }
 }
-=======
-};
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 6;
 title: "Annual Sustainability Report Published";
@@ -565,11 +333,7 @@ category: "Sustainability";
 author: "Lisa Park";
 readTime: "6 min read";
 image: "🌱"
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 7;
 title: "Customer Success Story: Retail Automation";
@@ -579,11 +343,7 @@ category: "Case Studies";
 author: "Alex Thompson";
 readTime: "4 min read";
 image: "📊"
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 {
   id: 8;
 title: "New Research Paper on Autonomous Systems";
@@ -603,15 +363,10 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
   article.readTime
 }</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) )
 }</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) )
-<<<<<<< HEAD
 }</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)       {/* Latest News Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
           <motion.h2
-=======
-          <motion.h2 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -663,22 +418,14 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Upcoming Events Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Upcoming Events Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -723,14 +470,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                         {event.location}
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
-                    
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <a
                       href={event.registration}
                       target="_blank"
@@ -747,14 +486,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -834,14 +565,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
@@ -901,14 +624,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* News Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -950,14 +665,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Recent News */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -1012,14 +719,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1095,11 +794,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
       {/* Call to Action */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<<<<<<< HEAD
           <motion.div
-=======
-          <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1232,14 +927,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                 </button>
               ))}
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Featured Article */}
             {newsArticles.filter(article => article.featured).map((article) => (
               <div key={article.id} className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-cyan-400/30">
@@ -1274,10 +961,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                 </div>
               </div>
             ))}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             {/* News Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article) => (
@@ -1307,14 +990,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
                 </article>
               ))}
             </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Newsletter Signup */}
             <div className="text-center mt-16">
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
@@ -1338,15 +1013,5 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-=======
-<<<<<<< HEAD
-}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>)
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  ),
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

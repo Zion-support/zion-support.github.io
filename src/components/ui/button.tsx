@@ -51,23 +51,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {content}
     </button>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
 }
 export { Button }
 export default Button
-=======
-  );
-};
-
-export { Button };
-}
-
-export default Button;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-};
-export { Button };
-export default Button;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

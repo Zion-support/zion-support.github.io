@@ -1,9 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -170,16 +166,5 @@ const SearchBar: React.FC = () => {
       )}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
-<<<<<<< HEAD
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default SearchBar;

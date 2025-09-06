@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import { prisma } from "@/lib/prisma";
 interface InstanceWithCounts {id: string;
   name: string;
@@ -18,99 +17,10 @@ interface InstanceWithCounts {id: string;
   _count: {;
     deployments: number;
     features: number;
-<<<<<<< HEAD
-=======
-  };
-  region: string;
-  version: string;
-}
-
-export default function InstancesPage() {
-  const [instances, setInstances] = useState<Instance[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error] = useState<string | null>(null);
-
-  useEffect(() => {
-    const mockInstances: Instance[] = [
-      {
-        id: '1',
-        name: 'Zion Main Economy',
-        description: 'Primary digital economy instance',
-        isPublic: true,
-        status: 'active',
-        createdAt: '2024-01-15',
-        lastDeployed: '2024-01-20',
-        count: { deployments: 12, features: 8 },
-        region: 'us-east-1',
-        version: 'v2.1.0'
-      }
-    ];
-
-    setTimeout(() => {
-      setInstances(mockInstances);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'active':
-        return 'text-green-400 bg-green-400/20';
-      case 'inactive':
-        return 'text-gray-400 bg-gray-400/20';
-      case 'deploying':
-        return 'text-yellow-400 bg-yellow-400/20';
-      case 'error':
-        return 'text-red-400 bg-red-400/20';
-      default:
-        return 'text-gray-400 bg-gray-400/20';
-    }
-  };
-
-  if (loading) {
-    return (
-      <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center py-16">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
-            <p className="text-white/70">Loading instances...</p>
-          </div>
-        </div>
-      </div>
-    );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
 }
 export default function InstancesPage() {const instances: any[] = [], // Temporary empty array;
   const error: string | null = null;
-=======
-// import { prisma } from "@/lib/prisma",;
-interface InstanceWithCounts {;
-  id: string,;
-  name: string,;
-  slug: string,;
-  domain: string | null,;
-  subdomain: string | null,;
-  vertical: string,;
-  defaultLanguage: string,;
-  tokenSystem: string,;
-  governanceType: string,;
-  isPublic: boolean,;
-  region: string | null,;
-  country: string | null,;
-  createdAt: Date,;
-  updatedAt: Date,;
-  daoConfig: any | null,;
-  _count: {;
-    deployments: number,;
-    features: number;
-  }
-}
-;
-export default function InstancesPage() {;
-  const instances: any[] = [], // Temporary empty array;
-  const error: string | null = null,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
@@ -131,10 +41,6 @@ export default function InstancesPage() {;
             </p>;
           </div>;
         )}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Stats Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">;
           <div className="glass-effect rounded-xl p-6 text-center">;
@@ -167,12 +73,7 @@ export default function InstancesPage() {;
               <div key={inst.id} className="feature-card group hover-lift">;
                 <div className="flex items-start justify-between mb-4">;
                   <div className="flex items-center gap-3">;
-<<<<<<< HEAD
                     <div className={`w-3 h-3 rounded-full ${inst.isPublic ? 'bg-green-500' : 'bg-yellow-500';
-=======
-                    <div className={`w-3 h-3 rounded-full ${;
-                      inst.isPublic ? 'bg-green-500' : 'bg-yellow-500';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     }`}></div>;
                     <div className="font-semibold text-lg text-white group-hover:text-blue-400 transition-colors">;
                       {inst.name}
@@ -186,11 +87,7 @@ export default function InstancesPage() {;
                   <div className="flex items-center gap-2 text-sm text-white/70">;
                     <span className="w-4 h-4">🌐</span>;
                     <span className="truncate">;
-<<<<<<< HEAD
                       {inst.domain |inst.subdomain |inst.slug}
-=======
-                      {inst.domain || inst.subdomain || inst.slug}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </span>;
                   </div>;
                   <div className="flex items-center gap-2 text-sm text-white/70">;
@@ -203,10 +100,6 @@ export default function InstancesPage() {;
                       <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                     </div>;
                   )}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <div className="flex items-center gap-2 text-sm text-white/70">;
                     <span className="w-4 h-4">🔧</span>;
                     <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
@@ -224,21 +117,13 @@ export default function InstancesPage() {;
                 <div className="mt-4 pt-4 border-t border-white/10">;
                   <div className="flex gap-2">;
                     <a;
-<<<<<<< HEAD
                       href={`/admin/instances/${inst.id}`}
-=======
-                      href={`/admin/instances/${inst.id}`} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
                     >;
                       Manage;
                     </a>;
                     <a;
-<<<<<<< HEAD
                       href={`/admin/instances/${inst.id}/deployments`}
-=======
-                      href={`/admin/instances/${inst.id}/deployments`} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
                     >;
                       Deployments;
@@ -249,10 +134,6 @@ export default function InstancesPage() {;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Empty State */}
         {instances.length === 0 && !error && (;
           <div className="text-center py-16">;
@@ -315,12 +196,7 @@ export default function InstancesPage() {;
                 <div className="flex-1">;
                   <h3 className="text-xl font-semibold text-white mb-1">{inst.name}</h3>;
                   <div className="flex items-center space-x-2 mb-2">;
-<<<<<<< HEAD
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-=======
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
-                      inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
@@ -343,11 +219,7 @@ export default function InstancesPage() {;
               <div className="space-y-3 mb-4">;
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
                   <span>🌐</span>;
-<<<<<<< HEAD
                   <span>{inst.domain |inst.subdomain |inst.slug}</span>;
-=======
-                  <span>{inst.domain || inst.subdomain || inst.slug}</span>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </div>;
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
                   <span>🏛️</span>;
@@ -359,10 +231,6 @@ export default function InstancesPage() {;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                   </div>;
                 )}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
                   <span>💎</span>;
                   <span>Token: {inst.tokenSystem}</span>;
@@ -382,21 +250,13 @@ export default function InstancesPage() {;
               {/* Actions */}
               <div className="flex space-x-2">;
                 <a;
-<<<<<<< HEAD
                   href={`/admin/instances/${inst.id}`}
-=======
-                  href={`/admin/instances/${inst.id}`} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
                   Manage;
                 </a>;
                 <a;
-<<<<<<< HEAD
                   href={`/admin/instances/${inst.id}/deployments`}
-=======
-                  href={`/admin/instances/${inst.id}/deployments`} ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
                   Deployments;
@@ -410,10 +270,6 @@ export default function InstancesPage() {;
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Quick Actions */}
       <div className="card text-center py-8">;
         <h2 className="text-2xl font-semibold mb-4">Quick Actions</h2>;
@@ -581,7 +437,6 @@ export default function InstancesPage() {;
     </div>;
   );
 }
-<<<<<<< HEAD
 function getGovernanceLabel(type: string) {switch (type) {;
     case "ADMIN": return "Admin Control";
     case "DAO_LITE": return "DAO-lite";
@@ -590,20 +445,6 @@ function getGovernanceLabel(type: string) {switch (type) {;
   }
 }
 function getTokenSystemLabel(type: string) {switch (type) {;
-=======
-;
-function getGovernanceLabel(type: string) {;
-  switch (type) {;
-    case "ADMIN": return "Admin Control",;
-    case "DAO_LITE": return "DAO-lite",;
-    case "DAO_FULL": return "Full DAO",;
-    default: return type;
-  }
-}
-;
-function getTokenSystemLabel(type: string) {;
-  switch (type) {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     case "SHARED": return "ZION$ Shared";
     case "LOCAL": return "Local Token";
     default: return type;

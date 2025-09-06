@@ -1,19 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function PartnersPage() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -46,12 +32,7 @@ export default function PartnersPage() {
           </a>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
-    </div>;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   );	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -71,15 +52,5 @@ export default function PartnersPage() {
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
-<<<<<<< HEAD
 	)
 }
-=======
-<<<<<<< HEAD
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-	),
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

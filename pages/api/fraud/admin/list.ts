@@ -1,26 +1,12 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { getFraudStore } from '[^']*';
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = null;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { getFraudStore } from '../../../../utils/fraud/store';
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getFraudStore } from '../../../../utils/fraud/store',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
   return token === process.env.ADMIN_TOKEN
-<<<<<<< HEAD
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -40,57 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: label as any})
 
   res.status(200).json({ items })
-<<<<<<< HEAD
 }
-=======
-import { getFraudStore } from '../../../../utils/fraud/store';
-
-function ensureAdmin(req: NextApiRequest): boolean {
-  const token = req.headers['x-admin-token'];
-  if (!process.env.ADMIN_TOKEN) return true; // allow if not configured
-  return token === process.env.ADMIN_TOKEN;
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'GET') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-  }
-  if (!ensureAdmin(req)) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return;
-  }
-
-  const {
-    limit = '50',
-    offset = '0',
-    source,
-    userId,
-    status,
-    label,
-  } = req.query as Record<string, string>;
-  const store = getFraudStore();
-  const items = await store.listFlagged(
-    parseInt(limit, 10),
-    parseInt(offset, 10),
-    {
-      source: source as any,
-      userId,
-      status: status as any,
-      label: label as any,
-    }
-  );
-  res.status(200).json({ items });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -106,10 +42,6 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   } catch (error) {
     console.error("Error:", error);
@@ -172,23 +104,4 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-<<<<<<< HEAD
-
-  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
-  const store = getFraudStore(),
-  const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
-    source: source as any,
-    userId,
-    status: status as any,
-    label: label as any}),
-  res.status(200).json({ items });
-};
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

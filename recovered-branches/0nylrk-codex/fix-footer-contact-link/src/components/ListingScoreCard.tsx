@@ -1,16 +1,6 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {cn} from "@/lib/utils";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {StarIcon} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react";
 interface ListingScoreCardProps {
@@ -26,14 +16,8 @@ interface ListingScoreCardProps {
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
-<<<<<<< HEAD
   className?: string
 }
-=======
-  className?: string;
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ListingScoreCard({
   title;
 
@@ -51,13 +35,6 @@ export function ListingScoreCard({
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
-=======
-import { Button } from "@/components/ui/button",
-import { StarIcon } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -72,13 +49,8 @@ interface ListingScoreCardProps {
   className?: string
 }
 
-<<<<<<< HEAD
 export function ListingScoreCard({ ;
   title;
-=======
-export function ListingScoreCard({ 
-  title,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   description, 
   image, 
   category, 
@@ -93,7 +65,6 @@ export function ListingScoreCard({
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className
     )}>
       {image && (
@@ -127,22 +98,11 @@ export function ListingScoreCard({
                 <StarIcon
                   key={star}
                   className={cn(
-<<<<<<< HEAD
                     "h-4 w-4"
                     star <= Math.round(rating)
                       ? "text-zion-cyan fill-zion-cyan"
 
                       : "text-zion-slate-light"
-=======
-                    "h-4 w-4", 
-                    star <= Math.round(rating) 
-                      ? "text-zion-cyan fill-zion-cyan" 
-                      : "text-zion-slate-light"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -214,11 +174,6 @@ export function ListingScoreCard({;
                     star <= Math.round(rating);
                       ? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 />
               ))}
@@ -233,25 +188,12 @@ export function ListingScoreCard({;
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-<<<<<<< HEAD
               </Badge>
             ))}
           </div>
-<<<<<<< HEAD
         )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-              </Badge>;
-            ))}
-          </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>

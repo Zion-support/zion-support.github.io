@@ -1,20 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousEcosystemManager() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 			title="AI Autonomous Ecosystem Manager"
 			slug="ai-autonomous-ecosystem-manager"
 			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
 			subtitle="Govern multi-agent systems with policy, observability, and guardrails."
-<<<<<<< HEAD
 			pricePerMonthUSD={2999}
-<<<<<<< HEAD
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -27,18 +21,6 @@ export default function AIAutonomousEcosystemManager() {
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
 			]}
 			industries={["Platform Teams", "R&D", "Operations", "Security"]}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-			pricePerMonthUSD={2999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Average ROI 4–9x within 6 months"
 			features={[
@@ -48,30 +30,6 @@ export default function AIAutonomousEcosystemManager() {
 				"Sandboxing and E2E approvals for sensitive actions",
 				"Cost and performance optimization",
 				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-			]}
-			industries={["Platform Teams", "R&D", "Operations", "Security"]}
-			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
-	)
-<<<<<<< HEAD
-}
-=======
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-}
-
-export default function AIAutonomousEcosystemManager() {
-
-    />
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -82,10 +40,6 @@ export default function AIAutonomousEcosystemManager() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
 		/>
 	)
@@ -97,5 +51,3 @@ export default function AIAutonomousEcosystemManager() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

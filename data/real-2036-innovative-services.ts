@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type Real2036InnovativeService = any;
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export type Real2036InnovativeService = {
-=======
-export type Real2036InnovativeService = {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -21,18 +8,11 @@ export type Real2036InnovativeService = {;
   price: string;
   period?: string;
   features: string[];
-<<<<<<< HEAD
   link: string;  launchDate?: string;  rating?: number;
-=======
-  link: string;
-  launchDate?: string;
-  rating?: number;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
-<<<<<<< HEAD
   useCases?: string[];};  useCases?: string[]
 }
 export const real2036InnovativeServices: Real2036InnovativeService[] = [
@@ -41,18 +21,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     id: 'ai-business-intelligence-platform-pro'
     name: 'AI Business Intelligence Platform Pro'
     tagline: 'Transform raw data into actionable business insights with AI'
-=======
-  useCases?: string[];
-};
-}
-
-export const real2036InnovativeServices: Real2036InnovativeService[] = [
-  // AI-Powered Business Intelligence
-  {
-    id: 'ai-business-intelligence-platform-pro',
-    name: 'AI Business Intelligence Platform Pro',
-    tagline: 'Transform raw data into actionable business insights with AI',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     description:
       'Advanced AI-powered business intelligence platform that automatically analyzes data patterns, generates predictive insights, and creates interactive dashboards for strategic decision-making.'
     category: 'AI & Data'
@@ -95,7 +63,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     name: 'Quantum-Secure Communication Enterprise'
     tagline: 'Unbreakable communication using quantum cryptography'
     description:
-<<<<<<< HEAD
       'Enterprise-grade quantum-secure communication platform that leverages quantum key distribution (QKD) to provide unbreakable encryption for sensitive communications.',    category: 'Quantum Technology'
     price: '$1,999'
     period: '/month'
@@ -113,26 +80,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     launchDate: '2036-01-25'
     rating: 4.9
     marketSize: '$3.2B'
-=======
-      'Enterprise-grade quantum-secure communication platform that leverages quantum key distribution (QKD) to provide unbreakable encryption for sensitive communications.',
-    category: 'Quantum Technology',
-    price: '$1,999',
-    period: '/month',
-    features: [
-      'Quantum key distribution (QKD)',
-      'End-to-end quantum encryption',
-      'Multi-party secure communication',
-      'Quantum-resistant algorithms',
-      'Real-time key generation',
-      'Compliance certifications',
-      '24/7 quantum network monitoring',
-      'Custom deployment options',
-    ],
-    link: 'https://ziontechgroup.com/services/quantum-secure-communication-enterprise',
-    launchDate: '2036-01-25',
-    rating: 4.9,
-    marketSize: '$3.2B',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     targetAudience:
       'Government agencies, Financial institutions, Healthcare organizations'
     competitiveAdvantage:
@@ -201,7 +148,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     tagline:
       'Advanced analytics for space exploration and satellite operations'
     description:
-<<<<<<< HEAD
       'Comprehensive analytics platform for space technology companies, providing insights into satellite performance, orbital mechanics, and space mission optimization.',    category: 'Space Technology'
     price: '$1,499'
     period: '/month'
@@ -220,27 +166,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     rating: 4.6
     marketSize: '$4.8B'
     targetAudience: 'Space agencies, Satellite companies, Aerospace firms'
-=======
-      'Comprehensive analytics platform for space technology companies, providing insights into satellite performance, orbital mechanics, and space mission optimization.',
-    category: 'Space Technology',
-    price: '$1,499',
-    period: '/month',
-    features: [
-      'Satellite performance analytics',
-      'Orbital mechanics calculations',
-      'Space weather monitoring',
-      'Mission optimization algorithms',
-      'Real-time telemetry analysis',
-      'Predictive maintenance',
-      '3D visualization tools',
-      'Custom reporting engine',
-    ],
-    link: 'https://ziontechgroup.com/services/space-technology-analytics-platform',
-    launchDate: '2036-02-05',
-    rating: 4.6,
-    marketSize: '$4.8B',
-    targetAudience: 'Space agencies, Satellite companies, Aerospace firms',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     competitiveAdvantage:
       'Space-specific algorithms, Real-time data processing, Advanced visualization'
     integration: [
@@ -304,7 +229,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     name: 'Quantum Machine Learning Platform'
     tagline: 'Accelerate ML with quantum computing power'
     description:
-<<<<<<< HEAD
       'Revolutionary platform that combines quantum computing with machine learning to solve complex problems faster and more efficiently than classical computing.',    category: 'Quantum Technology'
     price: '$2,499'
     period: '/month'
@@ -322,26 +246,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     launchDate: '2036-02-15'
     rating: 4.9
     marketSize: '$2.8B'
-=======
-      'Revolutionary platform that combines quantum computing with machine learning to solve complex problems faster and more efficiently than classical computing.',
-    category: 'Quantum Technology',
-    price: '$2,499',
-    period: '/month',
-    features: [
-      'Quantum algorithm optimization',
-      'Hybrid quantum-classical ML',
-      'Quantum neural networks',
-      'Advanced optimization algorithms',
-      'Real-time quantum processing',
-      'Custom quantum circuits',
-      'Performance benchmarking',
-      'Expert consultation',
-    ],
-    link: 'https://ziontechgroup.com/services/quantum-machine-learning-platform',
-    launchDate: '2036-02-15',
-    rating: 4.9,
-    marketSize: '$2.8B',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     targetAudience:
       'Research institutions, Pharmaceutical companies, Financial services'
     competitiveAdvantage:
@@ -450,7 +354,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     name: 'Blockchain Infrastructure Enterprise'
     tagline: 'Enterprise-grade blockchain infrastructure and development'
     description:
-<<<<<<< HEAD
       'Comprehensive blockchain platform that provides enterprise-grade infrastructure, development tools, and deployment solutions for blockchain applications.',    category: 'Blockchain'
     price: '$1,199'
     period: '/month'
@@ -468,26 +371,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     launchDate: '2036-03-01'
     rating: 4.6
     marketSize: '$8.9B'
-=======
-      'Comprehensive blockchain platform that provides enterprise-grade infrastructure, development tools, and deployment solutions for blockchain applications.',
-    category: 'Blockchain',
-    price: '$1,199',
-    period: '/month',
-    features: [
-      'Multi-chain support',
-      'Smart contract development',
-      'Deployment automation',
-      'Security auditing',
-      'Performance monitoring',
-      'Scalability solutions',
-      'Compliance tools',
-      'Developer APIs',
-    ],
-    link: 'https://ziontechgroup.com/services/blockchain-infrastructure-enterprise',
-    launchDate: '2036-03-01',
-    rating: 4.6,
-    marketSize: '$8.9B',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     targetAudience:
       'Financial institutions, Supply chain companies, Healthcare organizations'
     competitiveAdvantage:
@@ -512,7 +395,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     name: 'Autonomous Manufacturing Platform'
     tagline: 'AI-powered manufacturing automation and optimization'
     description:
-<<<<<<< HEAD
       'Revolutionary platform that enables autonomous manufacturing operations using AI, robotics, and advanced automation to improve efficiency and quality.',    category: 'Manufacturing'
     price: '$1,799'
     period: '/month'
@@ -530,26 +412,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     launchDate: '2036-03-05'
     rating: 4.7
     marketSize: '$15.2B'
-=======
-      'Revolutionary platform that enables autonomous manufacturing operations using AI, robotics, and advanced automation to improve efficiency and quality.',
-    category: 'Manufacturing',
-    price: '$1,799',
-    period: '/month',
-    features: [
-      'AI-powered quality control',
-      'Predictive maintenance',
-      'Autonomous robotics',
-      'Production optimization',
-      'Real-time monitoring',
-      'Supply chain integration',
-      'Custom workflows',
-      'Performance analytics',
-    ],
-    link: 'https://ziontechgroup.com/services/autonomous-manufacturing-platform',
-    launchDate: '2036-03-05',
-    rating: 4.7,
-    marketSize: '$15.2B',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     targetAudience:
       'Manufacturing companies, Industrial automation, Factory operators'
     competitiveAdvantage:
@@ -574,7 +436,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     name: 'Quantum Internet Security Gateway'
     tagline: 'Next-generation internet security using quantum technology'
     description:
-<<<<<<< HEAD
       'Advanced security gateway that protects internet communications using quantum encryption and quantum-resistant algorithms, ensuring future-proof security.',    category: 'Quantum Technology'
     price: '$1,399'
     period: '/month'
@@ -592,26 +453,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     launchDate: '2036-03-10'
     rating: 4.9
     marketSize: '$5.6B'
-=======
-      'Advanced security gateway that protects internet communications using quantum encryption and quantum-resistant algorithms, ensuring future-proof security.',
-    category: 'Quantum Technology',
-    price: '$1,399',
-    period: '/month',
-    features: [
-      'Quantum encryption protocols',
-      'Quantum-resistant algorithms',
-      'Real-time threat detection',
-      'Multi-layer protection',
-      'Performance optimization',
-      'Compliance certifications',
-      '24/7 monitoring',
-      'Custom security policies',
-    ],
-    link: 'https://ziontechgroup.com/services/quantum-internet-security-gateway',
-    launchDate: '2036-03-10',
-    rating: 4.9,
-    marketSize: '$5.6B',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     targetAudience:
       'Internet service providers, Data centers, Government agencies'
     competitiveAdvantage:
@@ -636,7 +477,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     name: 'AI Healthcare Diagnostics Platform'
     tagline: 'Advanced medical diagnostics powered by artificial intelligence'
     description:
-<<<<<<< HEAD
       'Comprehensive healthcare platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.',    category: 'Healthcare AI'
     price: '$2,999'
     period: '/month'
@@ -655,27 +495,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     rating: 4.8
     marketSize: '$18.7B'
     targetAudience: 'Hospitals, Medical clinics, Healthcare providers'
-=======
-      'Comprehensive healthcare platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.',
-    category: 'Healthcare AI',
-    price: '$2,999',
-    period: '/month',
-    features: [
-      'AI-powered image analysis',
-      'Symptom assessment',
-      'Treatment recommendations',
-      'Patient data integration',
-      'Compliance management',
-      'Real-time monitoring',
-      'Custom AI models',
-      'Expert consultation',
-    ],
-    link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics-platform',
-    launchDate: '2036-03-15',
-    rating: 4.8,
-    marketSize: '$18.7B',
-    targetAudience: 'Hospitals, Medical clinics, Healthcare providers',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     competitiveAdvantage:
       'Advanced AI algorithms, Medical expertise, Compliance focus'
     integration: [
@@ -697,7 +516,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     name: 'Space Resource Mining Platform'
     tagline: 'Advanced platform for space resource exploration and mining'
     description:
-<<<<<<< HEAD
       'Comprehensive platform that enables space resource exploration, mining operations, and resource management using advanced robotics and AI technology.',    category: 'Space Technology'
     price: '$3,999'
     period: '/month'
@@ -715,26 +533,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     launchDate: '2036-03-20'
     rating: 4.7
     marketSize: '$2.4B'
-=======
-      'Comprehensive platform that enables space resource exploration, mining operations, and resource management using advanced robotics and AI technology.',
-    category: 'Space Technology',
-    price: '$3,999',
-    period: '/month',
-    features: [
-      'Resource mapping algorithms',
-      'Mining operation management',
-      'Robotic control systems',
-      'Resource processing',
-      'Logistics optimization',
-      'Safety monitoring',
-      'Environmental impact assessment',
-      'Custom mining strategies',
-    ],
-    link: 'https://ziontechgroup.com/services/space-resource-mining-platform',
-    launchDate: '2036-03-20',
-    rating: 4.7,
-    marketSize: '$2.4B',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     targetAudience:
       'Space mining companies, Government agencies, Research institutions'
     competitiveAdvantage: 'Space expertise, Advanced robotics, AI optimization'
@@ -757,7 +555,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     name: 'Quantum Financial Trading Platform'
     tagline: 'Revolutionary trading platform powered by quantum computing'
     description:
-<<<<<<< HEAD
       'Advanced financial trading platform that leverages quantum computing to analyze market data, optimize trading strategies, and execute high-frequency trades.',    category: 'Quantum Technology'
     price: '$4,999'
     period: '/month'
@@ -776,27 +573,6 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     rating: 4.9
     marketSize: '$7.8B'
     targetAudience: 'Investment banks, Hedge funds, Trading firms'
-=======
-      'Advanced financial trading platform that leverages quantum computing to analyze market data, optimize trading strategies, and execute high-frequency trades.',
-    category: 'Quantum Technology',
-    price: '$4,999',
-    period: '/month',
-    features: [
-      'Quantum market analysis',
-      'High-frequency trading',
-      'Risk management',
-      'Portfolio optimization',
-      'Real-time execution',
-      'Compliance monitoring',
-      'Custom algorithms',
-      'Performance analytics',
-    ],
-    link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform',
-    launchDate: '2036-03-25',
-    rating: 4.9,
-    marketSize: '$7.8B',
-    targetAudience: 'Investment banks, Hedge funds, Trading firms',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     competitiveAdvantage:
       'Quantum advantage, High-frequency capabilities, Advanced algorithms'
     integration: [
@@ -848,21 +624,12 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Cloud services'
     ]
     useCases: [
-<<<<<<< HEAD
       'Demand planning'
       'Inventory management'
       'Logistics optimization'
       'Risk management'
     ]
   }
-=======
-      'Demand planning',
-      'Inventory management',
-      'Logistics optimization',
-      'Risk management',
-    ],
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
     ];
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
@@ -873,27 +640,8 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
-<<<<<<< HEAD
   }
 ];
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-      'Demand planning',
-      'Inventory management',
-      'Logistics optimization',
-      'Risk management',
-    ],
-  },
-];
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-export type Real2036InnovativeService = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1226,11 +974,5 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',;
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],;
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

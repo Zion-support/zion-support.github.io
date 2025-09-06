@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -7,11 +5,6 @@ import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import useResponsive from '../../hooks/useResponsive';
 import { useToast  } from '../../components/ui/NotificationSystem';
 import { useEffect, useState } from 'react';
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function JobDetailsPage() {
 
   const router = useRouter();
@@ -19,63 +12,20 @@ export default function JobDetailsPage() {
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-import {useRouter} from 'next/router';
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import useResponsive from '../../hooks/useResponsive';
-import {useToast} from '../../components/ui/NotificationSystem';
-import {useEffect, useState} from 'react';
-export default function JobDetailsPage() {;
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-  const { isMobile } = useResponsive();
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(true);
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
-<<<<<<< HEAD
   const onApply = () => {
     notify(
       'Application submitted! We’ll notify you when it’s viewed.'
       'success'
     );
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
-import { useRouter } from 'next/router',
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import EnhancedLoading from '../../components/ui/EnhancedLoading',
-import useResponsive from '../../hooks/useResponsive',
-import { useToast } from '../../components/ui/NotificationSystem',
-import { useEffect, useState } from 'react',
-export default function JobDetailsPage() {
-  const router = useRouter(),
-  const { slug } = router.query as { slug?: string },
-  const { isMobile } = useResponsive(),
-  const { notify } = useToast(),
-  const [loading, setLoading] = useState(true),
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const onApply = () => {
     notify('Application submitted! We’ll notify you when it’s viewed.success')
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="relative">
       {loading ? (
@@ -85,36 +35,17 @@ export default function JobDetailsPage() {
           <EnhancedCard>
             <div className="flex items-start justify-between gap-3">
               <div>
-<<<<<<< HEAD
                 <h1 className='text-xl font-semibold'>
                   {slug?.replace(/-/g, ' ') |'Job Title'}
                 </h1>
                 <p className='text-sm text-gray-600 dark:text-gray-300'>
                   Remote • Contract • Posted today
                 </p>
-=======
-                <h1 className="text-xl font-semibold">{slug?.replace(/-/g, ' ') || 'Job Title'}</h1>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Remote • Contract • Posted today</p>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </div>
               {!isMobile && (
-<<<<<<< HEAD
                 <EnhancedButton onClick={onApply} variant='primary'>
                   Apply Now
-<<<<<<< HEAD
                 </EnhancedButton>              )}
-=======
-                </EnhancedButton>
-              )}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-                <EnhancedButton onClick={onApply} variant="primary">Apply Now</EnhancedButton>
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             </div>
           </EnhancedCard>
           <EnhancedCard>
@@ -122,94 +53,22 @@ export default function JobDetailsPage() {
             <p className="text-sm text-gray-700 dark:text-gray-300">You will design, build, and scale AI features using LLMs and modern tooling.</p>
           </EnhancedCard>
           <EnhancedCard>
-<<<<<<< HEAD
             <h2 className='font-semibold mb-2'>Requirements</h2>
-<<<<<<< HEAD
             <ul className='list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300'>              <li>3+ years with Python or TypeScript</li>
-=======
-            <ul className='list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300'>
-              <li>3+ years with Python or TypeScript</li>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            <h2 className="font-semibold mb-2">Requirements</h2>
-            <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
-              <li>3+ years with Python or TypeScript</li>
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               <li>Experience with ML/AI production systems</li>
               <li>Familiarity with cloud infra and CI/CD</li>
             </ul>
           </EnhancedCard>
         </div>
-<<<<<<< HEAD
       )}
       {/* Sticky mobile apply CTA */}
-=======
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      {/* Sticky mobile apply CTA */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {isMobile && (
-<<<<<<< HEAD
         <div className='fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3'>
           <div className='container mx-auto px-2'>
             <EnhancedButton onClick={onApply} variant='primary' fullWidth>
               Apply Now
-<<<<<<< HEAD
             </EnhancedButton>          </div>
-=======
-        <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">
-          <div className="container mx-auto px-2">
-            <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>
-          </div>
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         </div>
-<<<<<<< HEAD
       )}
     </div>
 );
-<<<<<<< HEAD
-=======
-            </EnhancedButton>
-          </div>
-        </div>
-      )}
-    </div>
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket  } from 'lucide-react';
 import { innovative2026AIServices  } from '../../data/innovative-2026-ai-services';
@@ -9,15 +6,8 @@ import { innovative2026ITInfrastructureServices  } from '../../data/innovative-2
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = null;
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   ArrowRight
   Star
   TrendingUp
@@ -26,47 +16,22 @@ import {
   Brain
   Globe
   Rocket;
-=======
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Brain,
-  Globe,;
-  Rocket,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
-<<<<<<< HEAD
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-=======
-import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-}
-
-export default function Enhanced2026ServiceShowcase() {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.2
         delayChildren: 0.1
       }
     },  }
-=======
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },  };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: {
       opacity: 0
@@ -95,37 +60,11 @@ export default function Enhanced2026ServiceShowcase() {
       }
     }
   }
-=======
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-      scale: 0.9,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut' as const,
-      },
-    },
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const cardVariants = {
     hover: {
       y: -10
       scale: 1.02
       transition: {
-<<<<<<< HEAD
         duration: 0.3
         ease: 'easeOut' as const
       }
@@ -133,36 +72,12 @@ export default function Enhanced2026ServiceShowcase() {
       }
     }
   }
-=======
-        duration: 0.3,
-        ease: 'easeOut' as const,
-      },
-<<<<<<< HEAD
-    },
-  };
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-    },  };
-
-  };
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const renderServiceCard = (service: any, index: number) => (
     <motion.div
       key={service.id}
       variants={itemVariants}
       whileHover='hover'
       className='group relative'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       <motion.div
         variants={cardVariants}
@@ -184,7 +99,6 @@ export default function Enhanced2026ServiceShowcase() {
             </div>
             {service.popular && (
               <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>
-<<<<<<< HEAD
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>    >
       <motion.div
         variants={cardVariants}
@@ -207,21 +121,14 @@ export default function Enhanced2026ServiceShowcase() {
             {service.popular && (
               <div className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                 <Star className="w-3 h-3 fill-current" />
-=======
-                <Star className='w-3 h-3 fill-current' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <span>Popular</span>
               </div>
             )}
           </div>
           {/* Description */}
-<<<<<<< HEAD
           <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service.description}
           </p>
           {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">
-=======
-          <p className='text-slate-300 text-sm mb-4 leading-relaxed'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {service.description}
           </p>
           {/* Features */}
@@ -240,7 +147,6 @@ export default function Enhanced2026ServiceShowcase() {
                     <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />
                     <span>{feature}</span>
                   </div>
-<<<<<<< HEAD
                 ))}            </div>
           </div>
           {/* Price and CTA */}          <div className="mb-4">
@@ -252,10 +158,6 @@ export default function Enhanced2026ServiceShowcase() {
                   <span>{feature}</span>
                 </div>
               ))}
-=======
-                ))}
-            </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
           {/* Price and CTA */}
           <div className='flex items-center justify-between'>
@@ -263,46 +165,14 @@ export default function Enhanced2026ServiceShowcase() {
               <div className='text-2xl font-bold text-white'>
                 {service.price}
               </div>
-<<<<<<< HEAD
               <div className='text-slate-400 text-sm'>{service.period}</div>            </div>
-=======
-              <div className='text-slate-400 text-sm'>{service.period}</div>
-            </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
             >
               <span>Learn More</span>
-<<<<<<< HEAD
               <ArrowRight className='w-4 h-4' />            </motion.button>
-=======
-                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
-
-                <span>Popular</span>
-
-              </div>
-            )}
-          </div>
-
-          {/* Description */}
-          <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service.description}
-          </p>
-
-          {/* Features */}
-
-            {service.description}
-          </p>
-
-          {/* Features */}
-
-            </motion.button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -320,30 +190,18 @@ export default function Enhanced2026ServiceShowcase() {
             >
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4" />
-=======
-              <ArrowRight className='w-4 h-4' />
-            </motion.button>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
-<<<<<<< HEAD
             <div className='flex items-center justify-between text-xs text-slate-500'>          <div className="mt-4 pt-4 border-t border-slate-700/50">
             <div className="flex items-center justify-between text-xs text-slate-500">
-=======
-            <div className='flex items-center justify-between text-xs text-slate-500'>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <span>Market: {service.marketSize}</span>
               <span>Growth: {service.growthRate}</span>
             </div>
           </div>
         </div>
         {/* Hover glow effect */}
-<<<<<<< HEAD
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />      </motion.div>        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
-=======
-        <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </motion.div>
     </motion.div>
   )
@@ -352,29 +210,15 @@ export default function Enhanced2026ServiceShowcase() {
     <section className='py-20 relative overflow-hidden'>
       {/* Background effects */}
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />
-<<<<<<< HEAD
       <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
       <div className="container mx-auto px-4 relative z-10">
-=======
-
-      <div className='container mx-auto px-4 relative z-10'>
-        {/* Section header */}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -393,7 +237,6 @@ export default function Enhanced2026ServiceShowcase() {
           <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>
             Discover our cutting-edge micro SAAS solutions, AI-powered
             platforms, and quantum-enhanced infrastructure services designed for
-<<<<<<< HEAD
             the future of business.          </p>        >
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -411,33 +254,14 @@ export default function Enhanced2026ServiceShowcase() {
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.
-=======
-            the future of business.
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* AI Services Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-20'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
@@ -453,7 +277,6 @@ export default function Enhanced2026ServiceShowcase() {
           >
             {innovative2026AIServices.map((service, index) =>
               renderServiceCard(service, index)
-<<<<<<< HEAD
             )}          </motion.div>        >
           <div className="flex items-center space-x-3 mb-8">
             <Brain className="w-6 h-6 text-cyan-400" />
@@ -466,33 +289,14 @@ export default function Enhanced2026ServiceShowcase() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
-=======
-            )}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
         </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* IT Infrastructure Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className='mb-20'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Globe className='w-6 h-6 text-purple-400' />
@@ -508,7 +312,6 @@ export default function Enhanced2026ServiceShowcase() {
           >
             {innovative2026ITInfrastructureServices.map((service, index) =>
               renderServiceCard(service, index)
-<<<<<<< HEAD
             )}          </motion.div>        >
           <div className="flex items-center space-x-3 mb-8">
             <Globe className="w-6 h-6 text-purple-400" />
@@ -521,19 +324,8 @@ export default function Enhanced2026ServiceShowcase() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
-=======
-            )}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
         </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Micro SAAS Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -554,7 +346,6 @@ export default function Enhanced2026ServiceShowcase() {
           >
             {innovative2026MicroSaasServices.map((service, index) =>
               renderServiceCard(service, index)
-<<<<<<< HEAD
             )}          </motion.div>          </div>
           <motion.div
             variants={containerVariants}
@@ -563,33 +354,14 @@ export default function Enhanced2026ServiceShowcase() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
-=======
-            )}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.div>
         </motion.div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
           className='text-center mt-16'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -604,7 +376,6 @@ export default function Enhanced2026ServiceShowcase() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              >        >
           <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -618,20 +389,13 @@ export default function Enhanced2026ServiceShowcase() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
-=======
-                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
                 className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'              >                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
-=======
-                className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Schedule Demo
               </motion.button>
@@ -640,24 +404,6 @@ export default function Enhanced2026ServiceShowcase() {
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

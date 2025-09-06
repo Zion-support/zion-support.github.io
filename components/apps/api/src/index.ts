@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import rateLimit from '@fastify/rate-limit',
-=======
-import Fastify from 'fastify';
-import cors from '@fastify/cors';
-import rateLimit from '@fastify/rate-limit';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import dotenv from 'dotenv';
 import { createOpenAIClient, generateJobPost  } from './openai.js';
 import { getPool, withUser } from './pg.js';
@@ -15,11 +9,7 @@ dotenv.config();
 const app = Fastify({ logger: true });
 await app.register(cors, {
   origin: (origin, cb) => {
-<<<<<<< HEAD
     const allowed = (process.env.CORS_ORIGINS |'')
-=======
-    const allowed = (process.env.CORS_ORIGINS || '')
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       .split(',')
       .map(s => s.trim());
     if (!origin |allowed.includes('*') |allowed.includes(origin)) {
@@ -27,7 +17,6 @@ await app.register(cors, {
       return;
     }
     cb(new Error('Not allowed'), false);
-<<<<<<< HEAD
   }
   methods: ['GET', 'POST', 'OPTIONS'],});    if (!origin |allowed.includes('*') |allowed.includes(origin)) {
       cb(null, true);
@@ -36,10 +25,6 @@ await app.register(cors, {
     cb(new Error('Not allowed'), false)
   }
   methods: ['GETPOSTOPTIONS']
-=======
-  },
-  methods: ['GET', 'POST', 'OPTIONS'],
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');
@@ -48,13 +33,8 @@ function getUserId(req: any): string | null {
     (req.headers['x-user-id'] as string) |
     (req.query as any)['user_id'] |
     null
-<<<<<<< HEAD
   );  return (req.headers['x-user-id'] as string) |(req.query as any)['user_id'] |null;
 }
-=======
-  );
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) |{}
   const prompt = body.prompt as string;
@@ -63,23 +43,15 @@ app.post('/ai/ask', async (req, reply) => {
     model: 'gpt-4o-mini'
     input: prompt
   });
-<<<<<<< HEAD
   return { text: completion.output_text };});  const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
   return { text: completion.output_text }
-=======
-  return { text: completion.output_text };
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 app.post('/jobs/generate', async (req, reply) => {
   const body = (req.body as any) |{}
   const role = (body.role as string) |'Engineer';
   const userId = getUserId(req);
   const description = await generateJobPost(openai, role, body);
-<<<<<<< HEAD
   if (!userId) return { description }
-=======
-  if (!userId) return { description };
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   await withUser(userId, async client => {
     await client.query(
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
@@ -87,7 +59,6 @@ app.post('/jobs/generate', async (req, reply) => {
       [userId, role, description, body.location |null, body.tags |null]
     );
   });
-<<<<<<< HEAD
   return { saved: Boolean(userId), description };});    await client.query(
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
        VALUES ($1, $2, $3, $4, $5, 'draft')`;
@@ -95,9 +66,6 @@ app.post('/jobs/generate', async (req, reply) => {
     )
   });
   return { saved: Boolean(userId), description }
-=======
-  return { saved: Boolean(userId), description };
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 app.get('/talent/search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -107,7 +75,6 @@ app.get('/talent/search', async (req, reply) => {
   const rows = await withUser(userId, async client => {
     const res = await client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
-<<<<<<< HEAD
        WHERE ($1::text IS NULL OR country = $1)         AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
            ))
@@ -129,19 +96,6 @@ app.get('/talent/search', async (req, reply) => {
     return res.rows
   });
   return { results: rows }
-=======
-       WHERE ($1::text IS NULL OR country = $1)
-         AND ($2::text IS NULL OR EXISTS (
-              SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
-           ))
-       ORDER BY created_at DESC
-       LIMIT 25`,
-      [country || null, q || null]
-    );
-    return res.rows;
-  });
-  return { results: rows };
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 });
 app.get('/projects/:name/track', async (req, reply) => {
   const name = (req.params as any).name as string;
@@ -155,7 +109,6 @@ app.get('/projects/:name/track', async (req, reply) => {
     return res.rows[0];
   });
   if (!project) return reply.code(404).send({ error: 'not found' });
-<<<<<<< HEAD
   return { project };});  const project = await withUser(userId, async (client) => {
     const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
     return res.rows[0]
@@ -170,23 +123,12 @@ app.get('/notifications', async (req, reply) => {
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
     return res.rows;  const items = await withUser(userId, async (client) => {
-=======
-  return { project };
-});
-
-app.get('/notifications', async (req, reply) => {
-  const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-  const items = await withUser(userId, async client => {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
-<<<<<<< HEAD
     );
     return res.rows;
   });
-<<<<<<< HEAD
   return { items }
 });
 const port = Number(process.env.API_PORT |4000);
@@ -201,27 +143,3 @@ app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   app.log.error(err);
   process.exit(1)
 });
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  return { items };
-});
-
-const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch(err => {
-  app.log.error(err);
-  process.exit(1);
-});
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
-=======
-    );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-    );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

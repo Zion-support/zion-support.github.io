@@ -1,10 +1,4 @@
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 async function fetchJson(url, token) {
   const resp = await fetch(url, {
     headers: token ? { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github+json' } : {}
@@ -12,8 +6,6 @@ async function fetchJson(url, token) {
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json()
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 
   const resp = await fetch(url, {
@@ -40,32 +32,17 @@ exports.handler = async function () {
     const since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
     const commits = await fetchJson(commitsUrl, token);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     const byAuthor = {},
     const messages = [],
     for (const c of commits) {
       const author = c.commit?.author?.name || c.author?.login || 'unknown',
       byAuthor[author] = (byAuthor[author] || 0) + 1;
       messages.push({ sha: c.sha, message: c.commit?.message || '' })
-=======
-
-    const byAuthor = {};
-    const messages = [];
-    );
-    }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
     const summary = {
       updatedAt: Date.now();
       since,
       totalCommits: commits.length,
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const byAuthor = {}
     const messages = [];
     );    }    const byAuthor = {}
@@ -78,13 +55,6 @@ exports.handler = async function () {
       updatedAt: Date.now()
       since
       totalCommits: commits.length
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       authors: Object.entries(byAuthor)
         .map(([name, count]) => ({ name, count }))
         .sort((a, b) => b.count - a.count)
@@ -103,10 +73,8 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, commits: commits.length })
     }
   } catch (e) {
-<<<<<<< HEAD
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 }
     await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token })
     return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
@@ -115,22 +83,3 @@ exports.handler = async function () {
   }
 
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
-  }
-};
-    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

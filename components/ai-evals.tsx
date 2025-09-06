@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
 import Card from '../components/ui/Card';
@@ -14,33 +11,10 @@ export default function AIEvalsPage() {
 				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
 				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
 			</Head>
-=======
-import {
-  Check,
-  ShieldCheck,
-  TrendingUp,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,;
-} from 'lucide-react';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
-=======
-import React from 'react',
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import {
-<<<<<<< HEAD
   Check
   ShieldCheck
   TrendingUp
@@ -49,24 +23,9 @@ import {
   Mail
   MapPin
   ExternalLink;
-=======
-  Check,
-  ShieldCheck,
-  TrendingUp,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,;
-  ExternalLink,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -74,8 +33,6 @@ export default function AIEvalsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -84,7 +41,6 @@ export default function AIEvalsPage() {
     website: 'https://ziontechgroup.com',;
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const features = [
     'Golden datasets and synthetic evals'
     'Hallucination and grounding score'
@@ -221,7 +177,6 @@ export default function AIEvalsPage() {
         </div>
       </section>
     </QuantumHolographicMatrixBackground>
-<<<<<<< HEAD
   );					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
@@ -236,23 +191,6 @@ export default function AIEvalsPage() {
 				</div>
 			</section>
 		</QuantumHolographicMatrixBackground>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-=======
-	);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
-	);
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

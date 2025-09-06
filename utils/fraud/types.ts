@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Fraud detection types
 export type AdminActionType =
   | 'ban_user'
@@ -8,12 +7,7 @@ export type AdminActionType =
   | 'investigate'
   | 'dismiss';
   | 'escalate';
-<<<<<<< HEAD
 export interface AdminAction {
-=======
-
-export interface AdminAction {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   caseId: string;
   type: AdminActionType;
@@ -24,24 +18,14 @@ export interface AdminAction {;
   executedAt?: string;
   status: 'pending' | 'executed' | 'failed'
 }
-<<<<<<< HEAD
 export interface FraudDetectionResult {
-=======
-
-export interface FraudDetectionResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isFraud: boolean;
   confidence: number;
   reasons: string[];
   suggestedActions: AdminActionType[]
   metadata: Record<string, any>;
 }
-<<<<<<< HEAD
 export interface FraudDetectionConfig {
-=======
-
-export interface FraudDetectionConfig {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   enabled: boolean;
   rules: {
     suspiciousActivity: {
@@ -64,17 +48,6 @@ export interface FraudDetectionConfig {;
   autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
-<<<<<<< HEAD
     confidenceThreshold: number
   }
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-    confidenceThreshold: number,
-  };
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

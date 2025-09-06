@@ -1,19 +1,5 @@
 import Link from 'next/link';
 import AnimatedBackground from './AnimatedBackground';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function FuturisticHero() {
   return (
     <section className='relative py-20 sm:py-28'>
@@ -41,7 +27,6 @@ export default function FuturisticHero() {
         <div className='mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow'>
           <p className='text-sm text-gray-700 dark:text-gray-300'>
             Talent marketplace • Project accelerators • Secure contracts •
-<<<<<<< HEAD
             Integrated AI toolchain          </p>export default function FuturisticHero() {
   return (
     <section className="relative py-20 sm:py-28">
@@ -60,32 +45,11 @@ export default function FuturisticHero() {
         <div className="mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow">
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
-=======
-            Integrated AI toolchain
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </div>
       </div>
-<<<<<<< HEAD
     </section>;
   );
 }
 
 }
-=======
-    </section>
-  );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

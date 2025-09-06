@@ -1,49 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-
-  talentId, 
-  name, 
-  title, 
-  company, 
-  avatar, 
-  location, 
-  category, 
-  matchPercent, 
-}
-}
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react'
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
-import { JobMatch } from '@/types/jobs';
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-import { formatDistanceToNow } from "date-fns",
-import { JobMatch } from "@/types/jobs",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 interface JobMatchProps {
   matchId: string;
   talentId: string;
@@ -58,14 +20,10 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function JobMatchCard({ 
   matchId;
-<<<<<<< HEAD
   talentId;
   name;
   title;
@@ -78,116 +36,8 @@ export function JobMatchCard({
   onApply;
   onViewDetails;
   onInvite 
-=======
-talentId;
-name;
-title;
-company;
-avatar;
-location;
-category;
-matchPercent;
-skills;
-onApply;
-onViewDetails;
-onInvite ;
-}: JobMatchProps) {;
-  const handleApply = () => {;
-  if (onApply) {;
-  onApply (matchId) ;
-}
-}
-}
-
-export function JobMatchCard({
-  matchId,
-  talentId,
-  name,
-  title,
-  company,
-  avatar,
-  location,
-  category,
-  matchPercent,
-  skills,
-  onApply,
-  onViewDetails,
-  onInvite,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }: JobMatchProps) {
   const handleApply = null;
-=======
-
-  talentId
-  name
-  title
-  company
-  avatar
-  location
-  category
-  matchPercent
-
-}
-}
-=======
-import React from 'react',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react';
-import { formatDistanceToNow } from "date-fns",;
-import { JobMatch } from "@/types/jobs",;
-interface JobMatchProps {;
-  matchId: string,;
-  talentId: string,;
-  name: string,;
-  title: string,;
-  company: string,;
-  avatar: string,;
-  location: string,;
-  category: string,;
-  matchPercent: number,;
-  skills: string[],;
-  onApply?: (matchId: string) => void,;
-  onViewDetails?: (matchId: string) => void,;
-  onInvite?: (matchId: string) => void;
-}
-;
-export function JobMatchCard({;
-  matchId,;
-  talentId,;
-  name,;
-  title,;
-  company,;
-  avatar,;
-  location,;
-  category,;
-  matchPercent,;
-  skills,;
-  onApply,;
-  onViewDetails,;
-  onInvite;
-}: JobMatchProps) {;
-  const handleApply = () => {;
-    if (onApply) {;
-      onApply(matchId);
-    }
-  },;
-  const handleViewDetails = () => {;
-    if (onViewDetails) {;
-      onViewDetails(matchId);
-    }
-  },;
-  const handleInvite = () => {;
-    if (onInvite) {;
-      onInvite(matchId);
-    }
-  },
-
-  // Generate a formatted date for display
-  const postedDate = new Date(),
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
   
   return (
@@ -262,64 +112,10 @@ export function JobMatchCard({;
                 Apply Now
               </Button>
             )}
-<<<<<<< HEAD
           </div>
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   )
-=======
-  talentId
-  name
-  title
-  company
-  avatar
-  location
-  category
-  matchPercent
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 }
-=======
-  );
-
-};
-const handleInvite = () => {;
-  if (onInvite) {;
-  onInvite (matchId) ;
-
-};
-//Generate a formatted date for display const postedDate = new Date ();
-postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), //Random date within last 2 weeks return (<Card className="overflow-hidden" > <CardContent className="p-0" > {;
-  /* Match score indicator */ ";
-}<div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center" > <div className="flex items-center gap-1" > <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" /> <span className="font-medium" > {;
-  matchPercent ";
-}% Match</span> </div> <Badge variant="outline" className="bg-background" > {;
-  formatDistanceToNow (postedDate, {;
-  addSuffix: true ;
-}) ;
-}</Badge> </div> {;
-  /* Talent details */ ";
-}<div className="p-4" > <div className="flex justify-between items-start gap-2 mb-3" > <h3 className="text-lg font-bold line-clamp-2" > {;
-  name ";
-}</h3> <Badge variant="default" > h-3 w-3" /> </AvatarFallback>) ;
-}</Avatar> </Badge>) ) ;
-}</div> Apply Now </Button>) ;
-}</div> </div> </CardContent> </Card>) ;
-}"
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-          </div>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

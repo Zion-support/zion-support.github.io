@@ -1,111 +1,39 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import type { KycProfile } from '../../../utils/kyc',;
-import fs from 'fs',;
-import path from 'path',;
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),
-const FILE = path.join(DATA_DIR, 'profiles.json'),
-
-function load(): Record<string, KycProfile> {
-  try {
-    const raw = fs.readFileSync(FILE, 'utf8'),
-    return JSON.parse(raw)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
-=======
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
-<<<<<<< HEAD
-=======
-=======
-
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8')
     return JSON.parse(raw)
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-const DATA_DIR = path.join(process.cwd(), 'datakyc');
-const FILE = path.join(DATA_DIR, 'profiles.json');
-
-function load(): Record<string, KycProfile> {
-  try {
-    if (!fs.existsSync(FILE)) return {};
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   } catch {
     return {};
   }
 }
 function save(db: Record<string, KycProfile>) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   fs.mkdirSync(DATA_DIR, { recursive: true });
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 fs.mkdirSync(DATA_DIR, { recursive: true })
 
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const db = load();
   
   if (req.method === 'GET') {
     const profiles = Object.values(db);
     return res.status(200).json({ ok: true, profiles });
-=======
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const db = load();
-  if (req.method === 'GET') {
-    const queue = Object.values(db).filter((p) => 
-      p.status === 'submitted' || p.status === 'needs_more_info'
-    );
-    return res.status(200).json({ ok: true, queue });
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   
   if (req.method === 'POST') {
-<<<<<<< HEAD
     const { id, status } = req.body;
     if (!id || !status) {
       return res.status(400).json({ error: 'Missing required fields' });
@@ -124,15 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     
     return res.status(404).json({ error: 'Profile not found' });
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const db = load()
-=======
-<<<<<<< HEAD
-  const db = load(),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method === 'GET') {
     const queue = Object.values(db).filter((p) => p.status === 'submitted' |p.status === 'needs_more_info')
     return res.status(200).json({ ok: true, queue })
@@ -151,23 +71,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     db[userId] = profile
     save(db)
     return res.status(200).json({ ok: true, profile })
-<<<<<<< HEAD
 
   }
   return res.status(405).json({ error: 'Method not allowed' });
 
 }
 
-<<<<<<< HEAD
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-  }
-;
-  return res.status(405).json({ error: 'Method not allowed' });
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {
     if (req.method === 'GET') {
       const profiles = load();
@@ -191,44 +100,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-    const { userId, action, reason } = req.body as { 
-      userId?: string; 
-      action?: 'approve' | 'reject' | 'needs_more_info'; 
-      reason?: string; 
-    };
-    if (!userId || !action) {
-      return res.status(400).json({ error: 'Missing userId or action' });
-    }
-    const profile = db[userId];
-    if (!profile) return res.status(404).json({ error: 'Profile not found' });
-
-    const now = new Date().toISOString();
-    if (action === 'approve') profile.status = 'approved';
-    if (action === 'reject') profile.status = 'rejected';
-    if (action === 'needs_more_info') profile.status = 'needs_more_info';
-    profile.lastUpdatedAt = now;
-    profile.auditTrail.push({
-      at: now,
-      by: 'admin',
-      action: `admin_${action}`,
-      details: reason ? { reason } : undefined,
-    });
-
-    db[userId] = profile;
-    save(db);
-    return res.status(200).json({ ok: true, profile });
-  }
-
-  return res.status(405).json({ error: 'Method not allowed' });
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

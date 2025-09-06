@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function RAGEvaluationLabPage() {
 
   return (
@@ -89,20 +78,6 @@ export default function RAGEvaluationLabPage() {
       </section>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-<<<<<<< HEAD
-=======
-=======
-}
-=======
-import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO',
 import Link from 'next/link',
 export default function RAGEvaluationLabPage() {
@@ -205,9 +180,3 @@ export default function RAGEvaluationLabPage(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -13,14 +13,7 @@ interface HTMLDivElement extends HTMLElement {
   tagName: 'DIV';
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const badgeVariants = null;
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const badgeVariants = cva(
   "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
   {

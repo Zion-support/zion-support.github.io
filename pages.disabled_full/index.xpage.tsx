@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from \'react\';
 }
 
@@ -11,23 +10,3 @@ import _React from 'react';
 }
 
 export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-=======
-<<<<<<< HEAD
-=======
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
-const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
-import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,44 +9,15 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
-=======
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
-<<<<<<< HEAD
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function ReferralLink({
   referralLink
   onCopy
@@ -60,21 +29,12 @@ export function ReferralLink({
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }
-=======
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
-  const [copied, setCopied] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleCopy = () => {
     onCopy(),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="mt-6">
@@ -145,18 +105,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </div>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
-  )
-=======
-  )
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -244,8 +194,3 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

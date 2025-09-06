@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AILegalContractAnalyzerPage() {
   const service = null;
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -26,57 +13,16 @@ import {
   ArrowRight
   Star
   Scale;
-=======
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,;
-  Scale,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-legal-contract-analyzer');
   );  if (!service) return null;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-}
-
-export default function AILegalContractAnalyzerPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/ai-legal-contract-analyzer')
-  );
-  if (!service) return null;
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
   if (!service) return null,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <Layout>
       <Head>
@@ -118,7 +64,6 @@ export default function AILegalContractAnalyzerPage() {
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
               </div>
-<<<<<<< HEAD
               <a
                 href='/contact'
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
@@ -138,25 +83,10 @@ export default function AILegalContractAnalyzerPage() {
                 <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>
                   <MapPin />
                   <span>{service.contactInfo.address}</span>
-<<<<<<< HEAD
                 </div>              </div>
             </div>
           </div>
         </div>
-=======
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         <div className="bg-amber-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Streamline Legal Work</h2>
           <p className="text-lg text-gray-700 mb-6">
@@ -173,31 +103,4 @@ export default function AILegalContractAnalyzerPage() {
         </div>
       </main>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-);
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      </div>
-    </Layout>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

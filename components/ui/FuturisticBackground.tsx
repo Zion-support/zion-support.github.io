@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 import React from "react";
-=======
-import React from 'react';
-<<<<<<< HEAD
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function FuturisticBackground() {
   return (
     <div className='pointer-events-none absolute inset-0 overflow-hidden'>
@@ -28,12 +10,7 @@ export default function FuturisticBackground() {
       <div className='absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float' />
       <div className='absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay:1.2s]' />
       <div className='absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]' />
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
-    </div>;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   );export default function FuturisticBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -45,28 +22,8 @@ export default function FuturisticBackground() {
       <div className="absolute top-10 left-1/4 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl animate-float" />
       <div className="absolute bottom-10 right-1/5 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-float [animation-delay: 1.2s]" />
       <div className="absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2.1s]" />
-<<<<<<< HEAD
     </div>;
   );
 }
 
 }
-=======
-    </div>
-  );
-<<<<<<< HEAD
-}
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -22,8 +22,7 @@ function findMergeConflictFiles() {
         } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<< HEAD')) {
-              files.push(fullPath);
+            if (content.includes('              files.push(fullPath);
             }
           } catch (error) {
             // Skip files that can't be read
@@ -46,13 +45,9 @@ function resolveMergeConflicts(filePath) {
     let originalContent = content;
     
     // Remove merge conflict markers and keep the HEAD version (first part)
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
-    
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-    
+    content = content.replace(/    // Clean up any remaining conflict markers
+    content = content.replace(/    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/    
     // Clean up extra newlines
     content = content.replace(/\n{3,}/g, '\n\n');
     

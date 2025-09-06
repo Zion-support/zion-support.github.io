@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {motion} from 'framer-motion';
-import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon,} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import Head from 'next/head',
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
@@ -55,86 +42,6 @@ const serviceCategories = [
   {
     title: 'AI Development Tools'
     description: 'Advanced AI-powered development and testing automation'
-=======
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Sparkles,
-  Atom,
-  Dna,
-  Users,
-  Globe,
-  Cpu,
-  Target,
-  Microscope,
-  Lock,
-  Cloud,
-  BarChart3,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Heart,
-  Lightbulb,
-  Target as TargetIcon,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  Search,
-  Code,
-  TestTube,
-  Server,
-  Database,
-  Network,
-  Shield as SecurityIcon,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-const heroStats = [
-  {
-    label: 'AI Services Delivered',
-    value: '200+',
-    icon: <Brain className='w-5 h-5' />,
-  },
-  {
-    label: 'Happy AI Clients',
-    value: '500+',
-    icon: <Users className='w-5 h-5' />,
-  },
-  {
-    label: 'AI Success Rate',
-    value: '99.8%',
-    icon: <Award className='w-5 h-5' />,
-  },
-  {
-    label: 'AI ROI Average',
-    value: '500%',
-    icon: <TrendingUp className='w-5 h-5' />,
-  },
-];
-
-const serviceCategories = [
-  {
-    title: 'AI Development Tools',
-    description: 'Advanced AI-powered development and testing automation',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     services: advancedAIAutomationServices2025.filter(
       s => s.category === 'AI Development Tools'
     )
@@ -185,7 +92,6 @@ const serviceCategories = [
     icon: Database
     color: 'from-cyan-500 to-blue-600'
     features: [
-<<<<<<< HEAD
       'Pipeline Management'
       'Quality Assurance'
       'Governance Automation'
@@ -246,28 +152,6 @@ const testimonials = [
     rating: 5
     avatar: '👨‍🔒'
   },];
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-=======
-
-=======
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -323,21 +207,12 @@ const serviceCategories = [
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
     icon: Database,
     color: 'from-cyan-500 to-blue-600',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    features: [
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       'Pipeline Management',
       'Quality Assurance',
       'Governance Automation',
     ],
-<<<<<<< HEAD
   },
 ];
-=======
-  },];
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 const heroFeatures = [
   {
@@ -367,12 +242,8 @@ const heroFeatures = [
       'AI-powered insights that predict issues before they occur and optimize performance.',
     icon: BarChart3,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
-<<<<<<< HEAD
   },
 ];
-=======
-  },];
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 const testimonials = [
   {
@@ -383,12 +254,8 @@ const testimonials = [
       "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly.",
     rating: 5,
     avatar: '👨‍💻',
-<<<<<<< HEAD
   },
   {
-=======
-  },  {
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     name: 'Sarah Rodriguez',
     role: 'DevOps Director, CloudScale Inc.',
     company: 'CloudScale Inc.',
@@ -396,12 +263,8 @@ const testimonials = [
       'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
     rating: 5,
     avatar: '👩‍💼',
-<<<<<<< HEAD
   },
   {
-=======
-  },  {
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     name: 'David Kim',
     role: 'Security Manager, SecureNet Corp.',
     company: 'SecureNet Corp.',
@@ -409,17 +272,10 @@ const testimonials = [
       'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
     avatar: '👨‍🔒',
-<<<<<<< HEAD
   },
 ];
 }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  },];
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
 import React from 'react';
 import Head from 'next/head';
@@ -557,12 +413,6 @@ const testimonials = [;
   }
 }
 ],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function AdvancedAIAutomationServices() {
   return (
     <Layout>
@@ -576,49 +426,13 @@ export default function AdvancedAIAutomationServices() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/advanced-ai-automation-services" />
       </Head>
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20'></div>
-<<<<<<< HEAD
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-=======
-        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <motion.div
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Advanced AI Automation Services
@@ -626,51 +440,13 @@ export default function AdvancedAIAutomationServices() {
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your development, testing, DevOps, and security operations with revolutionary AI automation that works 24/7
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats.map((stat, index) => (
-=======
-            <div className='flex flex-wrap justify-center gap-4 mb-12'>
-              {heroStats.map((stat, index) => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {heroStats.map((stat, index) => (
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30'
-=======
-                  key={index  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  animate={{ opacity: 1, scale: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -691,96 +467,34 @@ export default function AdvancedAIAutomationServices() {
                 Explore Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-<<<<<<< HEAD
               <Link
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'
               >
-<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />                Get Started
-=======
-                <Phone className='mr-2 w-5 h-5' />
-                Get Started
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-              <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300">
-                <Phone className="mr-2 w-5 h-5" />
-                Get Started
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-=======
-
-      {/* Features Section */}
-      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <motion.div
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
-      </section>
-      {/* Features Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our AI Automation Services?
             </h2>
-<<<<<<< HEAD
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI automation services provide unprecedented efficiency
               accuracy, and cost savings across all aspects of technology
               operations
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
-=======
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            {heroFeatures.map((feature, index) => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -788,27 +502,6 @@ export default function AdvancedAIAutomationServices() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='relative group'
-=======
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI automation services provide unprecedented efficiency, accuracy, and cost savings across all aspects of technology operations
-            </p>
-          </motion.div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
-              <motion.div
-<<<<<<< HEAD
-=======
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='relative group'
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {heroFeatures.map((feature, index) => (
-              <motion.div
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -835,11 +528,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="relative group"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -847,87 +535,24 @@ export default function AdvancedAIAutomationServices() {
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
-<<<<<<< HEAD
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
-<<<<<<< HEAD
                       <p className='text-gray-300'>{feature.description}</p>                    </div>
-=======
-                      <p className='text-gray-300'>{feature.description}</p>
-                    </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-                      <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                      <p className="text-gray-300">{feature.description}</p>
-                    </div>
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-=======
-
-      {/* Services Section */}
-      <section id='services' className='py-20 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <motion.div
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Services Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section id="services" className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               AI Automation Service Categories
@@ -936,13 +561,7 @@ export default function AdvancedAIAutomationServices() {
               Comprehensive AI automation solutions covering every aspect of modern technology operations
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
-=======
-
-          <div className='space-y-16'>
-            {serviceCategories.map((category, categoryIndex) => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
@@ -950,41 +569,6 @@ export default function AdvancedAIAutomationServices() {
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
                 className='relative'
-=======
-          <div className="space-y-16">
-            {serviceCategories.map((category, categoryIndex) => (
-              <motion.div
-                key={categoryIndex  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="relative"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -993,13 +577,7 @@ export default function AdvancedAIAutomationServices() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
-<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
-=======
-
-                <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
-                  {category.services.map((service, serviceIndex) => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -1007,58 +585,13 @@ export default function AdvancedAIAutomationServices() {
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className='relative group'
-=======
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                  {category.services.map((service, serviceIndex) => (
-                    <motion.div
-                      key={service.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      initial={{ opacity: 0, scale: 0.9 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      whileInView={{ opacity: 1, scale: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      transition={{ duration: 0.5, delay: serviceIndex * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className="relative group"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
                           <div className="flex items-center justify-between mb-4">
                             <span className="text-3xl">{service.icon}</span>
                             {service.popular && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>                                Popular
-=======
-                              <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
-                                Popular
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-                              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
-                                Popular
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                               </span>
                             )  } catch (error) {
     console.error("Error:", error);
@@ -1072,7 +605,6 @@ export default function AdvancedAIAutomationServices() {
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
-<<<<<<< HEAD
                           <p className='text-gray-300 text-sm mb-4'>
                             {service.description}
                           </p>
@@ -1088,28 +620,6 @@ export default function AdvancedAIAutomationServices() {
                                   {feature}
                                 </div>
                               ))}
-=======
-                          <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                          <div className="space-y-2 mb-6">
-                            {service.features.slice(0, 3).map((feature, featureIndex) => (
-                              <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                                <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                                {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                              </div>;
-                            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -1124,30 +634,14 @@ export default function AdvancedAIAutomationServices() {
                               <ArrowRight className="ml-1 w-4 h-4" />
                             </Link>
                             <Link
-<<<<<<< HEAD
                               href={`tel:${contactInfo.mobile}`}
-<<<<<<< HEAD
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'                            >
-=======
-                              className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300'
-                            >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-                              href={`tel:${contactInfo.mobile}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                            >
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                               Get Started
                             </Link>
                           </div>
                         </div>
                       </div>
                     </motion.div>
-<<<<<<< HEAD
                   ))}
                 </div>
               </motion.div>
@@ -1157,67 +651,12 @@ export default function AdvancedAIAutomationServices() {
       </section>
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
-<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
-=======
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <motion.div
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>;
-              </motion.div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Testimonials Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -1226,13 +665,7 @@ export default function AdvancedAIAutomationServices() {
               Real feedback from organizations that have transformed their operations with our AI automation services
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
-=======
-
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {testimonials.map((testimonial, index) => (
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -1240,41 +673,6 @@ export default function AdvancedAIAutomationServices() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1288,12 +686,7 @@ export default function AdvancedAIAutomationServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
-=======
-                      <Star key={i} className='w-4 h-4 fill-current' />
-                    ))}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </div>
                 </div>
               </motion.div>
@@ -1303,67 +696,11 @@ export default function AdvancedAIAutomationServices() {
       </section>
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
-<<<<<<< HEAD
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
-=======
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <motion.div
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
-                      <Star key={i} className="w-4 h-4 fill-current" />
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </div>;
-                </div>;
-              </motion.div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?
@@ -1380,86 +717,27 @@ export default function AdvancedAIAutomationServices() {
 }
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
-<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo.mobile}
-=======
-                <Phone className='mr-2 w-5 h-5' />
-                Call Now: {contactInfo.mobile}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'
-=======
-                <Phone className="mr-2 w-5 h-5" />
-                Call Now: {contactInfo.mobile  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </Link>;
-              <Link;
-                href={`mailto:${contactInfo.email}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
               </Link>
             </div>
-<<<<<<< HEAD
             <div className='mt-8 text-center'>
               <p className='text-gray-300 mb-2'>📍 {contactInfo.address}</p>
-<<<<<<< HEAD
               <p className='text-gray-300'>🌐 {contactInfo.website}</p>            </div>
-=======
-              <p className='text-gray-300'>🌐 {contactInfo.website}</p>
-            </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-            <div className="mt-8 text-center">
-              <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
-              <p className="text-gray-300">🌐 {contactInfo.website}</p>
-            </div>
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </Layout>
-<<<<<<< HEAD
 );
-=======
-<<<<<<< HEAD
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-=======
-<<<<<<< HEAD
-    </Layout>;
-);
-
-}
-=======
-    </Layout>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

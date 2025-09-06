@@ -1,32 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
-=======
-import { supabase } from "@/integrations/supabase/client",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-import {supabase} from "@/integrations/supabase/client";
-=======
-import { supabase } from "@/integrations/supabase/client",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const ensureProfilesTableExists = null;
-=======
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export const ensureProfilesTableExists = async () => {
   try {
     // Try to execute a simple query to check if the table exists
@@ -35,18 +13,9 @@ export const ensureProfilesTableExists = async () => {
         SELECT FROM information_schema.tables
         WHERE table_schema = 'public'
         AND table_name = 'profiles'
-<<<<<<< HEAD
       ),`;
     });
-=======
-      ),`
-<<<<<<< HEAD
-    });
-=======
-    }),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // If there's an error, log it and proceed with table creation
     if (error) {
       console.warn("Error checking if profiles table exists, attempting to create it:", error)
@@ -63,17 +32,9 @@ export const ensureProfilesTableExists = async () => {
         bio TEXT,
         avatar_url TEXT,
         headline TEXT
-<<<<<<< HEAD
       );
       -- Create RLS policies
       ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
-=======
-      ),
-      
-      -- Create RLS policies
-      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY,
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       -- Create policies
       DO $$
       BEGIN
@@ -82,22 +43,12 @@ export const ensureProfilesTableExists = async () => {
           WHERE policyname = 'Users can view their own profile'
           AND tablename = 'profiles'
         ) THEN
-<<<<<<< HEAD
           CREATE POLICY "Users can view their own profile"
             ON public.profiles FOR SELECT
             USING (auth.uid() = id);
         END IF;
       END
       $$;
-=======
-          CREATE POLICY "Users can view their own profile" 
-            ON public.profiles FOR SELECT 
-            USING (auth.uid() = id),
-        END IF,
-      END
-      $$,
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       DO $$
       BEGIN
         IF NOT EXISTS (
@@ -105,28 +56,17 @@ export const ensureProfilesTableExists = async () => {
           WHERE policyname = 'Users can update their own profile'
           AND tablename = 'profiles'
         ) THEN
-<<<<<<< HEAD
           CREATE POLICY "Users can update their own profile"
             ON public.profiles FOR UPDATE
             USING (auth.uid() = id);
         END IF;
       END
       $$;
-=======
-          CREATE POLICY "Users can update their own profile" 
-            ON public.profiles FOR UPDATE 
-            USING (auth.uid() = id),
-        END IF,
-      END
-      $$,
-        
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       -- Set up trigger for new users
       CREATE OR REPLACE FUNCTION public.handle_new_user()
       RETURNS TRIGGER AS $$
       BEGIN
         INSERT INTO public.profiles (id, display_name, bio, headline)
-<<<<<<< HEAD
         VALUES (new.id
                 new.raw_user_meta_data->>'display_name'
                 new.raw_user_meta_data->>'bio';
@@ -134,16 +74,6 @@ export const ensureProfilesTableExists = async () => {
         RETURN new;
       END;
       $$ LANGUAGE plpgsql SECURITY DEFINER;
-=======
-        VALUES (new.id, 
-                new.raw_user_meta_data->>'display_name', 
-                new.raw_user_meta_data->>'bio',
-                new.raw_user_meta_data->>'headline'),
-        RETURN new,
-      END,
-      $$ LANGUAGE plpgsql SECURITY DEFINER,
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       -- Check if trigger exists before creating it
       DO $$
       BEGIN
@@ -153,7 +83,6 @@ export const ensureProfilesTableExists = async () => {
             FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),
         END IF,
       END
-<<<<<<< HEAD
       $$;
     `;
     // Execute the creation query using RPC to avoid TypeScript errors
@@ -166,85 +95,11 @@ export const ensureProfilesTableExists = async () => {
   } catch (error) {
     console.error('Error setting up profiles table:', error)
   }
-<<<<<<< HEAD
 }
 // Call this when the app starts to ensure the table exists
 export const initializeDatabase = async () => {
   await ensureProfilesTableExists()
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  try {
-  //Try to execute a simple query to check if the table exists const {
-  error 
-}= await supabase.rpc ('exec', {
-  sql: `SELECT EXISTS (SELECT FROM information schema.tables WHERE table schema = 'public'AND table name = 'profiles' 
-}display name TEXT;
-user type TEXT;
-profile complete BOOLEAN DEFAULT FALSE;
-created at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now () );
-updated at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE ('utc', now () );
-bio TEXT;
-avatar url TEXT;
-headline TEXT);
--- Create RLS policies ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
--- Create policies DO $$ BEGIN IF NOT EXISTS (SELECT FROM pg catalog.pg policies WHERE policyname = 'Users can view their own profile'AND tablename = 'profiles') THEN CREATE POLICY "Users can view their own profile" ON public.profiles FOR SELECT USING (auth.uid () = id);
-END IF;
-END $$;
-DO $$ BEGIN IF NOT EXISTS (SELECT FROM pg catalog.pg policies WHERE policyname = 'Users can update their own profile'AND tablename = 'profiles') THEN CREATE POLICY "Users can update their own profile" ON public.profiles FOR UPDATE USING (auth.uid () = id);
-END IF;
-END $$;
--- Set up trigger for new users CREATE OR REPLACE FUNCTION public.handle new user () RETURNS TRIGGER AS $$ BEGIN INSERT INTO public.profiles (id, display name, bio, headline) VALUES (new.id;
-new.raw user meta data->>'display name';
-new.raw user meta data->>'bio';
-new.raw user meta data->>'headline');
-RETURN new;
-END;
-$$ LANGUAGE plpgsql SECURITY DEFINER;
--- Check if trigger exists before creating it DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg trigger WHERE tgname = 'on auth user created') THEN CREATE TRIGGER on auth user created AFTER INSERT ON auth.users FOR EACH ROW EXECUTE FUNCTION public.handle new user ();
-END IF;
-END $$;
-`;
-//Execute the creation query using RPC to avoid TypeScript errors 
-
-}catch (error) {
-  console.error ('Error setting up profiles table:', error) 
-
-};
-// Call this when the app starts to ensure the table exists
-}
-
-export const initializeDatabase = async () => {
-  await ensureProfilesTableExists () 
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-      $$,
-    `,
-    
-    // Execute the creation query using RPC to avoid TypeScript errors
-    const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery }),
-    
-    if (createError) {
-      console.error('Error creating profiles table:', createError)
-    } else {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      console.log('Profiles table setup completed')
-    }
-  } catch (error) {
-    console.error('Error setting up profiles table:', error)
-  }
-};
-
-// Call this when the app starts to ensure the table exists
-export const initializeDatabase = async () => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // // // console.log('Profiles table setup completed')
 import { supabase } from "@/integrations/supabase/client",;
 /**;
@@ -344,8 +199,5 @@ export const ensureProfilesTableExists = async () => {;
 };
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   await ensureProfilesTableExists();
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

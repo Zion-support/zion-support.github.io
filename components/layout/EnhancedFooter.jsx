@@ -1,18 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
 
@@ -31,7 +20,6 @@ const EnhancedFooter = () => {
             </div>
             <p className='text-gray-300 mb-6 max-w-md'>
               Leading technology solutions provider helping businesses transform
-<<<<<<< HEAD
               their digital presence with cutting-edge AI, cloud architecture
               and innovative development services.            </p>const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear()
@@ -52,10 +40,6 @@ const EnhancedFooter = () => {
             <p className="text-gray-300 mb-6 max-w-md">
               Leading technology solutions provider helping businesses transform their digital presence
               with cutting-edge AI, cloud architecture, and innovative development services.
-=======
-              their digital presence with cutting-edge AI, cloud architecture,
-              and innovative development services.
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </p>
           </div>
           {/* Services */}
@@ -93,17 +77,12 @@ const EnhancedFooter = () => {
                 >
                   Data Analytics
                 </Link>
-<<<<<<< HEAD
               </li>            </ul>            <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Development</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Blockchain Solutions</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
-=======
-              </li>
-            </ul>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
           {/* Company */}
           <div>
@@ -140,17 +119,12 @@ const EnhancedFooter = () => {
                 >
                   Blog
                 </Link>
-<<<<<<< HEAD
               </li>            </ul>            <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/talent" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
-=======
-              </li>
-            </ul>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
         </div>
       </div>
@@ -158,7 +132,6 @@ const EnhancedFooter = () => {
       <div className='border-t border-gray-700 py-6'>
         <div className='container mx-auto px-4'>
           <div className='text-center text-gray-300 text-sm'>
-<<<<<<< HEAD
             <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>          </div>      <div className="border-t border-gray-700 py-6">
         <div className="container mx-auto px-4">
           <div className="text-center text-gray-300 text-sm">
@@ -167,30 +140,7 @@ const EnhancedFooter = () => {
       </div>
     </footer>
 
-<<<<<<< HEAD
 );
 }
 export default EnhancedFooter;}
 export default EnhancedFooter;
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-            <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
-}
-
-export default EnhancedFooter;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-export default EnhancedFooter;},
-
-export default EnhancedFooter;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

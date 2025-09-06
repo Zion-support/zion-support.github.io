@@ -1,63 +1,22 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
-=======
-import { useState, useEffect } from 'react',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
-<<<<<<< HEAD
 interface ModelVersionData extends ModelConfig {
-<<<<<<< HEAD
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
-import { supabase } from '@/integrations/supabase/client',
-import { ModelConfig } from '@/utils/zion-gpt',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-import {useState, useEffect} from 'react';
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
-import {supabase} from '@/integrations/supabase/client';
-import {ModelConfig} from '@/utils/zion-gpt';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ModelVersionData extends ModelConfig {
 
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
   errorMessage?: string
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-  errorMessage?: string;
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]),
-=======
-
-export function ZionGPTModelManager() {;
-  const [models, setModels] = useState<ModelVersionData[]>([]);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({})
   // Fetch model data on component mount
@@ -141,24 +100,7 @@ export function ZionGPTModelManager() {;
     } catch (error) {
       console.error('Error toggling model active state:', error)
     }
-<<<<<<< HEAD
   }
-=======
-=======
-  };
-=======
-import { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
-import { supabase } from '@/integrations/supabase/client',
-import { ModelConfig } from '@/utils/zion-gpt',
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
-  errorMessage?: string
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -258,11 +200,6 @@ export function ZionGPTModelManager() {;
       console.error('Error toggling model active state:', error);
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <Card className="w-full">
@@ -356,30 +293,13 @@ export function ZionGPTModelManager() {;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-<<<<<<< HEAD
                   </TableCell>
                 </TableRow>
-=======
-                  </TableCell>;
-                </TableRow>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </TableBody>
           </Table>
         )}
-<<<<<<< HEAD
       </CardContent>
     </Card>
   )
 }
-=======
-      </CardContent>;
-    </Card>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,44 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -73,10 +44,6 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 const cloudServices = [
   {
@@ -115,17 +82,10 @@ const cloudServices = [
     pricing: "$2,500 - $12,000/month"
   }
 ];
-<<<<<<< HEAD
 }
 
 export default function CloudServicesPage() {
   
-=======
-
-export default function CloudServicesPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -160,18 +120,10 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
       description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
-=======
-  
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -181,17 +133,6 @@ export default function CloudServicesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -204,16 +145,6 @@ export default function CloudServicesPage() {
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -226,14 +157,6 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -275,10 +198,6 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -319,11 +238,6 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -365,13 +279,6 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

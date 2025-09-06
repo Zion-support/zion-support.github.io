@@ -1,37 +1,14 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 type Props = any;
-=======
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 type Props = {
   onSubmit: (payload: {
     title: string;
     description?: string;
     dueDate: string;
     amountUsd: number;
-<<<<<<< HEAD
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-<<<<<<< HEAD
 }
-=======
-  }) => Promise<void> | void;
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function MilestoneForm({ onSubmit }: Props) {
-=======
-};
-
-export default function MilestoneForm({ onSubmit }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -61,9 +38,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
     } catch (err: any) {
       setError(err?.message |'Failed to create milestone');
     } finally {
-<<<<<<< HEAD
       setLoading(false);    }
-<<<<<<< HEAD
   }
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
@@ -79,14 +54,8 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       setError(err?.message |'Failed to create milestone')
     } finally {
       setLoading(false)
-=======
-      setLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
-=======
-  };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
@@ -97,7 +66,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           className='mt-1 w-full rounded border px-3 py-2'
           value={title}
           onChange={e => setTitle(e.target.value)}
-<<<<<<< HEAD
           placeholder='Phase 1 – Backend Setup'          required
         />
       </div>
@@ -109,9 +77,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Phase 1 – Backend Setup"
-=======
-          placeholder='Phase 1 – Backend Setup'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           required
         />
       </div>
@@ -132,7 +97,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             type='date'
             className='mt-1 w-full rounded border px-3 py-2'
             value={dueDate}
-<<<<<<< HEAD
             onChange={e => setDueDate(e.target.value)}            required
           />
         </div>
@@ -153,9 +117,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             className="mt-1 w-full rounded border px-3 py-2"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
-=======
-            onChange={e => setDueDate(e.target.value)}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             required
           />
         </div>
@@ -168,7 +129,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             className='mt-1 w-full rounded border px-3 py-2'
             value={amountUsd}
             onChange={e => setAmountUsd(e.target.value)}
-<<<<<<< HEAD
             placeholder='3000'            required          <input
             type="number"
             min={0}
@@ -177,44 +137,19 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             value={amountUsd}
             onChange={(e) => setAmountUsd(e.target.value)}
             placeholder="3000"
-=======
-            placeholder='3000'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             required
           />
         </div>
       </div>
       <button
         type='submit'
-<<<<<<< HEAD
         className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50'        disabled={loading}        type="submit"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
-=======
-        className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50'
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
         disabled={loading}
       >
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

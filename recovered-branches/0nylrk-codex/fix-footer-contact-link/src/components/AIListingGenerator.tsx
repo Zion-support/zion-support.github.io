@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Skeleton} from "@/components/ui/skeleton";
-import {Sparkles, ArrowRight} from "@/components/icons";
-import {supabase} from "@/integrations/supabase/client";
-import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -21,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Skeleton } from "@/components/ui/skeleton",
 import { Sparkles, ArrowRight } from "@/components/icons",
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 interface GeneratedContent {
@@ -36,14 +20,7 @@ interface GeneratedContent {
   keyPoints: string[]
 }
 interface AIListingGeneratorProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
   onApplyGenerated?: (content: GeneratedContent) => void;
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   onApplyGenerated?: (content: GeneratedContent) => void
 
   initialValues?: {
@@ -51,13 +28,6 @@ interface AIListingGeneratorProps {
     category?: string;
     keyFeatures?: string;
     targetAudience?: string
-=======
-import { supabase } from "@/integrations/supabase/client",
-import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -66,32 +36,6 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-
-interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void,
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-initialValues?: {
-  title?: string;
-category?: string;
-keyFeatures?: string;
-targetAudience?: string
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
@@ -101,8 +45,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -130,15 +72,10 @@ interface AIListingGeneratorProps {;
     category?: string,;
     keyFeatures?: string,;
     targetAudience?: string;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-<<<<<<< HEAD
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title |"");
   const [category, setCategory] = useState(initialValues.category |"");
@@ -146,17 +83,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-=======
-  const { toast } = useToast(),
-  const [title, setTitle] = useState(initialValues.title || ""),
-  const [category, setCategory] = useState(initialValues.category || ""),
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
-  const [isLoading, setIsLoading] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
       case 'title':
@@ -172,19 +99,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         setTargetAudience(e.target.value)
         break
     }
-<<<<<<< HEAD
   }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
-<<<<<<< HEAD
       });
       return
     }
@@ -195,66 +116,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       });
       if (error) {
         throw new Error(error.message)
-=======
-      }),
-      return
-;
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
-  const { toast } = useToast(),;
-  const [title, setTitle] = useState(initialValues.title || ""),;
-  const [category, setCategory] = useState(initialValues.category || ""),;
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),;
-  const handleInputChange = (e: { target: { value: string } }, field: string) => {;
-    switch(field) {;
-      case 'title':;
-        setTitle(e.target.value),;
-        break,;
-      case 'category':;
-        setCategory(e.target.value),;
-        break,;
-      case 'keyFeatures':;
-        setKeyFeatures(e.target.value),;
-        break,;
-      case 'targetAudience':;
-        setTargetAudience(e.target.value),;
-        break;
-    }
-  },;
-  const handleGenerate = async () => {;
-    if (!title || !category) {;
-      toast({;
-        title: "Missing required fields",;
-        description: "Please provide at least a title and category.",;
-        variant: "destructive";
-      }),;
-      return;
-    }
-;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
-        body: { title, category, keyFeatures, targetAudience }
-      }),;
-      if (error) {;
-        throw new Error(error.message);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       if (data.error) {
         throw new Error(data.error)
       }
-<<<<<<< HEAD
       setGeneratedContent(data.generated);
-=======
-
-      setGeneratedContent(data.generated),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -269,12 +135,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
@@ -283,11 +144,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "The generated content has been applied to your listing."
       })
     }
-<<<<<<< HEAD
   }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -343,109 +200,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
-<<<<<<< HEAD
               disabled={isLoading}
             />
           </div>
-<<<<<<< HEAD
           <Button
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
-=======
-          <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-;
-      setGeneratedContent(data.generated),;
-      toast({;
-        title: "Content Generated",;
-        description: "AI has created optimized listing content for you.";
-      });
-    } catch (error) {;
-      console.error("Error generating content:", error),;
-      toast({;
-        title: "Generation Failed",;
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
-        variant: "destructive";
-      });
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  const handleApply = () => {;
-    if (generatedContent && onApplyGenerated) {;
-      onApplyGenerated(generatedContent),;
-      toast({;
-        title: "Content Applied";
-        description: "The generated content has been applied to your listing.";
-      });
-    }
-  };
-  return (;
-    <div className="space-y-6">;
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-        <CardHeader>;
-          <CardTitle className="flex items-center text-white">;
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
-            AI Listing Optimizer;
-          </CardTitle>;
-          <p className="text-sm text-zion-slate-light">;
-            Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
-          </p>;
-        </CardHeader>;
-        <CardContent className="space-y-4">;
-          <div className="space-y-2">;
-            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
-            <Input;
-              id="title";
-              value={title}
-              onChange={(e) => handleInputChange(e, 'title')}
-              placeholder="Enter your product or service title";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
-            <Input;
-              id="category";
-              value={category}
-              onChange={(e) => handleInputChange(e, 'category')}
-              placeholder="e.g. AI Tool, Digital Product, Service";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
-            <Textarea;
-              id="keyFeatures";
-              value={keyFeatures}
-              onChange={(e) => handleInputChange(e, 'keyFeatures')}
-              placeholder="Briefly describe the main features or benefits";
-              className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
-            <Input;
-              id="targetAudience";
-              value={targetAudience}
-              onChange={(e) => handleInputChange(e, 'targetAudience')}
-              placeholder="e.g. Developers, Marketers, Startups";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-              disabled={isLoading}
-            />;
-          </div>;
-          <Button;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
             {isLoading ? (
@@ -480,10 +242,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {generatedContent && !isLoading && (
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>

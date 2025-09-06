@@ -1,40 +1,4 @@
-<<<<<<< HEAD
-=======
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { GradientHeading } from '@/components/GradientHeading';
-import { AIMatchmaker } from '@/components/AIMatchmaker';
-import {
-  Select,
-  SelectValue,
-  SelectTrigger,
-  SelectContent,
-  SelectItem,;
-} from '@/components/ui/select';
-import { toast } from '@/hooks/use-toast';
-import { MatchResult } from '@/lib/ai-matchmaking';
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {AIMatchmaker} from "@/components/AIMatchmaker";
-import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {toast} from "@/hooks/use-toast";
-import {MatchResult} from "@/lib/ai-matchmaking";
-export default function AIMatcherPage() {;
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -42,7 +6,6 @@ import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
 import { AIMatchmaker } from "@/components/AIMatchmaker",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-<<<<<<< HEAD
 import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
@@ -55,13 +18,6 @@ export default function AIMatcherPage() {
     const category = match.item.category.toLowerCase()
     if (category.includes("talent") |category === "engineering" |
         category === "data science" |category === "development") {
-=======
-import { toast } from "@/hooks/use-toast",
-import { MatchResult } from "@/lib/ai-matchmaking",
-export default function AIMatcherPage() {
-  const navigate = useNavigate(),
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
@@ -70,7 +26,6 @@ export default function AIMatcherPage() {
     
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
@@ -85,13 +40,8 @@ export default function AIMatcherPage() {
         specificItem: match.item
       }
     })
-<<<<<<< HEAD
   }
 
-=======
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Header />
@@ -120,8 +70,6 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
@@ -133,14 +81,6 @@ export default function AIMatcherPage() {
     </>
   )
 }
-=======
-            
-            <AIMatchmaker 
-=======
-            <AIMatchmaker 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -205,10 +145,6 @@ export default function AIMatcherPage() {;
               </Select>;
             </div>;
             <AIMatchmaker;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
             />;
@@ -219,12 +155,4 @@ export default function AIMatcherPage() {;
     </>;
   );
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

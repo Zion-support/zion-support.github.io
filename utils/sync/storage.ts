@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
-<<<<<<< HEAD
 const defaultState: SyncState = {
   config: {
     instanceId: 'default-instance'
@@ -12,7 +10,6 @@ const defaultState: SyncState = {
     paused: false
   }
   lastSyncedAt: new Date().toISOString()
-<<<<<<< HEAD
 }
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {
@@ -20,86 +17,7 @@ export function readState(): SyncState {
 }
 export function updateState(updates: Partial<SyncState>): void {
   state = { ...state, ...updates }
-=======
-};
-
-let state: SyncState = { ...defaultState };
-
-export function readState(): SyncState {;
-  return { ...state };
 }
-
-export function updateState(updates: Partial<SyncState>): void {;
-  state = { ...state, ...updates };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-=======
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'multiverse');
-const STATE_PATH = path.join(DATA_DIR, 'state.json');
-
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-
-function defaultConfig(): InstanceConfig {
-  const instanceId = process.env.ZION_INSTANCE_ID || 'zion-local';
-  return {
-    instanceId,
-    optIn: false,
-    paused: false,
-    scope: 'full',
-    peers: [],
-    secretConfigured: Boolean(
-      process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0
-    ),
-  };
-
-function defaultState(): MultiverseState {
-  return {
-    config: defaultConfig(),
-    lastSyncedAt: 0,
-    seenEventIds: {},
-    latestVersionByEntityId: {},
-    proposalMerkleById: {},
-    events: [],
-  };
-}
-}
-
-export function readState(): MultiverseState {
-  ensureDataDir();
-  if (!fs.existsSync(STATE_PATH)) {
-    const initial = defaultState();
-    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2));
-    return initial;
-  }
-  const raw = fs.readFileSync(STATE_PATH, 'utf8');
-  try {
-    const parsed = JSON.parse(raw) as MultiverseState;
-    // Backfill missing fields on upgrade
-    parsed.config.secretConfigured = Boolean(
-      process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0
-    );
-    parsed.seenEventIds = parsed.seenEventIds || {};
-    parsed.latestVersionByEntityId = parsed.latestVersionByEntityId || {};
-    parsed.proposalMerkleById = parsed.proposalMerkleById || {};
-    parsed.events = parsed.events || [];
-    return parsed;
-  } catch {
-    const initial = defaultState();
-    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2));
-    return initial;
-  }
-}
-}
-
-export function writeState(state: MultiverseState): void {
-  ensureDataDir();
-  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2));
-}
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function upsertEvent(
   state: MultiverseState
   event: SyncEvent
@@ -118,12 +36,6 @@ export function upsertEvent(
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
   return state;
-<<<<<<< HEAD
-=======
-}
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function getEntityId(event: SyncEvent): string {
   switch (event.type) {
     case 'proposal':;
@@ -143,11 +55,6 @@ export function getEntityId(event: SyncEvent): string {
     default:
       return (event.payload as any).id |event.eventId;
   }
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function filterEventsByScope(
   events: SyncEvent[]
   scope: InstanceConfig['scope']
@@ -166,27 +73,6 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
-<<<<<<< HEAD
   return events;export function resetState(): void {
   state = { ...defaultState }
 }
-=======
-<<<<<<< HEAD
-  return events;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  return events;export function resetState(): void {;
-  state = { ...defaultState };
-}
-
-}
-}
-}
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

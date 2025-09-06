@@ -1,26 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { LoginCard } from './LoginCard';
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
-=======
-<<<<<<< HEAD
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { LoginCard } from "./LoginCard";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
 import { LoginCard } from "./LoginCard";
-=======
-import { LoginCard } from "./LoginCard",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function LoginContent() {
   return (
     <div className="flex min-h-screen bg-zion-blue">
@@ -39,20 +20,9 @@ export function LoginContent() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
-    </div>;
-  );
-}
-=======
-    </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { LoginCard } from "./LoginCard";
 export function LoginContent() {;
@@ -77,8 +47,3 @@ export function LoginContent() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

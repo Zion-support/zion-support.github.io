@@ -1,32 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
-=======
-  try {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const supabase = createServerClient();
     const clientId = (req.query.clientId as string) |null
     const [jobsR, quotesR] = await Promise.allSettled([
@@ -77,7 +58,6 @@ export default async function handler(
           { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' }
           { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }
         ];
-<<<<<<< HEAD
     const jobs = jobsR.status === 'fulfilled' && jobsR.value.data ? jobsR.value.data as any[] : [];
     const quotes = quotesR.status === 'fulfilled' && quotesR.value.data ? quotesR.value.data as any[] : [];
     const jobsData = jobs.length ? jobs : [
@@ -87,9 +67,6 @@ export default async function handler(
     const quotesData = quotes.length ? quotes : [
       { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' }
       { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }];
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const jobsPosted = jobsData.length;
     const quotesReceived = quotesData.length;
     const filled = jobsData.filter(j => j.status === 'filled');
@@ -132,7 +109,6 @@ export default async function handler(
         { label: 'Hire', value: 2 }
       ]
     });
-<<<<<<< HEAD
   }      jobsPosted: 3;
       quotesReceived: 2;
       timeToHireDays: 3.1;
@@ -145,6 +121,3 @@ export default async function handler(
         { label: 'Hire', value: 2 }]})
   }
 }
-=======
-  }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b

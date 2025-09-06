@@ -1,60 +1,19 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,;
-} from '@/components/ui/card';
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
-import { FraudStats } from '@/types/fraud';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-}
-import React from "react"
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats } from "@/types/fraud"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
-<<<<<<< HEAD
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
-<<<<<<< HEAD
   stats: FraudStats
 }
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
-<<<<<<< HEAD
-=======
-  stats: FraudStats;
-}
-
-export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   return (
-<<<<<<< HEAD
     <div className;
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-import { FraudStats } from "@/types/fraud",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
@@ -64,14 +23,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -81,14 +32,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -98,14 +41,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -115,28 +50,12 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -144,26 +63,9 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
     </div>
-<<<<<<< HEAD
   );
 };
 ";
-=======
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 },
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -224,9 +126,3 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
     </div>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

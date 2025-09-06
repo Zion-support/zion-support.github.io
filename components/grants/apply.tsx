@@ -1,48 +1,17 @@
-<<<<<<< HEAD
 import { useState  } from 'react';
-=======
-import {useState} from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 export default function ApplyGrantPage() {
   const router = null;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const categories: GrantCategory[] = [
-<<<<<<< HEAD
   'Ecosystem Tools'
   'Talent Development'
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
-=======
-
-const categories: GrantCategory[] = [
-  'Ecosystem Tools',
-  'Talent Development',
-  'Regional Expansion',
-  'Research Grants',
-];
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ApplyGrantPage() {
-=======
-  'Ecosystem Tools',
-  'Talent Development',
-  'Regional Expansion',
-  'Research Grants',
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
-export default function ApplyGrantPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -52,11 +21,7 @@ export default function ApplyGrantPage() {;
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
-<<<<<<< HEAD
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
@@ -71,7 +36,6 @@ export default function ApplyGrantPage() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
           program
           projectName
           teamInfo
@@ -79,15 +43,6 @@ export default function ApplyGrantPage() {;
           timeline
           budgetAmount: Number(budgetAmount |0)
           budgetCurrency
-=======
-          program,
-          projectName,
-          teamInfo,
-          proposalSummary,
-          timeline,
-          budgetAmount: Number(budgetAmount || 0),
-          budgetCurrency,
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
           supportingLinks: supportingLinks
             .split('\n')
             .map(s => s.trim())
@@ -104,7 +59,6 @@ export default function ApplyGrantPage() {;
     } catch (e: any) {
       setError(e.message);
     } finally {
-<<<<<<< HEAD
       setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
           budgetCurrency;
           supportingLinks: supportingLinks
@@ -122,16 +76,8 @@ export default function ApplyGrantPage() {;
       setError(e.message)
     } finally {
       setLoading(false)
-=======
-      setLoading(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
-<<<<<<< HEAD
   }
-=======
-
-  };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <EnhancedLayout>
@@ -249,14 +195,6 @@ export default function ApplyGrantPage() {;
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -272,7 +210,6 @@ export default function ApplyGrantPage() {;
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
           >
             Submit for Review
-<<<<<<< HEAD
           </button>        </div>
       </div>
     </EnhancedLayout>
@@ -325,22 +262,5 @@ export default function ApplyGrantPage() {;
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
 );
 }
-=======
-<<<<<<< HEAD
-          </button>
-        </div>
-      </div>
-    </EnhancedLayout>
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

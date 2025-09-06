@@ -1,55 +1,17 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { ServiceDescriptionForm } from '@/components/services/ServiceDescriptionForm';
-import { GeneratedDescriptionDisplay } from '@/components/services/GeneratedDescriptionDisplay';
-import { SEO } from '@/components/SEO';
-import { useAuth } from '@/hooks/useAuth';
-import { Navigate } from 'react-router-dom';
-}
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {ServiceDescriptionForm} from "@/components/services/ServiceDescriptionForm";
-import {GeneratedDescriptionDisplay} from "@/components/services/GeneratedDescriptionDisplay";
-import {SEO} from "@/components/SEO";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-export default function ServiceDescriptionGenerator() {;
-  const { isAuthenticated, isLoading } = useAuth();
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
 import { SEO } from "@/components/SEO",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth();
 
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-=======
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
-export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth(),
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -64,21 +26,10 @@ export default function ServiceDescriptionGenerator() {
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />
   }
-<<<<<<< HEAD
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription)
-=======
-}
-
-const handleDescriptionSave = (editedDescription: string) => {
-    setGeneratedDescription(editedDescription);
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Here you could also save to database if needed
-<<<<<<< HEAD
   }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
@@ -97,15 +48,7 @@ const handleDescriptionSave = (editedDescription: string) => {
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
-<<<<<<< HEAD
               <GeneratedDescriptionDisplay
-=======
-              <GeneratedDescriptionDisplay 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -155,11 +98,6 @@ export default function ServiceDescriptionGenerator() {;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
             {generatedDescription && (;
               <GeneratedDescriptionDisplay;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />

@@ -1,26 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { MessageSquare } from 'lucide-react'
-<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-import React from 'react'
-import Link from 'next/link'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-=======
-import { MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import {
   Tooltip
   TooltipContent
@@ -48,38 +33,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({
         <MessageSquare className='h-10 w-10 text-zion-purple' />
       </div>
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
-<<<<<<< HEAD
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
-=======
-import React from 'react';
-import Link from 'next/link';
-import { MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
-interface EmptyStateProps {;
-  title: string,;
-  subtitle: string,;
-  cta: string,;
-  href: string,;
-  hasSession: boolean;
-}
-
-const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
-  return (
-    <div className="text-center py-16">
-      <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">
-        <MessageSquare className="h-10 w-10 text-zion-purple" />
-      </div>
-      <h2 className="text-xl font-medium mb-2">{title}</h2>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <p className="text-muted-foreground mb-6">{subtitle}</p>
-=======
-      <p className='text-muted-foreground mb-6'>{subtitle}</p>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -92,40 +47,11 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             )}
           </TooltipTrigger>
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-<<<<<<< HEAD
         </Tooltip>
       </TooltipProvider>
     </div>
-<<<<<<< HEAD
   )
 };
 export default EmptyState;
 }
-<<<<<<< HEAD
 export default EmptyState
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-  );
-};
-}
-
-export default EmptyState;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        </Tooltip>;
-      </TooltipProvider>;
-    </div>;
-  );
-},;
-export default EmptyState;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -159,14 +159,10 @@ const missingTags = openTags - closeTa;g;s;
 console.log('Starting comprehensive syntax error fixes...');
 const files = getAllFiles('/workspace;';);
 let fixedCount = ;0;
-<<<<<<< HEAD
 for (const file of files) {
   if () {
     fixedCount++}
 }
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 console.log(`Fixed syntax errors in ${fixedCount} files.`)) {
     ) {
     fixedCount++}

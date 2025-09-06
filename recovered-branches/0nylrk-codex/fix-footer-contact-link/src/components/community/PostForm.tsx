@@ -1,22 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-=======
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {ForumCategory} from "@/types/community";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from "react",
-import { useForm } from "react-hook-form",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { 
   Card;
   CardContent;
@@ -34,89 +18,31 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea";
 import { ForumCategory } from "@/types/community";
-=======
-import { Textarea } from "@/components/ui/textarea",
-import { ForumCategory } from "@/types/community",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface PostFormValues {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
-<<<<<<< HEAD
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   title: string
   content: string
   categoryId: ForumCategory
 
   tags: string
-<<<<<<< HEAD
 }
 interface PostFormProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
   initialValues?: Partial<PostFormValues>,
   onSubmit: (values: PostFormValues) => void;
-<<<<<<< HEAD
-=======
-=======
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   isEditing?: boolean
-=======
-  isEditing?: boolean;
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
 
 export const PostForm = ({;
   initialValues;
   onSubmit;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle;
-} from "@/components/ui/card",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import { ForumCategory } from "@/types/community",;
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
-}
-;
-interface PostFormProps {;
-  initialValues?: Partial<PostFormValues>,;
-  onSubmit: (values: PostFormValues) => void,;
-  isEditing?: boolean;
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
@@ -125,21 +51,15 @@ interface PostFormProps {;
 export const PostForm = ({
   initialValues,
   onSubmit,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
-<<<<<<< HEAD
       title: initialValues?.title |""
       content: initialValues?.content |""
       categoryId: initialValues?.categoryId |"project-help"
       tags: initialValues?.tags |""
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async (values: PostFormValues) => {
@@ -149,18 +69,7 @@ export const PostForm = ({
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   }
-=======
-      title: initialValues?.title || "",
-      content: initialValues?.content || "",
-      categoryId: initialValues?.categoryId || "project-help",
-      tags: initialValues?.tags || ""
-    }
-=======
-  };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const handleSubmit = async (values: PostFormValues) => {;
@@ -171,12 +80,7 @@ export const PostForm = ({
       setIsSubmitting(false);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card>
       <CardHeader>
@@ -259,28 +163,7 @@ export const PostForm = ({
         </Form>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
 }
-=======
-  );
-};
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default PostForm;
 
-=======
-},
-
-<<<<<<< HEAD
-export default PostForm,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-export default PostForm;
-=======
-export default PostForm,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

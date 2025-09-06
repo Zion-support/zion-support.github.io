@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import SEO from '../components/SEO';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function SOC2ComplianceAutomationPage() {
 	return (
 		<>
@@ -24,8 +13,6 @@ export default function SOC2ComplianceAutomationPage() {
 							</div>
 						))}
 					</div>
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
   return (
     <>
@@ -163,7 +150,6 @@ export default function SOC2ComplianceAutomationPage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
   );					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
@@ -173,15 +159,4 @@ export default function SOC2ComplianceAutomationPage() {
 			</section>
 		</>
 	)
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

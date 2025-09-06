@@ -50,7 +50,6 @@ const config: Config = {
   }
 }
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-<<<<<<< HEAD
 export default createJestConfig(config);
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
@@ -70,8 +69,4 @@ const config: Config = {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default createJestConfig(config);

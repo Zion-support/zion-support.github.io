@@ -20,11 +20,8 @@ const CATEGORIES = [
     "Recruitment",
     "Infrastructure"
 ];
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function Blog() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All Categories");
@@ -118,10 +115,7 @@ export default function Blog() {
             </div>
           </div>
 import React from 'react';
-<<<<<<< HEAD
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export default function Blog() {
     return (

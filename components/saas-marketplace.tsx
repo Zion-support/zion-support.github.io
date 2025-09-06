@@ -1,15 +1,7 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
-=======
-import React from 'react';
-import Head from 'next/head';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Zap;
   Shield;
   BarChart3;
@@ -19,12 +11,7 @@ import { Zap;
   TrendingUp;
   Code;
   Database;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
-<<<<<<< HEAD
   Zap
   Shield
   BarChart3
@@ -39,27 +26,6 @@ import {
   Star
   Check
   ExternalLink;} from 'lucide-react';import {
-=======
-  Zap,
-  Shield,
-  BarChart3,
-  Globe,
-  Users,
-  Lock,
-  TrendingUp,
-  Code,
-  Database,
-  Cloud,
-  ArrowRight,
-  Star,
-<<<<<<< HEAD
-  Check,
-  ExternalLink,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-  Check,;
-  ExternalLink,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Zap;
   Shield
   BarChart3
@@ -91,38 +57,6 @@ export default function SaaSMarketplacePage() {
       rating: 4.8
       users: '2M+'
       icon: <Zap className='w-8 h-8 text-orange-400' />
-=======
-import {
-  Zap,
-  Shield,
-  BarChart3,
-  Globe,
-  Users,
-  Lock,
-  TrendingUp,
-  Code,
-  Database,
-  Cloud,
-  ArrowRight,
-  Star,
-  Check,
-  ExternalLink,;
-} from 'lucide-react';
-}
-
-export default function SaaSMarketplacePage() {
-  const microSaasServices = [
-    {
-      name: 'Zapier',
-      description:
-        'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
-      category: 'Automation',
-      pricing: 'Free - $19.99/month',
-      rating: 4.8,
-      users: '2M+',
-      icon: <Zap className='w-8 h-8 text-orange-400' />,
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       features: [
         '5000+ app integrations'
         'Visual workflow builder'
@@ -232,7 +166,6 @@ export default function SaaSMarketplacePage() {
     {
       name: 'Mixpanel'
       description:
-<<<<<<< HEAD
         'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',      category: 'Analytics'
       pricing: 'Free - $25/month'
       rating: 4.5
@@ -252,24 +185,6 @@ export default function SaaSMarketplacePage() {
         'Mobile analytics'
       ]
       website: 'https://mixpanel.com'
-=======
-        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
-      category: 'Analytics',
-      pricing: 'Free - $25/month',
-      rating: 4.5,
-      users: '26K+',
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-      features: [
-        'User behavior tracking',
-        'Funnel analysis',
-        'A/B testing',
-        'Real-time data',
-        'Custom events',
-        'Mobile analytics',
-      ],
-      website: 'https://mixpanel.com',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       useCase:
         'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
       pros: [
@@ -283,7 +198,6 @@ export default function SaaSMarketplacePage() {
     {
       name: 'MongoDB Atlas'
       description:
-<<<<<<< HEAD
         'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',      category: 'Database'
       pricing: 'Free - $57/month'
       rating: 4.7
@@ -303,24 +217,6 @@ export default function SaaSMarketplacePage() {
         'Monitoring & alerting'
       ]
       website: 'https://mongodb.com/atlas'
-=======
-        'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',
-      category: 'Database',
-      pricing: 'Free - $57/month',
-      rating: 4.7,
-      users: '35K+',
-      icon: <Database className='w-8 h-8 text-green-400' />,
-      color: 'bg-gradient-to-br from-green-500 to-teal-600',
-      features: [
-        'Fully managed MongoDB',
-        'Global clusters',
-        'Auto-scaling',
-        'Backup & recovery',
-        'Security & compliance',
-        'Monitoring & alerting',
-      ],
-      website: 'https://mongodb.com/atlas',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       useCase:
         'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.'
       pros: [
@@ -358,7 +254,6 @@ export default function SaaSMarketplacePage() {
     {
       name: 'Linear'
       description:
-<<<<<<< HEAD
         'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',      category: 'Project Management'
       pricing: 'Free - $8/month'
       rating: 4.9
@@ -378,28 +273,9 @@ export default function SaaSMarketplacePage() {
         'Mobile apps'
       ]
       website: 'https://linear.app'
-=======
-        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
-      category: 'Project Management',
-      pricing: 'Free - $8/month',
-      rating: 4.9,
-      users: '10K+',
-      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      features: [
-        'Issue tracking',
-        'Roadmap planning',
-        'Team collaboration',
-        'Git integration',
-        'Automated workflows',
-        'Mobile apps',
-      ],
-      website: 'https://linear.app',
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
-<<<<<<< HEAD
         'Lightning fast'
         'Beautiful design'
         'Great keyboard shortcuts'
@@ -407,15 +283,6 @@ export default function SaaSMarketplacePage() {
       ]
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
     }
-=======
-        'Lightning fast',
-        'Beautiful design',
-        'Great keyboard shortcuts',
-        'Git integration',
-      ],
-      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
-    },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const categories = [
     'All'
@@ -434,19 +301,9 @@ export default function SaaSMarketplacePage() {
       ? microSaasServices
       : microSaasServices.filter(
           service => service.category === selectedCategory
-<<<<<<< HEAD
         );  const filteredServices = selectedCategory === 'All'
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-        );
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <>
       <Head>
@@ -502,15 +359,10 @@ export default function SaaSMarketplacePage() {
                 href='/contact'
                 variant='outline'
                 size='lg'
-<<<<<<< HEAD
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0.4s' }}                href="/contact"
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-=======
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               >
                 Get Recommendations
               </Button>
@@ -523,14 +375,6 @@ export default function SaaSMarketplacePage() {
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -551,7 +395,6 @@ export default function SaaSMarketplacePage() {
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
                 100K+
               </div>
-<<<<<<< HEAD
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {microSaasServices.length}+
               </div>
               <div className="text-gray-400 text-sm">Curated Services</div>
@@ -573,9 +416,6 @@ export default function SaaSMarketplacePage() {
                 100K+
               </div>
               <div className="text-gray-400 text-sm">Total Users</div>
-=======
-              <div className='text-gray-400 text-sm'>Total Users</div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </div>
           </div>
         </div>
@@ -584,28 +424,10 @@ export default function SaaSMarketplacePage() {
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-wrap justify-center gap-4'>
-<<<<<<< HEAD
             {categories.map(category => (              <button      <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-<<<<<<< HEAD
-=======
-            {categories.map(category => (
-              <button
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-
-              <button
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -620,14 +442,6 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Services Grid */}
       <section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -636,15 +450,6 @@ export default function SaaSMarketplacePage() {
               {selectedCategory === 'All'
                 ? 'All Services'
                 : `${selectedCategory} Services`}
-<<<<<<< HEAD
-=======
-
-            </h2>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
@@ -688,14 +493,6 @@ export default function SaaSMarketplacePage() {
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {service.description}
                     </p>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -730,15 +527,10 @@ export default function SaaSMarketplacePage() {
                         </div>
                         <div className='text-sm text-gray-300 max-w-xs'>
                           {service.useCase}
-<<<<<<< HEAD
                         </div>                      </div>
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{service.useCase}</div>
-=======
-                        </div>
-                      </div>
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </div>
                   </div>
                 </div>
@@ -747,28 +539,11 @@ export default function SaaSMarketplacePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
-
-            Need Help Choosing?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -789,40 +564,16 @@ export default function SaaSMarketplacePage() {
               href='/services'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/services"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
-=======
-              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
-            >
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
               View Our Services
             </Button>
           </div>
         </div>
       </section>
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 }
-=======
-  );
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
-
-}
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

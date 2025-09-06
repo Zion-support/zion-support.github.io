@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -38,10 +30,6 @@ const features = [;
     description: 'Government data analytics and business intelligence for informed decision making.'';
 import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -56,10 +44,6 @@ import {
   ArrowRight ;
 } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from '../../components/Layout';
 import { Shield, Users, FileText, Globe, Database } from 'lucide-react';
 import React from 'react';
@@ -92,11 +76,6 @@ const features = [;
     description: 'Government data analytics and business intelligence for informed decision making.'';
 import Layout from '../../components/Layout';
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const features = [
   {
     icon: Building2,
@@ -119,14 +98,6 @@ const features = [
     description: 'Secure document storage and management systems'
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -149,11 +120,8 @@ const solutions = [;
   'Compliance Management',',
   'Public Sector Cloud Solutions'';
 ;];
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function GovernmentSolutionsPage() {
   return (;
     <Layout );
@@ -217,30 +185,18 @@ const benefits = [
   'Reduced operational costs',
   'Increased government efficiency'
 ];
-<<<<<<< HEAD
 }
 
 export default function GovernmentSolutions() {
-=======
-export default function GovernmentSolutions() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     icon: Database,
     title: 'Data Management',
     description: 'Secure data management and analytics for government data',
     benefits: ['Data governance', 'Analytics', 'Reporting', 'Integration']
   }
 ];
-<<<<<<< HEAD
 }
 
 export default function GovernmentSolutionsPage() {
-=======
-
-export default function GovernmentSolutionsPage() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     icon: CheckCircle,
     title: 'Workflow Automation',
     description: 'Automated government processes and approvals'
@@ -327,10 +283,6 @@ const benefits = [
   'Increased government efficiency'
 ];
 export default function GovernmentSolutions() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Government Solutions - Zion Tech Group"
@@ -339,16 +291,10 @@ export default function GovernmentSolutions() {
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         <section className="bg-gradient-to-r from-gray-700 to-blue-800 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -370,10 +316,7 @@ export default function GovernmentSolutions() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -385,48 +328,21 @@ export default function GovernmentSolutions() {
                 Comprehensive solutions designed to modernize government operations
                 and improve citizen services.
               </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-gray-600" />
                   </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -551,10 +467,6 @@ export default function GovernmentSolutions() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -567,14 +479,10 @@ export default function GovernmentSolutions() {
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -699,14 +607,9 @@ export default function GovernmentSolutions() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
             </div>
           </div>
         </section>
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -728,26 +631,9 @@ export default function GovernmentSolutions() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </Layout>
     </Layout>
     </>
     </>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
-=======
-    </Layout>
-    </Layout>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-    </>
-=======
-    </Layout>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   );

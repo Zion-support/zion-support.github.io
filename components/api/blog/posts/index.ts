@@ -3,18 +3,9 @@ import { v4 as uuidv4  } from 'uuid';
 import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
 import { requireAdmin } from '@/utils/api/auth';
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   if (req.method === 'GET') {
-=======
-  if (req.method === 'GET') {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const { status, topic, tag, author, limit, offset } = req.query;
     let posts = readPosts();
     if (status && typeof status === 'string')
@@ -33,7 +24,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const l = parseInt(String(limit |20), 10) |20;
     return res
       .status(200)
-<<<<<<< HEAD
       .json({ items: posts.slice(o, o + l), total: posts.length });    if (status && typeof status === 'string') posts = posts.filter((p) => p.status === status);
     if (topic && typeof topic === 'string') posts = posts.filter((p) => (p.topics |[]).includes(topic));
     if (tag && typeof tag === 'string') posts = posts.filter((p) => (p.tags |[]).includes(tag));
@@ -47,18 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const body = req.body as Partial<BlogPost>;
     if (!body.title |!body.slug |!body.author |!body.publishDate) {
       return res.status(400).json({ error: 'Missing required fields' });
-=======
-      .json({ items: posts.slice(o, o + l), total: posts.length });
-  }
-
-  if (req.method === 'POST') {
-    if (!requireAdmin(req, res)) return;
-    const body = req.body as Partial<BlogPost>;
-    if (!body.title || !body.slug || !body.author || !body.publishDate) {
-      return res.status(400).json({ error: 'Missing required fields' });
-   
-}
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const posts = readPosts();
     if (posts.some(p => p.slug === body.slug)) {
       return res.status(409).json({ error: 'Slug already exists' });
@@ -74,7 +52,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       tags: body.tags |[]
       topics: body.topics |[]
       seo: {
-<<<<<<< HEAD
         metaTitle: body.seo?.metaTitle |body.title!
         metaDescription: body.seo?.metaDescription |''
         ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |''
@@ -86,48 +63,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     posts.unshift(post);
     writePosts(posts);
     return res.status(201).json(post);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   }
 return res.status(405).end();
 }
-=======
-<<<<<<< HEAD
- 
-}
-
-  return res.status(405).end();
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-        metaTitle: body.seo?.metaTitle || body.title!,
-        metaDescription: body.seo?.metaDescription || '',
-        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
-      },
-      body: body.body || '',
-      status: body.status || 'draft',
-      metrics: { views: 0, likes: 0, shares: 0 },
-    };
-    posts.unshift(post);
-    writePosts(posts);
-    return res.status(201).json(post);
-  }
-
-<<<<<<< HEAD
-  return res.status(405).end();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-return res.status(405).end();
-}
-
-}
-}
-=======
-  return res.status(405).end();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

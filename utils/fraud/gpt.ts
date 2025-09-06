@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
@@ -55,19 +54,11 @@ export async function classifyWithGPT(
     } as GptClassification;
   } catch {
     return {
-<<<<<<< HEAD
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
     }
   }export interface GptResult {
-=======
-      label: 'SUSPICIOUS',
-      reason: 'Invalid JSON from GPT',
-      confidence: 0.5,
-    };
-  }export interface GptResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   label: string;
   confidence: number;
   reasoning: string
@@ -81,24 +72,3 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
   }
 }
-<<<<<<< HEAD
-=======
-      label: 'SUSPICIOUS',
-      reason: 'Invalid JSON from GPT',
-      confidence: 0.5,
-    };
-  }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

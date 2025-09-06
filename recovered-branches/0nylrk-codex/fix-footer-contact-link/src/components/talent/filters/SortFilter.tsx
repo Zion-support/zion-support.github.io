@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   Select;
   SelectContent;
   SelectItem;
   SelectTrigger;
   SelectValue} from "@/components/ui/select",
-=======
-=======
-import {
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   Select
   SelectContent
   SelectItem
@@ -19,39 +11,16 @@ import {
 } from "@/components/ui/select";
 
 import { SortFilterProps } from "@/types/filters";
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {SortFilterProps} from "@/types/filters";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-<<<<<<< HEAD
   SelectValue,;
 } from '@/components/ui/select';
 import { SortFilterProps } from '@/types/filters';
 }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-  SelectValue} from "@/components/ui/select",
-import { SortFilterProps } from "@/types/filters",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -71,16 +40,8 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {;
   Select,;
   SelectContent,;
@@ -108,12 +69,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
       </Select>;
     </div>;
   );
-<<<<<<< HEAD
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

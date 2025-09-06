@@ -33,13 +33,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))"
           foreground: "hsl(var(--card-foreground))"}}
       borderRadius: {
-<<<<<<< HEAD
         lg: "var(--radius)"
         md: "calc(var(--radius) - 2px)"
         sm: "calc(var(--radius) - 4px)"}}}
-=======
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)"}}},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   plugins: []}

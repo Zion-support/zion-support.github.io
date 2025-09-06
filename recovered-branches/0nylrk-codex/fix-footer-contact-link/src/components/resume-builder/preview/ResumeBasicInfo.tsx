@@ -1,21 +1,8 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {ResumeBasicInfo} from '@/types/resume';
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ResumeBasicInfo } from '@/types/resume';
-<<<<<<< HEAD
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ResumeBasicInfoSection({
   basicInfo
 }: ResumeBasicInfoSectionProps) {
@@ -26,13 +13,6 @@ export function ResumeBasicInfoSection({
       </h1>
       {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
     </div>
-=======
-interface ResumeBasicInfoSectionProps {;
-  basicInfo: ResumeBasicInfo;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {
@@ -42,14 +22,6 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
       {basicInfo.summary && (
         <p className="text-sm">{basicInfo.summary}</p>
       )}
-<<<<<<< HEAD
     </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }
-=======
-    </div>
-  )
-}
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

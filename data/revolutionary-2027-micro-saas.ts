@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface Revolutionary2027MicroSaas {
-=======
-export interface Revolutionary2027MicroSaas {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -17,17 +11,11 @@ export interface Revolutionary2027MicroSaas {;
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     address: string
   }
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
     address: string;
-<<<<<<< HEAD
   }
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
   [
@@ -73,16 +61,6 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
     }
   }
 ];
-=======
-<<<<<<< HEAD
-    address: string;
-  };
-}
-=======
-export interface Revolutionary2027MicroSaas {;
-=======
-  };
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
   [
@@ -108,19 +86,8 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] =
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
-<<<<<<< HEAD
     },
   ];
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-    },;
-  ];    features: [
-      "Revolutionary features";
-      "Transformative capabilities";
-      "Advanced technology";
-      "Innovation platform";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -149,28 +116,15 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = 
       "Transformative capabilities",
       "Advanced technology",
       "Innovation platform",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       "Future-ready solutions"
     ],
     link: "/services/2027-revolutionary-micro-saas",
     category: "Revolutionary 2027 Micro SAAS",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
-<<<<<<< HEAD
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

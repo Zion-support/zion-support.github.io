@@ -1,10 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/Layout';
-<<<<<<< HEAD
 }
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export default function APIDocsPage() {
   

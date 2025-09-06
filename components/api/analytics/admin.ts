@@ -1,49 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
-=======
-=======
-
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
-=======
-  try {;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const supabase = createServerClient();
     // Replace with your actual tables/queries
     // Fallback to mock if querying fails
     const result = await Promise.allSettled([
-<<<<<<< HEAD
       supabase.from('users').select('id, role, country')
       supabase.from('jobs').select('id, status, category')
       supabase.from('quotes').select('id, status')
       supabase.from('projects').select('id, status')
       supabase.from('referrals').select('id, converted, source')
-=======
-      supabase.from('users').select('id, role, country'),
-      supabase.from('jobs').select('id, status, category'),
-      supabase.from('quotes').select('id, status'),
-      supabase.from('projects').select('id, status'),
-      supabase.from('referrals').select('id, converted, source'),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -89,20 +62,12 @@ export default async function handler(
       { id: 33, status: 'active' }
     ]);
     const referralsData = mockIfEmpty(referrals, [
-<<<<<<< HEAD
       { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
       { id: 43, converted: true, source: 'partner' }
     ]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
       { id: 43, converted: true, source: 'partner' }]);
-=======
-      { id: 41, converted: true, source: 'linkedin' },
-      { id: 42, converted: false, source: 'twitter' },
-      { id: 43, converted: true, source: 'partner' },
-    ]);
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
@@ -119,33 +84,18 @@ export default async function handler(
     jobsData.forEach(j => {
       categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1;
     });
-<<<<<<< HEAD
     const referralConversions = referralsData.filter(r => r.converted).length;
     const geoCounts: Record<string, number> = {}
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
-<<<<<<< HEAD
     const geoCounts: Record<string, number> = {}
-=======
-
-<<<<<<< HEAD
-    const referralConversions = referralsData.filter(r => r.converted).length;
-
-    const geoCounts: Record<string, number> = {};
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-    const geoCounts: Record<string, number> = {};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     usersData.forEach(u => {
       geoCounts[u.country |'Unknown'] =
         (geoCounts[u.country |'Unknown'] |0) + 1;
     });
     res.status(200).json({
-<<<<<<< HEAD
       totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects }
       topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
       referralConversions;
@@ -156,7 +106,6 @@ export default async function handler(
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
       referralConversions: 2
 
-<<<<<<< HEAD
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 res.status(200).json({
@@ -179,32 +128,10 @@ res.status(200).json({
         label: country
         value
       }))
-=======
-      totals: {
-        totalUsers,
-        totalTalents,
-        totalClients,
-        jobsPosted,
-        jobsFilled,
-        quotesSent,
-        quotesAccepted,
-        activeProjects,
-      },
-      topCategories: Object.entries(categoryCounts)
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 5)
-        .map(([label, value]) => ({ label, value })),
-      referralConversions,
-      geo: Object.entries(geoCounts).map(([country, value]) => ({
-        label: country,
-        value,
-      })),
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
   } catch (e: any) {
     res.status(200).json({
       totals: {
-<<<<<<< HEAD
         totalUsers: 4
         totalTalents: 2
         totalClients: 2
@@ -226,40 +153,3 @@ res.status(200).json({
       ]
     });
   }}
-<<<<<<< HEAD
-=======
-        totalUsers: 4,
-        totalTalents: 2,
-        totalClients: 2,
-        jobsPosted: 1,
-        jobsFilled: 2,
-        quotesSent: 2,
-        quotesAccepted: 1,
-        activeProjects: 2,
-      },
-      topCategories: [
-        { label: 'AI/ML', value: 2 },
-        { label: 'Design', value: 1 },
-      ],
-      referralConversions: 2,
-      geo: [
-        { label: 'US', value: 2 },
-        { label: 'IN', value: 1 },
-        { label: 'GB', value: 1 },
-      ],
-    });
-  }
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
-=======
-<<<<<<< HEAD
-=======
-    const geoCounts: Record<string, number> = {};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-=======
-    const geoCounts: Record<string, number> = {};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

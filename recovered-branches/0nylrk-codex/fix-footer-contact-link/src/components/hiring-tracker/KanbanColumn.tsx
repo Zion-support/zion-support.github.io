@@ -1,38 +1,14 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Droppable} from "react-beautiful-dnd";
-import {JobApplication} from "@/types/jobs";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {CandidateCard} from "./CandidateCard";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
-<<<<<<< HEAD
 interface KanbanColumnProps {
-<<<<<<< HEAD
   id: string;
   title: string;
   description: string;
   applications: JobApplication[];
-<<<<<<< HEAD
-=======
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
-=======
-import { Badge } from "@/components/ui/badge",
-import { CandidateCard } from "./CandidateCard",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface KanbanColumnProps {
 
   id: string
@@ -42,32 +18,16 @@ interface KanbanColumnProps {
 
   count: number
 }
-<<<<<<< HEAD
-=======
-  count: number;
-}
-
->>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function KanbanColumn({
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-export function KanbanColumn({;
->>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   id;
   title;
   description;
   applications;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function KanbanColumn({
   id,
   title,
   description,
   applications,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -86,12 +46,7 @@ export function KanbanColumn({
       default:
         return "outline"
     }
-<<<<<<< HEAD
   }
-=======
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
       case "hired": return "bg-green-50",
@@ -100,13 +55,8 @@ export function KanbanColumn({
       default:
         return "bg-muted/30"
     }
-<<<<<<< HEAD
   }
 
-=======
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">
@@ -125,15 +75,7 @@ export function KanbanColumn({
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
-<<<<<<< HEAD
                 <CandidateCard
-=======
-                <CandidateCard 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -206,21 +148,12 @@ export function KanbanColumn({;
             >;
               {applications.map((application, index) => (;
                 <CandidateCard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   key={application.id}
                   application={application}
                   index={index}
                 />
               ))}
               {provided.placeholder}
-<<<<<<< HEAD
-=======
-              
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {applications.length === 0 && (
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
                   <p className="text-center text-sm text-muted-foreground">
@@ -230,17 +163,8 @@ export function KanbanColumn({;
               )}
             </div>
           )}
-<<<<<<< HEAD
         </Droppable>
       </CardContent>
     </Card>
   )
 }
-=======
-        </Droppable>;
-      </CardContent>;
-    </Card>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
