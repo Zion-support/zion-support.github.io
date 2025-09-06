@@ -2,9 +2,12 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';
+<<<<<<< HEAD
 interface WorkspaceHeaderProps {;
   company: Company;
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -38,12 +41,15 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             <h1 className='text-3xl font-bold tracking-tight'>
               {company.name} Workspace
             </h1>
+<<<<<<< HEAD
             <p className='text-muted-foreground'>              {company.plan} Plan · {company.teamSize} team members
             </p>
           </div>
         </div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
+<<<<<<< HEAD
+=======
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -114,6 +120,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
             <img
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
               className="max-h-10 max-w-10"
@@ -133,10 +140,14 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
+=======
+            <p className='text-muted-foreground'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {company.plan} Plan · {company.teamSize} team members
             </p>
           </div>
         </div>
+<<<<<<< HEAD
 
 
 
@@ -145,6 +156,11 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
             <Bell className="h-4 w-4" />
+=======
+<div className='flex items-center gap-2'>
+          <Button variant='outline' size='icon' aria-label='Notifications'>
+            <Bell className='h-4 w-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
 
 
@@ -176,6 +192,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
           <div className="text-sm text-muted-foreground">Interviews Scheduled</div>
           <div className="text-2xl font-medium">12</div>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
 
@@ -284,6 +301,8 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
 
   );
 }
@@ -369,3 +388,16 @@ function WorkspaceHeader() {
     </div>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        <div className='bg-card rounded-lg p-4 border border-border'>
+          <div className='text-sm text-muted-foreground'>
+            Interviews Scheduled
+          </div>
+          <div className='text-2xl font-medium'>12</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

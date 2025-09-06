@@ -10,7 +10,7 @@ const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ className }) => {
       <h1>KnowledgeBase</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 
 export default KnowledgeBase;

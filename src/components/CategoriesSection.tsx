@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string,
+  name: string,
+=======
+
+import { GradientHeading } from "./GradientHeading",
+import Link from "next/link",
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string;
+  name: string;
+  description?: string;
+color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
+    : defaultCategories.map(cat => ({
+        ...cat
+import { GradientHeading } from "./GradientHeading"
+import Link from "next/link"
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils"
+import { useTranslation } from "react-i18next"
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string
+  name: string
+  description?: string
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  iconName?: string, // Example field if categories have icons
+  itemCount?: number, // Example field for number of items in a category
+  // Add a 'link' property if your API provides it, or construct it.
+  link?: string
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   {
     title: "Comprehensive Services"
@@ -8,11 +50,15 @@
     link: "/services - comparison"
 }
 // Default static categories with translation keys
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 const getDefaultCategories = (t: any) => [
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "services"
     name: t('categories.services')
@@ -22,9 +68,12 @@ const getDefaultCategories = (t: any) => [
     color: "from-purple-500 to-indigo-600", // Keep color for styling
 
 
+<<<<<<< HEAD
+=======
   },
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "talents"
     name: t('categories.talents')
@@ -40,6 +89,12 @@ const getDefaultCategories = (t: any) => [
     link: "/equipment"
     color: "from-amber-500 to-orange-600"}
   {
+<<<<<<< HEAD
+// Helper to get icon component from name
+const getIcon = (iconName?: string) => {
+  switch (iconName) {
+
+=======
 
 
     id: "innovation",
@@ -247,6 +302,7 @@ export function CategoriesSection({
   const defaultCategories = getDefaultCategories(t),
   
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
@@ -259,15 +315,21 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
+<<<<<<< HEAD
+=======
 
 
         ...cat,
         ...cat,
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 
+=======
+const getDefaultCategories = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (
@@ -436,13 +498,20 @@ export function CategoriesSection(): any ({;
             {t('home && home.no_categories_desc')}
           </p>;
           <p className="text-zion-slate-light text-md">;
+<<<<<<< HEAD
+=======
             {t('home && home.no_categories_support')}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </p>;
         </div>;
       </section>;
     );
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -460,6 +529,24 @@ export function CategoriesSection(): any ({;
           </div>;
         )}
 
+<<<<<<< HEAD
+  }
+
+  return (
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
+      <div className="container mx-auto px-4">
+        {showTitle && (
+          <div className="text-center mb-16">
+            <GradientHeading>{t('home.categories_title')}</GradientHeading>
+            <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+              {t('home.categories_subtitle')}
+            </p>
+          </div>
+        )}
+            <Link
+              key={category.id}
+              href={category.link || '#'}
+=======
 
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -468,6 +555,7 @@ export function CategoriesSection(): any ({;
               key={category.id}
               href={category.link || '#'}
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
@@ -483,13 +571,24 @@ export function CategoriesSection(): any ({;
           ))}
 
 
+<<<<<<< HEAD
+=======
         </div>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
+<<<<<<< HEAD
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+              >
+                {service.title}
+              </Link>            ))}
+          </div>
+        </div>
+=======
 
 
             {getSpecialServices(t).map((service) => (
@@ -504,6 +603,7 @@ export function CategoriesSection(): any ({;
           </div>
         </div>
         
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
         <div className="mt-12 flex justify-center">
@@ -512,14 +612,49 @@ export function CategoriesSection(): any ({;
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             {t('home.view_all_categories')}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+  switch (iconName) {;
+  ;
+
+};
+const getSpecialServices = (t: any) => [ {;
+  title: t ('categories.it onsite services');
+link: "/it-onsite-services" ;
+}];
+interface CategoriesSectionProps {;
+  showTitle?: boolean;
+className?: string;
+style?: React.CSSProperties;
+categories?: CategoryType[], //Accept categories as a prop ;
+}export function CategoriesSection ({;
+  showTitle = true;
+className;
+style;
+categories: fetchedCategories, //Rename prop for clarity ;
+}: CategoriesSectionProps) {;
+  const {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -546,6 +681,8 @@ icon: getIcon (cat.iconName)
   t ('home.view all categories')
 }</Link> </div> </div> </section>)
 }'"}
+<<<<<<< HEAD
+=======
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
           {displayCategories && displayCategories.map((category,) => (;
@@ -734,3 +871,34 @@ if ( {) {
 }'"}
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  id: cat.id;";
+title: cat.name,  //Map name to title description: cat.description || "No description available.";
+icon: getIcon (cat.iconName), //Get icon component link: cat.link || `/category/$ {;
+  cat.id ";
+}`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: defaultCategories.find (dc => dc.id === cat.id) ?.color || "from-gray-500 to-gray-600" ;
+}) ) : defaultCategories.map (cat => ({;
+  ...cat;
+title: cat.name;
+icon: getIcon (cat.iconName) ;
+}) );
+//If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
+  
+}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
+  t ('home.no categories title') ";
+}</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
+  t ('home.no categories desc') ";
+}</p> <p className="text-zion-slate-light text-md" > {';
+  t ('home.no categories support') ;
+
+}return (</p> </div>) ;
+}</div> </Link>) ) ;
+}</div> > {;
+  service.title ;
+}</Link>) ) ";
+}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
+  t ('home.view all categories') ;
+}</Link> </div> </div> </section>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

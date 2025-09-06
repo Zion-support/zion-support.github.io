@@ -2,6 +2,9 @@
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 =======
 <<<<<<< HEAD
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+=======
+<<<<<<< HEAD
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
@@ -10,6 +13,7 @@ exports && exports.handler = async function () {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const pages = [
       '/'
       '/about'
@@ -25,6 +29,8 @@ exports && exports.handler = async function () {
       `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +
       pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
       `</urlset>`;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -78,12 +84,16 @@ if ( {) {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         content: xml,
         message: 'chore (automation): weekly sitemap refresh',
         token,
       });
     }
     return {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -111,20 +121,34 @@ exports.handler = async function() {
       pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;
 <<<<<<< HEAD
 =======
+=======
+      statusCode: 200
+      body: JSON.stringify({ ok: true, pages: pages.length })
+    }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+      `</urlset>`,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       `</urlset>`,
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
+<<<<<<< HEAD
     const token = process.env.GITHUB_TOKEN,
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Check condition
 if ( {) {
   $2
@@ -132,6 +156,11 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'public / sitemap - autogen.xml', content: xml, message: 'chore (automation): weekly sitemap refresh', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: pages.length }) }
+<<<<<<< HEAD
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+=======
 <<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -185,4 +214,16 @@ if ( {) {
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 },
+=======
+    const token = process.env.GITHUB_TOKEN;
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
+    }
+    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

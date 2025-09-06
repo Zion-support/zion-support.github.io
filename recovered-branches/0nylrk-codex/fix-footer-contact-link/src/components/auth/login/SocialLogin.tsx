@@ -1,7 +1,6 @@
 
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 
-
     useAuth();
 
   return (
@@ -17,12 +16,7 @@
         </div>
       </div>
       <div className="mt-6 grid grid-cols-4 gap-3">
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button
           type="button"
           variant="outline"
@@ -69,116 +63,30 @@
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => loginWithTwitter()}
-          disabled={isLoading}
-<<<<<<< HEAD
-        >
-          <span className="sr-only">Sign in with Twitter</span>
-          <Twitter className="h-5 w-5" />
-        </Button>
-        <Web3Login />
-      </div>
-    </div>
-
-
-=======
-=======
-
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  )
+          disabled={isLoading}  )
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Web3Login } from "./Web3Login",;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export function SocialLogin() {;
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
 
-  return (
-=======
-export function SocialLogin() {;
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <div className="mt-6">;
+  return (    <div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;
-        <div className="relative flex justify-center text-sm">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { Facebook, Twitter  } from './lucide-react';
-import { Button  } from '@/components / ui / button';
-import { use_auth  } from '@/hooks / use_auth';
-import { Web3Login  } from './Web3Login';
-export /**
- * SocialLogin - Function description
- */
-function SocialLogin() {
-  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading } =;
-    use_auth ();
-;
-  return (
-    <div className="mt - 6">;
-      <div className="relative">;
-        <div className="absolute inset - 0 flex items - center">;
-          <div className="w - full border - t border - zion - blue - light" />;
-        </div>;
-        <div className="relative flex justify - center text - sm">;
-          <span className="px - 2 bg - zion - blue - dark text - zion - slate - light">;
-            Or continue with;
-          </span>;
-        </div>;
-        >;
-          <span className="sr-only">Sign in with Twitter</span>;
-          <Twitter className="h-5 w-5" />;
-        </Button>;
-        <Web3Login />;
-      </div>;
-    </div>;
-  );
-      <div className="mt - 6 grid grid - cols - 4 gap - 3">;
-        <Button;
-          type="button";
-          variant="outline";
-  );
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
-        </div>;
-      </div>;
-      <div className="mt-6 grid grid-cols-4 gap-3">;
-=======
-          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
-          on_click={() => loginWithGoogle ()}
+        <div className="relative flex justify-center text-sm">;          on_click={() => loginWithGoogle ()}
           disabled={is_loading}
         >;
-          <span className="sr - only">Sign in with Google</span>;
+          <span className="sr-only">Sign in with Google</span>;
           <svg;
-            className="h - 5 w - 5";
+            className="h - 5 w-5";
             aria - hidden="true";
             fill="current_color";
-            view_box="0 0 24 24";
+            viewBox="0 0 24 24";
           >;
             <path;
               d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z";
@@ -198,33 +106,29 @@ function SocialLogin() {
             />;
           </svg>;
         </Button>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button;
           type="button";
           variant="outline";
-          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
+          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion-cyan";
           on_click={() => loginWithFacebook ()}
           disabled={is_loading}
         >;
-          <span className="sr - only">Sign in with Facebook</span>;
-          <Facebook className="h - 5 w - 5" />;
+          <span className="sr-only">Sign in with Facebook</span>;
+          <Facebook className="h - 5 w-5" />;
         </Button>;
         <Button;
           type="button";
           variant="outline";
-          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan";
+          className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion-cyan";
           on_click={() => loginWithTwitter ()}
           disabled={is_loading}
         >;
-          <span className="sr - only">Sign in with Twitter</span>;
-          <Twitter className="h - 5 w - 5" />;
+          <span className="sr-only">Sign in with Twitter</span>;
+          <Twitter className="h - 5 w-5" />;
         </Button>;
         <Web3Login />;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

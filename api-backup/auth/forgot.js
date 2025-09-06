@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,15 +24,14 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import React from './react';
 (" ");
+<<<<<<< HEAD
 export default /**
  * ForgotPassword - Function description
  */
 function ForgotPassword() {
   return (
-<<<<<<< HEAD
-=======
-
 }
+<<<<<<< HEAD
 
 =======
     <div>;
@@ -53,3 +47,8 @@ function ForgotPassword() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

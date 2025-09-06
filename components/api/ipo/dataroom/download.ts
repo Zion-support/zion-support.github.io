@@ -8,10 +8,9 @@ import path from 'path';
 import mime from 'mime-types';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-
-
 
   const section = String(req && req.query.section || "General");
   const file = String(req && req.query.file || "");
@@ -68,9 +67,13 @@ function handler() {
   appendAuditLog ({ type: "file_download", section, name: file });
   fs.createReadStream (full_path).pipe (res);
 
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
+=======
+  const section = null;
+  fs.createReadStream(fullPath).pipe(res)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

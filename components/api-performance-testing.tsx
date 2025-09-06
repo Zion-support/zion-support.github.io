@@ -22,14 +22,19 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
 
+<<<<<<< HEAD
+=======
 
 import React from './react';
 import SEO from "../components / SEO";
@@ -71,7 +76,9 @@ import { Check, ExternalLink } from "lucide-react";
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function ApiPerformanceTestingPage() {
+<<<<<<< HEAD
 
   const features = [
     "k6/Gatling-compatible test runner"
@@ -87,9 +94,12 @@ export default function ApiPerformanceTestingPage() {
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -149,6 +159,8 @@ export default function ApiPerformanceTestingPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             </a>;
@@ -157,6 +169,7 @@ export default function ApiPerformanceTestingPage() {
       </main>;
 
     </>);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       <SEO;
@@ -247,6 +260,8 @@ return (
         </section>;
       </main>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -267,6 +282,9 @@ return (
 	const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	];
+=======
+	const features = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
 		<>
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
@@ -298,6 +316,7 @@ return (
 		</>
 );
 }
+<<<<<<< HEAD
     </>);
 }
   return (
@@ -336,36 +355,39 @@ return (
             <a
               href="/contact"
               className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Start from $129/mo
             </a>
             <a
-              href="/market-pricing"
-              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
+              href='/market-pricing'
+              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'
             >
               Market Pricing
             </a>
             <a
-              href="https://grafana.com/docs/k6/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              href='https://grafana.com/docs/k6/'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
             >
-              <ExternalLink className="w-4 h-4" /> k6 Docs
+              <ExternalLink className='w-4 h-4' /> k6 Docs
             </a>
             <a
-              href="https://gatling.io/open-source/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              href='https://gatling.io/open-source/'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
             >
-              <ExternalLink className="w-4 h-4" /> Gatling OSS
+              <ExternalLink className='w-4 h-4' /> Gatling OSS
             </a>
           </div>
         </section>
       </main>
     </>
   );
+<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -430,8 +452,14 @@ return (
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </a>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

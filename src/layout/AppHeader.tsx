@@ -1,4 +1,31 @@
+<<<<<<< HEAD
 const showTagline = router.pathname === '/'
+=======
+import React, { useState } from 'react';
+import { useMessaging  } from '@/context/MessagingContext';
+import Link from 'next/link';
+import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
+import { Logo  } from '@/components/header/Logo';
+import { useTranslation  } from 'react-i18next';
+import { Menu, X } from 'lucide-react'
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+import { PointsBadge  } from '@/components/loyalty/PointsBadge';
+import { LoginModal  } from '@/components/auth/LoginModal';
+import { useAuth  } from '@/hooks/useAuth';
+import { UserMenu  } from '@/components/header/UserMenu';
+import { useSelector  } from 'react-redux';
+import type { RootState } from '@/store';
+import { cn } from '@/lib/utils', // Import cn utility
+import { useRouter } from 'next/router';
+export function AppHeader() {
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const isMobile = null;
+  const showTagline = router.pathname === '/'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
@@ -49,7 +76,6 @@ import React from 'react';
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
 
-
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -66,17 +92,14 @@ import React from 'react';
             </nav>;
           </div>;
 
-
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
-
 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
-
 
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
@@ -97,20 +120,19 @@ import React from 'react';
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
 
-
-
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
-
-
 
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   openLoginModal(router.asPath)
                 onClick={(e,) => {;
                   e && e.preventDefault(),;
@@ -127,9 +149,7 @@ import React from 'react';
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
 
-
                 aria-label={t('auth.signup')}
-
 
                 data-testid="signup-nav-link"
               >
@@ -178,6 +198,7 @@ import React from 'react';
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+<<<<<<< HEAD
 
   const show_tagline = router.pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState (false),
@@ -917,7 +938,6 @@ import React from 'react';
             </Link>;
           </div>;
 
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml - 8 space - x-8">;
             {navigation.map ((item) => (
@@ -1215,11 +1235,7 @@ import React from 'react';
               </div>;
 
               {/* Mobile Services */}
-              <div className="space-y-2">
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  Services
-                </div>
-                {services.map((service) => (
+
                   <Link
                     key={service.name}
                     to={service.href}
@@ -1442,9 +1458,6 @@ import React from 'react';
     </header>  );
 }
 
-
-
-
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -1456,3 +1469,37 @@ import React from 'react';
 ;
 
 ;
+=======
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+  );
+
+}';
+}> {';';
+  t ('auth.login') ;';
+}</Link> <Link > {';';
+  t ('auth.signup') ;
+}</Link> </div>) ;";
+}<UserMenu /> </div>) ";";
+}</div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;";
+  () => setMobileMenuOpen (false) ";";
+}aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
+  unreadCount ;
+}onClose= {;
+  () => setMobileMenuOpen (false) ;
+}openLoginModal= {;
+  openLoginModal ;
+}/> </div> </div>) ;
+}{;
+  /* Mobile Bottom Navigation */ ;
+}{;
+  isMobile && <MobileBottomNav unreadCount= {;
+  unreadCount ;
+}/> ;
+}<LoginModal isOpen= {;
+  loginOpen ;
+}onOpenChange= {;
+  setLoginOpen ;
+}/> </>) ;'";
+}'"'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

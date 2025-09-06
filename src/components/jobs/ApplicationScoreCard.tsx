@@ -1,9 +1,59 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface ApplicationScoreCardProps {
+  application: JobApplication,
+  onScoreUpdated?: (updatedApplication: JobApplication) => void
+}
+
+  application: JobApplication
+  onScoreUpdated?: (updatedApplication: JobApplication,) => void
+
+=======
+import { useState } from 'react';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { supabase } from '@/integrations/supabase/client';
+import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react';
+import { toast } from 'sonner';
+import { JobApplication } from '@/types/jobs';
+
+import { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { supabase } from "@/integrations/supabase/client",
+import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
+import { toast } from "sonner";
+import { JobApplication } from "@/types/jobs";
+interface ApplicationScoreCardProps {
+  application: JobApplication;
+  onScoreUpdated?: (updatedApplication: JobApplication) => void
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+}
+export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
+  const [isScoring, setIsScoring] = useState(false),
+
+  // Determine if application has been scored
+<<<<<<< HEAD
+  const hasScore = typeof application.match_score === 'number',
+  
+  // Format the date when the application was scored
+  const scoredDate = application.scored_at 
+    ? new Date(application.scored_at).toLocaleDateString() 
+    : null,
+
+  // Get suggestion color
+  const getSuggestionColor = (suggestion: string | undefined,) => {
+    switch (suggestion) {
+=======
 // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
 
       case "Strongly Recommended": return "bg-green-100 text-green-800",
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800"
       case "Low Match":
@@ -12,6 +62,8 @@
         return "bg-gray-100 text-gray-800"
 
 
+<<<<<<< HEAD
+=======
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -45,6 +97,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-gray-100 text-gray-800";
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   // Trigger the scoring process
@@ -187,6 +240,10 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
   },;
 
   // Render the score result or button to score;
+=======
+  const hasScore = null;
+  // Render the score result or button to score
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card className="overflow-hidden">;
       <CardHeader className="pb-3">;
@@ -262,12 +319,15 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
+<<<<<<< HEAD
+=======
 
 
                       </div>;
                       </div>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
                     
                     {application.match_breakdown.experience_match && (
@@ -276,6 +336,8 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
+<<<<<<< HEAD
+=======
 import { useState  } from './react';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
@@ -438,18 +500,24 @@ if ( {) {
                         <p className="font - medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>;
                         <p>{application.match_breakdown.experience_match.analysis}</p>;
                       </div>)}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     {application.match_breakdown.certifications_match && (
                       <div>;
                         <p className="font - medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>;
                         {application.match_breakdown.certifications_match.matching && (
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (", ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
+<<<<<<< HEAD
+                          <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
+                        )}
+=======
 
 
                       </div>;
                       </div>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     )}
                     
                     {application.match_breakdown.education_match && (
@@ -457,6 +525,11 @@ if ( {) {
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
+<<<<<<< HEAD
+                  </div>
+                </details>
+              </div>
+=======
                       </div>;
                     )}
 
@@ -488,6 +561,7 @@ if ( {) {
                   </div>;
                 </details>;
               </div>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             )}
 
           </div>;
@@ -508,16 +582,22 @@ if ( {) {
                 </>;
               ) : (;
                 "Score Resume";
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
 
+<<<<<<< HEAD
+=======
             <Button 
 
               onClick={handleScore} 
               disabled={isScoring}
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="w-full"
             >
               {isScoring ? (
@@ -527,11 +607,15 @@ if ( {) {
                 </>
               ) : (
                 "Score Resume"
+<<<<<<< HEAD
+=======
               )}
             </Button>;
           </div>;
         )}
+<<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </CardContent>;
     </Card>;
   );
@@ -568,5 +652,37 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </CardContent>
+    </Card>
+  );
+
+};";
+//Render the score result or button to score return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <CardTitle className="text-lg font-medium flex items-center justify-between" > Resume Match Score </Badge> </CardTitle> </CardHeader> <CardContent> {;
+  hasScore ? (<div> {;
+  /* Score */ ";
+}<div className="flex items-center mb-4" > <div className="p-2 bg-primary/10 rounded-full mr-3" > <Star className="h-5 w-5 text-primary" /> </div> <div> Scored on {;
+  scoredDate ;
+}</div>) ";
+}</div> </div> View detailed breakdown </summary> <div className="mt-2 space-y-2 text-muted-foreground" > {;
+  application.match breakdown.skills match && (<div>) ;
+}</div>) ;
+}{;
+  application.match breakdown.experience match && (<div> </div>) ;
+}{;
+  application.match breakdown.certifications match && (<div>) ;
+}</div>) ;
+}{;
+  application.match breakdown.education match && (<div> </div>) ;
+}</div> </details> </div>) ";
+}</div>) : (<div className="text-center py-4" > <p className="text-muted-foreground mb-4" > Analyze how well this resume matches your job requirements. </p> <Button > {";
+  isScoring ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Scoring Resume... </>) : ("Score Resume") ;
+}</Button> </div>) ;
+}</CardContent> </Card>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
   ];
@@ -39,10 +42,22 @@ import Head from "next/head";
 export default function SitemapPage() {
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const links = [
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
     {
+<<<<<<< HEAD
+      name: "All Services Showcase"
+      href: "/comprehensive-services-showcase-2025"
+    }
+    { name: "Pricing", href: "/pricing" }
+    { name: "Market Pricing", href: "/market-pricing" }
+    { name: "Services Advertising", href: "/services-advertising" }
+    { name: "Resources", href: "/resources" }
+    { name: "Support", href: "/support" }
+    { name: "Contact", href: "/contact" }
+=======
 
 <<<<<<< HEAD
 =======
@@ -67,6 +82,7 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Head from "next/head";
 export default function SitemapPage() {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -109,6 +125,8 @@ export default function SitemapPage() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const links = [;
     { name: "Home", href: "/" },;
@@ -174,6 +192,12 @@ export default function SitemapPage() {;
 		{ name: 'Support', href: '/support' },
 		{ name: 'Contact', href: '/contact' }
 	];
+=======
+import React from 'react';
+import Head from 'next/head';
+export default function SitemapPage() {
+	const links = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -190,6 +214,7 @@ export default function SitemapPage() {;
 				</ul>
 			</div>
 		</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 	);
 
@@ -282,6 +307,10 @@ export default function SitemapPage() {
               className="p-4 rounded-xl bg-black/40 border border-cyan-500/20"
             >
               <a className="text-cyan-300" href={l.href}>
+=======
+	)
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {l.name}
               </a>
             </li>
@@ -290,6 +319,8 @@ export default function SitemapPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -340,10 +371,13 @@ function SitemapPage() {
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     { name: "Contact", href: "/contact" },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ];
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -415,6 +449,8 @@ function SitemapPage() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -424,3 +460,6 @@ function SitemapPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

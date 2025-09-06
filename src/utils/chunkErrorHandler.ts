@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
@@ -6,7 +7,7 @@ private readonly RETRY_DELAY = 1000; // 1 second
 
   }
   private initializeGlobalHandlers(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     // Handle webpack chunk loading errors
 
     window && window.addEventListener('error', event => {
@@ -275,6 +276,39 @@ if ( {) {
 
 
 
+=======
+/**
+ * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
+ * Handles automatic retry, cache clearing, and graceful degradation
+ */
+
+import { logErrorToProduction } from './productionLogger';
+interface ChunkErrorStats {
+  errorCount: number;
+  lastErrorTime: number;
+  userAgent: string;
+  url: string
+class ChunkErrorHandler {
+          background: #0070f3;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          cursor: pointer;
+          margin-right: 1rem;
+        ">
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style="
+background: #666;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          cursor: pointer;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         ">
           Go Home
         </button>
@@ -416,6 +450,7 @@ if ( {) {
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
+<<<<<<< HEAD
 
 export default chunkErrorHandler
 export default chunkErrorHandler
@@ -450,10 +485,68 @@ export default chunkErrorHandler
           margin - right: 1rem;        ">;
           Try Again;
         </button>;
+<<<<<<< HEAD
+        <button onclick="window.location.href='/'" style=";
+          background: #666;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border - radius: 0.5rem;
+          font - size: 1rem;
+          cursor: pointer;
+        ">;
+          Go Home;
+        </button>;
+      </div>;
+    `;
+    document.body.append_child (error_div);
+  }
+  private delay (ms: number): Promise < void> {
+    return new Promise (resolve => set_timeout (resolve, ms));
+  }
+  private getSessionKey (): string {
+    return `${navigator.user_agent}_${window.location.origin}`;
+  }
+  private getOrCreateErrorStats (session_key: string): ChunkErrorStats {
+    if () {) {
+  $2
+}
+}
+;
+  // Public method to manually trigger recovery;
+  public trigger_recovery (): void {
+    this.clear_caches ().then (() => {
+      this.reload_page ();
+    }) }
+  // Public method to check if we're in a chunk error state;
+  public isInErrorState (): boolean {
+    const session_key = this.getSessionKey ();
+    const stats = this.error_stats.get (session_key);
+    return stats ? stats.error_count > 0 : false;
+  }
+  // Public method to reset error state;
+  public resetErrorState (): void {
+    const session_key = this.getSessionKey ();
+    this.error_stats.delete (session_key);
+  }
+// Create and export singleton instance;
+export const chunkErrorHandler = new ChunkErrorHandler ();
+// Export for manual usage;
+export default chunkErrorHandler;
+export default chunkErrorHandler;
+        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
 }
+<<<<<<< HEAD
+=======
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
@@ -490,6 +583,7 @@ export default chunkErrorHandler;
 export default chunkErrorHandler;
 }
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 ;
   // Public method to manually trigger recovery;
@@ -517,3 +611,6 @@ export default chunkErrorHandler;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 export default chunkErrorHandler;
+=======
+export default chunkErrorHandler;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

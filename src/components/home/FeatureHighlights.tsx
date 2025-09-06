@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 className?: string;
   style?: React && React.CSSProperties;
 
@@ -41,6 +44,24 @@ export function FeatureHighlights(): any ({;
     },;
   ];
 
+=======
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Check } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from 'lucide-react'
+import { cn } from "@/lib/utils";
+interface FeatureHighlightsProps {
+  className?: string;
+  style?: React.CSSProperties
+}
+
+export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
+  const highlightsData = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 import React from 'react';
@@ -57,6 +78,7 @@ function FeatureHighlights() {
   const highlights_data = [;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const highlightsData = [
 
     {
@@ -110,6 +132,7 @@ function FeatureHighlights() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
+<<<<<<< HEAD
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
@@ -186,11 +209,30 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
 
+=======
+            <Card
+              key={index}
+              className='bg-zion-blue-dark border-zion-blue-light'
+            >
+              <CardContent className='p-6'>
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  {category.title}
+                </h3>
+                <ul className='space-y-3'>
+                  {category.features.map((feature, idx) => (
+                    <li key={idx} className='flex items-start'>
+                      <Check className='h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0' />
+                      <span className='text-zion-slate-light'>{feature}</span>
+                    </li>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </ul>;
               </CardContent>;
             </Card>;
           ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           {highlights_data.map ((category, index) => (
@@ -544,3 +586,11 @@ export function FeatureHighlights() {;
 '"`);
 
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        </div>
+      </div>
+    </section>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

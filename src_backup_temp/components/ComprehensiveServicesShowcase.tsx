@@ -69,8 +69,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       case 'Autonomous Vehicles & Fleet Management':"
         return <Rocket className="h-6 w-6"   />;
       default:"
-        return <Star className="h-6 w-6"   />};';
-  };';';
+        return <Star className="h-6 w-6"   />};'
+};';';
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
 ;
       case 'AI & Customer Experience': ";
@@ -109,8 +109,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       case 'Autonomous Vehicles & Fleet Management':"
         return <Rocket className="h-6 w-6"   />;
       "default":";
-        return <Star className="h-6 w-6"   />"};
-  };
+        return <Star className="h-6 w-6"   />"}
+};
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
   return (";
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">;
@@ -256,8 +256,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                     <div className="flex items-center gap-3">";
                       <div className="p-2 bg-zion-cyan/10 rounded-lg text-zion-cyan">;
       default:"
-        return <Star className="h-6 w-6"   />};
-  };
+        return <Star className="h-6 w-6"   />}
+};
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -72,6 +75,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -85,9 +89,12 @@ export default function GlobalSearchBar() {;
       setSuggestions([]);
       return;      return
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 class ErrorBoundary extends React.Component {
@@ -224,9 +231,12 @@ import { useEffect, useMemo, useRef, useState } from 'react';
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     
     return this.props.children;
@@ -248,13 +258,18 @@ export default function GlobalSearchBar() {
       setSuggestions([]);
       return
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import { useEffect, useMemo, useRef, useState  } from 'react';
+import { useRouter } from 'next/router';
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
     controller.current?.abort();
     controller.current = new AbortController();
     const run = async () => {
       try {
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
-          signal: controller.current!.signal
+const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
+          signal: controller.current!.signal,
         });
         const j = await r.json();
         setSuggestions(j.suggestions |[]);
@@ -262,45 +277,62 @@ export default function GlobalSearchBar() {
       } catch {}
     }
     const id = setTimeout(run, 150);
+<<<<<<< HEAD
     return () => clearTimeout(id);  }, [query]);        const j = await r.json();
         setSuggestions(j.suggestions |[]);
         setOpen(true)
       } catch {}
     }
     const id = setTimeout(run, 150);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return () => clearTimeout(id);
   }, [query]);
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
-    fetch('/api/telemetry/search', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ q: query })
+fetch('/api/telemetry/search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ q: query }),
     }).catch(() => {});
     router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false);  }
+    setOpen(false);
+  };
+
   const startVoice = () => {
     if (typeof window === 'undefined') return;
-    const Speech: any =
-      (window as any).SpeechRecognition |
-      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {})
-    router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false)
-  }
-  const startVoice = () => {
-    if (typeof window === 'undefined') return;
-    const Speech: any =
-      (window as any).SpeechRecognition |
-      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition
+const Speech: any =
+      (window as any).SpeechRecognition ||
+      (window as any).webkitSpeechRecognition;
     if (!Speech) return;
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
+<<<<<<< HEAD
+=======
+      const transcript = e.results?.[0]?.[0]?.transcript || '';
+if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
+    };
+    rec.start();
+  }
+    >
+      <input
+        value={query}
+        onChange={e => setQuery(e.target.value)}
+        onFocus={() => setOpen(suggestions.length > 0)}
+        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-gray-900/60 backdrop-blur px-3 py-2 pr-20 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500'
+        placeholder='Search talent, jobs, projects...'
+        aria-label='Search'
+      />
+      <div className='absolute inset-y-0 right-2 flex items-center gap-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         <button
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           aria-label='Voice search'
         >
@@ -325,6 +357,7 @@ export default function GlobalSearchBar() {
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
+<<<<<<< HEAD
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
   }
@@ -352,6 +385,7 @@ export default function GlobalSearchBar() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <button
                   type="button"
                   onClick={() => {;
@@ -359,6 +393,11 @@ export default function GlobalSearchBar() {
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
+<<<<<<< HEAD
+
+                >
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
@@ -371,6 +410,7 @@ export default function GlobalSearchBar() {
                 >
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -381,6 +421,8 @@ export default function GlobalSearchBar() {
         </div>;
       )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
                   {s}
@@ -388,6 +430,10 @@ export default function GlobalSearchBar() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -405,12 +451,18 @@ export default function GlobalSearchBar() {
       )}
     </form>
 <<<<<<< HEAD
+<<<<<<< HEAD
+  )
+}
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
   )
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { use_router } from 'next / router';
 export default /**
  * GlobalSearchBar - Function description
@@ -580,6 +632,8 @@ if (return) {
     </form>));
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 
@@ -596,3 +650,7 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

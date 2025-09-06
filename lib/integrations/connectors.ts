@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
@@ -16,6 +20,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -31,6 +37,7 @@ import { v4 as uuidv4 } from 'uuid';
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -39,12 +46,37 @@ async function mockProviderCall<T>(
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+async function callProvider<T>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, any>
+): Promise<{ log: SyncLogEntry; result: T }> {
+  const log: SyncLogEntry = {
+    id: uuidv4(),
+    timestamp: Date.now(),
+    providerId: connection.providerId,
+    level: 'info',
+    action,
+    details,
+  };
+  // In a real implementation, call provider SDK/API here using connection.accessToken
+  return { log, result: { ok: true } as unknown as T };
+}
+
+// CRM actions
+export const crm = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   async syncContact(
     connection: ProviderConnection
     contact: Record<string, any>
@@ -61,11 +93,19 @@ async function mockProviderCall<T>(
     connection: ProviderConnection
     note: Record<string, any>
   ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
-}
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addEmailTouchpoint(
+    connection: ProviderConnection,
+    touch: Record<string, any>
+  ) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  },
+};
+
 // ATS actions
 export const ats = {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const log: SyncLogEntry = {
     id: uuidv4(),
@@ -97,6 +137,8 @@ async function mockProviderCall < T>(
 // CRM actions;
 export const crm = {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -107,12 +149,15 @@ export const crm = {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 
 };
 
 // ATS actions
 export const ats = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   async pushApplicant($2) {
@@ -131,17 +176,38 @@ export const ats = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+async pushApplicant(
+    connection: ProviderConnection,
+    applicant: Record<string, any>
+  ) {
+    return simulateAction(connection, 'ats.pushApplicant', { applicant });
+  },
+  async uploadResume(
+    connection: ProviderConnection,
+    resume: Record<string, any>
+  ) {
+    return simulateAction(connection, 'ats.uploadResume', {
+      resumeMeta: { name: resume?.name },
+    });
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   async updateStatus(
     connection: ProviderConnection
     status: Record<string, any>
   ) {
+<<<<<<< HEAD
     connection: ProviderConnection,
     status: Record<string, any>,
   ) {;
     return mockProviderCall(connection, "update_status", { status });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async sync_contact (
     connection: ProviderConnection,
     contact: Record < string, any>,
@@ -212,9 +278,12 @@ export const ats = {
   },
 }
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   async createCandidate(
     connection: ProviderConnection,
@@ -225,12 +294,15 @@ export const ats = {
 };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Email actions
 export const email = {
   async sendNotification(
@@ -244,7 +316,15 @@ export const email = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    return simulateAction(connection, 'ats.updateStatus', { change });
+  },
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

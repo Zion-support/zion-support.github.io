@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
 }</tbody> </table> </div> </div>) import fs from 'fs';
@@ -13,6 +14,12 @@ export async function getServerSideProps() {;
     generatedAt = json.generatedAt |''
 
 
+=======
+import fs from 'fs';
+import path from 'path';
+type RouteInfo = any;
+    generatedAt = json.generatedAt || ''
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {}
   return { props: { routes, generatedAt } }
 }
@@ -42,6 +49,7 @@ function getServerSideProps() {
 }
 );
 }
+<<<<<<< HEAD
   );
 }
 
@@ -72,3 +80,5 @@ function SiteMapIntelPage() {
         </table>;
       </div>;
     </div>);
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

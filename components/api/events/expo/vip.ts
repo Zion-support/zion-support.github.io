@@ -2,6 +2,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const allowlist = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const allowlist = new Set<string>(
   [(process.env.EXPO_VIP_ADDRESS |'').toLowerCase()].filter(Boolean)
 );
@@ -35,6 +42,8 @@ function handler() {
 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -45,6 +54,7 @@ export default async function handler(
   res: NextApiResponse
 
 ) {
+<<<<<<< HEAD
 const allowlist = new Set<string>([(process.env.EXPO_VIP_ADDRESS || '').toLowerCase()].filter(Boolean));
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const address = String(req.query.address |'').toLowerCase();
@@ -59,6 +69,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 ) {;
   const address = String(req.query.address || '').toLowerCase();
@@ -93,4 +104,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ allowed: allowlist.has(address) })
 
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  const address = String(req.query.address |'').toLowerCase();
+  if (!address) return res.status(400).json({ allowed: false });
+  res.status(200).json({ allowed: allowlist.has(address) });
+  res.status(200).json({ allowed: allowlist.has(address) })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Export a safe environment accessor
 export const safeEnv = {
   NODE_ENV:
@@ -18,7 +19,6 @@ export const safeEnv = {
       (globalThis as any).process && process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) ||
     '',
 } as const;
-
 
 // Safe environment getter function
 export function getEnv(key: string, defaultValue = ''): string {
@@ -41,7 +41,7 @@ export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production'
 
 // Export the polyfilled process object
-export const processEnv = null;
+export const processEnv =
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process && process.env
 /**;
@@ -137,7 +137,6 @@ export const process_env =;
 
 console && console.log('✅ Environment polyfill loaded successfully');
 
-
 export default safeEnv;
 export default safeEnv;
 }
@@ -191,9 +190,25 @@ export function isProduction(): boolean {
 
 export default safeEnv;
 
-
-
 console.log ('✅ Environment polyfill loaded successfully');
 export default safe_env;
 export default safe_env;
 export default safe_env;
+=======
+/**
+ * Environment Polyfill for Browser
+ *
+ * This polyfill ensures that process.env is always available in the browser environment.
+ * It prevents the "Cannot read properties of undefined (reading 'env')" error.
+ */
+// Define safe defaults for environment variables
+        NODE_ENV: 'production',
+        NEXT_PUBLIC_APP_URL: '',
+        NEXT_PUBLIC_SUPABASE_URL: '',
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
+      };
+
+console.log('✅ Environment polyfill loaded successfully');
+
+export default safeEnv;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,7 +11,15 @@ import Head from 'next/head';
 >>>>>>> main
 =======
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { ReactNode } from 'react';
+=======
+React from
+  'react'
+import Header from 'react'
+  './Header';import Footer from 'react'
+  './Footer'
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -103,6 +115,8 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
@@ -179,3 +193,4 @@ export default Layout;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

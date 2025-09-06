@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -35,10 +38,15 @@ import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface InterviewRequestFormProps {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   talent: TalentProfile;
   onClose: () => void;
   userDetails?: UserProfile
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
+<<<<<<< HEAD
+=======
 
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -132,6 +140,7 @@ if ( {) {
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
       await request_interview ({
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -146,7 +155,41 @@ import { cn } from "@/lib/utils",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { z } from "zod",
+<<<<<<< HEAD
 import { format, addDays } from "date-fns",
+=======
+import { format, addDays } from "date-fns";
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  Form
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+  Select
+  SelectTrigger
+  SelectValue
+  SelectContent
+  SelectItem
+} from '@/components/ui/select'
+import { Calendar } from '@/components/ui/calendar'
+  Popover
+  PopoverTrigger
+  PopoverContent
+} from '@/components/ui/popover'
+import { TalentProfile } from '@/types/talent'
+import type { UserProfile } from '@/types/auth'
+import { cn } from '@/lib/utils'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm, ControllerRenderProps } from 'react-hook-form'
+import { z } from 'zod'
+import { format, addDays } from 'date-fns'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { CalendarIcon } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -157,6 +200,7 @@ interface InterviewRequestFormProps {
   userDetails?: UserProfile
 }
 
+<<<<<<< HEAD
 
 
 
@@ -462,10 +506,20 @@ export function InterviewRequestForm(): any ({;
 
 
 
+=======
+const formSchema = null;
+                          !field.value && "text-muted-foreground"
+                        )}
+                      >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         {field.value ? (
                           format(field.value, 'PPP')
                         ) : (
                           <span>Pick a date</span>
+<<<<<<< HEAD
+
+
+=======
               field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'date'>;
             }) => (;
               <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>;
@@ -499,6 +553,7 @@ export function InterviewRequestForm(): any ({;
                       className="p-3 pointer-events-auto"
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     />
                   </PopoverContent>
                 </Popover>
@@ -749,7 +804,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="duration"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <FormField
             control={form.control}
             name='duration'
@@ -757,6 +815,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               field,
             }: {
               field: ControllerRenderProps<
+<<<<<<< HEAD
+                <FormLabel>Duration</FormLabel>
+=======
                 z.infer<typeof formSchema>,
                 'duration'
               >
@@ -774,6 +835,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               >;
             }) => (              <FormItem>;
                 <FormLabel>Duration</FormLabel>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
@@ -812,6 +874,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField;
             control={form.control}
             name='platform';
+<<<<<<< HEAD
+=======
             render={({
               field
             }: {
@@ -823,6 +887,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="platform"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "platform"> }) => (
               <FormItem>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
                 <FormLabel>Platform</FormLabel>
@@ -875,6 +940,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField;
             control={form.control}
             name='meeting_link';
+<<<<<<< HEAD
+          />
+        </div>
+        {form.watch('platform') !== 'in-app' && (
+          <FormField
+            control={form.control}
+            name='meetingLink'
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             render={({
               field
             }: {
@@ -929,6 +1003,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
         <FormField
+<<<<<<< HEAD
+          control={form.control}
+          name='notes'
+=======
           control={form && form.control}
           name='notes'
               </FormItem>)}
@@ -936,6 +1014,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         <FormField;
           control={form.control}
           name='notes';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           render={({
             field
           }: {
@@ -948,7 +1027,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Textarea
                   placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
         <FormField;
           control={form.control}
@@ -970,11 +1052,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             </FormItem>
           )}
         />
+<<<<<<< HEAD
+=======
 
 
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Cancel
           </Button>
           <Button type='submit' disabled={isSubmitting}>
@@ -983,6 +1068,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 
 
@@ -1028,6 +1114,8 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
 }/> </Button> </div> </form> </Form>)
 }'"}
+<<<<<<< HEAD
+=======
 
 
 
@@ -1091,3 +1179,54 @@ toast ({
 }'"}
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+
+}setIsSubmitting (true);
+}catch (error) {;
+  logErrorToProduction ('Failed to schedule interview:', {;
+  data: error ;
+});
+toast ({;
+  ;
+}finally {;
+  setIsSubmitting (false) ;
+}";
+}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";";
+"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";";
+"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
+"18:00", "18:30", "19:00", "19:30", "20: 00" ];";
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) ";
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
+}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {;
+  field.onChange ;
+}defaultValue= {;
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) ) ;
+}</SelectContent> </Select> <FormMessage /> </FormItem>) ";
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {;
+  field.onChange ;
+}defaultValue= {;
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {;
+  field.onChange ;
+}defaultValue= {;
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) ;
+}/> </div> {';
+  form.watch ('platform') !== 'in-app' && (<FormField control= {;
+  form.control ;
+}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {;
+  `Add your $ {';
+  form.watch ('platform') ;
+}link here` ;
+}{;
+  ...field ;
+}/> </FormControl> <FormMessage /> </FormItem>) ;
+}/>) ;
+}<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
+}/> </Button> </div> </form> </Form>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -135,6 +135,22 @@ resolver.resolveMergeConflicts().catch(console.error);
 module.exports = MergeConflictResolver;
 =======
 
+<<<<<<< HEAD
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Remove merge conflict markers and keep the HEAD version (first part)
+    content = content.replace(/[\s\S]*?
+      // Extract only the HEAD part (before 
+    
+    // Handle incomplete conflicts (missing closing markers)
+    content = content.replace(/[\s\S]*?
+=======
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve modify/delete conflicts by removing the files
@@ -168,6 +184,8 @@ function resolveModifyDeleteConflicts() {
   }
 }
 
+<<<<<<< HEAD
+=======
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {
   console.log('📝 Resolving content conflicts...');
@@ -354,3 +372,9 @@ async function main() {
 }
 
 main();
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

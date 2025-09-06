@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,11 +21,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+<<<<<<< HEAD
 import {;
   AlertTriangle,;
   CheckCircle,;
@@ -34,6 +38,27 @@ import {;
   Activity,;
 } from 'lucide-react';
 interface HealthData {;
+<<<<<<< HEAD
+=======
+import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import {
+  AlertTriangle
+  CheckCircle
+  XCircle
+  Clock
+  TrendingUp
+  Activity
+} from 'lucide-react'
+<<<<<<< HEAD
+
+=======
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -47,12 +72,17 @@ import {
   TrendingUp,
   Activity,
 } from 'lucide-react';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
   uptime: number;
   version: string;
   environment: string;
+<<<<<<< HEAD
+=======
 
   metrics: {
     error_rate: number;
@@ -60,11 +90,14 @@ interface HealthData {
     response_time: number;
     memory_usage: number;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   health: {
     status: string;
     score: number;
     issues: string[];
+<<<<<<< HEAD
+=======
 
     memoryUsage: number;
   };
@@ -78,6 +111,7 @@ interface HealthData {
     summary: {;
 
     recommendations: string[];
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   errors: {
     summary: {
@@ -85,11 +119,14 @@ interface HealthData {
       critical: number;
       high: number;
       medium: number;
+<<<<<<< HEAD
+=======
 
       low: number;
     };
     topErrors: Array<{;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       patternId: string;
       description: string;
       occurrences: number;
@@ -97,6 +134,9 @@ interface HealthData {
       solution?: string
     }>
     byCategory: { [category: string]: number }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       low: number;
     }
     top_errors: Array<{
@@ -216,6 +256,7 @@ const HealthDashboard: React.FC = () => {;
     return `${bytes.toFixed(1)} MB`
   },
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -240,6 +281,8 @@ const HealthDashboard: React.FC = () => {;
         </CardContent>
       </Card>
     )
+<<<<<<< HEAD
+=======
 
 const HealthDashboard: React.FC = () => {;
   const [healthData, setHealthData] = useState<HealthData | null>(null);
@@ -247,6 +290,7 @@ const HealthDashboard: React.FC = () => {;
   const [error, setError] = useState<string | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
   }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -275,6 +319,12 @@ const HealthDashboard: React.FC = () => {;
   if (!healthData) return null,
 
 
+<<<<<<< HEAD
+  if (!healthData) return null
+  if (!healthData) return null,
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className="space-y-6">
@@ -286,7 +336,10 @@ const HealthDashboard: React.FC = () => {;
         </div>
         <div className="flex items-center space-x-2">
           <Button
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
@@ -355,10 +408,13 @@ const HealthDashboard: React.FC = () => {;
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
 
+<<<<<<< HEAD
+=======
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
@@ -393,9 +449,12 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
+<<<<<<< HEAD
+=======
 
                   <ul className="space-y-2">
                     {healthData.health.issues.map((issue, index) => (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
 ;
@@ -473,6 +532,20 @@ const HealthDashboard: React.FC = () => {;
           <Button
             variant='outline'
             size='sm'
+<<<<<<< HEAD
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-green-600 text-sm">No issues detected</p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+        <TabsContent value='errors' className='space-y-4'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+=======
 
             onClick={() => setAutoRefresh(!autoRefresh)}          >;
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh;
@@ -606,6 +679,7 @@ const HealthDashboard: React.FC = () => {;
                 )}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -650,6 +724,8 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
+<<<<<<< HEAD
+=======
 
               </CardContent>;
             </Card>;
@@ -703,6 +779,7 @@ const HealthDashboard: React.FC = () => {;
                       .slice(0, 5);
                       .map((error, index) => (;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         <div
                           key={index}
                           className='border-l-4 border-red-400 pl-3 py-1'>;
@@ -717,6 +794,8 @@ const HealthDashboard: React.FC = () => {;
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 
+<<<<<<< HEAD
+=======
                   <div className="space-y-2">
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
                       <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
@@ -727,6 +806,7 @@ const HealthDashboard: React.FC = () => {;
                       </div>;
                     ))}
                   </div>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
@@ -780,22 +860,71 @@ const HealthDashboard: React.FC = () => {;
                   {formatBytes(healthData.metrics.memoryUsage)}
                 </p>
                 <p className='text-xs text-gray-600'>JavaScript heap</p>
+<<<<<<< HEAD
+                ) : (
+                  <p className="text-gray-600 text-sm">No recurring errors</p>
+                )}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </CardContent>
             </Card>
           </div>
         </TabsContent>
 
 
+<<<<<<< HEAD
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Error Rate</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{healthData.metrics.errorRate.toFixed(2)}%</p>
+                <p className="text-xs text-gray-600">Errors per request</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Critical Errors</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold text-red-600">{healthData.metrics.criticalErrors}</p>
+                <p className="text-xs text-gray-600">In last hour</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Avg Response</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{healthData.metrics.responseTime.toFixed(0)}ms</p>
+                <p className="text-xs text-gray-600">API response time</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-sm">Memory Usage</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-2xl font-bold">{formatBytes(healthData.metrics.memoryUsage)}</p>
+                <p className="text-xs text-gray-600">JavaScript heap</p>
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+=======
 
         <TabsContent value="recommendations" className="space-y-4">
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Card>
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
+<<<<<<< HEAD
+=======
 
               </CardContent>;
             </Card>;
@@ -867,6 +996,7 @@ const HealthDashboard: React.FC = () => {;
                       <CheckCircle className='w-4 h-4 text-green-500 mt-0 && 0.5 mr-2 flex-shrink-0' />;
                       <span className='text-sm'>{rec}</span>                    </li>;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   ))}
                 </ul>;
               ) : (;
@@ -886,6 +1016,8 @@ export default HealthDashboard;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
         throw new Error (`HTTP ${response.status}`);
       }
       const data = await response.json ();
@@ -1238,10 +1370,14 @@ if (return null) {
                 <p className='text - gray - 600'>;
                   No specific recommendations at this time;
                 </p>)}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </CardContent>;
           </Card>;
         </TabsContent>;
       </Tabs>;
+<<<<<<< HEAD
+export default HealthDashboard;
+=======
 
 
     </div>);
@@ -1249,3 +1385,11 @@ if (return null) {
 export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  }
+  );
+};
+
+export default HealthDashboard;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

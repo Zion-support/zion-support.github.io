@@ -179,7 +179,6 @@ function createGitHubPRAutomation() {
   
   const prScript = `#!/usr/bin/env node
 
-
 const GITHUB_TOKEN = 'ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY';
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app';

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 id?: string,;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title: string,;
   description: string,;
   images?: string[],;
@@ -8,6 +12,8 @@ id?: string,;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
+<<<<<<< HEAD
+=======
 
 interface ListingCardProps {;
   id?: string;
@@ -21,6 +27,7 @@ interface ListingCardProps {;
   profileType?: 'service' | 'talent';
 
 export function ListingCard(): any ({;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id,;
   title,;
   description,;
@@ -29,6 +36,8 @@ export function ListingCard(): any ({;
   tags,;
   author,;
   className,;
+<<<<<<< HEAD
+=======
   profileType = 'service',;
 }: ListingCardProps) {;
   // Generate a profile ID based on the listing data;
@@ -85,6 +94,7 @@ export function ListingCard(): any ({;
       )}
     >
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
@@ -92,11 +102,14 @@ export function ListingCard(): any ({;
             alt={title}
 
 
+<<<<<<< HEAD
+=======
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
@@ -108,6 +121,8 @@ export function ListingCard(): any ({;
 
 
 
+<<<<<<< HEAD
+=======
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
         
@@ -115,12 +130,19 @@ export function ListingCard(): any ({;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
 
 
+<<<<<<< HEAD
+            ))}
+          </div>
+        )}
+
+=======
               </Badge>;
 
 
@@ -155,6 +177,7 @@ export function ListingCard(): any ({;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
@@ -169,11 +192,16 @@ export function ListingCard(): any ({;
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>;
     </Link>;
   );
 }
+<<<<<<< HEAD
+=======
 
 ;"}) })"
   );
@@ -194,6 +222,13 @@ import Image from 'next / image';interface ListingCardProps {
   class_name?: string,
   profile_type?: 'service' | 'talent';
 }
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link";
+import Image from "next/image";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface ListingCardProps {
   id?: string;
   title: string;
@@ -201,6 +236,7 @@ interface ListingCardProps {
   images?: string[];
   category: string;
   tags?: string[];
+<<<<<<< HEAD
   author?: { name: string; id?: string; avatar_url?: string; email?: string }
   class_name?: string;
   profile_type?: 'service' | 'talent';
@@ -213,6 +249,67 @@ function ListingCard() {
   const profile_id =;
     id || (profile_type === 'service' ? 'service - provider - 1' : 'talent - 1');
       >;
+=======
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
+  className?: string;
+  profileType?: 'service' | 'talent'
+}
+
+export function ListingCard({ 
+  id;
+  title;
+  description;
+  images;
+  category;
+  tags;
+  author;
+  className;
+  profileType;
+        className
+      )}
+    >
+import React from 'react'
+import { cn } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+import Image from 'next/image';interface ListingCardProps {
+  id?: string
+  title: string
+  description: string
+  images?: string[]
+  category: string
+  tags?: string[]
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string }
+  className?: string
+  profileType?: 'service' | 'talent'
+}
+interface ListingCardProps {
+  id?: string
+  title: string
+  description: string
+  images?: string[]
+  category: string
+  tags?: string[]
+  author?: { name: string; id?: string; avatarUrl?: string; email?: string }
+  className?: string
+  profileType?: 'service' | 'talent'
+export function ListingCard({
+  id
+  title
+  description
+  images
+  category
+  tags
+  author
+  className
+  profileType = 'service'
+}: ListingCardProps) {
+  // Generate a profile ID based on the listing data
+  // In a real app, this would be a proper ID from the database
+  const profileId =
+    id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
+      >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       {images && images.length > 0 && images[0] && (
         <div className='h - 48 w - full overflow - hidden relative'>;
           <Image;
@@ -239,6 +336,7 @@ function ListingCard() {
             {tags.map ((tag, i) => (
               <Badge;
                 key={i}
+<<<<<<< HEAD
                 variant='outline';
                 className='border - zion - slate - dark text - zion - slate - light';
               >                {tag}              <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
@@ -271,3 +369,35 @@ function ListingCard() {
     </Link>);
 }"}) })";
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+                variant='outline'
+                className='border-zion-slate-dark text-zion-slate-light'
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+{author && (
+          <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
+            {author.avatarUrl ? (
+              <Image
+                src={author.avatarUrl}
+                alt={author.name}
+                width={32}
+                height={32}
+                className='rounded-full mr-2'
+                loading='lazy'
+              />
+            ) : (
+              <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />
+            )}
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>
+          </div>
+        )}
+      </div>
+    </Link>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

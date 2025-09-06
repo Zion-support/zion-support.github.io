@@ -314,8 +314,8 @@ import {;
 export default function ITServicesPage() {;
   const itServices = [;
     {;
-      name: "Cloud Migration & Optimization",;
-      description: "End-to-end cloud migration services with strategic planning, cost optimization, and performance tuning for maximum ROI.",;
+      name: "Cloud Migration & Optimization",,
+  description: "End-to-end cloud migration services with strategic planning, cost optimization, and performance tuning for maximum ROI.",;
       icon: <Cloud className="w-12 h-12 text-blue-500" />,;
       features: [;
         "Multi-cloud strategy development",;
@@ -344,8 +344,8 @@ export default function ITServicesPage() {;
       website: "https://ziontechgroup.com/cloud-migration";
     },;
     {;
-      name: "DevOps Automation Platform",;
-      description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.",;
+      name: "DevOps Automation Platform",,
+  description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.",;
       icon: <Code className="w-12 h-12 text-green-500" />,;
       features: [;
         "CI/CD pipeline automation",;
@@ -374,8 +374,8 @@ export default function ITServicesPage() {;
       website: "https://ziontechgroup.com/devops-automation";
     },;
     {;
-      name: "Cybersecurity Assessment & Implementation",;
-      description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.",;
+      name: "Cybersecurity Assessment & Implementation",,
+  description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.",;
       icon: <Shield className="w-12 h-12 text-red-500" />,;
       features: [;
         "Security audits and assessments",;
@@ -404,8 +404,8 @@ export default function ITServicesPage() {;
       website: "https://ziontechgroup.com/cybersecurity";
     },;
     {;
-      name: "Network Infrastructure Design",;
-      description: "Scalable network architecture design with high availability, security, and performance optimization.",;
+      name: "Network Infrastructure Design",,
+  description: "Scalable network architecture design with high availability, security, and performance optimization.",;
       icon: <Network className="w-12 h-12 text-purple-500" />,;
       features: [;
         "Network architecture design",;
@@ -434,8 +434,8 @@ export default function ITServicesPage() {;
       website: "https://ziontechgroup.com/network-infrastructure";
     },;
     {;
-      name: "Database Design & Optimization",;
-      description: "Database architecture design, performance tuning, and migration services for optimal data management.",;
+      name: "Database Design & Optimization",,
+  description: "Database architecture design, performance tuning, and migration services for optimal data management.",;
       icon: <Database className="w-12 h-12 text-orange-500" />,;
       features: [;
         "Database architecture design",;
@@ -464,8 +464,8 @@ export default function ITServicesPage() {;
       website: "https://ziontechgroup.com/database-services";
     },;
     {;
-      name: "IT Infrastructure Management",;
-      description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.",;
+      name: "IT Infrastructure Management",,
+  description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.",;
       icon: <Server className="w-12 h-12 text-indigo-500" />,;
       features: [;
         "24/7 infrastructure monitoring",;
@@ -496,26 +496,26 @@ export default function ITServicesPage() {;
   ],;
   const additionalServices = [;
     {;
-      name: "API Development & Integration",;
-      description: "Custom API development and third-party system integration services.",;
+      name: "API Development & Integration",,
+  description: "Custom API development and third-party system integration services.",;
       pricing: "From $2,500",;
       icon: <Code className="w-8 h-8 text-blue-400" />;
     },;
     {;
-      name: "Data Backup & Recovery",;
-      description: "Comprehensive backup solutions and disaster recovery planning.",;
+      name: "Data Backup & Recovery",,
+  description: "Comprehensive backup solutions and disaster recovery planning.",;
       pricing: "From $299/month",;
       icon: <Database className="w-8 h-8 text-green-400" />;
     },;
     {;
-      name: "Performance Monitoring",;
-      description: "Real-time performance monitoring and optimization services.",;
+      name: "Performance Monitoring",,
+  description: "Real-time performance monitoring and optimization services.",;
       pricing: "From $199/month",;
       icon: <Monitor className="w-8 h-8 text-purple-400" />;
     },;
     {;
-      name: "IT Consulting",;
-      description: "Strategic IT consulting and technology roadmap planning.",;
+      name: "IT Consulting",,
+  description: "Strategic IT consulting and technology roadmap planning.",;
       pricing: "From $150/hour",;
       icon: <Users className="w-8 h-8 text-orange-400" />;
     }

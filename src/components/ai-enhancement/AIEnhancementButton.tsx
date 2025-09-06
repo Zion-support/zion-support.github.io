@@ -1,10 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export function AIEnhancementButton({
+  const handleEnhance = async () => {
+=======
 const handleEnhance = async () => {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
       toast({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
+<<<<<<< HEAD
+=======
 
   import { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -133,6 +142,7 @@ export function AIEnhancementButton(): any ({;
       setGeneratedContent(null),
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
@@ -155,21 +165,65 @@ export function AIEnhancementButton(): any ({;
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">;
+<<<<<<< HEAD
+=======
+
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
+import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
+import { toast } from '@/hooks/use-toast';
+interface AIEnhancementButtonProps {
+  options: AIEnhancementOptions;
+  onEnhanced: (enhancedContent: string) => void;
+  buttonText?: string;
+  className?: string;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
+  contentLength?: number
+  import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer'
+import { toast } from '@/hooks/use-toast'
+interface AIEnhancementButtonProps {
+  options: AIEnhancementOptions
+  onEnhanced: (enhancedContent: string) => void
+  buttonText?: string
+  className?: string
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
+  size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
+}
+export function AIEnhancementButton({
+  options;
+  onEnhanced;
+  buttonText;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  if (showActions) {
+    return (
+      <div className="flex gap-2 items-center">
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Button
           type="button"
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
+=======
           onClick = {handleAccept,}
           className="text-green-500 hover:text-green-700 hover:bg-green-100/20">;
           <Check className="h-4 w-4 mr-1" />;
           Apply;
         </Button>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Button
           type="button"
           variant="ghost"
           size="sm"
           onClick = {handleRegenerate,}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+<<<<<<< HEAD
+=======
           disabled = {isEnhancing,}>;
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />;
@@ -226,20 +280,26 @@ if ( {) {
 }
     return (
       <div className="flex gap - 2 items - center">;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Button;
           type="button";
           variant="ghost";
           size="sm";
+<<<<<<< HEAD
+=======
           on_click = {handle_accept, }
           className="text - green - 500 hover:text - green - 700 hover:bg - green - 100 / 20";
         >;
           <Check className="h - 4 w - 4 mr - 1" />;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           Apply;
         </Button>;
         <Button;
           type="button";
           variant="ghost";
           size="sm";
+<<<<<<< HEAD
+=======
           on_click = {handle_regenerate, }
           className="text - blue - 500 hover:text - blue - 700 hover:bg - blue - 100 / 20";
           disabled = {is_enhancing, }
@@ -247,6 +307,7 @@ if ( {) {
           {is_enhancing ? (
             <Loader2 className="h - 4 w - 4 mr - 1 animate - spin" />) : (
             <RefreshCw className="h - 4 w - 4 mr - 1" />)}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           Regenerate;
         </Button>;
         <Button;
@@ -285,10 +346,35 @@ if ( {) {
 }"}
 
 
+<<<<<<< HEAD
+      variant={variant}
+      size={size}
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
       ) : (
         <Sparkles className="h-4 w-4" />
       )}
+<<<<<<< HEAD
+=======
       <span className="text-xs">{buttonText}</span>
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </Button>
+  );
+
+};";
+<Button type="button" variant="ghost" size="sm" onClick={;
+  handleAccept ";
+}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
+}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
+}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
+}</Button>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

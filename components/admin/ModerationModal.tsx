@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export type ModerationModalProps = {
   flag: any | null;
@@ -52,11 +53,14 @@ export default function ModerationModal(): any ({;
 }: ModerationModalProps) {;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   flag,
   onClose,
   onAction,
@@ -88,7 +92,10 @@ import React, { useState } from 'react';
 
 export type ModerationModalProps = {;
   flag: any | null;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -99,6 +106,8 @@ export type ModerationModalProps = {;
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button
             onClick={onClose}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -163,6 +172,7 @@ export type ModerationModalProps = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -199,6 +209,8 @@ export type ModerationModalProps = {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -263,6 +275,7 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
         </div>
         <div className="p-4 border-t flex items-center justify-end gap-2">
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -277,7 +290,10 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
   );
 =======
 );
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
   on_close: () => void;
   on_action: (
@@ -398,6 +414,8 @@ if (return null) {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -415,6 +433,10 @@ export type ModerationModalProps = {;
 
 export type ModerationModalProps = {
   flag: any | null;
+=======
+import React, { useState } from 'react';
+export type ModerationModalProps = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   onClose: () => void;
   onAction: (
     action: 'approve' | 'remove' | 'warn' | 'ban'
@@ -431,7 +453,10 @@ export default function ModerationModal({
 }: ModerationModalProps) {;
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
@@ -525,10 +550,12 @@ export default function ModerationModal({
             className='px-3 py-2 rounded bg-gray-800 text-white'
           >
             Ban User
-          </button>        </div>
+          </button>
+        </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
@@ -542,3 +569,7 @@ export default function ModerationModal({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -15,12 +15,61 @@ import {;
   Monitor,;
 } from 'lucide-react';
 interface QuickAction {;
+<<<<<<< HEAD
+  id: string;
+  label: string;
+  description: string;
+  icon: React && React.ReactNode;
+  action: () => void;
+  category: 'performance' | 'development' | 'maintenance';
+
+<<<<<<< HEAD
+    setIsProcessing(actionId);    try {
+      await action()
+    } catch (error) {
+      logErrorToProduction(`Failed to execute action ${actionId}:`, {
+        data: error
+      })
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import React, { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { logErrorToProduction } from '@/utils/productionLogger'
+import {
+  Zap
+  Download
+  Trash2
+  RefreshCw
+  Settings
+  Activity
+  Package
+  Monitor
+} from 'lucide-react'
+<<<<<<< HEAD
+
+interface QuickAction {
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   label: string;
   description: string;
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
+<<<<<<< HEAD
+  dangerous?: boolean
+export function QuickActions() {
+
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  if (!isAllowed) {
+    return null
+  }
+=======
 
 
 ;
@@ -29,12 +78,15 @@ interface QuickAction {;
   const executeAction = async (actionId: string, action: () => void) => {;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { Button } from '@/components / ui / button';
@@ -51,6 +103,8 @@ import {
   Package,
   Monitor,
 } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface QuickAction {
   id: string;
   label: string;
@@ -58,6 +112,7 @@ interface QuickAction {
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
+<<<<<<< HEAD
   dangerous?: boolean;
 export /**
  * QuickActions - Function description
@@ -81,6 +136,7 @@ if ( {) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
       });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } finally {
       setIsProcessing(null)
     }
@@ -127,9 +183,12 @@ export function QuickActions() {;
     }
   },
 
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -139,10 +198,13 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -150,10 +212,13 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
+=======
 
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -186,8 +251,11 @@ export function QuickActions() {;
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
+<<<<<<< HEAD
+=======
 
   dangerous?: boolean;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         // Preload critical images
         const criticalImages = [
@@ -243,8 +311,11 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
+<<<<<<< HEAD
+=======
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -264,6 +335,8 @@ export function QuickActions() {;
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
+<<<<<<< HEAD
+=======
 
         const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
           type: 'application/json',;
@@ -322,6 +395,7 @@ export function QuickActions() {;
 
   if (!isVisible) {;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     {
       id: 'download-performance-report',
@@ -359,17 +433,28 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
+<<<<<<< HEAD
+=======
 
 
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  dangerous?: boolean
+export function QuickActions() {
+  const { user } = useAuth();
+  const isAdmin = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
         <Button
 
 
+<<<<<<< HEAD
+=======
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
@@ -378,10 +463,13 @@ export function QuickActions() {;
           <Settings className="w-4 h-4 mr-2" />
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           Quick Actions
         </Button>
       </div>
     )
+<<<<<<< HEAD
+=======
           className='bg-background/80 backdrop-blur-sm'        >;
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
@@ -408,6 +496,7 @@ export function QuickActions() {;
             >
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               ✕
             </Button>
           </div>
@@ -422,6 +511,7 @@ export function QuickActions() {;
                   {category}
                 </Badge>
               </div>
+<<<<<<< HEAD
               <div className="space-y-2">
                 {categoryActions.map((action) => (
                   <div key={action.id} className="space-y-1">
@@ -451,8 +541,11 @@ export function QuickActions() {;
                   </div>;
                 ))}
               </div>;
+<<<<<<< HEAD
+=======
             </div>;
           ))}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </CardContent>;
       </Card>;
     </div>;
@@ -647,4 +740,15 @@ if ( {) {
     </div>);
 }
 }
+<<<<<<< HEAD
+=======
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+            )
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

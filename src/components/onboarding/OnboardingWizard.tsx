@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+
+import { useState, useEffect  } from 'react';
+import { useRouter  } from 'next/router';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAuth } from '@/hooks/useAuth'
@@ -18,9 +27,14 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
+<<<<<<< HEAD
+=======
 interface WizardStep {;
   title: string;
   description: string;
@@ -67,10 +81,12 @@ interface OnboardingWizardProps {
 
 interface OnboardingWizardProps {;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
   className?: string
+<<<<<<< HEAD
 
 
 export function OnboardingWizard(): any ({;
@@ -194,6 +210,50 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you",
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
+<<<<<<< HEAD
+        text: "Enable Matchmaking",
+        url: "/talent-dashboard"
+      }
+    }
+  ],;
+  const steps = type === 'client' ? clientSteps : talentSteps,;
+  // Navigate to the specified URL;
+  const handleAction = () => {;
+    const currentStepData = steps[currentStep],;
+    if (!currentStepData) return,;
+    if (currentStep < steps.length - 1) {;
+      router.push(currentStepData.action.url), // Changed to router.push;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      router.push(currentStepData.action.url), // Changed to router.push;
+      onComplete();
+    }
+  },;
+  // Skip the current step;
+  const handleSkip = () => {;
+    if (currentStep < steps.length - 1) {;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      onSkip();
+    }
+  },
+  
+  return (
+    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
+      <CardHeader>
+        <CardTitle className='text-center text-white'>
+          {type === 'client'
+            ? 'Ready to find top IT talent?'
+            : "Let's build your professional profile"}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='flex items-center mb-6'>;
+          {/* Step dots */}
+
+=======
 
 
       <CardHeader>
@@ -209,12 +269,30 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
           <div className="flex items-center justify-center flex-1">
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
 
+<<<<<<< HEAD
+            {steps[currentStep]?.icon}
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
+          <p className="text-zion-slate-light mb-6">{steps[currentStep]?.description}</p>
+        </div>
+      </CardContent>
+      <CardFooter className="flex flex-col space-y-2">
+        <Button
+=======
                   "h-2 w-2 rounded-full mx-1",
+=======
+}
+
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+  const [currentStep, setCurrentStep] = useState(0);
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
@@ -248,11 +326,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
         {steps[currentStep]?.skipText && (;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
 
+<<<<<<< HEAD
+=======
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
           onClick={handleAction}
         >;
@@ -265,20 +346,27 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}
           >;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             {steps[currentStep]?.skipText}
           </Button>
         )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 ;
 }
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </CardFooter>;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -450,3 +538,9 @@ if ( {) {
     </Card>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </CardFooter>
+    </Card>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

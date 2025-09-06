@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -20,6 +22,7 @@ import { incrementMetric } from '@/utils/data/blogStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
+<<<<<<< HEAD
 
   if (typeof id !== 'string' |typeof metric !== 'string')
     return res.status(400).json({ error: 'Invalid params' });
@@ -31,6 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
   if (typeof id !== 'string' |typeof metric !== 'string') return res.status(400).json({ error: 'Invalid params' });
@@ -39,6 +43,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const post = null;
   return res.status(200).json({ ok: true, metrics: post.metrics })
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -63,6 +69,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { increment_metric } from '@/utils / data / blog_store';
 export default /**
  * handler - Function description
@@ -106,15 +113,20 @@ function handler() {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 }
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -132,3 +144,11 @@ function handler() {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return res.status(200).json({ ok: true, metrics: post.metrics });
+  if (!['viewslikesshares'].includes(metric)) return res.status(400).json({ error: 'Invalid metric' });
+  const post = null;
+  return res.status(200).json({ ok: true, metrics: post.metrics })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

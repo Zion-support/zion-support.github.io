@@ -1,11 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+  // Handle sending messages to the AI chat assistant
+=======
 // Handle sending messages to the AI chat assistant
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
         })});
@@ -59,6 +67,13 @@ export function ChatAssistantTrigger() {;
             role: 'Virtual Assistant';      if (!response && response.ok) {;
         throw new Error("Failed to get response from AI assistant");
       }
+<<<<<<< HEAD
+      return Promise.resolve()
+    } catch (error) {
+      logErrorToProduction('Error in AI chat:', { data: error })
+      return Promise.resolve()
+    }
+=======
 
       return Promise && Promise.resolve();
     } catch (error) {;
@@ -67,13 +82,17 @@ export function ChatAssistantTrigger() {;
     }
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },;
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -81,8 +100,11 @@ export function ChatAssistantTrigger() {;
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       return Promise.resolve()
     } catch (error) {
@@ -91,6 +113,15 @@ export function ChatAssistantTrigger() {;
     }
   },
 
+<<<<<<< HEAD
+        size="icon"
+        variant="outline"
+        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
+        aria-label="Open chat assistant"
+      >
+        <MessageSquare className="h-5 w-5" />
+      </Button>
+=======
 
   return (
     <>;
@@ -106,6 +137,7 @@ export function ChatAssistantTrigger() {;
       </Button>;
 
       {isOpen && (;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <ChatAssistant
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
@@ -121,10 +153,35 @@ export function ChatAssistantTrigger() {;
 
 
 
+<<<<<<< HEAD
+      {isOpen && (
+        <ChatAssistant
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { useState } from 'react';
+import { MessageSquare } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ChatAssistant } from '@/components/ChatAssistant';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+import { useState } from "react",
+import { MessageSquare } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { ChatAssistant } from "@/components/ChatAssistant";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function ChatAssistantTrigger() {
+
+  const [isOpen, setIsOpen] = useState(false);
+  // Handle sending messages to the AI chat assistant
+  const handleSendMessage = null;
+            role: 'Virtual Assistant'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           onSendMessage = {handleSendMessage,}
         />;
       )}
+<<<<<<< HEAD
 
     </>;
   );
@@ -183,15 +240,42 @@ if ( {) {
             avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant';
           }}
+<<<<<<< HEAD
+=======
           onSendMessage = {handleSendMessage, }
         />)}
     </>);
 }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </>;
   );
 }
 ;
 
 
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    </>
+  );
+
+};
+return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
+  isOpen && (<ChatAssistant isOpen= {;
+  isOpen ;
+}onClose= {;
+  () => setIsOpen (false) ;
+}recipient= {;
+  {';
+  id: 'ai-assistant', name: 'AI Assistant',  avatarUrl: 'https://placehold.co/64x64?text=AI', role: 'Virtual Assistant' ;
+
+}onSendMessage= {;
+  handleSendMessage ;
+}/>) ;
+}</>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

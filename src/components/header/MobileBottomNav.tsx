@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React from "react",
+import { useRouter } from "next/router",
+import Link from "next/link",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useWishlist } from "@/hooks/useWishlist";
+import { useCart  } from '@/context/CartContext';
+import { logWarn } from '@/utils/productionLogger';
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface MobileBottomNavProps {
   unread_count?: number;
 export /**
@@ -16,8 +30,45 @@ if ( {) {
   $2
 }
 
+<<<<<<< HEAD
   const nav_items = [;
 
+=======
+export function MobileBottomNav({ unreadCount;
+import React from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useWishlist } from '@/hooks/useWishlist'
+import { useCart } from '@/context/CartContext'
+import { logWarn } from '@/utils/productionLogger'
+import {
+  Home
+  Search
+  MessageCircle
+  Heart
+  MessageSquare
+  ShoppingCart
+  User
+} from 'lucide-react'
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
+interface MobileBottomNavProps {
+  unreadCount?: number
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
+  const router = useRouter()
+  const { user } = useAuth()
+  const isAuthenticated = !!user
+  const { items: wishlistItems } = useWishlist(); // Renamed to avoid conflict
+  const favoritesCount = wishlistItems.length
+  const cartContextValue = useCart(); // Call hook at top level
+  let cartCount = 0
+  if (cartContextValue && cartContextValue.items) {
+    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0) } else {
+    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
+  }
+  const navItems = [
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Home'
       href: '/'
@@ -59,6 +110,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
@@ -117,7 +169,11 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             href={item.href}
             aria-label={item.name}
             className={cn(
+<<<<<<< HEAD
               "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+=======
+              'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               item.matches(router.pathname)
                 ? "text-primary"
                 : "text-foreground/70 hover:text-foreground"
@@ -138,6 +194,8 @@ import { logWarn } from '@/utils/productionLogger',;
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
 interface MobileBottomNavProps {;
   unreadCount?: number;
+<<<<<<< HEAD
+=======
 
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const router = useRouter();
@@ -219,6 +277,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
                 <span className='absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (;
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">;
       <div className="flex justify-around items-center h-16">;
@@ -248,6 +307,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
             </span>;
           </Link>;
         ))}
+<<<<<<< HEAD
 
 
 ;
@@ -258,6 +318,8 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     </nav>;
   );
 }
+<<<<<<< HEAD
+=======
 
 
 
@@ -334,3 +396,9 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     </nav>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </div>
+    </nav>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

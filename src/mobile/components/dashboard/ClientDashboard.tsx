@@ -1,9 +1,34 @@
+<<<<<<< HEAD
 export function ClientDashboard() {
   return (
+<<<<<<< HEAD
+    <div className='space-y-6 px-4 pb-24'>
+      <section className='mt-4'>
+        <Button className='w-full py-6' size='lg'>
+          <Plus className='mr-2 h-5 w-5' /> Post a New Job
+=======
+=======
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
+import Link from 'next/link';
+
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge";
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
+                </Button>
+export function ClientDashboard() {
+  return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     <div className="space-y-6 px-4 pb-24">
       <section className="mt-4">
         <Button className="w-full py-6" size="lg">
           <Plus className="mr-2 h-5 w-5" /> Post a New Job
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
       </section>
 
@@ -67,6 +92,7 @@ export function ClientDashboard() {
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
 
       
 
@@ -79,6 +105,14 @@ export function ClientDashboard() {
           <Link href="/mobile/marketplace">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
               View all <ChevronRight className="h-4 w-4" />
+=======
+<section>
+        <div className='flex items-center justify-between mb-4'>
+          <h2 className='text-lg font-medium'>Suggested Talents</h2>
+          <Link href='/mobile/marketplace'>
+            <Button variant='ghost' size='sm' className='h-8 gap-1'>
+              View all <ChevronRight className='h-4 w-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             </Button>
           </Link>
         </div>
@@ -136,6 +170,7 @@ export function ClientDashboard() {
                   89% match
                 </div>
               </div>
+<<<<<<< HEAD
 
 
               <div className="mt-3 flex gap-1 flex-wrap">
@@ -144,15 +179,35 @@ export function ClientDashboard() {
                 <Badge variant="outline" className="text-xs">React</Badge>
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
                 <Badge variant="outline" className="text-xs">AWS</Badge>
+=======
+              <div className='mt-3 flex gap-1 flex-wrap'>
+                <Badge variant='outline' className='text-xs'>
+                  React
+                </Badge>
+                <Badge variant='outline' className='text-xs'>
+                  Node.js
+                </Badge>
+                <Badge variant='outline' className='text-xs'>
+                  AWS
+                </Badge>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
-              <div className="flex gap-2 mt-3">
-                <Button size="sm">View Profile</Button>
-                <Button size="sm" variant="outline">Message</Button>
+              <div className='flex gap-2 mt-3'>
+                <Button size='sm'>View Profile</Button>
+                <Button size='sm' variant='outline'>
+                  Message
+                </Button>
               </div>
+              <div className='flex gap-2 mt-3'>
+                <Button size='sm'>View Profile</Button>
+                <Button size='sm' variant='outline'>
+                  Message
+                </Button>              </div>
             </CardContent>
           </Card>
         </div>
       </section>
+<<<<<<< HEAD
 
 
       
@@ -161,6 +216,11 @@ export function ClientDashboard() {
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
+=======
+<section>
+        <div className='flex items-center justify-between mb-4'>
+          <h2 className='text-lg font-medium'>Recent Updates</h2>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
 
@@ -190,12 +250,21 @@ export function ClientDashboard() {
 
               </div>
               <div>
+<<<<<<< HEAD
+                <p className='text-sm'>
+                  <strong>Mobile App Development:</strong> 3 new applicants for
+                  your job post
+                </p>
+                <p className='text-xs text-muted-foreground'>1 day ago</p>
+=======
                 <p className="text-sm">
                   <strong>Mobile App Development:</strong> 3 new applicants for your job post
                 </p>
                 <p className="text-xs text-muted-foreground">1 day ago</p>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </div>
             </div>
+<<<<<<< HEAD
 
       
       <section>
@@ -231,6 +300,11 @@ export function ClientDashboard() {
             
 
             <Button variant="outline" className="w-full">View All Notifications</Button>
+=======
+            <Button variant='outline' className='w-full'>
+              View All Notifications
+            </Button>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           </CardContent>
         </Card>
       </section>
@@ -238,6 +312,7 @@ export function ClientDashboard() {
 
 
     </div>
+<<<<<<< HEAD
 
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";
@@ -575,3 +650,7 @@ function ClientDashboard() {
       </section>;
     </div>);
 }
+=======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

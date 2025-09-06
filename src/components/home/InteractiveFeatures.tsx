@@ -1,10 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next / link';
 import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
   class_name?: string,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   style?: React.CSSProperties;
 }
 interface InteractiveFeaturesProps {
+<<<<<<< HEAD
+  className?: string
+  style?: React.CSSProperties
+export function InteractiveFeatures({
+  className
+  style
+}: InteractiveFeaturesProps) {
+  const [openIndex, setOpenIndex] = React.useState<number | null>(null)
+import React from "react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
+import Link from "next/link",
+import { cn } from "@/lib/utils",
+interface InteractiveFeaturesProps {
+  className?: string,
+  style?: React.CSSProperties
+=======
   class_name?: string;
   style?: React.CSSProperties;
 export /**
@@ -88,6 +110,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {;
   className?: string,;
   style?: React && React.CSSProperties;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 interface InteractiveFeaturesProps {;
@@ -146,7 +169,20 @@ export function InteractiveFeatures(): any ({;
           {features.map((feature, index) => (;
             <Card;
 
+<<<<<<< HEAD
+    <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
+            Key Features
+          </h2>
+          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            Hover or click a card to learn more about what Zion offers
+          </p>
+        </div>
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
@@ -214,6 +250,8 @@ export default InteractiveFeatures;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
+=======
 
 
 
@@ -225,3 +263,19 @@ export default InteractiveFeatures;
 }
 ;
 export default InteractiveFeatures;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
+  );
+
+export default InteractiveFeatures;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

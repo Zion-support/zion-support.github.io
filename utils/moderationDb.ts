@@ -1,13 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ModerationFlag {
 export interface ModerationFlag {;
 
 
 export interface ModerationFlag {
+<<<<<<< HEAD
+=======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -17,6 +24,20 @@ export interface ModerationFlag {
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+<<<<<<< HEAD
+export interface ModerationFlag {
+  id: string;
+  content_id: string;
+  content_type: 'post' | 'comment' | 'user';
+  reason: string;
+  user_email: string;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+  created_at: string;
+  admin_notes?: string;
+}
+// Mock data storage - replace with actual database;
+let flags: ModerationFlag[] = [];
+=======
 }
 <<<<<<< HEAD
 =======
@@ -47,6 +68,7 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
@@ -61,6 +83,8 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
   flag && flag.updatedAt = new Date().toISOString();
 
+<<<<<<< HEAD
+=======
   await upsertFlag(flag);
   return flag;
 
@@ -81,6 +105,7 @@ export interface ModerationFlag {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 // Mock data storage - replace with actual database
@@ -90,11 +115,53 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  // Mock implementation - replace with actual database logic
+  return {
+    id;
+    contentId: 'content-1';
+    contentType: 'post';
+    reason: 'spam';
+    status: 'pending';
+    reportedBy: 'user-1';
+    createdAt: new Date().toISOString();
+    updatedAt: new Date().toISOString()
+  };
+}
+
+export async function updateFlagStatus(id: string, status: string, adminNotes?: string): Promise<ModerationFlag | null> {
+  // Mock implementation - replace with actual database logic
+  const flag = await getFlagById(id);
+  if (flag) {
+    flag.status = status as any;
+    flag.adminNotes = adminNotes;
+    flag.updatedAt = new Date().toISOString();
+  }
+  return flag;
+}
+
+export async function createFlag(flag: Omit<ModerationFlag, 'id' | 'createdAt' | 'updatedAt'>): Promise<ModerationFlag> {
+  // Mock implementation - replace with actual database logic
+  const newFlag: ModerationFlag = {
+    ...flag,
+    id: Date.now().toString();
+    createdAt: new Date().toISOString();
+    updatedAt: new Date().toISOString()
+  };
+  return newFlag;
+// Mock data storage - replace with actual database
+let flags: ModerationFlag[] = [];
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find(flag => flag.id === id) |null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 export async function readAllFlags(): Promise<ModerationFlag[]> {;
   return [...flags];
 }
+<<<<<<< HEAD
 
 export async function createFlag(
   data: Partial<ModerationFlag>,
@@ -121,6 +188,9 @@ export async function createFlag(
     contentId: data.contentId || '',
     contentType: data.contentType || 'post',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     content_id: data.content_id || '',
     content_type: data.content_type || 'post',
@@ -169,6 +239,8 @@ if (return undefined) {
   flags.push(flag);
   return flag;
 }
+<<<<<<< HEAD
+=======
 
 export async function updateFlagStatus(
   id: string, 
@@ -194,3 +266,6 @@ export async function updateFlagStatus(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,8 +1,25 @@
+<<<<<<< HEAD
+=======
+import Link from "next/link",
+import { useRouter } from "next/router",
+import { useState } from "react",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useTranslation } from "react-i18next",
+import { useFavorites } from "@/hooks/useFavorites",
+import { useCart } from "@/context/CartContext";
+import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
+import { LanguageSelector  } from '@/components/header/LanguageSelector';
+import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/hover-card';
+import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
+import { LoginModal } from '@/components/auth/LoginModal';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
 
+<<<<<<< HEAD
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { useState } from 'react';
@@ -11,6 +28,18 @@ import { use_auth } from '@/hooks / use_auth';
 import { use_translation } from 'react - i18next';
 import { use_favorites } from '@/hooks / use_favorites';
 import { use_cart } from '@/context / CartContext';
+=======
+export function MainNavigation({ isAdmin;
+                      router.pathname.startsWith('/cart')
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useTranslation } from 'react-i18next'
+import { useFavorites } from '@/hooks/useFavorites'
+import { useCart } from '@/context/CartContext'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Heart,
   MessageSquare,
@@ -122,110 +151,34 @@ interface MainNavigationProps {;
   unreadCount?: number,;
   className?: string;
 }
-;
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state;
-  const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const { count } = useFavorites(),;
-  const { items } = useCart(),;
-  const cartCount = items.length,;
-  const router = useRouter(), // Changed from useLocation;
-  const { t } = useTranslation(),;
-  const handleCartClick = (e: React.MouseEvent) => {;
-    if (!isAuthenticated) {;
-      e.preventDefault(),;
-      setLoginOpen(true),;
-      return;
-    }
-    setIsMobileMenuOpen(false);
-  },;
+
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
-      matches: (path: string) => path === '/';
-    },;
-    {;
-      key: 'marketplace',;
-      href: '/marketplace',;
-      matches: (path: string) => path.startsWith('/marketplace');
-    },;
-    {;
-      key: 'categories',;
-      href: '/categories',;
-      matches: (path: string) => path.startsWith('/categories');
-    },;
-    {;
-      key: 'talent',;
-      href: '/talent',;
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard');
-    },;
-    {;
-      key: 'equipment',;
-      href: '/equipment',;
-      matches: (path: string) => path.startsWith('/equipment');
-    },;
-    {;
-      key: 'community',;
-      href: '/community',;
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum');
-    }
-  ],;
-  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),;
-  // Add authenticated-only links;
-  if (isAuthenticated) {;
-    links.push({;
-      key: 'dashboard',;
-      name: t('nav.dashboard'),;
-      href: '/dashboard',;
-      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard';
-    });
-  }
-;
-  // Add admin-only links;
-  if (isAdmin) {;
-    links.push({;
-      key: 'analytics',;
-      name: t('nav.analytics'),;
+
       href: '/analytics',;
       matches: (path: string) => path && path.startsWith('/analytics'),;
     });  }
 
-
   return (
-    <>
-      <button
-        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-expanded={isMobileMenuOpen}
-        aria-controls="main-navbar-collapse"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+
       <nav
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
 
-
         <div
-          id="main-navbar-collapse"
+
           className={cn(
-
-
 
                   href={link.href}
                   aria-label={link.name}
 
                   onClick={() => setIsMobileMenuOpen(false)}
 
-
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-
 
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
@@ -239,8 +192,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >;
-
-
 
                   {link.name}
                 </Link>
@@ -319,20 +270,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 </Link>;
               </li>;
             )}
-;
-            {/* Cart icon with badge */}
-            <li className="nav-item">
-              <HoverCard openDelay={100}>
-                <HoverCardTrigger asChild>
-                  <Link
-                    href="/cart"
-                    aria-label={t('nav.cart')}
+
                     onClick={handleCartClick}
                     className={cn(
+<<<<<<< HEAD
 
                       'nav-link',
                       'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router && router.pathname.startsWith('/cart')
 
+=======
+                      'nav-link'
+                      'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router.pathname.startsWith('/cart')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     ),}>;
@@ -346,7 +295,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
     {
-      matches: (path: string)  => path.startsWith('/contact')
+
 }
     links.push ({
       key: 'dashboard',
@@ -688,7 +637,6 @@ export default function Page() {; []);
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
 }`}
 
-
                 {link && link.name}
               </Link>;
 
@@ -759,7 +707,6 @@ export default function Page() {; []);
                               ? 'bg - zion - cyan text - white'';
                               : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
 }`}
-
 
 ;
             {/* Wishlist link */}
@@ -846,7 +793,6 @@ export default function Page() {; []);
                         ? 'bg-zion-purple/20 text-zion-cyan';
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                     )}
-
 
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
@@ -961,8 +907,6 @@ export default function Page() {; []);
                         {cartCount}
                       </span>;
 
-
-
                     )}
                   </Link>
                 </HoverCardTrigger>
@@ -972,14 +916,14 @@ export default function Page() {; []);
               </HoverCard>
             </li>
           </ul>
-          <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">
+          <div className='flex items-center gap-2 mt-4 md:mt-0 md:ml-auto'>
             <LanguageSelector />
           </div>
         </div>
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-
+<<<<<<< HEAD
 
                         {link && link.name}
                       </Link>;
@@ -1015,8 +959,6 @@ export default function Page() {; []);
         </div>;
       </nav>;
 
-
-
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>));
 }
@@ -1027,3 +969,6 @@ export default function Page() {; []);
   )
 }
 ;
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 import { Search } from 'lucide-react'
+=======
+import React, { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { HelpCategoryList } from './HelpCategoryList';
+import { HelpArticleList } from './HelpArticleList';
+import { HelpArticleView } from './HelpArticleView';
+import { HELP_CATEGORIES } from './help-content';
+import { Search } from 'lucide-react';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
@@ -29,6 +42,7 @@ function HelpCenter() {
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId)
   }
+<<<<<<< HEAD
 
 export default /**
  * HelpCenter - Function description
@@ -121,10 +135,65 @@ import { HelpArticleList } from "./HelpArticleList",;
 import { HelpArticleView } from "./HelpArticleView",;
 import { HELP_CATEGORIES } from "./help-content",;
 import { Search } from 'lucide-react';
+<<<<<<< HEAD
+
+export default function HelpCenter() {;
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleCategorySelect = (categoryId: string) => {;
+    setSelectedCategory(categoryId);
+    setSelectedArticle(null);
+  };
+
+  const handleArticleSelect = (articleId: string) => {;
+    setSelectedArticle(articleId);
+  };
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
+<<<<<<< HEAD
+
+  const handleCategorySelect = (categoryId: string,) => {;
+    setSelectedCategory(categoryId),;
+    setSelectedArticle(null);
+  },;
+
+  const handleArticleSelect = (articleId: string,) => {;
+    setSelectedArticle(articleId);
+  },;
+
+  const handleBackToCategories = () => {;
+    setSelectedCategory(null);
+    setSelectedArticle(null);
+  };
+
+  const handleBackToArticles = () => {;
+    setSelectedArticle(null);
+  };
+
+=======
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleCategorySelect = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <>;
+      <div className='container mx-auto px-4 py-8'>;
+        <div className='max-w-4xl mx-auto'>;
+          <h1 className='text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>;
+            Help Center;
+          </h1>;
+          <p className='text-zion-slate-light mb-6'>;
+            Find answers to common questions or get in touch with our support;
+            team.;
+=======
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -148,6 +217,7 @@ export default function HelpCenter() {;
           </h1>;
           <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </p>;
 
           <div className='relative mb-8'>;
@@ -171,12 +241,11 @@ export default function HelpCenter() {;
           </p>;
           <div className='relative mb - 8'>;
             <Input;
-              placeholder="Search for help articles...";
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10";
-            />;
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
+              placeholder='Search for help articles...';
+              value={search_query}
+              on_change={e => setSearchQuery (e.target.value)}
+              className='pl - 10'            />;
+            <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400' />;
           </div>;
           <Tabs default_value='articles' className='mb - 8'>;
             <TabsList className='w - full grid grid - cols - 3 mb - 6'>;
@@ -277,9 +346,20 @@ export default function HelpCenter() {;
                 
                 <div className="space-y-6">
                   <div>
+<<<<<<< HEAD
+                    <h3 className='font-medium text-zion-cyan mb-2'>
+                      How do I hire someone on Zion?
+                    </h3>
+                    <p className='text-zion-slate-light'>
+                      To hire talent on Zion, post a job or project, review
+                      matches or applications, interview candidates through our
+                      platform, and extend an offer. Our secure payment system
+                      protects both parties throughout the engagement.
+=======
                     <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </p>
                   </div>
 
@@ -288,9 +368,20 @@ export default function HelpCenter() {;
 
 
                   <div>
+<<<<<<< HEAD
+                    <h3 className='font-medium text-zion-cyan mb-2'>
+                      What are the payment terms?
+                    </h3>
+                    <p className='text-zion-slate-light'>
+                      Zion offers flexible payment options including
+                      milestone-based payments, hourly rates, or fixed project
+                      fees. Funds are held in escrow until deliverables are
+                      approved, ensuring security for both clients and talent.
+=======
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className="text-zion-slate-light">
                       To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </p>
                   </div>
 
@@ -449,7 +540,11 @@ export default function HelpCenter() {;
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
                         support@ziontechgroup.com
+<<<<<<< HEAD
+                      </a>
+=======
                       </Link>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </div>
 
                         href='mailto:support@ziontechgroup && ziontechgroup.com'
@@ -476,7 +571,9 @@ export default function HelpCenter() {;
 
                         </svg>
                       </div>
-                      <span className="text-zion-slate-light">+1 302 464 0950</span>
+                      <span className='text-zion-slate-light'>
+                        +1 302 464 0950
+                      </span>
                     </div>
                   </div>
 
@@ -497,19 +594,15 @@ export default function HelpCenter() {;
 
 
                     <div>
-                      <Input
-                        placeholder="Your email"
-                      />
+                      <Input placeholder='Your email' />
                     </div>
                     <div>
-                      <Input
-                        placeholder="Subject"
-                      />
+                      <Input placeholder='Subject' />
                     </div>
                     <div>
                       <textarea
-                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black"
-                        placeholder="Your feedback or suggestion"
+                        className='w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-black'
+                        placeholder='Your feedback or suggestion'
                       />
                     </div>
 
@@ -613,4 +706,8 @@ export default function HelpCenter() {;
 
       </div>
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

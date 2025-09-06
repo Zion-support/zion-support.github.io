@@ -62,7 +62,17 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
+import type { AppDispatch } from '@/store'
+import { addItem } from '@/store/cartSlice'
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+import Image from 'next/image'; // Import next/image
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -70,6 +80,15 @@ import type { AppDispatch } from '@/store',
 import { addItem } from '@/store/cartSlice',
 import { toast } from '@/hooks/use-toast',
 import { useCurrency } from '@/hooks/useCurrency',
+=======
+import { RatingStars } from "@/components/RatingStars",
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch  } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem  } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import Image from 'next/image', // Import next/image
 
 interface ProductListingCardProps {
@@ -77,6 +96,7 @@ interface ProductListingCardProps {
   view?: 'grid' | 'list',
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
+<<<<<<< HEAD
 }
 
 
@@ -86,13 +106,134 @@ const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
+<<<<<<< HEAD
+  const stockStatus =
+    listing.stock === undefined
+      ? 'In stock'
+      : listing.stock <= 0
+        ? 'Out of stock'
+        : listing.stock <= 5
+          ? 'Low stock'
+          : 'In stock'
+  const stockVariant =
+    listing.stock === undefined
+      ? 'success'
+      : listing.stock <= 0
+        ? 'destructive'
+        : listing.stock <= 5
+          ? 'warning'
+          : 'success'
+  const { formatPrice } = useCurrency()
+  const getPrice = () => {
+    if (listing.price === null) return 'Custom pricing'
+    return formatPrice(listing.price)
+  }
+  const handleImageError = () => {
+    if (!imageError) {
+      // Prevent infinite loops if placeholder also fails
+      setImageSrc('/placeholder.svg')
+      setImageError(true)
+=======
 
   const handleViewListing = () =>: any {
     // Debug logging for development;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+    }
+  }
+  const handleViewListing = () => {
+    // Debug logging for development
+    if (process.env.NODE_ENV === 'development') {
+      logDebug('[ProductCard] Navigating to:', {
+        path: `${detailBasePath}/${listing.id}`
+      })
+      logDebug('[ProductCard] Listing ID:', { id: listing.id })
+      logDebug('[ProductCard] Listing Title:', { title: listing.title })
+    }
+    // Validate listing ID exists before navigation
+    if (!listing.id) {
+      logErrorToProduction(
+        '[ProductCard] Missing listing ID, cannot navigate'
+        new Error('Missing listing ID')
+        { component: 'ProductListingCard' }
+      )
+      toast({
+        title: 'Navigation Error'
+        description: 'Product information is incomplete'
+        variant: 'destructive'
+      })
+      return
+    }
+    router.push(`${detailBasePath}/${listing.id}`)
+  }
+  const dispatch = useDispatch<AppDispatch>()
+  const addToCart = () => {
+    setLoading(true)
+    dispatch(
+      addItem({
+        id: listing.id
+        title: listing.title
+        price: listing.price ?? 0
+      })
+    )
+    toast.success(`1 ${listing.title} added`, {
+      action: {
+        label: 'View Cart'
+        onClick: () => router.push('/cart')
+      }
+    })
+    setLoading(false)
+  }
+    } else {
+      router.push(`/request-quote?listing=${listing.id}`)
+    }
+  }
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
+      onKeyDown={e => {
+        if (e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault()
+          handleViewListing()
+        }      }}
+    >
+      {/* Image */}
+      <div
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+  const getPrice = () => {
+    if (listing.price === null) return "Custom pricing",
+    return formatPrice(listing.price)
+  },
+
+  const handleImageError = () => {
+    if (!imageError) { // Prevent infinite loops if placeholder also fails
+      setImageSrc('/placeholder.svg'),
+      setImageError(true)
+import React, { useState } from 'react',;
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
+import { useRouter } from 'next/router',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { ProductListing } from "@/types/listings",;
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from "@/components/RatingStars",;
+import { FavoriteButton } from "@/components/FavoriteButton",;
+import { useDispatch } from 'react-redux',;
+import type { AppDispatch } from '@/store',;
+import { addItem } from '@/store/cartSlice',;
+import { toast } from '@/hooks/use-toast',;
+import { useCurrency } from '@/hooks/useCurrency',;
+import Image from 'next/image', // Import next/image;
+interface ProductListingCardProps {;
+  listing: ProductListing,;
+  view?: 'grid' | 'list',;
+  onRequestQuote?: (id: string) => void,;
+  detailBasePath?: string;
+}
+;
+=======
       log_debug ('[ProductCard] Navigating to:', {
         path: `${detailBasePath}/${listing.id}`,
       });
@@ -152,10 +293,104 @@ if ( {) {
       onKeyDown={e => {
 
   detailBasePath?: string;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const ProductListingCardComponent = ({;
   listing,;
   view = 'grid',;
   onRequestQuote,;
+<<<<<<< HEAD
+  detailBasePath = '/marketplace/listing';
+}: ProductListingCardProps) => {;
+  const isGrid = view === 'grid',;
+  const router = useRouter(),;
+  const [loading, setLoading] = useState(false),;
+  const [imageSrc, setImageSrc] = useState(;
+    listing.images && listing.images.length > 0 && listing.images[0];
+    ? listing.images[0];
+    : '/placeholder.svg';
+  ),;
+  const [imageError, setImageError] = useState(false),;
+  const stockStatus =;
+    listing.stock === undefined;
+      ? 'In stock';
+      : listing.stock <= 0;
+      ? 'Out of stock';
+      : listing.stock <= 5;
+      ? 'Low stock';
+      : 'In stock',;
+  const stockVariant =;
+    listing.stock === undefined;
+      ? 'success';
+      : listing.stock <= 0;
+      ? 'destructive';
+      : listing.stock <= 5;
+      ? 'warning';
+      : 'success',;
+  const { formatPrice } = useCurrency(),;
+  const getPrice = () => {;
+    if (listing.price === null) return "Custom pricing",;
+    return formatPrice(listing.price);
+  },;
+  const handleImageError = () => {;
+    if (!imageError) { // Prevent infinite loops if placeholder also fails;
+      setImageSrc('/placeholder.svg'),;
+      setImageError(true);
+    }
+  },;
+  const handleViewListing = () => {;
+    // Debug logging for development;
+    if (process.env.NODE_ENV === 'development') {;
+      logDebug('[ProductCard] Navigating to:', { path: `${detailBasePath}/${listing.id}` }),;
+      logDebug('[ProductCard] Listing ID:', { id: listing.id }),;
+      logDebug('[ProductCard] Listing Title:', { title: listing.title });
+    }
+    
+    // Validate listing ID exists before navigation
+    if (!listing.id) {
+      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' }),
+      toast({
+        title: "Navigation Error",
+        description: "Product information is incomplete",
+        variant: "destructive"}),
+      return
+;
+    // Validate listing ID exists before navigation;
+    if (!listing.id) {;
+      logErrorToProduction('[ProductCard] Missing listing ID, cannot navigate', new Error('Missing listing ID'), { component: 'ProductListingCard' }),;
+      toast({;
+        title: "Navigation Error",;
+        description: "Product information is incomplete",;
+        variant: "destructive"}),;
+      return;
+    }
+;
+    router.push(`${detailBasePath}/${listing.id}`);
+  },;
+  const dispatch = useDispatch<AppDispatch>(),;
+  const addToCart = () => {;
+    setLoading(true),;
+    dispatch(;
+      addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 });
+    ),;
+    toast.success(`1× ${listing.title} added`, {;
+      action: {;
+        label: 'View Cart',;
+        onClick: () => router.push('/cart')}}),;
+    setLoading(false);
+  },;
+  const handleRequestQuote = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestQuote) {;
+      onRequestQuote(listing.id);
+    } else {;
+      router.push(`/request-quote?listing=${listing.id}`);
+    }
+  },
+  
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
+
+=======
   detailBasePath = '/marketplace/listing',;
 }: ProductListingCardProps) => {;
   const isGrid = view === 'grid';
@@ -270,6 +505,7 @@ const ProductListingCardComponent = ({;
         }      }}
     >;
       {/* Image */}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
 
@@ -277,6 +513,40 @@ const ProductListingCardComponent = ({;
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
+<<<<<<< HEAD
+  return (
+    <div
+      data-testid="equipment-link"
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      onClick={handleViewListing}
+      tabIndex={0}
+      role="button"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault(),
+          handleViewListing()
+        }
+      }}
+    >
+      {/* Image */}
+      <div;
+        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        onClick={handleViewListing} // Keep existing onClick for navigation
+        role='button'
+        tabIndex={-1} // Remove from tab order as parent is focusable
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            handleViewListing()
+          }  return ()
+    <div
+      data-testid= "equipment-link";'`
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      onClick={handleViewListing}
+      tabIndex={0};"
+      onKeyDown={(e) => {
+        if(e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault ()
+=======
 
         onKeyDown={e => {;
           if (e && e.key === 'Enter' || e && e.key === ' ') {;
@@ -292,11 +562,20 @@ const ProductListingCardComponent = ({;
         if(e && e.key === 'Enter' || e && e.key === ' ') {;
           e && e.preventDefault () ;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           handleViewListing () }
       }}
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+<<<<<<< HEAD
+            handleViewListing () }
+        }}
+      >
+        <div className={`relative ${imageContainerClasses}`}>
+          {' '}
+          {/* Ensure this container has dimensions */}
+=======
 
         onClick={handleViewListing} // Keep existing onClick for navigation"
         tabIndex={-1} // Remove from tab order as parent is focusable
@@ -358,11 +637,37 @@ if ( {) {
           {/* Ensure this container has dimensions */}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
+<<<<<<< HEAD
+          }
+        }}
+      >;
+        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+          <Image;
+            src={imageSrc}
+            alt={listing.title}
+            fill={true}
+            style={{ objectFit: 'cover' }}
+            onError={handleImageError}
+            priority={false} // Assuming these are not LCP images
+            sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
+          />
+          {listing.featured && (
+            <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
+              Featured
+            </Badge>
+          )}
+
+
+              {stockStatus}
+            </Badge>
+          )}
+=======
 
 
 
@@ -408,11 +713,14 @@ if ( {) {
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {listing.category}
             </Badge>
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
+<<<<<<< HEAD
+=======
 
           </div>;
 
@@ -483,6 +791,7 @@ if ( {) {
           </p>;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Tags */}
           {listing && listing.tags && listing && listing.tags.length > 0 && (;
             <div className='flex flex-wrap gap-1 mb-4'>;
@@ -490,14 +799,34 @@ if ( {) {
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
+<<<<<<< HEAD
+=======
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                 {listing.uspHeadline}
               </p>
             )}
+<<<<<<< HEAD
+            <h3 className='font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]'>
+              {listing.title}
+            </h3>
+          </div>
+          <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]'>
+            {listing.description}
+          </p>
+          {/* Tags */}
+          {listing.tags && listing.tags.length > 0 && (
+            <div className='flex flex-wrap gap-1 mb-4'>
+              {listing.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -514,6 +843,12 @@ if ( {) {
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
 
+<<<<<<< HEAD
+                {listing.uspHeadline}
+              </p>
+            )}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {tag}
                 </span>;
               ))}
@@ -570,18 +905,38 @@ if ( {) {
               size='sm'
               variant='default'
               className='bg-green-600 hover:bg-green-700 text-white'
+<<<<<<< HEAD
+            {listing.price !== null ? (
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+        {/* Footer with price and button */}
+        <div className='flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20'>
+          <div className='text-sm font-medium'>
+        </div>;
+        {/* Footer with price and button */}
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
+          <div className="text-sm font-medium">
+=======
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
                 {getPrice()}
               </div>
             ) : (
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
@@ -611,7 +966,10 @@ if ( {) {
                 "Add to Cart"
               )}
             </Button>
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             
             <Button
               size="sm"
@@ -630,6 +988,8 @@ if ( {) {
             >
               Buy Now
             </Button>
+<<<<<<< HEAD
+=======
 
               onClick={e => {;
                 e && e.stopPropagation(); // Prevent card click event                // Add to cart first, then redirect to checkout;
@@ -649,11 +1009,17 @@ if ( {) {
 
             {onRequestQuote && (;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Button
                 size='sm'
                 variant='outline'
                 onClick={handleRequestQuote}
+<<<<<<< HEAD
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";
+              >;
+=======
                 className='border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground'>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 Request Quote;
               </Button>;
             )}
@@ -827,7 +1193,10 @@ ProductListingCard.display_name = 'ProductListingCard';
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             
             {onRequestQuote && (
               <Button 
@@ -887,12 +1256,20 @@ ProductListingCard.displayName = 'ProductListingCard';
                 Request Quote;
               </Button>;
             )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+},;
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard';
+=======
 
           </div>;
         </div>;
@@ -916,3 +1293,6 @@ ProductListingCard.display_name = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

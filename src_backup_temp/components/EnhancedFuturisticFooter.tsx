@@ -319,10 +319,10 @@ import { Link } from 'react-router-dom';
         </div>
       <div  className="relative">
         {/* Main Footer Content */}
-        <div  className="container - responsive py-16">
+        <div  className="container-responsive py-16">
           {/* Stats Section */}
           <motion.div
-            className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"            initial={{ opacity: 0, y: 20 }}
+            className="grid grid - cols - 2 md:grid - cols-4 gap-8 mb-16"            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, staggerChildren: 0.1 }}
@@ -347,9 +347,9 @@ import { Link } from 'react-router-dom';
             ))}
           </motion.div>
           {/* Main Footer Grid */}
-          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap-8 mb-12">
+          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols-6 gap-8 mb-12">
             {/* Company Info */}
-            <div  className="lg:col - span -2">
+            <div  className="lg:col-span -2">
               <motion.div                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}"
@@ -365,7 +365,7 @@ import { Link } from 'react-router-dom';
                   <p className="text-slate-400 text-sm">Future Technology Solutions</p>
                 </div>
               </div>
-              <p className="text-slate - 300 mb-6 leading -relaxed">
+              <p className="text-slate-300 mb-6 leading -relaxed">
                 Leading provider of cutting - edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.              </div>"
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise.                We help businesses innovate and thrive in the digital age.</p>"
@@ -403,7 +403,7 @@ import { Link } from 'react-router-dom';
                 ))}
               </div>
             </div>
-            <p className="text-gray - 300 mb-6 max - w-md">
+            <p className="text-gray - 300 mb-6 max-w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure,              and digital transformation services.Transforming businesses with cutting - edge technology.</p>
             {/* Footer Sections */}
             {footerSections.map((section, index) => (

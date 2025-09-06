@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import {;
   FormField,;
   FormItem,;
@@ -19,7 +20,38 @@ import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+<<<<<<< HEAD
+=======
+import { FormField, FormItem, FormLabel, FormControl, FormMessage  } from '@/components/ui/form';
+import { Input  } from '@/components/ui/input';
+import { Textarea  } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { cn  } from '@/lib/utils';
+import React, { useState, useEffect } from 'react'
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
+import { cn } from '@/lib/utils'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
+import { Button } from '@/components/ui/button';
+interface ValidationRule {
+=======
 interface ValidationRule {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   required?: boolean;
   minLength?: number;
   maxLength?: number;
@@ -50,6 +82,7 @@ interface ValidationRule {;
 
   debounceMs?: number
 export function ValidatedFormField({
+<<<<<<< HEAD
 
   name
   label
@@ -89,6 +122,8 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
+<<<<<<< HEAD
+=======
 import React, { useState, useEffect } from 'react';
 import {
   FormField,
@@ -215,6 +250,7 @@ if ( {) {
       return validation.custom (value);
     }
     return null;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   const getValidationIcon = () =>: any {
     // Check condition
@@ -383,11 +419,14 @@ export function ValidatedFormField(): any ({;
             <Textarea
 
 
+<<<<<<< HEAD
+=======
               disabled={disabled}
               className={baseClasses}
               rows={4}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {...form.register(name)}
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
@@ -420,6 +459,9 @@ export function ValidatedFormField(): any ({;
                 ))}
 
 
+<<<<<<< HEAD
+      case 'checkbox':
+=======
         ),
 
 
@@ -432,6 +474,7 @@ export function ValidatedFormField(): any ({;
         );
 
       case 'checkbox':;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return (
           <div className='flex items-center space-x-2'>;
             <Checkbox
@@ -453,6 +496,9 @@ export function ValidatedFormField(): any ({;
             {getValidationIcon()}
 
 
+<<<<<<< HEAD
+      case 'password':
+=======
         ),
 
 
@@ -462,6 +508,7 @@ export function ValidatedFormField(): any ({;
         );
 
       case 'password':;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return (
           <div className='relative'>;
             <Input
@@ -478,6 +525,8 @@ export function ValidatedFormField(): any ({;
               {getValidationIcon()}
               <Button
 
+<<<<<<< HEAD
+=======
                 type="button"
                 variant="ghost"
                 size="sm"
@@ -486,6 +535,7 @@ export function ValidatedFormField(): any ({;
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
@@ -493,6 +543,9 @@ export function ValidatedFormField(): any ({;
                 )}
 
 
+<<<<<<< HEAD
+      default:
+=======
         ),
 
 
@@ -504,9 +557,12 @@ export function ValidatedFormField(): any ({;
         );
 
       default:;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return (
           <div className='relative'>;
             <Input
+<<<<<<< HEAD
+=======
 
 
               type={type}
@@ -540,13 +596,17 @@ export function ValidatedFormField(): any ({;
                   <FormMessage className="text-sm text-red-500">
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     {fieldError.message}
                   </FormMessage>
                 )}
                 {description && !fieldError && (
 
+<<<<<<< HEAD
+=======
                   <p className="text-sm text-muted-foreground">{description}</p>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
               </div>;
             )}
@@ -660,6 +720,8 @@ if ( {) {
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (
+<<<<<<< HEAD
+=======
 
 
 
@@ -685,13 +747,17 @@ if ( {) {
                   <AlertCircle className="h-3 w-3" />
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   {fieldError.message}
                 </FormMessage>
               )}
               {description && !fieldError && (
+<<<<<<< HEAD
+=======
 
                 <p className="text-sm text-muted-foreground">{description}</p>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               )}
             </div>;
           )}
@@ -798,6 +864,8 @@ export const commonValidations = {;
   password: {;
     required: true,;
     minLength: 8,;
+<<<<<<< HEAD
+=======
     custom: (value: string,) => {;
       if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {;
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
@@ -818,3 +886,10 @@ export const commonValidations = {;
   }},
     }
   }};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      return null;
+    },
+  },
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

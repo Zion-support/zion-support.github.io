@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 import React from \'react\'; import type { AppProps } from \'next/app\'; import \'../src/index.css\'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 const React from "react"; import type { AppProps } from "next/app"; import "./src/index.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
 import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
@@ -15,10 +10,3 @@ import React from \'react\'; import type { AppProps } from \'next/app\'; import 
 const React from "react"; import type { AppProps } from "next/app"; import "./src/index.css"; export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} />}''"
 import _React from 'react'; import type { AppProps } from 'next/app'; import '../src/index.css'; export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} />}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

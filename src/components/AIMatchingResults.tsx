@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -12,6 +13,8 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
+<<<<<<< HEAD
+=======
 
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
@@ -40,6 +43,7 @@ export /**
 function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -75,6 +79,8 @@ if ( {) {
         </div>;
       </div>);
   }
+<<<<<<< HEAD
+=======
 
 
 import { useState } from 'react';
@@ -164,6 +170,7 @@ export function AIMatchingResults(): any ({;
       </Card>;
     );
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   return (
     <div className='space-y-4'>;
@@ -171,6 +178,8 @@ export function AIMatchingResults(): any ({;
         defaultValue='all'
         value={activeTab}
         onValueChange={setActiveTab}
+<<<<<<< HEAD
+=======
         className='w-full'>;
         <TabsList className='bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full'>;
           <TabsTrigger
@@ -209,6 +218,7 @@ export function AIMatchingResults(): any ({;
                           'w-2',
                           match && match.category.toLowerCase().includes('talent')
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
@@ -221,6 +231,37 @@ export function AIMatchingResults(): any ({;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
 
+=======
+import { useState } from 'react';
+import { MatchResultItem } from '@/lib/ai-matchmaking';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
+import Skeleton from '@/components/ui/skeleton';
+import { cn } from '@/lib/utils';
+
+interface AIMatchingResultsProps {
+  matches: MatchResultItem[];
+  onSelectMatch?: (match: MatchResultItem) => void;
+  isLoading?: boolean;
+  projectDescription?: string;
+  serviceType?: string
+}
+export function AIMatchingResults({
+  matches;
+  onSelectMatch;
+  isLoading;
+                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
+                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
+                        "bg-green-500"
+                      )} />
+                      <div className="flex-1 p-4">
+                        <div className="flex items-start gap-4">
+                          <Avatar className="h-12 w-12 border border-zion-blue-light">
+                            {match.image ? (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                               <AvatarImage
                                 src={match && match.image}
                                 alt={match && match.title}
@@ -368,6 +409,8 @@ if ( {) {
                                 </div>
                               )}
                             </div>
+<<<<<<< HEAD
+=======
 
                             
                             <div className="mt-2 flex flex-wrap gap-1">
@@ -410,6 +453,7 @@ if ( {) {
                                     <Badge key={i} variant='outline'>;
                                       {skill}
                                     </Badge>))}                            </div>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           </div>;
                         </div>;
                       </div>;
@@ -420,12 +464,16 @@ if ( {) {
             )}
           </TabsContent>;
         ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 };
 ;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
       </Tabs>;
     </div>;
@@ -442,4 +490,12 @@ if ( {) {
           </TabsContent>))}
       </Tabs>;
     </div>);
+<<<<<<< HEAD
+=======
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+      </Tabs>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

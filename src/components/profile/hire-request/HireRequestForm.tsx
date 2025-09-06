@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { PersonalInfoFields } from "./PersonalInfoFields",
 import { ProjectDetailsField } from "./ProjectDetailsField",
 
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components/ui/button';
@@ -15,7 +18,12 @@ import { PersonalInfoFields } from './PersonalInfoFields';
 import { ProjectDetailsField } from './ProjectDetailsField';
 import { TimelineField } from './TimelineField';
 import { BudgetFields } from './BudgetFields';
+<<<<<<< HEAD
 export interface HireRequestFormProps {;
+=======
+
+export interface HireRequestFormProps {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   talent: TalentProfile;
   onClose: () => void;
   initialJobTitle?: string;
@@ -52,8 +60,8 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <PersonalInfoFields form={form} />
         </div>
 
@@ -95,6 +103,7 @@ export function HireRequestForm(): any ({;
             type='button'
             variant='outline'
             onClick={onClose}
+<<<<<<< HEAD
             className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'            disabled={isSubmitting}
           >
             Cancel
@@ -135,10 +144,18 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
     talent, ;
     onClose: onSubmitSuccess || onClose, ;
+=======
+  const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
+    talent;
+    onClose: onSubmitSuccess || onClose;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     initialJobTitle;
     userDetails ;
   });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
@@ -180,11 +197,9 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
           >
             Cancel
           </Button>
-          <Button
+<Button
             type='submit'
-            className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button
-            type="submit"
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className='bg-zion-purple hover:bg-zion-purple-dark text-white'
             disabled={isSubmitting}
             disabled = {isSubmitting,}>;
             {isSubmitting ? (;
@@ -206,14 +221,19 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
           >
             {isSubmitting ? (
               <>
+<<<<<<< HEAD
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 
 
 
+=======
+<Loader2 className='mr-2 h-4 w-4 animate-spin' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 Submitting...
               </>
             ) : (
               'Submit Request'
+<<<<<<< HEAD
 
 
 }
@@ -346,3 +366,12 @@ function HireRequestForm() {
     </Form>);
 }
 ;
+=======
+            )}
+          </Button>
+        </DialogFooter>
+      </form>
+    </Form>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

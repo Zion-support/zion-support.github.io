@@ -1,7 +1,16 @@
+<<<<<<< HEAD
   }
   return default_value;
+=======
+import fs from 'fs';
+import path from 'path';
+function getFilePath(fileName: string): string {
+  return path.join(process.cwd(), 'data', `${fileName}.json`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -19,11 +28,15 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
   writeJsonFile<T[]>(fileName, items);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -96,6 +109,8 @@ export class DatabaseManager {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 // Default database configuration
@@ -112,6 +127,7 @@ export const db = new DatabaseManager(defaultConfig);
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function writeJsonFile < T>(file_name: string, data: T): void {
   const file_path = getFilePath (file_name);
   const tmp_path = `${file_path}.tmp`;
@@ -125,23 +141,32 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import fs from 'fs';
 import path from 'path';
 
 }
 }
+<<<<<<< HEAD
+=======
 =======
 
 =======
@@ -154,3 +179,6 @@ import path from 'path';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

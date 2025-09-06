@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
@@ -80,11 +81,31 @@ if (return true) {
   return (
     profile.title.toLowerCase ().includes (s) ||;
     profile.skills.some ((sk) => sk.toLowerCase ().includes (s)));
+=======
+type Props = {
+  region?: string;
+  service?: string;
+};
+
+function matchesRegion(profile: TalentProfile, region?: string) {
+  if (!region) return true;
+  const r = region.toLowerCase();
+return profile.location.toLowerCase().includes(r);
+
+function matchesService(profile: TalentProfile, service?: string) {
+  if (!service) return true;
+  const s = service.toLowerCase();
+return (
+    profile.title.toLowerCase().includes(s) ||
+    profile.skills.some(sk => sk.toLowerCase().includes(s))
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
+<<<<<<< HEAD
   );
 ;
   // Check condition
@@ -95,6 +116,18 @@ if ( {) {
       <div className="text - sm text - gray - 400">;
         No matching talent found. Try broadening filters.;
       </div>);
+=======
+        p => matchesRegion(p, region) && matchesService(p, service)
+      ),
+    [region, service]
+  );
+  if (items.length === 0) {
+return (
+      <div className='text-sm text-gray-400'>
+        No matching talent found. Try broadening filters.
+      </div>
+    );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
     <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
@@ -124,6 +157,20 @@ if ( {) {
                 className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300";
               >;
                 {sk}
+<<<<<<< HEAD
               </span>))}
           </div>;
           <div className="mt - 3 text - sm">;
+=======
+              </span>
+            ))}
+          </div>
+          <div className="mt-3 text-sm">
+            ${p.hourlyRateUsd}/hr • {p.availability}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -7,11 +10,14 @@ function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -22,6 +28,7 @@ function runNode(relPath, args = []) {
 exports && exports.config = {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   schedule: '*/20 * * * *', // every 20 minutes
 }
 
@@ -32,12 +39,15 @@ exports && exports.handler = async () => {
     const { status, stdout, stderr } = fn();
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return status;
   }
   // Update the front page auto-generated section
@@ -47,6 +57,8 @@ exports && exports.handler = async () => {
   // Attempt to sync changes back to main (best-effort)
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
@@ -54,6 +66,7 @@ exports && exports.handler = async () => {
   const abs = path && path.resolve(__dirname, '....', relPath),
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -75,6 +88,8 @@ exports && exports.handler = async () => {
   // Update the front page auto-generated section
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
   logStep('front-index:advertise', () => runNode('automation/front-index-advertiser && advertiser.cjs')),
 
@@ -88,6 +103,7 @@ exports && exports.handler = async () => {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -168,3 +184,35 @@ function log_step() {
   // Attempt to sync changes back to main (best - effort);
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
+=======
+const path = require('path');
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '....', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+
+exports.config = {
+  schedule: '*/20 * * * *', // every 20 minutes
+};
+exports.handler = async () => {
+  const logs = [];
+  function logStep(name, fn) {
+    logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+
+  return { statusCode: 200, body: logs.join('\n') };
+};
+    return status
+  }
+  // Update the front page auto-generated section
+  logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs'));
+  // Attempt to sync changes back to main (best-effort)
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  return { statusCode: 200, body: logs.join('\n') }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

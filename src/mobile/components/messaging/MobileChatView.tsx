@@ -1,4 +1,33 @@
+<<<<<<< HEAD
 id: string;
+=======
+
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { useRouter  } from 'next/router';
+import { toast } from "sonner";
+import React, { useState } from 'react'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import {
+  Send
+  PaperclipIcon
+  ChevronLeft
+  MoreVertical
+  Video
+  Phone
+} from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { useRouter } from 'next/router'
+import { toast } from 'sonner'
+interface Message {
+  id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   content: string;
   timestamp: string;
   isMe: boolean;
@@ -18,7 +47,7 @@ interface MobileChatViewProps {;
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void
-
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
@@ -66,10 +95,6 @@ if (!== '') {) {
 }
       onSendMessage (new_message);
       setNewMessage ('');
-
-
-
-
 
     }
   }
@@ -121,26 +146,25 @@ export function MobileChatView(): any ({;
 
   const startVideoCall = () => {;
     const roomId = `mobile-${contact && contact.id}`;
-    toast && toast.success('Starting video call', {;
-      description: `Connecting with ${contact && contact.name}...`,;
+    toast && toast.success('Starting video call', {,
+  description: `Connecting with ${contact && contact.name}...`,;
     });
 
     // Navigate to video call page;
-    router && router.push(`/call/${roomId}`);
-  };
+    router && router.push(`/call/${roomId}`)
+};
 
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact && contact.id}`;
-    toast && toast.success('Starting audio call', {;
-      description: `Connecting with ${contact && contact.name}...`,;
+    toast && toast.success('Starting audio call', {,
+  description: `Connecting with ${contact && contact.name}...`,;
     });
 
     // Navigate to video call page with audio-only flag;
-    router && router.push(`/call/${roomId}?audioOnly=true`);
-  };
+    router && router.push(`/call/${roomId}?audioOnly=true`)
+};
 
   return (
-
 
   },
   
@@ -165,7 +189,6 @@ export function MobileChatView(): any ({;
   },
   
 
-
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -184,7 +207,9 @@ export function MobileChatView(): any ({;
 
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
-              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
+              <AvatarFallback>
+                {contact.name.charAt(0).toUpperCase()}
+              </AvatarFallback>
             </Avatar>
             <div>
 
@@ -218,12 +243,10 @@ export function MobileChatView(): any ({;
               <Phone className='h-5 w-5' />;
             </Button>;
 
-
             <Button
               variant='ghost'
               size='icon'
               onClick={startVideoCall}
-
 
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
@@ -231,7 +254,6 @@ export function MobileChatView(): any ({;
               </p>
             </div>
           </div>
-
 
             </Button>
           </div>
@@ -342,16 +364,16 @@ export function MobileChatView(): any ({;
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {;
-      description: `Connecting with ${contact.name}...`;
+    toast.success("Starting video call", {,
+  description: `Connecting with ${contact.name}...`;
     }),;
     // Navigate to video call page;
     router.push(`/call/${roomId}`);
   },;
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
-    toast.success("Starting audio call", {;
-      description: `Connecting with ${contact.name}...`;
+    toast.success("Starting audio call", {,
+  description: `Connecting with ${contact.name}...`;
     }),;
     // Navigate to video call page with audio-only flag;
     router.push(`/call/${roomId}?audioOnly=true`);
@@ -407,20 +429,17 @@ export function MobileChatView(): any ({;
         {messages.map((message) => (;
 
           <div;
-            key={message.id} ;
-            className={cn(;
-              "flex",;
-              message.isMe ? "justify-end" : "justify-start";
-            )}
+            key={message.id}
+            className={cn (
+              'flex',
+              message.is_me ? 'justify - end' : 'justify - start')}
           >;
             <div;
-              className={cn(;
-                "max-w-[80%] rounded-2xl px-4 py-2";
-                message.isMe;
-                  ? "bg-primary text-primary-foreground rounded-tr-none";
-                  : "bg-muted rounded-tl-none";
-              )}
-            >;
+              className={cn (
+                'max - w-[80%] rounded - 2xl px - 4 py - 2',
+                message.is_me;
+                  ? 'bg - primary text - primary - foreground rounded - tr - none';
+                  : 'bg - muted rounded - tl - none')}            >;
               <p>{message.content}</p>;
               <div;
                 className={cn (
@@ -429,11 +448,19 @@ export function MobileChatView(): any ({;
                     ? 'text - primary - foreground / 80';
                     : 'text - muted - foreground')}
               >;
+=======
+}
+
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+  const [newMessage, setNewMessage] = useState("");
+  const router = null;
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {message.timestamp}
 
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
-
 
                     {message.status === 'read' ? '✓✓' : '✓'}
 
@@ -488,7 +515,7 @@ export function MobileChatView(): any ({;
         </div>
       </div>;
     </div>;
-  );
+  )
 };
 }
 }
@@ -529,7 +556,6 @@ export function MobileChatView(): any ({;
           <Input
             value={newMessage}
 
-
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -539,12 +565,11 @@ export function MobileChatView(): any ({;
           >
             <Send className="h-5 w-5" />
 
-
-
           </Button>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 
             placeholder='Type a message...';
@@ -595,3 +620,6 @@ export function MobileChatView(): any ({;
 
 }
 ;
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,15 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const rssUrl = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
     (process.env.SITE_URL |'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
@@ -28,6 +38,8 @@ export default async function handler(
 
   return res.status(200).json({ ok: true, rssUrl })
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -49,6 +61,7 @@ export default async function handler(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export default async /**
  * handler - Function description
@@ -72,15 +85,20 @@ function handler() {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 }
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -98,3 +116,13 @@ function handler() {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+  const rssUrl =
+    (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
+  return res.status(200).json({ ok: true, rssUrl });
+  return res.status(200).json({ ok: true, rssUrl })
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

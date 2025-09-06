@@ -26,8 +26,11 @@ import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export default function BrowserAutomationCloudPage() {
   const features = [
@@ -37,7 +40,10 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -100,12 +106,15 @@ export default function BrowserAutomationCloudPage() {
               <ExternalLink className='w-4 h-4' /> Puppeteer;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -176,6 +185,8 @@ function BrowserAutomationCloudPage() {
         </section>;
       </main>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -184,6 +195,7 @@ function BrowserAutomationCloudPage() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -213,6 +225,8 @@ function BrowserAutomationCloudPage() {
   </>),
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -227,6 +241,7 @@ import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
 
 export default function BrowserAutomationCloudPage() {
+<<<<<<< HEAD
 
 export default function BrowserAutomationCloudPage() {
   const features = [
@@ -243,6 +258,10 @@ export default function BrowserAutomationCloudPage() {
     'Artifacts: HAR, traces, screenshots, videos'
     'Rotating proxies and geo targeting'
     'Webhook callbacks and REST API'
+=======
+	const features = null;
+	return (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   return (
     <>
@@ -303,8 +322,12 @@ export default function BrowserAutomationCloudPage() {
         </section>
       </main>
     </>
+<<<<<<< HEAD
   );	return (
 
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -334,6 +357,7 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 	),
@@ -349,3 +373,6 @@ export default function BrowserAutomationCloudPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

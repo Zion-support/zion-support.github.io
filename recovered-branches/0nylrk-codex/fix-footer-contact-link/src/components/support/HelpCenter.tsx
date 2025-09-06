@@ -1,36 +1,50 @@
 import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
-import { AppLayout } from "@/layout/AppLayout";
-import { Search } from "lucide-react";
-export default function HelpCenter() {
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {HelpCategoryList} from "./HelpCategoryList";
+import {HelpArticleList} from "./HelpArticleList";
+import {HelpArticleView} from "./HelpArticleView";
+import {HELP_CATEGORIES} from "./help-content";
+import {AppLayout} from "@/layout/AppLayout";
+import {Search} from "lucide-react";
+export default function HelpCenter() {;
+
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+import React, { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { HelpCategoryList } from "./HelpCategoryList",
+import { HelpArticleList } from "./HelpArticleList",
+import { HelpArticleView } from "./HelpArticleView",
+import { HELP_CATEGORIES } from "./help-content",
+import { AppLayout } from "@/layout/AppLayout",
+import { Search } from "lucide-react",export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleCategorySelect = (categoryId: string) => {
-    (setSelectedCategory(categoryId), setSelectedArticle(null));
-  };
-
+    setSelectedCategory(categoryId),
+    setSelectedArticle(null)
+  },
+  
   const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  };
-
+    setSelectedArticle(articleId)
+  },
+  
   const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
-
+    setSelectedCategory(null),
+    setSelectedArticle(null)
+  },
+  
   const handleBackToArticles = () => {
-    setSelectedArticle(null);
-  };
-
-  return (
+    setSelectedArticle(null)
+  },
+    return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
@@ -58,29 +72,63 @@ export default function HelpCenter() {
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
-
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React, { useState } from "react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { HelpCategoryList } from "./HelpCategoryList",;
+import { HelpArticleList } from "./HelpArticleList",;
+import { HelpArticleView } from "./HelpArticleView",;
+import { HELP_CATEGORIES } from "./help-content",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { Search } from "lucide-react",;
+export default function HelpCenter() {;
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const handleCategorySelect = (categoryId: string) => {;
+    setSelectedCategory(categoryId),;
+    setSelectedArticle(null);
+  },;
+  const handleArticleSelect = (articleId: string) => {;
+    setSelectedArticle(articleId);
+  },;
+  const handleBackToCategories = () => {;
+    setSelectedCategory(null),;
+    setSelectedArticle(null)
+};
+  const handleBackToArticles = () => {;
+    setSelectedArticle(null)
+};
+  return (;
+    <AppLayout>;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="max-w-4xl mx-auto">;
+          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+            Help Center;
+          </h1>;
+          <p className="text-zion-slate-light mb-6">;
+            Find answers to common questions or get in touch with our support team.;
+          </p>;
+          ;
+          <div className="relative mb-8">;
+            <Input;
+              placeholder="Search for help articles...";
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10";
+            />;
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
+          </div>;
+          ;
+          <Tabs defaultValue="articles" className="mb-8">;
+            <TabsList className="w-full grid grid-cols-3 mb-6">;
+              <TabsTrigger value="articles">Articles</TabsTrigger>;
+              <TabsTrigger value="faq">FAQ</TabsTrigger>;
+              <TabsTrigger value="contact">Contact Us</TabsTrigger>;
+            </TabsList>;
+            <TabsContent value="articles">;
+              {!selectedCategory && !selectedArticle && (;
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -97,8 +145,6 @@ export default function HelpCenter() {
                   />;
                 </>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               {selectedArticle && (
                 <>
@@ -109,39 +155,6 @@ export default function HelpCenter() {
                     variant="ghost"
                     onClick={handleBackToArticles}
                     className="mb-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              ;
-              {selectedArticle && (;
-                <>;
-                  <Button;
-                    variant="ghost";
-                    onClick={handleBackToArticles}
-                    className="mb-4";
-                  >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                    ← Back to Articles;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  </Button>;
-                  <HelpArticleView articleId={selectedArticle} />;
-                </>;
-              )}
-            </TabsContent>
-
-            <TabsContent value="faq">
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">
-                <h2 className="text-xl font-semibold mb-4">
-                  Frequently Asked Questions
-                </h2>
-
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -149,9 +162,7 @@ export default function HelpCenter() {
                     </h3>
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and
-                      preferences to match you with the most compatible talent
-                      or services. The process takes into account skills,
-                      experience, availability, and past performance to ensure
+                      preferences to match you with the most compatible talent                      experience, availability, and past performance to ensure
                       optimal results.
                     </p>
                   </div>
@@ -224,10 +235,7 @@ export default function HelpCenter() {
                         className="text-zion-cyan hover:underline"
                       >
                         support@ziontechgroup.com
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      </a>
-                    </div>
+                      </Link>                    </div>
 
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -287,25 +295,9 @@ export default function HelpCenter() {
     </AppLayout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-}
     </AppLayout>);
+}    </AppLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </AppLayout>;
   );}
  export default function HelpCenter () {
@@ -358,7 +350,4 @@ const handleBackToArticles = () => {
 
 }
 ;
-<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -45,16 +45,16 @@ export function Header({ className = '' }: "HeaderProps) {;
 ;
   useEffect(() => {;
     const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 10);
-    };
+      setIsScrolled(window.scrollY > 10)
+};
 ;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 ;
   const toggleTheme = () => {;
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+};
 ;
   const handleSearch = ("e": "React.FormEvent) => {;
     e.preventDefault();
@@ -325,8 +325,8 @@ const Header = () => {
   ];
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)
+};
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
@@ -738,6 +738,6 @@ const router = useRouter()
     );"
 }"
 "
-  );
+  )
 };
 export default Header;

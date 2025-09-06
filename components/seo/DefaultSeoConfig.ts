@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -31,10 +34,13 @@ const config: DefaultSeoProps = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   additionalMetaTags: [
 { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     { name: 'theme-color', content: '#111827' }]}
 export default config;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -76,3 +82,9 @@ export default config
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import type { DefaultSeoProps } from 'next-seo';
+const config: DefaultSeoProps;
+export default config;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

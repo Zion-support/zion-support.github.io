@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+    setIsSubmitting(true),
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
@@ -11,6 +16,17 @@ import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
+=======
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useState, useRef } from 'react';
+import { Mail } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+export function EnhancedNewsletterForm() {
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState("");
 <<<<<<< HEAD
 =======
@@ -29,6 +45,7 @@ export function EnhancedNewsletterForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
+<<<<<<< HEAD
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 <<<<<<< HEAD
 
@@ -69,6 +86,7 @@ export function EnhancedNewsletterForm() {
     }
 
     setIsSubmitting(true);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
 <<<<<<< HEAD
 =======
@@ -136,6 +154,9 @@ export function EnhancedNewsletterForm() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  const EMAIL_REGEX = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -239,6 +260,7 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -513,5 +535,11 @@ export function EnhancedNewsletterForm() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

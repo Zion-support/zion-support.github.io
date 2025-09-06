@@ -12,76 +12,13 @@ import {DisputeReason, disputeReasonLabels} from "@/types/disputes";
 import {useDisputes} from "@/hooks/useDisputes";
 import {toast} from "sonner";
 import {FileText} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue} from "@/components/ui/select",
-import { Input } from "@/components/ui/input",
-import { DisputeReason, disputeReasonLabels } from "@/types/disputes",
-import { useDisputes } from "@/hooks/useDisputes",
-import { toast } from "sonner",
-import { FileText } from "lucide-react",
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" })
   description: z.string()
     .min(20, { message: "Description must be at least 20 characters" })
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-  projectId: string
-  milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void
-  onCancel?: () => void
-}
-export function DisputeForm({
-  projectId
-  milestoneId
-  onDisputeCreated
-  onCancel
-}: DisputeFormProps) {
-  const { createDispute } = useDisputes();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  projectId: string,
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
   onCancel?: () => void
@@ -92,148 +29,6 @@ export function DisputeForm({
   milestoneId, 
   onDisputeCreated, 
   onCancel 
-<<<<<<< HEAD
-
-=======
-}: DisputeFormProps) {;
-  const { createDispute } = useDisputes();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
-}: DisputeFormProps) {
-  const { createDispute } = useDisputes(),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [files, setFiles] = useState<File[]>([]),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      reason_code: ""
-      description: ""
-      attachments: []}})
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-const formSchema = z && z.object({;
-  reason_code: z && z.string();
-    .min(1, { message: "Please select a reason for the dispute" }),;
-  description: z && z.string();
-    .min(20, { message: "Description must be at least 20 characters" }),;
-  attachments: z && z.array(z && z.any()).optional()}),;
-
-type DisputeFormProps = {;
-  projectId: string,;
-  milestoneId?: string;
-  onDisputeCreated?: (disputeId: string) => void,;
-  onCancel?: () => void;
-};
-
-export function DisputeForm(): any ({ ;
-=======
-import React, { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Button } from "@/components/ui/button",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { Input } from "@/components/ui/input",;
-import { DisputeReason, disputeReasonLabels } from "@/types/disputes",;
-import { useDisputes } from "@/hooks/useDisputes",;
-import { toast } from "sonner",;
-import { FileText } from "lucide-react",;
-;
-const formSchema = z.object({;
-  reason_code:z.string();
-    .min(1, { message:"Please select a reason for the dispute" }),;
-  description:z.string();
-    .min(20, { message:"Description must be at least 20 characters" }),;
-  attachments:z.array(z.any()).optional()}),;
-;
-type DisputeFormProps = {;
-  projectId:string,;
-  milestoneId?:string,;
-  onDisputeCreated?:(disputeId:string) => void,;
-  onCancel?:() => void;
-},;
-;
-export function DisputeForm({ ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  projectId, ;
-  milestoneId, ;
-  onDisputeCreated, ;
-  onCancel ;
-<<<<<<< HEAD
-}: DisputeFormProps) {;
-  const { createDispute } = useDisputes();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [files, setFiles] = useState<File[]>([]);
-
-  const form = useForm<z && z.infer<typeof formSchema>>({;
-    resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      reason_code: "",;
-      description: "",;
-      attachments: []}}),;
-
-  const handleFileChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    if (e && e.target.files) {;
-      const newFiles = Array && Array.from(e && e.target.files),;
-
-      setFiles(prev => [...prev, ...newFiles]);
-      form && form.setValue("attachments", [...files, ...newFiles]);
-    }
-
-
-=======
-      const newFiles = Array.from(e.target.files)
-      setFiles(prev => [...prev, ...newFiles]);
-      form.setValue("attachments", [...files, ...newFiles])
-    }
-  }
-  const removeFile = (index: number) => {
-    const newFiles = [...files]
-    newFiles.splice(index, 1);
-    setFiles(newFiles);
-    form.setValue("attachments", newFiles)
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      const newFiles = Array.from(e.target.files),
-      setFiles(prev => [...prev, ...newFiles]),
-      form.setValue("attachments", [...files, ...newFiles])
-    }
-  },
-
-  const removeFile = (index: number) => {
-    const newFiles = [...files],
-    newFiles.splice(index, 1),
-    setFiles(newFiles),
-    form.setValue("attachments", newFiles)
-  },
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true)
@@ -246,67 +41,15 @@ export function DisputeForm({ ;
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
           console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
-        }
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-        
-        toast.success("Your dispute has been submitted"),
-        
-
-
-<<<<<<< HEAD
-=======
-          // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
-        }
-        toast.success("Your dispute has been submitted");
-        
-        toast.success("Your dispute has been submitted"),
-        
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        if (onDisputeCreated) {
-          onDisputeCreated(dispute.id)
-        }
-      }
-    } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-      console.error("Error submitting dispute:", error),
-
-
-      toast.error("Failed to submit dispute. Please try again.")
-    } finally {
-      setIsSubmitting(false)
-<<<<<<< HEAD
-=======
-=======
-      setFiles(prev => [...prev, ...newFiles]);
-      form && form.setValue("attachments", [...files, ...newFiles]);
-    }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      toast.error("Failed to submit dispute. Please try again.")
-    } finally {
-      setIsSubmitting(false)
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  };
+        }  };
 
   const removeFile = (index: number) => {;
     const newFiles = [...files],;
     newFiles && newFiles.splice(index, 1);
     setFiles(newFiles);
-    form && form.setValue("attachments", newFiles);
-  };
+    form && form.setValue("attachments", newFiles)
+};
 
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     try {;
@@ -315,8 +58,8 @@ export function DisputeForm({ ;
       const dispute = await createDispute({;
         project_id: projectId,;
         milestone_id: milestoneId,;
-        reason_code: values && values.reason_code,;
-        description: values && values.description}),;
+        reason_code: values && values.reason_code,,
+  description: values && values.description}),;
 
       if (dispute && dispute.id) {;
         // Future enhancement: Upload attachments;
@@ -338,196 +81,7 @@ export function DisputeForm({ ;
       setIsSubmitting(false);
     }
   }
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-      console.error("Error submitting dispute:", error);
-
-      console.error("Error submitting dispute:", error),
-      toast.error("Failed to submit dispute. Please try again.")
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center space-x-2">
-        <FileText className="h-5 w-5 text-primary" />
-        <h2 className="text-xl font-semibold">Report an Issue</h2>
-      </div>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          <FormField
-            control={form.control}
-            name="reason_code"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Reason for dispute</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a reason" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {Object.entries(disputeReasonLabels).map(([value, label]) => (
-                      <SelectItem key={value} value={value}>{label}</SelectItem>
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React, { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Button } from "@/components/ui/button",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { Input } from "@/components/ui/input",;
-import { DisputeReason, disputeReasonLabels } from "@/types/disputes",;
-import { useDisputes } from "@/hooks/useDisputes",;
-import { toast } from "sonner",;
-import { FileText } from "lucide-react",;
-const formSchema = z.object({;
-  reason_code: z.string();
-    .min(1, { message: "Please select a reason for the dispute" }),;
-  description: z.string();
-    .min(20, { message: "Description must be at least 20 characters" }),;
-  attachments: z.array(z.any()).optional()}),;
-type DisputeFormProps = {;
-  projectId: string,;
-  milestoneId?: string,;
-  onDisputeCreated?: (disputeId: string) => void,;
-  onCancel?: () => void;
-},;
-export function DisputeForm({;
-  projectId,;
-  milestoneId,;
-  onDisputeCreated,;
-  onCancel;
-}: DisputeFormProps) {;
-  const { createDispute } = useDisputes(),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [files, setFiles] = useState<File[]>([]),;
-  const form = useForm<z.infer<typeof formSchema>>({;
-    resolver: zodResolver(formSchema),;
-    defaultValues: {;
-      reason_code: "",;
-      description: "",;
-      attachments: []}}),;
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    if (e.target.files) {;
-      const newFiles = Array.from(e.target.files),;
-      setFiles(prev => [...prev, ...newFiles]),;
-      form.setValue("attachments", [...files, ...newFiles]);
-=======
-          <FormField
-            control={form.control}
-            name="reason_code"
-      setFiles(prev => [...prev, ...newFiles]);
-      form && form.setValue("attachments", [...files, ...newFiles]);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    }
-    }
-  }
-<<<<<<< HEAD
-;
-  return (;
-<<<<<<< HEAD
-
-=======
-} DisputeFormProps) {;
-  const { createDispute } = useDisputes(),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [files, setFiles] = useState<File[]>([]),;
-;
-  const form = useForm<z.infer<typeof formSchema>>({;
-    resolver:zodResolver(formSchema),;
-    defaultValues:{;
-      reason_code:"",;
-      description:"",;
-      attachments:[]}}),;
-;
-  const handleFileChange = (e:React.ChangeEvent<HTMLInputElement>) => {;
-    if (e.target.files) {;
-      const newFiles = Array.from(e.target.files),;
-      setFiles(prev => [...prev, ...newFiles]),;
-      form.setValue("attachments", [...files, ...newFiles]),;
-    }
-  },;
-;
-  const removeFile = (index:number) => {;
-    const newFiles = [...files],;
-    newFiles.splice(index, 1),;
-    setFiles(newFiles),;
-    form.setValue("attachments", newFiles),;
-  },;
-;
-  async function onSubmit(values:z.infer<typeof formSchema>) {;
-    try {;
-      setIsSubmitting(true),;
-      ;
-      const dispute = await createDispute({;
-        project_id:projectId,;
-        milestone_id:milestoneId,;
-        reason_code:values.reason_code,;
-        description:values.description}),;
-      ;
-      if (dispute && dispute.id) {;
-        // Future enhancement:Upload attachments;
-        // For now we just log the files that would be uploaded;
-        if (files.length > 0) {;
-          // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`),;
-        }
-        ;
-        toast.success("Your dispute has been submitted"),;
-        ;
-        if (onDisputeCreated) {;
-          onDisputeCreated(dispute.id),;
-        }
-      }
-    } catch (error) {;
-      console.error("Error submitting dispute:", error),;
-      toast.error("Failed to submit dispute. Please try again."),;
-    } finally {;
-      setIsSubmitting(false),;    }
-        if (onDisputeCreated) {onDisputeCreated(dispute.id)}
-      }
-    } catch (error) {toast.error("Failed to submit dispute. Please try again.")} finally {setIsSubmitting(false)}
-  }
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    <div className="space-y-6">;
-      <div className="flex items-center space-x-2">;
-        <FileText className="h-5 w-5 text-primary" />;
-        <h2 className="text-xl font-semibold">Report an Issue</h2>;
-      </div>;
-<<<<<<< HEAD
-
-      <Form {...form}>;
-        <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          <FormField
+  return (          <FormField
             control={form && form.control}
             name="reason_code"
             render={({ field }) => (;
@@ -632,58 +186,20 @@ if ( {) {
     }
   }
   return (
-    <div className="space - y-6">;
-      <div className="flex items - center space - x-2">;
-        <FileText className="h - 5 w - 5 text - primary" />;
-        <h2 className="text - xl font - semibold">Report an Issue</h2>;
+    <div className="space-y-6">;
+      <div className="flex items - center space-x-2">;
+        <FileText className="h - 5 w - 5 text-primary" />;
+        <h2 className="text - xl font-semibold">Report an Issue</h2>;
       </div>;
       <Form {...form}>;
-        <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+        <form on_submit={form.handle_submit (on_submit)} className="space-y-6">;
           <FormField;
             control={form.control}
             name="reason_code";
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Reason for dispute</FormLabel>;
-                <Select onValueChange={field.on_change} default_value={field.value}>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-          />;
-          <FormField
-            control={form && form.control}
-            name="description"
-      ;
-      <Form {...form}>;
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
-          <FormField;
-            control={form.control}
-            name="reason_code";
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Reason for dispute</FormLabel>;
-                <Select onValueChange={field.onChange} defaultValue={field.value}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  <FormControl>;
-                    <SelectTrigger>;
-                      <SelectValue placeholder="Select a reason" />;
-                    </SelectTrigger>;
-                  </FormControl>;
-                  <SelectContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    {Object.entries(disputeReasonLabels).map(([value, label]) => (;
-                      <SelectItem key={value} value={value}>{label}</SelectItem>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                    ))}
-                  </SelectContent>;
+                <Select onValueChange={field.on_change} default_value={field.value}>;                  </SelectContent>;
                 </Select>;
                 <FormMessage />;
               </FormItem>;
@@ -691,30 +207,15 @@ if ( {) {
 
           />;
 
-
           <FormField
             control={form && form.control}
             name="description"
-<<<<<<< HEAD
-=======
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
           />;
           ;
           <FormField;
             control={form.control}
             name="description";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Describe the issue in detail</FormLabel>;
-                <FormControl>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                  <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
                     {Object.entries (disputeReasonLabels).map (([value, label]) => (
@@ -733,86 +234,22 @@ if ( {) {
                 <FormControl>;
                   <Textarea;
                     placeholder="Please provide specific details about the issue...";
-                    className="min - h-[150px]";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-                  <Textarea;
-                    placeholder="Please provide specific details about the issue...";
                     className="min-h-[150px]";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           />;
-
-=======
-              </FormItem>;
-            )}
-          />;
-          ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <FormItem>;
             <FormLabel>Attachments (optional)</FormLabel>;
             <FormControl>;
               <div className="space-y-4">;
-<<<<<<< HEAD
                 <Input
                   type="file" 
                   multiple 
                   onChange={handleFileChange}
-                  className="cursor-pointer"
-=======
-                      <SelectItem key={value} value={value}>{label}</SelectItem>;
-                    ))}
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="description"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Describe the issue in detail</FormLabel>
-                <FormControl>
-                  <Textarea
-                    placeholder="Please provide specific details about the issue..."
-                    className="min-h-[150px]"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormItem>
-            <FormLabel>Attachments (optional)</FormLabel>
-            <FormControl>
-              <div className="space-y-4">
-                <Input
-                  type="file"
-                  multiple
-                  onChange={handleFileChange}
-                  className="cursor-pointer"
-                />
-                {files.length > 0 && (
-                  <div className="space-y-2">
-                    <p className="text-sm font-medium">Selected files:</p>
-                    <ul className="space-y-1">
-                      {files.map((file, index) => (
-                        <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
-                          <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                />;
+                  className="cursor-pointer"                />;
 
                 {files && files.length > 0 && (;
                   <div className="space-y-2">;
@@ -825,243 +262,16 @@ if ( {) {
                             type="button" 
                             variant="ghost" 
                             size="sm" 
-
-<<<<<<< HEAD
-=======
-
-=======
-                          <Button
-                            type="button"
-                            variant="ghost"
-                            size="sm"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                          <Button 
-                            type="button" 
-                            variant="ghost" 
-                            size="sm" 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-                <Input ;
-                  type="file" ;
-                  multiple ;
-                  onChange={handleFileChange}
-                  className="cursor-pointer";
-                />;
-                ;
-                {files.length > 0 && (;
-                  <div className="space-y-2">;
-                    <p className="text-sm font-medium">Selected files:</p>;
-                    <ul className="space-y-1">;
-                      {files.map((file, index) => (;
-                        <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">;
-                          <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>;
-                          <Button ;
-                            type="button" ;
-                            variant="ghost" ;
-                            size="sm" ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                            onClick={() => removeFile(index)}
-                          >;
-                            Remove;
-                          </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-                        </li>;
-                      ))}
-                    </ul>;
-                  </div>;
-                )}
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              </FormItem>)}
-          />;
-          <FormItem>;
-            <FormLabel > Attachments (optional)</FormLabel>;
-            <FormControl>;
-              <div className="space - y-4">;
-                <Input;
-                  type="file";
-                  multiple;
-                  on_change={handleFileChange}
-                  className="cursor - pointer";
-                />;
-                {files.length > 0 && (
-                  <div className="space - y-2">;
-                    <p className="text - sm font - medium">Selected files:</p>;
-                    <ul className="space - y-1">;
-                      {files.map ((file, index) => (
-                        <li key={index} className="flex items - center justify - between text - sm bg - muted / 30 p - 2 rounded">;
-                          <span>{file.name} ({(file.size / 1024).to_fixed (1)} KB)</span>;
-                          <Button;
-                            type="button";
-                            variant="ghost";
-                            size="sm";
-                            on_click={() => remove_file (index)}
-                          >;
-                            Remove;
-                          </Button>;
-                        </li>))}
-                    </ul>;
-                  </div>)}
-<<<<<<< HEAD
-
-=======
-                        </li>;                      ))}
-                    </ul>;
-                  </div>;
-                )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-              </div>;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          <div className="flex justify - end space - x-2">;
-            {on_cancel && (
-              <Button type="button" variant="outline" on_click={on_cancel}>;
-                Cancel;
-              </Button>)}
-            <Button type="submit" disabled={is_submitting}>;
-              {is_submitting ? "Submitting..." : "Submit Dispute"}
-
-=======
-          ;
-          <div className="flex justify-end space-x-2">;
-            {onCancel && (;
-              <Button type="button" variant="outline" onClick={onCancel}>;
-                Cancel;
-              </Button>;
-            )}
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? "Submitting..." :"Submit Dispute"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </form>;
       </Form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </div>);
 
-}
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            </Button>
+}            </Button>
           </div>
         </form>
       </Form>
     </div>
   )
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-                            onClick={() => removeFile(index)}
-                          >
-                            Remove
-                          </Button>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-          <div className="flex justify-end space-x-2">
-            {onCancel && (
-              <Button type="button" variant="outline" onClick={onCancel}>
-                Cancel
-              </Button>
-            )}
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Submit Dispute"}
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </div>
-  )
-
-    </div>;
-  ),; import {
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormLabel;
-import {
-  Select;
-SelectContent;
-SelectItem;
-SelectTrigger;
-const formSchema = z.object ({
-  reason code: z.string () .min (1, {
-  message: "Please select a reason for the dispute" 
-});
-description: z.string () attachments: z.array (z.any () ) .optional () 
-});
-}
-};
-const removeFile = (index: number) => {
-  async function onSubmit (values: z.infer<typeof formSchema>) {
-  try {
-  setIsSubmitting (true);
-const dispute = await createDispute ({
-  project id: projectId;
-milestone id: milestoneId;
-reason code: values.reason code;
-description: values.description 
-});
-//Future enhancement: Upload attachments //For now we just log the files that would be uploaded toast.success ("Your dispute has been submitted");
-}finally {
-  setIsSubmitting (false) 
-}
-}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
-  field.onChange 
-}defaultValue= {
-  field.value 
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
-  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
-  value 
-}value= {
-  value 
-}> {
-  label 
-}</SelectItem>) ) 
-}</SelectContent> </Select> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
-}</ul> </div>) 
-}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) 
-}
-}
-};
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-};
-}
-
-
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

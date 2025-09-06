@@ -16,7 +16,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
 
-
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
@@ -119,9 +118,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       }
     }
   },
-
-
-
 
       setSuggestion(result);
     } catch (error) {;
@@ -236,7 +232,7 @@ if ( {) {
   }
 ;
   return (
-    <div className="space - y-4">;
+    <div className="space-y-4">;
       <div>;
         {!suggestion && !is_loading ? (
           <Button;
@@ -244,25 +240,18 @@ if ( {) {
             variant="outline";
             on_click={generate_suggestion}
             disabled={!job_title || !category}
-            className="w - full";
+            className="w-full";
           >;
-            <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation;
+            <Sparkles className="h - 4 w - 4 mr-2" /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
 
-
-
-
       </div>;
     </div>;
-  );
-
-
-
-
+  )
 };
             rate_type="hourly";
           />)}

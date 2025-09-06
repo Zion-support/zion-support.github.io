@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -29,6 +30,8 @@ const WebDevelopmentChat: NextPage = () => {;
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="WebDevelopmentChat blog post" />{" "}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -48,6 +51,7 @@ const WebDevelopmentChat: NextPage = () => {
       </Head>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <main>
         <h1>WebDevelopmentChat</h1>
         <p>Blog content coming soon...</p>
@@ -59,7 +63,10 @@ const WebDevelopmentChat: NextPage = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <main>;
         <h1>WebDevelopmentChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -69,6 +76,8 @@ const WebDevelopmentChat: NextPage = () => {
   );
 }
 export default WebDevelopmentChat;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -86,6 +95,7 @@ export default WebDevelopmentChat;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -106,6 +116,8 @@ const WebDevelopmentChat: NextPage = () => {
 ;
 export default WebDevelopmentChat;
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -157,3 +169,7 @@ export default WebDevelopmentChat;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

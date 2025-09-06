@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -10,9 +12,11 @@ import {useState} from 'react';
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
+<<<<<<< HEAD
 
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
@@ -22,6 +26,8 @@ const categories: GrantCategory[] = [
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -40,6 +46,12 @@ const categories: GrantCategory[] = [
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
+export default function ApplyGrantPage() {
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -49,9 +61,12 @@ const categories: GrantCategory[] = [;
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -59,6 +74,9 @@ export default function ApplyGrantPage() {;
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,12 +88,20 @@ export default function ApplyGrantPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
+    'USDC'
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -196,6 +222,7 @@ function ApplyGrantPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -209,6 +236,8 @@ function ApplyGrantPage() {
             .filter (Boolean);
           pitchDeckUrl;
           region;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -230,6 +259,7 @@ function ApplyGrantPage() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
@@ -271,6 +301,8 @@ function ApplyGrantPage() {
           <button
             disabled={loading}
             onClick={() => save(true)}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
           >;
@@ -319,13 +351,13 @@ function ApplyGrantPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          program
-          projectName
-          teamInfo
-          proposalSummary
-          timeline
-          budgetAmount: Number(budgetAmount |0)
-          budgetCurrency
+program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
           supportingLinks: supportingLinks
             .split('\n')
             .map(s => s.trim())
@@ -342,31 +374,18 @@ function ApplyGrantPage() {
     } catch (e: any) {
       setError(e.message);
     } finally {
-      setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
-          budgetCurrency;
-          supportingLinks: supportingLinks
-            .split('\n')
-            .map((s) => s.trim())
-            .filter(Boolean);
-          pitchDeckUrl;
-          region;
-          sector: (sector as any) |undefined
-          submit})});
-      const data = await resp.json();
-      if (!resp.ok) throw new Error(data?.error |'Failed');
-      router.push(`/grants/${data.id}`)
-    } catch (e: any) {
-      setError(e.message)
-    } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
+<<<<<<< HEAD
 
   };
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
-      <h1 className='text-2xl font-semibold mb-4'>
+<h1 className='text-2xl font-semibold mb-4'>
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
       </h1>
       <div className='grid gap-4 max-w-3xl'>
@@ -511,15 +530,18 @@ function ApplyGrantPage() {
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
           >
             Submit for Review
-          </button>        </div>
+          </button>
+        </div>
       </div>
     </EnhancedLayout>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
             </select>;
@@ -535,6 +557,8 @@ function ApplyGrantPage() {
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
         </label>;
 
+<<<<<<< HEAD
+=======
 
   );
 <<<<<<< HEAD
@@ -592,6 +616,7 @@ function ApplyGrantPage() {
       </div>
     </EnhancedLayout>
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   );
 
@@ -603,4 +628,10 @@ function ApplyGrantPage() {
 }
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

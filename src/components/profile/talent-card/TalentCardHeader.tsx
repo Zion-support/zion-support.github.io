@@ -1,7 +1,29 @@
+<<<<<<< HEAD
 yearsExperience
+=======
+import React from 'react';
+import { BadgeCheck } from 'lucide-react';
+import { TalentCardAvatar } from './TalentCardAvatar';
+import { TalentCardAvailability } from './TalentCardAvailability';
+
+interface TalentCardHeaderProps {
+  fullName: string;
+  professionalTitle: string;
+  profilePicture?: string;
+  availabilityType: string;
+  yearsExperience: number
+}
+
+export function TalentCardHeader({ 
+  fullName;
+  professionalTitle;
+  profilePicture;
+  availabilityType;
+  yearsExperience
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }: TalentCardHeaderProps) {
   return (
-    <div className="flex items-start gap-4 mb-4">
+    <div className='flex items-start gap-4 mb-4'>
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
 
 export function TalentCardHeader(): any ({;
@@ -19,8 +41,6 @@ export function TalentCardHeader(): any ({;
         <div className='flex items-center justify-between'>;
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;
 
-
-      
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
@@ -32,23 +52,22 @@ export function TalentCardHeader(): any ({;
             )}
 
           </h3>
+<<<<<<< HEAD
 
     </div>;
   );
 };
-
 
 }
           </h3>;
 
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
-        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
+
       </div>;
     </div>;
   );
 }
-
 
 import React from 'react';
 import { BadgeCheck } from 'lucide-react';
@@ -88,3 +107,11 @@ function TalentCardHeader() {
     </div>);
 }
 ;
+=======
+          <TalentCardAvailability availabilityType={availabilityType} />
+        </div>
+        <p className='text-zion-cyan text-sm'>{professionalTitle}</p>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,31 +1,36 @@
-import {
   FormField,
-=======
-<<<<<<< HEAD
-
 
   FormField,
 FormField,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-  FormField,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { UseFormReturn  } from './react - hook - form';
+import { FormValues  } from './useHireRequestForm';
+
 interface PersonalInfoFieldsProps {
-  form: UseFormReturn<FormValues>;
+  form: UseFormReturn < FormValues>;
 }
 
-export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return (
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {UseFormReturn} from "react-hook-form";
+import {FormValues} from "./useHireRequestForm";
+
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
+
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { UseFormReturn } from "react-hook-form",
+import { FormValues } from "./useHireRequestForm",
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { UseFormReturn } from "react-hook-form",;  return (
     <>;
       <FormField
         control={form && form.control}
@@ -68,15 +73,9 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   FormField,
   FormItem,
@@ -112,7 +111,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 }
 ;
 
-<<<<<<< HEAD
   ),;}
  interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues> 
@@ -202,5 +200,3 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

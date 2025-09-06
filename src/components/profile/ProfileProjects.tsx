@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <img
                   src={project && project.imageUrl}
                   alt={project && project.title}
@@ -9,7 +10,13 @@
                 <FileText className='text-zion-purple h-12 w-12 opacity-50' />;
               </div>;
             )}
-
+=======
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { ProfileProject } from '@/types/profile';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { FileText } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
             <CardContent className='p-4'>;
               <h4 className='text-white font-medium mb-2'>{project && project.title}</h4>;
@@ -30,12 +37,13 @@
             {project && project.imageUrl ? (;
               <AspectRatio ratio={16/9}>;
 
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { FileText } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 interface ProfileProjectsProps {
   projects: ProfileProject[]
@@ -49,13 +57,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
 
-
-
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
-
 
               </AspectRatio>
             ) : (
@@ -63,8 +68,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
-
-
 
             <CardContent className='p-4'>
               <h4 className='text-white font-medium mb-2'>{project.title}</h4>
@@ -78,6 +81,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                       key={i}
                       variant='outline'
                       className='text-xs border-zion-slate-dark text-zion-slate-light'
+<<<<<<< HEAD
                     >                      {tag}                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
         {projects.map((project) => (
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
@@ -113,7 +117,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               <AspectRatio ratio={16/9}>;
                 <img;
 
-
                   src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover"
@@ -126,8 +129,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               </div>
             )}
 
-            
-
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
@@ -135,40 +136,36 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
+=======
+                    >
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                       {tag}
                     </Badge>
 ;
             <CardContent className="p-4">;
-              <h4 className="text-white font-medium mb-2">{project.title}</h4>;
-              <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>;
-              {project.tags && project.tags.length > 0 && (;
-                <div className="flex flex-wrap gap-1 mb-2">;
-                  {project.tags.map((tag, i) => (;
+
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
                       {tag}
                     </Badge>;
 
-
-
-
                   ))}
-                </div>
+
               )}
-
-              
-
-
+<<<<<<< HEAD
 
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
 
               <div className="text-xs text-zion-slate-light mt-2">
+=======
+<div className='text-xs text-zion-slate-light mt-2'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {project.date}
               </div>
             </CardContent>
           </Card>
         ))}
       </div>
-
+<<<<<<< HEAD
 
     </div>;
   );
@@ -177,7 +174,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 }
 }
 }
-
 
 }
 
@@ -266,3 +262,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
     </div>);
 }
 ;
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
