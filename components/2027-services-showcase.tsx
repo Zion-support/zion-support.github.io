@@ -1,8 +1,52 @@
+<<<<<<< HEAD
+import React, { useState } from 'react',
+import Head from 'next/head',
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  Search
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  CheckCircle
+  ArrowRight
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Target
+  Cpu
+  Database
+  Cloud
+  Lock
+  ShieldCheck
+  Eye
+  Heart
+  Share2
+  Download
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
+  Search, Star, Users, TrendingUp, DollarSign, Clock
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud
+
+  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
+ } from 'lucide-react';
+import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
+=======
   Search,
   Star,
   Users,
@@ -37,63 +81,54 @@ import {
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {;
   const [searchTerm, setSearchTerm] = useState('');
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
-
   // Sort options
   const sortOptions = [
-    { value: 'name', label: 'Sort by Name' },
-    { value: 'price', label: 'Sort by Price' },
-    { value: 'roi', label: 'Sort by ROI' },
+    { value: 'name', label: 'Sort by Name' }
+    { value: 'price', label: 'Sort by Price' }
+    { value: 'roi', label: 'Sort by ROI' }
   ];
-
   const allServices = [
-    ...cuttingEdge2027Innovations,
+    ...cuttingEdge2027Innovations
     ...practicalMicroSaas2027,    { value: 'roi', label: 'Sort by ROI' }
   ];
-
   const allServices = [
     ...cuttingEdge2027Innovations;
     ...practicalMicroSaas2027
-
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
-
     const matchesCategory =
-      selectedCategory === 'all' || service.category.includes(selectedCategory);
-
+      selectedCategory === 'all' |service.category.includes(selectedCategory);
     const matchesPrice =
-      selectedPriceRange === 'all' ||
+      selectedPriceRange === 'all' |
       (selectedPriceRange === 'low' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
+        parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
       (selectedPriceRange === 'medium' &&
         parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
+        parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |
       (selectedPriceRange === 'high' &&
         parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
-
-    return matchesSearch && matchesCategory && matchesPrice;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    return matchesSearch && matchesCategory && matchesPrice;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    
-    const matchesPrice = selectedPriceRange === 'all' || 
-                        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-                        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
+    const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory);
+    const matchesPrice = selectedPriceRange === 'all' |
+                        (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
+                        (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
-
     return matchesSearch && matchesCategory && matchesPrice
-
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -115,131 +150,126 @@ export default function ServicesShowcase2027() {;
         return parseInt(a.roi.replace(/[^0-9]/g, '')) - parseInt(b.roi.replace(/[^0-9]/g, ''));
       default: return 0
   });
-
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     {
-      id: 'AI Consciousness Evolution',
-      name: 'AI Consciousness',
-      icon: '🧠',
+      id: 'AI Consciousness Evolution'
+      name: 'AI Consciousness'
+      icon: '🧠'
       count: allServices.filter(s => s.category.includes('AI Consciousness'))
-        .length,
-    },
+        .length
+    }
     {
-      id: 'Quantum Consciousness',
-      name: 'Quantum Consciousness',
-      icon: '⚛️',
+      id: 'Quantum Consciousness'
+      name: 'Quantum Consciousness'
+      icon: '⚛️'
       count: allServices.filter(s =>
         s.category.includes('Quantum Consciousness')
-      ).length,
-    },
+      ).length
+    }
     {
-      id: 'AI Civilization',
-      name: 'AI Civilization',
-      icon: '🏛️',
+      id: 'AI Civilization'
+      name: 'AI Civilization'
+      icon: '🏛️'
       count: allServices.filter(s => s.category.includes('AI Civilization'))
-        .length,
-    },
+        .length
+    }
     {
-      id: 'Quantum Time',
-      name: 'Quantum Time',
-      icon: '⏰',
+      id: 'Quantum Time'
+      name: 'Quantum Time'
+      icon: '⏰'
       count: allServices.filter(s => s.category.includes('Quantum Time'))
-        .length,
-    },
+        .length
+    }
     {
-      id: 'AI Multiverse',
-      name: 'AI Multiverse',
-      icon: '🌌',
+      id: 'AI Multiverse'
+      name: 'AI Multiverse'
+      icon: '🌌'
       count: allServices.filter(s => s.category.includes('AI Multiverse'))
-        .length,
-    },
+        .length
+    }
     {
-      id: 'Customer Success Automation',
-      name: 'Customer Success',
-      icon: '🎯',
+      id: 'Customer Success Automation'
+      name: 'Customer Success'
+      icon: '🎯'
       count: allServices.filter(s => s.category.includes('Customer Success'))
-        .length,
-    },
+        .length
+    }
     {
-      id: 'Content Marketing Automation',
-      name: 'Content Marketing',
-      icon: '📝',
+      id: 'Content Marketing Automation'
+      name: 'Content Marketing'
+      icon: '📝'
       count: allServices.filter(s => s.category.includes('Content Marketing'))
-        .length,
-    },
+        .length
+    }
     {
-      id: 'Inventory Management',
-      name: 'Inventory Management',
-      icon: '📦',
+      id: 'Inventory Management'
+      name: 'Inventory Management'
+      icon: '📦'
       count: allServices.filter(s =>
         s.category.includes('Inventory Management')
-      ).length,
-    },
+      ).length
+    }
     {
-      id: 'HR Automation',
-      name: 'HR Automation',
-      icon: '👥',
+      id: 'HR Automation'
+      name: 'HR Automation'
+      icon: '👥'
       count: allServices.filter(s => s.category.includes('HR Automation'))
-        .length,
-    },
+        .length
+    }
     {
-      id: 'Financial Automation',
-      name: 'Financial Automation',
-      icon: '💰',
+      id: 'Financial Automation'
+      name: 'Financial Automation'
+      icon: '💰'
       count: allServices.filter(s =>
         s.category.includes('Financial Automation')
-      ).length,
+      ).length
     },  ];
-
   const priceRanges = [
-    { id: 'all', name: 'All Prices', count: allServices.length },    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI Consciousness')).length },
-    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '⚛️', count: allServices.filter(s => s.category.includes('Quantum Consciousness')).length },
-    { id: 'AI Civilization', name: 'AI Civilization', icon: '🏛️', count: allServices.filter(s => s.category.includes('AI Civilization')).length },
-    { id: 'Quantum Time', name: 'Quantum Time', icon: '⏰', count: allServices.filter(s => s.category.includes('Quantum Time')).length },
-    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '🌌', count: allServices.filter(s => s.category.includes('AI Multiverse')).length },
-    { id: 'Customer Success Automation', name: 'Customer Success', icon: '🎯', count: allServices.filter(s => s.category.includes('Customer Success')).length },
-    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '📝', count: allServices.filter(s => s.category.includes('Content Marketing')).length },
-    { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices.filter(s => s.category.includes('Inventory Management')).length },
-    { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s => s.category.includes('HR Automation')).length },
+    { id: 'all', name: 'All Prices', count: allServices.length },    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI Consciousness')).length }
+    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '⚛️', count: allServices.filter(s => s.category.includes('Quantum Consciousness')).length }
+    { id: 'AI Civilization', name: 'AI Civilization', icon: '🏛️', count: allServices.filter(s => s.category.includes('AI Civilization')).length }
+    { id: 'Quantum Time', name: 'Quantum Time', icon: '⏰', count: allServices.filter(s => s.category.includes('Quantum Time')).length }
+    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '🌌', count: allServices.filter(s => s.category.includes('AI Multiverse')).length }
+    { id: 'Customer Success Automation', name: 'Customer Success', icon: '🎯', count: allServices.filter(s => s.category.includes('Customer Success')).length }
+    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '📝', count: allServices.filter(s => s.category.includes('Content Marketing')).length }
+    { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices.filter(s => s.category.includes('Inventory Management')).length }
+    { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s => s.category.includes('HR Automation')).length }
     { id: 'Financial Automation', name: 'Financial Automation', icon: '💰', count: allServices.filter(s => s.category.includes('Financial Automation')).length }
-
   const priceRanges = [
-    { id: 'all', name: 'All Prices', count: allServices.length },
+    { id: 'all', name: 'All Prices', count: allServices.length }
     {
-      id: 'low',
-      name: 'Under $1K/month',
+      id: 'low'
+      name: 'Under $1K/month'
       count: allServices.filter(
         s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000
-      ).length,
-    },
+      ).length
+    }
     {
-      id: 'medium',
-      name: '$1K - $10K/month',
+      id: 'medium'
+      name: '$1K - $10K/month'
       count: allServices.filter(
         s =>
           parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 &&
           parseInt(s.price.replace(/[^0-9]/g, '')) < 10000
-      ).length,
-    },
+      ).length
+    }
     {
-      id: 'high',
-      name: '$10K+/month',
+      id: 'high'
+      name: '$10K+/month'
       count: allServices.filter(
         s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000
-      ).length,
-    },  ];    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length };
-    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length };
+      ).length
+    },  ];    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length }
+    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length }
     { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
   ];
-
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  };
-
+  }
   return (
     <UltraFuturisticMatrixBackground2027>
       <Head>
@@ -400,7 +430,11 @@ export default function ServicesShowcase2027() {;
                 <DollarSign className="w-5 h-5" />
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>View Pricing</span>
               </Link>
             </div>
@@ -410,7 +444,11 @@ export default function ServicesShowcase2027() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Search and Filters */}
       <section className='px-4 sm:px-6 lg:px-8 mb-16'>
         <div className='max-w-7xl mx-auto'>
@@ -467,7 +505,11 @@ export default function ServicesShowcase2027() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Price Range Filter */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -493,7 +535,11 @@ export default function ServicesShowcase2027() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Sort By */}
               <div>
                 <label className='block text-cyan-400 font-medium mb-2'>
@@ -578,7 +624,11 @@ export default function ServicesShowcase2027() {;
 
                         {service.price}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
                     {/* Features */}
@@ -615,7 +665,11 @@ export default function ServicesShowcase2027() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* ROI */}
                     <div className='mb-6 text-center'>
                       <div className='text-green-400 font-semibold text-lg'>
@@ -644,7 +698,11 @@ export default function ServicesShowcase2027() {;
 =======
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         Learn More
                       </Link>
@@ -659,7 +717,11 @@ export default function ServicesShowcase2027() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Category Badge */}
                     <div className='mt-4'>
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service.category}                    <div className="mt-4">
@@ -675,7 +737,11 @@ export default function ServicesShowcase2027() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
@@ -705,13 +771,18 @@ export default function ServicesShowcase2027() {;
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >
 
               <button
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
+
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
@@ -724,7 +795,11 @@ export default function ServicesShowcase2027() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact Section */}
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
@@ -733,7 +808,11 @@ export default function ServicesShowcase2027() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -856,8 +935,14 @@ export default function ServicesShowcase2027() {;
 <<<<<<< HEAD
 );  )
 }
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 }
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

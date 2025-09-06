@@ -1,16 +1,34 @@
+
+<<<<<<< HEAD
 import React from 'react'
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
+<<<<<<< HEAD
+  ArrowRight
+  Users
+  Zap
+  Settings
+  Search
+  MessageSquare
+  Smartphone
+  Calendar
+  BookOpen
+  Code
+  Building
+  Clock
+} from 'lucide-react'
+import { cn } from '@/lib/utils'
+=======
   ArrowRight,
   Users,
   Zap,
@@ -35,7 +53,177 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
   Clock,;
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+interface FeatureCTAsProps {
+  className?: string;
+  style?: React.CSSProperties
+export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
+
+  const { t } = useTranslation();  const features = [    {
+      key: 'ai_talent_matching'
+      descriptionKey: 'ai_talent_matching_desc'
+      detailsKey: 'ai_talent_matching_details'
+      icon: (
+        <Search className='h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700' />
+      )
+      link: '/match'
+      badge: 'popular'
+    },    {
+      key: 'talent_directory'
+      descriptionKey: 'talent_directory_desc'
+      detailsKey: 'talent_directory_details',      icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />
+      link: '/match'
+      badge: 'popular'
+    }
+    {
+      key: 'talent_directory'
+      descriptionKey: 'talent_directory_desc'
+      detailsKey: 'talent_directory_details'
+      icon: (
+        <Users className='h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700' />
+      )
+      link: '/talent'
+    },    {
+      key: 'services_marketplace'
+      descriptionKey: 'services_marketplace_desc'
+      detailsKey: 'services_marketplace_details',      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />
+      link: '/talent'
+    }
+    {
+      key: 'services_marketplace'
+      descriptionKey: 'services_marketplace_desc'
+      detailsKey: 'services_marketplace_details'
+      icon: (
+        <Zap className='h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700' />
+      )
+      link: '/services'
+      badge: 'new'
+    },    {
+      key: 'equipment_catalog'
+      descriptionKey: 'equipment_catalog_desc'
+      detailsKey: 'equipment_catalog_details',      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
+      link: '/services'
+      badge: 'new'
+    }
+    {
+      key: 'equipment_catalog'
+      descriptionKey: 'equipment_catalog_desc'
+      detailsKey: 'equipment_catalog_details'
+      icon: (
+        <Settings className='h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700' />
+      )
+      link: '/equipment'
+    },    {
+      key: 'community_hub'
+      descriptionKey: 'community_hub_desc'
+      detailsKey: 'community_hub_details',      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />
+      link: '/equipment'
+    }
+    {
+      key: 'community_hub'
+      descriptionKey: 'community_hub_desc'
+      detailsKey: 'community_hub_details'
+      icon: (
+        <MessageSquare className='h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700' />
+      )
+      link: '/community'
+    },    {
+      key: 'mobile_app'
+      descriptionKey: 'mobile_app_desc'
+      detailsKey: 'mobile_app_details',      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
+      link: '/community'
+    }
+    {
+      key: 'mobile_app'
+      descriptionKey: 'mobile_app_desc'
+      detailsKey: 'mobile_app_details'
+      icon: (
+        <Smartphone className='h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700' />
+      )
+      link: '/mobile-launch'
+      badge: 'featured'
+    },    {
+      key: 'enterprise_solutions'
+      descriptionKey: 'enterprise_solutions_desc'
+      detailsKey: 'enterprise_solutions_details',      icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />
+      link: '/mobile-launch'
+      badge: 'featured'
+    }
+    {
+      key: 'enterprise_solutions'
+      descriptionKey: 'enterprise_solutions_desc'
+      detailsKey: 'enterprise_solutions_details'
+      icon: (
+        <Building className='h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700' />
+      )
+      link: '/enterprise'
+    },    {
+      key: 'developer_tools'
+      descriptionKey: 'developer_tools_desc'
+      detailsKey: 'developer_tools_details',      icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />
+      link: '/enterprise'
+    }
+    {
+      key: 'developer_tools'
+      descriptionKey: 'developer_tools_desc'
+      detailsKey: 'developer_tools_details'
+      icon: (
+        <Code className='h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700' />
+      )
+      link: '/developers'
+    },    {
+      key: 'learning_resources'
+      descriptionKey: 'learning_resources_desc'
+      detailsKey: 'learning_resources_details',      icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />
+      link: '/developers'
+    }
+    {
+      key: 'learning_resources'
+      descriptionKey: 'learning_resources_desc'
+      detailsKey: 'learning_resources_details'
+      icon: (
+        <BookOpen className='h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700' />
+      )
+      link: '/blog'
+    },    {
+      key: 'project_management'
+      descriptionKey: 'project_management_desc'
+      detailsKey: 'project_management_details',      icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />
+      link: '/blog'
+    }
+    {
+      key: 'project_management'
+      descriptionKey: 'project_management_desc'
+      detailsKey: 'project_management_details'
+      icon: (
+        <Calendar className='h-10 w-10 p-2 rounded-md bg-red-100 text-red-700' />
+      )
+      link: '/project-milestones'
+    },    {
+      key: 'zion_hire_ai'
+      descriptionKey: 'zion_hire_ai_desc'
+      detailsKey: 'zion_hire_ai_details'
+      icon: (
+        <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />
+      ),      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
+      link: '/project-milestones'
+    }
+    {
+      key: 'zion_hire_ai'
+      descriptionKey: 'zion_hire_ai_desc'
+      detailsKey: 'zion_hire_ai_details'
+      icon: (
+        <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />
+      )
+      badge: 'premium'
+    }
+  ]
+      >
+      <div className='container mx-auto px-4'>
+        <div className='mb-12 text-center'>
+          <h2 className='text-3xl font-bold tracking-tight mb-3'>
+=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -60,6 +248,10 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: '/match',
 <<<<<<< HEAD
+      badge: 'popular'
+    },
+=======
+<<<<<<< HEAD
       badge: 'popular',
     },    {
       key: 'talent_directory',
@@ -72,10 +264,16 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       badge: 'popular'
     },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'talent_directory',
       descriptionKey: 'talent_directory_desc',
       detailsKey: 'talent_directory_details',
+<<<<<<< HEAD
+      icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
+      link: '/talent'
+    },
+=======
 <<<<<<< HEAD
       icon: (
         <Users className='h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700' />
@@ -92,10 +290,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       link: '/talent'
     },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'services_marketplace',
       descriptionKey: 'services_marketplace_desc',
       detailsKey: 'services_marketplace_details',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       icon: (
         <Zap className='h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700' />
@@ -110,15 +311,24 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       badge: 'new'
     }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
       link: '/services',
       badge: 'new'
     },
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'equipment_catalog',
       descriptionKey: 'equipment_catalog_desc',
       detailsKey: 'equipment_catalog_details',
+<<<<<<< HEAD
+      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
+      link: '/equipment'
+    },
+=======
 <<<<<<< HEAD
       icon: (
         <Settings className='h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700' />
@@ -135,10 +345,16 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       link: '/equipment'
     },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'community_hub',
       descriptionKey: 'community_hub_desc',
       detailsKey: 'community_hub_details',
+<<<<<<< HEAD
+      icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,
+      link: '/community'
+    },
+=======
 <<<<<<< HEAD
       icon: (
         <MessageSquare className='h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700' />
@@ -155,10 +371,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       link: '/community'
     },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'mobile_app',
       descriptionKey: 'mobile_app_desc',
       detailsKey: 'mobile_app_details',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       icon: (
         <Smartphone className='h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700' />
@@ -173,15 +392,24 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       badge: 'featured'
     }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
       link: '/mobile-launch',
       badge: 'featured'
     },
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'enterprise_solutions',
       descriptionKey: 'enterprise_solutions_desc',
       detailsKey: 'enterprise_solutions_details',
+<<<<<<< HEAD
+      icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
+      link: '/enterprise'
+    },
+=======
 <<<<<<< HEAD
       icon: (
         <Building className='h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700' />
@@ -198,10 +426,16 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       link: '/enterprise'
     },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'developer_tools',
       descriptionKey: 'developer_tools_desc',
       detailsKey: 'developer_tools_details',
+<<<<<<< HEAD
+      icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />,
+      link: '/developers'
+    },
+=======
 <<<<<<< HEAD
       icon: (
         <Code className='h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700' />
@@ -218,10 +452,16 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       link: '/developers'
     },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'learning_resources',
       descriptionKey: 'learning_resources_desc',
       detailsKey: 'learning_resources_details',
+<<<<<<< HEAD
+      icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />,
+      link: '/blog'
+    },
+=======
 <<<<<<< HEAD
       icon: (
         <BookOpen className='h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700' />
@@ -238,10 +478,16 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       link: '/blog'
     },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'project_management',
       descriptionKey: 'project_management_desc',
       detailsKey: 'project_management_details',
+<<<<<<< HEAD
+      icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
+      link: '/project-milestones'
+    },
+=======
 <<<<<<< HEAD
       icon: (
         <Calendar className='h-10 w-10 p-2 rounded-md bg-red-100 text-red-700' />
@@ -261,10 +507,13 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       link: '/project-milestones'
     },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       key: 'zion_hire_ai',
       descriptionKey: 'zion_hire_ai_desc',
       detailsKey: 'zion_hire_ai_details',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       icon: (
         <Clock className='h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700' />
@@ -277,6 +526,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
         <div className='mb-12 text-center'>
           <h2 className='text-3xl font-bold tracking-tight mb-3'>
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
       link: '/zion-hire-ai',
       badge: 'premium'
@@ -294,7 +544,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-3">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {t('home.features_heading')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -323,6 +577,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
     <section
       className={cn(
         "py-16 bg-gradient-to-b from-background to-background/90"
+
         className
       )}
       style={style}
@@ -477,7 +732,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                   {feature.icon}
                   {feature.badge && (;
                     <Badge variant="secondary" className="bg-primary/20 text-primary">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {t(`badges.${feature.badge}`)}
                     </Badge>
                   )}
@@ -498,7 +757,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                   <CardDescription className="line-clamp-2">
                     {t(`features.${feature.descriptionKey}`)}
                   </CardDescription>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </CardHeader>
               <CardContent>
@@ -519,14 +782,24 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
               </CardContent>
               <CardFooter>
                 <Button asChild className="w-full gap-1">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Link
                     href={feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
-                    className="cursor-pointer"
-                    {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
+<<<<<<< HEAD
+                    className='cursor-pointer'
+                    {...(feature.key === 'ai_talent_matching' && {
+                      'data-testid': 'explore-ai-talent-matching-cta'
+                    })}
                   >
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span>
                       {t('general.explore')} {t(`features.${feature.key}`)}
                     </span>
@@ -537,7 +810,14 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
                     {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
                   >
 =======
+<<<<<<< HEAD
+                    className="cursor-pointer"
+                    {...(feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}
+                  >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -551,9 +831,12 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
     </section>
   );  )
 }
+<<<<<<< HEAD
+=======
 ;
 }
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         </div>;
       </div>;
@@ -561,4 +844,8 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

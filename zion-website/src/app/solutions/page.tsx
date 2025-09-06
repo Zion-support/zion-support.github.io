@@ -1,96 +1,96 @@
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  RocketLaunchIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  UserGroupIcon,
+import {
+  LightBulbIcon
+  CpuChipIcon
+  RocketLaunchIcon
+  ShieldCheckIcon
+  ChartBarIcon
+  GlobeAltIcon
+  UserGroupIcon
   CogIcon
 } from '@heroicons/react/24/outline'
-
 const flagshipSolutions = [
   {
-    name: 'AI Research Assistant',
-    description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.',
-    icon: LightBulbIcon,
+    name: 'AI Research Assistant'
+    description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.'
+    icon: LightBulbIcon
     features: [
       'Natural Language ProcessingMulti-modal LearningReal-time CollaborationAdvanced Analytics'
-    ],
-    href: '/solutions/ai-autonomous-research'},
+    ]
+    href: '/solutions/ai-autonomous-research'}
   {
-    name: 'Quantum Neural Networks',
-    description: 'Breakthrough quantum computing technology for next-generation AI applications.',
-    icon: CpuChipIcon,
+    name: 'Quantum Neural Networks'
+    description: 'Breakthrough quantum computing technology for next-generation AI applications.'
+    icon: CpuChipIcon
     features: [
       'Quantum SupremacyNeural Architecture SearchHybrid Classical-QuantumScalable Architecture'
-    ],
-    href: '/solutions/quantum-neural-networks'},
+    ]
+    href: '/solutions/quantum-neural-networks'}
   {
-    name: 'Autonomous Business Operations',
-    description: 'Self-optimizing business processes that adapt and improve automatically.',
-    icon: RocketLaunchIcon,
+    name: 'Autonomous Business Operations'
+    description: 'Self-optimizing business processes that adapt and improve automatically.'
+    icon: RocketLaunchIcon
     features: [
       'Process AutomationPredictive AnalyticsContinuous OptimizationReal-time Monitoring'
-    ],
-    href: '/solutions/autonomous-business'},
+    ]
+    href: '/solutions/autonomous-business'}
   {
-    name: 'IT Asset Management',
-    description: 'Intelligent asset tracking and optimization for modern enterprise infrastructure.',
-    icon: ShieldCheckIcon,
+    name: 'IT Asset Management'
+    description: 'Intelligent asset tracking and optimization for modern enterprise infrastructure.'
+    icon: ShieldCheckIcon
     features: [
       'Asset DiscoveryLifecycle ManagementSecurity ComplianceCost Optimization'
-    ],
+    ]
     href: '/solutions/it-asset-management'}]
-
 const industryApplications = [
   {
-    name: 'Healthcare',
-    description: 'AI-powered diagnostics, drug discovery, and patient care optimization.',
-    icon: UserGroupIcon,
-    useCases: ['Medical Imaging AnalysisDrug DiscoveryPatient Risk AssessmentClinical Decision Support']},
+    name: 'Healthcare'
+    description: 'AI-powered diagnostics, drug discovery, and patient care optimization.'
+    icon: UserGroupIcon
+    useCases: ['Medical Imaging AnalysisDrug DiscoveryPatient Risk AssessmentClinical Decision Support']}
   {
-    name: 'Finance',
-    description: 'Intelligent trading, risk assessment, and fraud detection systems.',
-    icon: ChartBarIcon,
-    useCases: ['Algorithmic TradingCredit Risk AnalysisFraud DetectionPortfolio Optimization']},
+    name: 'Finance'
+    description: 'Intelligent trading, risk assessment, and fraud detection systems.'
+    icon: ChartBarIcon
+    useCases: ['Algorithmic TradingCredit Risk AnalysisFraud DetectionPortfolio Optimization']}
   {
-    name: 'Manufacturing',
-    description: 'Predictive maintenance, quality control, and supply chain optimization.',
-    icon: CogIcon,
-    useCases: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationProduction Planning']},
+    name: 'Manufacturing'
+    description: 'Predictive maintenance, quality control, and supply chain optimization.'
+    icon: CogIcon
+    useCases: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationProduction Planning']}
   {
-    name: 'Retail',
-    description: 'Customer behavior analysis, inventory management, and personalized marketing.',
-    icon: GlobeAltIcon,
+    name: 'Retail'
+    description: 'Customer behavior analysis, inventory management, and personalized marketing.'
+    icon: GlobeAltIcon
     useCases: ['Customer AnalyticsInventory ManagementPersonalized MarketingDemand Forecasting']}]
-
 const implementationSteps = [
   {
-    step: '01',
-    title: 'Discovery & Assessment',
-    description: 'We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.',
-    icon: LightBulbIcon},
+    step: '01'
+    title: 'Discovery & Assessment'
+    description: 'We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.'
+    icon: LightBulbIcon}
   {
-    step: '02',
-    title: 'Solution Design',
-    description: 'Our experts design custom AI solutions tailored to your specific business needs and objectives.',
-    icon: CpuChipIcon},
+    step: '02'
+    title: 'Solution Design'
+    description: 'Our experts design custom AI solutions tailored to your specific business needs and objectives.'
+    icon: CpuChipIcon}
   {
-    step: '03',
-    title: 'Development & Testing',
-    description: 'We develop and rigorously test your AI solution to ensure optimal performance and reliability.',
-    icon: CogIcon},
+    step: '03'
+    title: 'Development & Testing'
+    description: 'We develop and rigorously test your AI solution to ensure optimal performance and reliability.'
+    icon: CogIcon}
   {
-    step: '04',
-    title: 'Deployment & Training',
-    description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.',
-    icon: RocketLaunchIcon},
+    step: '04'
+    title: 'Deployment & Training'
+    description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.'
+    icon: RocketLaunchIcon}
   {
-    step: '05',
-    title: 'Ongoing Support',
-    description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',
+    step: '05'
+    title: 'Ongoing Support'
+    description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.'
     icon: ShieldCheckIcon}]
+<<<<<<< HEAD
+export default function SolutionsPage() {
+=======
 
 <<<<<<< HEAD
 export default function SolutionsPage() {;
@@ -98,6 +98,7 @@ export default function SolutionsPage() {;
     <div className=&quot;bg-black&quot;>
 =======
 const Page: React.FC<PageProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="bg-black">
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -111,8 +112,13 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 Every Industry
               </span>
             </h1>
+<<<<<<< HEAD
+            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+              Discover our cutting-edge AI and technology solutions designed to transform your business
+=======
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Discover our cutting-edge AI and technology solutions designed to transform your business 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               operations and drive unprecedented growth and innovation.
             </p>
           </div>
@@ -152,7 +158,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
 className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
 =======
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
@@ -167,16 +177,27 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Industries</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Transforming Every Sector
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our AI solutions are designed to adapt and excel across diverse industries
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Transforming Every Sector
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our AI solutions are designed to adapt and excel across diverse industries, 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             delivering measurable results and competitive advantages.
           </p>
         </div>
@@ -210,16 +231,27 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Implementation</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Our Proven Process
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            From initial assessment to ongoing optimization, we guide you through every step
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Our Proven Process
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             From initial assessment to ongoing optimization, we guide you through every step 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             of your AI transformation journey.
           </p>
         </div>
@@ -248,15 +280,26 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Ready to transform your business?
+          </h2>
+          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+            Let's discuss how our AI solutions can accelerate your growth and give you a
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to transform your business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Let's discuss how our AI solutions can accelerate your growth and give you a 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             competitive edge in your industry.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">

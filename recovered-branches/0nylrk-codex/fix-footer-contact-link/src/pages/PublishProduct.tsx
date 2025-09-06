@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -10,17 +12,25 @@ import {SEO} from "@/components/SEO";
 export default function PublishProduct() {;
   const { isAuthenticated, isLoading } = useAuth();
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { Navigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth();
+=======
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -31,16 +41,14 @@ export default function PublishProduct() {
       </div>
     )
   }
-  
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/publish' }} replace />
   }
-
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEO 
-        title="Publish Your Product" 
+      <SEO
+        title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
       />
@@ -60,6 +68,10 @@ export default function PublishProduct() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -108,5 +120,10 @@ export default function PublishProduct() {;
       <Footer />;
     </div>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

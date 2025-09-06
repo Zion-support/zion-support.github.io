@@ -1,21 +1,23 @@
 import React from 'react';
-import {ApiDocsSpec, Visibility} from '../../data/api-docs/types';
+import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
 interface SidebarProps {
   spec: ApiDocsSpec;
+  activeEndpointId?: string;
   onSelectEndpoint: (endpointId: string) => void;
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
+
   onChangeVisibility: (v: Visibility | 'all') => void;
 
 export default function Sidebar({
-  spec,
-  activeEndpointId,
-  onSelectEndpoint,
-  selectedVersion,
-  onChangeVersion,
-  visibilityFilter,
-  onChangeVisibility,
+  spec
+  activeEndpointId
+  onSelectEndpoint
+  selectedVersion
+  onChangeVersion
+  visibilityFilter
+  onChangeVisibility
 }: SidebarProps) {
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>
@@ -104,5 +106,12 @@ export default function Sidebar({
 =======
     </aside>
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

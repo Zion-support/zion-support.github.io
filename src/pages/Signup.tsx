@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { useRouter } from 'next/router', // Changed from react-router-dom
+import { useFormik  } from 'formik';
+import * as Yup from 'yup',
+import axios from 'axios',
+import Link from 'next/link';
+import { Input  } from '@/components/ui/input';
+import { Button  } from '@/components/ui/button';
+import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
+import { AuthButtons  } from '@/components/AuthButtons';
+=======
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
 import * as Yup from 'yup'
@@ -10,28 +24,36 @@ import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
+
 import { toast } from '@/hooks/use-toast'
 import { AuthLayout } from '@/layout'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 const SignupSchema = Yup.object({
-  name: Yup.string().required('Name is required'),
-  email: Yup.string().email('Invalid email').required('Email is required'),
+  name: Yup.string().required('Name is required')
+  email: Yup.string().email('Invalid email').required('Email is required')
   password: Yup.string()
     .min(8, 'Password must be at least 8 characters')
     .matches(/[A-Z]/, 'Password must include an uppercase letter')
     .matches(/[a-z]/, 'Password must include a lowercase letter')
     .matches(/[0-9]/, 'Password must include a number')
-    .required('Password is required'),
+    .required('Password is required')
   confirm: Yup.string()
     .oneOf([Yup.ref('password')], 'Passwords must match')
-    .required('Confirm password is required'),
+    .required('Confirm password is required')
   terms: Yup.boolean().oneOf(
-    [true],
+    [true]
     'You must accept the terms and conditions'
+<<<<<<< HEAD
+  )
+})
+export default function Signup() {
+=======
   ),
 });
 export default function Signup() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -43,7 +65,7 @@ export default function Signup() {;
   const [healthCheckError, setHealthCheckError] = useState<string | null>(null)
   // Check if this is a partner signup
   const isPartnerSignup = router.query.type === 'partner'
-  const signupSource = (router.query.source as string) || 'direct'
+  const signupSource = (router.query.source as string) |'direct'
   const performHealthCheck = async () => {
     setHealthCheckLoading(true)
     setHealthCheckError(null)
@@ -57,7 +79,13 @@ export default function Signup() {;
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
+<<<<<<< HEAD
+      if (
+        err.code === 'NETWORK_ERROR' |
+        err.message?.includes('Network Error')
+=======
       if (true) {}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -76,18 +104,18 @@ export default function Signup() {;
   }, [])
   const formik = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      password: '',
-      confirm: '',
-      terms: false,
-    },
-    validationSchema: SignupSchema,
+      name: ''
+      email: ''
+      password: ''
+      confirm: ''
+      terms: false
+    }
+    validationSchema: SignupSchema
     onSubmit: async (values, { setErrors }) => {
       logInfo('Form submission started with:', {
-        name: values.name,        email: values.email,
-        hasPassword: !!values.password,
-        isPartnerSignup,
+        name: values.name,        email: values.email
+        hasPassword: !!values.password
+        isPartnerSignup
       })
       setLoading(true)
       setErrorMessage(''); // Clear any previous error
@@ -95,26 +123,26 @@ export default function Signup() {;
       setEmailVerificationRequired(false)
       try {
         const requestData = {
-          name: values.name,
-          email: values.email,
-          password: values.password,
+          name: values.name
+          email: values.email
+          password: values.password
           ...(isPartnerSignup && {
-            userType: 'partner',
-            source: signupSource,
+            userType: 'partner'
+            source: signupSource
             metadata: {
-              partnerProgram: true,
-              signupType: 'partner',
-            },
-          }),
+              partnerProgram: true
+              signupType: 'partner'
+            }
+          })
         }
         logInfo('Making API request to /api/auth/register with:', {
-          ...requestData,
-          password: '[REDACTED]',
+          ...requestData
+          password: '[REDACTED]'
         })
         const res = await axios.post('/api/auth/register', requestData)
         logInfo('API response received:', {
-          status: res.status,
-          data: res.data,
+          status: res.status
+          data: res.data
         })
         if (res.status === 201) {
           const data = res.data
@@ -124,28 +152,28 @@ export default function Signup() {;
             const message = isPartnerSignup
               ? 'Partner application submitted! Please check your email to verify your account. Once verified, your partner application will be reviewed.'
               : 'Account created! Please check your email to verify your account.'
-            setSuccessMessage(data.message || message)
+            setSuccessMessage(data.message |message)
             toast({
               title: isPartnerSignup
                 ? 'Partner application submitted!'
-                : 'Account created!',
+                : 'Account created!'
               description: isPartnerSignup
                 ? 'Please verify your email. Your partner application will be reviewed after verification.'
-                : 'Please check your email to verify your account before logging in.',
+                : 'Please check your email to verify your account before logging in.'
             })
           } else {
             // Account created and ready to use
             const message = isPartnerSignup
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.'
               : 'Account created successfully!'
-            setSuccessMessage(data.message || message)
+            setSuccessMessage(data.message |message)
             toast({
               title: isPartnerSignup
                 ? 'Partner application submitted!'
-                : 'Account created successfully!',
+                : 'Account created successfully!'
               description: isPartnerSignup
                 ? 'Welcome to the partner program. You can now log in.'
-                : 'Welcome to the platform. You can now log in.',
+                : 'Welcome to the platform. You can now log in.'
             })
             // Redirect to appropriate page after a short delay
             setTimeout(() => {
@@ -154,27 +182,33 @@ export default function Signup() {;
         }
       } catch (err: any) {
         logErrorToProduction('Signup error details:', {
-          message: err.message,
+          message: err.message
           response: err.response
             ? {
-                status: err.response.status,
-                statusText: err.response.statusText,
-                data: err.response.data,
+                status: err.response.status
+                statusText: err.response.statusText
+                data: err.response.data
               }
-            : 'No response',
-          request: err.request ? 'Request made but no response' : 'No request',
+            : 'No response'
+          request: err.request ? 'Request made but no response' : 'No request'
           config: err.config
             ? {
-                url: err.config.url,
-                method: err.config.method,
+                url: err.config.url
+                method: err.config.method
               }
-            : 'No config',
+            : 'No config'
         })
         const status = err.response?.status
         // Try both 'error' and 'message' fields for compatibility
+<<<<<<< HEAD
+        const errorMsg =
+          err.response?.data?.error |
+          err.response?.data?.message |
+=======
         const errorMsg = null;
           err.response?.data?.error ||
           err.response?.data?.message ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -183,9 +217,9 @@ export default function Signup() {;
           setErrors({ email: errorMsg })
           // Show toast notification
           toast({
-            title: 'Signup failed',
-            description: errorMsg,
-            variant: 'destructive',
+            title: 'Signup failed'
+            description: errorMsg
+            variant: 'destructive'
           })
         } else if (status === 400) {
           // Handle validation errors (weak password, etc.)
@@ -196,11 +230,10 @@ export default function Signup() {;
           } else {
             setErrors({ confirm: errorMsg })
           }
-
           toast({
-            title: 'Signup failed',
-            description: errorMsg,
-            variant: 'destructive',
+            title: 'Signup failed'
+            description: errorMsg
+            variant: 'destructive'
           })
         } else {
           // Handle other errors (network, server, etc.)
@@ -208,24 +241,24 @@ export default function Signup() {;
           setErrors({ confirm: errorMsg })
           // Show toast notification for other errors
           toast({
-            title: 'Signup failed',
-            description: errorMsg,
-            variant: 'destructive',
+            title: 'Signup failed'
+            description: errorMsg
+            variant: 'destructive'
           })
         }
       } finally {
         logInfo('Form submission completed, setting loading to false')
         setLoading(false)
       }
-    },
+    }
   })
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();    formik.setTouched({
-      name: true,
-      email: true,
-      password: true,
-      confirm: true,
-      terms: true,
+      name: true
+      email: true
+      password: true
+      confirm: true
+      terms: true
     })
     await formik.handleSubmit(e)
   }
@@ -463,7 +496,11 @@ export default function Signup() {;
     return undefined
   }, [emailVerificationRequired, formik.values.email, router]),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Show loading state only during initial health check
   if (healthCheckLoading) {
     return (
@@ -477,7 +514,6 @@ export default function Signup() {;
       </AuthLayout>
     )
   }
-
   return (
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">
@@ -515,7 +551,6 @@ export default function Signup() {;
                 </AlertDescription>
               </Alert>
             )}
-
             {/* Show Success message */}
             {successMessage && (
               <Alert
@@ -530,7 +565,6 @@ export default function Signup() {;
                 <AlertDescription>{successMessage}</AlertDescription>
               </Alert>
             )}
-
             {/* Show Error message */}
             {errorMessage && (
               <Alert variant='destructive' data-testid='error-alert'>
@@ -538,7 +572,6 @@ export default function Signup() {;
                 <AlertDescription>{errorMessage}</AlertDescription>
               </Alert>
             )}
-
             {emailVerificationRequired && (
               <Alert className='border-blue-500 bg-blue-50 text-blue-900'>
                 <Mail className='h-4 w-4' />
@@ -548,7 +581,6 @@ export default function Signup() {;
                 </AlertDescription>
               </Alert>
             )}
-
             <div>
               <label htmlFor='name' className='block text-sm font-medium'>
                 Full Name
@@ -559,7 +591,7 @@ export default function Signup() {;
                 data-testid='name-input'
                 value={formik.values.name}
                 onChange={formik.handleChange}
-                disabled={loading || emailVerificationRequired}
+                disabled={loading |emailVerificationRequired}
               />
               {formik.touched.name && formik.errors.name && (
                 <div className='text-red-500 text-sm'>{formik.errors.name}</div>
@@ -576,7 +608,7 @@ export default function Signup() {;
                 data-testid='email-input'
                 value={formik.values.email}
                 onChange={formik.handleChange}
-                disabled={loading || emailVerificationRequired}
+                disabled={loading |emailVerificationRequired}
               />
               {formik.touched.email && formik.errors.email && (
                 <div className='text-red-500 text-sm'>
@@ -595,7 +627,7 @@ export default function Signup() {;
                 data-testid='password-input'
                 value={formik.values.password}
                 onChange={formik.handleChange}
-                disabled={loading || emailVerificationRequired}
+                disabled={loading |emailVerificationRequired}
               />
               <PasswordStrengthMeter password={formik.values.password} />
               {formik.touched.password && formik.errors.password && (
@@ -615,7 +647,7 @@ export default function Signup() {;
                 data-testid='confirm-password-input'
                 value={formik.values.confirm}
                 onChange={formik.handleChange}
-                disabled={loading || emailVerificationRequired}
+                disabled={loading |emailVerificationRequired}
               />
               {formik.touched.confirm && formik.errors.confirm && (
                 <div className='text-red-500 text-sm'>
@@ -631,7 +663,7 @@ export default function Signup() {;
                 data-testid='terms-checkbox'
                 checked={formik.values.terms}
                 onChange={formik.handleChange}
-                disabled={loading || emailVerificationRequired}
+                disabled={loading |emailVerificationRequired}
               />
               <label htmlFor='terms' className='text-sm'>
                 I agree to the{' '}
@@ -647,7 +679,6 @@ export default function Signup() {;
             {formik.touched.terms && formik.errors.terms && (
               <div className='text-red-500 text-sm'>{formik.errors.terms}</div>
             )}
-
             {!emailVerificationRequired ? (
 =======
           <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
@@ -814,7 +845,11 @@ export default function Signup() {;
               >
                 Go to Login
               </Button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Button
                 type="button"
                 variant="outline"
@@ -861,7 +896,6 @@ export default function Signup() {;
                 </Button>
               </div>
             )}
-
             {/* Additional help text when service issues are detected */}
             {healthCheckError && (
               <div className='text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded'>
@@ -872,6 +906,10 @@ export default function Signup() {;
                 </p>
               </div>
             )}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               <Button
                 type="button"
@@ -894,7 +932,11 @@ export default function Signup() {;
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </form>
           {!emailVerificationRequired && (
             <div className="mt-6">
@@ -906,15 +948,15 @@ export default function Signup() {;
       </div>
     </AuthLayout>
   )
-}) 
+})
 }
 toast ({'
   title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!'
-setSuccessMessage (data.message || message)
+setSuccessMessage (data.message |message)
 toast ({'
-  title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.' 
+  title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.'
 })
-//Redirect to appropriate page after a short delay 
+//Redirect to appropriate page after a short delay
 }catch (err: unknown) {'
   logErrorToProduction ('Signup error details:', {
   message: err.message, response: err.response ? {
@@ -925,33 +967,33 @@ request: err.request ? 'Request made but no response': 'No request'
 }return undefined
 }, [emailVerificationRequired, formik.values.email, router])
 //Show loading state only during initial health check if (healthCheckLoading) {
-  return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>) 
+  return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>)
 }> {'
-  healthCheckLoading ? 'Checking...': 'Retry' 
-}</Button> </AlertDescription> </Alert>) 
+  healthCheckLoading ? 'Checking...': 'Retry'
+}</Button> </AlertDescription> </Alert>)
 }<AlertDescription> {
-  errorMessage 
-}</AlertDescription> </Alert>) 
+  errorMessage
+}</AlertDescription> </Alert>)
 }<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {
-  formik.values.email 
+  formik.values.email
 }</strong>. </AlertDescription> </Alert>) "
 }<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) "
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
 }</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
-}</div> <div className="flex items-center space-x-2" > <input) 
+}</div> <div className="flex items-center space-x-2" > <input)
 }{"
   !emailVerificationRequired ? (<Button type="submit" disabled= {
-  loading 
+  loading
 }> {'"
-  loading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account') 
+  loading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account')
 }</Button> > Go to Login </Button> <Button router.push (`/verify-status?email=$ {
-  encodeURIComponent (formik.values.email) 
-}`) 
-}> Check Verification Status </Button> <Button > Try Different Email </Button> </div>) 
-}<p>⚠️ We detected some authentication service issues.</p> <p>If signup fails, please try again in a few minutes or contact support.</p> </div>) 
-}</form> </div>) 
-}</div> </div> </AuthLayout>) 
+  encodeURIComponent (formik.values.email)
+}`)
+}> Check Verification Status </Button> <Button > Try Different Email </Button> </div>)
+}<p>⚠️ We detected some authentication service issues.</p> <p>If signup fails, please try again in a few minutes or contact support.</p> </div>)
+}</form> </div>)
+}</div> </div> </AuthLayout>)
 }'"
 }
 import { useState } from "react"
@@ -969,31 +1011,31 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter"
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,,
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage,
 } from "@/components/ui/form"
 // Form validation schema
 const signupSchema = z
   .object({
-    displayName: z.string().min(2, "Name must be at least 2 characters"),
-    email: z.string().email("Please enter a valid email"),
+    displayName: z.string().min(2, "Name must be at least 2 characters")
+    email: z.string().email("Please enter a valid email")
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
-      .regex(/[0-9]/, "Password must contain at least one number"),
-    confirmPassword: z.string(),
+      .regex(/[0-9]/, "Password must contain at least one number")
+    confirmPassword: z.string()
     termsAccepted: z.boolean().refine(val => val === true, {
-      message: "You must accept the terms and conditions",,
-}),,
+      message: "You must accept the terms and conditions",
+}),
 })
   .refine(data => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"],,
+    message: "Passwords do not match"
+    path: ["confirmPassword"],
 })
 type SignupFormValues = z.infer<typeof signupSchema>
 export default function Signup() {
@@ -1007,8 +1049,19 @@ export default function Signup() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   // Initialize react-hook-form
   const form = useForm({
-    resolver: zodResolver(signupSchema),
+    resolver: zodResolver(signupSchema)
     defaultValues: {
+<<<<<<< HEAD
+      displayName: "
+      email: "
+      password: "
+      confirmPassword: "
+      termsAccepted: false,
+}
+}) as UseFormReturn<SignupFormValues>
+  // Form submission handler
+  const onSubmit = async (data: SignupFormValues) => {
+=======
       displayName: ",
       email: ",
       password: ",
@@ -1018,12 +1071,13 @@ export default function Signup() {
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
       const { res, data: resData } = await register(
-        data.displayName,
-        data.email,
+        data.displayName
+        data.email
         data.password
       )
       // Handle duplicate email error from API
@@ -1032,13 +1086,12 @@ export default function Signup() {
         toast.error('Email already registered – please login.')
         return;
 }
-
       // Check for successful response
       if (res.ok && resData.token && resData.user) {
         // Successful registration
         safeStorage.setItem('authToken', resData.token)
         setUser(resData.user)
-        setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken || null })
+        setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken |null })
       // Handle email verification required case
       if (resData?.emailVerificationRequired) {
         setShowVerificationMessage(true)
@@ -1048,9 +1101,15 @@ export default function Signup() {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
+<<<<<<< HEAD
+          form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
+          toast.error(sessionError.message |"Failed to set session. Please try logging in.")
+          return
+=======
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
           return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
         // The onAuthStateChange listener in AuthProvider should now handle
         // updating user state and navigating if necessary for other cases.
@@ -1065,12 +1124,11 @@ export default function Signup() {
         // Potentially navigate to login or show a more specific error
         return;
 }
-
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
       if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
         try {
           await mailchimpService.addSubscriber({
-            email: data.email,
+            email: data.email
             mergeFields: { FNAME: data.displayName }
           })
           await mailchimpService.sendWelcomeEmail(data.email, 'NEW10')
@@ -1098,12 +1156,10 @@ export default function Signup() {
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
 }
-
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
     return <Navigate to="/onboarding" />
 }
-
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
@@ -1152,8 +1208,13 @@ const Signup = () => {
             </div>
     </>  )
 }
+<<<<<<< HEAD
+}}
+}
+=======
 }};
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         </div>;
       </div>;
@@ -1161,4 +1222,8 @@ const Signup = () => {
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

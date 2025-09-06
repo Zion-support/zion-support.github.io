@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import {
+  LightBulbIcon
+  CpuChipIcon
+  GlobeAltIcon
+  ShieldCheckIcon
+  ChartBarIcon
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
+=======
+import React from 'react';
+=======
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -10,70 +22,69 @@ import {
 =======
 import React from 'react';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const features = [
   {
-    name: 'AI-Powered Research',
-    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
+    name: 'AI-Powered Research'
+    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.'
     icon: LightBulbIcon
-  },
+  }
   {
-    name: 'Quantum Computing',
-    description: 'Next-generation quantum neural networks for solving complex computational problems.',
+    name: 'Quantum Computing'
+    description: 'Next-generation quantum neural networks for solving complex computational problems.'
     icon: CpuChipIcon
-  },
+  }
   {
-    name: 'Global Solutions',
-    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
+    name: 'Global Solutions'
+    description: 'Worldwide deployment of autonomous business operations and digital transformation.'
     icon: GlobeAltIcon
-  },
+  }
   {
-    name: 'Enterprise Security',
-    description: 'Military-grade security protocols protecting your most valuable digital assets.',
+    name: 'Enterprise Security'
+    description: 'Military-grade security protocols protecting your most valuable digital assets.'
     icon: ShieldCheckIcon
-  },
+  }
   {
-    name: 'Data Analytics',
-    description: 'Advanced analytics and insights driving informed decision-making.',
+    name: 'Data Analytics'
+    description: 'Advanced analytics and insights driving informed decision-making.'
     icon: ChartBarIcon
-  },
+  }
   {
-    name: 'Expert Team',
-    description: 'World-class researchers and engineers pushing the boundaries of technology.',
+    name: 'Expert Team'
+    description: 'World-class researchers and engineers pushing the boundaries of technology.'
     icon: UserGroupIcon
   }
 ];
-
 const stats = [
-  { name: 'Research Papers Published', value: '150+' },
-  { name: 'AI Models Deployed', value: '500+' },
-  { name: 'Global Clients', value: '1000+' },
+  { name: 'Research Papers Published', value: '150+' }
+  { name: 'AI Models Deployed', value: '500+' }
+  { name: 'Global Clients', value: '1000+' }
   { name: 'Patents Filed', value: '25+' }
 ];
-
 const solutions = [
   {
-    name: 'AI Research Assistant',
-    description: 'Autonomous research platform that accelerates scientific discovery.',
+    name: 'AI Research Assistant'
+    description: 'Autonomous research platform that accelerates scientific discovery.'
     href: '/solutions/ai-autonomous-research'
-  },
+  }
   {
-    name: 'Quantum Neural Networks',
-    description: 'Next-generation computing for complex problem solving.',
+    name: 'Quantum Neural Networks'
+    description: 'Next-generation computing for complex problem solving.'
     href: '/solutions/quantum-neural-networks'
-  },
+  }
   {
-    name: 'Autonomous Business Operations',
-    description: 'AI-powered automation for enterprise efficiency.',
+    name: 'Autonomous Business Operations'
+    description: 'AI-powered automation for enterprise efficiency.'
     href: '/solutions/autonomous-business'
-  },
+  }
   {
-    name: 'IT Asset Management',
-    description: 'Intelligent management of digital infrastructure.',
+    name: 'IT Asset Management'
+    description: 'Intelligent management of digital infrastructure.'
     href: '/solutions/it-asset-management'
   }
 ];
-
 export default function HomePage() {
   return (
     <div className="bg-black">
@@ -88,7 +99,11 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
+              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
+=======
               Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               Join the revolution that's reshaping industries worldwide.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -107,7 +122,11 @@ export default function HomePage() {
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
               </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </div>
         </div>
@@ -120,7 +139,11 @@ export default function HomePage() {
             Everything you need to accelerate innovation
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
+            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results
+=======
             Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             and maintain competitive advantage in the digital age.
           </p>
         </div>
@@ -141,7 +164,11 @@ export default function HomePage() {
                     </a>
 =======
                     </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                 </dd>
               </div>
@@ -154,7 +181,11 @@ export default function HomePage() {
           </dl>;
         </div>;
       </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -181,7 +212,11 @@ export default function HomePage() {
           </dl>;
         </div>;
       </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Solutions showcase */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -237,7 +272,11 @@ export default function HomePage() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -263,11 +302,24 @@ export default function HomePage() {
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          </div>
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
     </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
+=======
+  )
+}
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

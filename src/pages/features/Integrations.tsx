@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -21,11 +23,30 @@ export default function IntegrationsFeature() {
     markSlackConnected()
   }, [markSlackConnected])
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+import Link from 'next/link';
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+export default function IntegrationsFeature() {
+
+  const schema = {
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'API & Integrations'
+    description:
+      'Connect Zion with Slack, your website and other tools via our API and widgets.'
+    url: 'https://app.ziontechgroup.com/features/integrations'
+  }
+  const { markSlackConnected } = useAdvancedOnboardingStatus()
+  useEffect(() => {
+    markSlackConnected()
+  }, [markSlackConnected])
+=======
 import Link from 'next/link',
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
 export default function IntegrationsFeature() {
@@ -42,8 +63,12 @@ export default function IntegrationsFeature() {
   useEffect(() => {
     markSlackConnected()
   }, [markSlackConnected]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -104,7 +129,11 @@ export default function IntegrationsFeature() {
               <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
 =======
           <div className="text-center">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
             </Button>
@@ -115,7 +144,10 @@ export default function IntegrationsFeature() {
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
@@ -191,4 +223,8 @@ export default function IntegrationsFeature() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

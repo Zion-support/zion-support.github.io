@@ -1,40 +1,49 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from "react";
+import { Quote } from 'lucide-react'
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import React from 'react'
 import { Quote } from 'lucide-react'
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+
+  Carousel
+  CarouselContent
+  CarouselItem
+  CarouselNext
+  CarouselPrevious
 } from '@/components/ui/carousel'
 const testimonials = [
   {
     quote:
-      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",
-    author: 'Sarah Johnson',
-    title: 'VP of Talent Acquisition',
-    company: 'TechGlobal Inc.',
-    image: '/placeholder.svg',
-  },
+      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing."
+    author: 'Sarah Johnson'
+    title: 'VP of Talent Acquisition'
+    company: 'TechGlobal Inc.'
+    image: '/placeholder.svg'
+  }
   {
     quote:
-      'The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.',
-    author: 'Michael Chen',
-    title: 'Director of HR',
-    company: 'InnovateCorp',
-    image: '/placeholder.svg',
-  },
+      'The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.'
+    author: 'Michael Chen'
+    title: 'Director of HR'
+    company: 'InnovateCorp'
+    image: '/placeholder.svg'
+  }
   {
     quote:
-      'The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.',
-    author: 'Elena Rodriguez',
-    title: 'CTO',
-    company: 'FutureTech Systems',
-    image: '/placeholder.svg',
-  },
+      'The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.'
+    author: 'Elena Rodriguez'
+    title: 'CTO'
+    company: 'FutureTech Systems'
+    image: '/placeholder.svg'
+  }
 ]
 export function EnterpriseTestimonials() {
   return (
@@ -47,11 +56,20 @@ export function EnterpriseTestimonials() {
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            See how enterprise teams are transforming their hiring process
           </p>
         </div>
+<<<<<<< HEAD
+        <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous."
+    author: "Elena Rodriguez"
+    title: "CTO"
+    company: "FutureTech Systems"
+    image: "/placeholder.svg"}]
+
+=======
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -101,6 +119,8 @@ export function EnterpriseTestimonials() {
           </CarouselContent>
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
             <CarouselPrevious />
+<<<<<<< HEAD
+=======
             <CarouselNext />
           </div>
         </Carousel>
@@ -109,6 +129,7 @@ export function EnterpriseTestimonials() {
   );
 };
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
                       />
@@ -240,12 +261,23 @@ export function EnterpriseTestimonials() {;
                     <div>;
                       <p className="font-bold">{testimonial.author}</p>;
                       <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <CarouselNext />
           </div>
         </Carousel>
       </div>
     </section>
   )
+<<<<<<< HEAD
+}
+=======
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,6 +1,23 @@
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import { useTranslation  } from 'react-i18next';
+import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
+=======
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+const localeLabelKey: Record<string, string> = {
+
+  en: "lang.english"
+  pt: "lang.portuguese"
+  es: "lang.spanish"
+  ar: "lang.arabic"
+}
+export default function LanguageSwitchPrompt() {
+=======
 <<<<<<< HEAD
 =======
 
@@ -12,17 +29,16 @@ const localeLabelKey: Record<string, string> = {
   ar: "lang.arabic",
 };
 export default function LanguageSwitchPrompt() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
-
   useEffect(() => {
     const key = "langPromptShown";
     const preferred = localStorage.getItem("preferredLanguage");
     if (preferred) return; // user has chosen
     if (localStorage.getItem(key)) return; // already prompted
-
     const detected =
-      i18n.language || i18n.resolvedLanguage || navigator.language || "en";
+      i18n.language |i18n.resolvedLanguage |navigator.language |"en";
     const normalized = detected.split("-")[0];
     const suggestion =
       supportedLocales.includes(normalized as any) && normalized !== "en"
@@ -30,25 +46,22 @@ export default function LanguageSwitchPrompt() {;
         : null;
     if (suggestion) setSuggested(suggestion);
   }, []);
-
   if (!suggested) return null;
-
   const accept = async () => {
     await i18n.changeLanguage(suggested!);
     localStorage.setItem("preferredLanguage", suggested!);
     localStorage.setItem("langPromptShown1", "true");
     document.documentElement.setAttribute(
-      "dir",
-      isRtl(suggested!) ? "rtl" : "ltr",
+      "dir"
+      isRtl(suggested!) ? "rtl" : "ltr"
     );
     document.documentElement.setAttribute("lang", suggested!);
     setSuggested(null);
-  };
-
+  }
   const decline = () => {
     localStorage.setItem("langPromptShown1", "true");
     setSuggested(null);
-  };
+  }
 
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">
@@ -73,8 +86,16 @@ export default function LanguageSwitchPrompt() {;
       </div>
     </div>
 <<<<<<< HEAD
+  );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 );
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,7 +1,22 @@
 import React from 'react';
-import {motion} from 'framer-motion';
+import { motion  } from 'framer-motion';
 import Link from 'next/link';
+
 import {
+<<<<<<< HEAD
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Rocket
+  Globe
+  Sparkles
+  CheckCircle
+  Phone
+  Mail
+  MapPin;
+=======
   ArrowRight,
   Star,
   TrendingUp,
@@ -14,6 +29,7 @@ import {
   Phone,
   Mail,;
   MapPin,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -23,45 +39,49 @@ export default function UltraAdvancedHero2026() {
     aiAutonomousServices2026.length +
     quantumSpaceTechServices2026.length +;
     metaverseDigitalRealityServices2026.length;
-
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function UltraAdvancedHero2026() {;
   const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
-  
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
-
+  }
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.1,
-      },
+        staggerChildren: 0.1
+      }
     },  };        staggerChildren: 0.1
       }
     }
-  };
-
+  }
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 30 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
+<<<<<<< HEAD
+        duration: 0.8
+      }
+    }
+  }
+=======
         duration: 0.8,
       },
     },
+
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Enhanced Background Effects */}
@@ -95,7 +115,11 @@ export default function UltraAdvancedHero2026() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
@@ -110,7 +134,11 @@ export default function UltraAdvancedHero2026() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
@@ -127,7 +155,11 @@ export default function UltraAdvancedHero2026() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Service Statistics */}
           <motion.div
             variants={itemVariants}
@@ -158,8 +190,7 @@ export default function UltraAdvancedHero2026() {;
               <div className='text-gray-300 text-sm'>Possibilities</div>            </div>
           </motion.div>
           {/* Key Benefits */}
-          <motion.div  };
-
+          <motion.div  }
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Effects */}
@@ -186,7 +217,7 @@ export default function UltraAdvancedHero2026() {;
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Technology Solutions</span>
           </motion.div>
           {/* Main Heading */}
-          <motion.h1 
+          <motion.h1
             variants={itemVariants}
             className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight"
           >
@@ -199,15 +230,15 @@ export default function UltraAdvancedHero2026() {;
             </span>
           </motion.h1>
           {/* Subheading */}
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed"
           >
-            Experience the most advanced AI, quantum computing, and metaverse technologies ever created. 
+            Experience the most advanced AI, quantum computing, and metaverse technologies ever created.
             <span className="text-purple-400 font-semibold"> 1000% ROI guaranteed</span> with our revolutionary solutions.
           </motion.p>
           {/* Service Statistics */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
@@ -252,7 +283,11 @@ export default function UltraAdvancedHero2026() {;
 
           {/* Key Benefits */}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -298,7 +333,7 @@ export default function UltraAdvancedHero2026() {;
               <Zap className='w-6 h-6 mr-3' />              Get Started Today            variants={itemVariants}
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
           >
-            <Link 
+            <Link
               href="/services"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl"
             >
@@ -306,7 +341,11 @@ export default function UltraAdvancedHero2026() {;
               Explore All Services
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
+<<<<<<< HEAD
+            <Link
+=======
             <Link 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
@@ -315,14 +354,22 @@ export default function UltraAdvancedHero2026() {;
 
           {/* Call to Action Buttons */}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Get Started Today
             </Link>
           </motion.div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}
@@ -395,7 +442,11 @@ export default function UltraAdvancedHero2026() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Trust Indicators */}
           <motion.div
             variants={itemVariants}
@@ -420,13 +471,13 @@ export default function UltraAdvancedHero2026() {;
       <div className='absolute inset-0 pointer-events-none'>
         <motion.div
           animate={{
-            y: [0, -20, 0],
-            rotate: [0, 5, 0],
+            y: [0, -20, 0]
+            rotate: [0, 5, 0]
           }}
           transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
           className='absolute top-20 right-20 text-6xl opacity-20'
         >
@@ -434,13 +485,13 @@ export default function UltraAdvancedHero2026() {;
         </motion.div>
         <motion.div
           animate={{
-            y: [0, 20, 0],
-            rotate: [0, -5, 0],
+            y: [0, 20, 0]
+            rotate: [0, -5, 0]
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
           className='absolute bottom-20 left-20 text-6xl opacity-20'
         >
@@ -448,13 +499,13 @@ export default function UltraAdvancedHero2026() {;
         </motion.div>
         <motion.div
           animate={{
-            y: [0, -15, 0],
-            rotate: [0, 3, 0],
+            y: [0, -15, 0]
+            rotate: [0, 3, 0]
           }}
           transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 7
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
           className='absolute top-1/3 left-10 text-5xl opacity-20'
         >
@@ -462,22 +513,22 @@ export default function UltraAdvancedHero2026() {;
         </motion.div>
         <motion.div
           animate={{
-            y: [0, 15, 0],
-            rotate: [0, -3, 0],
+            y: [0, 15, 0]
+            rotate: [0, -3, 0]
           }}
           transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 9
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'        >        <motion.div
-          animate={{ 
+          animate={{
             y: [0, -20, 0];
             rotate: [0, 5, 0]
           }}
-          transition={{ 
-            duration: 6,
-            repeat: Infinity,
+          transition={{
+            duration: 6
+            repeat: Infinity
             ease: "easeInOut"
           }}
           className="absolute top-20 right-20 text-6xl opacity-20"
@@ -485,13 +536,13 @@ export default function UltraAdvancedHero2026() {;
           🚀
         </motion.div>
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, 20, 0];
             rotate: [0, -5, 0]
           }}
-          transition={{ 
-            duration: 8,
-            repeat: Infinity,
+          transition={{
+            duration: 8
+            repeat: Infinity
             ease: "easeInOut"
           }}
           className="absolute bottom-20 left-20 text-6xl opacity-20"
@@ -499,13 +550,13 @@ export default function UltraAdvancedHero2026() {;
           ⚛️
         </motion.div>
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, -15, 0];
             rotate: [0, 3, 0]
           }}
-          transition={{ 
-            duration: 7,
-            repeat: Infinity,
+          transition={{
+            duration: 7
+            repeat: Infinity
             ease: "easeInOut"
           }}
           className="absolute top-1/3 left-10 text-5xl opacity-20"
@@ -513,13 +564,14 @@ export default function UltraAdvancedHero2026() {;
           🧠
         </motion.div>
         <motion.div
-          animate={{ 
+          animate={{
             y: [0, 15, 0];
             rotate: [0, -3, 0]
           }}
-          transition={{ 
-            duration: 9,
-            repeat: Infinity,
+          transition={{
+            duration: 9
+            repeat: Infinity
+
             ease: "easeInOut"
           }}
           className="absolute bottom-1/3 right-10 text-5xl opacity-20"
@@ -533,4 +585,8 @@ export default function UltraAdvancedHero2026() {;
 }
 =======
   );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

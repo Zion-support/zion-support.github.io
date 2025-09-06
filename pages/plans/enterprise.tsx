@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import Link from 'next/link',;
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' },
@@ -6,29 +10,36 @@ const features = [
   { key: 'custom_sla', label: 'Custom SLA' },
   { key: 'branded_onboarding', label: 'Branded onboarding' },
   { key: 'admin_dashboards', label: 'Admin dashboards' }],
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+const features = [
+  { key: 'private_portal', label: 'Private hiring portal' }
+  { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' }
+  { key: 'custom_sla', label: 'Custom SLA' }
+  { key: 'branded_onboarding', label: 'Branded onboarding' }
+  { key: 'admin_dashboards', label: 'Admin dashboards' }]
 const tiers = [
   {
-    id: 'teams',
-    name: 'Teams',
-    price: '$199/mo',
-    blurb: 'Up to 10 users, core collaboration features',
-    highlights: ['10 seatsPrivate portalAdmin dashboard'],
-    includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true }},
+    id: 'teams'
+    name: 'Teams'
+    price: '$199/mo'
+    blurb: 'Up to 10 users, core collaboration features'
+    highlights: ['10 seatsPrivate portalAdmin dashboard']
+    includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true }}
   {
-    id: 'business',
-    name: 'Business',
-    price: '$499/mo',
-    blurb: 'Up to 50 users, advanced controls and limits',
-    highlights: ['50 seatsDedicated talent poolSLA options'],
-    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }},
+    id: 'business'
+    name: 'Business'
+    price: '$499/mo'
+    blurb: 'Up to 50 users, advanced controls and limits'
+    highlights: ['50 seatsDedicated talent poolSLA options']
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}
   {
-    id: 'enterprise-custom',
-    name: 'Enterprise',
-    price: 'Custom',
-    blurb: 'Unlimited users, custom contracts and SLAs',
-    highlights: ['Unlimited seatsCustom SLADedicated CSM'],
-    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
+    id: 'enterprise-custom'
+    name: 'Enterprise'
+    price: 'Custom'
+    blurb: 'Unlimited users, custom contracts and SLAs'
+    highlights: ['Unlimited seatsCustom SLADedicated CSM']
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}]
 
 export default function EnterprisePlans() {
   return (
@@ -81,7 +92,10 @@ export default function EnterprisePlans() {
                 </tr>
               ))}
 =======
+<<<<<<< HEAD
+=======
 import Link from 'next/link';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const features = [;
   { key: 'private_portal', label: 'Private hiring portal' },;
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },;
@@ -185,7 +199,11 @@ export default function EnterprisePlans(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </tbody>
           </table>
         </div>
@@ -202,13 +220,20 @@ export default function EnterprisePlans(req, res) {
       </section>
     </main>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

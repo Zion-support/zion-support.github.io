@@ -4,9 +4,17 @@ import { v4 as uuidv4 } from 'uuid';
 export type FeedbackWidgetProps = {;
   responseId?: string;
   aiModel?: string;
-};
-
+}
 export default function FeedbackWidget({
+<<<<<<< HEAD
+  responseId
+  aiModel
+}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
+  responseId?: string;
+  aiModel?: string
+}
+export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
+=======
   responseId,
   aiModel,;
 }: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
@@ -15,21 +23,20 @@ export default function FeedbackWidget({
 };
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const effectiveResponseId = useMemo(
-    () => responseId || uuidv4(),
+    () => responseId |uuidv4()
     [responseId]
   );
   const submit = async () => {
     if (!rating) {
       setError('Please choose 👍 or 👎');
-      return;    }  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
-
+      return;    }  const effectiveResponseId = useMemo(() => responseId |uuidv4(), [responseId]);
   const submit = async () => {
     if (!rating) {
       setError('Please choose 👍 or 👎');
@@ -39,40 +46,43 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     setSubmitting(true);
     try {
       const res = await fetch('/api/feedback/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          responseId: effectiveResponseId,
-          rating,
-          comment: comment.trim(),
+          responseId: effectiveResponseId
+          rating
+          comment: comment.trim()
           pagePath:
             typeof window !== 'undefined'
               ? window.location.pathname
-              : undefined,
-          aiModel,
-        }),
+              : undefined
+          aiModel
+        })
       });
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true);
     } catch (e: any) {
-      setError(e?.message || 'Something went wrong');
+      setError(e?.message |'Something went wrong');
     } finally {
       setSubmitting(false);    }
-  };
-
+<<<<<<< HEAD
+  }
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
-      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment.trim(),
-          pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
+      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>          comment: comment.trim()
+          pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined
           aiModel})});
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true)
     } catch (e: any) {
-      setError(e?.message || 'Something went wrong')
+      setError(e?.message |'Something went wrong')
     } finally {
       setSubmitting(false)
     }
+  }
+=======
   };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -138,8 +148,15 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

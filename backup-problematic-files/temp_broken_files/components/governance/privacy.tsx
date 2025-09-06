@@ -10,7 +10,13 @@ export default function GovernancePrivacy() {
 <<<<<<< HEAD:components/governance/privacy.tsx
   )
 }
+<<<<<<< HEAD
+=======
+  )}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/governance/privacy.tsx
+=======
 ;
 =======
   )}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/governance/privacy.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

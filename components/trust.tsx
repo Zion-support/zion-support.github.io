@@ -3,18 +3,23 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
+<<<<<<< HEAD
+export default function TrustPage() {
+  const [userId, setUserId] = useState<string>('demo-user'),
+  const [data, setData] = useState<any>(null),
+=======
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
-
   useEffect(() => {
+
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u)
   }, []);
-
   useEffect(() => {
     async function load() {
       setLoading(true);
@@ -27,12 +32,11 @@ export default function TrustPage() {;
     }
     load();
   }, [userId]);
-
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type })
     });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res.json();
       setData(json);
@@ -40,12 +44,10 @@ export default function TrustPage() {;
     }
     load()
   }, [userId]);
-
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, reviewerId: 'demo-reviewer', type }) });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged')
   }
-
   async function submitAppeal(e: React.FormEvent) {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
@@ -53,24 +55,30 @@ export default function TrustPage() {;
     const message = formData.get('message');
     const contactEmail = formData.get('email');
     await fetch('/api/trust/appeal', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, message, contactEmail }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, message, contactEmail })
     });
     alert('Appeal submitted');
     form.reset();  }
-
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
+
+<<<<<<< HEAD
     form.reset()
+<<<<<<< HEAD
+=======
 =======
     <EnhancedLayout>
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
-
   return (
     <EnhancedLayout>
 <<<<<<< HEAD
@@ -106,9 +114,9 @@ export default function TrustPage() {;
               <div className='bg-white dark:bg-gray-900 rounded border p-4'>
                 <h2 className='font-medium mb-2'>Trust Metrics</h2>
                 <TrustRadar
-                  metrics={(data.components || []).map((c: any) => ({
-                    label: c.key,
-                    value: Math.round(c.raw * 100),
+                  metrics={(data.components |[]).map((c: any) => ({
+                    label: c.key
+                    value: Math.round(c.raw * 100)
                   }))}
                 />
               </div>
@@ -126,7 +134,7 @@ export default function TrustPage() {;
               </div>
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
-                <TrustRadar metrics={(data.components || []).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
+                <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
               </div>
               {showLogic && (
                 <div className="bg-white dark:bg-gray-900 rounded border p-4 text-sm">
@@ -138,10 +146,21 @@ export default function TrustPage() {;
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
 =======
+<<<<<<< HEAD
+  }
+
+  return (
+    <EnhancedLayout>
+
+                      </li>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
                       </li>
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </ul>
                 </div>
@@ -216,4 +235,8 @@ export default function TrustPage() {;
                 </div>
               )}
             </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

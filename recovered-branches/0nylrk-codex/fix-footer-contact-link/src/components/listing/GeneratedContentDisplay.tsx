@@ -1,13 +1,29 @@
+<<<<<<< HEAD
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { ArrowRight } from "lucide-react";
+
 import {
+<<<<<<< HEAD
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+  CardTitle
+=======
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/card";
 <<<<<<< HEAD
 =======
@@ -17,19 +33,24 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
 <<<<<<< HEAD
     min: number;
-    max: number;
-  };
-  keyPoints: string[];
-}
 
+    max: number;
+  }
+  keyPoints: string[];
+
+}
 interface GeneratedContentDisplayProps {
 =======
     min: number,
@@ -52,12 +73,23 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   content: GeneratedContent;
-  onApply: () => void;
+  onApply: () => void
 }
+<<<<<<< HEAD
+export function GeneratedContentDisplay({
+  content
+  onApply
+}: GeneratedContentDisplayProps) {
+=======
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -71,7 +103,11 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
@@ -83,7 +119,11 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
               >
 =======
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {tag}
               </Badge>
             ))}
@@ -92,7 +132,11 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
@@ -102,7 +146,11 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
@@ -124,6 +172,13 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 =======
     </Card>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
@@ -135,3 +190,5 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
     </Card>;
   );
 }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

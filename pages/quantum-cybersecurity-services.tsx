@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+import React from 'react',
+=======
+<<<<<<< HEAD
 import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
-import {motion} from 'framer-motion';
-import {quantumCybersecurityServices} from '../data/2026-quantum-cybersecurity-services';
+import { motion  } from 'framer-motion';
+import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
+<<<<<<< HEAD
+=======
 =======
 import React from 'react',
 import Head from 'next/head',
@@ -12,6 +18,7 @@ import { motion } from 'framer-motion',
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026',
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function QuantumCybersecurityServices() {
   return (
     <>
@@ -21,35 +28,54 @@ export default function QuantumCybersecurityServices() {
         <meta name="keywords" content="quantum cybersecurity, quantum encryption, quantum threat detection, quantum identity verification, quantum network security, ZionTech Group" />
         <meta name="author" content="ZionTech Group" />
         <meta name="robots" content="index, follow" />
+<<<<<<< HEAD
+        
+        {/* Open Graph */}
+=======
         {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <meta property="og:title" content="Quantum Cybersecurity Services - ZionTech Group" />
         <meta property="og:description" content="Unbreakable security powered by quantum computing and advanced AI algorithms." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity-services" />
         <meta property="og:site_name" content="ZionTech Group" />
+<<<<<<< HEAD
+        
+        {/* Contact Information */}
+=======
         {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <meta name="contact:phone" content="+1 302 464 0950" />
         <meta name="contact:email" content="kleber@ziontechgroup.com" />
         <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
         <meta name="contact:website" content="https://ziontechgroup.com" />
       </Head>
+<<<<<<< HEAD
+
+      <UltraFuturisticBackground2026 intensity="high" theme="cyberpunk">
+        {/* Hero Section */}
+=======
       <UltraFuturisticBackground2026 intensity="high" theme="cyberpunk">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="text-center z-10 max-w-6xl mx-auto">
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.h1
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -96,7 +122,11 @@ export default function QuantumCybersecurityServices() {
 =======
               Unbreakable security powered by quantum computing and advanced AI algorithms. Protect your business from tomorrow's threats today.
             </motion.p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -158,7 +188,11 @@ export default function QuantumCybersecurityServices() {
   }
 }
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                 <div className="text-4xl mb-4">🔐</div>
@@ -211,7 +245,11 @@ export default function QuantumCybersecurityServices() {
   }
 }
               className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -259,7 +297,11 @@ export default function QuantumCybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <UltraFuturisticServiceCard2026
                     service={service  } catch (error) {
@@ -316,7 +358,11 @@ export default function QuantumCybersecurityServices() {
   }
 }
               className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -355,7 +401,11 @@ export default function QuantumCybersecurityServices() {
   }
 }
                 className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
                 <p className="text-gray-300 mb-4">
@@ -397,7 +447,11 @@ export default function QuantumCybersecurityServices() {
   }
 }
                 className="bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
                 <p className="text-gray-300 mb-4">
@@ -446,7 +500,11 @@ export default function QuantumCybersecurityServices() {
   }
 }
               className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -608,7 +666,11 @@ export default function QuantumCybersecurityServices() {
   }
 }
                 className="text-center"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="text-6xl mb-4">📊</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Real-Time Analytics</h3>
@@ -654,7 +716,11 @@ export default function QuantumCybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -681,7 +747,11 @@ export default function QuantumCybersecurityServices() {
                   <div className="text-3xl mb-4">📱</div>
                   <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
                   <a href="tel:+13024640950" className="text-indigo-400 hover:text-indigo-300 transition-colors">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     +1 302 464 0950
                   </Link>
                 </div>
@@ -705,7 +775,11 @@ export default function QuantumCybersecurityServices() {
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 =======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -786,4 +860,8 @@ export default function QuantumCybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

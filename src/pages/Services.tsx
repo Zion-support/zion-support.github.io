@@ -1,102 +1,99 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ServiceCard from '../components/ServiceCard';
+import Card from '../components/Card';
 
 const Services: React.FC = () => {
-  const services = [
-    {
-      title: "AI & Machine Learning",
-      description: "Transform your business with cutting-edge AI solutions including natural language processing, computer vision, and predictive analytics.",
-      features: ["Custom AI Models", "Data Analytics", "Automation", "Predictive Insights"],
-      icon: "🤖",
-      color: "from-blue-500 to-purple-600"
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable, secure, and reliable cloud solutions that grow with your business needs.",
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Auto-scaling"],
-      icon: "☁️",
-      color: "from-green-500 to-blue-600"
-    },
-    {
-      title: "Web Development",
-      description: "Modern, responsive web applications built with the latest technologies and best practices.",
-      features: ["React/Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
-      icon: "💻",
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      title: "Mobile Applications",
-      description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
-      features: ["iOS/Android", "React Native", "Flutter", "App Store Optimization"],
-      icon: "📱",
-      color: "from-orange-500 to-red-600"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
-      features: ["Security Audits", "Penetration Testing", "Compliance", "24/7 Monitoring"],
-      icon: "🔒",
-      color: "from-red-500 to-orange-600"
-    },
-    {
-      title: "Data Analytics",
-      description: "Turn your data into actionable insights with advanced analytics and visualization tools.",
-      features: ["Business Intelligence", "Data Warehousing", "Real-time Analytics", "Custom Dashboards"],
-      icon: "📊",
-      color: "from-indigo-500 to-purple-600"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+            Comprehensive technology solutions designed to transform your business 
+            and drive innovation across all sectors.
           </p>
         </div>
+<<<<<<< HEAD
+
+        {/* Main Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            title="AI & Machine Learning"
+            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
+            icon="🤖"
+          />
+          <ServiceCard
+            title="Cybersecurity"
+            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <ServiceCard
+            title="Cloud Infrastructure"
+            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
+            icon="☁️"
+          />
+          <ServiceCard
+            title="Digital Transformation"
+            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
+            icon="🚀"
+          />
+          <ServiceCard
+            title="Data Analytics"
+            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
+            icon="📊"
+          />
+          <ServiceCard
+            title="IoT Solutions"
+            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
+            icon="🌐"
+          />
+        </div>
+
+        {/* Service Categories */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
+=======
       </div>
       {/* Services Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
-                <div className={`h-2 bg-gradient-to-r ${service.color} rounded-t-2xl`}></div>
-                <div className="p-8">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link 
-                    to="/contact" 
-                    className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
-                  >
-                    Learn More
-                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            ))}
+            <Card
+              title="Consulting Services"
+              description="Strategic technology consulting to help you make informed decisions about your digital future."
+            />
+            <Card
+              title="Implementation"
+              description="End-to-end implementation of technology solutions tailored to your specific business needs."
+            />
+            <Card
+              title="Support & Maintenance"
+              description="Ongoing support and maintenance to ensure your systems run smoothly and efficiently."
+            />
+            <Card
+              title="Training & Education"
+              description="Comprehensive training programs to help your team master new technologies and processes."
+            />
+            <Card
+              title="Custom Development"
+              description="Bespoke software development solutions designed specifically for your unique requirements."
+            />
+            <Card
+              title="Integration Services"
+              description="Seamless integration of new technologies with your existing systems and workflows."
+            />
           </div>
         </div>
+<<<<<<< HEAD
+
+        {/* Industry Solutions */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+=======
       </div>
       {/* Process Section */}
       <div className="py-20 bg-white">
@@ -106,34 +103,45 @@ const Services: React.FC = () => {
             <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">1</span>
+              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏥</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
-              <p className="text-gray-600">We analyze your business needs and challenges to understand your goals.</p>
+              <h3 className="text-lg font-semibold">Healthcare</h3>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">2</span>
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏦</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategy</h3>
-              <p className="text-gray-600">We develop a comprehensive strategy tailored to your specific requirements.</p>
+              <h3 className="text-lg font-semibold">Finance</h3>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">3</span>
+              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏭</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Development</h3>
-              <p className="text-gray-600">Our expert team builds and implements your solution with precision.</p>
+              <h3 className="text-lg font-semibold">Manufacturing</h3>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">4</span>
+              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛒</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
-              <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
+              <h3 className="text-lg font-semibold">Retail</h3>
             </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold">Education</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏛️</span>
+              </div>
+              <h3 className="text-lg font-semibold">Government</h3>
+            </div>
+<<<<<<< HEAD
+=======
           </div>
         </div>
       </div>
@@ -155,6 +163,7 @@ const Services: React.FC = () => {
             >
               View Pricing
             </Link>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
       </div>

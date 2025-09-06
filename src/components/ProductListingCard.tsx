@@ -1,4 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+import { useRouter  } from 'next/router';
+=======
+import React, { useState } from 'react',
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
+import { useRouter } from 'next/router',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings",
+import { DollarSign } from 'lucide-react'
+<<<<<<< HEAD
+
+import { RatingStars } from '@/components/RatingStars'
+=======
 import React, { useState } from 'react'
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
 import { useRouter } from 'next/router'
@@ -7,12 +24,37 @@ import { Button } from '@/components/ui/button'
 import { ProductListing } from '@/types/listings'
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image'; // Import next/image
+<<<<<<< HEAD
+
+interface ProductListingCardProps {
+  listing: ProductListing;
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void;
+  detailBasePath?: string
+
+const ProductListingCardComponent = ({
+  listing
+  view = 'grid'
+  onRequestQuote
+  detailBasePath = '/marketplace/listing'
+}: ProductListingCardProps) => {
+  const isGrid = view === 'grid'
+  const router = useRouter()
+  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
+      ? listing.images[0]
+      : '/placeholder.svg'
+  )
+  const [imageError, setImageError] = useState(false)
+=======
+=======
 =======
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
@@ -21,6 +63,7 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -36,17 +79,35 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-interface ProductListingCardProps {
-  listing: ProductListing
-  view?: 'grid' | 'list'
-  onRequestQuote?: (id: string) => void
-  detailBasePath?: string
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
+<<<<<<< HEAD
+  detailBasePath = '/marketplace/listing'
+}: ProductListingCardProps) => {
+  const isGrid = view === 'grid',
+  const router = useRouter(),
+  const [loading, setLoading] = useState(false),
+  const [imageSrc, setImageSrc] = useState(
+    listing.images && listing.images.length > 0 && listing.images[0]
+    ? listing.images[0] 
+    : '/placeholder.svg'
+  ),
+  const [imageError, setImageError] = useState(false),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const stockStatus =
+    listing.stock === undefined
+      ? 'In stock'
+      : listing.stock <= 0
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   detailBasePath = '/marketplace/listing',
 }: ProductListingCardProps) => {
@@ -62,14 +123,30 @@ const ProductListingCardComponent = ({
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ? 'Out of stock'
         : listing.stock <= 5
           ? 'Low stock'
           : 'In stock'
+<<<<<<< HEAD
+=======
+      ? 'Out of stock'
+      : listing.stock <= 5
+      ? 'Low stock'
+      : 'In stock',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const stockVariant =
+    listing.stock === undefined
+      ? 'success'
+      : listing.stock <= 0
+<<<<<<< HEAD
+=======
   const stockVariant = null;
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ? 'destructive'
         : listing.stock <= 5
           ? 'warning'
@@ -90,27 +167,25 @@ const ProductListingCardComponent = ({
     // Debug logging for development
     if (process.env.NODE_ENV === 'development') {
       logDebug('[ProductCard] Navigating to:', {
-        path: `${detailBasePath}/${listing.id}`,
+        path: `${detailBasePath}/${listing.id}`
       })
       logDebug('[ProductCard] Listing ID:', { id: listing.id })
       logDebug('[ProductCard] Listing Title:', { title: listing.title })
     }
-
     // Validate listing ID exists before navigation
     if (!listing.id) {
       logErrorToProduction(
-        '[ProductCard] Missing listing ID, cannot navigate',
-        new Error('Missing listing ID'),
+        '[ProductCard] Missing listing ID, cannot navigate'
+        new Error('Missing listing ID')
         { component: 'ProductListingCard' }
       )
       toast({
-        title: 'Navigation Error',
-        description: 'Product information is incomplete',
-        variant: 'destructive',
+        title: 'Navigation Error'
+        description: 'Product information is incomplete'
+        variant: 'destructive'
       })
       return;
     }
-
     router.push(`${detailBasePath}/${listing.id}`)
   }
   const dispatch = useDispatch<AppDispatch>()
@@ -118,16 +193,16 @@ const ProductListingCardComponent = ({
     setLoading(true)
     dispatch(
       addItem({
-        id: listing.id,
-        title: listing.title,
-        price: listing.price ?? 0,
+        id: listing.id
+        title: listing.title
+        price: listing.price ?? 0
       })
     )
     toast.success(`1× ${listing.title} added`, {
       action: {
-        label: 'View Cart',
-        onClick: () => router.push('/cart'),
-      },
+        label: 'View Cart'
+        onClick: () => router.push('/cart')
+      }
     })
     setLoading(false)
   }
@@ -142,7 +217,7 @@ const ProductListingCardComponent = ({
   }
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48'
       onKeyDown={e => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (e.key === 'Enter' |e.key === ' ') {
           e.preventDefault()
           handleViewListing()
         }      }}
@@ -150,6 +225,8 @@ const ProductListingCardComponent = ({
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+=======
+<<<<<<< HEAD
 =======
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
@@ -176,6 +253,7 @@ const ProductListingCardComponent = ({
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ? 'destructive'
       : listing.stock <= 5
       ? 'warning'
@@ -326,12 +404,21 @@ const ProductListingCardComponent = ({;
       {/* Image */}
       <div;
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
 <<<<<<< HEAD
         onKeyDown={e => {
+<<<<<<< HEAD
+          if (e.key === 'Enter' |e.key === ' ') {
+            e.preventDefault()
+            handleViewListing()
+=======
 =======
         onKeyDown={(e) => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -339,6 +426,7 @@ const ProductListingCardComponent = ({;
             e.preventDefault()
             handleViewListing()
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }  return ()
     <div
       data-testid= "equipment-link";'`
@@ -346,19 +434,18 @@ const ProductListingCardComponent = ({;
       onClick={handleViewListing}
       tabIndex={0};"
       onKeyDown={(e) => {
-        if(e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault () 
+        if(e.key === 'Enter' |e.key === ' ') {
+          e.preventDefault ()
           handleViewListing () }
       }}
-
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation;"
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={(e) => {
-          if(e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault () 
+          if(e.key === 'Enter' |e.key === ' ') {
+            e.preventDefault ()
             handleViewListing () }
         }}
       >
@@ -372,6 +459,13 @@ const ProductListingCardComponent = ({;
             style={{ objectFit: 'cover' }}
             onError = {handleImageError,}
 =======
+<<<<<<< HEAD
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault(),
+            handleViewListing()
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }}
       >;
@@ -382,7 +476,11 @@ const ProductListingCardComponent = ({;
             fill={true}
             style={{ objectFit: 'cover' }}
             onError={handleImageError}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
@@ -402,7 +500,11 @@ const ProductListingCardComponent = ({;
               variant={stockVariant as any}
               className="absolute top-2 left-2"
             >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {stockStatus}
             </Badge>
           )}
@@ -431,7 +533,11 @@ const ProductListingCardComponent = ({;
           {/* Category & Rating */}
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {listing.category}
             </Badge>
             {listing.rating && (
@@ -449,7 +555,11 @@ const ProductListingCardComponent = ({;
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {listing.uspHeadline}
               </p>
             )}
@@ -484,7 +594,11 @@ const ProductListingCardComponent = ({;
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {tag}
                 </span>
               ))}
@@ -500,7 +614,11 @@ const ProductListingCardComponent = ({;
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
@@ -535,7 +653,11 @@ const ProductListingCardComponent = ({;
                 addToCart()
               }}
               disabled={loading}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {loading ? (
                 <>
@@ -558,9 +680,9 @@ const ProductListingCardComponent = ({;
                 e.stopPropagation(); // Prevent card click event                // Add to cart first, then redirect to checkout
                 dispatch(
                   addItem({
-                    id: listing.id,
-                    title: listing.title,
-                    price: listing.price ?? 0,
+                    id: listing.id
+                    title: listing.title
+                    price: listing.price ?? 0
                   })
                 )
 =======
@@ -575,7 +697,11 @@ const ProductListingCardComponent = ({;
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 router.push('/checkout')
               }}
               disabled={loading}
@@ -601,67 +727,67 @@ const stockVariant = listing.stock === undefined ? 'success' : listing.stock <= 
 const handleImageError = () => {
   if (!imageError) {'
   //Prevent infinite loops if placeholder also fails setImageSrc ('/placeholder.svg')
-setImageError (true) 
+setImageError (true)
 };'
 //Debug logging for development if (process.env.NODE ENV === 'development') {
   return;
 }
 }> {
-  /* Image */ 
-}<div 
+  /* Image */
+}<div
 }> <div className= {
   `relative $ {
-  imageContainerClasses 
-}` 
+  imageContainerClasses
+}`
 }> {
-  /* Ensure this container has dimensions */ 
-}<Image Featured </Badge>) 
+  /* Ensure this container has dimensions */
+}<Image Featured </Badge>)
 }{
   stockStatus && (<Badge variant= {
-  stockVariant as any 
+  stockVariant as any
 }className="absolute top-2 left-2" > {
-  stockStatus 
-}</Badge>) 
+  stockStatus
+}</Badge>)
 }<FavoriteButton itemId= {
-  listing.id 
+  listing.id
 }/> </div> </div> {
-  /* Content */ 
+  /* Content */
 }<div className= {
   `flex flex-col justify-between $ {'
-  isGrid ? 'p-4 flex-1' : 'p-4 flex-1' 
-}` 
+  isGrid ? 'p-4 flex-1' : 'p-4 flex-1'
+}`
 }> <div> </Badge> {
   listing.rating && (<RatingStars value= {
-  listing.rating 
+  listing.rating
 }count= {
-  listing.reviewCount 
-}/>) 
+  listing.reviewCount
+}/>)
 }</div> <span key= {
   idx "
 }className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {
-  tag 
-}</span>) ) 
-}</div>) 
+  tag
+}</span>) )
+}</div>)
 }</div> </span>) "
 }</div> <div className="flex gap-2" > <Button onClick={
   (e) => {
-  e.stopPropagation (), //Prevent card click event addToCart () 
+  e.stopPropagation (), //Prevent card click event addToCart ()
 }disabled= {
   loading "
-}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart") 
+}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart")
 }</Button> <Button onClick={
   (e) => {
   e.stopPropagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (addItem ({
-  id: listing.id,  title: listing.title, price: listing.price ?? 0 
+  id: listing.id,  title: listing.title, price: listing.price ?? 0
 }) );'
-router.push ('/checkout') 
+router.push ('/checkout')
 }disabled= {
-  loading 
+  loading
 }> Buy Now </Button> {"
   onRequestQuote && (<Button size="sm" variant="outline" onClick={
   handleRequestQuote "
-}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>) 
-}</div> </div> </div> </div>) 
+}className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>)
+}</div> </div> </div> </div>)
 }
 '"
 export const ProductListingCard = React.memo(ProductListingCardComponent)
@@ -681,8 +807,14 @@ export default ProductListingCard
 export default ProductListingCard
 export default ProductListingCard
 '"`
+<<<<<<< HEAD
+export const ProductListingCard = React.memo(ProductListingCardComponent)
+ProductListingCard.displayName = 'ProductListingCard'
+
+=======
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             
             {onRequestQuote && (
@@ -751,4 +883,8 @@ ProductListingCard.displayName = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

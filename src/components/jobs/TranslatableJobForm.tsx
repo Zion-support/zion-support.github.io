@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -23,6 +25,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   // Form fields with translations
   const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -33,21 +36,26 @@ import { Loader2, Globe } from 'lucide-react'
 import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-import { toast } from "@/components/ui/use-toast",
-import {logErrorToProduction} from '@/utils/productionLogger',
+<<<<<<< HEAD
+import { toast } from "@/components/ui/use-toast";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void,
-  isSubmitting?: boolean
-}
 
+  onSubmit: (formData: any) => void
+  isSubmitting?: boolean }
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-  const { t } = useTranslation(),
-  const { translateContent, isTranslating } = useTranslationService(),
-  const { supportedLanguages, currentLanguage } = useLanguage(),
-  
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
-  
+  const { t } = useTranslation()
+  const { translateContent, isTranslating } = useTranslationService()
+  const { supportedLanguages, currentLanguage } = useLanguage()
+  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage)
   // Form fields with translations
+<<<<<<< HEAD
+  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
+    en: ""
+    es: ""
+    fr: ""
+    pt: ""
+=======
   const [title, setTitle] = useState<Record<SupportedLanguage string>>({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     en: "",
@@ -55,6 +63,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     fr: "",
     pt: "",
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ar: ""
   })
     ar: ""
@@ -71,24 +80,52 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         content = requirements[lang]
         sourceLanguage = lang
         break
-        title: t('translation.no_content'),
-        description: t('translation.add_content_first'),
+        title: t('translation.no_content')
+        description: t('translation.add_content_first')
         variant: "destructive"
       })
       return;
           variant: "destructive"
       })
+<<<<<<< HEAD
+      return
+        title: t('translation.translation_success')
+=======
       return;
         title: t('translation.translation_success'),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         description: t('translation.content_translated')
       })
     } catch (error) {
       logErrorToProduction('Error translating ${field}:', { data: error })
       toast({
-        title: t('translation.translation_failed'),
-        description: error instanceof Error ? error.message : t('translation.unknown_error'),
+        title: t('translation.translation_failed')
+        description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"
       })
+<<<<<<< HEAD
+=======
+import { toast } from "@/components/ui/use-toast",
+import {logErrorToProduction} from '@/utils/productionLogger',
+interface TranslatableJobFormProps {
+  onSubmit: (formData: any) => void,
+  isSubmitting?: boolean
+}
+
+export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
+  const { t } = useTranslation(),
+  const { translateContent, isTranslating } = useTranslationService(),
+  const { supportedLanguages, currentLanguage } = useLanguage(),
+  
+  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
+  
+  // Form fields with translations
+  const [title, setTitle] = useState<Record<SupportedLanguage string>>({
+    en: "",
+    es: "",
+    fr: "",
+    pt: "",
+=======
     }
   }
   // Ensure all translations are available
@@ -98,6 +135,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ar: ""}),
   
   const [description, setDescription] = useState<Record<SupportedLanguage string>>({
@@ -306,37 +344,21 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         title: t('translation.translation_failed'),;
         description: error instanceof Error ? error.message : t('translation.unknown_error'),;
         variant: "destructive"});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
-  },;
-  // Ensure all translations are available;
-  const ensureAllTranslations = async () => {;
-    const promises = [],;
-    if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return,;
-    if (!description.en && !description.es && !description.fr && !description.pt && !description.ar) return;
-    // Title translations;
-    if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {;
-      promises.push(autoTranslate('title'));
-    }
-;
-    // Description translations;
-    if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {;
-      promises.push(autoTranslate('description'));
-    }
-;
-    // Requirements translations;
-    if (Object.values(requirements).some(val => val) && Object.values(requirements).some(val => !val)) {;
-      promises.push(autoTranslate('requirements'));
-    }
-;
-    if (promises.length) {;
-      await Promise.all(promises);
-    }
-  };
-  return (;
-    <form onSubmit={handleSubmit} className="space-y-6">;
-      <div>;
-        <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>;
-        <p className="text-zion-slate-light mb-6">;
+  }
+  // Ensure all translations are available
+  const ensureAllTranslations = async () => {
+    const promises = []
+
+}
+
+export function TranslatableJobForm({ onSubmit, isSubmitting;
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <h1 className="text-2xl font-bold mb-6">{t('jobs.post_job_title')}</h1>
+        <p className="text-zion-slate-light mb-6">
           {t('jobs.post_job_description')}
         </p>
       </div>
@@ -353,36 +375,38 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               variant="outline"
               onClick={() => autoTranslate('title')}
               disabled={isTranslating || (!title.en && !title.es && !title.fr && !title.pt && !title.ar)}
-              className="flex items-center gap-1";
-            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
+              className="flex items-center gap-1"
+            >
+              {isTranslating ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Globe className="h-4 w-4" />
               )}
               {t('translation.auto_translate')}
-            </Button>;
-          </div>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
+            </Button>
+          </div>
+          
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+            <TabsList className="w-full">
+              {supportedLanguages.map((lang) => (
+                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
                   <span className="mr-1">{lang.flag}</span> {lang.name}
-                </TabsTrigger>;
+                </TabsTrigger>
               ))}
-            </TabsList>;
-            {supportedLanguages.map((lang) => (;
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">;
-                <div className="space-y-1">;
-                  <Input;
+            </TabsList>
+            
+            {supportedLanguages.map((lang) => (
+              <TabsContent key={lang.code} value={lang.code} className="mt-2">
+                <div className="space-y-1">
+                  <Input
                     id={`title-${lang.code}`}
                     value={title[lang.code] || ''}
                     onChange={(e) => handleTitleChange(e.target.value)}
-                    className="w-full";
+                    className="w-full"
                     dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-                  />;
-                </div>;
-              </TabsContent>;
+                  />
+                </div>
+              </TabsContent>
             ))}
           </Tabs>
         </div>
@@ -398,34 +422,36 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               variant="outline"
               onClick={() => autoTranslate('description')}
               disabled={isTranslating || (!description.en && !description.es && !description.fr && !description.pt && !description.ar)}
-              className="flex items-center gap-1";
-            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
+              className="flex items-center gap-1"
+            >
+              {isTranslating ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Globe className="h-4 w-4" />
               )}
               {t('translation.auto_translate')}
-            </Button>;
-          </div>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
+            </Button>
+          </div>
+          
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+            <TabsList className="w-full">
+              {supportedLanguages.map((lang) => (
+                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
                   <span className="mr-1">{lang.flag}</span> {lang.name}
-                </TabsTrigger>;
+                </TabsTrigger>
               ))}
-            </TabsList>;
-            {supportedLanguages.map((lang) => (;
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">;
-                <Textarea;
+            </TabsList>
+            
+            {supportedLanguages.map((lang) => (
+              <TabsContent key={lang.code} value={lang.code} className="mt-2">
+                <Textarea
                   id={`description-${lang.code}`}
                   value={description[lang.code] || ''}
                   onChange={(e) => handleDescriptionChange(e.target.value)}
-                  className="min-h-32 w-full";
+                  className="min-h-32 w-full"
                   dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-                />;
-              </TabsContent>;
+                />
+              </TabsContent>
             ))}
           </Tabs>
         </div>
@@ -441,34 +467,36 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               variant="outline"
               onClick={() => autoTranslate('requirements')}
               disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.fr && !requirements.pt && !requirements.ar)}
-              className="flex items-center gap-1";
-            >;
-              {isTranslating ? (;
-                <Loader2 className="h-4 w-4 animate-spin" />;
-              ) : (;
-                <Globe className="h-4 w-4" />;
+              className="flex items-center gap-1"
+            >
+              {isTranslating ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Globe className="h-4 w-4" />
               )}
               {t('translation.auto_translate')}
-            </Button>;
-          </div>;
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">;
-            <TabsList className="w-full">;
-              {supportedLanguages.map((lang) => (;
-                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">;
+            </Button>
+          </div>
+          
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
+            <TabsList className="w-full">
+              {supportedLanguages.map((lang) => (
+                <TabsTrigger key={lang.code} value={lang.code} className="flex-1">
                   <span className="mr-1">{lang.flag}</span> {lang.name}
-                </TabsTrigger>;
+                </TabsTrigger>
               ))}
-            </TabsList>;
-            {supportedLanguages.map((lang) => (;
-              <TabsContent key={lang.code} value={lang.code} className="mt-2">;
-                <Textarea;
+            </TabsList>
+            
+            {supportedLanguages.map((lang) => (
+              <TabsContent key={lang.code} value={lang.code} className="mt-2">
+                <Textarea
                   id={`requirements-${lang.code}`}
                   value={requirements[lang.code] || ''}
                   onChange={(e) => handleRequirementsChange(e.target.value)}
-                  className="min-h-24 w-full";
+                  className="min-h-24 w-full"
                   dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-                />;
-              </TabsContent>;
+                />
+              </TabsContent>
             ))}
           </Tabs>
         </div>
@@ -506,19 +534,30 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           type="submit"
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
           disabled={isSubmitting || isTranslating}
-        >;
-          {isSubmitting ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+        >
+          {isSubmitting ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               {t('jobs.submitting')}
-            </>;
-          ) : (;
-            t('jobs.post_job_button');
+            </>
+          ) : (
+            t('jobs.post_job_button')
           )}
+<<<<<<< HEAD
+        </Button>
+      </div>
+    </form>
+  )
+}
+=======
         </Button>;
       </div>;
     </form>;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

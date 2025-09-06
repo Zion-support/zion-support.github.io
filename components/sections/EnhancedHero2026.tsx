@@ -1,6 +1,18 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Brain
+  Rocket
+  CheckCircle;
+=======
   ArrowRight,
   Star,
   TrendingUp,
@@ -10,65 +22,80 @@ import {
   Brain,
   Rocket,;
   CheckCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
+
 interface EnhancedHero2026Props {
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
+
     website: string;
-  };
+  }
+
   serviceStats: {
     totalServices: number;
     aiServices: number;
     emergingTech: number;
     itSolutions: number;
     microSaas: number;
-    revolutionaryServices: number;
-  };
 
+    revolutionaryServices: number;
+  }
 export default function EnhancedHero2026({
-  contactInfo,
-  serviceStats,
+  contactInfo
+  serviceStats
 }: EnhancedHero2026Props) {  const containerVariants = {export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        staggerChildren: 0.2
+      }
+=======
         staggerChildren: 0.2,
       },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },  };        staggerChildren: 0.2
       }
     }
+  }
+=======
+        staggerChildren: 0.2,
+      },
+    },  };
+
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 30, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
-        duration: 0.8,
-        ease: 'easeOut' as const,
-      },
+        duration: 0.8
+        ease: 'easeOut' as const
+      }
     },  };        ease: "easeOut" as const
       }
     }
-  };
-
+  }
   const statsVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
+    hidden: { scale: 0.8, opacity: 0 }
     visible: {
-      scale: 1,
-      opacity: 1,
+      scale: 1
+      opacity: 1
       transition: {
-        duration: 0.6,
-        ease: 'easeOut' as const,
-      },
-    },
-  };
-
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
+    }
+  }
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Enhanced Background Elements */}
@@ -82,20 +109,33 @@ export default function EnhancedHero2026({
             key={i}
             className='absolute w-2 h-2 bg-cyan-400/30 rounded-full'
             style={{
+<<<<<<< HEAD
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
+=======
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.8, 0.3],
+              y: [0, -30, 0]
+              opacity: [0.3, 0.8, 0.3]
               scale: [1, 1.5, 1],            }}
             transition={{
+<<<<<<< HEAD
+<<<<<<< HEAD
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: Math.random() * 2,            }}  }
+=======
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math.random() * 2,            }}  };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Elements */}
@@ -109,18 +149,41 @@ export default function EnhancedHero2026({
             key={i}
             className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`}}
             animate={{
               y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
+<<<<<<< HEAD
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: Math.random() * 2,              ease: "easeInOut"
+              delay: Math.random() * 2
+            }}
+=======
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math.random() * 2,            }}
+
+=======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
+<<<<<<< HEAD
+
+            }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
               ease: 'easeInOut',
               delay: Math.random() * 2,              ease: "easeInOut",
@@ -131,6 +194,7 @@ export default function EnhancedHero2026({
             }}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         ))}
       </div>
@@ -168,9 +232,9 @@ export default function EnhancedHero2026({
               delivering unprecedented ROI.            </p>
           </motion.div>
           {/* Enhanced Stats Grid */}
-          <motion.div            
+          <motion.div
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. 
+              Transform your business with our revolutionary AI, Quantum, and IT infrastructure services.
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
           </motion.div>
 <<<<<<< HEAD
@@ -180,45 +244,46 @@ export default function EnhancedHero2026({
           >
             {[
               {
-                label: 'Total Services',
-                value: serviceStats.totalServices,
-                icon: Rocket,
-                color: 'from-blue-500 to-cyan-500',
-              },
+                label: 'Total Services'
+                value: serviceStats.totalServices
+                icon: Rocket
+                color: 'from-blue-500 to-cyan-500'
+              }
               {
-                label: 'AI Solutions',
-                value: serviceStats.aiServices,
-                icon: Brain,
-                color: 'from-purple-500 to-pink-500',
-              },
+                label: 'AI Solutions'
+                value: serviceStats.aiServices
+                icon: Brain
+                color: 'from-purple-500 to-pink-500'
+              }
               {
-                label: 'Emerging Tech',
-                value: serviceStats.emergingTech,
-                icon: TrendingUp,
-                color: 'from-green-500 to-emerald-500',
-              },
+                label: 'Emerging Tech'
+                value: serviceStats.emergingTech
+                icon: TrendingUp
+                color: 'from-green-500 to-emerald-500'
+              }
               {
-                label: 'IT Infrastructure',
-                value: serviceStats.itSolutions,
-                icon: Globe,
-                color: 'from-orange-500 to-red-500',
-              },
+                label: 'IT Infrastructure'
+                value: serviceStats.itSolutions
+                icon: Globe
+                color: 'from-orange-500 to-red-500'
+              }
               {
-                label: 'Micro SaaS',
-                value: serviceStats.microSaas,
-                icon: Zap,
-                color: 'from-yellow-500 to-orange-500',
-              },
+                label: 'Micro SaaS'
+                value: serviceStats.microSaas
+                icon: Zap
+                color: 'from-yellow-500 to-orange-500'
+              }
               {
-                label: 'Revolutionary',
-                value: serviceStats.revolutionaryServices,
-                icon: Star,
-                color: 'from-pink-500 to-purple-500',
-              },            ].map((stat, index) => (              { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' },
-              { label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' },
-              { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
-              { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' },
-              { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' },
+                label: 'Revolutionary'
+                value: serviceStats.revolutionaryServices
+                icon: Star
+                color: 'from-pink-500 to-purple-500'
+              },            ].map((stat, index) => (              { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' }
+              { label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' }
+              { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' }
+              { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' }
+              { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' }
+
               { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
               <motion.div
                 key={stat.label}
@@ -249,7 +314,11 @@ export default function EnhancedHero2026({
 
                   {stat.label}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </motion.div>
             ))}
@@ -257,7 +326,11 @@ export default function EnhancedHero2026({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -273,8 +346,13 @@ export default function EnhancedHero2026({
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
+<<<<<<< HEAD
+              <Button
+                href="/contact"
+=======
               <Button 
                 href="/contact" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
@@ -323,7 +401,11 @@ export default function EnhancedHero2026({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}
@@ -378,4 +460,8 @@ export default function EnhancedHero2026({
 }
 =======
   );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

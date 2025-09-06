@@ -1,31 +1,49 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from "react";
+import { Link } from "react-router-dom";
+=======
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",
 import { Link } from "react-router-dom",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { 
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
+  DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+import { Eye, ChevronDown, Loader2 } from "lucide-react";
+import { JobApplication, ApplicationStatus } from "@/types/jobs";
+=======
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplicationActionsProps {
-  application: JobApplication,
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
+
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 export function ApplicationActions({;
@@ -33,6 +51,7 @@ export function ApplicationActions({;
   processingId;
   onViewApplication;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplicationActions({
   application,
   processingId,
@@ -42,9 +61,9 @@ export function ApplicationActions({
 }: ApplicationActionsProps) {
   return (
     <div className="flex items-center justify-end gap-2">
-      <Button 
-        variant="outline" 
-        size="sm" 
+      <Button
+        variant="outline"
+        size="sm"
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}
       >
@@ -52,8 +71,8 @@ export function ApplicationActions({
       </Button>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="sm"
             disabled={processingId === application.id}
           >
@@ -65,22 +84,22 @@ export function ApplicationActions({
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "shortlisted")}
           >
             Shortlist
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "interview")}
           >
             Schedule Interview
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "hired")}
           >
             Hire
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
@@ -88,8 +107,13 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
+      <Button
+        variant="default"
+=======
       <Button 
         variant="default" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         size="sm"
         asChild
       >
@@ -187,4 +211,8 @@ export function ApplicationActions({;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

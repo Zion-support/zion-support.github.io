@@ -1,4 +1,15 @@
 <<<<<<< HEAD:components/email-validator.tsx
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
+export default function EmailValidatorPage() {const [emails, setEmails] = useState('');
+  const [validationResults, setValidationResults] = useState<any[]>([]);
+  const [isValidating, setIsValidating] = useState(false);
+  const [bulkMode, setBulkMode] = useState(false);
+=======
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Card from '../components/ui/Card',;
@@ -9,58 +20,56 @@ export default function EmailValidatorPage() {;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
   const [isValidating, setIsValidating] = useState(false),;
   const [bulkMode, setBulkMode] = useState(false),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const validateEmails = async () => {;
-    if (!emails.trim()) return,;
-    setIsValidating(true),;
-    setValidationResults([]),;
-    const emailList = emails.split('\n').filter(email => email.trim()),;
-    const results = [],;
+    if (!emails.trim()) return;
+    setIsValidating(true);
+    setValidationResults([]);
+    const emailList = emails.split('\n').filter(email => email.trim());
+    const results = [];
     // Simulate email validation with realistic results;
     for (let i = 0, i < emailList.length, i++) {;
-      await new Promise(resolve => setTimeout(resolve, 200)),;
-      const email = emailList[i].trim(),;
-      const result = validateSingleEmail(email),;
+      await new Promise(resolve => setTimeout(resolve, 200));
+      const email = emailList[i].trim();
+      const result = validateSingleEmail(email);
       results.push(result);
     }
-;
-    setValidationResults(results),;
+    setValidationResults(results);
     setIsValidating(false);
-  },;
-  const validateSingleEmail = (email: string) => {;
-    // Basic email regex;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
+  }
+  const validateSingleEmail = (email: string) => {// Basic email regex;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // Check for common disposable email domains;
     const disposableDomains = [;
-      'tempmail.orgguerrillamail.commailinator.com10minutemail.com',;
+      'tempmail.orgguerrillamail.commailinator.com10minutemail.com';
       'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com';
-    ],;
+    ];
     // Check for common typos;
     const commonTypos = {;
-      'gmail.com': ['gmial.comgamil.comgmai.com'],;
-      'yahoo.com': ['yaho.comyahooo.comyhaoo.com'],;
-      'hotmail.com': ['hotmai.comhotmial.comhotmeil.com'],;
+      'gmail.com': ['gmial.comgamil.comgmai.com'];
+      'yahoo.com': ['yaho.comyahooo.comyhaoo.com'];
+      'hotmail.com': ['hotmai.comhotmial.comhotmeil.com'];
       'outlook.com': ['outlok.comoutloook.comoutlok.com'];
-    },;
-    const domain = email.split('@')[1],;
-    const isDisposable = disposableDomains.includes(domain),;
+    }
+    const domain = email.split('@')[1];
+    const isDisposable = disposableDomains.includes(domain);
     const hasTypo = Object.entries(commonTypos).some(([correct, typos]) =>;
       typos.includes(domain);
-    ),;
-    let status = 'valid',;
-    let score = 100,;
-    const issues = [],;
-    if (!emailRegex.test(email)) {;
-      status = 'invalid',;
-      score = 0,;
+    );
+    let status = 'valid';
+    let score = 100;
+    const issues = [];
+    if (!emailRegex.test(email)) {status = 'invalid';
+      score = 0;
       issues.push('Invalid email format');
-    } else if (isDisposable) {;
-      status = 'disposable',;
-      score = 20,;
+    } else if (isDisposable) {status = 'disposable';
+      score = 20;
       issues.push('Disposable email domain');
-    } else if (hasTypo) {;
-      status = 'suspicious',;
-      score = 60,;
+    } else if (hasTypo) {status = 'suspicious';
+      score = 60;
       issues.push('Possible typo in domain');
+<<<<<<< HEAD
+=======
     }
 ;
     // Additional checks;
@@ -68,6 +77,7 @@ export default function EmailValidatorPage() {;
       status = 'invalid',;
       score = 0,;
       issues.push('Email too long');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',
 import Head from 'next/head',
@@ -147,44 +157,52 @@ if (email.length > 254) {
       status = 'invalid',
       score = 0,
       issues.push('Email too long')
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
-;
-    if (email.split('@')[0].length > 64) {;
-      status = 'invalid',;
-      score = 0,;
+    // Additional checks;
+    if (email.length > 254) {status = 'invalid';
+      score = 0;
+      issues.push('Email too long');
+    }
+    if (email.split('@')[0].length > 64) {status = 'invalid';
+      score = 0;
       issues.push('Local part too long');
     }
-;
-    return {;
-      email,;
-      status,;
-      score,;
-      issues,;
-      domain,;
-      isDisposable,;
-      hasTypo,;
+<<<<<<< HEAD:components/email-validator.tsx
+    return {email;
+      status;
+      score;
+      issues;
+      domain;
+      isDisposable;
+      hasTypo;
       timestamp: new Date().toLocaleTimeString();
     }
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD:components/email-validator.tsx
 },
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'valid':
-
     }
-  },;
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
+  }
+  const getStatusColor = (status: string) => {switch (status) {;
       case 'valid':;
-        return 'text-green-400',;
+        return 'text-green-400';
       case 'suspicious':;
-        return 'text-yellow-400',;
+        return 'text-yellow-400';
       case 'disposable':;
-        return 'text-orange-400',;
+        return 'text-orange-400';
       case 'invalid':;
-        return 'text-red-400',;
+        return 'text-red-400';
       default:;
         return 'text-gray-400';
 =======
@@ -215,38 +233,36 @@ if (email.length > 254) {
         return 'text-red-400',
       default:
         return 'text-gray-400'
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
-  },;
-  const getScoreColor = (score: number) => {;
-    if (score >= 80) return 'text-green-400',;
-    if (score >= 60) return 'text-yellow-400',;
-    if (score >= 40) return 'text-orange-400',;
+  }
+  const getScoreColor = (score: number) => {if (score >= 80) return 'text-green-400';
+    if (score >= 60) return 'text-yellow-400';
+    if (score >= 40) return 'text-orange-400';
     return 'text-red-400';
-  },;
-  const copyResults = () => {;
-    const resultsText = validationResults.map(result =>;
+  }
+  const copyResults = () => {const resultsText = validationResults.map(result =>;
       `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`;
-    ).join('\n'),;
+    ).join('\n');
     navigator.clipboard.writeText(resultsText);
-  },;
-  const clearResults = () => {;
-    setValidationResults([]),;
+  }
+  const clearResults = () => {setValidationResults([]);
     setEmails('');
-  },;
-  const getStats = () => {;
-    if (validationResults.length === 0) return null,;
-    const total = validationResults.length,;
-    const valid = validationResults.filter(r => r.status === 'valid').length,;
-    const invalid = validationResults.filter(r => r.status === 'invalid').length,;
-    const suspicious = validationResults.filter(r => r.status === 'suspicious').length,;
-    const disposable = validationResults.filter(r => r.status === 'disposable').length,;
-    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total,;
+  }
+  const getStats = () => {if (validationResults.length === 0) return null;
+    const total = validationResults.length;
+    const valid = validationResults.filter(r => r.status === 'valid').length;
+    const invalid = validationResults.filter(r => r.status === 'invalid').length;
+    const suspicious = validationResults.filter(r => r.status === 'suspicious').length;
+    const disposable = validationResults.filter(r => r.status === 'disposable').length;
+    const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total;
     return { total, valid, invalid, suspicious, disposable, avgScore }
-},
-
-  const stats = getStats(),
-
+}
+  const stats = getStats()
   return (
     <>
       <Head>
@@ -267,8 +283,14 @@ if (email.length > 254) {
             Email Validator
           </h1>
           <p className=&quot;text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed&quot;>
+<<<<<<< HEAD:components/email-validator.tsx
+            Validate email addresses with our advanced validation service. Check for typos, disposable domains
+            and ensure maximum deliverability for your email campaigns and user registrations.
+          </p>
+=======
             Validate email addresses with our advanced validation service. Check for typos, disposable domains, 
             and ensure maximum deliverability for your email campaigns and user registrations.          </p>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
         </div>
       </section>
       {/* Email Validation Tool */}
@@ -306,7 +328,10 @@ type=&quot;checkbox&quot;
 value={emails}
                       onChange={(e) => setEmails(e.target.value)}
 <<<<<<< HEAD:components/email-validator.tsx
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </Button>;
                   {validationResults.length > 0 && (;
@@ -371,7 +396,11 @@ onClick={validateEmails}
                     <Button,
 onClick={clearResults}
                       variant=&quot;outline&quot;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
                       Clear
@@ -432,7 +461,11 @@ onClick={copyResults}
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
 {validationResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
@@ -440,8 +473,7 @@ onClick={copyResults}
                   {validationResults.map((result, index) => (
                     <div
                       key={index}
-                      className={`p-4 rounded-lg border ${;
-                        result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
+                      className={`p-4 rounded-lg border ${result.status === 'valid' ? 'border-green-500/30 bg-green-500/10' :;
                         result.status === 'suspicious' ? 'border-yellow-500/30 bg-yellow-500/10' :;
                         result.status === 'disposable' ? 'border-orange-500/30 bg-orange-500/10' :;
                         'border-red-500/30 bg-red-500/10';
@@ -471,7 +503,11 @@ key={index}
                             {result.email}                          </span>
                         </div>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           Score: {result.score}
 </span>
                       </div>
@@ -491,7 +527,11 @@ key={index}
                               </li>;
 =======
                                 {issue}                              </li>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             ))}
                           </ul>;
                         </div>;
@@ -504,10 +544,13 @@ key={index}
 
                       {result.isDisposable && (
                         <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>                          ⚠️ Disposable email domain detected
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       )}
-
                       {result.hasTypo && (
                         <div className=&quot;mt-2 p-2 bg-yellow-500/20 border border-yellow-500/30 rounded text-sm text-yellow-300&quot;>                          💡 Possible typo detected in domain
                         </div>
@@ -530,7 +573,11 @@ key={index}
 <<<<<<< HEAD:components/email-validator.tsx
 =======
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Features */}
 <section className=&quot;py-20 bg-gray-800&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -651,7 +698,10 @@ key={index}
       </section>
       {/* CTA Section */}
 <<<<<<< HEAD:components/email-validator.tsx
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
@@ -687,4 +737,8 @@ href=&quot;/pricing&quot;
       </section>
     </>
   )}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,15 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 const p = path.join(
-  process.cwd(),
-  'data',
-  'reports',
+  process.cwd()
+  'data'
+  'reports'
   'changelog.json'
 );
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {;
@@ -19,15 +22,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
       return res.status(500).json({ error: 'Failed to read changelog' });
     }
+
+=======
+const p = path.join(process.cwd(), 'datareportschangelogweekly-changelog.json');
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (!fs.existsSync(p)) return res.status(200).json({});
+    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to read changelog' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 if (req.method === 'POST') {
     try {
       const { version, changes, date } = req.body;
-      
-      if (!version || !changes || !Array.isArray(changes)) {
+      if (!version |!changes |!Array.isArray(changes)) {
         return res.status(400).json({ error: 'Missing required fields' });
       }
-
       let changelog = [];
       try {
         const data = fs.readFileSync(p, 'utf8');
@@ -35,24 +47,23 @@ if (req.method === 'POST') {
       } catch {
         // File doesn't exist, start with empty array
       }
-
       const newEntry = {
-        version,
-        changes,
-        date: date || new Date().toISOString()
-      };
-
+        version
+        changes
+        date: date |new Date().toISOString()
+      }
       changelog.unshift(newEntry);
-      
       fs.writeFileSync(p, JSON.stringify(changelog, null, 2));
       return res.status(201).json(newEntry);
     } catch (error) {
       return res.status(500).json({ error: 'Failed to update changelog' });
     }
   }
-
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
+<<<<<<< HEAD
+}
+=======
 }
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -94,3 +105,4 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

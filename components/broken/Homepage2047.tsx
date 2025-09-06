@@ -1,7 +1,63 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
+
 import {
+<<<<<<< HEAD
+  ArrowRight
+  Play
+  TrendingUp
+  Brain
+  Shield
+  Rocket
+  Globe
+  Cpu
+  Database
+  Atom
+  Target
+  Star
+  Sparkles as SparklesIcon
+  Brain as BrainIcon
+  Atom as AtomIcon
+  Shield as ShieldIcon
+  Rocket as RocketIcon
+  Zap
+  Eye
+  Heart
+  Infinity
+  ChevronRight
+  ChevronLeft
+  ExternalLink
+  Users
+  Award
+  Clock
+  CheckCircle
+  Zap as ZapIcon
+  DollarSign
+  BarChart3
+  Palette
+  Cloud
+  Network
+  ShoppingCart
+  Settings
+  Building
+  Monitor
+  Layers
+  Globe2
+  Lock
+  Code
+  Server
+  Phone
+  Search
+  Filter
+  Grid
+  List
+  Eye as EyeIcon
+  ArrowUpRight
+  Star as StarIcon
+  Sparkles
+  Target as TargetIcon;} from 'lucide-react';import {
+=======
   ArrowRight,
   Play,
   TrendingUp,
@@ -55,21 +111,25 @@ import {
   Star as StarIcon,
   Sparkles,;
   Target as TargetIcon,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
+
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
 
+
 // Import our new innovative services
-import { innovative2025AIAutonomousEcosystemV2 } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
-import { emergingTechBreakthroughs2025V4 } from '../data/2025-emerging-tech-breakthroughs-v4';
-import { innovative2025ITInfrastructureV2 } from '../data/2025-innovative-it-infrastructure-v2';
+import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
+import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';
+import { innovative2025ITInfrastructureV2  } from '../data/2025-innovative-it-infrastructure-v2';
 // Import enhanced components
-import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';
+import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
+
 const Homepage2047: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -78,86 +138,69 @@ const Homepage2047: React.FC = () => {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [consciousnessLevel, setConsciousnessLevel] = useState(0.5);
   const [scrollY, setScrollY] = useState(0);
-
   useEffect(() => {
     setIsVisible(true);
-
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex(prev => (prev + 1) % 6);
     }, 8000);
-
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
+    }
     // Animate consciousness level
     const consciousnessInterval = setInterval(() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7);    }, 100);
-
     // Track scroll position
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };  const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [consciousnessLevel, setConsciousnessLevel] = useState(0.5);
   const [scrollY, setScrollY] = useState(0);
-  
   useEffect(() => {
     setIsVisible(true);
-    
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)
     }, 8000);
-    
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
-    };
-    
+    }
     // Animate consciousness level
     const consciousnessInterval = setInterval(() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7)
     }, 100);
-
     // Track scroll position
     const handleScroll = () => {
-      setScrollY(window.scrollY);    };
-    
+      setScrollY(window.scrollY);    }
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('scroll', handleScroll);
-
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('scroll', handleScroll);
-    
     return () => {
       clearInterval(interval);
       clearInterval(consciousnessInterval);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
     };  }, []);
-
   // Combine all innovative services
   const allInnovativeServices = [
-    ...innovative2025AIAutonomousEcosystemV2,
-    ...emergingTechBreakthroughs2025V4,
+    ...innovative2025AIAutonomousEcosystemV2
+    ...emergingTechBreakthroughs2025V4
     ...innovative2025ITInfrastructureV2,  ];      window.removeEventListener('scroll', handleScroll)
     }
   }, []);
-
   // Combine all innovative services
   const allInnovativeServices = [
-    ...innovative2025AIAutonomousEcosystemV2,
-    ...emergingTechBreakthroughs2025V4,
+    ...innovative2025AIAutonomousEcosystemV2
+    ...emergingTechBreakthroughs2025V4
     ...innovative2025ITInfrastructureV2,    ...innovative2025AIAutonomousEcosystemV2;
     ...emergingTechBreakthroughs2025V4;
     ...innovative2025ITInfrastructureV2
   ];
-
   // Get featured services for rotation
   const featuredServices = allInnovativeServices.slice(0, 6);
-
   // Filter services by category
   const getFilteredServices = () => {
     if (selectedCategory === 'all') return allInnovativeServices;
@@ -165,88 +208,102 @@ const Homepage2047: React.FC = () => {
       service =>
         service.category
           .toLowerCase()
-          .includes(selectedCategory.toLowerCase()) ||
+          .includes(selectedCategory.toLowerCase()) |
         service.type.toLowerCase().includes(selectedCategory.toLowerCase())
     );
-
   const categories = [
     {
-      id: 'all',
-      name: 'All Services',
-      icon: SparklesIcon,
-      color: 'from-purple-500 to-pink-500',
-      count: allInnovativeServices.length,
-    },
+      id: 'all'
+      name: 'All Services'
+      icon: SparklesIcon
+      color: 'from-purple-500 to-pink-500'
+      count: allInnovativeServices.length
+    }
     {
-      id: 'ai',
-      name: 'AI & Autonomous',
-      icon: BrainIcon,
-      color: 'from-cyan-500 to-blue-500',
-      count: innovative2025AIAutonomousEcosystemV2.length,
-    },
+      id: 'ai'
+      name: 'AI & Autonomous'
+      icon: BrainIcon
+      color: 'from-cyan-500 to-blue-500'
+      count: innovative2025AIAutonomousEcosystemV2.length
+    }
     {
-      id: 'quantum',
-      name: 'Quantum & Emerging',
-      icon: AtomIcon,
-      color: 'from-blue-500 to-indigo-500',
-      count: emergingTechBreakthroughs2025V4.length,
-    },
+      id: 'quantum'
+      name: 'Quantum & Emerging'
+      icon: AtomIcon
+      color: 'from-blue-500 to-indigo-500'
+      count: emergingTechBreakthroughs2025V4.length
+    }
     {
-      id: 'it',
-      name: 'IT Infrastructure',
-      icon: Cpu,
-      color: 'from-emerald-500 to-teal-500',
-      count: innovative2025ITInfrastructureV2.length,
-    },
+      id: 'it'
+      name: 'IT Infrastructure'
+      icon: Cpu
+      color: 'from-emerald-500 to-teal-500'
+      count: innovative2025ITInfrastructureV2.length
+    }
   ];
-
   const features = [
     {
-      icon: Brain,
-      title: 'AI Autonomous Ecosystem 2025',
-      description: 'Revolutionary autonomous AI solutions',
-      href: '/2025-innovative-services-showcase-v2',
-      color: 'from-purple-500 to-pink-500',
-    },
+      icon: Brain
+      title: 'AI Autonomous Ecosystem 2025'
+      description: 'Revolutionary autonomous AI solutions'
+      href: '/2025-innovative-services-showcase-v2'
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      icon: Atom,
-      title: 'Quantum AI Neural Networks 2025',
-      description: 'Quantum-powered AI with consciousness',
-      href: '/quantum-ai-neural-network-fusion-platform-2025',
-      color: 'from-blue-500 to-cyan-500',
-    },
+      icon: Atom
+      title: 'Quantum AI Neural Networks 2025'
+      description: 'Quantum-powered AI with consciousness'
+      href: '/quantum-ai-neural-network-fusion-platform-2025'
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      icon: Shield,
-      title: 'Quantum Cybersecurity Intelligence 2025',
-      description: 'Quantum-resistant security with AI',
-      href: '/quantum-cybersecurity-intelligence-platform-2025',
-      color: 'from-red-500 to-orange-500',
-    },
+      icon: Shield
+      title: 'Quantum Cybersecurity Intelligence 2025'
+      description: 'Quantum-resistant security with AI'
+      href: '/quantum-cybersecurity-intelligence-platform-2025'
+      color: 'from-red-500 to-orange-500'
+    }
     {
-      icon: Rocket,
-      title: 'Space Resource Intelligence 2025',
-      description: 'AI-powered space resource discovery',
-      href: '/space-resource-intelligence-platform-2025',
-      color: 'from-indigo-500 to-purple-500',
-    },
+      icon: Rocket
+      title: 'Space Resource Intelligence 2025'
+      description: 'AI-powered space resource discovery'
+      href: '/space-resource-intelligence-platform-2025'
+      color: 'from-indigo-500 to-purple-500'
+    }
     {
-      icon: Cpu,
-      title: 'Autonomous DevOps Intelligence 2025',
-      description: 'AI-powered DevOps optimization',
-      href: '/autonomous-devops-intelligence-platform-2025',
-      color: 'from-emerald-500 to-teal-500',
-    },
+      icon: Cpu
+      title: 'Autonomous DevOps Intelligence 2025'
+      description: 'AI-powered DevOps optimization'
+      href: '/autonomous-devops-intelligence-platform-2025'
+      color: 'from-emerald-500 to-teal-500'
+    }
     {
-      icon: Database,
-      title: 'Edge Computing Orchestration 2025',
-      description: 'Edge computing optimization platform',
-      href: '/edge-computing-orchestration-platform-2025',
-      color: 'from-yellow-500 to-orange-500',
-    },
+      icon: Database
+      title: 'Edge Computing Orchestration 2025'
+      description: 'Edge computing optimization platform'
+      href: '/edge-computing-orchestration-platform-2025'
+      color: 'from-yellow-500 to-orange-500'
+    }
   ];
-
   const stats = [
     {
+<<<<<<< HEAD
+      number: `${allInnovativeServices.length}+`
+      label: 'Innovative Services'
+      icon: Star
+    }
+    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp }
+    { number: '24/7', label: 'AI Intelligence Available', icon: Brain }
+    { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star }
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp }
+    { number: "24/7", label: "AI Intelligence Available", icon: Brain }
+    { number: "300+", label: "Countries Served", icon: Globe }
+  const fadeInUp = {
+    initial: { opacity: 0, y: 60 }
+    animate: { opacity: 1, y: 0 }
+    transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
+  }
+=======
       number: `${allInnovativeServices.length}+`,
       label: 'Innovative Services',
       icon: Star,
@@ -258,35 +315,44 @@ const Homepage2047: React.FC = () => {
     { number: "24/7", label: "AI Intelligence Available", icon: Brain },
     { number: "300+", label: "Countries Served", icon: Globe }
 <<<<<<< HEAD
+
+  ];
+=======
+<<<<<<< HEAD
 =======
 
   ];
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
+<<<<<<< HEAD
+    transition: { duration: 0.6 },  };
+
+=======
 <<<<<<< HEAD
     transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
 =======
     transition: { duration: 0.6 },  };
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const staggerContainer = {
     animate: {
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
+        staggerChildren: 0.1
+      }
+    }
+  }
   return (
     <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden'>
       {/* Futuristic Background */}
-      <UltraFuturisticBackground2047 />  };
-
+      <UltraFuturisticBackground2047 />  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
       {/* Futuristic Background */}
@@ -299,7 +365,11 @@ const Homepage2047: React.FC = () => {
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
@@ -365,7 +435,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -375,7 +449,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Link
                   href='/2025-innovative-services-showcase-v2'
@@ -408,7 +486,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Stats */}
               <motion.div
                 variants={staggerContainer}
@@ -421,7 +503,11 @@ const Homepage2047: React.FC = () => {
 =======
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'              >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -449,7 +535,11 @@ const Homepage2047: React.FC = () => {
               </motion.div>
             </motion.div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Right Content - Featured Service */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -464,7 +554,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -474,7 +568,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
@@ -513,7 +611,7 @@ const Homepage2047: React.FC = () => {
                       </div>
                     </div>
                     <Link
-                      href={featuredServices[currentServiceIndex]?.slug || '#'}
+                      href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'                    >                >
                   <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm">
                     <div className="flex items-center justify-between mb-6">
@@ -547,16 +645,20 @@ const Homepage2047: React.FC = () => {
                     </div>
 <<<<<<< HEAD
                     <Link
-                      href={featuredServices[currentServiceIndex]?.slug || '#'}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'                    
+                      href={featuredServices[currentServiceIndex]?.slug |'#'}
+                      className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'
                     <Link
-                      href={featuredServices[currentServiceIndex]?.slug || '#'}
+                      href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
 =======
 
                     >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Learn More
                     </Link>
                   </div>
@@ -574,7 +676,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -583,13 +689,17 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-              Explore our comprehensive suite of innovative solutions across AI,
+              Explore our comprehensive suite of innovative solutions across AI
               quantum computing, IT infrastructure, and emerging technologies            </p>          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Service Categories
@@ -601,7 +711,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Category Cards */}
           <motion.div
             variants={staggerContainer}
@@ -660,7 +774,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -669,7 +787,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -678,7 +800,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -696,7 +822,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Services Grid */}
           <motion.div
             variants={staggerContainer}
@@ -739,7 +869,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* View All Services CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -750,7 +884,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Link
               href='/2025-innovative-services-showcase-v2'
@@ -776,7 +914,11 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -823,18 +965,33 @@ const Homepage2047: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Homepage2047;  )
-};
-
+}
 export default Homepage2047;
+
+<<<<<<< HEAD
+=======
+export default Homepage2047;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 export default Homepage2047;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

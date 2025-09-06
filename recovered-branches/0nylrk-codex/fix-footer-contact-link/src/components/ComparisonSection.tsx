@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+
+import { GradientHeading } from "./GradientHeading",
+import { Button } from "./ui/button",
+import { CheckCircle2 } from "lucide-react";
+
+import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from "./ui/table";
+export function ComparisonSection() {
+  return (
+    <section className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <GradientHeading>Compare & Save</GradientHeading>
+          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
+            See how Zion can drastically reduce your IT costs compared to
+            traditional providers
+=======
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
@@ -10,6 +34,8 @@ import {
   TableRow,;
 } from "./ui/table";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export function ComparisonSection() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -20,13 +46,18 @@ export function ComparisonSection() {
             See how Zion can drastically reduce your IT costs compared to
             traditional providers
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button",
 import { CheckCircle2 } from "lucide-react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
@@ -42,11 +73,46 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
               </TableHeader>
               <TableBody>
                 {[
+<<<<<<< HEAD
+                  {
+                    service: "Server Hosting"
+                    traditional: "$1,200/mo"
+                    zion: "$650/mo"
+                    savings: "45%"
+                  }
+                  {
+                    service: "IT Equipment"
+                    traditional: "Full Purchase"
+                    zion: "Flexible Rental"
+                    savings: "60%"
+                  }
+                  {
+                    service: "24/7 Support"
+                    traditional: "$2,500/mo"
+                    zion: "$950/mo"
+                    savings: "62%"
+                  }
+                  {
+                    service: "Storage Solutions"
+                    traditional: "$800/mo"
+                    zion: "$350/mo"
+                    savings: "56%"
+                  }
+                  {
+                    service: "Marketplace Listings"
+                    traditional: "$99/mo"
+                    zion: "Free"
+                    savings: "100%"
+                  }
+                ].map((item, index) => (
+
+=======
                   { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },
                   { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },
                   { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
                   { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" },
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -69,7 +135,11 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 <<<<<<< HEAD
 =======
             
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
@@ -79,6 +149,13 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 <<<<<<< HEAD
 =======
     </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
@@ -141,3 +218,5 @@ export function ComparisonSection() {;
     </section>;
   );
 }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,21 +1,34 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+export type ForumCategory =
+=======
 export type ForumCategory = 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
   | 'feedback';
   | 'announcements';
+<<<<<<< HEAD
+export interface ForumCategoryInfo {
+=======
 
 export interface ForumCategoryInfo {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: ForumCategory;
   name: string;
   description: string;
-  adminOnly: boolean,
+  adminOnly: boolean
   icon: string
 }
+<<<<<<< HEAD
+export interface ForumPost {
+=======
 
 export interface ForumPost {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   content: string;
@@ -32,11 +45,15 @@ export interface ForumPost {;
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
-  isLocked?: boolean,
+  isLocked?: boolean
   isFeatured?: boolean
 }
+<<<<<<< HEAD
+export interface ForumReply {
+=======
 
 export interface ForumReply {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   postId: string;
   parentReplyId?: string;
@@ -48,25 +65,37 @@ export interface ForumReply {;
   createdAt: string;
   updatedAt: string;
   upvotes: number;
-  downvotes: number,
+  downvotes: number
   isAnswer?: boolean
 }
+<<<<<<< HEAD
+export interface Badge {
+=======
 
 export interface Badge {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
-  icon: string,
+  icon: string
   color: string
 }
+<<<<<<< HEAD
+export interface UserBadge {
+=======
 
 export interface UserBadge {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
-  badgeId: string,
+  badgeId: string
   awardedAt: string
 }
+<<<<<<< HEAD
+export interface CommunityUser {
+=======
 
 export interface CommunityUser {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   avatar?: string;
@@ -75,7 +104,8 @@ export interface CommunityUser {;
   postCount: number;
   replyCount: number;
   badges: Badge[];
-  isVerified: boolean,
+  isVerified: boolean
+
   isModerator: boolean
 }
 =======
@@ -157,4 +187,8 @@ export interface CommunityUser {;
   isModerator: boolean;
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

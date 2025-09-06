@@ -1,10 +1,14 @@
-import Head from 'next/head',;
-import React from 'react',;
+import Head from 'next/head';
+import React from 'react';
 export default function ManifestoPage(): JSX.Element {
   return (
     <>
       <Head>
         <title>Zion Manifesto</title>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -36,7 +40,8 @@ export default function ManifestoPage(): JSX.Element {
             </ul>
             <h2 id="ai-for-empowerment">AI for Empowerment, Not Exploitation</h2>
             <p>
-              AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching,
+              AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching
+
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize
               transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.
             </p>

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
 import React, { useState, useEffect } from "react"
 import { safeStorage } from "@/utils/safeStorage"
@@ -11,10 +13,20 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string;
   delay?: number; // Delay in milliseconds before showing the banner
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
 import { X, ArrowRight } from 'lucide-react'
+<<<<<<< HEAD
+import Link from "next/link";
+import { useIsMobile } from "@/hooks/use-mobile";
+interface SmartAppBannerProps {
+  appName?: string;
+  appIconSrc?: string;
+  appStoreUrl?: string;
+  googlePlayUrl?: string;
+=======
 import Link from "next/link",
 import { useIsMobile } from "@/hooks/use-mobile",
 interface SmartAppBannerProps {
@@ -22,11 +34,26 @@ interface SmartAppBannerProps {
   appIconSrc?: string,
   appStoreUrl?: string,
   googlePlayUrl?: string,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   delay?: number, // Delay in milliseconds before showing the banner
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+<<<<<<< HEAD
+
+  appName = "Zion Marketplace"
+  appIconSrc
+  appStoreUrl = "/download"
+  googlePlayUrl = "/download"
+  delay = 1500
+}) => {
+  const [isVisible, setIsVisible] = useState(false)
+  const isMobile = useIsMobile()
+  useEffect((,) => {
+=======
   appName = "Zion Marketplace",
   appIconSrc,
   appStoreUrl = "/download",
@@ -34,15 +61,22 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   delay = 1500
 }) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
   
   useEffect(() => {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
@@ -79,17 +113,32 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     setIsVisible(true)
   },
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Only render on mobile devices
-  if (!isMobile || !isVisible) {
+  if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
         Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
       </div>
     ) : null
   }
+<<<<<<< HEAD
+  // Detect iOS or Android
+<<<<<<< HEAD
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
+=======
   
   // Detect iOS or Android
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
@@ -98,6 +147,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
@@ -111,7 +161,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
@@ -119,10 +173,14 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="flex items-center gap-3">
-          <Link 
-            href="/open-app" 
+          <Link
+            href="/open-app"
             className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View
@@ -131,7 +189,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
             <X className="h-5 w-5" />
           </button>
@@ -141,8 +203,13 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+'"
+
+=======
 '";
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 },
 import React, { useState, useEffect } from "react",;
@@ -227,4 +294,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
     </div>;
   );
 };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

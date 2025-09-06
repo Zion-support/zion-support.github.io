@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -9,9 +11,26 @@ export interface MessageTabProps {;
   proposalLink: string;
   setProposalLink: (link: string) => void;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from 'react',
 import { Textarea } from "@/components/ui/textarea",
+<<<<<<< HEAD
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+export interface MessageTabProps {
+  message: string;
+  setMessage: (message: string) => void;
+  proposalLink: string;
+  setProposalLink: (link: string) => void
+}
+export function MessageTab({
+  message
+  setMessage
+  proposalLink
+  setProposalLink
+}: MessageTabProps) {
+=======
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 export interface MessageTabProps {
@@ -23,6 +42,7 @@ export interface MessageTabProps {
 }
 
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div>
@@ -38,7 +58,11 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
         <Input
@@ -53,6 +77,13 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
 <<<<<<< HEAD
 =======
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from 'react',;
 import { Textarea } from "@/components/ui/textarea",;
@@ -93,3 +124,8 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,8 +1,37 @@
+<<<<<<< HEAD
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
+import EnhancedLayout from '../../../components/layout/EnhancedLayout',
+import Link from 'next/link';
+import type { GetServerSideProps } from 'next';
+
+const fetcher = (url: string) => fetch(url).then(r => r.json())
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const cookies = (req.headers.cookie |'').split(';').reduce(
+    (acc: any, part: string) => {
+      const [k, v] = part.trim().split('=');
+      if (k) acc[k] = decodeURIComponent(v |'');
+      return acc;
+    }
+    {} as Record<string, string>
+  );
+  let role = 'guest';
+  try {
+    const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
+    role = user?.role |'guest';
+  } catch {}
+  if (role !== 'admin') {
+    return { redirect: { destination: '/', permanent: false } }
+  }
+  return { props: {} };}
+=======
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
@@ -16,6 +45,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     {} as Record<string, string>
   );
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
@@ -23,7 +53,10 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     if (k) acc[k] = decodeURIComponent(v || '');
     return acc;
   }, {} as Record<string, string>),;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   let role = 'guest';
   try {
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
@@ -33,6 +66,8 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return { props: {} };};
 
 export default function AdminDisputesDashboard() {;
@@ -41,6 +76,7 @@ export default function AdminDisputesDashboard() {;
     'All' | 'Open' | 'Under Review' | 'Resolved'
   >('Open');
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   if (role !== 'admin') {;
     return { redirect: { destination: '/', permanent: false }   } catch (error) {
@@ -59,15 +95,26 @@ export default function AdminDisputesDashboard() {;
   }
 }
 },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher),
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const disputes = useMemo(() => {
+<<<<<<< HEAD
+    const list = data?.disputes |[];
+    if (statusFilter === 'All') return list;
+    return list.filter((d: any) => d.status === statusFilter);  }, [data, statusFilter]);
+
+=======
     const list = data?.disputes || [],
     if (statusFilter === 'All') return list,
     return list.filter((d: any) => d.status === statusFilter)
   }, [data, statusFilter]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <EnhancedLayout>
       <div className="max-w-6xl mx-auto">
@@ -117,8 +164,11 @@ export default function AdminDisputesDashboard() {
       </div>
     </EnhancedLayout>
 );
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 },;
 export default function AdminDisputesDashboard(req, res) {
@@ -186,4 +236,8 @@ export default function AdminDisputesDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

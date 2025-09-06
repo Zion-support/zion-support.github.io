@@ -2,7 +2,11 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
+<<<<<<< HEAD
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+=======
     "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 export default function ServicesOverviewPage() {
   return (
@@ -26,9 +30,9 @@ export default function ServicesOverviewPage() {
           title="Micro SaaS"
           description="End-to-end product development with billing,auth,and analytics"
           bullets={[
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
+            "Foundational architecture"
+            "Billing + subscriptions"
+            "Growth analytics"
           ]}
           icon="🚀"
         />{" "}
@@ -52,11 +56,11 @@ export default function ServicesOverviewPage() {
   );
 }
 function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
+  href
+  title
+  description
+  bullets
+  icon
 }: {
   href: string;
   title: string;
@@ -96,7 +100,7 @@ function CTA() {
       </h3>{" "}
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
         {" "}
-        Talk to our experts about your project. We'll help you choose the right
+        Talk to our experts about your project. We&apos;ll help you choose the right
         service and create a custom solution for your business needs.{" "}
       </p>{" "}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

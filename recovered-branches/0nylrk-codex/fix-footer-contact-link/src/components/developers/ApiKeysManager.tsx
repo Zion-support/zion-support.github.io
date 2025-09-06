@@ -9,7 +9,11 @@ import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -25,8 +29,27 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+  const {
+    keys;
+
+    loading
+    newApiKey;
+    fetchApiKeys
+    createApiKey
+    regenerateApiKey
+
+    revokeApiKey;
+    clearNewApiKey
+  } = useApiKeys();
+  const [showCreateDialog, setShowCreateDialog] = useState(false);
+
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
+=======
   const { ;
     keys;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   const { 
     keys,
@@ -44,6 +67,7 @@ export function ApiKeysManager() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Create key form state
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -51,6 +75,17 @@ export function ApiKeysManager() {
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
+<<<<<<< HEAD
+  });
+
+  const handleCreateKey = async () => {
+    if (keyName.trim() === "" |selectedScopes.length === 0) return;
+    await createApiKey(keyName, selectedScopes);
+    setShowCreateDialog(false);
+    setKeyName("");
+    setSelectedScopes([])
+  }
+=======
   }),
   
   const handleCreateKey = async () => {
@@ -62,45 +97,65 @@ export function ApiKeysManager() {
     setSelectedScopes([])
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId),
+    await regenerateApiKey(keyId)
     setShowRegenerateConfirm(null)
+<<<<<<< HEAD
+  }
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRevokeKey = async (keyId: string) => {
-    await revokeApiKey(keyId),
+    await revokeApiKey(keyId)
     setShowDeleteConfirm(null)
+<<<<<<< HEAD
+  }
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Scope options
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
-    { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },
-    { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },
-    { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },
-    { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },
-    { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],
-
+    { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' }
+    { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' }
+    { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' }
+    { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' }
+    { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }]
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {
-    setSelectedScopes(prev => 
-      prev.includes(scope) 
-        ? prev.filter(s => s !== scope) 
+    setSelectedScopes(prev =>
+      prev.includes(scope)
+        ? prev.filter(s => s !== scope)
         : [...prev, scope]
     )
+<<<<<<< HEAD
+  }
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Reset form when dialog closes
   const handleDialogClose = () => {
     setKeyName(""),
     setSelectedScopes([]),
     setShowCreateDialog(false)
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -144,10 +199,17 @@ export function ApiKeysManager() {
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
+<<<<<<< HEAD
+                        <Checkbox
+                          id={scope.value}
+=======
                         <Checkbox 
                           id={scope.value} 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
 import { format } from "date-fns",;
@@ -269,7 +331,11 @@ export function ApiKeysManager() {;
                       <div key={scope.value} className="flex items-center space-x-2">;
                         <Checkbox;
                           id={scope.value} ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
@@ -287,7 +353,7 @@ export function ApiKeysManager() {;
               </div>
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
-                <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
+                <Button onClick={handleCreateKey} disabled={keyName.trim() === "" |selectedScopes.length === 0}>
                   Create Key
                 </Button>
               </DialogFooter>
@@ -320,7 +386,6 @@ export function ApiKeysManager() {;
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
           </div>
         )}
-        
         {/* API Keys List */}
         <div className="space-y-4">
           {loading ? (
@@ -374,8 +439,8 @@ export function ApiKeysManager() {;
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
-                    <Badge 
-                      key={scope} 
+                    <Badge
+                      key={scope}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                     >
@@ -388,14 +453,14 @@ export function ApiKeysManager() {;
                   <Popover>
                     <PopoverTrigger className="flex items-center hover:text-zinc-300">
                       <Clock size={12} className="mr-1" />
-                      Last used: {key.last_used_at 
-                        ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
+                      Last used: {key.last_used_at
+                        ? format(new Date(key.last_used_at), 'MMM d, yyyy')
                         : 'Never'}
                     </PopoverTrigger>
                     <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
                       <p className="text-sm mb-1">Last Used</p>
                       <p className="text-xs text-zinc-400">
-                        {key.last_used_at 
+                        {key.last_used_at
                           ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
                           : 'This API key has never been used'}
                       </p>
@@ -421,10 +486,14 @@ export function ApiKeysManager() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Regenerate Key Confirmation Dialog */}
-      <AlertDialog 
-        open={showRegenerateConfirm !== null} 
+      <AlertDialog
+        open={showRegenerateConfirm !== null}
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -439,7 +508,7 @@ export function ApiKeysManager() {;
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction 
+            <AlertDialogAction
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
             >
@@ -449,8 +518,8 @@ export function ApiKeysManager() {;
         </AlertDialogContent>
       </AlertDialog>
       {/* Delete Key Confirmation Dialog */}
-      <AlertDialog 
-        open={showDeleteConfirm !== null} 
+      <AlertDialog
+        open={showDeleteConfirm !== null}
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -465,7 +534,7 @@ export function ApiKeysManager() {;
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction 
+            <AlertDialogAction
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
             >
@@ -477,4 +546,3 @@ export function ApiKeysManager() {;
     </Card>
   )
 }
-;

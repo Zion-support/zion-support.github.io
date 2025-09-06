@@ -1,7 +1,42 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  Shield
+  Rocket
+  BarChart3
+  Settings
+  ArrowRight
+  CheckCircle
+  Users
+  Building
+  Globe
+  Target
+=======
 import { 
   Shield, 
   Rocket, 
@@ -13,61 +48,102 @@ import {
   Building,
   Globe,
   Target;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const solutions = [
   {
-    title: "Enterprise Solutions",
-    description: "Comprehensive technology solutions for large organizations",
-    icon: Building,
-    href: "/solutions/enterprise",
+    title: "Enterprise Solutions"
+    description: "Comprehensive technology solutions for large organizations"
+    icon: Building
+    href: "/solutions/enterprise"
     features: [
-      "Scalable Infrastructure",
-      "Enterprise Security",
-      "Custom Integration",
+      "Scalable Infrastructure"
+      "Enterprise Security"
+      "Custom Integration"
       "24/7 Support"
-    ],
+    ]
     color: "from-blue-600 to-blue-800"
-  },
+  }
   {
-    title: "Startup Solutions",
-    description: "Rapid deployment solutions for growing startups",
-    icon: Rocket,
-    href: "/solutions/startup",
+    title: "Startup Solutions"
+    description: "Rapid deployment solutions for growing startups"
+    icon: Rocket
+    href: "/solutions/startup"
     features: [
-      "Quick Setup",
-      "Cost Effective",
-      "Scalable Growth",
+      "Quick Setup"
+      "Cost Effective"
+      "Scalable Growth"
       "Expert Guidance"
-    ],
+    ]
     color: "from-green-600 to-green-800"
-  },
+  }
   {
-    title: "Industry Solutions",
-    description: "Specialized solutions for specific industries",
-    icon: BarChart3,
-    href: "/solutions/industry",
+    title: "Industry Solutions"
+    description: "Specialized solutions for specific industries"
+    icon: BarChart3
+    href: "/solutions/industry"
     features: [
-      "Industry Expertise",
-      "Compliance Ready",
-      "Custom Workflows",
+      "Industry Expertise"
+      "Compliance Ready"
+      "Custom Workflows"
       "Best Practices"
-    ],
+    ]
     color: "from-purple-600 to-purple-800"
-  },
+  }
   {
-    title: "Custom Development",
-    description: "Tailored solutions built specifically for your needs",
-    icon: Settings,
-    href: "/solutions/custom",
+    title: "Custom Development"
+    description: "Tailored solutions built specifically for your needs"
+    icon: Settings
+    href: "/solutions/custom"
     features: [
-      "Bespoke Development",
-      "Unique Requirements",
-      "Full Ownership",
+      "Bespoke Development"
+      "Unique Requirements"
+      "Full Ownership"
       "Ongoing Support"
-    ],
+    ]
     color: "from-orange-600 to-orange-800"
+<<<<<<< HEAD
+  }
+];
+const industries = [
+  { name: "Healthcare", icon: "🏥" }
+  { name: "Finance", icon: "🏦" }
+  { name: "Manufacturing", icon: "🏭" }
+  { name: "Retail", icon: "🛍️" }
+  { name: "Education", icon: "🎓" }
+  { name: "Government", icon: "🏛️" }
+];
+const stats = [
+  { number: '500+', label: 'Projects Delivered' }
+  { number: '50+', label: 'Industries Served' }
+  { number: '99.9%', label: 'Client Satisfaction' }
+  { number: '24/7', label: 'Support Available' }
+];
+export default function SolutionsPage() {
+  return (
+    <Layout
+=======
 =======
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -305,6 +381,7 @@ const SolutionsPage: NextPage = () => {
   return (
 <<<<<<< HEAD
     <Layout 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title="Solutions - Zion Tech Group"
       description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
       keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
@@ -330,7 +407,11 @@ const SolutionsPage: NextPage = () => {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+                From startups to enterprises, we provide tailored technology solutions that drive growth
+=======
                 From startups to enterprises, we provide tailored technology solutions that drive growth, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 efficiency, and innovation across all industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -356,6 +437,8 @@ const SolutionsPage: NextPage = () => {
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Our Solution Categories
+<<<<<<< HEAD
+=======
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
@@ -431,25 +514,51 @@ const SolutionsPage: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {category.solutions.map((solution, solutionIndex) => (
-                  <div key={solutionIndex} className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-purple-100">
-                    <div className="text-4xl mb-4">{solution.icon}</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {solution.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                We offer comprehensive technology solutions tailored to different business needs and stages.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {solutions.map((solution, index) => {
+                const IconComponent = solution.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      {solution.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {solution.description  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {solution.description}
                     </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                    <ul className="space-y-2 mb-6">
+                      {solution.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href={solution.href}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
+=======
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
                       <ul className="space-y-1">
@@ -505,10 +614,15 @@ const SolutionsPage: NextPage = () => {
 }
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
-                      Learn More
+                      <span>Explore {solution.title}</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </motion.div>
                 );
               })}
@@ -605,6 +719,11 @@ const SolutionsPage: NextPage = () => {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
+}
+  )
+}
+=======
 =======
                   </div>
                 ))  } catch (error) {
@@ -854,4 +973,10 @@ export default SolutionsPage,
   );
 },;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default SolutionsPage;
+
+<<<<<<< HEAD
+=======
+export default SolutionsPage;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

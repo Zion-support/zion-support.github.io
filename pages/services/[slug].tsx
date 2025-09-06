@@ -1,39 +1,39 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import Button from '../../components/ui/Button';
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import Button from '../../components/ui/Button',
 import Card from '../../components/ui/Card';
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
 import {extraServices} from '../../data/extra-services';
 import {additionalEnhancedServices} from '../../data/additional-real-services';
 import {newRealServices} from '../../data/new-real-services';
 import {marketReadyServices} from '../../data/market-ready-services';
-
 type Service = (typeof enhancedRealMicroSaasServices)[number];
-
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices.concat(
-    extraServices as Service[],
-    additionalEnhancedServices as Service[],
-    newRealServices as Service[],
+    extraServices as Service[]
+    additionalEnhancedServices as Service[]
+    newRealServices as Service[]
     marketReadyServices as Service[]
   );
-
 function toSlug(value: string): string {
   return value
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
-
 function extractServiceSlugFromLink(link: string): string | null {
   try {
     const url = new URL(link);
@@ -45,47 +45,52 @@ function extractServiceSlugFromLink(link: string): string | null {
   } catch {
     return null;
   }
+<<<<<<< HEAD
+export async function getStaticPaths() {
+=======
 
 export async function getStaticPaths() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const services = getAllServices();
   const slugs = new Set<string>();
-
     // Fall back to normalized id or name to provide a stable URL under /services/*
     if (s.id) slugs.add(toSlug(s.id));
     else if (s.name) slugs.add(toSlug(s.name));
   }
-
   return {
+<<<<<<< HEAD
+    paths: Array.from(slugs).map(slug => ({ params: { slug } }))
+    fallback: false
+  }
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+=======
     paths: Array.from(slugs).map(slug => ({ params: { slug } })),
     fallback: false,
   };
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const services = getAllServices();
-  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-
+  const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '');
   let service: Service | undefined = services.find(s => {
     if (!s.link) return false;
     const fromLink = extractServiceSlugFromLink(s.link);
     return fromLink === incomingSlug;
   });
-
   if (!service) {
     service = services.find(
       s =>
-        toSlug(s.id || '') === incomingSlug ||
-        toSlug(s.name || '') === incomingSlug
+        toSlug(s.id |'') === incomingSlug |
+        toSlug(s.name |'') === incomingSlug
     );
   }
 
   if (!service) {
-    return { notFound: true };
+    return { notFound: true }
   }
-
   return {
-    props: { service },
-  };
-
+    props: { service }
+  }
 export default function ServiceDetailPage({ service }: { service: Service }) {
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
@@ -93,7 +98,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
         <title>{service.name} | Zion Tech Group</title>
         <meta
           name='description'
-          content={service.tagline || service.description}
+          content={service.tagline |service.description}
         />
         <link rel='canonical' href={service.link} />
       </Head>
@@ -103,7 +108,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
             {service.name}
           </h1>
           <p className='text-gray-300 text-lg max-w-3xl mx-auto'>
-            {service.tagline || service.description}
+            {service.tagline |service.description}
           </p>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>
@@ -121,7 +126,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                 Key Features
               </h3>
               <ul className='space-y-2 text-gray-300'>
-                {(service.features || []).slice(0, 12).map((f: string) => (
+                {(service.features |[]).slice(0, 12).map((f: string) => (
                   <li key={f} className='flex items-start gap-2'>
                     <Check className='w-4 h-4 mt-0.5 text-emerald-400' />
                     <span>{f}</span>
@@ -140,8 +145,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                 </span>
               </div>
               <div className='text-sm text-gray-400 mt-2'>
-                Trial: {service.trialDays || 14} days • Setup:{' '}
-                {service.setupTime || 'Fast'}
+                Trial: {service.trialDays |14} days • Setup:{' '}
+                {service.setupTime |'Fast'}
               </div>
               <div className='mt-6 flex gap-3'>
                 <Button
@@ -198,6 +203,14 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </div>
     </UltraFuturisticBackground>;
   );
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Button from '../../components/ui/Button';
+import Card from '../../components/ui/Card';
+=======
 
 }
 }
@@ -205,6 +218,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 }
 }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -391,4 +405,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

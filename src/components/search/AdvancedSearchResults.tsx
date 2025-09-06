@@ -1,65 +1,71 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import {
-  Search,
-  Filter,
-  X,
-  SortAsc,
-  SortDesc,
-  GridIcon,
-  List,
-  Loader2,
+  Search
+  Filter
+  X
+  SortAsc
+  SortDesc
+  GridIcon
+  List
+  Loader2
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
 } from '@/components/ui/select'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Slider } from '@/components/ui/slider'
 import { Separator } from '@/components/ui/separator'
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
+  Sheet
+  SheetContent
+  SheetHeader
+  SheetTitle
+  SheetTrigger
 } from '@/components/ui/sheet'
 import { EnhancedSearchInput } from './EnhancedSearchInput'
 import { generateSearchSuggestions } from '@/data/marketplaceData'
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
+
 interface SearchResult {
-  id: string
-  title: string
-  description: string
-  type: 'product' | 'talent' | 'blog' | 'service'
-  category?: string
-  url?: string
-  image?: string
-  price?: number
-  currency?: string
-  rating?: number
-  tags?: string[]
+  id: string;
+  title: string;
+  description: string;
+  type: 'product' | 'talent' | 'blog' | 'service';
+  category?: string;
+  url?: string;
+  image?: string;
+  price?: number;
+  currency?: string;
+  rating?: number;
+  tags?: string[];
   date?: string
 interface SearchFilters {
-  types: string[]
-  category: string
-  minPrice: number
-  maxPrice: number
-  minRating: number
+  types: string[];
+  category: string;
+  minPrice: number;
+  maxPrice: number;
+  minRating: number;
   sort: string
 interface SearchResponse {
-  results: SearchResult[]
-  totalCount: number
-  page: number
-  limit: number
-  query: string
+  results: SearchResult[];
+  totalCount: number;
+  page: number;
+  limit: number;
+  query: string;
   hasMore: boolean
 // Highlight search terms in text
+
 const HighlightText: React.FC<{
   text: string
   searchTerm: string
@@ -67,7 +73,6 @@ const HighlightText: React.FC<{
 }> = ({ text, searchTerm, className = '' }) => {  if (!searchTerm.trim()) {
     return <span className={className}>{text}</span>
   }
-
   const parts = text.split(
     new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')
   )
@@ -140,7 +145,11 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {part}
           </mark>
         ) : (
@@ -179,6 +188,13 @@ const SearchResultCard: React.FC<{
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
             }          />
+<<<<<<< HEAD
+        </div>
+      )}
+      <div className='flex-1'>
+        <div className='flex items-start justify-between mb-2'>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     </span>;
   );
@@ -209,12 +225,16 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       )}
       
       <div className="flex-1">
         <div className="flex items-start justify-between mb-2">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div>
             <h3 className="font-semibold text-lg mb-1">
               <HighlightText text={result.title} searchTerm={searchTerm} />
@@ -292,7 +312,11 @@ const SearchResultCard: React.FC<{;
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
               <Badge variant="outline" className="text-xs">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {result.category}
               </Badge>
             )}
@@ -309,7 +333,11 @@ const SearchResultCard: React.FC<{;
             ))}
           </div>
           
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
@@ -328,10 +356,10 @@ const FilterSidebar: React.FC<{
   onFiltersChange: (filters: SearchFilters) => void
   availableCategories: string[]
 }> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [
-    { id: 'product', label: 'Products' },
-    { id: 'talent', label: 'Talent' },
-    { id: 'service', label: 'Services' },
-    { id: 'blog', label: 'Blog Posts' },
+    { id: 'product', label: 'Products' }
+    { id: 'talent', label: 'Talent' }
+    { id: 'service', label: 'Services' }
+    { id: 'blog', label: 'Blog Posts' }
   ]
   const handleTypeChange = (typeId: string, checked: boolean) => {
     const newTypes = checked      ? [...filters.types, typeId]
@@ -340,9 +368,9 @@ const FilterSidebar: React.FC<{
   }
   const handlePriceChange = (values: number[]) => {
     onFiltersChange({
-      ...filters,
-      minPrice: values[0] ?? 0,
-      maxPrice: values[1] ?? 10000,
+      ...filters
+      minPrice: values[0] ?? 0
+      maxPrice: values[1] ?? 10000
     })
   }
 =======
@@ -380,7 +408,11 @@ const FilterSidebar: React.FC<{;
     })
   },
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div>
@@ -400,7 +432,11 @@ const FilterSidebar: React.FC<{;
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {option.label}
               </label>
             </div>
@@ -415,8 +451,8 @@ const FilterSidebar: React.FC<{;
           value={filters.category}
           onValueChange={value =>
             onFiltersChange({
-              ...filters,
-              category: value === 'all' ? '' : value,
+              ...filters
+              category: value === 'all' ? '' : value
             })
           }
         >          <SelectTrigger>
@@ -428,7 +464,11 @@ const FilterSidebar: React.FC<{;
         }>
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -457,7 +497,11 @@ const FilterSidebar: React.FC<{;
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
           </div>
@@ -479,7 +523,11 @@ const FilterSidebar: React.FC<{;
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -501,12 +549,12 @@ const NoResultsState: React.FC<{
   searchTerm: string
   onNewSearch: (term: string) => void
 }> = ({ searchTerm, onNewSearch }) => {  const suggestions = [
-    'AI & Machine Learning',
-    'Web Development',
-    'Mobile App Development',
-    'Data Analysis',
-    'UI/UX Design',
-    'Blockchain Development',
+    'AI & Machine Learning'
+    'Web Development'
+    'Mobile App Development'
+    'Data Analysis'
+    'UI/UX Design'
+    'Blockchain Development'
   ]
 =======
 },
@@ -525,7 +573,11 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
     "Blockchain Development"
   ],
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="text-center py-12">
       <div className="mb-6">
@@ -620,7 +672,11 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
               >;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {suggestion}
               </Button>
             ))}
@@ -635,7 +691,11 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <li>• Try different keywords</li>
             <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
@@ -658,6 +718,25 @@ export const AdvancedSearchResults: React.FC = () => {
   const [hasMore, setHasMore] = useState(false)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [showFilters, setShowFilters] = useState(false)
+<<<<<<< HEAD
+  const [filters, setFilters] = useState<SearchFilters>({
+    types: []
+    category: ''
+    minPrice: 0
+    maxPrice: 10000
+    minRating: 0
+    sort: 'relevance'
+  })
+  const suggestions = generateSearchSuggestions()
+  // Extract available categories from results for filter
+  const availableCategories = useMemo(() => {
+    const categories = new Set<string>();    results.forEach(result => {
+      if (result.category) categories.add(result.category)
+    })
+    return Array.from(categories).sort()
+  }, [results])
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 },
 
@@ -673,13 +752,18 @@ export const AdvancedSearchResults: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
   
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
     category: '',
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     sort: 'relevance',
   });
@@ -692,6 +776,7 @@ export const AdvancedSearchResults: React.FC = () => {
     return Array.from(categories).sort()
   }, [results])
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     sort: 'relevance'
   }),
 
@@ -706,7 +791,11 @@ export const AdvancedSearchResults: React.FC = () => {
     return Array.from(categories).sort()
   }, [results]),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
@@ -717,22 +806,21 @@ export const AdvancedSearchResults: React.FC = () => {
   }, [router.isReady, router.query.q])
   // Search function
   const performSearch = async (
-    term: string,
-    page: number = 1,
+    term: string
+    page: number = 1
     newFilters?: SearchFilters
   ) => {    if (!term.trim()) {
       setResults([])
       setTotalCount(0)
       return;
     }
-
     setLoading(true)
     try {
-      const searchFilters = newFilters || filters
+      const searchFilters = newFilters |filters
       const params = new URLSearchParams({
-        query: term,
-        page: page.toString(),
-        limit: '20',
+        query: term
+        page: page.toString()
+        limit: '20'
       })
       if (searchFilters.types.length > 0) {
         params.append('type', searchFilters.types.join(','))
@@ -752,7 +840,6 @@ export const AdvancedSearchResults: React.FC = () => {
       if (searchFilters.sort !== 'relevance') {
         params.append('sort', searchFilters.sort)
       }
-
       const response = await fetch(`/api/search?${params}`)
       const data: SearchResponse = await response.json()
       if (page === 1) {
@@ -760,14 +847,13 @@ export const AdvancedSearchResults: React.FC = () => {
       } else {
         setResults(prev => [...prev, ...data.results])
       }
-
       setTotalCount(data.totalCount)
       setCurrentPage(data.page)
       setHasMore(data.hasMore)
       logInfo('Search completed', {
-        term,
-        resultCount: data.results.length,
-        totalCount: data.totalCount,
+        term
+        resultCount: data.results.length
+        totalCount: data.totalCount
       })
     } catch (error) {
       logErrorToProduction('Search failed', { data: error })
@@ -788,7 +874,7 @@ export const AdvancedSearchResults: React.FC = () => {
   const handleSearch = (term: string) => {
     setSearchTerm(term)
     router.push(`/search?q=${encodeURIComponent(term)}`, undefined, {
-      shallow: true,
+      shallow: true
     })
   }
   // Handle filter changes
@@ -802,10 +888,17 @@ export const AdvancedSearchResults: React.FC = () => {
     }
   }
   // Active filters count
+<<<<<<< HEAD
+  const activeFiltersCount =
+    filters.types.length +
+    (filters.category ? 1 : 0) +
+    (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) +
+=======
   const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     (filters.minRating > 0 ? 1 : 0)
 =======
       const urlTerm = router.query.q as string,
@@ -948,7 +1041,11 @@ export const AdvancedSearchResults: React.FC = () => {;
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="container mx-auto px-4 py-6">
       {/* Search Header */}
@@ -965,7 +1062,11 @@ export const AdvancedSearchResults: React.FC = () => {;
 =======
               placeholder="Search products, talent, services, and more..."
             />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
@@ -996,7 +1097,11 @@ export const AdvancedSearchResults: React.FC = () => {;
               }>
                 <SelectTrigger className="w-40">
                   <SelectValue />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="relevance">Relevance</SelectItem>
@@ -1031,7 +1136,11 @@ export const AdvancedSearchResults: React.FC = () => {;
                   onClick={() => setViewMode('list')}
                 >
                   <List className="h-4 w-4" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Button>
               </div>
               {/* Mobile Filter Toggle */}
@@ -1068,7 +1177,11 @@ export const AdvancedSearchResults: React.FC = () => {;
               </Sheet>;
             </div>;
           </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </div>
       {searchTerm && (
@@ -1085,12 +1198,12 @@ export const AdvancedSearchResults: React.FC = () => {;
                     size='sm'
                     onClick={() =>
                       setFilters({
-                        types: [],
-                        category: '',
-                        minPrice: 0,
-                        maxPrice: 10000,
-                        minRating: 0,
-                        sort: 'relevance',
+                        types: []
+                        category: ''
+                        minPrice: 0
+                        maxPrice: 10000
+                        minRating: 0
+                        sort: 'relevance'
                       })
                     }                  >
                     Clear All
@@ -1131,7 +1244,11 @@ export const AdvancedSearchResults: React.FC = () => {;
           </div>;
           {/* Main Content */}
           <div className="flex-1">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin" />
@@ -1176,7 +1293,11 @@ export const AdvancedSearchResults: React.FC = () => {;
                       searchTerm={searchTerm}
                       viewMode={viewMode}
                     />;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
                 {/* Load More Button */}
@@ -1194,7 +1315,11 @@ export const AdvancedSearchResults: React.FC = () => {;
                       disabled={loading}
                       variant="outline"
                     >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -1216,69 +1341,85 @@ export const AdvancedSearchResults: React.FC = () => {;
   )
 }
 export default AdvancedSearchResults
-  suggestion 
-}</Button>) ) 
-}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>) 
+  suggestion
+}</Button>) )
+}</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>)
 }
 //Main Search Results Page Component setTotalCount (data.totalCount)
+<<<<<<< HEAD
+setCurrentPage (data.page)
+setHasMore (data.hasMore)
+//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
+=======
 setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
-  /* Mobile Filter Toggle */ 
+  /* Mobile Filter Toggle */
 }<Sheet open= {
-  showFilters 
+  showFilters
 }onOpenChange= {
   setShowFilters "
 }> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80" > <SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6" > <FilterSidebar filters= {
-  filters 
+  filters
 }onFiltersChange= {
-  handleFiltersChange 
+  handleFiltersChange
 }availableCategories= {
-  availableCategories 
+  availableCategories
 }/> </div> </SheetContent> </Sheet> </div> </div>) "
 }</div> <Button variant="ghost" size="sm" onClick={
   () => setFilters ({'
-  types: [], category: '', minPrice: 0, maxPrice: 10000,  minRating: 0, sort: 'relevance' 
-}) 
-}> Clear All </Button>) 
+  types: [], category: '', minPrice: 0, maxPrice: 10000,  minRating: 0, sort: 'relevance'
+})
+}> Clear All </Button>)
 }</div> <FilterSidebar filters= {
-  filters 
+  filters
 }onFiltersChange= {
-  handleFiltersChange 
+  handleFiltersChange
 }availableCategories= {
-  availableCategories 
+  availableCategories
 }/> </div> </div> </div>) : results.length === 0 && searchTerm ? (<NoResultsState searchTerm= {
-  searchTerm 
+  searchTerm
 }onNewSearch= {
-  handleSearch 
+  handleSearch
 }/> <SearchResultCard key= {
   `$ {
-  result.type 
+  result.type
 }-$ {
-  result.id 
-}` 
+  result.id
+}`
 }result= {
-  result 
+  result
 }searchTerm= {
-  searchTerm 
+  searchTerm
 }viewMode= {
-  viewMode 
-}/>) ) 
+  viewMode
+}/>) )
 }</div> > {'"
-  loading ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results') 
-}</Button> </div>) 
-}</>) 
-}</div> </div>) 
-}</div>) 
+  loading ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results')
+}</Button> </div>)
+}</>)
+}</div> </div>)
+}</div>)
 }
 export default AdvancedSearchResults
 '"
+<<<<<<< HEAD
+export default AdvancedSearchResults
+export default AdvancedSearchResults
+
+=======
 export default AdvancedSearchResults, ;
 export default AdvancedSearchResults;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     </div>;
   );
 };
 export default AdvancedSearchResults;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

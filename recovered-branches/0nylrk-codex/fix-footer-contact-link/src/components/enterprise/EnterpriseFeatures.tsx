@@ -1,37 +1,51 @@
 
 <<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
+=======
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const features = [
   {
+<<<<<<< HEAD
+    title: "Private Hiring Portal"
+    description: "Create a secure, private hiring portal accessible only to your team members.";
+    icon: Shield}
+=======
     title: "Private Hiring Portal",
     description: "Create a secure, private hiring portal accessible only to your team members.",
     icon: Shield},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
-    title: "Dedicated Talent Pool",
-    description: "Access to a curated pool of pre-vetted talent matched to your industry and needs.",
-    icon: Users},
+    title: "Dedicated Talent Pool"
+    description: "Access to a curated pool of pre-vetted talent matched to your industry and needs."
+    icon: Users}
   {
-    title: "Custom SLA",
-    description: "Get guaranteed response times and dedicated support with our custom SLAs.",
-    icon: Award},
+    title: "Custom SLA"
+    description: "Get guaranteed response times and dedicated support with our custom SLAs."
+    icon: Award}
   {
-    title: "Branded Onboarding",
-    description: "Customize the onboarding experience with your company branding and messaging.",
-    icon: Briefcase},
+    title: "Branded Onboarding"
+    description: "Customize the onboarding experience with your company branding and messaging."
+    icon: Briefcase}
   {
-    title: "Admin Dashboards",
-    description: "Powerful analytics and management tools for team leaders and administrators.",
-    icon: Settings},
+    title: "Admin Dashboards"
+    description: "Powerful analytics and management tools for team leaders and administrators."
+    icon: Settings}
   {
-    title: "Global Access",
-    description: "Connect with talent across multiple regions with localized interfaces.",
-    icon: Globe}],
+    title: "Global Access"
+    description: "Connect with talent across multiple regions with localized interfaces."
+    icon: Globe}]
 
 export function EnterpriseFeatures() {
   return (
@@ -63,7 +77,11 @@ export function EnterpriseFeatures() {
       </div>
     </section>
   )
+<<<<<<< HEAD
+}
+=======
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
@@ -108,5 +126,10 @@ export function EnterpriseFeatures() {;
           {features.map((feature) => (;
             <div;
 }
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

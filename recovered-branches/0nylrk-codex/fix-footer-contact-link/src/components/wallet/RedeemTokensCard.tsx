@@ -1,5 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -19,38 +23,60 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 type RewardOption = {
-  id: string,
-  title: string,
-  description: string,
-  cost: number,
+  id: string
+  title: string
+  description: string
+  cost: number
   type: 'credit' | 'feature' | 'course'
+<<<<<<< HEAD
+}
+=======
 },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const REWARD_OPTIONS: RewardOption[] = [
   {
-    id: 'premium-week',
-    title: 'Premium Week',
-    description: '7 days of premium features including top placement in search results',
-    cost: 100,
+    id: 'premium-week'
+    title: 'Premium Week'
+    description: '7 days of premium features including top placement in search results'
+    cost: 100
     type: 'feature'
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
-    id: 'resume-review',
-    title: 'AI Resume Review',
-    description: 'Get your resume analyzed and optimized by our AI',
-    cost: 50,
+    id: 'resume-review'
+    title: 'AI Resume Review'
+    description: 'Get your resume analyzed and optimized by our AI'
+    cost: 50
     type: 'feature'
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
-    id: 'platform-credit',
-    title: '$5 Platform Credit',
-    description: 'Get $5 credit to use on any paid service',
-    cost: 100,
+    id: 'platform-credit'
+    title: '$5 Platform Credit'
+    description: 'Get $5 credit to use on any paid service'
+    cost: 100
     type: 'credit'
   }
+<<<<<<< HEAD
+];
+export function RedeemTokensCard() {
+  const { wallet, spendTokens } = useWallet();
+  const [open, setOpen] = useState(false);
+=======
 ],
 
 <<<<<<< HEAD
@@ -63,12 +89,16 @@ export function RedeemTokensCard() {
   const [open, setOpen] = useState(false),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRedeem = async (option: RewardOption) => {
-    if (!wallet || wallet.balance < option.cost) return,
-    
-    await spendTokens(option.cost, `Redeemed: ${option.title}`),
+    if (!wallet |wallet.balance < option.cost) return
+    await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card>
@@ -87,7 +117,7 @@ export function RedeemTokensCard() {
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
-                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
+                Exchange your tokens for these rewards. You currently have {wallet?.balance |0} ZION$.
               </DialogDescription>
             </DialogHeader>
             <div className="space-y-4 py-4">
@@ -99,10 +129,10 @@ export function RedeemTokensCard() {
                   </div>
                   <div className="flex flex-col items-end gap-1">
                     <span className="text-sm font-bold">{option.cost} ZION$</span>
-                    <Button 
-                      size="sm" 
+                    <Button
+                      size="sm"
                       variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
-                      disabled={!wallet || wallet.balance < option.cost}
+                      disabled={!wallet |wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
@@ -123,6 +153,10 @@ export function RedeemTokensCard() {
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -226,6 +260,10 @@ export function RedeemTokensCard() {;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

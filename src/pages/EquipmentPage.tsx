@@ -1,26 +1,46 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import { useState, useEffect, useCallback, useMemo  } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+=======
 
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
+import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
+import { ProductListing  } from '@/types/listings';
+import { SkeletonCard  } from '@/components/ui/skeleton';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { EquipmentErrorBoundary  } from '@/components/EquipmentErrorBoundary';
+import { useCurrency  } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
+<<<<<<< HEAD
+    id: "nvidia-a100-server";
+    title: "NVIDIA A100 GPU Training Server";
+    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
+    category: "AI Hardware";
+    price: 85000;
+    currency: "$";
+    brand: "NVIDIA";
+    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
+    tags: ["AI", "Machine Learning", "GPU"],
+    author: { name: "NVIDIA", id: "nvidia" },
+    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
+=======
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -188,11 +208,17 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 ),
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-// Main export with error boundary
-export default function EquipmentPage() {
+// Equipment card
+const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
+  const { formatPrice } = useCurrency(),
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
@@ -200,6 +226,7 @@ export default function EquipmentPage() {
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
@@ -383,6 +410,7 @@ function EquipmentPageContent() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -398,6 +426,19 @@ function EquipmentPageContent() {;
     )
   }
 
+<<<<<<< HEAD
+
+
+}
+// Main export with error boundary
+export default function EquipmentPage() {
+  return (
+    <EquipmentErrorBoundary>
+      <EquipmentPageContent />
+    </EquipmentErrorBoundary>
+  )
+}
+=======
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -603,4 +644,8 @@ export default function EquipmentPage() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,13 +1,15 @@
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import {Button} from '@/components/ui/button';
-import {GeneratedMilestone, MilestoneInput, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
-import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
-import {Loader2, Sparkles, Check} from 'lucide-react';
-import {Badge} from '@/components/ui/badge';
-import {format, parseISO} from 'date-fns';
+import { Button  } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Loader2, Sparkles, Check  } from 'lucide-react';
+import { Badge  } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
+<<<<<<< HEAD
+=======
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -22,6 +24,7 @@ export function MilestoneSuggestions({;
   startDate;
   endDate;
   projectType;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -38,7 +41,16 @@ interface MilestoneSuggestionsProps {;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+  projectName: string
+  scopeSummary: string
+  startDate: Date
+  endDate?: Date;
+  projectType: string
+
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
+}
 export function MilestoneSuggestions({
   projectName,
   scopeSummary,
@@ -53,6 +65,14 @@ export function MilestoneSuggestions({
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
+<<<<<<< HEAD
+      scope: `${projectName}: ${scopeSummary}`
+      startDate: startDate.toISOString()
+      endDate: endDate ? endDate.toISOString() : null
+      projectType: projectType |"Other"
+    }
+    const milestones = await generateMilestones(input);
+=======
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -61,6 +81,7 @@ export function MilestoneSuggestions({
 
     const milestones = await generateMilestones(input),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
@@ -68,15 +89,18 @@ export function MilestoneSuggestions({
 <<<<<<< HEAD
       }
     }
-  };
-
+  }
   const formatDate = (dateString: string) => {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
       return dateString
     }
+<<<<<<< HEAD
+  }
+=======
   };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
 export function MilestoneSuggestions({;
@@ -111,7 +135,11 @@ export function MilestoneSuggestions({;
       return dateString;
     }
   },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <div className="space-y-4">
@@ -119,7 +147,7 @@ export function MilestoneSuggestions({;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
+          disabled={isGenerating |!scopeSummary |!startDate}
           className="w-full"
         >
           {isGenerating ? (
@@ -135,7 +163,10 @@ export function MilestoneSuggestions({;
           )}
         </Button>
       )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -165,7 +196,6 @@ export function MilestoneSuggestions({;
                   </div>
                 </div>
               ))}
-
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
@@ -174,7 +204,13 @@ export function MilestoneSuggestions({;
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
     </div>
   )
 }
+=======
+    </div>;
+  );
+}
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

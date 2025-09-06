@@ -1,5 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
@@ -8,14 +12,28 @@ import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const testimonials = [
   {
-    name: "Alex Johnson",
-    role: "AI Developer",
-    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
-    rating: 5,
+    name: "Alex Johnson"
+    role: "AI Developer"
+    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
+    rating: 5
     avatar: "/placeholder.svg"
+<<<<<<< HEAD
+  }
+  {
+    name: "Sarah Williams"
+    role: "Tech Recruiter"
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
+    rating: 5
+    avatar: "/placeholder.svg"
+  }
+=======
   },
   {
     name: "Sarah Williams",
@@ -24,15 +42,20 @@ const testimonials = [
     rating: 5,
     avatar: "/placeholder.svg"
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
-    name: "Michael Chen",
-    role: "Full Stack Developer",
-    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
-    rating: 4,
+    name: "Michael Chen"
+    role: "Full Stack Developer"
+    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful."
+    rating: 4
     avatar: "/placeholder.svg"
   }
+<<<<<<< HEAD
+];
+=======
 ],
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -49,7 +72,7 @@ export const AppTestimonials: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star 
+                    <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />
@@ -74,6 +97,12 @@ export const AppTestimonials: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
+  )
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Star } from "lucide-react",;
@@ -144,3 +173,4 @@ export const AppTestimonials: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

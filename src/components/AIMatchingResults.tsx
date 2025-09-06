@@ -6,8 +6,13 @@ import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+<<<<<<< HEAD
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+=======
 import Skeleton from '@/components/ui/skeleton'
 import { cn } from '@/lib/utils'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
@@ -18,41 +23,51 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AIMatchingResultsProps {
+
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;interface AIMatchingResultsProps {
-  matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem,) => void,
-  isLoading?: boolean,
-  projectDescription?: string,
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem,) => void
+  isLoading?: boolean
+  projectDescription?: string
+
   serviceType?: string
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 export function AIMatchingResults({
-  matches,
-  onSelectMatch,
-  isLoading = false,
-  projectDescription = '',
-  serviceType: _serviceType = '',
+
+  matches
+  onSelectMatch
+  isLoading = false
+  projectDescription = ''
+  serviceType: _serviceType = ''
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState('all')
   // Group matches by category
   const categories = {
-    all: matches,
+    all: matches
     talent: matches.filter(match =>
       match.category.toLowerCase().includes('talent')
-    ),
+    )
     services: matches.filter(match =>
       match.category.toLowerCase().includes('service')
-    ),
+    )
     equipment: matches.filter(match =>
       match.category.toLowerCase().includes('equipment')
-    ),
+    )
   }
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
@@ -73,7 +88,6 @@ export function AIMatchingResults({
       </div>
     )
   }
-
   if (matches.length === 0) {
     return (
       <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>
@@ -94,7 +108,6 @@ export function AIMatchingResults({
       </Card>
     )
   }
-
   return (
     <div className='space-y-4'>
       <Tabs
@@ -138,7 +151,7 @@ export function AIMatchingResults({
                     <div className='flex'>
                       <div
                         className={cn(
-                          'w-2',
+                          'w-2'
                           match.category.toLowerCase().includes('talent')
                             ? 'bg-zion-cyan'
                             : match.category.toLowerCase().includes('service')
@@ -149,6 +162,7 @@ export function AIMatchingResults({
                       <div className='flex-1 p-4'>
                         <div className='flex items-start gap-4'>
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>
+
                             {match.image ? (
                               <AvatarImage
                                 src={match.image}
@@ -182,7 +196,12 @@ export function AIMatchingResults({
                                       ? '/hour'
                                       : ''}
 =======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   </div>
                                 </div>
                               )}
@@ -232,7 +251,11 @@ export function AIMatchingResults({
               <div className="text-center py-8 text-zion-slate-light">;
                 No {tab} matches found.;
               </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </TabsContent>
         ))}
@@ -240,12 +263,19 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
+=======
 };
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
       </Tabs>;
     </div>;
   );
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

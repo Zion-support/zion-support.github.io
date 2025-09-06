@@ -1,11 +1,21 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { Progress } from "@/components/ui/progress";
+import { ResumeProgressProps } from "./types";
+
+=======
+import { Progress } from "@/components/ui/progress",
+import { ResumeProgressProps } from "./types",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import {Progress} from "@/components/ui/progress";
 import {ResumeProgressProps} from "./types";
 =======
 import { Progress } from "@/components/ui/progress",
 import { ResumeProgressProps } from "./types",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
   return (
     <div className="flex flex-col gap-1 w-full sm:w-auto">
@@ -17,7 +27,12 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
     </div>
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
+}
+
+=======
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
 },
@@ -36,4 +51,8 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {;
 };
 
 export default ResumeProgress;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

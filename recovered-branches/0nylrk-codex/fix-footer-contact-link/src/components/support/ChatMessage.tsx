@@ -1,32 +1,53 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {cn} from "@/lib/utils";
 import {format} from "date-fns";
 import {useTheme} from "@/hooks/useTheme";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+import { format } from "date-fns";
+import { useTheme } from "@/hooks/useTheme";
+=======
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ChatMessageProps {
-  message: string,
-  isUser: boolean,
+
+  message: string
+  isUser: boolean
+
   timestamp: Date
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   const { theme } = useTheme();
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
+<<<<<<< HEAD
+  const { theme } = useTheme();
+=======
   const { theme } = useTheme(),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
+
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
         {isUser ? (
@@ -45,18 +66,30 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         )}
       </Avatar>
       <div className={cn(
+<<<<<<< HEAD
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
+        isUser
+          ? "bg-zion-purple text-white"
+=======
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser 
           ? "bg-zion-purple text-white" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
+<<<<<<< HEAD
+          "text-xs mt-1";
+          isUser
+            ? "text-white/70"
+=======
           "text-xs mt-1",
           isUser 
             ? "text-white/70" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -67,25 +100,32 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
     </div>
   )
 }
-
 // Function to convert URLs and help links to actual clickable links
 function formatMessageWithLinks(message: string): string {
   // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g,
+  const urlRegex = /(https?:\/\/[^\s]+)/g
   let formattedMessage = message.replace(
-    urlRegex, 
+    urlRegex
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+<<<<<<< HEAD
+  );
+=======
   ),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Replace help center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g,
+  const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex, 
+    helpCenterRegex
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  ),
-  
+  )
+
   return formattedMessage
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -157,6 +197,10 @@ function formatMessageWithLinks(message: string): string {;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
   );
   return formattedMessage;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

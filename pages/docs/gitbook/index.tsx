@@ -1,15 +1,35 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import fs from 'fs';
+import path from 'path';
+import Link from 'next/link';
+=======
 import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir),
+  const items = fs.readdirSync(dir)
   return items.map((name) => {
-    const full = path.join(dir, name),
-    const rel = path.relative(baseDir, full),
-    const stat = fs.statSync(full),
+    const full = path.join(dir, name)
+    const rel = path.relative(baseDir, full)
+    const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
+<<<<<<< HEAD
+}
+export async function getStaticProps() {
+  const base = path.join(process.cwd(), 'docs/gitbook')
+  const sections = fs.existsSync(base)
+    ? list(base, base).map((entry) => ({
+        title: entry.name
+        items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
+    : []
+
+  return { props: { sections }, revalidate: 600 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import fs from 'fs';
 import path from 'path';
@@ -24,7 +44,10 @@ function list(dir: string, baseDir: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   });
   } catch (error) {
@@ -49,6 +72,7 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
   return (
@@ -66,6 +90,8 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
 <<<<<<< HEAD
                     {it.rel}
                   </a>
+<<<<<<< HEAD
+=======
                 </li>
               ))}
             </ul>
@@ -75,6 +101,7 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
     </div>
   );
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                     {it.rel  } catch (error) {
     console.error("Error:", error);
@@ -82,6 +109,7 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
   }
 }
                   </Link>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </li>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -102,5 +130,9 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

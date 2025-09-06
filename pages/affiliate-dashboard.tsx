@@ -1,55 +1,67 @@
 <<<<<<< HEAD
+import { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react',;
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function getRefCode(): string {
-  if (typeof window === 'undefined') return '',
-  return localStorage.getItem('ref_code') || ''
+
+  if (typeof window === 'undefined') return ''
+  return localStorage.getItem('ref_code') |''
 }
-
 export default function AffiliateDashboard() {
-  const [code, setCode] = useState<string>(''),
-  const [metrics, setMetrics] = useState<any>(null),
-  const [amount, setAmount] = useState<string>(''),
-  const [msg, setMsg] = useState<string>(''),
-
+  const [code, setCode] = useState<string>('')
+  const [metrics, setMetrics] = useState<any>(null)
+  const [amount, setAmount] = useState<string>('')
+  const [msg, setMsg] = useState<string>('')
   useEffect(() => {
-    const c = getRefCode(),
+    const c = getRefCode()
     setCode(c)
-  }, []),
-
+  }, [])
   useEffect(() => {
-    if (!code) return,
+    if (!code) return
     (async () => {
       try {
-        const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`),
-        const json = await res.json(),
+        const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`)
+        const json = await res.json()
         setMetrics(json)
       } catch {}
     })()
-  }, [code]),
-
+  }, [code])
   async function requestPayout() {
-    setMsg(''),
+    setMsg('')
     try {
       const res = await fetch('/api/partners/request-payout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
-      const json = await res.json(),
-      if (!res.ok) throw new Error(json.error || 'Failed'),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })})
+      const json = await res.json()
+      if (!res.ok) throw new Error(json.error |'Failed')
       setMsg('Payout requested')
     } catch (e: any) {
-      setMsg(e?.message || 'Error')
+      setMsg(e?.message |'Error')
     }
+<<<<<<< HEAD
+  }
+  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
+
+=======
+=======
 =======
 import { useEffect, useMemo, useState } from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function getRefCode(): string {;
   if (typeof window === 'undefined') return '',;
   return localStorage.getItem('ref_code') || '';
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
@@ -100,6 +112,7 @@ export default function AffiliateDashboard(req, res) {
   }
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!code) {
     return (
       <div className="space-y-4">
@@ -111,7 +124,10 @@ export default function AffiliateDashboard(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
@@ -125,7 +141,11 @@ export default function AffiliateDashboard(req, res) {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-sm text-gray-600 dark:text-gray-300">Estimated Payout</div>
+<<<<<<< HEAD
+            <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency |'USD'}</div>
+=======
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
           <div className="flex gap-2">
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
@@ -144,7 +164,11 @@ export default function AffiliateDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </div>
     </div>
   )
@@ -160,9 +184,12 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
@@ -225,5 +252,9 @@ function Stat({ label, value }: { label: string, value: number | string }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,19 +1,32 @@
 <<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 import React from 'react'
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { CreditCard, Plus, Trash } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import { CreditCard, Plus, Trash } from 'lucide-react'
 import React from "react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+<<<<<<< HEAD
+=======
 =======
 
 import React from "react",
@@ -22,22 +35,47 @@ import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function PaymentMethods() {
   // Mock payment methods
+
   const paymentMethods = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+      id: 'pm-1'
+      type: 'credit_card'
+      brand: 'Visa'
+      last4: '4242'
+      expYear: 2025
+      isDefault: true
+    }
+    {
+      id: 'pm-2'
+      type: 'credit_card'
+      brand: 'Mastercard'
+      last4: '8888'
+      expMonth: 4
+      expYear: 2026
+      isDefault: false
+    }
+  ]
+=======
       id: 'pm-1',
       type: 'credit_card',
       brand: 'Visa',
       last4: '4242',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
       last4: "4242",
       expMonth: 12,
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       expYear: 2025,
       isDefault: true},
     {
@@ -48,14 +86,21 @@ export function PaymentMethods() {
       expMonth: 4,
       expYear: 2026,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       isDefault: false,
     },
   ]
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       isDefault: false}
   ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card>
       <CardHeader>
@@ -70,7 +115,7 @@ export function PaymentMethods() {
           <div            key={method.id}
       <CardContent className="space-y-4">
         {paymentMethods.map((method,) => (
-          <div 
+          <div
             key = {method.id,}
 =======
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
@@ -79,7 +124,11 @@ export function PaymentMethods() {
         {paymentMethods.map((method) => (
           <div 
             key={method.id}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? "bg-muted border-primary" : "border-border"
             }`}
@@ -104,7 +153,11 @@ export function PaymentMethods() {
             <div className='flex gap-2'>                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
 =======
                     <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Default
                     </span>
                   )}
@@ -113,7 +166,11 @@ export function PaymentMethods() {
                 <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">
 =======
                 <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
@@ -130,7 +187,11 @@ export function PaymentMethods() {
 =======
             <div className="flex gap-2">
               {!method.isDefault && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button size="sm" variant="ghost">Set Default</Button>
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
@@ -144,6 +205,11 @@ export function PaymentMethods() {
 <<<<<<< HEAD
         <Button className='gap-1'>
           <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">
+<<<<<<< HEAD
+=======
+        <Button className="gap-1">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -153,12 +219,19 @@ export function PaymentMethods() {
 };
 =======
         <Button className="gap-1">
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -241,4 +314,8 @@ export function PaymentMethods() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

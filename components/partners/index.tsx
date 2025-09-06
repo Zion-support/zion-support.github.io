@@ -1,5 +1,15 @@
+<<<<<<< HEAD
+import { useState } from "react";
+import Head from "next/head";
+=======
 import { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function Partners() {
+  const [form, setForm] = useState({
+=======
 <<<<<<< HEAD
 =======
 
@@ -17,34 +27,47 @@ export default function Partners() {
     pocEmail: "",
     useCaseType: "Education Partnership"}),
   const [loading, setLoading] = useState(false);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+    name: ''
+    entityType: ''
+    pocName: ''
+    pocEmail: ''
+    useCaseType: 'Education Partnership'
+  });  const [result, setResult] = useState<any>(null);    name: ""
+    entityType: ""
+    pocName: ""
+    pocEmail: ""
+    useCaseType: "Education Partnership"})
+
+  const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setResult(null);
+
     const res = await fetch('/api/partners/register', {
-      method: 'POST',
+      method: 'POST'
       headers: { 'Content-Type': 'application/json' },      body: JSON.stringify({
-        name: form.name,
-        entityType: form.entityType,
-        useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail },
-      }),
+        name: form.name
+        entityType: form.entityType
+        useCaseType: form.useCaseType
+        pointOfContact: { name: form.pocName, email: form.pocEmail }
+      })
     });    const res = await fetch("/api/partners/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
       body: JSON.stringify({
-        name: form.name,
-        entityType: form.entityType,
-        useCaseType: form.useCaseType,
-        pointOfContact: { name: form.pocName, email: form.pocEmail },
-      }),
+        name: form.name
+        entityType: form.entityType
+        useCaseType: form.useCaseType
+        pointOfContact: { name: form.pocName, email: form.pocEmail }
+      })
     });
     const data = await res.json();
     setLoading(false);
     setResult(data);
   }
-
   return (
     <div className='min-h-screen bg-gray-50 text-gray-900'>
       <Head>
@@ -98,9 +121,9 @@ export default function Partners() {
               onChange={e => setForm({ ...form, useCaseType: e.target.value })}
             >              <option>Education Partnership</option>    const data = await res.json();
     setLoading(false);
+
     setResult(data)
   }
-
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Head>
@@ -203,7 +226,10 @@ export default function Partners() {
       </div>
     </div>
 );
+<<<<<<< HEAD
+=======
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
           </div>
@@ -212,5 +238,10 @@ export default function Partners() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

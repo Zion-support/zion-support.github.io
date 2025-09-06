@@ -1,18 +1,46 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { GetServerSideProps  } from 'next';
+import fs from 'fs',
+import path from 'path';
+
+=======
+import { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
+=======
 import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
 =======
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import fs from 'fs';
 import path from 'path';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue;
+} from '@/components/ui/select';
+import {
+  AlertTriangle
+  Info
+  AlertCircle
+  XCircle
+  Search
+  Download
+  RefreshCw;
+=======
   Select,
   SelectContent,
   SelectItem,
@@ -27,27 +55,45 @@ import {
   Search,
   Download,;
   RefreshCw,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
+
+=======
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
   id: string;
+  timestamp: string;
+<<<<<<< HEAD
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
   category: string;
-  component?: string;
-  timestamp: string;
-  sessionId?: string;
+  context?: Record<string, unknown>,
+  stack?: string;
+  url?: string;
+  userAgent?: string;
   userId?: string;
+  sessionId: string;
+  source: 'client' | 'server' | 'middleware' | 'api';
+  component?: string;
+  feature?: string;
   error?: {
     name: string;
+    message: string;
     stack?: string;
-  };
+
+  }
+
   performance?: {
-    duration: number;
     memory?: number;
-  };
+
+  }
 
 interface LogsPageProps {
+=======
+<<<<<<< HEAD
 =======
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
@@ -55,6 +101,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
   id: string;
   timestamp: string;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical',;
   message: string;
   category: string;
@@ -89,11 +136,16 @@ interface LogEntry {
 }
 ;
 interface LogsPageProps {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
+
   lastUpdated: string;
 <<<<<<< HEAD
 =======
@@ -102,7 +154,11 @@ interface LogsPageProps {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
@@ -122,22 +178,28 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
 ];
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   const colors = {
-    debug: 'bg-blue-100 text-blue-800',
-    info: 'bg-green-100 text-green-800',
-    warn: 'bg-yellow-100 text-yellow-800',
-    error: 'bg-red-100 text-red-800',
-    critical: 'bg-red-200 text-red-900',
-  };
-
+    debug: 'bg-blue-100 text-blue-800'
+    info: 'bg-green-100 text-green-800'
+    warn: 'bg-yellow-100 text-yellow-800'
+    error: 'bg-red-100 text-red-800'
+    critical: 'bg-red-200 text-red-900'
+  }
   return <Badge className={colors[level]}>{level.toUpperCase()}</Badge>;
-};
-
+}
 export default function LogsPage({
+<<<<<<< HEAD
+  logs: initialLogs
+  errorCount
+  warningCount
+  totalCount
+  lastUpdated
+=======
   logs: initialLogs,
   errorCount,
   warningCount,
   totalCount,
   lastUpdated,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 =======
       return <XCircle className="h-4 w-4 text-red-700" />,
@@ -182,7 +244,11 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
 export default function LogsPage(req, res) {
   try {
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
@@ -190,14 +256,16 @@ export default function LogsPage(req, res) {
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
   );
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(
     Boolean
   );
-
   useEffect(() => {
     // Simulate loading logs
     setTimeout(() => {
@@ -206,31 +274,25 @@ export default function LogsPage(req, res) {
       setLoading(false);
     }, 1000);
   }, []);
-
   useEffect(() => {
     let filtered = [...logs];
-
     if (searchTerm) {
       filtered = filtered.filter(
         log =>
-          log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          log.message.toLowerCase().includes(searchTerm.toLowerCase()) |
+          log.category.toLowerCase().includes(searchTerm.toLowerCase()) |
           (log.component &&
             log.component.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
-
     if (levelFilter !== 'all') {
       filtered = filtered.filter(log => log.level === levelFilter);
     }
-
     if (categoryFilter !== 'all') {
       filtered = filtered.filter(log => log.category === categoryFilter);
     }
-
     setFilteredLogs(filtered);
   }, [logs, searchTerm, levelFilter, categoryFilter]);
-
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'debug': return 'bg-blue-100 text-blue-800';
@@ -239,9 +301,15 @@ export default function LogsPage(req, res) {
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
       default: return 'bg-gray-100 text-gray-800';    }
-  };
-
+  }
   const exportLogs = () => {
+<<<<<<< HEAD
+    const dataStr = JSON.stringify(filteredLogs, null, 2);
+    const dataUri =
+      'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
@@ -312,26 +380,33 @@ export default function LogsPage(req, res) {
 }
   },;
   const exportLogs = () => {;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
 <<<<<<< HEAD
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const formatTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString();  };
-
+    return new Date(timestamp).toLocaleString();  }
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
-
     const parts = [];
     if (performance.memory) {
       parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`);
@@ -342,15 +417,21 @@ export default function LogsPage(req, res) {
     if (performance.fps) {
       parts.push(`FPS: ${performance.fps}`);
     }
-
     return parts.length > 0 ? parts.join(', ') : null;
-  };
-
-  const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
+  }
+  const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
   const warningCount = logs.filter(log => log.level === 'warn').length;
   const totalCount = logs.length;
+<<<<<<< HEAD
+=======
+  },;
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();
+  };
+=======
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const formatPerformance = (performance?: LogEntry['performance']) => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       } catch (error) {
@@ -360,7 +441,11 @@ export default function LogsPage(req, res) {
 }
     return parts.length > 0 ? parts.join() : null
   },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -386,7 +471,11 @@ export default function LogsPage(req, res) {
   }
 }
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Logs</CardTitle>
@@ -436,7 +525,11 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
@@ -496,7 +589,11 @@ export default function LogsPage(req, res) {
               </SelectContent>
             </Select>
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <SelectTrigger>
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
@@ -544,7 +641,11 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Card>
         <CardHeader>
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
@@ -580,7 +681,11 @@ export default function LogsPage(req, res) {
                   <div className='text-sm font-medium'>{log.message}</div>
 =======
                   <div className="text-sm font-medium">{log.message}</div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
@@ -591,7 +696,10 @@ export default function LogsPage(req, res) {
                       </pre>
                     </details>
                   )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
                         {JSON.stringify(log.context, null, 2)  } catch (error) {
@@ -606,7 +714,11 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
@@ -637,7 +749,6 @@ export default function LogsPage(req, res) {
                       </div>
                     </details>
                   )}
-
                   <div className='flex items-center justify-between text-xs text-muted-foreground'>                    <div>
                       Session: {log.sessionId}
                       {log.userId && ` • User: ${log.userId}`}
@@ -694,7 +805,11 @@ export default function LogsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               ))
             ) : (
@@ -708,7 +823,7 @@ export default function LogsPage(req, res) {
       </main>
     </>
   );
-};
+}
 export const getServerSideProps: GetServerSideProps = async () => {
   try {;
     const logsDir = path.join(process.cwd(), 'logs');
@@ -721,31 +836,40 @@ export const getServerSideProps: GetServerSideProps = async () => {
         }
       }
     }
-
     // Sort logs by timestamp (newest first)
     logs.sort(
       (a, b) =>
         new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
     );
-
     // Calculate statistics
     const errorCount = logs.filter(
-      log => log.level === 'error' || log.level === 'critical'
+      log => log.level === 'error' |log.level === 'critical'
     ).length;    const warningCount = logs.filter(log => log.level === 'warn').length;
     const totalCount = logs.length;
-
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
-        errorCount,
-        warningCount,
-        totalCount,
-        lastUpdated: new Date().toISOString(),
-      },
-    };
+        errorCount
+        warningCount
+        totalCount
+        lastUpdated: new Date().toISOString()
+      }
+    }
   } catch (error) {
     logErrorToProduction('Error reading logs:', error);    return {
       props: {
+<<<<<<< HEAD
+        logs: []
+        errorCount: 0
+        warningCount: 0
+        totalCount: 0
+        lastUpdated: new Date().toISOString()
+      }
+    }
+  }
+}
+
+=======
         logs: [],
         errorCount: 0,
         warningCount: 0,
@@ -753,6 +877,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
         lastUpdated: new Date().toISOString(),
       },
     };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             )  } catch (error) {
     console.error("Error:", error);
@@ -850,7 +975,11 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

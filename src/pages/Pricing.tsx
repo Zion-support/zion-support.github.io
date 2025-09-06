@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 const Pricing: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(false);
-
   const plans = [
     {
       name: "Starter",
@@ -60,7 +58,6 @@ const Pricing: React.FC = () => {
       popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -109,7 +106,6 @@ const Pricing: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="p-8">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
@@ -189,14 +185,14 @@ const Pricing: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using Zion Tech to accelerate their growth.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
             >
               Start Free Trial
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
             >
               Talk to Sales
@@ -206,6 +202,5 @@ const Pricing: React.FC = () => {
       </div>
     </div>
   );
-};
-
+}
 export default Pricing;

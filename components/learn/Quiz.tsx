@@ -1,37 +1,37 @@
 import React, { useState } from 'react';
+
 type Question = {
   id: string;
   question: string;
   options: string[];
   answerIndex: number;
-};
-
+}
 type Props = {
   questions: Question[];
-  onComplete: (score: number) => void;};  id: string,
-  question: string,
-  options: string[],
+  onComplete: (score: number) => void;};  id: string
+  question: string
+  options: string[]
   answerIndex: number
-};
-
+}
 type Props = {
-  questions: Question[],
+  questions: Question[]
   onComplete: (score: number) => void
+<<<<<<< HEAD
+export default function Quiz({ questions, onComplete }: Props) {
+=======
 
 export default function Quiz({ questions, onComplete }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
-
   const score = questions.reduce(
-    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),
+    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
     0
   );
-
   function submit() {
     setSubmitted(true);
     onComplete(score);
   }
-
   return (
     <div className='space-y-4'>
       {questions.map((q, idx) => (
@@ -46,9 +46,14 @@ export default function Quiz({ questions, onComplete }: Props) {;
                   type='radio'                  name={q.id}
   function submit() {
     setSubmitted(true);
+<<<<<<< HEAD
+=======
     onComplete(score)
   }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+    onComplete(score)
+  }
   return (
     <div className="space-y-4">
       {questions.map((q, idx) => (
@@ -96,11 +101,19 @@ export default function Quiz({ questions, onComplete }: Props) {;
   );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
+<<<<<<< HEAD
 );
 }
+<<<<<<< HEAD
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
 
 }
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

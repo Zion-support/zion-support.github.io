@@ -1,13 +1,17 @@
+<<<<<<< HEAD
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+=======
 useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { X } from 'lucide-react';
-type ChatMessage = {
-  role: 'user' | 'assistant' | 'system',
-  content: string,
-  timestamp?: number
-};
 
+type ChatMessage = {
+  role: 'user' | 'assistant' | 'system'
+  content: string
+  timestamp?: number
+}
 function generateSessionId(): string {
   if (typeof window === 'undefined') return '';
   const existing = window.localStorage.getItem('zion_support_session_id');
@@ -25,122 +29,139 @@ export default function ChatWidget() {;
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-
   useEffect(() => {
     sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef.current = generateSessionId()
   }, []);
-
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
         {
-          role: 'assistant',
-          content: 'Hi! How can I help you?',
-          timestamp: Date.now(),
-        },
+          role: 'assistant'
+          content: 'Hi! How can I help you?'
+          timestamp: Date.now()
+        }
       ]);    }
   }, [isOpen, messages.length]);
-
   useEffect(() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
     }
   }, [isOpen, messages.length]);
-
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-
   const quickReplies = useMemo(
     () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages]);
-
   const quickReplies = useMemo(
     () => ['How do I hire?How do I get matched?Billing help'];
   );
-
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
+          sessionId: sessionIdRef.current
+          eventType
+          payload
+        })
+      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+=======
           sessionId: sessionIdRef.current,
           eventType,
           payload,
         }),
+<<<<<<< HEAD
+      });    } catch {}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
 =======
       });    } catch {}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch {}
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          sessionId: sessionIdRef.current,
-          reason,
-          tag: 'escalate',
-        }),
+          sessionId: sessionIdRef.current
+          reason
+          tag: 'escalate'
+        })
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
+=======
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setShowEscalation(true)
 =======
       setShowEscalation(true);    } catch {}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch {}
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
-
     const newUserMessage: ChatMessage = {
-      role: 'user',
-      content: text,
-      timestamp: Date.now(),
-    };
+      role: 'user'
+      content: text
+      timestamp: Date.now()
+    }
     setMessages(prev => [...prev, newUserMessage]);
     setInput('');
     setIsLoading(true);
-    await logEvent('message/user', { content: text });    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() },
+    await logEvent('message/user', { content: text });    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() }
     setMessages((prev) => [...prev, newUserMessage]);
     setInput('');
     setIsLoading(true);
-    await logEvent('message/user', { content: text }),
+    await logEvent('message/user', { content: text })
       const res = await fetch('/api/support/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          sessionId: sessionIdRef.current,
+          sessionId: sessionIdRef.current
           messages: [...messages, newUserMessage].map(({ role, content }) => ({
-            role,
-            content,
-          })),
-        }),
+            role
+            content
+          }))
+        })
       });      const data = await res.json();          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
       const data = await res.json();
-
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
-          role: 'assistant',
-          content: data.assistantMessage,
-          timestamp: Date.now(),
-        };
+          role: 'assistant'
+          content: data.assistantMessage
+          timestamp: Date.now()
+        }
         setMessages(prev => [...prev, assistantMessage]);
         await logEvent('message/assistant', {
-          content: assistantMessage.content,
-          meta: data.meta,
+          content: assistantMessage.content
+          meta: data.meta
         });
       }
-
       if (data?.meta?.intentMatched === false) {
         setFailedIntents(n => {
           const next = n + 1;
@@ -154,22 +175,25 @@ export default function ChatWidget() {;
       }
     } catch (e) {
       setMessages(prev => [
-        ...prev,
+        ...prev
         {
-          role: 'assistant',
+          role: 'assistant'
           content:
-            'Sorry, something went wrong. Please try again or contact support.',
-          timestamp: Date.now(),
-        },
+            'Sorry, something went wrong. Please try again or contact support.'
+          timestamp: Date.now()
+        }
       ]);
     } finally {
       setIsLoading(false);    }
   }
-
   return (
+<<<<<<< HEAD
     <div className='fixed bottom-4 right-4 z-50'>      }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
           const next = n + 1;
@@ -187,11 +211,20 @@ export default function ChatWidget() {;
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+    }
+  }
+=======
+    <div className='fixed bottom-4 right-4 z-50'>
+
+=======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='fixed bottom-4 right-4 z-50'>
       {!isOpen && (
@@ -207,7 +240,6 @@ export default function ChatWidget() {;
           ?
         </button>
       )}
-
       {isOpen && (
         <div className='w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col'>
           <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800'>
@@ -246,7 +278,11 @@ export default function ChatWidget() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }
                 >
                   {m.content}
@@ -283,14 +319,21 @@ export default function ChatWidget() {;
 
                   >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {q}
                   </button>
                 ))}
               </div>
             </div>
           )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -309,6 +352,9 @@ export default function ChatWidget() {;
                   onClick={() => onSend()}
                   disabled={isLoading}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
               <div className="flex gap-2">
                 <input
@@ -317,15 +363,21 @@ export default function ChatWidget() {;
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
+
+<<<<<<< HEAD
                       onSend()
                     }
                   }}
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
                 <button
                   onClick={() => onSend()}
@@ -365,8 +417,15 @@ export default function ChatWidget() {;
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

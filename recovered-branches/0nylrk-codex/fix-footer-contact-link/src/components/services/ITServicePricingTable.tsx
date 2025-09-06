@@ -1,5 +1,24 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useMemo } from "react";
+import {
+  onsiteServicePricing
+  CountryPricing
+} from "@/data/onsiteServicePricing";
+import { Input } from "@/components/ui/input";
+import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from "@/components/ui/table";
+
+import { Globe, Search, ArrowUpDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+=======
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -8,6 +27,7 @@ import {Globe, Search, ArrowUpDown} from "lucide-react";
 import {Button} from "@/components/ui/button";
 export function ITServicePricingTable() {;
   const [searchQuery, setSearchQuery] = useState("");
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
@@ -15,34 +35,57 @@ import { Input } from "@/components/ui/input",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Globe, Search, ArrowUpDown } from "lucide-react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing,
+    key: keyof CountryPricing;
     direction: "ascending" | "descending"
   }>({
-    key: "country",
-    direction: "ascending"}),
 
+    key: "country"
+    direction: "ascending"
+  });
   const sortedData = useMemo(() => {
+<<<<<<< HEAD
+    let filteredData = [...onsiteServicePricing];
+=======
     let filteredData = [...onsiteServicePricing],
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Filter by search query
     if (searchQuery) {
-      filteredData = filteredData.filter(item => 
+      filteredData = filteredData.filter((item) =>
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
-      )
+      );
     }
-    
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? -1 : 1
+        return sortConfig.direction === "ascending" ? -1 : 1;
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
+        return sortConfig.direction === "ascending" ? 1 : -1;
       }
+<<<<<<< HEAD
+      return 0;
+    });
+    return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+      key
+      direction:
+        sortConfig.key === key && sortConfig.direction === "ascending"
+          ? "descending"
+          : "ascending"
+    });
+  }
+=======
       return 0
     }),
     
@@ -57,6 +100,7 @@ export function ITServicePricingTable() {
           ? "descending" 
           : "ascending"})
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
@@ -76,8 +120,8 @@ export function ITServicePricingTable() {
           <TableHeader className="bg-zion-blue">
             <TableRow>
               <TableHead className="text-zion-cyan font-medium">
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
@@ -86,8 +130,8 @@ export function ITServicePricingTable() {
                 </Button>
               </TableHead>
               <TableHead className="text-right text-zion-cyan font-medium">
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   onClick={() => handleSort("pricePerIncident")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
@@ -100,17 +144,25 @@ export function ITServicePricingTable() {
           <TableBody className="bg-zion-blue-dark">
             {sortedData.length > 0 ? (
               sortedData.map((item) => (
-                <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
+                <TableRow
+                  key={item.country}
+                  className="border-b border-zion-blue-light hover:bg-zion-blue/50"
+                >
                   <TableCell className="flex items-center space-x-2">
                     <Globe className="h-4 w-4 text-zion-purple" />
                     <span className="text-white">{item.country}</span>
                   </TableCell>
-                  <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
+                  <TableCell className="text-right font-medium text-white">
+                    ${item.pricePerIncident.toFixed(2)}
+                  </TableCell>
                 </TableRow>
               ))
             ) : (
               <TableRow>
-                <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">
+                <TableCell
+                  colSpan={2}
+                  className="text-center py-10 text-zion-slate-light"
+                >
                   No countries match your search
                 </TableCell>
               </TableRow>
@@ -215,11 +267,15 @@ export function ITServicePricingTable() {;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </TableBody>
         </Table>
       </div>
     </div>
-  )
+  );
 }

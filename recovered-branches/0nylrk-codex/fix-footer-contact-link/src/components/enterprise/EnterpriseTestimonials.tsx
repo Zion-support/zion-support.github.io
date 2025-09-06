@@ -1,13 +1,54 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import { Quote } from "lucide-react";
 import {
+<<<<<<< HEAD
+=======
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
+  Carousel
+  CarouselContent
+  CarouselItem
+  CarouselNext
+  CarouselPrevious
+} from "@/components/ui/carousel";
+const testimonials = [
+  {
+    quote:
+      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing."
+    author: "Sarah Johnson"
+    title: "VP of Talent Acquisition"
+    company: "TechGlobal Inc."
+    image: "/placeholder.svg"
+  }
+  {
+    quote:
+      "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options."
+    author: "Michael Chen"
+    title: "Director of HR"
+    company: "InnovateCorp"
+    image: "/placeholder.svg"
+  }
+  {
+    quote:
+      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous."
+    author: "Elena Rodriguez"
+    title: "CTO"
+    company: "FutureTech Systems"
+    image: "/placeholder.svg"
+  }
+];
+=======
 import React from "react",
 import { Quote } from "lucide-react",
 import {
@@ -36,6 +77,7 @@ const testimonials = [
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export function EnterpriseTestimonials() {
   return (
@@ -86,6 +128,10 @@ export function EnterpriseTestimonials() {
       </div>
     </section>;
   );
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Quote } from "lucide-react",;
@@ -138,5 +184,10 @@ export function EnterpriseTestimonials() {;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
                       <img;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

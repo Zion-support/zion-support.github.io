@@ -3,6 +3,18 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
+<<<<<<< HEAD
+  Code
+  Copy
+  RefreshCw
+  CheckCircle
+  XCircle
+  ArrowRight
+  Download
+  Upload
+  Settings
+  Eye;
+=======
   Code,
   Copy,
   RefreshCw,
@@ -13,6 +25,7 @@ import {
   Upload,
   Settings,;
   Eye,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
@@ -31,18 +44,15 @@ export default function JSONFormatterPage() {;
       setIsValid(true);
       setErrorMessage('');
       return;    }
-
     try {
       const parsed = JSON.parse(inputJson);
       const formatted = compactMode      return
     }
-
     try {
       const parsed = JSON.parse(inputJson);
       const formatted = compactMode
         ? JSON.stringify(parsed)
         : JSON.stringify(parsed, null, indentSize);
-
       setFormattedJson(formatted);
       setIsValid(true);
       setErrorMessage('');
@@ -51,7 +61,6 @@ export default function JSONFormatterPage() {;
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
       setFormattedJson('');    }        ? JSON.stringify(parsed)
         : JSON.stringify(parsed, null, indentSize);
-      
       setFormattedJson(formatted);
       setIsValid(true);
       setErrorMessage('')
@@ -60,11 +69,9 @@ export default function JSONFormatterPage() {;
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
       setFormattedJson('')
     }
-  };
-
+  }
   const minifyJSON = () => {
     if (!inputJson.trim()) return;
-    
     try {
       const parsed = JSON.parse(inputJson);
       const minified = JSON.stringify(parsed);
@@ -77,47 +84,49 @@ export default function JSONFormatterPage() {;
     } catch (error) {
       setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-  };
-
+  }
   const validateJSON = () => {
     if (!inputJson.trim()) {
       setIsValid(true);
       setErrorMessage('');
       return;    }      return
     }
-
     try {
       JSON.parse(inputJson);
       setIsValid(true);
       setErrorMessage('');
     } catch (error) {
       setIsValid(false);
+<<<<<<< HEAD
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }      setErrorMessage('')
     } catch (error) {
       setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
+  }
+=======
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }
+
+    }
+
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const clearAll = () => {
     setInputJson('');
     setFormattedJson('');
     setIsValid(true);
     setErrorMessage('');
-  };
-
+  }
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-  };
-
+  }
   const downloadJSON = (content: string, filename: string) => {
-    const blob = new Blob([content], { type: 'application/json' });    const url = URL.createObjectURL(blob);  };
-
+    const blob = new Blob([content], { type: 'application/json' });    const url = URL.createObjectURL(blob);  }
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text)
-  };
-
+  }
   const downloadJSON = (content: string, filename: string) => {
-    const blob = new Blob([content], { type: 'application/json' }),
+    const blob = new Blob([content], { type: 'application/json' })
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -125,51 +134,46 @@ export default function JSONFormatterPage() {;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url);  };
-
+    URL.revokeObjectURL(url);  }
   const loadSampleJSON = () => {
     const sample = {    URL.revokeObjectURL(url)
-  };
-
+  }
   const loadSampleJSON = () => {
     const sample = {
-      name: 'John Doe',
-      age: 30,
-      email: 'john.doe@example.com',
+      name: 'John Doe'
+      age: 30
+      email: 'john.doe@example.com'
       address: {
-        street: '123 Main St',
-        city: 'Anytown',
-        state: 'CA',
-        zipCode: '12345',
-      },
+        street: '123 Main St'
+        city: 'Anytown'
+        state: 'CA'
+        zipCode: '12345'
+      }
       phoneNumbers: [
-          type: 'home',
-          number: '555-123-4567',
-        },
+          type: 'home'
+          number: '555-123-4567'
+        }
         {
-          type: 'work',
-          number: '555-987-6543',
-        },
-      ],
-      interests: ['programming', 'reading', 'hiking'],
-      active: true,
-      lastLogin: '2024-01-15T10:30:00Z',
-    };
-
+          type: 'work'
+          number: '555-987-6543'
+        }
+      ]
+      interests: ['programming', 'reading', 'hiking']
+      active: true
+      lastLogin: '2024-01-15T10:30:00Z'
+    }
     setInputJson(JSON.stringify(sample, null, 2));
     setFormattedJson('');
     setIsValid(true);
-    setErrorMessage('');  };
-
+    setErrorMessage('');  }
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n');
     return lines.map((_, index) => index + 1).join('\n');  };    setErrorMessage('')
-  };
-
+  }
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n');
     return lines.map((_, index) => index + 1).join('\n');    return lines.map((_, index) => index + 1).join('\n')
-  };
+  }
 
   return (
     <>
@@ -214,7 +218,7 @@ export default function JSONFormatterPage() {;
             JSON Formatter
           </h1>
           <p className="text-xl text-teal-200 max-w-4xl mx-auto leading-relaxed">
-            Format, validate, and beautify JSON with our professional tools. Minify, prettify, and analyze 
+            Format, validate, and beautify JSON with our professional tools. Minify, prettify, and analyze
             JSON data with advanced features and real-time validation.
           </p>
         </div>
@@ -382,7 +386,11 @@ export default function JSONFormatterPage() {;
 
                       {getLineNumbers(inputJson)}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   )}
                   <textarea
@@ -400,6 +408,10 @@ export default function JSONFormatterPage() {;
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+=======
 
 <<<<<<< HEAD
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
@@ -407,10 +419,10 @@ export default function JSONFormatterPage() {;
                 <div className='flex space-x-3'>
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
-
                 <div className='flex space-x-3'>
                   <Button
                     onClick={formatJSON}
@@ -423,6 +435,15 @@ export default function JSONFormatterPage() {;
                     className="flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <Code className="w-5 h-5 mr-2" />
+=======
+
+                <div className='flex space-x-3'>
+
+                    <strong>Error:</strong> {errorMessage}
+                  </div>
+                )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     Format JSON
                   </Button>
                   <Button
@@ -523,7 +544,6 @@ export default function JSONFormatterPage() {;
                       Formatted JSON will appear here. Enter JSON data and click format to get started.
                   </div>
                 )}
-
                 {formattedJson && (
                   <div className='text-sm text-gray-400'>
                     <p>• Characters: {formattedJson.length}</p>
@@ -541,7 +561,11 @@ export default function JSONFormatterPage() {;
 
                   </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             </Card>
@@ -551,7 +575,11 @@ export default function JSONFormatterPage() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -561,7 +589,11 @@ export default function JSONFormatterPage() {;
 =======
 
               Professional JSON Formatting Features
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -771,8 +803,15 @@ export default function JSONFormatterPage() {;
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 }
 import React, { useState, useEffect } from "react"
 import { safeStorage } from "@/utils/safeStorage"
@@ -8,7 +12,10 @@ export const AppStoreBanner: React.FC = () => {
   const isMobile = useIsMobile()
   useEffect((,) => {
 =======
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
 import { X } from 'lucide-react'
@@ -18,7 +25,11 @@ export const AppStoreBanner: React.FC = () => {
   const isMobile = useIsMobile(),
   
   useEffect(() => {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Only show banner on mobile devices and if it hasn't been dismissed before
     if (isMobile && !safeStorage.getItem("appBannerDismissed")) {
       // Delay showing the banner by 2 seconds
@@ -35,7 +46,11 @@ export const AppStoreBanner: React.FC = () => {
     safeStorage.setItem("appBannerDismissed", "true")
   }
   // Only render on mobile devices
+<<<<<<< HEAD
+  if (!isMobile |!isVisible) return null
+=======
   if (!isMobile || !isVisible) return null
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       }, 2000),
       
@@ -52,7 +67,11 @@ export const AppStoreBanner: React.FC = () => {
   // Only render on mobile devices
   if (!isMobile || !isVisible) return null,
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
@@ -62,8 +81,8 @@ export const AppStoreBanner: React.FC = () => {
           <p className="text-xs text-gray-300">Get the full experience on our app</p>
         </div>
         <div className="flex items-center gap-3">
-          <a 
-            href="/open-app" 
+          <a
+            href="/open-app"
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View
@@ -85,6 +104,15 @@ export const AppStoreBanner: React.FC = () => {
 };
 =======
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+'"}
+}
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 },
 import React, { useState, useEffect } from "react",;
 import { safeStorage } from "@/utils/safeStorage",;
@@ -137,4 +165,8 @@ export const AppStoreBanner: React.FC = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

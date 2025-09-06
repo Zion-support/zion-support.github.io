@@ -1,15 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React from 'react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface FilterSidebarProps {
-  className?: string
+  className?: string;
   children?: React.ReactNode
 }
 
-export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
-  className,
-  children 
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({
+  className
+  children
 },) => {  return (
-    <div className={`filter-sidebar ${className || ''}`}>
+    <div className={`filter-sidebar ${className |''}`}>
       {children}
     </div>
   )
@@ -20,13 +24,11 @@ interface FilterOption {
   label: string
   count?: number
 }
-
 interface FilterGroup {
   title: string
   key: string
   options: FilterOption[]
   type: 'checkbox' | 'radio' | 'range'}
-
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   filters: FilterGroup[]
   selectedFilters: Record<string, any>
@@ -34,13 +36,12 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   onClearFilters: : unknown void
   isOpen: boolean
   onClose: ()  => void}
-
 export function FilterSidebar({
-  filters,
-  selectedFilters,
-  onFilterChange,
-  onClearFilters,
-  isOpen,
+  filters
+  selectedFilters
+  onFilterChange
+  onClearFilters
+  isOpen
   onClose
 }: FilterSidebarProps) {
   return ()
@@ -52,7 +53,6 @@ export function FilterSidebar({
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
       <div className={`
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none'
@@ -75,10 +75,18 @@ export function FilterSidebar({
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+      </div>
+    </>
+  )}
+'"`
+
+=======
       </div>;
     </>;
   )};
 '"`;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 interface FilterSidebarProps {;
@@ -97,4 +105,8 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   );
 };
 export default FilterSidebar;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

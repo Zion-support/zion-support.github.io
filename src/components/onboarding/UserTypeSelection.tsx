@@ -1,29 +1,61 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useState } from 'react'
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
+import { useState } from "react";
+=======
 import { useState } from "react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Briefcase, Star, User } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Button } from "@/components/ui/button";
 interface UserTypeOption {
-  id: 'serviceProvider' | 'talent' | 'client'
-  name: string
-  description: string
+<<<<<<< HEAD
+  id: "serviceProvider" | "talent" | "client";
+  name: string;
+  description: string;
   icon: React.ElementType
 interface UserTypeSelectionProps {
-  onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
   selectedType: string | null
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function UserTypeSelection({
-  onSelect,
-  selectedType,
+  onSelect
+  selectedType
 }: UserTypeSelectionProps) {
+<<<<<<< HEAD
+  const userTypes: UserTypeOption[] = [
+    {
+=======
+  id: "serviceProvider" | "talent" | "client",
+  name: string,
+  description: string,
+  icon: React.ElementType
+}
+
+interface UserTypeSelectionProps {
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,
+  selectedType: string | null
+}
+
+export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
+=======
 =======
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const userTypes: UserTypeOption[] = [
     {
       id: "serviceProvider",
@@ -39,6 +71,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     },
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       id: 'client',
       name: 'Client',
       description: 'I want to discover and hire talent or services',
@@ -46,14 +80,37 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     },
   ]
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       id: "client",
       name: "Client",
       description: "I want to discover and hire talent or services",
       icon: User
     }
   ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+      id: 'serviceProvider'
+      name: 'Service Provider'
+      description: 'I want to offer services on the platform'
+      icon: Briefcase
+    }
+    {
+      id: 'talent'
+      name: 'Talent'
+      description: 'I want to showcase my skills and find opportunities'
+      icon: Star
+    }
+    {
+      id: 'client'
+      name: 'Client'
+      description: 'I want to discover and hire talent or services'
+      icon: User
+    }
+  ]
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -67,6 +124,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         {userTypes.map(type => {
           const Icon = type.icon
           const isSelected = selectedType === type.id
+
               onClick={() => onSelect(type.id)}
               variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
@@ -88,7 +146,11 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 isSelected 
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
@@ -103,6 +165,14 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
               </div>
             </Button>
           )
+<<<<<<< HEAD
+        })}
+      </div>
+    </div>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
@@ -189,4 +259,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 =======
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,55 +1,52 @@
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 interface FormData {
-  name: string, email: string,
-  company: string, phone: string,
-  service: string,
-  message: string,
-};
+  name: string, email: string
+  company: string, phone: string
+  service: string
+  message: string
+}
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
-      [name]: value,
+      ...prev
+      [name]: value
     }));
-  };
-
+  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-    try {,
-      // Simulate form submission,
+    try {
+      // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
+        message: ''
       });
-      
       setSubmitStatus('success');
     } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
-  };
-
+  }
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
@@ -60,13 +57,11 @@ const ContactForm: React.FC = () => {
           Thank you for your message! We&apos;ll get back to you soon.
         </div>
       )}
-      
       {submitStatus === 'error' && (
         <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
           Something went wrong. Please try again.
         </div>
       )}
-
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -178,6 +173,10 @@ const ContactForm: React.FC = () => {
       </form>
     </div>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default ContactForm;

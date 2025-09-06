@@ -1,24 +1,27 @@
 
 <<<<<<< HEAD
 // Signup checking functionality
-import {supabase} from '@/integrations/supabase/client';
-import {analyzeEmail} from './analyzeEmail';
-import {SignupCheckResult} from './types';
+import { supabase  } from '@/integrations/supabase/client';
+import { analyzeEmail  } from './analyzeEmail';
+import { SignupCheckResult } from './types';
 /**
  * Check for suspicious signup patterns
  */
+<<<<<<< HEAD
+
+export const checkSignupPatterns = async (
+=======
 export const checkSignupPatterns = async (;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   email: string;
   ipAddress?: string
 ): Promise<SignupCheckResult> => {
   const reasons: string[] = [];
-  
   // Check email against suspicious patterns
-  const emailCheck = analyzeEmail(email),
+  const emailCheck = analyzeEmail(email)
   if (emailCheck.isSuspicious) {
     reasons.push(...emailCheck.reasons)
   }
-  
   // If IP address is provided, check for rapid signups from same IP
   if (ipAddress) {
     try {
@@ -28,7 +31,6 @@ export const checkSignupPatterns = async (;
         .eq('ip_address', ipAddress)
         .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
-      
       if (!error && recentSignups && recentSignups.length >= 3) {
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
 =======
@@ -61,15 +63,23 @@ export const checkSignupPatterns = async (;
         .order('created_at', { ascending: false }),;
       if (!error && recentSignups && recentSignups.length >= 3) {;
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
       console.error('Error checking signup patterns:', error)
     }
   }
-  
   return {
-    isSuspicious: reasons.length > 0,
+    isSuspicious: reasons.length > 0
     reasons
   }
+<<<<<<< HEAD
+}
+
+=======
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

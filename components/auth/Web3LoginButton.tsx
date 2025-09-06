@@ -1,37 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
-  ssr: false,
-});const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),
+  ssr: false
+});const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false })
 async function resolveDisplayName(addr: string): Promise<string | null> {
   try {
+
     const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`);
     const { data } = await r.json();
-    const did = data?.payload || {};
-    return did.lens || did.ens || null;
+    const did = data?.payload |{}
+    return did.lens |did.ens |null;
   } catch {
     return null;
   }
+<<<<<<< HEAD
+export default function Web3LoginButton() {
+=======
 
 export default function Web3LoginButton() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-
-  useEffect(() => {    return did.lens || did.ens || null
-  } catch { return null };
+  useEffect(() => {    return did.lens |did.ens |null
+  } catch { return null }
 }
+<<<<<<< HEAD
+export default function Web3LoginButton() {
+=======
 
 export default function Web3LoginButton() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [open, setOpen] = useState(false);
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
+  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null)
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-
   useEffect(() => {
     const saved =
       typeof window !== 'undefined'
@@ -43,39 +49,39 @@ export default function Web3LoginButton() {;
         ? window.localStorage.getItem('zion-web3-display')
         : null;
     setDisplayWeb3(pref === 'true');  }, []);
-
   useEffect(() => {
     (async () => {    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved));
     const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
     setDisplayWeb3(pref === 'true')
-
   useEffect(() => {
     (async () => {
       if (user && displayWeb3)
         setDisplayName(await resolveDisplayName(user.address));
       else setDisplayName(null);
     })();
-
   const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) => {
     window.localStorage.setItem('zion-web3-user', JSON.stringify(u));
-    setUser(u);  };
-
+    setUser(u);  }
   const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');    setUser(u)
-  };
-
+  }
   const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user');
     try {
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (user) {
     const base =
-      displayName || `${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
+      displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
+
+<<<<<<< HEAD
     return (
       <div className='flex items-center gap-2'>
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5'>
@@ -99,11 +105,9 @@ export default function Web3LoginButton() {;
         )}
       </div>
     );  }
-
   return (
     <>    )
   }
-
   return (
     <>
       <button
@@ -125,14 +129,21 @@ export default function Web3LoginButton() {;
     </>
 );
 }
+<<<<<<< HEAD
+=======
 
 }
 }
 }
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   }
 
   return (
     <>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

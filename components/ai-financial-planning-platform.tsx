@@ -1,7 +1,31 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  DollarSign
+  TrendingUp
+  Shield
+  Zap
+  Target
+  BarChart3
+  CheckCircle
+  Star
+  Globe
+  Lock
+  Smartphone
+  Monitor
+  Award
+  MessageCircle
+  Calculator;} from 'lucide-react';import {
+  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor
+=======
   DollarSign,
   TrendingUp,
   Shield,
@@ -16,66 +40,74 @@ import {
   Monitor,
   Award,
 <<<<<<< HEAD
+  MessageCircle,
+  Calculator,;} from 'lucide-react';import { 
+=======
+<<<<<<< HEAD
   MessageCircle,;
   Calculator,;} from 'lucide-react';import {
 =======
   MessageCircle,
   Calculator,;} from 'lucide-react';import { 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   Award, MessageCircle, Calculator
-
 export default function AIFinancialPlanningPlatform() {
   const features = [
     {
-      icon: <DollarSign className='w-6 h-6' />,
+      icon: <DollarSign className='w-6 h-6' />
       description:
-        'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.',
-    },
+        'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
+    }
     {
-      icon: <TrendingUp className='w-6 h-6' />,
-      title: 'Predictive Financial Planning',
+      icon: <TrendingUp className='w-6 h-6' />
+      title: 'Predictive Financial Planning'
       description:
-        'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.',
-    },
+        'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'
+    }
     {
-      icon: <Target className='w-6 h-6' />,
-      title: 'Goal-Based Planning',
+      icon: <Target className='w-6 h-6' />
+      title: 'Goal-Based Planning'
       description:
-        'Personalized financial planning based on your specific goals, timeline, and risk tolerance.',
-    },
+        'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
+    }
     {
-      icon: <Zap className='w-6 h-6' />,
-      title: 'Automated Portfolio Management',
+      icon: <Zap className='w-6 h-6' />
+      title: 'Automated Portfolio Management'
       description:
-        'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.',
-    },
+        'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'
+    }
     {
-      icon: <Shield className='w-6 h-6' />,
-      title: 'Risk Assessment & Management',
+      icon: <Shield className='w-6 h-6' />
+      title: 'Risk Assessment & Management'
       description:
-        'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.',
-    },
+        'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'
+    }
     {
-      icon: <BarChart3 className='w-6 h-6' />,
-      title: 'Real-Time Financial Insights',
+      icon: <BarChart3 className='w-6 h-6' />
+      title: 'Real-Time Financial Insights'
       description:
+<<<<<<< HEAD
+        'Live financial data, market analysis, and personalized recommendations updated in real-time.'
+    }
+=======
         'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
     },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
-
   const benefits = [
-    'Increase investment returns by 25%',
-    'Reduce financial planning time by 70%',
-    'Improve risk-adjusted returns by 40%',
-    'Optimize tax efficiency by 30%',
-    'Reduce portfolio volatility by 35%',
-    'Improve financial goal achievement by 50%',
-    'Reduce financial planning costs by 60%',
-    'Gain professional-grade financial insights',
+    'Increase investment returns by 25%'
+    'Reduce financial planning time by 70%'
+    'Improve risk-adjusted returns by 40%'
+    'Optimize tax efficiency by 30%'
+    'Reduce portfolio volatility by 35%'
+    'Improve financial goal achievement by 50%'
+    'Reduce financial planning costs by 60%'
+    'Gain professional-grade financial insights'
   ];
-
   <div className='mt-12'>
     <h2 className='text-2xl font-semibold'>Pricing</h2>
     <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -233,7 +265,8 @@ export default function AIFinancialPlanningPlatform() {
                 AI Financial Planning Platform
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Intelligent financial planning and wealth management with AI. Get personalized plans,
+                Intelligent financial planning and wealth management with AI. Get personalized plans
+
                 portfolio optimization, and risk management that drives financial success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -283,7 +316,7 @@ export default function AIFinancialPlanningPlatform() {
                 Powerful Financial Planning Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform combines advanced financial modeling with machine learning to deliver 
+                Our AI platform combines advanced financial modeling with machine learning to deliver
                 comprehensive financial planning and wealth management solutions.
               </p>
             </motion.div>
@@ -298,7 +331,11 @@ export default function AIFinancialPlanningPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
                     <div className='text-yellow-400'>{feature.icon}</div>
@@ -323,7 +360,11 @@ export default function AIFinancialPlanningPlatform() {
 
                 </motion.div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
@@ -331,7 +372,11 @@ export default function AIFinancialPlanningPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Benefits Section */}
         <section className='py-20 bg-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
@@ -344,7 +389,11 @@ export default function AIFinancialPlanningPlatform() {
 =======
               className='text-center mb-16'
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -365,7 +414,7 @@ export default function AIFinancialPlanningPlatform() {
                 Transform Your Financial Future
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Experience dramatic improvements in financial planning efficiency, investment returns, and 
+                Experience dramatic improvements in financial planning efficiency, investment returns, and
                 goal achievement with our AI-powered financial planning platform.
               </p>
             </motion.div>
@@ -395,7 +444,11 @@ export default function AIFinancialPlanningPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Use Cases Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
@@ -408,7 +461,11 @@ export default function AIFinancialPlanningPlatform() {
 =======
               className='text-center mb-16'
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -429,7 +486,7 @@ export default function AIFinancialPlanningPlatform() {
                 Comprehensive Financial Planning Solutions
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From retirement planning to investment management, our platform provides AI-powered 
+                From retirement planning to investment management, our platform provides AI-powered
                 solutions for every aspect of your financial life.
               </p>
             </motion.div>
@@ -444,7 +501,11 @@ export default function AIFinancialPlanningPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
                     <Calculator className='w-6 h-6 text-yellow-400' />
@@ -460,7 +521,11 @@ export default function AIFinancialPlanningPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
@@ -476,7 +541,11 @@ export default function AIFinancialPlanningPlatform() {
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -497,7 +566,7 @@ export default function AIFinancialPlanningPlatform() {
                   className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25'                >                Ready to Transform Your Financial Planning?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of individuals that have already revolutionized their financial planning 
+                Join thousands of individuals that have already revolutionized their financial planning
                 with AI automation. Start your free trial today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -523,6 +592,11 @@ export default function AIFinancialPlanningPlatform() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
 
 }
@@ -531,4 +605,5 @@ export default function AIFinancialPlanningPlatform() {
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

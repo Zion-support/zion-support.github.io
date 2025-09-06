@@ -1,39 +1,40 @@
 
-const OPENAI_API_KEY = '',
+const OPENAI_API_KEY = ''
 // Base URL for opening Zion pages in a new tab
-const BASE_URL = 'https: //zionai.com',
 
+const BASE_URL = 'https: //zionai.com'
 async function askZionGPT(prompt) {
-  if (!OPENAI_API_KEY) return { answer: 'Model key missing' },
+  if (!OPENAI_API_KEY) return { answer: 'Model key missing' }
 
   try {
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
+      method: 'POST'
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${OPENAI_API_KEY}`
-      },
+
+      }
       body: JSON.stringify({
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-3.5-turbo'
         messages: [{ role: 'user', content: prompt }]
       })
-    }),
-
+    })
     if (!res.ok) {
-      console.error('OpenAI request failed', res.status, await res.text()),
+      console.error('OpenAI request failed', res.status, await res.text())
       return { answer: 'Error contacting model' }
     }
-
-    const data = await res.json(),
-    return { answer: data.choices?.[0]?.message?.content || '' }
+    const data = await res.json()
+    return { answer: data.choices?.[0]?.message?.content |'' }
   } catch (err) {
-    console.error('OpenAI request error', err),
+    console.error('OpenAI request error', err)
+
     return { answer: 'Error contacting model' }
   }
 }
-
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === 'ask') {
-    askZionGPT(message.prompt).then(sendResponse),
+
+    askZionGPT(message.prompt).then(sendResponse)
+
     return true
   }
   if (message.type === 'post-job') {
@@ -46,8 +47,17 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     chrome.tabs.create({ url: `${BASE_URL}/notifications` })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+});
+
+=======
+}),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }),
 ;
 =======
 }),;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

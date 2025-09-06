@@ -1,75 +1,91 @@
 import type { GetServerSideProps } from 'next';
-import {FormEvent, useEffect, useState} from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {;
 =======
 type Props = { vendor: Vendor | null };
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AgencyDashboardPage({ vendor }: Props) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
-
   if (!activeVendor)
     return (
       <div className='text-gray-500'>No vendor found. Please apply first.</div>
     );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
-
   async function saveProfile(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const updated = {
-      ...activeVendor,
-      name: String(formData.get('name') || activeVendor.name),
-      about: String(formData.get('about') || activeVendor.about || ''),
+      ...activeVendor
+      name: String(formData.get('name') |activeVendor.name)
+      about: String(formData.get('about') |activeVendor.about |'')
       servicesOffered: String(
-        formData.get('servicesOffered') ||
-          activeVendor.servicesOffered?.join(',') ||
+        formData.get('servicesOffered') |
+          activeVendor.servicesOffered?.join(',') |
           ''
       )
         .split(',')
         .map(s => s.trim())
+<<<<<<< HEAD
+        .filter(Boolean)
+=======
         .filter(Boolean),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only
     setActiveVendor(updated);  }
-
   function addPackage() {
-    if (!pkgTitle || !pkgPrice || !activeVendor) return;      name: String(formData.get('name') || activeVendor.name),
-      about: String(formData.get('about') || activeVendor.about || ''),
-      servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join() || '')
+    if (!pkgTitle |!pkgPrice |!activeVendor) return;      name: String(formData.get('name') |activeVendor.name)
+      about: String(formData.get('about') |activeVendor.about |'')
+      servicesOffered: String(formData.get('servicesOffered') |activeVendor.servicesOffered?.join() |'')
         .split()
         .map(s => s.trim())
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only
     setActiveVendor(updated)
   }
-
   function addPackage() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (!pkgTitle |!pkgPrice |!activeVendor) return;
+=======
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const packages = [
-      ...(activeVendor.packages || []),
+      ...(activeVendor.packages |[])
       {
-        id: `pkg_${Date.now()}`,
-        title: pkgTitle,
-        description: pkgDesc,
-        priceUsd: Number(pkgPrice),
-      },
+        id: `pkg_${Date.now()}`
+        title: pkgTitle
+        description: pkgDesc
+        priceUsd: Number(pkgPrice)
+      }
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className='space-y-8'>
       <div className='flex items-center justify-between'>
@@ -98,7 +114,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             <label className='block text-sm mb-1'>About</label>
             <textarea
               name='about'
-              defaultValue={activeVendor.about || ''}
+              defaultValue={activeVendor.about |''}
               rows={4}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />
@@ -107,7 +123,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             <label className='block text-sm mb-1'>Services Offered</label>
             <input
               name='servicesOffered'
-              defaultValue={activeVendor.servicesOffered?.join(', ') || ''}
+              defaultValue={activeVendor.servicesOffered?.join(', ') |''}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />
           </div>
@@ -124,7 +140,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setPkgDesc('');
     setPkgPrice('')
   }
-
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
@@ -140,11 +155,11 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           </div>
           <div className="md:col-span-2">
             <label className="block text-sm mb-1" htmlFor="input-About">About</label>
-            <textarea name="about" defaultValue={activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
+            <textarea name="about" defaultValue={activeVendor.about |''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
             <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>
-            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join() || ''} className="w-full border rounded px-3 py-2 bg-transparent" />
+            <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join() |''} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
             <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>
@@ -152,6 +167,9 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         </form>
       </section>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -216,38 +234,53 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   );
 }
 =======
+<<<<<<< HEAD
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+
+          </div>
+        </form>
+      </section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
-
   async function fetchItems() {
     const res = await fetch(
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
     );
     const data = await res.json();
-    setItems(data.items || []);  }    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
+    setItems(data.items |[]);  }    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
     const data = await res.json();
-    setItems(data.items || [])
+    setItems(data.items |[])
   }
-
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ itemId, status }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ itemId, status })
     });
     fetchItems();
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
 =======
   }
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   useEffect(() => {
     fetchItems();
   }, []);
-
   return (
     <div className='space-y-2'>
       {items.length === 0 && (
@@ -289,19 +322,35 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 <<<<<<< HEAD
     </div>
   );
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+=======
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] || null; // tie to auth later
-  return { props: { vendor } };
+  const vendor = listVendors()[0] |null; // tie to auth later
+  return { props: { vendor } }
 };  )
 }
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+=======
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
-  const vendor = listVendors()[0] || null, // tie to auth later
+  const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
+<<<<<<< HEAD
+}
+
+=======
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 };
 =======
     </div>
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

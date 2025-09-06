@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+export default function APIPage() {return (;
+=======
 export default function APIPage() {;
   return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
         {/* Header */}
@@ -206,12 +210,20 @@ export default function APIPage() {;
               <div className="bg-gray-900/50 rounded-lg p-4">;
                 <div className="text-sm text-gray-400 mb-2">Node.js</div>;
                 <pre className="text-sm text-gray-300 overflow-x-auto">;
+<<<<<<< HEAD
+{`const { ZionOS } = require('@zion-os/sdk');
+const client = new ZionOS('YOUR_API_KEY');
+const economy = await client.economies.create({name: 'My Digital Economy';
+  description: 'A sovereign digital economy';
+  features: ['marketplacegovernancetokens'];
+=======
 {`const { ZionOS } = require('@zion-os/sdk'),;
 const client = new ZionOS('YOUR_API_KEY'),;
 const economy = await client.economies.create({;
   name: 'My Digital Economy',;
   description: 'A sovereign digital economy',;
   features: ['marketplacegovernancetokens'],;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   blockchain: 'ethereum';
 });
 // // // console.log('Economy created:', economy.id),`}

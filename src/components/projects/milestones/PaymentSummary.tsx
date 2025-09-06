@@ -1,13 +1,24 @@
 <<<<<<< HEAD
+
+<<<<<<< HEAD
+import React from 'react';
+import { Milestone  } from '@/hooks/useMilestones';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+=======
+<<<<<<< HEAD
 }; import React from 'react'
 import { Milestone } from '@/hooks/useMilestones'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { CreditCard } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import React from 'react'
 interface PaymentSummaryProps {
-  milestones: Milestone[],
+
+  milestones: Milestone[]
   paymentTerms: string | null
+<<<<<<< HEAD
+=======
 }
 ;
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {;
@@ -28,10 +39,32 @@ import { CreditCard } from 'lucide-react';
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {
+  const totalPayment = milestones.reduce(
+<<<<<<< HEAD
+    (sum, m) => sum + parseFloat(m.amount.toString());    0
+  ).toFixed(2)
+  const paidAmount = milestones
+    .filter(m => m.status === 'paid')
+    .reduce(
+      (sum, m) => sum + parseFloat(m.amount.toString());      0
+    ).toFixed(2)
+=======
+import React from 'react',;
+import { Milestone } from '@/hooks/useMilestones',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { CreditCard } from 'lucide-react';
+interface PaymentSummaryProps {;
+  milestones: Milestone[],;
+  paymentTerms: string | null;
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     (sum, m) => sum + parseFloat(m.amount.toString()), 
     0
   ).toFixed(2),
@@ -43,7 +76,11 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       0
     ).toFixed(2),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -62,17 +99,25 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
-              {paymentTerms || "Not specified"}
+              {paymentTerms |"Not specified"}
             </p>
           </div>
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
@@ -86,6 +131,10 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   )
 }
 '"
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             </p>;
           </div>;
@@ -94,4 +143,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     </Card>;
   );
 };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

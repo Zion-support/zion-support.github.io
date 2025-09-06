@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredCybersecurityPage() {
+
   return (
     <>
       <Head>
@@ -24,28 +30,32 @@ export default function AIPoweredCybersecurityPage() {
         implementationWeeks='2-6 weeks'
         roiNote='Reduce alert fatigue by 80% and mean time to contain by 70%'
         features={[
-          'Anomaly detection and adversary behavior modeling',
-          'Automated playbooks and SOAR actions',
-          'Deception tokens and breach canaries',
-          'Zero-trust policy recommendations',
-          'Ransomware early detection and isolation',
-          'Compliance evidence and audit-ready reports',
+          'Anomaly detection and adversary behavior modeling'
+          'Automated playbooks and SOAR actions'
+          'Deception tokens and breach canaries'
+          'Zero-trust policy recommendations'
+          'Ransomware early detection and isolation'
+          'Compliance evidence and audit-ready reports'
         ]}
         industries={[
-          'Financial Services',
-          'Healthcare',
-          'SaaS',
-          'Public Sector',
-          'Critical Infrastructure',
+          'Financial Services'
+          'Healthcare'
+          'SaaS'
+          'Public Sector'
+          'Critical Infrastructure'
         ]}
         canonical='https: //ziontechgroup.com/ai-powered-cybersecurity'
       />
     </>;
   );
 
+<<<<<<< HEAD
+=======
+=======
 }
 =======
 import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIPoweredCybersecurityPage() {
@@ -97,4 +107,8 @@ export default function AIPoweredCybersecurityPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

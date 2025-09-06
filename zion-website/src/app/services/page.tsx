@@ -1,108 +1,108 @@
-import { 
-  UserGroupIcon,
-  LightBulbIcon, 
-  CogIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  RocketLaunchIcon,
-  AcademicCapIcon,
+import {
+  UserGroupIcon
+  LightBulbIcon
+  CogIcon
+  ShieldCheckIcon
+  ChartBarIcon
+  RocketLaunchIcon
+  AcademicCapIcon
   GlobeAltIcon
 } from '@heroicons/react/24/outline'
-
 const professionalServices = [
   {
-    name: 'AI Strategy & Consulting',
-    description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.',
-    icon: LightBulbIcon,
+    name: 'AI Strategy & Consulting'
+    description: 'Comprehensive assessment and strategic planning for AI transformation initiatives.'
+    icon: LightBulbIcon
     features: [
       'Technology AssessmentROI AnalysisImplementation RoadmapChange Management Planning'
-    ],
-    duration: '4-8 weeks'},
+    ]
+    duration: '4-8 weeks'}
   {
-    name: 'Custom AI Development',
-    description: 'Tailored AI solutions built specifically for your business needs and objectives.',
-    icon: CogIcon,
+    name: 'Custom AI Development'
+    description: 'Tailored AI solutions built specifically for your business needs and objectives.'
+    icon: CogIcon
     features: [
       'Custom Algorithm DevelopmentIntegration ServicesTesting & ValidationDocumentation & Training'
-    ],
-    duration: '8-24 weeks'},
+    ]
+    duration: '8-24 weeks'}
   {
-    name: 'AI Integration & Deployment',
-    description: 'Seamless integration of AI solutions into your existing infrastructure and workflows.',
-    icon: RocketLaunchIcon,
+    name: 'AI Integration & Deployment'
+    description: 'Seamless integration of AI solutions into your existing infrastructure and workflows.'
+    icon: RocketLaunchIcon
     features: [
       'System IntegrationAPI DevelopmentPerformance OptimizationGo-live Support'
-    ],
-    duration: '4-12 weeks'},
+    ]
+    duration: '4-12 weeks'}
   {
-    name: 'AI Training & Education',
-    description: 'Comprehensive training programs to ensure your team maximizes AI solution value.',
-    icon: AcademicCapIcon,
+    name: 'AI Training & Education'
+    description: 'Comprehensive training programs to ensure your team maximizes AI solution value.'
+    icon: AcademicCapIcon
     features: [
       'Technical TrainingBest PracticesOngoing SupportCertification Programs'
-    ],
-    duration: '2-4 weeks'},
+    ]
+    duration: '2-4 weeks'}
   {
-    name: 'AI Maintenance & Support',
-    description: 'Continuous monitoring, optimization, and support for your AI solutions.',
-    icon: ShieldCheckIcon,
+    name: 'AI Maintenance & Support'
+    description: 'Continuous monitoring, optimization, and support for your AI solutions.'
+    icon: ShieldCheckIcon
     features: [
       '24/7 MonitoringPerformance OptimizationSecurity UpdatesTechnical Support'
-    ],
-    duration: 'Ongoing'},
+    ]
+    duration: 'Ongoing'}
   {
-    name: 'AI Audit & Compliance',
-    description: 'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.',
-    icon: ChartBarIcon,
+    name: 'AI Audit & Compliance'
+    description: 'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.'
+    icon: ChartBarIcon
     features: [
       'Compliance AssessmentEthical AI ReviewSecurity AuditsRisk Mitigation'
-    ],
+    ]
     duration: '2-6 weeks'}]
-
 const serviceProcess = [
   {
-    step: '01',
-    title: 'Discovery & Assessment',
-    description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.',
-    icon: LightBulbIcon},
+    step: '01'
+    title: 'Discovery & Assessment'
+    description: 'We begin by understanding your business challenges, current technology stack, and AI objectives.'
+    icon: LightBulbIcon}
   {
-    step: '02',
-    title: 'Solution Design',
-    description: 'Our experts design a comprehensive solution that addresses your specific needs and goals.',
-    icon: CogIcon},
+    step: '02'
+    title: 'Solution Design'
+    description: 'Our experts design a comprehensive solution that addresses your specific needs and goals.'
+    icon: CogIcon}
   {
-    step: '03',
-    title: 'Development & Testing',
-    description: 'We develop and rigorously test your solution to ensure optimal performance and reliability.',
-    icon: RocketLaunchIcon},
+    step: '03'
+    title: 'Development & Testing'
+    description: 'We develop and rigorously test your solution to ensure optimal performance and reliability.'
+    icon: RocketLaunchIcon}
   {
-    step: '04',
-    title: 'Deployment & Training',
-    description: 'Seamless deployment with comprehensive training to maximize adoption and value.',
-    icon: AcademicCapIcon},
+    step: '04'
+    title: 'Deployment & Training'
+    description: 'Seamless deployment with comprehensive training to maximize adoption and value.'
+    icon: AcademicCapIcon}
   {
-    step: '05',
-    title: 'Ongoing Support',
-    description: 'Continuous monitoring, optimization, and support to ensure lasting success.',
+    step: '05'
+    title: 'Ongoing Support'
+    description: 'Continuous monitoring, optimization, and support to ensure lasting success.'
     icon: ShieldCheckIcon}]
-
 const reasonsToChoose = [
   {
-    name: 'Expert Team',
-    description: 'World-class AI researchers and engineers with decades of combined experience.',
-    icon: UserGroupIcon},
+    name: 'Expert Team'
+    description: 'World-class AI researchers and engineers with decades of combined experience.'
+    icon: UserGroupIcon}
   {
-    name: 'Proven Track Record',
-    description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.',
-    icon: ChartBarIcon},
+    name: 'Proven Track Record'
+    description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.'
+    icon: ChartBarIcon}
   {
-    name: 'Cutting-Edge Technology',
-    description: 'Access to the latest AI research and technology innovations.',
-    icon: LightBulbIcon},
+    name: 'Cutting-Edge Technology'
+    description: 'Access to the latest AI research and technology innovations.'
+    icon: LightBulbIcon}
   {
-    name: 'Global Support',
-    description: '24/7 support and maintenance services across multiple time zones.',
+    name: 'Global Support'
+    description: '24/7 support and maintenance services across multiple time zones.'
     icon: GlobeAltIcon}]
+<<<<<<< HEAD
+export default function ServicesPage() {
+=======
 
 <<<<<<< HEAD
 export default function ServicesPage() {;
@@ -110,6 +110,7 @@ export default function ServicesPage() {;
     <div className=&quot;bg-black&quot;>
 =======
 const Page: React.FC<PageProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="bg-black">
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -123,8 +124,13 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 AI Services
               </span>
             </h1>
+<<<<<<< HEAD
+            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+              From strategy to implementation, our comprehensive AI services help you navigate
+=======
             <p className="mt-6 text-lg leading-8 text-gray-300">
               From strategy to implementation, our comprehensive AI services help you navigate 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
@@ -137,8 +143,13 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Comprehensive AI Solutions
           </p>
+<<<<<<< HEAD
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            We offer end-to-end AI services designed to accelerate your digital transformation
+=======
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We offer end-to-end AI services designed to accelerate your digital transformation 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             and drive measurable business outcomes.
           </p>
         </div>
@@ -179,16 +190,27 @@ const Page: React.FC<PageProps> = ({ className }) => {
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Process</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            How We Deliver Results
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our proven methodology ensures successful project delivery and maximum value
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             How We Deliver Results
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our proven methodology ensures successful project delivery and maximum value 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             from your AI investment.
           </p>
         </div>
@@ -223,7 +245,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             The Zion Tech Group Advantage
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -255,7 +281,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

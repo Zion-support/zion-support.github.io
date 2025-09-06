@@ -1,8 +1,32 @@
+<<<<<<< HEAD
+import React from 'react',
+import Layout from './layout/Layout',
+=======
 import React from 'react';
 import Layout from './layout/Layout';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  ArrowRight
+  Star
+  Brain
+  Atom
+  Shield
+  Zap
+  TrendingUp
+  Globe
+  MapPin
+  Users
+  Building
+  Rocket
+  CheckCircle
+  Phone
+  Mail;} from 'lucide-react';import {
+  ArrowRight, Star
+=======
   ArrowRight,
   Star,
   Brain,
@@ -19,9 +43,9 @@ import {
   Phone,;
   Mail,;} from 'lucide-react';import {
   ArrowRight, Star, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail
-
 const Homepage2026: React.FC = () => {
   return (
     <Layout>
@@ -30,7 +54,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
           {/* Background Elements */}
@@ -61,7 +89,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Company Badge */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -71,7 +103,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
@@ -137,7 +173,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -310,7 +350,11 @@ const Homepage2026: React.FC = () => {
 
               {/* AI Automation Services */}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -319,7 +363,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-5xl mb-6'>🤖</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -349,7 +397,7 @@ const Homepage2026: React.FC = () => {
                 <div className="text-5xl mb-6">🤖</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Automation Services</h3>
                 <p className="text-gray-300 mb-6">
-                  Intelligent automation solutions that streamline operations and boost productivity. 
+                  Intelligent automation solutions that streamline operations and boost productivity.
                   From content creation to customer service, our AI solutions save time and improve efficiency.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -375,7 +423,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* IT Infrastructure Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -385,7 +437,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-5xl mb-6'>🏗️</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -415,7 +471,7 @@ const Homepage2026: React.FC = () => {
                 <div className="text-5xl mb-6">🏗️</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">IT Infrastructure Services</h3>
                 <p className="text-gray-300 mb-6">
-                  Robust infrastructure solutions for modern digital businesses. 
+                  Robust infrastructure solutions for modern digital businesses.
                   Edge computing, zero trust security, and hybrid cloud management for enterprise-grade performance.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -441,7 +497,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Micro SAAS Solutions */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -451,7 +511,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-5xl mb-6'>🚀</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -481,7 +545,7 @@ const Homepage2026: React.FC = () => {
                 <div className="text-5xl mb-6">🚀</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-6">
-                  Specialized software solutions for specific business needs. 
+                  Specialized software solutions for specific business needs.
                   Affordable, focused solutions that solve real problems and drive growth.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -507,7 +571,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Cutting-Edge AI Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -517,7 +585,11 @@ const Homepage2026: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-5xl mb-6'>🧠</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -547,7 +619,7 @@ const Homepage2026: React.FC = () => {
                 <div className="text-5xl mb-6">🧠</div>
                 <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>
                 <p className="text-gray-300 mb-6">
-                  Next-generation AI solutions for competitive advantage. 
+                  Next-generation AI solutions for competitive advantage.
                   Video generation, code assistance, and data analysis powered by advanced AI.
                 </p>
                 <div className="space-y-3 mb-6">
@@ -713,13 +785,24 @@ const Homepage2026: React.FC = () => {
       </main>
     </Layout>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Homepage2026;  )
-};
-
+}
 export default Homepage2026;
+
+<<<<<<< HEAD
+=======
+export default Homepage2026;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 export default Homepage2026;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

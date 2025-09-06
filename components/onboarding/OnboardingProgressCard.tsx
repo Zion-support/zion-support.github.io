@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
+
 import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
 export type OnboardingStep = {;
   id: string;
@@ -7,16 +12,30 @@ export type OnboardingStep = {;
   completed: boolean;
   ctaLabel?: string;
   ctaHref?: string;
+<<<<<<< HEAD
+}
+export type OnboardingProgressCardProps = {
+=======
 };
 
 export type OnboardingProgressCardProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title: string;
   steps: OnboardingStep[];
-  highlightColorClass?: string;};
-
+  highlightColorClass?: string;}
 function computePercentage(steps: OnboardingStep[]): number {
-  if (!steps || steps.length === 0) return 0;
+  if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
+<<<<<<< HEAD
+  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
+  ctaHref?: string
+}
+export type OnboardingProgressCardProps = {
+  title: string
+  steps: OnboardingStep[]
+  highlightColorClass?: string
+}
+=======
 <<<<<<< HEAD
   return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
   ctaHref?: string
@@ -31,23 +50,29 @@ export type OnboardingProgressCardProps = {
   highlightColorClass?: string;
 };
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function computePercentage(steps: OnboardingStep[]): number {
-  if (!steps || steps.length === 0) return 0;
+  if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
-
+<<<<<<< HEAD
 export default function OnboardingProgressCard({
+<<<<<<< HEAD
+  title
+  steps
+  highlightColorClass = 'from-neon-green to-neon-blue'
+}: OnboardingProgressCardProps) {
+=======
   title,
   steps,
   highlightColorClass = 'from-neon-green to-neon-blue',
 }: OnboardingProgressCardProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
-
   const firstIncomplete = steps.find(
     s => !s.completed && s.ctaHref && s.ctaLabel
   );
-
   return (
     <div className='rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm'>
       <div className='flex items-center justify-between'>
@@ -61,8 +86,14 @@ export default function OnboardingProgressCard({
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
-
   const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
+=======
+
+};
+
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps || steps.length === 0) return 0;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
@@ -84,15 +115,17 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           <PartyPopper size={18} />
           <span className='text-sm'>All steps completed — great job!</span>        </div>
       ) : null}
-
       {/* Checklist */}        <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">
           <PartyPopper size={18} />
           <span className="text-sm">All steps completed — great job!</span>
         </div>
       ) : null}
-
+<<<<<<< HEAD
       {/* Checklist */}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <ul className='mt-4 space-y-2'>
         {steps.map(step => (
           <li key={step.id} className='flex items-center justify-between'>
@@ -113,7 +146,13 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 =======
 
+<<<<<<< HEAD
+      {/* Checklist */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -124,7 +163,11 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
         <div className='mt-5'>
@@ -140,8 +183,15 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

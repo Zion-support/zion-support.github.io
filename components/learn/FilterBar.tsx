@@ -1,20 +1,23 @@
 import React from 'react';
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Props = {
   category: string;
   level: string;
   isFree: string;
   onChange: (next: { category: string; level: string; isFree: string }) => void;
-};
-
+}
 export default function FilterBar({
-  category,
-  level,
-  isFree,
-  onChange,
+  category
+  level
+  isFree
+  onChange
 }: Props) {
   return (
     <div className='grid grid-cols-1 sm:grid-cols-3 gap-3'>
@@ -24,11 +27,19 @@ export default function FilterBar({
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
+<<<<<<< HEAD
+  category: string
+  level: string
+  isFree: string
+  onChange: (next: { category: string, level: string, isFree: string }) => void
+}
+=======
   category: string,
   level: string,
   isFree: string,
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function FilterBar({ category, level, isFree, onChange }: Props) {
   return (
@@ -80,9 +91,16 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
       </select>
     </div>
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
 
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

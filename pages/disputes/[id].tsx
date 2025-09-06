@@ -1,12 +1,50 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
+=======
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import {useCurrentUser} from '../../utils/auth';
 
+import {useCurrentUser} from '../../utils/auth';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
+<<<<<<< HEAD
+export default function DisputeDetailPage() {
+  const router = useRouter();
+  const { id } = router.query as { id?: string }
+  const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
+  const user = useCurrentUser();
+  const dispute = data?.dispute;
+  const [activeTab, setActiveTab] = useState<
+    'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'
+  >('Overview');  const [message, setMessage] = useState('');
+  const [resolutionSummary, setResolutionSummary] = useState('');
+  async function sendMessage() {
+    if (!message.trim() |!id) return;
+    await fetch(`/api/disputes/${id}/message`, {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ body: message })
+    });
+    setMessage('');
+    mutate();  }
+  async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
+    if (!id) return;
+    await fetch(`/api/disputes/${id}/resolve`, {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ resolutionSummary, status })
+    });
+    setResolutionSummary('');
+    mutate();  }
+
+=======
 export default function DisputeDetailPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
@@ -16,11 +54,16 @@ import { useCurrentUser } from '../../utils/auth';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function DisputeDetailPage(req, res) {
   try {
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   const dispute = data?.dispute;
@@ -50,6 +93,7 @@ export default function DisputeDetailPage(req, res) {
     mutate();  }
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const dispute = data?.dispute;
   const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview');
   const [message, setMessage] = useState('');
@@ -75,7 +119,11 @@ export default function DisputeDetailPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <EnhancedLayout>
       {!dispute ? (
@@ -96,7 +144,11 @@ export default function DisputeDetailPage(req, res) {
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Project</div>
               <div className="mt-1">{dispute.projectId}</div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Client</div>
@@ -128,7 +180,11 @@ export default function DisputeDetailPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           {activeTab === 'Overview' && (
             <div className="space-y-6">
@@ -172,7 +228,10 @@ export default function DisputeDetailPage(req, res) {
               </div>
             </div>
           )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                     <li className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
@@ -261,7 +320,11 @@ export default function DisputeDetailPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {activeTab === 'Messages' && (
             <div className="space-y-4">
               <div className="max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900">
@@ -298,7 +361,10 @@ export default function DisputeDetailPage(req, res) {
               )}
             </div>
           )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                       <li key={m.id} className="text-sm">
                         <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
@@ -332,7 +398,11 @@ export default function DisputeDetailPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {activeTab === 'Attachments' && (
             <div className="space-y-3">
               {dispute.attachments.length === 0 ? (
@@ -357,7 +427,10 @@ export default function DisputeDetailPage(req, res) {
               )}
             </div>
           )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                       <a className="text-blue-600 hover:underline" href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}>Download</Link>
                     </li>
@@ -378,7 +451,11 @@ export default function DisputeDetailPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {activeTab === 'Admin Notes' && (
             <div className="space-y-4">
               {user.role !== 'admin' ? (
@@ -399,8 +476,11 @@ export default function DisputeDetailPage(req, res) {
       )}
     </EnhancedLayout>
 );
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               )  } catch (error) {
     console.error("Error:", error);
@@ -426,4 +506,8 @@ export default function DisputeDetailPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,7 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Phone, 
+  Mail, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+=======
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+<<<<<<< HEAD
   Menu,
   X,
   ChevronDown,
@@ -12,6 +30,7 @@ import {
   Facebook,
   Twitter,
   Linkedin,
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   Instagram,
   Github,
   ArrowRight,
@@ -21,175 +40,233 @@ import {
   Shield,
   Zap,
   Globe,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   BarChart3,
   Search,;
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+=======
+<<<<<<< HEAD
+  BarChart3,
+  Search
+} from 'lucide-react';
+import SearchModal from './SearchModal';
+<<<<<<< HEAD
+=======
+=======
+  BarChart3
+} from 'lucide-react;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  Menu
+  X
+  ChevronDown
+  ChevronRight
+  Phone
+  Mail
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Github
+  ArrowRight
+  Building
+  Users
+  ShoppingCart
+  Shield
+  Zap
+  Globe
+  BarChart3
+  Search
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+export default function Navigation() {
+=======
 export default function Navigation() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
   const services = [
     {
-      name: "AI Services",
-      href: "/ai-services",
-      description: "Machine Learning, NLP, Computer Vision",
-      icon: BarChart3,
-    },
+      name: "AI Services"
+      href: "/ai-services"
+      description: "Machine Learning, NLP, Computer Vision"
+      icon: BarChart3
+    }
     {
-      name: "IT Services",
-      href: "/it-services",
-      description: "Cloud, DevOps, Cybersecurity",
-      icon: Shield,
-    },
+      name: "IT Services"
+      href: "/it-services"
+      description: "Cloud, DevOps, Cybersecurity"
+      icon: Shield
+    }
     {
-      name: "Micro SaaS",
-      href: "/micro-saas",
-      description: "Custom SaaS Solutions",
-      icon: Zap,
-    },
+      name: "Micro SaaS"
+      href: "/micro-saas"
+      description: "Custom SaaS Solutions"
+      icon: Zap
+    }
     {
-      name: "Blockchain",
-      href: "/blockchain",
-      description: "Smart Contracts, DeFi, NFTs",
-      icon: Building,
-    },
+      name: "Blockchain"
+      href: "/blockchain"
+      description: "Smart Contracts, DeFi, NFTs"
+      icon: Building
+    }
     {
-      name: "IoT Solutions",
-      href: "/iot",
-      description: "Connected Devices, Edge Computing",
-      icon: Globe,
-    },
+      name: "IoT Solutions"
+      href: "/iot"
+      description: "Connected Devices, Edge Computing"
+      icon: Globe
+    }
     {
-      name: "Cybersecurity",
-      href: "/cybersecurity",
-      description: "Security Audits, Compliance",
-      icon: Shield,
-    },
+      name: "Cybersecurity"
+      href: "/cybersecurity"
+      description: "Security Audits, Compliance"
+      icon: Shield
+    }
   ];
-
   const solutions = [
     {
-      name: "Enterprise Solutions",
-      href: "/enterprise",
-      description: "Large-scale business solutions",
-      icon: Building,
-    },
+      name: "Enterprise Solutions"
+      href: "/enterprise"
+      description: "Large-scale business solutions"
+      icon: Building
+    }
     {
-      name: "Startup Solutions",
-      href: "/startup",
-      description: "Scalable startup platforms",
-      icon: Zap,
-    },
+      name: "Startup Solutions"
+      href: "/startup"
+      description: "Scalable startup platforms"
+      icon: Zap
+    }
     {
-      name: "E-commerce",
-      href: "/ecommerce",
-      description: "Online store solutions",
-      icon: ShoppingCart,
-    },
+      name: "E-commerce"
+      href: "/ecommerce"
+      description: "Online store solutions"
+      icon: ShoppingCart
+    }
     {
-      name: "Healthcare",
-      href: "/industries/healthcare",
-      description: "Medical technology solutions",
-      icon: Users,
-    },
+      name: "Healthcare"
+      href: "/industries/healthcare"
+      description: "Medical technology solutions"
+      icon: Users
+    }
     {
-      name: "Finance",
-      href: "/industries/finance",
-      description: "Fintech and banking solutions",
-      icon: BarChart3,
-    },
+      name: "Finance"
+      href: "/industries/finance"
+      description: "Fintech and banking solutions"
+      icon: BarChart3
+    }
     {
-      name: "Education",
-      href: "/industries/education",
-      description: "EdTech platforms",
-      icon: Users,
-    },
+      name: "Education"
+      href: "/industries/education"
+      description: "EdTech platforms"
+      icon: Users
+    }
   ];
-
   const industries = [
     {
-      name: "Healthcare",
-      href: "/industries/healthcare",
-      description: "Medical technology solutions",
-    },
+      name: "Healthcare"
+      href: "/industries/healthcare"
+      description: "Medical technology solutions"
+    }
     {
-      name: "Finance",
-      href: "/industries/finance",
-      description: "Fintech and banking solutions",
-    },
+      name: "Finance"
+      href: "/industries/finance"
+      description: "Fintech and banking solutions"
+    }
     {
-      name: "Education",
-      href: "/industries/education",
-      description: "EdTech platforms",
-    },
+      name: "Education"
+      href: "/industries/education"
+      description: "EdTech platforms"
+    }
     {
-      name: "Government",
-      href: "/industries/government",
-      description: "Public sector solutions",
-    },
+      name: "Government"
+      href: "/industries/government"
+      description: "Public sector solutions"
+    }
     {
-      name: "Manufacturing",
-      href: "/industries/manufacturing",
-      description: "Industrial automation",
-    },
+      name: "Manufacturing"
+      href: "/industries/manufacturing"
+      description: "Industrial automation"
+    }
     {
-      name: "Retail",
-      href: "/industries/retail",
-      description: "E-commerce and retail tech",
-    },
+      name: "Retail"
+      href: "/industries/retail"
+      description: "E-commerce and retail tech"
+    }
     {
-      name: "Real Estate",
-      href: "/industries/real-estate",
-      description: "Property technology",
-    },
+      name: "Real Estate"
+      href: "/industries/real-estate"
+      description: "Property technology"
+    }
   ];
-
   const resources = [
-    { name: "Blog", href: "/blog", description: "Latest insights and updates" },
+    { name: "Blog", href: "/blog", description: "Latest insights and updates" }
     {
-      name: "Case Studies",
-      href: "/case-studies",
-      description: "Success stories and projects",
-    },
+      name: "Case Studies"
+      href: "/case-studies"
+      description: "Success stories and projects"
+    }
     {
-      name: "White Papers",
-      href: "/white-papers",
-      description: "In-depth research and analysis",
-    },
+      name: "White Papers"
+      href: "/white-papers"
+      description: "In-depth research and analysis"
+    }
     {
-      name: "Tutorials",
-      href: "/tutorials",
-      description: "Step-by-step guides",
-    },
+      name: "Tutorials"
+      href: "/tutorials"
+      description: "Step-by-step guides"
+    }
     {
-      name: "Training",
-      href: "/training",
-      description: "Professional development",
-    },
+      name: "Training"
+      href: "/training"
+      description: "Professional development"
+    }
     {
-      name: "Events",
-      href: "/events",
-      description: "Webinars and conferences",
-    },
-    { name: "News", href: "/news", description: "Industry news and updates" },
+      name: "Events"
+      href: "/events"
+      description: "Webinars and conferences"
+    }
+    { name: "News", href: "/news", description: "Industry news and updates" }
   ];
-
   const quickLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Our Team", href: "/team" },
-    { name: "Careers", href: "/careers" },
-    { name: "Contact", href: "/contact" },
-    { name: "Support", href: "/support" },
-    { name: "Status", href: "/status" },
+    { name: "About Us", href: "/about" }
+    { name: "Our Team", href: "/team" }
+    { name: "Careers", href: "/careers" }
+    { name: "Contact", href: "/contact" }
+    { name: "Support", href: "/support" }
+    { name: "Status", href: "/status" }
   ];
+<<<<<<< HEAD
+=======
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       {/* Top Bar */}
@@ -456,6 +533,24 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 Pricing
               </Link>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <button
@@ -468,6 +563,20 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+<<<<<<< HEAD
+=======
+=======
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <Link
+                href=/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
               >
                 Get Started
               </Link>

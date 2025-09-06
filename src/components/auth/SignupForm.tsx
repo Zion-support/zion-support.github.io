@@ -1,4 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Label  } from '@/components/ui/label';
+import { useAuth  } from '@/hooks/useAuth';
+import { toast  } from '@/hooks/use-toast';
+import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
+import { cn  } from '@/lib/utils';
+import { fireEvent  } from '@/lib/analytics';
+import {logErrorToProduction} from '@/utils/productionLogger';
+const signupSchema = null;
+=======
 
   path: ["confirmPassword"]}),
 
@@ -30,6 +46,7 @@ type SignupFormData = z.infer<typeof signupSchema>
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
@@ -425,6 +442,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
             <div className="flex justify-between text-xs">
               <span>Password Strength</span>
               <span className={cn('font-medium', 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
@@ -464,8 +482,41 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
           <p className="text-sm text-red-600 flex items-center gap-1">
             <AlertCircle className="h-3 w-3" />
             {errors.password.message}
-          </p>;
+          </p>
         )}
+<<<<<<< HEAD
+      </div>
+
+
+  path: ["confirmPassword"]})
+type SignupFormData = z.infer<typeof signupSchema>
+        setFieldStates(prev => ({
+          ...prev
+        timeouts[fieldName] = setTimeout(async () => {
+          const result = await trigger(typedFieldName)
+          const error = errors[typedFieldName]
+          setFieldStates(prev => ({
+            ...prev
+    const state = fieldStates[fieldName]
+    const isTouched = touchedFields[fieldName as keyof SignupFormData]
+      return <AlertCircle className="h-4 w-4 text-red-500" />
+    }
+    return null
+  }
+  const getFieldClasses = (fieldName: string) => {
+    const state = fieldStates[fieldName]
+    const isTouched = touchedFields[fieldName as keyof SignupFormData]
+    let strength = 0
+    const labels = ['Very WeakWeakFairGoodStrong']
+    const colors = ['bg-red-500bg-orange-500bg-yellow-500bg-blue-500bg-green-500']
+      logErrorToProduction('Unexpected signup error:', { data: error })
+      fireEvent('signup_error', { message: error.message |'unexpected' })
+      const errorMessage = 'An unexpected error occurred during signup. Please try again.'
+      setError('root', { message: errorMessage })
+              <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
+}
+
+=======
       </div>;
       {/* Confirm Password Field */}
       <div className="space-y-2">
@@ -534,4 +585,8 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

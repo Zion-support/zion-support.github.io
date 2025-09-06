@@ -1,19 +1,32 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
+=======
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>)
 export default function ContentMap({ report }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
  
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ContentMap({ report }: Props) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
+
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -28,7 +41,7 @@ export default function ContentMap({ report }: Props) {
         <h2 className="font-semibold mb-2">Pages by Section</h2>
         <ul className="text-sm space-y-1">
           {sections.map(([sec, n]) => (
-            <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>
+            <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
           ))}
         </ul>
       </section>
@@ -41,5 +54,10 @@ export default function ContentMap({ report }: Props) {
         </ul>
       </section>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,28 +1,44 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const id = String(req.query.id |"");
+=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const id = String(req.query.id || "");
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (id) {
     const updates = readJsonFile("updates.json", [] as any[]);
     const idx = updates.findIndex((x: any) => x.id === id);
     if (idx >= 0) {
-      updates[idx].opens = (updates[idx].opens || 0) + 1;
+      updates[idx].opens = (updates[idx].opens |0) + 1;
       writeJsonFile("updates.json", updates);
     }
   }
   const pixel = Buffer.from(
-"R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
-    "base64",
+    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+    "base64"
   );
   res.setHeader("Content-Type", "image/gif");
   res.setHeader(
-    "Cache-Control",
-    "no-store, no-cache, must-revalidate, proxy-revalidate",
+    "Cache-Control"
+    "no-store, no-cache, must-revalidate, proxy-revalidate"
   );
   res.status(200).send(pixel);
   res.setHeader("Content-Typeimage/gif");
   res.setHeader(
-    "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate",
+    "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate"
   );
   res.status(200).send(pixel);
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

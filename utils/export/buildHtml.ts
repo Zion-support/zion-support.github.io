@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import type { BookProject } from '../book/bookTypes',;
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project,;
@@ -6,13 +8,21 @@ export function buildPrintableHtml(project: BookProject): string {;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n'),;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { BookProject } from '../book/bookTypes';
+<<<<<<< HEAD
+export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
+=======
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const chapterHtml = chapters;
     .map(;
       (c) => `;
@@ -22,6 +32,8 @@ export function buildPrintableHtml(project: BookProject): string {;
       </section>;
     `);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     .join('\n\n'),;
   const visualsHtml = [;
     ...visuals.timelineImages,;
@@ -30,6 +42,7 @@ export function buildPrintableHtml(project: BookProject): string {;
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n'),;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -37,7 +50,10 @@ export function buildPrintableHtml(project: BookProject): string {;
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
   return `<!doctype html>;
 <html>;
@@ -64,9 +80,9 @@ export function buildPrintableHtml(project: BookProject): string {;
 </head>;
 <body>;
   <section class="cover">;
-    <div>${escapeHtml(meta.publisher || '')}</div>;
+    <div>${escapeHtml(meta.publisher |'')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
-    <h3>${escapeHtml(meta.subtitle || '')}</h3>;
+    <h3>${escapeHtml(meta.subtitle |'')}</h3>;
     <div class="by">By ${escapeHtml(meta.author)}</div>;
     ${barcode}
   </section>;
@@ -76,17 +92,19 @@ export function buildPrintableHtml(project: BookProject): string {;
 </body>;
 </html>`;
 }
-;
-function paragraphize(text: string): string {;
-  if (!text) return '';
+function paragraphize(text: string): string {if (!text) return '';
   return text;
     .split(/\n\n+/);
     .map((p) => `<p>${escapeHtml(p)}</p>`);
     .join('\n');
 }
+<<<<<<< HEAD
+function escapeHtml(s: string): string {return s;
+=======
 ;
 function escapeHtml(s: string): string {;
   return s;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
@@ -197,7 +215,11 @@ function escapeHtml(s: string): string {;
 ;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
@@ -209,5 +231,9 @@ function paragraphize(text: string): string {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

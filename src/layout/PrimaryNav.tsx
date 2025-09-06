@@ -1,4 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+import Link from 'next/link';
+import { useRouter  } from 'next/router';
+import { Logo  } from '@/components/header/Logo';
+import { PointsBadge  } from '@/components/loyalty/PointsBadge';
+import { UserMenu  } from '@/components/header/UserMenu';
+import { LanguageSelector  } from '@/components/header/LanguageSelector';
+import { ModeToggle  } from '@/components/ModeToggle';
+import { useAuth  } from '@/hooks/useAuth';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { useMessaging  } from '@/context/MessagingContext';
+import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions  } from '@/data/marketplaceData';
+import { slugify  } from '@/lib/slugify';
+import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+=======
 import { useState } from 'react'
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
 import Link from 'next/link'
@@ -17,11 +37,13 @@ import { slugify } from '@/lib/slugify'
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
 import { MobileMenu } from '@/components/header/MobileMenu'
 import { MobileBottomNav } from '@/components/header/MobileBottomNav'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Menu, X } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
-import { CartDrawer } from '@/components/cart/CartDrawer'
-import { LoginModal } from '@/components/auth/LoginModal'
+import { useTranslation  } from 'react-i18next';
+import { CartDrawer  } from '@/components/cart/CartDrawer';
+import { LoginModal } from '@/components/auth/LoginModal';
 export function PrimaryNav() {
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const { user } = useAuth()
@@ -37,10 +59,16 @@ export function PrimaryNav() {
     unreadCount = messaging.unreadCount
   } catch {
     // context not available
+<<<<<<< HEAD
+  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+=======
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -48,8 +76,8 @@ export function PrimaryNav() {
         .then(() => setQuery(''))
         .catch(err =>
           logErrorToProduction('Search navigation failed', err, {
-            query: trimmed,
-            component: 'PrimaryNav',
+            query: trimmed
+            component: 'PrimaryNav'
           })
         ) }
   }
@@ -106,7 +134,11 @@ export function PrimaryNav() {;
     }
   },
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <header
@@ -130,7 +162,11 @@ export function PrimaryNav() {;
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Actions container with responsive layout */}
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
@@ -141,7 +177,7 @@ export function PrimaryNav() {;
 <<<<<<< HEAD
                 onSelectSuggestion={sugg => {
                   logDebug('PrimaryNav search suggestion selected:', {
-                    suggestion: sugg,
+                    suggestion: sugg
                   });                  // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
@@ -161,12 +197,12 @@ export function PrimaryNav() {;
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
                     window.gtag('event', 'search_suggestion_click', {
-                      search_term: sugg.text,
-                      suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug,
+                      search_term: sugg.text
+                      suggestion_type: sugg.type
+                      suggestion_id: sugg.id |sugg.slug
                     })
                   }
-                  // // // // // console.log('PrimaryNav search suggestion selected:',
+                  // // // // // console.log('PrimaryNav search suggestion selected:'
   sugg)
                   // Handle different suggestion types with proper navigation
                   if(sugg.id) {
@@ -179,14 +215,14 @@ export function PrimaryNav() {;
                     // Blog posts navigate to blog detail page`
                     router.push(`/blog/${sugg.slug}`)} else {
                     // Default: search results page with slug;`
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}
+                    router.push(`/search/${sugg.slug |slugify(sugg.text)}`)}
                   setQuery('')
                   // Track analytics event'
                   if(typeof window !== 'null' && window.gtag) {
                     window.gtag('event',search_suggestion_click', {
-                      search_term: sugg.text,
-                      suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug
+                      search_term: sugg.text
+                      suggestion_type: sugg.type
+                      suggestion_id: sugg.id |sugg.slug
 })}
                 }}
                 searchSuggestions = {suggestions,}
@@ -233,7 +269,11 @@ export function PrimaryNav() {;
               <CartDrawer />
             </div>
             
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
@@ -282,7 +322,11 @@ export function PrimaryNav() {;
                       setLoginOpen(true);
                     }}
                   >;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {t('auth.login')}
                   </Link>
                   <Link
@@ -304,7 +348,11 @@ export function PrimaryNav() {;
           </div>;
           {/* Tablet view (md to lg) - simplified controls */}
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
@@ -316,6 +364,7 @@ export function PrimaryNav() {;
                 onClick={e => {
                   e.preventDefault()
                   setLoginOpen(true) }}
+
               >
 =======
                 href="/auth/login"
@@ -337,7 +386,11 @@ export function PrimaryNav() {;
                   setLoginOpen(true);
                 }}
               >;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {t('auth.login')}
               </Link>
             )}
@@ -362,7 +415,11 @@ export function PrimaryNav() {;
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -393,26 +450,26 @@ export function PrimaryNav() {;
 }
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
-//Track analytics event 
+//Track analytics event
 }searchSuggestions= {
-  suggestions 
+  suggestions
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
   (e) => {
   > {'
   t ('auth.login') "
 }</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {'
-  t ('auth.signup') 
-}</Link> </>) 
+  t ('auth.signup')
+}</Link> </>)
 }{
   isLoggedIn && <UserMenu />
 }</div> </div> <ModeToggle /> <LanguageSelector /> {"
   !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={
   (e) => {
   e.preventDefault ()
-setLoginOpen (true) 
+setLoginOpen (true)
 }'
-}t ('auth.login') 
-}</Link>) 
+}t ('auth.login')
+}</Link>)
 }{
   isLoggedIn && <UserMenu />
 }</div> {
@@ -421,30 +478,34 @@ setLoginOpen (true)
 }</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
   () => setMobileMenuOpen (false) "
 }aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
-  unreadCount 
+  unreadCount
 }onClose= {
-  () => setMobileMenuOpen (false) 
+  () => setMobileMenuOpen (false)
 }openLoginModal= {
-  (returnToPath) => setLoginOpen (true) 
-}/> </div> </div>) 
+  (returnToPath) => setLoginOpen (true)
+}/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
+<<<<<<< HEAD
+  unreadCount
+=======
   unreadCount 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }/>
 }<LoginModal isOpen= {
-  loginOpen 
+  loginOpen
 }onOpenChange= {
-  setLoginOpen 
-}/> </>) 
-}'"  { opacity: 0,
+  setLoginOpen
+}/> </>)
+}'"  { opacity: 0
   height: 0
 }}
               animate = {
-  { opacity: 1,
+  { opacity: 1
   height: 'auto'
 }}
               exit = {
-  { opacity: 0,
+  { opacity: 0
   height: 0
 }}
               transition={{ duration: 0.3 }}"
@@ -456,7 +517,7 @@ setLoginOpen (true)
                       {category.category}
                     </h3>"
                     <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknown, serviceIndex: unknown 
+                      {category.items.map((service: unknown, serviceIndex: unknown
                         <Link
                           key={serviceIndex}
                           to={service.path}"
@@ -469,7 +530,6 @@ setLoginOpen (true)
                     </div>
                   </div>
                 ))}
-
                 <div className="pt-4 border-t border-white/10 space-y-2">
                   <Link                    to="/solutions"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
@@ -505,7 +565,10 @@ setLoginOpen (true)
   )}
 '"`
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
@@ -526,4 +589,8 @@ setLoginOpen (true)
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

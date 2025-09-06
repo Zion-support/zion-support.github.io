@@ -1,17 +1,25 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+
 import {
+<<<<<<< HEAD
+  Room
+  RoomEvent
+  RemoteParticipant
+  LocalParticipant
+  createLocalTracks
+  VideoPresets;
+=======
   Room,
   RoomEvent,
   RemoteParticipant,
   LocalParticipant,
   createLocalTracks,;
   VideoPresets,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
-
 export type StartMode = 'video' | 'audio';
-
 type Props = {
   projectId: string;
   userId: string;
@@ -21,9 +29,19 @@ type Props = {
   token: string;
   startMode: StartMode;
   onLeave?: (durationSec: number) => void;
-};
-
+}
 export default function CallRoom({
+<<<<<<< HEAD
+  projectId
+  userId
+  displayName
+  roomName
+  serverUrl
+  token
+  startMode
+  onLeave
+}: Props) {
+=======
   projectId,
   userId,
   displayName,
@@ -33,86 +51,81 @@ export default function CallRoom({
   startMode,
   onLeave,
 }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<
     Array<RemoteParticipant | LocalParticipant>
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
-
 type Props = {
-  projectId: string,
-  userId: string,
-  displayName: string,
-  roomName: string,
-  serverUrl: string,
-  token: string,
-  startMode: StartMode,
+  projectId: string
+  userId: string
+  displayName: string
+  roomName: string
+  serverUrl: string
+  token: string
+  startMode: StartMode
   onLeave?: (durationSec: number) => void
+<<<<<<< HEAD
+}
+export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
+=======
 };
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
-
   const connect = useCallback(async () => {
     const r = new Room();
-
     r.on(RoomEvent.ParticipantConnected, () => rebuild());
     r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
     r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r.on(RoomEvent.LocalTrackPublished, () => rebuild());
     r.on(RoomEvent.TrackSubscribed, () => rebuild());
-
     // create local tracks per start mode
     let localTracks: any[] = [];
     if (startMode === 'video') {
       localTracks = await createLocalTracks({
-        audio: true,
-        video: VideoPresets.h720,
+        audio: true
+        video: VideoPresets.h720
       });
     } else {
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
-
     await r.connect(serverUrl, token, {
-      autoSubscribe: true,
+      autoSubscribe: true
     });
-
     // publish local tracks
-    
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {
       localTracks = await createLocalTracks({ audio: true, video: false })
     }
-
     await r.connect(serverUrl, token, {
-      autoSubscribe: true}),
+      autoSubscribe: true})
     // publish local tracks
     for (const t of localTracks) {
       await r.localParticipant.publishTrack(t)
     }
-
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [serverUrl, token, startMode]);
-
   const rebuild = (current?: Room | null) => {
-    const r = current || room;
+    const r = current |room;
     if (!r) return;
     const list: Array<RemoteParticipant | LocalParticipant> = [
-      r.localParticipant,
-      ...Array.from(r.participants.values()),
+      r.localParticipant
+      ...Array.from(r.participants.values())
     ];
     setParticipants(list);  };    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
     setParticipants(list)
-  };
-
+  }
   useEffect(() => {
     connect();
     return () => {
@@ -120,13 +133,11 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         room.disconnect();
       }
     };  }, [connect]);
-
   const handleLeave = () => {
     if (room) {        room.disconnect()
       }
     }
   }, [connect]);
-
   const handleLeave = () => {
     if (room) {
 <<<<<<< HEAD
@@ -142,10 +153,14 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 =======
 
   };
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const gridCols = useMemo(() => {
-    const count = participants.length || 1;
+    const count = participants.length |1;
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
     if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
@@ -167,18 +182,18 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         {participants.map((p, idx) => (
 <<<<<<< HEAD
           <ParticipantTile
-            key={String((p as any).sid || (p as any).identity) + idx}
+            key={String((p as any).sid |(p as any).identity) + idx}
             participant={p}
             isLocal={p instanceof LocalParticipant}
             displayName={
-              (p as any).name ||
+              (p as any).name |
               (p instanceof LocalParticipant ? 'You' : undefined)
             }
           />        ))}
       </div>
     </div>
   );
-}          <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
+}          <ParticipantTile key={String((p as any).sid |(p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name |(p instanceof LocalParticipant ? 'You' : undefined)} />
         ))}
       </div>
     </div>
@@ -190,4 +205,8 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       </div>
     </div>
   );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

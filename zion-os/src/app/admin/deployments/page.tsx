@@ -2,6 +2,30 @@
 'use client';
 import { useState, useEffect } from 'react';
 import {
+<<<<<<< HEAD
+  Rocket
+  Clock
+  CheckCircle
+  AlertCircle
+  Play
+  Eye
+  Settings
+  Globe
+  Activity
+  Calendar
+  User
+  Building2
+  Shield
+  TrendingUp
+  Users
+  Zap
+  Sparkles
+  ArrowRight
+  RefreshCw
+  Pause
+  StopCircle
+  MapPin
+=======
   Rocket,
   Clock,
   CheckCircle,
@@ -24,8 +48,8 @@ import {
   Pause,
   StopCircle,
   MapPin,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
-
 interface Deployment {
   id: string;
   instanceName: string;
@@ -40,59 +64,61 @@ interface Deployment {
   subdomain?: string;
   region?: string;
   country?: string;
-
 // Mock data - replace with actual API calls
 const mockDeployments: Deployment[] = [
   {
-    id: 'deploy-001',
-    instanceName: 'Zion Health Network',
-    status: 'completed',
-    createdAt: '2024-01-15T10:30:00Z',
-    updatedAt: '2024-01-15T11:45:00Z',
-    progress: 100,
-    features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting'],
-    vertical: 'HEALTH',
-    governanceType: 'DAO_FULL',
-    domain: 'health.zion.network',
-    region: 'North America',
-    country: 'United States',
-  },
+    id: 'deploy-001'
+    instanceName: 'Zion Health Network'
+    status: 'completed'
+    createdAt: '2024-01-15T10:30:00Z'
+    updatedAt: '2024-01-15T11:45:00Z'
+    progress: 100
+    features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting']
+    vertical: 'HEALTH'
+    governanceType: 'DAO_FULL'
+    domain: 'health.zion.network'
+    region: 'North America'
+    country: 'United States'
+  }
   {
-    id: 'deploy-002',
-    instanceName: 'EduDAO Academy',
-    status: 'deploying',
-    createdAt: '2024-01-15T14:20:00Z',
-    updatedAt: '2024-01-15T15:10:00Z',
-    progress: 65,
-    features: ['academy', 'zion_gpt', 'incubator_grants'],
-    vertical: 'EDUCATION',
-    governanceType: 'DAO_LITE',
-    subdomain: 'edu',
-    region: 'Europe',
-    country: 'Germany',
-  },
+    id: 'deploy-002'
+    instanceName: 'EduDAO Academy'
+    status: 'deploying'
+    createdAt: '2024-01-15T14:20:00Z'
+    updatedAt: '2024-01-15T15:10:00Z'
+    progress: 65
+    features: ['academy', 'zion_gpt', 'incubator_grants']
+    vertical: 'EDUCATION'
+    governanceType: 'DAO_LITE'
+    subdomain: 'edu'
+    region: 'Europe'
+    country: 'Germany'
+  }
   {
-    id: 'deploy-003',
-    instanceName: 'LegalTech DAO',
-    status: 'pending',
-    createdAt: '2024-01-15T16:00:00Z',
-    updatedAt: '2024-01-15T16:00:00Z',
-    progress: 0,
-    features: ['marketplace', 'onchain_contracts', 'web3_login'],
-    vertical: 'LAW',
-    governanceType: 'DAO_FULL',
-    domain: 'legal.zion.network',
-    region: 'Asia Pacific',
-    country: 'Singapore',
-  },
+    id: 'deploy-003'
+    instanceName: 'LegalTech DAO'
+    status: 'pending'
+    createdAt: '2024-01-15T16:00:00Z'
+    updatedAt: '2024-01-15T16:00:00Z'
+    progress: 0
+    features: ['marketplace', 'onchain_contracts', 'web3_login']
+    vertical: 'LAW'
+    governanceType: 'DAO_FULL'
+    domain: 'legal.zion.network'
+    region: 'Asia Pacific'
+    country: 'Singapore'
+  }
 ];
+<<<<<<< HEAD
+export default function DeploymentsPage() {
+=======
 
 export default function DeploymentsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deployments, setDeployments] = useState<Deployment[]>(mockDeployments);
   const [filter, setFilter] = useState<
     'all' | 'pending' | 'deploying' | 'completed' | 'failed'
   >('all');
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'completed':
@@ -109,7 +135,6 @@ export default function DeploymentsPage() {;
         return 'text-gray-400';
     }
   ];
-
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'completed':
@@ -125,8 +150,7 @@ export default function DeploymentsPage() {;
       default:
         return <Clock className='w-5 h-5' />;
     }
-  };
-
+  }
 const getVerticalIcon = (vertical: string) => {
     switch (vertical) {
       case 'HEALTH':
@@ -140,8 +164,7 @@ const getVerticalIcon = (vertical: string) => {
       default:
         return <Globe className='w-4 h-4 text-gray-400' />;
     }
-  };
-
+  }
   const getGovernanceIcon = (type: string) => {
     switch (type) {
       case 'ADMIN':
@@ -153,26 +176,22 @@ const getVerticalIcon = (vertical: string) => {
       default:
         return <User className='w-4 h-4 text-gray-400' />;
     }
-  };
-
+  }
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
+      month: 'short'
+      day: 'numeric'
+      hour: '2-digit'
+      minute: '2-digit'
     });
-  };
-
+  }
   const filteredDeployments = deployments.filter(
-    deployment => filter === 'all' || deployment.status === filter
+    deployment => filter === 'all' |deployment.status === filter
   );  const deployments = []; // This should be populated from your data source
   const filter = 'all'; // This should be managed with state
-  
-  const filteredDeployments = deployments.filter(deployment => filter === 'all' || deployment.status === filter);
+  const filteredDeployments = deployments.filter(deployment => filter === 'all' |deployment.status === filter);
     return deployments.filter(d => d.status === status).length;
-  };
-
+  }
   return (
     <div className='space-y-8'>
       {/* Header Section */}
@@ -310,23 +329,23 @@ const getVerticalIcon = (vertical: string) => {
       </div>
       {/* Filter Tabs */}
       <div className='flex flex-wrap gap-2'>
-          { key: 'all', label: 'All Deployments', count: deployments.length },
+          { key: 'all', label: 'All Deployments', count: deployments.length }
           {
-            key: 'pending',
-            label: 'Pending',
-            count: getStatusCount('pending'),
-          },
+            key: 'pending'
+            label: 'Pending'
+            count: getStatusCount('pending')
+          }
           {
-            key: 'deploying',
-            label: 'Deploying',
-            count: getStatusCount('deploying'),
-          },
+            key: 'deploying'
+            label: 'Deploying'
+            count: getStatusCount('deploying')
+          }
           {
-            key: 'completed',
-            label: 'Completed',
-            count: getStatusCount('completed'),
-          },
-          { key: 'failed', label: 'Failed', count: getStatusCount('failed') },
+            key: 'completed'
+            label: 'Completed'
+            count: getStatusCount('completed')
+          }
+          { key: 'failed', label: 'Failed', count: getStatusCount('failed') }
         ].map(({ key, label, count }) => (
           <button
             key={key}
@@ -568,7 +587,11 @@ export default function DeploymentsPage() {;
           >;
             {label} ({count});
           </button>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>
       {/* Deployments Grid */}
@@ -696,7 +719,11 @@ export default function DeploymentsPage() {;
                     ></div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
             {/* Deployment Details */}
@@ -707,12 +734,21 @@ export default function DeploymentsPage() {;
                 <div className='flex items-center gap-2 text-white/70'>
                   <Globe className='w-4 h-4' />
                   <span className='font-mono'>
+<<<<<<< HEAD
+                    {deployment.domain |
+                      deployment.subdomain |
+                      'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region |deployment.country) && (
+=======
                     {deployment.domain ||
                       deployment.subdomain ||
                       'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
@@ -724,10 +760,17 @@ export default function DeploymentsPage() {;
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
+<<<<<<< HEAD
+                    {deployment.domain |deployment.subdomain |'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region |deployment.country) && (
+=======
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
@@ -747,7 +790,11 @@ export default function DeploymentsPage() {;
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
               {/* Features */}
@@ -790,7 +837,11 @@ export default function DeploymentsPage() {;
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       +{deployment.features.length - 4} more;
                     </span>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 </div>
               </div>
@@ -823,7 +874,11 @@ export default function DeploymentsPage() {;
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             </div>
@@ -837,7 +892,6 @@ export default function DeploymentsPage() {;
                     Start Deployment
                   </button>
                 )}
-
                 {deployment.status === 'deploying' && (
                   <>
                     <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
@@ -850,21 +904,18 @@ export default function DeploymentsPage() {;
                     </button>
                   </>
                 )}
-
                 {deployment.status === 'completed' && (
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
                     <Eye className='w-4 h-4' />
                     View Instance
                   </button>
                 )}
-
                 {deployment.status === 'failed' && (
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
                     <RefreshCw className='w-4 h-4' />
                     Retry
                   </button>
                 )}
-
                 <button className='flex items-center justify-center px-3 py-2 bg-white/10 hover:bg-white/20 text-white/80 text-sm font-medium rounded-lg transition-colors duration-200'>
                   <Settings className='w-4 h-4' />                </button>                {deployment.status === 'pending' && (
                   <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">
@@ -940,7 +991,11 @@ export default function DeploymentsPage() {;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>
       {/* Empty State */}
@@ -969,8 +1024,8 @@ export default function DeploymentsPage() {;
         </div>          </div>
           <h3 className="text-lg font-medium text-white/60 mb-2">No deployments found</h3>
           <p className="text-white/40 mb-6">
-            {filter === 'all' 
-              ? 'Start by creating your first Zion ecosystem deployment' 
+            {filter === 'all'
+              ? 'Start by creating your first Zion ecosystem deployment'
               : `No deployments with status "${filter}" found`
             }
           </p>
@@ -1031,6 +1086,11 @@ export default function DeploymentsPage() {;
     </div>
   );      )}
     </div>
+<<<<<<< HEAD
+  );
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       {filteredDeployments.length === 0 && (;
         <div className="text-center py-16">;
@@ -1056,6 +1116,10 @@ export default function DeploymentsPage() {;
         </div>;
       )}
     </div>;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

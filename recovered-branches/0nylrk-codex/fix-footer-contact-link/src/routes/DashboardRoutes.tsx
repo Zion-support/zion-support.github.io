@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
@@ -23,6 +25,7 @@ import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -43,60 +46,69 @@ import HiringTracker from "@/pages/HiringTracker",
 import PortfolioBuilder from "@/pages/PortfolioBuilder",
 import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
+<<<<<<< HEAD
+import WalletPage from "@/pages/Wallet";
+import ContractBuilder from "@/pages/ContractBuilder";
+
+=======
 import WalletPage from "@/pages/Wallet",
 import ContractBuilder from "@/pages/ContractBuilder",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const DashboardRoutes = () => {
   return (
     <Routes>
       {/* Dashboard Routes */}
-      <Route 
-        path="/dashboard" 
+      <Route
+        path="/dashboard"
         element={
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/client-dashboard" 
+      <Route
+        path="/client-dashboard"
         element={
           <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/talent-dashboard" 
+      <Route
+        path="/talent-dashboard"
         element={
           <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
         }
       />
-      <Route 
-        path="/creator-dashboard" 
+      <Route
+        path="/creator-dashboard"
         element={
           <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/analytics" 
+      <Route
+        path="/analytics"
         element={
           <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/project/:id/milestones" 
+      <Route
+        path="/project/:id/milestones"
         element={
           <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
-        } 
+        }
       />
       <Route
         path="/project/:id"
@@ -120,71 +132,71 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <MessagingInbox />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/inbox" 
+      <Route
+        path="/inbox"
         element={
           <ProtectedRoute>
             <MessagingInbox />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/payments" 
+      <Route
+        path="/payments"
         element={
           <ProtectedRoute>
             <Payments />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/interviews" 
+      <Route
+        path="/interviews"
         element={
           <ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/notifications" 
+      <Route
+        path="/notifications"
         element={
           <ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/applications/track" 
+      <Route
+        path="/applications/track"
         element={
           <ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/hiring-tracker" 
+      <Route
+        path="/hiring-tracker"
         element={
           <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/portfolio-builder" 
+      <Route
+        path="/portfolio-builder"
         element={
           <ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/referrals" 
+      <Route
+        path="/referrals"
         element={
           <ProtectedRoute>
             <Referrals />
           </ProtectedRoute>
-        } 
+        }
       />
       <Route
         path="/developers"
@@ -208,7 +220,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        } 
+        }
       />
       <Route
         path="/contract-builder"
@@ -216,14 +228,22 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
-        } 
+        }
       />
     </Routes>
   )
+<<<<<<< HEAD
+}
+export default DashboardRoutes;
+
+=======
 },
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default DashboardRoutes,
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -422,5 +442,9 @@ const DashboardRoutes = () => {;
     </Routes>;
   );
 },;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default DashboardRoutes;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

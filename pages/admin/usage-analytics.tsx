@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -38,12 +43,43 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const result = await requireAdminRole(ctx)
+  // @ts-ignore
+  if ('redirect' in result) return result
+  return result
+}
+type Datum = { label: string, value: number }
+function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
+  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0))
+  let acc = 0
+  const radius = size / 2
+  const center = radius
+  const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4']
+  const slices = data.map((d, i) => {
+    const start = (acc / total) * 2 * Math.PI
+    acc += d.value
+    const end = (acc / total) * 2 * Math.PI
+    const x1 = center + radius * Math.cos(start)
+    const y1 = center + radius * Math.sin(start)
+    const x2 = center + radius * Math.cos(end)
+    const y2 = center + radius * Math.sin(end)
+    const largeArc = end - start > Math.PI ? 1 : 0
+    const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`
+    return <path key={d.label} d={path} fill={colors[i % colors.length]} />
+  })
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
+  )
+=======
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
@@ -75,15 +111,19 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
-  const max = Math.max(1, ...data.map((d) => d.value)),
+  const max = Math.max(1, ...data.map((d) => d.value))
   const points = data.map((d, i) => {
-    const x = (i / Math.max(1, data.length - 1)) * width,
-    const y = height - (d.value / max) * height,
+    const x = (i / Math.max(1, data.length - 1)) * width
+    const y = height - (d.value / max) * height
     return `${x},${y}`
-  }).join(' '),
+  }).join(' ')
   return (
     <svg width={width} height={height} className="border rounded bg-white/40 dark:bg-gray-900/40">
       <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points} />
@@ -105,12 +145,44 @@ function Funnel({ data }: { data: Datum[] }) {
       ))}
     </div>
   )
+<<<<<<< HEAD
+}
+export default function UsageAnalytics() {
+  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000))
+  const [end, setEnd] = useState<Date>(new Date())
+  const [userType, setUserType] = useState<string>('all')
+  const [loading, setLoading] = useState(false)
+  const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([])
+  const [events, setEvents] = useState<Datum[]>([])
+  const [line, setLine] = useState<{ date: string, value: number }[]>([])
+  const [funnel, setFunnel] = useState<Datum[]>([])
+  const refresh = useCallback(async () => {
+    setLoading(true)
+    try {
+      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType })
+      const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`)
+      const json = await res.json()
+      setPagesMostUsed(json.pagesMostUsed |[])
+      setEvents(json.events |[])
+      setLine(json.line |[])
+      setFunnel(json.funnel |[])
+    } finally {
+      setLoading(false)
+    }
+  }, [start, end, userType])
+  useEffect(() => { refresh() }, [])
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
         </div>;
       ))  } catch (error) {
@@ -155,6 +227,7 @@ export default function UsageAnalytics(req, res) {
 }
   }, [start, end, userType]),
   useEffect(() => { refresh() }, []),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <EnhancedLayout>
       <Head>
@@ -201,7 +274,11 @@ export default function UsageAnalytics(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </ul>
             </div>
           </div>
@@ -232,13 +309,20 @@ export default function UsageAnalytics(req, res) {
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

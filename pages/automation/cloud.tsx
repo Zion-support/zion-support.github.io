@@ -1,19 +1,37 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import { useEffect, useState } from 'react';
+
+export default function CloudAutomationHub() {
+  const [logs, setLogs] = useState<any[]>([])
+  useEffect(() => {
+=======
+import { useEffect, useState } from 'react',
+=======
 import { useEffect, useState } from 'react',;
 ;
 =======
 import { useEffect, useState } from 'react',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
 export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   useEffect__(() => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
-      .then((d) => setLogs(d.logs || []))
+      .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
+<<<<<<< HEAD
+
+  }, [])
+
+=======
   }, []),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div>
@@ -44,23 +62,37 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
           <h3 className="font-semibold">Intelligence Digest</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/INTELLIGENCE_DIGEST.md</p>
         </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
 <<<<<<< HEAD
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
+<<<<<<< HEAD
+          {logs.map((log) => (
+            <li key={log.id} className="flex items-center justify-between">
+              <span>{log.generatedAt |log.file}</span>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {logs.map((log) => (
             <li key={log.id} className="flex items-center justify-between">
               <span>{log.generatedAt || log.file}</span>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               <span className="text-gray-600">{log.insights?.theme}</span>
             </li>
           ))  } catch (error) {
@@ -76,9 +108,12 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
       </div>
     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { useEffect, useState } from 'react';
 export default function CloudAutomationHub(req, res) {
@@ -140,5 +175,9 @@ export default function CloudAutomationHub(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

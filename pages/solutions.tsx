@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import {
+  Target, Brain, Rocket, Shield, Zap, Atom, Cpu
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart
+  Lightbulb, Search, Grid, List, TrendingUp
+  User, ShoppingCart, Bell, HelpCircle, FileText
+  Video, Headphones, Code, Database, Network, Server
+  Monitor, Smartphone, Camera, Gamepad2, Palette
+  Music, Film, BookOpenCheck, Building, MessageCircle
+=======
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
@@ -11,6 +26,7 @@ import {
   Video, Headphones, Code, Database, Network, Server, 
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',
 import Layout from '../components/layout/Layout',
@@ -24,14 +40,151 @@ import {
   Video, Headphones, Code, Database, Network, Server,
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
+} from 'lucide-react'
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const Solutions: NextPage = () => {
   const industrySolutions = [
     {
+<<<<<<< HEAD
+      id: 'healthcare'
+      name: 'Healthcare Solutions'
+      description: 'AI-powered healthcare technology solutions'
+      features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management']
+      price: '$3,999'
+      period: 'month'
+      popular: true
+      icon: <Heart className="w-8 h-8" />
+    }
+    {
+      id: 'financial'
+      name: 'Financial Solutions'
+      description: 'Advanced financial technology and services'
+      features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation']
+      price: '$2,999'
+      period: 'month'
+      popular: false
+      icon: <TrendingUp className="w-8 h-8" />
+    }
+    {
+      id: 'manufacturing'
+      name: 'Manufacturing Solutions'
+      description: 'Smart manufacturing and Industry 4.0'
+      features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration']
+      price: '$2,799'
+      period: 'month'
+      popular: false
+      icon: <Settings className="w-8 h-8" />
+    }
+    {
+      id: 'retail'
+      name: 'Retail Solutions'
+      description: 'Digital transformation for retail businesses'
+      features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions']
+      price: '$2,499'
+      period: 'month'
+      popular: false
+      icon: <ShoppingCart className="w-8 h-8" />
+    }
+    {
+      id: 'government'
+      name: 'Government Solutions'
+      description: 'Technology solutions for public sector'
+      features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement']
+      price: '$3,499'
+      period: 'month'
+      popular: false
+      icon: <Building className="w-8 h-8" />
+    }
+    {
+      id: 'education'
+      name: 'Education Solutions'
+      description: 'Innovative educational technology'
+      features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms']
+      price: '$1,999'
+      period: 'month'
+      popular: false
+      icon: <BookOpenCheck className="w-8 h-8" />
+    }
+  ]
+  const solutionCapabilities = [
+    {
+      title: 'Industry Expertise'
+      description: 'Deep domain knowledge across sectors'
+      icon: <Briefcase className="w-6 h-6" />
+    }
+    {
+      title: 'Custom Development'
+      description: 'Tailored solutions for unique needs'
+      icon: <Code className="w-6 h-6" />
+    }
+    {
+      title: 'Integration Services'
+      description: 'Seamless system integration'
+      icon: <Network className="w-6 h-6" />
+    }
+    {
+      title: 'AI & Automation'
+      description: 'Intelligent automation solutions'
+      icon: <Brain className="w-6 h-6" />
+    }
+    {
+      title: 'Cloud & Security'
+      description: 'Secure cloud infrastructure'
+      icon: <Shield className="w-6 h-6" />
+    }
+    {
+      title: 'Analytics & Insights'
+      description: 'Data-driven decision making'
+      icon: <BarChart3 className="w-6 h-6" />
+    }
+  ]
+  const caseStudies = [
+    {
+      title: "Healthcare Provider Digital Transformation"
+      industry: "Healthcare"
+      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency."
+      results: [
+        "30% reduction in administrative overhead"
+        "Improved patient satisfaction scores"
+        "Enhanced data security and compliance"
+      ]
+      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
+    }
+    {
+      title: "E-commerce Platform Modernization"
+      industry: "Retail"
+      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales."
+      results: [
+        "45% increase in conversion rates"
+        "60% improvement in page load times"
+        "Enhanced mobile user experience"
+      ]
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
+    }
+    {
+      title: "Manufacturing IoT Integration"
+      industry: "Manufacturing"
+      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency."
+      results: [
+        "25% reduction in unplanned downtime"
+        "15% improvement in production efficiency"
+        "Predictive maintenance cost savings"
+      ]
+      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+    }
+  ]
+=======
       id: 'healthcare',
       name: 'Healthcare Solutions',
       description: 'AI-powered healthcare technology solutions',
@@ -91,14 +244,20 @@ const Solutions: NextPage = () => {
       popular: false,
       icon: <BookOpenCheck className="w-8 h-8" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const solutionCapabilities = [
     {
@@ -131,14 +290,20 @@ const Solutions: NextPage = () => {
       description: 'Data-driven decision making',
       icon: <BarChart3 className="w-6 h-6" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudies = [
     {
@@ -174,15 +339,22 @@ const Solutions: NextPage = () => {
       ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -198,7 +370,11 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -226,12 +402,21 @@ const Solutions: NextPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+                <a
+                  href="/contact"
+=======
+<<<<<<< HEAD
                 <a 
                   href="/contact" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
+<<<<<<< HEAD
                 </a>
+<<<<<<< HEAD
+=======
+=======
                 <a 
                   href="/contact" 
 =======
@@ -240,10 +425,15 @@ const Solutions: NextPage = () => {
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Link>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <a
                   href="/contact"
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -290,7 +480,11 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -335,7 +529,11 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -348,7 +546,11 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -404,7 +606,11 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -417,6 +623,18 @@ const Solutions: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industrySolutions.map((solution, index) => (
                 <motion.div
+<<<<<<< HEAD
+                  key={solution.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
+                    solution.popular
+                      ? 'border-orange-500 shadow-lg shadow-orange-500/25'
+                      : 'border-gray-700 hover:border-orange-500'
+                  }`}
+=======
                   key={solution.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -451,6 +669,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 >
                   {solution.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -460,7 +679,6 @@ const Solutions: NextPage = () => {
                     </div>
 <<<<<<< HEAD
                   )}
-                  
                   <div className="text-center mb-6">
                     <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
                       {solution.icon}
@@ -477,7 +695,11 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
                     <p className="text-gray-300 mb-4">{solution.description}</p>
@@ -490,7 +712,11 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
                   </div>
@@ -502,9 +728,12 @@ const Solutions: NextPage = () => {
                         {feature}
                       </li>
                     ))}
+<<<<<<< HEAD
+=======
                   </ul>
                   <a 
                     href="/contact" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                         {feature  } catch (error) {
     console.error("Error:", error);
@@ -517,10 +746,14 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </ul>
                   <a
                     href="/contact"
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
                     Get Started
@@ -564,7 +797,11 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -597,12 +834,21 @@ const Solutions: NextPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+                <a
+                  href="/contact"
+=======
+<<<<<<< HEAD
                 <a 
                   href="/contact" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Transformation
+<<<<<<< HEAD
                 </a>
+<<<<<<< HEAD
+=======
+=======
                 <a 
                   href="/contact" 
 =======
@@ -611,10 +857,15 @@ const Solutions: NextPage = () => {
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Transformation
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Link>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <a
                   href="/contact"
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -626,12 +877,20 @@ const Solutions: NextPage = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
+}
+export default Solutions;
+
+=======
 },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export default Solutions,;
 ;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Solutions,
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">;
@@ -662,4 +921,8 @@ export default Solutions,
   );
 },;
 export default Solutions;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import { useState  } from 'react';
+=======
 import {useState} from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 export default function OffworldConsole() {;
   const [chat, setChat] = useState('');
@@ -7,57 +11,52 @@ export default function OffworldConsole() {;
   const [name, setName] = useState('');
   const [skills, setSkills] = useState('');
   const [status, setStatus] = useState('');
-
   async function sendChat() {
     setStatus('Sending chat...');
+
     const res = await fetch('/api/offworld/orbit?action=chat', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ from: 'anon', text: chat }),
+      method: 'POST'
+      headers: { 'content-type': 'application/json' }
+      body: JSON.stringify({ from: 'anon', text: chat })
     });
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
+    setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) })
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')
   }
-
   async function castVote() {
     setStatus('Recording vote...');
     const res = await fetch('/api/offworld/orbit?action=vote', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }),
+      method: 'POST'
+      headers: { 'content-type': 'application/json' }
+      body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice })
     });
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');  }
-
   async function syncProfile() {
-    setStatus('Pinning profile...');    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
+    setStatus('Pinning profile...');    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) })
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
-
   async function syncProfile() {
     setStatus('Pinning profile...');
     const res = await fetch('/api/offworld/ipfs?action=json', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      method: 'POST'
+      headers: { 'content-type': 'application/json' }
       body: JSON.stringify({
-        profile: { name, skills: skills.split(',').map(s => s.trim()) },
-      }),
+        profile: { name, skills: skills.split(',').map(s => s.trim()) }
+      })
     });
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');  }
-
   async function broadcast() {
-    setStatus('Broadcasting manifesto...');    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
+    setStatus('Broadcasting manifesto...');    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) })
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
-
   async function broadcast() {
 <<<<<<< HEAD
     setStatus('Broadcasting manifesto...');
     const res = await fetch('/api/offworld/ipfs?action=broadcast', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ message: 'We build beyond platforms.' }),
+      method: 'POST'
+      headers: { 'content-type': 'application/json' }
+      body: JSON.stringify({ message: 'We build beyond platforms.' })
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
 
@@ -140,8 +139,14 @@ export default function OffworldConsole() {;
     </div>
 );
 }
+<<<<<<< HEAD
+=======
+    setStatus('Broadcasting manifesto...');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 }
 =======
     setStatus('Broadcasting manifesto...');
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

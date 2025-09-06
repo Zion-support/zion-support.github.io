@@ -1,37 +1,43 @@
-import React, { useMemo, useState } from 'react',;
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react',;
-import { buildPrintableHtml } from '../../utils/export/buildHtml',;
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes',;
-import { defaultChapters } from '../../utils/book/defaultOutline',;
+import React, { useMemo, useState } from 'react';
+
+import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react';
+import { buildPrintableHtml } from '../../utils/export/buildHtml';
+import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
+import { defaultChapters } from '../../utils/book/defaultOutline';
 const initialProject: BookProject = {
   meta: {
-    title: 'Zion OS: Building the Civilization Protocol',
-    subtitle: 'AI. Talent. Trust.',
-    author: 'Founder Name',
-    isbn: '',
-    publisher: 'Zion Tech Solutions'},
-  chapters: defaultChapters,
+    title: 'Zion OS: Building the Civilization Protocol'
+    subtitle: 'AI. Talent. Trust.'
+    author: 'Founder Name'
+    isbn: ''
+    publisher: 'Zion Tech Solutions'}
+  chapters: defaultChapters
   visuals: {
-    timelineImages: [],
-    daoVoteCharts: [],
-    uiScreens: [],
+    timelineImages: []
+    daoVoteCharts: []
+    uiScreens: []
     quoteCallouts: [
-      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}},
-
+      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}}
 function fileToBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader(),
-    reader.onload = () => resolve(reader.result as string),
-    reader.onerror = reject,
+    const reader = new FileReader()
+    reader.onload = () => resolve(reader.result as string)
+    reader.onerror = reject
     reader.readAsDataURL(file)
   })
 }
-
 export default function BookBuilder() {
+<<<<<<< HEAD:components/book/BookBuilder.tsx
+  const [project, setProject] = useState<BookProject>(initialProject)
+  const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER')
+  const [busy, setBusy] = useState<boolean>(false)
+  const coverPreview = useMemo(() => {
+=======
   const [project, setProject] = useState<BookProject>(initialProject),
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
   const [busy, setBusy] = useState<boolean>(false),
   const coverPreview = useMemo_(() => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
     return (
       <div className="w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900">
         <div className="p-8 space-y-2">
@@ -49,7 +55,11 @@ export default function BookBuilder() {
             <div className=&quot;pt-4&quot;>              <img,
 alt=&quot;ISBN barcode&quot;
                 className=&quot;h-16&quot;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 src={`/api/barcode/isbn?code=${encodeURIComponent(project.meta.isbn)}`}
               />
             </div>
@@ -57,16 +67,15 @@ alt=&quot;ISBN barcode&quot;
         </div>
       </div>
     )
-  }, [project]),
-
+  }, [project])
   async function handleGenerateWithAI() {
-    setBusy(true),
+    setBusy(true)
     try {
       const res = await fetch('/api/book/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ meta: project.meta, chapters: project.chapters })}),
-      const data = await res.json(),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ meta: project.meta, chapters: project.chapters })})
+      const data = await res.json()
       if (data?.chapters) {
         setProject((p) => ({ ...p, chapters: data.chapters }))
       }
@@ -74,56 +83,52 @@ alt=&quot;ISBN barcode&quot;
       setBusy(false)
     }
   }
-
   async function handleExportPdf() {
-    setBusy(true),
+    setBusy(true)
     try {
-      const html = buildPrintableHtml(project),
+      const html = buildPrintableHtml(project)
       const res = await fetch('/api/book/export/pdf', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ html, pageSize })}),
-      const blob = await res.blob(),
-      const url = URL.createObjectURL(blob),
-      const a = document.createElement('a'),
-      a.href = url,
-      a.download = 'zion-os-book.pdf',
-      a.click(),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ html, pageSize })})
+      const blob = await res.blob()
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = 'zion-os-book.pdf'
+      a.click()
       URL.revokeObjectURL(url)
     } finally {
       setBusy(false)
     }
   }
-
   async function handleExportEpub() {
-    setBusy(true),
+    setBusy(true)
     try {
       const res = await fetch('/api/book/export/epub', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ project })}),
-      const blob = await res.blob(),
-      const url = URL.createObjectURL(blob),
-      const a = document.createElement('a'),
-      a.href = url,
-      a.download = 'zion-os-book.epub',
-      a.click(),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ project })})
+      const blob = await res.blob()
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = 'zion-os-book.epub'
+      a.click()
       URL.revokeObjectURL(url)
     } finally {
       setBusy(false)
     }
   }
-
   async function onUploadImages(files: FileList | null, target: keyof VisualAsset[]) {
-    if (!files) return,
-    const arr = await Promise.all(Array.from(files).map(fileToBase64)),
+    if (!files) return
+    const arr = await Promise.all(Array.from(files).map(fileToBase64))
     setProject((p) => ({
-      ...p,
+      ...p
       visuals: {
-        ...p.visuals,
+        ...p.visuals
         [target as any]: [...(p.visuals[target as any] as string[]), ...arr]}}))
   }
-
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
@@ -147,7 +152,11 @@ className=&quot;border rounded px-2 py-1 text-sm&quot;
             onChange={(e) => setPageSize(e.target.value as any)}          >
             <option value=&quot;LETTER&quot;>8.5x11 Letter</option>
             <option value=&quot;A4&quot;>A4</option>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </select>
           <button className="btn btn-sm btn-primary" onClick={handleExportPdf} disabled={busy}>
             <Download className="w-4 h-4 mr-1" /> PDF
@@ -159,7 +168,11 @@ className=&quot;border rounded px-2 py-1 text-sm&quot;
 =======
           <button className=&quot;btn btn-sm btn-secondary&quot; onClick={handleExportEpub} disabled={busy}>
             <FileType className=&quot;w-4 h-4 mr-1&quot; /> EPUB          </button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </div>
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -179,7 +192,11 @@ className=&quot;border rounded px-2 py-1 text-sm&quot;
               <div className=&quot;text-xs uppercase opacity-60&quot;>Title</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={project.meta.title}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
             </label>
@@ -193,7 +210,11 @@ className=&quot;w-full border rounded px-3 py-2&quot;
               <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={project.meta.subtitle}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
             </label>
@@ -207,7 +228,11 @@ className=&quot;w-full border rounded px-3 py-2&quot;
               <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={project.meta.author}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
             </label>
@@ -223,7 +248,11 @@ className=&quot;w-full border rounded px-3 py-2&quot;
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
                 placeholder=&quot;9781234567897&quot;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={project.meta.isbn}
                 onChange={(e) => setProject({ ...project, meta: { ...project.meta, isbn: e.target.value } })}
               />
@@ -241,7 +270,11 @@ className=&quot;w-full border rounded px-3 py-2&quot;
         <div className=&quot;space-y-4&quot;>
           <h2 className=&quot;font-semibold flex items-center gap-2&quot;>
             <Settings className=&quot;w-4 h-4&quot; /> Visual Elements
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <div className="space-y-3">
             <label className="block">
@@ -265,7 +298,11 @@ className=&quot;w-full border rounded px-3 py-2&quot;
 =======
                 <div key={i} className=&quot;aspect-video bg-gray-100 rounded flex items-center justify-center overflow-hidden&quot;>
                   <img src={src} alt=&quot;visual&quot; className=&quot;object-cover w-full h-full&quot; />                </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
@@ -280,17 +317,30 @@ className=&quot;w-full border rounded px-3 py-2&quot;
               <div className="font-medium">{ch.title}</div>
               <textarea
                 className="w-full min-h-[160px] border rounded p-2"
+<<<<<<< HEAD
+                value={ch.content}
+                onChange={(e) => {
+                  const chapters: BookChapter[] = [...project.chapters]
+                  chapters[idx] = { ...chapters[idx], content: e.target.value }
+                  setProject({ ...project, chapters })
+                }}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             <div key={idx} className=&quot;border rounded-lg p-4 space-y-2&quot;>
               <div className=&quot;font-medium&quot;>{ch.title}</div>
               <textarea,
 className=&quot;w-full min-h-[160px] border rounded p-2&quot;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={ch.content}
                 onChange={(e) => {
                   const chapters: BookChapter[] = [...project.chapters],
                   chapters[idx] = { ...chapters[idx], content: e.target.value },
                   setProject({ ...project, chapters })                }}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
               />
             </div>
           ))}
@@ -308,25 +358,48 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
             <div key={i} className=&quot;grid grid-cols-1 md:grid-cols-3 gap-2&quot;>
               <input,
 className=&quot;border rounded px-2 py-1&quot;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={q.text}
                 onChange={(e) => {
-                  const quoteCallouts = [...project.visuals.quoteCallouts],
-                  quoteCallouts[i] = { ...quoteCallouts[i], text: e.target.value },
+                  const quoteCallouts = [...project.visuals.quoteCallouts]
+                  quoteCallouts[i] = { ...quoteCallouts[i], text: e.target.value }
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
               />
 <<<<<<< HEAD:components/book/BookBuilder.tsx
               <input
                 className="border rounded px-2 py-1"
+<<<<<<< HEAD
+                value={q.attribution ?? ''}
+                onChange={(e) => {
+                  const quoteCallouts = [...project.visuals.quoteCallouts]
+                  quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value }
+
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
+                }}
+                placeholder="Attribution"
+=======
+              <input,
+className=&quot;border rounded px-2 py-1&quot;
+=======
 =======
               <input,
 className=&quot;border rounded px-2 py-1&quot;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 value={q.attribution ?? ''}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value },
+<<<<<<< HEAD
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })                }}
+                placeholder=&quot;Attribution&quot;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+=======
 <<<<<<< HEAD:components/book/BookBuilder.tsx
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
@@ -335,6 +408,7 @@ className=&quot;border rounded px-2 py-1&quot;
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })                }}
                 placeholder=&quot;Attribution&quot;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               />
               <div />
             </div>
@@ -342,9 +416,13 @@ className=&quot;border rounded px-2 py-1&quot;
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+  )}
+=======
 <<<<<<< HEAD:components/book/BookBuilder.tsx
   );
 };
 =======
   )}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

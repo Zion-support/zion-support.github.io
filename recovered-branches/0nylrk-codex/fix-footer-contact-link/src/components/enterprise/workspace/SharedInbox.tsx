@@ -1,17 +1,36 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function SharedInbox() {
   // Mock messages
+
   const messages = [
     {
+<<<<<<< HEAD
+      id: "msg-1"
+      from: "John Smith"
+      subject: "Interview Scheduled"
+      preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm."
+      timestamp: "2h ago"
+=======
       id: "msg-1",
       from: "John Smith",
       subject: "Interview Scheduled",
@@ -21,23 +40,35 @@ export function SharedInbox() {
       unread: true;
     };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       unread: true
+<<<<<<< HEAD
+    }
+=======
     },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
-      id: "msg-2",
-      from: "Talent Support",
-      subject: "New talent matches",
-      preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer.",
-      timestamp: "Yesterday",
+      id: "msg-2"
+      from: "Talent Support"
+      subject: "New talent matches"
+      preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer."
+      timestamp: "Yesterday"
       unread: false
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      id: "msg-3",
-      from: "Sarah Wilson",
-      subject: "Contract approved",
-      preview: "The contract with freelancer Michael Chen has been approved and signed.",
-      timestamp: "2d ago",
+      id: "msg-3"
+      from: "Sarah Wilson"
+      subject: "Contract approved"
+      preview: "The contract with freelancer Michael Chen has been approved and signed."
+      timestamp: "2d ago"
       unread: false
     }
   ],
@@ -56,8 +87,8 @@ export function SharedInbox() {
       <CardContent className="p-0">
         <div className="divide-y divide-border">
           {messages.map((message) => (
-            <div 
-              key={message.id} 
+            <div
+              key={message.id}
               className={`flex flex-col p-4 hover:bg-muted/50 cursor-pointer ${message.unread ? 'bg-blue-50 dark:bg-blue-900/10' : ''}`}
             >
               <div className="flex items-center justify-between">
@@ -74,7 +105,6 @@ export function SharedInbox() {
             No new messages
           </div>
         )}
-        
         <div className="p-3 text-center border-t border-border">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View All Messages
@@ -84,6 +114,10 @@ export function SharedInbox() {
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -157,6 +191,10 @@ export function SharedInbox() {;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

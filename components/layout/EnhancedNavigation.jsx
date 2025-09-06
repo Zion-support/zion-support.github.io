@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -59,7 +62,7 @@ const EnhancedNavigation = () => {
               href='/contact'
               className='bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors'
             >              Get Startedconst EnhancedNavigation = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -187,9 +190,12 @@ const EnhancedNavigation = () => {
         )}
       </div>
     </nav>
+
 );
-};
-
-export default EnhancedNavigation;},
-
+}
+export default EnhancedNavigation;}
 export default EnhancedNavigation;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

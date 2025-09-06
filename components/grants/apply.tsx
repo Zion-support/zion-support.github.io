@@ -1,15 +1,28 @@
+<<<<<<< HEAD
+import { useState  } from 'react';
+=======
 import {useState} from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import {useRouter} from 'next/router';
+import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 
 const categories: GrantCategory[] = [
+<<<<<<< HEAD
+  'Ecosystem Tools'
+  'Talent Development'
+  'Regional Expansion'
+  'Research Grants'
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+export default function ApplyGrantPage() {
+=======
   'Ecosystem Tools',
   'Talent Development',
   'Regional Expansion',
   'Research Grants',
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -26,39 +39,38 @@ export default function ApplyGrantPage() {;
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const save = async (submit: boolean) => {
     try {
       setLoading(true);
-      setError(null),
+      setError(null)
       const resp = await fetch('/api/grants', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          program,
-          projectName,
-          teamInfo,
-          proposalSummary,
-          timeline,
-          budgetAmount: Number(budgetAmount || 0),
-          budgetCurrency,
+          program
+          projectName
+          teamInfo
+          proposalSummary
+          timeline
+          budgetAmount: Number(budgetAmount |0)
+          budgetCurrency
           supportingLinks: supportingLinks
             .split('\n')
             .map(s => s.trim())
-            .filter(Boolean),
-          pitchDeckUrl,
-          region,
-          sector: (sector as any) || undefined,
-          submit,
-        }),
+            .filter(Boolean)
+          pitchDeckUrl
+          region
+          sector: (sector as any) |undefined
+          submit
+        })
       });
       const data = await resp.json();
-      if (!resp.ok) throw new Error(data?.error || 'Failed');
+      if (!resp.ok) throw new Error(data?.error |'Failed');
       router.push(`/grants/${data.id}`);
     } catch (e: any) {
       setError(e.message);
     } finally {
-      setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),
+      setLoading(false);    }          budgetAmount: Number(budgetAmount |0)
           budgetCurrency;
           supportingLinks: supportingLinks
             .split('\n')
@@ -66,17 +78,22 @@ export default function ApplyGrantPage() {;
             .filter(Boolean);
           pitchDeckUrl;
           region;
-          sector: (sector as any) || undefined,
+          sector: (sector as any) |undefined
           submit})});
       const data = await resp.json();
-      if (!resp.ok) throw new Error(data?.error || 'Failed');
+      if (!resp.ok) throw new Error(data?.error |'Failed');
       router.push(`/grants/${data.id}`)
     } catch (e: any) {
       setError(e.message)
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
+  }
+=======
+
   };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <EnhancedLayout>
@@ -197,9 +214,12 @@ export default function ApplyGrantPage() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {error && <div className='text-sm text-red-600'>{error}</div>}
-
         <div className='flex gap-3'>
           <button
             disabled={loading}
@@ -260,7 +280,6 @@ export default function ApplyGrantPage() {;
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e.target.value)} />
         </label>
         {error && <div className="text-sm text-red-600">{error}</div>}
-
         <div className="flex gap-3">
           <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
           <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>
@@ -272,4 +291,8 @@ export default function ApplyGrantPage() {;
 }
 =======
   );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

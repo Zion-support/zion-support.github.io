@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
   const showTagline = router.pathname === '/'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',
 import { useMessaging } from '@/context/MessagingContext',
@@ -21,40 +24,55 @@ import { cn } from '@/lib/utils', // Import cn utility
 import { useRouter } from 'next/router',
 export function AppHeader() {
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
   const isMobile = useIsMobile(),
   const { t } = useTranslation(),
   const { user } = useAuth(),
-  const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn),
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn),
   const router = useRouter(),
   const showTagline = router.pathname === '/',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+  const showTagline = router.pathname === '/'
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [loginOpen, setLoginOpen] = useState(false)
+  const isMobile = useIsMobile()
+  const { t } = useTranslation()
+  const { user } = useAuth()
+  const isLoggedIn = useSelector((state: RootState,) => state.auth.isLoggedIn)
+  const router = useRouter()
+  const showTagline = router.pathname === '/'
   // Messaging context (unread message count)
-  const { unreadCount } = useMessaging(),
-
+  const { unreadCount } = useMessaging()
   const openLoginModal = (returnToPath?: string,) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu)
     // using router.push with shallow:true before this function is called.
     // This function's main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
-  },
-  
+  }
   return (
     <>
       <header
         style={{ "--nav-height": "64px" } as React.CSSProperties}
 <<<<<<< HEAD
         className = {cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
           { "bg-red-500": mobileMenuOpen ,}
 =======
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -82,7 +100,11 @@ export function AppHeader() {
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
@@ -102,16 +124,26 @@ export function AppHeader() {
                 aria-label = {t('auth.login'),}
                 data-testid="login-link"
                 onClick={(e,) => {
+<<<<<<< HEAD
+                  e.preventDefault()
+                  // For the main login link, we might not have a specific returnTo beyond current page
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
-                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
+
                   openLoginModal(router.asPath)
                 }}
               >
@@ -124,7 +156,11 @@ export function AppHeader() {
                 aria-label = {t('auth.signup'),}
 =======
                 aria-label={t('auth.signup')}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 data-testid="signup-nav-link"
               >
                 {t('auth.signup')}
@@ -142,8 +178,16 @@ export function AppHeader() {
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div 
+<<<<<<< HEAD
+          <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+<<<<<<< HEAD
+            onClick = {(,) => setMobileMenuOpen(false),}
+            aria-hidden="true"
+          />
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu
+=======
 <<<<<<< HEAD
             onClick = {(,) => setMobileMenuOpen(false),}
 =======
@@ -154,6 +198,7 @@ export function AppHeader() {
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
@@ -161,17 +206,31 @@ export function AppHeader() {
           </div>
         </div>
 =======
+<<<<<<< HEAD
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
             />;
           </div>;
         </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
-
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+<<<<<<< HEAD
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
       setActiveNav(null)
@@ -458,17 +517,17 @@ export function AppHeader() {
           <div className="flex items-center space-x-4">
             {/* Search */}
             <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Home', href: '/', current: true }
+    { name: 'About', href: '/about', current: false }
+    { name: 'Contact', href: '/contact', current: false }
   ]
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
-    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' }
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' }
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' }
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' }
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' }
+    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' }
   ]
   return (
     <>
@@ -492,7 +551,6 @@ export function AppHeader() {
                 {item.name}
               </Link>
             ))}
-
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -504,7 +562,7 @@ export function AppHeader() {
                 <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesDropdownOpen && (
-                <div 
+                <div
                   className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md"
                   onMouseEnter={() => setServicesDropdownOpen(true)}
                   onMouseLeave={() => setServicesDropdownOpen(false)}
@@ -643,7 +701,6 @@ export function AppHeader() {
                   {item.name}
                 </Link>
               ))}
-
               {/* Mobile Services */}
               <div className="px-3 py-2">
                 <div className="text-slate-400 text-sm font-medium mb-2">Services</div>
@@ -765,6 +822,15 @@ export function AppHeader() {
       </AnimatePresence>
     </header>  )
 }
+<<<<<<< HEAD
+=======
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 ;
 <<<<<<< HEAD
 }
@@ -772,3 +838,4 @@ export function AppHeader() {
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

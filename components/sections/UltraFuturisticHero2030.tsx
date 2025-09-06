@@ -1,7 +1,33 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  ArrowRight
+  Zap
+  Brain
+  Atom
+  Rocket
+  Star
+  TrendingUp
+  Shield
+  Globe
+  Cpu
+  Sparkles
+  Play
+  CheckCircle
+  Award
+  Users
+  Clock
+  Phone
+  Mail;} from 'lucide-react';import {
+  ArrowRight, Zap, Brain, Atom, Rocket, Star
+=======
   ArrowRight,
   Zap,
   Brain,
@@ -21,68 +47,68 @@ import {
   Phone,;
   Mail,;} from 'lucide-react';import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
-
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-};
-
+}
 const features = [
   {
-    icon: Brain,
-    title: 'AI Consciousness',
-    description: 'Develop genuine AI consciousness and emotional intelligence',
-  },
+    icon: Brain
+    title: 'AI Consciousness'
+    description: 'Develop genuine AI consciousness and emotional intelligence'
+  }
   {
-    icon: Atom,
-    title: 'Quantum Computing',
+    icon: Atom
+    title: 'Quantum Computing'
     description: 'Leverage quantum algorithms for exponential performance',  {
-    icon: Atom,
-    title: 'Quantum Computing',
+    icon: Atom
+    title: 'Quantum Computing'
     description: 'Leverage quantum algorithms for exponential performance'
-  };
+  }
   {
-    icon: Rocket,
-    title: 'Space Technology',
+    icon: Rocket
+    title: 'Space Technology'
     description: 'Automated space exploration and resource utilization'
-  };
+  }
   {
-    icon: Shield,
-    title: 'Quantum Security',
-    description: 'Unbreakable encryption with quantum key distribution',
-  },
+    icon: Shield
+    title: 'Quantum Security'
+    description: 'Unbreakable encryption with quantum key distribution'
+  }
   {
-    icon: Rocket,
-    title: 'Space Technology',
-    description: 'Automated space exploration and resource utilization',
-  },
+    icon: Rocket
+    title: 'Space Technology'
+    description: 'Automated space exploration and resource utilization'
+  }
   {
-    icon: Shield,
-    title: 'Quantum Security',
-    description: 'Unbreakable encryption with quantum key distribution',
+    icon: Shield
+    title: 'Quantum Security'
+    description: 'Unbreakable encryption with quantum key distribution'
   },];    description: 'Unbreakable encryption with quantum key distribution'
   }
 ];
-
 const stats = [
-  { number: '500+', label: 'Active Clients', icon: Users },
-  { number: '99.9%', label: 'Uptime SLA', icon: Clock },
-  { number: '24/7', label: 'Support', icon: Shield },
+  { number: '500+', label: 'Active Clients', icon: Users }
+  { number: '99.9%', label: 'Uptime SLA', icon: Clock }
+  { number: '24/7', label: 'Support', icon: Shield }
   { number: '2030', label: 'Future Ready', icon: Star },];
-
 export default function UltraFuturisticHero2030() {
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star };
 ];
-
 export default function UltraFuturisticHero2030() {
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+<<<<<<< HEAD
       {/* Background Glow Effects */}
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl'></div>
@@ -99,9 +125,20 @@ export default function UltraFuturisticHero2030() {
         {/* Main Heading */}
 =======
 
+<<<<<<< HEAD
+];
+
+export default function UltraFuturisticHero2030() {
+  return (
+
+        {/* Main Heading */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
         {/* Main Heading */}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -111,7 +148,11 @@ export default function UltraFuturisticHero2030() {
 =======
           className='mb-8'        >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -165,7 +206,7 @@ export default function UltraFuturisticHero2030() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'
           >
-            Transform your business with cutting-edge micro SAAS solutions,
+            Transform your business with cutting-edge micro SAAS solutions
             enterprise IT services, and revolutionary AI platforms that define
             the next decade of technological innovation.          </motion.p>            className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto"
           >
@@ -175,7 +216,11 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -185,7 +230,11 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <Link
             href='/contact'
@@ -227,7 +276,11 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -238,7 +291,11 @@ export default function UltraFuturisticHero2030() {
 =======
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {features.map((feature, index) => (
             <motion.div
@@ -250,7 +307,11 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <feature.icon className='w-6 h-6 text-white' />
@@ -273,7 +334,11 @@ export default function UltraFuturisticHero2030() {
           ))}
         </motion.div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -284,7 +349,11 @@ export default function UltraFuturisticHero2030() {
 =======
           className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -296,7 +365,11 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <stat.icon className='w-8 h-8 text-purple-400' />
@@ -319,7 +392,11 @@ export default function UltraFuturisticHero2030() {
           ))}
         </motion.div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -330,7 +407,11 @@ export default function UltraFuturisticHero2030() {
 =======
 
         >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <h3 className='text-2xl font-bold text-white mb-6'>
             Ready to Transform Your Business?
           </h3>
@@ -372,7 +453,11 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -382,7 +467,11 @@ export default function UltraFuturisticHero2030() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <p className='text-gray-400 text-sm mb-4'>
             Trusted by leading companies worldwide
@@ -421,40 +510,46 @@ export default function UltraFuturisticHero2030() {
         <motion.div
           className='absolute top-20 right-20 w-2 h-2 bg-purple-400 rounded-full'
           animate={{
-            scale: [1, 2, 1],
-            opacity: [0.5, 1, 0.5],
+            scale: [1, 2, 1]
+            opacity: [0.5, 1, 0.5]
           }}
           transition={{
-            duration: 3,
-            repeat: Infinity,
+            duration: 3
+            repeat: Infinity
             ease: 'easeInOut',          }}
         />
         <motion.div
           className='absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full'
           animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.8, 0.3],
+            scale: [1, 1.5, 1]
+            opacity: [0.3, 0.8, 0.3]
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
         />
         <motion.div
           className='absolute top-1/2 right-1/4 w-1 h-1 bg-emerald-400 rounded-full'
           animate={{
-            scale: [1, 3, 1],
-            opacity: [0.2, 0.6, 0.2],
+            scale: [1, 3, 1]
+            opacity: [0.2, 0.6, 0.2]
           }}
           transition={{
+<<<<<<< HEAD
+            duration: 5
+            repeat: Infinity
+=======
             duration: 5,
             repeat: Infinity,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             ease: 'easeInOut',          }}
         />
       </div>
     </section>;
   );            ease: "easeInOut"
+
           }}
         />
       </div>
@@ -464,4 +559,8 @@ export default function UltraFuturisticHero2030() {
 }
 =======
     </section>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

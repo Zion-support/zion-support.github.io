@@ -1,31 +1,40 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Progress  } from '@/components/ui/progress';
+=======
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { AlertTriangle, Package, Zap } from 'lucide-react'
-import { logErrorToProduction } from '@/utils/productionLogger'
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface BundleInfo {
-  totalSize: number
-  gzippedSize: number
-  chunkCount: number
-  loadTime: number
+  totalSize: number;
+  gzippedSize: number;
+  chunkCount: number;
+  loadTime: number;
   cacheHitRate: number
 interface ChunkInfo {
-  name: string
-  size: number
-  loadTime: number
+  name: string;
+  size: number;
+  loadTime: number;
   cached: boolean
 export function BundleAnalyzer() {
+
   const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
   if (!isAllowed) {
     return null
   }
-
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
   const [chunks, setChunks] = useState<ChunkInfo[]>([])
   const [isVisible, setIsVisible] = useState(false)
@@ -33,8 +42,13 @@ export function BundleAnalyzer() {
   const [shouldShow, setShouldShow] = useState(false)
   useEffect((,) => {
     // Only show in development or when explicitly enabled
+<<<<<<< HEAD
+    const show =
+      process.env.NODE_ENV === 'development' |
+=======
     const show = null;
       process.env.NODE_ENV === 'development' ||
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
@@ -52,24 +66,23 @@ export function BundleAnalyzer() {
       const scriptEntries = resourceEntries.filter(
         entry =>
           entry.name.includes('/_next/static/') &&
-          (entry.name.endsWith('.js') || entry.name.endsWith('.css'))
+          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
       )
       // Calculate bundle information
       let totalSize = 0
       let totalLoadTime = 0
       const chunkData: ChunkInfo[] = []
-      const chunkData: ChunkInfo[] = [],
-
+      const chunkData: ChunkInfo[] = []
       scriptEntries.forEach(entry => {
-        const size = entry.transferSize || entry.encodedBodySize || 0
+        const size = entry.transferSize |entry.encodedBodySize |0
         const loadTime = entry.responseEnd - entry.requestStart
         const cached = entry.transferSize === 0
         totalLoadTime += loadTime
         chunkData.push({
-          name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
-          size,
-          loadTime,
-          cached,
+          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
+          size
+          loadTime
+          cached
         })
       })
       // Estimate gzipped size (roughly 70% of original)
@@ -77,12 +90,21 @@ export function BundleAnalyzer() {
       const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
+<<<<<<< HEAD
+        totalSize
+        gzippedSize
+        chunkCount: chunkData.length
+        loadTime: totalLoadTime / chunkData.length
+        cacheHitRate: cacheHitRate * 100
+      })
+=======
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
@@ -109,10 +131,14 @@ export function BundleAnalyzer() {
       collectBundleInfo()
     }
   }
+
   if (!shouldShow) {
     return null
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -226,7 +252,11 @@ export function BundleAnalyzer() {;
     return null;
   }
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
@@ -244,13 +274,16 @@ export function BundleAnalyzer() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Bundle Analyzer
         </Button>
       </div>
     )
   }
-
   return (
     <div className="fixed bottom-20 right-4 z-50 w-96">
       <Card className="bg-background/95 backdrop-blur-sm border shadow-lg">
@@ -290,7 +323,11 @@ export function BundleAnalyzer() {;
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ✕
               </Button>
             </div>
@@ -353,7 +390,11 @@ export function BundleAnalyzer() {;
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -368,7 +409,11 @@ export function BundleAnalyzer() {;
                       >
 =======
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
@@ -394,9 +439,12 @@ export function BundleAnalyzer() {;
       </Card>
     </div>
   )
+<<<<<<< HEAD
+=======
 } 
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
             <div className="text-xs text-muted-foreground">
@@ -408,4 +456,8 @@ export function BundleAnalyzer() {;
     </div>;
   );
 } ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

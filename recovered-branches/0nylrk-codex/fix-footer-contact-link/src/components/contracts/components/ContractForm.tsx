@@ -1,5 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -33,11 +37,30 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields",
 import { PaymentTermsFields } from "./PaymentTermsFields",
 import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required"),
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
   startDate: z.date({
+<<<<<<< HEAD
+    required_error: "Start date is required"})
+  endDate: z.date().optional()
+  paymentTerms: z.enum(["hourly", "fixed", "milestone"]);
+  paymentAmount: z.string().min(1, "Payment amount is required");
+  additionalClauses: z.array(z.string()).default([])})
+export type ContractFormValues = z.infer<typeof formSchema>;
+interface ContractFormProps {
+  talent: TalentProfile
+  clientName: string
+  initialValues?: ContractFormValues;
+  onFormValuesChange?: (values: ContractFormValues) => void
+  onContractGenerated: (contractContent: string) => void
+  deployOptions?: DeploymentOptions;
+=======
     required_error: "Start date is required"}),
   endDate: z.date().optional(),
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
@@ -53,8 +76,11 @@ interface ContractFormProps {
   onFormValuesChange?: (values: ContractFormValues) => void,
   onContractGenerated: (contractContent: string) => void,
   deployOptions?: DeploymentOptions,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 export function ContractForm({;
@@ -65,6 +91,7 @@ export function ContractForm({;
   onContractGenerated;
   deployOptions;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ContractForm({
   talent,
   clientName,
@@ -75,6 +102,20 @@ export function ContractForm({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onDeployOptionsChange
 }: ContractFormProps) {
+<<<<<<< HEAD
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const { toast } = useToast();
+  const form = useForm<ContractFormValues>({
+    resolver: zodResolver(formSchema)
+    defaultValues: initialValues |{
+      projectName: ""
+      scopeSummary: ""
+      startDate: new Date()
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed"
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : ""
+      additionalClauses: ["nda", "ip"]}});
+=======
   const [isGenerating, setIsGenerating] = useState(false),
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
   const { toast } = useToast(),
@@ -89,6 +130,7 @@ export function ContractForm({
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
       additionalClauses: ["nda", "ip"]}}),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
@@ -99,14 +141,12 @@ export function ContractForm({
 <<<<<<< HEAD
     }
   }, [initialValues, form]);
-  
   // Track form values for template saving
   useEffect(() => {
     if (onFormValuesChange) {
       const subscription = form.watch((value) => {
         onFormValuesChange(value as ContractFormValues)
       });
-      
       return () => subscription.unsubscribe()
     }
   }, [form, onFormValuesChange]);
@@ -186,44 +226,54 @@ export function ContractForm({;
       return () => subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]),
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
-    setGeneratedMilestones(milestones),
-    
+    setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
     if (form.getValues("paymentTerms") !== "milestone") {
       form.setValue("paymentTerms", "milestone")
     }
-    
     toast({
-      title: "Milestones Generated",
+      title: "Milestones Generated"
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
+<<<<<<< HEAD
+  }
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const onSubmit = async (values: ContractFormValues) => {
-    setIsGenerating(true),
+    setIsGenerating(true)
     try {
       const contract = await generateContract(
-        values, 
-        talent, 
-        clientName, 
+        values
+        talent
+        clientName
         generatedMilestones
+<<<<<<< HEAD
+      );
+=======
       ),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       onContractGenerated(contract)
     } catch (error) {
       console.error("Error generating contract:", error),
       toast({
-        title: "Contract Generation Failed",
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
+        title: "Contract Generation Failed"
+        description: error instanceof Error ? error.message : "Something went wrong. Please try again."
         variant: "destructive"})
     } finally {
       setIsGenerating(false)
 <<<<<<< HEAD
     }
-  };
-  
+  }
+
   return (
     <>
       <DialogHeader>
@@ -267,19 +317,45 @@ export function ContractForm({;
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <ProjectDetailsFields 
-            form={form} 
+          <ProjectDetailsFields
+            form={form}
           />
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <PaymentTermsFields
+            form={form}
+            talent={talent}
+            handleMilestonesGenerated={handleMilestonesGenerated}
+=======
+          
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
+<<<<<<< HEAD
+          />;
+          <AdditionalClausesFields;
+            form={form}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          />
+          <AdditionalClausesFields
+            form={form}
+          />
+          <Button
+            type="submit"
+=======
 <<<<<<< HEAD
 =======
           />;
@@ -292,6 +368,7 @@ export function ContractForm({;
           />
           <Button 
             type="submit" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}
           >
@@ -307,8 +384,9 @@ export function ContractForm({;
         </form>
       </Form>
       <DialogFooter className="gap-2 flex-wrap mt-4">
-        <Button 
-          variant="outline" 
+<<<<<<< HEAD
+        <Button
+          variant="outline"
           onClick={() => form.reset()}
           disabled={isGenerating}
         >
@@ -318,4 +396,17 @@ export function ContractForm({;
     </>
   )
 }
+=======
+        <Button 
+          variant="outline" 
+          onClick={() => form.reset()}
+          disabled={isGenerating}
+        >;
+          Reset Form;
+        </Button>;
+      </DialogFooter>;
+    </>;
+  );
+}
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

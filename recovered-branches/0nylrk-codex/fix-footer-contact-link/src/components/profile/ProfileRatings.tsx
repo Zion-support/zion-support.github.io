@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -8,19 +10,67 @@ import {useReviews} from "@/hooks/useReviews";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { Star } from "lucide-react",
 import { ReviewStats } from "@/components/reviews/ReviewStats",
 import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+interface ProfileRatingsProps {
+  userId: string;
+  averageRating?: number;
+  ratingCount?: number
+}
+
+export function ProfileRatings({
+  userId
+  averageRating = 0
+  ratingCount = 0
+}: ProfileRatingsProps) {
+  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
+  const [ratingDistribution, setRatingDistribution] = useState<
+    Record<number, number>
+  >({});
+  // Calculate rating distribution
+  useEffect(() => {
+    if (reviews.length > 0) {
+      const distribution: Record<number, number> = {
+        1: 0
+        2: 0
+        3: 0
+        4: 0
+        5: 0
+      }
+      reviews.forEach((review) => {
+        if (review.rating >= 1 && review.rating <= 5) {
+          distribution[review.rating] = (distribution[review.rating] |0) + 1;
+        }
+      });
+      setRatingDistribution(distribution);
+    }
+  }, [reviews]);
+  // Fetch reviews when component mounts
+  useEffect(() => {
+    fetchUserReviews(userId);
+  }, [userId]);
+
+=======
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProfileRatingsProps {
   userId: string,
   averageRating?: number,
   ratingCount?: number
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }
 
@@ -43,6 +93,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     }
   }, [reviews]);
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",;
 import { Star } from "lucide-react",;
 import { ReviewStats } from "@/components/reviews/ReviewStats",;
@@ -71,13 +122,17 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       setRatingDistribution(distribution);
     }
   }, [reviews]),
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
   // Fetch reviews when component mounts
   useEffect(() => {
     fetchUserReviews(userId)
   }, [userId]),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
@@ -91,7 +146,9 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
-              <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>
+              <TabsTrigger value="all">
+                All Reviews ({reviews.length})
+              </TabsTrigger>
               <TabsTrigger value="positive">Positive</TabsTrigger>
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
@@ -120,9 +177,17 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         </div>
       </div>
     </div>
-  )
+  );
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
 =======
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

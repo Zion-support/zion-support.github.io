@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -15,6 +17,7 @@ import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -27,20 +30,46 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
+=======
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ApplyToJobFormProps {
-  job: Job,
+
+  job: Job
+
   onSuccess?: () => void
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+<<<<<<< HEAD
+  const { user } = useAuth();
+  const { applyToJob } = useJobApplications();
+
+  const { resumes, isLoading: isResumesLoading } = useResume()
+  const navigate = useNavigate();
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
+  const [selectedResumeId, setSelectedResumeId] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+=======
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -55,16 +84,22 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (!user) {
-      toast.error("You must be logged in to apply"),
-      navigate("/login", { state: { returnTo: `/jobs/${job.id}` } }),
+      toast.error("You must be logged in to apply")
+      navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
       return
     }
-    
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter"),
       return
     }
+<<<<<<< HEAD
+    setIsSubmitting(true);
+    setError(null);
+    try {
+      const success = await applyToJob(job.id, coverLetter, selectedResumeId |undefined);
+=======
     
     setIsSubmitting(true),
     setError(null),
@@ -72,6 +107,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     try {
       const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (success) {
         toast.success("Your application has been submitted!"),
         if (onSuccess) {
@@ -79,13 +115,18 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         }
       }
     } catch (err: any) {
-      setError(err.message || "Failed to submit application"),
+      setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+  }
+
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -100,7 +141,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-      
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
@@ -135,7 +175,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
                 <SelectItem value="">No resume</SelectItem>
                 {resumes.map((resume) => (
                   <SelectItem key={resume.id} value={resume.id}>
-                    {resume.basic_info.title || "Untitled Resume"}
+                    {resume.basic_info.title |"Untitled Resume"}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -146,9 +186,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
                 <FileText className="h-5 w-5 text-muted-foreground" />
                 <span>No resumes found</span>
               </div>
-              <Button 
-                variant="outline" 
-                size="sm" 
+              <Button
+                variant="outline"
+                size="sm"
                 type="button"
                 onClick={() => navigate("/dashboard/talent/portfolio")}
               >
@@ -298,7 +338,11 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
         <Button;
           type="button";
           variant="outline";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           disabled={isSubmitting}
           onClick={() => {
             if (onSuccess) onSuccess()
@@ -315,9 +359,17 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (
             "Submit Application"
           )}
+<<<<<<< HEAD
         </Button>
       </div>
     </form>
   )
 }
+=======
+        </Button>;
+      </div>;
+    </form>;
+  );
+}
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

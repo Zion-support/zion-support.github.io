@@ -13,7 +13,11 @@ import { useForm, type UseFormReturn } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -31,12 +35,32 @@ import { Footer } from "@/components/Footer",
 // Form validation schema
 const signupSchema = z
   .object({
+<<<<<<< HEAD
+    displayName: z.string().min(2, "Name must be at least 2 characters");
+    email: z.string().email("Please enter a valid email")
+=======
     displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+<<<<<<< HEAD
+      .regex(/[0-9]/, "Password must contain at least one number");
+    confirmPassword: z.string()
+    termsAccepted: z.boolean().refine(val => val === true, {
+      message: "You must accept the terms and conditions"})})
+  .refine(data => data.password === data.confirmPassword, {
+    message: "Passwords do not match"
+    path: ["confirmPassword"]})
+type SignupFormValues = z.infer<typeof signupSchema>;
+export default function Signup() {
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
       .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
@@ -61,38 +85,44 @@ export default function Signup() {
   const [isSubmitting, setIsSubmitting] = useState(false),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Initialize react-hook-form
   const form = useForm({
-    resolver: zodResolver(signupSchema),
+    resolver: zodResolver(signupSchema)
     defaultValues: {
-      displayName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      termsAccepted: false}}) as UseFormReturn<SignupFormValues>,
-
+      displayName: ""
+      email: ""
+      password: ""
+      confirmPassword: ""
+      termsAccepted: false}}) as UseFormReturn<SignupFormValues>
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
+<<<<<<< HEAD
+    setIsSubmitting(true);
+=======
     
     setIsSubmitting(true),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       await signup(data.email, data.password, data.displayName)
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
   }
-  
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
     return <Navigate to="/onboarding" />
   }
-
   return (
     <>
       <Header />
@@ -245,10 +275,13 @@ export default function Signup() {;
                         </FormControl>;
                         <FormMessage className="text-red-400" />;
                       </FormItem>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   />
-
                   <FormField
                     control={form.control}
                     name="email"
@@ -272,7 +305,6 @@ export default function Signup() {;
                       </FormItem>
                     )}
                   />
-
                   <FormField
                     control={form.control}
                     name="password"
@@ -311,7 +343,6 @@ export default function Signup() {;
                       </FormItem>
                     )}
                   />
-
                   <FormField
                     control={form.control}
                     name="confirmPassword"
@@ -350,7 +381,6 @@ export default function Signup() {;
                       </FormItem>
                     )}
                   />
-
                   <FormField
                     control={form.control}
                     name="termsAccepted"
@@ -379,11 +409,10 @@ export default function Signup() {;
                       </FormItem>
                     )}
                   />
-
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    disabled={isLoading || isSubmitting}
+                    disabled={isLoading |isSubmitting}
                   >
                     {isLoading ? "Creating Account..." : "Create Account"}
                   </Button>
@@ -404,7 +433,7 @@ export default function Signup() {;
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithGoogle()}
-                    disabled={isLoading || isSubmitting}
+                    disabled={isLoading |isSubmitting}
                   >
                     <span className="sr-only">Sign in with Google</span>
                     <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -419,7 +448,7 @@ export default function Signup() {;
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithFacebook()}
-                    disabled={isLoading || isSubmitting}
+                    disabled={isLoading |isSubmitting}
                   >
                     <span className="sr-only">Sign in with Facebook</span>
                     <Facebook className="h-5 w-5" />
@@ -429,7 +458,7 @@ export default function Signup() {;
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithTwitter()}
-                    disabled={isLoading || isSubmitting}
+                    disabled={isLoading |isSubmitting}
                   >
                     <span className="sr-only">Sign in with Twitter</span>
                     <Twitter className="h-5 w-5" />
@@ -455,5 +484,9 @@ export default function Signup() {;
       <Footer />
     </>
   )
+<<<<<<< HEAD
+}
+=======
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

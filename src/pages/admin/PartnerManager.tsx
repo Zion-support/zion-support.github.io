@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useRouter } from 'next/router'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -13,9 +15,10 @@ import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { s
 import { logErrorToProduction } from '@/utils/productionLogger'
 import { EmptyState } from "@/components/ui/empty-state"
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useRouter } from 'next/router',
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter  } from 'next/router';
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -26,10 +29,33 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client";
+import { logErrorToProduction  } from '@/utils/productionLogger';
+import { EmptyState } from "@/components/ui/empty-state";
+interface PartnerProfile {
+
+  id: string
+  user_id: string
+  name: string
+  status: 'pending' | 'approved' | 'rejected'
+  created_at: string
+  niche: string
+  audience_size: string
+  social_media?: Record<string, string>
+  website?: string
+  bio?: string
+  payout_method?: string
+  fraud_flags?: number
+
+=======
 import { supabase } from "@/integrations/supabase/client",
 import { logErrorToProduction } from '@/utils/productionLogger',
 import { EmptyState } from "@/components/ui/empty-state",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -39,23 +65,33 @@ interface PartnerProfile {
   niche: string,
   audience_size: string,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   social_media?: Record<string, string>
   website?: string
   bio?: string
   payout_method?: string
   fraud_flags?: number
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   social_media?: Record<string string>,
   website?: string,
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   commission_rate?: number
 }
-
 export default function PartnerManager() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [partners, setPartners] = useState<PartnerProfile[]>([])
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -72,28 +108,33 @@ export default function PartnerManager() {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'))
       return;
     }
-
     fetchPartners()
   }, [isAuthenticated, router])
   const fetchPartners = async () => {
     try {
       setIsLoading(true)
       // In a real application, check admin permissions here
-      
       const { data, error } = await supabase
         .from('partner_profiles')
         .select('*')
-        .order('created_at', { ascending: false }),
-
+        .order('created_at', { ascending: false })
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
+<<<<<<< HEAD
+  partners
+  isLoading
+  onViewDetails, }
+
+  )
+=======
   partners, 
   isLoading, ;
   onViewDetails, };
   );
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
@@ -924,4 +965,8 @@ function PartnerTable({;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

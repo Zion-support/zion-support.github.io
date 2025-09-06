@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -6,27 +8,38 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+<<<<<<< HEAD
+export default function CaseStudyResourcePage() {
+  const router = useRouter()
+  const { id } = router.query
   // Case studies data - this should match the data in resources.tsx
   const caseStudies = [
     {
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime',
-      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
+      id: 'ai-automation-manufacturing'
+      title: 'AI-Powered Manufacturing Automation'
+      company: 'Global Manufacturing Corp'
+      industry: 'Manufacturing'
+      results: '40% increase in production efficiency, 60% reduction in downtime'
+      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
       fullContent: `
         <h2>Executive Summary</h2>
-        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations, 
+        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         <h2>Background</h2>
-        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes. 
-        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line 
+        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
+        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
         and preventing them from meeting growing customer demands.</p>
         <h2>Challenge</h2>
-        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
-        and reducing operational costs. They required a solution that could adapt to changing production demands, 
+        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards
+        and reducing operational costs. They required a solution that could adapt to changing production demands
         minimize human intervention, and provide real-time insights into their operations.</p>
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included:</p>
@@ -61,29 +74,29 @@ export default function CaseStudyResourcePage() {
           <li>Continuous monitoring and optimization is essential for long-term success</li>
         </ul>
         <h2>Conclusion</h2>
-        <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential 
-        of autonomous systems in traditional industries. The results exceeded expectations and positioned the company 
+        <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
+        of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
       `
-    },
+    }
     {
-      id: 'content-generation-scale',
-      title: 'Scaling Content Generation 10x',
-      company: 'Digital Marketing Agency',
-      industry: 'Marketing',
-      results: '10x increase in content output, 85% improvement in engagement',
-      description: 'Transforming content creation through autonomous AI systems.',
+      id: 'content-generation-scale'
+      title: 'Scaling Content Generation 10x'
+      company: 'Digital Marketing Agency'
+      industry: 'Marketing'
+      results: '10x increase in content output, 85% improvement in engagement'
+      description: 'Transforming content creation through autonomous AI systems.'
       fullContent: `
         <h2>Executive Summary</h2>
-        <p>This case study explores how autonomous AI systems can revolutionize content creation, enabling 
+        <p>This case study explores how autonomous AI systems can revolutionize content creation, enabling
         marketing agencies to scale their operations dramatically while maintaining quality and creativity.</p>
         <h2>Background</h2>
-        <p>A leading digital marketing agency was struggling to scale their content creation capabilities. 
-        Their manual processes were limiting growth and preventing them from taking on new clients. The creative 
+        <p>A leading digital marketing agency was struggling to scale their content creation capabilities.
+        Their manual processes were limiting growth and preventing them from taking on new clients. The creative
         team was overwhelmed, and content quality was beginning to suffer under the pressure.</p>
         <h2>Challenge</h2>
-        <p>The agency needed to dramatically increase their content production capacity while maintaining 
-        high quality standards and creative excellence. They required a solution that could handle multiple 
+        <p>The agency needed to dramatically increase their content production capacity while maintaining
+        high quality standards and creative excellence. They required a solution that could handle multiple
         content types and formats, adapt to different client needs, and maintain consistency across all outputs.</p>
         <h2>Solution</h2>
         <p>We implemented an autonomous content generation system that included:</p>
@@ -118,29 +131,29 @@ export default function CaseStudyResourcePage() {
           <li>Continuous learning systems improve content quality over time</li>
         </ul>
         <h2>Conclusion</h2>
-        <p>The AI content generation system transformed the agency's operations, enabling unprecedented scale 
-        while maintaining creative excellence. The system continues to learn and improve, positioning the agency 
+        <p>The AI content generation system transformed the agency's operations, enabling unprecedented scale
+        while maintaining creative excellence. The system continues to learn and improve, positioning the agency
         for continued growth and success.</p>
       `
-    },
+    }
     {
-      id: 'cloud-infrastructure-optimization',
-      title: 'Cloud Infrastructure Optimization',
-      company: 'E-commerce Platform',
-      industry: 'Technology',
-      results: '50% reduction in cloud costs, 99.9% uptime achieved',
-      description: 'Building self-healing, auto-scaling cloud infrastructure.',
+      id: 'cloud-infrastructure-optimization'
+      title: 'Cloud Infrastructure Optimization'
+      company: 'E-commerce Platform'
+      industry: 'Technology'
+      results: '50% reduction in cloud costs, 99.9% uptime achieved'
+      description: 'Building self-healing, auto-scaling cloud infrastructure.'
       fullContent: `
         <h2>Executive Summary</h2>
-        <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically 
+        <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically
         reduce costs while improving performance and reliability for high-traffic applications.</p>
         <h2>Background</h2>
-        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
-        Their infrastructure was not scaling efficiently with their business growth, leading to poor customer 
+        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
+        Their infrastructure was not scaling efficiently with their business growth, leading to poor customer
         experience and high operational expenses.</p>
         <h2>Challenge</h2>
-        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability. 
-        They required a solution that could automatically adapt to traffic patterns, prevent outages, and 
+        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.
+        They required a solution that could automatically adapt to traffic patterns, prevent outages, and
         optimize resource allocation in real-time.</p>
         <h2>Solution</h2>
         <p>We designed and implemented a comprehensive cloud optimization system:</p>
@@ -175,16 +188,23 @@ export default function CaseStudyResourcePage() {
           <li>Self-healing systems significantly improve reliability</li>
         </ul>
         <h2>Conclusion</h2>
-        <p>The cloud infrastructure optimization project transformed the platform's performance and cost structure. 
-        The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining 
+        <p>The cloud infrastructure optimization project transformed the platform's performance and cost structure.
+        The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining
         optimal performance and cost efficiency.</p>
       `
     }
+<<<<<<< HEAD
+  ]
+  const caseStudy = caseStudies.find(study => study.id === id)
+
+=======
+=======
 =======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -366,9 +386,13 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!caseStudy) {
     return (
       <>
@@ -383,10 +407,14 @@ export default function CaseStudyResourcePage(req, res) {
                 The case study resource you're looking for doesn't exist.
               </p>
 <<<<<<< HEAD
+              <Link
+=======
+<<<<<<< HEAD
               <Link 
 =======
               <Link
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -401,7 +429,10 @@ export default function CaseStudyResourcePage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -429,7 +460,11 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -442,6 +477,8 @@ export default function CaseStudyResourcePage(req, res) {
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               <div 
                 className="prose prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
@@ -450,18 +487,26 @@ export default function CaseStudyResourcePage(req, res) {
             <div className="text-center">
               <Link 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div
                 className="prose prose-invert max-w-none"
+<<<<<<< HEAD
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+=======
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               />
             </div>
             <div className="text-center">
               <Link
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -473,9 +518,12 @@ export default function CaseStudyResourcePage(req, res) {
       </div>
     </>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   ];
   const caseStudy = caseStudies.find(study => study.id === id);
@@ -570,5 +618,9 @@ export default function CaseStudyResourcePage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

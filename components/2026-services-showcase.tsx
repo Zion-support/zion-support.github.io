@@ -1,7 +1,30 @@
+<<<<<<< HEAD
+import React, { useState, useMemo } from 'react',
+=======
 import React, { useState, useMemo } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
+
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+  Search
+  Filter
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Cpu
+  Shield
+  Rocket
+  Globe
+  Database
+  Lock
+  Cloud
+  Atom
+  Sparkles
+  Target;
+=======
   Search,
   Filter,
   Star,
@@ -18,35 +41,36 @@ import {
   Atom,
   Sparkles,;
   Target,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { revolutionary2026Services } from '../data/revolutionary-2026-services';
-import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
+import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
+import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
 export default function ServicesShowcase2026() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
-
   // Combine all 2026 services
+
   const allServices = [
-    ...revolutionary2026Services,
-    ...emergingTech2026Services,
+    ...revolutionary2026Services
+    ...emergingTech2026Services
     ...comprehensiveIT2026Services,    ...revolutionary2026Services;
     ...emergingTech2026Services;
     ...comprehensiveIT2026Services
   ];
-
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
       const matchesSearch =
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory =
-        selectedCategory === 'all' ||
+        selectedCategory === 'all' |
         service.category.includes(selectedCategory);
       return matchesSearch && matchesCategory;    })
     .sort((a, b) => {
@@ -60,10 +84,10 @@ export default function ServicesShowcase2026() {;
         case 'customers':
           return b.customers - a.customers;
         default:
-          return a.name.localeCompare(b.name);      }      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          return a.name.localeCompare(b.name);      }      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                            service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory);
       return matchesSearch && matchesCategory
     .sort((a, b) => {
       switch (sortBy) {
@@ -80,61 +104,58 @@ export default function ServicesShowcase2026() {;
           return a.name.localeCompare(b.name);        default: return a.name.localeCompare(b.name)
       }
     });
-
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
+    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length }
     {
-      id: 'AI',
-      name: 'AI & Machine Learning',
-      icon: Brain,
-      count: allServices.filter(s => s.category.includes('AI')).length,
-    },
+      id: 'AI'
+      name: 'AI & Machine Learning'
+      icon: Brain
+      count: allServices.filter(s => s.category.includes('AI')).length
+    }
     {
-      id: 'Quantum',
-      name: 'Quantum Computing',
-      icon: Atom,
-      count: allServices.filter(s => s.category.includes('Quantum')).length,
-    },
+      id: 'Quantum'
+      name: 'Quantum Computing'
+      icon: Atom
+      count: allServices.filter(s => s.category.includes('Quantum')).length
+    }
     {
-      id: 'Emerging',
-      name: 'Emerging Technology',
-      icon: Sparkles,
-      count: allServices.filter(s => s.category.includes('Emerging')).length,
-    },
+      id: 'Emerging'
+      name: 'Emerging Technology'
+      icon: Sparkles
+      count: allServices.filter(s => s.category.includes('Emerging')).length
+    }
     {
-      id: 'IT',
-      name: 'IT & Infrastructure',
-      icon: Shield,
+      id: 'IT'
+      name: 'IT & Infrastructure'
+      icon: Shield
       count: allServices.filter(
-        s => s.category.includes('IT') || s.category.includes('Infrastructure')
-      ).length,
-    },
+        s => s.category.includes('IT') |s.category.includes('Infrastructure')
+      ).length
+    }
     {
-      id: 'Autonomous',
-      name: 'Autonomous Systems',
-      icon: Target,
-      count: allServices.filter(s => s.category.includes('Autonomous')).length,
-    },
+      id: 'Autonomous'
+      name: 'Autonomous Systems'
+      icon: Target
+      count: allServices.filter(s => s.category.includes('Autonomous')).length
+    }
     {
-      id: 'Cloud',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
+      id: 'Cloud'
+      name: 'Cloud & DevOps'
+      icon: Cloud
       count: allServices.filter(
-        s => s.category.includes('Cloud') || s.category.includes('DevOps')
-      ).length,
-    },  ];    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
-    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
-
+        s => s.category.includes('Cloud') |s.category.includes('DevOps')
+      ).length
+    },  ];    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length }
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length }
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') |s.category.includes('Infrastructure')).length }
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length }
+    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') |s.category.includes('DevOps')).length }
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
     >
       <div className='min-h-screen'>
         <Head>
@@ -188,7 +209,11 @@ export default function ServicesShowcase2026() {;
         {/* Navigation */}
         <UltraAdvancedNavigation />
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -204,7 +229,7 @@ export default function ServicesShowcase2026() {;
                 </span>
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
-                Discover the future of technology with our revolutionary AI,
+                Discover the future of technology with our revolutionary AI
                 quantum computing, emerging technologies, and comprehensive IT
                 solutions
               </p>
@@ -243,6 +268,7 @@ export default function ServicesShowcase2026() {;
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
+
               </p>
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -314,7 +340,11 @@ export default function ServicesShowcase2026() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Sort By */}
                 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -367,7 +397,11 @@ export default function ServicesShowcase2026() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -448,7 +482,11 @@ export default function ServicesShowcase2026() {;
 
                             {feature}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </li>
                         ))}
                       </ul>
@@ -456,7 +494,11 @@ export default function ServicesShowcase2026() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
@@ -481,7 +523,11 @@ export default function ServicesShowcase2026() {;
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       Learn More
                     </a>
@@ -492,7 +538,11 @@ export default function ServicesShowcase2026() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -524,7 +574,11 @@ export default function ServicesShowcase2026() {;
           </div>
         </section>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -533,7 +587,11 @@ export default function ServicesShowcase2026() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -612,6 +670,11 @@ export default function ServicesShowcase2026() {;
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
 
 }
@@ -621,4 +684,5 @@ export default function ServicesShowcase2026() {;
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

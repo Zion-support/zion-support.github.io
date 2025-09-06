@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
+
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Badge} from '@/components/ui/badge';
@@ -10,10 +11,13 @@ import {cn} from '@/lib/utils';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
+<<<<<<< HEAD
+=======
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
@@ -26,6 +30,10 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { useNavigate } from 'react-router-dom',
 import { Notification, NotificationType } from '@/context/notifications',
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -40,10 +48,12 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'onboarding':
       return <span className="text-zion-cyan">🚀</span>,
     case 'system':
-      return <span className="text-yellow-500">⚠️</span>,
+      return <span className="text-yellow-500">⚠️</span>
     default:
       return <span className="text-gray-500">📣</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
   }
 };
 
@@ -63,6 +73,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   const handleClick = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
@@ -90,13 +101,25 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-yellow-500">⚠️</span>,;
     default:;
       return <span className="text-gray-500">📣</span>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-},;
-interface NotificationItemProps {;
-  notification: Notification,;
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>;
 }
+<<<<<<< HEAD
+interface NotificationItemProps {
+  notification: Notification
+  onMarkAsRead: (id: string) => Promise<void>
+  onDismiss: (id: string) => Promise<void>
+}
+export const NotificationItem: React.FC<NotificationItemProps> = ({
+  notification
+  onMarkAsRead
+  onDismiss
+}) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    if (!notification.read) {
+      onMarkAsRead(notification.id)
+=======
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
@@ -107,20 +130,31 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   const handleClick = () => {;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  },
+=======
   };
 =======
   },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
-    <div 
+    <div
       className={cn(
         "p-3 border-b border-zion-blue-light relative group",
         !notification.read ? "bg-zion-blue-dark/30" : ""
@@ -130,12 +164,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
         <div className="flex-1">
           <div className="flex justify-between items-center mb-1">
-            <h4 className="font-medium text-white">{notification.title || "Notification"}</h4>
+            <h4 className="font-medium text-white">{notification.title |"Notification"}</h4>
             {!notification.read && (
               <Badge className="bg-zion-cyan text-xs">New</Badge>
             )}
           </div>
-          <p className="text-sm text-zion-slate-light">{notification.message || "You have a new notification"}</p>
+          <p className="text-sm text-zion-slate-light">{notification.message |"You have a new notification"}</p>
           <div className="flex justify-between items-center mt-1">
             <p className="text-xs text-zion-slate">
               {notification.created_at ? formatDistanceToNow(new Date(notification.created_at), { addSuffix: true }) : "Just now"}
@@ -159,12 +193,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button 
-                variant="ghost" 
-                size="icon" 
+              <Button
+                variant="ghost"
+                size="icon"
                 className="h-6 w-6"
                 onClick={(e) => {
-                  e.stopPropagation(),
+                  e.stopPropagation()
                   onMarkAsRead(notification.id)
                 }}
               >
@@ -179,9 +213,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button 
-                variant="ghost" 
-                size="icon" 
+              <Button
+                variant="ghost"
+                size="icon"
                 className="h-6 w-6"
                 onClick={(e) => {
                   e.stopPropagation(),
@@ -200,6 +234,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
@@ -245,5 +284,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

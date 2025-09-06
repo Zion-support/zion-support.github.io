@@ -2,9 +2,14 @@ import Head from 'next/head';
 <<<<<<< HEAD
 =======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SiteHealth() {
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
+
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
       <Head>
         <title>Site Health — A11y, Performance, Links</title>
@@ -62,7 +67,7 @@ export default function SiteHealth() {
             <span className='gradient-text'>Site Health</span>
           </h1>
           <p className='mx-auto mt-5 max-w-3xl text-lg text-white/80'>
-            Dashboards, audits, and guardrails that keep your experience fast,
+            Dashboards, audits, and guardrails that keep your experience fast
             accessible, and reliable.
           </p>
           <div className='mt-8 flex flex-wrap justify-center gap-3'>
@@ -88,21 +93,22 @@ export default function SiteHealth() {
           <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
             {[
               {
-                title: 'Accessibility',
-                desc: 'WCAG checks with actionable fixes and reports.',
-                href: '/reports/seo',
-              },
+                title: 'Accessibility'
+                desc: 'WCAG checks with actionable fixes and reports.'
+                href: '/reports/seo'
+              }
               {
-                title: 'Performance',
-                desc: 'Core Web Vitals and performance budgets.',
-                href: '/reports/seo',
-              },
+                title: 'Performance'
+                desc: 'Core Web Vitals and performance budgets.'
+                href: '/reports/seo'
+              }
               {
-                title: 'Link Integrity',
-                desc: 'Broken links identified and prevented.',
-                href: '/reports/links',
-              },
+                title: 'Link Integrity'
+                desc: 'Broken links identified and prevented.'
+                href: '/reports/links'
+              }
             ].map(card => (
+
               <Link key={card.title} href={card.href}>
                 <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30'>
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -176,4 +182,8 @@ export default function SiteHealth() {
 =======
         </nav>
       </header>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

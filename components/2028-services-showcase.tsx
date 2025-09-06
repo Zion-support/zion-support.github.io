@@ -1,8 +1,44 @@
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+=======
 import React from 'react';
 import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Phone
+  Zap
+  DollarSign
+  Shield
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Sparkles
+  Globe
+  Atom
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+
+=======
   CheckCircle,
   ArrowRight,
   Star,
@@ -30,85 +66,86 @@ import {
   Music,;
   Gamepad2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+ } from 'lucide-react';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com'
-};
 
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com'
+}
 const serviceCategories = [
   {
-    title: '🚀 2028 Futuristic Innovations',
-    description: 'Beyond the future of technology',
-    icon: Rocket,
-    color: 'from-violet-600 to-purple-600',
-    services: futuristic2028Services.slice(0, 4),
+    title: '🚀 2028 Futuristic Innovations'
+    description: 'Beyond the future of technology'
+    icon: Rocket
+    color: 'from-violet-600 to-purple-600'
+    services: futuristic2028Services.slice(0, 4)
   },  {    services: futuristic2028Services.slice(0, 4)
-  };
+  }
   {
-    title: '🏙️ Smart City & Infrastructure',
-    description: 'Intelligent urban solutions',
-    icon: Building,
-    color: 'from-blue-600 to-cyan-600',
+    title: '🏙️ Smart City & Infrastructure'
+    description: 'Intelligent urban solutions'
+    icon: Building
+    color: 'from-blue-600 to-cyan-600'
     services: emergingTech2028Services
       .filter(
         s =>
-          s.category.includes('Smart City') ||
+          s.category.includes('Smart City') |
           s.category.includes('Infrastructure')
       )
-      .slice(0, 4),
-  },  {    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4)
-  };
+      .slice(0, 4)
+  },  {    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') |s.category.includes('Infrastructure')).slice(0, 4)
+  }
   {
-    title: '⚛️ Quantum & Advanced Tech',
-    description: 'Quantum computing and beyond',
-    icon: Atom,
-    color: 'from-indigo-600 to-blue-600',
+    title: '⚛️ Quantum & Advanced Tech'
+    description: 'Quantum computing and beyond'
+    icon: Atom
+    color: 'from-indigo-600 to-blue-600'
     services: futuristic2028Services
       .filter(s => s.category.includes('Quantum'))
-      .slice(0, 4),
+      .slice(0, 4)
   },  {    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
-  };
+  }
   {
-    title: '🤖 AI & Machine Learning',
-    description: 'Next-generation AI solutions',
-    icon: Brain,
-    color: 'from-emerald-600 to-teal-600',
+    title: '🤖 AI & Machine Learning'
+    description: 'Next-generation AI solutions'
+    icon: Brain
+    color: 'from-emerald-600 to-teal-600'
     services: emergingTech2028Services
       .filter(s => s.category.includes('AI'))
-      .slice(0, 4),
+      .slice(0, 4)
   },  {    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
-  };
+  }
   {
-    title: '⛓️ Blockchain & Web3',
-    description: 'Decentralized solutions',
-    icon: Globe,
-    color: 'from-orange-600 to-red-600',
+    title: '⛓️ Blockchain & Web3'
+    description: 'Decentralized solutions'
+    icon: Globe
+    color: 'from-orange-600 to-red-600'
     services: emergingTech2028Services
       .filter(s => s.category.includes('Blockchain'))
-      .slice(0, 4),
+      .slice(0, 4)
   },  {    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4)
-  };
+  }
   {
-    title: '🚗 Autonomous & Mobility',
-    description: 'Self-driving and mobility solutions',
-    icon: Car,
-    color: 'from-red-600 to-pink-600',
+    title: '🚗 Autonomous & Mobility'
+    description: 'Self-driving and mobility solutions'
+    icon: Car
+    color: 'from-red-600 to-pink-600'
     services: futuristic2028Services
       .filter(s => s.category.includes('Autonomous'))
-      .slice(0, 4),
+      .slice(0, 4)
   },];    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
   }
 ];
-
 export default function ServicesShowcase2028() {
   return (
     <>
@@ -216,7 +253,7 @@ export default function ServicesShowcase2028() {
               <span className="text-white">Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of technology with our cutting-edge 2028 services. 
+              Experience the future of technology with our cutting-edge 2028 services.
               From AI consciousness to quantum internet, we're building tomorrow's solutions today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -270,7 +307,11 @@ export default function ServicesShowcase2028() {
 
             {/* Stats */}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
           </motion.div>
@@ -294,7 +335,7 @@ export default function ServicesShowcase2028() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceCategories.map((category, index) => (            </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Discover our comprehensive range of futuristic services designed to transform your business 
+              Discover our comprehensive range of futuristic services designed to transform your business
               and propel you into the future of technology.
             </p>
           </div>
@@ -345,7 +386,11 @@ export default function ServicesShowcase2028() {
                       ))}
                     </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Link
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'
@@ -365,7 +410,11 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -496,7 +545,11 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Market Analysis */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -522,7 +575,11 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -534,7 +591,7 @@ export default function ServicesShowcase2028() {
                 Market Growth
               </h3>
               <p className='text-purple-300 mb-6'>
-                Our services target markets with exponential growth potential,
+                Our services target markets with exponential growth potential
                 with some sectors growing at 300-800% annually.
               </p>
               <div className='text-3xl font-bold text-green-400'>500%+</div>
@@ -542,7 +599,8 @@ export default function ServicesShowcase2028() {
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
-                Our services target markets with exponential growth potential,
+                Our services target markets with exponential growth potential
+
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
@@ -568,7 +626,7 @@ export default function ServicesShowcase2028() {
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Size</h3>
               <p className="text-blue-300 mb-6">
-                Combined market size of our service categories exceeds 
+                Combined market size of our service categories exceeds
                 $500 billion with rapid expansion expected.
               </p>
               <div className="text-3xl font-bold text-blue-400">$500B+</div>
@@ -594,7 +652,7 @@ export default function ServicesShowcase2028() {
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Edge</h3>
               <p className="text-pink-300 mb-6">
-                First-to-market solutions with proprietary technology 
+                First-to-market solutions with proprietary technology
                 and AI algorithms that competitors cannot replicate.
               </p>
               <div className="text-3xl font-bold text-pink-400">90%</div>
@@ -611,7 +669,11 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -620,7 +682,11 @@ export default function ServicesShowcase2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -669,6 +735,14 @@ export default function ServicesShowcase2028() {
       </section>
       <UltraFuturisticFooter2028 />
 <<<<<<< HEAD
+    </>
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
     </>;
 );
 }
@@ -679,4 +753,5 @@ export default function ServicesShowcase2028() {
     </>
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

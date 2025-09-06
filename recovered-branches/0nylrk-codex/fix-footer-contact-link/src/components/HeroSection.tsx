@@ -1,13 +1,24 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+import { GradientHeading } from "@/components/GradientHeading";
+import { Link } from "react-router-dom";
+=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
@@ -16,7 +27,11 @@ export function HeroSection() {
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Animated floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
@@ -27,7 +42,11 @@ export function HeroSection() {
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="container relative z-10 px-4 mx-auto text-center">
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">
           The Future of Tech & AI Marketplace
@@ -57,6 +76,13 @@ export function HeroSection() {
 <<<<<<< HEAD
 =======
     </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -103,3 +129,5 @@ export function HeroSection() {;
     </section>;
   );
 }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           if (index < currentStep) status = "complete"
           if (index === currentStep) status = "current"
 interface StepProps {
@@ -6,7 +8,20 @@ interface StepProps {
   label: string,
   description?: string
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+<<<<<<< HEAD
+import React from "react";
+import { cn } from "@/lib/utils";
+import { CheckIcon } from 'lucide-react'
+
+interface StepProps {
+
+  status: "incomplete" | "current" | "complete"
+  label: string
+  description?: string
+
+=======
 import React from "react",
 import { cn } from "@/lib/utils",
 import { CheckIcon } from 'lucide-react'
@@ -15,11 +30,19 @@ interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className?: string
 }
-
 export function Step({
+<<<<<<< HEAD
+  status,
+  label,
+  description,
+=======
 <<<<<<< HEAD
   status
   label
@@ -29,9 +52,11 @@ export function Step({
   label,
   description,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   className}: StepProps) {
   return (
     <li
+
       className={cn(
 <<<<<<< HEAD
         "relative flex items-center"
@@ -41,7 +66,11 @@ export function Step({
         "relative flex items-center",
         {
           "opacity-60": status === "incomplete"},
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         className
       )}
     >
@@ -60,7 +89,11 @@ export function Step({
               status === "incomplete",
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
         )}
@@ -111,7 +144,11 @@ export function Step({;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Step number would go here */}
           </span>
         )}
@@ -121,10 +158,17 @@ export function Step({;
           className={cn("text-sm font-medium", {
 <<<<<<< HEAD
             "text-zion-slate-light": status === "incomplete"
+<<<<<<< HEAD
+            "text-white": status === "current" |status === "complete"})}
+=======
+            "text-zion-slate-light": status === "incomplete",
+=======
 =======
             "text-zion-slate-light": status === "incomplete",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             "text-white": status === "current" || status === "complete"})}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           {label}
         </h3>
@@ -136,13 +180,15 @@ export function Step({;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StepsProps {
-  currentStep: number,
+  currentStep: number
   className?: string
   children: React.ReactNode
 }
-
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children)
 =======
@@ -156,16 +202,24 @@ interface StepsProps {;
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
 <<<<<<< HEAD
           if (!React.isValidElement(child)) return null
-          let status: "incomplete" | "current" | "complete" = "incomplete",
+          let status: "incomplete" | "current" | "complete" = "incomplete"
           if (index < currentStep) status = "complete"
           if (index === currentStep) status = "current"
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           if (!React.isValidElement(child)) return null,
           
@@ -173,7 +227,11 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -181,7 +239,11 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
@@ -194,9 +256,14 @@ export function Steps({ currentStep, className, children }: StepsProps) {
       </div>
     </div>
   )
+<<<<<<< HEAD
+}/> </div> </div> </div>)
+}"}
+=======
 }/> </div> </div> </div>) 
 }"};
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
@@ -226,4 +293,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

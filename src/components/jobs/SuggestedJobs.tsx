@@ -1,36 +1,75 @@
 <<<<<<< HEAD
+
+<<<<<<< HEAD
+    updateJobMatchStatus
+=======
+<<<<<<< HEAD
     updateJobMatchStatus, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useAuth } from "@/hooks/useAuth"
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
 import { useJobSuggestions } from "@/hooks/useJobSuggestions"
 import { JobMatchesCard } from "./JobMatchesCard"
 import { NoJobsCard } from "./NoJobsCard"
+<<<<<<< HEAD
+=======
 =======
 updateJobMatchStatus, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from 'lucide-react'
 import { Badge } from "@/components/ui/badge",
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",
 import { JobMatchesCard } from "./JobMatchesCard",
 import { NoJobsCard } from "./NoJobsCard",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SuggestedJobsProps {
   talentId?: string
 }
-
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+  const { user } = useAuth()
+  const currentTalentId = talentId |user?.id
+  const {
+    isLoading
+    updateJobMatchStatus
+    categorizedMatches: {
+      newMatches
+      viewedMatches
+      appliedMatches
+    }
+  } = useJobSuggestions(currentTalentId)
+  const handleApply = (matchId: string, jobId: string) => {
+    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
+  }
+  const handleDecline = (matchId: string) => {
+    updateJobMatchStatus(matchId, 'declined')
+  }
+=======
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+=======
   const { user } = useAuth()
   const currentTalentId = talentId || user?.id
 =======
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { 
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       newMatches,
       viewedMatches,
@@ -44,6 +83,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     updateJobMatchStatus(matchId, 'declined')
   }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       newMatches, 
       viewedMatches, 
       appliedMatches 
@@ -58,8 +98,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">
@@ -68,9 +112,12 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     )
 <<<<<<< HEAD
   }
-
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
@@ -111,9 +158,13 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
 ;
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
     return <NoJobsCard />;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       {/* New Matches Section */}
@@ -126,6 +177,16 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
             </Badge>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+          <div className="grid gap-4 md:grid-cols-2">
+            {newMatches.map(match => (
+              <JobMatchesCard
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -136,16 +197,23 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               />
             ))}
           </div>
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
       
 =======
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
@@ -153,6 +221,16 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+          <div className="grid gap-4 md:grid-cols-2">
+            {viewedMatches.map(match => (
+              <JobMatchesCard
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -163,16 +241,23 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               />
             ))}
           </div>
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
       
 =======
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
@@ -182,7 +267,11 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
 <<<<<<< HEAD
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
+<<<<<<< HEAD
+              <JobMatchesCard
+=======
               <JobMatchesCard 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key = {match.id,}
                 match = {match,}
                 onApply = {handleApply,}
@@ -200,7 +289,11 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 onDecline={handleDecline}
                 showApplied={true}
               />;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -211,58 +304,62 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
 }= useJobSuggestions (currentTalentId)
 const handleApply = (matchId: string, jobId: string) => {
   updateJobMatchStatus (matchId,  'applied')
-//In a real app, this might redirect to application form or open a modal 
+//In a real app, this might redirect to application form or open a modal
 }
 const handleDecline = (matchId: string) => {'
-  updateJobMatchStatus (matchId, 'declined') 
+  updateJobMatchStatus (matchId, 'declined')
 }
 if (isLoading) {
-  return (<div className="flex items-center justify-center p-6" > <Loader2 className="w-6 h-6 animate-spin text-primary" /> </div>) 
+  return (<div className="flex items-center justify-center p-6" > <Loader2 className="w-6 h-6 animate-spin text-primary" /> </div>)
 }if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
   return <NoJobsCard /> "
 }return (<div className="space-y-6" > {
-  /* New Matches Section */ 
+  /* New Matches Section */
 }{"
-  newMatches.length > 0 && (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches.length 
+  newMatches.length > 0 && (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches.length
 }New </Badge> </div> <JobMatchesCard key= {
-  match.id 
+  match.id
 }match= {
-  match 
+  match
 }onApply= {
-  handleApply 
+  handleApply
 }onDecline= {
-  handleDecline 
-}/>) ) 
+  handleDecline
+}/>) )
 }</div> </div>) "
 }</div> <div className="grid gap-4 md:grid-cols-2" > {
   viewedMatches.map (match => (<JobMatchesCard key= {
-  match.id 
+  match.id
 }match= {
-  match 
+  match
 }onApply= {
-  handleApply 
+  handleApply
 }onDecline= {
-  handleDecline 
-}/>) ) 
+  handleDecline
+}/>) )
 }</div> </div>) "
 }</div> <div className="grid gap-4 md:grid-cols-2" > {
   appliedMatches.map (match => (<JobMatchesCard key= {
-  match.id 
+  match.id
 }match= {
-  match 
+  match
 }onApply= {
-  handleApply 
+  handleApply
 }onDecline= {
-  handleDecline 
+  handleDecline
 }showApplied= {
-  true 
-}/>) ) 
-}</div> </div>) 
-}</div>) 
+  true
+}/>) )
+}</div> </div>)
+}</div>)
 }'"}
 =======
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

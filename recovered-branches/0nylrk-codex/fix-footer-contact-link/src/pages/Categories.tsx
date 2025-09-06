@@ -1,15 +1,26 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {CategoriesSection} from "@/components/CategoriesSection";
 import {GradientHeading} from "@/components/GradientHeading";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
+<<<<<<< HEAD
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { GradientHeading } from "@/components/GradientHeading";
+=======
 import { CategoriesSection } from "@/components/CategoriesSection",
 import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Categories() {
   return (
     <>
@@ -21,7 +32,7 @@ export default function Categories() {
               Browse Categories
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              Explore our extensive range of AI services and products organized by category. 
+              Explore our extensive range of AI services and products organized by category.
               Find exactly what you're looking for to enhance your business or personal projects.
             </p>
           </div>
@@ -47,7 +58,11 @@ export default function Categories() {;
               Find exactly what you're looking for to enhance your business or personal projects.;
             </p>;
           </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />
         </div>
@@ -55,5 +70,9 @@ export default function Categories() {;
       <Footer />
     </>
   )
+<<<<<<< HEAD
+}
+=======
 }
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

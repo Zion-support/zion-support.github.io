@@ -1,6 +1,27 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+
+import {
+  X
+  Building2
+  Code
+  Smartphone
+  Cloud
+  Shield
+  Zap
+  ShoppingCart
+  Heart
+  GraduationCap
+  Factory
+  Truck
+  CreditCard
+  Phone
+  Mail
+
+  ExternalLink
+=======
 import { 
   X, 
   Building2, 
@@ -18,55 +39,51 @@ import {
   Phone,
   Mail,
   ExternalLink;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
-
 interface SidebarProps {
-  isOpen: boolean, onClose: () => void,
+  isOpen: boolean, onClose: () => void
 }
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
-  const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
-
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
   const handleDropdownToggle = (title: string) => {
     setOpenDropdowns(prev =>
       prev.includes(title)
         ? prev.filter(item => item !== title)
         : [...prev, title];
     );
-  };
 
+  }
   const navigation = {
     'Services': [
-      { name: 'Web Development', href: '/services/web-development', icon: Code },
-      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone },
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
-      { name: 'Performance Optimization', href: '/services/performance', icon: Zap },
-    ],
+      { name: 'Web Development', href: '/services/web-development', icon: Code }
+      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
+      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud }
+      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield }
+      { name: 'Performance Optimization', href: '/services/performance', icon: Zap }
+    ]
     'Solutions': [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },
-      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart },
-      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart },
-      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap },
-    ],
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 }
+      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart }
+      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart }
+      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap }
+    ]
     'Industries': [
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
-      { name: 'Logistics', href: '/industries/logistics', icon: Truck },
-      { name: 'Finance', href: '/industries/finance', icon: CreditCard },
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-      { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    ],;
-  };
-
+      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory }
+      { name: 'Logistics', href: '/industries/logistics', icon: Truck }
+      { name: 'Finance', href: '/industries/finance', icon: CreditCard }
+      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart }
+      { name: 'Education', href: '/industries/education', icon: GraduationCap }
+    ];
+  }
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },;
-  ];
+    { name: 'About Us', href: '/about' }
+    { name: 'Our Team', href: '/team' }
+    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'Blog', href: '/blog' }
+    { name: 'Careers', href: '/careers' }
+    { name: 'Contact', href: '/contact' }
 
+  ];
   return (
     <AnimatePresence>
       {isOpen && (
@@ -85,7 +102,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             exit={{ x: -300 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
-
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
@@ -108,7 +124,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                     <button
                       onClick={() => handleDropdownToggle(title)}
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors"
-
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                 <div className="space-y-2">
@@ -153,11 +168,19 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
+}
+export default Sidebar;
+=======
 };
 
 export default Sidebar;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
 
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

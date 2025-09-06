@@ -1,8 +1,15 @@
 import React, { useEffect, useMemo, useState } from 'react';
+
 import {
+<<<<<<< HEAD
+  LineChart
+  BarChart
+  DonutChart;
+=======
   LineChart,
   BarChart,;
   DonutChart,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -14,18 +21,22 @@ type InsightResponse = {
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
-  gptRecommendation?: string;};  recommendedHourlyUsd: number,
-  recommendedMonthlyUsd: number,
-  medianHourlyUsd: number,
-  minHourlyUsd: number,
-  maxHourlyUsd: number,
-  confidence: number,
-  trendMonthly: { label: string, value: number }[],
-  regionalComparison: { region: string, medianHourlyUsd: number }[],
-  tags: string[],
+  gptRecommendation?: string;};  recommendedHourlyUsd: number
+  recommendedMonthlyUsd: number
+  medianHourlyUsd: number
+  minHourlyUsd: number
+  maxHourlyUsd: number
+  confidence: number
+  trendMonthly: { label: string, value: number }[]
+  regionalComparison: { region: string, medianHourlyUsd: number }[]
+  tags: string[]
   gptRecommendation?: string
+<<<<<<< HEAD
+export default function SalaryInsightsPage() {
+=======
 
 export default function SalaryInsightsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -42,7 +53,6 @@ export default function SalaryInsightsPage() {;
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   useEffect(() => {
     // Lightweight login check via Supabase client if available; otherwise public mode    (async () => {
       try {
@@ -62,65 +72,70 @@ export default function SalaryInsightsPage() {;
       }
     })()
   }, []);
-
   async function fetchInsights() {
     setLoading(true);
     setError(null);
     try {
       const res = await fetch('/api/salary-insights', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          roleTitle,
+          roleTitle
           skills: skills
             .split(',')
             .map(s => s.trim())
-            .filter(Boolean),
-          region,
-          experienceLevel,
-          remote,
-          employmentType,
-        }),
+            .filter(Boolean)
+          region
+          experienceLevel
+          remote
+          employmentType
+        })
       });
       if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json);
     } catch (e: any) {
-      setError(e.message || 'Unexpected error');
+      setError(e.message |'Unexpected error');
     } finally {
 <<<<<<< HEAD
       setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json)
     } catch (e: any) {
-      setError(e.message || 'Unexpected error')
+      setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
 =======
       setLoading(false);    }
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   function saveInsight() {
     const payload = {
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toISOString()
       input: {
-        roleTitle,
-        skills,
-        region,
-        experienceLevel,
-        remote,
-        employmentType,
-      },
-      output: data,
-    };    (async () => {    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data },
+        roleTitle
+        skills
+        region
+        experienceLevel
+        remote
+        employmentType
+      }
+      output: data
+    };    (async () => {    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data }
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -128,8 +143,8 @@ export default function SalaryInsightsPage() {;
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
           await supabase.from('salary_insights').insert({
-            user_id: user.data.user.id,
-            payload,
+            user_id: user.data.user.id
+            payload
           });
           alert('Insight saved to your profile');
           return;
@@ -143,38 +158,45 @@ export default function SalaryInsightsPage() {;
       }
       try {
         const key = 'zion.salary-insights.history';
-        const history = JSON.parse(localStorage.getItem(key) || '[]');
+        const history = JSON.parse(localStorage.getItem(key) |'[]');
         history.unshift(payload);
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
         alert('Insight saved locally');
 <<<<<<< HEAD
+<<<<<<< HEAD
+      } catch {}
+    })();
+  }
+=======
+
+=======
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch {}
     })();
   }
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
     })()
   }
-
   const donutData = useMemo(() => {
-    if (!data) return [] as { label: string, value: number }[],
+    if (!data) return [] as { label: string, value: number }[]
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
     const lower = Math.max(0, median - min);
     const upper = Math.max(0, max - median);
     return [
-      { label: 'Below Median', value: lower || 1 },
-      { label: 'Median', value: median || 1 },
-      { label: 'Above Median', value: upper || 1 },
+      { label: 'Below Median', value: lower |1 }
+      { label: 'Median', value: median |1 }
+      { label: 'Above Median', value: upper |1 }
     ];  }, [data]);
-
   return (
-    <div>      { label: 'Above Median', value: upper || 1 }]
+    <div>      { label: 'Above Median', value: upper |1 }]
   }, [data]);
 
   return (
@@ -199,7 +221,6 @@ export default function SalaryInsightsPage() {;
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
               placeholder='e.g., Senior AI Engineer'
             />
-
             <label className='block text-sm mt-3 mb-2'>Skills</label>
             <input
               value={skills}
@@ -207,7 +228,6 @@ export default function SalaryInsightsPage() {;
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
               placeholder='Comma-separated'
             />
-
             <label className='block text-sm mt-3 mb-2'>Region</label>
             <input
               value={region}
@@ -215,7 +235,6 @@ export default function SalaryInsightsPage() {;
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm'
               placeholder='City, Country'
             />
-
             <div className='grid grid-cols-2 gap-3 mt-3'>
               <div>
                 <label className='block text-sm mb-2'>Experience</label>
@@ -232,13 +251,10 @@ export default function SalaryInsightsPage() {;
             <h2 className="font-medium mb-3">Filters</h2>
             <label className="block text-sm mb-2" htmlFor="input-Role title">Role title</label>
             <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g., Senior AI Engineer" />
-
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Skills">Skills</label>
             <input value={skills} onChange={(e) => setSkills(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />
-
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Region">Region</label>
             <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />
-
             <div className="grid grid-cols-2 gap-3 mt-3">
               <div>
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>
@@ -292,7 +308,6 @@ export default function SalaryInsightsPage() {;
                 Advanced filters are available when you sign in.
               </div>
             )}
-
             <button
               onClick={fetchInsights}
               disabled={loading}
@@ -342,7 +357,6 @@ export default function SalaryInsightsPage() {;
               {error}
             </div>
           )}
-
           <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='text-xs text-gray-500'>Recommended Hourly</div>
@@ -383,8 +397,8 @@ export default function SalaryInsightsPage() {;
               {data ? (
                 <BarChart
                   data={data.regionalComparison.map(r => ({
-                    label: r.region,
-                    value: r.medianHourlyUsd,
+                    label: r.region
+                    value: r.medianHourlyUsd
                   }))}
                 />
               ) : (
@@ -422,8 +436,8 @@ export default function SalaryInsightsPage() {;
                   <DonutChart
                     slices={
                       donutData.map((d, i) => ({
-                        label: d.label,
-                        value: d.value,
+                        label: d.label
+                        value: d.value
                       })) as any
                     }
                   />
@@ -450,7 +464,11 @@ export default function SalaryInsightsPage() {;
               )}
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -460,14 +478,16 @@ export default function SalaryInsightsPage() {;
                 {data.gptRecommendation}
               </p>            </div>
           )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
           )}
-
           {data && (
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-3'>Signals</h3>
@@ -496,10 +516,18 @@ export default function SalaryInsightsPage() {;
 );
 }
 =======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {data && (
 
             </div>
           )}
 
           {data && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

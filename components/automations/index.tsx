@@ -1,9 +1,19 @@
+<<<<<<< HEAD
+import React from "react";
+import Link from "next/link";
+export default function AutomationsPage() {
+=======
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <main className='mx-auto max-w-5xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>
@@ -19,7 +29,7 @@ import Link from 'next/link';
             Intelligent Orchestrator
           </h2>
           <p className='mt-2 text-sm text-gray-600'>
-            Detects change patterns, selects relevant tasks (UI, SEO,
+            Detects change patterns, selects relevant tasks (UI, SEO
             performance, security, links, monetization, venture), executes in
             parallel batches, and commits results.
           </p>
@@ -60,4 +70,8 @@ import Link from 'next/link';
       </div>
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

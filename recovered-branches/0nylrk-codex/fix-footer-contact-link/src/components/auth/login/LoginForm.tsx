@@ -11,7 +11,11 @@ import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { LogIn, User, Eye, EyeOff } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -26,6 +30,15 @@ import {
 import { Link } from "react-router-dom",
 // Form validation schema
 const loginSchema = z.object({
+<<<<<<< HEAD
+  email: z.string().email("Please enter a valid email").min(1, "Email is required");
+  password: z.string().min(6, "Password must be at least 6 characters")});
+type LoginFormValues = z.infer<typeof loginSchema>;
+export function LoginForm() {
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters")}),
 
@@ -43,27 +56,35 @@ export function LoginForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(loginSchema)
     defaultValues: {
-      email: "",
-      password: ""}}),
-
+      email: ""
+      password: ""}})
   const onSubmit = async (data: LoginFormValues) => {
+<<<<<<< HEAD
+    if (isSubmitting) return;
+=======
     if (isSubmitting) return,
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
-      setIsSubmitting(true),
+      setIsSubmitting(true)
       await login(data.email, data.password)
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Form {...form}>
-      <form 
-        onSubmit={form.handleSubmit(onSubmit)} 
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-6"
         autoComplete="off" // Disable browser autofill
       >
@@ -153,10 +174,13 @@ export function LoginForm() {;
               </FormControl>;
               <FormMessage className="text-red-400" />;
             </FormItem>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         />
-
         <FormField
           control={form.control}
           name="password"
@@ -195,7 +219,6 @@ export function LoginForm() {;
             </FormItem>
           )}
         />
-
         <div className="flex items-center justify-between">
           <div className="text-sm">
             <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -206,12 +229,16 @@ export function LoginForm() {;
         <Button
           type="submit"
           className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-          disabled={isLoading || isSubmitting}
+          disabled={isLoading |isSubmitting}
         >
-          {isLoading || isSubmitting ? "Logging in..." : "Login"}
+          {isLoading |isSubmitting ? "Logging in..." : "Login"}
         </Button>
       </form>
     </Form>
   )
+<<<<<<< HEAD
+}
+=======
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

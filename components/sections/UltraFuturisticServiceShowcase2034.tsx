@@ -1,6 +1,39 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  Star
+  CheckCircle
+  ArrowRight
+  TrendingUp
+  Users
+  Award
+  Clock
+  Zap
+  Shield
+  Brain
+  Atom
+  Rocket
+  ShoppingCart
+  Cpu
+  Globe
+  Lock
+  Video
+  Palette
+  BarChart
+  UserCheck
+  FileText
+  Heart
+  Eye
+  Search
+  Phone;
+} from 'lucide-react';
+import { realMarketServices } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
+  Star, CheckCircle, ArrowRight, TrendingUp, Users
+
+=======
   Star,
   CheckCircle,
   ArrowRight,
@@ -30,147 +63,159 @@ import {
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
-} from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
+ } from 'lucide-react';
+import { realMarketServices  } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
+
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
 visible: {
   opacity: 1, transition: {
-  staggerChildren: 0.1 
-};
-
-};
-> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) ) 
+  staggerChildren: 0.1
+}
+}
+> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
 }</div> </motion.div> {
-  /* Search and Filter */ 
+  /* Search and Filter */
 }<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {
-  /* Category Filter */ 
-}<select </option>) ) 
+  /* Category Filter */
+}<select </option>) )
 }</select> </div> </motion.div> {
-  /* Service Categories */ 
+  /* Service Categories */
 }<motion.div key= {
-  category.id 
-}initial= {  {};
-
+  category.id
+}initial= {  {}
 const serviceCategories = [
   {
-    id: 'ai-services',
-    title: '🧠 Revolutionary AI Services',
-    description: 'Next-generation AI consciousness and creativity',
-    icon: Brain,
-    color: 'from-violet-500 to-purple-500',
-    services: aiEmergingTechServices.filter(s => s.category.includes('AI')),
-    gradient: 'from-violet-500/20 to-indigo-500/20',
+    id: 'ai-services'
+    title: '🧠 Revolutionary AI Services'
+    description: 'Next-generation AI consciousness and creativity'
+    icon: Brain
+    color: 'from-violet-500 to-purple-500'
+    services: aiEmergingTechServices.filter(s => s.category.includes('AI'))
+    gradient: 'from-violet-500/20 to-indigo-500/20'
   },  {    gradient: 'from-violet-500/20 to-indigo-500/20'
-  };
+  }
   {
-    id: 'quantum-tech',
-    title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing and beyond',
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-500',
+    id: 'quantum-tech'
+    title: '⚛️ Quantum & Emerging Tech'
+    description: 'Quantum computing and beyond'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-500'
     services: aiEmergingTechServices.filter(
-      s => s.category.includes('Quantum') || s.category.includes('Blockchain')
-    ),
-    gradient: 'from-indigo-500/20 to-cyan-500/20',
-  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain')),
+      s => s.category.includes('Quantum') |s.category.includes('Blockchain')
+    )
     gradient: 'from-indigo-500/20 to-cyan-500/20'
-  };
+  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') |s.category.includes('Blockchain'))
+    gradient: 'from-indigo-500/20 to-cyan-500/20'
+  }
   {
-    id: 'enterprise-it',
-    title: '🏙️ Enterprise IT Solutions',
-    description: 'Autonomous operations and zero-trust security',
-    icon: Cpu,
-    color: 'from-blue-500 to-cyan-500',
+    id: 'enterprise-it'
+    title: '🏙️ Enterprise IT Solutions'
+    description: 'Autonomous operations and zero-trust security'
+    icon: Cpu
+    color: 'from-blue-500 to-cyan-500'
     services: realMarketServices.filter(
       s =>
-        s.category.includes('Security') ||
-        s.category.includes('HR') ||
+        s.category.includes('Security') |
+        s.category.includes('HR') |
         s.category.includes('Project')
-    ),
-    gradient: 'from-blue-500/20 to-teal-500/20',
-  },  {    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project')),
+    )
     gradient: 'from-blue-500/20 to-teal-500/20'
-  };
+  },  {    services: realMarketServices.filter(s => s.category.includes('Security') |s.category.includes('HR') |s.category.includes('Project'))
+    gradient: 'from-blue-500/20 to-teal-500/20'
+  }
   {
-    id: 'business-automation',
-    title: '🛒 Business Automation',
-    description: 'Streamline business operations',
-    icon: ShoppingCart,
-    color: 'from-teal-500 to-emerald-500',
+    id: 'business-automation'
+    title: '🛒 Business Automation'
+    description: 'Streamline business operations'
+    icon: ShoppingCart
+    color: 'from-teal-500 to-emerald-500'
     services: realMarketServices.filter(
       s =>
-        s.category.includes('E-commerce') ||
-        s.category.includes('Marketing') ||
+        s.category.includes('E-commerce') |
+        s.category.includes('Marketing') |
         s.category.includes('Finance')
-    ),
-    gradient: 'from-teal-500/20 to-green-500/20',
-  },  {    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance')),
+    )
     gradient: 'from-teal-500/20 to-green-500/20'
-  };
+  },  {    services: realMarketServices.filter(s => s.category.includes('E-commerce') |s.category.includes('Marketing') |s.category.includes('Finance'))
+    gradient: 'from-teal-500/20 to-green-500/20'
+  }
   {
-    id: 'robotics-automation',
-    title: '🤖 Robotics & Automation',
-    description: 'Intelligent automation solutions',
-    icon: Rocket,
-    color: 'from-green-500 to-yellow-500',
+    id: 'robotics-automation'
+    title: '🤖 Robotics & Automation'
+    description: 'Intelligent automation solutions'
+    icon: Rocket
+    color: 'from-green-500 to-yellow-500'
     services: aiEmergingTechServices.filter(
-      s => s.category.includes('Robotics') || s.category.includes('Edge')
-    ),
-    gradient: 'from-green-500/20 to-orange-500/20',
-  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge')),
+      s => s.category.includes('Robotics') |s.category.includes('Edge')
+    )
     gradient: 'from-green-500/20 to-orange-500/20'
-  };
+  },  {    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') |s.category.includes('Edge'))
+    gradient: 'from-green-500/20 to-orange-500/20'
+  }
   {
-    id: 'research-development',
-    title: '🔬 Research & Development',
-    description: 'Breakthrough technologies and innovations',
-    icon: Globe,
-    color: 'from-orange-500 to-red-500',
+    id: 'research-development'
+    title: '🔬 Research & Development'
+    description: 'Breakthrough technologies and innovations'
+    icon: Globe
+    color: 'from-orange-500 to-red-500'
     services: aiEmergingTechServices.filter(
-      s => s.category.includes('Drug') || s.category.includes('Climate')
-    ),
-    gradient: 'from-orange-500/20 to-pink-500/20',
-  },];    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate')),
+      s => s.category.includes('Drug') |s.category.includes('Climate')
+    )
+    gradient: 'from-orange-500/20 to-pink-500/20'
+  },];    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') |s.category.includes('Climate'))
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
+<<<<<<< HEAD
+export default function UltraFuturisticServiceShowcase2034() {
+=======
 
 export default function UltraFuturisticServiceShowcase2034() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const allServices = [...realMarketServices, ...aiEmergingTechServices];
-
     const matchesCategory =
-      selectedCategory === 'all' ||
+      selectedCategory === 'all' |
       serviceCategories.some(cat => cat.services.includes(service));
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    return matchesCategory && matchesSearch;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.1,
-      },
-    },  };
-
+        staggerChildren: 0.1
+      }
+    },  }
   const itemVariants = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    hidden: { opacity: 0, y: 20 }
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
+      }
+    }
+  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: { opacity: 1, y: 0 }
+  }
+=======
     hidden: { opacity: 0, y: 20 },
 <<<<<<< HEAD
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
@@ -188,6 +233,7 @@ export default function UltraFuturisticServiceShowcase2034() {;
   };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>
       {/* Animated Background */}
@@ -196,11 +242,15 @@ export default function UltraFuturisticServiceShowcase2034() {;
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
+<<<<<<< HEAD
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
+=======
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 =======
         {/* Header */}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
       {/* Animated Background */}
@@ -211,6 +261,18 @@ export default function UltraFuturisticServiceShowcase2034() {;
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
+=======
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+
+        {/* Header */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -220,7 +282,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
             Revolutionary Technology Services
@@ -234,12 +300,41 @@ export default function UltraFuturisticServiceShowcase2034() {;
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>
             {[
               {
+<<<<<<< HEAD
+                label: 'Total Services'
+                value: allServices.length.toString()
+                icon: Rocket
+              }
+              { label: 'Happy Customers', value: '50K+', icon: Users }
+              { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            Revolutionary Technology Services
+          </h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions.
+            Each service is designed to transform your business and propel you into the future.
+          </p>
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+            {[
+              { label: 'Total Services', value: allServices.length.toString(), icon: Rocket }
+              { label: 'Happy Customers', value: '50K+', icon: Users }
+              { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe }
+=======
                 label: 'Total Services',
                 value: allServices.length.toString(),
                 icon: Rocket,
               },
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
+<<<<<<< HEAD
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
@@ -260,6 +355,7 @@ export default function UltraFuturisticServiceShowcase2034() {;
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -291,7 +387,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Search and Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -302,7 +402,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             {/* Search */}
@@ -333,7 +437,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
 
             </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -354,7 +462,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Service Categories */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -422,7 +534,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -447,15 +563,24 @@ export default function UltraFuturisticServiceShowcase2034() {;
               {/* Popular Badge */}
               {service.popular && (
                 <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+<<<<<<< HEAD
+                </div>
+              )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
 
                   Popular
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               )}
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Service Icon */}
               <div className='flex items-center justify-between mb-4'>
                 <div
@@ -509,7 +634,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
               {/* Features */}
 
                     <span>{feature}</span>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 ))}
                 {service.features.length > 3 && (
@@ -530,7 +659,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
                 )}
               </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
@@ -587,7 +720,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <a
                   href={service.link}
                   className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-center group'
@@ -626,7 +763,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -637,7 +778,11 @@ export default function UltraFuturisticServiceShowcase2034() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -669,7 +814,7 @@ export default function UltraFuturisticServiceShowcase2034() {;
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already leveraging our cutting-edge technology solutions. 
+              Join thousands of businesses already leveraging our cutting-edge technology solutions.
               Get started today and experience the future of business automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -696,8 +841,15 @@ export default function UltraFuturisticServiceShowcase2034() {;
     </section>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

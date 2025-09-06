@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -13,9 +15,34 @@ export default function QuantumServicesPage() {
   ];
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+<<<<<<< HEAD
+import Button from '../components/ui/Button';
+import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
+export default function QuantumServicesPage() {
+
+  const features = [
+    'Quantum-inspired optimization & annealing strategies'
+    'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable'
+    'Quantum-safe cryptography assessments and roadmaps'
+    'R&D ideation for quantum-ready workloads'
+  ];
+  const solutions = [
+    {
+      name: 'Quantum Internet Security'
+      href: '/quantum-internet-security-platform'
+    }
+    { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' }
+    {
+      name: 'Quantum Cloud Infrastructure'
+      href: '/quantum-cloud-infrastructure'
+    }
+  ];
+
+=======
 import Button from '../components/ui/Button',
 import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react',
 export default function QuantumServicesPage() {
@@ -26,6 +53,7 @@ export default function QuantumServicesPage() {
     { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
     { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
     { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraAdvancedFuturisticBackground colorScheme="quantum" intensity="high">
       <Head>
@@ -89,15 +117,22 @@ export default function QuantumServicesPage() {
               <Shield className="w-5 h-5 text-purple-400" />
               <span>Post-quantum readiness assessments and migration planning</span>
             </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
   } catch (error) {
@@ -105,4 +140,8 @@ export default function QuantumServicesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

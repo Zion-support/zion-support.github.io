@@ -1,9 +1,233 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+<<<<<<< HEAD
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Layout from "./components/Layout";
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
+<<<<<<< HEAD
+  BookOpen
+  Clock
+  User
+  ArrowRight
+  CheckCircle
+  Star
+  Play
+  Download
+  ExternalLink
+  Code
+  Database
+  Cloud
+  Shield
+  Zap
+  Brain
+  Globe
+  Smartphone
+  Monitor
+  Server
+  Bot
+  Microscope
+  Layers
+  Workflow
+  FileText
+  Image
+  Video
+  Music
+  Palette
+  Search
+  Filter
+  Settings
+  Wrench
+  Cog
+  Activity
+  PieChart
+  BarChart
+  TrendingUp
+  DollarSign
+  ShoppingCart
+  Home
+  Trash2
+  Camera
+  Heart
+  ClipboardList
+  TreePine
+  Droplets
+  Award
+  Building
+  Rocket
+  Lightbulb
+  Target
+  Users
+  Phone
+  Mail
+  MapPin
+  MessageSquare
+  HelpCircle
+  Info
+  AlertCircle
+  CheckCircle2
+  XCircle
+  Plus
+  Minus
+  ChevronUp
+  ChevronRight
+  ChevronLeft
+  ChevronDown
+  ArrowUp
+  ArrowDown
+  ArrowLeft
+  Pause
+  Stop
+  SkipForward
+  SkipBack
+  Volume2
+  VolumeX
+  Maximize
+  Minimize
+  RotateCcw
+  RotateCw
+  RefreshCw
+  Upload
+  Share
+  Copy
+  Edit
+  Trash
+  Save
+  Lock
+  Unlock
+  EyeOff
+  Bell
+  BellOff
+  Star as StarIcon
+  Heart as HeartIcon
+  ThumbsUp
+  ThumbsDown
+  MessageCircle
+  Send
+  Paperclip
+  Smile
+  Frown
+  Meh
+  Laugh
+  Angry
+  Sad
+  Surprised
+  Wink
+  Kiss
+  Tongue
+  Wink2
+  KissWinkHeart
+  KissClosedEyes
+  StuckOutTongue
+  StuckOutTongueWinkingEye
+  StuckOutTongueClosedEyes
+  Disappointed
+  Worried
+  Angry2
+  Rage
+  Cry
+  Scream
+  Confounded
+  Hugging
+  Smirk
+  NoMouth
+  NeutralFace
+  Expressionless
+  Unamused
+  RollingEyes
+  Thinking
+  LyingFace
+  HandOverMouth
+  ShushingFace
+  ExplodingHead
+  CowboyHatFace
+  DisguisedFace
+  Sunglasses
+  NerdFace
+  MonocleFace
+  Confused
+  WorriedFace
+  SlightlyFrowningFace
+  OpenMouth
+  Hushed
+  Astonished
+  Flushed
+  PleadingFace
+  FrowningFace
+  AnguishedFace
+  FearfulFace
+  ColdSweat
+  DisappointedRelieved
+  CryFace
+  LoudlyCryingFace
+  ScreamFace
+  StuckOutTongueFace
+  DroolingFace
+  UnamusedFace
+  SweatSmile
+  Sweat
+  WearyFace
+  TiredFace
+  SleepyFace
+  YawningFace
+  DizzyFace
+  ExplodingHeadFace
+  CowboyHatFace2
+  DisguisedFace2
+  SunglassesFace
+  NerdFace2
+  MonocleFace2
+  ConfusedFace
+  WorriedFace2
+  SlightlyFrowningFace2
+  OpenMouthFace
+  HushedFace
+  AstonishedFace
+  FlushedFace
+  PleadingFace2
+  FrowningFace2
+  AnguishedFace2
+  FearfulFace2
+  ColdSweatFace
+  DisappointedRelievedFace
+  CryFace2
+  LoudlyCryingFace2
+  ScreamFace2
+  StuckOutTongueFace2
+  DroolingFace2
+  UnamusedFace2
+  SweatSmileFace
+  SweatFace
+  WearyFace2
+  TiredFace2
+  SleepyFace2
+  YawningFace2
+  DizzyFace2
+=======
   BookOpen,
   Clock,
   User,
@@ -201,116 +425,119 @@ import {
   SleepyFace2,
   YawningFace2,
   DizzyFace2,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
-
 const guides = [
   {
-    id: 1,
-    title: "Getting Started with AI Development",
+    id: 1
+    title: "Getting Started with AI Development"
     description:
-      "Learn the fundamentals of AI development and how to build your first AI application.",
-    category: "AI Development",
-    difficulty: "Beginner",
-    readTime: "15 min read",
-    author: "Zion Tech Team",
-    rating: 4.8,
-    students: 1250,
-    image: "/images/guides/ai-development.jpg",
-    icon: Brain,
-    tags: ["AI", "Machine Learning", "Python", "TensorFlow"],
-  },
+      "Learn the fundamentals of AI development and how to build your first AI application."
+    category: "AI Development"
+    difficulty: "Beginner"
+    readTime: "15 min read"
+    author: "Zion Tech Team"
+    rating: 4.8
+    students: 1250
+    image: "/images/guides/ai-development.jpg"
+    icon: Brain
+    tags: ["AI", "Machine Learning", "Python", "TensorFlow"]
+  }
   {
-    id: 2,
-    title: "Cloud Infrastructure Setup",
+    id: 2
+    title: "Cloud Infrastructure Setup"
     description:
-      "Complete guide to setting up scalable cloud infrastructure for your applications.",
-    category: "Cloud Computing",
-    difficulty: "Intermediate",
-    readTime: "25 min read",
-    author: "Cloud Experts",
-    rating: 4.9,
-    students: 980,
-    image: "/images/guides/cloud-infrastructure.jpg",
-    icon: Cloud,
-    tags: ["AWS", "Docker", "Kubernetes", "DevOps"],
-  },
+      "Complete guide to setting up scalable cloud infrastructure for your applications."
+    category: "Cloud Computing"
+    difficulty: "Intermediate"
+    readTime: "25 min read"
+    author: "Cloud Experts"
+    rating: 4.9
+    students: 980
+    image: "/images/guides/cloud-infrastructure.jpg"
+    icon: Cloud
+    tags: ["AWS", "Docker", "Kubernetes", "DevOps"]
+  }
   {
-    id: 3,
-    title: "Cybersecurity Best Practices",
+    id: 3
+    title: "Cybersecurity Best Practices"
     description:
-      "Essential cybersecurity practices to protect your applications and data.",
-    category: "Security",
-    difficulty: "Advanced",
-    readTime: "30 min read",
-    author: "Security Team",
-    rating: 4.7,
-    students: 750,
-    image: "/images/guides/cybersecurity.jpg",
-    icon: Shield,
-    tags: ["Security", "Encryption", "Authentication", "Compliance"],
-  },
+      "Essential cybersecurity practices to protect your applications and data."
+    category: "Security"
+    difficulty: "Advanced"
+    readTime: "30 min read"
+    author: "Security Team"
+    rating: 4.7
+    students: 750
+    image: "/images/guides/cybersecurity.jpg"
+    icon: Shield
+    tags: ["Security", "Encryption", "Authentication", "Compliance"]
+  }
   {
-    id: 4,
-    title: "Mobile App Development",
+    id: 4
+    title: "Mobile App Development"
     description:
-      "Build cross-platform mobile applications with modern frameworks.",
-    category: "Mobile Development",
-    difficulty: "Intermediate",
-    readTime: "20 min read",
-    author: "Mobile Team",
-    rating: 4.6,
-    students: 1100,
-    image: "/images/guides/mobile-development.jpg",
-    icon: Smartphone,
-    tags: ["React Native", "Flutter", "iOS", "Android"],
-  },
+      "Build cross-platform mobile applications with modern frameworks."
+    category: "Mobile Development"
+    difficulty: "Intermediate"
+    readTime: "20 min read"
+    author: "Mobile Team"
+    rating: 4.6
+    students: 1100
+    image: "/images/guides/mobile-development.jpg"
+    icon: Smartphone
+    tags: ["React Native", "Flutter", "iOS", "Android"]
+  }
   {
-    id: 5,
-    title: "Database Design & Optimization",
+    id: 5
+    title: "Database Design & Optimization"
     description:
-      "Learn database design principles and optimization techniques.",
-    category: "Database",
-    difficulty: "Intermediate",
-    readTime: "22 min read",
-    author: "Database Team",
-    rating: 4.8,
-    students: 890,
-    image: "/images/guides/database-design.jpg",
-    icon: Database,
-    tags: ["SQL", "NoSQL", "Performance", "Scaling"],
-  },
+      "Learn database design principles and optimization techniques."
+    category: "Database"
+    difficulty: "Intermediate"
+    readTime: "22 min read"
+    author: "Database Team"
+    rating: 4.8
+    students: 890
+    image: "/images/guides/database-design.jpg"
+    icon: Database
+    tags: ["SQL", "NoSQL", "Performance", "Scaling"]
+  }
   {
-    id: 6,
-    title: "Web Performance Optimization",
+    id: 6
+    title: "Web Performance Optimization"
     description:
-      "Optimize your web applications for maximum performance and user experience.",
-    category: "Performance",
-    difficulty: "Advanced",
-    readTime: "18 min read",
-    author: "Performance Team",
-    rating: 4.9,
-    students: 650,
-    image: "/images/guides/web-performance.jpg",
-    icon: Zap,
-    tags: ["Performance", "Optimization", "Caching", "CDN"],
-  },
+      "Optimize your web applications for maximum performance and user experience."
+    category: "Performance"
+    difficulty: "Advanced"
+    readTime: "18 min read"
+    author: "Performance Team"
+    rating: 4.9
+    students: 650
+    image: "/images/guides/web-performance.jpg"
+    icon: Zap
+    tags: ["Performance", "Optimization", "Caching", "CDN"]
+  }
 ];
-
 const categories = [
-  { name: "All", count: guides.length, icon: Globe },
-  { name: "AI Development", count: 1, icon: Brain },
-  { name: "Cloud Computing", count: 1, icon: Cloud },
-  { name: "Security", count: 1, icon: Shield },
-  { name: "Mobile Development", count: 1, icon: Smartphone },
-  { name: "Database", count: 1, icon: Database },
-  { name: "Performance", count: 1, icon: Zap },
+  { name: "All", count: guides.length, icon: Globe }
+  { name: "AI Development", count: 1, icon: Brain }
+  { name: "Cloud Computing", count: 1, icon: Cloud }
+  { name: "Security", count: 1, icon: Shield }
+  { name: "Mobile Development", count: 1, icon: Smartphone }
+  { name: "Database", count: 1, icon: Database }
+  { name: "Performance", count: 1, icon: Zap }
 ];
+<<<<<<< HEAD
+export default function GuidesPage() {
+=======
 
 interface GuidesProps {
   className?: string;
 }
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Layout>
       <Head>
@@ -334,7 +561,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 Expert Guides & Tutorials
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-                Master the latest technologies with our comprehensive guides,
+                Master the latest technologies with our comprehensive guides
                 tutorials, and best practices from industry experts.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -545,6 +772,33 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+=======
+import Layout from '../components/Layout';
+
+export default function GuidesPage() {
+  
+    >
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Guides
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Comprehensive guides and tutorials for our services
+              </p>
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </Layout>;
   );

@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
+
   return (
     <>
       <Head>
@@ -24,12 +30,12 @@ export default function AIPoweredDevOpsPlatformPage() {
         implementationWeeks='2-4 weeks'
         roiNote='Cut MTTR by 40% and increase deployment frequency 3-5x'
         features={[
-          'Autonomous CI/CD optimization and caching',
-          'Flaky test detection and auto quarantine',
-          'Change-risk scoring before deploy',
-          'Automated canary and feature flags',
-          'Rollback orchestration with blast radius limits',
-          'Incident prediction, runbooks, and guardrails',
+          'Autonomous CI/CD optimization and caching'
+          'Flaky test detection and auto quarantine'
+          'Change-risk scoring before deploy'
+          'Automated canary and feature flags'
+          'Rollback orchestration with blast radius limits'
+          'Incident prediction, runbooks, and guardrails'
         ]}
         industries={['SaaS', 'E-commerce', 'Fintech', 'Media', 'Enterprise IT']}
         canonical='https: //ziontechgroup.com/ai-powered-devops-platform'
@@ -37,9 +43,13 @@ export default function AIPoweredDevOpsPlatformPage() {
     </>;
   );
 
+<<<<<<< HEAD
+=======
+=======
 }
 =======
 import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIPoweredDevOpsPlatformPage() {
@@ -91,4 +101,8 @@ export default function AIPoweredDevOpsPlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

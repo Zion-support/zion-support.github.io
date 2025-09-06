@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -29,6 +31,7 @@ export default function ContentGenerator() {;
   const [previewContent, setPreviewContent] = useState<any>(null);
   const [testEmail, setTestEmail] = useState('');
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -44,6 +47,22 @@ import { toast } from "sonner",
 import { Loader2 } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useNavigate } from "react-router-dom";
+export default function ContentGenerator() {
+  const { user, isLoading } = useAuth();
+
+  const navigate = useNavigate();
+  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
+  const [customPrompt, setCustomPrompt] = useState('');
+  const [topic, setTopic] = useState('');
+  const [autoPublish, setAutoPublish] = useState(false);
+  const [includeImage, setIncludeImage] = useState(true);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [previewContent, setPreviewContent] = useState<any>(null);
+  const [testEmail, setTestEmail] = useState('');
+=======
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useNavigate } from "react-router-dom",
 export default function ContentGenerator() {
@@ -59,6 +78,7 @@ export default function ContentGenerator() {
   const [testEmail, setTestEmail] = useState(''),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
@@ -67,21 +87,24 @@ export default function ContentGenerator() {
 <<<<<<< HEAD
     }
   }, [user, isLoading, navigate]);
-
   const generateContent = async () => {
     setIsGenerating(true);
     setPreviewContent(null);
-    
     try {
       const { data, error } = await supabase.functions.invoke('generate-content', {
         body: {
-          contentType,
-          prompt: customPrompt || undefined,
-          topic: topic || undefined,
+          contentType
+          prompt: customPrompt |undefined
+          topic: topic |undefined
           autoPublish;
           includeImage: contentType === 'blog' ? includeImage : false
         }
       });
+<<<<<<< HEAD
+      if (error) throw error;
+      setPreviewContent(data);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
@@ -131,11 +154,15 @@ export default function ContentGenerator() {;
           includeImage: contentType === 'blog' ? includeImage : false;
         }
       }),
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
       if (error) throw error,
       
       setPreviewContent(data),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)
     } catch (error) {
       console.error("Error generating content:", error),
@@ -143,30 +170,36 @@ export default function ContentGenerator() {;
     } finally {
       setIsGenerating(false)
     }
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address"),
       return
     }
-    
     if (!previewContent) {
       toast.error("Generate newsletter content first"),
       return
 <<<<<<< HEAD
     }
-    
     try {
       const { data, error } = await supabase.functions.invoke('send-newsletter', {
         body: {
-          subject: previewContent.subject,
-          previewText: previewContent.previewText,
-          body: previewContent.body,
-          testMode: true,
+          subject: previewContent.subject
+          previewText: previewContent.previewText
+          body: previewContent.body
+          testMode: true
           testEmail
         }
       });
+<<<<<<< HEAD
+      if (error) throw error;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       }),;
       if (error) throw error,;
@@ -200,16 +233,24 @@ export default function ContentGenerator() {;
           testEmail;
         }
       }),
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
       if (error) throw error,
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       console.error("Error sending test newsletter:", error),
       toast.error("Failed to send test newsletter. Please try again.")
     }
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   // Check if user is still loading
   if (isLoading) {
@@ -223,7 +264,6 @@ export default function ContentGenerator() {;
       </>
     )
   }
-
   return (
     <>
       <Header />
@@ -371,14 +411,21 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
                         <Switch;
                           id="includeImage";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />
                       </div>
                     </>
                   )}
+<<<<<<< HEAD
+=======
                   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
@@ -439,9 +486,9 @@ export default function ContentGenerator() {;
                               <div className="space-y-4">
                                 <h2 className="text-2xl font-bold text-white">{previewContent.title}</h2>
                                 <p className="text-zion-slate-light">{previewContent.metaDescription}</p>
-                                <div 
+                                <div
                                   className="prose prose-invert max-w-none"
-                                  dangerouslySetInnerHTML={{ 
+                                  dangerouslySetInnerHTML={{
                                     __html: previewContent.body
                                       .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>")
                                       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
@@ -474,7 +521,7 @@ export default function ContentGenerator() {;
                                 <h3 className="text-white font-semibold mb-1">Tags</h3>
                                 <div className="flex flex-wrap gap-2">
                                   {previewContent.tags.map((tag: string, index: number) => (
-                                    <span 
+                                    <span
                                       key={index}
                                       className="bg-zion-blue-light px-2 py-1 rounded-md text-xs text-zion-cyan"
                                     >
@@ -489,7 +536,6 @@ export default function ContentGenerator() {;
                                   <p className="text-zion-slate-light">{previewContent.tweetSummary}</p>
                                 </div>
                               )}
-                              
                               {previewContent.imagePrompt && (
                                 <div>
                                   <h3 className="text-white font-semibold mb-1">Image Prompt</h3>
@@ -512,13 +558,13 @@ export default function ContentGenerator() {;
                               <h2 className="text-xl font-bold">{previewContent.subject}</h2>
                               <p className="text-gray-500 text-sm mt-2">{previewContent.previewText}</p>
                               <div className="border-t border-gray-200 my-4"></div>
-                              <div 
+                              <div
                                 className="prose max-w-none"
                                 dangerouslySetInnerHTML={{ __html: previewContent.body }}
                               />
                               <div className="mt-6">
                                 <Button className="bg-zion-purple hover:bg-zion-purple-dark text-white">
-                                  {previewContent.cta || "Visit Zion Marketplace"}
+                                  {previewContent.cta |"Visit Zion Marketplace"}
                                 </Button>
                               </div>
                             </div>
@@ -528,7 +574,7 @@ export default function ContentGenerator() {;
                                 disabled={!testEmail}
                                 className="bg-zion-blue-light hover:bg-zion-blue text-white"
                               >
-                                Send Test to {testEmail || "your email"}
+                                Send Test to {testEmail |"your email"}
                               </Button>
                             </div>
                           </TabsContent>
@@ -569,6 +615,7 @@ export default function ContentGenerator() {;
                       </p>
                     </div>
                   )}
+<<<<<<< HEAD
                 </CardContent>
               </Card>
             </div>
@@ -579,4 +626,16 @@ export default function ContentGenerator() {;
     </>
   )
 }
+=======
+                </CardContent>;
+              </Card>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+}
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

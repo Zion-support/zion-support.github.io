@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
 interface Partner {
   id: string;
   code: string;
@@ -14,77 +17,79 @@ interface Partner {
   lastActivity: string;
   totalReferrals: number;
   totalEarnings: number;
-
 const mockPartners: Partner[] = [
   {
-    id: '1',
-    code: 'PART001',
-    name: 'Tech Solutions Inc.',
-    status: 'active',
-    commission: 15,
-    contactEmail: 'contact@techsolutions.com',
-    contactPhone: '+1-555-0123',
-    joinedAt: '2024-01-15T00:00:00Z',
-    lastActivity: '2025-01-15T10:30:00Z',
-    totalReferrals: 25,
+    id: '1'
+    code: 'PART001'
+    name: 'Tech Solutions Inc.'
+    status: 'active'
+    commission: 15
+    contactEmail: 'contact@techsolutions.com'
+    contactPhone: '+1-555-0123'
+    joinedAt: '2024-01-15T00:00:00Z'
+    lastActivity: '2025-01-15T10:30:00Z'
+    totalReferrals: 25
     totalEarnings: 12500
-  },
+  }
   {
-    id: '2',
-    code: 'PART002',
-    name: 'Digital Marketing Pro',
-    status: 'active',
-    commission: 12,
-    contactEmail: 'hello@digitalmarketingpro.com',
-    contactPhone: '+1-555-0456',
-    joinedAt: '2024-03-20T00:00:00Z',
-    lastActivity: '2025-01-14T16:45:00Z',
-    totalReferrals: 18,
+    id: '2'
+    code: 'PART002'
+    name: 'Digital Marketing Pro'
+    status: 'active'
+    commission: 12
+    contactEmail: 'hello@digitalmarketingpro.com'
+    contactPhone: '+1-555-0456'
+    joinedAt: '2024-03-20T00:00:00Z'
+    lastActivity: '2025-01-14T16:45:00Z'
+    totalReferrals: 18
     totalEarnings: 8750
-  },
+  }
   {
-    id: '3',
-    code: 'PART003',
-    name: 'Cloud Services LLC',
-    status: 'pending',
-    commission: 10,
-    contactEmail: 'info@cloudservices.com',
-    contactPhone: '+1-555-0789',
-    joinedAt: '2025-01-10T00:00:00Z',
-    lastActivity: '2025-01-10T00:00:00Z',
-    totalReferrals: 0,
+    id: '3'
+    code: 'PART003'
+    name: 'Cloud Services LLC'
+    status: 'pending'
+    commission: 10
+    contactEmail: 'info@cloudservices.com'
+    contactPhone: '+1-555-0789'
+    joinedAt: '2025-01-10T00:00:00Z'
+    lastActivity: '2025-01-10T00:00:00Z'
+    totalReferrals: 0
     totalEarnings: 0
   }
 ];
-
 const AdminPartnersPage: React.FC = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-
   useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
       setPartners(mockPartners);
       setLoading(false);
     }, 1000);  }, []);
-
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, ...updates }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ code, ...updates })
     });
     const res = await fetch('/api/admin/partners/list');
     const json = await res.json();
-    setPartners(json.partners || []);  }
-
+    setPartners(json.partners |[]);  }
   async function viewFlags(code: string) {
-    setSelected(code),
+    setSelected(code)
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
+<<<<<<< HEAD
+    const json = await res.json();
+    setFlags(json.flags |[]);
+
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useEffect, useState } from 'react';
 export default function AdminPartners(req, res) {
@@ -122,7 +127,10 @@ export default function AdminPartners(req, res) {
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
@@ -130,10 +138,15 @@ export default function AdminPartners(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
 
 =======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>
@@ -163,7 +176,7 @@ export default function AdminPartners(req, res) {
                     step={0.01}
                     onBlur={e =>
                       updatePartner(p.code, {
-                        commission_rate: Number(e.target.value),
+                        commission_rate: Number(e.target.value)
                       })
                     }
                     className='w-24 border rounded px-2 py-1'
@@ -195,7 +208,11 @@ export default function AdminPartners(req, res) {
   }
 }
                     className="w-24 border rounded px-2 py-1"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -398,10 +415,13 @@ export default function AdminPartners(req, res) {
       </main>
     </>
   );
+<<<<<<< HEAD
+=======
 
 }
 }
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       )  } catch (error) {
     console.error("Error:", error);
@@ -415,4 +435,8 @@ export default function AdminPartners(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

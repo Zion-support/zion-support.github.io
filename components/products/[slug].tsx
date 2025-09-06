@@ -1,19 +1,22 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import {useRouter} from 'next/router';
+import { useRouter  } from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const EquipmentDetail: NextPage = () => {
-  const router = useRouter(),
-  const { slug } = router.query as { slug?: string };
+  const router = useRouter()
+  const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
   const item = items.find(e => e.slug === slug);  const item = items.find((e) => e.slug === slug);
-
   if (!item) {
     return (
       <EnhancedLayout>
@@ -33,7 +36,6 @@ const EquipmentDetail: NextPage = () => {
         </div>
       </EnhancedLayout>
     )
-
   return (
     <EnhancedLayout>
       <Head>
@@ -96,10 +98,17 @@ const EquipmentDetail: NextPage = () => {
       </div>
     </EnhancedLayout>
   )
-};
+}
+export default EquipmentDetail;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default EquipmentDetail;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 export default EquipmentDetail;
 =======
 export default EquipmentDetail;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

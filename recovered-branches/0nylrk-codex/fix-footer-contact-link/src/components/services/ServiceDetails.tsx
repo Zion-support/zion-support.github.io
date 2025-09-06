@@ -1,19 +1,28 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Server, Clock, MapPin } from "lucide-react";
+=======
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from "lucide-react",
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ServiceDetailsProps {
   country: string
 }
-
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
+
   const getDatacenters = (country: string): string[] => {
 <<<<<<< HEAD
     const dataCenters: Record<string, string[]> = {;
@@ -36,11 +45,17 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       // Default for other countries
       "default": ["Major metropolitan areas"]
+<<<<<<< HEAD
+    }
+    return dataCenters[country] |dataCenters["default"]
+  }
+=======
     },
     
     return dataCenters[country] || dataCenters["default"]
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
@@ -53,11 +68,17 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+<<<<<<< HEAD
+    }
+    return regions[country] |regions["default"]
+  }
+=======
     },
     
     return regions[country] || regions["default"]
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -69,18 +90,29 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
+<<<<<<< HEAD
+    }
+    const timezone = timeZones[country] |timeZones["default"];
+=======
     },
     
     const timezone = timeZones[country] || timeZones["default"],
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
            `For remote locations, additional travel fees may apply.`
+<<<<<<< HEAD
+  }
+  const datacenters = getDatacenters(country);
+
+=======
   },
   
   const datacenters = getDatacenters(country),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -94,7 +126,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="overflow-hidden rounded-lg mb-4">
-          <img 
+          <img
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
@@ -108,8 +140,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {datacenters.map((dc, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
                 >
 <<<<<<< HEAD
@@ -202,7 +234,11 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {dc}
                 </div>
               ))}
@@ -236,5 +272,9 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
+}
+=======
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

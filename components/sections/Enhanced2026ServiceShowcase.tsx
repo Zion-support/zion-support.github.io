@@ -1,6 +1,17 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Brain
+  Globe
+  Rocket;
+=======
   ArrowRight,
   Star,
   TrendingUp,
@@ -9,6 +20,7 @@ import {
   Brain,
   Globe,;
   Rocket,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -17,58 +29,72 @@ import { innovative2026AIServices } from '../../data/innovative-2026-ai-services
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
+<<<<<<< HEAD
+        staggerChildren: 0.2
+        delayChildren: 0.1
+      }
+    },  }
+=======
         staggerChildren: 0.2,
         delayChildren: 0.1,
       },
     },  };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: {
-      opacity: 0,
-      y: 50,
-      scale: 0.9,
-    },
+      opacity: 0
+      y: 50
+      scale: 0.9
+    }
     visible: {      opacity: 1,        delayChildren: 0.1
       }
     }
-  };
-
+  }
   const itemVariants = {
-    hidden: { 
-      opacity: 0,
-      y: 50,
+    hidden: {
+      opacity: 0
+      y: 50
       scale: 0.9
-    };
-    visible: { 
-      opacity: 1,
-      y: 0,
-      scale: 1,
+    }
+    visible: {
+      opacity: 1
+      y: 0
+      scale: 1
       transition: {
-        duration: 0.6,
-        ease: 'easeOut' as const,
-      },
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
     },  };        ease: "easeOut" as const
       }
     }
-  };
-
+  }
   const cardVariants = {
     hover: {
-      y: -10,
-      scale: 1.02,
+      y: -10
+      scale: 1.02
       transition: {
+<<<<<<< HEAD
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
+    },  };        ease: "easeOut" as const
+      }
+    }
+  }
+=======
         duration: 0.3,
         ease: 'easeOut' as const,
       },
-    },  };        ease: "easeOut" as const
-      }
-    }
+    },  };
+
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const renderServiceCard = (service: any, index: number) => (
     <motion.div
       key={service.id}
@@ -78,7 +104,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       <motion.div
         variants={cardVariants}
@@ -196,7 +226,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           {/* Features */}
 
             </motion.button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -228,7 +262,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />      </motion.div>        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
       </motion.div>
     </motion.div>
-  ),
+  )
 
   return (
     <section className='py-20 relative overflow-hidden'>
@@ -246,7 +280,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -287,7 +325,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* AI Services Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -297,7 +339,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
@@ -330,7 +376,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* IT Infrastructure Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -340,7 +390,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Globe className='w-6 h-6 text-purple-400' />
@@ -373,7 +427,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Micro SAAS Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -407,7 +465,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -417,7 +479,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -462,8 +528,15 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     </section>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

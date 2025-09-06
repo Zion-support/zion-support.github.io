@@ -1,5 +1,21 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Wallet, Database, Save } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Separator  } from '@/components/ui/separator';
+import { Switch  } from '@/components/ui/switch';
+import { Label  } from '@/components/ui/label';
+import { toast } from 'sonner';
+export default function AccountSettings() {
+=======
 import {useState, useEffect} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -14,11 +30,24 @@ import {Switch} from '@/components/ui/switch';
 import {Label} from '@/components/ui/label';
 import {toast} from 'sonner';
 export default function AccountSettings() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
+  useEffect(() => {
+    try {
+
+      const saved = localStorage.getItem('account_settings');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        setDisplayWeb3(!!parsed.displayWeb3);
+        setDidHandle(parsed.didHandle |'');
+        setEnableBackup(!!parsed.enableBackup)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
@@ -51,6 +80,9 @@ export default function AccountSettings() {
         setEnableBackup(!!parsed.enableBackup)
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -78,20 +110,32 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
         setEnableBackup(!!parsed.enableBackup);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (e) {
       console.error('Error loading account settings', e)
     }
 <<<<<<< HEAD
   }, []);
+<<<<<<< HEAD
+  const handleSave = () => {
+    setIsSubmitting(true);
+=======
+  }, []),
+=======
 =======
   }, []),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleSave = () => {
     setIsSubmitting(true),
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Simulate API call
     setTimeout(() => {
       try {
@@ -109,8 +153,7 @@ export default function AccountSettings() {;
 <<<<<<< HEAD
       }
     }, 1000)
-  };
-  
+  }
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
@@ -119,18 +162,15 @@ export default function AccountSettings() {;
         toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return
       }
-      
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
       const address = accounts[0];
-      
       // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
       await ethereum.request({
-        method: 'personal_sign',
+        method: 'personal_sign'
         params: [address, message]
       });
-      
       // Auto-set DID handle if ENS is available
       try {
         const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
@@ -182,21 +222,31 @@ export default function AccountSettings() {;
         const ensName = await provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       } catch (error) {
         console.error('ENS lookup error:', error)
       }
-      
       toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)
     } catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet')
+      toast.error(error.message |'Failed to connect wallet')
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
   };
 =======
   },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <>
@@ -215,7 +265,7 @@ export default function AccountSettings() {;
                 <Label htmlFor="email">Email Address</Label>
                 <Input
                   id="email"
-                  value={user?.email || ''}
+                  value={user?.email |''}
                   disabled
                   className="bg-gray-100"
                 />
@@ -229,8 +279,8 @@ export default function AccountSettings() {;
                     onChange={(e) => setDidHandle(e.target.value)}
                     placeholder="ENS / Lens / Ceramic / Farcaster"
                   />
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     onClick={handleConnectWallet}
                     type="button"
                     className="flex items-center gap-1"
@@ -276,8 +326,7 @@ export default function AccountSettings() {;
                   Data will be backed up to decentralized storage. This feature is in beta.
                 </div>
               )}
-              
-              <Button 
+              <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className="w-full"
@@ -297,16 +346,16 @@ export default function AccountSettings() {;
                 <h3 className="font-medium">Connected Wallet</h3>
                 {didHandle ? (
                   <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="20" 
-                      height="20" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="text-green-500"
                     >
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
@@ -316,16 +365,16 @@ export default function AccountSettings() {;
                   </div>
                 ) : (
                   <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
-                    <svg 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      width="20" 
-                      height="20" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="text-red-500"
                     >
                       <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -366,16 +415,17 @@ export default function AccountSettings() {;
               </div>
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="w-full"
                   disabled={!enableBackup}
                 >
                   Restore Profile from Backup
                 </Button>
                 <p className="text-xs text-gray-500 mt-1">
-                  {enableBackup 
-                    ? 'Restore your profile data from decentralized storage' 
+<<<<<<< HEAD
+                  {enableBackup
+                    ? 'Restore your profile data from decentralized storage'
                     : 'Enable backup first to use this feature'}
                 </p>
               </div>
@@ -387,4 +437,19 @@ export default function AccountSettings() {;
     </>
   )
 }
+=======
+                  {enableBackup 
+                    ? 'Restore your profile data from decentralized storage' 
+                    : 'Enable backup first to use this feature'}
+                </p>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        </div>;
+      </main>;
+      <Footer />;
+    </>;
+  );
+}
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

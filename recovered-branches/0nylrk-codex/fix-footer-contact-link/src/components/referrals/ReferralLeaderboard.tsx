@@ -1,27 +1,42 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+
+import { Award } from "lucide-react";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface LeaderboardEntry {
-  rank: number,
-  name: string,
+  rank: number;
+  name: string;
   referrals: number
 }
-
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data
   const leaderboardData: LeaderboardEntry[] = [
-    { rank: 1, name: "Alex Johnson", referrals: 24 },
-    { rank: 2, name: "Jamie Smith", referrals: 18 },
-    { rank: 3, name: "Taylor Wong", referrals: 15 },
-    { rank: 4, name: "Casey Brown", referrals: 12 },
-    { rank: 5, name: "Jordan Lee", referrals: 10 }],
-
+    { rank: 1, name: "Alex Johnson", referrals: 24 }
+    { rank: 2, name: "Jamie Smith", referrals: 18 }
+    { rank: 3, name: "Taylor Wong", referrals: 15 }
+    { rank: 4, name: "Casey Brown", referrals: 12 }
+    { rank: 5, name: "Jordan Lee", referrals: 10 }
+  ];
   return (
     <Card>
       <CardHeader>
@@ -34,22 +49,31 @@ export function ReferralLeaderboard() {
       <CardContent>
         <div className="space-y-2">
           {leaderboardData.map((entry) => (
-            <div 
+            <div
               key={entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
             >
               <div className="flex items-center gap-3">
-                <div 
+                <div
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry.rank === 1
                       ? "bg-yellow-200 text-yellow-800"
                       : entry.rank === 2
+<<<<<<< HEAD
+                        ? "bg-slate-200 text-slate-800"
+                        : entry.rank === 3
+                          ? "bg-amber-200 text-amber-800"
+                          : "bg-muted text-muted-foreground"
+=======
                       ? "bg-slate-200 text-slate-800"
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
                       : "bg-muted text-muted-foreground"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from "lucide-react",;
 interface LeaderboardEntry {;
@@ -93,7 +117,11 @@ export function ReferralLeaderboard() {;
                       : entry.rank === 3;
                       ? "bg-amber-200 text-amber-800";
                       : "bg-muted text-muted-foreground";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }`}
                 >
                   {entry.rank}
@@ -108,6 +136,11 @@ export function ReferralLeaderboard() {;
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
+  );
+}
+=======
   )
 }
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

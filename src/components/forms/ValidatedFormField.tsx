@@ -1,30 +1,56 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react'
 import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+<<<<<<< HEAD
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+=======
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,;
   SelectValue;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/utils'
+
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button';
 interface ValidationRule {
-  required?: boolean
-  minLength?: number
-  maxLength?: number
-  pattern?: RegExp
+  required?: boolean;
+  minLength?: number;
+  maxLength?: number;
+  pattern?: RegExp;
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
+<<<<<<< HEAD
+  name: string;
+  label: string;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
+  placeholder?: string;
+  description?: string;
+  validation?: ValidationRule;
+  options?: { value: string, label: string }[],
+  form: any, // React Hook Form control
+  className?: string;
+  disabled?: boolean;
+  showValidIcon?: boolean;
+=======
   name: string
   label: string
   type?:
@@ -45,20 +71,22 @@ interface ValidatedFormFieldProps {
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   debounceMs?: number
 export function ValidatedFormField({
-  name,
-  label,
-  type = 'text',
-  placeholder,
-  description,
-  validation = {},
-  options = [],
-  form,
-  className,
-  disabled = false,
-  showValidIcon = true,
-  debounceMs = 300,
+
+  name
+  label
+  type = 'text'
+  placeholder
+  description
+  validation = {}
+  options = []
+  form
+  className
+  disabled = false
+  showValidIcon = true
+  debounceMs = 300
 }: ValidatedFormFieldProps) {
   const [showPassword, setShowPassword] = useState(false)
   const [validationState, setValidationState] = useState<
@@ -72,15 +100,13 @@ export function ValidatedFormField({
   const isTouched = form.formState.touchedFields[name]
   // Debounced validation
   useEffect((,) => {
-    if (!fieldValue || !isTouched) {
+    if (!fieldValue |!isTouched) {
       setValidationState('idle')
       return;
     }
-
     if (debounceTimer) {
       clearTimeout(debounceTimer)
     }
-
     setValidationState('validating')
     const timer = setTimeout(() => {
       const error = validateField(fieldValue)
@@ -94,28 +120,57 @@ export function ValidatedFormField({
   const validateField = (value: any): string | null => {
     if (
       validation.required &&
-      (!value || (typeof value === 'string' && value.trim() === ''))
+      (!value |(typeof value === 'string' && value.trim() === ''))
     ) {
       return `${label} is required`
     }
-
     if (typeof value === 'string') {
       if (validation.minLength && value.length < validation.minLength) {
         return `${label} must be at least ${validation.minLength} characters`
       }
-
       if (validation.maxLength && value.length > validation.maxLength) {
         return `${label} must not exceed ${validation.maxLength} characters`
       }
-
       if (validation.pattern && !validation.pattern.test(value)) {
         return `${label} format is invalid`
       }
     }
-
     if (validation.custom) {
       return validation.custom(value)
     }
+<<<<<<< HEAD
+    return null
+  }
+  const getValidationIcon = () => {
+    if (!showValidIcon |!isTouched |validationState === 'idle') return null
+    switch (validationState) {
+      case 'validating':
+        return (
+          <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
+        )
+      case 'valid':
+        return <CheckCircle className='h-4 w-4 text-green-500' />
+      case 'invalid':
+        return <AlertCircle className='h-4 w-4 text-red-500' />
+      default:
+        return null
+    }
+  }
+  const getFieldClasses = () => {
+    if (!isTouched) return ''
+    switch (validationState) {
+      case 'valid':
+        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20'
+      case 'invalid':
+        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+      default:
+        return ''
+    }
+  }
+  const renderField = () => {
+    const baseClasses = cn(getFieldClasses(), className)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useEffect } from 'react';
 
@@ -211,11 +266,14 @@ export function ValidatedFormField({;
 
     return null
   },
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-    return null
-  }
   const getValidationIcon = () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     if (!showValidIcon || !isTouched || validationState === 'idle') return null
     switch (validationState) {
@@ -245,6 +303,7 @@ export function ValidatedFormField({;
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
     switch (validationState) {
@@ -285,7 +344,11 @@ export function ValidatedFormField({;
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     switch (type) {
       case 'textarea':
         return (
@@ -299,7 +362,11 @@ export function ValidatedFormField({;
               disabled={disabled}
               className={baseClasses}
               rows={4}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {...form.register(name)}
             />
             <div className="absolute top-2 right-2">
@@ -332,7 +399,11 @@ export function ValidatedFormField({;
               <SelectContent>
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {option.label}
                   </SelectItem>
                 ))}
@@ -347,7 +418,11 @@ export function ValidatedFormField({;
 =======
         ),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case 'checkbox':
         return (
           <div className="flex items-center space-x-2">
@@ -364,7 +439,11 @@ export function ValidatedFormField({;
 =======
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {label}
             </label>
             {getValidationIcon()}
@@ -374,7 +453,11 @@ export function ValidatedFormField({;
 =======
         ),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case 'password':
         return (
           <div className="relative">
@@ -387,7 +470,11 @@ export function ValidatedFormField({;
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
@@ -408,7 +495,11 @@ export function ValidatedFormField({;
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
@@ -422,7 +513,11 @@ export function ValidatedFormField({;
 =======
         ),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       default:
         return (
           <div className="relative">
@@ -441,10 +536,9 @@ export function ValidatedFormField({;
     }
   }
   if (type === 'checkbox') {
-    
         render={() => (
           <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
-            <FormControl>{renderField()}</FormControl>            {(fieldError || description) && (
+            <FormControl>{renderField()}</FormControl>            {(fieldError |description) && (
               <div className='space-y-1'>
                 {fieldError && (
                   <FormMessage className='text-sm text-red-500'>
@@ -475,7 +569,11 @@ export function ValidatedFormField({;
               <div className="space-y-1">
                 {fieldError && (
                   <FormMessage className="text-sm text-red-500">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {fieldError.message}
                   </FormMessage>
                 )}
@@ -484,7 +582,11 @@ export function ValidatedFormField({;
                   <p className='text-sm text-muted-foreground'>{description}</p>
 =======
                   <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             )}
@@ -494,7 +596,6 @@ export function ValidatedFormField({;
       />
     )
   }
-
       render={() => (
         <FormItem>
           <FormLabel className='text-sm font-medium'>
@@ -503,7 +604,7 @@ export function ValidatedFormField({;
               <span className='text-red-500 ml-1'>*</span>
             )}          </FormLabel>
           <FormControl>{renderField()}</FormControl>
-          {(fieldError || description) && (
+          {(fieldError |description) && (
             <div className='space-y-1'>
               {fieldError && (
                 <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
@@ -531,7 +632,11 @@ export function ValidatedFormField({;
               {fieldError && (
                 <FormMessage className="text-sm text-red-500 flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {fieldError.message}
                 </FormMessage>
               )}
@@ -540,7 +645,11 @@ export function ValidatedFormField({;
                 <p className='text-sm text-muted-foreground'>{description}</p>
 =======
                 <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
           )}
@@ -551,49 +660,56 @@ export function ValidatedFormField({;
   )
 // Validation helpers for common patterns
 export const validationPatterns = {
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
-  phone: /^[\+]?[1-9][\d]{0,15}$/,
-  url: /^https?:\/\/.+/,
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/
+  phone: /^[\+]?[1-9][\d]{0,15}$/
+  url: /^https?:\/\/.+/
   strongPassword:
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/
 }
 // Pre-configured validation rules
 export const commonValidations = {
-  required: { required: true },
+  required: { required: true }
   email: {
-    required: true,
-    pattern: validationPatterns.email,
+    required: true
+    pattern: validationPatterns.email
     custom: (value: string,) => {
       if (value && !validationPatterns.email.test(value)) {
         return 'Please enter a valid email address'
       }
       return null
-    },
-  },
+    }
+  }
   password: {
-    required: true,
-    minLength: 8,
+    required: true
+    minLength: 8
     custom: (value: string,) => {
       if (value && !validationPatterns.strongPassword.test(value)) {
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character'
       }
       return null
-    },
-  },
+    }
+  }
   phone: {
-    pattern: validationPatterns.phone,
+    pattern: validationPatterns.phone
     custom: (value: string,) => {
       if (value && !validationPatterns.phone.test(value)) {
         return 'Please enter a valid phone number'
       }
       return null
-    },
-  },
+    }
+  }
 }
     }
+<<<<<<< HEAD
+  }}
+    }
+  }}
+
+=======
   }},
     };
   }};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     />;
   );
@@ -637,4 +753,8 @@ export const commonValidations = {;
       return null;
     }
   }};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

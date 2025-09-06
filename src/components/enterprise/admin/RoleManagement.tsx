@@ -1,13 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from "react";
+import {
+=======
+=======
 import React from 'react'
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   TableRow,
 } from '@/components/ui/table'
@@ -20,6 +29,7 @@ import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-reac
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
 import {
@@ -38,12 +48,105 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import { Badge } from '@/components/ui/badge'
+import { Switch } from '@/components/ui/switch'
+import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-react'
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
     {
+<<<<<<< HEAD
+      id: 1
+      name: 'Alex Johnson'
+      email: 'alex@example.com'
+      role: 'Admin'
+      permissions: {
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: true
+        viewBilling: true
+        manageBilling: true
+      }
+    }
+    {
+      id: 2
+      name: 'Jamie Smith'
+      email: 'jamie@example.com'
+      role: 'Recruiter'
+      permissions: {
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: false
+        viewBilling: false
+        manageBilling: false
+      }
+    }
+    {
+      id: 3
+      name: 'Sam Williams'
+      email: 'sam@example.com'
+      role: 'Manager'
+      permissions: {
+        viewCandidates: true
+        editCandidates: false
+        createJobs: true
+        manageTeam: false
+        viewBilling: true
+        manageBilling: false
+      }
+    }
+    {
+      id: 4
+      name: 'Taylor Brown'
+      email: 'taylor@example.com'
+      role: 'Viewer'
+      permissions: {
+        viewCandidates: true
+        editCandidates: false
+        createJobs: false
+        manageTeam: false
+        viewBilling: false
+        manageBilling: false
+      }
+    }
+  ]
+  const handlePermissionChange = (
+    _memberId: number
+    permission: string
+    value: boolean
+  ) => {    // In a real app, this would make an API call to update permissions
+    toast({
+      title: 'Permission updated'
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`
+    })
+  }
+  const roleDescriptions: Record<string, string> = {
+    Admin: 'Full access to all features and settings'
+    Recruiter: 'Can manage candidates and job postings'
+    Manager: 'Can view candidates and create jobs'
+    Viewer: 'Read-only access to candidates'
+  }
+=======
       id: 1,
       name: "Alex Johnson",
       email: "alex@example.com",
@@ -91,6 +194,8 @@ export function RoleManagement() {
         manageTeam: false,
         viewBilling: false,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         manageBilling: false,
       },
     },
@@ -112,6 +217,7 @@ export function RoleManagement() {
     Viewer: 'Read-only access to candidates',
   }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         manageBilling: false}}],
 
   const handlePermissionChange = (_memberId: number, permission: string, value: boolean) => {
@@ -126,8 +232,12 @@ export function RoleManagement() {
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div>
@@ -153,7 +263,11 @@ export function RoleManagement() {
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           ))}
         </div>
@@ -163,7 +277,11 @@ export function RoleManagement() {
 =======
 
       <div className="rounded-md border">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Table>
           <TableHeader>
             <TableRow>
@@ -252,7 +370,11 @@ export function RoleManagement() {
 =======
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="font-medium">{member.name}</div>
                   <div className="text-sm text-muted-foreground">
@@ -277,7 +399,11 @@ export function RoleManagement() {
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
@@ -525,12 +651,16 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
-                        member.id,
-                        'viewCandidates',
+                        member.id
+                        'viewCandidates'
                         checked
                       )
                     }                  />
@@ -541,8 +671,8 @@ export function RoleManagement() {;
                     checked={member.permissions.editCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
-                        member.id,
-                        'editCandidates',
+                        member.id
+                        'editCandidates'
                         checked
                       )
                     }                  />
@@ -576,10 +706,17 @@ export function RoleManagement() {;
             ))}
           </TableBody>
         </Table>
+<<<<<<< HEAD
+      </div>
+    </div>
+  )
+}
+=======
       </div>;
     </div>;
   );
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
@@ -595,4 +732,8 @@ export function RoleManagement() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

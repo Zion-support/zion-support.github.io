@@ -1,16 +1,29 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
+<<<<<<< HEAD
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+=======
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface ApiDocsLayoutProps {
+  children: React.ReactNode
+}
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApiDocsLayoutProps {
   children: React.ReactNode
@@ -21,18 +34,24 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   const location = useLocation();
   const currentPath = location.pathname;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+<<<<<<< HEAD
+
+  const location = useLocation();
+  const currentPath = location.pathname;
+=======
   const location = useLocation(),
   const currentPath = location.pathname,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const navigationItems = [
-    { title: "Getting Started", path: "/developers/docs/getting-started" },
-    { title: "API Reference", path: "/developers/docs/reference" },
-    { title: "Webhooks", path: "/developers/docs/webhooks" },
-    { title: "Sample Code", path: "/developers/docs/samples" },
-    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
-
+    { title: "Getting Started", path: "/developers/docs/getting-started" }
+    { title: "API Reference", path: "/developers/docs/reference" }
+    { title: "Webhooks", path: "/developers/docs/webhooks" }
+    { title: "Sample Code", path: "/developers/docs/samples" }
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }]
   return (
     <div className="flex min-h-screen bg-zinc-950">
       {/* Sidebar */}
@@ -46,8 +65,8 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
         <div className="mb-6">
           <div className="relative">
             <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
-            <Input 
-              placeholder="Search documentation" 
+            <Input
+              placeholder="Search documentation"
               className="pl-8 bg-zinc-900 border-zinc-800 focus:border-zion-purple"
             />
           </div>
@@ -80,6 +99,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     </div>
   )
 }
+export default ApiDocsLayout;
 
 =======
 import React from "react",;
@@ -147,5 +167,9 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   );
 }
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ApiDocsLayout;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

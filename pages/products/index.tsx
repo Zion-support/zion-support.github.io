@@ -1,104 +1,145 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import { NextPage } from 'next';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
 import Layout from '../../components/Layout';
-
 const products = [
   {
-    id: 'ai-analytics-suite',
-    name: 'ZionAI Analytics Suite',
-    description: 'Comprehensive business intelligence platform with AI-powered insights and predictive analytics.',
-    category: 'AI & Analytics',
-    pricing: '$2,999/month',
-    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration'],
-    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Scalable Solutions'],
-    icon: Award,
+    id: 'ai-analytics-suite'
+    name: 'ZionAI Analytics Suite'
+    description: 'Comprehensive business intelligence platform with AI-powered insights and predictive analytics.'
+    category: 'AI & Analytics'
+    pricing: '$2,999/month'
+    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration']
+    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Competitive Advantage', 'Scalable Solutions']
+    icon: Award
     popular: true
-  },
+  }
   {
-    id: 'cloud-infrastructure',
-    name: 'ZionCloud Infrastructure',
-    description: 'Scalable cloud infrastructure solutions with enterprise-grade security and performance.',
-    category: 'Cloud Services',
-    pricing: '$4,999/month',
-    features: ['Auto-scaling', '99.9% Uptime', 'Global CDN', 'Security Compliance'],
-    benefits: ['Cost Optimization', 'High Availability', 'Global Performance', 'Secure Operations'],
-    icon: Globe,
+    id: 'cloud-infrastructure'
+    name: 'ZionCloud Infrastructure'
+    description: 'Scalable cloud infrastructure solutions with enterprise-grade security and performance.'
+    category: 'Cloud Services'
+    pricing: '$4,999/month'
+    features: ['Auto-scaling', '99.9% Uptime', 'Global CDN', 'Security Compliance']
+    benefits: ['Cost Optimization', 'High Availability', 'Global Performance', 'Secure Operations']
+    icon: Globe
     popular: true
-  },
+  }
   {
-    id: 'cybersecurity-suite',
-    name: 'ZionShield Security',
-    description: 'Advanced cybersecurity solutions with threat detection and prevention capabilities.',
-    category: 'Security',
-    pricing: '$3,999/month',
-    features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Compliance Management'],
-    benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance Ready', 'Peace of Mind'],
-    icon: Shield,
+    id: 'cybersecurity-suite'
+    name: 'ZionShield Security'
+    description: 'Advanced cybersecurity solutions with threat detection and prevention capabilities.'
+    category: 'Security'
+    pricing: '$3,999/month'
+    features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Compliance Management']
+    benefits: ['Enhanced Security', 'Risk Mitigation', 'Compliance Ready', 'Peace of Mind']
+    icon: Shield
     popular: false
-  },
+  }
   {
-    id: 'automation-platform',
-    name: 'ZionAutomate Platform',
-    description: 'Intelligent automation platform for streamlining business processes and workflows.',
-    category: 'Automation',
-    pricing: '$2,499/month',
-    features: ['Workflow Automation', 'Process Optimization', 'Integration Hub', 'Analytics Dashboard'],
-    benefits: ['Increased Productivity', 'Reduced Errors', 'Cost Savings', 'Better Efficiency'],
-    icon: Zap,
+    id: 'automation-platform'
+    name: 'ZionAutomate Platform'
+    description: 'Intelligent automation platform for streamlining business processes and workflows.'
+    category: 'Automation'
+    pricing: '$2,499/month'
+    features: ['Workflow Automation', 'Process Optimization', 'Integration Hub', 'Analytics Dashboard']
+    benefits: ['Increased Productivity', 'Reduced Errors', 'Cost Savings', 'Better Efficiency']
+    icon: Zap
     popular: false
-  },
+  }
   {
-    id: 'collaboration-suite',
-    name: 'ZionCollaborate Suite',
-    description: 'Comprehensive collaboration platform for teams and organizations.',
-    category: 'Collaboration',
-    pricing: '$1,999/month',
-    features: ['Team Chat', 'Video Conferencing', 'File Sharing', 'Project Management'],
-    benefits: ['Better Communication', 'Improved Collaboration', 'Remote Work Ready', 'Enhanced Productivity'],
-    icon: Users,
+    id: 'collaboration-suite'
+    name: 'ZionCollaborate Suite'
+    description: 'Comprehensive collaboration platform for teams and organizations.'
+    category: 'Collaboration'
+    pricing: '$1,999/month'
+    features: ['Team Chat', 'Video Conferencing', 'File Sharing', 'Project Management']
+    benefits: ['Better Communication', 'Improved Collaboration', 'Remote Work Ready', 'Enhanced Productivity']
+    icon: Users
     popular: false
-  },
+  }
   {
-    id: 'data-management',
-    name: 'ZionData Manager',
-    description: 'Advanced data management and governance platform for enterprise data needs.',
-    category: 'Data Management',
-    pricing: '$3,499/month',
-    features: ['Data Governance', 'Quality Management', 'Compliance Tools', 'Analytics Integration'],
-    benefits: ['Data Quality', 'Compliance Ready', 'Better Insights', 'Risk Reduction'],
-    icon: Star,
+    id: 'data-management'
+    name: 'ZionData Manager'
+    description: 'Advanced data management and governance platform for enterprise data needs.'
+    category: 'Data Management'
+    pricing: '$3,499/month'
+    features: ['Data Governance', 'Quality Management', 'Compliance Tools', 'Analytics Integration']
+    benefits: ['Data Quality', 'Compliance Ready', 'Better Insights', 'Risk Reduction']
+    icon: Star
     popular: false
   }
 ];
-
 const categories = [
-  'All',
-  'AI & Analytics',
-  'Cloud Services',
-  'Security',
-  'Automation',
-  'Collaboration',
+  'All'
+  'AI & Analytics'
+  'Cloud Services'
+  'Security'
+  'Automation'
+  'Collaboration'
   'Data Management'
 ];
-
 const ProductsIndex: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
-
   const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesCategory = selectedCategory === 'All' |product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                          product.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -287,8 +328,17 @@ const ProductsIndex: NextPage = () => {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
 };
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+=======
 
 export default ProductsIndex;
   )
@@ -300,17 +350,54 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 const Index: NextPage = () => {
   return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index page" />
+<<<<<<< HEAD
+        <meta name='description' content='Index page' />
       </Head>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+export default ProductsIndex;
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
+  ),
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  );
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+};
+
+export default Index;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+}
+export default ProductsIndex;
+>>>>>>> origin/main
   )
+<<<<<<< HEAD
+}
+export default Index;
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 },
 export default Index,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { useState, useEffect } from "react"
 import { format } from "date-fns"
 import { List, RefreshCw } from 'lucide-react'import { useApiKeys } from "@/hooks/useApiKeys"
@@ -19,6 +21,7 @@ export function ApiLogs() {
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from 'lucide-react'
@@ -26,6 +29,14 @@ import { useApiKeys } from "@/hooks/useApiKeys",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge";
+import { ApiLogsChart } from "./ApiLogsChart";
+export function ApiLogs() {
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+=======
 import { Badge } from "@/components/ui/badge",
 import { ApiLogsChart } from "./ApiLogsChart",
 export function ApiLogs() {
@@ -33,11 +44,16 @@ export function ApiLogs() {
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
   
+<<<<<<< HEAD
+  const handleRefresh = null;
+                setCurrentPage(0), // Reset to first page when changing page size
+=======
   const handleRefresh = () => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   },
@@ -140,6 +156,7 @@ export function ApiLogs() {;
               onValueChange={(value) => {;
                 setPageSize(Number(value));
                 setCurrentPage(0), // Reset to first page when changing page size;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -217,7 +234,7 @@ export function ApiLogs() {;
                             ? "border-yellow-500 text-yellow-400"
                             : "border-red-500 text-red-400"
                         }
-                      >;
+                      >
                         {log.method}
                       </Badge>
                     </td>
@@ -258,15 +275,27 @@ export function ApiLogs() {;
                 size="sm"
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}
-              >;
-                Next;
-              </Button>;
-            </div>;
-          </div>;
+              >
+                Next
+              </Button>
+            </div>
+          </div>
         )}
+<<<<<<< HEAD
+      </CardContent>
+    </Card>
+  )
+}
+  )
+}
+=======
       </CardContent>;
     </Card>;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

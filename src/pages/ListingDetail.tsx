@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { ChatWidget } from '@/components/ChatWidget';
@@ -15,6 +19,13 @@ import { toast } from '@/hooks/use-toast';
 import { PaymentButton } from '@/components/transactions/PaymentButton';
 import { ProfileContact } from '@/components/profile/ProfileContact';
 import {
+<<<<<<< HEAD
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+} from '@/components/ui/dialog';
+=======
   Dialog,
   DialogContent,
   DialogHeader,;
@@ -31,7 +42,22 @@ export default function ListingDetail() {
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+import { useCurrency } from '@/hooks/useCurrency';
+export default function ListingDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+
+  const router = useRouter();
+  const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const { user } = useAuth();
+  const { formatPrice } = useCurrency();
+  // Find the listing from our shared data source - now also checking equipment listings
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
+=======
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { ChatWidget } from "@/components/ChatWidget",
@@ -65,6 +91,7 @@ export default function ListingDetail() {
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!listing) {
     return (
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -81,7 +108,6 @@ export default function ListingDetail() {
 <<<<<<< HEAD
       </div>
     );  }
-
   const handleContact = () => {
     if (user) {
       setIsChatOpen(true);
@@ -98,7 +124,6 @@ export default function ListingDetail() {
           </div>
         </div>
       )
-
   const handleContact = () => {
     if (user) {
       setIsChatOpen(true);
@@ -107,8 +132,7 @@ export default function ListingDetail() {
     } else {
       setIsContactDialogOpen(true)
     }
-  };
-
+  }
   return (
     <>
       <div className='min-h-screen bg-zion-blue py-12 px-4'>
@@ -120,8 +144,8 @@ export default function ListingDetail() {
                   {listing.images && listing.images.length > 0 ? (
                     <ImageWithRetry
                       src={
-                        listing.images[selectedImageIndex] ||
-                        listing.images[0] ||
+                        listing.images[selectedImageIndex] |
+                        listing.images[0] |
                         '/placeholder.svg'
                       }
                       alt={listing.title}
@@ -199,7 +223,11 @@ export default function ListingDetail() {;
                       className="object-cover"
                       fallbackSrc="/placeholder.svg"
                     />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
@@ -213,14 +241,22 @@ export default function ListingDetail() {;
                 
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {listing.images.map((image, index) => (
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
+                          'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2'
+=======
                           'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           index === selectedImageIndex
                             ? 'border-zion-purple'
                             : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
@@ -228,11 +264,11 @@ export default function ListingDetail() {;
                         )}
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index,) => (
-                      <div 
+                      <div
                         key = {index,}
                         onClick = {(,) => setSelectedImageIndex(index),}
                         className = {cn(
-                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2"
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         ),}
                       >
@@ -250,7 +286,11 @@ export default function ListingDetail() {;
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}
                           className="object-cover"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           fallbackSrc="/placeholder.svg"
                         />
                       </div>
@@ -272,7 +312,11 @@ export default function ListingDetail() {;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
                 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -320,7 +364,11 @@ export default function ListingDetail() {;
                       </div>
                       <div>
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
@@ -396,7 +444,11 @@ export default function ListingDetail() {;
                     {listing.category}
                   </Badge>
                   {listing.featured && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
                       Featured
                     </Badge>
@@ -415,13 +467,21 @@ export default function ListingDetail() {;
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
+                            'h-5 w-5'
+=======
                             'h-5 w-5',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             i < Math.floor(listing.rating!)
                               ? 'text-zion-cyan fill-zion-cyan'
                               : 'text-zion-slate-light'                          )}
@@ -439,7 +499,7 @@ export default function ListingDetail() {;
                         <Star
                           key = {i,}
                           className = {cn(
-                            "h-5 w-5",
+                            "h-5 w-5"
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           ),}
                         />
@@ -457,11 +517,14 @@ export default function ListingDetail() {;
                     </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                   </div>
                 )}
-
                 {/* Price */}
 <<<<<<< HEAD
                 <div className='mb-6'>
@@ -478,7 +541,6 @@ export default function ListingDetail() {;
                 <div className='space-y-3 mb-8'>                  {listing.price !== null ? (                    </span>
                   </div>
                 )}
-                
                 {/* Price */}
                 <div className="mb-6">
                   {listing.price !== null ? (
@@ -493,7 +555,11 @@ export default function ListingDetail() {;
                       {formatPrice(listing.price)}
                     </div>
                   ) : (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className="text-2xl font-bold text-white">
                       Custom Pricing
                     </div>
@@ -504,14 +570,22 @@ export default function ListingDetail() {;
                 <div className='space-y-3 mb-8'>
 =======
                 </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
                     <PaymentButton
+<<<<<<< HEAD
+=======
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                       buttonText='Buy Now'
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
@@ -546,6 +620,7 @@ export default function ListingDetail() {;
                   </Button>
                 </div>
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
@@ -556,17 +631,43 @@ export default function ListingDetail() {;
                 <div className="space-y-3 mb-8">;
                   {listing.price !== null ? (;
                     <PaymentButton;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
-                      buttonText="Buy Now";
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
-                      onPaymentInitiated={() => {;
-                        toast({;
-                          title: "Payment Processing";
-                          description: "Redirecting to secure checkout...";
+                      buttonText='Buy Now'
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
+                      amount = {listing.price,}
+                      serviceId = {listing.id,}
+                      providerId = {listing.author.id,}
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={(,) => {
+                        toast({
+                          title: 'Payment Processing'
+                          description: 'Redirecting to secure checkout...'
                         });
                       }}
+<<<<<<< HEAD
+                    />
+                  ) : (
+                    <Button
+                      onClick={handleContact}
+                      disabled={isLoading}
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'                    >
+                      {isLoading ? 'Processing...' : 'Request Quote'}
+                    </Button>
+                  )}
+                  <Button
+                    variant='outline'
+                    onClick={handleContact}
+                    disabled={isLoading}
+                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'                  >
+                    <MessageSquare className='h-4 w-4 mr-2' />
+                    Contact Publisher
+                  </Button>
+                </div>
+=======
                     />;
                   ) : (;
                     <Button;
@@ -589,7 +690,11 @@ export default function ListingDetail() {;
                   </Button>
                 </div>
                 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -609,11 +714,19 @@ export default function ListingDetail() {;
                         />
                       </div>
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />
@@ -655,7 +768,11 @@ export default function ListingDetail() {;
                       </div>
                     )}
                     <div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <p className="font-medium text-white">{listing.author.name}</p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
@@ -664,7 +781,11 @@ export default function ListingDetail() {;
 <<<<<<< HEAD
 =======
                 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Additional Info */}
                 <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">
@@ -688,7 +809,6 @@ export default function ListingDetail() {;
         isOpen = {isChatOpen,}
         onClose = {() => setIsChatOpen(false),}
       />
-
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>
@@ -761,7 +881,11 @@ export default function ListingDetail() {;
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
@@ -773,11 +897,15 @@ export default function ListingDetail() {;
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact 
+          <ProfileContact
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             profileType="service"
           />
         </DialogContent>
@@ -785,26 +913,24 @@ export default function ListingDetail() {;
     </>
 <<<<<<< HEAD
 );
-
 }/>) : (<Button </Button>) ";
 }<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;
 }";
-}/> </div>) : (<div className=" h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center"> <span className=" text-lg font-medium text-zion-purple"> {;
-  listing.author.name.charAt (0) ;
+}/> </div>) : (<div className=" h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center"> <span className=" text-lg font-medium text-zion-purple"> {listing.author.name.charAt (0) ;
 }</span> </div>) ";
-}<div> <p className=" font-medium text-white"> {;
-  listing.author.name ";
+}<div> <p className=" font-medium text-white"> {listing.author.name ";
 }</p> <p className=" text-xs text-zion-slate-light">Member since 2022</p> listing.id ;
-}recipientId= {;
-  listing.author.id ;
-}isOpen= {;
-  isChatOpen ;
-}onClose= {;
-  () => setIsChatOpen (false) ";
+}recipientId= {listing.author.id ;
+}isOpen= {isChatOpen ;
+}onClose= {() => setIsChatOpen (false) ";
 }/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
 }'"}
 =======
   )
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

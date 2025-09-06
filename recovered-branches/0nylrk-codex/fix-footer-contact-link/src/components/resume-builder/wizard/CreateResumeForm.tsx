@@ -1,13 +1,26 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {CreateResumeFormProps} from "./types";
+<<<<<<< HEAD
+export const CreateResumeForm = ({
+  onCreateResume;
+  onCancel;
+  isLoading
+}: CreateResumeFormProps) => {
+  const [newResumeTitle, setNewResumeTitle] = useState('');
+=======
 export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -22,11 +35,16 @@ export const CreateResumeForm = ({
 }: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState(''),
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return,
     await onCreateResume(newResumeTitle)
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardContent className="py-8">
@@ -66,13 +84,21 @@ export const CreateResumeForm = ({;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />
-            <Button 
+            <Button
               onClick={handleSubmit}
+<<<<<<< HEAD
+              disabled={!newResumeTitle.trim() |isLoading}
+=======
               disabled={!newResumeTitle.trim() || isLoading}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Create
@@ -90,7 +116,15 @@ export const CreateResumeForm = ({;
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 };
 =======
 },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

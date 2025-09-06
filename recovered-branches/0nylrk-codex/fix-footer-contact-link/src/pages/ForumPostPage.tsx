@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -18,6 +20,7 @@ import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -33,9 +36,17 @@ import { formatDistanceToNow, format } from "date-fns",
 import { ForumPost, ForumReply } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
+<<<<<<< HEAD
+import ReplyForm from "@/components/community/ReplyForm";
+import { useToast } from "@/hooks/use-toast";
+// Mock data for a forum post
+=======
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -55,20 +66,67 @@ const mockPost: ForumPost = {
   isAnswered: true,
   isFeatured: true
 },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+const mockPost: ForumPost = {
+  id: "1"
+  title: "Best practices for AI model fine-tuning"
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
+  authorId: "user1"
+  authorName: "Alex Johnson"
+  authorAvatar: "https://i.pravatar.cc/150?img=3"
+  authorRole: "Verified Talent"
+  categoryId: "ai-tools"
+  tags: ["machine-learning", "fine-tuning", "gpt"];
+  createdAt: "2025-04-01T12:00:00Z"
+  updatedAt: "2025-04-01T12:00:00Z"
+  upvotes: 48
+  downvotes: 2
+  replyCount: 4
+  isAnswered: true
+  isFeatured: true
+}
 // Mock data for replies
 const mockReplies: ForumReply[] = [
   {
-    id: "reply1",
-    postId: "1",
-    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
-    authorId: "user2",
-    authorName: "Sarah Chen",
-    authorAvatar: "https://i.pravatar.cc/150?img=5",
-    createdAt: "2025-04-01T14:30:00Z",
-    updatedAt: "2025-04-01T14:30:00Z",
-    upvotes: 12,
+    id: "reply1"
+    postId: "1"
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples."
+    authorId: "user2"
+    authorName: "Sarah Chen"
+    authorAvatar: "https://i.pravatar.cc/150?img=5"
+    createdAt: "2025-04-01T14:30:00Z"
+    updatedAt: "2025-04-01T14:30:00Z"
+    upvotes: 12
     downvotes: 0
+<<<<<<< HEAD
+  }
+  {
+    id: "reply2"
+    postId: "1"
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance."
+    authorId: "user3"
+    authorName: "Michael Wong"
+    authorRole: "AI Engineer"
+    createdAt: "2025-04-01T16:15:00Z"
+    updatedAt: "2025-04-01T16:15:00Z"
+    upvotes: 8
+    downvotes: 0
+  }
+  {
+    id: "reply3"
+    postId: "1"
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.";
+    authorId: "user4"
+    authorName: "Emma Davis"
+    authorRole: "ML Research Lead"
+    createdAt: "2025-04-02T09:45:00Z"
+    updatedAt: "2025-04-02T09:45:00Z"
+    upvotes: 15
+    downvotes: 0
+    isAnswer: true
+  }
+=======
   },
   {
     id: "reply2",
@@ -95,19 +153,24 @@ const mockReplies: ForumReply[] = [
     downvotes: 0,
     isAnswer: true
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
-    id: "reply4",
-    postId: "1",
-    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",
-    authorId: "user5",
-    authorName: "David Lin",
-    createdAt: "2025-04-02T11:20:00Z",
-    updatedAt: "2025-04-02T11:20:00Z",
-    upvotes: 4,
+    id: "reply4"
+    postId: "1"
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?"
+    authorId: "user5"
+    authorName: "David Lin"
+    createdAt: "2025-04-02T11:20:00Z"
+    updatedAt: "2025-04-02T11:20:00Z"
+    upvotes: 4
     downvotes: 0
   }
+<<<<<<< HEAD
+];
+=======
 ],
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
@@ -120,6 +183,17 @@ export default function ForumPostPage() {
   const [replies, setReplies] = useState(mockReplies);
 =======
   // Cast the result instead to provide the expected shape.
+<<<<<<< HEAD
+  const { postId } = useParams() as { postId?: string }
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const [post, setPost] = useState(mockPost);
+  const [replies, setReplies] = useState(mockReplies);
+  // Check if this is the user's own post
+  const isAuthor = user?.id === post?.authorId;
+  // Check if user is admin/mod
+  const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin';
+=======
   const { postId } = useParams() as { postId?: string },
   const { user } = useAuth(),
   const { toast } = useToast(),
@@ -133,6 +207,7 @@ export default function ForumPostPage() {
   // Check if user is admin/mod
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // For this demo, we'll assume the post is found
   if (!post) {
     return (
@@ -146,45 +221,64 @@ export default function ForumPostPage() {
       </AppLayout>
     )
   }
-
   const handleUpvote = () => {
     if (!user) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to vote on posts"}),
+        title: "Authentication required"
+        description: "Please sign in to vote on posts"})
       return
     }
-    
-    setPost({ ...post, upvotes: post.upvotes + 1 }),
+    setPost({ ...post, upvotes: post.upvotes + 1 })
     toast({
-      title: "Vote recorded",
+      title: "Vote recorded"
       description: "You upvoted this post"})
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleDownvote = () => {
     if (!user) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to vote on posts"}),
+        title: "Authentication required"
+        description: "Please sign in to vote on posts"})
       return
     }
-    
-    setPost({ ...post, downvotes: post.downvotes + 1 }),
+    setPost({ ...post, downvotes: post.downvotes + 1 })
     toast({
-      title: "Vote recorded",
+      title: "Vote recorded"
       description: "You downvoted this post"})
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to reply"}),
+        title: "Authentication required"
+        description: "Please sign in to reply"})
       return
     }
-    
     // Create a new reply
     const newReply: ForumReply = {
+<<<<<<< HEAD
+      id: `reply${Date.now()}`
+      postId: post.id
+      content;
+      authorId: user.id |'unknown'
+      authorName: user.displayName |'Anonymous'
+      authorAvatar: user.avatarUrl
+      createdAt: new Date().toISOString()
+      updatedAt: new Date().toISOString()
+      upvotes: 0
+      downvotes: 0
+    }
+    setReplies([...replies, newReply]);
+    setPost({ ...post, replyCount: post.replyCount + 1 })
+=======
       id: `reply${Date.now()}`,
       postId: post.id,
       content,
@@ -200,47 +294,66 @@ export default function ForumPostPage() {
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     toast({
-      title: "Reply posted",
+      title: "Reply posted"
       description: "Your reply has been added to the discussion"})
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
       toast({
-        title: "Permission denied",
-        description: "Only the original poster or moderators can mark answers",
+        title: "Permission denied"
+        description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
       }),
       return
     }
-    
     // Update the replies
     const updatedReplies = replies.map(reply => ({
       ...reply,
       isAnswer: reply.id === replyId
+<<<<<<< HEAD
+    }));
+    setReplies(updatedReplies);
+    setPost({ ...post, isAnswered: true })
+=======
     })),
     
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     toast({
-      title: "Answer marked",
+      title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleReportPost = () => {
     if (!user) {
       toast({
-        title: "Authentication required",
-        description: "Please sign in to report content"}),
+        title: "Authentication required"
+        description: "Please sign in to report content"})
       return
     }
-    
     toast({
-      title: "Report submitted",
+      title: "Report submitted"
       description: "A moderator will review this content"})
+<<<<<<< HEAD
+  }
+  const handlePinPost = () => {
+    if (!isAdminOrMod) return;
+    setPost({ ...post, isPinned: !post.isPinned })
+=======
   },
 
   const handlePinPost = () => {
@@ -248,9 +361,16 @@ export default function ForumPostPage() {
     
     setPost({ ...post, isPinned: !post.isPinned }),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     toast({
-      title: post.isPinned ? "Post unpinned" : "Post pinned",
+      title: post.isPinned ? "Post unpinned" : "Post pinned"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
+<<<<<<< HEAD
+  }
+  const handleLockPost = () => {
+    if (!isAdminOrMod) return;
+    setPost({ ...post, isLocked: !post.isLocked })
+=======
   },
 
   const handleLockPost = () => {
@@ -258,17 +378,25 @@ export default function ForumPostPage() {
     
     setPost({ ...post, isLocked: !post.isLocked }),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     toast({
-      title: post.isLocked ? "Post unlocked" : "Post locked",
+      title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
+<<<<<<< HEAD
+  }
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
+
+=======
   },
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
-      <SEO 
+      <SEO
         title={`${post.title} | Community Forum | Zion AI Marketplace`}
         description={post.content.substring(0, 160)}
         keywords={`community, forum, discussion, ${post.tags.join()}`}
@@ -547,7 +675,11 @@ export default function ForumPostPage() {;
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {post.authorRole}
                     </Badge>
                   )}
@@ -595,7 +727,7 @@ export default function ForumPostPage() {;
                 </Button>
               </div>
               <div className="flex items-center gap-2">
-                {(isAuthor || isAdminOrMod) && (
+                {(isAuthor |isAdminOrMod) && (
                   <Button variant="ghost" size="sm" asChild>
                     <Link to={`/community/edit/${post.id}`}>
                       <Edit className="h-4 w-4 mr-1" />
@@ -603,7 +735,6 @@ export default function ForumPostPage() {;
                     </Link>
                   </Button>
                 )}
-                
                 {isAdminOrMod && (
                   <>
                     <Button
@@ -624,7 +755,6 @@ export default function ForumPostPage() {;
                     </Button>
                   </>
                 )}
-                
                 <Button
                   variant="ghost"
                   size="sm"
@@ -650,7 +780,10 @@ export default function ForumPostPage() {;
               ))}
             </div>
           )}
+<<<<<<< HEAD
+=======
           
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
@@ -665,7 +798,10 @@ export default function ForumPostPage() {;
               )}
             </div>
           )}
+<<<<<<< HEAD
+=======
           
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -674,7 +810,6 @@ export default function ForumPostPage() {;
               </AlertDescription>
             </Alert>
           )}
-          
           <div className="space-y-6">
             {replies
               .filter(reply => !reply.isAnswer)
@@ -683,7 +818,8 @@ export default function ForumPostPage() {;
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
-                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+<<<<<<< HEAD
+                  canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 />
               ))}
           </div>
@@ -692,4 +828,15 @@ export default function ForumPostPage() {;
     </AppLayout>
   )
 }
+=======
+                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+                />
+              ))}
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>;
+  );
+}
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

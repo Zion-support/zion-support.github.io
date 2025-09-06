@@ -1,34 +1,40 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useEffect, useState} from 'react'
 import {ProductListingCard} from '@/components/ProductListingCard'
 import {useAuth} from '@/hooks/useAuth'
 import {fetchRecommendations} from '@/api/recommendations'
 import type { ProductListing } from '@/types/listings'
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
+
 import { Loader2 } from 'lucide-react'
-import Link from 'next/link'
-import { ErrorState } from '@/components/jobs/applications'
+import Link from 'next/link';
+import { ErrorState } from '@/components/jobs/applications';
 export default function EquipmentRecommendations() {
+
   const { isAuthenticated, user } = useAuth()
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
   useEffect(() => {
 export default function EquipmentRecommendations() {
-  const { isAuthenticated, user } = useAuth(),
-  const [listings, setListings] = useState<ProductListing[]>([]),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<boolean>(false),
+  const { isAuthenticated, user } = useAuth()
+  const [listings, setListings] = useState<ProductListing[]>([])
+  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<boolean>(false)
 
   useEffect((,) => {
     if (isAuthenticated && user?.id) {
-      setLoading(true)
+      setLoading(true);
       fetchRecommendations(user.id)
         .then(setListings)
         .catch(() => setError(true))
@@ -74,7 +80,11 @@ export default function EquipmentRecommendations() {;
     return (
       <Dialog open>
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
@@ -89,14 +99,17 @@ export default function EquipmentRecommendations() {;
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
 =======
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
           </Button>
         </DialogContent>
       </Dialog>
     )
   }
-
   return (
 <<<<<<< HEAD
     <div className='min-h-screen bg-zion-blue py-8 px-4'>
@@ -114,6 +127,15 @@ export default function EquipmentRecommendations() {;
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {listings.map((listing,) => (
           <div key={listing.id} className="break-inside-avoid mb-4">
+<<<<<<< HEAD
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     <div className="min-h-screen bg-zion-blue py-8 px-4">
       <h1 className="text-2xl font-bold text-white mb-6">AI Equipment Recommendations</h1>
@@ -139,4 +161,8 @@ export default function EquipmentRecommendations() {;
 =======
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

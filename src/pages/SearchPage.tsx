@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect, useState } from "react";
+import { useRouter  } from 'next/router';
+import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+  Tabs;
+  TabsContent;
+  TabsList;
+  TabsTrigger} from "@/components/ui/tabs",
+import { Loader2 } from 'lucide-react'
+=======
   const pageKey = `search-${routeKey}-${router.asPath}`
 import { useRouter } from 'next/router'
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
@@ -11,6 +26,7 @@ import {
   TabsContent
   TabsList
   TabsTrigger} from "@/components/ui/tabs"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
@@ -24,27 +40,46 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Loader2 } from 'lucide-react'
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface SearchResult {
-  id: string,
-  type: "product" | "service" | "talent" | "blog" | "doc",
-  title: string,
+
+  id: string
+  type: "product" | "service" | "talent" | "blog" | "doc"
+  title: string
+
   description: string
 }
-
 function highlight(text: string, term: string) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  if (!term) return text
+=======
   if (!term) return text,
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
   const regex = new RegExp(`(${escaped})`, "gi")
   const parts = text.split(regex)
+=======
+<<<<<<< HEAD
+  if (!term) return text,
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+  const regex = new RegExp(`(${escaped})`, "gi"),
+  const parts = text.split(regex),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
   const regex = new RegExp(`(${escaped})`, "gi"),
   const parts = text.split(regex),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       {parts.map((part, i) =>
@@ -60,19 +95,25 @@ function highlight(text: string, term: string) {
     </>
   )
 }
-
 export default function SearchPage() {
   const router = useRouterReady(), // Use our custom hook
   const [query, setQuery] = useState("")
   const [results, setResults] = useState<SearchResult[]>([])
+<<<<<<< HEAD
+  const [loading, setLoading] = useState(false)
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions()
+  // Force re-render and reset state when route changes
+  const routeKey = useRouteChange(() => {
+=======
   const [loading, setLoading] = useState(false);
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   // Force re-render and reset state when route changes;
   const routeKey = useRouteChange(() => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setResults([]);    setLoading(false)
   })
   const productResults = results.filter(
-    r => r.type === 'product' || r.type === 'service'
+    r => r.type === 'product' |r.type === 'service'
   )
   const talentResults = results.filter(r => r.type === 'talent')
   const docResults = results.filter(r => r.type === 'doc')
@@ -80,13 +121,17 @@ export default function SearchPage() {
   const marketplaceResults = [...productResults, ...talentResults]
   // Sync query with URL parameter changes
   useEffect(() => {
+<<<<<<< HEAD
+    if (!router.isReady) return
+    const urlQuery = (router.query.q as string) |""
+=======
     if (!router.isReady) return;
     const urlQuery = (router.query.q as string) || ""
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (urlQuery !== query) {
       setQuery(urlQuery)
     }
   }, [router.isReady, router.query.q]), // Fixed dependency array
-
   // Fetch results when query changes
   useEffect(() => {
     if (!router.isReady) return;
@@ -96,13 +141,16 @@ export default function SearchPage() {
       setResults([])
     }
   }, [router.isReady, query]), // Fixed dependency array
-
   const fetchResults = async (term: string,) => {
     if (!term.trim()) {
+<<<<<<< HEAD
+      setResults([])
+      return
+=======
       setResults([]),
       return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
-
     setLoading(true)
     try {
       const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`)
@@ -232,10 +280,14 @@ export default function SearchPage() {;
       } else {;
         setResults([]),;
         logErrorToProduction('Search API response structure is not as expected:', { data: data });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
-      logErrorToProduction('Search failed:', { data: error }),
+      logErrorToProduction('Search failed:', { data: error })
       setResults([])
     } finally {
       setLoading(false)
@@ -261,7 +313,11 @@ export default function SearchPage() {;
   // Add key prop to force re-render when route changes
   const pageKey = `search-${routeKey}-${router.asPath}`,
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -273,6 +329,7 @@ export default function SearchPage() {;
             onSelectSuggestion={(suggestion) => {
               const searchTerm = suggestion.text.trim()
               setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
+
             }}
             searchSuggestions = {suggestions,}
 =======
@@ -282,7 +339,11 @@ export default function SearchPage() {;
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
             searchSuggestions={suggestions}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
@@ -325,8 +386,13 @@ export default function SearchPage() {;
             </TabsList>
             <TabsContent value="products" className="space-y-4">
               {results
+<<<<<<< HEAD
+                .filter((r,) => r.type === "product" |r.type === "service")
+                .map((r,) => (
+=======
                 .filter((r) => r.type === "product" || r.type === "service")
                 .map((r) => (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   <div
                     key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -397,67 +463,71 @@ export default function SearchPage() {;
       </main>
     </div>
   )
-  setQuery (urlQuery) 
+  setQuery (urlQuery)
 }, [router.isReady, router.query.q]), //Fixed dependency array //Fetch results when query changes useEffect ( () => {
   if (!router.isReady) return;
 if (query.trim () ) {
-  fetchResults (query.trim () ) 
+  fetchResults (query.trim () )
 }else {
-  setResults ([]) 
+  setResults ([])
 }, [router.isReady, query]), //Fixed dependency array const fetchResults = async (term: string) => {
   if (!term.trim () ) {
   setResults ([])
+<<<<<<< HEAD
+return
+=======
 return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
-  encodeURIComponent (term) 
+  encodeURIComponent (term)
 }`)
 const data = await res.json ()
 if (data && data.results && Array.isArray (data.results) ) {
-  setResults (data.results) 
+  setResults (data.results)
 }else {
   setResults ([]);'
 logErrorToProduction ('Search API response structure is not as expected:', {
-  data: data 
-}) 
+  data: data
+})
 }catch (error) {'
   logErrorToProduction ('Search failed:', {
-  data: error 
+  data: error
 })
-setResults ([]) 
+setResults ([])
 }finally {
-  setLoading (false) 
+  setLoading (false)
 }
 const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault ()
 router.push (`/search?q=$ {
-  encodeURIComponent (query.trim () ) 
-}`) 
+  encodeURIComponent (query.trim () )
+}`)
 }
-//Add key prop to force re-render when route changes </div>) 
+//Add key prop to force re-render when route changes </div>)
 }{
   !loading && marketplaceResults.length === 0 && blogResults.length > 0 && (<div> <p className="text-zion-slate-light mb-2" >No marketplace results found. Related blog posts:</p> <div className="space-y-4" > {
-  blogResults.map (r => (</div>) ) 
-}</div> </div>) 
-}</p> </div>) ) 
+  blogResults.map (r => (</div>) )
+}</div> </div>)
+}</p> </div>) )
 }</TabsContent> <div key= {
   `talent-$ {
-  r.id 
+  r.id
 }` "
-}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) ) 
+}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
 }</TabsContent> <div key= {
   `doc-$ {
-  r.id 
+  r.id
 }` "
-}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) ) 
+}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
 }</TabsContent> <div key= {
   `blog-$ {
-  r.id 
+  r.id
 }` "
-}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) ) 
-}</TabsContent> </Tabs>) 
-}</main> </div>) 
+}className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
+}</TabsContent> </Tabs>)
+}</main> </div>)
 }'"  )
               {/* Sort Options */}
               <div  className="mb-6">
@@ -530,11 +600,18 @@ router.push (`/search?q=$ {
     </>
   )
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       </main>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

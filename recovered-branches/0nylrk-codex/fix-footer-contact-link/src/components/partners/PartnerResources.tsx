@@ -1,26 +1,48 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+=======
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ResourceItem {
-  id: string,
-  title: string,
-  description: string,
-  type: 'image' | 'video' | 'document' | 'link',
-  icon: JSX.Element,
+
+  id: string
+  title: string
+  description: string
+  type: 'image' | 'video' | 'document' | 'link'
+  icon: JSX.Element
+
   url: string
 }
-
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
+<<<<<<< HEAD
+
+      id: 'logo-pack'
+      title: 'Zion AI Logo Pack'
+      description: 'Official logos in various formats (PNG, SVG, JPG)';
+      type: 'image'
+      icon: <FileImage className="h-10 w-10 text-zion-purple" />
+      url: '#'
+    }
+=======
       id: 'logo-pack',
 <<<<<<< HEAD
       title: 'Zion AI Logo Pack',;
@@ -33,55 +55,80 @@ export function PartnerResources() {
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      id: 'brand-guidelines',
-      title: 'Brand Guidelines',
-      description: 'How to properly use our brand assets in your content',
-      type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      id: 'brand-guidelines'
+      title: 'Brand Guidelines'
+      description: 'How to properly use our brand assets in your content'
+      type: 'document'
+      icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      id: 'banner-templates',
-      title: 'Social Media Banners',
-      description: 'Pre-designed graphics for your social channels',
-      type: 'image',
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />,
+      id: 'banner-templates'
+      title: 'Social Media Banners'
+      description: 'Pre-designed graphics for your social channels'
+      type: 'image'
+      icon: <FileImage className="h-10 w-10 text-zion-purple" />
       url: '#'
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      id: 'promotional-video',
-      title: 'Promotional Video',
-      description: 'Short explainer video about Zion AI Marketplace',
-      type: 'video',
-      icon: <FileVideo className="h-10 w-10 text-red-500" />,
+      id: 'promotional-video'
+      title: 'Promotional Video'
+      description: 'Short explainer video about Zion AI Marketplace'
+      type: 'video'
+      icon: <FileVideo className="h-10 w-10 text-red-500" />
       url: '#'
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      id: 'email-templates',
-      title: 'Email Templates',
-      description: 'Ready-to-use email templates for your audience',
-      type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      id: 'email-templates'
+      title: 'Email Templates'
+      description: 'Ready-to-use email templates for your audience'
+      type: 'document'
+      icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      id: 'talking-points',
-      title: 'Talking Points',
-      description: 'Key messages and benefits to highlight',
-      type: 'document',
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />,
+      id: 'talking-points'
+      title: 'Talking Points'
+      description: 'Key messages and benefits to highlight'
+      type: 'document'
+      icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
     }
+<<<<<<< HEAD
+  ];
+=======
   ],
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
     toast({
-      title: "Download started",
-      description: `Downloading ${resource.title}`,
+      title: "Download started"
+      description: `Downloading ${resource.title}`
       variant: "default"})
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -102,7 +149,7 @@ export function PartnerResources() {
                   </div>
                   <h3 className="font-semibold text-white mb-1">{resource.title}</h3>
                   <p className="text-xs text-zion-slate-light mb-4">{resource.description}</p>
-                  <Button 
+                  <Button
                     onClick={() => handleDownload(resource)}
                     size="sm"
                     variant="outline"
@@ -208,7 +255,11 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
@@ -267,7 +318,10 @@ export function PartnerResources() {;
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           </div>;
         </CardContent>;
@@ -321,5 +375,10 @@ export function PartnerResources() {;
       </Card>;
     </div>;
   );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

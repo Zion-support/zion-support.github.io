@@ -3,53 +3,52 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
 import Layout from "../components/Layout";
+<<<<<<< HEAD
+export default function RegisterPage() {
+=======
 
 export default function RegisterPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-    company: "",
-    agreeToTerms: false,
-    subscribeNewsletter: false,
+    firstName: ""
+    lastName: ""
+    email: ""
+    password: ""
+    confirmPassword: ""
+    company: ""
+    agreeToTerms: false
+    subscribeNewsletter: false
   });
-
   const [passwordRequirements, setPasswordRequirements] = useState({
-    length: false,
-    uppercase: false,
-    lowercase: false,
-    number: false,
-    special: false,
+    length: false
+    uppercase: false
+    lowercase: false
+    number: false
+    special: false
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle registration logic here
-  };
-
+  }
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      ...prev
+      [name]: type === "checkbox" ? checked : value
     }));
-
     // Check password requirements
     if (name === "password") {
       setPasswordRequirements({
-        length: value.length >= 8,
-        uppercase: /[A-Z]/.test(value),
-        lowercase: /[a-z]/.test(value),
-        number: /\d/.test(value),
-        special: /[!@#$%^&*(),.?":{}|<>]/.test(value),
+        length: value.length >= 8
+        uppercase: /[A-Z]/.test(value)
+        lowercase: /[a-z]/.test(value)
+        number: /\d/.test(value)
+        special: /[!@#$%^&*(),.?":{}|<>]/.test(value)
       });
     }
-  };
-
+  }
   const isPasswordValid = Object.values(passwordRequirements).every(Boolean);
   const isFormValid =
     formData.firstName &&
@@ -60,7 +59,6 @@ export default function RegisterPage() {;
     formData.password === formData.confirmPassword &&
     isPasswordValid &&
     formData.agreeToTerms;
-
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -230,7 +228,7 @@ export default function RegisterPage() {;
                           {key === "special" && "One special character"}
                         </span>
                       </div>
-                    ),
+                    )
                   )}
                 </div>
               </div>

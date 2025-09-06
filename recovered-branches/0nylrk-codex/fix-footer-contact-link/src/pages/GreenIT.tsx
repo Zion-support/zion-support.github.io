@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -12,34 +14,56 @@ export default function GreenIT() {
       title: "Energy-Efficient Hardware",;
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Leaf, Server, Cloud } from "lucide-react",
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+import { AppLayout } from "@/layout/AppLayout";
+=======
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function GreenIT() {
+
   const greenITSolutions = [
     {
+<<<<<<< HEAD
+      title: "Energy-Efficient Hardware"
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
+      icon: Server}
+=======
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       icon: Server},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      title: "Optimized Cooling Systems",
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud},
+      title: "Optimized Cooling Systems"
+      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
+      icon: Cloud}
     {
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
+      title: "Renewable Energy Integration"
+      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint."
       icon: Leaf}
   ],
 
   return (
     <AppLayout>
+<<<<<<< HEAD
+      <SEO
+        title="Green IT Solutions - Sustainable Technology"
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
+=======
       <SEO 
         title="Green IT Solutions - Sustainable Technology" 
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -57,12 +81,12 @@ export default function GreenIT() {
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
                   <p className="text-zion-slate-light text-lg mb-6">
-                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
-                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
+                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers.
+                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure
                     while maintaining performance and reliability.
                   </p>
                   <p className="text-zion-slate-light text-lg mb-6">
-                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
+                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions
                     for reducing your carbon footprint.
                   </p>
                   <div className="mt-8">
@@ -72,9 +96,9 @@ export default function GreenIT() {
                   </div>
                 </div>
                 <div className="rounded-lg overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600" 
-                    alt="Green IT sustainability" 
+                  <img
+                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600"
+                    alt="Green IT sustainability"
                     className="object-cover w-full h-full"
                   />
                 </div>
@@ -132,6 +156,10 @@ export default function GreenIT() {
     </AppLayout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -250,6 +278,10 @@ export default function GreenIT() {;
       </main>;
     </AppLayout>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

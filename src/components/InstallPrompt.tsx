@@ -1,20 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+=======
 
 export default InstallPrompt; import React, { useEffect, useState } from 'react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
+
 import { Button } from '@/components/ui/button'
 import { safeSessionStorage } from '@/utils/safeStorage'
-const SHOWN_KEY = 'pwaInstallShown',
-const DISMISS_KEY = 'pwaInstallDismissUntil',
+const SHOWN_KEY = 'pwaInstallShown'
+const DISMISS_KEY = 'pwaInstallDismissUntil'
 const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours
-
 // Define BeforeInstallPromptEvent interface
 interface BeforeInstallPromptEvent extends Event {
-  readonly platforms: string[],
+  readonly platforms: string[]
   readonly userChoice: Promise<{
-    outcome: 'accepted' | 'dismissed',
+    outcome: 'accepted' | 'dismissed'
     platform: string
-  }>,
+  }>
   prompt(): Promise<void>
 =======
 <<<<<<< HEAD
@@ -33,63 +37,62 @@ interface BeforeInstallPromptEvent extends Event {;
     platform: string;
   }>,;
   prompt(): Promise<void>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
   interface WindowEventMap {
-    beforeinstallprompt: BeforeInstallPromptEvent,
+    beforeinstallprompt: BeforeInstallPromptEvent
     // appinstalled event is standard, but if issues arise, it can be augmented too
     // appinstalled: Event
   }
 }
-
 export const InstallPrompt: React.FC = () => {
-  const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null),
-  const [visible, setVisible] = useState(false),
-
+  const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null)
+  const [visible, setVisible] = useState(false)
   useEffect((,) => {
-    if (typeof window === 'undefined') return,
-
-    const dismissUntil = safeSessionStorage.getItem(DISMISS_KEY),
-    const isDismissed = dismissUntil && Date.now() < Number(dismissUntil),
-    const hasShown = safeSessionStorage.getItem(SHOWN_KEY),
-
+    if (typeof window === 'undefined') return
+    const dismissUntil = safeSessionStorage.getItem(DISMISS_KEY)
+    const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
+    const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
+<<<<<<< HEAD
+    if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
+      return
+=======
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
-
     const handler = (e: BeforeInstallPromptEvent,) => {
-      e.preventDefault(),
-      safeSessionStorage.setItem(SHOWN_KEY, 'true'),
-      setPromptEvent(e),
+      e.preventDefault()
+      safeSessionStorage.setItem(SHOWN_KEY, 'true')
+      setPromptEvent(e)
       setVisible(true)
-    },
-
+    }
     const handleAppInstalled = () => {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_success'), // More specific event for install success
       }
       setVisible(false), // Hide prompt once installed
       setPromptEvent(null)
-    },
-
+    }
     // Add typed event listeners
-    window.addEventListener('beforeinstallprompt', handler as EventListener),
-    window.addEventListener('appinstalled', handleAppInstalled as EventListener),
-
+    window.addEventListener('beforeinstallprompt', handler as EventListener)
+    window.addEventListener('appinstalled', handleAppInstalled as EventListener)
     return () => {
-      window.removeEventListener('beforeinstallprompt', handler as EventListener),
+      window.removeEventListener('beforeinstallprompt', handler as EventListener)
       window.removeEventListener('appinstalled', handleAppInstalled as EventListener)
     }
-  }, []),
-
+  }, [])
   const install = async () => {
-    if (!promptEvent) return,
-    promptEvent.prompt(),
-    const { outcome } = await promptEvent.userChoice,
+    if (!promptEvent) return
+    promptEvent.prompt()
+    const { outcome } = await promptEvent.userChoice
     if (outcome === 'accepted') {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_accepted')
@@ -99,22 +102,19 @@ export const InstallPrompt: React.FC = () => {
         (window as any).gtag('eventpwa_install_dismissed')
       }
     }
-    setVisible(false),
+    setVisible(false)
     setPromptEvent(null)
-  },
-
+  }
   const close = () => {
-    setVisible(false),
+    setVisible(false)
     setPromptEvent(null), // Clear the event so it doesn't re-appear on next visit in same session
-    safeSessionStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_MS)),
+    safeSessionStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_MS))
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('eventpwa_prompt_closed_manually')
     }
-  },
-
+  }
   // Only render if promptEvent is set and visible is true
-  if (!promptEvent || !visible) return null,
-
+  if (!promptEvent |!visible) return null
   return (
     <>
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
@@ -145,9 +145,18 @@ export default InstallPrompt;
 =======
     </>
   )
+<<<<<<< HEAD
+}
+export default InstallPrompt;
+
+=======
 },
 
 export default InstallPrompt,
 =======
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

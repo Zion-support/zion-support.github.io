@@ -1,8 +1,30 @@
+<<<<<<< HEAD
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
+
 import {
+<<<<<<< HEAD
+  Link
+  Copy
+  BarChart3
+  ArrowRight
+  RefreshCw
+  CheckCircle
+  ExternalLink
+  QrCode
+  Settings
+  Trash2;
+} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+
+export default function URLShortenerPage() {
+=======
   Link,
   Copy,
   BarChart3,
@@ -15,39 +37,34 @@ import {
   Trash2,;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 export default function URLShortenerPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
-  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]);
+  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
   const [isShortening, setIsShortening] = useState(false);
-  const [showQR, setShowQR] = useState<string | null>(null);
 
+  const [showQR, setShowQR] = useState<string | null>(null);
   const generateShortUrl = async () => {
     if (!longUrl.trim()) return;
-
     setIsShortening(true);
-
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
-
-    const alias = customAlias.trim() || generateRandomAlias();
+    const alias = customAlias.trim() |generateRandomAlias();
     const shortUrl = `https://zion.tech/${alias}`;
-
     const newShortUrl = {
-      id: Date.now(),
-      longUrl: longUrl.trim(),
-      shortUrl,
-      alias,
-      clicks: 0,
-      createdAt: new Date().toISOString(),
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`,
-    };
-
+      id: Date.now()
+      longUrl: longUrl.trim()
+      shortUrl
+      alias
+      clicks: 0
+      createdAt: new Date().toISOString()
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
+    }
     setShortenedUrls(prev => [newShortUrl, ...prev]);
     setLongUrl('');
     setCustomAlias('');
     setIsShortening(false);
-  };
-
+  }
   const generateRandomAlias = () => {
     const chars =
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -56,53 +73,48 @@ export default function URLShortenerPage() {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
+<<<<<<< HEAD
+  }
+=======
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-  };
-
+  }
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev =>
       prev.map(url =>
         url.id === id ? { ...url, clicks: url.clicks + 1 } : url
       )
     );
-  };
-
+  }
   const deleteUrl = (id: number) => {
     setShortenedUrls(prev => prev.filter(url => url.id !== id));
-  };
-
+  }
   const getTotalClicks = () => {
     return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
-  };
-
+  }
   const getTotalUrls = () => {
     return shortenedUrls.length;  };    setIsShortening(true);
-    
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    const alias = customAlias.trim() || generateRandomAlias();
+    const alias = customAlias.trim() |generateRandomAlias();
     const shortUrl = `https://zion.tech/${alias}`;
-    
     const newShortUrl = {
-      id: Date.now(),
-      longUrl: longUrl.trim(),
+      id: Date.now()
+      longUrl: longUrl.trim()
       shortUrl;
       alias;
-      clicks: 0,
-      createdAt: new Date().toISOString(),
+      clicks: 0
+      createdAt: new Date().toISOString()
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
-    };
-    
+    }
     setShortenedUrls(prev => [newShortUrl, ...prev]);
     setLongUrl('');
     setCustomAlias('');
     setIsShortening(false)
-  };
-
+  }
   const generateRandomAlias = () => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
@@ -110,31 +122,26 @@ export default function URLShortenerPage() {;
       result += chars.charAt(Math.floor(Math.random() * chars.length))
     }
     return result
-  };
-
+  }
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text)
-  };
-
+  }
   const incrementClicks = (id: number) => {
-    setShortenedUrls(prev => 
-      prev.map(url => 
+    setShortenedUrls(prev =>
+      prev.map(url =>
         url.id === id ? { ...url, clicks: url.clicks + 1 } : url
       )
     )
-  };
-
+  }
   const deleteUrl = (id: number) => {
     setShortenedUrls(prev => prev.filter(url => url.id !== id))
-  };
-
+  }
   const getTotalClicks = () => {
     return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)
-  };
-
+  }
   const getTotalUrls = () => {
     return shortenedUrls.length
-  };
+  }
 
   return (
     <>
@@ -164,7 +171,7 @@ export default function URLShortenerPage() {;
           </h1>
           <p className='text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed'>
             Transform long URLs into short, memorable links with our
-            professional shortening service. Track clicks, generate QR codes,
+            professional shortening service. Track clicks, generate QR codes
             and manage your links efficiently with advanced analytics.          </p>      </Head>
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900">
@@ -179,7 +186,7 @@ export default function URLShortenerPage() {;
             URL Shortener
           </h1>
           <p className="text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed">
-            Transform long URLs into short, memorable links with our professional shortening service. 
+            Transform long URLs into short, memorable links with our professional shortening service.
             Track clicks, generate QR codes, and manage your links efficiently with advanced analytics.
           </p>
         </div>
@@ -280,7 +287,7 @@ export default function URLShortenerPage() {;
                 </div>
                 <Button
                   onClick={generateShortUrl}
-                  disabled={!longUrl.trim() || isShortening}
+                  disabled={!longUrl.trim() |isShortening}
                   className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'
                 >
                   {isShortening ? (
@@ -390,7 +397,11 @@ export default function URLShortenerPage() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
         <section className='py-20 bg-gray-800'>
@@ -559,9 +570,9 @@ export default function URLShortenerPage() {;
                         className='mx-auto mb-3 w-32 h-32'
                       />
                       <p className='text-sm text-gray-400'>                        Scan this QR code to visit the shortened URL                    <div className="mt-4 p-4 bg-gray-800 rounded-lg text-center">
-                      <img 
-                        src={url.qrCode} 
-                        alt="QR Code" 
+                      <img
+                        src={url.qrCode}
+                        alt="QR Code"
                         className="mx-auto mb-3 w-32 h-32"
                       />
                       <p className="text-sm text-gray-400">
@@ -574,7 +585,10 @@ export default function URLShortenerPage() {;
           </div>
         </section>
       )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Features */}
       <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -584,7 +598,11 @@ export default function URLShortenerPage() {;
 =======
 
               Professional URL Shortening Features
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -796,9 +814,15 @@ export default function URLShortenerPage() {;
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
 
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

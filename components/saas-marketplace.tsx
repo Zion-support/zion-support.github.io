@@ -1,8 +1,30 @@
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+=======
 import React from 'react';
 import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+
 import {
+<<<<<<< HEAD
+  Zap
+  Shield
+  BarChart3
+  Globe
+  Users
+  Lock
+  TrendingUp
+  Code
+  Database
+  Cloud
+  ArrowRight
+  Star
+  Check
+  ExternalLink;} from 'lucide-react';import {
+=======
   Zap,
   Shield,
   BarChart3,
@@ -15,17 +37,24 @@ import {
   Cloud,
   ArrowRight,
   Star,
+<<<<<<< HEAD
+  Check,
+  ExternalLink,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
   Check,;
   ExternalLink,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Zap;
-  Shield, 
-  BarChart3, 
-  Globe, 
-  Users, 
-  Lock, 
-  TrendingUp, 
-  Code, 
-  Database, 
+  Shield
+  BarChart3
+  Globe
+  Users
+  Lock
+  TrendingUp
+  Code
+  Database
+
   Cloud;
   ArrowRight;
   Star;
@@ -35,237 +64,246 @@ import {
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
     {
-      name: 'Zapier',
+      name: 'Zapier'
       description:
-        'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',      category: 'Automation',
-      pricing: 'Free - $19.99/month',
-      rating: 4.8,
-      users: '2M+',
-      icon: <Zap className='w-8 h-8 text-orange-400' />,      description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
-      category: 'Automation',
-      pricing: 'Free - $19.99/month',
-      rating: 4.8,
-      users: '2M+',
-      icon: <Zap className='w-8 h-8 text-orange-400' />,
+        'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',      category: 'Automation'
+      pricing: 'Free - $19.99/month'
+      rating: 4.8
+      users: '2M+'
+      icon: <Zap className='w-8 h-8 text-orange-400' />,      description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.'
+      category: 'Automation'
+      pricing: 'Free - $19.99/month'
+      rating: 4.8
+      users: '2M+'
+      icon: <Zap className='w-8 h-8 text-orange-400' />
       features: [
-        '5000+ app integrations',
-        'Visual workflow builder',
-        'Multi-step automations',
-        'Scheduled triggers',
-        'Error handling',
-        'Team collaboration',
-      ],
-      website: 'https://zapier.com',
+        '5000+ app integrations'
+        'Visual workflow builder'
+        'Multi-step automations'
+        'Scheduled triggers'
+        'Error handling'
+        'Team collaboration'
+      ]
+      website: 'https://zapier.com'
       useCase:
-        'Perfect for businesses looking to automate customer support, marketing, and sales processes.',
+        'Perfect for businesses looking to automate customer support, marketing, and sales processes.'
       pros: [
-        'Easy to use',
-        'Extensive integrations',
-        'Reliable',
-        'Great support',
-      ],
-      cons: ['Can get expensive', 'Limited customization'],
-    },
+        'Easy to use'
+        'Extensive integrations'
+        'Reliable'
+        'Great support'
+      ]
+      cons: ['Can get expensive', 'Limited customization']
+    }
     {
-      name: 'Notion',
+      name: 'Notion'
       description:
-        'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',
-      category: 'Productivity',
-      pricing: 'Free - $8/month',
-      rating: 4.7,
-      users: '20M+',
-      icon: <Code className='w-8 h-8 text-gray-400' />,
-      color: 'bg-gradient-to-br from-gray-500 to-gray-700',
+        'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.'
+      category: 'Productivity'
+      pricing: 'Free - $8/month'
+      rating: 4.7
+      users: '20M+'
+      icon: <Code className='w-8 h-8 text-gray-400' />
+      color: 'bg-gradient-to-br from-gray-500 to-gray-700'
       features: [
-        'Note-taking & docs',
-        'Project management',
-        'Team collaboration',
-        'Database & tables',
-        'Templates library',
-        'API integration',
-      ],
-      website: 'https://notion.so',
+        'Note-taking & docs'
+        'Project management'
+        'Team collaboration'
+        'Database & tables'
+        'Templates library'
+        'API integration'
+      ]
+      website: 'https://notion.so'
       useCase:
-        'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
+        'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.'
       pros: [
-        'Highly flexible',
-        'Beautiful interface',
-        'Great templates',
-        'Free tier',
-      ],
-      cons: ['Learning curve', 'Limited offline access'],
-    },
+        'Highly flexible'
+        'Beautiful interface'
+        'Great templates'
+        'Free tier'
+      ]
+      cons: ['Learning curve', 'Limited offline access']
+    }
     {
-      name: 'Stripe',
+      name: 'Stripe'
       description:
-        'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.',
-      category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
-      rating: 4.9,
-      users: '1M+',
-      icon: <Shield className='w-8 h-8 text-blue-400' />,
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
+        'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.'
+      category: 'Payments'
+      pricing: '2.9% + 30¢ per transaction'
+      rating: 4.9
+      users: '1M+'
+      icon: <Shield className='w-8 h-8 text-blue-400' />
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
       features: [
-        'Global payment methods',
-        'Subscription billing',
-        'Fraud protection',
-        'Compliance tools',
-        'Developer-friendly API',
-        'Analytics dashboard',
-      ],
-      website: 'https://stripe.com',
+        'Global payment methods'
+        'Subscription billing'
+        'Fraud protection'
+        'Compliance tools'
+        'Developer-friendly API'
+        'Analytics dashboard'
+      ]
+      website: 'https://stripe.com'
       useCase:
-        'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.',
+        'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.'
       pros: [
-        'Developer-friendly',
-        'Global reach',
-        'Excellent docs',
-        'Reliable',
-      ],
-      cons: ['Higher fees than some alternatives', 'Complex for beginners'],
-    },
+        'Developer-friendly'
+        'Global reach'
+        'Excellent docs'
+        'Reliable'
+      ]
+      cons: ['Higher fees than some alternatives', 'Complex for beginners']
+    }
     {
-      name: 'Intercom',
+      name: 'Intercom'
       description:
-        'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.',
-      category: 'Customer Support',
-      pricing: '$39 - $999/month',
-      rating: 4.6,
-      users: '25K+',
-      icon: <Users className='w-8 h-8 text-green-400' />,
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+        'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.'
+      category: 'Customer Support'
+      pricing: '$39 - $999/month'
+      rating: 4.6
+      users: '25K+'
+      icon: <Users className='w-8 h-8 text-green-400' />
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
       features: [
-        'Live chat',
-        'Customer messaging',
-        'Help desk',
-        'User onboarding',
-        'Analytics & reporting',
-        'Integration ecosystem',
-      ],
-      website: 'https://intercom.com',
+        'Live chat'
+        'Customer messaging'
+        'Help desk'
+        'User onboarding'
+        'Analytics & reporting'
+        'Integration ecosystem'
+      ]
+      website: 'https://intercom.com'
       useCase:
-        'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',
+        'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.'
       pros: [
-        'Great UX',
-        'Powerful features',
-        'Good integrations',
-        'Mobile apps',
-      ],
-      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming'],
-    },
+        'Great UX'
+        'Powerful features'
+        'Good integrations'
+        'Mobile apps'
+      ]
+      cons: ['Expensive', 'Complex pricing', 'Can be overwhelming']
+    }
     {
-      name: 'Mixpanel',
+      name: 'Mixpanel'
       description:
-        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',      category: 'Analytics',
-      pricing: 'Free - $25/month',
-      rating: 4.5,
-      users: '26K+',
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
-      category: 'Analytics',
-      pricing: 'Free - $25/month',
-      rating: 4.5,
-      users: '26K+',
-      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
+        'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',      category: 'Analytics'
+      pricing: 'Free - $25/month'
+      rating: 4.5
+      users: '26K+'
+      icon: <BarChart3 className='w-8 h-8 text-purple-400' />,      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.'
+      category: 'Analytics'
+      pricing: 'Free - $25/month'
+      rating: 4.5
+      users: '26K+'
+      icon: <BarChart3 className='w-8 h-8 text-purple-400' />
       features: [
-        'User behavior tracking',
-        'Funnel analysis',
-        'A/B testing',
-        'Real-time data',
-        'Custom events',
-        'Mobile analytics',
-      ],
-      website: 'https://mixpanel.com',
+        'User behavior tracking'
+        'Funnel analysis'
+        'A/B testing'
+        'Real-time data'
+        'Custom events'
+        'Mobile analytics'
+      ]
+      website: 'https://mixpanel.com'
       useCase:
-        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
+        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
       pros: [
-        'Powerful analytics',
-        'Real-time data',
-        'Good documentation',
-        'Flexible',
-      ],
-      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve'],
-    },
+        'Powerful analytics'
+        'Real-time data'
+        'Good documentation'
+        'Flexible'
+      ]
+      cons: ['Complex setup', 'Expensive at scale', 'Steep learning curve']
+    }
     {
-      name: 'MongoDB Atlas',
+      name: 'MongoDB Atlas'
       description:
-        'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',      category: 'Database',
-      pricing: 'Free - $57/month',
-      rating: 4.7,
-      users: '35K+',
-      icon: <Database className='w-8 h-8 text-green-400' />,      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',
-      category: 'Database',
-      pricing: 'Free - $57/month',
-      rating: 4.7,
-      users: '35K+',
-      icon: <Database className='w-8 h-8 text-green-400' />,
+        'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',      category: 'Database'
+      pricing: 'Free - $57/month'
+      rating: 4.7
+      users: '35K+'
+      icon: <Database className='w-8 h-8 text-green-400' />,      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.'
+      category: 'Database'
+      pricing: 'Free - $57/month'
+      rating: 4.7
+      users: '35K+'
+      icon: <Database className='w-8 h-8 text-green-400' />
       features: [
-        'Fully managed MongoDB',
-        'Global clusters',
-        'Auto-scaling',
-        'Backup & recovery',
-        'Security & compliance',
-        'Monitoring & alerting',
-      ],
-      website: 'https://mongodb.com/atlas',
+        'Fully managed MongoDB'
+        'Global clusters'
+        'Auto-scaling'
+        'Backup & recovery'
+        'Security & compliance'
+        'Monitoring & alerting'
+      ]
+      website: 'https://mongodb.com/atlas'
       useCase:
-        'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.',
+        'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.'
       pros: [
-        'Fully managed',
-        'Global distribution',
-        'Auto-scaling',
-        'Good free tier',
-      ],
-      cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization'],
-    },
+        'Fully managed'
+        'Global distribution'
+        'Auto-scaling'
+        'Good free tier'
+      ]
+      cons: ['Can be expensive', 'Vendor lock-in', 'Limited customization']
+    }
     {
-      name: 'Vercel',
+      name: 'Vercel'
       description:
-        'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.',
-      category: 'Hosting',
-      pricing: 'Free - $20/month',
-      rating: 4.8,
-      users: '100K+',
-      icon: <Cloud className='w-8 h-8 text-black' />,
-      color: 'bg-gradient-to-br from-gray-800 to-black',
+        'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.'
+      category: 'Hosting'
+      pricing: 'Free - $20/month'
+      rating: 4.8
+      users: '100K+'
+      icon: <Cloud className='w-8 h-8 text-black' />
+      color: 'bg-gradient-to-br from-gray-800 to-black'
       features: [
-        'Zero-config deployment',
-        'Global CDN',
-        'Automatic scaling',
-        'Git integration',
-        'Preview deployments',
-        'Edge functions',
-      ],
-      website: 'https://vercel.com',
+        'Zero-config deployment'
+        'Global CDN'
+        'Automatic scaling'
+        'Git integration'
+        'Preview deployments'
+        'Edge functions'
+      ]
+      website: 'https://vercel.com'
       useCase:
-        'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.',
-      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier'],
-      cons: ['Limited backend features', 'Can be expensive for high traffic'],
-    },
+        'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent performance.'
+      pros: ['Zero config', 'Excellent performance', 'Great DX', 'Free tier']
+      cons: ['Limited backend features', 'Can be expensive for high traffic']
+    }
     {
-      name: 'Linear',
+      name: 'Linear'
       description:
-        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',      category: 'Project Management',
-      pricing: 'Free - $8/month',
-      rating: 4.9,
-      users: '10K+',
-      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
-      category: 'Project Management',
-      pricing: 'Free - $8/month',
-      rating: 4.9,
-      users: '10K+',
-      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
+        'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',      category: 'Project Management'
+      pricing: 'Free - $8/month'
+      rating: 4.9
+      users: '10K+'
+      icon: <TrendingUp className='w-8 h-8 text-blue-400' />,      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.'
+      category: 'Project Management'
+      pricing: 'Free - $8/month'
+      rating: 4.9
+      users: '10K+'
+      icon: <TrendingUp className='w-8 h-8 text-blue-400' />
       features: [
-        'Issue tracking',
-        'Roadmap planning',
-        'Team collaboration',
-        'Git integration',
-        'Automated workflows',
-        'Mobile apps',
-      ],
-      website: 'https://linear.app',
+        'Issue tracking'
+        'Roadmap planning'
+        'Team collaboration'
+        'Git integration'
+        'Automated workflows'
+        'Mobile apps'
+      ]
+      website: 'https://linear.app'
       useCase:
-        'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.',
+        'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
+<<<<<<< HEAD
+        'Lightning fast'
+        'Beautiful design'
+        'Great keyboard shortcuts'
+        'Git integration'
+      ]
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
+    }
+=======
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -273,28 +311,27 @@ export default function SaaSMarketplacePage() {
       ],
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
     },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
-
   const categories = [
-    'All',
-    'Automation',
-    'Productivity',
-    'Payments',
-    'Customer Support',
-    'Analytics',
-    'Database',
-    'Hosting',
-    'Project Management',
+    'All'
+    'Automation'
+    'Productivity'
+    'Payments'
+    'Customer Support'
+    'Analytics'
+    'Database'
+    'Hosting'
+    'Project Management'
   ];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
-
   const filteredServices =
     selectedCategory === 'All'
       ? microSaasServices
       : microSaasServices.filter(
           service => service.category === selectedCategory
-        );  const filteredServices = selectedCategory === 'All' 
-    ? microSaasServices 
+        );  const filteredServices = selectedCategory === 'All'
+    ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
 
   return (
@@ -371,7 +408,11 @@ export default function SaaSMarketplacePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -430,7 +471,11 @@ export default function SaaSMarketplacePage() {
 
               <button
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -448,7 +493,11 @@ export default function SaaSMarketplacePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Services Grid */}
       <section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -461,7 +510,11 @@ export default function SaaSMarketplacePage() {
 =======
 
             </h2>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
@@ -508,7 +561,11 @@ export default function SaaSMarketplacePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -558,7 +615,11 @@ export default function SaaSMarketplacePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -568,7 +629,11 @@ export default function SaaSMarketplacePage() {
 =======
 
             Need Help Choosing?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -601,10 +666,16 @@ export default function SaaSMarketplacePage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
 
 }
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

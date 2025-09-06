@@ -1,5 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -11,6 +15,12 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
+<<<<<<< HEAD
+type JobPostStep = "details" | "requirements" | "budget" | "preview";
+export function MobileJobPost() {
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
@@ -29,7 +39,10 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
@@ -41,6 +54,7 @@ export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
@@ -49,8 +63,12 @@ export function MobileJobPost() {
     } else if (currentStep === "budget") {
       setCurrentStep("preview")
     }
+<<<<<<< HEAD
+  }
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")
@@ -59,8 +77,12 @@ export function MobileJobPost() {
     } else if (currentStep === "preview") {
       setCurrentStep("budget")
     }
+<<<<<<< HEAD
+  }
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const renderStepContent = () => {
     switch (currentStep) {
       case "details": return <DetailsStep />,
@@ -73,8 +95,12 @@ export function MobileJobPost() {
       default:
         return <DetailsStep />
     }
+<<<<<<< HEAD
+  }
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="min-h-screen flex flex-col">
       <MobileHeader
@@ -94,19 +120,17 @@ export function MobileJobPost() {
           </Button>
         </div>
         {renderStepContent()}
-        
         <div className="flex gap-2 mt-6">
           {currentStep !== "details" && (
-            <Button 
-              variant="outline" 
-              className="flex-1 gap-1" 
+            <Button
+              variant="outline"
+              className="flex-1 gap-1"
               onClick={goToPrevStep}
             >
               <ChevronLeft className="h-4 w-4" /> Back
             </Button>
           )}
-          
-          <Button 
+          <Button
             className="flex-1 gap-1"
             onClick={goToNextStep}
           >
@@ -119,7 +143,6 @@ export function MobileJobPost() {
     </div>
   )
 }
-
 function DetailsStep() {
   return (
     <div className="space-y-4">
@@ -161,17 +184,36 @@ function DetailsStep() {
       </div>
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
+=======
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           rows={5}
         />
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ]);
+  const [newSkill, setNewSkill] = useState("");
 =======
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -318,7 +360,10 @@ function DetailsStep() {;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
@@ -326,17 +371,26 @@ function RequirementsStep() {
   ]),
   const [newSkill, setNewSkill] = useState(""),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
       setSkills([...skills, newSkill]),
       setNewSkill("")
     }
+<<<<<<< HEAD
+  }
+  const removeSkill = (skill: string) => {
+    setSkills(skills.filter(s => s !== skill))
+  }
+
+=======
   },
   
   const removeSkill = (skill: string) => {
     setSkills(skills.filter(s => s !== skill))
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -374,16 +428,23 @@ function RequirementsStep() {
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">
           {skills.map((skill) => (
-            <Badge 
-              key={skill} 
+            <Badge
+              key={skill}
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
+<<<<<<< HEAD
+              <button
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+=======
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -444,7 +505,11 @@ function RequirementsStep() {;
               {skill}
               <button;
                 className="ml-1 rounded-full hover:bg-background/20 p-1";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 onClick={() => removeSkill(skill)}
               >
                 ×
@@ -453,7 +518,7 @@ function RequirementsStep() {;
           ))}
         </div>
         <div className="flex gap-2">
-          <Input 
+          <Input
             value={newSkill}
             onChange={(e) => setNewSkill(e.target.value)}
             placeholder="Add a skill"
@@ -464,31 +529,48 @@ function RequirementsStep() {;
       </div>
       <div className="space-y-2">
         <Label htmlFor="requirements">Specific Requirements</Label>
-        <Textarea 
-          id="requirements" 
-          placeholder="List any specific requirements or qualifications" 
+        <Textarea
+          id="requirements"
+          placeholder="List any specific requirements or qualifications"
           rows={4}
         />
       </div>
       <div className="space-y-2">
         <Label htmlFor="responsibilities">Key Responsibilities</Label>
-        <Textarea 
-          id="responsibilities" 
-          placeholder="List the key responsibilities for this role" 
+<<<<<<< HEAD
+        <Textarea
+          id="responsibilities"
+          placeholder="List the key responsibilities for this role"
           rows={4}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
 =======
+        <Textarea 
+          id="responsibilities" 
+          placeholder="List the key responsibilities for this role" 
+          rows={4}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function BudgetStep() {
   return (
     <div className="space-y-4">
@@ -550,16 +632,25 @@ function BudgetStep() {
       </div>
       <div className="space-y-2">
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
+<<<<<<< HEAD
+        <Textarea
+          id="additionalInfo"
+          placeholder="Any additional information about budget or payment"
+=======
         <Textarea 
           id="additionalInfo" 
           placeholder="Any additional information about budget or payment" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           rows={3}
         />
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function PreviewStep() {
   return (
     <div className="space-y-4">
@@ -594,8 +685,16 @@ function PreviewStep() {
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
 =======
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

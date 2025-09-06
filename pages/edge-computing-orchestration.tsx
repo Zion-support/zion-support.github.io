@@ -1,12 +1,22 @@
 <<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
-import {motion} from 'framer-motion';
-import {Cpu, Network, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Users,} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Cpu, Network, Zap, Shield, Database, Globe;
+  ArrowRight, CheckCircle, Star, TrendingUp, Users
+ } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 =======
+<<<<<<< HEAD
+=======
 import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -15,10 +25,142 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function EdgeComputingPage() {
+
   const features = [
     {
+<<<<<<< HEAD
+      icon: Cpu
+      title: 'Edge Orchestration'
+      description:
+        'Intelligent distribution and management of computing workloads across edge nodes for optimal performance.'
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      icon: Network
+      title: 'IoT Management'
+      description:
+        'Comprehensive management of IoT devices with real-time monitoring and automated control systems.'
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      icon: Zap
+      title: 'Real-time Processing'
+      description:
+        'Ultra-low latency data processing at the network edge for mission-critical applications.'
+      color: 'from-green-500 to-emerald-500'
+    }
+    {
+      icon: Shield
+      title: 'Edge Security'
+      description:
+        'Advanced security protocols designed specifically for distributed edge computing environments.'
+      color: 'from-red-500 to-orange-500'
+    }
+    {
+      icon: Database
+      title: 'Data Synchronization'
+      description:
+        'Seamless data synchronization between edge nodes and central systems with conflict resolution.'
+      color: 'from-indigo-500 to-purple-500'
+    }
+    {
+      icon: Globe
+      title: 'Global Distribution'
+      description:
+        'Worldwide edge network deployment with intelligent traffic routing and load balancing.'
+      color: 'from-yellow-500 to-orange-500'
+    }
+  ];
+  const benefits = [
+    'Reduce latency by 80-90% with edge processing'
+    'Cut bandwidth costs by 60% through local data processing'
+    'Improve reliability with distributed computing architecture'
+    'Scale seamlessly across global edge networks'
+    'Enable real-time AI and machine learning at the edge'
+    'Reduce central server load and improve overall performance',  ];
+  const useCases = [
+    {
+      industry: 'Manufacturing'
+      description:
+        'Real-time quality control, predictive maintenance, and production optimization'
+      results: '30% reduction in downtime, 25% improvement in product quality'
+    }
+    {
+      industry: 'Healthcare'
+      description:
+        'Patient monitoring, medical device management, and telemedicine support'
+      results: '40% faster response times, improved patient outcomes'
+    }
+    {
+      industry: 'Transportation'
+      description:
+        'Autonomous vehicle support, traffic management, and fleet optimization'
+      results: '50% reduction in accidents, 35% improvement in efficiency'
+    }
+    {
+      industry: 'Retail'
+      description:
+        'Inventory management, customer analytics, and supply chain optimization'
+      results:
+        '45% reduction in stockouts, 30% improvement in customer satisfaction'
+    },  ];
+  const pricing = [
+    {
+      plan: 'Starter'
+      price: '$399'
+      period: '/month'
+      description: 'Basic edge computing for small deployments'
+      features: [
+        'Up to 10 edge nodes'
+        'Basic orchestration'
+        'Standard monitoring'
+        'Email support'
+        'Basic security features'
+        'Up to 100 IoT devices'
+      ]
+      popular: false
+    }
+    {
+      plan: 'Professional'
+      price: '$999'
+      period: '/month'
+      description: 'Advanced features for growing edge networks'
+      features: [
+        'Everything in Starter'
+        'Up to 100 edge nodes'
+        'Advanced orchestration'
+        'Real-time monitoring'
+        'Priority support'
+        'Advanced security'
+        'Up to 1000 IoT devices'
+        'Custom integrations'
+      ]
+      popular: true
+    }
+    {
+      plan: 'Enterprise'
+      price: 'Custom'
+      period: ''
+      description: 'Full-scale solution for large organizations'
+      features: [
+        'Everything in Professional'
+        'Unlimited edge nodes'
+        'Custom orchestration'
+        'Dedicated support team'
+        'Unlimited IoT devices'
+        'On-premise deployment'
+        'Custom training'
+        'SLA guarantees'
+      ]
+      popular: false
+    },  ];
+=======
       icon: Cpu,
       title: "Edge Orchestration",
       description: "Intelligent distribution and management of computing workloads across edge nodes for optimal window.window.window.performance.",
@@ -158,6 +300,7 @@ export default function EdgeComputingPage() {
   }
 }
   ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -379,7 +522,11 @@ export default function EdgeComputingPage(req, res) {
   }
 }
             className="text-center"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
@@ -463,6 +610,7 @@ export default function EdgeComputingPage(req, res) {
                 Edge computing brings processing power closer to where data is
                 generated, enabling faster response times, reduced bandwidth
                 usage, and improved reliability for distributed applications.
+
               </p>
               <div className='space-y-4'>                {benefits.map((benefit, index) => (
                   <motion.div
@@ -560,7 +708,7 @@ export default function EdgeComputingPage(req, res) {
               Edge Computing Architecture
             </h2>
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>
-              Our distributed architecture ensures optimal performance,
+              Our distributed architecture ensures optimal performance
               reliability, and scalability.
             </p>
           </motion.div>
@@ -643,7 +791,6 @@ export default function EdgeComputingPage(req, res) {
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                    Most Popular
                   </div>
                 )}
-
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-slate-900 mb-2'>
                     {plan.plan}
@@ -1103,7 +1250,11 @@ export default function EdgeComputingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </ul>
                 <a
                   href="/contact"
@@ -1155,7 +1306,11 @@ export default function EdgeComputingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1182,8 +1337,11 @@ export default function EdgeComputingPage(req, res) {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
   } catch (error) {
@@ -1191,4 +1349,8 @@ export default function EdgeComputingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

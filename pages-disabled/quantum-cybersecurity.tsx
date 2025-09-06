@@ -1,49 +1,63 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
-import {motion} from 'framer-motion';
-import {Shield, Lock, Eye, AlertTriangle, Zap, Cpu, Database, Globe, ArrowRight, CheckCircle, Star, Users} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
+  Database, Globe, ArrowRight, CheckCircle, Star, Users
+ } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function QuantumCybersecurityPage() {
+
   const features = [
     {
+<<<<<<< HEAD
+      icon: Shield
+      title: "Quantum-Resistant Encryption"
+      description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
+      color: "from-blue-500 to-cyan-500"
+    }
+=======
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
       color: "from-blue-500 to-cyan-500";
     };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
-      icon: Lock,
-      title: "Zero-Trust Architecture",
-      description: "Verify every user and device before granting access to any resource.",
+      icon: Lock
+      title: "Zero-Trust Architecture"
+      description: "Verify every user and device before granting access to any resource."
       color: "from-purple-500 to-pink-500"
-    };
+    }
     {
-      icon: Eye,
-      title: "AI-Powered Threat Detection",
-      description: "Machine learning algorithms that identify and respond to threats in real-time.",
+      icon: Eye
+      title: "AI-Powered Threat Detection"
+      description: "Machine learning algorithms that identify and respond to threats in real-time."
       color: "from-green-500 to-emerald-500"
-    };
+    }
     {
-      icon: AlertTriangle,
-      title: "Advanced Threat Intelligence",
-      description: "Real-time monitoring and analysis of global cyber threats and vulnerabilities.",
+      icon: AlertTriangle
+      title: "Advanced Threat Intelligence"
+      description: "Real-time monitoring and analysis of global cyber threats and vulnerabilities."
       color: "from-red-500 to-orange-500"
-    };
+    }
     {
-      icon: Zap,
-      title: "Automated Incident Response",
-      description: "Instant response and mitigation of security incidents with minimal human intervention.",
+      icon: Zap
+      title: "Automated Incident Response"
+      description: "Instant response and mitigation of security incidents with minimal human intervention."
       color: "from-yellow-500 to-orange-500"
-    };
+    }
     {
-      icon: Cpu,
-      title: "Secure Cloud Infrastructure",
-      description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",
+      icon: Cpu
+      title: "Secure Cloud Infrastructure"
+      description: "Enterprise-grade security for cloud deployments with end-to-end encryption."
       color: "from-indigo-500 to-purple-500"
     }
   ];
-
   const benefits = [
     "Protect against quantum computing attacks with future-proof encryption";
     "Reduce security incidents by 90% with AI-powered threat detection";
@@ -52,36 +66,34 @@ export default function QuantumCybersecurityPage() {
     "Scalable security that grows with your business";
     "Expert security team available around the clock"
   ];
-
   const threats = [
     {
-      type: "Quantum Attacks",
-      description: "Future quantum computers could break current encryption standards",
+      type: "Quantum Attacks"
+      description: "Future quantum computers could break current encryption standards"
       solution: "Quantum-resistant algorithms and post-quantum cryptography"
-    };
+    }
     {
-      type: "AI-Powered Threats",
-      description: "Sophisticated attacks using artificial intelligence and machine learning",
+      type: "AI-Powered Threats"
+      description: "Sophisticated attacks using artificial intelligence and machine learning"
       solution: "Advanced AI defense systems and behavioral analysis"
-    };
+    }
     {
-      type: "Supply Chain Attacks",
-      description: "Compromised software or hardware in the supply chain",
+      type: "Supply Chain Attacks"
+      description: "Compromised software or hardware in the supply chain"
       solution: "Comprehensive supply chain verification and integrity checks"
-    };
+    }
     {
-      type: "Ransomware",
-      description: "Malicious software that encrypts data and demands payment",
+      type: "Ransomware"
+      description: "Malicious software that encrypts data and demands payment"
       solution: "Real-time detection, automated backup, and rapid recovery"
     }
   ];
-
   const pricing = [
     {
-      plan: "Essential",
-      price: "$799",
-      period: "/month",
-      description: "Basic quantum cybersecurity for small businesses",
+      plan: "Essential"
+      price: "$799"
+      period: "/month"
+      description: "Basic quantum cybersecurity for small businesses"
       features: [
         "Quantum-resistant encryption";
         "Basic threat detection";
@@ -89,14 +101,14 @@ export default function QuantumCybersecurityPage() {
         "Email support";
         "Up to 100 users";
         "Standard compliance reports"
-      ],
+      ]
       popular: false
-    };
+    }
     {
-      plan: "Professional",
+      plan: "Professional"
       price: "$1,999";
-      period: "/month",
-      description: "Advanced security features for growing organizations",
+      period: "/month"
+      description: "Advanced security features for growing organizations"
       features: [
         "Everything in Essential";
         "AI-powered threat detection";
@@ -106,14 +118,14 @@ export default function QuantumCybersecurityPage() {
         "Custom security policies";
         "Advanced compliance reporting";
         "Incident response team"
-      ],
+      ]
       popular: true
-    };
+    }
     {
-      plan: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Full-scale security solution for large organizations",
+      plan: "Enterprise"
+      price: "Custom"
+      period: ""
+      description: "Full-scale security solution for large organizations"
       features: [
         "Everything in Professional";
         "Custom security architecture";
@@ -123,7 +135,7 @@ export default function QuantumCybersecurityPage() {
         "Custom training programs";
         "SLA guarantees";
         "Executive reporting"
-      ],
+      ]
       popular: false
     }
   ];
@@ -143,7 +155,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -160,7 +176,7 @@ export default function QuantumCybersecurityPage() {
               </span>
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
-              Future-proof your security infrastructure with quantum-resistant encryption and AI-powered threat detection. 
+              Future-proof your security infrastructure with quantum-resistant encryption and AI-powered threat detection.
               Stay ahead of emerging cyber threats with the most advanced security technology available.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -183,7 +199,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Features */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -201,7 +221,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -224,7 +248,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Benefits */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -236,7 +264,11 @@ export default function QuantumCybersecurityPage() {
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
+<<<<<<< HEAD
+                Our advanced security platform provides comprehensive protection against both current and future threats.
+=======
                 Our advanced security platform provides comprehensive protection against both current and future threats. 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Stay ahead of the curve with quantum-resistant technology.
               </p>
               <div className="space-y-4">
@@ -257,7 +289,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -286,7 +322,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Threat Landscape */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -304,7 +344,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {threats.map((threat, index) => (
               <motion.div
@@ -327,7 +371,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Compliance */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -345,7 +393,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -362,7 +414,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -378,7 +434,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -394,7 +454,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -413,7 +477,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -431,7 +499,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
@@ -448,7 +520,10 @@ export default function QuantumCybersecurityPage() {
                     Most Popular
                   </div>
                 )}
+<<<<<<< HEAD
+=======
                 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-slate-900 mb-2">
@@ -460,7 +535,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3">
@@ -483,7 +562,11 @@ export default function QuantumCybersecurityPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -517,7 +600,11 @@ export default function QuantumCybersecurityPage() {
     </>
   )
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 };
 =======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

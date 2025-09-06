@@ -1,7 +1,34 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  TrendingUp
+  Brain
+  Shield
+  Zap
+  Target
+  BarChart3
+  Cpu
+  Globe
+  Users
+  Award
+  CheckCircle
+  ArrowRight
+  Star
+  Phone
+  Mail
+  MapPin;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  TrendingUp, Brain, Shield, Zap, Target
+
+=======
   TrendingUp,
   Brain,
   Shield,
@@ -21,79 +48,78 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react';
+ } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
 
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
 const features = [
-  'Multi-chain DeFi aggregation',
-  'Automated yield optimization',
-  'Liquidity pool management',
-  'Cross-chain bridge services',
-  'Smart contract auditing',
-  'DeFi analytics dashboard',
-  'Mobile app integration',
+  'Multi-chain DeFi aggregation'
+  'Automated yield optimization'
+  'Liquidity pool management'
+  'Cross-chain bridge services'
+  'Smart contract auditing'
+  'DeFi analytics dashboard'
+  'Mobile app integration'
   'Staking and governance',];  website: 'https://ziontechgroup.com'
-};
-
+}
 const features = [
   'Multi-chain DeFi aggregationAutomated yield optimizationLiquidity pool managementCross-chain bridge servicesSmart contract auditingDeFi analytics dashboardMobile app integrationStaking and governance'
-
 const pricingPlans = [
   {
-    name: 'Starter',
-    price: 29,
-    period: 'month',
+    name: 'Starter'
+    price: 29
+    period: 'month'
     features: [
-      'Basic DeFi tools',
-      '3 blockchain networks',
-      'Yield tracking',
-      'Standard support',
-    ],
-    popular: false,
-  },  {
-    name: 'Professional',
-    price: 99,
-    period: 'month',    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support'],
+      'Basic DeFi tools'
+      '3 blockchain networks'
+      'Yield tracking'
+      'Standard support'
+    ]
     popular: false
-  };
-  {
-    name: 'Professional',
-    price: 99,
-    period: 'month',
-    features: [
-      'Advanced DeFi tools',
-      'All major networks',
-      'Automated strategies',
-      'Analytics',
-      'Priority support',
-    ],
-    popular: true,
   },  {
-    name: 'Enterprise',
-    price: 299,
-    period: 'month',    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support'],
-    popular: true
-  };
+    name: 'Professional'
+    price: 99
+    period: 'month',    features: ['Basic DeFi tools3 blockchain networksYield trackingStandard support']
+    popular: false
+  }
   {
-    name: 'Enterprise',
-    price: 299,
-    period: 'month',
+    name: 'Professional'
+    price: 99
+    period: 'month'
     features: [
-      'Custom DeFi solutions',
-      'White-label platform',
-      'API access',
-      'Priority support',
-      'Custom integrations',
-    ],
-    popular: false,
-  },];    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations'],
+      'Advanced DeFi tools'
+      'All major networks'
+      'Automated strategies'
+      'Analytics'
+      'Priority support'
+    ]
+    popular: true
+  },  {
+    name: 'Enterprise'
+    price: 299
+    period: 'month',    features: ['Advanced DeFi toolsAll major networksAutomated strategiesAnalyticsPriority support']
+    popular: true
+  }
+  {
+    name: 'Enterprise'
+    price: 299
+    period: 'month'
+    features: [
+      'Custom DeFi solutions'
+      'White-label platform'
+      'API access'
+      'Priority support'
+      'Custom integrations'
+    ]
+    popular: false
+  },];    features: ['Custom DeFi solutionsWhite-label platformAPI accessPriority supportCustom integrations']
     popular: false
   }
 ];
@@ -186,7 +212,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -196,7 +226,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <a
               href='#pricing'
@@ -235,7 +269,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -244,7 +282,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary DeFi Technology
@@ -275,7 +317,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>
                   <CheckCircle className='w-6 h-6 text-white' />
@@ -291,7 +337,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -299,7 +349,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section id="pricing" className="py-20 bg-black">
@@ -308,7 +362,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -317,13 +375,17 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Choose Your Plan
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Flexible pricing options designed for DeFi users of all levels,
+              Flexible pricing options designed for DeFi users of all levels
               from beginners to institutional investors.
             </p>
           </motion.div>
@@ -353,8 +415,8 @@ export default function DeFiNexusPlatform() {
                     <span className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular
                     </span>
                   </div>
-                )}                  plan.popular 
-                    ? 'border-green-500/50 scale-105' 
+                )}                  plan.popular
+                    ? 'border-green-500/50 scale-105'
                     : 'border-green-500/20'
                 }`}
               >
@@ -366,7 +428,10 @@ export default function DeFiNexusPlatform() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -395,9 +460,16 @@ export default function DeFiNexusPlatform() {
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
+<<<<<<< HEAD
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                       {feature}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -412,7 +484,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact Section */}
       <section
         id='contact'
@@ -424,7 +500,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -433,7 +513,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform DeFi?
@@ -456,7 +540,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -465,7 +553,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -487,7 +579,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -509,7 +605,11 @@ export default function DeFiNexusPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
@@ -526,6 +626,15 @@ export default function DeFiNexusPlatform() {
         </div>
       </section>
 <<<<<<< HEAD
+    </Layout>
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+<<<<<<< HEAD
     </Layout>;
 );
 }
@@ -534,3 +643,4 @@ export default function DeFiNexusPlatform() {
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

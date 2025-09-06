@@ -1,22 +1,30 @@
-import type { NextPage } from 'next',;
-import Seo from '../components/seo/Seo',;
-import { JobPostingJsonLd } from 'next-seo',;
+import type { NextPage } from 'next';
+import Seo from '../components/seo/Seo';
+import { JobPostingJsonLd } from 'next-seo';
+
 const Jobs: NextPage = () => {
   const job = {
-    title: 'Senior Full-Stack Engineer (Next.js + AI)',
-    description: 'Build modern AI-enabled web apps at Zion Tech Solutions.',
-    datePosted: new Date().toISOString().slice(0, 10),
-    employmentType: 'FULL_TIME',
-    validThrough: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString().slice(0, 10),
+    title: 'Senior Full-Stack Engineer (Next.js + AI)'
+    description: 'Build modern AI-enabled web apps at Zion Tech Solutions.'
+    datePosted: new Date().toISOString().slice(0, 10)
+    employmentType: 'FULL_TIME'
+    validThrough: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString().slice(0, 10)
     baseSalary: {
-      currency: 'USD',
-      value: 160000,
-      unitText: 'YEAR'},
+      currency: 'USD'
+      value: 160000
+      unitText: 'YEAR'}
     hiringOrganization: {
+<<<<<<< HEAD
+      name: 'Zion Tech Solutions'
+      sameAs: 'https://ziontechgroup.netlify.app'
+      logo: 'https://ziontechgroup.netlify.app/logo.png'}
+    jobLocationType: 'TELECOMMUTE'} as const
+=======
       name: 'Zion Tech Solutions',
       sameAs: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app/logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div>
       <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
@@ -38,9 +46,13 @@ const Jobs: NextPage = () => {
       </main>
     </div>
   )
-},
+}
+export default Jobs;
 
+<<<<<<< HEAD
+=======
 export default Jobs,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         datePosted={job.datePosted  } catch (error) {
     console.error("Error:", error);
@@ -92,4 +104,8 @@ export default Jobs,;
   );
 },;
 export default Jobs;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

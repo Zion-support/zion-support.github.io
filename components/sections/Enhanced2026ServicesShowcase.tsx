@@ -1,6 +1,21 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+  ArrowRight
+  Brain
+  Zap
+  Shield
+  Rocket
+  Sparkles
+  Star
+  TrendingUp
+  Globe
+  Cpu
+  Lock
+  Cloud;
+=======
   ArrowRight,
   Brain,
   Zap,
@@ -13,182 +28,183 @@ import {
   Cpu,
   Lock,;
   Cloud,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
 const Enhanced2026ServicesShowcase = () => {
   const featuredServices = [
     {
-      id: 'ai-business-intelligence-elite-2026',
-      name: 'AI Business Intelligence Elite 2026',
+      id: 'ai-business-intelligence-elite-2026'
+      name: 'AI Business Intelligence Elite 2026'
       description:
-        'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',      price: '$299',      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
-      price: '$299',
-      period: '/month',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      category: 'AI & Analytics',
+        'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',      price: '$299',      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.'
+      price: '$299'
+      period: '/month'
+      icon: Brain
+      color: 'from-purple-500 to-pink-500'
+      category: 'AI & Analytics'
       features: [
-        'Predictive Analytics',
-        'Real-time Insights',
-        'Custom Dashboards',
-        'AI-powered Reports',
-      ],
-    },
+        'Predictive Analytics'
+        'Real-time Insights'
+        'Custom Dashboards'
+        'AI-powered Reports'
+      ]
+    }
     {
-      id: 'autonomous-ai-agents-platform-2026',
-      name: 'Autonomous AI Agents Platform 2026',
+      id: 'autonomous-ai-agents-platform-2026'
+      name: 'Autonomous AI Agents Platform 2026'
       description:
-        'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
-      price: '$199',      period: '/month',
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-      category: 'AI & Automation',
+        'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.'
+      price: '$199',      period: '/month'
+      icon: Zap
+      color: 'from-blue-500 to-cyan-500'
+      category: 'AI & Automation'
       features: [
-        'Task Automation',
-        'Process Optimization',
-        '24/7 Operation',
-        'Scalable Architecture',
-      ],
-    },
+        'Task Automation'
+        'Process Optimization'
+        '24/7 Operation'
+        'Scalable Architecture'
+      ]
+    }
     {
-      id: 'quantum-cybersecurity-suite-2026',
-      name: 'Quantum Cybersecurity Suite 2026',
+      id: 'quantum-cybersecurity-suite-2026'
+      name: 'Quantum Cybersecurity Suite 2026'
       description:
         'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture']
-    };
+    }
     {
-      id: 'quantum-cybersecurity-suite-2026',
-      name: 'Quantum Cybersecurity Suite 2026',
-      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',
-      period: '/month',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      category: 'Security',
+      id: 'quantum-cybersecurity-suite-2026'
+      name: 'Quantum Cybersecurity Suite 2026'
+      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.'
+      period: '/month'
+      icon: Shield
+      color: 'from-red-500 to-orange-500'
+      category: 'Security'
       features: [
-        'Quantum Encryption',
-        'Threat Detection',
-        'Zero Trust',
-        'Compliance Ready',
-      ],
-    },
+        'Quantum Encryption'
+        'Threat Detection'
+        'Zero Trust'
+        'Compliance Ready'
+      ]
+    }
     {
-      id: 'neuromorphic-computing-platform-2026',
+      id: 'neuromorphic-computing-platform-2026'
       name: 'Neuromorphic Computing Platform 2026',    {
-      id: 'neuromorphic-computing-platform-2026',
-      name: 'Neuromorphic Computing Platform 2026',
-      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
+      id: 'neuromorphic-computing-platform-2026'
+      name: 'Neuromorphic Computing Platform 2026'
+      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.'
       price: '$1,499';
-      period: '/month',
-      icon: Cpu,
-      color: 'from-green-500 to-emerald-500',
-      category: 'Emerging Tech',
+      period: '/month'
+      icon: Cpu
+      color: 'from-green-500 to-emerald-500'
+      category: 'Emerging Tech'
       features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']
-    };
+    }
     {
-      id: 'dna-computing-platform-2026',
-      name: 'DNA Computing Platform 2026',
-      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
+      id: 'dna-computing-platform-2026'
+      name: 'DNA Computing Platform 2026'
+      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.'
       price: '$2,999';
-      period: '/month',
-      icon: Globe,
-      color: 'from-indigo-500 to-purple-500',
-      category: 'Emerging Tech',
+      period: '/month'
+      icon: Globe
+      color: 'from-indigo-500 to-purple-500'
+      category: 'Emerging Tech'
       features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']
-    };
+    }
     {
-      id: 'space-debris-tracking-system',
-      name: 'Space Debris Tracking System 2026',
+      id: 'space-debris-tracking-system'
+      name: 'Space Debris Tracking System 2026'
       description:
-        'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
-      price: '$1,499',
-      period: '/month',
-      icon: Cpu,
-      color: 'from-green-500 to-emerald-500',
-      category: 'Emerging Tech',
+        'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.'
+      price: '$1,499'
+      period: '/month'
+      icon: Cpu
+      color: 'from-green-500 to-emerald-500'
+      category: 'Emerging Tech'
       features: [
-        'Brain-like Processing',
-        'Low Power',
-        'Real-time Learning',
-        'Cognitive Computing',
-      ],
-    },
+        'Brain-like Processing'
+        'Low Power'
+        'Real-time Learning'
+        'Cognitive Computing'
+      ]
+    }
     {
-      id: 'dna-computing-platform-2026',
-      name: 'DNA Computing Platform 2026',
+      id: 'dna-computing-platform-2026'
+      name: 'DNA Computing Platform 2026'
       description:
-        'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
-      price: '$2,999',
-      period: '/month',
-      icon: Globe,
-      color: 'from-indigo-500 to-purple-500',
-      category: 'Emerging Tech',
+        'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.'
+      price: '$2,999'
+      period: '/month'
+      icon: Globe
+      color: 'from-indigo-500 to-purple-500'
+      category: 'Emerging Tech'
       features: [
-        'Molecular Processing',
-        'Exponential Speed',
-        'Complex Algorithms',
-        'Research Ready',
-      ],
-    },
+        'Molecular Processing'
+        'Exponential Speed'
+        'Complex Algorithms'
+        'Research Ready'
+      ]
+    }
     {
-      id: 'space-debris-tracking-system',
-      name: 'Space Debris Tracking System 2026',
+      id: 'space-debris-tracking-system'
+      name: 'Space Debris Tracking System 2026'
       description:
-        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
-      price: '$899',
-      period: '/month',
-      icon: Rocket,
-      color: 'from-yellow-500 to-orange-500',
-      category: 'Space Tech',
+        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.'
+      price: '$899'
+      period: '/month'
+      icon: Rocket
+      color: 'from-yellow-500 to-orange-500'
+      category: 'Space Tech'
       features: [
-        'Real-time Tracking',
-        'Collision Prediction',
-        'Satellite Safety',
-        'Space Traffic Management',
-      ],
-    },
+        'Real-time Tracking'
+        'Collision Prediction'
+        'Satellite Safety'
+        'Space Traffic Management'
+      ]
+    }
   ];
-
   const categories = [
     {
-      name: 'AI Services',
-      count: '150+',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-    },
+      name: 'AI Services'
+      count: '150+'
+      icon: Brain
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      name: 'Quantum Tech',
-      count: '75+',
-      icon: Sparkles,
-      color: 'from-blue-500 to-cyan-500',
-    },
+      name: 'Quantum Tech'
+      count: '75+'
+      icon: Sparkles
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      name: 'Emerging Tech',
-      count: '100+',
-      icon: Rocket,
-      color: 'from-green-500 to-emerald-500',
-    },
+      name: 'Emerging Tech'
+      count: '100+'
+      icon: Rocket
+      color: 'from-green-500 to-emerald-500'
+    }
     {
-      name: 'IT Solutions',
-      count: '200+',
-      icon: Cloud,
-      color: 'from-yellow-500 to-orange-500',
-    },
+      name: 'IT Solutions'
+      count: '200+'
+      icon: Cloud
+      color: 'from-yellow-500 to-orange-500'
+    }
   ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
       {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
-
   const categories = [
-    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' }
+    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' }
+    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' }
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
   ];
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Effects */}
@@ -204,7 +220,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -226,7 +246,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Category Overview */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -238,7 +262,11 @@ const Enhanced2026ServicesShowcase = () => {
 =======
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {categories.map((category, index) => (
             <motion.div
@@ -252,7 +280,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div
                 className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
@@ -284,7 +316,11 @@ const Enhanced2026ServicesShowcase = () => {
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -297,7 +333,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}
@@ -359,7 +399,11 @@ const Enhanced2026ServicesShowcase = () => {
 
                         {feature}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
                     ))}
                   </ul>
@@ -372,7 +416,11 @@ const Enhanced2026ServicesShowcase = () => {
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -389,7 +437,7 @@ const Enhanced2026ServicesShowcase = () => {
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                     <span className="text-gray-400 text-sm">{service.period}</span>
                   </div>
-                  <Link 
+                  <Link
                     href={`/${service.id}`}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200"
                   >
@@ -403,7 +451,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -414,7 +466,11 @@ const Enhanced2026ServicesShowcase = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -469,16 +525,27 @@ const Enhanced2026ServicesShowcase = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Enhanced2026ServicesShowcase;  )
-};
-
+}
 export default Enhanced2026ServicesShowcase;
+
+<<<<<<< HEAD
+=======
+export default Enhanced2026ServicesShowcase;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 }
 }
 =======
 export default Enhanced2026ServicesShowcase;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

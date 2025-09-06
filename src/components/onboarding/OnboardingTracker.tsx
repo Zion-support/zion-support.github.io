@@ -1,16 +1,33 @@
 <<<<<<< HEAD
+
+<<<<<<< HEAD
+  title = "Complete Your Profile"
+=======
+<<<<<<< HEAD
   title = "Complete Your Profile", 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react"
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 =======
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export interface OnboardingStep {
+  id: string
+  label: string
+  completed: boolean
+  link: string
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export interface OnboardingStep {
   id: string,
@@ -20,17 +37,21 @@ export interface OnboardingStep {
   action?: string
 <<<<<<< HEAD
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+  action?: string
+<<<<<<< HEAD
+}
 interface OnboardingTrackerProps {
-  steps: OnboardingStep[],
+
+  steps: OnboardingStep[]
   title?: string
   className?: string
 }
-
-export function OnboardingTracker({ 
+export function OnboardingTracker({
   steps
-  title = "Complete Your Profile", 
-  className 
+  title = "Complete Your Profile"
+  className
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length
   const progress = Math.round((completedSteps / steps.length) * 100)
@@ -61,8 +82,12 @@ export function OnboardingTracker({
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length,
   const progress = Math.round((completedSteps / steps.length) * 100),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">
@@ -70,6 +95,16 @@ export function OnboardingTracker({
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Progress bar */}
+      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
+        <div
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -78,10 +113,13 @@ export function OnboardingTracker({
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           style={{ width: `${progress}%` }}
         ></div>
       </div>
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export function OnboardingTracker({;
   steps,;
@@ -103,7 +141,11 @@ export function OnboardingTracker({;
           style={{ width: `${progress}%` }}
         ></div>;
       </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Steps list */}
       <div className="space-y-3">
         {steps.map((step) => (
@@ -119,10 +161,10 @@ export function OnboardingTracker({;
               <div className="text-sm font-medium text-white">{step.label}</div>
             </div>
             {!step.completed && step.action && (
-              <Button 
-                asChild 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                asChild
+                variant="ghost"
+                size="sm"
                 className="text-zion-purple hover:text-zion-cyan hover:bg-zion-blue"
               >
                 <Link href={step.link}>
@@ -142,18 +184,30 @@ export function OnboardingTracker({;
   steps.map ( (step) => (<div key= {
   step.id "
 }className="flex items-center" > <div className="mr-3" > {"
-  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>) 
+  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
 }</div> </div> {"
   !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
+<<<<<<< HEAD
+  step.link
+}> </Link> </Button>)
+}</div>) )
+}</div> </div>)
+}"}
+=======
   step.link 
 }> </Link> </Button>) 
 }</div>) ) ;
 }</div> </div>) ;
 }"};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       </div>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,12 +1,20 @@
+<<<<<<< HEAD
+import { useEffect, useMemo, useRef, useState  } from 'react';
+=======
 import { useEffect, useMemo, useRef, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+export default function GlobalSearchBar() {
+
+=======
 export default function GlobalSearchBar() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [open, setOpen] = useState(false);
   const controller = useRef<AbortController | null>(null);
-
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
@@ -17,58 +25,58 @@ export default function GlobalSearchBar() {;
     const run = async () => {
       try {
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
-          signal: controller.current!.signal,
+          signal: controller.current!.signal
         });
         const j = await r.json();
-        setSuggestions(j.suggestions || []);
+        setSuggestions(j.suggestions |[]);
         setOpen(true);
       } catch {}
-    };
+    }
     const id = setTimeout(run, 150);
     return () => clearTimeout(id);  }, [query]);        const j = await r.json();
-        setSuggestions(j.suggestions || []);
+        setSuggestions(j.suggestions |[]);
         setOpen(true)
       } catch {}
-    };
+    }
     const id = setTimeout(run, 150);
     return () => clearTimeout(id)
   }, [query]);
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
     fetch('/api/telemetry/search', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ q: query }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ q: query })
     }).catch(() => {});
     router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false);  };
-
+    setOpen(false);  }
   const startVoice = () => {
     if (typeof window === 'undefined') return;
     const Speech: any =
-      (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
+      (window as any).SpeechRecognition |
+      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {})
     router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false)
-  };
-
+  }
   const startVoice = () => {
     if (typeof window === 'undefined') return;
     const Speech: any =
-      (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
+      (window as any).SpeechRecognition |
+      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition
     if (!Speech) return;
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
-      const transcript = e.results?.[0]?.[0]?.transcript || '';
+      const transcript = e.results?.[0]?.[0]?.transcript |'';
       if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
-    };
+    }
     rec.start();
-  };
-
+  }
     >
       <input
         value={query}
@@ -106,11 +114,16 @@ export default function GlobalSearchBar() {;
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
+<<<<<<< HEAD
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
+<<<<<<< HEAD
+  }
+=======
   };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">
       <input
@@ -135,14 +148,23 @@ export default function GlobalSearchBar() {;
                   onClick={() => {
                     setQuery(s);
                     setOpen(false);
+
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
 =======
+<<<<<<< HEAD
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
+
+                >
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                 >
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {s}
                 </button>
               </li>
@@ -156,4 +178,8 @@ export default function GlobalSearchBar() {;
 }
 =======
   );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

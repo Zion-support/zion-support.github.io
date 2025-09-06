@@ -1,15 +1,23 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
+import { Briefcase } from "lucide-react";
+=======
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
+import { Briefcase } from "lucide-react",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
 =======
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
 import { Briefcase } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProfileExperienceProps {
-  experience: ProfileExperienceType[]
+  experience: ProfileExperienceType[];
 }
-
 export function ProfileExperience({ experience }: ProfileExperienceProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -26,7 +34,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <h4 className="text-white font-medium">{exp.role}</h4>
               <div className="text-zion-cyan mb-1">{exp.company}</div>
               <div className="text-sm text-zion-slate-light mb-2">
-                {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
+                {exp.startDate} - {exp.current ? "Present" : exp.endDate}
               </div>
               <p className="text-zion-slate">{exp.description}</p>
             </div>
@@ -60,6 +68,14 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
               <p className="text-zion-slate">{exp.description}</p>;
             </div>;
           </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        ))}
+      </div>
+    </div>
+  );
+}
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         ))}
       </div>
@@ -67,3 +83,4 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
   )
 }
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

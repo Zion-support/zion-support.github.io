@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Download, Settings } from 'lucide-react'
@@ -7,16 +9,27 @@ export function AdminHeader() {;
   // const { user } = useAuth(); // Unused but available
   const { company } = useCompanyWorkspace()
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
+<<<<<<< HEAD
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+export function AdminHeader() {
+  // const { user } = useAuth(), // Unused but available
+  const { company } = useCompanyWorkspace();
+=======
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace(),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -42,7 +55,11 @@ export function AdminHeader() {
             Settings
           </Button>
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
             Export Data
@@ -54,19 +71,19 @@ export function AdminHeader() {
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>Subscription Plan</div>
           <div className='text-xl font-medium'>
-            {company?.plan || 'Enterprise'}
+            {company?.plan |'Enterprise'}
           </div>
         </div>
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>Team Members</div>
           <div className='text-xl font-medium'>
-            {company?.teamSize || 'Loading...'} / {company?.teamLimit || '∞'}
+            {company?.teamSize |'Loading...'} / {company?.teamLimit |'∞'}
           </div>
         </div>
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>Billing Cycle</div>
           <div className='text-xl font-medium'>
-            {company?.billingCycle || 'Annual'}
+            {company?.billingCycle |'Annual'}
           </div>
         </div>
       </div>
@@ -74,28 +91,30 @@ export function AdminHeader() {
         <div className='flex items-center gap-4'>
           <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center'>
             <img
-              src={company?.logoUrl || '/placeholder.svg'}
-              alt={company?.name || 'Company'}
+              src={company?.logoUrl |'/placeholder.svg'}
+              alt={company?.name |'Company'}
               className='max-h-10 max-w-10'
               loading='lazy'            />
           </div>
           <div>
-            <h2 className='font-medium'>{company?.name || 'Company Name'}</h2>
+            <h2 className='font-medium'>{company?.name |'Company Name'}</h2>
             <p className='text-sm text-muted-foreground'>
-              Workspace URL: {company?.workspaceUrl || 'loading...'}            </p>
-            <h2 className="font-medium">{company?.name || "Company Name"}</h2>
+              Workspace URL: {company?.workspaceUrl |'loading...'}            </p>
+            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
-              Workspace URL: {company?.workspaceUrl || "loading..."}
+              Workspace URL: {company?.workspaceUrl |"loading..."}
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
-          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>
+          <div className="text-xl font-medium">{company?.teamSize |"Loading..."} / {company?.teamLimit |"∞"}</div>
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Billing Cycle</div>
-          <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
+          <div className="text-xl font-medium">{company?.billingCycle |"Annual"}</div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
@@ -107,6 +126,7 @@ export function AdminHeader() {
             />
           </div>
           <div>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -124,21 +144,36 @@ export function AdminHeader() {
         </div>
       </div>
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img
+<<<<<<< HEAD
+              src={company?.logoUrl |"/placeholder.svg"}
+              alt={company?.name |"Company"}
+=======
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="max-h-10 max-w-10"
               loading="lazy"
             />
           </div>
           <div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
+            <p className="text-sm text-muted-foreground">
+              Workspace URL: {company?.workspaceUrl |"loading..."}
+=======
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
           </div>
         </div>
@@ -148,7 +183,10 @@ export function AdminHeader() {
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -214,4 +252,8 @@ export function AdminHeader() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

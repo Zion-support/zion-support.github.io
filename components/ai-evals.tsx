@@ -1,6 +1,21 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
+
 import {
+<<<<<<< HEAD
+  Check
+  ShieldCheck
+  TrendingUp
+  Clock
+  Phone
+  Mail
+  MapPin
+  ExternalLink;
+=======
   Check,
   ShieldCheck,
   TrendingUp,
@@ -9,12 +24,23 @@ import {
   Mail,
   MapPin,;
   ExternalLink,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function AIEvalsPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  }
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AIEvalsPage() {
   const contactInfo = {
@@ -24,15 +50,15 @@ export default function AIEvalsPage() {
     website: 'https://ziontechgroup.com',;
   };
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const features = [
-    'Golden datasets and synthetic evals',
-    'Hallucination and grounding score',
-    'Toxicity, bias and safety metrics',
-    'LLM version comparison reports',
-    'CI quality gates and webhooks',
-    'Latency and cost KPIs with budgets',
+    'Golden datasets and synthetic evals'
+    'Hallucination and grounding score'
+    'Toxicity, bias and safety metrics'
+    'LLM version comparison reports'
+    'CI quality gates and webhooks'
+    'Latency and cost KPIs with budgets'
   ];
-
   return (
     <QuantumHolographicMatrixBackground>
       <Head>
@@ -177,7 +203,14 @@ export default function AIEvalsPage() {
 		</QuantumHolographicMatrixBackground>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
 =======
 	);
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+	);
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

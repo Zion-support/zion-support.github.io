@@ -1,4 +1,16 @@
 <<<<<<< HEAD
+
+<<<<<<< HEAD
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { useRouter } from 'next/router', // Changed from useNavigate
+import { CheckCircle2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next';
+export default function PaymentSuccess() {
+  const router = null;
+=======
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate
@@ -11,6 +23,7 @@ export default function PaymentSuccess() {;
   const { t } = useTranslation()
 =======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
@@ -20,7 +33,11 @@ export default function PaymentSuccess() {
   const router = useRouter(), // Changed from navigate
   const { t } = useTranslation(),
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -46,7 +63,11 @@ export default function PaymentSuccess() {
         
         <div className="flex flex-col space-y-3">
           <Button 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
@@ -67,13 +88,17 @@ export default function PaymentSuccess() {
           {t('errors.payment_success_message')}
         </p>
         <div className="flex flex-col space-y-3">
-          <Button 
+          <Button
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {t('errors.go_to_dashboard')}
           </Button>
+<<<<<<< HEAD
+          <Button
+=======
           <Button 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -85,7 +110,10 @@ export default function PaymentSuccess() {
     </div>
   )
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           
           <Button 
@@ -101,4 +129,8 @@ export default function PaymentSuccess() {
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

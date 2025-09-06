@@ -1,3 +1,93 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = {;
+  testEnvironmen:t:'jsdom',;
+  setupFilesAfterEn:v:['<rootDir>/jest.setup.js'],;
+  moduleNameMappin:g:{;
+    '^@/(.*)$':'<rootDir>/$1',;
+  },;
+  testMatc:h:[;
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',;
+    '**/*.(test|spec).(js|jsx|ts|tsx)',;
+  ],;
+  collectCoverageFro:m:[;
+    'components/**/*.{js,jsx,ts,tsx}',;
+    'pages/**/*.{js,jsx,ts,tsx}',;
+    '!**/*.d.ts',;
+    '!**/node_modules/**',;
+  ],;
+  transfor:m:{;
+    '^.+\\.(js|jsx|ts|tsx)$':['babel-jest', { preset:s:['next/babel'] }],;
+  },;
+  moduleFileExtension:s:['ts', 'tsx', 'js', 'jsx', 'json'],;
+  testPathIgnorePattern:s:['<rootDir>/.next/', '<rootDir>/node_modules/'],;
+};  transform: {
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = { preset: "ts-jest","" testEnvironment: "jsdom"," globals: {" "ts-jest": { diagnostics: false," isolatedModules: true}},"" setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]," moduleNameMapper: {" "^@/(.*)$": "<rootDir>/src/$1"," "\.(css|less|scss|sass)$": "identity-obj-proxy"},"" testMatch: ["**/__tests__*.(js|jsx|ts|tsx)"," "***.{js,jsx,ts,tsx}"," "!src*.d.ts"," "!src*.stories.{js,jsx,ts,tsx}", ]," coverageThreshold: { global: { branches: 50," functions: 50," lines: 50," statements: 50}}," transform: {" "^.+\.(ts|tsx)$": "ts-jest"," "^.+\.(js|jsx)$": "babel-jest"},"" moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],"" testPathIgnorePatterns: ["/node_modules/"," "/dist/"," "/pages\.disabled/"," "/pages-disabled/"," "/pages\.broken/"," "/pages\.bak/"," "/pages-backup/"," "/pages\.__backup/"," "/src\.pages\.disabled/"," "/src\.disabled/"," "/src/disabled/"," "/tests/integration/", ]};'"'"
+=======
+module.exports = {}
+  "preset": 'ts-jest',
+  "testEnvironment": 'jsdom',
+  "globals": {}
+    'ts-jest': {}
+      diagnostics: false,
+      "isolatedModules": true}},
+  "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
+  "moduleNameMapper": {}
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'},
+  "testMatch": ['**/__tests__/**/*.(js|jsx|ts|tsx)',]
+    '**/*.(test|spec).(js|jsx|ts|tsx)',
+  ],
+  "collectCoverageFrom": ['src/**/*.{js,jsx,ts,tsx}',]
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}',
+  ],
+  "coverageThreshold": {}
+    global: {}
+      branches: 50,
+      "functions": 50,
+      "lines": 50,
+      "statements": 50}},
+  "transform": {}
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(js|jsx)$': 'babel-jest'},
+  "moduleFileExtensions": ['ts', 'tsx', 'js', 'jsx', 'json'],
+  "testPathIgnorePatterns": ['/node_modules/',]
+    '/dist/',
+    '/pages\\.disabled/',
+    '/pages-disabled/',
+    '/pages\\.broken/',
+    '/pages\\.bak/',
+    '/pages-backup/',
+    '/pages\\.__backup/',
+    '/src\\.pages\\.disabled/',
+    '/src\\.disabled/',
+    '/src/disabled/',
+    '/tests/integration/',
+  ]};
+>>>>>>> main
+=======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+module.exports = {
+  preset: 'ts-jest',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/automation-improvements-final
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -8,119 +98,116 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+module.exports = {
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+module.exports = {
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-    '<rootDir>/dist/',
-    '<rootDir>/build/',
-    '<rootDir>/out/',
-    '<rootDir>/coverage/',
-    '<rootDir>/src.corrupted/',
-    '<rootDir>/src.disabled/',
-    '<rootDir>/src.broken/',
-    '<rootDir>/src.pages.disabled/',
-    '<rootDir>/solutions.disabled/',
-    '<rootDir>/components.disabled/',
-    '<rootDir>/components.corrupted/',
-    '<rootDir>/hooks.disabled/',
-    '<rootDir>/lib.disabled/',
-    '<rootDir>/lib.corrupted/',
-    '<rootDir>/zion-os.disabled/',
-    '<rootDir>/zion_academy/',
-    '<rootDir>/contracts.disabled/',
-    '<rootDir>/corrupted-files-backup/',
-    '<rootDir>/corrupted_files_backup_2/',
-    '<rootDir>/cypress.disabled/',
-    '<rootDir>/cypress_backup/',
-    '<rootDir>/data/',
-    '<rootDir>/e2e/',
-    '<rootDir>/pages.disabled/',
-    '<rootDir>/pages.disabled_backup/',
-    '<rootDir>/pages_backup/',
-    '<rootDir>/pages.disabled_full/',
-    '<rootDir>/pages_backup_before_cleanup/',
-    '<rootDir>/pages_backup_conflicts/',
-    '<rootDir>/pages.bak/',
-    '<rootDir>/pages.broken/',
-    '<rootDir>/pages.corrupted.*/',
-    '<rootDir>/pages._quarantine/',
-    '<rootDir>/pages._archive_corrupted/',
-    '<rootDir>/pages-quarantine/',
-    '<rootDir>/pages.blog.disabled/',
-    '<rootDir>/pages.disabled_auto/',
-    '<rootDir>/pages_api.disabled/',
-    '<rootDir>/components.disabled_full/',
-    '<rootDir>/components.broken/',
-    '<rootDir>/backup-corrupted-files/',
-    '<rootDir>/lib.broken/',
-    '<rootDir>/data.disabled/',
-    '<rootDir>/test_build/',
-    '<rootDir>/server/',
-    '<rootDir>/types/',
-    '<rootDir>/temp-backup/',
-    '<rootDir>/temp_backup/',
-    '<rootDir>/temp_broken_files/',
-    '<rootDir>/temp_working/',
-    '<rootDir>/tests.disabled/',
-    '<rootDir>/supabase/',
-    '<rootDir>/deployments/',
-    '<rootDir>/pages.__backup/',
-    '<rootDir>/pages-disabled/',
-    '<rootDir>/src/',
-    '<rootDir>/automation/',
-    '<rootDir>/automation_backup/',
-    '<rootDir>/data_backup/',
-    '<rootDir>/pm2-automation/',
-    '<rootDir>/scripts/',
-    '<rootDir>/tests/',
-    '<rootDir>/test-results/',
-    '<rootDir>/test-reports/',
-    '<rootDir>/api/',
-    '<rootDir>/api.disabled/',
-    '<rootDir>/api.disabled.temp/',
-    '<rootDir>/disabled-api/',
-  ],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '^@/components/(.*)$': '<rootDir>/components/$1',
-    '^@/lib/(.*)$': '<rootDir>/lib/$1',
-    '^@/utils/(.*)$': '<rootDir>/utils/$1',
-    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
-    '^@/types/(.*)$': '<rootDir>/types/$1',
-  },
-  collectCoverageFrom: [
-    'components/**/*.{js,jsx,ts,tsx}',
-    'pages/**/*.{js,jsx,ts,tsx}',
-    'lib/**/*.{js,jsx,ts,tsx}',
-    'hooks/**/*.{js,jsx,ts,tsx}',
-    'utils/**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-    '!**/.next/**',
-    '!**/dist/**',
-    '!**/build/**',
-    '!**/out/**',
-    '!**/coverage/**',
-  ],
   testMatch: [
-    '<rootDir>/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/**/*.{test,spec}.{js,jsx,ts,tsx}',
+    '**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)'
   ],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/.next/',
+    '/out/',
+    '/dist/',
+    '/recovered-branches/',
+    '/src_backup/',
+    '/e2e/'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    'components/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/**/*.stories.{js,jsx,ts,tsx}'
+  ],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1'
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+=======
   transformIgnorePatterns: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     '/node_modules/',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  coverageReporters: ['text', 'lcov'],
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
+    }
+  }
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+};
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-build-nav-links
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+>>>>>>> origin/automation-improvements-final
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   testTimeout: 10000,
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+<<<<<<< HEAD
 module.exports = createJestConfig(customJestConfig)
+=======
+module.exports = createJestConfig(customJestConfig)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  // setupFilesAfterEnv: ['<rootDir>/jest.setup.simple.js'],
+  transform: {
+    '^.+\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+  },
+  transformIgnorePatterns: [
+    '/node_modules/(?!(.*\.mjs$))'
+  ]
+};
+>>>>>>> origin/main
+=======
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+>>>>>>> origin/automation-improvements-final
+=======
+    '/node_modules/(?!(.*\.mjs$))'
+  ]
+};
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

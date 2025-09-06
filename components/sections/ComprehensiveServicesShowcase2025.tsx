@@ -1,6 +1,26 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Brain
+  Database
+  Cloud
+  Lock
+  Rocket
+  Users
+  DollarSign
+  Target
+  Award
+  Phone;
+=======
   CheckCircle,
   ArrowRight,
   Star,
@@ -18,6 +38,7 @@ import {
   Target,
   Award,;
   Phone,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
@@ -29,87 +50,93 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 const ComprehensiveServicesShowcase2025 = () => {
   const serviceCategories = [
     {
-      title: 'AI & Automation Services',
-      icon: Brain,
-      services: advancedAIAutomation2025,
-      gradient: 'from-purple-600 via-pink-600 to-blue-600',
+      title: 'AI & Automation Services'
+      icon: Brain
+      services: advancedAIAutomation2025
+      gradient: 'from-purple-600 via-pink-600 to-blue-600'
       description:
-        'Cutting-edge AI solutions that transform business operations',
+        'Cutting-edge AI solutions that transform business operations'
     },      description: 'Cutting-edge AI solutions that transform business operations'
-    };
+    }
     {
-      title: 'Cybersecurity & Security',
-      icon: Shield,
-      services: advancedCybersecurity2025,
-      gradient: 'from-red-600 via-orange-600 to-yellow-600',
-      description: 'Advanced security solutions for the digital age',
+      title: 'Cybersecurity & Security'
+      icon: Shield
+      services: advancedCybersecurity2025
+      gradient: 'from-red-600 via-orange-600 to-yellow-600'
+      description: 'Advanced security solutions for the digital age'
     },    {      description: 'Advanced security solutions for the digital age'
-    };
+    }
     {
-      title: 'Blockchain & Web3',
-      icon: Globe,
-      services: blockchainWeb32025,
-      gradient: 'from-green-600 via-teal-600 to-cyan-600',
-      description: 'Next-generation blockchain and decentralized solutions',
+      title: 'Blockchain & Web3'
+      icon: Globe
+      services: blockchainWeb32025
+      gradient: 'from-green-600 via-teal-600 to-cyan-600'
+      description: 'Next-generation blockchain and decentralized solutions'
     },    {      description: 'Next-generation blockchain and decentralized solutions'
-    };
+    }
     {
-      title: 'IoT & Edge Computing',
-      icon: Cloud,
-      services: iotEdgeComputing2025,
-      gradient: 'from-blue-600 via-indigo-600 to-purple-600',
-      description: 'Smart connected solutions for the Internet of Things',
+      title: 'IoT & Edge Computing'
+      icon: Cloud
+      services: iotEdgeComputing2025
+      gradient: 'from-blue-600 via-indigo-600 to-purple-600'
+      description: 'Smart connected solutions for the Internet of Things'
     },    {      description: 'Smart connected solutions for the Internet of Things'
-    };
+    }
     {
-      title: 'Healthcare & Biotechnology',
-      icon: Target,
-      services: healthcareBiotech2025,
-      gradient: 'from-pink-600 via-rose-600 to-red-600',
-      description: 'Innovative healthcare and biotech solutions',
+      title: 'Healthcare & Biotechnology'
+      icon: Target
+      services: healthcareBiotech2025
+      gradient: 'from-pink-600 via-rose-600 to-red-600'
+      description: 'Innovative healthcare and biotech solutions'
     },    {      description: 'Innovative healthcare and biotech solutions'
-    };
+    }
     {
-      title: 'Fintech & Financial',
-      icon: DollarSign,
-      services: fintechFinancial2025,
-      gradient: 'from-emerald-600 via-green-600 to-teal-600',
-      description: 'Revolutionary financial technology solutions',
+      title: 'Fintech & Financial'
+      icon: DollarSign
+      services: fintechFinancial2025
+      gradient: 'from-emerald-600 via-green-600 to-teal-600'
+      description: 'Revolutionary financial technology solutions'
     },    {      description: 'Revolutionary financial technology solutions'
-    };
+    }
     {
-      title: 'Education & E-Learning',
-      icon: Award,
-      services: educationElearning2025,
-      gradient: 'from-amber-600 via-yellow-600 to-orange-600',
-      description: 'Advanced learning and educational technology',
+      title: 'Education & E-Learning'
+      icon: Award
+      services: educationElearning2025
+      gradient: 'from-amber-600 via-yellow-600 to-orange-600'
+      description: 'Advanced learning and educational technology'
     },  ];      description: 'Advanced learning and educational technology'
     }
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.1,
-      },
+        staggerChildren: 0.1
+      }
     },  };        staggerChildren: 0.1
       }
     }
-  };
-
+  }
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
+<<<<<<< HEAD
+        duration: 0.5
+      }
+    }
+  }
+=======
         duration: 0.5,
       },
     },
+
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section className='relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated Background Elements */}
@@ -118,9 +145,14 @@ const ComprehensiveServicesShowcase2025 = () => {
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>
         <div className='absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000'></div>
       </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  }
+=======
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Elements */}
@@ -132,11 +164,19 @@ const ComprehensiveServicesShowcase2025 = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
 =======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
         {/* Header */}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +185,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
             Revolutionary 2025 Services
@@ -164,7 +208,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Service Categories */}
         <motion.div
           variants={containerVariants}
@@ -210,7 +258,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                     {category.description}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                 </div>
               </div>
@@ -220,7 +272,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
@@ -231,7 +287,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     {/* Service Header */}
                     <div className='mb-4'>
@@ -252,7 +312,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                         {service.description}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </p>
                     </div>
                     {/* Features */}
@@ -291,7 +355,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Pricing */}
                     <div className='mb-4'>
                       <div className='flex items-center justify-between'>
@@ -388,7 +456,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 
                     {/* CTA Button */}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </a>
                     </div>
                     {/* Hover Effect Overlay */}
@@ -397,7 +469,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
               </div>
             </motion.div>
@@ -406,7 +482,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -416,7 +496,11 @@ const ComprehensiveServicesShowcase2025 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -468,13 +552,24 @@ const ComprehensiveServicesShowcase2025 = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ComprehensiveServicesShowcase2025;  )
-};
-
+}
 export default ComprehensiveServicesShowcase2025;
+
+<<<<<<< HEAD
+=======
+export default ComprehensiveServicesShowcase2025;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 export default ComprehensiveServicesShowcase2025;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

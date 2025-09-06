@@ -1,34 +1,30 @@
 <<<<<<< HEAD
 import React, { useEffect } from 'react';
-
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add skip link for keyboard navigation
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content',
-    skipLink.className = 'sr-only focus: not-sr-only',
+    skipLink.textContent = 'Skip to main content'
+    skipLink.className = 'sr-only focus: not-sr-only'
     skipLink.style.cssText = `
-      position: absolute, top: -40px,
-      left: 6px, background: #000,
-      color: #fff, padding: 8px,
-      text-decoration: none, z-index: 1000,
+      position: absolute, top: -40px
+      left: 6px, background: #000
+      color: #fff, padding: 8px
+      text-decoration: none, z-index: 1000
     `;
     document.body.insertBefore(skipLink, document.body.firstChild);
-
     // Focus management
     const handleMouseDown = () => {
       document.body.classList.add('using-mouse');
-    };
+    }
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        document.body.classList.remove('using-mouse'),
+        document.body.classList.remove('using-mouse')
       }
-    };
-
+    }
     document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('keydown', handleKeyDown);
-
     // Add ARIA live region for announcements
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -36,38 +32,31 @@ const AccessibilityEnhancer: React.FC = () => {
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
-
     // Announce page changes
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
-        liveRegion.textContent = message,
+        liveRegion.textContent = message
       }
-    };
-
+    }
     // Listen for route changes (Next.js specific)
     const handleRouteChange = () => {
       announcePageChange('Page loaded');
-    };
-
+    }
     // Add route change listener if available
     if (typeof window !== 'undefined' && window.history) {
       const originalPushState = window.history.pushState;
       const originalReplaceState = window.history.replaceState;
-
       window.history.pushState = function(...args) {
         originalPushState.apply(this, args);
         setTimeout(handleRouteChange, 100);
-      };
-
+      }
       window.history.replaceState = function(...args) {
         originalReplaceState.apply(this, args);
         setTimeout(handleRouteChange, 100);
-      };
-
+      }
       window.addEventListener('popstate', handleRouteChange);
     }
-
     // Cleanup
     return () => {
       document.removeEventListener('mousedown', handleMouseDown);
@@ -78,35 +67,32 @@ const AccessibilityEnhancer: React.FC = () => {
       if (liveRegion.parentNode) {
         liveRegion.parentNode.removeChild(liveRegion);
       }
-    };
+    }
   }, []);
-
   return null;
-};
-
+}
 // Add CSS for focus management
 const focusStyles = `
   .using-mouse *:focus {
-    outline: none !important,
+    outline: none !important
   }
   .focus-visible:focus {
-    outline: 2px solid #2563eb !important, outline-offset: 2px !important,
+    outline: 2px solid #2563eb !important, outline-offset: 2px !important
   }
   .sr-only {
-    position: absolute, width: 1px,
-    height: 1px, padding: 0,
-    margin: -1px, overflow: hidden,
+    position: absolute, width: 1px
+    height: 1px, padding: 0
+    margin: -1px, overflow: hidden
     clip: rect(0, 0, 0, 0);
-    white-space: nowrap, border: 0,
+    white-space: nowrap, border: 0
   }
   .sr-only.focus:not-sr-only:focus {
-    position: static, width: auto,
-    height: auto, padding: inherit,
-    margin: inherit, overflow: visible,
-    clip: auto, white-space: normal,
+    position: static, width: auto
+    height: auto, padding: inherit
+    margin: inherit, overflow: visible
+    clip: auto, white-space: normal
   }
 `;
-
 // Inject styles
 if (typeof document !== 'undefined') {
   const styleSheet = document.createElement('style');
@@ -115,62 +101,51 @@ if (typeof document !== 'undefined') {
 }
 export default AccessibilityEnhancer;
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
-
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
-
     const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-    const savedFontSize = localStorage.getItem('fontSize') || 'normal';
+    const savedFontSize = localStorage.getItem('fontSize') |'normal';
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
   }, []);
-
   const applyAccessibilityStyles = (
-    highContrast: boolean,
-    fontSizeValue: string,
+    highContrast: boolean
+    fontSizeValue: string
     reducedMotionValue: boolean
   ) => {
     const root = document.documentElement;
-
     if (highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-
     root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
     root.classList.add(`font-${fontSizeValue}`);
-
     if (reducedMotionValue) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-  };
-
+  }
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
-  };
-
+  }
   const changeFontSize = (newSize: string) => {
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-  };
-
+  }
   return (
     <>
       {/* Accessibility Controls */}
@@ -222,9 +197,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       <div id="main-content">{children}</div>
     </>
   );
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default AccessibilityEnhancer;
+=======
 };
 
 export default AccessibilityEnhancer;
 =======
 export default AccessibilityEnhancer;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

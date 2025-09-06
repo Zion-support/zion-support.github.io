@@ -1,6 +1,7 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import EmptyState from '../../components/ui/EmptyState',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import EmptyState from '../../components/ui/EmptyState';
+
 const Dashboard: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
@@ -33,7 +34,11 @@ const Dashboard: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </section>
       <section>
@@ -48,9 +53,13 @@ const Dashboard: NextPage = () => {
       </section>
     </div>
   )
-},
+}
+export default Dashboard;
 
+<<<<<<< HEAD
+=======
 export default Dashboard,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           icon={<span>💬</span>  } catch (error) {
     console.error("Error:", error);
@@ -68,4 +77,8 @@ export default Dashboard,;
   );
 },;
 export default Dashboard;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

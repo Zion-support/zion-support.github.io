@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
 import { ClickableBadge } from '@/components/ui/clickable-badge'
 import {  Table,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -11,11 +14,16 @@ import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { 
   Table,
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   TableRow,
 } from '@/components/ui/table'
@@ -52,6 +60,7 @@ interface ApplicationsTableProps {
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableRow
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
@@ -72,10 +81,61 @@ interface ApplicationsTableProps {
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+import { format } from 'date-fns'
+import { JobApplication } from '@/types/jobs'
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
+import { ClickableBadge } from '@/components/ui/clickable-badge'
+import {  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import { ApplicationActions } from './ApplicationActions'
+import { StatusBadge } from './StatusBadge'
+import { Briefcase, User } from 'lucide-react'
+import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal'
+import React, { useState } from 'react'; // Import React and useState
+import { toast } from '@/hooks/use-toast'
+import Image from 'next/image'; // Import next/image
+
+interface ApplicationsTableProps {
+  applications: JobApplication[];
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
+  onViewScore: (application: JobApplication) => void
+
+// Sub-component for avatar to handle its own error state
+const ApplicationAvatar = ({
+  application
+}: {
+  application: JobApplication
+}) => {
+  const [avatarError, setAvatarError] = useState(false)
+  const talentName = application.talent_profile?.full_name |'Candidate'
+interface ApplicationsTableProps {
+  applications: JobApplication[]
+  processingId: string | null
+  onViewApplication: (applicationId: string,) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: string,) => Promise<void>
+  onViewScore: (application: JobApplication,) => void
+
+}
+// Sub-component for avatar to handle its own error state
+
+const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
+  const [avatarError, setAvatarError] = useState(false)
+  const talentName = application.talent_profile?.full_name |"Candidate"
   return (
     <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
       {application.talent_profile?.profile_picture_url && !avatarError ? (
@@ -93,7 +153,11 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
           onError={() => setAvatarError(true)}
           priority={false}
         />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ) : (
         <User className="h-4 w-4" />
       )}
@@ -102,6 +166,14 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
 <<<<<<< HEAD
 }
 export function ApplicationsTable({
+<<<<<<< HEAD
+  applications
+  processingId
+  onViewApplication
+  onStatusChange
+  onViewScore
+}: ApplicationsTableProps) {
+=======
   applications,
   processingId,
   onViewApplication,
@@ -117,6 +189,7 @@ export function ApplicationsTable({
   onViewScore
 }: ApplicationsTableProps) {
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [hireModalOpen, setHireModalOpen] = useState(false)
   const [selectedApplication, setSelectedApplication] =
     useState<JobApplication | null>(null)
@@ -126,11 +199,25 @@ export function ApplicationsTable({
   }
   const handleHireConfirmed = () => {
     toast({
-      title: 'Hiring process initiated',
-      description: 'Offer has been sent to the talent.',
+      title: 'Hiring process initiated'
+      description: 'Offer has been sent to the talent.'
     })
   }
+<<<<<<< HEAD
+
 =======
+},
+
+export function ApplicationsTable({ 
+  applications, 
+  processingId, 
+  onViewApplication, 
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -146,7 +233,11 @@ export function ApplicationsTable({
     })
   },
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <div className="rounded-md border">
@@ -166,16 +257,29 @@ export function ApplicationsTable({
 =======
             {applications.map((application) => (
               <TableRow key={application.id}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
+<<<<<<< HEAD
+                      <div className='font-medium'>
+                        {application.talent_profile?.full_name |'Candidate'}
+                      </div>
+                      <div className='text-xs text-muted-foreground mt-0.5'>
+                        {application.talent_profile?.professional_title |
+                          'Applicant'}
+=======
                       <div className="font-medium">
                         {application.talent_profile?.full_name || "Candidate"}
                       </div>
                       <div className="text-xs text-muted-foreground mt-0.5">
                         {application.talent_profile?.professional_title || "Applicant"}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       </div>
                     </div>
                   </div>
@@ -202,7 +306,11 @@ export function ApplicationsTable({
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {application.match_score}%
                     </ClickableBadge>
                   ) : (
@@ -234,54 +342,59 @@ export function ApplicationsTable({
       <HireConfirmationModal
         isOpen = {hireModalOpen,}
         onClose = {() => setHireModalOpen(false),}
-        application = {selectedApplication || undefined,}
+        application = {selectedApplication |undefined,}
         onConfirm = {handleHireConfirmed,}
       />
     </>
   )
-  /* Using Renamed AvatarPrimitive */ 
+  /* Using Renamed AvatarPrimitive */
 }{
   application.talent profile?.profile picture url && !avatarError ? (<Image src= {
-  application.talent profile.profile picture url 
+  application.talent profile.profile picture url
 }alt= {
-  talentName 
+  talentName
 }width= {
-  32 
+  32
 }//for h-8 w-8 height= {
   32 "
 }//for h-8 w-8 className="rounded-full object-cover" onError= {
-  () => setAvatarError (true) 
+  () => setAvatarError (true)
 }priority= {
   false "
+<<<<<<< HEAD
+}h-4 w-4"/>)
+}</AvatarPrimitive>)
+=======
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
-  application.id 
+  application.id
 }> <TableCell> </div> </div> </div> </TableCell> onClick={
-  () => onViewScore (application) 
+  () => onViewScore (application)
 }> {
   application.match score "
 }% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) "
 }</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {
-  application 
+  application
 }processingId= {
-  processingId 
+  processingId
 }onViewApplication= {
-  onViewApplication 
+  onViewApplication
 }onStatusChange= {
-  onStatusChange 
-}/> </div> </TableCell> </TableRow>) ) 
+  onStatusChange
+}/> </div> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> <HireConfirmationModal isOpen= {
-  hireModalOpen 
+  hireModalOpen
 }onClose= {
-  () => setHireModalOpen (false) 
+  () => setHireModalOpen (false)
 }application= {
-  selectedApplication || undefined 
+  selectedApplication |undefined
 }onConfirm= {
-  handleHireConfirmed 
-}/> </>) 
+  handleHireConfirmed
+}/> </>)
 }'"}
 =======
                 <TableCell className="text-right">
@@ -442,4 +555,8 @@ export function ApplicationsTable({;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

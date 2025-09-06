@@ -2,22 +2,22 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface NavigationItem {
-  name: string, href: string,
+  name: string, href: string
   submenu?: NavigationItem[];
 }
-
 interface InteractiveNavigationProps {
-  items: NavigationItem[], className?: string,
+  items: NavigationItem[], className?: string
 }
-
-const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ 
-  items, 
-  className = '' 
+const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
+  items
+  className = ''
 }) => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
-
   return (
     <nav className={`relative ${className}`}>
       <ul className="flex space-x-8">
@@ -75,12 +75,18 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
       </ul>
     </nav>
   );
+<<<<<<< HEAD
+}
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+=======
 
 };
 
 export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -88,8 +94,12 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
-            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",
+            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>","
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+<<<<<<< HEAD
+export default Component}
+=======
 export default Component}
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

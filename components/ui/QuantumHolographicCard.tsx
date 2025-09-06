@@ -1,6 +1,19 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+  Star
+  Zap
+  Shield
+  TrendingUp
+  ArrowRight
+  ExternalLink
+  Check
+  Users
+  Clock
+  DollarSign;
+=======
   Star,
   Zap,
   Shield,
@@ -11,7 +24,9 @@ import {
   Users,
   Clock,;
   DollarSign,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
+
 interface QuantumHolographicCardProps {
   service: {
     id: string;
@@ -44,78 +59,94 @@ interface QuantumHolographicCardProps {
       mobile: string;
       email: string;
       address: string;
+
       website: string;
-    };
+    }
+
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
+<<<<<<< HEAD
+=======
     reviews: number;
   };
   className?: string;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+    reviews: number;
+  }
+  className?: string;
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
-  service,
-  className = '',
+  service
+  className = ''
 }) => {
   const cardVariants = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: {      opacity: 1,    visible: { 
-      opacity: 1,
-      y: 0,
-      scale: 1,
+    hidden: { opacity: 0, y: 50, scale: 0.9 }
+    visible: {      opacity: 1,    visible: {
+      opacity: 1
+      y: 0
+      scale: 1
       transition: {
-        duration: 0.6,
-        ease: 'easeOut' as const,
-      },
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
     },    hover: {        ease: "easeOut" as const
       }
-    };
+    }
     hover: {
-      y: -10,
-      scale: 1.02,
+      y: -10
+      scale: 1.02
       transition: {
-        duration: 0.3,
-        ease: 'easeInOut' as const,
-      },
+        duration: 0.3
+        ease: 'easeInOut' as const
+      }
     },  };        ease: "easeInOut" as const
       }
     }
-  };
-
+  }
   const glowVariants = {
-    initial: { opacity: 0.5, scale: 1 },
+    initial: { opacity: 0.5, scale: 1 }
     animate: {
-      opacity: [0.5, 1, 0.5],
-      scale: [1, 1.05, 1],
+      opacity: [0.5, 1, 0.5]
+      scale: [1, 1.05, 1]
       transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: 'easeInOut' as const,
-      },
+        duration: 3
+        repeat: Infinity
+        ease: 'easeInOut' as const
+      }
     },  };      opacity: [0.5, 1, 0.5];
       scale: [1, 1.05, 1];
       transition: {
-        duration: 3,
-        repeat: Infinity,
+        duration: 3
+        repeat: Infinity
         ease: "easeInOut" as const
       }
     }
-
   const featureVariants = {
-    hidden: { opacity: 0, x: -20 },
+    hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
+      opacity: 1
+      x: 0
       transition: {
+<<<<<<< HEAD
+        delay: i * 0.1
+        duration: 0.5
+        ease: 'easeOut' as const
+      }
+    })
+  }
+=======
         delay: i * 0.1,
         duration: 0.5,
         ease: 'easeOut' as const,
       },
     }),
+
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     >
       {/* Holographic glow effect */}
       <motion.div
@@ -151,9 +182,14 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
+=======
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -201,13 +237,22 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             )}
           </div>
 =======
+<<<<<<< HEAD
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>Popular</span>
 
               </motion.div>
             )}
           </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Price and trial */}
           <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center space-x-2'>
@@ -308,7 +353,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
                   <span>{feature}</span>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </motion.div>
               ))}
             </div>
@@ -316,7 +365,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Market data */}
           <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
             <div className='flex items-center justify-between mb-2'>
@@ -351,7 +404,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               <div className='text-sm font-semibold text-orange-300 mb-1'>
                 Competitors
               </div>
-              <div className='text-xs text-gray-300'>                {service.competitors.slice(0, 2).join(', ')}            
+              <div className='text-xs text-gray-300'>                {service.competitors.slice(0, 2).join(', ')}
             <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
               <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
               <div className="text-xs text-gray-300">
@@ -394,14 +447,22 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
           {/* ROI and competitors */}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </div>
           </div>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* CTA Button */}
           <motion.a
             href={service.link}
@@ -409,7 +470,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -447,13 +512,24 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default QuantumHolographicCard;  )
-};
-
+}
 export default QuantumHolographicCard;
+
+<<<<<<< HEAD
+=======
+export default QuantumHolographicCard;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 export default QuantumHolographicCard;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

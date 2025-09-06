@@ -1,50 +1,57 @@
 <<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+=======
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+const usersPath = path.join(process.cwd(), 'datalearnusers.json')
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
-
 function writeJson(p: string, data: any) {
   fs.writeFileSync(p, JSON.stringify(data, null, 2))
 }
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-res.setHeader('AllowPOST'),
+res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
   }
-
-  const { userId = 'demo-user', courseId, enableBoost } = req.body || {},
-  if (!courseId) return res.status(400).json({ error: 'courseId required' }),
-
+  const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
+  if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
-    const users = readJson(usersPath),
-    const courses = readJson(coursesPath),
-    const course = courses.find((c: any) => c.id === courseId),
-    if (!course) return res.status(404).json({ error: 'Course not found' }),
-
-    const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },
-    if (!user.certifications.includes(courseId)) user.certifications.push(courseId),
-    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge),
-    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost,
-
+    const users = readJson(usersPath)
+    const courses = readJson(coursesPath)
+    const course = courses.find((c: any) => c.id === courseId)
+    if (!course) return res.status(404).json({ error: 'Course not found' })
+    const user = users[userId] |{ userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} }
+    if (!user.certifications.includes(courseId)) user.certifications.push(courseId)
+    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge)
+    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost
     // Mark progress complete
-    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) },
+    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons |[]).map((l: any) => l.id) }
+    users[userId] = user
+    writeJson(usersPath, users)
 
-    users[userId] = user,
-    writeJson(usersPath, users),
     return res.status(200).json({ ok: true, user })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
+<<<<<<< HEAD
+=======
+=======
   };
 };
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -140,6 +147,11 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

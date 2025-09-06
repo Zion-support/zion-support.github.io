@@ -5,7 +5,6 @@ export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
-
 // Export service types and interfaces
 export type {;
   ShortUrl;
@@ -13,27 +12,43 @@ export type {;
   ClickEvent;
   CreateShortUrlRequest
 } from './urlShortenerService';
+<<<<<<< HEAD
+export type {
+=======
 
 export type {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword
 } from './passwordGeneratorService';
+<<<<<<< HEAD
+export type {
+=======
 
 export type {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate
 } from './qrCodeService';
+<<<<<<< HEAD
+export type {
+=======
 
 export type {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
   FileInfo
 } from './fileConverterService';
+<<<<<<< HEAD
+export type {
+=======
 
 export type {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -43,39 +58,42 @@ export type {;
   EntityExtraction;
   TextSummary
 } from './textAnalysisService';
-
 // Service categories for easy discovery
+
 export const SERVICE_CATEGORIES = {
   UTILITIES: {;
     name: 'Utility Tools';
-    description: 'Essential tools for everyday tasks',
+    description: 'Essential tools for everyday tasks'
     services: ['urlShortenerpasswordGeneratorqrCodeGenerator']
-  };
+  }
   MEDIA: {
     name: 'Media & Files';
-    description: 'File conversion and media processing tools',
+    description: 'File conversion and media processing tools'
     services: ['fileConverter']
-  };
+  }
   ANALYSIS: {
     name: 'Analysis & Insights';
-    description: 'Text analysis and content insights',
+    description: 'Text analysis and content insights'
     services: ['textAnalysis']
   }
 } as const;
-
 // Service metadata for the application
 export const SERVICES_METADATA = {
   urlShortener: {
+<<<<<<< HEAD
+    name: 'URL Shortener'
+=======
     name: 'URL Shortener',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
     features: [
       'Custom short codesClick trackingAnalytics dashboardExpiration datesQR code generation'
     ];
-    pricing: 'Free',
+    pricing: 'Free'
     apiEndpoint: '/api/url-shortener'
-  };
+  }
   passwordGenerator: {
     name: 'Password Generator';
     description: 'Generate secure passwords with strength analysis';
@@ -84,9 +102,9 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple generation modesStrength analysisCustom character setsPassword historySecurity recommendations'
     ];
-    pricing: 'Free',
+    pricing: 'Free'
     apiEndpoint: '/api/password-generator'
-  };
+  }
   qrCodeGenerator: {
     name: 'QR Code Generator';
     description: 'Create QR codes for various purposes';
@@ -95,9 +113,9 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple QR code typesCustom stylingLogo integrationError correctionTemplate library'
     ];
-    pricing: 'Free',
+    pricing: 'Free'
     apiEndpoint: '/api/qr-code-generator'
-  };
+  }
   fileConverter: {
     name: 'File Converter';
     description: 'Convert files between different formats';
@@ -106,9 +124,9 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
     ];
-    pricing: 'Free (Basic) / $9.99/month (Pro)',
+    pricing: 'Free (Basic) / $9.99/month (Pro)'
     apiEndpoint: '/api/file-converter'
-  };
+  }
   textAnalysis: {
     name: 'Text Analysis';
     description: 'Analyze text for insights and optimization';
@@ -117,33 +135,51 @@ export const SERVICES_METADATA = {
     features: [
       'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
     ];
-    pricing: 'Free (Basic) / $19.99/month (Pro)',
+    pricing: 'Free (Basic) / $19.99/month (Pro)'
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
-
 // Service availability and status
 export const getServiceStatus = () => {
+<<<<<<< HEAD
+  return {
+    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+=======
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
   }
-};
-
+}
 // Service usage statistics
 export const getServiceStats = () => {
   return {;
     totalUsers: 15420;
     totalRequests: 2847500;
-    averageResponseTime: 125,
+    averageResponseTime: 125
     services: {
+<<<<<<< HEAD
+      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
+      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
+      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
+      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 }
+      textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
+    }
+  }
+}
+
+=======
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 // Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService',;
@@ -281,8 +317,12 @@ export const getServiceStats = () => {;
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },;
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },;
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
   }
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

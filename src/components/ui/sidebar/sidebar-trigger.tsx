@@ -8,17 +8,22 @@ import { useSidebar } from &quot;./sidebar-context&quot;
 =======
 import * as React from "react"
 import { PanelLeft } from 'lucide-react'
+<<<<<<< HEAD
+import { Button } from &quot;@/components/ui/button&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import { useSidebar } from &quot;./sidebar-context&quot;
+=======
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const SidebarTrigger = React.forwardRef<
-  React.ElementRef<typeof Button>,
+  React.ElementRef<typeof Button>
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
-
   return (
 <<<<<<< HEAD
     <Button;
@@ -46,4 +51,8 @@ export const SidebarTrigger = React.forwardRef<
     </Button>
   )
 })
+<<<<<<< HEAD
+SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
+=======
 SidebarTrigger.displayName = "SidebarTrigger"
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

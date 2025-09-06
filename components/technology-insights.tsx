@@ -1,119 +1,132 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
+
   const technologyTrends = [
     {
-      id: 'quantum-computing',
-      title: 'Quantum Computing in 2025',
+      id: 'quantum-computing'
+      title: 'Quantum Computing in 2025'
       description:
+<<<<<<< HEAD
+        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
+      readTime: '15 min read'
+      featured: true
+    }
+=======
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true;
     };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
-      id: 'edge-ai',
-      title: 'Edge AI Revolution',
-      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.',
-      category: 'AI/ML',
-      readTime: '12 min read',
+      id: 'edge-ai'
+      title: 'Edge AI Revolution'
+      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.'
+      category: 'AI/ML'
+      readTime: '12 min read'
       featured: false
-    };
+    }
     {
-      id: 'autonomous-vehicles',
-      title: 'Autonomous Vehicle Technology',
-      description: 'The current state and future of autonomous vehicle technology and its broader applications.',
-      category: 'Autonomy',
-      readTime: '18 min read',
-      featured: false,
+      id: 'autonomous-vehicles'
+      title: 'Autonomous Vehicle Technology'
+      description: 'The current state and future of autonomous vehicle technology and its broader applications.'
+      category: 'Autonomy'
+      readTime: '18 min read'
+      featured: false
     },      featured: false
     }
   ];
-
   const researchAreas = [
     {
-      title: 'Autonomous Systems Research',
+      title: 'Autonomous Systems Research'
       description:
-        'Pioneering research in building truly autonomous systems that can operate independently.',
+        'Pioneering research in building truly autonomous systems that can operate independently.'
       focus: [
-        'Decision Making',
-        'Self-Learning',
-        'Adaptive Behavior',
-        'System Integration',
-      ],
-      icon: '🔬',
-    },
-      title: 'AI Ethics & Governance',
+        'Decision Making'
+        'Self-Learning'
+        'Adaptive Behavior'
+        'System Integration'
+      ]
+      icon: '🔬'
+    }
+      title: 'AI Ethics & Governance'
       description:
-        'Research into responsible AI development and ethical considerations for autonomous systems.',
-      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability'],
-      icon: '⚖️',
-    },
+        'Research into responsible AI development and ethical considerations for autonomous systems.'
+      focus: ['Ethical AI', 'Bias Detection', 'Transparency', 'Accountability']
+      icon: '⚖️'
+    }
     {
-      title: 'Human-AI Collaboration',
+      title: 'Human-AI Collaboration'
       description:
-        'Exploring how humans and AI can work together effectively and safely.',
+        'Exploring how humans and AI can work together effectively and safely.'
       focus: [
-        'Human-AI Interface',
-        'Collaborative Decision Making',
-        'Safety Protocols',
-        'Trust Building',
-      ],
-      icon: '🤝',
-    },  ];      description: 'Exploring how humans and AI can work together effectively and safely.',
-      focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],
+        'Human-AI Interface'
+        'Collaborative Decision Making'
+        'Safety Protocols'
+        'Trust Building'
+      ]
+      icon: '🤝'
+    },  ];      description: 'Exploring how humans and AI can work together effectively and safely.'
+      focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building']
       icon: '🤝'
     }
-
   const whitepapers = [
     {
-      id: 'autonomous-systems-whitepaper',
-      title: 'The Future of Autonomous Systems',
+      id: 'autonomous-systems-whitepaper'
+      title: 'The Future of Autonomous Systems'
       description:
-        'A comprehensive analysis of autonomous technology trends and implementation strategies.',
-      pages: '45',
-      category: 'Technology',
-      downloadUrl: '/whitepapers/autonomous-systems-future.pdf',      pages: '45',
-      category: 'Technology',
+        'A comprehensive analysis of autonomous technology trends and implementation strategies.'
+      pages: '45'
+      category: 'Technology'
+      downloadUrl: '/whitepapers/autonomous-systems-future.pdf',      pages: '45'
+      category: 'Technology'
       downloadUrl: '/whitepapers/autonomous-systems-future.pdf'
-    };
+    }
     {
-      id: 'ai-ethics-framework',
-      title: 'AI Ethics Framework for Business',
-      description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
-      pages: '32',
-      category: 'Ethics',
+      id: 'ai-ethics-framework'
+      title: 'AI Ethics Framework for Business'
+      description: 'Establishing ethical guidelines for AI implementation in enterprise environments.'
+      pages: '32'
+      category: 'Ethics'
       downloadUrl: '/whitepapers/ai-ethics-framework.pdf'
-    };
+    }
     {
-      id: 'automation-roi-guide',
-      title: 'Automation ROI Guide',
-      description: 'How to calculate and maximize return on investment for automation initiatives.',
-      pages: '28',
-      category: 'Business',
-      downloadUrl: '/whitepapers/automation-roi-guide.pdf',
-    },
+      id: 'automation-roi-guide'
+      title: 'Automation ROI Guide'
+      description: 'How to calculate and maximize return on investment for automation initiatives.'
+      pages: '28'
+      category: 'Business'
+      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
+    }
     {
-      id: 'ai-ethics-framework',
-      title: 'AI Ethics Framework for Business',
+      id: 'ai-ethics-framework'
+      title: 'AI Ethics Framework for Business'
       description:
-        'Establishing ethical guidelines for AI implementation in enterprise environments.',
-      pages: '32',
-      category: 'Ethics',
-      downloadUrl: '/whitepapers/ai-ethics-framework.pdf',
-    },
+        'Establishing ethical guidelines for AI implementation in enterprise environments.'
+      pages: '32'
+      category: 'Ethics'
+      downloadUrl: '/whitepapers/ai-ethics-framework.pdf'
+    }
     {
-      id: 'automation-roi-guide',
-      title: 'Automation ROI Guide',
+      id: 'automation-roi-guide'
+      title: 'Automation ROI Guide'
       description:
-        'How to calculate and maximize return on investment for automation initiatives.',
-      pages: '28',
-      category: 'Business',
-      downloadUrl: '/whitepapers/automation-roi-guide.pdf',
+        'How to calculate and maximize return on investment for automation initiatives.'
+      pages: '28'
+      category: 'Business'
+      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     },  ];      downloadUrl: '/whitepapers/automation-roi-guide.pdf'
     }
   ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -198,7 +211,7 @@ export default function TechnologyInsightsPage() {
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
                     <p className="text-white/70 mb-4">{trend.description}</p>
-                    <Link 
+                    <Link
                       href={`/blog/${trend.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
@@ -209,7 +222,11 @@ export default function TechnologyInsightsPage() {
 
                     </Link>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 ))}
               </div>
@@ -217,7 +234,11 @@ export default function TechnologyInsightsPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Research Areas */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -227,7 +248,11 @@ export default function TechnologyInsightsPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {researchAreas.map((area, index) => (
                   <div
                     key={index}
@@ -264,7 +289,11 @@ export default function TechnologyInsightsPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Whitepapers */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -274,7 +303,11 @@ export default function TechnologyInsightsPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {whitepapers.map((paper, index) => (
                   <div
                     key={index}
@@ -305,7 +338,7 @@ export default function TechnologyInsightsPage() {
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>
                     <p className="text-white/70 mb-4">{paper.description}</p>
-                    <Link 
+                    <Link
                       href={paper.downloadUrl}
                       className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                     >
@@ -316,7 +349,11 @@ export default function TechnologyInsightsPage() {
 
                     </Link>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 ))}
               </div>
@@ -324,7 +361,11 @@ export default function TechnologyInsightsPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -335,14 +376,18 @@ export default function TechnologyInsightsPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
                     </h3>
                     <p className='text-white/80 mb-6'>
                       Our innovation lab is dedicated to exploring the frontiers
-                      of technology, conducting research in autonomous systems,
+                      of technology, conducting research in autonomous systems
                       AI ethics, and human-AI collaboration. We work with
                       leading institutions and industry partners to advance the
                       state of the art.
@@ -351,6 +396,7 @@ export default function TechnologyInsightsPage() {
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
+
                     </p>
                     <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>
@@ -388,13 +434,13 @@ export default function TechnologyInsightsPage() {
                   href='/blog'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link 
+                <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get in Touch
                 </Link>
-                <Link 
+                <Link
                   href="/blog"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
                 >
@@ -408,8 +454,15 @@ export default function TechnologyInsightsPage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -3,6 +3,21 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
+<<<<<<< HEAD
+  Code
+  Zap
+  Shield
+  BarChart3
+  CheckCircle
+  ArrowRight
+  Play
+  AlertTriangle
+  Clock
+  Database;
+} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
+=======
   Code,
   Zap,
   Shield,
@@ -14,6 +29,11 @@ import {
   Clock,;
   Database,;
 <<<<<<< HEAD
+} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
 } from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
@@ -21,6 +41,7 @@ export default function APITestingSuitePage() {;
 =======
 } from 'lucide-react';
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function APITestingSuitePage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isTesting, setIsTesting] = useState(false);
@@ -30,73 +51,86 @@ export default function APITestingSuitePage() {
 
   const features = [
     {
-      icon: <Code className='w-8 h-8 text-white' />,
+      icon: <Code className='w-8 h-8 text-white' />
       description:
-        'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.',
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      gradient: 'from-indigo-400 to-purple-500',
-    },
+        'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.'
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600'
+      gradient: 'from-indigo-400 to-purple-500'
+    }
     {
-      icon: <Zap className='w-8 h-8 text-white' />,
-      title: 'Performance Testing',
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'Performance Testing'
       description:
-        'Load testing, stress testing, and performance benchmarking for your APIs.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500',
-    },
+        'Load testing, stress testing, and performance benchmarking for your APIs.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'
+    }
     {
-      icon: <Shield className='w-8 h-8 text-white' />,
-      title: 'Security Testing',
+      icon: <Shield className='w-8 h-8 text-white' />
+      title: 'Security Testing'
       description:
-        'Automated security testing including authentication, authorization, and vulnerability scanning.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-    },
+        'Automated security testing including authentication, authorization, and vulnerability scanning.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
     {
-      icon: <BarChart3 className='w-8 h-8 text-white' />,
-      title: 'Real-Time Monitoring',
+      icon: <BarChart3 className='w-8 h-8 text-white' />
+      title: 'Real-Time Monitoring'
       description:
-        '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-    },
+        '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
   ];
-
   const testTypes = [
     {
-      name: 'Functional Testing',
+      name: 'Functional Testing'
       description:
-        'Verify that your API endpoints work correctly and return expected responses.',
+        'Verify that your API endpoints work correctly and return expected responses.'
       tests: [
-        'Request/response validation',
-        'Status code verification',
-        'Data format checking',
-        'Error handling',
-      ],
-    },
+        'Request/response validation'
+        'Status code verification'
+        'Data format checking'
+        'Error handling'
+      ]
+    }
     {
-      name: 'Performance Testing',
+      name: 'Performance Testing'
       description:
-        'Ensure your APIs can handle expected load and perform under pressure.',
+        'Ensure your APIs can handle expected load and perform under pressure.'
       tests: [
-        'Load testing',
-        'Stress testing',
-        'Response time analysis',
-        'Throughput measurement',
-      ],
-    },
+        'Load testing'
+        'Stress testing'
+        'Response time analysis'
+        'Throughput measurement'
+      ]
+    }
     {
-      name: 'Security Testing',
+      name: 'Security Testing'
       description:
-        'Identify security vulnerabilities and ensure proper authentication and authorization.',
+        'Identify security vulnerabilities and ensure proper authentication and authorization.'
       tests: [
-        'Authentication testing',
-        'Authorization checks',
-        'Input validation',
-        'SQL injection testing',
-      ],
-    },
+        'Authentication testing'
+        'Authorization checks'
+        'Input validation'
+        'SQL injection testing'
+      ]
+    }
     {
+<<<<<<< HEAD
+      name: 'Integration Testing'
+      description:
+        'Test how your APIs integrate with other systems and services.'
+      tests: [
+        'End-to-end workflows'
+        'Third-party integrations'
+        'Data flow validation'
+        'Error propagation'
+      ]
+    },  ];      description: 'Test how your APIs integrate with other systems and services.'
+      tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
+    }
+=======
       name: 'Integration Testing',
       description:
         'Test how your APIs integrate with other systems and services.',
@@ -106,120 +140,126 @@ export default function APITestingSuitePage() {
         'Data flow validation',
         'Error propagation',
       ],
-    },  ];      description: 'Test how your APIs integrate with other systems and services.',
-      tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
-    }
-  ];
+    },  ];
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  ];
   const pricing = [
     {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for developers and small teams',
+      name: 'Starter'
+      price: '$49'
+      period: '/month'
+      description: 'Perfect for developers and small teams'
       features: [
-        '100 API tests/month',
-        'Basic test scenarios',
-        'Email notifications',
-        'Basic reporting',
-        '5 API endpoints',
-        'Community support',
-      ],
-      popular: false,
+        '100 API tests/month'
+        'Basic test scenarios'
+        'Email notifications'
+        'Basic reporting'
+        '5 API endpoints'
+        'Community support'
+      ]
+      popular: false
     },    {        '100 API tests/monthBasic test scenariosEmail notificationsBasic reporting5 API endpointsCommunity support'
       ];
       popular: false
-    };
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for growing businesses and development teams',
+    }
+      name: 'Professional'
+      price: '$99'
+      period: '/month'
+      description: 'Ideal for growing businesses and development teams'
       features: [
-        '500 API tests/month',
-        'Advanced test scenarios',
-        'SMS & email alerts',
-        'Advanced reporting',
-        '25 API endpoints',
-        'Performance testing',
-        'API access',
-        'Priority support',
-      ],
-      popular: true,
+        '500 API tests/month'
+        'Advanced test scenarios'
+        'SMS & email alerts'
+        'Advanced reporting'
+        '25 API endpoints'
+        'Performance testing'
+        'API access'
+        'Priority support'
+      ]
+      popular: true
     },    {        '500 API tests/monthAdvanced test scenariosSMS & email alertsAdvanced reporting25 API endpointsPerformance testingAPI accessPriority support'
       ];
       popular: true
-    };
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations with complex API requirements',
+    }
+      name: 'Enterprise'
+      price: '$299'
+      period: '/month'
+      description: 'For large organizations with complex API requirements'
       features: [
-        'Unlimited API tests',
-        'Custom test scenarios',
-        'Custom alerting rules',
-        '24/7 dedicated support',
-        'Unlimited endpoints',
-        'Advanced security testing',
-        'White-label options',
-        'Custom integrations',
-      ],
-      popular: false,
+        'Unlimited API tests'
+        'Custom test scenarios'
+        'Custom alerting rules'
+        '24/7 dedicated support'
+        'Unlimited endpoints'
+        'Advanced security testing'
+        'White-label options'
+        'Custom integrations'
+      ]
+      popular: false
     },  ];
-
   const handleTestAPI = async () => {
     if (!apiEndpoint.trim()) return;        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations'
       ];
       popular: false
     }
-
   const handleTestAPI = async () => {
     if (!apiEndpoint.trim()) return;
-    
     setIsTesting(true);
     // Simulate API testing
     setTimeout(() => {
       setTestResults({
-        endpoint: apiEndpoint,
-        status: 'success',
-        responseTime: '245ms',
-        statusCode: 200,
+        endpoint: apiEndpoint
+        status: 'success'
+        responseTime: '245ms'
+        statusCode: 200
         tests: [
           {
-            name: 'Response Time',
-            status: 'pass',
-            value: '245ms',
-            threshold: '<500ms',
-          },
+            name: 'Response Time'
+            status: 'pass'
+            value: '245ms'
+            threshold: '<500ms'
+          }
           {
-            name: 'Status Code',
-            status: 'pass',
-            value: '200',
-            threshold: '200',
-          },
+            name: 'Status Code'
+            status: 'pass'
+            value: '200'
+            threshold: '200'
+          }
           {
-            name: 'Response Format',
-            status: 'pass',
-            value: 'JSON',
-            threshold: 'Valid JSON',
-          },
+            name: 'Response Format'
+            status: 'pass'
+            value: 'JSON'
+            threshold: 'Valid JSON'
+          }
           {
-            name: 'Authentication',
-            status: 'pass',
-            value: 'Valid',
-            threshold: 'Authenticated',
-          },
+            name: 'Authentication'
+            status: 'pass'
+            value: 'Valid'
+            threshold: 'Authenticated'
+          }
           {
+<<<<<<< HEAD
+            name: 'Rate Limiting'
+            status: 'pass'
+            value: 'Within limits'
+            threshold: 'No throttling'
+          }
+        ]
+=======
             name: 'Rate Limiting',
             status: 'pass',
             value: 'Within limits',
             threshold: 'No throttling',
           },
         ],
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         recommendations: [
-          'Consider implementing response caching for better performance',
-          'Monitor response times during peak usage',
-          'Implement rate limiting headers for better API documentation',
-        ],
+          'Consider implementing response caching for better performance'
+          'Monitor response times during peak usage'
+          'Implement rate limiting headers for better API documentation'
+        ]
       });
       setIsTesting(false);
     }, 3000);  };        recommendations: [
@@ -228,8 +268,7 @@ export default function APITestingSuitePage() {
       });
       setIsTesting(false)
     }, 3000)
-  };
-
+  }
   return (
     <>
       <Head>
@@ -266,9 +305,13 @@ export default function APITestingSuitePage() {
           </h1>
           <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>
             Test, monitor, and optimize your APIs with our comprehensive testing
-            suite. Functional, performance, and security testing for REST,
+            suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>
@@ -289,7 +332,7 @@ export default function APITestingSuitePage() {
             <Button
               onClick={handleTestAPI}
               size='lg'
-              className='w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow'              disabled={isTesting || !apiEndpoint.trim()}
+              className='w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow'              disabled={isTesting |!apiEndpoint.trim()}
             >
               {isTesting ? (
                 <>
@@ -306,7 +349,7 @@ export default function APITestingSuitePage() {
               size='lg'
               className='w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow'              size="lg"
               className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-2xl hover-glow"
-              disabled={isTesting || !apiEndpoint.trim()}
+              disabled={isTesting |!apiEndpoint.trim()}
             >
               {isTesting ? (
                 <>
@@ -417,7 +460,11 @@ export default function APITestingSuitePage() {
 
                       {feature.description}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                 </div>
@@ -429,7 +476,11 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -438,7 +489,11 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -494,7 +549,11 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Demo Test Results */}
       {testResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -595,7 +654,11 @@ export default function APITestingSuitePage() {
 
                       </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   ))}
                 </div>
@@ -603,7 +666,11 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -618,7 +685,11 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -668,14 +739,21 @@ export default function APITestingSuitePage() {
 
                   </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
               </div>
             </Card>
           </div>
         </section>
       )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -684,7 +762,11 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -716,7 +798,10 @@ export default function APITestingSuitePage() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -745,9 +830,16 @@ export default function APITestingSuitePage() {
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
+<<<<<<< HEAD
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                       {feature}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -769,7 +861,11 @@ export default function APITestingSuitePage() {
 
                 </Button>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
@@ -778,7 +874,11 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -788,7 +888,11 @@ export default function APITestingSuitePage() {
 =======
 
             Ready to Test Your APIs?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers and businesses using our API testing
@@ -819,9 +923,15 @@ export default function APITestingSuitePage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
 
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

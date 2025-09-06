@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
   buttonLabel?: string;
@@ -6,9 +11,17 @@ export type AIAssistantProps = {;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-};
-
+}
 export default function AIAssistant({
+<<<<<<< HEAD
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  defaultPrompt
+  systemPrompt
+  onAccept
+  authorizationToken
+}: AIAssistantProps) {
+=======
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -16,63 +29,62 @@ export default function AIAssistant({
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     setPrompt(defaultPrompt);
   }, [defaultPrompt]);
-
   const callOperator = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
       const res = await fetch("/api/ai/operator", {
-        method: "POST",
+        method: "POST"
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
           ...(authorizationToken
             ? { Authorization: `Bearer ${authorizationToken}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
               ? {
-                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}`,
+                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}`
                 }
-              : {}),
-        },
-        body: JSON.stringify({ prompt, system: systemPrompt }),
+              : {})
+        }
+        body: JSON.stringify({ prompt, system: systemPrompt })
       });
       const data = await res.json();
       if (!res.ok) {
-        throw new Error(data?.error || "Failed to generate");
+        throw new Error(data?.error |"Failed to generate");
       }
-      setOutput(String(data.text || ""));
+      setOutput(String(data.text |""));
       setIsEditing(false);
     } catch (e: any) {
-      setError(e.message || "Request failed");
+      setError(e.message |"Request failed");
     } finally {
       setLoading(false);
     }
   }, [authorizationToken, prompt, systemPrompt]);
-
   const onCopy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(output);
     } catch {}
   }, [output]);
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const onOpen = useCallback(() => {
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
     setError(null);
   }, []);
-
   const onClose = useCallback(() => setIsOpen(false), []);
-
   const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
 
   return (
@@ -167,7 +179,7 @@ export default function AIAssistant({
                   />
                 ) : (
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">
-                    {output || "No content yet. Click Generate."}
+                    {output |"No content yet. Click Generate."}
                   </pre>
                 )}
               </div>
@@ -176,5 +188,9 @@ export default function AIAssistant({
         </div>
       )}
     </>
-);
+  );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

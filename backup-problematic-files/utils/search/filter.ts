@@ -3,12 +3,14 @@
 export const filterResults = (results: any[], filters: any) => {
   // Add search filtering functionality here;
   return results;
-};
-
+}
 export const sortResults = (results: any[], sortBy: string) => {
   // Add search sorting functionality here;
   return results;
+<<<<<<< HEAD
+=======
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 <<<<<<< HEAD:backup-problematic-files/utils/search/filter.ts
 import type { ParsedFilters } from './parser',;
@@ -292,5 +294,10 @@ export function suggestDidYouMean(query: string): string[] {
   
   return suggestions.slice(0, 3); // Return max 3 suggestions
 >>>>>>> main:utils/search/filter.ts
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/search/filter.ts
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/search/filter.ts
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

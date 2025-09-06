@@ -1,13 +1,26 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
+<<<<<<< HEAD
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+=======
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/card";
+
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 <<<<<<< HEAD
@@ -16,6 +29,17 @@ export function DisputeDashboard() {;
 export function DisputeDashboard() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { disputes, isLoading, refetch } = useDisputes();
+<<<<<<< HEAD
+  useEffect(() => {
+    refetch();
+  }, [refetch]);
+
+  const openDisputes = disputes.filter((d) => d.status === "open");
+  const underReviewDisputes = disputes.filter(
+    (d) => d.status === "under_review"
+  );
+  const resolvedDisputes = disputes.filter((d) => d.status === "resolved");
+=======
 
 import React, { useEffect } from "react",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -33,6 +57,7 @@ export function DisputeDashboard() {
   const openDisputes = disputes.filter(d => d.status === 'open'),
   const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
   const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="container mx-auto p-4 space-y-6">
@@ -44,7 +69,11 @@ export function DisputeDashboard() {
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
@@ -52,7 +81,11 @@ export function DisputeDashboard() {
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -63,6 +96,20 @@ export function DisputeDashboard() {
             <CardDescription>Awaiting review</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+            <div
+              className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}
+            >
+              <div
+                className="bg-red-600 h-2.5 rounded-full"
+                style={{
+                  width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%`
+                }}
+              ></div>
+            </div>
+          </CardContent>
+        </Card>
+=======
             <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>
               <div className="bg-red-600 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
@@ -73,7 +120,11 @@ export function DisputeDashboard() {
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -83,6 +134,20 @@ export function DisputeDashboard() {
             <CardDescription>Being actively processed</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+            <div
+              className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}
+            >
+              <div
+                className="bg-yellow-500 h-2.5 rounded-full"
+                style={{
+                  width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%`
+                }}
+              ></div>
+            </div>
+          </CardContent>
+        </Card>
+=======
             <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>
               <div className="bg-yellow-500 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
@@ -93,7 +158,11 @@ export function DisputeDashboard() {
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -103,10 +172,22 @@ export function DisputeDashboard() {
             <CardDescription>Successfully concluded</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
+            <div
+              className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}
+            >
+              <div
+                className="bg-green-500 h-2.5 rounded-full"
+                style={{
+                  width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`
+                }}
+              ></div>
+=======
             <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>
               <div className="bg-green-500 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
               }}></div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
           </CardContent>
         </Card>
@@ -201,4 +282,8 @@ export function DisputeDashboard() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

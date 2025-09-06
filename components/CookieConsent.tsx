@@ -1,68 +1,64 @@
 import React, { useState, useEffect } from "react";
 import { X, Cookie, Settings } from "lucide-react";
+<<<<<<< HEAD
+export default function CookieConsent() {
+=======
 
 export default function CookieConsent() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({
-    necessary: true,
-    analytics: false,
-    marketing: false,
-    functional: false,
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
   });
-
   useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
     if (!consent) {
       setIsVisible(true);
     }
   }, []);
-
   const acceptAll = () => {
     const allAccepted = {
-      necessary: true,
-      analytics: true,
-      marketing: true,
-      functional: true,
-    };
+      necessary: true
+      analytics: true
+      marketing: true
+      functional: true
+    }
     setPreferences(allAccepted);
     localStorage.setItem("cookie-consent", JSON.stringify(allAccepted));
     setIsVisible(false);
-
     // Initialize analytics if accepted
     if (allAccepted.analytics) {
       // Add your analytics initialization code here
       console.log("Analytics initialized");
     }
-  };
-
+  }
   const acceptSelected = () => {
     localStorage.setItem("cookie-consent", JSON.stringify(preferences));
     setIsVisible(false);
-
     // Initialize analytics if accepted
     if (preferences.analytics) {
       // Add your analytics initialization code here
       console.log("Analytics initialized");
     }
-  };
-
+  }
   const rejectAll = () => {
     const onlyNecessary = {
-      necessary: true,
-      analytics: false,
-      marketing: false,
-      functional: false,
-    };
+      necessary: true
+      analytics: false
+      marketing: false
+      functional: false
+    }
     setPreferences(onlyNecessary);
     localStorage.setItem("cookie-consent", JSON.stringify(onlyNecessary));
     setIsVisible(false);
-  };
-
+  }
   if (!isVisible) {
     return null;
   }
-
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">
       <div className="max-w-7xl mx-auto p-4">
@@ -147,8 +143,8 @@ export default function CookieConsent() {;
                   checked={preferences.analytics}
                   onChange={(e) =>
                     setPreferences((prev) => ({
-                      ...prev,
-                      analytics: e.target.checked,
+                      ...prev
+                      analytics: e.target.checked
                     }))
                   }
                   className="w-4 h-4 text-blue-600 rounded"
@@ -169,8 +165,8 @@ export default function CookieConsent() {;
                   checked={preferences.marketing}
                   onChange={(e) =>
                     setPreferences((prev) => ({
-                      ...prev,
-                      marketing: e.target.checked,
+                      ...prev
+                      marketing: e.target.checked
                     }))
                   }
                   className="w-4 h-4 text-blue-600 rounded"
@@ -190,8 +186,8 @@ export default function CookieConsent() {;
                   checked={preferences.functional}
                   onChange={(e) =>
                     setPreferences((prev) => ({
-                      ...prev,
-                      functional: e.target.checked,
+                      ...prev
+                      functional: e.target.checked
                     }))
                   }
                   className="w-4 h-4 text-blue-600 rounded"

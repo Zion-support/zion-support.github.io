@@ -1,4 +1,105 @@
 <<<<<<< HEAD
+import Head from 'next/head';
+import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
+
+type RoadmapInputs = {
+  milestones: string
+  keywords: string
+  priorities: string
+}
+type Stage = {
+  id: number
+  name: string
+  theme: string
+  objective: string
+  highlights: string[]
+  metrics: string[]
+}
+function generateStages({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {
+  const keywordList = keywords
+    .split(/,|\n/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+  const priorityList = priorities
+    .split(/,|\n/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+  const baseThemes = [
+    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces'
+    'Governance & OwnershipGlobal Scale']
+  return baseThemes.map((theme, index) => {
+    const id = index + 1
+    const name = `Zion v${id}`
+    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() |'core principles'}, focus: ${
+      priorityList.join() |'execution and learning'
+    }.`
+    const highlights: string[] = [
+      index === 0 && 'Design system, domain model, and initial data architecture'
+      index === 1 && 'Verifiable credentials, attestations, and dispute primitives'
+      index === 2 && 'AI-assisted scoping, matching, and brief generation'
+      index === 3 && 'Reputation graph, portable profiles, contribution proofs'
+      index === 4 && 'Programmable escrow, milestone releases, stable on/off-ramps'
+      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration'
+      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations'
+      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem'
+      index === 8 && 'Progressive decentralization, contributor ownership, councils'
+      index === 9 && 'Regionalization, localization, reliability, and performance']
+      .filter(Boolean)
+      .map((s) => String(s))
+    const metrics: string[] = [
+      'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
+    return { id, name, theme, objective, highlights, metrics }
+  })
+}
+function defaultOperatorPrompt(): string {
+  return `You are Zion's Product Operator.
+Inputs you will receive:
+- milestones (string list)
+- keywords (string list)
+- priorities (string list)
+Goals:
+1) Produce a 10-stage roadmap labeled Zion v1 → v10
+2) For each stage: theme, objective, 3-5 highlights, 3-5 measurable metrics
+3) Ensure alignment with AI-native, trustless, talent-first, and sovereign tools ethos
+4) Include explicit risks and validation signals per stage
+5) Output concise, skimmable, exec-ready text
+Format:
+Zion v{n} — {theme}
+Objective: ...
+Highlights:
+- ...
+Metrics:
+- ...
+Risks:
+- ...
+Validation:
+- ...
+`
+}
+export default function RoadmapPage(): JSX.Element {
+  const [milestones, setMilestones] = useState('MVP live, First 50 users, First 10 paid engagements')
+  const [keywords, setKeywords] = useState('AI-native, trustless, talent-first, sovereign tools')
+  const [priorities, setPriorities] = useState('governance, scale, regional expansion')
+  const [copied, setCopied] = useState(false)
+  const stages = useMemo(
+    () => generateStages({ milestones, keywords, priorities })
+    [milestones, keywords, priorities]
+  )
+  const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
+  const copyPrompt = async () => {
+    try {
+      await navigator.clipboard.writeText(operatorPrompt)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+    } catch {
+      setCopied(false)
+    }
+  }
+
+=======
+=======
+<<<<<<< HEAD
 import Head from 'next/head',;
 import React, { useMemo, useState } from 'react',;
 ;
@@ -6,6 +107,7 @@ import React, { useMemo, useState } from 'react',;
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -121,6 +223,7 @@ export default function RoadmapPage(): JSX.Element {;
   }
 }
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -162,7 +265,11 @@ export default function RoadmapPage(): JSX.Element {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
                 />
@@ -184,7 +291,11 @@ export default function RoadmapPage(): JSX.Element {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -206,7 +317,11 @@ export default function RoadmapPage(): JSX.Element {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
@@ -225,7 +340,11 @@ export default function RoadmapPage(): JSX.Element {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'  } catch (error) {
@@ -286,6 +405,8 @@ export default function RoadmapPage(): JSX.Element {;
                   </div>
                 </article>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
               ))}
             </div>
           </section>
@@ -295,6 +416,7 @@ export default function RoadmapPage(): JSX.Element {;
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
   return (;
     <>;
@@ -455,5 +577,9 @@ export default function RoadmapPage(): JSX.Element {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

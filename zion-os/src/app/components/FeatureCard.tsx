@@ -1,18 +1,26 @@
+<<<<<<< HEAD
+interface FeatureCardProps {icon: string;
+  title: string;
+  description: string;
+  features: string[];
+  gradient: string;
+=======
 interface FeatureCardProps {;
   icon: string,;
   title: string,;
   description: string,;
   features: string[],;
   gradient: string,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string;
 }
-export default function FeatureCard({ 
-  icon, 
-  title, 
-  description, 
-  features, 
-  gradient, 
-  className = '' 
+export default function FeatureCard({
+  icon
+  title
+  description
+  features
+  gradient
+  className = ''
 }: FeatureCardProps) {
   return (
     <div className={`feature-card group ${className}`}>

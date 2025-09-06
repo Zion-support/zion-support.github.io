@@ -1,29 +1,51 @@
 
 <<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+
+import { HelpCategory } from "./types";
+=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HelpCategory } from "./types",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface HelpCategoryListProps {
-  categories: HelpCategory[],
-  onCategorySelect: (categoryId: string) => void,
+  categories: HelpCategory[];
+  onCategorySelect: (categoryId: string) => void;
   searchQuery: string
 }
-
-export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {
+export function HelpCategoryList({
+  categories
+  onCategorySelect
+  searchQuery
+}: HelpCategoryListProps) {
   // Filter categories based on search query
+
   const filteredCategories = searchQuery
     ? categories.filter(
-        category =>
-          category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (category) =>
+          category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+          category.description
+            .toLowerCase()
+            .includes(searchQuery.toLowerCase()) |
           category.articles.some(
-            article =>
-              article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            (article) =>
+              article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
 <<<<<<< HEAD
@@ -42,12 +64,11 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
           Try adjusting your search query or browse all categories.
         </p>
       </div>
-    )
+    );
   }
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {filteredCategories.map(category => (
+      {filteredCategories.map((category) => (
         <Card
           key={category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -123,8 +144,12 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ))}
     </div>
-  )
+  );
 }

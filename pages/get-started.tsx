@@ -1,6 +1,174 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+
+import {
+  Rocket
+  CheckCircle
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Zap
+  Users
+  Clock
+  Target
+  Star
+  FileText
+  Video
+  Code
+  Globe
+  Building;} from 'lucide-react';
+
+export default function GetStarted() {
+  const [selectedPath, setSelectedPath] = useState<string>(''),
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const onboardingSteps = [
+    {
+      step: 1
+      title: 'Choose Your Path'
+      description: 'Select the technology area that best fits your needs'
+      icon: <Target className='w-8 h-8 text-cyan-400' />
+    },    {
+      step: 2
+      title: 'Define Requirements'
+      description: 'Tell us about your project goals and constraints'
+      icon: <FileText className='w-8 h-8 text-purple-400' />
+    },    {
+      step: 3
+      title: 'Get Your Proposal'
+      description: 'Receive a detailed proposal and implementation plan'
+      icon: <Star className='w-8 h-8 text-yellow-400' />
+    },    {
+      step: 4
+      title: 'Begin Implementation'
+      description: 'Start your journey with our expert team'
+      icon: <Rocket className='w-8 h-8 text-green-400' />
+    },  ];
+  const technologyPaths = [
+    {
+      id: 'ai-consciousness'
+      name: 'AI Consciousness & Emotional Intelligence'
+      description:
+        'Develop AI systems with genuine self-awareness and emotional intelligence'
+      icon: <Brain className='w-8 h-8 text-cyan-400' />
+      features: [
+        'AI consciousness development'
+        'Emotional intelligence training'
+        'Self-aware neural networks'
+        'Autonomous decision making'
+      ]
+      useCases: [
+        'Customer Success'
+        'HR Analytics'
+        'Mental Health'
+        'Education'
+      ]
+      timeline: '6-12 months'
+      complexity: 'Advanced'
+    }
+    {
+      id: 'quantum-computing'
+      name: 'Quantum Computing Solutions'
+      description:
+        'Leverage quantum computing for cryptography, optimization, and simulation'
+      icon: <Atom className='w-8 h-8 text-purple-400' />
+      features: [
+        'Quantum algorithms'
+        'Post-quantum cryptography'
+        'Quantum machine learning'
+        'Quantum simulation'
+      ]
+      useCases: [
+        'Financial Services'
+        'Healthcare'
+        'Research'
+        'Cybersecurity'
+      ]
+      timeline: '8-18 months'
+      complexity: 'Expert'
+    }
+    {
+      id: 'autonomous-systems'
+      name: 'Autonomous Business Systems'
+      description:
+        'Build self-managing and self-optimizing business operations'
+      icon: <Rocket className='w-8 h-8 text-green-400' />
+      features: [
+        'Process automation'
+        'Self-healing infrastructure'
+        'Predictive maintenance'
+        'Autonomous operations'
+      ]
+      useCases: ['Manufacturing', 'DevOps', 'Customer Service', 'Supply Chain']
+      timeline: '3-9 months'
+      complexity: 'Intermediate'
+    }
+    {
+      id: 'enterprise-solutions'
+      name: 'Enterprise Technology Platform'
+      description:
+        'Modernize your infrastructure with cloud-native and AI-powered solutions'
+      icon: <Building className='w-8 h-8 text-blue-400' />
+      features: [
+        'Cloud migration'
+        'Microservices architecture'
+        'AI-powered analytics'
+        'Security automation'
+      ]
+      useCases: [
+        'Digital Transformation'
+        'Legacy Modernization'
+        'Data Analytics'
+        'Security'
+      ]
+      timeline: '4-12 months'
+      complexity: 'Intermediate'
+    },  ];
+  const quickStartOptions = [
+    {
+      title: 'Free Consultation'
+      description: '30-minute session to discuss your needs'
+      duration: '30 min'
+      icon: <Users className='w-6 h-6' />
+      action: 'Schedule Call'
+      color: 'from-cyan-500 to-blue-600'
+    },    {
+      title: 'Demo Session'
+      description: 'See our technology in action'
+      duration: '45 min'
+      icon: <Video className='w-6 h-6' />
+      action: 'Book Demo'
+      color: 'from-purple-500 to-pink-600'
+    },    {
+      title: 'Technical Assessment'
+      description: 'Evaluate your current technology stack'
+      duration: '2 hours'
+      icon: <Code className='w-6 h-6' />
+      action: 'Start Assessment'
+      color: 'from-green-500 to-emerald-600'
+    },    {
+      title: 'Pilot Project'
+      description: 'Small-scale implementation to prove value'
+      duration: '4-8 weeks'
+      icon: <Rocket className='w-6 h-6' />
+      action: 'Discuss Pilot'
+      color: 'from-orange-500 to-red-600'
+    },  ];
+  const handlePathSelection = (pathId: string) => {
+    setSelectedPath(pathId);
+    setCurrentStep(2);  }
+  const handleNextStep = () => {
+    if (currentStep < 4) {
+      setCurrentStep(currentStep + 1);    }
+  }
+  const handlePreviousStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);    }
+  }
+=======
 import {
   Rocket,
   CheckCircle,
@@ -23,6 +191,7 @@ export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>('');
   const [currentStep, setCurrentStep] = useState(1);
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
@@ -151,6 +320,8 @@ export default function GetStarted() {
       icon: <Rocket className="w-6 h-6" />,
       action: 'Discuss Pilot',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       color: 'from-orange-500 to-red-600',
     },  ];
 
@@ -169,6 +340,7 @@ export default function GetStarted() {
   };
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       color: 'from-orange-500 to-red-600'
       } catch (error) {
     console.error("Error:", error);
@@ -198,7 +370,11 @@ export default function GetStarted() {
   }
 }
   },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */  } catch (error) {
@@ -230,9 +406,17 @@ export default function GetStarted() {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Get Started Today
             </h1>
+<<<<<<< HEAD
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed'>
+              Begin your journey into the future of AI consciousness, quantum
+              computing, and autonomous systems. Our expert team will guide you
+              every step of the way.
+
+=======
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Begin your journey into the future of AI consciousness, quantum computing,
               and autonomous systems. Our expert team will guide you every step of the way.
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <div className="flex items-center gap-2 text-cyan-400">
@@ -284,7 +468,11 @@ export default function GetStarted() {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
@@ -336,7 +524,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                   {step.step  } catch (error) {
@@ -376,7 +568,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {currentStep === 1 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -442,7 +638,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
@@ -462,7 +662,11 @@ export default function GetStarted() {
                     <div className='grid md:grid-cols-2 gap-6 mb-6'>
 =======
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
@@ -528,7 +732,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
@@ -552,7 +760,6 @@ export default function GetStarted() {
           </div>
         </section>
       )}
-
       {/* Requirements Definition */}
 =======
               ))  } catch (error) {
@@ -574,7 +781,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -618,7 +829,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
@@ -630,7 +845,11 @@ export default function GetStarted() {
 =======
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
@@ -666,7 +885,11 @@ export default function GetStarted() {
                   <div className='flex justify-between pt-6'>
 =======
                   <div className="flex justify-between pt-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <button
                       onClick={handlePreviousStep  } catch (error) {
     console.error("Error:", error);
@@ -695,7 +918,6 @@ export default function GetStarted() {
         </section>
 <<<<<<< HEAD
       )}
-
       {/* Quick Start Options */}
       <section className='py-20'>
         <div className='container mx-auto px-4'>          <motion.div
@@ -734,7 +956,11 @@ export default function GetStarted() {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
@@ -774,7 +1000,11 @@ export default function GetStarted() {
   }
 }
                 className="group cursor-pointer"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -866,7 +1096,11 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Begin Your Journey?
@@ -895,49 +1129,48 @@ export default function GetStarted() {
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+)
+=======
 ),
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8, delay: index * 0.1 
-
+  duration: 0.8, delay: index * 0.1
 }className= {
   `text-center p-6 rounded-2xl border transition-all duration-300 $ {
-  currentStep === step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50' 
-}` 
-}> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Choose Your Technology Path </h2> <p className="text-xl text-gray-400" >Select the area that best aligns with your business goals</p> </motion.div> </div> </div> <div className="grid md:grid-cols-2 gap-6 mb-6" > <div> </li>) ) 
+  currentStep === step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50'
+}`
+}> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Choose Your Technology Path </h2> <p className="text-xl text-gray-400" >Select the area that best aligns with your business goals</p> </motion.div> </div> </div> <div className="grid md:grid-cols-2 gap-6 mb-6" > <div> </li>) )
 }</ul> </div> <div> <span key= {
-  useCase 
+  useCase
 }className="px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm" > {
-  useCase 
-}</span>) ) 
-}</div> </div> </div> </span> </div> <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" > <span className="font-medium" >Select Path</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.div>) ) 
-}</div> </div> </section>) 
-}> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6" > <div className="grid md:grid-cols-2 gap-6" > <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6" > <button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>) 
+  useCase
+}</span>) )
+}</div> </div> </div> </span> </div> <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" > <span className="font-medium" >Select Path</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.div>) )
+}</div> </div> </section>)
+}> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6" > <div className="grid md:grid-cols-2 gap-6" > <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6" > <button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>)
 }> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Quick Start Options </h2> <p className="text-xl text-gray-400" >Get started immediately with these quick options</p> </motion.div> </span> </div> <button className= {
   `w-full py-3 px-4 bg-gradient-to-r $ {
-  option.color 
-}text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300` 
+  option.color
+}text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`
 }> {
-  option.action 
-}</button> </div> </motion.div>) ) 
+  option.action
+}</button> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 20 
-
+  opacity: 0, y: 20
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>)
 =======
   )
@@ -993,4 +1226,8 @@ export default function GetStarted() {
   }
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

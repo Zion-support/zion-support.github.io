@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 useEffect ( () => {
   const load = async () => {
   try {
   if (loading) return <div>Loading episodes…</div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='space-y-6'>
       <div className='flex items-center justify-between'>
@@ -97,6 +104,8 @@ useEffect ( () => {
     </div>
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 ;
 }
@@ -104,4 +113,5 @@ useEffect ( () => {
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

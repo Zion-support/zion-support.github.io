@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -9,10 +11,18 @@ export function useJobMatches(jobId: string) {;
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
+import { JobMatch } from "@/types/jobs";
+=======
 import { JobMatch } from "@/types/jobs",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -25,6 +35,19 @@ export function useJobMatches(jobId: string) {
       const { data, error } = await supabase
         .from("job_talent_matches")
         .select(`
+<<<<<<< HEAD
+          *;
+          talent_profile: talent_id(
+            id;
+            user_id;
+            full_name;
+            professional_title;
+            profile_picture_url;
+            hourly_rate;
+            bio;
+            years_experience;
+            key_projects
+=======
           *,
           talent_profile:talent_id(
             id,
@@ -36,29 +59,52 @@ export function useJobMatches(jobId: string) {
             bio,
             years_experience,
             key_projects,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             skills
           )
         `)
         .eq("job_id", jobId)
+<<<<<<< HEAD
+        .order("match_score", { ascending: false });
+      if (error) throw error;
+      setMatches(data |[])
+=======
         .order("match_score", { ascending: false }),
 
       if (error) throw error,
       setMatches(data || [])
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } catch (error) {
       console.error("Error fetching job matches:", error),
       toast({
+<<<<<<< HEAD
+        title: "Error";
+        description: "Failed to load matched talents. Please try again later."
+=======
         title: "Error",
         description: "Failed to load matched talents. Please try again later.",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         variant: "destructive"})
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const triggerAIMatching = async () => {
     setIsProcessing(true),
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
+<<<<<<< HEAD
+        body: { jobId }});
+      if (response.error) throw new Error(response.error.message);
+      toast({
+        title: "AI Matching Complete"
+        description: `Found ${response.data.matches |0} potential talent matches for this job.`});
+=======
         body: { jobId }}),
       
       if (response.error) throw new Error(response.error.message),
@@ -67,16 +113,39 @@ export function useJobMatches(jobId: string) {
         title: "AI Matching Complete",
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`}),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
       console.error("Error triggering AI matching:", error),
       toast({
+<<<<<<< HEAD
+        title: "Matching Failed";
+        description: "Could not process talent matching. Please try again later."
+        variant: "destructive"})
+    } finally {
+      setIsProcessing(false)
+    }
+  }
+  useEffect(() => {
+    fetchMatches()
+  }, [jobId]);
+  return {
+    matches;
+    isLoading;
+    isProcessing;
+
+    triggerAIMatching
+  }
+}
+=======
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     }
   };
@@ -91,6 +160,7 @@ export function useJobMatches(jobId: string) {
     isProcessing;
     triggerAIMatching
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -162,7 +232,11 @@ export function useJobMatches(jobId: string) {;
     isLoading;
     isProcessing;
     triggerAIMatching;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

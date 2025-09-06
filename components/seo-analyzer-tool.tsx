@@ -1,8 +1,28 @@
+<<<<<<< HEAD
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
+
 import {
+<<<<<<< HEAD
+  Search
+  TrendingUp
+  CheckCircle
+  AlertTriangle
+  ArrowRight
+  Target
+  BarChart3
+  Globe
+  Smartphone
+  Zap;
+} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
+=======
   Search,
   TrendingUp,
   CheckCircle,
@@ -14,10 +34,14 @@ import {
   Smartphone,;
   Zap,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 export default function SEOAnalyzerToolPage() {;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 export default function SEOAnalyzerToolPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -27,243 +51,253 @@ export default function SEOAnalyzerToolPage() {
 
   const features = [
     {
-      icon: <Search className='w-8 h-8 text-white' />,
+      icon: <Search className='w-8 h-8 text-white' />
       description:
-        'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-    },
+        'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
     {
-      icon: <Target className='w-8 h-8 text-white' />,
-      title: 'Keyword Research',
+      icon: <Target className='w-8 h-8 text-white' />
+      title: 'Keyword Research'
       description:
-        'Discover high-value keywords and analyze search intent to optimize your content strategy.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-    },
+        'Discover high-value keywords and analyze search intent to optimize your content strategy.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
     {
-      icon: <BarChart3 className='w-8 h-8 text-white' />,
-      title: 'Competitive Analysis',
+      icon: <BarChart3 className='w-8 h-8 text-white' />
+      title: 'Competitive Analysis'
       description:
-        "Analyze your competitors' SEO strategies and identify opportunities to outperform them.",
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500',
-    },
+        "Analyze your competitors' SEO strategies and identify opportunities to outperform them."
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'
+    }
     {
-      icon: <Zap className='w-8 h-8 text-white' />,
-      title: 'AI-Powered Insights',
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'AI-Powered Insights'
       description:
-        'Get intelligent recommendations and actionable insights to improve your search rankings.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500',
-    },
-  ];      gradient: 'from-orange-400 to-red-500'}],
+        'Get intelligent recommendations and actionable insights to improve your search rankings.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'
+    }
+  ];      gradient: 'from-orange-400 to-red-500'}]
   const seoFactors = [
     {
-      category: 'On-Page SEO',
+      category: 'On-Page SEO'
       factors: [
-        'Title tags optimization',
-        'Meta descriptions',
-        'Header structure (H1, H2, H3)',
-        'Content quality and length',
-        'Internal linking structure',
-        'Image optimization (alt tags)',
-      ],
-      icon: '📝',
-      color: 'text-green-400',      icon: '📝',
+        'Title tags optimization'
+        'Meta descriptions'
+        'Header structure (H1, H2, H3)'
+        'Content quality and length'
+        'Internal linking structure'
+        'Image optimization (alt tags)'
+      ]
+      icon: '📝'
+      color: 'text-green-400',      icon: '📝'
       color: 'text-green-400'
-    };
+    }
     {
-      category: 'Technical SEO',
+      category: 'Technical SEO'
       factors: [
         'Page load speedMobile responsivenessXML sitemapRobots.txt configurationSSL certificateCore Web Vitals'
       ];
-      icon: '⚙️',
+      icon: '⚙️'
       color: 'text-blue-400'
-    };
+    }
     {
-      category: 'Content SEO',
+      category: 'Content SEO'
       factors: [
         'Keyword densityContent relevanceReadability scoresContent freshnessMultimedia optimizationSchema markup'
-      ],
-      icon: '📊',
+      ]
+      icon: '📊'
       color: 'text-purple-400'
-    };
+    }
     {
-      category: 'Local SEO',
+      category: 'Local SEO'
       factors: [
         'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
+<<<<<<< HEAD
+      ]
+      icon: '📍'
+      color: 'text-orange-400'
+    }
+    {
+      category: 'Technical SEO'
+      factors: [
+        'Page load speed'
+        'Mobile responsiveness'
+        'XML sitemap'
+        'Robots.txt configuration'
+        'SSL certificate'
+        'Core Web Vitals'
+      ]
+      icon: '⚙️'
+      color: 'text-blue-400'
+    }
+=======
       ],
       icon: '📍',
       color: 'text-orange-400',
+
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      category: 'Technical SEO',
+      category: 'Content SEO'
       factors: [
-        'Page load speed',
-        'Mobile responsiveness',
-        'XML sitemap',
-        'Robots.txt configuration',
-        'SSL certificate',
-        'Core Web Vitals',
-      ],
-      icon: '⚙️',
-      color: 'text-blue-400',
-    },
+        'Keyword density'
+        'Content relevance'
+        'Readability scores'
+        'Content freshness'
+        'Multimedia optimization'
+        'Schema markup'
+      ]
+      icon: '📊'
+      color: 'text-purple-400'
+    }
     {
-      category: 'Content SEO',
+      category: 'Local SEO'
       factors: [
-        'Keyword density',
-        'Content relevance',
-        'Readability scores',
-        'Content freshness',
-        'Multimedia optimization',
-        'Schema markup',
-      ],
-      icon: '📊',
-      color: 'text-purple-400',
-    },
-    {
-      category: 'Local SEO',
-      factors: [
-        'Google My Business',
-        'Local citations',
-        'Review management',
-        'Local keyword targeting',
-        'Location-based content',
-        'Local link building',
-      ],
-      icon: '📍',
-      color: 'text-orange-400',
+        'Google My Business'
+        'Local citations'
+        'Review management'
+        'Local keyword targeting'
+        'Location-based content'
+        'Local link building'
+      ]
+      icon: '📍'
+      color: 'text-orange-400'
     },  ];      color: 'text-orange-400'
     }
   ];
-
   const pricing = [
     {
-      name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small businesses and bloggers',
+      name: 'Starter'
+      price: '$39'
+      period: '/month'
+      description: 'Perfect for small businesses and bloggers'
       features: [
-        '10 website analyses/month',
-        'Basic SEO metrics',
-        'Keyword research (100 keywords)',
-        'On-page SEO analysis',
-        'Email support',
-        'Basic reporting',
-      ],
-      popular: false,
+        '10 website analyses/month'
+        'Basic SEO metrics'
+        'Keyword research (100 keywords)'
+        'On-page SEO analysis'
+        'Email support'
+        'Basic reporting'
+      ]
+      popular: false
     },    {        '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting'
       ];
       popular: false
-    };
-      name: 'Professional',
-      price: '$89',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+    }
+      name: 'Professional'
+      price: '$89'
+      period: '/month'
+      description: 'Ideal for growing businesses and agencies'
       features: [
-        '50 website analyses/month',
-        'Advanced SEO metrics',
-        'Keyword research (500 keywords)',
-        'Competitive analysis',
-        'Priority support',
-        'Advanced reporting',
-        'API access',
-        'Team collaboration',
-      ],
-      popular: true,
+        '50 website analyses/month'
+        'Advanced SEO metrics'
+        'Keyword research (500 keywords)'
+        'Competitive analysis'
+        'Priority support'
+        'Advanced reporting'
+        'API access'
+        'Team collaboration'
+      ]
+      popular: true
     },    {        '50 website analyses/monthAdvanced SEO metricsKeyword research (500 keywords)Competitive analysisPriority supportAdvanced reportingAPI accessTeam collaboration'
       ];
       popular: true
-    };
-      name: 'Enterprise',
-      price: '$249',
-      period: '/month',
-      description: 'For large organizations and SEO agencies',
+    }
+      name: 'Enterprise'
+      price: '$249'
+      period: '/month'
+      description: 'For large organizations and SEO agencies'
       features: [
-        'Unlimited analyses',
-        'Enterprise SEO metrics',
-        'Unlimited keyword research',
-        'Advanced competitive analysis',
-        '24/7 dedicated support',
-        'Custom reporting',
-        'White-label options',
-        'Custom integrations',
-      ],
-      popular: false,
+        'Unlimited analyses'
+        'Enterprise SEO metrics'
+        'Unlimited keyword research'
+        'Advanced competitive analysis'
+        '24/7 dedicated support'
+        'Custom reporting'
+        'White-label options'
+        'Custom integrations'
+      ]
+      popular: false
     },  ];
-
   const handleAnalyzeSEO = async () => {
     if (!url.trim()) return;        'Unlimited analysesEnterprise SEO metricsUnlimited keyword researchAdvanced competitive analysis24/7 dedicated supportCustom reportingWhite-label optionsCustom integrations'
       ];
       popular: false
     }
-
   const handleAnalyzeSEO = async () => {
     if (!url.trim()) return;
-    
     setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
       setAnalysisResults({
-        url: url,
-        overallScore: 78,
-        onPageScore: 82,
-        technicalScore: 75,
-        contentScore: 80,
-        mobileScore: 85,
+        url: url
+        overallScore: 78
+        onPageScore: 82
+        technicalScore: 75
+        contentScore: 80
+        mobileScore: 85
         issues: [
           {
-            type: 'error',
-            message: 'Missing meta description',
-            priority: 'high',
-          },
+            type: 'error'
+            message: 'Missing meta description'
+            priority: 'high'
+          }
           {
-            type: 'warning',
-            message: 'Title tag too long (65 characters)',
-            priority: 'medium',
-          },
+            type: 'warning'
+            message: 'Title tag too long (65 characters)'
+            priority: 'medium'
+          }
           {
-            type: 'info',
-            message: 'Consider adding more internal links',
-            priority: 'low',
-          },
-        ],
+            type: 'info'
+            message: 'Consider adding more internal links'
+            priority: 'low'
+          }
+        ]
         recommendations: [
-          'Optimize meta descriptions for better click-through rates',
-          'Improve page load speed by optimizing images',
-          'Add more relevant internal links to improve site structure',
-          'Implement schema markup for rich snippets',
-        ],
+          'Optimize meta descriptions for better click-through rates'
+          'Improve page load speed by optimizing images'
+          'Add more relevant internal links to improve site structure'
+          'Implement schema markup for rich snippets'
+        ]
         keywords: [
           {
-            keyword: 'website optimization',
-            volume: '12K',
-            difficulty: 'medium',
-          },
-          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },
+            keyword: 'website optimization'
+            volume: '12K'
+            difficulty: 'medium'
+          }
+          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
           {
-            keyword: 'search engine optimization',
-            volume: '15K',
-            difficulty: 'high',
-          },
-        ],
+            keyword: 'search engine optimization'
+            volume: '15K'
+            difficulty: 'high'
+          }
+        ]
       });
       setIsAnalyzing(false);
+<<<<<<< HEAD
     }, 4000);  };        recommendations: [
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
         ];
         keywords: [
-          { keyword: 'website optimization', volume: '12K', difficulty: 'medium' },
-          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },
+          { keyword: 'website optimization', volume: '12K', difficulty: 'medium' }
+          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
         ]
       });
       setIsAnalyzing(false)
     }, 4000)
+  }
+=======
+    }, 4000);  };
+
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -317,7 +351,7 @@ export default function SEOAnalyzerToolPage() {
               <Button
                 onClick={handleAnalyzeSEO}
                 size='lg'
-                className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing || !url.trim()}
+                className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing |!url.trim()}
               >
                 {isAnalyzing ? (
                   <>
@@ -341,6 +375,7 @@ export default function SEOAnalyzerToolPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
+
           </p>
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">
@@ -356,7 +391,7 @@ export default function SEOAnalyzerToolPage() {
                 onClick={handleAnalyzeSEO}
                 size="lg"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
-                disabled={isAnalyzing || !url.trim()}
+                disabled={isAnalyzing |!url.trim()}
               >
                 {isAnalyzing ? (
                   <>
@@ -468,7 +503,11 @@ export default function SEOAnalyzerToolPage() {
 
                       {feature.description}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                 </div>
@@ -480,7 +519,11 @@ export default function SEOAnalyzerToolPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -489,7 +532,11 @@ export default function SEOAnalyzerToolPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -549,7 +596,11 @@ export default function SEOAnalyzerToolPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -704,7 +755,11 @@ export default function SEOAnalyzerToolPage() {
 
                       </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   ))}
                 </div>
@@ -713,7 +768,11 @@ export default function SEOAnalyzerToolPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               <Card className='border-gradient-green'>
@@ -776,7 +835,11 @@ export default function SEOAnalyzerToolPage() {
 
                           {keyword.difficulty}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                       </div>
                     </div>
@@ -787,7 +850,10 @@ export default function SEOAnalyzerToolPage() {
           </div>
         </section>
       )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -796,7 +862,11 @@ export default function SEOAnalyzerToolPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -828,7 +898,10 @@ export default function SEOAnalyzerToolPage() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -857,9 +930,16 @@ export default function SEOAnalyzerToolPage() {
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
+<<<<<<< HEAD
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                       {feature}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -881,7 +961,11 @@ export default function SEOAnalyzerToolPage() {
 
                 </Button>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
@@ -890,7 +974,11 @@ export default function SEOAnalyzerToolPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -900,7 +988,11 @@ export default function SEOAnalyzerToolPage() {
 =======
 
             Ready to Improve Your SEO Rankings?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
@@ -931,8 +1023,15 @@ export default function SEOAnalyzerToolPage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

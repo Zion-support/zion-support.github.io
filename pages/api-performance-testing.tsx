@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO';
-import {Check, ExternalLink} from 'lucide-react';
+import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
+<<<<<<< HEAD
+=======
   const features = [
     'k6/Gatling-compatible test runner',
     'SLO-aware latency reports',
@@ -10,7 +17,15 @@ export default function ApiPerformanceTestingPage() {
     'CI checks and PR annotations',
     'Synthetic traffic for staging',;
   ];
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+  const features = [
+    'k6/Gatling-compatible test runner'
+    'SLO-aware latency reports'
+    'Regression baselines per endpoint'
+    'CI checks and PR annotations'
+    'Synthetic traffic for staging'
+  ];
   return (
     <div className='relative isolate'>
       <section className='px-6 lg:px-10 py-16 lg:py-24'>
@@ -27,29 +42,29 @@ export default function ApiPerformanceTestingPage() {
           <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
               {
-                title: 'Distributed Load',
-                desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.',
-              },
+                title: 'Distributed Load'
+                desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.'
+              }
               {
-                title: 'SLO Dashboards',
-                desc: 'Track p50/p95/p99 latency, error budgets, and throughput trends over time.',
-              },
+                title: 'SLO Dashboards'
+                desc: 'Track p50/p95/p99 latency, error budgets, and throughput trends over time.'
+              }
               {
-                title: 'Protocol Coverage',
-                desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.',
-              },
+                title: 'Protocol Coverage'
+                desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.'
+              }
               {
-                title: 'Regression Gates',
-                desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.',
-              },
+                title: 'Regression Gates'
+                desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.'
+              }
               {
-                title: 'Realistic Traffic',
-                desc: 'Custom scenarios, auth flows, test data seeding, and user think time.',
-              },
+                title: 'Realistic Traffic'
+                desc: 'Custom scenarios, auth flows, test data seeding, and user think time.'
+              }
               {
-                title: 'Reports & Export',
-                desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.',
-              },
+                title: 'Reports & Export'
+                desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.'
+              }
             ].map(f => (
               <div
                 key={f.title}
@@ -145,10 +160,14 @@ export default function ApiPerformanceTestingPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
+=======
+=======
 
 }
 =======
 import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
 export default function ApiPerformanceTestingPage() {
@@ -276,4 +295,8 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

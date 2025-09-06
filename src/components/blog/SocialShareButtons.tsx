@@ -1,10 +1,19 @@
 <<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+import { Button  } from '@/components/ui/button';
+=======
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react'
-import { toast } from '@/hooks/use-toast'
+import { toast } from '@/hooks/use-toast';
 interface SocialShareButtonsProps {
   title: string
+<<<<<<< HEAD
+=======
+=======
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareUrl = null;
     typeof window !== 'undefined'
@@ -13,6 +22,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   const shareText = encodeURIComponent(title)
 =======
 import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
 import { toast } from '@/hooks/use-toast',;
@@ -20,31 +30,48 @@ interface SocialShareButtonsProps {;
   title: string;
 }
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
+
   const shareUrl =
+<<<<<<< HEAD
+    typeof window !== 'undefined'
+      ? encodeURIComponent(window.location.href)
+      : ''
+  const shareText = encodeURIComponent(title)
+=======
     typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : '',
   const shareText = encodeURIComponent(title),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const shareToTwitter = () => {
     window.open(
-      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,
+      `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
 <<<<<<< HEAD
   }
   const shareToFacebook = () => {
     window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+      `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
       '_blank'
     )
   }
   const shareToLinkedIn = () => {
     window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+      `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`
       '_blank'
     )
   }
+<<<<<<< HEAD
+  const copyLink = () => {
+    if (typeof window === 'undefined') return
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },
 
@@ -59,6 +86,10 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const copyLink = () => {
     if (typeof window === 'undefined') return,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
@@ -67,26 +98,27 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   }
   const buttons = [
     {
-      icon: <Twitter className='h-4 w-4' />,
-      label: 'Twitter',
-      onClick: shareToTwitter,
-    },
+      icon: <Twitter className='h-4 w-4' />
+      label: 'Twitter'
+      onClick: shareToTwitter
+    }
     {
-      icon: <Facebook className='h-4 w-4' />,
-      label: 'Facebook',
-      onClick: shareToFacebook,
-    },
+      icon: <Facebook className='h-4 w-4' />
+      label: 'Facebook'
+      onClick: shareToFacebook
+    }
     {
-      icon: <Linkedin className='h-4 w-4' />,
-      label: 'LinkedIn',
-      onClick: shareToLinkedIn,
-    },
+      icon: <Linkedin className='h-4 w-4' />
+      label: 'LinkedIn'
+      onClick: shareToLinkedIn
+    }
     {
-      icon: <LinkIcon className='h-4 w-4' />,
-      label: 'Copy Link',
-      onClick: copyLink,
-    },
+      icon: <LinkIcon className='h-4 w-4' />
+      label: 'Copy Link'
+      onClick: copyLink
+    }
   ]
+
   return (
     <div className='mt-12 flex flex-wrap gap-2'>
       {buttons.map(btn => (
@@ -100,10 +132,17 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
           <span>{btn.label}</span>
         </Button>
       ))}
+<<<<<<< HEAD
+    </div>
+  )
+}
+}
+=======
     </div>;
   );
 };
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },
 
@@ -158,4 +197,8 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

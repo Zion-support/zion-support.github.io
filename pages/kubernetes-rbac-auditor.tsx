@@ -1,6 +1,8 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
+
+import React from 'react';
+
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 export default function KubernetesRbacAuditorPage() {
   return (
     <Layout>
@@ -32,12 +34,19 @@ export default function KubernetesRbacAuditorPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-700 text-white">Start from $179/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
       </div>
     </Layout>
   )
+<<<<<<< HEAD
+}
+=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -79,5 +88,10 @@ export default function KubernetesRbacAuditorPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

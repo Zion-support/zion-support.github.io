@@ -3,9 +3,10 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
 import { Mail } from 'lucide-react'
-import { useToast } from '@/hooks/use-toast'
-import { logErrorToProduction } from '@/utils/productionLogger'
+import { useToast } from "@/hooks/use-toast";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
+
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -22,15 +23,38 @@ export function EnhancedNewsletterForm() {
       toast.error('Invalid email')
       return;
     }
-
     setIsSubmitting(true)
     try {
       const res = await fetch('/api/newsletter', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmed }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email: trimmed })
       })
       const data = await res.json().catch(() => ({}))
+<<<<<<< HEAD
+      if (res.ok) {
+        // Handle different success statuses
+        if (data.status === 'already_subscribed') {
+          toast.success(data.message |"You're already subscribed!")
+        } else {
+          toast.success(data.message |'Thanks for subscribing!')
+        }
+        setIsSubmitted(true)
+        setEmail('')
+      } else {
+        // Handle error responses
+        logErrorToProduction('Newsletter subscription failed:', { data: data })
+        toast.error(data.error |'Subscription failed. Please try again.')
+      }
+    } catch (err: any) {
+      logErrorToProduction('Newsletter subscription error:', { data: err })
+      toast.error('Unable to subscribe right now. Please try again later.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -69,12 +93,17 @@ export function EnhancedNewsletterForm() {
 
       const data = await res.json().catch(() => ({})),
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
           toast.success(data.message || "You're already subscribed!")
         } else {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           toast.success(data.message || 'Thanks for subscribing!')
         }
@@ -93,6 +122,7 @@ export function EnhancedNewsletterForm() {
     }
   }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;
@@ -109,8 +139,12 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false)
     }
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -123,14 +157,18 @@ export function EnhancedNewsletterForm() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
       {isSubmitted ? (;
         <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>;
           <p className='text-white font-medium'>Thank you for subscribing!</p>;
           <p className='text-zion-slate-light mt-1'>;
             We&apos;ll keep you updated with the latest from Zion.
           </p>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
@@ -164,7 +202,6 @@ export function EnhancedNewsletterForm() {
           </Button>
         </form>
       )}
-
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>
         <div className='flex -space-x-1 mr-2'>
           {[...Array(3)].map((_, i) => (
@@ -179,6 +216,10 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             type="email"
             id="enhanced-newsletter-email"
@@ -265,5 +306,9 @@ export function EnhancedNewsletterForm() {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

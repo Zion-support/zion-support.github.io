@@ -1,15 +1,29 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 const AIAssistant: React.FC = () => {
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
+<<<<<<< HEAD
+import Head from 'next/head';
+
+import Layout from '../components/layout/Layout';
+const AIAssistant: React.FC = () => {
+
+=======
 import Head from 'next/head',
 import Button from '../components/ui/Button',
 export default function AIAssistantPage() {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -25,6 +39,22 @@ export default function AIAssistantPage() {
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
+<<<<<<< HEAD
+              'Research and summarize documents and web sources'
+              'Draft emails, posts, briefs, and reports'
+              'Auto-schedule meetings and follow-ups'
+              'Integrations: Gmail, Google Drive, Slack, Calendar'
+              'Team approvals and audit trail'
+              'Starting at $99/mo'
+            ].map(f => (
+              <div
+                key={f}
+                className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200'
+              >
+                {f}
+              </div>
+            ))}
+=======
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
@@ -33,6 +63,7 @@ export default function AIAssistantPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
@@ -56,8 +87,11 @@ export default function AIAssistantPage() {
       </main>
     </Layout>
   );
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       </div>
     </>
@@ -67,4 +101,8 @@ export default function AIAssistantPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

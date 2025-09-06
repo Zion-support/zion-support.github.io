@@ -1,7 +1,36 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Star
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Zap
+  Globe
+  Database
+  Lock
+  Cloud
+  BarChart3
+  Twitter
+  Linkedin
+  Github
+  Youtube
+  Instagram;} from 'lucide-react';import {
+=======
   Phone,
   Mail,
   MapPin,
@@ -24,132 +53,130 @@ import {
   Github,
   Youtube,;
   Instagram,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram
-
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-};
-
+}
 const serviceCategories = [
   {
-    title: 'AI & Consciousness',
-    icon: Brain,
+    title: 'AI & Consciousness'
+    icon: Brain
     services: [
       {
-        name: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution-2029',
-      },
-      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' },
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-2029'
+      }
+      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' }
       {
-        name: 'Multimodal AI Orchestrator',
-        href: '/multimodal-ai-orchestrator',
-      },
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
-    ],
-  },  {      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' },
-      { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' },
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
+        name: 'Multimodal AI Orchestrator'
+        href: '/multimodal-ai-orchestrator'
+      }
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' }
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
     ]
-  };
+  },  {      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' }
+      { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' }
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' }
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
+    ]
+  }
   {
-    title: 'Quantum & Emerging Tech',
-    icon: Atom,
+    title: 'Quantum & Emerging Tech'
+    icon: Atom
     services: [
-      { name: 'Space Mining Platform', href: '/space-mining-platform' },
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface' },
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' },
-    ],
+      { name: 'Space Mining Platform', href: '/space-mining-platform' }
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' }
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface' }
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' }
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' }
+    ]
   },  {
-    title: 'Enterprise IT',
-    icon: Shield,
+    title: 'Enterprise IT'
+    icon: Shield
     services: [      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' }
     ]
-  };
+  }
   {
-    title: 'Enterprise IT',
-    icon: Shield,
+    title: 'Enterprise IT'
+    icon: Shield
     services: [
       {
-        name: 'Quantum Cloud Infrastructure',
-        href: '/quantum-cloud-infrastructure',
-      },
+        name: 'Quantum Cloud Infrastructure'
+        href: '/quantum-cloud-infrastructure'
+      }
       {
-        name: 'Edge Computing Orchestrator',
-        href: '/edge-computing-orchestrator',
-      },
+        name: 'Edge Computing Orchestrator'
+        href: '/edge-computing-orchestrator'
+      }
       {
-        name: 'Zero Trust Security Platform',
-        href: '/zero-trust-security-platform',
-      },
+        name: 'Zero Trust Security Platform'
+        href: '/zero-trust-security-platform'
+      }
       {
-        name: 'Blockchain Enterprise Platform',
-        href: '/blockchain-enterprise-platform',
-      },
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
-    ],
-  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
-      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' },
-      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' },
+        name: 'Blockchain Enterprise Platform'
+        href: '/blockchain-enterprise-platform'
+      }
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }
     ]
-  };
-    title: 'Micro SAAS',
-    icon: Target,
+  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' }
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' }
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' }
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }
+    ]
+  }
+    title: 'Micro SAAS'
+    icon: Target
     services: [
-      { name: 'AI Content Factory Pro', href: '/ai-content-factory' },
-      { name: 'Quantum CRM Suite', href: '/quantum-crm' },
-      { name: 'CyberShield Pro', href: '/cyber-shield-pro' },
-      { name: 'DataVault Hub', href: '/data-vault-hub' },
-      { name: 'DevOps Automation Studio', href: '/devops-automation-studio' },
-    ],
+      { name: 'AI Content Factory Pro', href: '/ai-content-factory' }
+      { name: 'Quantum CRM Suite', href: '/quantum-crm' }
+      { name: 'CyberShield Pro', href: '/cyber-shield-pro' }
+      { name: 'DataVault Hub', href: '/data-vault-hub' }
+      { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
+    ]
   },];      { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ]
   }
 ];
-
 const companyLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'About Us', href: '/about' }
+  { name: 'Careers', href: '/careers' }
+  { name: 'News', href: '/news' }
+  { name: 'Case Studies', href: '/case-studies' }
+  { name: 'Blog', href: '/blog' }
   { name: 'Resources', href: '/resources' },];  { name: 'Resources', href: '/resources' }
 ];
-
 const legalLinks = [
-  { name: 'Privacy Policy', href: '/privacy' },
-  { name: 'Terms of Service', href: '/terms' },
-  { name: 'Cookie Policy', href: '/cookies' },
+  { name: 'Privacy Policy', href: '/privacy' }
+  { name: 'Terms of Service', href: '/terms' }
+  { name: 'Cookie Policy', href: '/cookies' }
   { name: 'GDPR Compliance', href: '/gdpr' },];  { name: 'GDPR Compliance', href: '/gdpr' }
 ];
-
 const socialLinks = [
-  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
-  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' },
-  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' },
-  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
+  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' }
+  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' }
+  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
+  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' }
   {
-    name: 'Instagram',
-    href: '#',
-    icon: Instagram,
-    color: 'hover:text-pink-400',
+    name: 'Instagram'
+    href: '#'
+    icon: Instagram
+    color: 'hover:text-pink-400'
   },];  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' }
 ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const EnhancedFooter2025: React.FC = () => {
-  const currentYear = new Date().getFullYear(),
-
+  const currentYear = new Date().getFullYear()
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50'>
       {/* Background Effects */}
@@ -245,7 +272,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Service Categories */}
             {serviceCategories.map((category, index) => (
               <motion.div
@@ -258,7 +289,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='flex items-center space-x-3'>
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -293,7 +328,11 @@ const EnhancedFooter2025: React.FC = () => {
 
                     >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {service.name}
                     </Link>
                   ))}
@@ -309,7 +348,11 @@ const EnhancedFooter2025: React.FC = () => {
           {/* Additional Links */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Company Links */}
             <div>
               <h4 className='text-white font-semibold mb-4'>Company</h4>
@@ -334,7 +377,11 @@ const EnhancedFooter2025: React.FC = () => {
 
                   >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {link.name}
                   </Link>
                 ))}
@@ -343,7 +390,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Legal Links */}
             <div>
               <h4 className='text-white font-semibold mb-4'>Legal</h4>
@@ -365,7 +416,11 @@ const EnhancedFooter2025: React.FC = () => {
 
                   >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {link.name}
                   </Link>
                 ))}
@@ -374,7 +429,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Social Links */}
             <div>
               <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
@@ -386,7 +445,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     key={social.name}
                     href={social.href}
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
@@ -397,7 +460,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
               </div>
             </div>
@@ -406,7 +473,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Newsletter Section */}
         <div className='border-t border-gray-800/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -417,7 +488,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -427,7 +502,11 @@ const EnhancedFooter2025: React.FC = () => {
 =======
                 className='text-2xl md:text-3xl font-bold text-white mb-4'              >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 Stay Ahead of the Future
               </motion.h3>
@@ -440,7 +519,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 Get the latest insights on AI, quantum computing, and emerging
                 technologies delivered to your inbox.
@@ -456,7 +539,11 @@ const EnhancedFooter2025: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <input
                   type='email'
@@ -506,15 +593,26 @@ const EnhancedFooter2025: React.FC = () => {
       </div>
     </footer>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedFooter2025;  )
-};
-
+}
 export default EnhancedFooter2025;
+
+<<<<<<< HEAD
+=======
+export default EnhancedFooter2025;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 }
 =======
 export default EnhancedFooter2025;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

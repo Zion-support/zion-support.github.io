@@ -1,8 +1,158 @@
 <<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  Rocket
+  Brain
+  Atom
+  Shield
+  Cloud
+  BarChart3
+  ArrowRight
+  ExternalLink
+  Star
+  Users
+  Clock
+  TrendingUp;
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function PortfolioPage() {
+  const projects = [
+    {
+      title: 'AI-Powered Financial Analytics Platform'
+      description:
+        'Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling'
+      category: 'AI & Machine Learning'
+      client: 'Fortune 500 Financial Institution'
+      technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL']
+      results: [
+        '40% improvement in prediction accuracy'
+        'Real-time processing of 1M+ data points'
+        'ROI of 300% in first year'
+      ]
+      image: '/api/placeholder/600/400'
+      icon: Brain
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      title: 'Quantum Cryptography Security System'
+      description:
+        'Next-generation security system implementing quantum-resistant cryptography for enterprise-level protection'
+      category: 'Quantum Computing'
+      client: 'Global Cybersecurity Firm'
+      technologies: ['Qiskit', 'Python', 'Rust', 'Docker', 'Kubernetes']
+      results: [
+        '99.99% security guarantee'
+        'Quantum-resistant encryption'
+        'Zero security breaches'
+      ]
+      image: '/api/placeholder/600/400'
+      icon: Atom
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      title: 'Edge Computing IoT Platform'
+      description:
+        'Distributed IoT platform with edge computing capabilities for real-time data processing and analytics'
+      category: 'Cloud Infrastructure'
+      client: 'Manufacturing Conglomerate'
+      technologies: [
+        'Kubernetes'
+        'TensorFlow Lite'
+        'MQTT'
+        'InfluxDB'
+        'Grafana'
+      ]
+      results: [
+        '50% reduction in latency'
+        'Real-time monitoring of 10K+ devices'
+        'Cost savings of $2M annually'
+      ]
+      image: '/api/placeholder/600/400'
+      icon: Cloud
+      color: 'from-emerald-500 to-teal-500'
+    }
+    {
+      title: 'Predictive Healthcare Analytics'
+      description:
+        'AI-driven healthcare analytics platform for early disease detection and treatment optimization'
+      category: 'Data Analytics'
+      client: 'Healthcare Network'
+      technologies: ['Python', 'Scikit-learn', 'React', 'MongoDB', 'Redis']
+      results: [
+        'Early detection rate improved by 60%'
+        'Treatment success rate increased by 35%'
+        'Cost reduction of 25%'
+      ]
+      image: '/api/placeholder/600/400'
+      icon: BarChart3
+      color: 'from-indigo-500 to-purple-500'
+    }
+    {
+      title: 'Zero-Trust Security Architecture'
+      description:
+        'Comprehensive zero-trust security implementation for enterprise network protection'
+      category: 'Cybersecurity'
+      client: 'Technology Corporation'
+      technologies: ['OAuth 2.0', 'JWT', 'React', 'Node.js', 'PostgreSQL']
+      results: [
+        '100% security compliance'
+        'Zero unauthorized access'
+        '24/7 threat monitoring'
+      ]
+      image: '/api/placeholder/600/400'
+      icon: Shield
+      color: 'from-red-500 to-orange-500'
+    }
+    {
+      title: 'Digital Transformation Platform'
+      description:
+        'End-to-end digital transformation solution for legacy system modernization'
+      category: 'Digital Transformation'
+      client: 'Retail Chain'
+      technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Docker']
+      results: [
+        '80% faster deployment'
+        'Customer satisfaction increased by 45%'
+        'Operational costs reduced by 30%'
+      ]
+      image: '/api/placeholder/600/400'
+      icon: Rocket
+      color: 'from-yellow-500 to-orange-500'
+    }
+  ];
+  const stats = [
+    { number: '500+', label: 'Projects Delivered', icon: Rocket }
+    { number: '50+', label: 'Enterprise Clients', icon: Users }
+    { number: '99.9%', label: 'Client Satisfaction', icon: Star }
+    { number: '2500%', label: 'Average ROI', icon: TrendingUp }
+  ];
+  const categories = [
+    'All'
+    'AI & Machine Learning'
+    'Quantum Computing'
+    'Cybersecurity'
+    'Cloud Infrastructure'
+    'Data Analytics'
+    'Digital Transformation'
+  ];
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const filteredProjects =
+    selectedCategory === 'All'
+      ? projects
+      : projects.filter(project => project.category === selectedCategory);
+
+=======
+=======
   Rocket,
   Brain,
   Atom,
@@ -20,6 +170,7 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 =======
 import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -28,7 +179,10 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function PortfolioPage() {
   const projects = [
     {
@@ -124,6 +278,7 @@ export default function PortfolioPage() {
   const filteredProjects = selectedCategory === "All"
     ? projects
     : projects.filter(project => project.category === selectedCategory),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -178,7 +333,11 @@ export default function PortfolioPage() {
   }
 }
             className="mb-8"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work
@@ -436,7 +595,11 @@ export default function PortfolioPage(req, res) {
   }
 }
                 className="text-center"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -572,7 +735,11 @@ export default function PortfolioPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -670,7 +837,11 @@ export default function PortfolioPage(req, res) {
                     <span className="text-sm text-white/60">Client: {project.client}</span>
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </button>
                   </div>
                 </div>
@@ -724,7 +895,11 @@ export default function PortfolioPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start Your Project?
@@ -746,38 +921,39 @@ export default function PortfolioPage(req, res) {
       <EnhancedFooter />
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+)
+</Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) )
+=======
 ),
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> key= {
-  category 
+  category
 }onClick= {
-  () => setSelectedCategory (category) 
+  () => setSelectedCategory (category)
 }className= {
   `px-6 py-3 rounded-full font-semibold transition-all duration-300 $ {
-  selectedCategory === category ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white': 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white' 
-}` 
+  selectedCategory === category ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white': 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
+}`
 }> {
-  category 
-}</button>) ) 
-}</div> </div> </section> </span>) ) 
-}</div> </div> </li>) ) 
-}</ul> </div> View Details </button> </div> </div> </motion.div>) ) 
+  category
+}</button>) )
+}</div> </div> </section> </span>) )
+}</div> </div> </li>) )
+}</ul> </div> View Details </button> </div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 30 
-
+  opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }viewport= {
   {
-  once: true 
-
+  once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 =======
   )
@@ -808,4 +984,8 @@ export default function PortfolioPage(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

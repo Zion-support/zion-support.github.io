@@ -1,11 +1,11 @@
-import React, { useState } from 'react',;
-import { useAutoTranslate } from '../../hooks/useAutoTranslate',;
-const defaultTargets = ['enptesar'],
+import React, { useState } from 'react';
+import { useAutoTranslate } from '../../hooks/useAutoTranslate';
 
+const defaultTargets = ['enptesar']
 export default function TranslationPreview() {
-  const [text, setText] = useState(''),
-  const [targets, setTargets] = useState<string[]>(defaultTargets),
-  const { translations, loading, error } = useAutoTranslate(text, targets),
+  const [text, setText] = useState('')
+  const [targets, setTargets] = useState<string[]>(defaultTargets)
+  const { translations, loading, error } = useAutoTranslate(text, targets)
 
   return (
     <div className="space-y-4">
@@ -23,21 +23,29 @@ export default function TranslationPreview() {
           <div key={lng} className="border rounded p-3">
             <div className="text-xs uppercase opacity-70 mb-2">{lng}</div>
             <div className="whitespace-pre-wrap text-sm min-h-[4rem]">
-              {translations[lng] || (lng === 'en' ? text : '')}
+              {translations[lng] |(lng === 'en' ? text : '')}
             </div>
 =======
           <div key={lng} className=&quot;border rounded p-3&quot;>
             <div className=&quot;text-xs uppercase opacity-70 mb-2&quot;>{lng}</div>
             <div className=&quot;whitespace-pre-wrap text-sm min-h-[4rem]&quot;>
               {translations[lng] || (lng === 'en' ? text : '')}            </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
+  )}
+=======
 <<<<<<< HEAD:components/admin/TranslationPreview.tsx
   );
 };
 =======
   )}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

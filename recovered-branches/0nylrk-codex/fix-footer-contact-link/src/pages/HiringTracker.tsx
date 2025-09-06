@@ -11,7 +11,7 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {Briefcase} from "lucide-react";
 function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string };
+  const { jobId } = useParams() as { jobId?: string }
   const [activeTab, setActiveTab] = useState<string>("kanban");
 =======
 import { useState } from "react",
@@ -27,13 +27,17 @@ import { Briefcase } from "lucide-react",
 function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string },
   const [activeTab, setActiveTab] = useState<string>("kanban"),
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
-      <SEO 
-        title="Hiring Tracker | Zion AI Marketplace" 
-        description="Manage your candidate pipeline in the Zion AI Marketplace." 
+      <SEO
+        title="Hiring Tracker | Zion AI Marketplace"
+        description="Manage your candidate pipeline in the Zion AI Marketplace."
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
@@ -65,6 +69,17 @@ function HiringTrackerContent() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+export default function HiringTracker() {
+  return (
+    <ProtectedRoute>
+      <HiringTrackerContent />
+    </ProtectedRoute>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
@@ -114,6 +129,19 @@ function HiringTrackerContent() {;
       <Footer />;
     </>;
   );
+<<<<<<< HEAD
+}
+;
+export default function HiringTracker() {;
+  return (;
+    <ProtectedRoute>;
+      <HiringTrackerContent />;
+    </ProtectedRoute>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
@@ -125,3 +153,4 @@ export default function HiringTracker() {
   )
 }
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

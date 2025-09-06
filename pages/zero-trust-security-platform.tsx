@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function ZeroTrustSecurityPlatformPage() {
+
   return (
     <>
       <Head>
@@ -24,28 +30,32 @@ export default function ZeroTrustSecurityPlatformPage() {
         implementationWeeks='4-8 weeks';
         roiNote='Reduce breach impact and lateral movement risk; meet compliance faster'
         features={[
-          'Policy-as-code and enforcement',
-          'Identity-aware proxies and device posture',
-          'Microsegmentation and service mesh integration',
-          'Continuous authentication and authorization',
-          'Visibility and audit for compliance',
-          'Rollout playbooks and migration kits',
+          'Policy-as-code and enforcement'
+          'Identity-aware proxies and device posture'
+          'Microsegmentation and service mesh integration'
+          'Continuous authentication and authorization'
+          'Visibility and audit for compliance'
+          'Rollout playbooks and migration kits'
         ]}
         industries={[
-          'Enterprise IT',
-          'Financial Services',
-          'Healthcare',
-          'SaaS',
-          'Public Sector',
+          'Enterprise IT'
+          'Financial Services'
+          'Healthcare'
+          'SaaS'
+          'Public Sector'
         ]}
         canonical='https: //ziontechgroup.com/zero-trust-security-platform'
       />
     </>
   );
 
+<<<<<<< HEAD
+=======
+=======
 }
 =======
 import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function ZeroTrustSecurityPlatformPage() {
@@ -127,4 +137,8 @@ export default function ZeroTrustSecurityPlatformPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

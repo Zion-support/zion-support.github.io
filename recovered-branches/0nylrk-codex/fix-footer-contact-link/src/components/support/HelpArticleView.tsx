@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
@@ -7,13 +9,21 @@ import {ThumbsUp, ThumbsDown} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {HELP_CATEGORIES} from "./help-content";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
+<<<<<<< HEAD
+import { HELP_CATEGORIES } from "./help-content";
+interface HelpArticleViewProps {
+=======
 import { HELP_CATEGORIES } from "./help-content",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -35,6 +45,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
       break
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
@@ -42,25 +55,45 @@ import { ThumbsUp, ThumbsDown } from "lucide-react",;
 import { toast } from "@/components/ui/use-toast",;
 import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   articleId: string;
 }
-;
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
-  // Find the article in all categories;
-  let article,;
-  for (const category of HELP_CATEGORIES) {;
-    const found = category.articles.find(a => a.id === articleId),;
-    if (found) {;
-      article = found,;
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+
+  const [feedbackGiven, setFeedbackGiven] = useState<
+    "helpful" | "not-helpful" | null
+  >(null);
+
+  // Find the article in all categories
+  let article = null;
+  for (const category of HELP_CATEGORIES) {
+
+    const found = category.articles.find((a) => a.id === articleId);
+    if (found) {
+      article = found;
       break;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
-  
   if (!article) {
-    return <div>Article not found</div>
+    return <div>Article not found</div>;
   }
+<<<<<<< HEAD
+  const handleFeedback = (type: "helpful" | "not-helpful") => {
+    (setFeedbackGiven(type)
+      // In a real implementation, this would send feedback to the server
+      toast({
+        title: "Thank you for your feedback!"
+        description:
+          type === "helpful"
+            ? "We're glad this article was helpful."
+            : "We'll work on improving this article."
+      }));
+  }
+=======
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
@@ -73,6 +106,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
         : "We'll work on improving this article."})
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div>
       <Card className="p-6">
@@ -94,7 +128,11 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
               <Button
                 variant="outline"
                 size="sm"
-                className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
+                className={
+                  feedbackGiven === "helpful"
+                    ? "bg-green-100 dark:bg-green-900/30"
+                    : ""
+                }
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
               >
@@ -104,7 +142,11 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
               <Button
                 variant="outline"
                 size="sm"
-                className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
+                className={
+                  feedbackGiven === "not-helpful"
+                    ? "bg-red-100 dark:bg-red-900/30"
+                    : ""
+                }
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
               >
@@ -116,9 +158,13 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
           {feedbackGiven === "not-helpful" && (
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
               <p className="text-sm text-zion-slate-light mb-2">
-                We're sorry this article wasn't helpful. Please contact our support team for further assistance.
+                We're sorry this article wasn't helpful. Please contact our
+                support team for further assistance.
               </p>
-              <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">
+              <Button
+                size="sm"
+                className="bg-zion-purple hover:bg-zion-purple-light"
+              >
                 Contact Support
               </Button>
             </div>
@@ -183,23 +229,39 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
                 Contact Support;
               </Button>;
             </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </div>
       </Card>
     </div>
-  )
+  );
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
+    year: "numeric"
+    month: "long"
     day: "numeric"
+<<<<<<< HEAD
+<<<<<<< HEAD
+  });
+}
+
+=======
+  })
+=======
   })
 <<<<<<< HEAD
 }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 function formatDate(date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -209,4 +271,8 @@ function formatDate(date: string): string {;
   });
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

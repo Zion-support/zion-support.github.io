@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
@@ -13,7 +17,12 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 ...innovative2025AIAutonomousServices ];
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
+<<<<<<< HEAD
+  opacity: 0
+}
+=======
   opacity: 0 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react';
 
@@ -28,68 +37,62 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 visible: {
   opacity: 1, transition: {
-  duration: 0.8, staggerChildren: 0.1 
-
-};
-
-};
-
-};
-
-};
-
-};
+  duration: 0.8, staggerChildren: 0.1
+}
+}
+}
+}
+}
 export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
+
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 // Import service data
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
+import { revolutionary2044AdvancedMicroSaas  } from '../data/revolutionary-2044-advanced-micro-saas';
+import { revolutionary2044ITServices  } from '../data/revolutionary-2044-it-services';
+import { revolutionary2044AIServices  } from '../data/revolutionary-2044-ai-services';
+import { realEnterpriseMicroSaas2025  } from '../data/2025-real-enterprise-micro-saas';
+import { innovativeITServicesExpansion2025V3  } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3  } from '../data/2025-innovative-ai-services-expansion-v3';
+import { innovative2025ITInfrastructureServices  } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  
   useEffect(() => {
     setIsVisible(true);
-    
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)
     }, 6000);
-    
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
-    };
-    
+    }
     // Show performance monitor after 5 seconds
     const performanceTimer = setTimeout(() => {
       setShowPerformanceMonitor(true)
     }, 5000);
-    
     window.addEventListener('mousemove', handleMouseMove);
-    
     return () => {
       clearInterval(interval);
       clearTimeout(performanceTimer);
       window.removeEventListener('mousemove', handleMouseMove)
     }
   }, []);
-
   // Combine all revolutionary services
   const allRevolutionaryServices = [
     ...revolutionary2044AdvancedMicroSaas;
@@ -101,82 +104,87 @@ const EnhancedHomepage: React.FC = () => {
     ...innovative2025ITInfrastructureServices;
     ...innovative2025AIAutonomousServices
   ];
-
   // Filter services by category
   const getFilteredServices = () => {
     if (selectedCategory === 'all') return allRevolutionaryServices;
-    return allRevolutionaryServices.filter(service => 
-      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
+    return allRevolutionaryServices.filter(service =>
+      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) |
       (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
     )
-  };
-
+  }
   const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },
-    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const },
-    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const },
-    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const },
+    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const }
+    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const }
+    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const }
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const }
+    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const }
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
   ];
-
   // Get featured services for rotation
   const featuredServices = allRevolutionaryServices.slice(0, 6);
-
   // Animation variants
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        duration: 0.8,
+        duration: 0.8
         staggerChildren: 0.1
       }
     }
+<<<<<<< HEAD
+  }
+=======
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
-        duration: 0.6,
+        duration: 0.6
         ease: "easeOut" as const
       }
     }
-  };
-
+  }
   const heroVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 50 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
-        duration: 1,
+        duration: 1
         ease: "easeOut" as const
       }
     }
-  };
-
+  }
   const floatingVariants = {
     animate: {
       y: [-10, 10, -10];
       transition: {
+<<<<<<< HEAD
+        duration: 3
+=======
         duration: 3,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         ease: "easeInOut" as const
       }
     }
-  };
-
+  }
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId);
     const category = categories.find(cat => cat.id === categoryId);
     if (category) {
       setColorScheme(category.scheme)
     }
+<<<<<<< HEAD
+  }
+=======
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -202,7 +210,7 @@ const EnhancedHomepage: React.FC = () => {
       <EnhancedNavigation />
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
         {/* Hero Section */}
-        <motion.section 
+        <motion.section
           className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20"
           variants={heroVariants}
           initial="hidden"
@@ -210,25 +218,39 @@ const EnhancedHomepage: React.FC = () => {
         >
           <div className="relative z-10 text-center max-w-6xl mx-auto">
             {/* Main Heading */}
-            <motion.h1 
+            <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
               variants={itemVariants}
             >
               Zion Tech Group
             </motion.h1>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <motion.p
+=======
+            
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.p 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
-              Pioneering the Future of Technology with Revolutionary AI Consciousness,
+              Pioneering the Future of Technology with Revolutionary AI Consciousness
               Quantum Computing, and Autonomous Solutions
             </motion.p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+            {/* CTA Buttons */}
+            <motion.div
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Buttons */}
             <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}
             >
@@ -254,7 +276,7 @@ const EnhancedHomepage: React.FC = () => {
               </Link>
             </motion.div>
             {/* Contact Information */}
-            <motion.div 
+            <motion.div
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
               variants={itemVariants}
             >
@@ -298,20 +320,28 @@ const EnhancedHomepage: React.FC = () => {
           </motion.div>
         </motion.section>
         {/* Category Filter */}
-        <motion.section 
+        <motion.section
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-6xl mx-auto">
-            <motion.h2 
+            <motion.h2
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
               variants={itemVariants}
             >
               Explore Our Revolutionary Services
             </motion.h2>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <motion.div
+=======
+            
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}
             >
@@ -335,18 +365,28 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Services Grid */}
+        <motion.section
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Grid */}
         <motion.section 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+            <motion.div
+=======
             <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
             >
@@ -357,9 +397,9 @@ const EnhancedHomepage: React.FC = () => {
                   title={service.name}
                   description={service.description}
                   category={service.category}
-                  type={(service as any).type || service.category}
+                  type={(service as any).type |service.category}
                   features={service.features?.map(f => ({ name: f, description: f }))}
-                  slug={(service as any).slug || service.id}
+                  slug={(service as any).slug |service.id}
                   index={index}
                   isPopular={Math.random() > 0.7}
                   isNew={Math.random() > 0.8}
@@ -371,7 +411,7 @@ const EnhancedHomepage: React.FC = () => {
               ))}
             </motion.div>
             {getFilteredServices().length > 12 && (
-              <motion.div 
+              <motion.div
                 className="text-center mt-12"
                 variants={itemVariants}
               >
@@ -390,24 +430,34 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Featured Service Showcase */}
+        <motion.section
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Featured Service Showcase */}
         <motion.section 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-6xl mx-auto">
-            <motion.h2 
+            <motion.h2
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
               variants={itemVariants}
             >
               Featured Revolutionary Services
             </motion.h2>
+<<<<<<< HEAD
+            <motion.div
+=======
             <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}
             >
@@ -434,7 +484,11 @@ const EnhancedHomepage: React.FC = () => {
                         </span>
                       ))}
                     </div>
+<<<<<<< HEAD
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
+=======
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -461,27 +515,35 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
         {/* Call to Action */}
-        <motion.section 
+        <motion.section
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h2 
+            <motion.h2
               className="text-3xl md:text-4xl font-bold text-white mb-6"
               variants={itemVariants}
             >
               Ready to Transform Your Business?
             </motion.h2>
+<<<<<<< HEAD
+            <motion.p
+=======
             <motion.p 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
-              Join the future of technology with Zion Tech Group's revolutionary solutions. 
+              Join the future of technology with Zion Tech Group's revolutionary solutions.
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
+<<<<<<< HEAD
+            <motion.div
+=======
             <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}
             >
@@ -512,7 +574,11 @@ const EnhancedHomepage: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (
@@ -521,6 +587,9 @@ const EnhancedHomepage: React.FC = () => {
       </AnimatePresence>
     </>
   )
-};
-
+}
 export default EnhancedHomepage;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

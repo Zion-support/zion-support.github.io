@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import {toast} from "@/hooks/use-toast"
@@ -6,6 +8,7 @@ import {NextSeo} from '@/components/NextSeo'
 import {Header} from "@/components/Header"
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import {logErrorToProduction} from '@/utils/productionLogger'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { GradientHeading } from "@/components/GradientHeading",
 import { ProductListingCard } from "@/components/ProductListingCard",
@@ -20,7 +23,29 @@ import { NextSeo } from '@/components/NextSeo',
 import { Header } from "@/components/Header",
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
 import {logErrorToProduction} from '@/utils/productionLogger',
+<<<<<<< HEAD
+const AUTO_SERVICE_TITLES = [
+  "AI-Powered Customer Support",
+  "Cloud Infrastructure Management",
+  "Predictive Analytics Consulting",
+  "Cybersecurity Automation Suite",
+  "Robotic Process Automation",
+  "Machine Learning Model Tuning",
+  "IoT Device Integration Service",
+  "Blockchain Data Solutions"
+],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import {toast} from "@/hooks/use-toast"
+import {NextSeo} from '@/components/NextSeo'
+import {Header} from "@/components/Header"
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
+import {logErrorToProduction} from '@/utils/productionLogger'
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support"
   "Cloud Infrastructure Management"
@@ -31,9 +56,13 @@ const AUTO_SERVICE_TITLES = [
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ]
 function generateInnovationListing(index: number): ProductListing {
-  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service'
+<<<<<<< HEAD
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] |'AI Service'
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
   const params = router.query as { slug?: string }
@@ -41,19 +70,22 @@ function generateInnovationListing(index: number): ProductListing {
       icon: <Briefcase className="w-6 h-6" />
     }
     'talents': {
-      title: "Talents",
+      title: "Talents"
       description: "Connect with AI experts, developers, and tech specialists"
       icon: <Brain className="w-6 h-6" />
     }
     'equipment': {
-      title: "Equipment",
+      title: "Equipment"
       description: "Rent or buy specialized hardware, servers, and devices"
       icon: <Code className="w-6 h-6" />
     }
 =======
+<<<<<<< HEAD
+=======
 ],
 
 function generateInnovationListing(index: number): ProductListing {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
@@ -168,67 +200,100 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'innovation': {
-      title: "Innovation",
-      description: "Discover cutting-edge solutions and tech breakthroughs",
+      title: "Innovation"
+      description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
 <<<<<<< HEAD
     }
 =======
     },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'ai-models-apis': {
-      title: "AI Models & APIs",
-      description: "Access cutting-edge AI models with easy integration",
+      title: "AI Models & APIs"
+      description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
 <<<<<<< HEAD
     }
 =======
     },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'content-creation': {
-      title: "Content Creation",
-      description: "Generate high-quality content for your projects",
+      title: "Content Creation"
+      description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
 <<<<<<< HEAD
     }
 =======
     },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'data-analysis': {
-      title: "Data Analysis",
-      description: "Extract insights from complex datasets",
+      title: "Data Analysis"
+      description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
 <<<<<<< HEAD
     }
 =======
     },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'computer-vision': {
-      title: "Computer Vision",
-      description: "Image and video processing solutions",
+      title: "Computer Vision"
+      description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
 <<<<<<< HEAD
     }
 =======
     },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'virtual-assistants': {
-      title: "Virtual Assistants",
-      description: "Intelligent automation for your workflow",
+      title: "Virtual Assistants"
+      description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
 <<<<<<< HEAD
     }
 =======
     },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'voice-speech': {
-      title: "Voice & Speech",
-      description: "Speech recognition and synthesis tools",
+      title: "Voice & Speech"
+      description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
 <<<<<<< HEAD
     }
+<<<<<<< HEAD
+=======
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",;
@@ -236,10 +301,22 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     };          icon: <Bot className="w-6 h-6" />},
 =======
     },
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'developer-tools': {
-      title: "Developer Tools",
-      description: "AI-powered coding assistance and automation",
+      title: "Developer Tools"
+      description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+    };          icon: <Bot className="w-6 h-6" />}
+        setCategory(currentCategory)
+        innovationCounterRef.current = 0
+    : 'Category | Zion Marketplace'
+  const seoDescription =
+    category.description |'Explore listings in this category.'
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },
     'business-solutions': {
       title: "Business Solutions",
@@ -346,6 +423,10 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     : 'Category | Zion Marketplace',
   const seoDescription =
     category.description || 'Explore listings in this category.',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
         setCategory(currentCategory)
@@ -353,11 +434,16 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     : 'Category | Zion Marketplace'
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
       <Header />
+<<<<<<< HEAD
+      <Suspense fallback={<ListingGridSkeleton />}>
+=======
       <Suspense fallback={<ListingGridSkeleton />}> 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="min-h-screen bg-zion-blue">
           <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
@@ -368,7 +454,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -595,10 +685,15 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
                   onRequestQuote={handleRequestQuote}
                   detailBasePath="/marketplace/listing";
                 />;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           )}
+<<<<<<< HEAD
           </div>
         </div>
       </Suspense>
@@ -607,5 +702,17 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 }
 <<<<<<< HEAD
 =======
+          </div>;
+        </div>;
+      </Suspense>;
+    </>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

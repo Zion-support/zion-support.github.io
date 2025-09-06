@@ -1,71 +1,76 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
+<<<<<<< HEAD
+export default function RequestToHirePage() {
+
+=======
 
 export default function RequestToHirePage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
-  const { talent } = router.query as { talent?: string };
+  const { talent } = router.query as { talent?: string }
   const selected = useMemo(
-    () => TALENT_PROFILES.find(t => t.slug === talent),
+    () => TALENT_PROFILES.find(t => t.slug === talent)
     [talent]
   );export default function RequestToHirePage() {;
   const router = useRouter();
-  const { talent } = router.query as { talent?: string };
+  const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    budget: '',
-    timeline: '',
-    description: '',
+    name: ''
+    email: ''
+    budget: ''
+    timeline: ''
+    description: ''
   });
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string; message: string }>(
     null
-  );  const [error, setError] = useState<string | null>(null);    description: ''}),
+  );  const [error, setError] = useState<string | null>(null);    description: ''})
   const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string, message: string }>(null),
+  const [result, setResult] = useState<null | { id: string, message: string }>(null)
   const [error, setError] = useState<string | null>(null);
-
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null),
-
-    if (!form.name || !form.email || !form.description) {
+    setError(null)
+    if (!form.name |!form.email |!form.description) {
       setError('Please fill in name, email, and description.');
       return;    }      return
     }
-
     const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
-
     setSubmitting(true);
     try {
       const res = await fetch('/api/requests/create', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          ...form,
-          budget: normalizedBudget,
-          talentSlug: selected?.slug || null,
-        }),
+          ...form
+          budget: normalizedBudget
+          talentSlug: selected?.slug |null
+        })
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to submit');
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' });
     } catch (err: any) {
-      setError(err.message || 'Something went wrong');
+      setError(err.message |'Something went wrong');
     } finally {
-      setSubmitting(false);    }          budget: normalizedBudget,
-          talentSlug: selected?.slug || null})}),
+      setSubmitting(false);    }          budget: normalizedBudget
+          talentSlug: selected?.slug |null})})
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to submit');
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
     } catch (err: any) {
-      setError(err.message || 'Something went wrong')
+      setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
     }
+<<<<<<< HEAD
+  }
+=======
   };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   if (result) {
     return (
@@ -80,7 +85,6 @@ export default function RequestToHirePage() {;
       </div>
     );
   }
-
   return (
     <div className='max-w-xl mx-auto'>
       <h1 className='text-2xl font-semibold mb-4'>
@@ -140,7 +144,6 @@ export default function RequestToHirePage() {;
         >          {submitting ? 'Submitting…' : 'Submit Request'}      </div>
     )
   }
-
   return (
     <div className="max-w-xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>
@@ -171,5 +174,10 @@ export default function RequestToHirePage() {;
         </button>
       </form>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,5 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -25,10 +29,22 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type DisputesListProps = {
-  disputes: Dispute[],
+  disputes: Dispute[]
   isLoading: boolean
+<<<<<<< HEAD
+}
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+  const filteredDisputes = statusFilter === "all"
+    ? disputes
+    : disputes.filter(dispute => dispute.status === statusFilter);
+=======
 },
 
 <<<<<<< HEAD
@@ -43,11 +59,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter),
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default",
       case "under_review":
-        return "secondary",
+        return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
@@ -55,7 +72,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       default:
         return "default"
     }
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   if (isLoading) {
     return (
@@ -156,7 +177,11 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </TableBody>
           </Table>
@@ -164,7 +189,10 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
       </div>
     )
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (disputes.length === 0) {
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">
@@ -176,7 +204,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
       </div>
     )
   }
-
   return (
     <div className="space-y-4">
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
@@ -235,15 +262,15 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
-                  {dispute.project?.title || "Unknown Project"}
+                  {dispute.project?.title |"Unknown Project"}
                 </TableCell>
                 <TableCell>
                   <div className="flex flex-col text-sm">
                     <span>
-                      Client: {dispute.client_profile?.display_name || "Unknown Client"}
+                      Client: {dispute.client_profile?.display_name |"Unknown Client"}
                     </span>
                     <span>
-                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
                     </span>
                   </div>
                 </TableCell>
@@ -262,10 +289,19 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
                 </TableCell>
               </TableRow>
             ))}
+<<<<<<< HEAD
           </TableBody>
         </Table>
       </div>
     </div>
   )
 }
+=======
+          </TableBody>;
+        </Table>;
+      </div>;
+    </div>;
+  );
+}
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

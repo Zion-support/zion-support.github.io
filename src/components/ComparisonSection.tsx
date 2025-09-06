@@ -1,17 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import { GradientHeading } from "./GradientHeading",
+import { Button } from "./ui/button";
+=======
 import { GradientHeading } from './GradientHeading'
 import { Button } from './ui/button'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { CheckCircle2 } from 'lucide-react'
+
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
 } from './ui/table'
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -49,35 +60,35 @@ export function ComparisonSection() {
               <TableBody>
                 {[
                   {
-                    service: 'Server Hosting',
-                    traditional: '$1,200/mo',
-                    zion: '$650/mo',
-                    savings: '45%',
-                  },
+                    service: 'Server Hosting'
+                    traditional: '$1,200/mo'
+                    zion: '$650/mo'
+                    savings: '45%'
+                  }
                   {
-                    service: 'IT Equipment',
-                    traditional: 'Full Purchase',
-                    zion: 'Flexible Rental',
-                    savings: '60%',
-                  },
+                    service: 'IT Equipment'
+                    traditional: 'Full Purchase'
+                    zion: 'Flexible Rental'
+                    savings: '60%'
+                  }
                   {
-                    service: '24/7 Support',
-                    traditional: '$2,500/mo',
-                    zion: '$950/mo',
-                    savings: '62%',
-                  },
+                    service: '24/7 Support'
+                    traditional: '$2,500/mo'
+                    zion: '$950/mo'
+                    savings: '62%'
+                  }
                   {
-                    service: 'Storage Solutions',
-                    traditional: '$800/mo',
-                    zion: '$350/mo',
-                    savings: '56%',
-                  },
+                    service: 'Storage Solutions'
+                    traditional: '$800/mo'
+                    zion: '$350/mo'
+                    savings: '56%'
+                  }
                   {
-                    service: 'Marketplace Listings',
-                    traditional: '$99/mo',
-                    zion: 'Free',
-                    savings: '100%',
-                  },
+                    service: 'Marketplace Listings'
+                    traditional: '$99/mo'
+                    zion: 'Free'
+                    savings: '100%'
+                  }
                 ].map((item, index) => (
                   <TableRow key={index} className='border-b border-zion-blue'>
                     <TableCell className='font-medium text-white'>
@@ -93,6 +104,7 @@ export function ComparisonSection() {
                       {item.savings}
                     </TableCell>                  </TableRow>
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
+
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -143,7 +155,11 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
                   </TableRow>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
               </TableBody>
             </Table>
@@ -187,7 +203,11 @@ export function ComparisonSection() {
             
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Button>
           </div>
         </div>
@@ -200,6 +220,12 @@ export function ComparisonSection() {
 =======
     </section>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
 import { CheckCircle2 } from 'lucide-react';
@@ -261,4 +287,8 @@ export function ComparisonSection() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

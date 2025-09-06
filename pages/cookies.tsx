@@ -1,8 +1,35 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+  Shield
+  Settings
+  Info
+  ExternalLink
+  ArrowRight
+  CheckCircle
+  XCircle
+  AlertTriangle
+=======
   Shield,
   Settings,
   Info,
@@ -11,61 +38,63 @@ import {
   CheckCircle,
   XCircle,
   AlertTriangle;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
-
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
+<<<<<<< HEAD
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
+=======
     necessary: true,
     analytics: false,
     marketing: false,
     functional: false;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
-
   const cookieTypes = [
     {
-      id: 'necessary',
-      name: 'Necessary Cookies',
-      description: 'Essential cookies required for the website to function properly',
-      required: true,
+      id: 'necessary'
+      name: 'Necessary Cookies'
+      description: 'Essential cookies required for the website to function properly'
+      required: true
       examples: ['Session management', 'Security', 'Load balancing']
-    },
+    }
     {
-      id: 'analytics',
-      name: 'Analytics Cookies',
-      description: 'Help us understand how visitors interact with our website',
-      required: false,
+      id: 'analytics'
+      name: 'Analytics Cookies'
+      description: 'Help us understand how visitors interact with our website'
+      required: false
       examples: ['Google Analytics', 'Page views', 'User behavior']
-    },
+    }
     {
-      id: 'marketing',
-      name: 'Marketing Cookies',
-      description: 'Used to track visitors across websites for advertising purposes',
-      required: false,
+      id: 'marketing'
+      name: 'Marketing Cookies'
+      description: 'Used to track visitors across websites for advertising purposes'
+      required: false
       examples: ['Ad targeting', 'Social media', 'Remarketing']
-    },
+    }
     {
-      id: 'functional',
-      name: 'Functional Cookies',
-      description: 'Enable enhanced functionality and personalization',
-      required: false,
+      id: 'functional'
+      name: 'Functional Cookies'
+      description: 'Enable enhanced functionality and personalization'
+      required: false
       examples: ['Language preferences', 'User settings', 'Chat widgets']
     }
   ];
-
   const handleCookieToggle = (cookieId: string) => {
     if (cookieId === 'necessary') return; // Can't disable necessary cookies
-    
     setCookiePreferences(prev => ({
-      ...prev,
+      ...prev
       [cookieId]: !prev[cookieId]
     }));
-  };
-
+  }
   const savePreferences = () => {
     // In a real implementation, this would save to localStorage and update cookie settings
     alert('Cookie preferences saved!');
-  };
-
+  }
   return (
     <MainLayout
       title="Cookie Policy - Zion Tech Group"
@@ -93,7 +122,7 @@ export default function CookiePolicyPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Learn about how we use cookies to enhance your experience on our website 
+                Learn about how we use cookies to enhance your experience on our website
                 and how you can manage your cookie preferences.
               </p>
             </motion.div>
@@ -113,7 +142,7 @@ export default function CookiePolicyPage() {
                 Manage Your Cookie Preferences
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                You can control which cookies we use on our website. 
+                You can control which cookies we use on our website.
                 Some cookies are necessary for the website to function properly.
               </p>
             </motion.div>
@@ -183,9 +212,9 @@ export default function CookiePolicyPage() {
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">
                   <button
                     onClick={() => setCookiePreferences({
-                      necessary: true,
-                      analytics: false,
-                      marketing: false,
+                      necessary: true
+                      analytics: false
+                      marketing: false
                       functional: false
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
@@ -194,9 +223,9 @@ export default function CookiePolicyPage() {
                   </button>
                   <button
                     onClick={() => setCookiePreferences({
-                      necessary: true,
-                      analytics: true,
-                      marketing: true,
+                      necessary: true
+                      analytics: true
+                      marketing: true
                       functional: true
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
@@ -228,7 +257,7 @@ export default function CookiePolicyPage() {
                 What Are Cookies?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Cookies are small text files that are stored on your device when you visit our website. 
+                Cookies are small text files that are stored on your device when you visit our website.
                 They help us provide you with a better experience and understand how you use our site.
               </p>
             </motion.div>
@@ -312,7 +341,7 @@ export default function CookiePolicyPage() {
                 Questions About Our Cookie Policy?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                If you have any questions about our use of cookies or this policy, 
+                If you have any questions about our use of cookies or this policy
                 please don't hesitate to contact us.
               </p>
             </motion.div>
@@ -339,40 +368,141 @@ export default function CookiePolicyPage() {
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function CookiesPage() {
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <SEO
+        title='Cookie Policy | Zion Tech Group'
+        description='Information about cookies used by Zion Tech Group.'
+        canonical='https://ziontechgroup.com/cookies/'
+      />
+      <div className='container mx-auto px-4 py-24 text-white'>
+        <div className='max-w-3xl mx-auto space-y-6'>
+          <h1 className='text-4xl md:text-5xl font-bold'>Cookie Policy</h1>
+          <p className='text-gray-300'>
+            We use minimal, privacy‑respecting analytics. Some third‑party
+            embeds may set cookies. You can block non‑essential cookies via your
+            browser.
+          </p>
+          <ul className='list-disc list-inside text-gray-300 space-y-1'>
+<<<<<<< HEAD
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+<<<<<<< HEAD
+=======
+}      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+=======
 =======
 import React from 'react',
 import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
           <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/automation-improvements-final
+            <li>Purpose: performance and security</li>
+=======
 <li>Purpose: performance and security</li>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
-          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</Link></p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+          <p className='text-gray-400 text-sm'>
+            Questions?{' '}
+            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+              kleber@ziontechgroup.com
+            </a>
+          </p>
         </div>
+<<<<<<< HEAD
+      </Layout>
+    </>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  );
+=======
 <<<<<<< HEAD
       </Layout>
     </>;
   );
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
 =======
       </div>
@@ -385,3 +515,4 @@ export default function CookiesPage() {
 }
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

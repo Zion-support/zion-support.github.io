@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 <<<<<<< HEAD
 export type EmptyStateProps = {;
@@ -8,14 +12,14 @@ export type EmptyStateProps = {
   title: string;
   message: string;
   action?: React.ReactNode;
-};
-
+}
 export default function EmptyState({
-  emoji = "✨",
-  title,
-  message,
-  action,
+  emoji = "✨"
+  title
+  message
+  action
 }: EmptyStateProps) {
+
   return (
     <div className="text-center py-12">
       <div className="mx-auto h-24 w-24 rounded-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 flex items-center justify-center">
@@ -30,4 +34,8 @@ export default function EmptyState({
     </div>
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

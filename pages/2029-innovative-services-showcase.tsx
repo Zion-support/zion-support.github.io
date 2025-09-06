@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -25,19 +30,61 @@ export default function InnovativeServicesShowcase2029() {
     ...emergingTechBreakthroughServices2029,
     ...practicalBusinessSolutionServices2029
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  Brain, Atom, Target, ArrowRight, CheckCircle, Star
+  Phone, Mail, MapPin
+} from 'lucide-react'
+=======
 import {;
   Brain, Atom, Target, ArrowRight, CheckCircle, Star,;
   Phone, Mail, MapPin;
 } from 'lucide-react',;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+<<<<<<< HEAD
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+export default function InnovativeServicesShowcase2029() {
+  const allServices = [
+    ...aiAutonomousEcosystemServices2029
+    ...emergingTechBreakthroughServices2029
+    ...practicalBusinessSolutionServices2029
+  ]
+  const serviceCategories = [
+    {
+      title: '🚀 AI Autonomous Ecosystem'
+      icon: Brain
+      color: 'from-violet-600 via-purple-600 to-indigo-600'
+      services: aiAutonomousEcosystemServices2029
+    }
+    {
+      title: '⚛️ Emerging Tech Breakthroughs'
+      icon: Atom
+      color: 'from-indigo-600 via-blue-600 to-cyan-600'
+      services: emergingTechBreakthroughServices2029
+    }
+    {
+      title: '🎯 Practical Business Solutions'
+      icon: Target
+      color: 'from-cyan-600 via-teal-600 to-emerald-600'
+      services: practicalBusinessSolutionServices2029
+    }
+  ]
+=======
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -74,8 +121,12 @@ export default function InnovativeServicesShowcase2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -94,7 +145,11 @@ export default function InnovativeServicesShowcase2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -119,10 +174,18 @@ export default function InnovativeServicesShowcase2029(req, res) {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+                Experience the future of technology with our revolutionary AI autonomous ecosystems
+
+=======
+                Experience the future of technology with our revolutionary AI autonomous ecosystems,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                 Experience the future of technology with our revolutionary AI autonomous ecosystems, 
 =======
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -169,17 +232,25 @@ export default function InnovativeServicesShowcase2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Revolutionary Service Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 <<<<<<< HEAD
+                Our 2029 services are organized into three cutting-edge categories, each designed to
+=======
+<<<<<<< HEAD
                 Our 2029 services are organized into three cutting-edge categories, each designed to 
 =======
                 Our 2029 services are organized into three cutting-edge categories, each designed to
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 revolutionize different aspects of business and technology.
               </p>
             </motion.div>
@@ -212,7 +283,11 @@ export default function InnovativeServicesShowcase2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   viewport={{ once: true }} className="relative group">
                   <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 rounded-2xl blur-xl group-hover:opacity-30 transition-opacity duration-500`}></div>
                   <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
@@ -222,10 +297,14 @@ export default function InnovativeServicesShowcase2029(req, res) {
                     <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
                     <p className="text-gray-300 mb-6">
 <<<<<<< HEAD
+                      {category.services.length} cutting-edge services designed to transform your business
+=======
+<<<<<<< HEAD
                       {category.services.length} cutting-edge services designed to transform your business 
 =======
                       {category.services.length} cutting-edge services designed to transform your business
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       and accelerate your success in the digital age.
                     </p>
                     <div className="text-sm text-gray-400">
@@ -277,17 +356,25 @@ export default function InnovativeServicesShowcase2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Featured Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 <<<<<<< HEAD
+                Explore our most innovative and transformative services that are reshaping industries
+=======
+<<<<<<< HEAD
                 Explore our most innovative and transformative services that are reshaping industries 
 =======
                 Explore our most innovative and transformative services that are reshaping industries
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 and creating new possibilities for businesses worldwide.
               </p>
             </motion.div>
@@ -320,7 +407,11 @@ export default function InnovativeServicesShowcase2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   viewport={{ once: true }} className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -354,7 +445,11 @@ export default function InnovativeServicesShowcase2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <div className="flex gap-4">
                     <Link
@@ -398,7 +493,11 @@ export default function InnovativeServicesShowcase2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               viewport={{ once: true }} className="text-center mt-16">
               <Link
                 href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
@@ -416,7 +515,11 @@ export default function InnovativeServicesShowcase2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -446,8 +549,11 @@ export default function InnovativeServicesShowcase2029(req, res) {
               </h2>
               <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 Join the future of technology with our innovative 2029 services. 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Join the future of technology with our innovative 2029 services.
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Contact us today to discover how we can revolutionize your business operations.
@@ -484,9 +590,12 @@ export default function InnovativeServicesShowcase2029(req, res) {
       </div>
     </>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
             >;
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">;
@@ -532,5 +641,9 @@ export default function InnovativeServicesShowcase2029(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

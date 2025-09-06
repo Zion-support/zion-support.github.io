@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 export default function CloudAutomationsPage() {;
 =======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CloudAutomationsPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [data, setData] = useState<any>(null);
@@ -30,12 +36,12 @@ export default function CloudAutomationsPage() {
             key={key}
             className='border rounded p-4 bg-gray-50 dark:bg-gray-900'
           >
-            <h2 className='text-xl font-semibold'>{value.name || key}</h2>
+            <h2 className='text-xl font-semibold'>{value.name |key}</h2>
             <p className='text-sm text-gray-500'>
-              Started: {value.startedAt || '—'}
+              Started: {value.startedAt |'—'}
             </p>
             <p className='text-sm text-gray-500'>
-              Finished: {value.finishedAt || '—'}
+              Finished: {value.finishedAt |'—'}
             </p>
             <p
               className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}
@@ -47,9 +53,9 @@ export default function CloudAutomationsPage() {
                 {JSON.stringify(value.metrics, null, 2)}
               </pre>            ) : null}        {items.map(([key, value]: any) => (
           <div key={key} className="border rounded p-4 bg-gray-50 dark:bg-gray-900">
-            <h2 className="text-xl font-semibold">{value.name || key}</h2>
-            <p className="text-sm text-gray-500">Started: {value.startedAt || '—'}</p>
-            <p className="text-sm text-gray-500">Finished: {value.finishedAt || '—'}</p>
+            <h2 className="text-xl font-semibold">{value.name |key}</h2>
+            <p className="text-sm text-gray-500">Started: {value.startedAt |'—'}</p>
+            <p className="text-sm text-gray-500">Finished: {value.finishedAt |'—'}</p>
             <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
             {value.metrics ? (
               <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metrics, null, 2)}</pre>
@@ -58,5 +64,10 @@ export default function CloudAutomationsPage() {
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

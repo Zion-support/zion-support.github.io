@@ -1,112 +1,114 @@
-'use client';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+  Mail
+  Phone
+  MapPin
+  Send
+  CheckCircle
+  AlertCircle;
+=======
   Mail,
   Phone,
   MapPin,
   Send,
   CheckCircle,;
   AlertCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
+    message: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+      ...formData
+      [e.target.name]: e.target.value
     });  };  });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData;
       [e.target.name]: e.target.value
     })
-  };
-
+  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate API call
     try {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
+        message: ''
       });
     } catch (error) {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);    }
-  };
-
+  }
   const services = [    } catch (error) {
       setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false)
     }
-  };
-
+  }
   const services = [
-    'AI Development',
-    'Cloud Architecture',
-    'Digital Transformation',
-    'IoT Platforms',
-    'Blockchain Solutions',
-    'Data Analytics',
+    'AI Development'
+    'Cloud Architecture'
+    'Digital Transformation'
+    'IoT Platforms'
+    'Blockchain Solutions'
+    'Data Analytics'
     'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
   ];
-
   const contactInfo = [
     {
-      icon: Mail,
-      title: 'Email Us',
-      content: 'contact@ziontechgroup.com',
-      href: 'mailto:contact@ziontechgroup.com',
+      icon: Mail
+      title: 'Email Us'
+      content: 'contact@ziontechgroup.com'
+      href: 'mailto:contact@ziontechgroup.com'
     },    {
-      icon: Phone,
-      title: 'Call Us',
+      icon: Phone
+      title: 'Call Us'
       content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup.com'
-    };
+    }
     {
-      icon: Phone,
-      title: 'Call Us',
-      content: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      icon: Phone
+      title: 'Call Us'
+      content: '+1 (555) 123-4567'
+      href: 'tel:+15551234567'
     },    {
-      icon: MapPin,
-      title: 'Visit Us',
-      content: '123 Tech Street, Innovation City, IC 12345',
-      href: '#',
-    },
-
+      icon: MapPin
+      title: 'Visit Us'
+      content: '123 Tech Street, Innovation City, IC 12345'
+      href: '#'
+    }
   return (
     <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
       {/* Background Elements */}
@@ -125,7 +127,11 @@ const ContactForm: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a
@@ -148,7 +154,7 @@ const ContactForm: React.FC = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your business? Get in touch with our team of experts to discuss 
+            Ready to transform your business? Get in touch with our team of experts to discuss
             how we can help you achieve your technology goals.
           </p>
         </motion.div>
@@ -160,7 +166,11 @@ const ContactForm: React.FC = () => {
 
           {/* Contact Information */}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -180,7 +190,7 @@ const ContactForm: React.FC = () => {
             {/* Contact Details */}
             <div className='space-y-6'>              {contactInfo.map((info, index) => (              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Our team is here to help you navigate the complex world of technology and find 
+                Our team is here to help you navigate the complex world of technology and find
                 the perfect solutions for your business needs. Reach out to us today.
             </div>
             {/* Contact Details */}
@@ -197,7 +207,11 @@ const ContactForm: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>
                     <info.icon className='w-6 h-6 text-white' />
@@ -222,7 +236,11 @@ const ContactForm: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Additional Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -272,7 +290,11 @@ const ContactForm: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -284,7 +306,11 @@ const ContactForm: React.FC = () => {
 =======
             className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             {submitStatus === 'success' ? (
               <motion.div
@@ -468,7 +494,11 @@ const ContactForm: React.FC = () => {
                     required
                     rows={5}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                 </div>
                 {submitStatus === 'error' && (
@@ -483,7 +513,6 @@ const ContactForm: React.FC = () => {
                     <span>Something went wrong. Please try again.</span>
                   </motion.div>
                 )}
-
                 <button
                   type='submit'
                   disabled={isSubmitting}
@@ -517,13 +546,24 @@ const ContactForm: React.FC = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ContactForm;  )
-};
-
+}
 export default ContactForm;
+
+<<<<<<< HEAD
+=======
+export default ContactForm;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 export default ContactForm;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

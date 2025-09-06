@@ -1,8 +1,50 @@
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+=======
 import React from 'react';
 import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Phone
+  Zap
+  DollarSign
+  Shield
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Sparkles
+  Globe
+  Atom
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Crown
+  Award
+  Target
+  Users
+  Clock
+  Globe2;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+
+=======
   CheckCircle,
   ArrowRight,
   Star,
@@ -36,140 +78,144 @@ import {
   Clock,;
   Globe2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+ } from 'lucide-react';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com'
-};
 
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com'
+}
 const pricingTiers = [
   {
-    name: 'Starter',
-    price: '$299',
-    period: '/month',
-    description: 'Perfect for small businesses and startups',
+    name: 'Starter'
+    price: '$299'
+    period: '/month'
+    description: 'Perfect for small businesses and startups'
     features: [
-      'Basic AI integration',
-      'Standard support',
-      'Core features access',
-      'Email support',
-      'Basic analytics',
-      'Mobile app access',
-    ],
-    popular: false,
-    color: 'from-blue-600 to-cyan-600',
-    cta: 'Get Started',
-    href: '/contact',
+      'Basic AI integration'
+      'Standard support'
+      'Core features access'
+      'Email support'
+      'Basic analytics'
+      'Mobile app access'
+    ]
+    popular: false
+    color: 'from-blue-600 to-cyan-600'
+    cta: 'Get Started'
+    href: '/contact'
   },  {      'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
     ];
-    popular: false,
-    color: 'from-blue-600 to-cyan-600',
-    cta: 'Get Started',
+    popular: false
+    color: 'from-blue-600 to-cyan-600'
+    cta: 'Get Started'
     href: '/contact'
-  };
-    name: 'Professional',
-    price: '$999',
-    period: '/month',
-    description: 'Ideal for growing businesses and enterprises',
+  }
+    name: 'Professional'
+    price: '$999'
+    period: '/month'
+    description: 'Ideal for growing businesses and enterprises'
     features: [
-      'Advanced AI capabilities',
-      'Priority support',
-      'Full feature access',
-      'Phone & email support',
-      'Advanced analytics',
-      'API access',
-      'Custom integrations',
-      'Training & onboarding',
-    ],
-    popular: true,
-    color: 'from-purple-600 to-pink-600',
-    cta: 'Start Free Trial',
-    href: '/contact',
+      'Advanced AI capabilities'
+      'Priority support'
+      'Full feature access'
+      'Phone & email support'
+      'Advanced analytics'
+      'API access'
+      'Custom integrations'
+      'Training & onboarding'
+    ]
+    popular: true
+    color: 'from-purple-600 to-pink-600'
+    cta: 'Start Free Trial'
+    href: '/contact'
   },  {      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'
     ];
-    popular: true,
-    color: 'from-purple-600 to-pink-600',
-    cta: 'Start Free Trial',
+    popular: true
+    color: 'from-purple-600 to-pink-600'
+    cta: 'Start Free Trial'
     href: '/contact'
-  };
-    name: 'Enterprise',
-    price: 'Custom',
-    period: '',
-    description: 'Tailored solutions for large organizations',
+  }
+    name: 'Enterprise'
+    price: 'Custom'
+    period: ''
+    description: 'Tailored solutions for large organizations'
     features: [
-      'Custom AI development',
-      'Dedicated support team',
-      'White-label solutions',
-      '24/7 phone support',
-      'Custom analytics',
-      'Full API access',
-      'Custom integrations',
-      'Dedicated account manager',
-      'SLA guarantees',
-      'On-premise deployment',
-    ],
-    popular: false,
-    color: 'from-indigo-600 to-purple-600',
-    cta: 'Contact Sales',
-    href: '/contact',
+      'Custom AI development'
+      'Dedicated support team'
+      'White-label solutions'
+      '24/7 phone support'
+      'Custom analytics'
+      'Full API access'
+      'Custom integrations'
+      'Dedicated account manager'
+      'SLA guarantees'
+      'On-premise deployment'
+    ]
+    popular: false
+    color: 'from-indigo-600 to-purple-600'
+    cta: 'Contact Sales'
+    href: '/contact'
   },];      'Custom AI developmentDedicated support teamWhite-label solutions24/7 phone supportCustom analyticsFull API accessCustom integrationsDedicated account manager';
       'SLA guaranteesOn-premise deployment'
     ];
-    popular: false,
-    color: 'from-indigo-600 to-purple-600',
-    cta: 'Contact Sales',
+    popular: false
+    color: 'from-indigo-600 to-purple-600'
+    cta: 'Contact Sales'
     href: '/contact'
   }
-
 const servicePricing = [
   {
-    category: '🚀 2028 Futuristic Innovations',
-    services: futuristic2028Services.slice(0, 6),
-  },
+    category: '🚀 2028 Futuristic Innovations'
+    services: futuristic2028Services.slice(0, 6)
+  }
   {
-    category: '🏙️ Smart City & Infrastructure',
+    category: '🏙️ Smart City & Infrastructure'
     services: emergingTech2028Services
       .filter(
         s =>
-          s.category.includes('Smart City') ||
+          s.category.includes('Smart City') |
           s.category.includes('Infrastructure')
       )
-      .slice(0, 4),
-  },
+      .slice(0, 4)
+  }
   {
-    category: '⚛️ Quantum & Advanced Tech',
+    category: '⚛️ Quantum & Advanced Tech'
     services: futuristic2028Services
       .filter(s => s.category.includes('Quantum'))
-      .slice(0, 4),
-  },
+      .slice(0, 4)
+  }
   {
-    category: '🤖 AI & Machine Learning',
+    category: '🤖 AI & Machine Learning'
     services: emergingTech2028Services
       .filter(s => s.category.includes('AI'))
-      .slice(0, 4),
+      .slice(0, 4)
   },];  {
-    category: '🏙️ Smart City & Infrastructure',
-    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4)
-  };
+    category: '🏙️ Smart City & Infrastructure'
+    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') |s.category.includes('Infrastructure')).slice(0, 4)
+  }
   {
-    category: '⚛️ Quantum & Advanced Tech',
+    category: '⚛️ Quantum & Advanced Tech'
     services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
-  };
+  }
   {
-    category: '🤖 AI & Machine Learning',
+    category: '🤖 AI & Machine Learning'
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
   }
 ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Revolutionary2028Pricing() {
   return (
     <>
@@ -276,7 +322,7 @@ export default function Revolutionary2028Pricing() {
               <span className="text-white">2028 Pricing</span>
             </h1>
             <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
-              Experience cutting-edge technology at competitive prices. Our transparent pricing model 
+              Experience cutting-edge technology at competitive prices. Our transparent pricing model
               ensures you get maximum value for your investment in the future.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -368,7 +414,6 @@ export default function Revolutionary2028Pricing() {
                     </div>
                   </div>
                 )}
-
                 <div
                   className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-2 ${tier.popular ? 'border-purple-500/60' : 'border-purple-500/30'} rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105`}
                 >
@@ -424,7 +469,11 @@ export default function Revolutionary2028Pricing() {
                       ))}
                     </ul>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Link
                       href={tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
@@ -441,7 +490,11 @@ export default function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Pricing */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -476,8 +529,8 @@ export default function Revolutionary2028Pricing() {
                   <motion.div
                     key={service.id}
                     initial={{
-                      opacity: 0,
-                      x: serviceIndex % 2 === 0 ? -30 : 30,
+                      opacity: 0
+                      x: serviceIndex % 2 === 0 ? -30 : 30
                     }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
@@ -573,7 +626,11 @@ export default function Revolutionary2028Pricing() {
                             <div className="text-white font-medium">{service.trialDays} days</div>
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                         </div>
                       </div>
@@ -588,7 +645,11 @@ export default function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Value Proposition */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -601,7 +662,11 @@ export default function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               We offer the best value in the market with transparent pricing and
@@ -618,7 +683,11 @@ export default function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -627,7 +696,11 @@ export default function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -642,7 +715,7 @@ export default function Revolutionary2028Pricing() {
               <Target className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Pricing</h3>
               <p className="text-purple-300 mb-6">
-                Our prices are 30% lower than market average while providing 
+                Our prices are 30% lower than market average while providing
                 superior technology and features.
               </p>
               <div className="text-3xl font-bold text-green-400">30%</div>
@@ -657,7 +730,11 @@ export default function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -672,7 +749,8 @@ export default function Revolutionary2028Pricing() {
               <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
-                Transparent pricing with no surprise fees. What you see is what you pay,
+                Transparent pricing with no surprise fees. What you see is what you pay
+
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
@@ -687,7 +765,11 @@ export default function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -702,7 +784,7 @@ export default function Revolutionary2028Pricing() {
               <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Premium Quality</h3>
               <p className="text-pink-300 mb-6">
-                Enterprise-grade technology with premium support and features 
+                Enterprise-grade technology with premium support and features
                 that justify every penny of investment.
               </p>
               <div className="text-3xl font-bold text-pink-400">5x</div>
@@ -719,7 +801,11 @@ export default function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -728,7 +814,11 @@ export default function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -776,6 +866,14 @@ export default function Revolutionary2028Pricing() {
       </section>
       <UltraFuturisticFooter2028 />
 <<<<<<< HEAD
+    </>
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
     </>;
 );
 }
@@ -785,4 +883,5 @@ export default function Revolutionary2028Pricing() {
     </>
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

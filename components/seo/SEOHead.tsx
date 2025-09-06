@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -11,17 +10,16 @@ interface SEOHeadProps {
   structuredData?: object;
   noIndex?: boolean;
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises.",
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, micro SaaS, artificial intelligence, machine learning, cloud computing",
-  canonicalUrl,
-  ogImage = "/og-image.jpg",
-  ogType = "website",
-  twitterCard = "summary_large_image",
-  structuredData,
-  noIndex = false,
+  title = "Zion Tech Group - Leading AI & Technology Solutions"
+  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results for modern enterprises."
+  keywords = "AI solutions, cloud services, technology consulting, digital transformation, IT services, micro SaaS, artificial intelligence, machine learning, cloud computing"
+  canonicalUrl
+  ogImage = "/og-image.jpg"
+  ogType = "website"
+  twitterCard = "summary_large_image"
+  structuredData
+  noIndex = false
 }) => {
   const fullTitle = title.includes("Zion Tech Group")
     ? title
@@ -29,36 +27,34 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullCanonicalUrl = canonicalUrl
     ? `https://ziontechgroup.com${canonicalUrl}`
     : "https://ziontechgroup.com";
-
   const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Zion Tech Group",
-    url: "https://ziontechgroup.com",
-    logo: "https://ziontechgroup.com/logo.png",
+    "@context": "https://schema.org"
+    "@type": "Organization"
+    name: "Zion Tech Group"
+    url: "https://ziontechgroup.com"
+    logo: "https://ziontechgroup.com/logo.png"
     description:
-      "Leading provider of AI services, IT solutions, and Micro SaaS products",
+      "Leading provider of AI services, IT solutions, and Micro SaaS products"
     address: {
-      "@type": "PostalAddress",
-      streetAddress: "364 E Main St STE 1008",
-      addressLocality: "Middletown",
-      addressRegion: "DE",
-      postalCode: "19709",
-      addressCountry: "US",
-    },
+      "@type": "PostalAddress"
+      streetAddress: "364 E Main St STE 1008"
+      addressLocality: "Middletown"
+      addressRegion: "DE"
+      postalCode: "19709"
+      addressCountry: "US"
+    }
     contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+1-302-464-0950",
-      contactType: "customer service",
-      email: "info@ziontechgroup.com",
-    },
+      "@type": "ContactPoint"
+      telephone: "+1-302-464-0950"
+      contactType: "customer service"
+      email: "info@ziontechgroup.com"
+    }
     sameAs: [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup",
-    ],
-  };
-
+      "https://linkedin.com/company/ziontechgroup"
+      "https://twitter.com/ziontechgroup"
+      "https://github.com/ziontechgroup"
+    ]
+  }
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -114,7 +110,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData),
+          __html: JSON.stringify(structuredData |defaultStructuredData)
         }}
       />
       {/* Additional SEO Scripts */}
@@ -122,20 +118,19 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Zion Tech Group",
-            url: "https://ziontechgroup.com",
+            "@context": "https://schema.org"
+            "@type": "WebSite"
+            name: "Zion Tech Group"
+            url: "https://ziontechgroup.com"
             potentialAction: {
-              "@type": "SearchAction",
-              target: "https://ziontechgroup.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string",
-            },
-          }),
+              "@type": "SearchAction"
+              target: "https://ziontechgroup.com/search?q={search_term_string}"
+              "query-input": "required name=search_term_string"
+            }
+          })
         }}
       />
     </Head>
   );
-};
-
+}
 export default SEOHead;

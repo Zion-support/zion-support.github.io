@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
@@ -8,16 +10,34 @@ export function QuoteFormSection() {;
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
+<<<<<<< HEAD
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+=======
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = (e: React.FormEvent) => {
+<<<<<<< HEAD
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    setTimeout(() => {
+      (setIsSubmitting(false), setIsSubmitted(true));
+    }, 1000);
+  }
+=======
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -27,6 +47,7 @@ export function QuoteFormSection() {
       setIsSubmitted(true)
     }, 1000)
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -34,24 +55,40 @@ export function QuoteFormSection() {
         <div className="text-center mb-12">
           <GradientHeading>Get a Quote Now</GradientHeading>
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
-            Request your instant commercial proposal and discover how Zion can revolutionize your IT operations
+            Request your instant commercial proposal and discover how Zion can
+            revolutionize your IT operations
           </p>
         </div>
         <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">
           {isSubmitted ? (
             <div className="text-center py-8">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-purple/20 rounded-full mb-6">
-                <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path>
+                <svg
+                  className="w-8 h-8 text-zion-cyan"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  ></path>
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Quote Request Sent!</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Quote Request Sent!
+              </h3>
               <p className="text-zion-slate-light mb-6">
-                Thank you for your interest in Zion's services. Our team will prepare your personalized commercial proposal and contact you shortly.
+                Thank you for your interest in Zion's services. Our team will
+                prepare your personalized commercial proposal and contact you
+                shortly.
               </p>
-              <Button 
+              <Button
                 onClick={() => setIsSubmitted(false)}
-                variant="outline" 
+                variant="outline"
                 className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
               >
                 Submit Another Request
@@ -61,7 +98,10 @@ export function QuoteFormSection() {
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
                     Name
                   </label>
                   <Input
@@ -72,7 +112,10 @@ export function QuoteFormSection() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
                     Company
                   </label>
                   <Input
@@ -82,7 +125,10 @@ export function QuoteFormSection() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
                     Email
                   </label>
                   <Input
@@ -93,7 +139,10 @@ export function QuoteFormSection() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-1">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
                     Phone
                   </label>
                   <Input
@@ -104,11 +153,22 @@ export function QuoteFormSection() {
                 </div>
               </div>
               <div className="mt-6">
-                <label htmlFor="interest" className="block text-sm font-medium text-zion-slate-light mb-1">
+                <label
+                  htmlFor="interest"
+                  className="block text-sm font-medium text-zion-slate-light mb-1"
+                >
                   I'm interested in (select all that apply)
                 </label>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
-                  {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (
+                  {[
+                    "AI Products/Services"
+                    "IT Equipment"
+                    "Server Solutions"
+                    "Storage Solutions"
+                    "Networking"
+                    "24/7 Support"
+                    "Recycling Services"
+                  ].map((item, index) => (
                     <div key={index} className="flex items-center">
                       <input
                         id={`interest-${index}`}
@@ -116,6 +176,13 @@ export function QuoteFormSection() {
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
 <<<<<<< HEAD
+<<<<<<< HEAD
+                      <label
+                        htmlFor={`interest-${index}`}
+                        className="ml-2 text-sm text-zion-slate-light"
+                      >
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
@@ -221,8 +288,12 @@ export function QuoteFormSection() {;
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                         {item}
                       </label>
                     </div>
@@ -230,7 +301,10 @@ export function QuoteFormSection() {;
                 </div>
               </div>
               <div className="mt-6">
-                <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-zion-slate-light mb-1"
+                >
                   Additional Details
                 </label>
                 <textarea
@@ -240,12 +314,14 @@ export function QuoteFormSection() {;
                 ></textarea>
               </div>
               <div className="mt-6">
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting} 
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3"
                 >
-                  {isSubmitting ? "Sending..." : "Get Your Free Commercial Proposal"}
+                  {isSubmitting
+                    ? "Sending..."
+                    : "Get Your Free Commercial Proposal"}
                 </Button>
               </div>
             </form>
@@ -253,5 +329,5 @@ export function QuoteFormSection() {;
         </div>
       </div>
     </section>
-  )
+  );
 }

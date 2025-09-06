@@ -2,28 +2,38 @@ import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
 
-type DistributionItem = { label: string; percent: number };
+type DistributionItem = { label: string; percent: number }
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
+<<<<<<< HEAD
+export default function TokenomicsWhitepaperBuilder() {
+=======
+type DistributionItem = { label: string, percent: number };
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
+export default function TokenomicsWhitepaperBuilder(req, res) {
+  try {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 export default function TokenomicsWhitepaperBuilder() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
-
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+<<<<<<< HEAD
   const [useCases, setUseCases] = useState<string>(
     'Access to premium AI agents, marketplace discounts, reputation staking, governance participation'
   );
   const [rewardsLogic, setRewardsLogic] = useState<string>(
     'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
   );  const [distribution, setDistribution] = useState<DistributionItem[]>([
-    { label: 'Ecosystem & Rewards', percent: 35 },
-    { label: 'Community Treasury', percent: 20 },
-    { label: 'Team & Contributors', percent: 15 },
-    { label: 'Investors', percent: 15 },
-    { label: 'Liquidity & Market Making', percent: 10 },
-    { label: 'Advisors & Partnerships', percent: 5 },
+    { label: 'Ecosystem & Rewards', percent: 35 }
+    { label: 'Community Treasury', percent: 20 }
+    { label: 'Team & Contributors', percent: 15 }
+    { label: 'Investors', percent: 15 }
+    { label: 'Liquidity & Market Making', percent: 10 }
+    { label: 'Advisors & Partnerships', percent: 5 }
   ]);
   const [governance, setGovernance] = useState<string>(
     'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
@@ -32,77 +42,73 @@ export default function TokenomicsWhitepaperBuilder() {;
   const [operatorPrompt, setOperatorPrompt] = useState<string>(
     defaultOperatorPrompt
   );
-
   const totalPercent = useMemo(
-    () => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0),
+    () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
     [distribution]
   );
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
-
   const [activeSection, setActiveSection] =
     useState<string>('Executive Summary');
-
   const previewMarkdown = useMemo(() => {
     return (
-      generatedMarkdown ||
+      generatedMarkdown |
       buildLocalMarkdown({
-        tokenName,
-        tokenSupply,
-        useCases,
-        rewardsLogic,
-        distribution,
-        governance,
-        jurisdiction,
-        legalReview,
+        tokenName
+        tokenSupply
+        useCases
+        rewardsLogic
+        distribution
+        governance
+        jurisdiction
+        legalReview
       })
     );
   }, [
-    generatedMarkdown,
-    tokenName,
-    tokenSupply,
-    useCases,
-    rewardsLogic,
-    distribution,
-    governance,
-    jurisdiction,
-    legalReview,
+    generatedMarkdown
+    tokenName
+    tokenSupply
+    useCases
+    rewardsLogic
+    distribution
+    governance
+    jurisdiction
+    legalReview
   ]);
   async function handleGenerate() {
     try {
       setIsGenerating(true);
       const res = await fetch('/api/whitepaper/generate', {
-        method: 'POST',
+        method: 'POST'
         headers: {
-          'Content-Type': 'application/json',
-          'X-Admin': isAdmin ? 'true' : 'false',
-        },
+          'Content-Type': 'application/json'
+          'X-Admin': isAdmin ? 'true' : 'false'
+        }
         body: JSON.stringify({
-          tokenName,
-          tokenSupply,
-          useCases,
-          rewardsLogic,
-          distribution,
-          governance,
-          jurisdiction,
-          operatorPrompt,
-          legalReview,
-        }),
+          tokenName
+          tokenSupply
+          useCases
+          rewardsLogic
+          distribution
+          governance
+          jurisdiction
+          operatorPrompt
+          legalReview
+        })
       });
       if (!res.ok) throw new Error('Failed to generate');
       const data = await res.json();
-      setGeneratedMarkdown(data.markdown || '');
+      setGeneratedMarkdown(data.markdown |'');
     } catch (e) {
       console.error(e);
       alert('Generation failed');
     } finally {
       setIsGenerating(false);    }
   }
-
   async function handleDownload(ext: 'md' | 'pdf') {
     if (ext === 'md') {
       const blob = new Blob([previewMarkdown], {
-        type: 'text/markdown;charset=utf-8',
+        type: 'text/markdown;charset=utf-8'
       });      const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -112,9 +118,9 @@ export default function TokenomicsWhitepaperBuilder() {;
       document.body.removeChild(a);
       URL.revokeObjectURL(url);    } else {
       const res = await fetch('/api/whitepaper/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ markdown: previewMarkdown, tokenName })
       });
       if (!res.ok) {
         alert('PDF export failed');
@@ -124,13 +130,16 @@ export default function TokenomicsWhitepaperBuilder() {;
       window.open(url, '_blank');
     }
   }
-
   function updateDistribution(
-    index: number,
-    key: keyof DistributionItem,
+    index: number
+    key: keyof DistributionItem
     value: string
   ) {
     setDistribution(prev => {      const copy = [...prev];
+<<<<<<< HEAD
+      const item = { ...copy[index] }
+=======
+=======
 =======
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
@@ -141,6 +150,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
   const [distribution, setDistribution] = useState<DistributionItem[]>([;
@@ -243,8 +253,12 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const item = { ...copy[index] };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
@@ -252,19 +266,16 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     });
 <<<<<<< HEAD
   }
-
   function addDistributionItem() {
     setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
   }
-
   function removeDistributionItem(index: number) {
     setDistribution(prev => prev.filter((_, i) => i !== index));  }
-
   async function handleShareableLink() {
     const res = await fetch('/api/whitepaper/share', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })
     });
     if (!res.ok) {
 =======
@@ -296,7 +307,11 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),;
     if (!res.ok) {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       alert('Failed to create share link');
       return;
       } catch (error) {
@@ -312,20 +327,27 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const sections = [
-    'Executive Summary',
-    'Market Context',
-    'Utility & Usage',
-    'Rewards System',
-    'Distribution',
-    'Governance Model',
-    'Risks + Disclaimers',
+    'Executive Summary'
+    'Market Context'
+    'Utility & Usage'
+    'Rewards System'
+    'Distribution'
+    'Governance Model'
+    'Risks + Disclaimers'
   ];
 =======
 }
   const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -358,7 +380,11 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
             <div className="rounded-lg border p-4 space-y-4">
               <h2 className="font-medium">Builder Inputs</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -446,7 +472,11 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
                 <div className="flex items-center gap-2">
                   <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </div>
             </div>
@@ -484,7 +514,11 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
               />
               <div className='flex gap-3'>
                 <button
+<<<<<<< HEAD
+                  disabled={!isAdmin |isGenerating}
+=======
                   disabled={!isAdmin || isGenerating}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >
@@ -506,7 +540,11 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
@@ -560,7 +598,11 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
@@ -571,7 +613,6 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     </>
 <<<<<<< HEAD
   );
-
 function buildLocalMarkdown(input: {
 =======
   )
@@ -582,7 +623,11 @@ function buildLocalMarkdown(input: {
 }
 ;
 function buildLocalMarkdown(input: {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   tokenName: string;
   tokenSupply: string;
   useCases: string;
@@ -600,6 +645,12 @@ function buildLocalMarkdown(input: {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+function DistributionDonut({ data }: { data: DistributionItem[] }) {
+  // Simple textual donut placeholder until a chart lib is added
+  const total = data.reduce((a, b) => a + b.percent, 0) |1;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 }
 ;
@@ -625,10 +676,14 @@ function jurisdictionalNote(j: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-1 text-sm">
       {data.map((d, idx) => (
@@ -642,14 +697,32 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
       ))}
     </div>
   );
-
 function MarkdownPreview({
-  markdown,
-  activeSection,
+  markdown
+  activeSection
 }: {
   markdown: string;
   activeSection: string;
 }) {  // Very lightweight section filter: split by headings
+<<<<<<< HEAD
+  const parts = useMemo(() => {
+    const sections = markdown.split(/\n## /g)
+    const map: Record<string, string> = {}
+    sections.forEach((s, i) => {
+      if (i === 0) return; // first is H1
+      const [titleLine, ...rest] = s.split('\n');
+      map[titleLine.trim()] = rest.join('\n');
+    });
+    return map;  }, [markdown]);
+  const content = parts[activeSection] |'';
+
+  return (
+<pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content |markdown}
+    </pre>
+  );
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       ))  } catch (error) {
     console.error("Error:", error);
@@ -665,7 +738,10 @@ function MarkdownPreview({
 }
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -679,6 +755,8 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   const content = parts[activeSection] || '',
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <pre className='whitespace-pre-wrap text-sm leading-6'>
       {content || markdown}
     </pre>
@@ -690,6 +768,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 }
 }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
 ;
@@ -714,4 +793,8 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

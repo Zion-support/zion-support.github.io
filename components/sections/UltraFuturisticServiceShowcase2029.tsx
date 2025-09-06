@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
-import {motion} from 'framer-motion';
-import {ArrowRight, Star, Zap, Shield, Brain} from 'lucide-react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
 interface Service {
   id: string;
   name: string;
@@ -9,17 +13,20 @@ interface Service {
   price: string;
   description: string;
   features: string[];
-  link: string;
 
+  link: string;
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string;
   subtitle?: string;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function UltraFuturisticServiceShowcase2029({
-  services,
-  title = '2029 Cutting-Edge Services',
-  subtitle = 'Experience the future of technology with our revolutionary solutions',
+  services
+  title = '2029 Cutting-Edge Services'
+  subtitle = 'Experience the future of technology with our revolutionary solutions'
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
@@ -29,13 +36,17 @@ export default function UltraFuturisticServiceShowcase2029({
           transition={{ duration: 0.6 }}
           className='text-center mb-16'
 interface UltraFuturisticServiceShowcase2029Props {
+<<<<<<< HEAD
+  services: Service[]
+=======
   services: Service[],;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title?: string;
   subtitle?: string
 }
+export default function UltraFuturisticServiceShowcase2029({
+  services, title = "2029 Cutting-Edge Services", subtitle = "Experience the future of technology with our revolutionary solutions"
 
-export default function UltraFuturisticServiceShowcase2029({ 
-  services, title = "2029 Cutting-Edge Services", subtitle = "Experience the future of technology with our revolutionary solutions" 
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
@@ -66,7 +77,11 @@ export default function UltraFuturisticServiceShowcase2029({
 
           {services.slice(0, 6).map((service, index) => (
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -77,7 +92,11 @@ export default function UltraFuturisticServiceShowcase2029({
 =======
 
             >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -124,7 +143,11 @@ export default function UltraFuturisticServiceShowcase2029({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -133,7 +156,11 @@ export default function UltraFuturisticServiceShowcase2029({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <Link
             href='/services'
@@ -161,5 +188,8 @@ export default function UltraFuturisticServiceShowcase2029({
 =======
     </section>
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

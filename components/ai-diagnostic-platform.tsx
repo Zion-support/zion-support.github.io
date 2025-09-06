@@ -1,7 +1,34 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  Brain
+  Shield
+  Zap
+  Target
+  Stethoscope
+  BarChart3
+  Cpu
+  Globe
+  Users
+  Award
+  CheckCircle
+  ArrowRight
+  Star
+  Phone
+  Mail
+  MapPin;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Brain, Shield, Zap, Target, Stethoscope
+
+=======
   Brain,
   Shield,
   Zap,
@@ -21,79 +48,78 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   Brain, Shield, Zap, Target, Stethoscope, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react';
+ } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
 
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
 const features = [
-  'AI-powered medical image analysis',
-  'Symptom assessment algorithms',
-  'Treatment recommendation engine',
-  'Patient history integration',
-  'Real-time diagnostic updates',
-  'Multi-specialty coverage',
-  'Mobile app integration',
+  'AI-powered medical image analysis'
+  'Symptom assessment algorithms'
+  'Treatment recommendation engine'
+  'Patient history integration'
+  'Real-time diagnostic updates'
+  'Multi-specialty coverage'
+  'Mobile app integration'
   'HIPAA-compliant platform',];  website: 'https://ziontechgroup.com'
-};
-
+}
 const features = [
   'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
-
 const pricingPlans = [
   {
-    name: 'Starter',
-    price: 299,
-    period: 'month',
+    name: 'Starter'
+    price: 299
+    period: 'month'
     features: [
-      'Basic diagnostic tools',
-      '3 medical specialties',
-      'Standard reporting',
-      'Standard support',
-    ],
-    popular: false,
-  },  {
-    name: 'Professional',
-    price: 799,
-    period: 'month',    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'],
+      'Basic diagnostic tools'
+      '3 medical specialties'
+      'Standard reporting'
+      'Standard support'
+    ]
     popular: false
-  };
-  {
-    name: 'Professional',
-    price: 799,
-    period: 'month',
-    features: [
-      'Advanced AI diagnostics',
-      'All specialties',
-      'Custom reporting',
-      'API access',
-      'Priority support',
-    ],
-    popular: true,
   },  {
-    name: 'Enterprise',
-    price: 1999,
-    period: 'month',    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support'],
-    popular: true
-  };
+    name: 'Professional'
+    price: 799
+    period: 'month',    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support']
+    popular: false
+  }
   {
-    name: 'Enterprise',
-    price: 1999,
-    period: 'month',
+    name: 'Professional'
+    price: 799
+    period: 'month'
     features: [
-      'Custom AI models',
-      'White-label solution',
-      'Dedicated support',
-      'Custom integrations',
-      'Training included',
-    ],
-    popular: false,
-  },];    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included'],
+      'Advanced AI diagnostics'
+      'All specialties'
+      'Custom reporting'
+      'API access'
+      'Priority support'
+    ]
+    popular: true
+  },  {
+    name: 'Enterprise'
+    price: 1999
+    period: 'month',    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI accessPriority support']
+    popular: true
+  }
+  {
+    name: 'Enterprise'
+    price: 1999
+    period: 'month'
+    features: [
+      'Custom AI models'
+      'White-label solution'
+      'Dedicated support'
+      'Custom integrations'
+      'Training included'
+    ]
+    popular: false
+  },];    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included']
     popular: false
   }
 ];
@@ -187,7 +213,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -197,7 +227,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <a
               href='#pricing'
@@ -236,7 +270,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -245,7 +283,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Medical Technology
@@ -275,7 +317,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4'>
                   <CheckCircle className='w-6 h-6 text-white' />
@@ -291,7 +337,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -299,7 +349,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section id="pricing" className="py-20 bg-black">
@@ -308,7 +362,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -317,7 +375,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Choose Your Plan
@@ -353,8 +415,8 @@ export default function AIDiagnosticPlatform() {
                     <span className='bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular
                     </span>
                   </div>
-                )}                  plan.popular 
-                    ? 'border-blue-500/50 scale-105' 
+                )}                  plan.popular
+                    ? 'border-blue-500/50 scale-105'
                     : 'border-blue-500/20'
                 }`}
               >
@@ -366,7 +428,10 @@ export default function AIDiagnosticPlatform() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -395,9 +460,16 @@ export default function AIDiagnosticPlatform() {
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
+<<<<<<< HEAD
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                       {feature}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -412,7 +484,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact Section */}
       <section
         id='contact'
@@ -424,7 +500,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -433,7 +513,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Healthcare?
@@ -456,7 +540,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -465,7 +553,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -487,7 +579,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -509,7 +605,11 @@ export default function AIDiagnosticPlatform() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
@@ -526,6 +626,15 @@ export default function AIDiagnosticPlatform() {
         </div>
       </section>
 <<<<<<< HEAD
+    </Layout>
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+<<<<<<< HEAD
     </Layout>;
 );
 }
@@ -534,3 +643,4 @@ export default function AIDiagnosticPlatform() {
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

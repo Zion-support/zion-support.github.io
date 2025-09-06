@@ -1,30 +1,40 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+=======
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 =======
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
-  
-}) 
+})
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics.loadTime > 3000) {
   const formatTime = (ms: number) : string => {
   if (ms === 0) return 'N/A';
 if (ms < 1000) return `$ {
-  Math.round (ms) 
+  Math.round (ms)
 }ms`;
+<<<<<<< HEAD
+}
+=======
 
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
 case 'tablet': return Tablet;
 default: return Laptop;
-
-};
+}
 const getPerformanceScore = () => {
   let score = 0;
 let totalMetrics = 0;
@@ -33,54 +43,62 @@ let totalMetrics = 0;
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
-else score += 25 
+else score += 25
 }//LCP scoring (0-100) if (metrics.lcp !== null) {
   totalMetrics++;
 if (metrics.lcp < 2500) score += 100;
 else if (metrics.lcp < 4000) score += 75;
 else if (metrics.lcp < 6000) score += 50;
-else score += 25 
+else score += 25
 }//FID scoring (0-100) if (metrics.fid !== null) {
   totalMetrics++;
 if (metrics.fid < 100) score += 100;
 else if (metrics.fid < 300) score += 75;
 else if (metrics.fid < 500) score += 50;
-else score += 25 
+else score += 25
 }//CLS scoring (0-100) if (metrics.cls !== null) {
   totalMetrics++;
 if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
+<<<<<<< HEAD
+else score += 25
+}
+=======
 else score += 25 
 
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
-  isLoading ? 'animate-spin': '' 
-}` 
+  isLoading ? 'animate-spin': ''
+}`
 }/> </button> <button > <BarChart3 className="w-4 h-4" /> </button> <button > <X className="w-4 h-4" /> </button> </div> </div> </div> </div> </div> </div> {
-  /* Expanded View */ 
+  /* Expanded View */
 }<AnimatePresence> {
-  isExpanded && (<motion.div </div>) 
-}</div> </div> </div>) ) 
-}</div> </div>) 
-}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>) 
+  isExpanded && (<motion.div </div>)
+}</div> </div> </div>) )
+}</div> </div>)
+}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>)
 }{
-  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>) 
-}</div> </div> </div> </motion.div>) 
-}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>) 
-};
+  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)
+}</div> </div> </div> </motion.div>)
+}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
+}
 // Helper functions const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
-
-};
-
+}
 export default PerformanceMonitor;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

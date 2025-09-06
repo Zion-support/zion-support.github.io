@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+export interface WhitelabelTenant {
+=======
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   brand_name: string;
   subdomain: string;
@@ -11,27 +17,35 @@ export interface WhitelabelTenant {;
   theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
   landing_page_copy: {
     headline: string;
-    subtitle: string,
+
+    subtitle: string
     cta: string
-  };
+  }
+
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
-  dns_verified: boolean,
+
+  dns_verified: boolean
+
   email_template_override: Record<string, any> | null
 }
+<<<<<<< HEAD
+export function useWhitelabelTenant(externalSubdomain?: string) {
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
+=======
 
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
+  const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const loadTenant = async () => {
       setIsLoading(true);
       setError(null);
-
       // If running in the browser, bail out early when offline
       if (typeof navigator !== 'undefined' && !navigator.onLine) {
         setError('No internet connection');
@@ -39,31 +53,26 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
         setIsLoading(false);
         return
       }
-
       try {
         // Get the current hostname, fallback to localhost if not available
-        const hostname = window.location.hostname || 'localhost';
+        const hostname = window.location.hostname |'localhost';
         const functionName = 'tenant-detector';
-        
         // Build the query parameters
-        const params = externalSubdomain 
+        const params = externalSubdomain
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`
           : `?host=${encodeURIComponent(hostname)}`;
-
         const { data, error: functionError } = await supabase.functions.invoke(
           `${functionName}${params}`;
           {
             headers: {
               'Content-Type': 'application/json'}}
         );
-
         if (functionError) {
           console.error('Edge Function error:', functionError);
           setError('Failed to load tenant configuration. Please try again later.');
           setTenant(null);
           return
         }
-
         if (!data) {
           console.warn('No tenant data received');
           setTenant(null);
@@ -133,9 +142,12 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
-
         if (data.tenant) {
           setTenant(data.tenant)
         } else {
@@ -144,10 +156,10 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
 <<<<<<< HEAD
       } catch (err: any) {
         console.error('Error loading tenant:', err);
-        let message = err.message || 'An unexpected error occurred while loading tenant configuration';
+        let message = err.message |'An unexpected error occurred while loading tenant configuration';
         if (
-          message.includes('Failed to send a request to the Edge Function') ||
-          message.includes('Failed to connect to Supabase') ||
+          message.includes('Failed to send a request to the Edge Function') |
+          message.includes('Failed to connect to Supabase') |
           message.includes('No internet connection')
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
@@ -157,19 +169,15 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
       } finally {
         setIsLoading(false)
       }
-    };
-
+    }
     loadTenant()
   }, [externalSubdomain]);
-
   return { tenant, isLoading, error }
 }
-
 // Hook to check if current user is a tenant admin
 export function useTenantAdminStatus(tenantId?: string) {;
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const checkAdminStatus = async () => {
       if (!tenantId) {
@@ -177,14 +185,12 @@ export function useTenantAdminStatus(tenantId?: string) {;
         setIsLoading(false);
         return
       }
-
       try {
         const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
-        if (sessionError || !sessionData.session) {
+        if (sessionError |!sessionData.session) {
           setIsAdmin(false);
           return
         }
-
         const userId = sessionData.session.user.id;
         const { data, error } = await supabase
           .from('tenant_administrators')
@@ -192,7 +198,6 @@ export function useTenantAdminStatus(tenantId?: string) {;
           .eq('tenant_id', tenantId)
           .eq('user_id', userId)
           .single();
-
         setIsAdmin(!!data && !error)
       } catch (err) {
         console.error('Error checking tenant admin status:', err);
@@ -200,8 +205,7 @@ export function useTenantAdminStatus(tenantId?: string) {;
       } finally {
         setIsLoading(false)
       }
-    };
-
+    }
     checkAdminStatus()
   }, [tenantId]);
 
@@ -263,6 +267,10 @@ export function useTenantAdminStatus(tenantId?: string) {;
     };
     checkAdminStatus();
   }, [tenantId]);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return { isAdmin, isLoading }
-};
+}

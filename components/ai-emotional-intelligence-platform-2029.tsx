@@ -1,8 +1,44 @@
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+=======
 import React from 'react';
 import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  Brain
+  Heart
+  Eye
+  MessageCircle
+  Users
+  Shield
+  Zap
+  TrendingUp
+  CheckCircle
+  ArrowRight
+  Star
+  Phone
+  Mail
+  MapPin
+  Globe
+  Cpu
+  Lock
+  BarChart3
+  Smartphone
+  Database
+  Cloud
+  Server
+  ShieldCheck;
+} from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
+  Brain, Heart, Eye, MessageCircle, Users, Shield
+
+=======
   Brain,
   Heart,
   Eye,
@@ -30,200 +66,206 @@ import {
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
   Brain, Heart, Eye, MessageCircle, Users, Shield, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
-} from 'lucide-react';
+ } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  };
 
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
   const features = [
     {
-      icon: Brain,
-      title: 'Real-time Emotion Detection',
+      icon: Brain
+      title: 'Real-time Emotion Detection'
       description:
-        'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
-      color: 'from-violet-500 to-purple-600',
-    },
-      icon: Heart,
-      title: 'Emotional Response Generation',
+        'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time'
+      color: 'from-violet-500 to-purple-600'
+    }
+      icon: Heart
+      title: 'Emotional Response Generation'
       description:
-        'Intelligent system that generates contextually appropriate emotional responses',
-      color: 'from-pink-500 to-rose-600',
-    },
+        'Intelligent system that generates contextually appropriate emotional responses'
+      color: 'from-pink-500 to-rose-600'
+    }
     {
-      icon: Eye,
-      title: 'Multi-modal Emotion Analysis',
+      icon: Eye
+      title: 'Multi-modal Emotion Analysis'
       description:
-        'Combines visual, auditory, and textual data for comprehensive emotion understanding',
-      color: 'from-blue-500 to-cyan-600',
-    },
+        'Combines visual, auditory, and textual data for comprehensive emotion understanding'
+      color: 'from-blue-500 to-cyan-600'
+    }
     {
-      icon: MessageCircle,
-      title: 'Emotional Intelligence Training',
+      icon: MessageCircle
+      title: 'Emotional Intelligence Training'
       description:
-        'AI-powered training modules to improve emotional intelligence skills',
-      color: 'from-green-500 to-emerald-600',
-    },
+        'AI-powered training modules to improve emotional intelligence skills'
+      color: 'from-green-500 to-emerald-600'
+    }
     {
-      icon: TrendingUp,
-      title: 'Sentiment Optimization',
+      icon: TrendingUp
+      title: 'Sentiment Optimization'
       description:
-        'Optimizes communication and content based on emotional context',
-      color: 'from-orange-500 to-red-600',
-    },
+        'Optimizes communication and content based on emotional context'
+      color: 'from-orange-500 to-red-600'
+    }
     {
-      icon: Shield,
-      title: 'Emotional Health Monitoring',
+      icon: Shield
+      title: 'Emotional Health Monitoring'
       description:
-        'Tracks emotional patterns and provides insights for mental health support',
-      color: 'from-indigo-500 to-purple-600',
-    },
+        'Tracks emotional patterns and provides insights for mental health support'
+      color: 'from-indigo-500 to-purple-600'
+    }
   ];
-
   const benefits = [
-    'Improve customer satisfaction by 85%',
-    'Reduce customer churn by 60%',
-    'Enhance team collaboration and communication',
-    'Optimize marketing campaigns with emotional insights',
-    'Improve mental health support and monitoring',
+    'Improve customer satisfaction by 85%'
+    'Reduce customer churn by 60%'
+    'Enhance team collaboration and communication'
+    'Optimize marketing campaigns with emotional insights'
+    'Improve mental health support and monitoring'
     'Create empathetic AI interactions and experiences',  ];    'Improve customer satisfaction by 85%Reduce customer churn by 60%Enhance team collaboration and communicationOptimize marketing campaigns with emotional insightsImprove mental health support and monitoringCreate empathetic AI interactions and experiences'
   ];
-
   const useCases = [
     {
-      title: 'Customer Service Automation',
+      title: 'Customer Service Automation'
       description:
-        'AI agents that understand customer emotions and respond appropriately',
-      icon: Users,
-      color: 'from-blue-500 to-cyan-600',
-    },    {
-      title: 'Mental Health Applications',
-      description: 'Emotional support and monitoring for mental health care',
-      icon: Heart,
-      color: 'from-pink-500 to-rose-600',
-    },    {
-      title: 'Educational Platforms',
-      description: 'Personalized learning experiences based on emotional state',
-      icon: Brain,
-      color: 'from-green-500 to-emerald-600',
-    },    {
-      title: 'Marketing Optimization',
-      description: 'Campaign optimization based on emotional response analysis',
-      icon: TrendingUp,
-      color: 'from-orange-500 to-red-600',
-    },    {
-      title: 'HR and Recruitment',
-      description: 'Emotional intelligence assessment and team building',
-      icon: Users,
-      color: 'from-purple-500 to-indigo-600',
-    },    {
-      title: 'Healthcare Diagnostics',
-      description: 'Emotional state monitoring for healthcare professionals',
-      icon: Shield,
-      color: 'from-teal-500 to-cyan-600',
-    },  ];      description: 'AI agents that understand customer emotions and respond appropriately',
-      icon: Users,
+        'AI agents that understand customer emotions and respond appropriately'
+      icon: Users
       color: 'from-blue-500 to-cyan-600'
-    };
+    },    {
+      title: 'Mental Health Applications'
+      description: 'Emotional support and monitoring for mental health care'
+      icon: Heart
+      color: 'from-pink-500 to-rose-600'
+    },    {
+      title: 'Educational Platforms'
+      description: 'Personalized learning experiences based on emotional state'
+      icon: Brain
+      color: 'from-green-500 to-emerald-600'
+    },    {
+      title: 'Marketing Optimization'
+      description: 'Campaign optimization based on emotional response analysis'
+      icon: TrendingUp
+      color: 'from-orange-500 to-red-600'
+    },    {
+      title: 'HR and Recruitment'
+      description: 'Emotional intelligence assessment and team building'
+      icon: Users
+      color: 'from-purple-500 to-indigo-600'
+    },    {
+      title: 'Healthcare Diagnostics'
+      description: 'Emotional state monitoring for healthcare professionals'
+      icon: Shield
+      color: 'from-teal-500 to-cyan-600'
+    },  ];      description: 'AI agents that understand customer emotions and respond appropriately'
+      icon: Users
+      color: 'from-blue-500 to-cyan-600'
+    }
     {
-      title: 'Mental Health Applications',
-      description: 'Emotional support and monitoring for mental health care',
-      icon: Heart,
-      color: 'from-pink-500 to-rose-600',
+      title: 'Mental Health Applications'
+      description: 'Emotional support and monitoring for mental health care'
+      icon: Heart
+      color: 'from-pink-500 to-rose-600'
     },      color: 'from-pink-500 to-rose-600'
-    };
+    }
     {
-      title: 'Educational Platforms',
-      description: 'Personalized learning experiences based on emotional state',
-      icon: Brain,
-      color: 'from-green-500 to-emerald-600',
+      title: 'Educational Platforms'
+      description: 'Personalized learning experiences based on emotional state'
+      icon: Brain
+      color: 'from-green-500 to-emerald-600'
     },      color: 'from-green-500 to-emerald-600'
-    };
+    }
     {
-      title: 'Marketing Optimization',
-      description: 'Campaign optimization based on emotional response analysis',
-      icon: TrendingUp,
-      color: 'from-orange-500 to-red-600',
+      title: 'Marketing Optimization'
+      description: 'Campaign optimization based on emotional response analysis'
+      icon: TrendingUp
+      color: 'from-orange-500 to-red-600'
     },      color: 'from-orange-500 to-red-600'
-    };
+    }
     {
-      title: 'HR and Recruitment',
-      description: 'Emotional intelligence assessment and team building',
-      icon: Users,
-      color: 'from-purple-500 to-indigo-600',
+      title: 'HR and Recruitment'
+      description: 'Emotional intelligence assessment and team building'
+      icon: Users
+      color: 'from-purple-500 to-indigo-600'
     },      color: 'from-purple-500 to-indigo-600'
-    };
+    }
     {
-      title: 'Healthcare Diagnostics',
-      description: 'Emotional state monitoring for healthcare professionals',
-      icon: Shield,
-      color: 'from-teal-500 to-cyan-600',
+      title: 'Healthcare Diagnostics'
+      description: 'Emotional state monitoring for healthcare professionals'
+      icon: Shield
+      color: 'from-teal-500 to-cyan-600'
     },      color: 'from-teal-500 to-cyan-600'
     }
   ];
-
   const pricing = {
     basic: {
-      name: 'Starter',
-      price: '$1,999',
-      period: '/month',
-      description: 'Perfect for small teams and startups',
+      name: 'Starter'
+      price: '$1,999'
+      period: '/month'
+      description: 'Perfect for small teams and startups'
       features: [
-        'Up to 1,000 emotional interactions/month',
-        'Basic emotion detection (5 emotions)',
-        'Email support',
-        'Standard API access',
-        'Basic analytics dashboard',
-      ],
-      popular: false,    },
+        'Up to 1,000 emotional interactions/month'
+        'Basic emotion detection (5 emotions)'
+        'Email support'
+        'Standard API access'
+        'Basic analytics dashboard'
+      ]
+      popular: false,    }
     professional: {
-      name: 'Professional',
-      price: '$3,999',
-      description: 'Ideal for growing businesses',
+      name: 'Professional'
+      price: '$3,999'
+      description: 'Ideal for growing businesses'
       features: [
-        'Up to 10,000 emotional interactions/month',
-        'Advanced emotion detection (15+ emotions)',
-        'Priority support',
-        'Full API access with webhooks',
-        'Advanced analytics and reporting',
-        'Custom emotion models',
-        'Multi-language support',
-      ],
-      popular: true,
-    },
+        'Up to 10,000 emotional interactions/month'
+        'Advanced emotion detection (15+ emotions)'
+        'Priority support'
+        'Full API access with webhooks'
+        'Advanced analytics and reporting'
+        'Custom emotion models'
+        'Multi-language support'
+      ]
+      popular: true
+    }
     enterprise: {
-      name: 'Enterprise',
-      price: '$7,999',
-      period: '/month',
-      description: 'For large organizations with custom needs',
+      name: 'Enterprise'
+      price: '$7,999'
+      period: '/month'
+      description: 'For large organizations with custom needs'
       features: [
-        'Unlimited emotional interactions',
-        'Custom emotion detection models',
-        '24/7 dedicated support',
-        'Custom integrations',
-        'Advanced security features',
-        'White-label options',
-        'On-premise deployment',
-        'Custom training and consulting',
-      ],
-      popular: false,
+        'Unlimited emotional interactions'
+        'Custom emotion detection models'
+        '24/7 dedicated support'
+        'Custom integrations'
+        'Advanced security features'
+        'White-label options'
+        'On-premise deployment'
+        'Custom training and consulting'
+      ]
+      popular: false
     },  };        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting'
       ];
       popular: false
     }
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
 =======
   };
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -311,7 +353,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -327,7 +373,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -337,7 +387,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 AI Emotional Intelligence
@@ -353,7 +407,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -370,7 +428,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -380,7 +442,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <Link
                 href='/contact'
@@ -422,7 +488,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Key Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -432,7 +502,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='text-center'>
                 <div className='text-3xl font-bold text-violet-400 mb-2'>
@@ -491,7 +565,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -500,7 +578,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary{' '}
@@ -534,7 +616,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -560,7 +646,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -568,7 +658,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Benefits Section */}
       <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-black">
@@ -577,7 +671,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -586,7 +684,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Transform Your{' '}
@@ -595,7 +697,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               </span>
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Experience unprecedented improvements in customer satisfaction,
+              Experience unprecedented improvements in customer satisfaction
               team collaboration, and business outcomes.
             </p>
           </motion.div>
@@ -628,7 +730,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
               </motion.div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -636,7 +742,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -645,7 +755,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -654,7 +768,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Powerful{' '}
@@ -687,7 +805,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -713,7 +835,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -721,7 +847,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section id="pricing" className="py-20 bg-black">
@@ -730,7 +860,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -739,7 +873,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Choose Your{' '}
@@ -782,7 +920,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                     </span>
                   </div>
                 )}
-
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -831,7 +968,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
@@ -840,7 +981,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -849,7 +994,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -877,7 +1026,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -929,7 +1082,11 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Link
               href='/contact'
@@ -953,13 +1110,24 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       <UltraFuturisticFooter2028 />
     </>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AIEmotionalIntelligencePlatform2029;  )
-};
-
+}
 export default AIEmotionalIntelligencePlatform2029;
+
+<<<<<<< HEAD
+=======
+export default AIEmotionalIntelligencePlatform2029;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 export default AIEmotionalIntelligencePlatform2029;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

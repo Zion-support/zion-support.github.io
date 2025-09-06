@@ -1,14 +1,26 @@
 
 <<<<<<< HEAD
 import React from "react";
-import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription} from "@/components/ui/dialog";
-import {Button} from "@/components/ui/button";
-import {Calendar, User, Mail, Clock, DollarSign} from "lucide-react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Separator} from "@/components/ui/separator";
-import {QuoteStatusBadge} from "./QuoteStatusBadge";
+
+import {
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+  DialogDescription
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+
+import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
+import { format } from "date-fns";
+=======
 import {format} from "date-fns";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",
 import { 
@@ -25,25 +37,32 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface QuoteDetailsProps {
-  quote: QuoteRequest | null,
-  isOpen: boolean,
+  quote: QuoteRequest | null;
+  isOpen: boolean;
   onClose: () => void
 <<<<<<< HEAD
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
-
   const formatDate = (dateString?: string) => {
-    if (!dateString) return 'Not specified';
+    if (!dateString) return "Not specified";
     try {
-      return format(new Date(dateString), 'PPP')
+      return format(new Date(dateString), "PPP");
     } catch (e) {
-      return dateString
+      return dateString;
     }
+<<<<<<< HEAD
+  }
+=======
   };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import {;
@@ -76,8 +95,12 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       return dateString;
     }
   },
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -94,7 +117,9 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card>
             <CardContent className="pt-6">
-              <h3 className="text-lg font-medium mb-3">Requester Information</h3>
+              <h3 className="text-lg font-medium mb-3">
+                Requester Information
+              </h3>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4 text-gray-500" />
@@ -133,16 +158,15 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
                 <p>{quote.project_description}</p>
               </>
             )}
-            
             <div className="mt-6 flex items-center gap-2">
               <DollarSign className="h-4 w-4 text-gray-500" />
               <span className="font-medium">Budget: </span>
-              {quote.budget_display || 
-               (quote.budget_min && quote.budget_max 
-                ? `$${quote.budget_min} - $${quote.budget_max}` 
-                : quote.budget_min 
-                  ? `$${quote.budget_min}` 
-                  : 'Not specified')}
+              {quote.budget_display |
+                (quote.budget_min && quote.budget_max
+                  ? `$${quote.budget_min} - $${quote.budget_max}`
+                  : quote.budget_min
+                    ? `$${quote.budget_min}`
+                    : "Not specified")}
             </div>
           </CardContent>
         </Card>
@@ -151,9 +175,19 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>
       </DialogContent>
     </Dialog>
+<<<<<<< HEAD
+  );
+}
+
+=======
   )
+<<<<<<< HEAD
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 <<<<<<< HEAD
 };
 =======
 },
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

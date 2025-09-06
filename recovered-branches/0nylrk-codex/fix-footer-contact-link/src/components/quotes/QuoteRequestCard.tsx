@@ -1,44 +1,72 @@
 
 <<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
+import { format } from "date-fns";
+=======
 import {format} from "date-fns";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",
 import { format } from "date-fns",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { 
-  Card,
-  CardContent, 
-  CardHeader, 
-  CardTitle, 
+  Card;
+  CardContent;
+  CardHeader;
+  CardTitle;
   CardDescription
 } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+<<<<<<< HEAD
+import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+=======
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+type QuoteRequestCardProps = {
+  quote: QuoteRequest
+  onViewDetails: (quote: QuoteRequest) => void
+  onMarkAsResponded?: (id: string) => void
+  onToggleArchive: (id: string, isArchived: boolean) => void
+}
+=======
 <<<<<<< HEAD
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   quote;
   onViewDetails;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+<<<<<<< HEAD
+  quote;
+  onViewDetails;
+  onMarkAsResponded
+=======
   quote,
   onViewDetails,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onMarkAsResponded,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onToggleArchive
 }) => {
   // Format date for display
@@ -48,8 +76,12 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -95,7 +127,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 Mark Responded
               </Button>
             )}
-            
             <Button
               variant="ghost"
               size="sm"
@@ -114,6 +145,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",;
 import { format } from "date-fns",;
@@ -211,5 +247,9 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

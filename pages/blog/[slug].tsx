@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -15,6 +20,7 @@ function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -23,17 +29,74 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+function parseMarkdown(filePath: string): BlogPost | null {
+  if (!fs.existsSync(filePath)) {
+    return null
+  }
+
+  const raw = fs.readFileSync(filePath, 'utf8')
+  const match = raw.match(/---\n([\s\S]+?)\n---\n([\s\S]*)/)
+  if (!match |!match[1] |!match[2]) return null
+  const meta = JSON.parse(match[1])
+  const content = match[2].trim()
+  const slug = path.basename(filePath).replace(/\.md$/, '')
+  return { ...meta, id: slug, slug, content } as BlogPost
+}
+interface BlogPostPageProps {
+  /**
+   * Preloaded blog post for static generation. Can be null if not found.
+   */
+  initialPost: BlogPost | null
+}
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
+  const router = useRouter()
+  const { slug } = router.query
+  const [post, setPost] = React.useState<BlogPost | null>(initialPost)
+  const [error, setError] = React.useState<string | null>(null)
+  React.useEffect(() => {
+    if (initialPost && initialPost.slug === slug) {
+      setPost(initialPost)
+      setError(null), // Clear any previous error
+    } else if (slug) {
+      // This case handles if the slug changes and initialPost is not for the current slug
+      // Or if initialPost was null from getStaticProps (which shouldn't happen if notFound is true)
+      // For now, we will rely on getStaticProps to provide the correct post or a 404.
+      // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
+      // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
+      const directFallback = BLOG_POSTS.find((p) => p.slug === slug) |null
+      if (directFallback) {
+        setPost(directFallback)
+        setError(null)
+      } else {
+        // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
+        // should ideally not be hit frequently, as getStaticProps would have returned notFound.
+        // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
+        setError('Article not found')
+      }
+    }
+  }, [slug, initialPost])
+  if (error) {
+    return <div>{error}</div>
+=======
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
     return null;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   const raw = fs.readFileSync(filePath, 'utf8');
@@ -55,6 +118,7 @@ interface BlogPostPageProps {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
 ;
@@ -88,10 +152,10 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
   }
 <<<<<<< HEAD
   const articleLd = {
-    author: post.author.name,
-    publishedTime: post.publishedDate,
-    tags: post.tags || []},
-  const body = (post as any).body || post.content,
+    author: post.author.name
+    publishedTime: post.publishedDate
+    tags: post.tags |[]}
+  const body = (post as any).body |post.content
   return (
     <>
       <AdvancedSEO
@@ -179,10 +243,14 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className="w-10 h-10 rounded-full"
             onError={(e) => {
-              const target = e.currentTarget as HTMLImageElement,
+              const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
             }  } catch (error) {
     console.error("Error:", error);
@@ -210,7 +278,11 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
         {post.featuredImage && (
@@ -230,11 +302,55 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="object-cover w-full h-full"
               onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement,
+                const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
+<<<<<<< HEAD
+              }}
+            />
+          </div>
+        )}
+        <ReactMarkdown>{body}</ReactMarkdown>
+        <AuthorBio author={post.author} />
+        <SocialShareButtons title={post.title} />
+        <CommentsSection slug={post.slug} />
+      </main>
+    </>
+  )
+}
+export default BlogPostPage
+export const getStaticPaths: GetStaticPaths = async () => {
+  const dir = path.join(process.cwd(), 'contentblog')
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'))
+  const paths = files.map((f) => ({
+    params: { slug: f.replace(/\.md$/, '') }}))
+  // Use `blocking` so new posts added after build can be generated on demand
+  return { paths, fallback: 'blocking' }
+}
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
+  params}: {
+  params?: { slug?: string }
+}) => {
+  const slug = params?.slug as string
+  // Validate slug to prevent malformed paths
+  if (!/^[a-z0-9-]+$/.test(slug)) {
+    return { notFound: true }
+  }
+  const filePath = path.join(process.cwd(), 'contentblog', `${slug}.md`)
+  const post = parseMarkdown(filePath)
+  if (!post) {
+    return { notFound: true }
+  }
+  return { props: { initialPost: post }, revalidate: 60 }
+}
+
+=======
               }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -247,10 +363,13 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   return { props: { initialPost: post }, revalidate: 60 }
 },;
 ;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
         <ReactMarkdown>{body}</ReactMarkdown>;
         <AuthorBio author={post.author} />;
@@ -313,4 +432,8 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
   }
 }
 };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

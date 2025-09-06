@@ -1,4 +1,33 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react',
+import { useRouter } from 'next/router', // Changed from useNavigate
+import Link from 'next/link';
+import { useAuth  } from '@/hooks/useAuth';
+import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
+import { FilterSidebar  } from '@/components/talent/FilterSidebar';
+import { TalentResults  } from '@/components/talent/TalentResults';
+import { TalentSkeleton  } from '@/components/talent/TalentSkeleton';
+import { ErrorBanner  } from '@/components/talent/ErrorBanner';
+import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary
+import { useTalentDirectory  } from '@/hooks/useTalentDirectory';
+import { SORT_OPTIONS  } from '@/data/sortOptions';
+import { X } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import Image from 'next/image';
+import { TalentProfile } from '@/types/talent';
+import { Pagination;
+  PaginationContent;
+  PaginationItem;
+  PaginationButton;
+  PaginationNext;
+  PaginationPrevious } from '@/components/ui/pagination';
+export default function TalentDirectory() {
+  const router = null;
+                            setCurrentPage(
+                              Math.min(totalPages, currentPage + 1)
+                            )
+=======
   const isAdmin = user?.userType === 'admin'
   const paginatedTalents = filteredTalents
   const pageKey = `talent-directory-${routeKey}-${router.asPath}`
@@ -7,6 +36,7 @@
   )
 }
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
@@ -301,40 +331,17 @@ export default function TalentDirectory() {;
                           onClick={(e) => {;
                             e.preventDefault(),;
                             setCurrentPage(Math.max(1, currentPage - 1));
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           }}
-                        />;
-                      </PaginationItem>;
-                      {Array.from({ length: totalPages }, (_, i) => i + 1).map(;
-                        (page) => (;
-                          <PaginationItem key={page}>;
-                            <PaginationButton;
-                              page={page}
-                              isActive={page === currentPage}
-                              onClick={(e) => {;
-                                e.preventDefault();
-                                setCurrentPage(page);
-                              }}
-                            />;
-                          </PaginationItem>;
-                        );
-                      )}
-                      <PaginationItem>;
-                        <PaginationNext;
-                          href={`?page=${currentPage + 1}`}
-                          onClick={(e) => {;
-                            e.preventDefault();
-                            setCurrentPage(;
-                              Math.min(totalPages, currentPage + 1);
-                            );
-                          }}
-                        />;
-                      </PaginationItem>;
-                    </PaginationContent>;
-                  </Pagination>;
-                </div>;
+                        />
+                      </PaginationItem>
+                    </PaginationContent>
+                  </Pagination>
+                </div>
               )}
-            </ErrorBoundary>;
-          </div>;
+            </ErrorBoundary>
+          </div>
+
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
@@ -370,14 +377,27 @@ export default function TalentDirectory() {;
                   setSortOption={setSortOption}
                   clearFilters={clearFilters}
                   isMobileFilterOpen={isMobileFilterOpen}
-                />;
-              </div>;
-            </div>;
+                />
+              </div>
+            </div>
           )}
+<<<<<<< HEAD
+        </div>
+      </div>
+    </div>
+  )
+}
+  )
+}
+=======
         </div>;
       </div>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

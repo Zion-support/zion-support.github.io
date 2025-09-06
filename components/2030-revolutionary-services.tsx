@@ -1,7 +1,23 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
+
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
+  ArrowRight
+  Star
+  Zap
+  TrendingUp
+  Users
+  Award
+  Phone
+  Mail
+  MapPin;
+=======
   ArrowRight,
   Star,
   Zap,
@@ -11,6 +27,7 @@ import {
   Phone,
   Mail,;
   MapPin,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -21,12 +38,20 @@ import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFoote
 import { innovative2030Services } from '../data/2030-innovative-services';
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
+<<<<<<< HEAD
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
+  }
+=======
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
   };
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -86,34 +111,34 @@ export default function Revolutionary2030ServicesPage() {
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Zion Tech Group',
+              '@context': 'https://schema.org'
+              '@type': 'Organization'
+              name: 'Zion Tech Group'
               description:
-                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',
-              url: 'https://ziontechgroup.com',
-              logo: 'https://ziontechgroup.com/logo.png',
+                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing'
+              url: 'https://ziontechgroup.com'
+              logo: 'https://ziontechgroup.com/logo.png'
               contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+1-302-464-0950',
-                contactType: 'customer service',
-                email: 'kleber@ziontechgroup.com',
-              },
+                '@type': 'ContactPoint'
+                telephone: '+1-302-464-0950'
+                contactType: 'customer service'
+                email: 'kleber@ziontechgroup.com'
+              }
               address: {
-                '@type': 'PostalAddress',
-                streetAddress: '364 E Main St STE 1008',
-                addressLocality: 'Middletown',
-                addressRegion: 'DE',
-                postalCode: '19709',
-                addressCountry: 'US',
-              },
-              sameAs: ['https://github.com/Zion-Holdings'],
+                '@type': 'PostalAddress'
+                streetAddress: '364 E Main St STE 1008'
+                addressLocality: 'Middletown'
+                addressRegion: 'DE'
+                postalCode: '19709'
+                addressCountry: 'US'
+              }
+              sameAs: ['https://github.com/Zion-Holdings']
             }),          }}              "contactPoint": {
                 "@type": "ContactPoint";
                 "telephone": "+1-302-464-0950";
-                "contactType": "customer service",
+                "contactType": "customer service"
                 "email": "kleber@ziontechgroup.com"
-              };
+              }
               "address": {
                 "@type": "PostalAddress";
                 "streetAddress": "364 E Main St STE 1008";
@@ -121,7 +146,8 @@ export default function Revolutionary2030ServicesPage() {
                 "addressRegion": "DE";
                 "postalCode": "19709";
                 "addressCountry": "US"
-              };
+              }
+
               "sameAs": [
                 "https://github.com/Zion-Holdings"
               ]
@@ -136,7 +162,11 @@ export default function Revolutionary2030ServicesPage() {
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
@@ -189,9 +219,8 @@ export default function Revolutionary2030ServicesPage() {
             From AI consciousness and quantum computing to space mining and DNA
             computing, we're building the future today.          </motion.p>            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
-            Experience the next generation of revolutionary technology services. From AI consciousness 
+            Experience the next generation of revolutionary technology services. From AI consciousness
             and quantum computing to space mining and DNA computing, we're building the future today.
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -221,7 +250,11 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -242,9 +275,9 @@ export default function Revolutionary2030ServicesPage() {
               future.            </p>
           </motion.div>
           {/* Services Grid */}
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>            {innovative2030Services.map((service, index) => (            
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>            {innovative2030Services.map((service, index) => (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive range of cutting-edge 2030 technology services that will 
+              Discover our comprehensive range of cutting-edge 2030 technology services that will
               transform your business and propel you into the future.
           </motion.div>
           {/* Services Grid */}
@@ -298,7 +331,11 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Description */}
                   <p className='text-gray-300 leading-relaxed mb-6'>
                     {service.description}
@@ -401,7 +438,11 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Call to Action */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -429,7 +470,7 @@ export default function Revolutionary2030ServicesPage() {
                 Ready to Experience the Future?
               </h3>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join the revolution and transform your business with our cutting-edge 2030 technology services. 
+                Join the revolution and transform your business with our cutting-edge 2030 technology services.
                 The future is waiting for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -452,7 +493,11 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -485,7 +530,7 @@ export default function Revolutionary2030ServicesPage() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact our team of technology experts to discuss how our revolutionary 2030 services 
+              Contact our team of technology experts to discuss how our revolutionary 2030 services
               can transform your business and propel you into the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -527,8 +572,14 @@ export default function Revolutionary2030ServicesPage() {
 <<<<<<< HEAD
 );  )
 }
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 }
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

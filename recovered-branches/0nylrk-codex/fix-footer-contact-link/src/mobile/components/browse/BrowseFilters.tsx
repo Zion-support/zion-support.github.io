@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -22,6 +24,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     }
   };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -31,6 +34,24 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { X, Filter } from "lucide-react",
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+import { Label } from "@/components/ui/label";
+interface BrowseFiltersProps {
+  type: "jobs" | "talents"
+}
+export function BrowseFilters({ type }: BrowseFiltersProps) {
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+
+  const addFilter = (filter: string) => {
+    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter])
+    }
+  }
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  }
+
+=======
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
   type: "jobs" | "talents"
@@ -55,12 +76,16 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter]);
     }
   },
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -110,10 +135,10 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     </div>
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
-                      <Slider 
-                        defaultValue={[0, 10]} 
-                        max={20} 
-                        step={1} 
+                      <Slider
+                        defaultValue={[0, 10]}
+                        max={20}
+                        step={1}
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
@@ -123,7 +148,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     </div>
                   </>
                 )}
-                
                 <div className="space-y-2">
                   <Label>Location</Label>
                   <Select>
@@ -179,15 +203,15 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
             </SelectContent>
           </Select>
           {activeFilters.map((filter) => (
-            <Badge 
-              key={filter} 
+            <Badge
+              key={filter}
               variant="secondary"
               className="flex items-center gap-1"
             >
               {filter}
-              <X 
-                className="h-3 w-3 cursor-pointer" 
-                onClick={() => removeFilter(filter)} 
+              <X
+                className="h-3 w-3 cursor-pointer"
+                onClick={() => removeFilter(filter)}
               />
             </Badge>
           ))}

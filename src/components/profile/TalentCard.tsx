@@ -2,8 +2,14 @@
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+<<<<<<< HEAD
+
+import Link from 'next/link'
+import { TalentProfile } from '@/types/talent'
+=======
 import Link from 'next/link';
 import { TalentProfile } from '@/types/talent';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
 =======
@@ -14,8 +20,12 @@ import Link from "next/link",
 import { TalentProfile } from "@/types/talent",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -23,7 +33,15 @@ export interface TalentCardProps {
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
+<<<<<<< HEAD
 export interface TalentCardProps {
+<<<<<<< HEAD
+  talent: TalentProfile
+  onViewProfile: (id: string,) => void
+  onRequestHire: (talent: TalentProfile,) => void
+  isSaved: boolean
+  onToggleSave: (id: string, isSaved: boolean,) => void
+=======
   talent: TalentProfile,
   onViewProfile: (id: string,) => void,
   onRequestHire: (talent: TalentProfile,) => void,
@@ -32,14 +50,18 @@ export interface TalentCardProps {
   isAuthenticated: boolean
 <<<<<<< HEAD
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+  isAuthenticated: boolean
+}
 export function TalentCard({
-  talent,
-  onViewProfile,
-  onRequestHire,
-  isSaved,
-  onToggleSave,
-  isAuthenticated,
+
+  talent
+  onViewProfile
+  onRequestHire
+  isSaved
+  onToggleSave
+  isAuthenticated
 }: TalentCardProps) {
   const [avatarError, setAvatarError] = useState(false)
   const handleViewProfile = () => {
@@ -49,7 +71,7 @@ export function TalentCard({
   }
   const handleRequestHire = (e: React.MouseEvent) => {
     e.preventDefault()
-    e.stopPropagation(),
+    e.stopPropagation()
     if (onRequestHire) {
       onRequestHire(talent) }
       onRequestHire(talent)
@@ -59,14 +81,14 @@ export function TalentCard({
   }
   const handleToggleSave = (e: React.MouseEvent) => {
     e.preventDefault()
-    e.stopPropagation(),
+    e.stopPropagation()
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
     }
   }
-  const skills = talent.skills?.slice(0, 5) || []
-  const talentNameInitial = talent.full_name?.charAt(0) || 'T'
+  const skills = talent.skills?.slice(0, 5) |[]
+  const talentNameInitial = talent.full_name?.charAt(0) |'T'
     >
       <div className='p-6'>
         <div className='flex items-start'>
@@ -74,10 +96,11 @@ export function TalentCard({
             <div className='w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative'>
               {' '}
               {/* Added relative for Image */}
+
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url}
-                  alt={talent.full_name || 'Talent Avatar'}
+                  alt={talent.full_name |'Talent Avatar'}
                   fill={true}                  style={{ objectFit: 'cover' }}
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
@@ -88,7 +111,12 @@ export function TalentCard({
                   onError={() => setAvatarError(true)}
                   priority={false}                />
               ) : (
+<<<<<<< HEAD
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
+                  alt={talent.full_name |'Talent Avatar'}
+=======
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
@@ -168,8 +196,12 @@ export function TalentCard({;
               {talent.profile_picture_url && !avatarError ? (;
                 <Image;
                   src={talent.profile_picture_url} ;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   alt={talent.full_name || 'Talent Avatar'}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   fill={true}
                   style={{ objectFit: 'cover' }}
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
@@ -225,7 +257,11 @@ export function TalentCard({;
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
@@ -250,7 +286,11 @@ export function TalentCard({;
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
@@ -275,21 +315,20 @@ export function TalentCard({;
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >          <div className="mt-4">
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, index,) => (
-                <span 
+                <span
                   key = {index,}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                   {skill}
                 </span>
               ))}
-              {(talent.skills?.length || 0) > 5 && (
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length || 0) - 5} more
+              {(talent.skills?.length |0) > 5 && (
+                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length |0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
+                  +{(talent.skills?.length |0) - 5} more
                 </span>
               )}
             </div>
           </div>
         )}
-
         <div className='mt-5 flex items-center justify-between'>
           <div>
             {talent.hourly_rate ? (
@@ -366,7 +405,11 @@ export function TalentCard({;
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
@@ -395,8 +438,11 @@ export function TalentCard({;
   );
 };
 }
+<<<<<<< HEAD
+=======
 }
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               size="sm"
               variant="ghost"
@@ -412,4 +458,8 @@ export function TalentCard({;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

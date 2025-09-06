@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button';
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -14,232 +20,267 @@ import {
   BarChart3,;
   Clock,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 } from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+import {
+  Activity
+  Zap
+  TrendingUp
+  AlertTriangle
+  CheckCircle
+  ArrowRight
+  Monitor
+  Gauge
+  BarChart3
+  Clock;
+} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function WebsitePerformanceMonitorPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
-
   const features = [
     {
-      icon: <Monitor className='w-8 h-8 text-white' />,
+      icon: <Monitor className='w-8 h-8 text-white' />
       description:
-        '24/7 monitoring of your website performance with instant alerts and notifications.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-    },
+        '24/7 monitoring of your website performance with instant alerts and notifications.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
     {
-      icon: <Gauge className='w-8 h-8 text-white' />,
-      title: 'Performance Metrics',
+      icon: <Gauge className='w-8 h-8 text-white' />
+      title: 'Performance Metrics'
       description:
-        'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-    },
+        'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
     {
-      icon: <AlertTriangle className='w-8 h-8 text-white' />,
-      title: 'Issue Detection',
+      icon: <AlertTriangle className='w-8 h-8 text-white' />
+      title: 'Issue Detection'
       description:
-        'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500',
-    },
+        'Automatically detect and alert on performance issues, downtime, and bottlenecks.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'
+    }
     {
-      icon: <TrendingUp className='w-8 h-8 text-white' />,
-      title: 'Performance Optimization',
+      icon: <TrendingUp className='w-8 h-8 text-white' />
+      title: 'Performance Optimization'
       description:
-        'AI-powered recommendations to improve your website speed and user experience.',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500',
-    },
+        'AI-powered recommendations to improve your website speed and user experience.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'
+    }
   ];
-
   const metrics = [
     {
-      name: 'Core Web Vitals',
+      name: 'Core Web Vitals'
       description:
-        'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
-      icon: '⚡',
-      color: 'text-blue-400',
-    },
+        'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.'
+      icon: '⚡'
+      color: 'text-blue-400'
+    }
     {
-      name: 'Page Load Time',
+      name: 'Page Load Time'
       description:
-        'Comprehensive analysis of page load performance across different devices and locations.',
-      icon: '🚀',
-      color: 'text-green-400',
-    },
+        'Comprehensive analysis of page load performance across different devices and locations.'
+      icon: '🚀'
+      color: 'text-green-400'
+    }
     {
-      name: 'Uptime Monitoring',
+      name: 'Uptime Monitoring'
       description:
-        '99.9% uptime monitoring with instant alerts for any downtime or performance issues.',
-      icon: '🔄',
-      color: 'text-purple-400',
-    },
+        '99.9% uptime monitoring with instant alerts for any downtime or performance issues.'
+      icon: '🔄'
+      color: 'text-purple-400'
+    }
     {
-      name: 'Mobile Performance',
+      name: 'Mobile Performance'
       description:
-        'Mobile-first performance testing and optimization recommendations.',
-      icon: '📱',
-      color: 'text-orange-400',
-    },
+        'Mobile-first performance testing and optimization recommendations.'
+      icon: '📱'
+      color: 'text-orange-400'
+    }
     {
-      name: 'SEO Impact',
+      name: 'SEO Impact'
       description:
-        'Performance metrics that directly affect your search engine rankings and visibility.',
-      icon: '🔍',
-      color: 'text-cyan-400',
-    },
+        'Performance metrics that directly affect your search engine rankings and visibility.'
+      icon: '🔍'
+      color: 'text-cyan-400'
+    }
     {
-      name: 'User Experience',
+      name: 'User Experience'
       description:
+<<<<<<< HEAD
+        'Real user experience metrics and conversion impact analysis.'
+      icon: '👥'
+      color: 'text-pink-400'
+    },  ];      gradient: 'from-blue-400 to-cyan-500'}
+    {
+      icon: <Gauge className="w-8 h-8 text-white" />
+      title: 'Performance Metrics'
+      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.';
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'}
+    {
+      icon: <AlertTriangle className="w-8 h-8 text-white" />
+      title: 'Issue Detection'
+      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.';
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'}
+    {
+      icon: <TrendingUp className="w-8 h-8 text-white" />
+      title: 'Performance Optimization'
+      description: 'AI-powered recommendations to improve your website speed and user experience.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'}]
+  const metrics = [
+    {
+      name: 'Core Web Vitals'
+      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.';
+      icon: '⚡'
+      color: 'text-blue-400'
+    }
+    {
+      name: 'Page Load Time'
+      description: 'Comprehensive analysis of page load performance across different devices and locations.'
+      icon: '🚀'
+      color: 'text-green-400'
+    }
+    {
+      name: 'Uptime Monitoring'
+      description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.'
+      icon: '🔄'
+      color: 'text-purple-400'
+    }
+    {
+      name: 'Mobile Performance'
+      description: 'Mobile-first performance testing and optimization recommendations.'
+      icon: '📱'
+      color: 'text-orange-400'
+    }
+    {
+      name: 'SEO Impact'
+      description: 'Performance metrics that directly affect your search engine rankings and visibility.'
+      icon: '🔍'
+      color: 'text-cyan-400'
+    }
+    {
+      name: 'User Experience'
+      description: 'Real user experience metrics and conversion impact analysis.'
+      icon: '👥'
+      color: 'text-pink-400'
+    }
+=======
         'Real user experience metrics and conversion impact analysis.',
       icon: '👥',
       color: 'text-pink-400',
-    },  ];      gradient: 'from-blue-400 to-cyan-500'},
-    {
-      icon: <Gauge className="w-8 h-8 text-white" />,
-      title: 'Performance Metrics',
-      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500'},
-    {
-      icon: <AlertTriangle className="w-8 h-8 text-white" />,
-      title: 'Issue Detection',
-      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.';
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500'},
-    {
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
-      title: 'Performance Optimization',
-      description: 'AI-powered recommendations to improve your website speed and user experience.',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500'}],
-  const metrics = [
-    {
-      name: 'Core Web Vitals',
-      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.';
-      icon: '⚡',
-      color: 'text-blue-400'
-    };
-    {
-      name: 'Page Load Time',
-      description: 'Comprehensive analysis of page load performance across different devices and locations.',
-      icon: '🚀',
-      color: 'text-green-400'
-    };
-    {
-      name: 'Uptime Monitoring',
-      description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.',
-      icon: '🔄',
-      color: 'text-purple-400'
-    };
-    {
-      name: 'Mobile Performance',
-      description: 'Mobile-first performance testing and optimization recommendations.',
-      icon: '📱',
-      color: 'text-orange-400'
-    };
-    {
-      name: 'SEO Impact',
-      description: 'Performance metrics that directly affect your search engine rankings and visibility.',
-      icon: '🔍',
-      color: 'text-cyan-400'
-    };
-    {
-      name: 'User Experience',
-      description: 'Real user experience metrics and conversion impact analysis.',
-      icon: '👥',
-      color: 'text-pink-400'
-    }
-  ];
+    },  ];
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  ];
   const pricing = [
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small websites and blogs',
+      name: 'Starter'
+      price: '$29'
+      period: '/month'
+      description: 'Perfect for small websites and blogs'
       features: [
-        '5 websites monitored',
-        'Basic performance metrics',
-        'Daily monitoring',
-        'Email alerts',
-        'Basic reporting',
-        'Core Web Vitals tracking',
-      ],
-      popular: false,
+        '5 websites monitored'
+        'Basic performance metrics'
+        'Daily monitoring'
+        'Email alerts'
+        'Basic reporting'
+        'Core Web Vitals tracking'
+      ]
+      popular: false
     },    {        '5 websites monitoredBasic performance metricsDaily monitoringEmail alertsBasic reportingCore Web Vitals tracking'
       ];
       popular: false
-    };
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses and e-commerce sites',
+    }
+      name: 'Professional'
+      price: '$79'
+      period: '/month'
+      description: 'Ideal for growing businesses and e-commerce sites'
       features: [
-        '25 websites monitored',
-        'Advanced performance metrics',
-        'Real-time monitoring',
-        'SMS & email alerts',
-        'Advanced reporting',
-        'Performance optimization tips',
-        'API access',
-        'Team collaboration',
-      ],
-      popular: true,
+        '25 websites monitored'
+        'Advanced performance metrics'
+        'Real-time monitoring'
+        'SMS & email alerts'
+        'Advanced reporting'
+        'Performance optimization tips'
+        'API access'
+        'Team collaboration'
+      ]
+      popular: true
     },    {
-      name: 'Enterprise',
-      price: '$199',
+      name: 'Enterprise'
+      price: '$199'
       period: '/month',        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
       ];
       popular: true
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+      name: 'Enterprise'
+      price: '$199'
+      period: '/month'
+=======
     };
       name: 'Enterprise',
       price: '$199',
       period: '/month',
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       description:
-        'For large organizations with critical performance requirements',
+        'For large organizations with critical performance requirements'
       features: [
-        'Unlimited websites',
-        'Enterprise-grade monitoring',
-        'Custom alerting rules',
-        '24/7 support',
-        'Custom integrations',
-        'White-label reporting',
-        'SLA guarantees',
-        'On-premise options',
-      ],
-      popular: false,
+        'Unlimited websites'
+        'Enterprise-grade monitoring'
+        'Custom alerting rules'
+        '24/7 support'
+        'Custom integrations'
+        'White-label reporting'
+        'SLA guarantees'
+        'On-premise options'
+      ]
+      popular: false
     },  ];        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
       ];
       popular: false
     }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true);
     // Simulate website analysis
     setTimeout(() => {
       setAnalysisResults({
-        url: 'https://example.com',
-        overallScore: 87,
-        lcp: '2.1s',
-        fid: '45ms',
-        cls: '0.08',
-        loadTime: '1.8s',
+        url: 'https://example.com'
+        overallScore: 87
+        lcp: '2.1s'
+        fid: '45ms'
+        cls: '0.08'
+        loadTime: '1.8s'
         recommendations: [
-          'Optimize images and implement lazy loading',
-          'Minimize render-blocking resources',
-          'Enable compression and caching',
-          'Consider using a CDN for global performance',
-        ],
+          'Optimize images and implement lazy loading'
+          'Minimize render-blocking resources'
+          'Enable compression and caching'
+          'Consider using a CDN for global performance'
+        ]
       });
       setIsAnalyzing(false);
     }, 4000);  };          'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance'
@@ -247,7 +288,17 @@ export default function WebsitePerformanceMonitorPage() {
       });
       setIsAnalyzing(false)
     }, 4000)
+=======
+    };
 
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -316,6 +367,7 @@ export default function WebsitePerformanceMonitorPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations. Never let performance issues impact your users again.
+
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
@@ -415,7 +467,11 @@ export default function WebsitePerformanceMonitorPage() {
 
                       {feature.description}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                 </div>
@@ -427,7 +483,11 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Metrics Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -436,7 +496,11 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Comprehensive Performance Metrics
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -480,7 +544,11 @@ export default function WebsitePerformanceMonitorPage() {
 
               </Card>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
@@ -488,7 +556,11 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Demo Analysis Section */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -648,14 +720,21 @@ export default function WebsitePerformanceMonitorPage() {
 
                   </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ))}
               </div>
             </Card>
           </div>
         </section>
       )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -664,7 +743,11 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -696,7 +779,10 @@ export default function WebsitePerformanceMonitorPage() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -725,9 +811,16 @@ export default function WebsitePerformanceMonitorPage() {
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
 =======
+<<<<<<< HEAD
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                       {feature}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -749,7 +842,11 @@ export default function WebsitePerformanceMonitorPage() {
 
                 </Button>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
@@ -758,7 +855,11 @@ export default function WebsitePerformanceMonitorPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -768,7 +869,11 @@ export default function WebsitePerformanceMonitorPage() {
 =======
 
             Ready to Monitor Your Website Performance?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our monitoring platform to keep
@@ -799,8 +904,15 @@ export default function WebsitePerformanceMonitorPage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

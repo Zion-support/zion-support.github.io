@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
 
@@ -19,9 +22,9 @@ const EnhancedFooter = () => {
             </div>
             <p className='text-gray-300 mb-6 max-w-md'>
               Leading technology solutions provider helping businesses transform
-              their digital presence with cutting-edge AI, cloud architecture,
+              their digital presence with cutting-edge AI, cloud architecture
               and innovative development services.            </p>const EnhancedFooter = () => {
-  const currentYear = new Date().getFullYear(),
+  const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -37,7 +40,7 @@ const EnhancedFooter = () => {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider helping businesses transform their digital presence 
+              Leading technology solutions provider helping businesses transform their digital presence
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
           </div>
@@ -138,9 +141,15 @@ const EnhancedFooter = () => {
         </div>
       </div>
     </footer>
-);
-};
 
+<<<<<<< HEAD
+);
+}
+export default EnhancedFooter;}
+export default EnhancedFooter;
+
+=======
 export default EnhancedFooter;},
 
 export default EnhancedFooter;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

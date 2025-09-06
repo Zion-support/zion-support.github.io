@@ -1,42 +1,52 @@
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
-import {Textarea} from '@/components/ui/textarea';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
-import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
+import { Textarea  } from '@/components/ui/textarea';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check  } from '@/components/icons';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementPanelProps {
-  title: string,
-  defaultOptions: AIEnhancementOptions,
-  onApply: (content: string) => void,
+
+  title: string
+  defaultOptions: AIEnhancementOptions
+  onApply: (content: string) => void
+
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string
 }
+<<<<<<< HEAD
+export function AIEnhancementPanel({
+=======
 
 export function AIEnhancementPanel({;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title;
   defaultOptions;
   onApply;
   onClose;
+
   showInstructions = true;
   initialContent = ''
 }: AIEnhancementPanelProps) {
   const [options, setOptions] = useState<AIEnhancementOptions>({
     ...defaultOptions;
-    content: initialContent || defaultOptions.content}),
+    content: initialContent |defaultOptions.content})
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-
   const handleGenerate = async () => {
     const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
     }
+<<<<<<< HEAD
+  }
+=======
   };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -74,27 +84,43 @@ export function AIEnhancementPanel({;
       setGeneratedContent(result);
     }
   },
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-      ...options,
+      ...options
       [field]: e.target.value})
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleApply = () => {
     onApply(generatedContent),
     if (onClose) onClose()
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -136,12 +162,20 @@ export function AIEnhancementPanel({;
             />
           </div>
         )}
+<<<<<<< HEAD
+        {/* Generate button */}
+        <Button
+          onClick={handleGenerate}
+          className="w-full"
+          disabled={isEnhancing |!options.content && !options.context}
+=======
 
         {/* Generate button */}
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         >
           {isEnhancing ? (
             <>
@@ -160,9 +194,9 @@ export function AIEnhancementPanel({;
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
               <label className="text-sm font-medium">Generated content</label>
-              <Button 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={handleCopy}
                 className="h-8"
               >
@@ -198,4 +232,3 @@ export function AIEnhancementPanel({;
     </Card>
   )
 }
-;

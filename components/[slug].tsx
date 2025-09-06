@@ -1,62 +1,72 @@
+<<<<<<< HEAD
+import React, { useMemo } from 'react',
+=======
 import React, { useMemo } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
-import {useRouter} from 'next/router';
-import {Phone, Mail, MapPin, Check, ArrowRight, Star} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { useRouter  } from 'next/router';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { quantumSpaceServices } from '../data/quantum-space-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { newRealServices } from '../data/new-real-services';
-import { marketReadyServices } from '../data/market-ready-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { emergingTechnologyServices } from '../data/emerging-technology-services';
-import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { newRealInnovations } from '../data/new-real-innovations';
-import { realMarketServices } from '../data/real-market-services';
-import { new2025Services } from '../data/new-2025-services';
-import { curatedMarketServices } from '../data/curated-market-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { nextGenAIServices } from '../data/next-gen-ai-services';
-import { industryRealServices } from '../data/industry-real-services';
-import { professionalServices } from '../data/professional-services';
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+import { extraServices  } from '../data/extra-services';
+import { additionalEnhancedServices  } from '../data/additional-real-services';
+import { innovativeAIServices  } from '../data/innovative-ai-services';
+import { quantumSpaceServices  } from '../data/quantum-space-services';
+import { enterpriseITServices  } from '../data/enterprise-it-services';
+import { newRealServices  } from '../data/new-real-services';
+import { marketReadyServices  } from '../data/market-ready-services';
+import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
+import { emergingTechnologyServices  } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions  } from '../data/comprehensive-it-solutions';
+import { marketValidatedServices  } from '../data/market-validated-services';
+import { newRealInnovations  } from '../data/new-real-innovations';
+import { realMarketServices  } from '../data/real-market-services';
+import { new2025Services  } from '../data/new-2025-services';
+import { curatedMarketServices  } from '../data/curated-market-services';
+import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';
+import { nextGenAIServices  } from '../data/next-gen-ai-services';
+import { industryRealServices  } from '../data/industry-real-services';
+import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
+<<<<<<< HEAD
+export default function DynamicServicePage() {
+=======
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
     if (!slug) return undefined;
     const all: any[] = ([] as any[]).concat(
-      enhancedRealMicroSaasServices as any,
-      extraServices as any,
-      additionalEnhancedServices as any,
-      innovativeAIServices as any,
-      quantumSpaceServices as any,
-      enterpriseITServices as any,
-      newRealServices as any,
-      marketReadyServices as any,
-      realMarketServices as any,
-      new2025Services as any,
-      newRealInnovations as any,
-      emergingTechnologyServices as any,
-      comprehensiveITSolutions as any,
-      marketValidatedServices as any,
-      curatedMarketServices as any,
-      cuttingEdgeITServices as any,
-      nextGenerationAIServices as any,
-      nextGenAIServices as any,
-      industryRealServices as any,
-      professionalServices as any,
-      realEnterpriseServices2025 as any,
-      augmentedServicesBatch3 as any,
-      real2025Q3Additions as any,
-      realQ4Services2025 as any,
-      real2026Q1Additions as any,
+      enhancedRealMicroSaasServices as any
+      extraServices as any
+      additionalEnhancedServices as any
+      innovativeAIServices as any
+      quantumSpaceServices as any
+      enterpriseITServices as any
+      newRealServices as any
+      marketReadyServices as any
+      realMarketServices as any
+      new2025Services as any
+      newRealInnovations as any
+      emergingTechnologyServices as any
+      comprehensiveITSolutions as any
+      marketValidatedServices as any
+      curatedMarketServices as any
+      cuttingEdgeITServices as any
+      nextGenerationAIServices as any
+      nextGenAIServices as any
+      industryRealServices as any
+      professionalServices as any
+      realEnterpriseServices2025 as any
+      augmentedServicesBatch3 as any
+      real2025Q3Additions as any
+      realQ4Services2025 as any
+      real2026Q1Additions as any
       ultimateFuturisticServices2025 as any
     );    const byLink = all.find(s => {
       try {
@@ -71,7 +81,10 @@ export default function DynamicServicePage() {;
     if (byId) return byId;
     return undefined;  }, [slug]);    return undefined
   }, [slug]);
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
@@ -99,9 +112,7 @@ export default function DynamicServicePage() {;
         </div>
       </UltraAdvancedFuturisticBackground>
     )
-
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -191,31 +202,35 @@ export default function DynamicServicePage() {;
     </UltraAdvancedFuturisticBackground>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 // Static export support: generate root-level pages for service slugs;
 =======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Static export support: generate root-level pages for service slugs
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
-
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
-    extraServices as Svc[],
-    additionalEnhancedServices as Svc[],
-    innovativeAIServices as Svc[],
-    quantumSpaceServices as Svc[],
-    enterpriseITServices as Svc[],
-    newRealServices as Svc[],
-    marketReadyServices as Svc[],
-    nextGenerationAIServices as Svc[],
-    emergingTechnologyServices as Svc[],
-    comprehensiveITSolutions as Svc[],
-    marketValidatedServices as Svc[],
-    newRealInnovations as Svc[],
-    realMarketServices as Svc[],
+    extraServices as Svc[]
+    additionalEnhancedServices as Svc[]
+    innovativeAIServices as Svc[]
+    quantumSpaceServices as Svc[]
+    enterpriseITServices as Svc[]
+    newRealServices as Svc[]
+    marketReadyServices as Svc[]
+    nextGenerationAIServices as Svc[]
+    emergingTechnologyServices as Svc[]
+    comprehensiveITSolutions as Svc[]
+    marketValidatedServices as Svc[]
+    newRealInnovations as Svc[]
+    realMarketServices as Svc[]
     realVerifiedServices as unknown as Svc[]
   );
-
 function normalizeSlug(value: string): string {
   return value
     .toLowerCase()
@@ -230,12 +245,21 @@ function normalizeSlug(value: string): string {
     return null
   } catch {
     return null
+<<<<<<< HEAD
+  }
+}
+=======
   };
 }
-export const getStaticPaths: GetStaticPaths = async () => {;
-  const services = collectAllServices();
-  const candidateSlugs = new Set<string>(),
+<<<<<<< HEAD
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export const getStaticPaths: GetStaticPaths = async () => {
+=======
+export const getStaticPaths: GetStaticPaths = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const services = collectAllServices();
+  const candidateSlugs = new Set<string>()
   // Gather existing root-level page slugs to avoid conflicts
   const pagesDir = path.join(process.cwd(), 'pages');
   const staticSlugs = new Set<string>();
@@ -244,8 +268,7 @@ export const getStaticPaths: GetStaticPaths = async () => {;
           }
     }
   } catch {}
-
-      const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
+      const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
     for (const entry of entries) {
       if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
         const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
@@ -255,13 +278,18 @@ export const getStaticPaths: GetStaticPaths = async () => {;
     }
   } catch {}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
-
   return {
+<<<<<<< HEAD
+    paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
+=======
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   };
@@ -275,15 +303,35 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fallback: true
   }
-};
-
+}
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // No dynamic fetching needed; the component resolves the service client-side.
+  return { props: {} };}
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
+  return {
+    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }))
+    fallback: true
+  }
+}
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
+<<<<<<< HEAD
+  return { props: {} }
+}
+
+=======
+
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
   return { props: {} };
 };
 =======
 
 };
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

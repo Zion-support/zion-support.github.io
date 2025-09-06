@@ -1,6 +1,31 @@
 
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+import { MessageSquare, Video  } from 'lucide-react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { toast  } from 'sonner';
+import { Button  } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+export default function MessagingInbox() {
+  const {
+    conversations;
+
+    activeConversation
+    setActiveConversation
+
+    markAsRead;
+    fetchConversations;
+    isLoading
+  } = useMessaging();
+
+  const isMobile = useIsMobile();
+  const navigate = useNavigate();
+  const [activeCall, setActiveCall] = useState<string | null>(null);
+=======
 import {MessageSquare, Video} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
@@ -12,6 +37,7 @@ import {useNavigate} from 'react-router-dom';
 export default function MessagingInbox() {
   const { ;
     conversations;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react',
@@ -36,6 +62,7 @@ export default function MessagingInbox() {
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -45,16 +72,34 @@ export default function MessagingInbox() {
         console.error("Failed to load conversations:", error),
         toast.error("Failed to load messages. Please try again.")
       }
+<<<<<<< HEAD
+    }
+    loadData()
+  }, [fetchConversations]);
+=======
     },
     
     loadData()
   }, [fetchConversations]),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
       return
     }
+<<<<<<< HEAD
+    const roomId = `msg-${activeConversation.id}`;
+    setActiveCall(roomId);
+    // Show toast notification
+    toast.success("Starting video call", {
+      description: "Initializing video call connection..."
+    });
+    // Navigate to video call page
+    navigate(`/call/${roomId}`)
+  }
+
+=======
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
@@ -68,6 +113,7 @@ export default function MessagingInbox() {
     navigate(`/call/${roomId}`)
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -78,7 +124,7 @@ export default function MessagingInbox() {
               Messages
             </h1>
             {activeConversation && (
-              <Button 
+              <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
@@ -174,14 +220,17 @@ export default function MessagingInbox() {;
                 </div>;
               ) : (;
                 <ConversationsList;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   conversations={conversations}
                   activeConversation={activeConversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
                 />
               )}
-              
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>
@@ -192,5 +241,9 @@ export default function MessagingInbox() {;
       </div>
     </ProtectedRoute>
   )
+<<<<<<< HEAD
+}
+=======
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

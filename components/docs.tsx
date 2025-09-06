@@ -7,6 +7,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Star } from 'lucide-react';
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function DocsPage() {
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function DocsPage() {
   const contact = {
@@ -15,87 +19,99 @@ export default function DocsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+  const contact = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
   const sections = [
     {
-      title: 'Getting Started',
+      title: 'Getting Started'
       links: [
-        { name: 'Overview', href: '/enhanced-services-showcase' },
-        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
-        { name: 'Contact Sales', href: '/contact' },
-      ],
+        { name: 'Overview', href: '/enhanced-services-showcase' }
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' }
+        { name: 'Contact Sales', href: '/contact' }
+      ]
     },    {        { name: 'Contact Sales', href: '/contact' }]
-    };
+    }
     {
-      title: 'AI Services Docs',
+      title: 'AI Services Docs'
       links: [
-        { name: 'AI Guardrails', href: '/ai-guardrails' },
-        { name: 'AI Evals', href: '/ai-evals' },
-        { name: 'Agentic RAG', href: '/agentic-rag' },
-      ],
+        { name: 'AI Guardrails', href: '/ai-guardrails' }
+        { name: 'AI Evals', href: '/ai-evals' }
+        { name: 'Agentic RAG', href: '/agentic-rag' }
+      ]
     },    {        { name: 'Agentic RAG', href: '/agentic-rag' }]
-    };
+    }
     {
-      title: 'IT & Platform Docs',
+      title: 'IT & Platform Docs'
       links: [
-        { name: 'API Observability', href: '/api-observability' },
-        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-        { name: 'Status Pages & SLO', href: '/status-pages-slo' },
-      ],
-    },
+        { name: 'API Observability', href: '/api-observability' }
+        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
+        { name: 'Status Pages & SLO', href: '/status-pages-slo' }
+      ]
+    }
   ];        { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
     }];
-
   const external = [
-    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
-    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
-    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
-    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' },
-  ];    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }],
+    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' }
+    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' }
+    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' }
+    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }
+  ];    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }]
   const quickLinks = [
     {
-      title: 'API Status',
-      description: 'Check service availability and performance',
-      icon: <CheckCircle className='w-6 h-6' />,
-      color: 'text-green-400',
-    },
+      title: 'API Status'
+      description: 'Check service availability and performance'
+      icon: <CheckCircle className='w-6 h-6' />
+      color: 'text-green-400'
+    }
     {
-      title: 'SDK Downloads',
-      description: 'Get the latest SDKs and client libraries',
-      icon: <Download className='w-6 h-6' />,
-      href: '/downloads',
-      color: 'text-blue-400',
-    },
+      title: 'SDK Downloads'
+      description: 'Get the latest SDKs and client libraries'
+      icon: <Download className='w-6 h-6' />
+      href: '/downloads'
+      color: 'text-blue-400'
+    }
     {
-      title: 'Support Portal',
-      description: 'Get help from our technical support team',
-      icon: <ExternalLink className='w-6 h-6' />,
-      href: '/support',
-      color: 'text-purple-400',
-    },
+      title: 'Support Portal'
+      description: 'Get help from our technical support team'
+      icon: <ExternalLink className='w-6 h-6' />
+      href: '/support'
+      color: 'text-purple-400'
+    }
     {
+<<<<<<< HEAD
+      title: 'Community Forum'
+      description: 'Connect with other developers and users'
+      icon: <ExternalLink className='w-6 h-6' />
+      href: '/community'
+      color: 'text-yellow-400'
+    }
+=======
       title: 'Community Forum',
       description: 'Connect with other developers and users',
       icon: <ExternalLink className='w-6 h-6' />,
       href: '/community',
       color: 'text-yellow-400',
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
-
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =
-      doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      doc.title.toLowerCase().includes(searchTerm.toLowerCase()) |
       doc.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
-      selectedCategory === 'all' || doc.category === selectedCategory;
+      selectedCategory === 'all' |doc.category === selectedCategory;
     return matchesSearch && matchesCategory;  });
-
   const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    switch (difficulty) {    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) |
                          doc.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || doc.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' |doc.category === selectedCategory;
     return matchesSearch && matchesCategory
-
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
 <<<<<<< HEAD
@@ -108,20 +124,28 @@ export default function DocsPage() {
       default:
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
-      case 'Advanced': return 'bg-red-500/20 text-red-400',
+      case 'Advanced': return 'bg-red-500/20 text-red-400'
       default: return 'bg-gray-500/20 text-gray-400'
+<<<<<<< HEAD
+  }
+=======
   };
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
+      year: 'numeric'
+      month: 'short'
+      day: 'numeric'
     });  };      day: 'numeric'
     })
+  }
+=======
+
   };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -182,7 +206,11 @@ export default function DocsPage() {
 
                     </li>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </ul>
               </Card>
@@ -253,11 +281,18 @@ export default function DocsPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
+<<<<<<< HEAD
+=======
 ;
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
               ))}
             </ul>
           </Card>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

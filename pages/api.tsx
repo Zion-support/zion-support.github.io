@@ -1,7 +1,39 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import React from "react";
+import MainLayout from "../src/components/layout/MainLayout";
+import { motion } from "framer-motion";
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
+<<<<<<< HEAD
+  Code
+  Check
+  Globe
+  Shield
+  Zap
+  Database
+  Cpu
+  Cloud
+  XCircle
+=======
   Code,
   Check,
   Globe,
@@ -11,89 +43,94 @@ import {
   Cpu,
   Cloud,
   XCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
-
 export default function APIPage() {
   const apiEndpoints = [
     {
-      id: "auth",
-      title: "Authentication",
-      description: "Secure authentication and authorization endpoints",
-      baseUrl: "/api/v1/auth",
+      id: "auth"
+      title: "Authentication"
+      description: "Secure authentication and authorization endpoints"
+      baseUrl: "/api/v1/auth"
       methods: [
         {
-          method: "POST",
-          endpoint: "/login",
-          description: "Authenticate user with email and password",
+          method: "POST"
+          endpoint: "/login"
+          description: "Authenticate user with email and password"
           code: `curl -X POST https://api.ziontechgroup.com/v1/auth/login \\
   -H "Content-Type: application/json" \\
   -d '{
-    "email": "user@example.com",
+    "email": "user@example.com"
     "password": "your_password"
-  }'`,
-        },
+  }'`
+        }
         {
-          method: "POST",
-          endpoint: "/register",
-          description: "Register a new user account",
+          method: "POST"
+          endpoint: "/register"
+          description: "Register a new user account"
           code: `curl -X POST https://api.ziontechgroup.com/v1/auth/register \\
   -H "Content-Type: application/json" \\
   -d '{
-    "email": "user@example.com",
-    "password": "your_password",
+    "email": "user@example.com"
+    "password": "your_password"
     "name": "John Doe"
-  }'`,
-        },
-      ],
-    },
+  }'`
+        }
+      ]
+    }
     {
-      id: "ai-services",
-      title: "AI Services",
-      description: "Access our AI-powered services and models",
-      baseUrl: "/api/v1/ai",
+      id: "ai-services"
+      title: "AI Services"
+      description: "Access our AI-powered services and models"
+      baseUrl: "/api/v1/ai"
       methods: [
         {
-          method: "POST",
-          endpoint: "/chat",
-          description: "Send messages to our AI chat service",
+          method: "POST"
+          endpoint: "/chat"
+          description: "Send messages to our AI chat service"
           code: `curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "message": "Hello, how can you help me?",
-    "model": "gpt-4",
+    "message": "Hello, how can you help me?"
+    "model": "gpt-4"
     "temperature": 0.7
+<<<<<<< HEAD
+  }'`
+        }
+      ]
+    }
+=======
   }'`,
         },
       ],
     },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
-
   const responseExamples = {
     success: {
-      status: 200,
+      status: 200
       data: {
-        message: "Request successful",
+        message: "Request successful"
         data: {
-          id: "12345",
-          name: "Example Response",
-          created_at: "2024-01-01T00:00:00Z",
-        },
-      },
-    },
+          id: "12345"
+          name: "Example Response"
+          created_at: "2024-01-01T00:00:00Z"
+        }
+      }
+    }
     error: {
-      status: 400,
+      status: 400
       error: {
-        code: "VALIDATION_ERROR",
-        message: "Invalid request parameters",
+        code: "VALIDATION_ERROR"
+        message: "Invalid request parameters"
         details: {
-          field: "email",
-          issue: "Invalid email format",
-        },
-      },
-    },
-  };
-
+          field: "email"
+          issue: "Invalid email format"
+        }
+      }
+    }
+  }
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -304,5 +341,35 @@ export default function APIPage() {
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
+=======
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+export default function APIPage() {
+  
+    >
+      <div className="min-h-screen bg-gray-50">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                API Services
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Powerful, scalable API solutions for your applications
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   );
 }

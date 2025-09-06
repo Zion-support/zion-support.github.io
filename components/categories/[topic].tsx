@@ -1,12 +1,16 @@
+<<<<<<< HEAD
+import type { GetServerSideProps, NextPage } from 'next',
+=======
 import type { GetServerSideProps, NextPage } from 'next';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import Link from 'next/link';
-import {BlogPost} from '@/utils/types/blog';
+import { BlogPost  } from '@/utils/types/blog';
 import PageShareButtons from '@/components/blog/PageShareButtons';
-import {listPublishedPosts} from '@/utils/data/blogStore';
+import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 
-type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },
+type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
     <div>
@@ -35,17 +39,17 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
             description={`Articles about ${topic}`}
             onShare={network =>
               fetch('/api/analytics/share', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                method: 'POST'
+                headers: { 'Content-Type': 'application/json' }
                 body: JSON.stringify({
-                  url: window.location.href,
-                  title: `${topic} - Zion Blog`,
-                  network,
+                  url: window.location.href
+                  title: `${topic} - Zion Blog`
+                  network
                   utm:
                     'utm_source=' +
                     network +
-                    '&utm_medium=share&utm_campaign=category',
-                }),
+                    '&utm_medium=share&utm_campaign=category'
+                })
               }).catch(() => {})
             }
           />
@@ -63,14 +67,19 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
       </div>
     </div>
   );
+<<<<<<< HEAD
+}
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const topic = String(ctx.params?.topic |'');
+=======
 };
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx.params?.topic || '');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-  return { props: { topic, posts } };
-};
-
+  return { props: { topic, posts } }
+}
 export default TopicPage;      </Head>
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
@@ -91,6 +100,13 @@ export default TopicPage;      </Head>
       </div>
     </div>
   )
+<<<<<<< HEAD
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+<<<<<<< HEAD
+  const topic = String(ctx.params?.topic |'');
+=======
+=======
 };
 
 <<<<<<< HEAD
@@ -98,9 +114,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 =======
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const topic = String(ctx.params?.topic || '');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
-};
-
+}
 export default TopicPage;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

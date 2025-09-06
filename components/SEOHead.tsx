@@ -13,49 +13,45 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
-
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Technology Solutions',
-  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
+  title = 'Zion Tech Group - Technology Solutions'
+  description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.'
   keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',}
-
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',
-  description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
-  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',
-  canonicalUrl,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noIndex = false,
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions'
+  description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.'
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions'
+  canonicalUrl
+  ogImage = '/og-image.jpg'
+  ogType = 'website'
+  twitterCard = 'summary_large_image'
+  noIndex = false
   structuredData
 }) => {
   const router = useRouter();
   const baseUrl = 'https://ziontechgroup.com';
-  const fullCanonicalUrl = canonicalUrl || `${baseUrl}${router.asPath}`;
+  const fullCanonicalUrl = canonicalUrl |`${baseUrl}${router.asPath}`;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
-
   const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://zion.app',
-    logo: 'https://zion.app/logo.png',
-    description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
+    '@context': 'https://schema.org'
+    '@type': 'Organization'
+    name: 'Zion Tech Group'
+    url: 'https://zion.app'
+    logo: 'https://zion.app/logo.png'
+    description: 'Leading provider of AI services, IT solutions, and micro SaaS development'
     address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US'    },
+      '@type': 'PostalAddress'
+      addressCountry: 'US'    }
     "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1 302 464 0950",
-      "contactType": "customer service",
+      "@type": "ContactPoint"
+      "telephone": "+1 302 464 0950"
+      "contactType": "customer service"
       "email": "kleber@ziontechgroup.com"
-    },
+    }
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
+      'https://linkedin.com/company/zion-tech-group'
       'https://twitter.com/ziontechgroup'
-    ]  };
-
+    ]  }
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -67,7 +63,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -122,7 +117,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData)
+          __html: JSON.stringify(structuredData |defaultStructuredData)
         }}
       />
       {/* Preconnect to external domains */}
@@ -131,6 +126,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="preconnect" href="https://images.unsplash.com" />
     </Head>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default SEOHead;

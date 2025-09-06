@@ -1,95 +1,101 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react'
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-  CheckCircle,
-  AlertCircle,
-  TrendingUp,
-  Zap,
-  Shield,
-  Search,
+  CheckCircle
+  AlertCircle
+  TrendingUp
+  Zap
+  Shield
+  Search
 } from 'lucide-react'
+
 interface PerformanceMetrics {
-  buildSize: string
-  pageCount: number
-  loadTime: number
+  buildSize: string;
+  pageCount: number;
+  loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
-  id: string
-  title: string
-  description: string
-  status: 'completed' | 'in-progress' | 'planned'
-  impact: 'high' | 'medium' | 'low'
+  id: string;
+  title: string;
+  description: string;
+  status: 'completed' | 'in-progress' | 'planned';
+  impact: 'high' | 'medium' | 'low';
   category: 'performance' | 'security' | 'ux' | 'build'
+
 const PerformanceDashboard: React.FC = () => {
   const [metrics] = useState<PerformanceMetrics>({
-    buildSize: '959 MB',
-    pageCount: 166,
-    loadTime: 1.2,
-    healthStatus: 'healthy',
+    buildSize: '959 MB'
+    pageCount: 166
+    loadTime: 1.2
+    healthStatus: 'healthy'
   })
   const improvements: Improvement[] = [
     {
-      id: '1',
-      title: 'Fixed Search Bar Issues',
+      id: '1'
+      title: 'Fixed Search Bar Issues'
       description:
-        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',
-      status: 'completed',
-      impact: 'high',
-      category: 'ux',
-    },
+        'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems'
+      status: 'completed'
+      impact: 'high'
+      category: 'ux'
+    }
     {
-      id: '2',
-      title: 'Environment Validation System',
+      id: '2'
+      title: 'Environment Validation System'
       description:
-        'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
-      status: 'completed',
-      impact: 'high',
-      category: 'build',
-    },
+        'Added comprehensive pre-build checks to prevent deployment with missing environment variables'
+      status: 'completed'
+      impact: 'high'
+      category: 'build'
+    }
     {
-      id: '3',
-      title: 'NextAuth Configuration Fix',
+      id: '3'
+      title: 'NextAuth Configuration Fix'
       description:
-        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',
-      status: 'completed',
-      impact: 'medium',
-      category: 'security',
-    },
+        'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors'
+      status: 'completed'
+      impact: 'medium'
+      category: 'security'
+    }
     {
-      id: '4',
-      title: 'API Client Error Handling',
+      id: '4'
+      title: 'API Client Error Handling'
       description:
-        'Improved global error handling with better retry logic and user feedback',
-      status: 'completed',
-      impact: 'medium',
-      category: 'ux',
-    },
+        'Improved global error handling with better retry logic and user feedback'
+      status: 'completed'
+      impact: 'medium'
+      category: 'ux'
+    }
     {
-      id: '5',
-      title: 'Bundle Analyzer Integration',
+      id: '5'
+      title: 'Bundle Analyzer Integration'
       description:
-        'Added bundle analysis tools to identify and optimize large dependencies',
-      status: 'completed',
-      impact: 'medium',
-      category: 'performance',
-    },
+        'Added bundle analysis tools to identify and optimize large dependencies'
+      status: 'completed'
+      impact: 'medium'
+      category: 'performance'
+    }
     {
-      id: '6',
-      title: 'Health Check Endpoint',
+      id: '6'
+      title: 'Health Check Endpoint'
       description:
-        'Created production monitoring endpoint for environment and service health',
-      status: 'completed',
-      impact: 'medium',
-      category: 'security',
-    },
+        'Created production monitoring endpoint for environment and service health'
+      status: 'completed'
+      impact: 'medium'
+      category: 'security'
+    }
   ]
   const getStatusIcon = (status: string,) => {
     switch (status) {
@@ -248,7 +254,11 @@ const PerformanceDashboard: React.FC = () => {;
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6 p-6">
       <div className="flex items-center justify-between">
@@ -271,7 +281,11 @@ const PerformanceDashboard: React.FC = () => {;
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
@@ -284,7 +298,11 @@ const PerformanceDashboard: React.FC = () => {;
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
@@ -297,7 +315,11 @@ const PerformanceDashboard: React.FC = () => {;
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
@@ -336,7 +358,11 @@ const PerformanceDashboard: React.FC = () => {;
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -441,7 +467,11 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
@@ -463,7 +493,11 @@ const PerformanceDashboard: React.FC = () => {;
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -475,10 +509,17 @@ const PerformanceDashboard: React.FC = () => {;
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+export default PerformanceDashboard
+export default PerformanceDashboard
+export default PerformanceDashboard
+
+=======
 export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 },
 
@@ -497,4 +538,8 @@ export default PerformanceDashboard,
   );
 },;
 export default PerformanceDashboard;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

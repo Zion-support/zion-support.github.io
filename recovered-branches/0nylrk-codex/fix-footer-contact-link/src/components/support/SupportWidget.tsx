@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
@@ -13,10 +15,24 @@ export function SupportWidget() {;
   return (
     <>
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
 import { MessageSquare, Info, X } from "lucide-react",
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  return (
+    <>
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
+
+=======
 import { cn } from "@/lib/utils",
 import { useTheme } from "@/hooks/useTheme",
 export function SupportWidget() {
@@ -36,10 +52,14 @@ export function SupportWidget() {;
   const { theme } = useTheme();
   return (;
     <>;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           onClick={() => setIsOpen(true)}
           size="icon"
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50"
@@ -48,14 +68,20 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />
         </Button>
       )}
-      
       {/* Support panel */}
       {isOpen && (
-        <div 
+        <div
           className={cn(
+<<<<<<< HEAD
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
+            theme === "dark"
+              ? "bg-zion-blue-dark border border-zion-blue-light"
+
+=======
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}
@@ -94,4 +120,3 @@ export function SupportWidget() {;
     </>
   )
 }
-;

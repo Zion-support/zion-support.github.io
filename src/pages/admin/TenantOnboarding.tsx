@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from "react"
 import {Header} from "@/components/Header"
 import {SEO} from "@/components/SEO"
@@ -20,6 +22,7 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company")
   const [isSubmitting, setIsSubmitting] = useState(false)
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -33,30 +36,50 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+import { Switch } from "@/components/ui/switch";
+import { logErrorToProduction } from '@/utils/productionLogger';
+export default function TenantOnboarding() {
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
 import { Switch } from "@/components/ui/switch",
 import { logErrorToProduction } from '@/utils/productionLogger',
 export default function TenantOnboarding() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [formData, setFormData] = useState({
-    brand_name: "",
-    subdomain: "",
-    logo_url: "",
-    primary_color: "#9b87f5",
-    theme_preset: "light",
-    company_size: "",
-    industry: "",
-    custom_domain: "",
+
+    brand_name: ""
+    subdomain: ""
+    logo_url: ""
+    primary_color: "#9b87f5"
+    theme_preset: "light"
+    company_size: ""
+    industry: ""
+    custom_domain: ""
+
     is_co_branded: true
 <<<<<<< HEAD
+<<<<<<< HEAD
+  });
+  // Check if user has admin role
+  const isAdmin = null;
+=======
   })
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
       };
   );
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   }),
   
@@ -143,6 +166,7 @@ export default function TenantOnboarding() {
     }
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO 
@@ -354,6 +378,9 @@ export default function TenantOnboarding() {
       </main>
     </>
   )
+<<<<<<< HEAD
+}
+=======
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -657,4 +684,8 @@ export default function TenantOnboarding() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

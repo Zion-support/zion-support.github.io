@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {Button} from "./ui/button";
 import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
 import {toast} from "./ui/use-toast";
@@ -8,7 +10,27 @@ export function SocialShareSection() {
   const shareUrl = encodeURIComponent(window.location.href);
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "./ui/button",
+<<<<<<< HEAD
+import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
+import { toast } from "./ui/use-toast";
+export function SocialShareSection() {
+  // Current URL and text to share
+
+  const shareUrl = encodeURIComponent(window.location.href);
+  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
+  // Social sharing functions
+  const shareToTwitter = () => {
+    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
+  }
+  const shareToFacebook = () => {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
+  }
+  const shareToLinkedIn = () => {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
+  }
+=======
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",
 import { toast } from "./ui/use-toast",
 export function SocialShareSection() {
@@ -30,45 +52,62 @@ export function SocialShareSection() {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
       .then(() => {
         toast({
-          title: "Link Copied!",
+          title: "Link Copied!"
           description: "The link has been copied to your clipboard"})
       })
       .catch(() => {
         toast({
-          title: "Failed to copy",
-          description: "Please try again or copy the URL manually",
+          title: "Failed to copy"
+          description: "Please try again or copy the URL manually"
           variant: "destructive"
         })
       })
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const shareLinks = [
     {
-      name: "Twitter",
-      icon: <Twitter className="h-5 w-5" />,
-      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",
+      name: "Twitter"
+      icon: <Twitter className="h-5 w-5" />
+      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
       onClick: shareToTwitter
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      name: "Facebook",
-      icon: <Facebook className="h-5 w-5" />,
-      color: "bg-[#4267B2] hover:bg-[#4267B2]/80",
+      name: "Facebook"
+      icon: <Facebook className="h-5 w-5" />
+      color: "bg-[#4267B2] hover:bg-[#4267B2]/80"
       onClick: shareToFacebook
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      name: "LinkedIn",
-      icon: <Linkedin className="h-5 w-5" />,
-      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",
+      name: "LinkedIn"
+      icon: <Linkedin className="h-5 w-5" />
+      color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
       onClick: shareToLinkedIn
+<<<<<<< HEAD
+    }
+=======
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      name: "Copy Link",
-      icon: <Link className="h-5 w-5" />,
-      color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
+      name: "Copy Link"
+      icon: <Link className="h-5 w-5" />
+      color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80"
       onClick: copyLinkToClipboard
     }],
 
@@ -98,6 +137,10 @@ export function SocialShareSection() {
       </div>
     </section>
   )
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
@@ -167,6 +210,10 @@ export function SocialShareSection() {;
           <div className="flex flex-wrap gap-3">;
             {shareLinks.map((link, index) => (;
               <Button;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,7 +1,31 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Rocket
+  Shield
+  DollarSign
+  Users
+  Clock
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  ExternalLink;} from 'lucide-react';import {
+  Star, TrendingUp, Zap, Brain, Rocket, Shield
+
+=======
   Star,
   TrendingUp,
   Zap,
@@ -18,31 +42,63 @@ import {
   MapPin,;
   ExternalLink,;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+ } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
+import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
+<<<<<<< HEAD
+=======
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
   };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
+  }
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
+<<<<<<< HEAD
+        staggerChildren: 0.1
+        delayChildren: 0.2
+      }
     },  };        delayChildren: 0.2
       }
     }
+  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.6
+        ease: 'easeOut'
+      }
+    },  };        ease: "easeOut"
+      }
+    }
+  }
+=======
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },  };
+
   };
 
   const itemVariants = {
@@ -54,125 +110,132 @@ export default function InnovativeServicesShowcase() {
         duration: 0.6,
         ease: 'easeOut',
       },
-    },  };        ease: "easeOut"
-      }
-    }
+    },  };
+
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const featuredServices = [
     {
-      title: '🔐 Quantum Internet Security Platform',
+      title: '🔐 Quantum Internet Security Platform'
       description:
-        'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.',
-      price: '$8,999/month',
-      marketData: '$150B cybersecurity market, 300% annual growth',
-      savings: 'Quantum-level protection vs. traditional methods',
+        'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.'
+      price: '$8,999/month'
+      marketData: '$150B cybersecurity market, 300% annual growth'
+      savings: 'Quantum-level protection vs. traditional methods'
       features: [
-        'Quantum key distribution (QKD)',
-        'Post-quantum cryptography',
-        'Quantum-resistant VPN tunnels',
-        'Real-time threat detection',
-        'Zero-trust architecture',
-      ],
-      link: 'https://ziontechgroup.com/quantum-internet-security-platform',
-      color: 'from-indigo-600 to-purple-700',
-    },
+        'Quantum key distribution (QKD)'
+        'Post-quantum cryptography'
+        'Quantum-resistant VPN tunnels'
+        'Real-time threat detection'
+        'Zero-trust architecture'
+      ]
+      link: 'https://ziontechgroup.com/quantum-internet-security-platform'
+      color: 'from-indigo-600 to-purple-700'
+    }
     {
-      title: '🧬 AI-Powered Quantum Drug Discovery',
+      title: '🧬 AI-Powered Quantum Drug Discovery'
       description:
-        'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.',
-      price: '$12,999/month',
-      marketData: '$150B AI in healthcare, 400% annual growth',
-      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)',
-      savings: '100x faster drug discovery vs. traditional methods',
+        'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.'
+      price: '$12,999/month'
+      marketData: '$150B AI in healthcare, 400% annual growth'
+      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)'
+      savings: '100x faster drug discovery vs. traditional methods'
       features: [
-        'Quantum molecular simulation',
-        'AI-powered drug screening',
-        'Protein folding prediction',
-        'Drug interaction modeling',
-        'Clinical trial optimization',
-      ],
-      link: 'https://ziontechgroup.com/ai-quantum-drug-discovery',
-      color: 'from-emerald-600 to-teal-700',
-    },
+        'Quantum molecular simulation'
+        'AI-powered drug screening'
+        'Protein folding prediction'
+        'Drug interaction modeling'
+        'Clinical trial optimization'
+      ]
+      link: 'https://ziontechgroup.com/ai-quantum-drug-discovery'
+      color: 'from-emerald-600 to-teal-700'
+    }
     {
-      title: '💰 Autonomous Quantum Trading System',
+      title: '💰 Autonomous Quantum Trading System'
       description:
-        'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.',
-      price: '$15,999/month',
-      marketData: '$15T algorithmic trading, 200% annual growth',
-      competitors: 'Renaissance Technologies, Two Sigma, Citadel',
-      savings: 'Accessible quantum AI for smaller firms',
+        'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.'
+      price: '$15,999/month'
+      marketData: '$15T algorithmic trading, 200% annual growth'
+      competitors: 'Renaissance Technologies, Two Sigma, Citadel'
+      savings: 'Accessible quantum AI for smaller firms'
       features: [
-        'Quantum AI trading algorithms',
-        'Nanosecond execution',
-        'Real-time market analysis',
-        'Risk management',
-        'Portfolio optimization',
-      ],
-      link: 'https://ziontechgroup.com/autonomous-quantum-trading-system',
-      color: 'from-yellow-600 to-orange-700',
-    },
+        'Quantum AI trading algorithms'
+        'Nanosecond execution'
+        'Real-time market analysis'
+        'Risk management'
+        'Portfolio optimization'
+      ]
+      link: 'https://ziontechgroup.com/autonomous-quantum-trading-system'
+      color: 'from-yellow-600 to-orange-700'
+    }
     {
-      title: '🧠 Neural Interface Development Platform',
+      title: '🧠 Neural Interface Development Platform'
       description:
-        'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.',
-      price: '$19,999/month',
-      marketData: '$5B neural interface market, 500% annual growth',
-      competitors: 'Basic research tools, Traditional medical devices',
-      savings: 'First comprehensive neural interface platform',
+        'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.'
+      price: '$19,999/month'
+      marketData: '$5B neural interface market, 500% annual growth'
+      competitors: 'Basic research tools, Traditional medical devices'
+      savings: 'First comprehensive neural interface platform'
       features: [
-        'Neural signal processing',
-        'Brain activity monitoring',
-        'AI-powered interpretation',
-        'Real-time communication',
-        'Safety protocols',
-      ],
-      link: 'https://ziontechgroup.com/neural-interface-development-platform',
-      color: 'from-purple-600 to-indigo-700',
+        'Neural signal processing'
+        'Brain activity monitoring'
+        'AI-powered interpretation'
+        'Real-time communication'
+        'Safety protocols'
+      ]
+      link: 'https://ziontechgroup.com/neural-interface-development-platform'
+      color: 'from-purple-600 to-indigo-700'
     },  ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
-    };
+    }
     {
-      title: '🧬 AI-Powered Quantum Drug Discovery',
-      description: 'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.',
+      title: '🧬 AI-Powered Quantum Drug Discovery'
+      description: 'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.'
       price: '$12,999/month';
       marketData: '$150B AI in healthcare, 400% annual growth';
       competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)';
-      savings: '100x faster drug discovery vs. traditional methods',
-      features: ['Quantum molecular simulationAI-powered drug screeningProtein folding predictionDrug interaction modelingClinical trial optimization'],
-      link: 'https://ziontechgroup.com/ai-quantum-drug-discovery',
+      savings: '100x faster drug discovery vs. traditional methods'
+      features: ['Quantum molecular simulationAI-powered drug screeningProtein folding predictionDrug interaction modelingClinical trial optimization']
+      link: 'https://ziontechgroup.com/ai-quantum-drug-discovery'
       color: 'from-emerald-600 to-teal-700'
-    };
+    }
     {
-      title: '💰 Autonomous Quantum Trading System',
-      description: 'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.',
+      title: '💰 Autonomous Quantum Trading System'
+      description: 'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.'
       price: '$15,999/month';
       marketData: '$15T algorithmic trading, 200% annual growth';
       competitors: 'Renaissance Technologies, Two Sigma, Citadel';
-      savings: 'Accessible quantum AI for smaller firms',
-      features: ['Quantum AI trading algorithmsNanosecond executionReal-time market analysisRisk managementPortfolio optimization'],
-      link: 'https://ziontechgroup.com/autonomous-quantum-trading-system',
+      savings: 'Accessible quantum AI for smaller firms'
+      features: ['Quantum AI trading algorithmsNanosecond executionReal-time market analysisRisk managementPortfolio optimization']
+      link: 'https://ziontechgroup.com/autonomous-quantum-trading-system'
       color: 'from-yellow-600 to-orange-700'
-    };
+    }
     {
-      title: '🧠 Neural Interface Development Platform',
-      description: 'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.',
+      title: '🧠 Neural Interface Development Platform'
+      description: 'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.'
       price: '$19,999/month';
       marketData: '$5B neural interface market, 500% annual growth';
       competitors: 'Basic research tools, Traditional medical devices';
-      savings: 'First comprehensive neural interface platform',
-      features: ['Neural signal processingBrain activity monitoringAI-powered interpretationReal-time communicationSafety protocols'],
-      link: 'https://ziontechgroup.com/neural-interface-development-platform',
+      savings: 'First comprehensive neural interface platform'
+      features: ['Neural signal processingBrain activity monitoringAI-powered interpretationReal-time communicationSafety protocols']
+      link: 'https://ziontechgroup.com/neural-interface-development-platform'
       color: 'from-purple-600 to-indigo-700'
     }
   ];
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -268,7 +331,11 @@ export default function InnovativeServicesShowcase() {
 
               initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -303,7 +370,11 @@ export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -386,7 +457,11 @@ export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -401,7 +476,11 @@ export default function InnovativeServicesShowcase() {
 
               initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -420,7 +499,11 @@ export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -506,7 +589,11 @@ export default function InnovativeServicesShowcase() {
 =======
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -543,7 +630,11 @@ export default function InnovativeServicesShowcase() {
 
               initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -621,7 +712,11 @@ export default function InnovativeServicesShowcase() {
 =======
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -652,7 +747,11 @@ export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -724,8 +823,15 @@ export default function InnovativeServicesShowcase() {
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

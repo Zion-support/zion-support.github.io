@@ -1,7 +1,11 @@
 export const metadata = {
   title: "About | Zion Tech Group",
   description:
+<<<<<<< HEAD
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+=======
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 export default function AboutPage() {
   return (
@@ -127,7 +131,7 @@ export default function AboutPage() {
             </h2>{" "}
             <p className="text-gray-600 mb-6">
               {" "}
-              Let's discuss how we can help your business leverage technology
+              Let&apos;s discuss how we can help your business leverage technology
               for growth.{" "}
             </p>{" "}
             <a

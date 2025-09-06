@@ -1,135 +1,142 @@
 import React from 'react';
-import {motion} from 'framer-motion';
-import {Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket} from 'lucide-react';
+import { motion  } from 'framer-motion';
+import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
 interface Service {
-  id: string,
-  name: string,
-  tagline: string,
-  description: string,
+
+  id: string
+  name: string
+  tagline: string
+  description: string
+
   price?: string | {
     monthly?: number;
     yearly?: number;
     currency?: string;
     trialDays?: number;
     setupTime?: string
-  };
+
+  }
   period?: string;
   pricing?: any;
-  features: string[],
+  features: string[]
   popular?: boolean;
-  category: string,
-  icon: string,
+  category: string
+  icon: string
+
   marketPrice?: string;
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
-  integration?: string[];
+  integration?: string[],
   benefits?: string[]
 }
+<<<<<<< HEAD
+interface ServiceCardProps {
+=======
 
 interface ServiceCardProps {
   service: Service,
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+  service: Service
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
+}
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
   const getVariantStyles = () => {
     switch (variant) {
       case 'ai':
         return {
-          gradient: 'from-purple-600 via-pink-600 to-purple-700',
-          borderColor: 'border-purple-400/30',
-          textColor: 'text-purple-400',
-          iconBg: 'bg-purple-500/20',
+          gradient: 'from-purple-600 via-pink-600 to-purple-700'
+          borderColor: 'border-purple-400/30'
+          textColor: 'text-purple-400'
+          iconBg: 'bg-purple-500/20'
           iconBorder: 'border-purple-400/30'
-        };
+        }
       case 'quantum':
         return {
-          gradient: 'from-cyan-600 via-blue-600 to-cyan-700',
-          borderColor: 'border-cyan-400/30',
-          textColor: 'text-cyan-400',
-          iconBg: 'bg-cyan-500/20',
+          gradient: 'from-cyan-600 via-blue-600 to-cyan-700'
+          borderColor: 'border-cyan-400/30'
+          textColor: 'text-cyan-400'
+          iconBg: 'bg-cyan-500/20'
           iconBorder: 'border-cyan-400/30'
-        };
+        }
       case 'space':
         return {
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',
-          borderColor: 'border-indigo-400/30',
-          textColor: 'text-indigo-400',
-          iconBg: 'bg-indigo-500/20',
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700'
+          borderColor: 'border-indigo-400/30'
+          textColor: 'text-indigo-400'
+          iconBg: 'bg-indigo-500/20'
           iconBorder: 'border-indigo-400/30'
-        };
+        }
       case 'cybersecurity':
         return {
-          gradient: 'from-red-600 via-orange-600 to-red-700',
-          borderColor: 'border-red-400/30',
-          textColor: 'text-red-400',
-          iconBg: 'bg-red-500/20',
+          gradient: 'from-red-600 via-orange-600 to-red-700'
+          borderColor: 'border-red-400/30'
+          textColor: 'text-red-400'
+          iconBg: 'bg-red-500/20'
           iconBorder: 'border-red-400/30'
-        };
+        }
       case 'enterprise':
         return {
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',
-          borderColor: 'border-indigo-400/30',
-          textColor: 'text-indigo-400',
-          iconBg: 'bg-indigo-500/20',
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700'
+          borderColor: 'border-indigo-400/30'
+          textColor: 'text-indigo-400'
+          iconBg: 'bg-indigo-500/20'
           iconBorder: 'border-indigo-400/30'
-        };
+        }
       case 'automation':
         return {
-          gradient: 'from-green-600 via-emerald-600 to-green-700',
-          borderColor: 'border-green-400/30',
-          textColor: 'text-green-400',
-          iconBg: 'bg-green-500/20',
+          gradient: 'from-green-600 via-emerald-600 to-green-700'
+          borderColor: 'border-green-400/30'
+          textColor: 'text-green-400'
+          iconBg: 'bg-green-500/20'
           iconBorder: 'border-green-400/30'
-        };
+        }
       case 'it':
         return {
-          gradient: 'from-blue-600 via-indigo-600 to-blue-700',
-          borderColor: 'border-blue-400/30',
-          textColor: 'text-blue-400',
-          iconBg: 'bg-blue-500/20',
+          gradient: 'from-blue-600 via-indigo-600 to-blue-700'
+          borderColor: 'border-blue-400/30'
+          textColor: 'text-blue-400'
+          iconBg: 'bg-blue-500/20'
           iconBorder: 'border-blue-400/30'
-        };
+        }
       case 'emerging':
         return {
-          gradient: 'from-yellow-600 via-orange-600 to-yellow-700',
-          borderColor: 'border-yellow-400/30',
-          textColor: 'text-yellow-400',
-          iconBg: 'bg-yellow-500/20',
+          gradient: 'from-yellow-600 via-orange-600 to-yellow-700'
+          borderColor: 'border-yellow-400/30'
+          textColor: 'text-yellow-400'
+          iconBg: 'bg-yellow-500/20'
           iconBorder: 'border-yellow-400/30'
-        };
+        }
       case 'premium':
         return {
-          gradient: 'from-amber-600 via-yellow-600 to-amber-700',
-          borderColor: 'border-amber-400/30',
-          textColor: 'text-amber-400',
-          iconBg: 'bg-amber-500/20',
+          gradient: 'from-amber-600 via-yellow-600 to-amber-700'
+          borderColor: 'border-amber-400/30'
+          textColor: 'text-amber-400'
+          iconBg: 'bg-amber-500/20'
           iconBorder: 'border-amber-400/30'
-        };
+        }
       default:
         return {
-          gradient: 'from-gray-600 via-gray-700 to-gray-800',
-          borderColor: 'border-gray-400/30',
-          textColor: 'text-gray-400',
-          iconBg: 'bg-gray-500/20',
+          gradient: 'from-gray-600 via-gray-700 to-gray-800'
+          borderColor: 'border-gray-400/30'
+          textColor: 'text-gray-400'
+          iconBg: 'bg-gray-500/20'
           iconBorder: 'border-gray-400/30'
         }
     }
-  };
-
+  }
   const styles = getVariantStyles();
-
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI')) return Brain;
     if (category.includes('Quantum')) return Atom;
     if (category.includes('Space')) return Rocket;
     if (category.includes('Cybersecurity')) return Shield;
     return TrendingUp
-  };
-
+  }
   const CategoryIcon = getCategoryIcon(service.category);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -144,7 +151,11 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Popular Badge */}
         {service.popular && (
           <motion.div
@@ -157,7 +168,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Popular
           </motion.div>
         )}
+<<<<<<< HEAD
+=======
         
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Service Header */}
         <div className="text-center mb-8 relative z-10">
           <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles.iconBg} flex items-center justify-center border ${styles.iconBorder} text-4xl backdrop-blur-sm`}>
@@ -201,7 +215,11 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -216,7 +234,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             )}
           </div>
         )}
+<<<<<<< HEAD
+=======
         
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Target Market & Use Cases */}
         {service.targetMarket && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -232,7 +253,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             )}
           </div>
         )}
+<<<<<<< HEAD
+=======
         
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Benefits Section */}
         {service.benefits && (
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">
@@ -250,7 +274,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             </div>
           </div>
         )}
+<<<<<<< HEAD
+=======
         
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.button
@@ -264,18 +291,28 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
     </motion.div>
-  ),
+  )
 });
-
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+export default UltraFuturisticServiceCard2026;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default UltraFuturisticServiceCard2026;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 export default UltraFuturisticServiceCard2026;
 =======
 export default UltraFuturisticServiceCard2026;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

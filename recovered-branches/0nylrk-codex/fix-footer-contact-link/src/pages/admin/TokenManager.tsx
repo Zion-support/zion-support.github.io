@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import { TokenTransaction  } from '@/types/tokens';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { useToast } from '@/hooks/use-toast';
+export default function TokenManager() {
+=======
 import {useEffect, useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -12,48 +27,50 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
 export default function TokenManager() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const { toast } = useToast();
-  const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
 
   const isAdmin = user?.userType === 'admin';
-
   useEffect(() => {
     if (isAdmin) fetchTransactions()
   }, [isAdmin]);
-
   const fetchTransactions = async () => {
     const { data, error } = await supabase
       .from('token_transactions')
       .select('*')
       .order('created_at', { ascending: false })
       .limit(100);
-    if (!error) setTransactions(data || [])
-  };
-
+    if (!error) setTransactions(data |[])
+  }
   const handleIssue = async (type: 'earn' | 'burn') => {
-    if (!userId || amount <= 0) return,
+    if (!userId |amount <= 0) return
     const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, amount })});
     if (res.ok) {
       toast({
-        title: 'Success',
+        title: 'Success'
         description: 'Transaction processed'
       });
       fetchTransactions()
     } else {
       const err = await res.json();
       toast({
-        title: 'Error',
-        description: err.error || 'Failed',
+        title: 'Error'
+        description: err.error |'Failed'
         variant: 'destructive'
       })
     }
+<<<<<<< HEAD
+  }
+=======
   };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
@@ -106,7 +123,11 @@ export default function TokenManager() {;
       });
     }
   },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <ProtectedRoute adminOnly>
@@ -149,4 +170,4 @@ export default function TokenManager() {;
       </div>
     </ProtectedRoute>
   )
-};
+}

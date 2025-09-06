@@ -1,6 +1,50 @@
 import React from 'react';
 import Link from 'next/link';
+
 import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Globe
+  Rocket
+  Brain
+  Atom
+  Shield
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Target
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  ShieldCheck
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Sun
+  Moon
+  Wind
+  Droplets
+  Code;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom
+  Shield, Users, Briefcase, BookOpen, MessageCircle
+  Star, TrendingUp, Target, Layers, Cpu, Database
+  Cloud, Lock, ShieldCheck, Heart, Leaf, Car
+=======
   Phone,
   Mail,
   MapPin,
@@ -42,168 +86,166 @@ import {
   Shield, Users, Briefcase, BookOpen, MessageCircle, 
   Star, TrendingUp, Target, Layers, Cpu, Database, 
   Cloud, Lock, ShieldCheck, Heart, Leaf, Car, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   GraduationCap, Scale, Building, Factory, Camera;
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
   Code
-
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-};
-
+}
 const serviceCategories = [
   {
-    title: '🚀 2028 Futuristic Innovations',
+    title: '🚀 2028 Futuristic Innovations'
     services: [
       {
-        name: 'AI Climate Prediction Platform',
-        href: '/ai-climate-prediction-platform',
-      },
+        name: 'AI Climate Prediction Platform'
+        href: '/ai-climate-prediction-platform'
+      }
       {
-        name: 'Quantum Cybersecurity Firewall',
-        href: '/quantum-cybersecurity-firewall',
-      },
+        name: 'Quantum Cybersecurity Firewall'
+        href: '/quantum-cybersecurity-firewall'
+      }
       {
-        name: 'Autonomous Drone Delivery Network',
-        href: '/autonomous-drone-delivery-network',
-      },
+        name: 'Autonomous Drone Delivery Network'
+        href: '/autonomous-drone-delivery-network'
+      }
       {
-        name: 'AI Healthcare Diagnosis Platform',
-        href: '/ai-healthcare-diagnosis-platform',
-      },
-    ],
-  },
-  {
-    title: '🏙️ Smart City & Infrastructure',
-    services: [
-      {
-        name: 'Smart City Infrastructure Management',
-        href: '/smart-city-infrastructure-management',
-      },
-      {
-        name: 'IoT Energy Management System',
-        href: '/iot-energy-management-system',
-      },
-      {
-        name: 'Digital Twin Manufacturing Platform',
-        href: '/digital-twin-manufacturing-platform',
-      },
-      {
-        name: 'Autonomous Manufacturing AI',
-        href: '/autonomous-manufacturing-ai',
-      },
-    ],
-  },
-  {
-    title: '⚛️ Quantum & Advanced Tech',
-    services: [
-      {
-        name: 'Quantum Financial Trading Platform',
-        href: '/quantum-financial-trading-platform',
-      },
-      {
-        name: 'Quantum Machine Learning Platform',
-        href: '/quantum-machine-learning-platform',
-      },
-      {
-        name: 'Quantum Internet Security Gateway',
-        href: '/quantum-internet-security-gateway',
-      },
-      { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol' },
-    ],
-  },
-  {
-    title: '🤖 AI & Machine Learning',
-    services: [
-      {
-        name: 'AI Customer Service Automation',
-        href: '/ai-customer-service-automation',
-      },
-      { name: 'AI Education Platform', href: '/ai-education-platform' },
-      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite' },
-      {
-        name: 'AI Legal Research Platform',
-        href: '/ai-legal-research-platform',
-      },
-    ],
-  },];  {
-    title: '🏙️ Smart City & Infrastructure',
-    services: [
-      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management' },
-      { name: 'IoT Energy Management System', href: '/iot-energy-management-system' },
-      { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform' },
-      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai' }
+        name: 'AI Healthcare Diagnosis Platform'
+        href: '/ai-healthcare-diagnosis-platform'
+      }
     ]
-  };
+  }
   {
-    title: '⚛️ Quantum & Advanced Tech',
+    title: '🏙️ Smart City & Infrastructure'
     services: [
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' },
-      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform' },
-      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway' },
+      {
+        name: 'Smart City Infrastructure Management'
+        href: '/smart-city-infrastructure-management'
+      }
+      {
+        name: 'IoT Energy Management System'
+        href: '/iot-energy-management-system'
+      }
+      {
+        name: 'Digital Twin Manufacturing Platform'
+        href: '/digital-twin-manufacturing-platform'
+      }
+      {
+        name: 'Autonomous Manufacturing AI'
+        href: '/autonomous-manufacturing-ai'
+      }
+    ]
+  }
+  {
+    title: '⚛️ Quantum & Advanced Tech'
+    services: [
+      {
+        name: 'Quantum Financial Trading Platform'
+        href: '/quantum-financial-trading-platform'
+      }
+      {
+        name: 'Quantum Machine Learning Platform'
+        href: '/quantum-machine-learning-platform'
+      }
+      {
+        name: 'Quantum Internet Security Gateway'
+        href: '/quantum-internet-security-gateway'
+      }
       { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol' }
     ]
-  };
+  }
   {
-    title: '🤖 AI & Machine Learning',
+    title: '🤖 AI & Machine Learning'
     services: [
-      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation' },
-      { name: 'AI Education Platform', href: '/ai-education-platform' },
-      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite' },
+      {
+        name: 'AI Customer Service Automation'
+        href: '/ai-customer-service-automation'
+      }
+      { name: 'AI Education Platform', href: '/ai-education-platform' }
+      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite' }
+      {
+        name: 'AI Legal Research Platform'
+        href: '/ai-legal-research-platform'
+      }
+    ]
+  },];  {
+    title: '🏙️ Smart City & Infrastructure'
+    services: [
+      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management' }
+      { name: 'IoT Energy Management System', href: '/iot-energy-management-system' }
+      { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform' }
+      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai' }
+    ]
+  }
+  {
+    title: '⚛️ Quantum & Advanced Tech'
+    services: [
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' }
+      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform' }
+      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway' }
+      { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol' }
+    ]
+  }
+  {
+    title: '🤖 AI & Machine Learning'
+    services: [
+      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation' }
+      { name: 'AI Education Platform', href: '/ai-education-platform' }
+      { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite' }
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform' }
     ]
   }
 ];
-
 const companyLinks = [
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: 'Careers', href: '/careers', icon: TrendingUp },
-  { name: 'Contact', href: '/contact', icon: MessageCircle },
+  { name: 'About Us', href: '/about', icon: Users }
+  { name: 'Case Studies', href: '/case-studies', icon: Briefcase }
+  { name: 'Blog & Resources', href: '/blog', icon: BookOpen }
+  { name: 'Careers', href: '/careers', icon: TrendingUp }
+  { name: 'Contact', href: '/contact', icon: MessageCircle }
   { name: 'Support', href: '/support', icon: ShieldCheck },];  { name: 'Support', href: '/support', icon: ShieldCheck }
 ];
-
 const resourceLinks = [
-  { name: 'Documentation', href: '/docs', icon: BookOpen },
-  { name: 'API Reference', href: '/api', icon: Cpu },
-  { name: 'Developer Tools', href: '/dev-tools', icon: Database },
-  { name: 'Mobile Apps', href: '/mobile', icon: Globe },
-  { name: 'Cloud Services', href: '/cloud', icon: Cloud },
-  { name: 'Security Center', href: '/security', icon: Shield },
+  { name: 'Documentation', href: '/docs', icon: BookOpen }
+  { name: 'API Reference', href: '/api', icon: Cpu }
+  { name: 'Developer Tools', href: '/dev-tools', icon: Database }
+  { name: 'Mobile Apps', href: '/mobile', icon: Globe }
+  { name: 'Cloud Services', href: '/cloud', icon: Cloud }
+  { name: 'Security Center', href: '/security', icon: Shield }
 ];
-
 const socialLinks = [
   {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Users,
-  },
+    name: 'LinkedIn'
+    href: 'https://linkedin.com/company/ziontechgroup'
+    icon: Users
+  }
   {
-    name: 'Twitter',
-    href: 'https://twitter.com/ziontechgroup',
-    icon: MessageCircle,
-  },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },
+    name: 'Twitter'
+    href: 'https://twitter.com/ziontechgroup'
+    icon: MessageCircle
+  }
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code },];
-
 export default function UltraFuturisticFooter2028() {
   return (;
     <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>];
-
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle }
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video }
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
 ];
 
 export default function UltraFuturisticFooter2028() {
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>
+<<<<<<< HEAD
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
@@ -269,7 +311,7 @@ export default function UltraFuturisticFooter2028() {
               </div>
             </div>
             <p className="text-purple-200 mb-6 leading-relaxed">
-              Leading the future with cutting-edge AI, quantum computing, and innovative technology solutions. 
+              Leading the future with cutting-edge AI, quantum computing, and innovative technology solutions.
               Transforming businesses through intelligent automation and next-generation infrastructure.
             </p>
             {/* Contact Information */}
@@ -292,9 +334,20 @@ export default function UltraFuturisticFooter2028() {
                   {contactInfo.website}
 =======
 
+<<<<<<< HEAD
+];
+
+export default function UltraFuturisticFooter2028() {
+  return (
+
+                  {contactInfo.website}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                   {contactInfo.website}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </a>
               </div>
             </div>
@@ -304,7 +357,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <a
                   key={social.name}
                   href={social.href}
@@ -341,7 +398,11 @@ export default function UltraFuturisticFooter2028() {
           <div className='lg:col-span-2'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               🚀 Our Services
             </h3>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -387,7 +448,11 @@ export default function UltraFuturisticFooter2028() {
           <div className='lg:col-span-1'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Quick Links
             </h3>
             {/* Company Links */}
@@ -422,7 +487,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Resource Links */}
             <div className='mb-6'>
               <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>
@@ -431,7 +500,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -452,7 +525,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Newsletter Signup */}
             <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>
               <h4 className='font-medium text-white mb-3'>Stay Updated</h4>
@@ -460,7 +537,11 @@ export default function UltraFuturisticFooter2028() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Get the latest insights on future technology and AI innovations.
               </p>
               <div className='flex space-x-2'>
@@ -570,6 +651,12 @@ export default function UltraFuturisticFooter2028() {
     </footer>
 );
 }
+<<<<<<< HEAD
+=======
+
+      {/* Background Effects */}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 }
 }
@@ -579,3 +666,4 @@ export default function UltraFuturisticFooter2028() {
 
       {/* Background Effects */}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

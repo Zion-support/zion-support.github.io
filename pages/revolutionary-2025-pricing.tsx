@@ -1,6 +1,127 @@
-import React, { useState } from 'react';
+<<<<<<< HEAD
+import React, { useState } from 'react',
 import Head from 'next/head';
+
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Code
+  BookOpen
+  Activity
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  ChevronRight
+  Crown
+  Infinity
+  Check
+  X
+  AlertTriangle
+  Info
+  Zap as ZapIcon
+  Shield as ShieldIcon
+  Users as UsersIcon
+  Globe as GlobeIcon
+  Cpu as CpuIcon
+  Database as DatabaseIcon
+  Cloud as CloudIcon
+  Smartphone as SmartphoneIcon
+  Palette as PaletteIcon
+  Search as SearchIcon
+  MessageSquare as MessageSquareIcon
+  FileText as FileTextIcon
+  Calendar as CalendarIcon
+  CreditCard as CreditCardIcon
+  BarChart3 as BarChart3Icon
+  Settings as SettingsIcon
+  Code as CodeIcon
+  BookOpen as BookIcon
+  Activity as ActivityIcon
+  Database as DatabaseIcon2
+  Play as PlayIcon
+  Mail as MailIcon
+  Phone as PhoneIcon
+  MapPin as MapPinIcon
+  Filter as FilterIcon
+  Grid as GridIcon
+  List as ListIcon
+  ChevronDown as ChevronDownIcon
+  ChevronUp as ChevronUpIcon
+  Sparkles as SparklesIcon
+  FlaskConical as FlaskConicalIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon
+  Brain as BrainIcon
+  Atom as AtomIcon
+  Globe2 as Globe2Icon
+  Bot as BotIcon
+  ChevronRight as ChevronRightIcon
+  Eye
+  Heart
+  Share2
+  Download
+  Bookmark
+  ThumbsUp
+  MessageCircle
+  Share
+  Users as UsersIcon2
+  Target as TargetIcon
+  Zap as ZapIcon2;
+=======
 <<<<<<< HEAD
 import {
   Star,
@@ -119,57 +240,56 @@ import {
   Users as UsersIcon2,
   Target as TargetIcon,;
   Zap as ZapIcon2,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import {revolutionaryAI2025Services} from '../data/revolutionary-2025-ai-services';
-import {revolutionaryITInfrastructure2025Services} from '../data/revolutionary-2025-it-infrastructure';
-import {revolutionary2025MicroSaasServices} from '../data/revolutionary-2025-micro-saas';
+import { revolutionaryAI2025Services  } from '../data/revolutionary-2025-ai-services';
+import { revolutionaryITInfrastructure2025Services  } from '../data/revolutionary-2025-it-infrastructure';
+import { revolutionary2025MicroSaasServices  } from '../data/revolutionary-2025-micro-saas';
 export default function Revolutionary2025Pricing() {
+
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly';
   );  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',  };
-
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  }
   // Combine all revolutionary services
   const allRevolutionaryServices = [
-    ...revolutionaryAI2025Services,
-    ...revolutionaryITInfrastructure2025Services,
+    ...revolutionaryAI2025Services
+    ...revolutionaryITInfrastructure2025Services
     ...revolutionary2025MicroSaasServices,  ];
-
   // Service categories
   const serviceCategories = [
     {
-      id: 'all',
-      name: 'All Services',
-      icon: Sparkles,
-      count: allRevolutionaryServices.length,
-    },
+      id: 'all'
+      name: 'All Services'
+      icon: Sparkles
+      count: allRevolutionaryServices.length
+    }
     {
-      id: 'ai',
-      name: 'AI & Machine Learning',
-      icon: Brain,
-      count: revolutionaryAI2025Services.length,
-    },
+      id: 'ai'
+      name: 'AI & Machine Learning'
+      icon: Brain
+      count: revolutionaryAI2025Services.length
+    }
     {
-      id: 'infrastructure',
-      name: 'IT Infrastructure',
-      icon: Cpu,
-      count: revolutionaryITInfrastructure2025Services.length,
-    },
+      id: 'infrastructure'
+      name: 'IT Infrastructure'
+      icon: Cpu
+      count: revolutionaryITInfrastructure2025Services.length
+    }
     {
-      id: 'saas',
-      name: 'Micro SaaS',
-      icon: Zap,
-      count: revolutionary2025MicroSaasServices.length,
-    },
+      id: 'saas'
+      name: 'Micro SaaS'
+      icon: Zap
+      count: revolutionary2025MicroSaasServices.length
+    }
   ];
-
   // Filter services based on selected category
   const filteredServices =
     selectedCategory === 'all'
@@ -178,28 +298,35 @@ export default function Revolutionary2025Pricing() {
           if (selectedCategory === 'ai') return service.category.includes('AI');
           if (selectedCategory === 'infrastructure')
             return (
-              service.category.includes('IT') ||
-              service.category.includes('Network') ||
+              service.category.includes('IT') |
+              service.category.includes('Network') |
               service.category.includes('Computing')
             );
           if (selectedCategory === 'saas')
             return (
-              service.category.includes('AI') ||
-              service.category.includes('Virtual') ||
+              service.category.includes('AI') |
+              service.category.includes('Virtual') |
               service.category.includes('Creative')
             );
           return true;
         });
-
   // Calculate pricing with billing cycle
   const getPrice = (service: any) => {
     const basePrice = parseInt(service.price.replace('$', '').replace(',', ''));
     if (billingCycle === 'yearly') {
       return Math.floor(basePrice * 0.8); // 20% discount for yearly
     }
+<<<<<<< HEAD
+    return basePrice;  }
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+=======
     return basePrice;  };
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
@@ -253,16 +380,94 @@ export default function Revolutionary2025Pricing(req, res) {
 }
     return basePrice
   },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Pricing tiers for comparison
   const pricingTiers = [
     {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 99 : 79,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name: 'Starter'
+      description: 'Perfect for small businesses and startups'
+      price: billingCycle === 'monthly' ? 99 : 79
+      period: billingCycle === 'monthly' ? '/month' : '/month'
+      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
+        'Access to 25+ Core Services'
+        'Basic AI Integration'
+        'Standard Support (24/7)'
+        '30-Day Free Trial'
+        'Basic Analytics Dashboard'
+        'Email Support'
+        '99.5% Uptime Guarantee'
+        'Standard Security Features'
+      ]
+      icon: <Sparkles className='w-8 h-8' />
+      variant: 'quantum' as const
+      popular: false
+      cta: 'Start Free Trial'
+      ctaVariant: 'secondary' as const
+    },    {
+      name: 'Professional'
+      description: 'Ideal for growing businesses and teams'
+      price: billingCycle === 'monthly' ? 299 : 239
+      period: billingCycle === 'monthly' ? '/month' : '/month'
+      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      features: [
+        'Access to 50+ Services'
+        'Advanced AI Integration'
+        'Priority Support (24/7)'
+        '60-Day Free Trial'
+        'Advanced Analytics Dashboard'
+        'Phone & Email Support'
+        '99.9% Uptime Guarantee'
+        'Advanced Security Features'
+        'Custom Integrations'
+        'Performance Monitoring'
+      ]
+      icon: <Rocket className='w-8 h-8' />
+      variant: 'ai-futuristic' as const
+      popular: true
+      cta: 'Start Free Trial'
+      ctaVariant: 'primary' as const
+    },    {
+      name: 'Enterprise'
+      description: 'For large organizations and enterprises'
+      price: billingCycle === 'monthly' ? 999 : 799
+      period: billingCycle === 'monthly' ? '/month' : '/month'
+      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
+      features: [
+        'Access to ALL Services'
+        'Full AI & Quantum Integration'
+        'Dedicated Support Team'
+        '90-Day Free Trial'
+        'Enterprise Analytics Suite'
+        '24/7 Dedicated Support'
+        '99.99% Uptime Guarantee'
+        'Enterprise Security Features'
+        'Custom Development'
+        'White-label Solutions'
+        'API Access'
+        'SLA Guarantees'
+      ]
+      icon: <Crown className='w-8 h-8' />
+      variant: 'quantum-futuristic' as const
+      popular: false
+      cta: 'Contact Sales'
+      ctaVariant: 'primary' as const
+    },  ];
+  // Market analysis
+  const marketAnalysis = {
+    totalMarketSize: '$150B+'
+    growthRate: '250% annually'
+    customerSatisfaction: '98%'
+    averageROI: '500%'
+    timeToValue: '< 30 days'
+    globalReach: '150+ countries',  }
+
+=======
         'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
       ],
       icon: <Sparkles className="w-8 h-8" />,
@@ -317,6 +522,7 @@ export default function Revolutionary2025Pricing(req, res) {
     timeToValue: '< 30 days',
     globalReach: '150+ countries'
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className="min-h-screen">
@@ -396,7 +602,11 @@ export default function Revolutionary2025Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Revolutionary 2025 Pricing
@@ -454,7 +664,11 @@ export default function Revolutionary2025Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                 </button>
                 <span className="text-gray-400">Yearly (Save 20%)</span>
@@ -469,7 +683,11 @@ export default function Revolutionary2025Pricing(req, res) {
   }
 }
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -601,7 +819,11 @@ export default function Revolutionary2025Pricing(req, res) {
 }
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Choose Your Transformation Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -659,7 +881,11 @@ export default function Revolutionary2025Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -667,6 +893,29 @@ export default function Revolutionary2025Pricing(req, res) {
                         Most Popular
                       </div>
                     </div>
+<<<<<<< HEAD
+                  )}
+                  <div className='text-center mb-8'>
+                    <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl mb-4'>
+                      {tier.icon}
+                    </div>
+                    <h3 className='text-2xl font-bold text-white mb-2'>
+                      {tier.name}
+                    </h3>
+                    <p className='text-gray-400 mb-6'>{tier.description}</p>
+                    <div className='mb-4'>
+                      <span className='text-4xl font-bold text-white'>
+                        ${tier.price}
+                      </span>
+                      <span className='text-gray-400'>{tier.period}</span>
+                    </div>
+                    {tier.savings && (
+                      <div className='text-green-400 text-sm font-semibold mb-6'>                        {tier.savings}
+                      </div>
+                    )}
+                  </div>
+                  <ul className='space-y-4 mb-8'>
+=======
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -719,7 +968,11 @@ export default function Revolutionary2025Pricing(req, res) {
 }
                   </div>
                   <ul className="space-y-4 mb-8">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -791,7 +1044,11 @@ export default function Revolutionary2025Pricing(req, res) {
 }
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Individual Service Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -918,7 +1175,11 @@ export default function Revolutionary2025Pricing(req, res) {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="text-3xl">{service.icon}</div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                           {service.name  } catch (error) {
@@ -973,7 +1234,11 @@ export default function Revolutionary2025Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -1021,7 +1286,11 @@ export default function Revolutionary2025Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
                           +{service.features.length - 3} more features
@@ -1068,7 +1337,11 @@ export default function Revolutionary2025Pricing(req, res) {
                   <div className="flex items-center gap-3">
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                       <ExternalLink className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Learn More
                     </button>
                     <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
@@ -1133,7 +1406,11 @@ export default function Revolutionary2025Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -1194,7 +1471,11 @@ export default function Revolutionary2025Pricing(req, res) {
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                   <Phone className="w-5 h-5 mr-2" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Get Custom Quote
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
@@ -1209,8 +1490,11 @@ export default function Revolutionary2025Pricing(req, res) {
     </UltraQuantumHolographicBackground>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
             >;
@@ -1259,4 +1543,8 @@ export default function Revolutionary2025Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

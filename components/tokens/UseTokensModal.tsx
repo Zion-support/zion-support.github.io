@@ -1,16 +1,27 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
-
 export type RedemptionType =
   | "boost_profile"
   | "promote_listing";
   | "premium_support";
 export default function UseTokensModal({
+<<<<<<< HEAD
+  isOpen
+  onClose
+  serviceId
+  defaultType
+}: {
+=======
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -18,31 +29,28 @@ export default function UseTokensModal({
 }) {
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(
-    defaultType ?? "boost_profile",
+    defaultType ?? "boost_profile"
   );
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
-
   useEffect(() => {
     (async () => {
       const accs = await getAccounts();
       if (accs && accs.length > 0) setAccount(accs[0]);
     })();
   }, []);
-
   async function connect() {
     const accs = await connectMetaMask();
     if (accs && accs.length > 0) setAccount(accs[0]);
   }
-
   async function redeem() {
     setIsSubmitting(true);
     try {
       const res = await fetch("/api/tokens/redeem", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ account, amount: tokens, type, serviceId }),
+        method: "POST"
+        headers: { "Content-Type": "application/json" }
+        body: JSON.stringify({ account, amount: tokens, type, serviceId })
       });
       const data = await res.json();
       if (data?.ok) {
@@ -52,7 +60,10 @@ export default function UseTokensModal({
       setIsSubmitting(false);
     }
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isOpen) return null;
 
   return (
@@ -88,7 +99,7 @@ export default function UseTokensModal({
               type="number"
               min={1}
               value={tokens}
-              onChange={(e) => setTokens(parseInt(e.target.value || "0", 10))}
+              onChange={(e) => setTokens(parseInt(e.target.value |"0", 10))}
               className="w-full rounded border border-gray-300 dark:border-gray-700 bg-transparent px-2 py-2"
             />
             <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>
@@ -115,7 +126,7 @@ export default function UseTokensModal({
             access premium support.
           </div>
           <button
-            disabled={!account || isSubmitting || tokens <= 0}
+            disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
             className="enhanced-button enhanced-button-primary disabled: opacity-50"
           >
@@ -125,8 +136,16 @@ export default function UseTokensModal({
       </div>
     </div>
 <<<<<<< HEAD
+  );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 );
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

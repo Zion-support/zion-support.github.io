@@ -1,9 +1,18 @@
+<<<<<<< HEAD
+
+import React from "react",
+import { BillingHeader } from "./BillingHeader",
+import { CurrentSubscription } from "./CurrentSubscription",
+import { PaymentMethods } from "./PaymentMethods",
+=======
 import React from "react";
 import { BillingHeader } from "./BillingHeader";
 import { CurrentSubscription } from "./CurrentSubscription";
 import { PaymentMethods } from "./PaymentMethods";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { InvoiceHistory } from "./InvoiceHistory";
 import { UsageOverview } from "./UsageOverview";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 <<<<<<< HEAD
@@ -24,7 +33,11 @@ import {
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Tabs defaultValue="subscription" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="subscription">Subscription</TabsTrigger>
@@ -56,17 +69,29 @@ import {
           <InvoiceHistory />
         </TabsContent>
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <TabsContent value="usage" className="space-y-8">
           <UsageOverview />
         </TabsContent>
       </Tabs>
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+  );
+}
+=======
+=======
 <<<<<<< HEAD
     </div>;
   );
 }
 =======
     </div>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from "react",;
 import { BillingHeader } from "./BillingHeader",;
@@ -107,4 +132,8 @@ export function BillingDashboard() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

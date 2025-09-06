@@ -1,5 +1,10 @@
 <<<<<<< HEAD:components/reviews/ReviewCard.tsx
+<<<<<<< HEAD
+ > Report abuse </button> </div>)
+}</div> </div>) }
+=======
  > Report abuse </button> </div>) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 <<<<<<< HEAD:backup-problematic-files/reviews/ReviewCard.tsx
 import React from 'react',
@@ -23,18 +28,22 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
           onClick={() => onReport && onReport(review.id)}
 =======
 > Report abuse </button> </div>) 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div>) };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
+
 import {Star} from 'lucide-react';
 type Props = {
-  review: PublicReview,
+  review: PublicReview
   onReport?: (id: string) => void
-
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
 <<<<<<< HEAD:components/reviews/ReviewCard.tsx
@@ -65,7 +74,11 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
           onClick={() => onReport && onReport(review.id)}
 
 >>>>>>> main:components/reviews/ReviewCard.tsx
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Report abuse
         </button>
@@ -120,9 +133,13 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
       </div>
     </div>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD:components/reviews/ReviewCard.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
           <span className="pill pill-success">Would work again</span>
         )}
@@ -141,10 +158,18 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
       </div>
     </div>
   )
-};
-
+}
 export default ReviewCard;
+<<<<<<< HEAD
+
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+=======
+>>>>>>> main:components/reviews/ReviewCard.tsx
+export default ReviewCard;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
+=======
 =======
 >>>>>>> main:components/reviews/ReviewCard.tsx
 export default ReviewCard;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

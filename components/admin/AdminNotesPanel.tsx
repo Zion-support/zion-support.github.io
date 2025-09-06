@@ -1,9 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
+
+export type AdminNotesPanelProps = {
+=======
 export type AdminNotesPanelProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
-};
-
+}
 type Note = {
   id: string;
   targetType: string;
@@ -11,37 +15,46 @@ type Note = {
   text: string;
   authorId: string;
   createdAt: number;
-};
-
+}
 export default function AdminNotesPanel({
+<<<<<<< HEAD
+  targetType
+  targetId
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+=======
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Note = {
-  id: string,
-  targetType: string,
-  targetId: string,
-  text: string,
-  authorId: string,
+  id: string
+  targetType: string
+  targetId: string
+  text: string
+  authorId: string
   createdAt: number
+<<<<<<< HEAD
+}
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+=======
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
-
   async function fetchNotes() {
     try {
       setLoading(true);
       const res = await fetch(
-        `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
+        `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`
         {
-          headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
+          headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
         }
       );
       if (!res.ok) {
@@ -49,39 +62,36 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         return;
       }
       const data = await res.json();
-      setNotes(data.notes || []);
+      setNotes(data.notes |[]);
     } finally {
       setLoading(false);    }
   }
-
   useEffect(() => {
     if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);      if (!res.ok) {
         setNotes([]);
         return
       }
       const data = await res.json();
-      setNotes(data.notes || [])
+      setNotes(data.notes |[])
     } finally {
       setLoading(false)
     }
   }
-
   useEffect(() => {
     if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
   }, [isAdmin, targetType, targetId]);
-
   async function addNote() {
     if (!text.trim()) return;
     setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
-        method: 'POST',
+        method: 'POST'
         headers: {
-          'Content-Type': 'application/json',
-          'X-Admin': isAdmin ? 'true' : 'false',
-          'X-Admin-User': adminId,
-        },
-        body: JSON.stringify({ targetType, targetId, text }),
+          'Content-Type': 'application/json'
+          'X-Admin': isAdmin ? 'true' : 'false'
+          'X-Admin-User': adminId
+        }
+        body: JSON.stringify({ targetType, targetId, text })
       });
       if (!res.ok) {
         alert('Failed to add note');
@@ -91,21 +101,33 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       await fetchNotes();
     } finally {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
         return
       }
       setText('');
+
+<<<<<<< HEAD
       await fetchNotes()
     } finally {
       setAdding(false)
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
       setAdding(false);    }
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
@@ -121,7 +143,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       </div>
     );
   }
-
   return (
     <div className='rounded border p-4 space-y-3'>
       <div className='flex items-center justify-between'>
@@ -152,7 +173,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
           onChange={e => setText(e.target.value)}
         />
         <button
-          disabled={!text.trim() || adding}
+          disabled={!text.trim() |adding}
           onClick={addNote}
           className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
         >
@@ -185,8 +206,15 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 }
 =======
   );
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

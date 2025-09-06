@@ -1,24 +1,34 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export type ModerationModalProps = {;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export type ModerationModalProps = {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   flag: any | null;
   onClose: () => void;
   onAction: (
-    action: 'approve' | 'remove' | 'warn' | 'ban',
+    action: 'approve' | 'remove' | 'warn' | 'ban'
     adminNotes?: string
   ) => Promise<void>;
-
 export default function ModerationModal({
+<<<<<<< HEAD
+  flag
+  onClose
+  onAction
+}: ModerationModalProps) {
+=======
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
+
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
@@ -60,19 +70,19 @@ export default function ModerationModal({
             <div className='p-3 border rounded'>
               <div className='text-gray-500'>Toxicity</div>
               <div className='font-semibold'>
-                {Math.round((flag.aiScores?.toxicity || 0) * 100)}%
+                {Math.round((flag.aiScores?.toxicity |0) * 100)}%
               </div>
             </div>
             <div className='p-3 border rounded'>
               <div className='text-gray-500'>NSFW</div>
               <div className='font-semibold'>
-                {Math.round((flag.aiScores?.nsfw || 0) * 100)}%
+                {Math.round((flag.aiScores?.nsfw |0) * 100)}%
               </div>
             </div>
             <div className='p-3 border rounded'>
               <div className='text-gray-500'>Scam</div>
               <div className='font-semibold'>
-                {Math.round((flag.aiScores?.scam || 0) * 100)}%
+                {Math.round((flag.aiScores?.scam |0) * 100)}%
               </div>
             </div>
           </div>
@@ -128,4 +138,8 @@ export default function ModerationModal({
 }
 =======
   );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

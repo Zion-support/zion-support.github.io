@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -15,13 +17,22 @@ export function WaitlistSection() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
+<<<<<<< HEAD
+import { useToast } from "@/hooks/use-toast";
+import { Checkbox } from "@/components/ui/checkbox";
+=======
 import { useToast } from "@/hooks/use-toast",
 import { Checkbox } from "@/components/ui/checkbox",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -32,15 +43,20 @@ export function WaitlistSection() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    
-    if (!email || !name || !role || !agreeTerms) {
+    e.preventDefault()
+    if (!email |!name |!role |!agreeTerms) {
       toast({
-        variant: "destructive",
-        title: "Missing information",
-        description: "Please fill all fields and agree to the terms."}),
+        variant: "destructive"
+        title: "Missing information"
+        description: "Please fill all fields and agree to the terms."})
       return
     }
+<<<<<<< HEAD
+    setIsSubmitting(true);
+    try {
+      // Simulating an API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+=======
     
     setIsSubmitting(true),
     
@@ -48,10 +64,10 @@ export function WaitlistSection() {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
-        title: "Success!",
-        description: "Thank you for registering with Zion. We'll be in touch soon."}),
-      
+        title: "Success!"
+        description: "Thank you for registering with Zion. We'll be in touch soon."})
       // Reset form
       setEmail(""),
       setName(""),
@@ -59,14 +75,19 @@ export function WaitlistSection() {
       setAgreeTerms(false)
     } catch (error) {
       toast({
-        variant: "destructive",
-        title: "Something went wrong",
+        variant: "destructive"
+        title: "Something went wrong"
         description: "Please try again later."})
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+  }
+
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">
       {/* Background elements */}
@@ -79,7 +100,7 @@ export function WaitlistSection() {
           <div className="text-center mb-12">
             <GradientHeading>Register Now</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4">
-              Join our growing community of AI and tech professionals. 
+              Join our growing community of AI and tech professionals.
               Complete your registration to access exclusive features and personalized services.
             </p>
           </div>
@@ -116,8 +137,8 @@ export function WaitlistSection() {
               />
             </div>
             <div className="flex items-center space-x-2">
-              <Checkbox 
-                id="terms" 
+              <Checkbox
+                id="terms"
                 checked={agreeTerms}
                 onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
               />
@@ -128,9 +149,15 @@ export function WaitlistSection() {
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.
               </Label>
             </div>
+<<<<<<< HEAD
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+=======
             <Button 
               type="submit" 
               disabled={isSubmitting} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -141,6 +168,10 @@ export function WaitlistSection() {
     </section>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -260,6 +291,10 @@ export function WaitlistSection() {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   talentId, 
   name, 
@@ -12,28 +14,50 @@
 }
 ;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react'
+<<<<<<< HEAD
+import { formatDistanceToNow } from "date-fns";
+import { JobMatch } from "@/types/jobs";
+=======
 import { formatDistanceToNow } from "date-fns",
 import { JobMatch } from "@/types/jobs",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface JobMatchProps {
-  matchId: string,
-  talentId: string,
-  name: string,
-  title: string,
-  company: string,
-  avatar: string,
-  location: string,
-  category: string,
-  matchPercent: number,
-  skills: string[],
-  onApply?: (matchId: string) => void,
-  onViewDetails?: (matchId: string) => void,
+  matchId: string;
+  talentId: string;
+  name: string;
+  title: string;
+  company: string;
+  avatar: string;
+  location: string;
+  category: string;
+  matchPercent: number;
+  skills: string[];
+  onApply?: (matchId: string) => void;
+  onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
+<<<<<<< HEAD
+}
+
+
+  talentId
+  name
+  title
+  company
+  avatar
+  location
+  category
+  matchPercent
+
+}
+}
+=======
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -172,4 +196,8 @@ export function JobMatchCard({;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

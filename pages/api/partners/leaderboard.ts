@@ -1,25 +1,37 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
-  _req: NextApiRequest,
-  res: NextApiResponse,
+  _req: NextApiRequest
+  res: NextApiResponse
 ) {
   const usingPlaceholder =
+<<<<<<< HEAD
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+=======
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       "placeholder-key";
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
         leaders: [
-          { code: "aihub", profile_completions: 9 },
-          { code: "modelmasters", profile_completions: 7 },
-          { code: "promptpro", profile_completions: 5 },
-        ],
+          { code: "aihub", profile_completions: 9 }
+          { code: "modelmasters", profile_completions: 7 }
+          { code: "promptpro", profile_completions: 5 }
+        ]
       });
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
@@ -71,7 +83,11 @@ export default async function handler(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
@@ -83,17 +99,17 @@ export default async function handler(req, res) {
       .gte("created_at", startOfMonth.toISOString());
     if (error) return res.status(500).json({ error: "Database error" });
     const map = new Map<string, number>();
-    for (const row of data || []) {
+    for (const row of data |[]) {
       if (row.event !== "profile_completed") continue;
       const key = row.partner_code as string;
-      map.set(key, (map.get(key) || 0) + 1);
+      map.set(key, (map.get(key) |0) + 1);
     }
-
     const leaders = Array.from(map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b.profile_completions - a.profile_completions)
       .slice(0, 10);
     return res.status(200).json({ leaders });
+
   } catch (e: any) {
 =======
     const { data, error } = await supabase;
@@ -122,7 +138,11 @@ export default async function handler(req, res) {
       .slice(0, 10);
     return res.status(200).json({ leaders });
   } catch (error) {
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(500).json({ error: e?.message });
     } catch (error) {
     console.error("Error:", error);

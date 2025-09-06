@@ -1,17 +1,36 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
+<<<<<<< HEAD
+export interface Webhook {
+=======
 
 export interface Webhook {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
+<<<<<<< HEAD
+  created_at: string
+  last_triggered_at: string | null
+}
+export interface TestWebhookResult {
+  status: number;
+  statusText: string
+  responseBody: string
+}
+export function useWebhooks() {
+=======
   created_at: string,
   last_triggered_at: string | null
 }
@@ -23,6 +42,7 @@ export interface TestWebhookResult {;
 }
 
 export function useWebhooks() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [loading, setLoading] = useState(false);
@@ -72,11 +92,23 @@ export function useWebhooks() {
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Helper to get the base URL for webhook functions
   const getWebhookUrl = () => {
     // import.meta may be undefined when this hook is executed in a Node
     // environment (e.g. during server side rendering or tests). Using optional
     // chaining avoids a TypeError in those cases and falls back to process.env.
+<<<<<<< HEAD
+    const env = (import.meta as any)?.env ?? process.env;
+    const url = env.VITE_SUPABASE_URL |env.SUPABASE_URL;
+    return `${url}/functions/v1/webhook-manager`
+  }
+  // Fetch user's webhooks
+  const fetchWebhooks = async () => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+=======
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,
     return `${url}/functions/v1/webhook-manager`
@@ -89,6 +121,7 @@ export function useWebhooks() {
     setLoading(true),
     setError(null),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -96,21 +129,22 @@ export function useWebhooks() {
         return
 <<<<<<< HEAD
       }
-
       const response = await fetch(`${getWebhookUrl()}/webhooks`, {
-        method: 'GET',
+        method: 'GET'
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
         }
       });
-
       const result = await response.json();
-      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to fetch webhooks')
+        throw new Error(result.error |'Failed to fetch webhooks')
       }
+<<<<<<< HEAD
+      setWebhooks(result.webhooks |[])
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
 export function useWebhooks() {;
@@ -152,18 +186,35 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to fetch webhooks');
       }
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setWebhooks(result.webhooks || [])
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } catch (err) {
       console.error('Error fetching webhooks:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
+        variant: "destructive";
+        title: "Error fetching webhooks"
+=======
         variant: "destructive",
         title: "Error fetching webhooks",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
+  }
+  // Create new webhook
+  const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+=======
   },
 
   // Create new webhook
@@ -173,6 +224,7 @@ export function useWebhooks() {;
     setLoading(true),
     setError(null),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -180,27 +232,32 @@ export function useWebhooks() {;
         return
 <<<<<<< HEAD
       }
-
       const response = await fetch(`${getWebhookUrl()}/create`, {
-        method: 'POST',
+        method: 'POST'
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
-        };
+        }
         body: JSON.stringify({
           name;
           url;
-          eventTypes,
+          eventTypes
           secret
         })
       });
-
       const result = await response.json();
-      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to create webhook')
+        throw new Error(result.error |'Failed to create webhook')
       }
+<<<<<<< HEAD
+      // Add the new webhook to the list
+      setWebhooks(prev => [result.webhook, ...prev]);
+      toast({
+        title: "Webhook Created"
+        description: "Your webhook has been created successfully."});
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
       setWebhooks(result.webhooks || []);
@@ -245,7 +302,10 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to create webhook');
       }
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Add the new webhook to the list
       setWebhooks(prev => [result.webhook, ...prev]),
       
@@ -253,17 +313,31 @@ export function useWebhooks() {;
         title: "Webhook Created",
         description: "Your webhook has been created successfully."}),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return result.webhook
     } catch (err) {
       console.error('Error creating webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
+        variant: "destructive";
+        title: "Error creating webhook"
+=======
         variant: "destructive",
         title: "Error creating webhook",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
+  }
+  // Toggle webhook active status
+  const toggleWebhook = async (webhookId: string, isActive: boolean) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null)
+=======
   },
 
   // Toggle webhook active status
@@ -273,6 +347,7 @@ export function useWebhooks() {;
     setLoading(true),
     setError(null),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -280,22 +355,22 @@ export function useWebhooks() {;
         return
 <<<<<<< HEAD
       }
-
       const response = await fetch(`${getWebhookUrl()}/toggle`, {
-        method: 'POST',
+        method: 'POST'
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
-        };
+        }
         body: JSON.stringify({ webhookId, isActive })
       });
-
       const result = await response.json();
-      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to update webhook')
+        throw new Error(result.error |'Failed to update webhook')
       }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
       // Add the new webhook to the list;
@@ -340,27 +415,51 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to update webhook');
       }
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Update the webhook in the list
-      setWebhooks(prev => prev.map(webhook => 
+      setWebhooks(prev => prev.map(webhook =>
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
+<<<<<<< HEAD
+      ));
+      toast({
+        title: isActive ? "Webhook Activated" : "Webhook Deactivated"
+        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
+=======
       )),
       
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`}),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return result
     } catch (err) {
       console.error('Error toggling webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
+        variant: "destructive";
+        title: "Error updating webhook"
+=======
         variant: "destructive",
         title: "Error updating webhook",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
+  }
+  // Delete webhook
+  const deleteWebhook = async (webhookId: string) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null)
+=======
   },
 
   // Delete webhook
@@ -370,6 +469,7 @@ export function useWebhooks() {;
     setLoading(true),
     setError(null),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -377,22 +477,27 @@ export function useWebhooks() {;
         return
 <<<<<<< HEAD
       }
-
       const response = await fetch(`${getWebhookUrl()}/delete`, {
-        method: 'POST',
+        method: 'POST'
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
-        };
+        }
         body: JSON.stringify({ webhookId })
       });
-
       const result = await response.json();
-      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to delete webhook')
+        throw new Error(result.error |'Failed to delete webhook')
       }
+<<<<<<< HEAD
+      // Remove the webhook from the list
+      setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId));
+      toast({
+        title: "Webhook Deleted"
+        description: "The webhook has been deleted successfully."});
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
       // Update the webhook in the list;
@@ -439,7 +544,10 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to delete webhook');
       }
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),
       
@@ -447,17 +555,32 @@ export function useWebhooks() {;
         title: "Webhook Deleted",
         description: "The webhook has been deleted successfully."}),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return result
     } catch (err) {
       console.error('Error deleting webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+<<<<<<< HEAD
+        variant: "destructive";
+        title: "Error deleting webhook"
+=======
         variant: "destructive",
         title: "Error deleting webhook",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
+  }
+  // Test webhook
+  const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+    if (!user) return;
+    setLoading(true);
+    setError(null);
+    setTestResult(null)
+=======
   },
 
   // Test webhook
@@ -468,6 +591,7 @@ export function useWebhooks() {;
     setError(null),
     setTestResult(null),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -475,22 +599,28 @@ export function useWebhooks() {;
         return
 <<<<<<< HEAD
       }
-
       const response = await fetch(`${getWebhookUrl()}/test`, {
-        method: 'POST',
+        method: 'POST'
         headers: {
           'Authorization': `Bearer ${session.access_token}`;
           'Content-Type': 'application/json'
-        };
+        }
         body: JSON.stringify({ webhookId, eventType })
       });
-
       const result = await response.json();
-      
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to test webhook')
+        throw new Error(result.error |'Failed to test webhook')
       }
+<<<<<<< HEAD
+      // Store test result
+      setTestResult({
+        status: result.status;
+        statusText: result.statusText
+        responseBody: result.responseBody
+      });
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 ;
       // Remove the webhook from the list;
@@ -536,7 +666,10 @@ export function useWebhooks() {;
         throw new Error(result.error || 'Failed to test webhook');
       }
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Store test result
       setTestResult({
         status: result.status,
@@ -544,29 +677,40 @@ export function useWebhooks() {;
         responseBody: result.responseBody
       }),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update last triggered timestamp
-      setWebhooks(prev => prev.map(webhook => 
+      setWebhooks(prev => prev.map(webhook =>
         webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook
+<<<<<<< HEAD
+      ));
+      toast({
+        title: "Webhook Test Sent"
+        description: `Test completed with status: ${result.status} ${result.statusText}`});
+=======
       )),
       
       toast({
         title: "Webhook Test Sent",
         description: `Test completed with status: ${result.status} ${result.statusText}`}),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return result
     } catch (err) {
       console.error('Error testing webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
-        variant: "destructive",
-        title: "Error testing webhook",
+<<<<<<< HEAD
+        variant: "destructive";
+        title: "Error testing webhook"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
-  };
-
+  }
   return {
     webhooks;
     loading;
@@ -577,8 +721,20 @@ export function useWebhooks() {;
     toggleWebhook;
     deleteWebhook;
     testWebhook;
+
     clearTestResult: () => setTestResult(null)
+<<<<<<< HEAD
+  }
+}
 =======
+        variant: "destructive",
+        title: "Error testing webhook",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       // Store test result;
       setTestResult({;
@@ -616,7 +772,11 @@ export function useWebhooks() {;
     deleteWebhook;
     testWebhook;
     clearTestResult: () => setTestResult(null);
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

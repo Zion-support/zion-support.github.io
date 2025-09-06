@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -37,15 +41,34 @@ import { DisputeReason, disputeReasonLabels } from "@/types/disputes",
 import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const formSchema = z.object({
   reason_code: z.string()
-    .min(1, { message: "Please select a reason for the dispute" }),
+    .min(1, { message: "Please select a reason for the dispute" })
   description: z.string()
-    .min(20, { message: "Description must be at least 20 characters" }),
-  attachments: z.array(z.any()).optional()}),
-
+    .min(20, { message: "Description must be at least 20 characters" })
+  attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
+<<<<<<< HEAD
+  projectId: string
+  milestoneId?: string;
+  onDisputeCreated?: (disputeId: string) => void
+  onCancel?: () => void
+}
+export function DisputeForm({
+  projectId
+  milestoneId
+  onDisputeCreated
+  onCancel
+}: DisputeFormProps) {
+  const { createDispute } = useDisputes();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [files, setFiles] = useState<File[]>([]);
+=======
   projectId: string,
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
@@ -69,15 +92,28 @@ export function DisputeForm({
   const [files, setFiles] = useState<File[]>([]),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema)
     defaultValues: {
-      reason_code: "",
-      description: "",
-      attachments: []}}),
-
+      reason_code: ""
+      description: ""
+      attachments: []}})
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
+<<<<<<< HEAD
+      const newFiles = Array.from(e.target.files)
+      setFiles(prev => [...prev, ...newFiles]);
+      form.setValue("attachments", [...files, ...newFiles])
+    }
+  }
+  const removeFile = (index: number) => {
+    const newFiles = [...files]
+    newFiles.splice(index, 1);
+    setFiles(newFiles);
+    form.setValue("attachments", newFiles)
+  }
+=======
       const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev, ...newFiles]),
       form.setValue("attachments", [...files, ...newFiles])
@@ -91,37 +127,44 @@ export function DisputeForm({
     form.setValue("attachments", newFiles)
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      setIsSubmitting(true),
-      
+      setIsSubmitting(true)
       const dispute = await createDispute({
-        project_id: projectId,
-        milestone_id: milestoneId,
-        reason_code: values.reason_code,
-        description: values.description}),
-      
+        project_id: projectId
+        milestone_id: milestoneId
+        reason_code: values.reason_code
+        description: values.description})
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
           // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
+<<<<<<< HEAD
+        toast.success("Your dispute has been submitted");
+=======
         
         toast.success("Your dispute has been submitted"),
         
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
+<<<<<<< HEAD
+      console.error("Error submitting dispute:", error);
+
+=======
       console.error("Error submitting dispute:", error),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
     }
   }
-
   return (
     <div className="space-y-6">
       <div className="flex items-center space-x-2">
@@ -262,7 +305,11 @@ export function DisputeForm({;
                   <SelectContent>;
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </SelectContent>
                 </Select>
@@ -270,7 +317,6 @@ export function DisputeForm({;
               </FormItem>
             )}
           />
-          
           <FormField
             control={form.control}
             name="description"
@@ -288,14 +334,13 @@ export function DisputeForm({;
               </FormItem>
             )}
           />
-          
           <FormItem>
             <FormLabel>Attachments (optional)</FormLabel>
             <FormControl>
               <div className="space-y-4">
-                <Input 
-                  type="file" 
-                  multiple 
+                <Input
+                  type="file"
+                  multiple
                   onChange={handleFileChange}
                   className="cursor-pointer"
                 />
@@ -306,10 +351,17 @@ export function DisputeForm({;
                       {files.map((file, index) => (
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
+<<<<<<< HEAD
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="sm"
+=======
                           <Button 
                             type="button" 
                             variant="ghost" 
                             size="sm" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             onClick={() => removeFile(index)}
                           >
                             Remove
@@ -338,7 +390,11 @@ export function DisputeForm({;
     </div>
   )
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 };
 =======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

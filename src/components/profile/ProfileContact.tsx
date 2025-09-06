@@ -3,16 +3,17 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Mail, Send } from 'lucide-react'
-import { useState } from 'react'
-import { toast } from '@/hooks/use-toast'
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
-  email?: string
-  profileName: string
+  email?: string;
+  profileName: string;
   profileType: 'service' | 'talent'
+
 export function ProfileContact({
-  email,
-  profileName,
-  profileType,
+  email
+  profileName
+  profileType
 }: ProfileContactProps) {
   const [message, setMessage] = useState('')
   const [subject, setSubject] = useState('')
@@ -25,8 +26,8 @@ export function ProfileContact({
       setIsSending(false);
       setMessage('');
       setSubject('');      toast({
-        title: 'Message Sent',
-        description: `Your message has been sent to ${profileName}.`,
+        title: 'Message Sent'
+        description: `Your message has been sent to ${profileName}.`
       })
     }, 1000)
   }
@@ -63,8 +64,12 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`})
     }, 1000)
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -74,22 +79,33 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
-          <a 
-            href={`mailto:${email}`} 
+          <a
+            href={`mailto:${email}`}
             className="text-zion-cyan hover:underline truncate block"
 <<<<<<< HEAD
 =======
           >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {email}
           </Link>
         </div>
       )}
+<<<<<<< HEAD
+=======
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
@@ -104,7 +120,11 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           <div>
             <Input
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
@@ -128,8 +148,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             disabled={isSending}              required
             />
           </div>
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled = {isSending,}
           >
@@ -147,7 +167,11 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}
           >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}
           </Button>
@@ -157,9 +181,9 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   )
 <<<<<<< HEAD
   `mailto:$ {
-  email 
+  email
 }` "
-}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) 
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
 }'"}
 =======
 import { Button } from "@/components/ui/button",;
@@ -243,4 +267,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

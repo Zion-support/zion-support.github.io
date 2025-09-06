@@ -4,6 +4,31 @@ import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
+<<<<<<< HEAD
+export const metadata: Metadata = {title: 'Zion Tech Group - Leading AI and Technology Solutions';
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.';
+  keywords: ['AIartificial intelligencetechnologyinnovationquantum computingautonomous systemsbusiness solutionszion tech'];
+  authors: [{ name: 'Zion Tech Group' }];
+  creator: 'Zion Tech Group';
+  publisher: 'Zion Tech Group';
+  robots: 'index, follow';
+  openGraph: {title: 'Zion Tech Group - Leading AI and Technology Solutions';
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.';
+    url: 'https://ziontechgroup.com';
+    siteName: 'Zion Tech Group';
+    images: [;
+      {;
+        url: '/og-image.jpg';
+        width: 1200;
+        height: 630;
+        alt: 'Zion Tech Group'}];
+    locale: 'en_US';
+    type: 'website'}
+  twitter: {card: 'summary_large_image';
+    title: 'Zion Tech Group - Leading AI and Technology Solutions';
+    description: 'Transform your business with cutting-edge AI and technology solutions.';
+    images: ['/og-image.jpg']}
+=======
 export const metadata: Metadata = {;
   title: 'Zion Tech Group - Leading AI and Technology Solutions',;
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',;
@@ -30,6 +55,7 @@ export const metadata: Metadata = {;
     title: 'Zion Tech Group - Leading AI and Technology Solutions',;
     description: 'Transform your business with cutting-edge AI and technology solutions.',;
     images: ['/og-image.jpg']};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   viewport: 'width=device-width, initial-scale=1';
   themeColor: '#000000'}
 export default function RootLayout({
@@ -52,5 +78,9 @@ export default function RootLayout({
       </body>;
     </html>;
   );
+<<<<<<< HEAD
+}
+=======
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,11 +1,24 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import {
+<<<<<<< HEAD
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+=======
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/card";
+
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {
   return (
@@ -64,7 +77,11 @@ export function TeamStats() {
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <p className="text-xl font-bold">24</p>
             </div>
           </div>
@@ -72,7 +89,11 @@ export function TeamStats() {
 <<<<<<< HEAD
 =======
         
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
@@ -82,6 +103,13 @@ export function TeamStats() {
 <<<<<<< HEAD
 =======
     </Card>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -132,3 +160,5 @@ export function TeamStats() {;
     </Card>;
   );
 }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

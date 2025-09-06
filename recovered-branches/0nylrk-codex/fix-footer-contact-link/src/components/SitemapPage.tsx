@@ -1,11 +1,20 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react";
+import { completeSitemap, dynamicPaths } from "@/config/sitemap";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
+import { SEO } from "./SEO";
+import { AppLayout } from "@/layout/AppLayout";
+=======
 import React from 'react';
 import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import {Link} from 'react-router-dom';
 import {ChevronRight} from 'lucide-react';
 import {SEO} from './SEO';
 import {AppLayout} from '@/layout/AppLayout';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
@@ -13,7 +22,11 @@ import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const SitemapPage: React.FC = () => {
   return (
     <AppLayout>
@@ -28,123 +41,141 @@ export const SitemapPage: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Public Pages
+            </h2>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(route => !route.requiredAuth)
-                .map(route => (
+                .filter((route) => !route.requiredAuth)
+                .map((route) => (
                   <li key={route.path}>
-                    <Link 
-                      to={route.path} 
+                    <Link
+                      to={route.path}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
-                ))
-              }
+                ))}
             </ul>
           </div>
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Talent Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Requires talent or creator account
+            </p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(route => 
-                  route.requiredRoles?.includes('jobSeeker') || 
-                  route.requiredRoles?.includes('creator')
+                .filter(
+                  (route) =>
+                    route.requiredRoles?.includes("jobSeeker") |
+                    route.requiredRoles?.includes("creator")
                 )
-                .map(route => (
+                .map((route) => (
                   <li key={route.path}>
-                    <Link 
-                      to={route.path} 
+                    <Link
+                      to={route.path}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
-                ))
-              }
+                ))}
             </ul>
           </div>
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Client Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Requires employer or buyer account
+            </p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(route => 
-                  route.requiredRoles?.includes('employer') || 
-                  route.requiredRoles?.includes('buyer')
+                .filter(
+                  (route) =>
+                    route.requiredRoles?.includes("employer") |
+                    route.requiredRoles?.includes("buyer")
                 )
-                .map(route => (
+                .map((route) => (
                   <li key={route.path}>
-                    <Link 
-                      to={route.path} 
+                    <Link
+                      to={route.path}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
-                ))
-              }
+                ))}
             </ul>
           </div>
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires any account type</p>
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Authenticated User Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Requires any account type
+            </p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(route => 
-                  route.requiredAuth && 
-                  (!route.requiredRoles || route.requiredRoles.length === 0)
+                .filter(
+                  (route) =>
+                    route.requiredAuth &&
+                    (!route.requiredRoles |route.requiredRoles.length === 0)
                 )
-                .map(route => (
+                .map((route) => (
                   <li key={route.path}>
-                    <Link 
-                      to={route.path} 
+                    <Link
+                      to={route.path}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
-                ))
-              }
+                ))}
             </ul>
           </div>
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Admin Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Requires admin account
+            </p>
             <ul className="space-y-2">
               {completeSitemap
-                .filter(route => 
-                  route.requiredRoles?.includes('admin')
-                )
-                .map(route => (
+                .filter((route) => route.requiredRoles?.includes("admin"))
+                .map((route) => (
                   <li key={route.path}>
-                    <Link 
-                      to={route.path} 
+                    <Link
+                      to={route.path}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
-                ))
-              }
+                ))}
             </ul>
           </div>
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
-            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
-            <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Dynamic Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Pages with dynamic parameters
+            </p>
             <ul className="space-y-2">
               {Object.entries(dynamicPaths).map(([key, path]) => (
                 <li key={key}>
@@ -160,6 +191,12 @@ export const SitemapPage: React.FC = () => {
         </div>
       </div>
     </AppLayout>
+<<<<<<< HEAD
+  );
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
             </ul>;
           </div>;
@@ -169,3 +206,4 @@ export const SitemapPage: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

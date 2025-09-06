@@ -1,10 +1,95 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  Monitor, Brain, Cpu, Zap, Shield, Globe
+  Rocket, Target, TrendingUp, Users, CheckCircle
+  ArrowRight, Star, Award, Clock, DollarSign
+  Database, Network, Server, Laptop, Smartphone
+} from 'lucide-react'
+const AIPoweredITAssetManagement = () => {
+  const features = [
+    {
+      icon: Brain
+      title: "AI-Powered Asset Discovery"
+      description: "Intelligent detection and cataloging of all IT assets across your network"
+      color: "from-purple-500 to-pink-500"
+    }
+    {
+      icon: Monitor
+      title: "Real-Time Monitoring"
+      description: "Continuous monitoring and health assessment of all IT assets"
+      color: "from-blue-500 to-cyan-500"
+    }
+    {
+      icon: Shield
+      title: "Security Compliance"
+      description: "Automated security audits and compliance monitoring for all assets"
+      color: "from-emerald-500 to-teal-500"
+    }
+    {
+      icon: TrendingUp
+      title: "Predictive Analytics"
+      description: "AI-driven insights for asset lifecycle management and optimization"
+      color: "from-red-500 to-orange-500"
+    }
+  ]
+  const assetTypes = [
+    "Hardware devices (servers, workstations, mobile devices)"
+    "Software licenses and applications"
+    "Network infrastructure and equipment"
+    "Cloud resources and virtual machines"
+    "Security devices and appliances"
+    "Peripheral devices and accessories"
+  ]
+  const benefits = [
+    {
+      icon: DollarSign
+      title: "Cost Optimization"
+      value: "35%"
+      description: "Reduction in IT asset costs"
+    }
+    {
+      icon: Clock
+      title: "Time Savings"
+      value: "60%"
+      description: "Faster asset management"
+    }
+    {
+      icon: Shield
+      title: "Security Improvement"
+      value: "90%"
+      description: "Better security compliance"
+    }
+    {
+      icon: TrendingUp
+      title: "Efficiency Boost"
+      value: "200%"
+      description: "Increased operational efficiency"
+    }
+  ]
+  const capabilities = [
+    "Automated asset discovery and inventory"
+    "Real-time health monitoring and alerts"
+    "Predictive maintenance scheduling"
+    "License compliance management"
+    "Security vulnerability assessment"
+    "Asset lifecycle optimization"
+    "Cost allocation and tracking"
+    "Integration with existing IT tools"
+  ]
+=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 import { 
   Monitor, Brain, Cpu, Zap, Shield, Globe, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react';
 const AIPoweredITAssetManagement = () => {
@@ -15,7 +100,10 @@ import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   Monitor, Brain, Cpu, Zap, Shield, Globe,
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Database, Network, Server, Laptop, Smartphone
@@ -46,8 +134,11 @@ const AIPoweredITAssetManagement = () => {
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -61,7 +152,10 @@ const AIPoweredITAssetManagement = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const assetTypes = [
     "Hardware devices (servers, workstations, mobile devices)",
@@ -73,9 +167,12 @@ const AIPoweredITAssetManagement = () => {
     "Peripheral devices and accessories"
   ],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const benefits = [
     {
       icon: DollarSign,
@@ -101,8 +198,11 @@ const AIPoweredITAssetManagement = () => {
       value: "200%",
       description: "Increased operational efficiency"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     }
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -116,7 +216,10 @@ const AIPoweredITAssetManagement = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const capabilities = [
     "Automated asset discovery and inventory",
@@ -128,9 +231,12 @@ const AIPoweredITAssetManagement = () => {
     "Cost allocation and tracking",
     "Integration with existing IT tools"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   ],
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   return (
     <div className="min-h-screen bg-gray-50">
@@ -163,7 +269,11 @@ const AIPoweredITAssetManagement = () => {
 };
 export default AIPoweredITAssetManagement;
   ],
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -192,7 +302,11 @@ export default AIPoweredITAssetManagement;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -250,10 +364,17 @@ export default AIPoweredITAssetManagement;
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+                Transform your IT operations with intelligent asset management that discovers
+=======
+                Transform your IT operations with intelligent asset management that discovers,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
                 Transform your IT operations with intelligent asset management that discovers, 
 =======
                 Transform your IT operations with intelligent asset management that discovers,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -563,7 +684,11 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -648,7 +773,11 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -755,7 +884,11 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -840,7 +973,11 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -944,7 +1081,11 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1029,7 +1170,11 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -1139,7 +1284,11 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1224,7 +1373,11 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
@@ -1266,7 +1419,11 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1344,12 +1501,20 @@ const AIPoweredITAssetManagement = () => {;
       </div>
     </>
   )
+<<<<<<< HEAD
+}
+export default AIPoweredITAssetManagement;
+
+=======
 },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export default AIPoweredITAssetManagement,;
 ;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AIPoweredITAssetManagement,
             >;
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
@@ -1375,4 +1540,8 @@ export default AIPoweredITAssetManagement,
   );
 },;
 export default AIPoweredITAssetManagement;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

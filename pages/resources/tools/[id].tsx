@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -6,19 +8,30 @@ import { useRouter } from 'next/router',;
 export default function ToolResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+<<<<<<< HEAD
+export default function ToolResourcePage() {
+  const router = useRouter()
+  const { id } = router.query
   // Tools data - this should match the data in resources.tsx
   const tools = [
     {
-      id: 'automation-assessment',
-      title: 'Automation Readiness Assessment',
-      description: 'Evaluate your organization\'s readiness for AI automation implementation.',
-      type: 'Interactive Tool',
-      estimatedTime: '15 minutes',
+      id: 'automation-assessment'
+      title: 'Automation Readiness Assessment'
+      description: 'Evaluate your organization\'s readiness for AI automation implementation.'
+      type: 'Interactive Tool'
+      estimatedTime: '15 minutes'
       fullContent: `
         <h2>About This Tool</h2>
-        <p>The Automation Readiness Assessment is designed to help organizations evaluate their current 
-        capabilities and identify opportunities for AI automation implementation. This comprehensive assessment 
+        <p>The Automation Readiness Assessment is designed to help organizations evaluate their current
+        capabilities and identify opportunities for AI automation implementation. This comprehensive assessment
         covers technology infrastructure, organizational culture, and business processes.</p>
         <h2>What You'll Learn</h2>
         <p>This assessment will help you understand:</p>
@@ -53,21 +66,21 @@ export default function ToolResourcePage() {
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-      `,
+      `
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
-    },
+    }
     {
-      id: 'ai-maturity-model',
-      title: 'AI Maturity Model',
-      description: 'Assess your current AI capabilities and plan your transformation journey.',
-      type: 'Framework',
-      estimatedTime: '30 minutes',
+      id: 'ai-maturity-model'
+      title: 'AI Maturity Model'
+      description: 'Assess your current AI capabilities and plan your transformation journey.'
+      type: 'Framework'
+      estimatedTime: '30 minutes'
       fullContent: `
         <h2>About This Framework</h2>
-        <p>The AI Maturity Model provides a structured approach to understanding and advancing your 
-        organization's AI capabilities. This framework helps you identify where you are today and 
+        <p>The AI Maturity Model provides a structured approach to understanding and advancing your
+        organization's AI capabilities. This framework helps you identify where you are today and
         create a roadmap for where you want to be tomorrow.</p>
         <h2>Maturity Levels</h2>
         <p>The framework defines five maturity levels:</p>
@@ -105,21 +118,21 @@ export default function ToolResourcePage() {
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-      `,
+      `
       features: [
         '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
-    },
+    }
     {
-      id: 'performance-benchmark',
-      title: 'Performance Benchmarking Tool',
-      description: 'Compare your automation performance against industry standards.',
-      type: 'Analytics Tool',
-      estimatedTime: '20 minutes',
+      id: 'performance-benchmark'
+      title: 'Performance Benchmarking Tool'
+      description: 'Compare your automation performance against industry standards.'
+      type: 'Analytics Tool'
+      estimatedTime: '20 minutes'
       fullContent: `
         <h2>About This Tool</h2>
-        <p>The Performance Benchmarking Tool helps you compare your automation performance against 
-        industry standards and best practices. This tool provides insights into how your organization 
+        <p>The Performance Benchmarking Tool helps you compare your automation performance against
+        industry standards and best practices. This tool provides insights into how your organization
         performs relative to peers and identifies opportunities for improvement.</p>
         <h2>Benchmarking Categories</h2>
         <p>The tool covers several performance categories:</p>
@@ -165,16 +178,23 @@ export default function ToolResourcePage() {
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-      `,
+      `
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
+<<<<<<< HEAD
+  ]
+  const tool = tools.find(t => t.id === id)
+
+=======
+=======
 =======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ToolResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -346,9 +366,13 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const tool = tools.find(t => t.id === id),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!tool) {
     return (
       <>
@@ -363,10 +387,14 @@ export default function ToolResourcePage(req, res) {
                 The tool resource you're looking for doesn't exist.
               </p>
 <<<<<<< HEAD
+              <Link
+=======
+<<<<<<< HEAD
               <Link 
 =======
               <Link
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -381,7 +409,10 @@ export default function ToolResourcePage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -409,7 +440,11 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -422,18 +457,28 @@ export default function ToolResourcePage(req, res) {
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                   <div 
                     className="prose prose-invert max-w-none"
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }}
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div
                     className="prose prose-invert max-w-none"
+<<<<<<< HEAD
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+=======
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                 </div>
               </div>
@@ -544,7 +589,11 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </ul>
                 </div>
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -564,10 +613,14 @@ export default function ToolResourcePage(req, res) {
             </div>
             <div className="text-center">
 <<<<<<< HEAD
+              <Link
+=======
+<<<<<<< HEAD
               <Link 
 =======
               <Link
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -579,9 +632,12 @@ export default function ToolResourcePage(req, res) {
       </div>
     </>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
                   </ul>;
                 </div>;
@@ -617,5 +673,9 @@ export default function ToolResourcePage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

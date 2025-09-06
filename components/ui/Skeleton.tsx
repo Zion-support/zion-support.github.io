@@ -1,6 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+export type SkeletonProps = {
+  className?: string;
+}
+=======
 export type SkeletonProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
 export type SkeletonProps = {
@@ -8,8 +14,8 @@ export type SkeletonProps = {
   className?: string;
 };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Skeleton({ className = '' }: SkeletonProps) {
-  
     >
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
       <style jsx global>{`
@@ -28,7 +34,6 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
 export type SkeletonProps = {
   className?: string
 }
-
 export default function Skeleton({ className = '' }: SkeletonProps) {
   return (
     <div className={`relative overflow-hidden rounded-md bg-gray-200/60 dark:bg-white/10 ${className}`}>
@@ -39,7 +44,12 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
         }
       `}</style>
 <<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 import React from "react";
 interface SkeletonProps {
@@ -47,17 +57,19 @@ interface SkeletonProps {
   width?: string | number;
   height?: string | number;
   rounded?: boolean}
-
-export const Skeleton: React.FC<SkeletonProps> = ({ ",
-  className = ",
-  width,
-  height,
+export const Skeleton: React.FC<SkeletonProps> = ({ "
+  className = "
+  width
+  height
   rounded = false}) => {
   const style: React.CSSProperties = {}
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ";
-  if (width) style.width = typeof width === "number" ? "${width}px" : width,
-if (height) style.height = typeof height === "number" ? "${height}px" : height,
+  if (width) style.width = typeof width === "number" ? "${width}px" : width
+if (height) style.height = typeof height === "number" ? "${height}px" : height
 return (";
     <div className="{"animate-pulse" bg-gray-200 ${rounded ? "rounded-full" : "rounded"} ${className}"}";
       style="{style}">;
@@ -65,7 +77,7 @@ return (";
   );
 }
 export const CardSkeleton: React.FC = () => (";
-  <div className="bg-white rounded-lg shadow-md p-6">",
+  <div className="bg-white rounded-lg shadow-md p-6">"
     <Skeleton height="{20}" className="mb-4"  />";
     <Skeleton height="{16}" className="mb-2"  />";
     <Skeleton height="{16}" width="60%"  />;
@@ -78,17 +90,21 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
       <Skeleton key="{i}" ";
         height="{16}" ;
         width="{i" === lines - 1 ? "60%" : "100%"}
-
             />;
     ))}
-
   </div>"';
 );
 }
 export default Component
 }
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 ;
 =======
     </div>
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

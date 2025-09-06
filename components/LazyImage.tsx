@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import LoadingSpinner from "./LoadingSpinner";
-
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -18,8 +17,24 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 export default function LazyImage({
+<<<<<<< HEAD
+  src
+  alt
+  width
+  height
+  className = ""
+  priority = false
+  placeholder = "empty"
+  blurDataURL
+  sizes
+  quality = 75
+  fill = false
+  style
+  onLoad
+  onError
+}: LazyImageProps) {
+=======
   src,
   alt,
   width,
@@ -35,44 +50,38 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (priority) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
         }
-      },
+      }
       {
-        threshold: 0.1,
-        rootMargin: "50px",
-      },
+        threshold: 0.1
+        rootMargin: "50px"
+      }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, [priority]);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
-  };
-
+  }
   const handleError = () => {
     setHasError(true);
     onError?.();
-  };
-
+  }
   if (hasError) {
     return (
       <div
@@ -87,7 +96,6 @@ export default function LazyImage({
       </div>
     );
   }
-
   return (
     <div ref={imgRef} className={`relative ${className}`} style={style}>
       {!isInView && !priority && (
@@ -95,7 +103,6 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />
         </div>
       )}
-
       {isInView && (
         <Image
           src={src}

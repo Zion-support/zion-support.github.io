@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -21,6 +23,7 @@ export default function ListingDetail() {
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -33,6 +36,17 @@ import { toast } from "@/hooks/use-toast",
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { AppLayout } from "@/layout/AppLayout",
 import { ProfileContact } from "@/components/profile/ProfileContact",
+<<<<<<< HEAD
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+export default function ListingDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { id } = useParams() as { id?: string }
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  // Find the listing from our shared data source - now also checking equipment listings
+=======
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 
 export default function ListingDetail() {
@@ -46,7 +60,9 @@ export default function ListingDetail() {
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
     return (
       <AppLayout>
@@ -64,11 +80,14 @@ export default function ListingDetail() {
       </AppLayout>
     )
   }
-
   const handleContact = () => {
     setIsContactDialogOpen(true)
+<<<<<<< HEAD
+  }
+=======
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -79,9 +98,9 @@ export default function ListingDetail() {
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
                   {listing.images && listing.images.length > 0 ? (
-                    <img 
-                      src={listing.images[selectedImageIndex]} 
-                      alt={listing.title} 
+                    <img
+                      src={listing.images[selectedImageIndex]}
+                      alt={listing.title}
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement,
@@ -97,7 +116,7 @@ export default function ListingDetail() {
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index) => (
-                      <div 
+                      <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(
@@ -105,9 +124,9 @@ export default function ListingDetail() {
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
                       >
-                        <img 
-                          src={image} 
-                          alt={`${listing.title} - image ${index + 1}`} 
+                        <img
+                          src={image}
+                          alt={`${listing.title} - image ${index + 1}`}
                           className="w-full h-full object-cover"
                           onError={(e) => {
 <<<<<<< HEAD
@@ -202,7 +221,11 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           }}
                         />
                       </div>
@@ -217,7 +240,11 @@ export default function ListingDetail() {;
 <<<<<<< HEAD
 =======
                 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -280,7 +307,11 @@ export default function ListingDetail() {;
                             "h-5 w-5";
 =======
                             "h-5 w-5",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />
@@ -291,7 +322,6 @@ export default function ListingDetail() {;
                     </span>
                   </div>
                 )}
-                
                 {/* Price */}
                 <div className="mb-6">
                   {listing.price !== null ? (
@@ -315,7 +345,7 @@ export default function ListingDetail() {;
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
                         toast({
-                          title: "Payment Processing",
+                          title: "Payment Processing"
                           description: "Redirecting to secure checkout..."
                         })
 <<<<<<< HEAD
@@ -333,11 +363,15 @@ export default function ListingDetail() {;
                           title: "Payment Processing";
                           description: "Redirecting to secure checkout...";
                         });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       }}
                     />
                   ) : (
-                    <Button 
+                    <Button
                       onClick={handleContact}
                       disabled={isLoading}
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
@@ -345,9 +379,8 @@ export default function ListingDetail() {;
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>
                   )}
-                  
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     onClick={handleContact}
                     disabled={isLoading}
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
@@ -361,12 +394,17 @@ export default function ListingDetail() {;
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (
-                      <img 
-                        src={listing.author.avatarUrl} 
-                        alt={listing.author.name} 
+                      <img
+                        src={listing.author.avatarUrl}
+                        alt={listing.author.name}
                         className="h-12 w-12 rounded-full"
                         onError={(e) => {
+<<<<<<< HEAD
+                          const target = e.target as HTMLImageElement;
+
+=======
                           const target = e.target as HTMLImageElement,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                         }}
                       />
@@ -403,7 +441,7 @@ export default function ListingDetail() {;
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact 
+          <ProfileContact
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
             profileType="service"
@@ -413,6 +451,10 @@ export default function ListingDetail() {;
     </AppLayout>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
@@ -486,6 +528,10 @@ export default function ListingDetail() {;
       </Dialog>;
     </AppLayout>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

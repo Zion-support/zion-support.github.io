@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
@@ -11,6 +13,7 @@ import {cn} from "@/lib/utils";
 import {ForumPost} from "@/types/community";
 import {ProfileBadge} from "@/components/profile/ProfileBadge";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -19,26 +22,38 @@ import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+import { ForumPost } from "@/types/community";
+import { ProfileBadge } from "@/components/profile/ProfileBadge";
+=======
 import { ForumPost } from "@/types/community",
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PostCardProps {
-  post: ForumPost,
+
+  post: ForumPost
   compact?: boolean
 }
-
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
 <<<<<<< HEAD
     <Card className={cn(;
       "transition-shadow hover: shadow-md";
 =======
     <Card className={cn(
+<<<<<<< HEAD
+      "transition-shadow hover: shadow-md";
+      post.isPinned && "border-zion-purple/50"
+=======
       "transition-shadow hover:shadow-md",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       post.isPinned && "border-zion-purple/50",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -118,7 +133,11 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {tag}
               </Badge>
             ))}
@@ -130,7 +149,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           <div className="line-clamp-3">{post.content}</div>
         </CardContent>
       )}
-
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1">
@@ -157,12 +175,17 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
       </CardFooter>
     </Card>
   )
-};
+}
+export default PostCard;
 
 =======
       </CardFooter>;
     </Card>;
   );
 };
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default PostCard;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

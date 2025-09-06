@@ -1,6 +1,19 @@
+<<<<<<< HEAD:pages-disabled/quantum-iot.tsx
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/quantum-internet-security-platform.tsx
 import React from "react";
 import Head from "next/head";
 import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Shield
+  Star
+=======
   Phone,
   Mail,
   MapPin,
@@ -8,13 +21,18 @@ import {
   ArrowRight,
   Shield,
   Star,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
+<<<<<<< HEAD
+    s.link.endsWith("/quantum-internet-security-platform")
+=======
     s.link.endsWith("/quantum-internet-security-platform"),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
   if (!service) return null;
 
@@ -130,7 +148,14 @@ export default function QuantumInternetSecurityPage() {
     </UltraAdvancedFuturisticBackground>
   );
 <<<<<<< HEAD:pages-disabled/quantum-iot.tsx
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> main:pages-disabled/quantum-iot.tsx
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/quantum-internet-security-platform.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+>>>>>>> main:pages-disabled/quantum-iot.tsx
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/quantum-internet-security-platform.tsx

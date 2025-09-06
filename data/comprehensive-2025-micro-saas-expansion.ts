@@ -1,6 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { ServiceVariant } from '../types/service-variants',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
+}
+<<<<<<< HEAD
+=======
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 //Healthcare AI Services {
   id: 'ai-healthcare-diagnostics-platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -41,8 +51,8 @@ rating: 4.9;
 reviews: 89;
 benefits: ['Improved diagnostic accuracyReduced misdiagnosis', 'Faster diagnosisCost savings'];
 capabilities: ['Multi-modality imagingReal-time analysis', 'Clinical decision supportRegulatory compliance'];
-marketAdvantage: 'Highest accuracy rate in the market with comprehensive multi-specialty coverage' 
-};
+marketAdvantage: 'Highest accuracy rate in the market with comprehensive multi-specialty coverage'
+}
 //Fintech AI Services {
   id: 'ai-fintech-intelligence-platform';
 name: 'AI Fintech Intelligence Platform';
@@ -83,8 +93,8 @@ rating: 4.7;
 reviews: 67;
 benefits: ['Improved trading performanceRisk reduction', 'Automated operationsReal-time insights'];
 capabilities: ['Multi-asset tradingAdvanced analytics', 'Risk managementRegulatory compliance'];
-marketAdvantage: 'First platform to combine AI-powered trading, risk management, and compliance in one solution' 
-};
+marketAdvantage: 'First platform to combine AI-powered trading, risk management, and compliance in one solution'
+}
 //Cybersecurity AI Services {
   id: 'ai-cybersecurity-threat-hunting';
 name: 'AI Cybersecurity Threat Hunting';
@@ -125,8 +135,8 @@ rating: 4.8;
 reviews: 156;
 benefits: ['Zero false positivesAutomated response', '24/7 monitoringCost reduction'];
 capabilities: ['Advanced threat huntingReal-time detection', 'Automated responseCompliance reporting'];
-marketAdvantage: 'Only platform with zero false positive guarantee and automated incident response' 
-};
+marketAdvantage: 'Only platform with zero false positive guarantee and automated incident response'
+}
 //IoT & Smart City Services {
   id: 'iot-smart-city-platform';
 name: 'IoT Smart City Platform';
@@ -167,8 +177,8 @@ rating: 4.9;
 reviews: 34;
 benefits: ['Operational efficiencyCost reduction', 'Improved citizen servicesEnvironmental sustainability'];
 capabilities: ['Comprehensive monitoringReal-time optimization', 'Data analyticsCitizen engagement'];
-marketAdvantage: 'Most comprehensive smart city platform with integrated citizen engagement features' 
-};
+marketAdvantage: 'Most comprehensive smart city platform with integrated citizen engagement features'
+}
 //Blockchain & DeFi Services {
   id: 'blockchain-defi-intelligence';
 name: 'Blockchain & DeFi Intelligence Platform';
@@ -209,8 +219,8 @@ rating: 4.8;
 reviews: 123;
 benefits: ['Improved DeFi strategiesRisk reduction', 'Real-time insightsCost savings'];
 capabilities: ['Multi-chain analysisAI-powered insights', 'DeFi optimizationRisk management'];
-marketAdvantage: 'First platform to combine AI-powered blockchain analysis with DeFi optimization' 
-};
+marketAdvantage: 'First platform to combine AI-powered blockchain analysis with DeFi optimization'
+}
 //Quantum Computing Services {
   id: 'quantum-computing-as-a-service';
 name: 'Quantum Computing as a Service';
@@ -251,8 +261,8 @@ rating: 4.9;
 reviews: 45;
 benefits: ['Quantum computing accessAI optimization', 'Real-time simulationExpert support'];
 capabilities: ['Multi-processor supportAI-powered algorithms', 'Real-time monitoringCustom solutions'];
-marketAdvantage: 'First platform to combine quantum computing access with AI-powered optimization' 
-};
+marketAdvantage: 'First platform to combine quantum computing access with AI-powered optimization'
+}
 //Space Technology Services {
   id: 'space-resource-intelligence';
 name: 'Space Resource Intelligence Platform';
@@ -293,8 +303,8 @@ rating: 4.8;
 reviews: 23;
 benefits: ['Resource discoveryMission optimization', 'Cost reductionRisk mitigation'];
 capabilities: ['AI-powered analysisReal-time monitoring', 'Mission planningData analytics'];
-marketAdvantage: 'First platform to combine AI-powered resource discovery with mission optimization' 
-};
+marketAdvantage: 'First platform to combine AI-powered resource discovery with mission optimization'
+}
 //Autonomous Systems Services {
   id: 'autonomous-systems-orchestration';
 name: 'Autonomous Systems Orchestration';
@@ -335,54 +345,15 @@ rating: 4.7;
 reviews: 67;
 benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'];
 capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'];
-marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems' 
+marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
 }];
+<<<<<<< HEAD
+=======
 =======
 import { ServiceVariant } from '../types/service-variants',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-export interface ComprehensiveMicroSaasService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: ServiceVariant,
-  contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  },
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number,
-  benefits: string[],
-  capabilities: string[],
-  marketAdvantage: string
-}
+=======
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -1235,4 +1206,8 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
   }
 ];
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

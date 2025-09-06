@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+<<<<<<< HEAD
+import React, { useState } from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
+  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
+  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
+ } from 'lucide-react';
+=======
 <<<<<<< HEAD
 import {motion, AnimatePresence} from 'framer-motion';
 import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon,} from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {;
@@ -12,138 +22,135 @@ export default function ExplorePage() {;
 
   const categories = [
     {
-      id: 'ai',
-      name: 'AI & Machine Learning',
-      icon: Brain,
+      id: 'ai'
+      name: 'AI & Machine Learning'
+      icon: Brain
       description:
-        'Revolutionary AI consciousness and machine learning solutions',
-      color: 'from-purple-500 to-pink-500',
-      serviceCount: 25,
-      featured: true,
+        'Revolutionary AI consciousness and machine learning solutions'
+      color: 'from-purple-500 to-pink-500'
+      serviceCount: 25
+      featured: true
     },    {
-      id: 'quantum',
-      name: 'Quantum Computing',
-      icon: Atom,
-      description: 'Quantum-powered computing and consciousness simulation',
-      color: 'from-blue-500 to-cyan-500',
-      serviceCount: 18,
-      featured: true,
+      id: 'quantum'
+      name: 'Quantum Computing'
+      icon: Atom
+      description: 'Quantum-powered computing and consciousness simulation'
+      color: 'from-blue-500 to-cyan-500'
+      serviceCount: 18
+      featured: true
     },    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: Shield,
-      description: 'Quantum-resistant security and AI threat detection',
-      color: 'from-red-500 to-orange-500',
-      serviceCount: 22,
-      featured: true,
+      id: 'cybersecurity'
+      name: 'Cybersecurity'
+      icon: Shield
+      description: 'Quantum-resistant security and AI threat detection'
+      color: 'from-red-500 to-orange-500'
+      serviceCount: 22
+      featured: true
     },    {
-      id: 'cloud',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      description: 'Autonomous DevOps and cloud infrastructure',
-      color: 'from-emerald-500 to-teal-500',
-      serviceCount: 20,
-      featured: false,
+      id: 'cloud'
+      name: 'Cloud & DevOps'
+      icon: Cloud
+      description: 'Autonomous DevOps and cloud infrastructure'
+      color: 'from-emerald-500 to-teal-500'
+      serviceCount: 20
+      featured: false
     },    {
-      id: 'edge',
-      name: 'Edge Computing',
-      icon: Network,
-      description: 'Edge computing orchestration and IoT management',
-      color: 'from-yellow-500 to-orange-500',
-      serviceCount: 15,
-      featured: false,
+      id: 'edge'
+      name: 'Edge Computing'
+      icon: Network
+      description: 'Edge computing orchestration and IoT management'
+      color: 'from-yellow-500 to-orange-500'
+      serviceCount: 15
+      featured: false
     },    {
-      id: 'space',
-      name: 'Space Technology',
-      icon: Rocket,
-      description: 'Space exploration and resource optimization',
-      color: 'from-indigo-500 to-purple-500',
-      serviceCount: 12,
-      featured: true,
+      id: 'space'
+      name: 'Space Technology'
+      icon: Rocket
+      description: 'Space exploration and resource optimization'
+      color: 'from-indigo-500 to-purple-500'
+      serviceCount: 12
+      featured: true
     },    {
-      id: 'biotech',
-      name: 'Biotechnology',
-      icon: ZapIcon,
-      description: 'Neural interfaces and biomedical innovations',
-      color: 'from-pink-500 to-rose-500',
-      serviceCount: 16,
-      featured: false,
+      id: 'biotech'
+      name: 'Biotechnology'
+      icon: ZapIcon
+      description: 'Neural interfaces and biomedical innovations'
+      color: 'from-pink-500 to-rose-500'
+      serviceCount: 16
+      featured: false
     },    {
-      id: 'blockchain',
-      name: 'Blockchain',
-      icon: Code,
-      description: 'AI-powered blockchain governance and DeFi',
-      color: 'from-green-500 to-emerald-500',
-      serviceCount: 14,
-      featured: false,
+      id: 'blockchain'
+      name: 'Blockchain'
+      icon: Code
+      description: 'AI-powered blockchain governance and DeFi'
+      color: 'from-green-500 to-emerald-500'
+      serviceCount: 14
+      featured: false
     },    {
-      id: 'automation',
-      name: 'Automation',
-      icon: Zap,
-      description: 'Business process automation and AI agents',
-      color: 'from-cyan-500 to-blue-500',
-      serviceCount: 19,
-      featured: false,
+      id: 'automation'
+      name: 'Automation'
+      icon: Zap
+      description: 'Business process automation and AI agents'
+      color: 'from-cyan-500 to-blue-500'
+      serviceCount: 19
+      featured: false
     },    {
-      id: 'fintech',
-      name: 'Financial Technology',
-      icon: TrendingUp,
-      description: 'Quantum financial trading and AI analytics',
-      color: 'from-emerald-500 to-green-500',
-      serviceCount: 17,
-      featured: false,
+      id: 'fintech'
+      name: 'Financial Technology'
+      icon: TrendingUp
+      description: 'Quantum financial trading and AI analytics'
+      color: 'from-emerald-500 to-green-500'
+      serviceCount: 17
+      featured: false
     },  ];
-
   const featuredServices = [
     {
-      id: 'ai-consciousness-evolution',
-      title: 'AI Consciousness Evolution',
-      category: 'ai',
+      id: 'ai-consciousness-evolution'
+      title: 'AI Consciousness Evolution'
+      category: 'ai'
       description:
-        'Revolutionary AI consciousness platform with emotional intelligence',
-      status: 'beta',
-      price: '$1,999/month',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
+        'Revolutionary AI consciousness platform with emotional intelligence'
+      status: 'beta'
+      price: '$1,999/month'
+      icon: Brain
+      color: 'from-purple-500 to-pink-500'
     },    {
-      id: 'quantum-neural-networks',
-      title: 'Quantum Neural Networks',
-      category: 'quantum',
+      id: 'quantum-neural-networks'
+      title: 'Quantum Neural Networks'
+      category: 'quantum'
       description:
-        'Quantum-powered AI with advanced consciousness capabilities',
-      status: 'beta',
-      price: '$1,299/month',
-      icon: Atom,
-      color: 'from-blue-500 to-cyan-500',
+        'Quantum-powered AI with advanced consciousness capabilities'
+      status: 'beta'
+      price: '$1,299/month'
+      icon: Atom
+      color: 'from-blue-500 to-cyan-500'
     },    {
-      id: 'quantum-cybersecurity',
-      title: 'Quantum Cybersecurity',
-      category: 'cybersecurity',
-      description: 'Future-proof security with quantum-resistant encryption',
-      status: 'active',
-      price: '$799/month',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
+      id: 'quantum-cybersecurity'
+      title: 'Quantum Cybersecurity'
+      category: 'cybersecurity'
+      description: 'Future-proof security with quantum-resistant encryption'
+      status: 'active'
+      price: '$799/month'
+      icon: Shield
+      color: 'from-red-500 to-orange-500'
     },    {
-      id: 'space-technology',
-      title: 'Space Technology Innovation',
-      category: 'space',
-      description: 'AI-powered space exploration and resource optimization',
-      status: 'beta',
-      price: '$2,499/month',
-      icon: Rocket,
-      color: 'from-indigo-500 to-purple-500',
+      id: 'space-technology'
+      title: 'Space Technology Innovation'
+      category: 'space'
+      description: 'AI-powered space exploration and resource optimization'
+      status: 'beta'
+      price: '$2,499/month'
+      icon: Rocket
+      color: 'from-indigo-500 to-purple-500'
     },  ];
-
   // Filter categories based on search
   const filteredCategories = categories.filter(category => {
     const matchesSearch =
-      category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      category.name.toLowerCase().includes(searchTerm.toLowerCase()) |
       category.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter =
-      selectedCategory === 'all' || category.id === selectedCategory;
+      selectedCategory === 'all' |category.id === selectedCategory;
     return matchesSearch && matchesFilter;  });
-
   // Sort categories
   const sortedCategories = [...filteredCategories].sort((a, b) => {
     switch (sortBy) {
@@ -156,8 +163,14 @@ export default function ExplorePage() {;
       default:
         return 0;    }
   });
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+=======
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   Search, Filter, Grid, List, ArrowRight, ChevronRight,;
@@ -337,7 +350,11 @@ export default function ExplorePage(req, res) {
   }
 }
   }),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -393,7 +410,11 @@ export default function ExplorePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Explore Technology Categories
@@ -442,7 +463,11 @@ export default function ExplorePage(req, res) {
               <div className="flex-1 max-w-md">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <input
                     type="text"
                     placeholder="Search categories..."
@@ -470,7 +495,11 @@ export default function ExplorePage(req, res) {
   }
 }
               <div className="flex items-center gap-4">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <select
                   value={sortBy  } catch (error) {
     console.error("Error:", error);
@@ -526,7 +555,11 @@ export default function ExplorePage(req, res) {
   }
 }
             className="mb-12"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
@@ -568,7 +601,11 @@ export default function ExplorePage(req, res) {
   }
 }
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
@@ -602,7 +639,11 @@ export default function ExplorePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
@@ -622,7 +663,11 @@ export default function ExplorePage(req, res) {
                   <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
                   <div className="mb-4">
                     <span className="text-xl font-bold text-cyan-400">{service.price}</span>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <a
                     href={`/services#${service.id}`  } catch (error) {
@@ -682,7 +727,11 @@ export default function ExplorePage(req, res) {
   }
 }
             className="mb-12"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
@@ -696,7 +745,11 @@ export default function ExplorePage(req, res) {
 =======
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.div
                 initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
@@ -773,7 +826,11 @@ export default function ExplorePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
@@ -790,7 +847,6 @@ export default function ExplorePage(req, res) {
                         </div>
 <<<<<<< HEAD
                       )}
-
                       {/* Category Icon */}
                       <div
                         className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
@@ -854,7 +910,11 @@ export default function ExplorePage(req, res) {
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
                           <div className="text-xs text-white/60">Services</div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
@@ -889,7 +949,11 @@ export default function ExplorePage(req, res) {
 }
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
@@ -955,7 +1019,11 @@ export default function ExplorePage(req, res) {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -966,6 +1034,65 @@ export default function ExplorePage(req, res) {
           </motion.div>
 <<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[
+<<<<<<< HEAD
+              {
+                icon: Brain
+                title: 'AI Consciousness'
+                description:
+                  'The evolution of AI towards true consciousness and emotional intelligence'
+                trend: 'Rising'
+                color: 'from-purple-500 to-pink-500'
+              }
+              {
+                icon: Atom
+                title: 'Quantum Supremacy'
+                description:
+                  'Breakthroughs in quantum computing and quantum AI applications'
+                trend: 'Breakthrough'
+                color: 'from-blue-500 to-cyan-500'
+              }
+              {
+                icon: Shield
+                title: 'Quantum Security'
+                description:
+                  'Quantum-resistant cryptography and AI-powered threat detection'
+                trend: 'Critical'
+                color: 'from-red-500 to-orange-500'
+              }
+              {
+                icon: Rocket
+                title: 'Space Innovation'
+                description:
+                  'AI-powered space exploration and resource optimization'
+                trend: 'Emerging'
+                color: 'from-indigo-500 to-purple-500'
+              }
+              {
+                icon: ZapIcon
+                title: 'Neural Interfaces'
+                description:
+                  'Brain-computer interfaces and neural augmentation'
+                trend: 'Experimental'
+                color: 'from-pink-500 to-rose-500'
+              }
+              {
+                icon: TrendingUp
+                title: 'Autonomous Systems'
+                description:
+                  'Self-improving AI systems and autonomous business operations'
+                trend: 'Growing'
+                color: 'from-emerald-500 to-green-500'
+              },            ].map((trend, index) => (
+
+              <motion.div
+                key={trend.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -1011,6 +1138,8 @@ export default function ExplorePage(req, res) {
                 description: 'Self-improving AI systems and autonomous business operations',
                 trend: 'Growing',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 color: 'from-emerald-500 to-green-500',
               },            ].map((trend, index) => (
               <motion.div
@@ -1021,6 +1150,7 @@ export default function ExplorePage(req, res) {
                 viewport={{ once: true }}
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 color: 'from-emerald-500 to-green-500'
                 } catch (error) {
     console.error("Error:", error);
@@ -1055,7 +1185,11 @@ export default function ExplorePage(req, res) {
   }
 }
                 className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
                   <trend.icon className="w-8 h-8 text-white" />
@@ -1153,7 +1287,11 @@ export default function ExplorePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
@@ -1183,8 +1321,11 @@ export default function ExplorePage(req, res) {
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   )
           >;
@@ -1220,4 +1361,8 @@ export default function ExplorePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

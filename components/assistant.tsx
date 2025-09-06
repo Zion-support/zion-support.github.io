@@ -1,12 +1,22 @@
+<<<<<<< HEAD
+=======
 import {useEffect, useMemo, useState} from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+import {useEffect, useMemo, useState} from 'react';
 interface Message {
   role: 'user' | 'assistant';
   content: string;
-
 export default function Assistant() {
   const params =
     typeof window !== 'undefined'
+<<<<<<< HEAD
+      ? new URLSearchParams(window.location.search)
+      : new URLSearchParams();  const tenantId = params.get('tenantId') |'';
+  const brand = params.get('brand') |'Zion AI';
+  const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
+export default function Assistant() {
+=======
       ? new URLSearchParams(window.location.search);
       : new URLSearchParams();  const tenantId = params.get('tenantId') || '';
   const brand = params.get('brand') || 'Zion AI';
@@ -14,56 +24,58 @@ export default function Assistant() {
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 
 export default function Assistant() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const tenantId = params.get('tenantId') || '';
-  const brand = params.get('brand') || 'Zion AI';
-
+  const tenantId = params.get('tenantId') |'';
+  const brand = params.get('brand') |'Zion AI';
   const [messages, setMessages] = useState<Message[]>([
     {
-      role: 'assistant',
-      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,
-    },
+      role: 'assistant'
+      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
+    }
   ]);
   const [input, setInput] = useState('');
-
   const faqs: Record<string, string> = useMemo(
     () => ({
       'is this role remote':
-        'Many roles support remote or hybrid work. Check the job description for specifics.',
+        'Many roles support remote or hybrid work. Check the job description for specifics.'
       'how soon do you hire':
-        'Typical timelines range from 2-4 weeks depending on role and interview availability.',
+        'Typical timelines range from 2-4 weeks depending on role and interview availability.'
       'what is the interview process':
-        'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.',
-    }),
+        'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'
+    })
     []
   );
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
-
   const faqs: Record<string, string> = useMemo(() => ({
     'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
   async function handleAsk(question: string) {
     const lower = question.toLowerCase();
-    const faq = Object.keys(faqs).find(key => lower.includes(key)),
+    const faq = Object.keys(faqs).find(key => lower.includes(key))
     if (faq) {
       setMessages(prev => [
-        ...prev,
-        { role: 'user', content: question },
-        { role: 'assistant', content: faqs[faq] },
+        ...prev
+        { role: 'user', content: question }
+        { role: 'assistant', content: faqs[faq] }
       ]);
       return;
+
     }
     // Basic fallback
     setMessages(prev => [
-      ...prev,
-      { role: 'user', content: question },
+      ...prev
+      { role: 'user', content: question }
       {
-        role: 'assistant',
-        content: 'Thanks! A recruiter will follow up shortly.',
-      },
+        role: 'assistant'
+        content: 'Thanks! A recruiter will follow up shortly.'
+      }
     ]);
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='min-h-full h-full w-full flex flex-col bg-white'>
       <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>
@@ -88,7 +100,6 @@ export default function Assistant() {;
     // Basic fallback
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
   }
-
   return (
     <div className="min-h-full h-full w-full flex flex-col bg-white">
       <div className="px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2">
@@ -140,8 +151,14 @@ export default function Assistant() {;
     </div>
 );
 }
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 }
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

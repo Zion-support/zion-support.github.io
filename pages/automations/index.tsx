@@ -1,9 +1,15 @@
-import type { NextPage } from 'next',;
-import Link from 'next/link',;
+import type { NextPage } from 'next';
+import Link from 'next/link';
+
 const AutomationsIndex: NextPage = () => {
   const items = [
+<<<<<<< HEAD
+    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
+    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
+=======
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -21,9 +27,13 @@ const AutomationsIndex: NextPage = () => {
       </div>
     </main>
   )
-},
+}
+export default AutomationsIndex;
 
+<<<<<<< HEAD
+=======
 export default AutomationsIndex,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         ))  } catch (error) {
     console.error("Error:", error);
@@ -35,4 +45,8 @@ export default AutomationsIndex,;
   );
 },;
 export default AutomationsIndex;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

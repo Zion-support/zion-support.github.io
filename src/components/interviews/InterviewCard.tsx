@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from "react"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -37,6 +39,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -48,11 +51,40 @@ import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
+<<<<<<< HEAD
+import { toast } from "@/components/ui/use-toast";
+import { InterviewResponseForm } from "./InterviewResponseForm";
+=======
 import { toast } from "@/components/ui/use-toast",
 import { InterviewResponseForm } from "./InterviewResponseForm",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface InterviewCardProps {
-  interview: Interview,
+
+  interview: Interview
+
   onRefresh: () => Promise<void>
+<<<<<<< HEAD
+}
+export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
+
+  const { user } = useAuth()
+  const { respondToInterview, cancelInterview } = useInterviews()
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const isClient = user?.id === interview.client_id
+  const isTalent = user?.id === interview.talent_id
+  const formattedEndTime = format(endTime, 'h: mm a')
+  const isInterviewPending = interview.status === 'requested'
+  const isInterviewConfirmed = interview.status === 'confirmed'
+  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
+        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>
+      default:
+        return <Badge>{interview.status}</Badge>
+}
+
+  )
+}
+=======
 import React, { useState } from "react",;
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -382,4 +414,8 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

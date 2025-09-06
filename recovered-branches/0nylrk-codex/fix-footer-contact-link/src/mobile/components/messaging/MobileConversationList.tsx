@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -8,14 +10,40 @@ import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Search } from "lucide-react",
+<<<<<<< HEAD
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+
+  id: string
+  name: string
+  avatar?: string;
+  lastMessage: string
+  timestamp: string
+  unreadCount: number
+
+  isTyping?: boolean
+}
+interface MobileConversationListProps {
+
+  conversations: Conversation[]
+
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void
+}
+=======
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Conversation {
   id: string,
   name: string,
@@ -24,6 +52,8 @@ interface Conversation {
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 }
 
@@ -37,6 +67,7 @@ export function MobileConversationList({;
   conversations;
   activeConversation;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -60,6 +91,7 @@ interface MobileConversationListProps {;
   onSelectConversation: (id: string) => void;
 }
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function MobileConversationList({
   conversations,
   activeConversation,
@@ -67,6 +99,7 @@ export function MobileConversationList({
   onSelectConversation
 }: MobileConversationListProps) {
   return (
+
     <div className="space-y-4">
       <div className="px-4 mb-2">
         <div className="relative">
@@ -90,7 +123,12 @@ export function MobileConversationList({
           <div
             key={conversation.id}
             className={cn(
+<<<<<<< HEAD
+              "px-4";
+
+=======
               "px-4",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -111,7 +149,11 @@ export function MobileConversationList({
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
+<<<<<<< HEAD
+                    {conversation.isTyping
+=======
                     {conversation.isTyping 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>

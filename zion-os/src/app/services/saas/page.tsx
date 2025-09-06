@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+export default function SAASServicesPage() {return (;
+=======
 export default function SAASServicesPage() {;
   return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 py-20">;
@@ -36,7 +40,11 @@ export default function SAASServicesPage() {;
               <div className="text-4xl mb-6">🛒</div>;
               <h2 className="text-3xl font-bold mb-4">Zion Marketplace</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
+                Complete marketplace solution with job boards, talent matching, project management;
+=======
                 Complete marketplace solution with job boards, talent matching, project management,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and integrated payment processing for modern business ecosystems.;
               </p>;
               <div className="space-y-4 mb-8">;
@@ -122,7 +130,11 @@ export default function SAASServicesPage() {;
               <div className="text-4xl mb-6">🪙</div>;
               <h2 className="text-3xl font-bold mb-4">Token Rewards System</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
+                Blockchain-based loyalty and rewards platform with gamification, community engagement;
+=======
                 Blockchain-based loyalty and rewards platform with gamification, community engagement,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and token economics for modern businesses and communities.;
               </p>;
               <div className="space-y-4 mb-8">;
@@ -208,7 +220,11 @@ export default function SAASServicesPage() {;
               <div className="text-4xl mb-6">🗳️</div>;
               <h2 className="text-3xl font-bold mb-4">DAO Governance Platform</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
+                Decentralized governance tools with proposal creation, voting mechanisms, treasury management;
+=======
                 Decentralized governance tools with proposal creation, voting mechanisms, treasury management,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and community governance for modern organizations.;
               </p>;
               <div className="space-y-4 mb-8">;

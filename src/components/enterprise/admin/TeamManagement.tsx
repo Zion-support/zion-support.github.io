@@ -1,4 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useState } from 'react'; import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogFooter
+  DialogHeader
+  DialogTitle
+  DialogTrigger
+=======
 import React, { useState } from 'react'; import {
 =======
 import {
@@ -19,6 +38,7 @@ import {
   DialogTitle,
 <<<<<<< HEAD
   DialogTrigger,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -26,7 +46,7 @@ import { Label } from '@/components/ui/label'
 import { Badge } from '@/components/ui/badge'
 import { Trash, Mail, UserPlus } from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
-  DialogTrigger} from "@/components/ui/dialog",
+  DialogTrigger} from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -35,7 +55,61 @@ import { toast } from "@/hooks/use-toast"
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false)
   const [newMemberEmail, setNewMemberEmail] = useState('')
+<<<<<<< HEAD
+  // Mock team members data
+  const teamMembers = [
+    {
+      id: 1
+      name: 'Alex Johnson'
+      email: 'alex@example.com'
+      role: 'Admin'
+      status: 'active'
+      lastActive: '2 hours ago'
+    }
+    {
+      id: 2
+      name: 'Jamie Smith'
+      email: 'jamie@example.com'
+      role: 'Recruiter'
+      status: 'active'
+      lastActive: 'Yesterday'
+    }
+    {
+      id: 3
+      name: 'Sam Williams'
+      email: 'sam@example.com'
+      role: 'Manager'
+      status: 'pending'
+      lastActive: 'Never'
+    }
+    {
+      id: 4
+      name: 'Taylor Brown'
+      email: 'taylor@example.com'
+      role: 'Viewer'
+      status: 'active'
+      lastActive: '3 days ago'
+    }
+  ]
 =======
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from '@/components/ui/table';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useState } from "react",
 import {
@@ -63,7 +137,10 @@ export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Mock team members data
   const teamMembers = [
     {
@@ -90,6 +167,8 @@ export function TeamManagement() {
     {
       id: 4,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       name: 'Taylor Brown',
       email: 'taylor@example.com',
       role: 'Viewer',
@@ -98,28 +177,51 @@ export function TeamManagement() {
     },
   ]
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       name: "Taylor Brown",
       email: "taylor@example.com",
       role: "Viewer",
       status: "active",
       lastActive: "3 days ago"}],
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
+        title: 'Email required'
+        description: 'Please enter an email address for the new team member.'
+        variant: 'destructive'
+      })
+=======
+        title: "Email required",
+        description: "Please enter an email address for the new team member.",
+        variant: "destructive"}),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      return
+=======
         title: 'Email required',
         description: 'Please enter an email address for the new team member.',
         variant: 'destructive',
       })
       return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
-
     toast({
+<<<<<<< HEAD
+<<<<<<< HEAD
+      title: 'Invitation sent'
+      description: `An invitation has been sent to ${newMemberEmail}`
+=======
       title: 'Invitation sent',
       description: `An invitation has been sent to ${newMemberEmail}`,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -127,17 +229,19 @@ export function TeamManagement() {
   const handleRemoveMember = (_memberId: number,) => {
     // In a real app, this would make an API call to remove the member
     toast({
-      title: 'Team member removed',
-      description: 'The team member has been removed from your workspace.',
+      title: 'Team member removed'
+      description: 'The team member has been removed from your workspace.'
     })
   }
   const handleResendInvite = (memberEmail: string,) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
-      title: 'Invitation resent',
-      description: `A new invitation has been sent to ${memberEmail}`,
+      title: 'Invitation resent'
+      description: `A new invitation has been sent to ${memberEmail}`
     })
   }
+=======
+<<<<<<< HEAD
 =======
         title: "Email required",
         description: "Please enter an email address for the new team member.",
@@ -146,6 +250,7 @@ export function TeamManagement() {
     }
 
     toast({
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -166,8 +271,12 @@ export function TeamManagement() {
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`})
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -207,7 +316,11 @@ export function TeamManagement() {
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="role" className="text-right">
@@ -238,7 +351,11 @@ export function TeamManagement() {
 =======
 
       <div className="rounded-md border">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Table>
           <TableHeader>
             <TableRow>
@@ -255,7 +372,11 @@ export function TeamManagement() {
 =======
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
@@ -270,7 +391,11 @@ export function TeamManagement() {
                           .map((n) => n[0])
                           .join("")}
                       </span>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                     <div>
                       <div className="font-medium">{member.name}</div>
@@ -288,7 +413,11 @@ export function TeamManagement() {
 =======
                     variant={member.status === "active" ? "default" : "outline"}
                   >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {member.status}
                   </Badge>
                 </TableCell>
@@ -308,7 +437,11 @@ export function TeamManagement() {
                         onClick={() => handleResendInvite(member.email)}
                       >
                         <Mail className="h-4 w-4 mr-1" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         Resend
                       </Button>
                     ) : (
@@ -524,7 +657,11 @@ export function TeamManagement() {;
                       >;
                         <Trash className="h-4 w-4" />;
                       </Button>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </div>
                 </TableCell>
@@ -543,20 +680,20 @@ export function TeamManagement() {;
 }>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded-md border"> <Table> <TableHeader> <TableRow> <TableHead>Name</TableHead> <TableHead>Role</TableHead> <TableHead>Status</TableHead> <TableHead>Last Active</TableHead> <TableHead className=" text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   teamMembers.map ( (member) => (<TableRow key= {
   member.id "
-}> <TableCell> .join ("") 
+}> <TableCell> .join ("")
 }</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
-  member.role 
+  member.role
 }</TableCell> <TableCell> <Badge > {
-  member.status 
+  member.status
 }</Badge> </TableCell> <TableCell> {
   member.lastActive "
 }</TableCell> <TableCell className="text-right"> onClick={
   () => handleResendInvite (member.email) "
 }> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={
   () => handleRemoveMember (member.id) "
-}> <Trash className="h-4 w-4" /> </Button>) 
-}</div> </TableCell> </TableRow>) ) 
-}</TableBody> </Table> </div> </div>) 
+}> <Trash className="h-4 w-4" /> </Button>)
+}</div> </TableCell> </TableRow>) )
+}</TableBody> </Table> </div> </div>)
 }'"}
 =======
           </TableBody>;
@@ -566,4 +703,8 @@ export function TeamManagement() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

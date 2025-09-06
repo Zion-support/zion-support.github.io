@@ -1,6 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  Menu
+  X
+  Home
+  Brain
+  Cpu
+  Rocket
+  Phone
+  Mail
+  MapPin
+  Globe
+  ChevronDown;
+} from 'lucide-react';
+import Link from 'next/link';import {
+  Menu, X, Home, Brain, Cpu, Rocket
+
+  Phone, Mail, MapPin, Globe, ChevronDown
+ } from 'lucide-react';
+=======
   Menu,
   X,
   Home,
@@ -17,99 +37,95 @@ import Link from 'next/link';import {
   Menu, X, Home, Brain, Cpu, Rocket, 
   Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from 'next/link';
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-    };
-
+    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
-    };
-
+    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-
   const navigationItems = [
     {
-      name: 'Home',
-      href: '/',
-      icon: Home,
+      name: 'Home'
+      href: '/'
+      icon: Home
     },    {      icon: Home
-    };
+    }
     {
-      name: 'Services',
-      href: '/services',
-      icon: Rocket,
+      name: 'Services'
+      href: '/services'
+      icon: Rocket
       dropdown: [
         {
-          name: 'AI Services',
-          href: '/ai-services',
-          icon: Brain,
-          description: 'Revolutionary AI solutions',
-        },
+          name: 'AI Services'
+          href: '/ai-services'
+          icon: Brain
+          description: 'Revolutionary AI solutions'
+        }
         {
-          name: 'IT Services',
-          href: '/it-services',
-          icon: Cpu,
-          description: 'Enterprise IT solutions',
-        },
+          name: 'IT Services'
+          href: '/it-services'
+          icon: Cpu
+          description: 'Enterprise IT solutions'
+        }
         {
-          name: 'Micro SaaS',
-          href: '/micro-saas',
-          icon: Rocket,
-          description: 'Specialized software solutions',
-        },
+          name: 'Micro SaaS'
+          href: '/micro-saas'
+          icon: Rocket
+          description: 'Specialized software solutions'
+        }
         {
-          name: 'Innovative Showcase',
-          href: '/innovative-services-showcase',
-          icon: Globe,
-          description: 'Cutting-edge technology',
-        },
-      ],
-    },
+          name: 'Innovative Showcase'
+          href: '/innovative-services-showcase'
+          icon: Globe
+          description: 'Cutting-edge technology'
+        }
+      ]
+    }
     {
-      name: 'Solutions',
-      href: '/solutions',
+      name: 'Solutions'
+      href: '/solutions'
       icon: Cpu,    {
-      name: 'Solutions',
-      href: '/solutions',
+      name: 'Solutions'
+      href: '/solutions'
       icon: Cpu
-    };
+    }
     {
-      name: 'About',
-      href: '/about',
+      name: 'About'
+      href: '/about'
       icon: Globe
-    };
+    }
     {
-      name: 'Contact',
-      href: '/contact',
-      icon: Phone,
-    },
+      name: 'Contact'
+      href: '/contact'
+      icon: Phone
+    }
     {
-      name: 'About',
-      href: '/about',
-      icon: Globe,
-    },
+      name: 'About'
+      href: '/about'
+      icon: Globe
+    }
     {
-      name: 'Contact',
-      href: '/contact',
-      icon: Phone,
+      name: 'Contact'
+      href: '/contact'
+      icon: Phone
     },  ];      icon: Phone
     }
   ];
-
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  };
-
+  }
   return (
     <>
       {/* Navigation Bar */}
@@ -187,7 +203,11 @@ import Link from 'next/link';
 =======
 
                       {/* Dropdown Menu */}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -199,12 +219,15 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
                                 const Icon = dropdownItem.icon;
-                                
                                   >
                                     <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>
                                       <Icon className='w-5 h-5 text-cyan-400' />
@@ -246,7 +269,11 @@ import Link from 'next/link';
 
                               })}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </div>
                           </motion.div>
                         )}
@@ -268,7 +295,11 @@ import Link from 'next/link';
 
                     </Link>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 </div>
               ))}
@@ -281,7 +312,11 @@ import Link from 'next/link';
             {/* CTA Button */}
             <div className='hidden lg:block'>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.a
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
@@ -320,7 +355,11 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -333,7 +372,11 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             {/* Backdrop */}
             <div
@@ -341,15 +384,26 @@ import Link from 'next/link';
               onClick={() => setIsOpen(false)}
             />          >
             {/* Backdrop */}
+<<<<<<< HEAD
+            <div
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              onClick={() => setIsOpen(false)}
+            />
+=======
             <div 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
 <<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
             
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile Menu */}
             <motion.div
               initial={{ x: '100%' }}
@@ -360,7 +414,11 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='p-6'>
                 {/* Close Button */}
@@ -399,7 +457,6 @@ import Link from 'next/link';
                           <div className='pl-4 space-y-2'>
                             {item.dropdown.map(dropdownItem => {
                               const Icon = dropdownItem.icon;
-                              
                                   onClick={() => setIsOpen(false)}
                                   className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                                 >
@@ -446,7 +503,11 @@ import Link from 'next/link';
 
                             })}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                         </div>
                       ) : (
@@ -468,7 +529,11 @@ import Link from 'next/link';
 
                         </Link>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                     </div>
                   ))}
@@ -476,7 +541,11 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -488,7 +557,11 @@ import Link from 'next/link';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
@@ -531,13 +604,24 @@ import Link from 'next/link';
       </AnimatePresence>
     </>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Navigation;  )
-};
-
+}
 export default Navigation;
+
+<<<<<<< HEAD
+=======
+export default Navigation;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 export default Navigation;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

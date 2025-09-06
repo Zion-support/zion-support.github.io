@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react',
+=======
 import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
 import {
   Menu,
   ChevronDown,
@@ -61,11 +67,77 @@ import {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+import {
+  Menu
+  ChevronDown
+  X
+  Phone
+  Mail
+  ArrowRight
+  Brain
+  Rocket
+  Target
+  Atom
+  Shield
+  DollarSign
+  BarChart3
+  Globe
+  Grid
+  Heart
+  Database
+  Cpu
+  Palette
+  Cloud
+  Network
+  TrendingUp
+  ShoppingCart
+  Settings
+  Building
+  Monitor
+  Zap
+  Eye
+  Infinity
+  Sparkles
+  Users
+  Lock
+  Code
+  Server
+  Layers
+  Globe2
+  Star
+  Award
+  Clock
+  CheckCircle
+  Zap as ZapIcon
+  Phone as PhoneIcon
+  Search
+  User
+  Bell
+  Cog
+  LogOut
+  Home
+  Info
+  FileText
+  Users as UsersIcon
+  Bot
+  MessageCircle
+  Linkedin
+  Twitter
+  Github
+  Youtube
+  MapPin;
+} from 'lucide-react';
 interface NavigationItem {
   name: string;
+<<<<<<< HEAD
+  href: string;  icon?: React.ReactNode;import {
+=======
   href: string;  icon?: React.ReactNode;import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
+
   Brain, Rocket, Target, Atom, Shield;
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
@@ -73,11 +145,12 @@ interface NavigationItem {
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
-} from 'lucide-react';
 
+} from 'lucide-react';
 interface NavigationItem {
-  name: string,
-  href: string,
+  name: string
+  href: string
+
   description?: string;
   children?: NavigationItem[];
   badge?: string;
@@ -85,99 +158,438 @@ interface NavigationItem {
   featured?: boolean;
   category?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+  color?: string
+}
+=======
+  color?: string;
+=======
   color?: string;  color?: string
 }
 =======
   color?: string;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Home & Core',
-    href: '/',
-    icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information',
-    category: 'core',
-    color: 'from-emerald-500 to-cyan-500',
+
+    name: 'Home & Core'
+    href: '/'
+    icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information'
+    category: 'core'
+    color: 'from-emerald-500 to-cyan-500'
     children: [
-      {    icon: <Home className="w-5 h-5" />,
+      {    icon: <Home className="w-5 h-5" />
+    description: 'Main pages and core information'
+    category: 'core'
+    color: 'from-emerald-500 to-cyan-500'
+    children: [
+      {
+<<<<<<< HEAD
+        name: 'Home'
+        href: '/'
+        description: 'Main homepage'
+        icon: <Home className='w-4 h-4' />
+        color: 'from-emerald-500 to-cyan-500'
+        featured: true
+      }
+      {
+        name: 'About Us'
+        href: '/about'
+        description: 'Company information and mission'
+        icon: <Info className='w-4 h-4' />
+        color: 'from-blue-500 to-cyan-500'
+      }
+      {
+        name: 'Contact'
+        href: '/contact'
+        description: 'Get in touch with our team'
+        icon: <Mail className='w-4 h-4' />
+        color: 'from-purple-500 to-pink-500'
+      }
+      {
+        name: 'Team'
+        href: '/team'
+        description: 'Meet our leadership team'
+        icon: <Users className='w-4 h-4' />
+        color: 'from-orange-500 to-red-500'
+      }
+    ]
+  }
+  {
+    name: 'AI & Technology Services'
+    href: '/services'
+    icon: <Brain className='w-5 h-5' />,    description: 'Advanced AI and technology solutions',        name: 'Home'
+        href: '/'
+        description: 'Main homepage'
+        icon: <Home className="w-4 h-4" />
+        color: 'from-emerald-500 to-cyan-500'
+        featured: true
+      }
+      {
+        name: 'About Us'
+        href: '/about'
+        description: 'Company information and mission'
+        icon: <Info className="w-4 h-4" />
+        color: 'from-blue-500 to-cyan-500'
+      }
+      {
+        name: 'Contact'
+        href: '/contact'
+        description: 'Get in touch with our team'
+        icon: <Mail className="w-4 h-4" />
+        color: 'from-purple-500 to-pink-500'
+      }
+      {
+        name: 'Team'
+        href: '/team'
+        description: 'Meet our leadership team'
+        icon: <Users className="w-4 h-4" />
+        color: 'from-orange-500 to-red-500'
+      }
+    ]
+  }
+  {
+    name: 'AI & Technology Services'
+    href: '/services'
+    icon: <Brain className="w-5 h-5" />
+    description: 'Advanced AI and technology solutions'
+    badge: 'Featured'
+    category: 'services'
+    color: 'from-purple-500 to-pink-500'
+    children: [
+      {
+        name: 'All Services'
+        href: '/services'
+        description: 'Complete services overview'
+        icon: <Grid className='w-4 h-4' />
+        featured: true
+      }
+      {
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-2029'
+        description: 'Next-generation AI consciousness'
+        icon: <Brain className='w-4 h-4' />
+        color: 'from-purple-500 to-pink-500'
+        featured: true
+      }
+      {
+        name: 'Quantum Neural Networks'
+        href: '/quantum-neural-network-platform'
+        description: 'Quantum-powered AI neural networks'
+        icon: <Atom className='w-4 h-4' />
+        color: 'from-blue-500 to-cyan-500'
+        featured: true
+      }
+      {
+        name: 'Autonomous Business Operations'
+        href: '/autonomous-business-operations-platform'
+        description: 'AI-powered business automation'
+        icon: <Bot className='w-4 h-4' />
+        color: 'from-emerald-500 to-teal-500'
+      }
+      {
+        name: 'IT Asset Management'
+        href: '/ai-powered-it-asset-management'
+        description: 'AI-powered IT infrastructure management'
+        icon: <Monitor className='w-4 h-4' />
+        color: 'from-indigo-500 to-purple-500'
+      }
+    ]
+  }
+  {
+    name: 'Advanced Solutions'
+    href: '/solutions'
+    icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions'
+    category: 'solutions'
+    color: 'from-blue-500 to-cyan-500'
+    children: [
+      {        name: 'All Services'
+        href: '/services'
+        description: 'Complete services overview'
+        icon: <Grid className="w-4 h-4" />
+        featured: true
+      }
+      {
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-2029'
+        description: 'Next-generation AI consciousness'
+        icon: <Brain className="w-4 h-4" />
+        color: 'from-purple-500 to-pink-500'
+        featured: true
+      }
+      {
+        name: 'Quantum Neural Networks'
+        href: '/quantum-neural-network-platform'
+        description: 'Quantum-powered AI neural networks'
+        icon: <Atom className="w-4 h-4" />
+        color: 'from-blue-500 to-cyan-500'
+        featured: true
+      }
+      {
+        name: 'Autonomous Business Operations'
+        href: '/autonomous-business-operations-platform'
+        description: 'AI-powered business automation'
+        icon: <Bot className="w-4 h-4" />
+        color: 'from-emerald-500 to-teal-500'
+      }
+      {
+        name: 'IT Asset Management'
+        href: '/ai-powered-it-asset-management'
+        description: 'AI-powered IT infrastructure management'
+        icon: <Monitor className="w-4 h-4" />
+        color: 'from-indigo-500 to-purple-500'
+      }
+    ]
+  }
+  {
+    name: 'Advanced Solutions'
+    href: '/solutions'
+    icon: <Rocket className="w-5 h-5" />
+    description: 'Cutting-edge technology solutions'
+    category: 'solutions'
+    color: 'from-blue-500 to-cyan-500'
+    children: [
+      {
+        name: 'Solutions Overview'
+        href: '/solutions'
+        description: 'Complete solutions overview'
+        icon: <Rocket className='w-4 h-4' />
+        featured: true
+      }
+      {
+        name: 'Blockchain Solutions'
+        href: '/blockchain-solutions'
+        description: 'Advanced blockchain technology'
+        icon: <Database className='w-4 h-4' />
+        color: 'from-emerald-500 to-teal-500'
+      }
+      {
+        name: 'IoT Platforms'
+        href: '/iot-platforms'
+        description: 'Internet of Things solutions'
+        icon: <Network className='w-4 h-4' />
+        color: 'from-blue-500 to-cyan-500'
+      }
+      {
+        name: 'Space Technology'
+        href: '/space-tech'
+        description: 'Space technology innovations'
+        icon: <Globe2 className='w-4 h-4' />
+        color: 'from-purple-500 to-pink-500'
+      }
+    ]
+  }
+  {
+    name: 'Resources & Insights'
+    href: '/blog'
+    icon: <FileText className='w-5 h-5' />,    description: 'Knowledge base and insights'
+    category: 'resources'
+    color: 'from-orange-500 to-red-500'
+    children: [
+      {        name: 'Solutions Overview'
+        href: '/solutions'
+        description: 'Complete solutions overview'
+        icon: <Rocket className="w-4 h-4" />
+        featured: true
+      }
+      {
+        name: 'Blockchain Solutions'
+        href: '/blockchain-solutions'
+        description: 'Advanced blockchain technology'
+        icon: <Database className="w-4 h-4" />
+        color: 'from-emerald-500 to-teal-500'
+      }
+      {
+        name: 'IoT Platforms'
+        href: '/iot-platforms'
+        description: 'Internet of Things solutions'
+        icon: <Network className="w-4 h-4" />
+        color: 'from-blue-500 to-cyan-500'
+      }
+      {
+        name: 'Space Technology'
+        href: '/space-tech'
+        description: 'Space technology innovations'
+        icon: <Globe2 className="w-4 h-4" />
+        color: 'from-purple-500 to-pink-500'
+      }
+    ]
+  }
+  {
+    name: 'Resources & Insights'
+    href: '/blog'
+    icon: <FileText className="w-5 h-5" />
+    description: 'Knowledge base and insights'
+    category: 'resources'
+    color: 'from-orange-500 to-red-500'
+    children: [
+      {
+        name: 'Blog & Articles'
+        href: '/blog'
+        description: 'Latest insights and articles'
+        icon: <FileText className='w-4 h-4' />
+        featured: true
+      }
+      {
+        name: 'Technology Insights'
+        href: '/technology-insights'
+        description: 'Technology trends and analysis'
+        icon: <TrendingUp className='w-4 h-4' />
+        color: 'from-blue-500 to-cyan-500'
+      }
+      {
+        name: 'Case Studies'
+        href: '/case-studies'
+        description: 'Success stories and implementations'
+        icon: <Star className='w-4 h-4' />
+        color: 'from-yellow-500 to-orange-500'
+      }
+      {
+        name: 'White Papers'
+        href: '/white-papers'
+        description: 'In-depth research and analysis'
+        icon: <FileText className='w-4 h-4' />
+        color: 'from-gray-500 to-slate-500'
+      }
+    ]
+  }
+  {
+    name: 'Company & Support'
+    href: '/about'
+    icon: <Building className='w-5 h-5' />,    description: 'Company information and support'
+    category: 'company'
+    color: 'from-gray-500 to-slate-500'
+    children: [
+      {        name: 'Blog & Articles'
+        href: '/blog'
+        description: 'Latest insights and articles'
+        icon: <FileText className="w-4 h-4" />
+        featured: true
+      }
+      {
+        name: 'Technology Insights'
+        href: '/technology-insights'
+        description: 'Technology trends and analysis'
+        icon: <TrendingUp className="w-4 h-4" />
+        color: 'from-blue-500 to-cyan-500'
+      }
+      {
+        name: 'Case Studies'
+        href: '/case-studies'
+        description: 'Success stories and implementations'
+        icon: <Star className="w-4 h-4" />
+        color: 'from-yellow-500 to-orange-500'
+      }
+      {
+        name: 'White Papers'
+        href: '/white-papers'
+        description: 'In-depth research and analysis'
+        icon: <FileText className="w-4 h-4" />
+        color: 'from-gray-500 to-slate-500'
+      }
+    ]
+  }
+  {
+    name: 'Company & Support'
+    href: '/about'
+    icon: <Building className="w-5 h-5" />
+    description: 'Company information and support'
+    category: 'company'
+    color: 'from-gray-500 to-slate-500'
+    children: [
+      {
+        href: '/about'
+        description: 'Our story and mission'
+        icon: <Info className='w-4 h-4' />
+        featured: true
+      }
+      {
+        name: 'Careers'
+        href: '/careers'
+        description: 'Join our team'
+        icon: <Users className='w-4 h-4' />
+        color: 'from-green-500 to-emerald-500'
+      }
+      {
+        name: 'Support'
+        href: '/support'
+        description: 'Get help and support'
+        icon: <MessageCircle className='w-4 h-4' />
+        color: 'from-blue-500 to-cyan-500'
+      }
+      {
+        name: 'Privacy Policy'
+        href: '/privacy'
+        description: 'Privacy and data protection'
+        icon: <Shield className='w-4 h-4' />
+        color: 'from-red-500 to-pink-500'
+      }
+    ]
+  },];        icon: <Shield className="w-4 h-4" />
+        color: 'from-red-500 to-pink-500'
+      }
+    ]
+  }
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const socialLinks = [
+  {
+    name: 'LinkedIn'
+    href: 'https://linkedin.com/company/ziontechgroup'
+    icon: Linkedin
+    color: 'hover:text-blue-400'
+  }
+  {
+    name: 'Twitter'
+    href: 'https://twitter.com/ziontechgroup'
+    icon: Twitter
+    color: 'hover:text-sky-400'
+  }
+  {
+    name: 'GitHub'
+    href: 'https://github.com/Zion-Holdings'
+    icon: Github
+    color: 'hover:text-gray-400'
+  }
+  {
+    name: 'YouTube'
+    href: 'https://youtube.com/@ziontechgroup'
+    icon: Youtube
+    color: 'hover:text-red-500'
+  },];  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
+const UltraFuturisticNavigation2047 = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+  const handleDropdownToggle = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
+  }
+=======
+
     description: 'Main pages and core information',
     category: 'core',
     color: 'from-emerald-500 to-cyan-500',
     children: [
-      {
-        name: 'Home',
-        href: '/',
-        description: 'Main homepage',
-        icon: <Home className='w-4 h-4' />,
-        color: 'from-emerald-500 to-cyan-500',
-        featured: true,
-      },
-      {
-        name: 'About Us',
-        href: '/about',
-        description: 'Company information and mission',
-        icon: <Info className='w-4 h-4' />,
-        color: 'from-blue-500 to-cyan-500',
-      },
-      {
-        name: 'Contact',
-        href: '/contact',
-        description: 'Get in touch with our team',
-        icon: <Mail className='w-4 h-4' />,
-        color: 'from-purple-500 to-pink-500',
-      },
-      {
-        name: 'Team',
-        href: '/team',
-        description: 'Meet our leadership team',
-        icon: <Users className='w-4 h-4' />,
-        color: 'from-orange-500 to-red-500',
-      },
-    ],
-  },
-  {
-    name: 'AI & Technology Services',
-    href: '/services',
-    icon: <Brain className='w-5 h-5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',
-        href: '/',
-        description: 'Main homepage',
-        icon: <Home className="w-4 h-4" />,
-        color: 'from-emerald-500 to-cyan-500',
-        featured: true
-      };
-      { 
-        name: 'About Us',
-        href: '/about',
-        description: 'Company information and mission',
-        icon: <Info className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
-      };
-      { 
-        name: 'Contact',
-        href: '/contact',
-        description: 'Get in touch with our team',
-        icon: <Mail className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
-      };
-      { 
-        name: 'Team',
-        href: '/team',
-        description: 'Meet our leadership team',
-        icon: <Users className="w-4 h-4" />,
-        color: 'from-orange-500 to-red-500'
-      }
-    ]
-  };
-  {
-    name: 'AI & Technology Services',
-    href: '/services',
-    icon: <Brain className="w-5 h-5" />,
+
     description: 'Advanced AI and technology solutions',
+
     badge: 'Featured',
     category: 'services',
     color: 'from-purple-500 to-pink-500',
     children: [
       {
+
         name: 'All Services',
         href: '/services',
         description: 'Complete services overview',
@@ -223,200 +635,24 @@ const navigationItems: NavigationItem[] = [
     category: 'solutions',
     color: 'from-blue-500 to-cyan-500',
     children: [
-      {        name: 'All Services',
-        href: '/services',
-        description: 'Complete services overview',
-        icon: <Grid className="w-4 h-4" />,
-        featured: true
-      };
-      { 
-        name: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution-2029',
-        description: 'Next-generation AI consciousness',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500',
-        featured: true
-      };
-      { 
-        name: 'Quantum Neural Networks',
-        href: '/quantum-neural-network-platform',
-        description: 'Quantum-powered AI neural networks',
-        icon: <Atom className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500',
-        featured: true
-      };
-      { 
-        name: 'Autonomous Business Operations',
-        href: '/autonomous-business-operations-platform',
-        description: 'AI-powered business automation',
-        icon: <Bot className="w-4 h-4" />,
-        color: 'from-emerald-500 to-teal-500'
-      };
-      { 
-        name: 'IT Asset Management',
-        href: '/ai-powered-it-asset-management',
-        description: 'AI-powered IT infrastructure management',
-        icon: <Monitor className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
-      }
-    ]
-  };
-  {
-    name: 'Advanced Solutions',
-    href: '/solutions',
-    icon: <Rocket className="w-5 h-5" />,
+      {
+
     description: 'Cutting-edge technology solutions',
     category: 'solutions',
     color: 'from-blue-500 to-cyan-500',
     children: [
-      {
-        name: 'Solutions Overview',
-        href: '/solutions',
-        description: 'Complete solutions overview',
-        icon: <Rocket className='w-4 h-4' />,
-        featured: true,
-      },
-      {
-        name: 'Blockchain Solutions',
-        href: '/blockchain-solutions',
-        description: 'Advanced blockchain technology',
-        icon: <Database className='w-4 h-4' />,
-        color: 'from-emerald-500 to-teal-500',
-      },
-      {
-        name: 'IoT Platforms',
-        href: '/iot-platforms',
-        description: 'Internet of Things solutions',
-        icon: <Network className='w-4 h-4' />,
-        color: 'from-blue-500 to-cyan-500',
-      },
-      {
-        name: 'Space Technology',
-        href: '/space-tech',
-        description: 'Space technology innovations',
-        icon: <Globe2 className='w-4 h-4' />,
-        color: 'from-purple-500 to-pink-500',
-      },
-    ],
-  },
-  {
-    name: 'Resources & Insights',
-    href: '/blog',
-    icon: <FileText className='w-5 h-5' />,    description: 'Knowledge base and insights',
-    category: 'resources',
-    color: 'from-orange-500 to-red-500',
-    children: [
-      {        name: 'Solutions Overview',
-        href: '/solutions',
-        description: 'Complete solutions overview',
-        icon: <Rocket className="w-4 h-4" />,
-        featured: true
-      };
-      { 
-        name: 'Blockchain Solutions',
-        href: '/blockchain-solutions',
-        description: 'Advanced blockchain technology',
-        icon: <Database className="w-4 h-4" />,
-        color: 'from-emerald-500 to-teal-500'
-      };
-      { 
-        name: 'IoT Platforms',
-        href: '/iot-platforms',
-        description: 'Internet of Things solutions',
-        icon: <Network className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
-      };
-      { 
-        name: 'Space Technology',
-        href: '/space-tech',
-        description: 'Space technology innovations',
-        icon: <Globe2 className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
-      }
-    ]
-  };
-  {
-    name: 'Resources & Insights',
-    href: '/blog',
-    icon: <FileText className="w-5 h-5" />,
+
     description: 'Knowledge base and insights',
     category: 'resources',
     color: 'from-orange-500 to-red-500',
     children: [
-      {
-        name: 'Blog & Articles',
-        href: '/blog',
-        description: 'Latest insights and articles',
-        icon: <FileText className='w-4 h-4' />,
-        featured: true,
-      },
-      {
-        name: 'Technology Insights',
-        href: '/technology-insights',
-        description: 'Technology trends and analysis',
-        icon: <TrendingUp className='w-4 h-4' />,
-        color: 'from-blue-500 to-cyan-500',
-      },
-      {
-        name: 'Case Studies',
-        href: '/case-studies',
-        description: 'Success stories and implementations',
-        icon: <Star className='w-4 h-4' />,
-        color: 'from-yellow-500 to-orange-500',
-      },
-      {
-        name: 'White Papers',
-        href: '/white-papers',
-        description: 'In-depth research and analysis',
-        icon: <FileText className='w-4 h-4' />,
-        color: 'from-gray-500 to-slate-500',
-      },
-    ],
-  },
-  {
-    name: 'Company & Support',
-    href: '/about',
-    icon: <Building className='w-5 h-5' />,    description: 'Company information and support',
-    category: 'company',
-    color: 'from-gray-500 to-slate-500',
-    children: [
-      {        name: 'Blog & Articles',
-        href: '/blog',
-        description: 'Latest insights and articles',
-        icon: <FileText className="w-4 h-4" />,
-        featured: true
-      };
-      { 
-        name: 'Technology Insights',
-        href: '/technology-insights',
-        description: 'Technology trends and analysis',
-        icon: <TrendingUp className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
-      };
-      { 
-        name: 'Case Studies',
-        href: '/case-studies',
-        description: 'Success stories and implementations',
-        icon: <Star className="w-4 h-4" />,
-        color: 'from-yellow-500 to-orange-500'
-      };
-      { 
-        name: 'White Papers',
-        href: '/white-papers',
-        description: 'In-depth research and analysis',
-        icon: <FileText className="w-4 h-4" />,
-        color: 'from-gray-500 to-slate-500'
-      }
-    ]
-  };
-  {
-    name: 'Company & Support',
-    href: '/about',
-    icon: <Building className="w-5 h-5" />,
+
     description: 'Company information and support',
     category: 'company',
     color: 'from-gray-500 to-slate-500',
     children: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       {
         href: '/about',
@@ -453,70 +689,25 @@ const navigationItems: NavigationItem[] = [
   }
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-const socialLinks = [
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin,
-    color: 'hover:text-blue-400',
-  },
-  {
-    name: 'Twitter',
-    href: 'https://twitter.com/ziontechgroup',
-    icon: Twitter,
-    color: 'hover:text-sky-400',
-  },
-  {
-    name: 'GitHub',
-    href: 'https://github.com/Zion-Holdings',
-    icon: Github,
-    color: 'hover:text-gray-400',
-  },
-  {
-    name: 'YouTube',
-    href: 'https://youtube.com/@ziontechgroup',
-    icon: Youtube,
-    color: 'hover:text-red-500',
-  },];  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
-
-const UltraFuturisticNavigation2047 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
-  const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
   };
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
         setActiveDropdown(null);      }
-    };
-
+    }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);        setActiveDropdown(null)
       }
-    };
-
+    }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+<<<<<<< HEAD
   }, []);
-
   return (
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -528,7 +719,6 @@ const UltraFuturisticNavigation2047 = () => {
                 <Rocket className='w-5 h-5 text-white' />
               </div>
               <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>                Zion Tech Group  }, []);
-
   return (
     <nav className="relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -540,6 +730,14 @@ const UltraFuturisticNavigation2047 = () => {
                 <Rocket className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+=======
+
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Zion Tech Group
               </span>
             </Link>
@@ -573,7 +771,11 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className='space-y-4'>
                         {item.children?.map(child => (
@@ -584,7 +786,7 @@ const UltraFuturisticNavigation2047 = () => {
                             onClick={closeMenu}
                           >
                             <div
-                              className={`p-2 rounded-lg bg-gradient-to-r ${child.color || 'from-gray-500 to-slate-500'}`}
+                              className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-slate-500'}`}
                             >
                               {child.icon}
                             </div>
@@ -609,7 +811,7 @@ const UltraFuturisticNavigation2047 = () => {
                             className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200"
                             onClick={closeMenu}
                           >
-                            <div className={`p-2 rounded-lg bg-gradient-to-r ${child.color || 'from-gray-500 to-slate-500'}`}>
+                            <div className={`p-2 rounded-lg bg-gradient-to-r ${child.color |'from-gray-500 to-slate-500'}`}>
                               {child.icon}
                             </div>
                             <div className="flex-1">
@@ -628,7 +830,11 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </Link>
                         ))}
                       </div>
@@ -641,7 +847,11 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>
             <div className='flex items-center space-x-4 text-sm text-gray-400'>
@@ -660,7 +870,11 @@ const UltraFuturisticNavigation2047 = () => {
 =======
 
                 <span>{contactInfo.mobile}</span>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </a>
             </div>
             <Link
@@ -702,7 +916,11 @@ const UltraFuturisticNavigation2047 = () => {
 
               )}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </button>
           </div>
         </div>
@@ -710,7 +928,11 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -723,7 +945,11 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
@@ -764,7 +990,11 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         {item.children?.map(child => (
                           <Link
@@ -783,7 +1013,11 @@ const UltraFuturisticNavigation2047 = () => {
 
                             onClick={closeMenu}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           >
                             {child.name}
                           </Link>
@@ -793,7 +1027,10 @@ const UltraFuturisticNavigation2047 = () => {
                   </AnimatePresence>
                 </div>
               ))}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>
                 <div className='px-3 py-2 text-sm text-gray-400'>
@@ -864,13 +1101,24 @@ const UltraFuturisticNavigation2047 = () => {
       </AnimatePresence>
     </nav>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticNavigation2047;  )
-};
-
+}
 export default UltraFuturisticNavigation2047;
+
+<<<<<<< HEAD
+=======
+export default UltraFuturisticNavigation2047;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 export default UltraFuturisticNavigation2047;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,46 +1,56 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from "react";
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 import React from 'react'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const features = [
   {
-    title: 'Private Hiring Portal',
+    title: 'Private Hiring Portal'
     description:
-      'Create a secure, private hiring portal accessible only to your team members.',
-    icon: Shield,
-  },
+      'Create a secure, private hiring portal accessible only to your team members.'
+    icon: Shield
+  }
   {
-    title: 'Dedicated Talent Pool',
+    title: 'Dedicated Talent Pool'
     description:
-      'Access to a curated pool of pre-vetted talent matched to your industry and needs.',
-    icon: Users,
-  },
+      'Access to a curated pool of pre-vetted talent matched to your industry and needs.'
+    icon: Users
+  }
   {
-    title: 'Custom SLA',
+    title: 'Custom SLA'
     description:
-      'Get guaranteed response times and dedicated support with our custom SLAs.',
-    icon: Award,
-  },
+      'Get guaranteed response times and dedicated support with our custom SLAs.'
+    icon: Award
+  }
   {
-    title: 'Branded Onboarding',
+    title: 'Branded Onboarding'
     description:
-      'Customize the onboarding experience with your company branding and messaging.',
-    icon: Briefcase,
-  },
+      'Customize the onboarding experience with your company branding and messaging.'
+    icon: Briefcase
+  }
   {
-    title: 'Admin Dashboards',
+    title: 'Admin Dashboards'
     description:
-      'Powerful analytics and management tools for team leaders and administrators.',
-    icon: Settings,
-  },
+      'Powerful analytics and management tools for team leaders and administrators.'
+    icon: Settings
+  }
   {
-    title: 'Global Access',
+    title: 'Global Access'
     description:
-      'Connect with talent across multiple regions with localized interfaces.',
-    icon: Globe,
-  },
+      'Connect with talent across multiple regions with localized interfaces.'
+    icon: Globe
+  }
 ]
+
 export function EnterpriseFeatures() {
   return (
     <section id='features' className='py-20 px-4 md:px-6 bg-muted/50'>
@@ -79,6 +89,15 @@ export function EnterpriseFeatures() {
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
+<<<<<<< HEAD
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
             </div>
@@ -200,4 +219,8 @@ export function EnterpriseFeatures() {;
 =======
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

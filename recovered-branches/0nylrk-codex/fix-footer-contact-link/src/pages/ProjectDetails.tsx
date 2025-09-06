@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -20,6 +24,30 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
+<<<<<<< HEAD
+function ProjectDetailsContent() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { projectId } = useParams() as { projectId?: string }
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const { getProjectById, updateProjectStatus } = useProjects();
+  const [project, setProject] = useState<Project | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [notes, setNotes] = useState<any[]>([]);
+  const [newNote, setNewNote] = useState("");
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
+  const [activeTab, setActiveTab] = useState("details");
+  // Load project data
+  useEffect(() => {
+    async function loadProject() {
+      if (!projectId) return;
+      setIsLoading(true);
+      const projectData = await getProjectById(projectId);
+      if (projectData) {
+        setProject(projectData);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
@@ -71,7 +99,10 @@ import {
   Video,
   User,
   XCircle} from "lucide-react",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -99,13 +130,14 @@ function ProjectDetailsContent() {
       if (projectData) {
         setProject(projectData),
         
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
-          title: "Project not found",
-          description: "The requested project could not be found.",
-          variant: "destructive"}),
+          title: "Project not found"
+          description: "The requested project could not be found."
+          variant: "destructive"})
         navigate("/dashboard")
 <<<<<<< HEAD
 =======
@@ -188,15 +220,23 @@ function ProjectDetailsContent() {;
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
-      
       setIsLoading(false)
     }
+<<<<<<< HEAD
+    loadProject()
+  }, [projectId]);
+=======
     
     loadProject()
   }, [projectId]),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase
@@ -206,6 +246,18 @@ function ProjectDetailsContent() {;
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
+<<<<<<< HEAD
+        .order("created_at", { ascending: false })
+      if (error) throw error;
+      setNotes(data |[])
+    } catch (err) {
+      console.error("Error fetching project notes:", err)
+    }
+  }
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() |!project |!user) return;
+    setIsSubmittingNote(true);
+=======
         .order("created_at", { ascending: false }),
       
       if (error) throw error,
@@ -221,13 +273,21 @@ function ProjectDetailsContent() {;
     
     setIsSubmittingNote(true),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     try {
       const { data, error } = await supabase
         .from("project_notes")
         .insert({
-          project_id: project.id,
-          user_id: user.id,
+          project_id: project.id
+          user_id: user.id
           content: newNote})
+<<<<<<< HEAD
+        .select();
+      if (error) throw error;
+      // Refresh notes
+      fetchProjectNotes(project.id);
+      setNewNote("");
+=======
         .select(),
       
       if (error) throw error,
@@ -236,18 +296,29 @@ function ProjectDetailsContent() {;
       fetchProjectNotes(project.id),
       setNewNote(""),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
-        title: "Note added",
+        title: "Note added"
         description: "Your note has been added to the project."})
     } catch (err: any) {
       console.error("Error adding note:", err),
       toast({
-        title: "Failed to add note",
-        description: err.message || "An error occurred while adding your note.",
+        title: "Failed to add note"
+        description: err.message |"An error occurred while adding your note."
         variant: "destructive"})
     } finally {
       setIsSubmittingNote(false)
     }
+<<<<<<< HEAD
+  }
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return
+    const success = await updateProjectStatus(project.id, newStatus);
+    if (success) {
+      setProject({
+        ...project;
+        status: newStatus})
+=======
   },
   
   const handleStatusChange = async (newStatus: ProjectStatus) => {
@@ -260,15 +331,20 @@ function ProjectDetailsContent() {;
         ...project,
         status: newStatus}),
       
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
-          title: "Offer Accepted! 🎉",
+          title: "Offer Accepted! 🎉"
           description: "The project is now in progress. Congratulations!"})
       }
     }
+<<<<<<< HEAD
+  }
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
@@ -281,12 +357,16 @@ function ProjectDetailsContent() {;
       case "completed":
         return <Badge variant="default">Completed</Badge>,
       case "canceled":
-        return <Badge variant="destructive">Canceled</Badge>,
+        return <Badge variant="destructive">Canceled</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+<<<<<<< HEAD
+  }
+=======
   },
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">
@@ -299,7 +379,6 @@ function ProjectDetailsContent() {;
       </div>
     )
   }
-  
   if (!project) {
     return (
       <div className="container mx-auto py-8">
@@ -318,24 +397,35 @@ function ProjectDetailsContent() {;
       </div>
     )
   }
-  
   // Check if user is either the client or the talent
+<<<<<<< HEAD
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+=======
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isClient && !isTalent) {
     navigate("/unauthorized"),
     return null
   }
+<<<<<<< HEAD
+  const isOfferPending = project.status === "offer_sent";
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+
+=======
   
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
-      <SEO 
-        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
+      <SEO
+        title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
         description="View and manage your project details and collaboration."
       />
       <AppHeader />
@@ -343,7 +433,7 @@ function ProjectDetailsContent() {;
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
             <div>
-              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
+              <h1 className="text-3xl font-bold">{project.job?.title |"Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
                 {getStatusBadge(project.status)}
                 <span className="text-muted-foreground">
@@ -365,7 +455,7 @@ function ProjectDetailsContent() {;
                       <AlertDialogHeader>
                         <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
                         <AlertDialogDescription>
-                          By accepting this offer, you agree to the project terms and timeline. 
+                          By accepting this offer, you agree to the project terms and timeline.
                           This will initiate the contract and start the project.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
@@ -382,8 +472,7 @@ function ProjectDetailsContent() {;
                   </Button>
                 </>
               )}
-              
-              {(isClient || isTalent) && project.status === "in_progress" && (
+              {(isClient |isTalent) && project.status === "in_progress" && (
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
@@ -394,7 +483,7 @@ function ProjectDetailsContent() {;
                     <AlertDialogHeader>
                       <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle>
                       <AlertDialogDescription>
-                        This will finalize the project and mark it as complete. 
+                        This will finalize the project and mark it as complete.
                         Make sure all deliverables have been provided and approved.
                       </AlertDialogDescription>
                     </AlertDialogHeader>
@@ -407,7 +496,6 @@ function ProjectDetailsContent() {;
                   </AlertDialogContent>
                 </AlertDialog>
               )}
-              
               {isActiveProject && (
                 <Button variant="default" asChild>
                   <Link to={`/project/${project.id}/milestones`}>
@@ -415,7 +503,6 @@ function ProjectDetailsContent() {;
                   </Link>
                 </Button>
               )}
-
               {isActiveProject && (
                 <Button variant="outline" asChild>
                   <Link to={`/project/${project.id}/room`}>
@@ -423,10 +510,9 @@ function ProjectDetailsContent() {;
                   </Link>
                 </Button>
               )}
-              
-              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
-                <Button 
-                  variant="outline" 
+              {(isClient |isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
+                <Button
+                  variant="outline"
                   onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
                 >
                   <MessageSquare className="mr-2 h-4 w-4" /> Message
@@ -573,7 +659,7 @@ function ProjectDetailsContent() {;
                                   )}
                                 </Avatar>
                                 <span className="font-medium text-sm">
-                                  {note.created_by_profile?.display_name || "User"}
+                                  {note.created_by_profile?.display_name |"User"}
                                 </span>
                                 <span className="text-xs text-muted-foreground">
                                   {format(new Date(note.created_at), "PPp")}
@@ -601,7 +687,7 @@ function ProjectDetailsContent() {;
                           />
                           <Button
                             onClick={handleSubmitNote}
-                            disabled={!newNote.trim() || isSubmittingNote}
+                            disabled={!newNote.trim() |isSubmittingNote}
                           >
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
@@ -636,10 +722,10 @@ function ProjectDetailsContent() {;
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
-                        {project.talent_profile?.full_name || "Talent"}
+                        {project.talent_profile?.full_name |"Talent"}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {project.talent_profile?.professional_title || "Professional"}
+                        {project.talent_profile?.professional_title |"Professional"}
                       </p>
                       {isClient && (
                         <Button
@@ -666,7 +752,7 @@ function ProjectDetailsContent() {;
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
-                        {project.client_profile?.display_name || "Client"}
+                        {project.client_profile?.display_name |"Client"}
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (
@@ -1160,7 +1246,11 @@ function ProjectDetailsContent() {;
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -1192,7 +1282,7 @@ function ProjectDetailsContent() {;
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
-                  <Button 
+                  <Button
                     variant="outline"
                     onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
                     className="w-full"
@@ -1201,7 +1291,6 @@ function ProjectDetailsContent() {;
                   </Button>
                 </CardFooter>
               )}
-              
               {project.status === "offer_sent" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
@@ -1209,7 +1298,6 @@ function ProjectDetailsContent() {;
                   </p>
                 </CardFooter>
               )}
-              
               {project.status === "completed" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-green-600 flex items-center gap-1">
@@ -1217,7 +1305,6 @@ function ProjectDetailsContent() {;
                   </p>
                 </CardFooter>
               )}
-              
               {project.status === "canceled" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-red-600 flex items-center gap-1">
@@ -1234,7 +1321,6 @@ function ProjectDetailsContent() {;
     </>
   )
 }
-
 export default function ProjectDetails() {
   return (
     <ProtectedRoute>
@@ -1243,6 +1329,15 @@ export default function ProjectDetails() {
   )
 };
 ;
+=======
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+    </>;
+  );
+}
 =======
             </Card>;
           </div>;
@@ -1261,4 +1356,8 @@ export default function ProjectDetails() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

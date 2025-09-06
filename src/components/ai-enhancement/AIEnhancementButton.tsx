@@ -1,19 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
-
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer'
 import { toast } from '@/hooks/use-toast'
 interface AIEnhancementButtonProps {
-  options: AIEnhancementOptions,
-  onEnhanced: (enhancedContent: string) => void,
+  options: AIEnhancementOptions
+  onEnhanced: (enhancedContent: string) => void
   buttonText?: string
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
-}
 
+<<<<<<< HEAD
+=======
 export function AIEnhancementButton({
   options
   onEnhanced
@@ -26,6 +30,7 @@ export function AIEnhancementButton({
   const { enhanceContent, isEnhancing } = useAIContentEnhancer()
   const [showActions, setShowActions] = useState(false)
   const [generatedContent, setGeneratedContent] = useState<string | null>(null)
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
@@ -45,9 +50,23 @@ interface AIEnhancementButtonProps {
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
   contentLength?: number
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-
 export function AIEnhancementButton({
+<<<<<<< HEAD
+
+  options
+  onEnhanced
+  buttonText = "Enhance with AI"
+  className
+  variant = "ghost"
+  size = "sm"
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
+  const [showActions, setShowActions] = useState(false)
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null)
+=======
   options,
   onEnhanced,
   buttonText = "Enhance with AI",
@@ -60,19 +79,22 @@ export function AIEnhancementButton({
   const [showActions, setShowActions] = useState(false),
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleEnhance = async () => {
-    if ((!options.content || options.content.trim().length < contentLength) && 
-        (!options.context || options.context.trim().length < contentLength)) {
+    if ((!options.content |options.content.trim().length < contentLength) &&
+        (!options.context |options.context.trim().length < contentLength)) {
       toast({
-        title: "Not enough content",
-        description: `Please enter at least ${contentLength} characters before enhancing.`,
+        title: "Not enough content"
+        description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
 <<<<<<< HEAD
       })
       return;
     }
-    
     const enhancedContent = await enhanceContent(options)
     if (enhancedContent) {
       setGeneratedContent(enhancedContent)
@@ -137,9 +159,13 @@ export function AIEnhancementButton({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       toast({
-        title: "Content applied",
+        title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
 <<<<<<< HEAD
@@ -151,6 +177,10 @@ export function AIEnhancementButton({;
     setShowActions(false)
     setGeneratedContent(null)
   }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },
   
@@ -163,7 +193,11 @@ export function AIEnhancementButton({;
     setGeneratedContent(null)
   },
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -205,17 +239,27 @@ export function AIEnhancementButton({;
       </div>
     )
   }
-  
+<<<<<<< HEAD
   return (
     <Button
       type="button"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       variant = {variant,}
       size = {size,}
       className={`gap-1 ${className}`}
       onClick = {handleEnhance,}
       disabled = {isEnhancing,}
 =======
+<<<<<<< HEAD
+  
+  return (
+    <Button
+      type="button"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   const handleAccept = () => {;
     if (generatedContent) {;
@@ -284,7 +328,11 @@ export function AIEnhancementButton({;
       className={`gap-1 ${className}`}
       onClick={handleEnhance}
       disabled={isEnhancing}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
@@ -293,19 +341,31 @@ export function AIEnhancementButton({;
       )}
       <span className="text-xs">{buttonText}</span>
 <<<<<<< HEAD
+    </Button>
+  )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </Button>;
   );
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };"
 <Button type="button" variant="ghost" size="sm" onClick={
   handleAccept "
 }className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) "
 }Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) "
-}return (<Button) : (<Sparkles className=" h-4 w-4" />) 
-}</Button>) 
+}return (<Button) : (<Sparkles className=" h-4 w-4" />)
+}</Button>)
 }"}
+=======
+<<<<<<< HEAD
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
     </Button>
   )
 }
 ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

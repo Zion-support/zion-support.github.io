@@ -1,5 +1,9 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from "react";
+import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+=======
 import React, { useState, useRef, useEffect } from "react"
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
 import { Button } from "@/components/ui/button"
@@ -11,9 +15,11 @@ import { cn } from "@/lib/utils"
 import { ChatMessage } from "./ChatMessage"
 import { QuickReplyButton } from "./QuickReplyButton"
 import { Send, Loader2 } from 'lucide-react'import { useTheme } from "@/hooks/useTheme"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useRef, useEffect } from "react",
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { ScrollArea } from "@/components/ui/scroll-area",
@@ -21,22 +27,49 @@ import { Separator } from "@/components/ui/separator",
 import { toast } from "@/components/ui/use-toast",
 import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
-import { QuickReplyButton } from "./QuickReplyButton",
+import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from 'lucide-react'
+<<<<<<< HEAD
+import { useTheme } from "@/hooks/useTheme";
+// Define suggested quick replies
+=======
 import { useTheme } from "@/hooks/useTheme",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
 <<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+const QUICK_REPLIES = [
+  { id: "hire", text: "How do I hire?" }
+  { id: "match", text: "How do I get matched?" }
+  { id: "billing", text: "Billing help" }]
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Message = {
-  id: string,
-  content: string,
-  sender: "user" | "bot",
+  id: string
+  content: string
+  sender: "user" | "bot"
   timestamp: Date
 }
+<<<<<<< HEAD
+export function ChatBotPanel() {
+  const [messages, setMessages] = useState<Message[]>([
+    {
+<<<<<<< HEAD
+      id: "welcome"
+      content: "Hi! How can I help you?"
+      sender: "bot"
+      timestamp: new Date()}])
+=======
 =======
 
 
@@ -49,6 +82,7 @@ export function ChatBotPanel() {
       sender: "bot",
       timestamp: new Date()}]),
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [inputValue, setInputValue] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [failedAttempts, setFailedAttempts] = useState(0)
@@ -56,6 +90,13 @@ export function ChatBotPanel() {
   const inputRef = useRef<HTMLInputElement>(null)
   const { theme } = useTheme()
 =======
+<<<<<<< HEAD
+      id: "welcome",
+      content: "Hi! How can I help you?",
+      sender: "bot",
+      timestamp: new Date()}]),
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [inputValue, setInputValue] = useState(""),
   const [isLoading, setIsLoading] = useState(false),
   const [failedAttempts, setFailedAttempts] = useState(0),
@@ -63,7 +104,11 @@ export function ChatBotPanel() {
   const inputRef = useRef<HTMLInputElement>(null),
   const { theme } = useTheme(),
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
@@ -78,6 +123,24 @@ export function ChatBotPanel() {
     }
   }, [])
   const handleSendMessage = async (text: string = inputValue) => {
+<<<<<<< HEAD
+    if (!text.trim()) return
+      timestamp: new Date()}
+        timestamp: new Date()}
+        description: "We're having trouble connecting to our support service."})
+      id: `bot-escalation-${Date.now()}`
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
+      sender: "bot"
+      timestamp: new Date()}
+  const handleQuickReply = (text: string,) => {
+    handleSendMessage(text)
+  }
+
+  )
+}
+  )
+}
+=======
     if (!text.trim()) return;
       timestamp: new Date()},
     
@@ -85,6 +148,7 @@ export function ChatBotPanel() {
       
         description: "We're having trouble connecting to our support service."}),
             
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
@@ -263,7 +327,10 @@ export function ChatBotPanel() {;
 
   const suggestEscalation = () => {
     const escalationMessage: Message = {
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       id: `bot-escalation-${Date.now()}`,
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
@@ -296,12 +363,15 @@ export function ChatBotPanel() {;
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
   );
 };
   );
 };
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
 
   const handleEscalateToLiveAgent = () => {
@@ -581,4 +651,8 @@ export function ChatBotPanel() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

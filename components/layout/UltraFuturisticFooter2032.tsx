@@ -1,7 +1,52 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Globe
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Cpu
+  Target
+  Microscope
+  Users
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  ArrowRight
+  Heart
+  Star
+  Award
+  CheckCircle
+  Home
+  Briefcase
+  BookOpen
+  MessageCircle
+  DollarSign
+  TrendingUp
+  Target as TargetIcon
+  Users as UsersIcon
+  Briefcase as BriefcaseIcon
+  BookOpen as BookOpenIcon
+  MessageCircle as MessageCircleIcon
+  Star as StarIcon;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+
+=======
   Phone,
   Mail,
   MapPin,
@@ -39,6 +84,7 @@ import {
   MessageCircle as MessageCircleIcon,;
   Star as StarIcon,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -48,308 +94,304 @@ import {
   MessageCircle as MessageCircleIcon, Star as StarIcon
 
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
 const mainNavigationRoutes = [
   {
-    name: 'Home',
-    href: '/',
-    icon: Home,
-    description: 'Welcome to Zion Tech Group',
-  },
+    name: 'Home'
+    href: '/'
+    icon: Home
+    description: 'Welcome to Zion Tech Group'
+  }
   {
-    name: 'Services',
-    href: '/services',
-    icon: Briefcase,
-    description: 'Our comprehensive service portfolio',
-  },
+    name: 'Services'
+    href: '/services'
+    icon: Briefcase
+    description: 'Our comprehensive service portfolio'
+  }
   {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: TargetIcon,
-    description: 'Tailored solutions for your business',
-  },
+    name: 'Solutions'
+    href: '/solutions'
+    icon: TargetIcon
+    description: 'Tailored solutions for your business'
+  }
   {
-    name: 'Pricing',
-    href: '/pricing',
-    icon: DollarSign,
-    description: 'Transparent pricing and packages',
-  },
+    name: 'Pricing'
+    href: '/pricing'
+    icon: DollarSign
+    description: 'Transparent pricing and packages'
+  }
   {
-    name: 'Resources',
-    href: '/resources',
-    icon: BookOpen,
-    description: 'Knowledge base and documentation',
-  },
+    name: 'Resources'
+    href: '/resources'
+    icon: BookOpen
+    description: 'Knowledge base and documentation'
+  }
   {
-    name: 'Case Studies',
-    href: '/case-studies',
-    icon: Users,
-    description: 'Success stories and implementations',
-  },
+    name: 'Case Studies'
+    href: '/case-studies'
+    icon: Users
+    description: 'Success stories and implementations'
+  }
   {
-    name: 'Blog',
-    href: '/blog',
-    icon: MessageCircle,
-    description: 'Latest insights and updates',
-  },
+    name: 'Blog'
+    href: '/blog'
+    icon: MessageCircle
+    description: 'Latest insights and updates'
+  }
   {
-    name: 'Contact',
-    href: '/contact',
-    icon: MessageCircle,
-    description: 'Get in touch with our team',
-  },];  { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
-  { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },
-  { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },
-  { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },
-  { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },
-  { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' },
-  { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
+    name: 'Contact'
+    href: '/contact'
+    icon: MessageCircle
+    description: 'Get in touch with our team'
+  },];  { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' }
+  { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' }
+  { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' }
+  { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' }
+  { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' }
+  { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' }
+  { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' }
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
-
 const serviceCategories = [
   {
-    title: '🚀 2032 Revolutionary AI Services',
+    title: '🚀 2032 Revolutionary AI Services'
     services: [
       {
-        name: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution-platform',
-      },
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-platform'
+      }
       {
-        name: 'AI Emotional Intelligence',
-        href: '/ai-emotional-intelligence-platform',
-      },
+        name: 'AI Emotional Intelligence'
+        href: '/ai-emotional-intelligence-platform'
+      }
       {
-        name: 'AI Creativity Orchestrator',
-        href: '/ai-creativity-orchestrator',
-      },
+        name: 'AI Creativity Orchestrator'
+        href: '/ai-creativity-orchestrator'
+      }
       {
-        name: 'AI Autonomous Business Manager',
-        href: '/ai-autonomous-business-manager',
-      },
-    ],
-  },
+        name: 'AI Autonomous Business Manager'
+        href: '/ai-autonomous-business-manager'
+      }
+    ]
+  }
   {
-    title: '⚛️ 2032 Quantum & Emerging Tech',
+    title: '⚛️ 2032 Quantum & Emerging Tech'
     services: [
       {
-        name: 'Quantum DNA Computing',
-        href: '/quantum-dna-computing-platform',
-      },
+        name: 'Quantum DNA Computing'
+        href: '/quantum-dna-computing-platform'
+      }
       {
-        name: 'Quantum Internet Security',
-        href: '/quantum-internet-security-gateway',
-      },
+        name: 'Quantum Internet Security'
+        href: '/quantum-internet-security-gateway'
+      }
       {
-        name: 'Quantum Financial Trading',
-        href: '/quantum-financial-trading-platform',
-      },
-      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' },
-    ],
-  },  {
-    title: '🏙️ 2032 Enterprise IT Solutions',
-    services: [
-      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform' },
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway' },
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
+        name: 'Quantum Financial Trading'
+        href: '/quantum-financial-trading-platform'
+      }
       { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
     ]
-  };
-    title: '🏙️ 2032 Enterprise IT Solutions',
+  },  {
+    title: '🏙️ 2032 Enterprise IT Solutions'
     services: [
-      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform' }
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway' }
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' }
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' }
+    ]
+  }
+    title: '🏙️ 2032 Enterprise IT Solutions'
+    services: [
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' }
       {
-        name: 'Zero Trust Architecture',
-        href: '/zero-trust-network-architecture',
-      },
+        name: 'Zero Trust Architecture'
+        href: '/zero-trust-network-architecture'
+      }
       {
-        name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
-      },
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration'
+      }
       {
-        name: 'AI IT Operations Center',
-        href: '/ai-powered-it-operations-center',
-      },
-    ],
-  },
-    title: '🌌 2032 Space & Metaverse Tech',
+        name: 'AI IT Operations Center'
+        href: '/ai-powered-it-operations-center'
+      }
+    ]
+  }
+    title: '🌌 2032 Space & Metaverse Tech'
     services: [
       {
-        name: 'Space Mining Automation',
-        href: '/space-mining-automation-platform',
-      },
+        name: 'Space Mining Automation'
+        href: '/space-mining-automation-platform'
+      }
       {
-        name: 'Metaverse Development',
-        href: '/metaverse-development-platform',
-      },
-      { name: 'AI Predictive Health', href: '/ai-predictive-health-analytics' },
+        name: 'Metaverse Development'
+        href: '/metaverse-development-platform'
+      }
+      { name: 'AI Predictive Health', href: '/ai-predictive-health-analytics' }
       {
-        name: 'AI Autonomous Business',
-        href: '/ai-autonomous-business-manager',
-      },
-    ],
-  },
+        name: 'AI Autonomous Business'
+        href: '/ai-autonomous-business-manager'
+      }
+    ]
+  }
   {
-    title: '🎯 2032 Innovative Micro SAAS',
+    title: '🎯 2032 Innovative Micro SAAS'
     services: [
       {
-        name: 'AI Business Intelligence',
-        href: '/ai-business-intelligence-suite',
-      },
+        name: 'AI Business Intelligence'
+        href: '/ai-business-intelligence-suite'
+      }
       {
-        name: 'Quantum-Secure Communication',
-        href: '/quantum-secure-communication-platform',
-      },
-      { name: 'AI Customer Success', href: '/ai-customer-success-automation' },
+        name: 'Quantum-Secure Communication'
+        href: '/quantum-secure-communication-platform'
+      }
+      { name: 'AI Customer Success', href: '/ai-customer-success-automation' }
       {
-        name: 'Blockchain Supply Chain',
-        href: '/blockchain-supply-chain-transparency',
-      },
-    ],
-  },
+        name: 'Blockchain Supply Chain'
+        href: '/blockchain-supply-chain-transparency'
+      }
+    ]
+  }
   {
-    title: '🔬 2032 Research & Development',
+    title: '🔬 2032 Research & Development'
     services: [
       {
-        name: 'Neuromorphic Computing',
-        href: '/neuromorphic-computing-platform',
-      },
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform' },
+        name: 'Neuromorphic Computing'
+        href: '/neuromorphic-computing-platform'
+      }
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform' }
       {
-        name: 'Photonic Computing',
-        href: '/photonic-computing-infrastructure',
-      },
-      { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' },
-    ],
-  },
+        name: 'Photonic Computing'
+        href: '/photonic-computing-infrastructure'
+      }
+      { name: 'Swarm Robotics', href: '/swarm-robotics-orchestration' }
+    ]
+  }
 ];
-
 const quickLinks = [
   {
-    name: '2032 Services',
-    href: '/2032-futuristic-services-showcase',
-    icon: Star,
-    description: 'Revolutionary 2032 services',
-  },
+    name: '2032 Services'
+    href: '/2032-futuristic-services-showcase'
+    icon: Star
+    description: 'Revolutionary 2032 services'
+  }
   {
-    name: 'Enhanced Pricing',
-    href: '/enhanced-market-pricing-2032',
-    icon: DollarSign,
-    description: 'Comprehensive pricing analysis',
-  },
+    name: 'Enhanced Pricing'
+    href: '/enhanced-market-pricing-2032'
+    icon: DollarSign
+    description: 'Comprehensive pricing analysis'
+  }
   {
-    name: 'Market Pricing',
-    href: '/market-pricing',
-    icon: DollarSign,
-    description: 'Competitive pricing references',
-  },
+    name: 'Market Pricing'
+    href: '/market-pricing'
+    icon: DollarSign
+    description: 'Competitive pricing references'
+  }
   {
-    name: 'Enhanced Services',
-    href: '/enhanced-services-showcase',
-    icon: Star,
-    description: 'Premium service showcase',
-  },
+    name: 'Enhanced Services'
+    href: '/enhanced-services-showcase'
+    icon: Star
+    description: 'Premium service showcase'
+  }
   {
-    name: 'Revolutionary 2026',
-    href: '/revolutionary-2026-services',
-    icon: TrendingUp,
-    description: '2026 breakthrough services',
-  },
+    name: 'Revolutionary 2026'
+    href: '/revolutionary-2026-services'
+    icon: TrendingUp
+    description: '2026 breakthrough services'
+  }
   {
-    name: 'Ultimate 2026',
-    href: '/ultimate-2026-services-showcase',
-    icon: Target,
-    description: 'Ultimate service portfolio',
-  },
+    name: 'Ultimate 2026'
+    href: '/ultimate-2026-services-showcase'
+    icon: Target
+    description: 'Ultimate service portfolio'
+  }
   {
-    name: 'News & Updates',
-    href: '/news',
-    icon: MessageCircle,
-    description: 'Latest company news',
-  },
+    name: 'News & Updates'
+    href: '/news'
+    icon: MessageCircle
+    description: 'Latest company news'
+  }
   {
-    name: 'Support',
-    href: '/support',
-    icon: Users,
-    description: 'Technical support and help',
-  },];  { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },
-  { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },
-  { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Competitive pricing references' },
-  { name: 'Enhanced Services', href: '/enhanced-services-showcase', icon: Star, description: 'Premium service showcase' },
-  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services', icon: TrendingUp, description: '2026 breakthrough services' },
-  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },
-  { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },
+    name: 'Support'
+    href: '/support'
+    icon: Users
+    description: 'Technical support and help'
+  },];  { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' }
+  { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' }
+  { name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Competitive pricing references' }
+  { name: 'Enhanced Services', href: '/enhanced-services-showcase', icon: Star, description: 'Premium service showcase' }
+  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services', icon: TrendingUp, description: '2026 breakthrough services' }
+  { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' }
+  { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' }
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
-
 const companyInfo = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'Press', href: '/press' },
-  { name: 'Partners', href: '/partners' },
-  { name: 'Support', href: '/support' },
-  { name: 'Status', href: '/status' },
+  { name: 'About Us', href: '/about' }
+  { name: 'Careers', href: '/careers' }
+  { name: 'Press', href: '/press' }
+  { name: 'Partners', href: '/partners' }
+  { name: 'Support', href: '/support' }
+  { name: 'Status', href: '/status' }
 ];
-
 const socialLinks = [
   {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/company/ziontechgroup',
-    icon: Linkedin,
-  },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    name: 'LinkedIn'
+    href: 'https://linkedin.com/company/ziontechgroup'
+    icon: Linkedin
+  }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
   {
-    name: 'Facebook',
-    href: 'https://facebook.com/ziontechgroup',
-    icon: Facebook,
-  },
+    name: 'Facebook'
+    href: 'https://facebook.com/ziontechgroup'
+    icon: Facebook
+  }
   {
-    name: 'Instagram',
-    href: 'https://instagram.com/ziontechgroup',
-    icon: Instagram,
-  },
-  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+    name: 'Instagram'
+    href: 'https://instagram.com/ziontechgroup'
+    icon: Instagram
+  }
+  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },];];
-
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook }
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
 ];
-
 const footerVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 50 }
   visible: {
-    opacity: 1,
-    y: 0,
+    opacity: 1
+    y: 0
     transition: {
-      duration: 0.8,
-      staggerChildren: 0.1,
-    },
-  },};
-
+      duration: 0.8
+      staggerChildren: 0.1
+    }
+  },}
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },};
-
+<<<<<<< HEAD
+  hidden: { opacity: 0, y: 20 }
+  visible: { opacity: 1, y: 0 },}
 export default function UltraFuturisticFooter2032() {
   return (
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>      staggerChildren: 0.1
     }
+<<<<<<< HEAD
+  }
+}
+=======
   };
 };
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
-};
-
+}
 export default function UltraFuturisticFooter2032() {
   return (
 <<<<<<< HEAD
@@ -452,7 +494,7 @@ export default function UltraFuturisticFooter2032() {
                 </div>
               </div>
               <p className="text-slate-300 mb-6 leading-relaxed">
-                Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems. 
+                Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems.
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.
               </p>
               {/* Contact Information */}
@@ -478,10 +520,33 @@ export default function UltraFuturisticFooter2032() {
                   <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">
                     {contactInfo.website}
 =======
+<<<<<<< HEAD
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+    <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>
+
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+
+};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+
+                    {contactInfo.website}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
                     {contactInfo.website}
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </a>
                 </div>
               </div>
@@ -492,7 +557,11 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Our Revolutionary Services
               </h3>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -537,7 +606,11 @@ export default function UltraFuturisticFooter2032() {
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Quick Access
               </h3>
               {/* Quick Links */}
@@ -575,7 +648,11 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -590,7 +667,11 @@ export default function UltraFuturisticFooter2032() {
 =======
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -606,7 +687,11 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Social Links */}
               <div>
                 <h4 className='text-lg font-medium text-white mb-4'>
@@ -635,7 +720,11 @@ export default function UltraFuturisticFooter2032() {
 
                     </a>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
               </div>
@@ -644,7 +733,11 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -655,7 +748,11 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Stay Ahead with Future Technology
               </h3>
               <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
@@ -673,6 +770,7 @@ export default function UltraFuturisticFooter2032() {
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
+
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <input
@@ -757,8 +855,14 @@ export default function UltraFuturisticFooter2032() {
 <<<<<<< HEAD
 );
 }
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 }
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

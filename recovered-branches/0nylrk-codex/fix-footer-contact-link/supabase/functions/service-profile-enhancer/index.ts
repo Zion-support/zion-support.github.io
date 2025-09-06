@@ -1,35 +1,60 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
+interface ServiceProfileData {
+  name: string;
+  title: string;
+  bio: string;
+
+  services?: string[]
+
+=======
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 =======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ServiceProfileData {
   name: string,
   title: string,
   bio: string,
   services?: string[],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   location: string
 }
-
 serve(async (req) => {
   try {
     // CORS headers
+
     const headers = {
+<<<<<<< HEAD
+      "Access-Control-Allow-Origin": "*";
+      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type";
+      "Content-Type": "application/json"}
+=======
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
       "Content-Type": "application/json"},
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Handle CORS preflight request
     if (req.method === "OPTIONS") {
       return new Response(null, { headers, status: 204 })
     }
+<<<<<<< HEAD
+    const reqData = await req.json();
+    const providerData = reqData.providerData as ServiceProfileData;
+=======
 
     const reqData = await req.json(),
     const providerData = reqData.providerData as ServiceProfileData,
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Validate input
-    if (!providerData || !providerData.bio) {
+    if (!providerData |!providerData.bio) {
       return new Response(
         JSON.stringify({
 <<<<<<< HEAD
@@ -70,8 +95,12 @@ serve(async (req) => {;
         { headers, status: 400 }
       );
     }
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Get OpenAI API key from environment
     const apiKey = Deno.env.get("OPENAI_API_KEY"),
     if (!apiKey) {
@@ -88,25 +117,37 @@ serve(async (req) => {;
       return new Response(;
         JSON.stringify({;
           error: "OpenAI API key not configured"}),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { headers, status: 500 }
       )
     }
-
     const prompt = `
     You are an expert in creating professional service profiles. Based on the following information about a service provider, create:
     1. A concise yet compelling professional summary (max 250 words)
     2. A list of 5-10 specific services they could offer based on their description
-
     Service Provider Name: ${providerData.name}
     Business/Service Title: ${providerData.title}
     Location: ${providerData.location}
     Current Bio: ${providerData.bio}
+<<<<<<< HEAD
+    ${providerData.services && providerData.services.length > 0
+=======
     ${providerData.services && providerData.services.length > 0 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       ? `Current Services: ${providerData.services.join(", ")}`
       : "No services listed yet."}
-    
     Focus on highlighting their unique value proposition, expertise, and professionalism.
+<<<<<<< HEAD
+    Only respond with JSON in this exact format: {
+      "summary": "Professional summary goes here..."
+      "services": ["Service 1", "Service 2", "Service 3", ...]
+    }
+    `;
+=======
     Only respond with JSON in this exact format:
     {
       "summary": "Professional summary goes here...",
@@ -114,15 +155,31 @@ serve(async (req) => {;
     }
     `,
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
+      method: "POST"
       headers: {
+<<<<<<< HEAD
+        Authorization: `Bearer ${apiKey}`;
+        "Content-Type": "application/json"}
+=======
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       body: JSON.stringify({
         model: "gpt-4",
         messages: [
           {
+<<<<<<< HEAD
+            role: "system"
+            content: "You are an expert at creating professional service descriptions for marketplaces."}
+          {
+            role: "user"
+            content: prompt}];
+        temperature: 0.7
+        max_tokens: 800})});
+    const responseData = await response.json();
+=======
             role: "system",
             content: "You are an expert at creating professional service descriptions for marketplaces."},
           {
@@ -133,26 +190,34 @@ serve(async (req) => {;
 
     const responseData = await response.json(),
     
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (!response.ok) {
       console.error("OpenAI API error:", responseData),
       return new Response(
         JSON.stringify({
+<<<<<<< HEAD
+<<<<<<< HEAD
+          error: "Failed to generate enhanced profile content"
+=======
           error: "Failed to generate enhanced profile content",
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           details: responseData});
         { headers, status: 500 }
       )
     }
-
     try {
       const content = responseData.choices[0].message.content;
       const parsedContent = JSON.parse(content);
-      
       return new Response(
         JSON.stringify({
-          summary: parsedContent.summary,
+          summary: parsedContent.summary
           services: parsedContent.services});
 =======
+<<<<<<< HEAD
+          error: "Failed to generate enhanced profile content",
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           details: responseData}),
     ${providerData.services && providerData.services.length > 0;
       ? `Current Services: ${providerData.services.join(", ")}`;
@@ -199,17 +264,29 @@ serve(async (req) => {;
         JSON.stringify({;
           summary: parsedContent.summary,;
           services: parsedContent.services}),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { headers, status: 200 }
       )
     } catch (error) {
       console.error("Error parsing AI response:", error),
       return new Response(
         JSON.stringify({
+<<<<<<< HEAD
+<<<<<<< HEAD
+          error: "Failed to parse AI response"
+          raw: responseData.choices[0]?.message?.content});
+=======
+          error: "Failed to parse AI response",
+=======
           error: "Failed to parse AI response",
 <<<<<<< HEAD
           raw: responseData.choices[0]?.message?.content});
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           raw: responseData.choices[0]?.message?.content}),
       );
     } catch (error) {;
@@ -218,7 +295,11 @@ serve(async (req) => {;
         JSON.stringify({;
           error: "Failed to parse AI response",;
           raw: responseData.choices[0]?.message?.content}),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { headers, status: 500 }
       )
     }
@@ -226,6 +307,14 @@ serve(async (req) => {;
     console.error("Function error:", error),
     return new Response(
       JSON.stringify({
+<<<<<<< HEAD
+        error: "Internal server error"});
+      {
+        headers: {
+          "Content-Type": "application/json"
+          "Access-Control-Allow-Origin": "*"}
+        status: 500
+=======
         error: "Internal server error"}),
       { 
         headers: {
@@ -234,6 +323,9 @@ serve(async (req) => {;
         status: 500 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {;
     console.error("Function error:", error),;
     return new Response(;
@@ -244,8 +336,16 @@ serve(async (req) => {;
           "Content-Type": "application/json",;
           "Access-Control-Allow-Origin": "*"},;
         status: 500;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     )
   }
 });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

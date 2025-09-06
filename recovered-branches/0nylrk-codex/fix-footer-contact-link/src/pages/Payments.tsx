@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -7,18 +9,28 @@ import {TransactionHistory} from "@/components/transactions/TransactionHistory";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { TransactionHistory } from "@/components/transactions/TransactionHistory",
+<<<<<<< HEAD
+import { GradientHeading } from "@/components/GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Payments() {
   return (
     <>
       <Header />
+
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="mb-12 text-center">
@@ -46,7 +58,7 @@ export default function Payments() {
                     <p className="text-zion-slate-light mb-4">
                       Manage your payment methods and set your default preference.
                     </p>
-                    <Button 
+                    <Button
                       onClick={() => window.open('https://stripe.com_blank')}
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
                     >
@@ -101,15 +113,25 @@ export default function Payments() {
     </>
   )
 }
+<<<<<<< HEAD
+// Import UI components for Payment Settings tab
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 // Import UI components for Payment Settings tab;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
+<<<<<<< HEAD
+
+=======
+=======
 =======
 // Import UI components for Payment Settings tab
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Button } from "@/components/ui/button",
 import { Switch } from "@/components/ui/switch",
 import { Label } from "@/components/ui/label",
@@ -212,4 +234,8 @@ import { Button } from "@/components/ui/button",;
 import { Switch } from "@/components/ui/switch",;
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

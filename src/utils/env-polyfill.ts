@@ -4,12 +4,31 @@
  * This polyfill ensures that process.env is always available in the browser environment.
  * It prevents the "Cannot read properties of undefined (reading 'env')" error.
  */
-
 // Define safe defaults for environment variables
+
 const defaultEnv = {
   NODE_ENV: 'production', // Default to production for safety
+<<<<<<< HEAD
+  NEXT_PUBLIC_APP_URL: ''
+  NEXT_PUBLIC_SUPABASE_URL: ''
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
+}
+// Create a safe process object
+const createProcessObject = () => ({
+  env: { ...defaultEnv }
+  versions: {}
+  platform: 'browser'
+  arch: 'x64'
+  version: '18.0.0'
+  browser: true
+})
+=======
   NEXT_PUBLIC_APP_URL: '',
   NEXT_PUBLIC_SUPABASE_URL: '',
+<<<<<<< HEAD
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
+
+=======
 <<<<<<< HEAD
   NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
 }
@@ -17,6 +36,7 @@ const defaultEnv = {
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Create a safe process object
 const createProcessObject = () => ({
   env: { ...defaultEnv },
@@ -25,12 +45,18 @@ const createProcessObject = () => ({
   arch: 'x64',
   version: '18.0.0',
 <<<<<<< HEAD
+  browser: true}),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
   browser: true,
 })
 =======
   browser: true}),
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Ensure process is available on globalThis
 if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
@@ -38,8 +64,7 @@ if (typeof globalThis !== 'undefined') {
   } else if (typeof (globalThis as any).process.env === 'undefined') {
 <<<<<<< HEAD
     (globalThis as any).process.env = { ...defaultEnv } }
-
-}//Ensure process is available on window 
+}//Ensure process is available on window
 // Ensure process is available globally
 if (typeof (globalThis as any).process === 'undefined') {
   (globalThis as any).process = createProcessObject()
@@ -47,20 +72,20 @@ if (typeof (globalThis as any).process === 'undefined') {
 export const safeEnv = {
   NODE_ENV:
     (typeof (globalThis as any).process !== 'undefined' &&
-      (globalThis as any).process.env?.NODE_ENV) ||
-    'production',
+      (globalThis as any).process.env?.NODE_ENV) |
+    'production'
   NEXT_PUBLIC_APP_URL:
     (typeof (globalThis as any).process !== 'undefined' &&
-      (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) ||
-    '',
+      (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) |
+    ''
   NEXT_PUBLIC_SUPABASE_URL:
     (typeof (globalThis as any).process !== 'undefined' &&
-      (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) ||
-    '',
+      (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) |
+    ''
   NEXT_PUBLIC_SUPABASE_ANON_KEY:
     (typeof (globalThis as any).process !== 'undefined' &&
-      (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) ||
-    '',
+      (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) |
+    ''
 } as const
 // Safe environment getter function
 export function getEnv(key: string, defaultValue = ''): string {
@@ -83,19 +108,25 @@ export const processEnv = null;
   typeof (globalThis as any).process !== 'undefined'
     ? (globalThis as any).process.env
     : {
-        NODE_ENV: 'production',
-        NEXT_PUBLIC_APP_URL: '',
-        NEXT_PUBLIC_SUPABASE_URL: '',
-        NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
+        NODE_ENV: 'production'
+        NEXT_PUBLIC_APP_URL: ''
+        NEXT_PUBLIC_SUPABASE_URL: ''
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ''
       }
 console.log('✅ Environment polyfill loaded successfully')
 export default safeEnv
+<<<<<<< HEAD
+export default safeEnv
+export default safeEnv
+
+=======
 export default safeEnv;
 export default safeEnv;
 }
 }
 }
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
     (globalThis as any).process.env = { ...defaultEnv }
   }
@@ -158,4 +189,8 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},;
 // // // console.log('✅ Environment polyfill loaded successfully'),;
 export default safeEnv;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

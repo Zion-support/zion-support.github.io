@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -34,12 +36,41 @@ export default function AIPoweredContent() {
     markAiExplored()
   }, [markAiExplored])
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
+<<<<<<< HEAD
+import { useFeatureUsage } from "@/hooks/useFeatureUsage";
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+export default function AIPoweredContent() {
+
+  useFeatureUsage('ZionGPT')
+  const schema = {
+    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "AI Content Generation"
+    "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility."
+    "url": "https://app.ziontechgroup.com/features/ai-content-generation"
+  }
+export default function AIPoweredContent() {
+  useFeatureUsage('ZionGPT')
+  const schema = {
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'AI Content Generation'
+    description:
+      'Generate SEO-optimized content using ZionGPT to boost your online visibility.'
+    url: 'https://app.ziontechgroup.com/features/ai-content-generation'
+  }
+  const { markAiExplored } = useAdvancedOnboardingStatus()
+  useEffect(() => {
+    markAiExplored()
+  }, [markAiExplored])
+=======
 import { useFeatureUsage } from "@/hooks/useFeatureUsage",
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
 export default function AIPoweredContent() {
@@ -57,8 +88,12 @@ export default function AIPoweredContent() {
   useEffect(() => {
     markAiExplored()
   }, [markAiExplored]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -123,7 +158,11 @@ export default function AIPoweredContent() {
               <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
 =======
           <div className="text-center">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
             </Button>
@@ -134,8 +173,11 @@ export default function AIPoweredContent() {
   )
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 ;
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
@@ -213,4 +255,8 @@ export default function AIPoweredContent() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

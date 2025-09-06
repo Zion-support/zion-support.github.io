@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -6,8 +8,245 @@ import {motion} from 'framer-motion';
 import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance,} from 'lucide-react';
 import Link from 'next/link';
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import Head from 'next/head',
+<<<<<<< HEAD
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { Stethoscope, Brain, Eye, Heart;
+  Microscope, Shield, BarChart3;
+  TrendingUp, Target, Users, CheckCircle;
+  ArrowRight, Cpu, Network, Database;
+  Lock, Clock, DollarSign, PieChart;
+  Activity, Zap, Pill, Syringe, Hospital, Ambulance
+ } from 'lucide-react';
+import Link from 'next/link';
+
+const AIHealthcareDiagnosticsPro: React.FC = () => {
+  const features = [
+    {
+      icon: Brain
+      title: 'Advanced AI Diagnostics'
+      description:
+        'Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.'
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      icon: Eye
+      title: 'Multi-Modal Imaging'
+      description:
+        'Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.'
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      icon: Heart
+      title: 'Predictive Analytics'
+      description:
+        'AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.'
+      color: 'from-red-500 to-orange-500'
+    }
+    {
+      icon: Shield
+      title: 'HIPAA Compliant'
+      description:
+        'Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.'
+      color: 'from-green-500 to-emerald-500'
+    }
+    {
+      icon: BarChart3
+      title: 'Real-time Monitoring'
+      description:
+        'Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.'
+      color: 'from-indigo-500 to-blue-500'
+    }
+    {
+      icon: Zap
+      title: 'Automated Workflows'
+      description:
+        'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.'
+      color: 'from-yellow-500 to-orange-500'
+    },  ];
+  const useCases = [
+    {
+      icon: Microscope
+      title: 'Radiology & Imaging'
+      description:
+        'AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.'
+      benefits: [
+        '95% accuracy rate'
+        '80% faster diagnosis'
+        'Reduced radiologist workload'
+      ]
+    }
+    {
+      icon: Heart
+      title: 'Cardiology'
+      description:
+        'Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.'
+      benefits: [
+        'Early disease detection'
+        'Risk stratification'
+        'Preventive care'
+      ]
+    }
+    {
+      icon: Brain
+      title: 'Neurology'
+      description:
+        "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data."
+      benefits: [
+        'Early intervention'
+        'Treatment planning'
+        'Outcome prediction'
+      ]
+    }
+    {
+      icon: Microscope
+      title: 'Pathology'
+      description:
+        'Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.'
+      benefits: [
+        'Precision medicine'
+        'Faster results'
+        'Standardized analysis'
+      ]
+    },  ];
+  const pricingPlans = [
+    {
+      name: 'Starter'
+      price: '$4,999'
+      period: '/month'
+      description: 'Perfect for small clinics and practices'
+      features: [
+        'Up to 1,000 diagnostic scans/month'
+        'Basic AI diagnostic models'
+        'Standard reporting dashboard'
+        'Email support'
+        'HIPAA compliance'
+        'API access (5,000 calls/month)'
+      ]
+      color: 'from-blue-500 to-cyan-500'
+      popular: false
+    }
+    {
+      name: 'Professional'
+      price: '$12,999'
+      period: '/month'
+      description: 'Ideal for hospitals and medical centers'
+      features: [
+        'Up to 10,000 diagnostic scans/month'
+        'Advanced AI diagnostic models'
+        'Multi-modal imaging support'
+        'Real-time monitoring & alerts'
+        'Priority support'
+        'API access (50,000 calls/month)'
+        'Custom integrations'
+        'Training & certification'
+      ]
+      color: 'from-purple-500 to-pink-500'
+      popular: true
+    }
+    {
+      name: 'Enterprise'
+      price: '$29,999'
+      period: '/month'
+      description: 'For large healthcare networks'
+      features: [
+        'Unlimited diagnostic scans'
+        'Custom AI model development'
+        'Full multi-modal support'
+        'Dedicated account manager'
+        '24/7 phone support'
+        'Unlimited API access'
+        'White-label solutions'
+        'On-premise deployment'
+        'Custom compliance features'
+      ]
+      color: 'from-green-500 to-emerald-500'
+      popular: false
+    },  ];
+  const integrations = [
+    {
+      name: 'PACS Systems'
+      icon: Database
+      description: 'DICOM integration with major PACS vendors'
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      name: 'EHR Platforms'
+      icon: Database
+      description: 'Epic, Cerner, Allscripts, athenahealth'
+      color: 'from-green-500 to-emerald-500'
+    }
+    {
+      name: 'LIS Systems'
+      icon: Microscope
+      description: 'Lab information systems integration'
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      name: 'RIS Systems'
+      icon: BarChart3
+      description: 'Radiology information systems'
+      color: 'from-orange-500 to-red-500'
+    }
+    {
+      name: 'Medical Devices'
+      icon: Stethoscope
+      description: 'CT, MRI, X-ray, ultrasound machines'
+      color: 'from-indigo-500 to-blue-500'
+    }
+    {
+      name: 'Cloud Platforms'
+      icon: Cpu
+      description: 'AWS, Azure, Google Cloud, IBM Cloud'
+      color: 'from-yellow-500 to-orange-500'
+    },  ];
+  const specialties = [
+    {
+      icon: Heart
+      name: 'Cardiology'
+      description:
+        'Heart disease detection, ECG analysis, cardiovascular risk assessment'
+      accuracy: '99.1%'
+    }
+    {
+      icon: Brain
+      name: 'Neurology'
+      description:
+        'Brain tumor detection, stroke diagnosis, neurological disorder analysis'
+      accuracy: '98.9%'
+    }
+    {
+      icon: Activity
+      name: 'Pulmonology'
+      description:
+        'Lung cancer screening, pneumonia detection, respiratory disease analysis'
+      accuracy: '99.3%'
+    }
+    {
+      icon: Eye
+      name: 'Ophthalmology'
+      description:
+        'Retinal disease detection, glaucoma screening, diabetic retinopathy'
+      accuracy: '98.7%'
+    }
+    {
+      icon: Shield
+      name: 'Hepatology'
+      description:
+        'Liver disease detection, cirrhosis assessment, tumor identification'
+      accuracy: '99.0%'
+    }
+    {
+      icon: Microscope
+      name: 'Nephrology'
+      description:
+        'Kidney disease detection, renal function analysis, transplant assessment'
+      accuracy: '98.8%'
+    },  ];
+=======
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
@@ -19,7 +258,10 @@ import {
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
 } from 'lucide-react',
 import Link from 'next/link',
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
     {
@@ -236,6 +478,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
   ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Layout>
       <Head>
@@ -305,7 +548,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
             className="mb-8"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
@@ -318,6 +565,25 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               <br />
               <span className="text-white">Diagnostics Pro</span>
             </h1>
+<<<<<<< HEAD
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Transform healthcare delivery with the world's most advanced AI
+              diagnostic platform. Achieve 99.2% accuracy in disease detection
+              reduce diagnosis time by 80%, and save countless lives through
+              early intervention.
+            </p>
+            {/* Key Metrics */}
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm'
+              >
+                <div className='text-3xl font-bold text-green-400 mb-2'>
+                  99.2%
+                </div>
+                <div className='text-gray-300'>Diagnostic Accuracy</div>              </motion.div>
+=======
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Transform healthcare delivery with the world's most advanced AI diagnostic platform.
               Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and save countless lives through early intervention.
@@ -341,7 +607,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -438,7 +708,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 }
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Schedule Demo
               </motion.button>
               <motion.button
@@ -506,7 +780,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Advanced AI</span>
@@ -554,7 +832,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -620,7 +902,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
@@ -675,7 +961,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
@@ -747,7 +1037,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
@@ -795,7 +1089,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -883,7 +1181,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
@@ -942,7 +1244,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -950,6 +1256,18 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                       Most Popular
                     </div>
                   </div>
+<<<<<<< HEAD
+                )}
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {plan.name}
+                  </h3>
+                  <div className='flex items-baseline justify-center space-x-1 mb-2'>
+                    <span className='text-4xl font-bold text-white'>
+                      {plan.price}
+                    </span>
+                    <span className='text-gray-400'>{plan.period}</span>
+=======
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -960,6 +1278,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                   <div className="flex items-baseline justify-center space-x-1 mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
@@ -1047,7 +1366,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
@@ -1095,7 +1418,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
@@ -1160,7 +1487,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
@@ -1174,7 +1505,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 =======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Schedule Demo
               </button>
               <button className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300">
@@ -1203,17 +1538,29 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</Link> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</Link></p>
             </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </motion.div>
         </div>
       </section>
     </Layout>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   ),
 };
 
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
+<<<<<<< HEAD
+}
+export default AIHealthcareDiagnosticsPro;
+
+=======
 },
 export default AIHealthcareDiagnosticsPro,
           >;
@@ -1240,5 +1587,9 @@ export default AIHealthcareDiagnosticsPro,
     </Layout>;
   );
 },;
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AIHealthcareDiagnosticsPro;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

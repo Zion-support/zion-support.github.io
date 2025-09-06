@@ -1,6 +1,33 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+<<<<<<< HEAD
+  Menu
+  X
+  ChevronDown
+  Search
+  User
+  Settings
+  LogOut
+  Bell
+  Globe
+  Zap
+  Brain
+  Rocket
+  Dna
+  DollarSign
+  Lock
+  Wifi
+  Truck
+  Gamepad2
+  Bot
+  Factory
+  Car
+=======
   Menu,
   X,
   ChevronDown,
@@ -22,97 +49,111 @@ import {
   Bot,
   Factory,
   Car,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {
   className?: string;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
-  className = "",
+  className = ""
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-    };
-
+    }
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const navigationItems = [
     {
-      name: "Services",
-      href: "/services",
-      icon: <Brain className="w-4 h-4" />,
+      name: "Services"
+      href: "/services"
+      icon: <Brain className="w-4 h-4" />
       dropdown: [
         {
-          name: "AI & Machine Learning",
-          href: "/services?category=ai-ml",
-          icon: <Brain className="w-4 h-4" />,
-        },
+          name: "AI & Machine Learning"
+          href: "/services?category=ai-ml"
+          icon: <Brain className="w-4 h-4" />
+        }
         {
-          name: "Quantum Computing",
-          href: "/services?category=quantum",
-          icon: <Rocket className="w-4 h-4" />,
-        },
+          name: "Quantum Computing"
+          href: "/services?category=quantum"
+          icon: <Rocket className="w-4 h-4" />
+        }
         {
-          name: "Space Technology",
-          href: "/services?category=space",
-          icon: <Globe className="w-4 h-4" />,
-        },
+          name: "Space Technology"
+          href: "/services?category=space"
+          icon: <Globe className="w-4 h-4" />
+        }
         {
-          name: "Biotech & Healthcare",
-          href: "/services?category=biotech",
-          icon: <Dna className="w-4 h-4" />,
-        },
+          name: "Biotech & Healthcare"
+          href: "/services?category=biotech"
+          icon: <Dna className="w-4 h-4" />
+        }
         {
-          name: "Financial Services",
-          href: "/services?category=finance",
-          icon: <DollarSign className="w-4 h-4" />,
-        },
+          name: "Financial Services"
+          href: "/services?category=finance"
+          icon: <DollarSign className="w-4 h-4" />
+        }
         {
-          name: "Cybersecurity",
-          href: "/services?category=security",
-          icon: <Lock className="w-4 h-4" />,
-        },
+          name: "Cybersecurity"
+          href: "/services?category=security"
+          icon: <Lock className="w-4 h-4" />
+        }
         {
-          name: "IoT & Smart Devices",
-          href: "/services?category=iot",
-          icon: <Wifi className="w-4 h-4" />,
-        },
+          name: "IoT & Smart Devices"
+          href: "/services?category=iot"
+          icon: <Wifi className="w-4 h-4" />
+        }
         {
-          name: "Logistics & Supply Chain",
-          href: "/services?category=logistics",
-          icon: <Truck className="w-4 h-4" />,
-        },
+          name: "Logistics & Supply Chain"
+          href: "/services?category=logistics"
+          icon: <Truck className="w-4 h-4" />
+        }
         {
-          name: "Metaverse & Gaming",
-          href: "/services?category=metaverse",
-          icon: <Gamepad2 className="w-4 h-4" />,
-        },
+          name: "Metaverse & Gaming"
+          href: "/services?category=metaverse"
+          icon: <Gamepad2 className="w-4 h-4" />
+        }
         {
-          name: "Robotics & Automation",
-          href: "/services?category=robotics",
-          icon: <Bot className="w-4 h-4" />,
-        },
+          name: "Robotics & Automation"
+          href: "/services?category=robotics"
+          icon: <Bot className="w-4 h-4" />
+        }
         {
-          name: "Manufacturing",
-          href: "/services?category=manufacturing",
-          icon: <Factory className="w-4 h-4" />,
-        },
+          name: "Manufacturing"
+          href: "/services?category=manufacturing"
+          icon: <Factory className="w-4 h-4" />
+        }
         {
-          name: "Autonomous Vehicles",
-          href: "/services?category=vehicles",
-          icon: <Car className="w-4 h-4" />,
-        },
-      ],
-      hasDropdown: true,
+          name: "Autonomous Vehicles"
+          href: "/services?category=vehicles"
+          icon: <Car className="w-4 h-4" />
+        }
+      ]
+      hasDropdown: true
       dropdownItems: [
+<<<<<<< HEAD
+        { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
+        { name: "Quantum Computing", href: "/services?category=quantum" }
+        { name: "Space Technology", href: "/services?category=space" }
+        { name: "Biotech & Healthcare", href: "/services?category=biotech" }
+        { name: "Financial Services", href: "/services?category=finance" }
+        { name: "Cybersecurity", href: "/services?category=security" }
+        { name: "Edge Computing", href: "/services?category=edge" }
+        { name: "Blockchain", href: "/services?category=blockchain" }
+        { name: "View All Services", href: "/services" }
+      ]
+    }
+=======
         { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
         { name: "Quantum Computing", href: "/services?category=quantum" },
         { name: "Space Technology", href: "/services?category=space" },
@@ -124,31 +165,34 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "View All Services", href: "/services" },
       ],
     },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
-      name: "Solutions",
-      href: "/solutions",
-      hasDropdown: true,
+      name: "Solutions"
+      href: "/solutions"
+      hasDropdown: true
       dropdownItems: [
-        { name: "Enterprise Solutions", href: "/solutions?type=enterprise" },
-        { name: "Startup Solutions", href: "/solutions?type=startup" },
-        { name: "Government Solutions", href: "/solutions?type=government" },
-        { name: "Healthcare Solutions", href: "/solutions?type=healthcare" },
-        { name: "Financial Solutions", href: "/solutions?type=financial" },
-      ],
-    },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Resources", href: "/resources" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+        { name: "Enterprise Solutions", href: "/solutions?type=enterprise" }
+        { name: "Startup Solutions", href: "/solutions?type=startup" }
+        { name: "Government Solutions", href: "/solutions?type=government" }
+        { name: "Healthcare Solutions", href: "/solutions?type=healthcare" }
+        { name: "Financial Solutions", href: "/solutions?type=financial" }
+      ]
+    }
+    { name: "Pricing", href: "/pricing" }
+    { name: "Resources", href: "/resources" }
+    { name: "Blog", href: "/blog" }
+    { name: "Contact", href: "/contact" }
   ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
-    mobile: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    website: "https://ziontechgroup.com",
-  };
-
+    mobile: "+1 302 464 0950"
+    email: "kleber@ziontechgroup.com"
+    address: "364 E Main St STE 1008 Middletown DE 19709"
+    website: "https://ziontechgroup.com"
+  }
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -257,7 +301,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Notifications */}
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
@@ -271,7 +319,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -301,7 +353,11 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -348,7 +404,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20">
                 <div className="space-y-2 text-sm text-gray-400">
@@ -377,6 +436,18 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         )}
       </AnimatePresence>
     </nav>
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+}
+export default EnhancedNavigation;
+
+=======
+};
+
+export default EnhancedNavigation;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 );
 };
 <<<<<<< HEAD
@@ -385,3 +456,4 @@ export default EnhancedNavigation;
 
 export default EnhancedNavigation;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

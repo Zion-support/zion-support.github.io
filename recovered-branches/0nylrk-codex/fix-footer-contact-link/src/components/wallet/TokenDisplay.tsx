@@ -7,7 +7,12 @@ import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Skeleton} from "@/components/ui/skeleton";
+<<<<<<< HEAD
+
+export function TokenDisplay() {
+=======
 export function TokenDisplay() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { wallet, loading } = useWallet();
 =======
 import React from "react",
@@ -20,6 +25,7 @@ export function TokenDisplay() {
   const { wallet, loading } = useWallet(),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -35,7 +41,7 @@ export function TokenDisplay() {
         ) : (
           <div className="flex flex-col gap-2">
             <div className="flex items-end">
-              <span className="text-3xl font-bold">{wallet?.balance || 0}</span>
+              <span className="text-3xl font-bold">{wallet?.balance |0}</span>
               <span className="ml-1 text-muted-foreground">ZION$</span>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -95,4 +101,8 @@ export function TokenDisplay() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

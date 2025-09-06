@@ -2,58 +2,66 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import type {
+<<<<<<< HEAD
+  GrantApplication
+  UpdateGrantPayload;
+=======
   GrantApplication,;
   UpdateGrantPayload,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../types/grants';
-
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
-
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
 }
-
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
 }
-
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
+
   const file = grantPath(id);
   if (!fs.existsSync(file)) return null;
   return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication;
-
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs.writeFileSync(
-    grantPath(record.id),
-    JSON.stringify(record, null, 2),
+    grantPath(record.id)
+    JSON.stringify(record, null, 2)
     'utf8'
   );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
+<<<<<<< HEAD
+function writeGrant(record: GrantApplication) {
+  ensureDir()
+=======
 
 function writeGrant(record: GrantApplication) {
   ensureDir(),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  const { id } = req.query as { id: string }
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { id } = req.query as { id: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return;  }    return
   }
-
   if (req.method === 'GET') {
     const g = readGrant(id);
     if (!g) {
@@ -65,7 +73,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     res.status(200).json({ record: g });
     return
-
   if (req.method === 'PUT') {
     const existing = readGrant(id);
     if (!existing) {
@@ -74,7 +81,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const payload = req.body as UpdateGrantPayload;
     const next: GrantApplication = {
-      ...existing,
+      ...existing
       ...payload,    }
     const payload = req.body as UpdateGrantPayload;
     const next: GrantApplication = {
@@ -86,18 +93,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ record: next });
     return
   }
-
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');
-      status: payload.submit ? 'Submitted' : existing.status,
-      updatedAt: new Date().toISOString(),
+      status: payload.submit ? 'Submitted' : existing.status
+      updatedAt: new Date().toISOString()
     } as GrantApplication;
     writeGrant(next);
     res.status(200).json({ record: next });
     return;
   }
-
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');  res.setHeader('AllowGET, PUT');
+
   res.status(405).end('Method Not Allowed')
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

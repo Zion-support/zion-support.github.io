@@ -1,15 +1,67 @@
+
 import { GradientHeading } from './GradientHeading'
 import {
+<<<<<<< HEAD
+  Server
+  HardDrive
+  Network
+  Clock
+  Recycle
+  Truck
+} from 'lucide-react'
+import { Button } from './ui/button'
+const services = [
+  {
+    title: 'Servers'
+    description:
+      'Enterprise-grade servers for any workload with 24/7 maintenance and support'
+    icon: <Server className='h-10 w-10' />
+  }
+  {
+    title: 'Storage'
+    description:
+      'Scalable storage solutions from SSDs to large-scale enterprise storage systems'
+    icon: <HardDrive className='h-10 w-10' />
+  }
+  {
+    title: 'Networking'
+    description:
+      'Connectivity solutions including switches, routers, and network security devices'
+    icon: <Network className='h-10 w-10' />
+  }
+  {
+    title: '24x7x365 Support'
+    description:
+      'Around-the-clock technical support with rapid response times guaranteed'
+    icon: <Clock className='h-10 w-10' />
+  }
+  {
+    title: 'Recycling Services'
+    description:
+      'Sustainable disposal and recycling of IT equipment following eco-friendly practices'
+    icon: <Recycle className='h-10 w-10' />
+  }
+  {
+    title: 'Equipment Rentals'
+    description:
+      'Flexible rental options for temporary projects and scaling requirements'
+    icon: <Truck className='h-10 w-10' />
+  }
+]
+=======
   Server,
   HardDrive,
   Network,
   Clock,
   Recycle,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   Truck,
 } from 'lucide-react'
 import { Button } from './ui/button'
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Truck,;
 } from 'lucide-react';
 import { Button } from './ui/button';
@@ -17,7 +69,10 @@ import { Button } from './ui/button';
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
 import { Button } from "./ui/button",
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const services = [
   {
     title: "Servers",
@@ -41,6 +96,8 @@ const services = [
     icon: <Recycle className="h-10 w-10" />},
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     title: 'Equipment Rentals',
     description:
       'Flexible rental options for temporary projects and scaling requirements',
@@ -48,11 +105,16 @@ const services = [
   },
 ]
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function GlobalServiceSection() {
   return (
     <section className="py-20 bg-zion-blue" id="global-services">
@@ -84,7 +146,11 @@ export function GlobalServiceSection() {
 =======
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
@@ -103,7 +169,11 @@ export function GlobalServiceSection() {
         </div>
 
         <div className="flex justify-center mt-12">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
             Get Your Free Commercial Proposal
           </Button>
@@ -117,6 +187,12 @@ export function GlobalServiceSection() {
       </div>
     </section>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react';
 import { Button } from "./ui/button",;
@@ -177,4 +253,8 @@ export function GlobalServiceSection() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

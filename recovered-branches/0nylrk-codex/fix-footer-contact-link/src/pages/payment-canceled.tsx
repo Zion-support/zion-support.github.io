@@ -1,11 +1,21 @@
 
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+import { Button  } from '@/components/ui/button';
+import { useNavigate  } from 'react-router-dom';
+import { XCircle } from 'lucide-react';
+export default function PaymentCanceled() {
+
+  const navigate = useNavigate();
+
+=======
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
 export default function PaymentCanceled() {;
   const navigate = useNavigate();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -15,6 +25,7 @@ export default function PaymentCanceled() {
   const navigate = useNavigate(),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -26,13 +37,17 @@ export default function PaymentCanceled() {
           Your payment process was canceled. No charges have been made to your account.
         </p>
         <div className="flex flex-col space-y-3">
-          <Button 
+          <Button
             onClick={() => navigate('/payments')}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Try Again
           </Button>
+<<<<<<< HEAD
+          <Button
+=======
           <Button 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             variant="outline"
             onClick={() => navigate('/dashboard')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -44,6 +59,10 @@ export default function PaymentCanceled() {
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -79,5 +98,10 @@ export default function PaymentCanceled() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,21 +1,32 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
+<<<<<<< HEAD
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+=======
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function About() {
   return (
     <>
-      <SEO 
-        title="About Zion - The Future of AI & Tech Marketplace" 
-        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
+      <SEO
+        title="About Zion - The Future of AI & Tech Marketplace"
+        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence."
         keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
         canonical="https://app.ziontechgroup.com/about"
       />
@@ -32,22 +43,22 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions. 
+                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions.
                 We believe that innovation thrives when barriers are removed and connections are made.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
-                Our platform brings together talented AI specialists, innovative companies, and the latest 
+                Our platform brings together talented AI specialists, innovative companies, and the latest
                 technological solutions in one seamless ecosystem.
               </p>
               <p className="text-zion-slate-light text-lg">
-                By connecting talent with opportunity and innovation with implementation, we're creating 
+                By connecting talent with opportunity and innovation with implementation, we're creating
                 a global community where the future of technology is being built today.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600" 
-                alt="Team collaboration" 
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600"
+                alt="Team collaboration"
                 className="object-cover w-full h-full"
               />
             </div>
@@ -56,23 +67,23 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                We envision a world where AI and technology are accessible to all, regardless of geographical 
-                or financial constraints. A world where the best minds can collaborate to solve the most 
+                We envision a world where AI and technology are accessible to all, regardless of geographical
+                or financial constraints. A world where the best minds can collaborate to solve the most
                 challenging problems.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
-                Zion is building that world by creating a transparent, ethical, and inclusive platform 
+                Zion is building that world by creating a transparent, ethical, and inclusive platform
                 that puts people at the center of technological advancement.
               </p>
               <p className="text-zion-slate-light text-lg">
-                Our goal is to become the premier destination for AI and tech innovation, fostering 
+                Our goal is to become the premier destination for AI and tech innovation, fostering
                 a community that shapes the future of how we live, work, and interact with technology.
               </p>
             </div>
             <div className="rounded-lg overflow-hidden lg:order-first">
-              <img 
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600" 
-                alt="Tech innovation" 
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600"
+                alt="Tech innovation"
                 className="object-cover w-full h-full"
               />
             </div>
@@ -121,6 +132,10 @@ export default function About() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -236,6 +251,12 @@ export default function About() {;
       <Footer />;
     </>;
   );
+<<<<<<< HEAD
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

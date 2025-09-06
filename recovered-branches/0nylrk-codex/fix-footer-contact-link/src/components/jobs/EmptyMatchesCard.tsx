@@ -1,11 +1,28 @@
+<<<<<<< HEAD
+
+import { Card } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { Sparkles, RefreshCcw } from "lucide-react";
+export interface EmptyMatchesCardProps {
+  onRefresh: () => void;
+  isProcessing: boolean
+}
+export function EmptyMatchesCard({
+  onRefresh
+  isProcessing
+}: EmptyMatchesCardProps) {
+=======
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export interface EmptyMatchesCardProps {;
   onRefresh: () => void;
   isProcessing: boolean;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -18,6 +35,7 @@ export interface EmptyMatchesCardProps {
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
@@ -45,6 +63,12 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 <<<<<<< HEAD
         )}
       </Button>
+<<<<<<< HEAD
+    </Card>
+  );
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -85,3 +109,8 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
     </Card>;
   );
 }
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

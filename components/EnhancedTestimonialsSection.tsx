@@ -1,12 +1,23 @@
 import React from 'react';
+
 import {
+<<<<<<< HEAD
+  Star
+  Quote
+  Users
+  Award
+  TrendingUp
+  CheckCircle;
+=======
   Star,
   Quote,
   Users,
   Award,
   TrendingUp,;
   CheckCircle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
+
 interface Testimonial {
   id: string;
   name: string;
@@ -15,110 +26,109 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-  category: string;  id: string,
-  name: string,
-  title: string,
-  company: string,
-  content: string,
-  rating: number,
-  avatar: string,
+
+  category: string;  id: string
+  name: string
+  title: string
+  company: string
+  content: string
+  rating: number
+  avatar: string
   category: string
 }
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-      id: '1',
-      name: 'Dr. Sarah Chen',
-      title: 'CTO',
-      company: 'Quantum Dynamics Inc.',
+      id: '1'
+      name: 'Dr. Sarah Chen'
+      title: 'CTO'
+      company: 'Quantum Dynamics Inc.'
       content:
-        'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.',
-      rating: 5,
-      avatar: 'SC',
-      category: 'AI & Security',
-    },    {      content: 'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.',
-      rating: 5,
-      avatar: 'SC',
+        'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.'
+      rating: 5
+      avatar: 'SC'
       category: 'AI & Security'
-    };
-      id: '2',
-      name: 'Marcus Rodriguez',
-      title: 'VP of Engineering',
-      company: 'SpaceTech Ventures',
+    },    {      content: 'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.'
+      rating: 5
+      avatar: 'SC'
+      category: 'AI & Security'
+    }
+      id: '2'
+      name: 'Marcus Rodriguez'
+      title: 'VP of Engineering'
+      company: 'SpaceTech Ventures'
       content:
-        'Working with Zion Tech Group on our space technology platform was game-changing. Their edge computing orchestration and AI-powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.',
-      rating: 5,
-      avatar: 'MR',
-      category: 'Space Technology',
-    },    {      content: 'Working with Zion Tech Group on our space technology platform was game-changing. Their edge computing orchestration and AI-powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.',
-      rating: 5,
-      avatar: 'MR',
+        'Working with Zion Tech Group on our space technology platform was game-changing. Their edge computing orchestration and AI-powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.'
+      rating: 5
+      avatar: 'MR'
       category: 'Space Technology'
-    };
-      id: '3',
-      name: 'Dr. Emily Watson',
-      title: 'Research Director',
-      company: 'NeuralLink Research',
+    },    {      content: 'Working with Zion Tech Group on our space technology platform was game-changing. Their edge computing orchestration and AI-powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.'
+      rating: 5
+      avatar: 'MR'
+      category: 'Space Technology'
+    }
+      id: '3'
+      name: 'Dr. Emily Watson'
+      title: 'Research Director'
+      company: 'NeuralLink Research'
       content:
-        "Zion Tech Group's neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn't considered. The team's expertise is unmatched.",
-      rating: 5,
-      avatar: 'EW',
-      category: 'Emerging Tech',
-    },    {      content: 'Zion Tech Group\'s neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn\'t considered. The team\'s expertise is unmatched.',
-      rating: 5,
-      avatar: 'EW',
+        "Zion Tech Group's neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn't considered. The team's expertise is unmatched."
+      rating: 5
+      avatar: 'EW'
       category: 'Emerging Tech'
-    };
-      id: '4',
-      name: 'James Thompson',
-      title: 'CEO',
-      company: 'EdgeFlow Systems',
+    },    {      content: 'Zion Tech Group\'s neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn\'t considered. The team\'s expertise is unmatched.'
+      rating: 5
+      avatar: 'EW'
+      category: 'Emerging Tech'
+    }
+      id: '4'
+      name: 'James Thompson'
+      title: 'CEO'
+      company: 'EdgeFlow Systems'
       content:
-        'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.',
-      rating: 5,
-      avatar: 'JT',
-      category: 'Infrastructure',
-    },    {      content: 'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.',
-      rating: 5,
-      avatar: 'JT',
+        'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.'
+      rating: 5
+      avatar: 'JT'
       category: 'Infrastructure'
-    };
-      id: '5',
-      name: 'Dr. Lisa Park',
-      title: 'Chief Innovation Officer',
-      company: 'FutureTech Labs',
+    },    {      content: 'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.'
+      rating: 5
+      avatar: 'JT'
+      category: 'Infrastructure'
+    }
+      id: '5'
+      name: 'Dr. Lisa Park'
+      title: 'Chief Innovation Officer'
+      company: 'FutureTech Labs'
       content:
-        "Zion Tech Group's quantum AI neural networks are cutting-edge. We've achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time.",
-      rating: 5,
-      avatar: 'LP',
-      category: 'Quantum AI',
-    },    {      content: 'Zion Tech Group\'s quantum AI neural networks are cutting-edge. We\'ve achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time.',
-      rating: 5,
-      avatar: 'LP',
+        "Zion Tech Group's quantum AI neural networks are cutting-edge. We've achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time."
+      rating: 5
+      avatar: 'LP'
       category: 'Quantum AI'
-    };
-      id: '6',
-      name: 'Robert Kim',
-      title: 'Head of Digital Transformation',
-      company: 'Global Innovations Corp',
+    },    {      content: 'Zion Tech Group\'s quantum AI neural networks are cutting-edge. We\'ve achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time.'
+      rating: 5
+      avatar: 'LP'
+      category: 'Quantum AI'
+    }
+      id: '6'
+      name: 'Robert Kim'
+      title: 'Head of Digital Transformation'
+      company: 'Global Innovations Corp'
       content:
-        "Implementing Zion Tech Group's AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.",
-      rating: 5,
-      avatar: 'RK',
-      category: 'AI & Analytics',
+        "Implementing Zion Tech Group's AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization."
+      rating: 5
+      avatar: 'RK'
+      category: 'AI & Analytics'
     },  ];      content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.';
-      rating: 5,
-      avatar: 'RK',
+      rating: 5
+      avatar: 'RK'
       category: 'AI & Analytics'
     }
-
   const stats = [
-    { number: '500+', label: 'Projects Delivered', icon: CheckCircle },
-    { number: '50+', label: 'Enterprise Clients', icon: Users },
-    { number: '99.9%', label: 'Client Satisfaction', icon: Award },
+    { number: '500+', label: 'Projects Delivered', icon: CheckCircle }
+    { number: '50+', label: 'Enterprise Clients', icon: Users }
+    { number: '99.9%', label: 'Client Satisfaction', icon: Award }
     { number: '4.9/5', label: 'Average Rating', icon: Star },  ];    { number: '4.9/5', label: 'Average Rating', icon: Star }
   ];
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -128,8 +138,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
         }`}
       />
     ));
-  };
-
+  }
   return (
     <section className='py-24 px-6 relative overflow-hidden'>
       {/* Background */}
@@ -150,8 +159,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
             their business with cutting-edge technology solutions          </p>
         </div>
         {/* Stats Section */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>  };
-
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>  }
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       {/* Background */}
@@ -204,7 +212,11 @@ const EnhancedTestimonialsSection: React.FC = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -247,7 +259,11 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
                 {/* Testimonial Text */}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -283,7 +299,11 @@ const EnhancedTestimonialsSection: React.FC = () => {
 
                     {testimonial.category}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
               </div>
@@ -298,7 +318,11 @@ const EnhancedTestimonialsSection: React.FC = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -306,7 +330,11 @@ const EnhancedTestimonialsSection: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -325,7 +353,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'              >              Ready to Join Our Success Stories?
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
-              Experience the same transformative results that our clients have achieved. 
+              Experience the same transformative results that our clients have achieved.
               Let's discuss how Zion Tech Group can accelerate your innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -371,13 +399,24 @@ const EnhancedTestimonialsSection: React.FC = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
+}
+=======
 };
 
 <<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedTestimonialsSection;  )
-};
-
+}
 export default EnhancedTestimonialsSection;
+
+<<<<<<< HEAD
+=======
+export default EnhancedTestimonialsSection;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 =======
 export default EnhancedTestimonialsSection;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

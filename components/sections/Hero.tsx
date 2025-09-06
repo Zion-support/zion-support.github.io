@@ -1,29 +1,37 @@
+<<<<<<< HEAD
+import React from 'react',
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../ui/Button';
-import {ArrowRight, Play, Star, Zap, Shield, Users} from 'lucide-react';
+import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 interface HeroProps {
   title: string;
   subtitle: string;
   primaryAction?: {
     text: string;
+
     href: string;
-  };
+  }
   secondaryAction?: {
     text: string;
     href: string;
-  };
+  }
   stats?: Array<{
     value: string;
     label: string;
     color: string;
   }>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const Hero: React.FC<HeroProps> = ({
-  title,
-  subtitle,
-  primaryAction,
-  secondaryAction,
-  stats,
+  title
+  subtitle
+  primaryAction
+  secondaryAction
+  stats
 }) => {
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
@@ -59,20 +67,20 @@ const Hero: React.FC<HeroProps> = ({
           </h1>
 <<<<<<< HEAD
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
-    text: string,
+    text: string
     href: string
-  };
+  }
   secondaryAction?: {
-    text: string,
+    text: string
     href: string
-  };
+  }
   stats?: Array<{
-    value: string,
-    label: string,
+    value: string
+    label: string
+
     color: string
   }>
 }
-
 const Hero: React.FC<HeroProps> = ({
   title;
   subtitle;
@@ -80,6 +88,7 @@ const Hero: React.FC<HeroProps> = ({
   secondaryAction;
   stats}) => {
   return (
+
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Elements */}
       <div className="absolute inset-0">
@@ -108,6 +117,11 @@ const Hero: React.FC<HeroProps> = ({
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
             {subtitle}
           </p>
+<<<<<<< HEAD
+          {/* Action Buttons */}
+          {(primaryAction |secondaryAction) && (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
@@ -118,6 +132,7 @@ const Hero: React.FC<HeroProps> = ({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
                 <Button
@@ -143,7 +158,11 @@ const Hero: React.FC<HeroProps> = ({
 
                 </Button>
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
               {secondaryAction && (
                 <Button
@@ -167,7 +186,11 @@ const Hero: React.FC<HeroProps> = ({
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Stats Section */}
         {stats && (
           <div
@@ -200,13 +223,20 @@ const Hero: React.FC<HeroProps> = ({
 
                   {stat.label}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </div>
             ))}
           </div>
         )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Trust Indicators */}
         <div
           className='mt-16 md:mt-20 animate-fade-in'
@@ -256,13 +286,15 @@ const Hero: React.FC<HeroProps> = ({
         style={{ animationDelay: '2s' }}
       />
   );
-};
-
+}
 export default Hero;
 
+<<<<<<< HEAD
+=======
 }
 }
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
       {/* Decorative Elements */}
@@ -271,4 +303,8 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

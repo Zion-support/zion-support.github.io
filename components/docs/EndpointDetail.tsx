@@ -1,19 +1,34 @@
+<<<<<<< HEAD
+import React from 'react',
+import CodeSamples from './CodeSamples',
+=======
 import React from 'react';
 import CodeSamples from './CodeSamples';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
 
 export default function EndpointDetail({
+<<<<<<< HEAD
+  endpoint
+}: {
+=======
   endpoint,
 }: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   endpoint: EndpointSpec;
 }) {
 <<<<<<< HEAD
 =======
 
   return (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className='space-y-4'>
+
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
           {endpoint.title}
@@ -53,8 +68,8 @@ export default function EndpointDetail({
           method={endpoint.method}
           path={endpoint.path}
           requiresAuth={
-            (endpoint.auth || []).includes('jwt') ||
-            (endpoint.auth || []).includes('wallet')
+            (endpoint.auth |[]).includes('jwt') |
+            (endpoint.auth |[]).includes('wallet')
           }
         />
       </div>
@@ -74,15 +89,25 @@ export default function EndpointDetail({
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
             ))}
+<<<<<<< HEAD
+          </ul>
+        </div>
+      )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
             ))}
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </ul>
         </div>
       )}
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {endpoint.errors && endpoint.errors.length > 0 && (
         <div>
           <div className='font-medium mb-2'>Error Codes</div>
@@ -99,13 +124,20 @@ export default function EndpointDetail({
 
             ))}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </ul>
         </div>
       )}
     </div>
   );
+<<<<<<< HEAD
+=======
 }
 
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

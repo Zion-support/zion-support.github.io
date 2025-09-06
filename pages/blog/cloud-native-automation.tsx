@@ -1,6 +1,8 @@
-import Head from 'next/head',;
-import Link from 'next/link',;
-import React from 'react',;
+
+import Head from 'next/head';
+
+import Link from 'next/link';
+import React from 'react';
 export default function CloudNativeAutomation() {
   return (
     <>
@@ -9,6 +11,7 @@ export default function CloudNativeAutomation() {
           Building Cloud-Native Automation Infrastructure | Zion Tech Group
         </title>
         <meta
+
           name='description'
           content='A deep dive into our cloud-native approach to building scalable, reliable automation systems.'
         />
@@ -87,7 +90,7 @@ export default function CloudNativeAutomation() {
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
-                    • Consistent runtime environments across development,
+                    • Consistent runtime environments across development
                     staging, and production
                   </li>
                   <li>
@@ -97,7 +100,8 @@ export default function CloudNativeAutomation() {
                   <li>Efficient resource allocation and management</li>
                 </ul>
                 <p className='text-white/90 mb-4'>
-                  Our Kubernetes clusters automatically handle load balancing,
+                  Our Kubernetes clusters automatically handle load balancing
+
                   service discovery, and failover, ensuring high availability
                   and performance.
                 </p>
@@ -177,7 +181,11 @@ export default function CloudNativeAutomation() {
                   infrastructure, we&apos,re exploring emerging technologies
 =======
                   infrastructure, we're exploring emerging technologies
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
@@ -220,6 +228,9 @@ export default function CloudNativeAutomation() {
       </div>
     </>
   )
+<<<<<<< HEAD
+}
+=======
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
@@ -445,3 +456,4 @@ export default function CloudNativeAutomation(req, res) {
   }
 }
 ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

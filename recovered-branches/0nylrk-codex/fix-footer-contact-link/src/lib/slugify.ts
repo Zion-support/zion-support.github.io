@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function slugify(title: string, separator = "-"): string {
   const sep = separator,
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
@@ -19,7 +25,6 @@ export function slugify(title: string, separator = "-"): string {
     .replace(new RegExp(`${escaped}{2}`, "g"), sep)
     .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "")
 }
-
 /**
  * Convert a slug back into a human readable title.
  * This simply splits the slug on the separator and
@@ -33,8 +38,11 @@ export function unslugify(slug: string, separator = "-"): string {
     .join(" ")
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 
 ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
@@ -64,4 +72,8 @@ export function unslugify(slug: string, separator = "-"): string {;
     .join(" ");
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

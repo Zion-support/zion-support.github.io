@@ -1,47 +1,54 @@
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Props = {
   milestone: Milestone;
   projectId: string;
   role: 'client' | 'talent' | 'admin';
   onAction: (
-    action: 'in_progress' | 'submitted' | 'approved' | 'paid',
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => Promise<void> | void;
-};
-
+}
 const statusSteps = [
-  'Pending',
-  'In Progress',
-  'Submitted',
-  'Approved',
-  'Paid',
+  'Pending'
+  'In Progress'
+  'Submitted'
+  'Approved'
+  'Paid'
 ] as const;
-
 export default function MilestoneCard({
+<<<<<<< HEAD
+  milestone
+  projectId
+  role
+  onAction
+}: Props) {
+=======
   milestone,
   projectId,
   role,
   onAction,
 }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [expanded, setExpanded] = useState(false);
-
   const currentIndex = statusSteps.findIndex(s => s === milestone.status);
-
   const canClientMarkInProgress =
     role !== 'talent' && milestone.status === 'Pending';
   const canTalentSubmit =
-    (role === 'talent' || role === 'admin') &&
+    (role === 'talent' |role === 'admin') &&
     milestone.status === 'In Progress';
   const canClientApprove =
     role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid =
     role !== 'talent' && milestone.status === 'Approved';
-
   return (
     <div className='border rounded-lg p-4 bg-white shadow-sm'>
       <div className='flex items-start justify-between'>
@@ -59,21 +66,22 @@ export default function MilestoneCard({
       </div>
       <div className='mt-3'>
         <div className='flex items-center gap-2'>type Props = {
-  milestone: Milestone,
-  projectId: string,
-  role: 'client' | 'talent' | 'admin',
+  milestone: Milestone
+  projectId: string
+  role: 'client' | 'talent' | 'admin'
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void
-};
-
+}
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
+<<<<<<< HEAD
+export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {
+=======
 
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [expanded, setExpanded] = useState(false);
-
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
-
   const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
-  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone.status === 'In Progress';
+  const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
 
@@ -106,7 +114,11 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
                   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
                 title={step}
               />
@@ -123,7 +135,11 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
 =======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
           ))}
@@ -153,7 +169,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
                       href={a.url}
                       target='_blank'
                       rel='noreferrer'
-                    >                      {a.label || a.url}              <div className="font-medium">Attachments</div>
+                    >                      {a.label |a.url}              <div className="font-medium">Attachments</div>
               <ul className="list-disc ml-5">
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
@@ -162,7 +178,11 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
 
                       {a.label || a.url}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </a>
                   </li>
                 ))}
@@ -171,21 +191,35 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
           )}
         </div>
       )}
-
+<<<<<<< HEAD
       <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
 =======
+<<<<<<< HEAD
+
+      <div className='mt-4 flex flex-wrap gap-2'>
+        {canClientMarkInProgress && (
+          <button
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
 
             onClick={() => onAction('in_progress', milestone.id)}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             Mark In Progress
           </button>
@@ -200,7 +234,11 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
 
             onClick={() => onAction('submitted', milestone.id)}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             Submit Work
           </button>
@@ -215,7 +253,11 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
 
             onClick={() => onAction('approved', milestone.id)}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             Approve
           </button>
@@ -230,7 +272,11 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
 
             onClick={() => onAction('paid', milestone.id)}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             Mark as Paid
           </button>
@@ -239,6 +285,11 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 }
 
 }
@@ -248,4 +299,5 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

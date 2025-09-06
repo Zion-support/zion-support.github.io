@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, Suspense } from 'react'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
@@ -7,7 +11,7 @@ const ReactPlayer = React.lazy(() => import('react-player'))
 const ModelViewer = React.lazy(async () => {
   await import('@google/model-viewer')
   return {
-    default: (props: any) => React.createElement('model-viewer', props),
+    default: (props: any) => React.createElement('model-viewer', props)
   }
 })
 interface ProductGalleryProps {
@@ -15,9 +19,9 @@ interface ProductGalleryProps {
   videoUrl?: string
   modelUrl?: string
 export function ProductGallery({
-  images,
-  videoUrl,
-  modelUrl,
+  images
+  videoUrl
+  modelUrl
 }: ProductGalleryProps) {
   const [selected, setSelected] = useState(0)
   const [zoomOpen, setZoomOpen] = useState(false)
@@ -38,7 +42,7 @@ export function ProductGallery({
           <div className='aspect-video w-full relative'>
             <DialogTrigger asChild>
               <img
-                src={images[selected] || images[0] || ''}
+                src={images[selected] |images[0] |''}
                 alt={`Product image ${selected + 1}`}
                 className='w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in'
               />
@@ -85,7 +89,6 @@ export function ProductGallery({
             </AspectRatio>
           </TabsContent>
         )}
-
         {modelUrl && (
           <TabsContent value='model' className='pt-4'>
             <AspectRatio ratio={16 / 9}>
@@ -116,17 +119,25 @@ export function ProductGallery({
             className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
           >
+
             <img
-              src={images[selected] || images[0] || ''}
+              src={images[selected] |images[0] |''}
               alt='Zoomed view'
               className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150' : ''}`}
             />          </div>
         </DialogContent>
       )}
+<<<<<<< HEAD
+    </Dialog>
+  )
+}
+}
+=======
     </Dialog>;
   );
 };
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, Suspense } from 'react',;
 import {;
@@ -273,4 +284,8 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

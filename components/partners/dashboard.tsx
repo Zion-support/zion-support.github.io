@@ -1,11 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect, useState } from "react";
+=======
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
 export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from "next/head";
 export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState("");
+<<<<<<< HEAD
+  const [token, setToken] = useState<string | null>(null),
+  const [usage, setUsage] = useState<any>(null),
+=======
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+=======
 =======
 
 export default function PartnerDashboard() {
@@ -16,71 +28,75 @@ export default function PartnerDashboard() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+export default function PartnerDashboard() {
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
+
+  const [token, setToken] = useState<string | null>(null);
+
+  const [usage, setUsage] = useState<any>(null);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+
     const saved = localStorage.getItem('zion_partner_token');
     if (saved) setToken(saved);
   }, []);
-
   async function getToken() {
     const res = await fetch('/api/partners/token', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ apiKey }),
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ apiKey })
     });
     const data = await res.json();
     if (data.token) {
       localStorage.setItem('zion_partner_token', data.token);
       setToken(data.token);    }  }, []);
-
   async function getToken() {
     const res = await fetch("/api/partners/token", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ apiKey })}),
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify({ apiKey })})
     const data = await res.json();
     if (data.token) {
       localStorage.setItem("zion_partner_token", data.token);
       setToken(data.token)
     }
   }
-
   async function fetchUsage() {
     setLoading(true);
     const res = await fetch('/api/partners/usage', {
-      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
     });
     const data = await res.json();
-    setUsage(data.summary || null);
+    setUsage(data.summary |null);
     setLoading(false);
   }
-
   async function regenerateKey() {
     const res = await fetch('/api/partners/key', {
-      method: 'POST',
-      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      method: 'POST'
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
     });
     const data = await res.json();
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`);    }
   }
-
   return (
     <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res.json();
-    setUsage(data.summary || null);
+    setUsage(data.summary |null);
     setLoading(false)
   }
-
   async function regenerateKey() {
     const res = await fetch("/api/partners/key", {
-      method: "POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {}}),
+      method: "POST"
+      headers: token ? { Authorization: `Bearer ${token}` } : {}})
     const data = await res.json();
+
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
     }
   }
-
   return (
 <<<<<<< HEAD
     <div className='min-h-screen bg-gray-50 text-gray-900'>
@@ -116,7 +132,6 @@ export default function PartnerDashboard() {
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>
           </div>
         )}
-
         <div className='grid md:grid-cols-3 gap-6'>
           <div className='bg-white p-6 rounded-lg shadow'>
             <h3 className='font-medium mb-2'>API Keys</h3>
@@ -146,7 +161,7 @@ export default function PartnerDashboard() {
                 <div className='mt-3'>
                   <p className='font-medium'>By Endpoint</p>
                   <ul className='list-disc ml-6'>
-                    {Object.entries(usage.byEndpoint || {}).map(([k, v]) => (
+                    {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>
                         {k}: {v as any}
                       </li>                    ))}          </div>
@@ -159,14 +174,18 @@ export default function PartnerDashboard() {
                 <div className="mt-3">
                   <p className="font-medium">By Endpoint</p>
                   <ul className="list-disc ml-6">
-                    {Object.entries(usage.byEndpoint || {}).map(([k, v]) => (
+                    {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
                     ))}
 =======
 
                     ))}
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </ul>
                 </div>
               </div>
@@ -206,4 +225,8 @@ export default function PartnerDashboard() {
 }
 =======
         </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

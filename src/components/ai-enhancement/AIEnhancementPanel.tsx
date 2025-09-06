@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useState } from 'react'
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardFooter
+=======
 import React, { useState } from 'react'
 import {
   Card,
@@ -6,33 +16,36 @@ import {
   CardHeader,
   CardTitle,;
   CardFooter;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/card'; import React, { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-  useAIContentEnhancer,
-  AIEnhancementOptions,
+  useAIContentEnhancer
+  AIEnhancementOptions
 } from '@/hooks/useAIContentEnhancer'
+
 interface AIEnhancementPanelProps {
-  title: string
-  defaultOptions: AIEnhancementOptions
-  onApply: (content: string) => void
-  onClose?: () => void
-  showInstructions?: boolean
+  title: string;
+  defaultOptions: AIEnhancementOptions;
+  onApply: (content: string) => void;
+  onClose?: () => void;
+  showInstructions?: boolean;
   initialContent?: string
 export function AIEnhancementPanel({
-  title,
-  defaultOptions,
-  onApply,
-  onClose,
-  showInstructions = true,
-  initialContent = '',
+
+  title
+  defaultOptions
+  onApply
+  onClose
+  showInstructions = true
+  initialContent = ''
 }: AIEnhancementPanelProps) {
   const [options, setOptions] = useState<AIEnhancementOptions>({
-    ...defaultOptions,
-    content: initialContent || defaultOptions.content,
+    ...defaultOptions
+    content: initialContent |defaultOptions.content
   })
   const [generatedContent, setGeneratedContent] = useState<string>('')
   const [copied, setCopied] = useState(false)
@@ -79,15 +92,25 @@ export function AIEnhancementPanel({;
     }
   },
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
+<<<<<<< HEAD
+<<<<<<< HEAD
+      ...options
+      [field]: e.target.value
+=======
       ...options,
 <<<<<<< HEAD
       [field]: e.target.value,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     })
   }
   const handleApply = () => {
@@ -100,6 +123,10 @@ export function AIEnhancementPanel({;
     setTimeout(() => setCopied(false), 2000)
   }
 =======
+<<<<<<< HEAD
+      ...options,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       [field]: e.target.value})
   },
 
@@ -113,8 +140,12 @@ export function AIEnhancementPanel({;
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -160,7 +191,11 @@ export function AIEnhancementPanel({;
             onChange={(e) => handleInputChange(e, 'context')}
           />;
         </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Instructions input (optional) */}
         {showInstructions && (
           <div className="space-y-2">
@@ -172,12 +207,15 @@ export function AIEnhancementPanel({;
               onChange={e => handleInputChange(e, 'instructions')}            />
           </div>
         )}
-
         {/* Generate button */}
         <Button
           onClick={handleGenerate}
           className='w-full'
+<<<<<<< HEAD
+          disabled={isEnhancing |(!options.content && !options.context)}        >
+=======
           disabled={isEnhancing || (!options.content && !options.context)}        >
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
@@ -190,7 +228,11 @@ export function AIEnhancementPanel({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {isEnhancing ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -224,7 +266,11 @@ export function AIEnhancementPanel({;
                 onClick={handleCopy}
                 className="h-8"
               >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -242,7 +288,11 @@ export function AIEnhancementPanel({;
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
               />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </div>
         )}
@@ -250,7 +300,11 @@ export function AIEnhancementPanel({;
 <<<<<<< HEAD
 =======
       
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {generatedContent && (
         <CardFooter className="flex justify-between">
           {onClose && (
@@ -261,10 +315,17 @@ export function AIEnhancementPanel({;
 <<<<<<< HEAD
           <Button onClick={handleApply}>Apply to Form</Button>
         </CardFooter>
+<<<<<<< HEAD
+      )}
+    </Card>
+  )
+}
+=======
       )};
     </Card>;
   );
 };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           <Button onClick={handleApply}>;
             Apply to Form;
@@ -275,4 +336,8 @@ export function AIEnhancementPanel({;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
