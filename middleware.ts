@@ -2,7 +2,11 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function middleware(request: NextRequest) {
+=======
+export function middleware(_request: NextRequest) {
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   return NextResponse.next();
 =======
 export function middleware(_request: NextRequest) {
@@ -36,6 +40,13 @@ export function middleware(_request: NextRequest) {
 
 export const config = {
   matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 };

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,14 +11,18 @@
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ToastContainer from './components/ToastContainer';
+<<<<<<< HEAD
+=======
 import { ThemeProvider } from './components/ThemeProvider';
+>>>>>>> main
 import ScrollToTop from './components/ScrollToTop';
+<<<<<<< HEAD
 import BackToTop from './components/BackToTop';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -39,11 +44,16 @@ const ContactPage = lazy(() => import('./pages/contact'));
 const ServicesPage = lazy(() => import('./pages/services/index'));
 const ComprehensiveMicroSaasShowcase = lazy(() => import('./pages/services/comprehensive-micro-saas-showcase'));
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+import { BackToTopButton } from './components/BackToTopButton';
+// Pages are handled by Next.js in the app directory
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 
 function App() {
   return (
 <<<<<<< HEAD
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -52,37 +62,13 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         </main>
         <Footer />
+        <BackToTop />
       </div>
     </Router>
-  );
-}
-
-<<<<<<< HEAD
-export default App;
-=======
-export default App;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-import React, { Suspense, lazy } from 'react';
-import Footer from './components/Footer';
-// Enhanced Components
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-// Lazy load pages for better performance - only import existing pages
-const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ default: module.default })));
-// Service Pages
-  return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Header />
-          <Sidebar />
-          <main className="flex-1 lg:ml-80">
-            <Suspense fallback={<LoadingSpinner />}>
 =======
     <ThemeProvider>
       <ErrorBoundary>
@@ -91,6 +77,7 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1">
+<<<<<<< HEAD
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -451,17 +438,33 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
                 </AnimatePresence>
               </Suspense>
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                  <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                    Zion Tech Group
+                  </h1>
+                  <p className="text-xl text-gray-600 mb-8">
+                    AI, Micro SaaS, and IT Services
+                  </p>
+                  <p className="text-gray-500">
+                    This is a Vite-based React application. The main pages are handled by Next.js in the app directory.
+                  </p>
+                </div>
+              </div>
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
             </main>
             <Footer />
-            <ToastContainer />
-            <BackToTop />
+            <BackToTopButton />
           </div>
         </Router>
       </ErrorBoundary>
     </ThemeProvider>
+>>>>>>> main
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function App() {
@@ -670,3 +673,6 @@ export default function App() {; return (; <ErrorBoundary>; <Router>; <div class
 =======
 
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+export default App;
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

@@ -1,56 +1,144 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+import { FileText, Search, Handshake, Check } from 'lucide-react';
 
-const HowItWorksSection = () => {
+const HowItWorksSection: React.FC = () => {
   const steps = [
     {
-      number: '01',
-      title: 'Consultation',
-      description: 'We start with a detailed consultation to understand your business needs and challenges.',
+      icon: <FileText className="w-8 h-8" />,
+      title: "Plan",
+      description: "Collaborate on project requirements, timeline, and deliverables",
+      color: "from-blue-600 to-blue-700",
+      bgColor: "from-blue-600/20 to-blue-700/20",
+      details: [
+        "Interactive project planning",
+        "Timeline optimization",
+        "Resource allocation",
+        "Risk assessment"
+      ],
+      duration: "4-8 hours",
+      success: "90% on-time delivery"
     },
     {
-      number: '02',
-      title: 'Strategy & Planning',
-      description: 'Our experts develop a customized strategy and implementation plan tailored to your goals.',
+      icon: <Search className="w-8 h-8" />,
+      title: "Match",
+      description: "Our AI finds the perfect talent and solutions for your needs",
+      color: "from-purple-600 to-purple-700",
+      bgColor: "from-purple-600/20 to-purple-700/20",
+      details: [
+        "AI-powered matching",
+        "Skill assessment",
+        "Compatibility analysis",
+        "Quality verification"
+      ],
+      duration: "2-4 hours",
+      success: "95% match accuracy"
     },
     {
-      number: '03',
-      title: 'Implementation',
-      description: 'We implement the solution with minimal disruption to your existing operations.',
+      icon: <Handshake className="w-8 h-8" />,
+      title: "Hire & Buy",
+      description: "Connect directly with verified professionals and services",
+      color: "from-green-600 to-green-700",
+      bgColor: "from-green-600/20 to-green-700/20",
+      details: [
+        "Direct communication",
+        "Secure transactions",
+        "Contract management",
+        "Payment processing"
+      ],
+      duration: "1-2 days",
+      success: "100% secure payments"
     },
     {
-      number: '04',
-      title: 'Support & Optimization',
-      description: 'Ongoing support and continuous optimization to ensure maximum value and performance.',
-    },
+      icon: <Check className="w-8 h-8" />,
+      title: "Done",
+      description: "Deliver exceptional results with ongoing support",
+      color: "from-orange-600 to-orange-700",
+      bgColor: "from-orange-600/20 to-orange-700/20",
+      details: [
+        "Project delivery",
+        "Quality assurance",
+        "Ongoing support",
+        "Performance monitoring"
+      ],
+      duration: "Ongoing",
+      success: "98% client satisfaction"
+    }
   ];
 
   return (
-    <section className="py-16 px-4 bg-white">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl font-bold text-center mb-4">How It Works</h2>
-        <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-          Our proven process ensures successful implementation and maximum value from your investment.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            How It Works
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Our streamlined process ensures you get the best results quickly and efficiently
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="text-center relative">
-              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                {step.number}
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-              <p className="text-gray-600">{step.description}</p>
+            <div
+              key={index}
+              className="relative group"
+            >
+              {/* Connection Line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gray-300 transform translate-x-8"></div>
+                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-gray-300 to-transparent transform translate-x-4 z-0" />
               )}
+              
+              <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 border border-gray-100">
+                {/* Step Number */}
+                <div className="absolute -top-4 left-8 bg-white border-2 border-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold text-gray-600">
+                  {index + 1}
+                </div>
+                
+                {/* Icon */}
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${step.bgColor} flex items-center justify-center text-white mb-6`}>
+                  {step.icon}
+                </div>
+                
+                {/* Content */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {step.description}
+                </p>
+                
+                {/* Details */}
+                <ul className="space-y-2 mb-4">
+                  {step.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center text-sm text-gray-500">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+                
+                {/* Stats */}
+                <div className="border-t border-gray-100 pt-4">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-500">Duration:</span>
+                    <span className="font-semibold text-gray-700">{step.duration}</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm mt-1">
+                    <span className="text-gray-500">Success Rate:</span>
+                    <span className="font-semibold text-green-600">{step.success}</span>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
+<<<<<<< HEAD
       </div>
     </section>
 =======
@@ -627,27 +715,23 @@ function HowItWorksSection() {
             ))}
           </div>
         </div>
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 
+        {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">Timeline</h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">1-2 Weeks</div>
-                <div className="text-gray-600">Discovery & Analysis</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">2-4 Weeks</div>
-                <div className="text-gray-600">Strategy & Planning</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">4-12 Weeks</div>
-                <div className="text-gray-600">Implementation</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600 mb-2">Ongoing</div>
-                <div className="text-gray-600">Support & Optimization</div>
-              </div>
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <p className="text-xl mb-6 opacity-90">
+              Join thousands of businesses that trust our platform for their technology needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Your Project
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+              </button>
             </div>
           </div>
         </div>
@@ -657,6 +741,7 @@ function HowItWorksSection() {
 <<<<<<< HEAD
 };
 
+<<<<<<< HEAD
 export default HowItWorksSection;
 =======
               <div 
@@ -751,3 +836,6 @@ export default Component;
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+export default HowItWorksSection;
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

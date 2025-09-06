@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "target": "ES2020",
     "lib": [
       "dom",
@@ -16,34 +12,13 @@
       "es2021",
       "es2022"
     ],
-<<<<<<< HEAD
-=======
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es6"],
->>>>>>> main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
-<<<<<<< HEAD
-    "esModuleInterop": true
-  }
-=======
     "esModuleInterop": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
     "module": "ESNext",
     "moduleResolution": "node",
-=======
-    "module": "esnext",
-    "moduleResolution": "bundler",
->>>>>>> main
-=======
-    "module": "esnext",
-    "moduleResolution": "bundler",
->>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -55,29 +30,22 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/styles/*": ["./src/styles/*"],
-      "@/assets/*": ["./src/assets/*"]
-    },
-    "allowSyntheticDefaultImports": true
-  }
-=======
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
       "@/styles/*": ["./styles/*"],
       "@/utils/*": ["./utils/*"],
       "@/types/*": ["./types/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

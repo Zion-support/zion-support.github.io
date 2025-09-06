@@ -7,12 +7,11 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-    host: true,
-  },
-  server: {
-    port: 3000,
-    open: true,
+<<<<<<< HEAD
     host: true
+=======
+    host: true,
+>>>>>>> main
   },
   build: {
     outDir: "dist",
@@ -21,6 +20,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
@@ -30,7 +30,6 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-<<<<<<< HEAD
         drop_debugger: true
       }
     }
@@ -39,16 +38,20 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
-<<<<<<< HEAD
 =======
-=======
-        drop_debugger: true,
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
       },
     },
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   optimizeDeps: {
-    include: ["react", "react-dom", "framer-motion", "lucide-react"],
+    include: ['react', 'react-dom', 'react-router-dom'],
   },
 });
 >>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

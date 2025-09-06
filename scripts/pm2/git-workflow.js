@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -306,6 +309,7 @@
     } catch (error) {,;
       this.log(`❌ Error running git workflow: monitor: ${error.message}`),;
       process.exit(1);
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -331,6 +335,8 @@ class GitWorkflow {
     } catch (error) {
       console.error('Error writing to log file: ', error.message);
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
     }
   }
 
@@ -378,6 +384,7 @@ class GitWorkflow {
       }).trim().split('\n');
       const branchInfo = [];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       for (const branch of branches) {
@@ -688,3 +695,5 @@ class GitWorkflow {; constructor() {; this.projectRoot = process.cwd(); this.log
 const gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error = > {; process.exit(1)});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

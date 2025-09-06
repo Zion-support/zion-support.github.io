@@ -1,6 +1,7 @@
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState  } from './react';
 export /**
  * BackToTopButton - Function description
@@ -35,13 +36,18 @@ export function BackToTopButton() {;
   useEffect(() => {;
     const updateVisibility = () => {;
 =======
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 
 export function BackToTopButton() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const updateVisibility = () => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
       setVisible(window.scrollY > 400);
     };
     updateVisibility();
@@ -68,13 +74,11 @@ export function BackToTopButton() {
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
-<<<<<<< HEAD
-=======
-
-    >;
-      <ArrowUp className="h-5 w-5" />;
-    </button>;
+    >
+      <ArrowUp className="h-4 w-4" />
+    </button>
   );
+<<<<<<< HEAD
 }
 ;
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -88,3 +92,6 @@ export function BackToTopButton() {
 
 }"
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+}
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

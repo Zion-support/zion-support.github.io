@@ -3,6 +3,7 @@
   "name": "ziontechgroup-site",
   "version": "1.0.0",
   "private": true,
+<<<<<<< HEAD
   "type": "module",
 =======
   "name": "@zion-holdings/zion.app",
@@ -15,34 +16,24 @@
     "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.js"
   },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   "scripts": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     "dev": "vite",
 <<<<<<< HEAD
     "build": "vite build",
 =======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "build:netlify": "node scripts/build-with-error-handling.js",
-<<<<<<< HEAD
-=======
-    "dev": "vite",
-    "build": "vite build",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
-=======
 >>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
+    "start": "vite preview --port 4173",
     "postbuild": "echo \"Build completed\"",
-    "lint": "next lint",
-    "lint:fix": "eslint . --fix",
+    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
+    "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
     "lint:check": "eslint . --max-warnings 0",
-    "type-check": "tsc --noEmit",
+    "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -212,13 +203,8 @@
     "automation:log-analyzer": "node scripts/intelligent/log-analyzer.js",
     "automation:resource-optimizer": "node scripts/intelligent/resource-optimizer.js",
     "security:fix": "npm audit fix --force",
-<<<<<<< HEAD
     "sitemap": "node scripts/generate-sitemap.js",
     "sitemap:generate": "node scripts/generate-sitemap.js",
-=======
-    "sitemap": "node scripts/generate-dynamic-sitemap.js",
-    "seo:generate": "node scripts/generate-dynamic-sitemap.js",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-347d
     "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
     "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
     "pm2:fastads:stop": "pm2 stop ecosystem.fast-ads.local.cjs || true",
@@ -317,19 +303,18 @@
 <<<<<<< HEAD
 =======
     "@babel/core": "^7.28.4",
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> main
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
-<<<<<<< HEAD
-=======
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.2",
@@ -340,6 +325,9 @@
 =======
     "@next/swc-linux-x64-gnu": "^15.5.2",
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+    "@next/swc-linux-x64-gnu": "^15.5.2",
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -364,6 +352,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     "@reduxjs/toolkit": "^2.9.0",
@@ -371,23 +360,15 @@
     "@stripe/stripe-js": "^7.9.0",
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-    "@reduxjs/toolkit": "^2.8.2",
-    "@stripe/stripe-js": "^2.3.0",
     "@sendgrid/mail": "^8.1.5",
+<<<<<<< HEAD
+    "@stripe/stripe-js": "^7.9.0",
+=======
 >>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-    "@reduxjs/toolkit": "^2.9.0",
-    "@stripe/stripe-js": "^7.9.0",
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-191f
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -395,7 +376,6 @@
     "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
-    "@types/mongodb": "^4.0.6",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "aws-sdk": "^2.1692.0",
@@ -425,7 +405,7 @@
     "jszip": "^3.10.1",
     "lucide-react": "^0.536.0",
     "mongodb": "^6.19.0",
-    "next": "^14.2.5",
+    "next": "^15.5.2",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
@@ -448,12 +428,6 @@
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     "tailwind-merge": "^3.3.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "tailwindcss-animate": "^1.0.7"
-=======
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
@@ -463,10 +437,16 @@
   },
   "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "@babel/core": "^7.28.3",
     "@babel/plugin-transform-class-properties": "^7.27.1",
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+=======
+    "@axe-core/cli": "^4.10.2",
+    "@axe-core/react": "^4.10.2",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
@@ -477,20 +457,11 @@
     "@next/bundle-analyzer": "^13.5.6",
     "@next/eslint-plugin-next": "^15.5.2",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
-<<<<<<< HEAD
-=======
     "@testing-library/dom": "^10.4.1",
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.8",
-    "@types/next": "^8.0.7",
-    "@types/node": "^18.0.0",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
-    "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
@@ -514,30 +485,14 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-<<<<<<< HEAD
-=======
     "typescript": "^5.9.2",
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 <<<<<<< HEAD
     "vite": "^7.1.4"
 =======
-<<<<<<< HEAD
-    "typescript": "^5.9.2",
-<<<<<<< HEAD
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
-<<<<<<< HEAD
-=======
-    "vite": "^7.1.4"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
-    "vite": "^7.1.4",
-    "web-vitals": "^5.1.0"
-<<<<<<< HEAD
 >>>>>>> main
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-191f
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
@@ -604,6 +559,8 @@
     "vite": "^5.0.8",
     "vitest": "^1.4.0"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   },
   "engines": {
     "node": ">=18.0.0",
@@ -612,9 +569,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   "postcss": {
     "plugins": {
       "tailwindcss": {},
@@ -650,8 +610,4 @@
 }
 =======
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
-=======
 >>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

@@ -7,6 +7,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Server, 
@@ -324,6 +325,8 @@ const industries = [
   }
 ];
 <<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 
 export default function ITServicesPage() {
 =======
@@ -1169,7 +1172,7 @@ export default function ITServices() {
 
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   return (
-    <>
+    <div>
       <Head>
 <<<<<<< HEAD
         <title>IT Services & Solutions - Zion Tech Group | Cloud, Security, DevOps</title>
@@ -1183,22 +1186,17 @@ export default function ITServices() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 IT Services & Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100">
-                Comprehensive IT services to modernize your infrastructure, enhance security, and drive digital transformation. 
-                From cloud migration to cybersecurity, we deliver enterprise-grade solutions at competitive prices.
+                Transform your technology infrastructure with our comprehensive IT services
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   href="/contact"
+<<<<<<< HEAD
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
 =======
       <ErrorBoundary level='page'>
@@ -1427,13 +1425,17 @@ export default function ITServices() {
                   href='/contact'
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
                 >
-                  Get IT Consultation
+                  Get Started
                 </Link>
-                <a 
-                  href={`tel:${contactInfo.phone}`}
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-lg"
+                <Link
+                  href="#services"
+                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
                   Call {contactInfo.phone}
 =======
@@ -1448,70 +1450,50 @@ export default function ITServices() {
                 </a>
               </div>
 </motion.div>
+=======
+                  View Services
+                </Link>
+              </div>
+            </div>
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-20 bg-gray-50">
+        {/* Services Section */}
+        <section id="services" className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
                 Our IT Services
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                End-to-end IT solutions designed to modernize your infrastructure, enhance security, and drive business growth.
-              </p>
-            </motion.div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Migration</h3>
+                  <p className="text-gray-600 mb-4">
+                    Seamlessly migrate your infrastructure to the cloud with our expert guidance and support.
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="text-blue-600 hover:text-blue-700 font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                >
-                  {service.popular && (
-                    <div className="absolute -top-3 -right-3 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-                      <Star className="w-4 h-4 fill-current" />
-                      Popular
-                    </div>
-                  )}
-                  
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                      <service.icon className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Clock className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm text-gray-500">{service.setupTime}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                      <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
-                    </div>
-                    <div className="text-sm text-green-600 font-medium">
-                      Save up to 50% vs market rate
-                    </div>
-                  </div>
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Cybersecurity</h3>
+                  <p className="text-gray-600 mb-4">
+                    Protect your business with comprehensive cybersecurity solutions and monitoring.
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="text-blue-600 hover:text-blue-700 font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
 
+<<<<<<< HEAD
                   {/* ROI and Popularity */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-sm">
@@ -2070,26 +2052,36 @@ export default function ITServices() {
                   <p className="text-gray-600">{item.description}</p>
                 </motion.div>
               ))}
+=======
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">DevOps</h3>
+                  <p className="text-gray-600 mb-4">
+                    Streamline your development and deployment processes with DevOps automation.
+                  </p>
+                  <Link
+                    href="/contact"
+                    className="text-blue-600 hover:text-blue-700 font-semibold"
+                  >
+                    Learn More →
+                  </Link>
+                </div>
+              </div>
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Modernize Your IT Infrastructure?
+                Ready to Transform Your IT Infrastructure?
               </h2>
-              <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity, 
-                we'll help you build a robust, secure, and scalable IT environment.
+              <p className="text-xl mb-8 text-blue-100">
+                Let our experts help you modernize your technology stack and improve your business operations.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link 
                   href="/contact"
@@ -2391,6 +2383,19 @@ export default function ITServices() {
       </div>
 <<<<<<< HEAD
     </>
+=======
+              <Link
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block"
+              >
+                Get Started Today
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   );
 }
 <<<<<<< HEAD

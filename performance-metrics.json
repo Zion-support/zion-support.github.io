@@ -1,6 +1,9 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   "timestamp": "2025-09-05T00:20:16.317Z",
   "memory": {
     "rss": 48967680,
@@ -31,30 +34,10 @@
   },
   "fileCounts": {
     ".tsx": 25,
-=======
-  "timestamp": "2025-09-05T20:55:04.458Z",
-  "bundleSize": {
-    ".next": {
-      "size": 183864,
-      "sizeMB": "0.18"
-    },
-    "node_modules": {
-      "size": 820676108,
-      "sizeMB": "782.66"
-    }
-  },
-  "fileCounts": {
-    ".tsx": 26,
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,
     ".css": 2,
     ".json": 0
-<<<<<<< HEAD
   }
-=======
-  },
-  "recommendations": []
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 }

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +29,10 @@ useState,;
 } from 'react';
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -152,12 +157,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };
 
+export default UserProvider;
+export default UserProvider;
 <<<<<<< HEAD
-export default UserProvider;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-export default UserProvider;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -184,3 +186,5 @@ export function useUser() {
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

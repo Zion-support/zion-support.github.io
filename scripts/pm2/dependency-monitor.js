@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +53,8 @@ monitor.run().catch(error = > {process.exit(1)});
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -1321,17 +1324,9 @@ const monitor = new DependencyMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 }),;
+
+
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-<<<<<<< HEAD
-=======
-
-      , vulnerabilities: {, total: 0, critical: 0, high: 0, moderate: 0,
-    low: 0;
-    },
-
-
 class DependencyMonitor {;
   constructor() {;
     this.projectRoot = process.cwd();
@@ -1704,3 +1699,5 @@ monitor.run().catch(error = > {; process.exit(1)});
 =======
 monitor.run().catch(error = > {; process.exit(1)});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

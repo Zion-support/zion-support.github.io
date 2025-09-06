@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     { cmd:"npm run test: smoke", desc: "Smoke tests" }
   ];
 ; for (const test of build_tests) { const result = await this.run_command (test.cmd, test.desc); this.results.builds[test.desc] = result}}
@@ -33,6 +34,8 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 #!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
@@ -265,7 +268,6 @@ class ComprehensiveAutomationRunner {;
 // Main execution;
 if (import.meta.url === `file: //${process.argv[1]}`) {;
   const runner = new ComprehensiveAutomationRunner();
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   runner.runAll().catch(console.error);
 };
 ;
@@ -506,6 +508,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 ,
 export default ComprehensiveAutomationRunner,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }),;
 ,;
@@ -585,3 +588,5 @@ if (import.meta.url = = = `file: //${process.argv[1]}`) {; const runner = new Co
 ;
 export default ComprehensiveAutomationRunner;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

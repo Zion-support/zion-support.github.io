@@ -1078,7 +1078,7 @@ export default function AIServicesPage() {
               </h2>
               <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
                 Transform your business with our comprehensive AI solutions. From machine learning to computer vision, 
-                we'll help you build the future of intelligent automation.
+                we&apos;ll help you build the future of intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link 
