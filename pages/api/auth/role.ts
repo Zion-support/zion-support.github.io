@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true });
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ ok: true })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ ok: true })
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

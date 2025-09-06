@@ -15,21 +15,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'POST') {
     const {
       title,
-    description,
-      category;
-      requiredSkills = [];
+      description,
+      category,
+      requiredSkills = [],
       budgetMinUsd,
-    budgetMaxUsd,
-      deliveryDeadlineIso;
-      clientEmail} = req.body || {};
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      clientEmail
+    } = req.body || {};
     if (!title || !description || !clientEmail) {
-      res.status(400).json({ error: 'Missing required fields' }),
-      return
+      res.status(400).json({ error: 'Missing required fields' });
+      return;
     }
 
     const nowIso = new Date().toISOString();
     const job: Job = {
-      id: uuidv4();
+      id: uuidv4(),
       title: String(title),
       description: String(description),
       category: String(category || ''),
@@ -40,20 +41,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       clientEmail: String(clientEmail),
       status: 'New',
       createdAtIso: nowIso,
-      updatedAtIso: nowIso},
+      updatedAtIso: nowIso
+    };
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
     if (!job.category) {
       const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
       if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
       else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
-      else job.category = 'General'
+      else job.category = 'General';
     }
 
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
     res.status(201).json({ job });
-    return
+    return;
   }
 
   res.setHeader('AllowGET, POST');

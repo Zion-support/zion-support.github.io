@@ -43,10 +43,5 @@
     "allowSyntheticDefaultImports": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-<<<<<<< HEAD
   "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**", "components/**", "temp_exclude/**"]
 }
-=======
-  "exclude": ["node_modules"]
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
