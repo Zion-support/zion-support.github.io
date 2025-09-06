@@ -1,12 +1,9 @@
 import React from 'react';
-import Card from './Card';
 
 interface ServiceCardProps {
   title: string;
   description: string;
-  icon?: string;
-  features?: string[];
-  price?: string;
+  icon?: React.ReactNode;
   className?: string;
 }
 
@@ -14,37 +11,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   icon,
-  features = [],
-  price,
   className = ''
 }) => {
   return (
-    <Card className={`h-full ${className}`}>
-      {icon && (
-        <div className="text-4xl mb-4 text-center">
-          {icon}
-        </div>
-      )}
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-300 mb-4">{description}</p>
-      
-      {features.length > 0 && (
-        <ul className="space-y-2 mb-4">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center text-sm text-gray-400">
-              <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      )}
-      
-      {price && (
-        <div className="text-2xl font-bold text-blue-400 text-center">
-          {price}
-        </div>
-      )}
-    </Card>
+    <div className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${className}`}>
+      {icon && <div className="mb-4">{icon}</div>}
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
   );
 };
 

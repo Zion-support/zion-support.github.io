@@ -1,0 +1,531 @@
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+  Search,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Globe,
+  Zap,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Eye,
+  Brain,
+  Shield,
+  Lock,
+  Sparkles,
+  ChartBar,
+  Lightbulb,
+  Rocket,;
+  Settings,;
+} from 'lucide-react';
+export default function AISeosuitePage() {
+  const features = [
+    {;
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+    {
+      icon: <Search className='w-8 h-8 text-white' />,
+
+
+export default function AISeosuitePage() {
+  const features = [
+} from 'lucide-react';
+export default function AISeosuitePage() {;
+  const features = [;
+    {;
+      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+    {
+      icon: <TrendingUp className="w-8 h-8 text-white" />
+      title: 'Ranking Analytics'
+      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'}
+    {
+      icon: <Target className="w-8 h-8 text-white" />
+      title: 'Content Optimization'
+      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'}
+    {
+      icon: <BarChart3 className="w-8 h-8 text-white" />
+      title: 'Technical SEO'
+      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'}
+    {
+      icon: <Globe className="w-8 h-8 text-white" />
+      title: 'Local SEO'
+      description: 'Optimize for local search with location-based keyword research and citation management.'
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
+      gradient: 'from-teal-400 to-blue-500'}
+    {
+      icon: <Zap className="w-8 h-8 text-white" />
+      title: 'Automated Reports'
+      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
+      gradient: 'from-pink-400 to-rose-500'}]
+  const seoTools = [
+    {
+      category: 'Keyword Research'
+      icon: <Search className="w-6 h-6 text-blue-400" />
+      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
+    }
+    {
+      category: 'On-Page SEO'
+      icon: <Target className="w-6 h-6 text-green-400" />
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
+    }
+
+export default function AISeosuitePage() {
+  const features = [
+    {
+  ];
+  const pricingPlans = [
+    {
+      name: 'Starter'
+      price: '$39'
+      period: '/month'
+      description: 'Perfect for small websites and blogs'
+      features: [
+    };
+    {;
+      category: 'On-Page SEO',;
+      icon: <Target className="w-6 h-6 text-green-400" />,;
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization'];
+    };
+    {;
+      category: 'Technical SEO',;
+      icon: <Settings className="w-6 h-6 text-purple-400" />,;
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator'];
+    };
+    {;
+      category: 'Analytics & Reporting',;
+      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,;
+      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards'];
+    }
+  ];
+
+    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
+
+  ];
+
+    { metric: 'ROI', value: '400%', description: 'Average return on investment' }
+
+  return (
+            <Button
+              href='#pricing'
+              size='lg'
+              className='bg-blue-600 hover:bg-blue-700 shadow-2xl shadow-blue-500/25'>;
+              Start Free Trial;
+              <ArrowRight className='w-5 h-5 ml-2' />;
+            </Button>;
+            <Button
+              href='#demo'
+              variant='outline'
+              size='lg'
+            <Button
+              href="#pricing"
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 shadow-2xl shadow-blue-500/25">;
+              Start Free Trial;
+              <ArrowRight className="w-5 h-5 ml-2" />;
+            </Button>;
+            <Button
+              href="#demo"
+              variant="outline"
+              size="lg"
+              Everything you need to dominate search rankings and drive organic;
+              traffic;
+            </p>;
+          </div>;
+                    {feature.icon}
+                  </div>;
+                </div>;
+                <h3 className='text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
+                  {feature.title}
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Everything you need to dominate search rankings and drive organic traffic
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
+                    {feature && feature.icon}
+                  </div>;
+                </div>;
+                <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>;
+                  {feature && feature.title}
+                </h3>;
+                <p className='text-gray-400 leading-relaxed'>                  {feature && feature.description}              Powerful SEO Features;
+            </h2>;
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+              Everything you need to dominate search rankings and drive organic traffic;
+            </p>;
+          </div>;
+              <Card
+                key={index}
+                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Tools Section */}
+
+      <section className="py-24 bg-black relative overflow-hidden">
+
+                style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
+                <div className="relative">;
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
+                    {feature && feature.icon}
+                  </div>;
+                </div>;
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">;
+                  {feature && feature.title}
+                </h3>;
+                <p className="text-gray-400 leading-relaxed">;
+                  {feature && feature.description}
+                </p>;
+              </Card>;
+                    {feature.icon}
+                  </div>;
+                </div>;
+                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300">;
+                  {feature.title}
+                </h3>;
+                <p className="text - gray - 400 leading - relaxed">;
+                  {feature.description}
+            ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Comprehensive SEO Tools
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <Card
+                key={index}
+                className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
+                <div className='flex items-start space-x-4'>;
+                  <div className='flex-shrink-0'>{tool && tool.icon}</div>;
+                  <div className='flex-1'>;
+                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300'>;
+                      {tool && tool.category}
+                    </h3>;
+                    <div className='grid grid-cols-1 gap-2'>;
+                      {tool && tool.tools.map((toolName, toolIndex) => (;
+                        <div
+                          key={toolIndex}
+                          className='flex items-center text-sm text-gray-300'>;
+                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {toolName}            {seoTools && seoTools.map((tool, index) => (;
+              <Card
+                key={index}
+                className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
+                <div className="flex items-start space-x-4">;
+                  <div className="flex-shrink-0">{tool && tool.icon}</div>;
+                  <div className="flex-1">;
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">;
+                      {tool && tool.category}
+                    </h3>;
+                    <div className="grid grid-cols-1 gap-2">;
+                      {tool && tool.tools.map((toolName, toolIndex) => (;
+                        <div key={toolIndex} className="flex items-center text-sm text-gray-300">;
+                          <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
+                          {toolName}
+                        </div>
+                      ))}
+                    </div>;
+                  </div>;
+                </div>;
+              </Card>;
+            ))}
+      {/* Success Metrics Section */}
+
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <Card
+                key={index}
+                className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>;
+                <div className='text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
+                  {metric && metric.value}
+                </div>;
+                <h3 className='text-xl font-bold mb-2 text-white'>;
+                  {metric && metric.metric}
+                </h3>;
+                <p className='text-gray-400 text-sm'>{metric && metric.description}</p>              </Card>            {successMetrics && successMetrics.map((metric, index) => (;
+              <Card
+                key={index}
+                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">;
+                <div className="text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
+                  {metric && metric.value}
+                </div>;
+                <h3 className="text-xl font-bold mb-2 text-white">{metric && metric.metric}</h3>;
+                <p className="text-gray-400 text-sm">{metric && metric.description}</p>;
+              </Card>;
+            ))}
+
+
+
+
+
+      {/* Use Cases Section */}
+
+      <section className="py-24 bg-black relative overflow-hidden">
+
+            ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Use Cases
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <Card
+                key={index}
+                className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
+                <div className='flex items-start space-x-4'>;
+                  <div className='text-4xl'>{useCase && useCase.icon}</div>;
+                  <div className='flex-1'>;
+                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300'>;
+                      {useCase && useCase.title}
+                    </h3>;
+                    <p className='text-gray-400 mb-4 leading-relaxed'>;
+                      {useCase && useCase.description}
+                    </p>;
+                    <div className='grid grid-cols-2 gap-2'>;
+                      {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
+                        <div
+                          key={benefitIndex}
+                          className='flex items-center text-sm text-gray-300'>;
+                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {benefit}            {useCases && useCases.map((useCase, index) => (;
+              <Card
+                key={index}
+                className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
+                <div className="flex items-start space-x-4">;
+                  <div className="text-4xl">{useCase && useCase.icon}</div>;
+                  <div className="flex-1">;
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">;
+                      {useCase && useCase.title}
+                    </h3>;
+                    <p className="text-gray-400 mb-4 leading-relaxed">;
+                      {useCase && useCase.description}
+                    </p>;
+                    <div className="grid grid-cols-2 gap-2">;
+                      {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
+                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
+                          <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
+                          {benefit}
+                        </div>
+                      ))}
+                    </div>;
+                  </div>;
+                </div>;
+              </Card>;
+            ))}
+      {/* Pricing Section */}
+
+      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+      {/* Pricing Section */}
+      <section
+        id='pricing'
+        className='py-24 bg-gray-900 relative overflow-hidden'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
+              Simple, Transparent Pricing;
+            </h2>;
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your SEO needs;
+            </p>;
+          </div>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
+          <div className="text-center mb-20">;
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
+              Simple, Transparent Pricing;
+            </h2>;
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+            </p>;
+          </div>;
+              <Card
+                key={index}
+
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='text-4xl font-bold text-white mb-2'>;
+                    {plan && plan.price}
+                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {plan.name}
+                  </h3>;
+                  <div className='text - 4xl font - bold text - white mb - 2'>;
+                    {plan.price}
+                    <span className='text-lg text-gray-400'>{plan.period}</span>
+                  </div>
+                  <p className='text-gray-400'>{plan.description}</p>
+                </div>
+                <ul className='space-y-4 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+
+                      {feature}
+                    </li>;
+                  ))}
+                <Button
+                  href='/contact'
+                  className={`w-full ${plan && plan.buttonColor} text-white`}
+                  size='lg'>;
+                  Get Started;
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
+                  size="lg";
+                >;
+                  Get Started;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+                </Button>;
+              </Card>;
+
+
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  href="/contact"
+                  className={`w-full ${plan.buttonColor} text-white`}
+                  size="lg"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Card>
+            ))}
+      {/* Integrations Section */}
+
+      <section className="py-24 bg-black relative overflow-hidden">
+
+            ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              Seamless Integrations
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <Card
+                key={index}
+                className='text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-300'>;
+                  {integration && integration.icon}
+                </div>;
+                <h3 className='font-semibold text-white mb-2'>;
+                  {integration && integration.name}
+                </h3>;
+                <p className='text-sm text-gray-400'>;
+                  {integration && integration.description}
+                </p>              </Card>            {integrations && integrations.map((integration, index) => (;
+              <Card
+                key={index}
+                className="text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">;
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">;
+                  {integration && integration.icon}
+                </div>;
+                <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
+                <p className="text-sm text-gray-400">{integration && integration.description}</p>;
+              </Card>;
+            ))}
+          </div>
+        </div>
+      </section>
+
+            ))}
+          </div>
+        </div>
+      </section>
+
+            ))}
+      {/* CTA Section */}
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
+            Ready to Dominate Search Rankings?
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Join thousands of businesses who are already ranking higher and
+            driving more organic traffic.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
+            Ready to Dominate Search Rankings?;
+          </h2>;
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
+            Join thousands of businesses who are already ranking higher and;
+            driving more organic traffic.;
+          </p>;
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+            <Button
+              href='/contact'
+              variant='secondary'
+              size='lg'
+            <Button
+              href='#demo'
+              variant='outline'
+              size='lg'
+            <Button
+              href="/contact"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl">;
+              Start Free Trial;
+              <ArrowRight className="w-5 h-5 ml-2" />;
+            </Button>;
+            <Button
+              href="#demo"
+              variant="outline"
+              size="lg"
+
+
+              Watch Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+}
+
+  );
+}
+    </>);
+}
