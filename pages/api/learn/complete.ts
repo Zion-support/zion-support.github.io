@@ -13,7 +13,7 @@ function writeJson(p: string, data: any) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST'),
+    res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed')
   }
 
