@@ -1,12 +1,10 @@
-const fs = require('fs'),
-const path = require('path'),
-const { OpenAI } = require('openai'),
-
-const ROOT = process.cwd(),
-const REPORTS_DIR = path.join(ROOT, 'datareportsautomation'),
-const STATUS_FILE = path.join(REPORTS_DIR, 'status.json'),
-const IDEAS_DIR = REPORTS_DIR,
-
+const fs = require('fs');
+const path = require('path');
+const { OpenAI } = require('openai');
+const ROOT = process.cwd();
+const REPORTS_DIR = path.join(ROOT, 'datareportsautomation');
+const STATUS_FILE = path.join(REPORTS_DIR, 'status.json');
+const IDEAS_DIR = REPORTS_DIR;
 function ensureDirs() {
   fs.mkdirSync(REPORTS_DIR, { recursive: true })
 }

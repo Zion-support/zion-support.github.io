@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs'),
-const path = require('path'),
-
+const fs = require('fs');
+const path = require('path');
 // List of specific pages that were identified as corrupted
 const corruptedPages = [
   'pages/403.tsxpages/ProductsList.tsxpages/faq.tsxpages/order-success.tsxpages/thank-you.tsxpages/gpt-library.tsxpages/order-confirmation/[orderId].tsxpages/governance/zgp-library.tsx',

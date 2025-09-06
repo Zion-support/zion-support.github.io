@@ -1,5 +1,4 @@
-import React, { useState } from 'react',
-
+import React, { useState } from 'react';
 type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical',
   language: string,

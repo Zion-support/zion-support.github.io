@@ -5,9 +5,8 @@
  * Creates or updates the main README.md file
  */
 
-const fs = require('fs'),
-const path = require('path'),
-
+const fs = require('fs');
+const path = require('path');
 const README_TEMPLATE = `# Zion Tech Group — Autonomous Innovation Hub
 
 Leading-edge technology solutions and autonomous innovation systems.

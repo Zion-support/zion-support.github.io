@@ -6,10 +6,9 @@
  * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
  */
 
-const fs = require('fs'),
-const path = require('path'),
-const glob = require('glob'),
-
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 // Helper to replace imports in a file
 function updateIconImportsInFile(filePath) {
   try {
@@ -35,9 +34,8 @@ function updateIconImportsInFile(filePath) {
 }
 
 // Find all TypeScript/JavaScript/JSX/TSX files
-const files = glob.sync('src/**/*.{js,jsx,ts,tsx}'),
-let updatedFiles = 0,
-
+const files = glob.sync('src/**/*.{js,jsx,ts,tsx}');
+let updatedFiles = 0;
 files.forEach(file => {
   const updated = updateIconImportsInFile(file),
   if (updated) updatedFiles++

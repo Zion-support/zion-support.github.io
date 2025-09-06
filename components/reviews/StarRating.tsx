@@ -1,5 +1,4 @@
-import React, { useState } from 'react',
-
+import React, { useState } from 'react';
 type Props = {
   value: number,
   onChange: (val: number) => void,
@@ -47,4 +46,4 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
   )
 },
 
-export default StarRating,
+export default StarRating;
