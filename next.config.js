@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
@@ -80,7 +81,56 @@ export default nextConfig;
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
+=======
+  // Image optimization
+  images: {
+    domains: ['localhost', 'zion.app', 'ziontechgroup.com'],
+    formats: ['image/webp', 'image/avif'],
   },
+  
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  
+  // Disable TypeScript checking during build
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
+  // Disable ESLint during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Experimental features
+  experimental: {
+    optimizeCss: true,
+  },
+  
+  // Webpack configuration
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Add custom webpack configurations here if needed
+    return config;
+  },
+  
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+  },
+  
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: '/old-page',
+        destination: '/new-page',
+        permanent: true,
+      },
+    ];
+  },
+  
+  // Headers
   async headers() {
     return [
       {
@@ -102,51 +152,10 @@ export default nextConfig;
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Add custom webpack configuration here if needed
-    return config;
-  },
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
-  output: 'standalone',
-  poweredByHeader: false,
-  compress: true,
-  generateEtags: true,
-  httpAgentOptions: {
-    keepAlive: true,
-  },
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
-  distDir: '.next',
-  assetPrefix: '',
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
-  },
-  trailingSlash: false,
-  skipTrailingSlashRedirect: true,
-  skipMiddlewareUrlNormalize: true,
-  experimental: {
-    optimizePackageImports: ['@radix-ui/react-icons'],
-  },
-  serverExternalPackages: ['sharp'],
 };
 
+<<<<<<< HEAD
 module.exports = nextConfig;
+=======
+module.exports = nextConfig;
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8

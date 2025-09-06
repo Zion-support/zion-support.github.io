@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -10,6 +11,13 @@ import {
   ExclamationTriangleIcon
 } from '@heroicons/react/24/outline';
 
+=======
+export const metadata = {
+  title: 'Contact | Zion Tech Group',
+  description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
+  keywords: 'contact, support, AI services, micro SaaS, IT services, consulting'
+};
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

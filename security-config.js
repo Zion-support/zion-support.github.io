@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -16,6 +17,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 
+=======
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
@@ -25,5 +28,4 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "origin-when-cross-origin" }
 ];
 
-
-
+export { securityHeaders };

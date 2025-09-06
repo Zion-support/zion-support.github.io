@@ -1,17 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+<<<<<<< HEAD
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+=======
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
   ],
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         primary: {
+=======
+        blue: {
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
           50: '#eff6ff',
           100: '#dbeafe',
           200: '#bfdbfe',
@@ -35,16 +46,22 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
+<<<<<<< HEAD
           950: '#030712'
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
+=======
+          950: '#030712',
+        },
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
+<<<<<<< HEAD
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
@@ -55,10 +72,13 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+=======
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
+<<<<<<< HEAD
           '100%': { opacity: '1' }
         },
         slideUp: {
@@ -134,4 +154,16 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
+=======
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+    },
+  },
+  plugins: [],
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 };

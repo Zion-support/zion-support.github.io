@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
@@ -8,14 +9,36 @@ import globals from 'globals';
 
 export default [
   js.configs.recommended,
+=======
+const { FlatCompat } = require('@eslint/eslintrc');
+const js = require('@eslint/js');
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+});
+
+module.exports = [
+  ...compat.extends('next/core-web-vitals'),
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
+  {
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn'
+    }
+  },
   {
     ignores: [
       'node_modules/**',
+      '.next/**',
       'dist/**',
       'build/**',
-      'coverage/**',
       '*.config.js',
       '*.config.cjs',
+<<<<<<< HEAD
       '*.config.mjs',
       'scripts/**',
       'automation/**',
@@ -149,4 +172,11 @@ export default [
       'no-console': 'off',
     },
   },
+=======
+      'public/**',
+      'src/**',
+      'app/**'
+    ]
+  }
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 ];

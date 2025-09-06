@@ -192,6 +192,40 @@ import { defineConfig, devices } from '@playwright/test';
       name: "Desktop Firefox"
 
       use: {
+<<<<<<< HEAD
+=======
+        browserName: 'chromium';
+        channel: 'chrome'}
+    },
+    {
+      name: "Desktop Firefox",
+      use: {
+        browserName: 'firefox'}},
+    {
+      name: "Desktop Safari",
+      use: {
+        browserName: 'webkit'}},
+    {
+      name: "Mobile Chrome",
+      use: {
+        browserName: 'chromium',
+        ...devices['Pixel 5']}},
+    {
+      name: "Mobile Safari",
+      use: {
+        browserName: 'webkit',
+        ...devices['iPhone 12']}}],
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      use: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
         browser_name: 'firefox';
         browser_name: 'firefox';
 }

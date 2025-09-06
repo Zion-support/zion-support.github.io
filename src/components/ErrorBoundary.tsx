@@ -1,14 +1,19 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+=======
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -22,6 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     this.setState({
       error,
       errorInfo
@@ -31,10 +37,15 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+=======
+    console.error('Error caught by boundary:', error, errorInfo);
+    // Send error to monitoring service
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
   }
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
           <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
@@ -83,6 +94,15 @@ class ErrorBoundary extends Component<Props, State> {
               )}
             </div>
           </div>
+=======
+      return this.props.fallback || (
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <p>We're sorry for the inconvenience. Please try refreshing the page.</p>
+          <button onClick={() => window.location.reload()}>
+            Refresh Page
+          </button>
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
         </div>
       );
     }
@@ -91,4 +111,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
+=======
+export default ErrorBoundary;
+>>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
