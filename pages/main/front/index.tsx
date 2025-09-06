@@ -1,5 +1,6 @@
 
 
+
 export default function FrontLanding() {
   return (
 
@@ -18,10 +19,12 @@ export default function FrontLanding() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
         <meta name="description" content="Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously." />
       </Head>
+
       {/* Animated background layers */}
       <div aria-hidden className='pointer-events-none absolute inset-0 -z-10'>
         <div className='absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float' />
@@ -83,6 +86,7 @@ export default function FrontLanding() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </div>
           <div className='hidden gap-6 md:flex'>
             <Link href='/'>
@@ -99,6 +103,7 @@ export default function FrontLanding() {
             </Link>          </div>
         </nav>
       </header>
+
       {/* Hero */}
       <main className='relative z-10'>
         <section className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'>
@@ -143,6 +148,7 @@ export default function FrontLanding() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             <motion.div
               initial={{ opacity: 0, y: 10 }  } catch (error) {
     console.error("Error:", error);
@@ -167,6 +173,7 @@ export default function FrontLanding() {
 
 
 
+
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
@@ -175,6 +182,7 @@ export default function FrontLanding() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   key={k}
                   initial={{ opacity: 0, coordinate_y: 6 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -199,6 +207,7 @@ export default function FrontLanding() {
             {[;
 
               {
+
 
         <section className="mx-auto max-w-7xl px-6 pb-14">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
@@ -258,6 +267,7 @@ export default function FrontLanding() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
             ].map(f => (              <motion.article
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -286,10 +296,12 @@ export default function FrontLanding() {
 
 
 
+
                 key={f.title}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
+
 
 
 
@@ -318,10 +330,12 @@ export default function FrontLanding() {
 
 
 
+
               '24/7 progress without human intervention',
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
+
 
 
 
@@ -347,6 +361,8 @@ export default function FrontLanding() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
+
+
 
 
             <motion.h1
@@ -733,7 +749,9 @@ export default function FrontLanding(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           >
@@ -746,6 +764,7 @@ export default function FrontLanding(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </section>
+
         {/* Explore more */}
 
 
@@ -762,6 +781,7 @@ export default function FrontLanding(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
@@ -781,16 +801,26 @@ export default function FrontLanding(req, res) {
   )
 }
 
-    </div>);
-;
+        <section className="mx-auto max-w-7xl px-6 pb-16">;
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>;
+          <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">;
+            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor — automate SEO improvements</span></a></Link>;
+            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot — reduce response time</span></a></Link>;
+            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator — launch pages instantly</span></a></Link>;
+            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence — market‑aware pricing</span></a></Link>;
+            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>;
+            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>;
+            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>;
+            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>;
+          </div>;
+        </section>;
+      </main>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements

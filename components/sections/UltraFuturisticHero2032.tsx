@@ -3,6 +3,7 @@
 
 
 
+
   Rocket,
   Brain,
   Atom,
@@ -19,6 +20,7 @@
   Mail,;
   MapPin,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+
 
 
 
@@ -242,6 +244,7 @@ export default function UltraFuturisticHero2032() {;
       {/* Animated Background Elements */}
       <div className='absolute inset-0'>;
         {/* Floating Particles */}
+
         <div className='absolute inset-0'>;
           {[...Array(50)].map((_, i) => (;
             <motion&& motion.div
@@ -268,6 +271,7 @@ function UltraFuturisticHero2032() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {/* Gradient Orbs */}
 
@@ -309,6 +313,7 @@ function UltraFuturisticHero2032() {
           <span className='text-purple-300 font-medium'>
             🚀 2032 Revolutionary Technology
           </span>
+
           <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
         >
           <Sparkles className="w-5 h-5 text-purple-400" />
@@ -328,6 +333,7 @@ function UltraFuturisticHero2032() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Main Heading */}
         <motion&& motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -342,7 +348,9 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -366,6 +374,7 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -375,10 +384,12 @@ function UltraFuturisticHero2032() {
 
 
 
+
         {/* Subheading */}
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+
 
 
 
@@ -399,6 +410,7 @@ function UltraFuturisticHero2032() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -413,7 +425,9 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -449,17 +463,20 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Stats Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
+
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
@@ -471,6 +488,7 @@ function UltraFuturisticHero2032() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -605,7 +623,9 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             >
@@ -617,6 +637,7 @@ function UltraFuturisticHero2032() {
               <div className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2'>
                 {stat.number}
               </div>
+
               <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>            >
               <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}>
                 <stat.icon className="w-8 h-8 text-white" />
@@ -645,6 +666,7 @@ function UltraFuturisticHero2032() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Featured Services */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -659,7 +681,9 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -688,8 +712,10 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -729,7 +755,9 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -749,7 +777,9 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -819,6 +849,7 @@ function UltraFuturisticHero2032() {
         </motion.div>
       </div>
 
+
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='hover:text-purple-400 transition-colors'>;
                 {contactInfo && contactInfo.email}
@@ -884,6 +915,7 @@ function UltraFuturisticHero2032() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
       {/* Floating Action Button */}
       <motion&& motion.div
@@ -1006,8 +1038,10 @@ function UltraFuturisticHero2032() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       >
         <Link
@@ -1019,14 +1053,16 @@ function UltraFuturisticHero2032() {
       </motion.div>
 
 
+  );      >
+        <Link
+          href={`tel:${contactInfo.mobile}`}
+          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40"
+        >
+          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />
+        </Link>
+      </motion.div>
+    </section>
+  )
+}
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

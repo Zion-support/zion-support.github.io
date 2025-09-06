@@ -3,6 +3,7 @@
 
 
 
+
   const onboardingStatus = useOnboardingStatus();
 import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
@@ -10,6 +11,7 @@ import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus(),
   
+
   const steps: OnboardingStep[] = [
     {
       id: "post-job"
@@ -26,6 +28,7 @@ export function ClientOnboardingSteps() {
       action: "Find Talent"
     }
     {
+
       id: "response"
       label: "Receive your first application"
       completed: onboardingStatus.responseReceived
@@ -46,6 +49,7 @@ export function ClientOnboardingSteps() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

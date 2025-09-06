@@ -2,6 +2,7 @@
 
 
 
+
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -36,6 +37,7 @@ import {
 
 
 
+
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
@@ -53,10 +55,13 @@ import {
   Music, Film, BookOpenCheck, Building, MessageCircle,
 
 
+
+
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
+
 
 
 
@@ -67,9 +72,11 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 const Solutions: NextPage = () => {
   const industry_solutions = [;
     {
+
       id: 'healthcare'
       name: 'Healthcare Solutions'
       description: 'AI-powered healthcare technology solutions'
@@ -260,6 +267,7 @@ const Solutions: NextPage = () => {
 
 
 
+
   ],
   const solutionCapabilities = [
     {
@@ -293,8 +301,11 @@ const Solutions: NextPage = () => {
       icon: <BarChart3 className="w-6 h-6" />
 
 
-
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
   ],
@@ -333,11 +344,15 @@ const Solutions: NextPage = () => {
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
 
 
-
-
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   ],
+
+
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -345,6 +360,7 @@ const Solutions: NextPage = () => {
           <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
           <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
         </Head>
+
         {/* Hero Section */}
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -356,6 +372,7 @@ const Solutions: NextPage = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
@@ -387,11 +404,16 @@ const Solutions: NextPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
 
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
 
+                </Link>
 
 
                 <a
                   href="/contact"
+
 
 
 
@@ -403,6 +425,7 @@ const Solutions: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -411,6 +434,7 @@ const Solutions: NextPage = () => {
             </motion.div>
           </div>
         </section>
+
         {/* Solution Capabilities */}
         <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900">;
           <div className="max - w-6xl mx - auto">;
@@ -458,6 +482,7 @@ const Solutions: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -470,6 +495,7 @@ const Solutions: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutionCapabilities.map((capability, index) => (
                 <motion.div
+
                   key={capability.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -507,10 +533,12 @@ const Solutions: NextPage = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
+
                       {capability.icon}
                       {capability.icon  } catch (error) {
     console.error("Error:", error);
@@ -527,11 +555,13 @@ const Solutions: NextPage = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
                   <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -591,6 +621,7 @@ const Solutions: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -603,6 +634,7 @@ const Solutions: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industrySolutions.map((solution, index) => (
                 <motion.div
+
                   key={solution.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -649,6 +681,7 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                 >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {solution.popular && (
@@ -657,6 +690,7 @@ const Solutions: NextPage = () => {
                         Most Popular
                       </span>
                     </div>
+
                   )}
                   <div className="text-center mb-6">
                     <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
@@ -680,10 +714,12 @@ const Solutions: NextPage = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
                     <p className="text-gray-300 mb-4">{solution.description}</p>
                     <div className="text-3xl font-bold text-orange-400 mb-2">
+
                       {solution.price}
                       {solution.price  } catch (error) {
     console.error("Error:", error);
@@ -700,6 +736,7 @@ const Solutions: NextPage = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
                   </div>
@@ -707,6 +744,8 @@ const Solutions: NextPage = () => {
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+
+
 
 
 
@@ -721,9 +760,12 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   </ul>
                   <a
                     href="/contact"
+
 
 
 
@@ -734,6 +776,7 @@ const Solutions: NextPage = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
                     Get Started
@@ -765,6 +808,7 @@ const Solutions: NextPage = () => {
           </motion.div>
         </div>
       </section>
+
         {/* CTA Section */}
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
@@ -776,6 +820,7 @@ const Solutions: NextPage = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
@@ -812,11 +857,16 @@ const Solutions: NextPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
 
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Transformation
 
+                </Link>
 
 
                 <a
                   href="/contact"
+
 
 
 
@@ -828,6 +878,7 @@ const Solutions: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -839,8 +890,10 @@ const Solutions: NextPage = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+
 }
 export default Solutions;
+
 
 
             >;
@@ -872,6 +925,7 @@ export default Solutions;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -883,4 +937,5 @@ export default Solutions,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

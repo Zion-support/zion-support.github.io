@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Head from 'next/head';
 export default function CommunityPage() {
@@ -89,6 +90,7 @@ export default function CommunityPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -130,6 +132,7 @@ export default function CommunityPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -137,3 +140,4 @@ export default function CommunityPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,3 +1,4 @@
+
 import React, { useMemo, useState } from "react";
 import Head from "next/head";
 import { getZionDesignMap } from "../utils/design-map";
@@ -44,6 +45,7 @@ export default function DesignMapPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   return (
     <>
       <Head>
@@ -58,10 +60,14 @@ export default function DesignMapPage() {
 
 
 
+
+
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</Link>
             <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</Link>
             <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</Link>
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</Link>
+
+
           </div>
         </div>
 
@@ -73,6 +79,8 @@ export default function DesignMapPage() {
           <MapColumn title="DAO & Token UI" sections={designMap.products.dao} />
           <MapColumn title="Admin Console" sections={designMap.products.admin} />
           <MapColumn title="Mobile Layouts" sections={designMap.products.mobile} />
+
+
         </div>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -80,6 +88,7 @@ export default function DesignMapPage() {
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
             <div className="flex-1 w-full">
+
               <label className="block text-xs text-gray-500 mb-1">
                 Screen name
               </label>
@@ -103,6 +112,7 @@ export default function DesignMapPage() {
             <div>
               <label className="block text-xs text-gray-500 mb-1">Role</label>
               <select value={role} onChange={e => setRole(e.target.value)} className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40">
+
                 <option>Talent</option>
                 <option>Client</option>
                 <option>Admin</option>
@@ -113,12 +123,18 @@ export default function DesignMapPage() {
             </div>
 
 
+              {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
             </button>
           </div>
           {suggestion && (
             <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
+
 
 
 
@@ -156,6 +172,7 @@ function MapColumn() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                   {i.title}
                 </span>
               ))}
@@ -166,7 +183,30 @@ function MapColumn() {
     </div>
 
 
+                  {i.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </span>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </div>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

@@ -1,3 +1,4 @@
+
 "use client";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -171,6 +172,7 @@ if ( {) {
   }
 
 ;
+
   return (;
 
     <>;
@@ -231,6 +233,7 @@ if ( {) {
         <div;
 
           className="fixed z-30 pointer-events-none";
+
           style={{top: 0;
             left: 0;
             right: 0;
@@ -238,10 +241,12 @@ if ( {) {
             top: 0,;
             left: 0,;
             right: 0,;
+
             bottom: 0}}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
+
             style={{top: "50%";
               left: "50%";
               transform: "translate(-50%, -50%)";
@@ -249,34 +254,21 @@ if ( {) {
               top: "50%",;
               left: "50%",;
               transform: "translate(-50%, -50%)",;
+
               width: "300px";
               height: "200px"}}
           />;
         </div>)}
     </>);
 }
-// Hook to add data attributes for walkthrough targeting;
-export function useWalkthroughTarget(id: string) {return {;
-;
-// Hook to add data attributes for walkthrough targeting;
-export function useWalkthroughTarget(id: string) {;
-  return {;
-    "data-walkthrough-target": id;
-=======
+
 export /**
  * useWalkthroughTarget - Function description
  */
 function useWalkthroughTarget() {
   return {
     "data - walkthrough - target": id;
-=======
-export function useWalkthroughTarget(id: string) {return {;
-=======
-;
-// Hook to add data attributes for walkthrough targeting;
-export function useWalkthroughTarget(id: string) {;
-  return {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     "data-walkthrough-target": id;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id}

@@ -3,6 +3,7 @@ import OpenAI from 'openai';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -14,6 +15,7 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
 
 
 
+
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
@@ -21,6 +23,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
 
   return completion.output_text
+
 }
 
 
@@ -38,3 +41,4 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

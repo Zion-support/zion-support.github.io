@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const vendors = listVendors();
   res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -45,5 +46,6 @@ function handler() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

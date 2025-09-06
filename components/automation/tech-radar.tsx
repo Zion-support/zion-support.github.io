@@ -1,11 +1,13 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
  
+
 
 
 
@@ -28,6 +30,7 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     return {
       props: {
 
+
 };
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },;
 export const getStaticProps: GetStaticProps<Props> = async () => {;
@@ -40,6 +43,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
         pypi: data && data.ecosystems.pypi || [],;
         crates: data && data.ecosystems.crates || [],;
         github: data && data.ecosystems.github || {}},;
+
 
 
 
@@ -92,11 +96,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
         </section>
       ))}
 
-    </div>;
-  );
-}
-
-=======
 }
 ;
 export default /**
@@ -172,3 +171,7 @@ export default function TechRadar({ pypi, crates, github }: Props) {
 }
   );
 }
+=======
+    </div>
+
+

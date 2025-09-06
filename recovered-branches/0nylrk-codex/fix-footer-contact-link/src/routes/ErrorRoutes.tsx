@@ -1,9 +1,10 @@
 
 
 
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const ErrorRoutes = () => {
   return (
     <Routes>
@@ -12,10 +13,12 @@ const ErrorRoutes = () => {
       <Route path="*" element={<NotFound />} />
     </Routes>
   )
+
 }
 export default ErrorRoutes;
 
 },
+
 
 
 
@@ -45,6 +48,7 @@ const ErrorRoutes = () => {;
   );
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -55,3 +59,4 @@ const ErrorRoutes = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default ErrorRoutes;
+

@@ -2,11 +2,14 @@
 
 
 
+
+
 import React from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { HireRequestForm } from "./HireRequestForm",
 import { TalentProfile } from "@/types/talent",
 import { UserProfile } from "@/types/auth",
+
 
 
 
@@ -19,6 +22,7 @@ import { UserProfile } from "@/types/auth",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface HireRequestModalProps {
   talent: TalentProfile | null;
@@ -37,10 +41,13 @@ export function HireRequestModal({
 
 
 
+
+
     onClose()
   },
 
   if (!talent) return null,
+
 
 
   return (
@@ -79,6 +86,7 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
 
 
 
+
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
@@ -87,10 +95,12 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           talent={talent}
           onClose={handleClose}

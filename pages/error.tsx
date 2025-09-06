@@ -6,6 +6,7 @@ import Head from 'next/head'
 export default function ErrorPage() {
   return (
     <>
+
       <Head>;
         <title>Authentication Error - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
@@ -26,6 +27,7 @@ export default function ErrorPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
             <p className=&quot;text-sm text-muted-foreground&quot;>
@@ -43,6 +45,7 @@ export default function ErrorPage() {
                 <li>• Network connectivity issues</li>
                 <li>• Temporary service unavailability</li>
               </ul>
+
               <div className=&quot;pt-4 space-y-2&quot;>
                 <Button asChild className=&quot;w-full&quot;>
                   <Link href=&quot;/auth/login&quot;>
@@ -60,6 +63,7 @@ export default function ErrorPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     Try Again
                   </Link>
                 </Button>
@@ -69,6 +73,7 @@ export default function ErrorPage() {
                   </Link>
                 </Button>
               </div>
+
               <div className=&quot;text-center text-sm text-muted-foreground pt-4&quot;>
                 Need help? <Link href=&quot;/contact&quot; className=&quot;hover:text-primary&quot;>Contact Support</Link>
               <div className="text-center text-sm text-muted-foreground pt-4">
@@ -84,6 +89,7 @@ export default function ErrorPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
             </div>
           </CardContent>
@@ -95,16 +101,20 @@ export default function ErrorPage() {
 
 
 
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

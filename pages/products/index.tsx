@@ -3,6 +3,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,6 +31,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 origin/automation-improvements-final
+
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -128,6 +130,7 @@ const ProductsIndex: NextPage = () => {;
 
     return matchesCategory && matchesSearch;
   });
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -137,6 +140,7 @@ origin/automation-improvements-final
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -303,6 +307,19 @@ origin/automation-improvements-final
                 <Link
                   href="/contact"
 
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  Contact Sales
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+
+
+
 
 
 
@@ -317,9 +334,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
   );
 ursor/integrate-build-improve-and-re-verify-8f7d
+
 };
 
 export default Index;
+
 
 
 
@@ -331,4 +350,5 @@ export default Index;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

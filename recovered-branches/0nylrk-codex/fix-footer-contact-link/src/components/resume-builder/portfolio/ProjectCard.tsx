@@ -2,6 +2,7 @@
 
 
 
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -61,6 +62,7 @@ import {PortfolioProject} from '@/types/resume';
 
 
 
+
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
@@ -71,10 +73,14 @@ interface ProjectCardProps {
 
 
 
+
+
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
+
+
 
 
 
@@ -107,6 +113,7 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -119,6 +126,7 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
     setDeleteDialogOpen(false)
   },
   
+
   return (
     <Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
@@ -165,6 +173,7 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
                 <Badge key={index} variant="secondary" className="text-xs">;
 
                   {tech}
+
                 </Badge>
               ))}
 
@@ -181,6 +190,7 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           )}
 
             </p>)}
@@ -259,8 +269,10 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
         </AlertDialogContent>
       </AlertDialog>
     </Card>
+
   );
 }
   )
 }
 ;
+

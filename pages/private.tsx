@@ -7,6 +7,7 @@ import { User, Mail, Calendar, Shield } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
+
 interface PrivatePageProps {user: SupabaseUser;
 interface PrivatePageProps {;
   user: SupabaseUser;
@@ -21,6 +22,7 @@ interface PrivatePageProps {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 }
 export default /**
  * PrivatePage - Function description
@@ -29,6 +31,7 @@ function PrivatePage() {
   return (
     <>
       <Head>
+
         <title>Private Profile - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
       </Head>
@@ -153,6 +156,7 @@ if ( {) {
         destination: '/auth / login';
 
 
+
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -206,11 +210,37 @@ if ( {) {
               </div>
             </div>
 
-            <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
-              <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
-              <div className=&quot;grid gap-2 text-sm&quot;>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div className="p-4 bg-muted/50 rounded-lg">
+              <h4 className="font-medium mb-2">Authentication Details</h4>
+              <div className="grid gap-2 text-sm">
+
+                <div>
+                  <span className="font-medium">Last Sign In: </span>
+
+                  {user.last_sign_in_at
+                    ? new Date(user.last_sign_in_at).toLocaleString()
+                    : 'Never'
+                    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </div>
+                <div>
+                  <span className="font-medium">App Metadata: </span>
+                  <code className="text-xs">
+                    {JSON.stringify(user.app_metadata, null, 2)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </code>
+                </div>
+              </div>
+            </div>
+
+
               <Button asChild>
                 <Link href="/dashboard">
                   Go to Dashboard
@@ -228,6 +258,7 @@ if ( {) {
     </>
   )
 
+
 }
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);
   const { data, error } = await supabase.auth.getUser();
@@ -242,6 +273,7 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     props: {
 
       user: data.user}}
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -277,6 +309,7 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
 
 
 
+
 } ;
 
 } ;
@@ -288,3 +321,4 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

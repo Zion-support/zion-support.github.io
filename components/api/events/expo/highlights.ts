@@ -5,14 +5,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
     const top = agendaItems && agendaItems.slice(0, 3);
     const baseSummary = `Highlights:\n- ${top && top.map(i => `${i && i.title} (${i && i.track})`).join('\n- ')}`;
-=======
-    if (!apiKey) {
-      return res.status(200).json({ summary: baseSummary, provider: 'local' })
-    }
 
-
-    const apiKey = process && process.env.OPENAI_API_KEY;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!apiKey) {
       return res && res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })
     }
@@ -35,12 +28,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }    const content = chat && chat.choices?.[0]?.message?.content || baseSummary;
     return res && res.status(200).json({ summary: content, provider: 'openai' })
   } catch (e: any) {
-    return res && res.status(500).json({ error: e && e.message || 'Failed to generate highlights' })
-  };
-}
 
-
-=======
 import { agenda_items } from '../../../../data / expo / agenda';
 ;
 export default async /**
@@ -83,3 +71,8 @@ if ( {) {
   }
 
 }
+=======
+    return res.status(500).json({ error: e.message |'Failed to generate highlights' })
+}
+
+

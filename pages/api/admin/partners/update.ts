@@ -2,9 +2,13 @@
 
 
 
+
+
     if (error) return res.status(500).json({ error: error.message });
 
     return res.status(200).json({ ok: true });
+
+
 
 
 
@@ -31,6 +35,7 @@
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
 
@@ -43,3 +48,4 @@
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

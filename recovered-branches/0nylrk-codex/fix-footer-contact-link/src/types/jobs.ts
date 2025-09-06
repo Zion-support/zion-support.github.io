@@ -1,6 +1,7 @@
 
 
 
+
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -18,6 +19,7 @@ export interface JobBudget {
 }
 export interface Job {
 
+
   min: number;
   max: number
   currency: string
@@ -27,7 +29,9 @@ export interface Job {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string;
   client_id: string;
@@ -38,6 +42,7 @@ export interface Job {
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+
 
 
 
@@ -52,6 +57,7 @@ export interface JobFormData {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   title: string;
   description: string;
   category: JobCategory;
@@ -96,6 +102,8 @@ export interface JobMatch {
 
 
 
+
+
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -109,6 +117,7 @@ export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' |
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 ;
@@ -117,6 +126,7 @@ export interface JobApplication {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string;
   job_id: string;
@@ -150,7 +160,9 @@ export interface JobApplication {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -280,8 +292,10 @@ export interface JobApplication {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 }
 ;
+

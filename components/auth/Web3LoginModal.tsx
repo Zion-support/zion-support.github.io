@@ -237,6 +237,7 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
       const { signature } = await provider.signMessage(encodedMessage, 'utf8');
       const bs58 = (await import('bs58')).default;
 
+
       const verifyRes = await fetch('/api/auth/verify-sol', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -253,12 +254,14 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       onClose()
     } catch (e: any) {
       console.error(e);
       setError(e?.message |'Phantom connection failed')
     } finally {
       setLoading(false)
+
       setLoading(false);    }
 
 
@@ -287,31 +290,79 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
     } finally {;
       setLoading(false);
 
+
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
 
+    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
+      <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>
+        <div className='mb-4'>
+          <h2 className='text-lg font-semibold'>Connect your wallet</h2>
+          <p className='text-sm text-gray-500 dark:text-gray-400'>
+            No gas needed. We will verify your ownership with a signed message.
+          </p>
+        </div>
+        {error && (
+          <div className='mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300'>
+            {error}
+          </div>
+        )}
+        <div className='space-y-3'>
+          <button
+            onClick={handleEvmConnect}
+            disabled={loading}
+            className='w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black'
+          >
+            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+          </button>
+          <button
+            onClick={handlePhantomConnect}
+            disabled={loading}
+            className='w-full rounded-lg bg-purple-600 text-white py-2.5'
+          >
+            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+          </button>
+        </div>
+        <div className='mt-4 flex justify-end'>
+          <button
+            onClick={onClose}
+            className='text-sm text-gray-600 dark:text-gray-300'
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 
+  return <ModalInner {...props} />;        </div>
+        {error && (
+          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
+        )}
+        <div className="space-y-3">
+          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
+            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
+          </button>
+          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
+            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
+          </button>
+        </div>
+        <div className="mt-4 flex justify-end">
+          <button onClick={onClose} className="text-sm text-gray-600 dark: text-gray-300">Cancel</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+export default function Web3LoginModal(props: Web3LoginModalProps) {
+  if (!isClient) return null;
 
-            Cancel;
-          </button>;
-        </div>;
-      </div>;
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+  return <ModalInner {...props} />
+}
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

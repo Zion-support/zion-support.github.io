@@ -2,6 +2,7 @@
 
 
 
+
   id: string;
   name: string;
   category: 'crm' | 'ats';
@@ -35,6 +36,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 import Head from 'next/head';
@@ -170,9 +172,50 @@ export default function AdminIntegrationsPage() {
       await refresh();
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+    } finally { setLoading(false);   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  async function disconnect(providerId: string) {
+    setLoading(true);
+    try {
+      await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
+      await refresh();
+    } finally { setLoading(false);   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  async function resync(providerId: string) {
+    setLoading(true);
+    try {
+      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
+      await refresh();
+    } finally { setLoading(false);   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const grouped = useMemo(() => ({
+    crm: providers.filter(p => p.category === 'crm'),
+    ats: providers.filter(p => p.category === 'ats')
+  }), [providers]);
 
 
   function Card({ p }: { p: ProviderMeta }) {
@@ -199,7 +242,28 @@ export default function AdminIntegrationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+}
+          {isConnected && (
+            <>
+
+              <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
+              <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
+              <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
+            </>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>
+      </div>
+    ),
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
 
   function RulesModal() {
     if (!selected) return null,
@@ -227,6 +291,7 @@ export default function AdminIntegrationsPage() {
           <div className="space-y-3 text-sm">
             {isCrm ? (
               <>
+
                 <label className='flex items-center gap-2'>
                   <input
                     type='checkbox'
@@ -274,10 +339,12 @@ export default function AdminIntegrationsPage() {
                     <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'auto'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'auto' })} /> Auto</label>
                     <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'manual'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'manual' })} /> Manual only</label>
                   </div>
+
                 </div>
               </>
             ) : (
               <>
+
                 <label className='flex items-center gap-2'>
                   <input
                     type='checkbox'
@@ -308,6 +375,7 @@ export default function AdminIntegrationsPage() {
                 </label>
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoSyncApplicants} onChange={e => setSyncRules({ ...syncRules, autoSyncApplicants: e.target.checked })} /> Auto-sync applicants</label>
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoUploadResumes} onChange={e => setSyncRules({ ...syncRules, autoUploadResumes: e.target.checked })} /> Auto-upload resumes</label>
+
               </>
             )  } catch (error) {
     console.error("Error:", error);
@@ -321,6 +389,7 @@ export default function AdminIntegrationsPage() {
           </div>
         </div>
       </div>
+
     );  }
   return (
     <>
@@ -368,6 +437,7 @@ export default function AdminIntegrationsPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
         </section>
 
         <section>
@@ -378,6 +448,7 @@ export default function AdminIntegrationsPage() {
       </main>
       <RulesModal />
     </>
+
   );
 function ManualOverrideForm() {;
   const [jobId, setJobId] = useState('');
@@ -404,6 +475,7 @@ function ManualOverrideForm() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -424,12 +496,14 @@ function ManualOverrideForm() {;
 
 
 
+
 }
 }
 }
 }
 }
 }
+
 
 
 
@@ -443,9 +517,11 @@ function ManualOverrideForm() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

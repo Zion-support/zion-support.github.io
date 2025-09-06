@@ -2,6 +2,7 @@
 
 
 
+
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 const NotFound = () => {
@@ -13,6 +14,7 @@ import { useEffect } from "react",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 const NotFound = () => {
   const location = useLocation(),
 
@@ -21,8 +23,10 @@ const NotFound = () => {
       "404 Error: User attempted to access non-existent route:"
       location.pathname
     )
+
   }, [location.pathname]);
   }, [location.pathname]),
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -35,10 +39,12 @@ const NotFound = () => {
       </div>
     </div>
   )
+
 }
 export default NotFound;
 
 },
+
 
 
 
@@ -64,6 +70,7 @@ export default NotFound;
   );
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -74,3 +81,4 @@ export default NotFound;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default NotFound;
+

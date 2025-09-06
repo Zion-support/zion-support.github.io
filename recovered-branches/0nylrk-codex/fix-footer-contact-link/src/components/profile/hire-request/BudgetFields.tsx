@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
@@ -40,6 +41,7 @@ interface BudgetFieldsProps {;
 
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
+
 
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
@@ -90,6 +92,7 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
         )}
       />
     </>
+
 
 
 
@@ -232,4 +235,5 @@ function BudgetFields() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

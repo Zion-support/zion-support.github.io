@@ -2,8 +2,10 @@
 
 
 
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+
 import { 
   getClientBudgetSuggestion;
   PricingSuggestion;
@@ -11,6 +13,7 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
+
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
@@ -72,6 +75,7 @@ import { Sparkles } from "lucide-react",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -81,8 +85,39 @@ interface ClientBudgetRecommenderProps {
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 
 
-
-
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {;
+  getClientBudgetSuggestion,;
+  PricingSuggestion,;
+  ClientBudgetParams,;
+  trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",;
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Sparkles } from "lucide-react",;
+interface ClientBudgetRecommenderProps {;
+  jobTitle: string,;
+  category: string,;
+  timeline?: string,;
+  scope?: string,;
+  experienceLevel?: string,;
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+}
+;
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+  jobTitle,;
+  category,;
+  timeline,;
+  scope,;
+  experienceLevel,;
+  onSuggestionApplied}) => {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
+  const { user } = useAuth(),;
+  const generateSuggestion = async () => {;
+    if (!jobTitle || !category) {;
+      return;
 
 
     }
@@ -98,11 +133,15 @@ interface ClientBudgetRecommenderProps {
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
       const result = await getClientBudgetSuggestion(params),
+
+
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating budget suggestion:", error)
     } finally {
       setIsLoading(false)
+
+
 
 
 
@@ -144,6 +183,7 @@ interface ClientBudgetRecommenderProps {
       }
     }
 
+
   },
 
 
@@ -154,6 +194,7 @@ interface ClientBudgetRecommenderProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <div className="space-y-4">;
       <div>;
@@ -171,6 +212,7 @@ interface ClientBudgetRecommenderProps {
           </Button>
         ) : (
           <PricingSuggestionBox
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -191,3 +233,4 @@ interface ClientBudgetRecommenderProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

@@ -4,11 +4,13 @@
 
 
 
+
 export const monitorContent = async (;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   userId: string;
   userEmail: string | undefined;
@@ -30,6 +32,8 @@ export const monitorContent = async (;
 
     )) {
       severity = 'dangerous'
+
+
 
 
 
@@ -64,11 +68,13 @@ export const monitorContent = async (;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     }
     
+
     await flagContent(
       userId;
       userEmail;
@@ -78,14 +84,34 @@ export const monitorContent = async (;
       severity;
       analysis && analysis.reasons.join();
       undefined // IP address would be added in a real implementation
+
     );
     ),
     
+
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
+
+
+;
+    await flagContent(;
+      userId,;
+      userEmail,;
+      contentType,;
+      contentId,;
+      content,;
+      severity,;
+      analysis.reasons.join(),;
+      undefined // IP address would be added in a real implementation;
+    ),;
+    // If this is a 'dangerous' flag, automatically hide content;
+    // This would be implemented in a real system with appropriate flags;
+    if (severity === 'dangerous') {;
+      // // // console.log('Auto-hiding dangerous content:', contentId);
+      // Code to hide content would go here;
 
 
     }
@@ -94,11 +120,13 @@ export const monitorContent = async (;
 
 
 
+
     }
   }
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 
 

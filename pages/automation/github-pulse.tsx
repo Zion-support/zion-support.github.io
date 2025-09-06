@@ -4,10 +4,12 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 export default function GithubPulsePage() {
 
   const repo = data?.repo |{}
@@ -20,7 +22,9 @@ export default function GithubPulsePage() {
 
 
 
+
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+
 
 
         <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
@@ -41,6 +45,7 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
+
 
 
 export default function GithubPulsePage() {
@@ -75,11 +80,13 @@ function Metric({ label, value }: { label: string, value: any }) {
     </div>
 
 
+
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 }
 
@@ -94,4 +101,5 @@ function Metric({ label, value }: { label: string, value: any }) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

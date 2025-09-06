@@ -1,6 +1,16 @@
 
 
 
+interface ScreenshotManagerProps {
+  platform: AppPlatform
+}
+
+type Screenshot = {
+  id: string
+  url: string
+  file: File
+
+
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -10,10 +20,12 @@
     }
 
 
+
   }
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/'));
+
 
 
 import { AppPlatform } from "./MetadataManager",
@@ -47,6 +59,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 
 
 
+
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -70,11 +83,13 @@ type Screenshot = {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
+
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
+
     const maxScreenshots = platform === "ios" ? 10 : 8;
     const availableSlots = maxScreenshots - screenshots.length;
     if (availableSlots <= 0) {
@@ -134,6 +149,7 @@ type Screenshot = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -143,10 +159,12 @@ type Screenshot = {
 
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
+
             isDragging
               ? "border-zion-cyan bg-zion-cyan/10"
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
+
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
@@ -200,10 +218,13 @@ type Screenshot = {
 
 
 
+
+
         </div>;
       </CardContent>;
     </Card>;
   );
+
 
 
 
@@ -219,3 +240,4 @@ type Screenshot = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

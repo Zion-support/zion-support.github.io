@@ -1,4 +1,5 @@
 import * as React from "react"
+
 import {Slot} from "@radix-ui/react-slot"
 import {cva, type, VariantProps} from "class-variance-authority"
 
@@ -19,11 +20,13 @@ import { cn } from "@/lib/utils"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
   {
     variants: {
       variant: {
+
 
 
 import {cn} from "@/lib/utils";
@@ -50,9 +53,12 @@ const buttonVariants = cva(;
 
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
 
+
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+
+
 
 
 
@@ -75,6 +81,7 @@ const buttonVariants = cva(;
 )
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
@@ -84,9 +91,11 @@ export interface ButtonProps
 
 
 
+
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
 }
+
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
@@ -94,10 +103,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 }
 
 const Button = React.forwardRef<HTMLButtonElement ButtonProps>(
+
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
+
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -177,6 +188,7 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
         className={cn (button_variants ({ variant, size, class_name }))}
 
 
+
         className={cn(buttonVariants({ variant, size, className }))}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ref={ref}
@@ -186,6 +198,7 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
   }
 )
 Button.displayName = "Button"
+
 export { Button, buttonVariants }
 
 
@@ -196,6 +209,7 @@ export { Button, buttonVariants }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

@@ -1,11 +1,14 @@
+
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
+
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+
   Search
   Filter
   TrendingUp
@@ -42,6 +45,7 @@ import {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
+
   Search;
   Filter
   TrendingUp
@@ -63,9 +67,11 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -142,6 +148,7 @@ function ToolComparisonPage() {
       users: '100K+'
       bestFor: 'Marketing teams, content creators, businesses'
       pros: [
+
         'Specialized for marketing'
         'Brand voice training'
         'SEO optimization'
@@ -290,6 +297,7 @@ function ToolComparisonPage() {
       rating: 4.8,
       users: '10M+',
       bestFor: 'Sales teams, consultants, remote teams',
+
       pros: [
         'Easy to use'
         'Extensive integrations'
@@ -423,6 +431,56 @@ function ToolComparisonPage() {
       ]
       icon: <Globe className='w-6 h-6' />
 
+      color: 'text-blue-400'
+    }
+  ];
+  const categories = [
+    'All'
+    'AI Assistant'
+    'AI Art'
+    'AI Writing'
+    'Automation'
+    'Productivity'
+    'Payments'
+    'Marketing & Sales'
+    'Email Marketing'
+  ];
+  const filteredTools = allTools.filter(tool => {
+    const matchesSearch =
+      tool.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      tool.category.toLowerCase().includes(searchTerm.toLowerCase()) |
+      tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      selectedCategory === 'All' |tool.category === selectedCategory;
+    return matchesSearch && matchesCategory;  });    const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         tool.category.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' |tool.category === selectedCategory;
+    return matchesSearch && matchesCategory
+  const sortedTools = [...filteredTools].sort((a, b) => {
+    switch (sortBy) {
+      case 'rating':
+        return b.rating - a.rating;
+      case 'users':
+        return (
+          parseInt(b.users.replace(/[^0-9]/g, '')) -
+          parseInt(a.users.replace(/[^0-9]/g, ''))
+        );
+      case 'name':
+        return a.name.localeCompare(b.name);
+      default:
+        return 0;    }        return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, ''));
+      case 'name':
+        return a.name.localeCompare(b.name);
+      default: return 0
+  });
+
+  const getPricingColor = (pricing: string) => {
+    if (pricing.includes('Free')) return 'text-green-400';
+    if (pricing.includes('$')) return 'text-blue-400';
+    return 'text-gray-400';  };    return 'text-gray-400'
+  }
+
 
   return (
 
@@ -494,6 +552,7 @@ function ToolComparisonPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -507,6 +566,7 @@ function ToolComparisonPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 {allTools.length}+
               </div>
@@ -621,6 +681,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             {/* Category Filter */}
 
 
+
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
@@ -658,6 +719,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -679,6 +741,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             </div>
 
 
+
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
@@ -696,6 +759,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -861,6 +925,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
+
           )}
         </div>
       </section>
@@ -879,11 +944,13 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
 
               Detailed Analysis
 
@@ -900,6 +967,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
+
 
 
             </h2>
@@ -1033,6 +1101,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
 
+
                           {con}
                         </li>;
                       ))}
@@ -1071,12 +1140,14 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
                   >                    {tool.pricing}
                   </span>
                   <Button
+
                     href={tool.website}                <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
                     href={tool.website}
@@ -1091,10 +1162,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     {tool.pricing}
                   </span>
                   <Button
                     href={tool.website}
+
                     variant='outline'
                     size='sm'
                     className='group-hover:border-purple-500 group-hover:text-purple-400'
@@ -1120,6 +1193,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1127,6 +1201,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           </div>
         </div>
       </section>
+
 
 
 
@@ -1147,11 +1222,13 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
 
             Need Help Choosing?
 
@@ -1162,6 +1239,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1182,6 +1260,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               href='/saas-marketplace'
               variant='outline'
               size='lg'
+
 
 
 
@@ -1214,3 +1293,4 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

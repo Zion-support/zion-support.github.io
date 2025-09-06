@@ -1,6 +1,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +33,7 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -46,6 +48,8 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
+
+
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -71,7 +75,9 @@ import { cn } from "@/lib/utils",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
@@ -91,8 +97,10 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:
       return <Bell className={cn(className, "text-gray-500")} />
   }
+
 }
 },
+
 
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
@@ -110,6 +118,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
       return <Badge className="bg-yellow-500">System</Badge>
     default:
       return <Badge variant="outline">Notification</Badge>
+
   }
 }
 ;
@@ -202,11 +211,13 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     }
 
     if (notification && notification.action_url) {;
       navigate(notification && notification.action_url);
     }
+
 
 
 
@@ -222,6 +233,7 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 
 
   
+
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -290,6 +302,7 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
       </div>
     </div>
   )
+
 }
 },
 
@@ -317,6 +330,7 @@ export default function NotificationsPage() {
 
   } = useNotifications() as NotificationContextType,
   
+
   return (
 
     <>;
@@ -387,6 +401,7 @@ export default function NotificationsPage() {
                   ))}
                 </div>;
               )}
+
             </TabsContent>
           </Tabs>
         </div>
@@ -404,5 +419,4 @@ export default function NotificationsPage() {
     </>);
 }
 
-=======
-;
+

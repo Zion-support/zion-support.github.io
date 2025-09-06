@@ -34,12 +34,8 @@ function handler() {
 
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];
   res.status(200).json(data)
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    { label: 'CAC / LTV ratio', value: '1:5.6', trend: 0.4 }];
-  res.status (200).json (data);
 
 }
+
+
+

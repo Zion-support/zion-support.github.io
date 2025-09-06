@@ -1,11 +1,14 @@
+
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -72,6 +75,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
@@ -331,9 +335,11 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <>
       <Head>
@@ -399,20 +405,38 @@ class ErrorBoundary extends React.Component {
           href='https://ziontechgroup && ziontechgroup.com/ai-emotional-intelligence-platform-2029'
         />      </Head>        {/* Open Graph */}
 
+        <meta property="og:title" content="AI Emotional Intelligence Platform 2029" />
+        <meta property="og:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real-time." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-emotional-intelligence-platform-2029" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Emotional Intelligence Platform 2029" />
+        <meta name="twitter:description" content="Revolutionary AI platform that reads, understands, and responds to human emotions in real-time." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+        {/* Additional Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#8b5cf6" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-emotional-intelligence-platform-2029" />
+      </Head>
+      <UltraFuturisticNavigation2029 />
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-32'>
+        <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className='mb-16'          >      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className='mb-16'            className="mb-16"
+          >
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             {/* Badge */}
             <motion&& motion.div
@@ -521,7 +545,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -541,7 +567,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -565,10 +593,12 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -595,7 +625,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -615,7 +647,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -671,7 +705,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -691,7 +727,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -814,6 +852,7 @@ class ErrorBoundary extends React.Component {
           <motion.div
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
@@ -828,6 +867,7 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -841,7 +881,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -899,6 +941,7 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -930,6 +973,7 @@ class ErrorBoundary extends React.Component {
 
 
 
+
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -956,16 +1000,19 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -980,6 +1027,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Benefits Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
@@ -1000,12 +1048,14 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1019,7 +1069,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1073,13 +1125,16 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -1094,6 +1149,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">;
@@ -1124,12 +1180,14 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1143,7 +1201,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1200,6 +1260,7 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -1231,6 +1292,7 @@ class ErrorBoundary extends React.Component {
 
 
 
+
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -1257,16 +1319,19 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -1281,6 +1346,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
@@ -1301,12 +1367,14 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1320,7 +1388,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1392,6 +1462,7 @@ class ErrorBoundary extends React.Component {
 
 
 
+
           </div>;
         </div>;
       </section>;
@@ -1402,6 +1473,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
@@ -1422,12 +1494,14 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -1441,7 +1515,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1466,6 +1542,7 @@ class ErrorBoundary extends React.Component {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div
+
 
               Your Business?;
             </h2>;
@@ -1550,6 +1627,7 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -1606,6 +1684,7 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -1646,6 +1725,7 @@ export default AIEmotionalIntelligencePlatform2029;
 
 
 
+
           >
             <Link
               href='/contact'
@@ -1671,6 +1751,7 @@ export default AIEmotionalIntelligencePlatform2029;
   );
 
 
+
 };
 
 
@@ -1684,6 +1765,7 @@ export default AIEmotionalIntelligencePlatform2029;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

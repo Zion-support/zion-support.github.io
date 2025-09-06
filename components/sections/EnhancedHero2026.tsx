@@ -23,6 +23,7 @@ import { motion } from 'framer-motion';
 
 
 
+
 } from 'lucide-react';
 
 interface EnhancedHero2026Props {;
@@ -54,6 +55,7 @@ interface EnhancedHero2026Props {
     website: string;
   };
   serviceStats: {;
+
 
 
 } from 'lucide-react';
@@ -116,8 +118,10 @@ export default function EnhancedHero2026({
     visible: {
       opacity: 1
       transition: {
+
         staggerChildren: 0.2,
       },;
+
     },  };        staggerChildren: 0.2
       }
     }
@@ -211,16 +215,19 @@ export default function EnhancedHero2026(): any ({;
             key={i}
             className='absolute w-2 h-2 bg-cyan-400/30 rounded-full'
             style={{
+
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+
             }}
             animate={{
               y: [0, -30, 0]
               opacity: [0.3, 0.8, 0.3]
               scale: [1, 1.5, 1],            }}
             transition={{
+
 
 
 
@@ -303,10 +310,12 @@ export default function EnhancedHero2026(): any ({;
 
 
 
+
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
+
 
 
 
@@ -331,6 +340,7 @@ export default function EnhancedHero2026(): any ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -382,6 +392,7 @@ export default function EnhancedHero2026(): any ({;
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services.
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
           </motion.div>
+
           {/* Enhanced Stats Grid */}
           <motion.div
             className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'
@@ -547,6 +558,7 @@ export default function EnhancedHero2026(): any ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 </div>
               </motion.div>
             ))}
@@ -555,7 +567,9 @@ export default function EnhancedHero2026(): any ({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
@@ -572,6 +586,7 @@ export default function EnhancedHero2026(): any ({;
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
+
 
               <Button
                 href="/contact"
@@ -593,6 +608,7 @@ export default function EnhancedHero2026(): any ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 variant="secondary"
@@ -654,6 +670,7 @@ export default function EnhancedHero2026(): any ({;
 
 
 
+
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;
                 <span className='flex items-center'>;
                   <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">;
@@ -697,6 +714,7 @@ export default function EnhancedHero2026(): any ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Contact Information */}
 
           <motion.div 
@@ -726,6 +744,7 @@ export default function EnhancedHero2026(): any ({;
         </motion.div>
       </div>
     </section>
+
 );  )
 }
 
@@ -739,4 +758,5 @@ export default function EnhancedHero2026(): any ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

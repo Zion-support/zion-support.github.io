@@ -1,6 +1,7 @@
 
 
 
+
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
@@ -25,6 +26,7 @@ export default function Dashboard() {
   const { user, logout } = useAuth(),
   const { toast } = useToast(),
 
+
   if (!user) return null,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -43,8 +45,10 @@ export default function Dashboard() {
         variant: "destructive"});
 
     }
+
   }
   },
+
 
   return (
     <>;
@@ -54,20 +58,22 @@ export default function Dashboard() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Sidebar - User Profile */}
 
+            <div className="lg:col-span-1">
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
+                    {user.displayName.split(' ').map(name => name[0]).join('')}
+                  </div>
+                  <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
+                  <p className="text-zion-slate-light mb-2">{user.email}</p>
 
-
-
-
-                  <Badge 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
+
+
 
 
 
@@ -121,10 +127,13 @@ export default function Dashboard() {
 
 
 
+
+
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
                         await createOnboardingNotification({
+
                           userId: user.id
                           missingMilestone: 'profile_completed'
                           userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'
@@ -133,6 +142,7 @@ export default function Dashboard() {
                           missingMilestone: 'profile_completed',
                           userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
                         }),
+
                         toast({
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
@@ -142,6 +152,8 @@ export default function Dashboard() {
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
+
+
 
 
 
@@ -256,6 +268,7 @@ export default function Dashboard() {
       <Footer />
     </>
   )
+
 }
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -498,3 +511,4 @@ export default function Dashboard() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

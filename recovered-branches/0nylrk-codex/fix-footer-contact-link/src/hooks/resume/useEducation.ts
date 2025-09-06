@@ -2,12 +2,14 @@
 
 
 
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
+
 
 
 
@@ -22,6 +24,8 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to add education')
       return false
+
+
 
 
 
@@ -45,18 +49,23 @@ export function useEducation() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('education')
         .insert({
+
           resume_id: resumeId;
           institution: education.institution;
           degree: education.degree;
@@ -83,11 +92,14 @@ export function useEducation() {;
       
       if (error) throw error,
       
+
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
+
+
 
 
 
@@ -126,18 +138,23 @@ export function useEducation() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('education')
         .update({
+
           institution: education.institution;
           degree: education.degree;
           field_of_study: education.field_of_study;
@@ -164,11 +181,14 @@ export function useEducation() {;
       
       if (error) throw error,
       
+
       return showSuccessToast("Education updated", "Your education has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
+
+
 
 
 
@@ -207,29 +227,36 @@ export function useEducation() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('education')
         .delete()
+
         .eq('id', eduId);
       if (error) throw error;
         .eq('id', eduId),
       
       if (error) throw error,
       
+
       return showSuccessToast("Education deleted", "Your education has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete education')
     } finally {
       setIsLoading(false)
+
 
     }
   }
@@ -252,3 +279,4 @@ export function useEducation() {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+

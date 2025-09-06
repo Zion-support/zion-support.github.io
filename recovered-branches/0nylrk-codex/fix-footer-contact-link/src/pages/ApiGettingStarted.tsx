@@ -5,10 +5,13 @@
 
 
 
+
+
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
+
 
 
 
@@ -19,16 +22,19 @@ export function ApiGettingStarted() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
   }
+
 });
 console.log(response.data),`;
 }),
 
 // // // console.log(response.data),`,
+
 
   return (
     <ApiDocsLayout>
@@ -42,10 +48,12 @@ console.log(response.data),`;
         </p>
         <h2>Authentication</h2>
         <p>
+
           All API requests must include your API key in the Authorization header.
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
           All API requests must include your API key in the Authorization header. 
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
+
         </p>
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -89,6 +97,7 @@ console.log(response.data),`;
       </div>
     </ApiDocsLayout>
   )
+
 }
 export default ApiGettingStarted;
 
@@ -188,3 +197,4 @@ console && console.log(response && response.data),`;
 
 
 export default ApiGettingStarted;
+

@@ -1,11 +1,14 @@
 
 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 const particles: Array< {
   //Initialize particles with enhanced properties const init_particles = () =>: any {
   const count = intensity === 'extreme' ? particle_count * 2 : intensity === 'high' ? particle_count : intensity === 'medium' ? Math.floor (particle_count * 0.7) : Math.floor (particle_count * 0.5);
 for (let index = 0, i < count, i++) {
   particles.push ({
+
 
 
  canvas && canvas.width = window && window.innerWidth;
@@ -35,6 +38,7 @@ for (let i = 0, i < count, i++) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   children;
   intensity = 'medium';
@@ -333,6 +337,7 @@ if (return) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -340,6 +345,7 @@ if (return) {
         }
 
             ctx.stroke();          }
+
 
           }
         }
@@ -350,34 +356,48 @@ if (return) {
             // Quantum tunneling effect
             particle.x = particle.x <= 0 ? canvas.width : 0;
           } else {
-            particle.vx *= -1;          }            particle.coordinate_x = particle.x <= 0 ? canvas.width : 0;
-          } else {
-            particle.vx *= -1
-            particle.vx *= -1;          }
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
           }
         }
-        if (particle.y <= 0 |particle.y >= canvas.height) {
-        if (particle.y <= 0 || particle.y >= canvas.height) {
+
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
+            particle.y = particle.y <= 0 ? canvas.height : 0;
+          } else {
 
+          }
+        }
 
-            particle.y = particle.y <= 0 ? canvas.height : 0
-
-
-
-
-
-
-
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+        // Draw particle with enhanced effects
+        ctx.save();
+        ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
+        ctx.translate(particle.x, particle.y);
+        ctx.rotate(particle.rotation);
+        if (particle.type === 'quantum') {
+          // Quantum particle with wave effect
+          const gradient = ctx.createRadialGradient(
+            0
+            0
+            0
+            0
+            0
+            particle.size * 4
+          );          gradient.addColorStop(0, particle.color);
+          gradient.addColorStop(0.3, particle.color + '80');
+          gradient.addColorStop(0.6, particle.color + '40');
+          gradient.addColorStop(1, 'transparent');
+        if (particle.type === 'quantum') {
+          // Quantum particle with wave effect
+          const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, particle.size * 4);
+          gradient.addColorStop(0.3, particle.color + '80');
+          gradient.addColorStop(0.6, particle.color + '40');
+          gradient.addColorStop(1, 'transparent');
 
 
           // Quantum wave rings
@@ -390,14 +410,106 @@ if (return) {
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
               ctx.stroke();            }          ctx.fillStyle = gradient;
 
+          ctx.fillRect(-particle.size * 2, -particle.size * 2, particle.size * 4, particle.size * 4);
+          // Quantum wave rings
+          if (enableQuantumEffects) {
+            for (let i = 1, i <= 3, i++) {
+              ctx.strokeStyle = particle.color + Math.floor(40 - i * 10).toString(16);
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
+              ctx.stroke()
 
-          ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
-          
+            }
+          }
+        } else if (particle.type === 'holographic' && enableHolographic) {
+          // Holographic particle with rainbow effect
+          const hue = (Date.now() * 0.1 + index * 10) % 360;
+          ctx.fillStyle = `hsl(${hue}, 100%, 70%)`;
+          ctx.fillRect(
+            -particle.size
+            -particle.size
+            particle.size * 2
+            particle.size * 2
+          );
+          // Holographic glitch effect
+          if (Math.random() < 0.05) {
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.fillRect(
+              -particle.size * 1.5
+              -particle.size * 1.5
+              particle.size * 3
+              particle.size * 3
+            );          }
+        } else if (particle.type === 'cyberpunk') {
+          // Cyberpunk particle with neon glow
+          ctx.fillStyle = particle.color;          ctx.fillRect(-particle.size, -particle.size, particle.size * 2, particle.size * 2);
 
           // Holographic glitch effect
           if (Math.random() < 0.05) {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
             ctx.fillRect(-particle.size * 1.5, -particle.size * 1.5, particle.size * 3, particle.size * 3)
+
+        } else if (particle.type === 'cyberpunk') {
+          // Cyberpunk particle with neon glow
+          ctx.fillStyle = particle.color;
+          ctx.fillRect(
+            -particle.size
+            -particle.size
+            particle.size * 2
+            particle.size * 2
+          );
+          ctx.shadowColor = particle.color;
+          ctx.shadowBlur = particle.size * 3;
+          ctx.fillRect(
+            -particle.size
+            -particle.size
+            particle.size * 2
+            particle.size * 2
+          );
+          ctx.shadowBlur = 0;
+        } else {
+          // Standard neon particle
+          ctx.fillStyle = particle.color;
+          ctx.fillRect(
+            -particle.size
+            -particle.size
+            particle.size * 2
+            particle.size * 2
+          );
+          // Neon glow
+          ctx.shadowColor = particle.color;
+          ctx.shadowBlur = particle.size * 2;
+          ctx.fillRect(
+            -particle.size
+            -particle.size
+            particle.size * 2
+            particle.size * 2
+          );
+          ctx.shadowBlur = 0;
+        }
+        ctx.restore();      });
+        ctx.restore()
+      });
+      // Add quantum field effects
+      if (enableQuantumEffects && theme === 'quantum-fusion') {
+        const time = Date.now() * 0.001;
+        for (let i = 0; i < 5; i++) {
+          const x =
+            Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
+          const y =
+            Math.cos(time + i * 0.7) * canvas.height * 0.3 +
+            canvas.height * 0.5;        for (let i = 0, i < 5, i++) {
+          const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
+          const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5;
+          ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
+          ctx.lineWidth = 2;
+          ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
+
+          ctx.stroke();        }
+
+
+
 
 
 
@@ -442,6 +554,7 @@ if (return) {
     return () => {
       window.removeEventListener('resize', handleResize);
       if (animationRef.current) {
+
 
 
         ctx && ctx.restore();      });        ;
@@ -529,6 +642,7 @@ if (return) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
   return (
     <div className='relative min-h-screen'>;
       <canvas
@@ -536,12 +650,14 @@ if (return) {
         className='fixed inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
 
+
       />;
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (;
@@ -563,7 +679,9 @@ if (return) {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]' />;
         </div>;
       )}
+
       {children}
+
 
 
   );      }
@@ -687,10 +805,12 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

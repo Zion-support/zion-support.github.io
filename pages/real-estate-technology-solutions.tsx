@@ -16,6 +16,7 @@ export default function RealEstateTechnologySolutions() {
       </div>
     </>
   )
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -23,3 +24,4 @@ export default function RealEstateTechnologySolutions() {
   }
 }
 ;
+

@@ -1,4 +1,5 @@
 
+
 export interface ProfileSkill {
 
 
@@ -10,6 +11,7 @@ export interface ProfileSkill {
   endorsements?: number;
 
 }
+
 
 
 
@@ -28,6 +30,8 @@ export interface ProfileSkill {
 
 
 
+
+
   id: string;
   role: string;
   company: string;
@@ -41,12 +45,16 @@ export interface ProfileSkill {
 
 
 
+
+
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
   message?: string,
   available_hours?: { day: string, hours: string }[];
 
 }
+
+
 
 
 
@@ -73,11 +81,53 @@ export interface ProfileSkill {
 }
 
 
+;
+export interface ProfileProject {;
+  id: string,;
+  title: string,;
+  description: string,;
+  imageUrl?: string,;
+  tags?: string[],;
+  url?: string,;
+  date: string;
+}
+;
+export interface ProfileExperience {;
+  id: string,;
+  role: string,;
+  company: string,;
+  description: string,;
+  startDate: string,;
+  endDate?: string,;
+  current?: boolean;
+}
+;
+export interface Availability {;
+  status: 'available' | 'limited' | 'unavailable',;
+  nextAvailable?: string,;
+  message?: string,;
+  availableHours?: { day: string, hours: string }[];
+}
+;
+export interface ProfileData {;
+  id: string,;
+  name: string,;
+  title: string,;
+  avatarUrl: string,;
+  coverImageUrl?: string,;
+  bio: string,;
+  location?: string,;
+  rating?: number,;
+  reviewCount?: number,;
+  aiScore?: number,;
+  profileType: 'service' | 'talent',;
+  skills: ProfileSkill[],;
+  projects: ProfileProject[],;
+  experience: ProfileExperience[],;
+  availability: Availability,;
+  hourlyRate?: number;
+  contactEmail?: string;
+}
+;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements

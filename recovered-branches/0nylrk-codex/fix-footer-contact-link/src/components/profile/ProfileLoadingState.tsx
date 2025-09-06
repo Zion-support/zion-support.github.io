@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import React from 'react',
 
@@ -6,6 +7,7 @@ import React from 'react',
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export function ProfileLoadingState() {
@@ -16,6 +18,7 @@ export function ProfileLoadingState() {
         Loading profile...
       </div>
     </div>
+
   );
 }
   )
@@ -30,3 +33,4 @@ export function ProfileLoadingState() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

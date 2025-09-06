@@ -1,6 +1,7 @@
 
 
 
+
 }
 
 
@@ -14,6 +15,7 @@ interface CertificationsSectionProps {
 
 
 
+
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -22,6 +24,7 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
     }
+
     return format(date, 'MMM yyyy');
   };
     return format(date, 'MMM yyyy')
@@ -29,6 +32,7 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
 
   if (certifications.length === 0) return null,
   
+
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>

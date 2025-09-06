@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -31,13 +32,25 @@ export default function EnterpriseBilling() {
   const hasBillingAccess = user?.role === "enterprise_admin" || 
                           (user?.permissions && user.permissions.includes('billing_access')),
   
+
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-
+    <ProtectedRoute>
+      <SEO
+        title="Enterprise Billing - Zion AI Marketplace"
+        description="Manage your subscription, view invoice history, and download billing statements."
+      />
+      <Header />
+      <main className="min-h-screen bg-background">
+        <BillingDashboard />
+      </main>
+      <Footer />
+    </ProtectedRoute>
+  )
 
 
 import React from "react",;
@@ -76,6 +89,7 @@ export default function EnterpriseBilling() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -84,6 +98,7 @@ export default function EnterpriseBilling() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -102,3 +117,5 @@ export default /**
 function EnterpriseBilling() {
   const { user } = use_auth ();
 ;
+
+

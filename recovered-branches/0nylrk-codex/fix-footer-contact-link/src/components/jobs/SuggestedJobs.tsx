@@ -1,11 +1,20 @@
 
 
 
+import { useAuth } from "@/hooks/useAuth",
+import { Loader2 } from "lucide-react",
+import { Badge } from "@/components/ui/badge",
+import { useJobSuggestions } from "@/hooks/useJobSuggestions",
+
+interface SuggestedJobsProps {
+  talentId?: string
+}
 
 
 interface SuggestedJobsProps {
   talentId?: string
 }
+
 
 
 
@@ -26,6 +35,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
+
   const { 
     isLoading,
     updateJobMatchStatus, 
@@ -49,6 +59,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const handleApply = (matchId: string, jobId: string) => {
     updateJobMatchStatus(matchId, 'applied');
     // In a real app, this might redirect to application form or open a modal
+
   }
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
@@ -58,6 +69,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
   },
+
 
   if (isLoading) {
     return (
@@ -65,6 +77,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
+
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from "lucide-react",;
 import { Badge } from "@/components/ui/badge",;
@@ -107,10 +120,12 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
     );
 
 
+
   }
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
   }
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -130,6 +145,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
     return <NoJobsCard />;
   }
   
+
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
@@ -146,6 +162,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           <div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (;
               <JobMatchesCard
+
 
 
                 match={match} 
@@ -210,3 +227,4 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

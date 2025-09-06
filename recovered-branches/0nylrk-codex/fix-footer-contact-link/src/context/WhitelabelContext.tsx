@@ -1,4 +1,5 @@
 
+
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 export interface WhitelabelContextType {
@@ -10,6 +11,7 @@ export interface WhitelabelContextType {
     subtitle: string,
     cta: string;
   };
+
 
 
 
@@ -34,6 +36,7 @@ const defaultContext: WhitelabelContextType = {
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+
 
 
 
@@ -75,10 +78,12 @@ export const useWhitelabel = (): WhitelabelContextType => {;
 
 
 
+
   const context = useContext(WhitelabelContext);
   if (!context) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')
   }
+
 
 
   const context = useContext(WhitelabelContext);
@@ -94,6 +99,7 @@ export const useWhitelabel = (): WhitelabelContextType => {;
 
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+
 
 
 
@@ -198,9 +204,11 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

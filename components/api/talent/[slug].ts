@@ -24,6 +24,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(200).json({ item, translated })
     }
 
+    const base = LOCAL.find((t) => t.slug === slug) |null;
+    if (!base) return res.status(404).json({ error: 'Not found' });
+    const { item, translated } = applyTranslations(base, lang);
+
+    return res.status(200).json({ item, translated })
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message })
+}
+
+
 }
 
 
@@ -33,6 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 }
+
 
 
 
@@ -50,4 +61,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

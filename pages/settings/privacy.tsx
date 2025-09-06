@@ -2,9 +2,11 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import React, { useEffect, useState } from 'react',
+
 
 
 export default function PrivacySettingsPage() {
@@ -12,6 +14,8 @@ export default function PrivacySettingsPage() {
   const [optOut, setOptOut] = useState(false),
   const [loading, setLoading] = useState(false),
   const [message, setMessage] = useState(''),
+
+
   const load = async () => {
 
     if (!userId) return;
@@ -22,8 +26,10 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
+
   }
   },
+
   const save = async () => {
     if (!userId) return
     setLoading(true)
@@ -37,20 +43,26 @@ export default function PrivacySettingsPage() {
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
+
   }
   },
+
   useEffect(() => {
     const savedUser = localStorage.getItem('user-id');
     if (savedUser) setUserId(savedUser)
+
   }, [])
   }, []),
+
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
 
     load()
+
   }
 
   },
+
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -70,10 +82,13 @@ export default function PrivacySettingsPage() {
 
 
 
+
+
           {message && <div>{message}</div>}
         </div>
       </div>
     </div>
+
 
 
 
@@ -87,4 +102,5 @@ export default function PrivacySettingsPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

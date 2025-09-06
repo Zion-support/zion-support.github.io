@@ -1,10 +1,10 @@
 
 
 
+import {Toaster, as, SonnerToaster} from "sonner";
 
-
-
-
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
 
 
 export function Toaster() {
@@ -23,7 +23,8 @@ export function Toaster() {
 
         descriptionClassName: "text-zion-slate-light"}}
 
-
+    />
+  )
 
 
 import * as React from "react",;
@@ -43,6 +44,7 @@ export function Toaster() {;
 
     />;
   );
+
 }
 
 
@@ -73,4 +75,5 @@ function Toaster() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -2,19 +2,24 @@ import React, { create_context, useContext, useEffect, useState } from 'react';
 ;
 type UserRole = 'talent' | 'client';
 
+type AuthContextType = {
+  role: UserRole;
+  setRole: (role: UserRole) => void;
+}
+const AuthContext = createContext<AuthContextType>({
+  role: 'talent'
+  setRole: () => {}
+});  role: UserRole
+  setRole: (role: UserRole) => void
+}
+const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} })
+  const [role, setRoleState] = useState<UserRole>('talent');
+  useEffect(() => {
+    try {
+      const stored = window.localStorage.getItem('userRole') as UserRole | null;
 
+      if (stored === 'talent' || stored === 'client') {
 
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       }
     } catch {}
@@ -28,6 +33,7 @@ type UserRole = 'talent' | 'client';
   return (    try {
       window.localStorage.setItem('userRole', r);
       document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`
+
 
 
 type AuthContextType = {;
@@ -60,10 +66,12 @@ export function useAuth() {;
 
 
 
+
 return useContext(AuthContext);
 }
 
   return (
+
 
 
 
@@ -74,3 +82,4 @@ return useContext(AuthContext);
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,6 +1,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -12,6 +13,7 @@ import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 export default function SavedTalentsPage() {;
+
 
 
 
@@ -106,6 +108,7 @@ if ( {) {
           `;
 
           );
+
           setSavedTalents(talentProfiles)
         }
           .eq("user_id", user.id),;
@@ -139,6 +142,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       } catch (error) {
 
         console.error ("Error fetching saved talents:", error);
@@ -150,6 +154,7 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
+
     }
     fetchSavedTalents()
   }, [user]);
@@ -165,19 +170,24 @@ if ( {) {
     navigate(`/talent/${talentId}`)
   },
 
+
   const handleRequestHire = (talent: TalentProfile) => {
     console.log("Request to hire:", talent);
     toast({
       title: "Hire Request Sent"
       description: `A hire request has been sent to ${talent.full_name}.`})
+
   }
   },
+
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
         console.warn("User not authenticated.")
         return
+
+
 
 
 
@@ -223,11 +233,13 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
         }
   
+
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );
@@ -247,9 +259,11 @@ if ( {) {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
+
           .single();
           .single(),
   
+
         if (talentError) {
           console.error("Error fetching talent profile:", talentError);
           toast({
@@ -371,8 +385,10 @@ if ( {) {
         variant: "destructive"});
 
     }
+
   }
   },
+
 
   return (
     <>;
@@ -394,6 +410,7 @@ if ( {) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map((talent) => (
               <TalentCard
+
 ;
         setSavedTalents(prevTalents =>;
           prevTalents.filter(talent => talent.id !== talentId);
@@ -582,6 +599,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 key={talent.id}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 talent={talent}
@@ -594,6 +612,7 @@ if ( {) {
             ))}
           </div>
         )}
+
       </div>
       <Footer />
     </>
@@ -604,5 +623,4 @@ if ( {) {
     </>);
 }
 
-=======
-;
+

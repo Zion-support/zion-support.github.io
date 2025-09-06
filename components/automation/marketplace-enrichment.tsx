@@ -7,5 +7,7 @@
       <p className="text-white/70 mt-2">This runs on a 6-hour schedule and auto-PRs updates.</p>
     </div>
   );
+
 }
 }
+

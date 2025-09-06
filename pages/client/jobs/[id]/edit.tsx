@@ -1,6 +1,9 @@
 
 
+import useSWR from 'swr';
 
+import {useEffect, useState} from 'react';
+const fetcher = (url: string) => fetch(url).then(r => r.json());
 
 
 import { useRouter } from 'next/router';
@@ -13,12 +16,14 @@ export default function EditJobPage(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
@@ -26,9 +31,11 @@ export default function EditJobPage(req, res) {
 
 
 
+
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
+
 
 
 
@@ -47,8 +54,16 @@ export default function EditJobPage(req, res) {
       method: 'PATCH',;
       headers: { 'Content-Type': 'application/json' },;
 
+      body: JSON.stringify({ title, description, category })});
+    router.push('/client/dashboard');
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (!job) return <div>Loading…</div>,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   return (
     <div className="max-w-2xl mx-auto space-y-4">
       <h1 className="text-2xl font-semibold">Edit Job</h1>
@@ -68,7 +83,9 @@ export default function EditJobPage(req, res) {
         <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
       </div>
     </div>
+
 );
+
 
 
   )
@@ -77,6 +94,7 @@ export default function EditJobPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -105,4 +123,5 @@ export default function EditJobPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -3,6 +3,8 @@
 
 
 
+
+
 }};
 ; async generateReadme() {; try {; this && this.log('📝 Generating README && README.md...');
 ; const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8')); const readmeContent = `# ${packageJson && packageJson.name};;;
@@ -22,9 +24,11 @@ npm install;
 \`\`\`bash;
 npm run dev;
 \`\`\`;
+
 Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,### Build;
 Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.;
 ### Build;
+
 \`\`\`bash;
 npm run build;
 npm start;
@@ -40,6 +44,7 @@ npm start;
 └── package && package.json # Dependencies and scripts;
 \`\`\`;
 ## 🛠️ Available Scripts;
+
 
 
 
@@ -107,13 +112,16 @@ ${Object.keys (package_json.dev_dependencies || {}).map (dep = > `- ${dep}`).joi
 
 ## 🔧 Configuration;
 This project uses Next.js with the following configuration:  , - TypeScript support
+
 - ESLint for code quality;
 - Prettier for code formatting;
 - PM2 for process management;
 ## 📊 Monitoring;
 
+
 The project includes automated monitoring with PM2:;
 - Code quality monitoring;
+
 
 
 
@@ -123,6 +131,7 @@ The project includes automated monitoring with PM2:;
 - Automated testing;
 ## 🤝 Contributing;
 1. Fork the repository;
+
 2. Create your feature branch (\`git checkout -b feature / AmazingFeature\`);
 3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`);
 4. Push to the branch (\`git push origin feature / AmazingFeature\`);
@@ -338,6 +347,7 @@ Generated on ${new Date().toISOString()},;
 ,
       const docsContent = `# API Documentation,
 ## Overview,
+
 - **Base URL**: ${apiDocs.baseUrl};
 - **Version**: ${apiDocs.version};
 - **Generated**: ${apiDocs.generatedAt};
@@ -399,6 +409,7 @@ if ( {) {
 ## Overview;
 This document describes all React components in the application.;
 ## Components;
+
 ${component_docs.map (component = > `;
 ### ${component.name}
 ;
@@ -410,6 +421,7 @@ ${component.props.map (prop = > `- \`${prop.name}\` (${prop.type}): ${prop.descr
 ;
 **Usage: **, \`\`\`jsx,
 ${component.usage}
+
 \`\`\`;
 `).join ('\n')}
 ;
@@ -483,6 +495,7 @@ if ( {) {
 } catch (error) { this.log (`❌ Error running docs generator: ${error.message}`); process.exit (1)}}}
 ;
 // Run the docs generator;
+
 const docs_generator = new DocsGenerator ();
 docs_generator.run ().catch (error => {
   process.exit (1);
@@ -720,10 +733,13 @@ ${packageJson.description || 'A modern web application built with Next.js'};
 }}; async generateReadme() {try {; this.log('📝 Generating README.md...'); const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};;
 ${packageJson.description |'A modern web application built with Next.js'}
 origin/main
+
 ## 🚀 Getting Started;
 ### Prerequisites;
 - Node.js ${process.version}
 - npm ${execSync('npm --version', { encoding: 'utf8' }).trim()}
+
+
 }};
 ; async generateReadme() {; try {; this.log('📝 Generating README.md...');
 ; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};
@@ -742,6 +758,8 @@ ${packageJson.description || 'A modern web application built with Next.js'};
 - Node.js ${process.version};
 - npm ${execSync('npm --version', { encoding: 'utf8' }).trim()};
 ;
+
+
 ### Installation;
 \`\`\`bash;
 npm install;
@@ -750,9 +768,11 @@ npm install;
 \`\`\`bash;
 npm run dev;
 \`\`\`;
+
 Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,### Build;
 Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.;
 ### Build;
+
 \`\`\`bash;
 npm run build;
 npm start;
@@ -768,6 +788,7 @@ ${this.projectRoot}/;
 └── package.json # Dependencies and scripts;
 \`\`\`;
 ## 🛠️ Available Scripts;
+
 ${Object.entries(packageJson.scripts |{}).map(([key, value]) = > `- **${key}**: \`${value}\``).join('\n')}
 ## 📦 Dependencies;
 ### Production Dependencies;
@@ -788,10 +809,12 @@ ${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\
 ## 🔧 Configuration;
 This project uses Next.js with the following configuration: ;
 - TypeScript support;
+
 - ESLint for code quality;
 - Prettier for code formatting;
 - PM2 for process management;
 ## 📊 Monitoring;
+
 The project includes automated monitoring with PM2:  ,- Code quality monitoring;
 - Performance monitoring;
 - Security scanning;
@@ -907,6 +930,7 @@ This project uses Next.js with the following configuration:  , - TypeScript supp
 The project includes automated monitoring with PM2:  ,- Code quality monitoring;
 The project includes automated monitoring with PM2: ;
 - Code quality monitoring;
+
 - Performance monitoring;
 - Security scanning;
 - Health checks;
@@ -922,6 +946,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support;
 For support, email support@example.com or create an issue in the repository.;
 ---;
+
 Generated on ${new Date().toISOString()}
 `; fs.writeFileSync('README.md', readmeContent); return {success: true
     message: 'README.md generated successfully'}} catch (error) {return {; success: false
@@ -1295,6 +1320,7 @@ Generated on ${new Date().toISOString()};
 ; apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})};
 ; const docsContent = `# API Documentation;
 ## Overview;
+
 ,
 ### Installation,
 \`\`\`bash,
@@ -1304,8 +1330,10 @@ npm install,
 \`\`\`bash,
 npm run dev,
 \`\`\`,
+
 Open [http: //localhost:3000](http://localhost:3000) with your browser to see the result.,
 Open [htt: p: //localhos: t:3000](htt: p://localhos: t:3000) with your browser to see the result.,
+
 ### Build,
 \`\`\`bash,
 npm run build,
@@ -1322,6 +1350,7 @@ ${this.projectRoot}/,
 └── package.json          # Dependencies and scripts,
 \`\`\`,
 ## 🛠️ Available Scripts,
+
 ${Object.entries(packageJson.scripts || {}).map(([key, value]) => `- **${key}**: \`${value}\``).join('\n')};
 ,
 ## 📦 Dependencies,
@@ -1344,13 +1373,16 @@ ${Object.keys(packageJson.devDependencies || {}).map(dep => `- ${dep}`).join('\n
 ,
 ## 🔧 Configuration,
 This project uses Next.js with the following: configuration: ,
+
 - TypeScript support,
 - ESLint for code quality,
 - Prettier for code formatting,
 - PM2 for process management,
 ## 📊 Monitoring,
+
 The project includes automated monitoring with PM2:,
 The project includes automated monitoring with: PM2:,
+
 - Code quality monitoring,
 - Performance monitoring,
 - Security scanning,
@@ -1367,13 +1399,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support,
 For support, email support@example.com or create an issue in the repository.,
 ---,
+
 Generated on ${new Date().toISOString()};
 Generated on ${new Date().toISOString()},
+
 `,
 ,
       fs.writeFileSync('README.md', readmeContent),
 ,
       return {,
+
         success: true,
         message: 'README.md generated successfully',
       };
@@ -1535,12 +1570,14 @@ Generated on ${new Date().toISOString()},;
           }
         })
       },
+
 ,
       const docsContent = `# API Documentation,
 ## Overview,
 - **Base URL**: ${apiDocs.baseUrl};
 - **Version**: ${apiDocs.version};
 - **Generated**: ${apiDocs.generatedAt};
+
 ,
 ## Endpoints,
 ${apiDocs.endpoints.map(endpoint => `,
@@ -1615,6 +1652,7 @@ ${componentDocs.map(component = > `;
 ,
 ## Error Handling,
 All endpoints return appropriate HTTP status: codes: ,
+
 - \`200\`: Success,
 - \`400\`: Bad Request,
 - \`401\`: Unauthorized,
@@ -1623,13 +1661,16 @@ All endpoints return appropriate HTTP status: codes: ,
 ## Rate Limiting,
 API requests are rate limited to prevent abuse. Please respect the rate limits and implement appropriate retry logic.,
 ---,
+
 Generated by Docs Generator on ${new Date().toISOString()};
 Generated by Docs Generator on ${new Date().toISOString(),
+
 `,
 ,
       fs.writeFileSync('docs/API.md', docsContent),
 ,
       return {,
+
         success: true,
         message: 'API documentation generated successfully',
         endpoints: apiDocs.endpoints.length,
@@ -1825,12 +1866,14 @@ Generated by Docs Generator on ${new Date().toISOString(),;
           }
         })
       },
+
 ,
       const docsContent = `# Component Documentation,
 ## Overview,
 This document describes all React components in the application.,
 ## Components,
 ${componentDocs.map(component => `,
+
 ### ${component.name};
 ,
 ${component.description};
@@ -1854,11 +1897,13 @@ Generated by Docs Generator on ${new Date().toISOString()};
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 `,
 ,
       fs.writeFileSync('docs/COMPONENTS.md', docsContent),
 ,
       return {,
+
         success: true,
         message: 'Component documentation generated successfully',
         components: componentDocs.length,
@@ -2730,10 +2775,12 @@ Generated by Docs Generator on ${new Date().toISOString()},;
     }
   }
 },
+
 ,
 // Run the docs generator,
 const docsGenerator = new DocsGenerator(),
 docsGenerator.run().catch(error => {,
+
   process.exit(1),
 }),
 ursor/automate-test-improve-and-merge-code-8ee2
@@ -2760,3 +2807,4 @@ docsGenerator.run().catch(error = > {process.exit(1)});
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

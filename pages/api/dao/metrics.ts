@@ -4,12 +4,16 @@
 
 
 
+
+
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 const configPath = path.join(process.cwd(), "data", "dao", "config.json");
 const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
 async function fetchJson(url: string) {
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -31,7 +35,9 @@ async function fetchJson(url: string) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   const resp = await fetch(url);
@@ -46,6 +52,7 @@ async function fetchJson(url: string) {;
 
 
 
+
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
 
@@ -53,6 +60,7 @@ function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -64,12 +72,14 @@ function readJson(p: string) {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -84,10 +94,13 @@ function writeJson(p: string, v: any) {
 
 
 
+
+
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
+
 
 
 
@@ -104,10 +117,12 @@ export default async function handler(req, res) {
   try {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true });
     }
@@ -300,6 +315,7 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

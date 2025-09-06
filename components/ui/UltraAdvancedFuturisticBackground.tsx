@@ -72,13 +72,183 @@ const UltraAdvancedFuturisticBackground: React.FC<;
       x: number;
       y: number;
 
-
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion';    }> = [];      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      opacity: number
+      color: string
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion'
+    // Set canvas size
+    const resizeCanvas = () => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;      }        canvas.height = rect.height
+      }
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Color schemes
+    const colorSchemes = {
+      'quantum-fusion': {
+        primary: '#00ffff'
+        secondary: '#ff00ff'
+        accent: '#ffff00'
+        quantum: '#00ff88'
+        holographic: '#ff0088'
+      },      'neon-cyber': {        holographic: '#ff0088'
+      }
+      'neon-cyber': {
+        primary: '#00ff41'
+        secondary: '#ff0080'
+        accent: '#00d4ff'
+        quantum: '#ff6b35'
+        holographic: '#9d4edd'
+      }
+      holographic: {        primary: '#ff00ff'
+        secondary: '#00ffff'
+        accent: '#ffff00'
+        quantum: '#00ff88'
+        holographic: '#ff0088'
+      },      'quantum-ai': {        holographic: '#9d4edd'
+      }
+      'holographic': {
+        primary: '#ff00ff'
+        secondary: '#00ffff'
+        accent: '#ffff00'
+        quantum: '#00ff88'
+        holographic: '#ff0088'
+      },        holographic: '#ff0088'
+      }
+      'quantum-ai': {
+        primary: '#00d4ff'
+        secondary: '#ff6b35'
+        accent: '#9d4edd'
+        quantum: '#00ff88'
+        holographic: '#ff0088'
+      },    };        holographic: '#ff0088'
+      }
+    }
+    const colors = colorSchemes[colorScheme];
+    // Initialize particles
+    const initParticles = () => {
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        const type =
+          Math.random() > 0.7
+            ? 'quantum'
+            : Math.random() > 0.5
+              ? 'holographic'
+              : Math.random() > 0.3
+                ? 'neon'
+                : 'fusion';      for (let i = 0, i < particleCount, i++) {
+        const type = Math.random() > 0.7 ? 'quantum' :
+                    Math.random() > 0.5 ? 'holographic' :
+                    Math.random() > 0.3 ? 'neon' : 'fusion';
+          x: Math.random() * canvas.width
+          y: Math.random() * canvas.height
+          vx: (Math.random() - 0.5) * 2 * animationSpeed
+          vy: (Math.random() - 0.5) * 2 * animationSpeed
+          size: Math.random() * 3 + 1
+          opacity: Math.random() * 0.8 + 0.2
+          color:
+            type === 'quantum'
+              ? colors.quantum
+              : type === 'holographic'
+                ? colors.holographic
+                : type === 'neon'
+                  ? colors.primary
+                  : colors.secondary
+          type
+        });      }          color: type === 'quantum' ? colors.quantum :
+                 type === 'holographic' ? colors.holographic :
+                 type === 'neon' ? colors.primary : colors.secondary
+          type
+        })
+    }
+    // Quantum entanglement effect
+    const createQuantumEntanglement = () => {
+      if (!enableQuantumEffects) return;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (
+            distance < 100 &&
+            particles[i].type === 'quantum' &&
+            particles[j].type === 'quantum'
+          ) {            ctx.beginPath();
+      for (let i = 0, i < particles.length, i++) {
+        for (let j = i + 1, j < particles.length, j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
+            ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`;
+            ctx.lineWidth = 1;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
 
           }
         }
       }
+
+    // Holographic grid effect
+    const createHolographicGrid = () => {
+      if (!enableHolographic) return;
+      const gridSize = 50;
+      const offset = (Date.now() * 0.001) % gridSize;
+      ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
+      ctx.lineWidth = 0.5;
+      // Vertical lines
+      for (let x = offset; x < canvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();      }
+      // Horizontal lines
+      for (let y = offset; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();      }        ctx.stroke()
+      }
     }
-    };
+    // Neural network effect
+    const createNeuralNetwork = () => {
+      if (!enableQuantumEffects) return;
+      const nodes = particles.filter(
+        p => p.type === 'quantum' |p.type === 'holographic'
+      );
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 150) {
+            const strength = 1 - distance / 150;            ctx.beginPath();          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < 150) {
+            const strength = 1 - (distance / 150);
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(0, 212, 255, ${0.2 * strength})`;
+            ctx.lineWidth = strength * 2;
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+
+          }
+        }
+      }
+
 
     // Animation loop
     const animate = () => {
@@ -325,6 +495,7 @@ const UltraAdvancedFuturisticBackground: React.FC<;
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
 
+
       />;
 
 
@@ -350,6 +521,7 @@ const UltraAdvancedFuturisticBackground: React.FC<;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
         {/* Holographic elements */}
         {enableHolographic && (;
           <>;
@@ -359,6 +531,7 @@ const UltraAdvancedFuturisticBackground: React.FC<;
             <div
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
               style={{
+
 
                 animationDuration: '15s',
                 animationDirection: 'reverse',
@@ -374,6 +547,7 @@ const UltraAdvancedFuturisticBackground: React.FC<;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default UltraAdvancedFuturisticBackground;
   return (
@@ -426,6 +600,7 @@ export default UltraAdvancedFuturisticBackground;
 export default UltraAdvancedFuturisticBackground;
 
 
+
   return (
     <div ref={container_ref} className="relative w - full h - full overflow - hidden">;
       <canvas;
@@ -468,4 +643,5 @@ export default UltraAdvancedFuturisticBackground;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,5 +1,6 @@
 
 
+
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-blue-400" />
@@ -208,10 +209,12 @@ function SpaceTechnologyAIPlatform() {
     'Airbus Defence ($10000 - 100000 / month)',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 export default function SpaceTechnologyAIPlatform() {
 
 
   const contactInfo = {
+
 
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -247,6 +250,7 @@ import React from 'react';
     website: 'https://ziontechgroup.com'
   },
 
+
   const features = [
     'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
     'API accessExpert consultation'
@@ -258,6 +262,8 @@ import React from 'react';
     'NASA APIsESA APIsSatellite ground stationsGIS systemsSlackMicrosoft TeamsCustom applications'
   ],
   const competitors = [
+
+
 
 
     'Maxar ($5000-50000/month)Planet Labs ($1000-10000/month)Airbus Defence ($10000-100000/month)Lockheed MartinBoeingNorthrop Grumman'
@@ -295,12 +301,15 @@ import React from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
     >
       <div className="min-h-screen">
         <Head>
           <title>Space Technology AI Platform - Zion Tech Group</title>
+
           <meta
             name='description'
             content='Revolutionary AI platform that combines space technology with artificial intelligence to enable autonomous space exploration, satellite operations, and space data analysis.'
@@ -376,11 +385,13 @@ import React from 'react';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             >
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-blue-400" />
                 <span className="text-blue-300 text-sm font-medium">2026 Revolutionary Innovation</span>
               </div>
+
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -391,11 +402,13 @@ import React from 'react';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                   Space Technology
                 </span>
                 <br />
                 <span className="text-white">AI Platform</span>
               </h1>
+
 
               <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
                 Revolutionary AI platform that combines space technology with
@@ -405,6 +418,7 @@ import React from 'react';
                 satellite operations, and space data analysis.
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
+
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Revolutionary AI platform that combines space technology with artificial intelligence to enable 
                 autonomous space exploration, satellite operations, and space data analysis.
@@ -413,10 +427,12 @@ import React from 'react';
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -435,6 +451,7 @@ import React from 'react';
                   <ArrowRight className="w-5 h-5" />
                 </motion.div>
               </div>
+
               <div className='flex items-center justify-center space-x-8 text-gray-400'>
                 <div className='flex items-center space-x-2'>
                   <CheckCircle className='w-5 h-5 text-green-400' />
@@ -447,6 +464,7 @@ import React from 'react';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                   <span>1-month setup</span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -462,6 +480,7 @@ import React from 'react';
             </motion.div>
           </div>
         </section>
+
 
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
@@ -515,6 +534,7 @@ import React from 'react';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -525,6 +545,7 @@ import React from 'react';
                 Experience the future of space technology with AI-powered operations and autonomous exploration
               </p>
             </motion.div>
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (
                 <motion.div
 
@@ -586,6 +607,7 @@ function SpaceTechnologyAIPlatform() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300">
@@ -598,6 +620,7 @@ function SpaceTechnologyAIPlatform() {
                     </p>
                   </div>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -634,6 +657,7 @@ function SpaceTechnologyAIPlatform() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -644,6 +668,7 @@ function SpaceTechnologyAIPlatform() {
                 Competitive pricing with superior features and AI-powered capabilities
               </p>
             </motion.div>
+
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -658,6 +683,7 @@ function SpaceTechnologyAIPlatform() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
                 <div className="space-y-4">
@@ -668,6 +694,7 @@ function SpaceTechnologyAIPlatform() {
                     </div>
                   ))}
                 </div>
+
                 <div className='p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl border border-green-500/30'>
                   <div className='flex items-center space-x-3'>
                     <div className='w-3 h-3 bg-green-500 rounded-full'></div>
@@ -720,6 +747,7 @@ function SpaceTechnologyAIPlatform() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -747,6 +775,7 @@ function SpaceTechnologyAIPlatform() {
             </div>
           </div>
         </section>
+
         {/* Use Cases Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -782,6 +811,7 @@ function SpaceTechnologyAIPlatform() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -792,6 +822,7 @@ function SpaceTechnologyAIPlatform() {
                 Transform every aspect of space operations with AI-powered intelligence
               </p>
             </motion.div>
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
                 <motion.div
                   key={useCase}
@@ -814,6 +845,7 @@ function SpaceTechnologyAIPlatform() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
@@ -826,6 +858,7 @@ function SpaceTechnologyAIPlatform() {
                     </p>
                   </div>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -860,6 +893,7 @@ function SpaceTechnologyAIPlatform() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -872,7 +906,9 @@ function SpaceTechnologyAIPlatform() {
               </p>
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 >
@@ -892,6 +928,7 @@ function SpaceTechnologyAIPlatform() {
                   <span>Email Us</span>
                 </motion.a>
               </div>
+
               <div className='p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20'>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
               <div className="p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20">
@@ -900,6 +937,7 @@ function SpaceTechnologyAIPlatform() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   <div>
@@ -922,6 +960,8 @@ function SpaceTechnologyAIPlatform() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+
+
 
 
 
@@ -977,6 +1017,7 @@ function SpaceTechnologyAIPlatform() {
 ;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -984,4 +1025,5 @@ function SpaceTechnologyAIPlatform() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

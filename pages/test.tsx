@@ -1,5 +1,11 @@
 
 
+import React from 'react';
+
+import Layout from '../components/Layout';
+
+
+
 
 
 
@@ -15,12 +21,15 @@
 
 export default function TestPage() {
   return (
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
     <Layout title="Test Page">
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <h1 className="text-4xl font-bold text-gray-900">Test Page</h1>
       </div>
+
 
 
 
@@ -42,6 +51,7 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default function TestPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
@@ -49,9 +59,11 @@ export default function TestPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
@@ -59,6 +71,7 @@ export default function TestPage() {
       <div className='min-h-screen bg-black text-white flex items-center justify-center'>
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
+
 
 
 
@@ -90,3 +103,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 }
 }
+

@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 
@@ -101,6 +104,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+
 
 
 
@@ -286,6 +290,7 @@ import { motion, AnimatePresence } from 'framer-motion';
         price: '$179/month'
       }
       {
+
         name: 'AI HR Management Suite 2030'
         href: '/ai-hr-management-suite-2030'
         description: 'Intelligent human resources management powered by AI'
@@ -307,6 +312,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -327,13 +333,48 @@ const mainNavigation = [
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-export default function UltraFuturisticNavigation2030() {
+const quickLinks = [
+  {
+    name: 'AI Services'
+    href: '/services/ai'
+    icon: Brain
+    color: 'from-purple-500 to-pink-500'
+  }
+  {
+    name: 'Quantum Tech'
+    href: '/services/quantum'
+    icon: Atom
+    color: 'from-blue-500 to-cyan-500'
+  }
+  {
+    name: 'Biotech Solutions'
+    href: '/services/biotech'
+    icon: Microscope
+    color: 'from-green-500 to-emerald-500'
+  }
+  {
+    name: 'Space Technology'
+    href: '/services/space'
+    icon: Rocket
+    color: 'from-indigo-500 to-purple-500'
+  }
+  {
+    name: 'Enterprise IT'
+    href: '/services/enterprise'
+    icon: Cpu
+    color: 'from-gray-500 to-slate-500'
+  }
+  {
+    name: 'Micro SAAS'
+    href: '/services/micro-saas'
+    icon: Target
+    color: 'from-orange-500 to-red-500'
+  },];  { name: 'AI Services', href: '/services/ai', icon: Brain, color: 'from-purple-500 to-pink-500' }
+  { name: 'Quantum Tech', href: '/services/quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' }
+  { name: 'Biotech Solutions', href: '/services/biotech', icon: Microscope, color: 'from-green-500 to-emerald-500' }
+  { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' }
+  { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' }
+  { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -428,7 +469,9 @@ export default function UltraFuturisticNavigation2030() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -477,6 +520,7 @@ export default function UltraFuturisticNavigation2030() {;
           </div>
         </div>
       </div>
+
 
 
 href={contactInfo && contactInfo.website}
@@ -701,6 +745,7 @@ function UltraFuturisticNavigation2030() {
 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
 
 
+
             {/* Logo */}
             <div className='flex items-center space-x-4'>
               <Link href='/' className='flex items-center space-x-3 group'>
@@ -799,11 +844,25 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
                 {/* Mega Menu */}
 
-
-
-
-
-
+                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4">
+                  <div className="p-8">
+                    <div className="grid grid-cols-2 gap-8">
+                      {serviceCategories.map((category, index) => (
+                        <div key={index} className="space-y-4">
+                          <div className="flex items-center space-x-3">
+                            <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
+                              <category.icon className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                              <p className="text-sm text-gray-400">{category.description}</p>
+                            </div>
+                          </div>
+                          <div className="space-y-2">
+                            {category.services.map((service, serviceIndex) => (
+                              <Link
+                                key={serviceIndex}
+                                href={service.href}
 
 
                               </Link>
@@ -823,11 +882,13 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {/* CTA Buttons */}
 
@@ -852,6 +913,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
+
               </button>;
             </div>;
           </div>;
@@ -863,6 +925,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -871,6 +934,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20'
+
 
 
 
@@ -909,6 +973,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
+
             >
               <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Navigation Links */}
@@ -931,6 +996,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                       key={item.name}
                       href={item.href}
 
+
                 </div>;
 
 
@@ -948,6 +1014,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 {/* Mobile Services */}
                 <div className='space-y-4'>
@@ -968,7 +1035,9 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -988,12 +1057,14 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
+
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-') 
                             ? `bg-gradient-to-r ${link.color} text-white` 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
 
 
@@ -1014,6 +1085,8 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                 </div>
                 {/* Mobile CTA */}
                 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
+
+
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>
 
                       </Link>
@@ -1029,9 +1102,11 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -1079,6 +1154,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
           )}
         </AnimatePresence>
       </nav>
+
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;
     </>;
@@ -1091,10 +1167,12 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
+
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
   );
+
 
 
 
@@ -1117,3 +1195,4 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

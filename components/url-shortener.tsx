@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -26,6 +27,7 @@ export default function URLShortenerPage() {;
 
 
 
+
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
@@ -46,8 +48,10 @@ export default function URLShortenerPage() {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
+
   }
   };
+
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -212,6 +216,7 @@ export default function URLShortenerPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -221,6 +226,7 @@ export default function URLShortenerPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 
@@ -461,12 +467,14 @@ export default function URLShortenerPage() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
       {/* Features */}
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -624,6 +632,7 @@ export default function URLShortenerPage() {;
           </div>
         </div>
       </section>
+
 
 
 
@@ -1371,5 +1380,6 @@ export default function URLShortenerPage() {;
 
 
 }
+
 
 

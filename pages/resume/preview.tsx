@@ -1,11 +1,27 @@
 
 
+}</div> </div> <PdfExportButton targetRef= {
+  targetRef
+}fileName= {
+  `resume-$ {
+  activeData.name.replace (/\s+/g, '-') .toLowerCase ()
+}.pdf`
+}/> </div> </div>)
+}if (!user) {
+  return {
+  redirect: {
+}//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
+  name: 'Your Name', contact: {
+  email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com'
+}
+export default function ResumePreviewPage({
 
 
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id |'current'
   );  const targetRef = useRef<HTMLDivElement>(null);
+
 
 
   const activeData = useMemo(() => {
@@ -23,6 +39,7 @@
           <select
             value={theme}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -55,7 +72,9 @@ export type ResumePreviewPageProps = {
 
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
 
-
+  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current'),
+  const targetRef = useRef<HTMLDivElement>(null),
 
 
   const activeData = useMemo(() => {
@@ -63,6 +82,8 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data || initialData
   }, [selectedVersionId, initialData, versions]),
+
+
   return (
     <div className="relative">
       <div className="flex items-center justify-between mb-4">
@@ -73,6 +94,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
             className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
           >
+
             <option value='light'>Light</option>
             <option value='dark'>Dark</option>          </select>
             <option value="light">Light</option>
@@ -91,6 +113,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
@@ -101,6 +124,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
               >
                 <option value="current">Current</option>
                 {versions.map(v => (
+
 
 
 
@@ -274,6 +298,7 @@ return { props: { initialData, versions } };
 
 
 
+
   )
   } catch (error) {
     console.error("Error:", error);
@@ -357,6 +382,7 @@ return { props: { initialData, versions } }
 }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -436,5 +462,6 @@ if (return initial_data) {
       </div>;
     </div>);
 ;
+
 
 

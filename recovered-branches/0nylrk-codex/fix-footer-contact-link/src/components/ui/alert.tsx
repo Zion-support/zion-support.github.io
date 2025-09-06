@@ -1,11 +1,13 @@
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
+
 
 
 
@@ -33,6 +35,7 @@ const Alert = React.forwardRef<
     className={cn(alertVariants({ variant }), className)}
     {...props}
   />
+
 ));
 Alert.displayName = 'Alert';
 const AlertTitle = React.forwardRef<
@@ -44,12 +47,14 @@ Alert.displayName = "Alert"
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
+
 >(({ className, ...props }, ref) => (
   <h5
     ref={ref}
     className={cn('mb-1 font-medium leading-none tracking-tight', className)}
     {...props}
   />
+
 ));
 AlertTitle.displayName = 'AlertTitle';
 const AlertDescription = React.forwardRef<
@@ -61,12 +66,14 @@ AlertTitle.displayName = "AlertTitle"
 const AlertDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
+
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn('text-sm [&_p]:leading-relaxed', className)}
     {...props}
   />
+
 ));
 AlertDescription.displayName = 'AlertDescription';
 export { Alert, AlertTitle, AlertDescription }
@@ -83,3 +90,4 @@ AlertDescription.displayName = "AlertDescription"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -18,12 +20,15 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const DevopsAutomationChat: NextPage = () => {
   return (
     <div>
       <Head>
+
 
 
 
@@ -38,4 +43,5 @@ const DevopsAutomationChat: NextPage = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

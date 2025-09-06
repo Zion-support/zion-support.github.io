@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 
@@ -38,6 +41,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
+
 
 
 
@@ -252,6 +256,7 @@ const serviceCategories = [
         price: '$2,999/month'
       }
       {
+
         name: 'AI Business Intelligence'
         href: '/autonomous-business-intelligence-network'
         description: 'Self-evolving BI'
@@ -313,6 +318,7 @@ import { motion, AnimatePresence } from 'framer-motion';
     icon: Microscope,
     color: 'from - teal - 600 to - cyan - 600',
     description: 'Healthcare innovation',
+
 
 
 
@@ -693,6 +699,7 @@ const UltraAdvancedNavigation2026 = () => {;
           description: 'Business intelligence and analytics'
         }
         {
+
           name: 'DevOps',
           href: '/services?category=devops',
           description: 'Development and operations',
@@ -706,6 +713,7 @@ const UltraAdvancedNavigation2026 = () => {;
     }
 
   ];
+
 
 
   const contactInfo = {
@@ -943,11 +951,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
           <div className='flex items-center justify-between h-20'>
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {/* Logo */}
             <Link href='/' className='flex items - center space - x-3 group'>;
@@ -1013,6 +1023,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>
+
                     onClick={() =>
                       setActiveDropdown(
                         activeDropdown === item.name ? null : item.name
@@ -1057,6 +1068,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -1088,7 +1100,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                   All Services
                 </Link>
 
@@ -1208,6 +1222,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
               </Link>
             </div>
 
+
               </Link>;
             </div>;
 
@@ -1225,6 +1240,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             {/* Mobile Menu Button */}
@@ -1249,7 +1265,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -1264,6 +1282,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
+
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
@@ -1276,6 +1295,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           >
             <motion.div
@@ -1298,6 +1318,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
               {/* Mobile Navigation Items */}
+
               <div className='space-y-4'>
                 {navigationItems.map(item => (
                   <div
@@ -1335,6 +1356,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1574,6 +1596,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
 
+
       <div className="h-20"></div>
     </>
 
@@ -1586,10 +1609,12 @@ export default UltraAdvancedNavigation2026;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
+
 
 
 
@@ -1601,4 +1626,5 @@ export default UltraAdvancedNavigation2026;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

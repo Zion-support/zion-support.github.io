@@ -2,6 +2,7 @@
 
 
 
+
   try {
     const tx = feature;
       ? burnForFeature (user_id, feature, metadata);
@@ -9,6 +10,7 @@
     return res.status (200).json ({ tx });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (err: any) {
+
 
 
 
@@ -23,6 +25,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
+
+
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -63,6 +67,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 
+
   }
 }
 
@@ -79,4 +84,5 @@ export default function handler(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

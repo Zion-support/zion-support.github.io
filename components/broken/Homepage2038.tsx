@@ -1,13 +1,16 @@
+
 import React from 'react',
 import Layout from './layout/Layout',
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
 import React from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -74,6 +77,7 @@ import { motion } from 'framer-motion';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning;
@@ -103,6 +107,7 @@ const Homepage2038: React.FC = () => {
   return (
     <Layout>;
       {/* Main Content */}
+
       <main className='relative z-10'>
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
@@ -142,12 +147,14 @@ const Homepage2038: React.FC = () => {
 
 
 
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='space-y-8'              className="space-y-8"
             >
+
 
 
 
@@ -161,6 +168,7 @@ const Homepage2038: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -175,7 +183,9 @@ const Homepage2038: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -253,6 +263,7 @@ const Homepage2038: React.FC = () => {
                 </Link>
               </div>
 
+
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ scale: 0 && 0.95 }}>;
                     <span className='flex items-center gap-3'>;
@@ -315,6 +326,7 @@ const Homepage2038: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -341,12 +353,14 @@ const Homepage2038: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -360,7 +374,9 @@ const Homepage2038: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -507,12 +523,14 @@ const Homepage2038: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -526,7 +544,9 @@ const Homepage2038: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -584,6 +604,7 @@ const Homepage2038: React.FC = () => {
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
+
                     variant='consciousness'                  />                    variant="consciousness"
                     variant='consciousness'                  />
 
@@ -599,6 +620,7 @@ const Homepage2038: React.FC = () => {
                     variant="consciousness"
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   />
                 </motion.div>
@@ -620,6 +642,7 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
+
 
 
             </div>;
@@ -904,11 +927,13 @@ const Homepage2038: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
+
 
 
 
@@ -922,6 +947,7 @@ const Homepage2038: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent'>
                 Innovative Micro SAAS
@@ -975,6 +1001,7 @@ const Homepage2038: React.FC = () => {
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
+
                     variant='automation'                  />                    variant="automation"
                     variant='automation'                  />
 
@@ -990,6 +1017,7 @@ const Homepage2038: React.FC = () => {
                     variant="automation"
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   />
                 </motion.div>
@@ -1011,6 +1039,7 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
+
 
 
             </div>;
@@ -1092,11 +1121,13 @@ const Homepage2038: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
+
 
 
 
@@ -1110,6 +1141,7 @@ const Homepage2038: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure
@@ -1163,6 +1195,7 @@ const Homepage2038: React.FC = () => {
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
+
                     variant='quantum'                  />                    variant="quantum"
                     variant='quantum'                  />
 
@@ -1178,6 +1211,7 @@ const Homepage2038: React.FC = () => {
                     variant="quantum"
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   />
                 </motion.div>
@@ -1199,6 +1233,7 @@ const Homepage2038: React.FC = () => {
             </div>
           </div>
         </section>
+
 
 
             </div>;
@@ -1280,11 +1315,13 @@ const Homepage2038: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-20'
+
 
 
 
@@ -1297,6 +1334,7 @@ const Homepage2038: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
               </h2>
@@ -1311,6 +1349,7 @@ const Homepage2038: React.FC = () => {
                   icon: <Brain className='w-12 h-12' />
                   title: 'AI Consciousness Evolution'
                   description:
+
                     'Leading the development of artificial consciousness and emotional intelligence'
                   color: 'from-purple-500 to-pink-500'
                 }
@@ -1351,6 +1390,7 @@ const Homepage2038: React.FC = () => {
                 {
                   icon: <Award className='w-12 h-12' />,
                   title: 'Proven Results',
+
                   description:
                     'Access to the most advanced quantum computing capabilities available'
                   color: 'from-blue-500 to-cyan-500'
@@ -1387,9 +1427,14 @@ const Homepage2038: React.FC = () => {
                   description: "Track record of delivering transformative solutions to leading organizations"
                   color: "from-yellow-500 to-orange-500"
 
-
-
-
+                }
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
 
 
                   whileHover={{ scale: 1.05 }}
@@ -1404,6 +1449,7 @@ const Homepage2038: React.FC = () => {
                   </h3>
                   <p className='text-gray-300 leading-relaxed'>
                     {feature.description}
+
                   </p>                </motion.div>                  whileHover={{ scale: 1.05 }}
                 >
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -1428,10 +1474,12 @@ const Homepage2038: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               ))}
             </div>
           </div>
         </section>
+
 
 
 
@@ -1446,6 +1494,7 @@ const Homepage2038: React.FC = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* CTA Section */}
         <section className='py-24 px-4'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-24 px-4">;
@@ -1466,12 +1515,14 @@ const Homepage2038: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1485,7 +1536,9 @@ const Homepage2038: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1587,6 +1640,7 @@ const Homepage2038: React.FC = () => {
   );
 
 
+
 }
 
 
@@ -1609,3 +1663,4 @@ export default Homepage2038;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -5,12 +5,14 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export default function CloudAutomationsPage() {
 
 
 export default function CloudAutomationsPage() {
+
   const [data, setData] = useState<any>(null);
   useEffect(() => {
     fetch('/api/cloud-automations-status')
@@ -29,6 +31,7 @@ export default function CloudAutomationsPage() {
         ))}
       </div>
     </div>
+
 );
 }
   );
@@ -49,6 +52,7 @@ export default function CloudAutomationsPage() {
             <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
             {value.metrics ? (
               <pre className=&quot;mt-2 text-xs whitespace-pre-wrap&quot;>{JSON.stringify(value.metrics, null, 2)}</pre>
+
 
 
 

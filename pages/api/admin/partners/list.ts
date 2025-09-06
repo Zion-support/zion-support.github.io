@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -11,6 +13,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+
 
 
 
@@ -73,7 +76,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+    if (req.method === 'GET') {
+      const usingPlaceholder = true; // Set to false when real data is available
+      if (usingPlaceholder) {
+        return res.status(200).json({ 
+          partners: [
+            { code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 },
+            { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }
+          ]
+        });
+      }
+      res.json({ partners: [] });
+    } else {
+      res.setHeader('Allow', 'GET');
+      res.status(405).end('Method Not Allowed');
+    }
+
 
   }
 }

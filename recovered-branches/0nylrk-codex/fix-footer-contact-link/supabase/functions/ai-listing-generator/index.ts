@@ -2,6 +2,7 @@
 
 
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -19,6 +20,7 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -28,6 +30,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+
     const { title, category, keyFeatures, targetAudience } = await req.json();
     if (!title |!category) {
       return new Response(
@@ -54,9 +57,11 @@ serve(async (req) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         }
       )
     }
+
 
 
 
@@ -73,10 +78,13 @@ serve(async (req) => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Generate an optimized marketplace listing for the following product:
+
+
 
 
 
@@ -90,7 +98,9 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 Title: ${title}
@@ -103,6 +113,7 @@ Please create:
 2. A list of 5-7 relevant tags for the listing
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points
+
 Format the response as a JSON object with the following structure: {
   "description": "The optimized description here..."
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
@@ -124,10 +135,12 @@ Format the response as a JSON object with the following structure: {
 
     const responseText = completion && completion.choices[0].message && message.content;
     
+
     // Parse the JSON from the AI response
     let parsedResponse;
     try {
       // Extract the JSON content if it's wrapped in markdown code blocks
+
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) |
                         responseText.match(/({[\s\S]*})/) |
                         [null, responseText];
@@ -159,6 +172,7 @@ Format the response as a JSON object with the following structure: {
         description: "An error occurred while generating the optimized description. Please try again.",
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
+
         keyPoints: []
       }
     }
@@ -167,6 +181,7 @@ Format the response as a JSON object with the following structure: {
       JSON && JSON.stringify({ 
 
         generated: parsedResponse
+
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
@@ -214,3 +229,4 @@ Format the response as a JSON object with the following structure: {
 
   }
 });
+

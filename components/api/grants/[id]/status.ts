@@ -2,6 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+import type {
+
+} from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
@@ -89,6 +93,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   existing && existing.updatedAt = new Date().toISOString();
 
   writeGrant(existing);
+
   res && res.status(200).json({ record: existing });  res && res.status(200).json({ record: existing })
 }
 
@@ -103,3 +108,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

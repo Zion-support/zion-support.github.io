@@ -1,12 +1,11 @@
 
 
+import type { BookProject } from '../book/bookTypes';
 
+  const quotesHtml = visuals.quoteCallouts;
+    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+    .join('\n');
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const chapterHtml = chapters;
     .map(;
@@ -18,13 +17,14 @@
     `);
 
 
+    .join('\n\n');
+  const visualsHtml = [;
+    ...visuals.timelineImages;
+    ...visuals.daoVoteCharts;
+    ...visuals.uiScreens];
+    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join('\n');
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 
@@ -34,6 +34,8 @@
 <meta charset="utf-8" />;
 <title>${escapeHtml(meta.title)}</title>;
 <style>;
+
+
 
 
 
@@ -167,6 +169,7 @@ function paragraphize(text: string): string {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -175,11 +178,13 @@ function paragraphize(text: string): string {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -196,3 +201,4 @@ function paragraphize(text: string): string {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

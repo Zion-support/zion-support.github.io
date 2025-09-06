@@ -1,4 +1,5 @@
 
+
 import React, { createContext, useContext, useState } from "react";
 import React, { createContext, useContext, useState } from "react",
 
@@ -12,11 +13,13 @@ import React, { createContext, useContext, useState } from "react",
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface SidebarContextType {
   is_open: boolean;
   toggle: () => void;
   open: () => void;
   close: () => void
+
 }
 
 const SidebarContext = create_context < SidebarContextType>({
@@ -49,6 +52,7 @@ export function SidebarProvider({
 
 
 
+
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
@@ -56,6 +60,8 @@ export function SidebarProvider({
 
   return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
+
+
 
 
 
@@ -100,6 +106,7 @@ export function SidebarProvider(): any ({ ;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -108,10 +115,12 @@ export function SidebarProvider(): any ({ ;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {children}
       </div>
     </SidebarContext.Provider>
   );
+
 }
 }
 
@@ -139,3 +148,4 @@ export function SidebarProvider(): any ({ ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

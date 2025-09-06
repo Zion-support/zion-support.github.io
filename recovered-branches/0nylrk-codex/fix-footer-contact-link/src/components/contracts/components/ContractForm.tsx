@@ -5,6 +5,8 @@
 
 
 
+
+
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -21,6 +23,8 @@ import {ProjectDetailsFields} from "./ProjectDetailsFields";
 import {PaymentTermsFields} from "./PaymentTermsFields";
 import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
+
+
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -42,6 +46,7 @@ import { DeploymentOptions } from "@/types/smart-contracts",
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -50,10 +55,12 @@ import { DeploymentOptions } from "@/types/smart-contracts",
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
   startDate: z.date({
+
     required_error: "Start date is required"})
   endDate: z.date().optional()
   paymentTerms: z.enum(["hourly", "fixed", "milestone"]);
@@ -131,10 +138,12 @@ interface ContractFormProps {
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
       additionalClauses: ["nda", "ip"]}}),
   
+
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
+
 
 
 
@@ -219,6 +228,7 @@ export function ContractForm({;
 
 
   
+
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -228,9 +238,11 @@ export function ContractForm({;
     toast({
       title: "Milestones Generated"
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
+
   }
   },
   
+
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true)
     try {
@@ -239,9 +251,11 @@ export function ContractForm({;
         talent
         clientName
         generatedMilestones
+
       );
       ),
       
+
       onContractGenerated(contract)
     } catch (error) {
       console.error("Error generating contract:", error);
@@ -251,6 +265,7 @@ export function ContractForm({;
         variant: "destructive"})
     } finally {
       setIsGenerating(false)
+
     }
   }
 
@@ -335,6 +350,7 @@ export function ContractForm({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
@@ -343,6 +359,7 @@ export function ContractForm({;
           <ProjectDetailsFields
             form={form}
           />
+
 
 
 
@@ -359,16 +376,21 @@ export function ContractForm({;
 
 
 
+
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
 
 
+          />
+          <AdditionalClausesFields 
+            form={form}
+          />
+          <Button 
+            type="submit" 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -383,6 +405,7 @@ export function ContractForm({;
         </form>
       </Form>
       <DialogFooter className="gap-2 flex-wrap mt-4">
+
         <Button
           variant="outline"
           onClick={() => form.reset()}
@@ -408,5 +431,4 @@ export function ContractForm({;
     </>);
 }
 
-=======
-;
+

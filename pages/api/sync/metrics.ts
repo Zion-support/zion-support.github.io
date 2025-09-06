@@ -3,6 +3,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -23,11 +25,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
+
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -36,6 +40,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
+
 
 
 
@@ -54,6 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -123,6 +129,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 }
 
@@ -137,3 +144,4 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

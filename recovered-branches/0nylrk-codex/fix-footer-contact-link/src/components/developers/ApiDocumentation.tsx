@@ -1,14 +1,85 @@
 
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import { useState } from "react",
+import { BookOpen, Code, Copy, Terminal } from "lucide-react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Alert, AlertDescription } from "@/components/ui/alert",
 
 
 export function ApiDocumentation() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+
+
+    <Card className="bg-zinc-900 border-zinc-800 text-white">
+      <CardHeader>
+        <CardTitle className="text-xl flex items-center">
+          <BookOpen className="mr-2" size={20} /> API Documentation
+        </CardTitle>
+        <CardDescription className="text-zinc-400">
+          Reference documentation for integrating with the Zion Marketplace API.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Alert className="bg-blue-900/30 border-blue-800 mb-6">
+          <Terminal className="h-4 w-4" />
+          <AlertDescription>
+            Make sure to include your API key in all requests as a Bearer token in the Authorization header.
+          </AlertDescription>
+        </Alert>
+        <Tabs defaultValue="jobs" className="space-y-4">
+          <TabsList className="bg-zinc-800 border-zinc-700">
+            <TabsTrigger value="jobs">Jobs</TabsTrigger>
+            <TabsTrigger value="talent">Talent</TabsTrigger>
+            <TabsTrigger value="quotes">Quotes</TabsTrigger>
+            <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
+            <TabsTrigger value="errors">Errors</TabsTrigger>
+          </TabsList>
+          <TabsContent value="jobs" className="space-y-6">
+            <EndpointSection
+              method="GET"
+              endpoint="/api/jobs"
+              description="List all available jobs with optional filtering."
+              note=""
+              params={[
+                { name: "page", type: "integer", description: "Page number for pagination (default: 1)" }
+                { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }
+                { name: "category", type: "string", description: "Filter by job category" }
+                { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" }
+                { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
+              ]}
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`
+                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
+  method: 'GET'
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+
+const data = await response.json(),
+// // // console.log(data),`,
+
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+
+    headers=headers
+)
+data = response.json()
+print(data)`
+
+import { useState } from "react",;
+import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { Badge } from "@/components/ui/badge",;
+import CodeBlock from "./CodeBlock",;
+export function ApiDocumentation() {;
+  return (;
 
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
@@ -64,6 +135,7 @@ headers = {
 }
 
 
+
 response = requests && requests.get(
     'https: //api && api.ziontechgroup.com/v1/jobs',
     params={'limit': 10, 'category': 'development'}
@@ -78,11 +150,13 @@ print(data)`
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
+
       "id": "job_abc123";
       "title": "Senior React Developer";
       "description": "We need an experienced React developer...";
@@ -93,10 +167,12 @@ print(data)`
       "description": "We need an experienced React developer...",
       "category": "development",
       "skills": ["react", "typescript", "node.js"],
+
       "budget": {
         "min": 5000,
         "max": 10000,
         "currency": "USD"
+
       }
       "status": "active";
       "client_id": "user_xyz789";
@@ -120,6 +196,7 @@ print(data)`
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   "meta": {
     "total": 42
     "page": 1
@@ -156,14 +233,17 @@ const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${j
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
+
 })
 
 const data = await response && response.json()
 console && console.log(data),`
 
+
                 python: `import requests
 
 headers = {
+
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 
@@ -176,10 +256,12 @@ print(data)`
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               }}
               response_examples={{
                 success: `{
   "data": {
+
     "id": "job_abc123";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
@@ -190,10 +272,12 @@ print(data)`
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
+
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
+
     }
     "status": "active";
     "client_id": "user_xyz789";
@@ -204,6 +288,7 @@ print(data)`
     "client_id": "user_xyz789",
     "created_at": "2025-05-15T10:30:00Z",
     "deadline": "2025-06-30T23:59:59Z",
+
     "application_count": 12
 
   }
@@ -230,6 +315,7 @@ print(data)`
   -H "Content - Type: application / json" \\;
 
   -d '{
+
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
     "category": "development"
@@ -238,20 +324,25 @@ print(data)`
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
+
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
+
     }
     },
+
     "deadline": "2025-06-30T23:59:59Z"
   }'`,
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
   method: 'POST'
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+
   }
   },
+
   body: JSON.stringify({
     title: 'Senior React Developer'
     description: 'We need an experienced React developer...'
@@ -261,6 +352,7 @@ print(data)`
       min: 5000
       max: 10000
       currency: 'USD'
+
     }
     deadline: '2025-06-30T23:59:59Z'
   })
@@ -274,6 +366,7 @@ console.log(data),`;
 
 const data = await response.json(),
 // // // console.log(data),`,
+
                 python: `import requests
 import json
 headers = {
@@ -283,10 +376,12 @@ headers = {
 
 
 
+
 payload = {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -302,6 +397,8 @@ response = requests && requests.post(
 data = response && response.json()
 
 print(data)`
+
+
             />;
             <EndpointSection;
               method="POST";
@@ -383,6 +480,7 @@ print(data)`;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -391,10 +489,12 @@ print(data)`;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               }}
               response_examples={{
                 success: `{
   "data": {
+
     "id": "job_def456";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
@@ -405,10 +505,12 @@ print(data)`;
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
+
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
+
     }
     "status": "new";
     "client_id": "user_xyz789";
@@ -417,6 +519,7 @@ print(data)`;
     "status": "new",
     "client_id": "user_xyz789",
     "created_at": "2025-05-16T14:22:10Z",
+
     "deadline": "2025-06-30T23:59:59Z"
 
   }
@@ -446,6 +549,7 @@ print(data)`;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
+
 });
 const data = await response.json();
 console.log(data),`;
@@ -453,9 +557,12 @@ console.log(data),`;
 
 const data = await response.json(),
 // // // console.log(data),`,
+
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+
+
 
 
 
@@ -468,6 +575,8 @@ headers = {
 )
 data = response.json()
 print(data)`
+
+
             />;
           </TabsContent>;
           <TabsContent value="talent" className="space - y-6">;
@@ -511,6 +620,7 @@ headers = {
 }
 
 
+
 response = requests && requests.get(
     'https: //api && api.ziontechgroup.com/v1/talent',
     params={'skills': 'react,typescript'}
@@ -525,11 +635,13 @@ print(data)`
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               }}
               response_examples={{
                 success: `{
   "data": [;
     {
+
       "id": "talent_abc123";
       "display_name": "Jane Smith";
       "headline": "Senior Frontend Developer"
@@ -559,6 +671,7 @@ print(data)`
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   "meta": {
     "total": 28
     "page": 1
@@ -595,14 +708,17 @@ const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\$
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
+
 })
 
 const data = await response && response.json()
 console && console.log(data),`
 
+
                 python: `import requests
 
 headers = {
+
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 
@@ -615,10 +731,12 @@ print(data)`
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               }}
               response_examples={{
                 success: `{
   "data": {
+
     "id": "talent_abc123";
     "display_name": "Jane Smith";
     "headline": "Senior Frontend Developer";
@@ -635,6 +753,7 @@ print(data)`
     "availability": "available",
     "average_rating": 4.8,
     "rating_count": 15,
+
     "portfolio": [
       {
         "id": "proj_123",
@@ -646,6 +765,7 @@ print(data)`
     ],
     "certifications": [
       {
+
 
 
         "name": "AWS Certified Developer",
@@ -683,9 +803,11 @@ print(data)`
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   }
 }`;
               }}
+
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -694,10 +816,13 @@ print(data)`
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
             <EndpointSection
               method="POST"
               endpoint="/api/quotes"
@@ -715,6 +840,7 @@ print(data)`
                 { name: "requester_email", type: "string", description: "Email of the requester", required: true }
               ]}
               codeExamples={{
+
                 curl: `curl -X POST "https://api && api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
@@ -733,6 +859,7 @@ print(data)`
   }'`
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/quotes', {
   method: 'POST',
+
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
@@ -755,6 +882,7 @@ import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
+
 
 
 
@@ -1091,6 +1219,7 @@ function EndpointSection() {
                 : method === 'PUT';
                 ? "border - yellow - 500 text - yellow - 400 font - mono";
                 : "border - red - 500 text - red - 400 font - mono";
+
             }
           >;
             {method}
@@ -1153,7 +1282,9 @@ function EndpointSection() {
           </table>;
         </div>;
       )}
+
       
+
       {codeExamples && (
         <div className="border-t border-zinc-800 p-4">
           <div className="flex items-center mb-2">
@@ -1184,7 +1315,15 @@ function EndpointSection() {
         </div>;
       )}
 
-
+      {responseExamples && (
+        <div className="border-t border-zinc-800 p-4">
+          <h4 className="font-medium mb-2">Response</h4>
+          <CodeBlock
+            code={responseExamples.success}
+            language="json"
+          />
+        </div>
+      )}
 
 
     </div>;
@@ -1195,9 +1334,11 @@ function EndpointSection() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -3,6 +3,7 @@
 
 
 
+
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -22,6 +23,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
 
 
 
+
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -35,17 +37,20 @@ import { useAuth } from "@/hooks/useAuth",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
 }
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
+
   const { user } = useAuth();
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
@@ -56,6 +61,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth(),
   const navigate = useNavigate(),
   
+
   const [startDate, setStartDate] = useState<Date | undefined>(undefined),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
   const [isRemote, setIsRemote] = useState(false),
@@ -65,6 +71,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema);
     defaultValues: {
+
       title: '';
       company: '';
       location: '';
@@ -141,6 +148,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       }
       return job_data;
     } catch (error: any) {
@@ -149,6 +157,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       throw error;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
+
 
 
 
@@ -177,3 +186,4 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
 
   }
 };
+

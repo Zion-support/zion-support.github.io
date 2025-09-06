@@ -59,6 +59,7 @@ const ContentCard: React.FC < ContentCardProps> = ({
           <span className='text-2xl'>{icon}</span>
         </div>
         {category && (
+
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}          <span className="px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20">
             {category}
           </span>
@@ -104,6 +105,7 @@ const ContentCard: React.FC < ContentCardProps> = ({
       <p className="text-white/70 leading-relaxed mb-6 line-clamp-3">
 
 
+
         {description}
       </p>
 
@@ -139,6 +141,7 @@ const ContentCard: React.FC < ContentCardProps> = ({
           <span className='text-xs text-white/50 font-mono'>{date}</span>        )}
       </div>;
       {/* Hover Effects */}
+
 
       </div>;
 
@@ -217,5 +220,6 @@ export default ContentCard;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -1,3 +1,4 @@
+
 import {
 
 
@@ -8,6 +9,7 @@ import { SortFilterProps } from "@/types/filters";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
@@ -31,6 +33,15 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
     </div>
 
 
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { SortFilterProps } from "@/types/filters";
+export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
+  return (;
 
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
@@ -55,6 +66,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -62,3 +74,4 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

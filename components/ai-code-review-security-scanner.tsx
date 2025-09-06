@@ -1,3 +1,4 @@
+
 import React from 'react',
 import React from 'react';
 import SEO from '../components/SEO';
@@ -24,6 +25,7 @@ import {
   Globe,;
   Award,;
 } from 'lucide-react';
+
 
 
 
@@ -205,6 +207,7 @@ const AICodeReviewSecurityScanner = () => {;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
               className='text-center mb-16'
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Comprehensive Code Security & Quality
@@ -284,10 +287,12 @@ const AICodeReviewSecurityScanner = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
               ))}
             </div>
           </div>
         </section>
+
 
 
 
@@ -301,6 +306,7 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Pricing Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -309,13 +315,16 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
               className='text-center mb-16'
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Transparent Pricing Plans
@@ -478,6 +487,7 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   }`}
 
                     plan.popular 
@@ -516,6 +526,7 @@ const AICodeReviewSecurityScanner = () => {;
                       </span>
                     </div>
                   )}
+
 
 
 
@@ -590,6 +601,7 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 
+
                         {feature}
                       </li>
                     ))}
@@ -599,16 +611,27 @@ const AICodeReviewSecurityScanner = () => {;
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
 
+                    className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
+                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                    }`}
+                  >
+                    Get Started
+                  </motion.button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Benefits Section */}
         <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+
 
 
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -645,10 +668,12 @@ const AICodeReviewSecurityScanner = () => {;
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
 
 
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
 
 
               className='text-center mb-16'
@@ -722,6 +747,7 @@ const AICodeReviewSecurityScanner = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                     </div>
                   </motion.div>
                 ))}
@@ -731,7 +757,9 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                   </motion.div>
                 ))}
@@ -743,7 +771,9 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
         {/* Use Cases Section */}
         <section className='py-20'>
@@ -754,7 +784,9 @@ const AICodeReviewSecurityScanner = () => {;
 
 
 
+
               className='text-center mb-16'
+
 
 
 
@@ -762,6 +794,7 @@ const AICodeReviewSecurityScanner = () => {;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
 
 
 className="text-center mb-16"
@@ -1074,6 +1107,7 @@ className="text-center mb-16"
 
 
 
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1275,6 +1309,7 @@ className="text-center mb-16"
   );
 
 
+
 };
 export default AICodeReviewSecurityScanner;  );
 
@@ -1287,4 +1322,5 @@ export default AICodeReviewSecurityScanner;  );
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -5,11 +5,13 @@
 
 
 
+
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+
 
 
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
@@ -35,6 +37,7 @@ export default function VerifyStatus() {
     setIsResending(true),
     setError(''),
     setMessage(''),
+
 
 
     try {
@@ -129,6 +132,7 @@ if ( {) {
         set_error (data.message || 'Failed to resend verification email');
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
@@ -136,6 +140,7 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout';
+
 
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
@@ -254,6 +259,7 @@ export default function VerifyStatus(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
     try {
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
@@ -344,10 +350,13 @@ if ( {) {
   const handleGoBack = () => {
     router.back()
   },
+
+
   return (
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">
         <div className="w-full max-w-md space-y-6">
+
           {/* Header */}
           {/* Header */  } catch (error) {
     console.error("Error:", error);
@@ -365,6 +374,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
@@ -374,6 +384,7 @@ if ( {) {
               Check and manage your email verification status
             </p>
           </div>
+
           {/* Success Message */}
           {/* Success Message */  } catch (error) {
     console.error("Error:", error);
@@ -391,11 +402,13 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
               <AlertDescription>{message}</AlertDescription>
             </Alert>
+
           )}
           {/* Error Message */}
           )  } catch (error) {
@@ -409,11 +422,13 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           {error && (
             <Alert variant="destructive">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
+
           )}
           {/* Email Input */}
           )  } catch (error) {
@@ -438,6 +453,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -445,6 +461,7 @@ if ( {) {
             <Input
               id="email"
               type="email"
+
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               value={email  } catch (error) {
@@ -464,6 +481,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               placeholder="Enter your email address"
               className="w-full"
             />
@@ -472,6 +490,7 @@ if ( {) {
               <p className="text-xs text-gray-500">
                 We'll check the verification status for this email address
               </p>
+
             )}
           </div>
           {/* Status Info */}
@@ -496,6 +515,7 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {email && (
 
             <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
@@ -508,6 +528,7 @@ if ( {) {
               {lastSentTime && (
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
                   <Clock className="h-3 w-3 mr-1" />
+
                   Last email sent: {lastSentTime.toLocaleTimeString()}
                 </p>
               )}
@@ -516,6 +537,7 @@ if ( {) {
           {/* Action Buttons */}
           <div className="space-y-3">
             {/* Check Status Button */}
+
 
 
 
@@ -563,12 +585,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="w-full"
               variant="outline"
             >
@@ -582,6 +606,8 @@ if ( {) {
                   <Eye className="h-4 w-4 mr-2" />
                   Check Verification Status
                 </>
+
+
 
 
 
@@ -611,12 +637,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="w-full"
               variant="secondary"
             >
@@ -635,6 +663,7 @@ if ( {) {
                   <Mail className="h-4 w-4 mr-2" />
                   Resend Verification Email
                 </>
+
               )}
             </Button>
             {/* Try Login Button */}
@@ -708,11 +737,13 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="w-full"
             >
               Try Login
             </Button>
           </div>
+
           {/* Help Text */}
           {/* Help Text */  } catch (error) {
     console.error("Error:", error);
@@ -730,11 +761,13 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
             <Button
+
               onClick={handleGoBack}
               onClick={handleGoBack  } catch (error) {
     console.error("Error:", error);
@@ -752,6 +785,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -760,6 +794,7 @@ if ( {) {
               Go Back
             </Button>
           </div>
+
           {/* Additional Options */}
           <div className="border-t pt-4 space-y-2">
             <Button
@@ -787,12 +822,14 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               variant="ghost"
               className="w-full text-sm"
             >
               Use Different Email Address
             </Button>
             <Button
+
               onClick={() => router.push('/contact')}
               onClick={() => router.push('/contact')  } catch (error) {
     console.error("Error:", error);
@@ -810,6 +847,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               variant="ghost"
               className="w-full text-sm"
             >
@@ -828,6 +866,7 @@ if ( {) {
 
 
 
+
 };
 
 
@@ -836,3 +875,4 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

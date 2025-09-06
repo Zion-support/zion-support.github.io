@@ -1,7 +1,12 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import {cn} from "@/lib/utils";
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
 interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode,
@@ -10,6 +15,7 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
 export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
   return (
     <div
+
 
 
       className={cn(
@@ -66,6 +72,7 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       )}
       {...props}>;

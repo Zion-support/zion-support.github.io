@@ -1,16 +1,14 @@
 
 
 
+  const { wallet, transactions, loading } = useWallet();
 
-
-import {useWallet} from '@/hooks/useWallet';
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
-import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
-import {BadgeDollarSign} from 'lucide-react';
-export default function WalletPage() {;
-
-
-
+import { useWallet } from '@/hooks/useWallet',
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
+import { BadgeDollarSign } from 'lucide-react',
+export default function WalletPage() {
+  const { wallet, transactions, loading } = useWallet(),
 
 
   return (
@@ -74,6 +72,8 @@ export default function WalletPage() {;
       </div>
     </div>
   )
+
 }
 }
 ;
+

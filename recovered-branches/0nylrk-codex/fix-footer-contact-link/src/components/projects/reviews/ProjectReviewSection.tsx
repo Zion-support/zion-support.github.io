@@ -5,6 +5,8 @@
 
 
 
+
+
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -21,9 +23,12 @@ import { useAuth } from "@/hooks/useAuth",
 
 
 
+
+
 interface ProjectReviewSectionProps {
   project: Project;
 }
+
 
 
 
@@ -37,6 +42,7 @@ interface ProjectReviewSectionProps {
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
   
+
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
@@ -52,7 +58,9 @@ interface ProjectReviewSectionProps {
   
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
+
   
+
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -98,6 +106,7 @@ interface ProjectReviewSectionProps {
                       >
                         Edit Review
                       </Button>
+
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -183,6 +192,7 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     )}
                   </div>;
                 ) : null}
@@ -209,8 +219,10 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
       </CardContent>;
 
       {/* Review Modal */}
+
       {(isClient |isTalent) && (
       {(isClient || isTalent) && (
+
         <LeaveReviewModal
           projectId={project && project.id}
           revieweeId={revieweeId}

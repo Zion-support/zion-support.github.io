@@ -1,7 +1,15 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const CybersecurityBestPractices: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>CybersecurityBestPractices - Zion Tech Solutions</title>
+        <meta name="description" content="CybersecurityBestPractices page" />
+      </Head>
 
 
       <main>
@@ -9,6 +17,7 @@
         <p>This page is under construction.</p>
       </main>
     </div>
+
 
 
 
@@ -35,4 +44,5 @@ export default CybersecurityBestPractices;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

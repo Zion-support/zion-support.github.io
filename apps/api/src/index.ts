@@ -1,7 +1,9 @@
+
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
+
 import rateLimit from '@fastify/rate-limit';
 import { createOpenAIClient, generateJobPost  } from './openai';
 import { withUser  } from './pg';
@@ -119,13 +121,14 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   return { items }
 });
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+const port = Number(process.env.API_PORT |4000);
+app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 
 
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
+
 
 
 });
@@ -144,12 +147,4 @@ app.get('/notifications', async (req: any, reply: any) => {
 });
 
 
-=======
-
-
-const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-
-
-});
 

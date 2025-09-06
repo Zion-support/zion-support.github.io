@@ -1,3 +1,4 @@
+
 import * as AspectRatioPrimitive from &quot;@radix-ui/react-aspect-ratio&quot;
 const AspectRatio = AspectRatioPrimitive.Root
 export { AspectRatio }
@@ -15,3 +16,4 @@ const AspectRatio = AspectRatioPrimitive.Root
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

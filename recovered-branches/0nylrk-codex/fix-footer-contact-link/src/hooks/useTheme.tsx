@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import React from 'react',
 
@@ -12,10 +13,12 @@ import React from 'react',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 // This is a simplified version of the theme hook for offline development
 
 export const useTheme = () => {
   return {
+
     theme: "dark"
     setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
   }
@@ -44,3 +47,4 @@ export const use_theme = () =>: any {
 
 
 };
+

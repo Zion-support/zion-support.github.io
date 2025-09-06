@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -8,6 +9,7 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     role?: string;
     talent?: string;
@@ -43,12 +45,14 @@
 
 
 
+
   headers["Set-Cookie"] = cookies && cookies.join();
   res && res.writeHead(302, { ...headers, Location: "/" });
   res && res.end();
 
 
 }
+
 
 
 

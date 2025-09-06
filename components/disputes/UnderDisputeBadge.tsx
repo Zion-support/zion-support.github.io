@@ -3,6 +3,8 @@ import useSWR from 'swr';
 
 
 
+
+
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {;
@@ -16,6 +18,7 @@ import useSWR from 'swr';
 
 
 
+
   return { hasActiveDispute, isLoading: !data && !error };
 export default function UnderDisputeBadge(): any ({;
   projectId,;
@@ -24,6 +27,7 @@ export default function UnderDisputeBadge(): any ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   projectId: string;
 }) {;
@@ -34,12 +38,14 @@ export default function UnderDisputeBadge(): any ({;
       Under Dispute;
     </span>;
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' |d.status === 'Under Review'))
   return { hasActiveDispute, isLoading: !data && !error }
 }
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
   return { hasActiveDispute, isLoading: !data && !error }
 }
+
 
 
 
@@ -51,6 +57,7 @@ export default function UnderDisputeBadge(): any ({;
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
       Under Dispute
     </span>
+
 );
 }
 
@@ -61,6 +68,7 @@ export default function UnderDisputeBadge(): any ({;
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

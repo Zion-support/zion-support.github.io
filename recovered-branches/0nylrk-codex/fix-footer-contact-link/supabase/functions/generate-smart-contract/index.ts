@@ -2,6 +2,8 @@
 
 
 
+
+
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -11,6 +13,7 @@ serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
+
   }
   try {
     // Get the OpenAI API key from environment variables
@@ -32,6 +35,7 @@ serve(async (req) => {
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
+
 
 
 
@@ -70,12 +74,14 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -98,6 +104,8 @@ serve(async (req) => {;
       ${additionalClauses && additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
       `
     }
+
+
 
 
 
@@ -148,6 +156,7 @@ serve(async (req) => {;
         error: error.message |'Failed to generate smart contract'
       });
 
+
     }), {
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   } catch (error) {
@@ -161,6 +170,7 @@ serve(async (req) => {;
 
       { 
         status: 500, 
+
 
 
 
@@ -208,6 +218,7 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -215,6 +226,7 @@ serve(async (req) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )

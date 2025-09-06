@@ -2,6 +2,7 @@
 
 
 
+
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -34,6 +35,7 @@ import {
 
 
 
+
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
@@ -52,7 +54,9 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
@@ -122,6 +126,8 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
+
   ],
   const spaceCapabilities = [
     {
@@ -155,6 +161,7 @@ const SpaceTechnologyPage: React.FC = () => {
       icon: <Heart className="w-6 h-6" />
 
 
+
   ],
   return (
     <Layout>
@@ -178,11 +185,13 @@ const SpaceTechnologyPage: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         title="Space Technology Solutions - Zion Tech Group"
         description="Revolutionary space technology solutions for the future. From resource mining to autonomous systems, explore the final frontier."
         keywords="space technology, space mining, AI space systems, brain-computer interface, autonomous vehicles, quantum space communications"
       />
       <main className="relative z-10">
+
         {/* Hero Section */}
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -194,6 +203,7 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
@@ -226,6 +236,7 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
                 </Link>
 
 
@@ -243,6 +254,7 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -252,6 +264,7 @@ const SpaceTechnologyPage: React.FC = () => {
           </div>
         </div>
       </section>
+
         {/* Space Capabilities */}
         <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900">;
           <div className="max - w-6xl mx - auto">;
@@ -299,6 +312,7 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -311,6 +325,7 @@ const SpaceTechnologyPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceCapabilities.map((capability, index) => (
                 <motion.div
+
                   key={capability.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -348,10 +363,12 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-purple-500/20 rounded-lg mr-3">
+
                       {capability.icon}
                       {capability.icon  } catch (error) {
     console.error("Error:", error);
@@ -367,11 +384,13 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
                   <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -429,6 +448,7 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -441,6 +461,7 @@ const SpaceTechnologyPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {spaceServices.map((service, index) => (
                 <motion.div
+
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -487,6 +508,7 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                 >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {service.popular && (
@@ -495,6 +517,7 @@ const SpaceTechnologyPage: React.FC = () => {
                         Most Popular
                       </span>
                     </div>
+
                   )}
                   <div className="text-center mb-6">
                     <div className="inline-flex p-3 bg-purple-500/20 rounded-full mb-4">
@@ -518,10 +541,12 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <div className="text-3xl font-bold text-purple-400 mb-2">
+
                       {service.price}
                       {service.price  } catch (error) {
     console.error("Error:", error);
@@ -538,6 +563,7 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
                   </div>
@@ -545,6 +571,8 @@ const SpaceTechnologyPage: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+
+
 
 
 
@@ -559,9 +587,12 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   </ul>
                   <a
                     href="/contact"
+
 
 
 
@@ -572,11 +603,13 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
                   >
                     Get Started
                   </a>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -600,6 +633,7 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
@@ -637,6 +671,7 @@ const SpaceTechnologyPage: React.FC = () => {
 
 
 
+
                 </Link>
 
 
@@ -654,6 +689,7 @@ const SpaceTechnologyPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -665,8 +701,10 @@ const SpaceTechnologyPage: React.FC = () => {
       </main>
     </Layout>
   )
+
 }
 export default SpaceTechnologyPage;
+
 
 
 
@@ -700,6 +738,7 @@ export default SpaceTechnologyPage;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -711,4 +750,5 @@ export default SpaceTechnologyPage,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

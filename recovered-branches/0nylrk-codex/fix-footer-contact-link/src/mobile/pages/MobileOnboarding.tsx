@@ -5,6 +5,8 @@
 
 
 
+
+
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -17,8 +19,10 @@ type OnboardingStep = "language" | "role" | "signup";
 
 
 
+
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
+
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -30,7 +34,9 @@ type OnboardingStep = "language" | "role" | "signup",
 export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
   const navigate = useNavigate(),
+
   
+
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role")
@@ -39,6 +45,7 @@ export function MobileOnboarding() {
     } else {
       navigate("/mobile")
     }
+
   }
   const handleRoleSelect = () => {
     setCurrentStep("signup")
@@ -48,6 +55,7 @@ export function MobileOnboarding() {
   const handleRoleSelect = () => {
     setCurrentStep("signup")
   },
+
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -88,6 +96,7 @@ export function MobileOnboarding() {
             </div>
             <SignUpForm />
           </div>
+
         )}
       </div>
     </div>
@@ -248,6 +257,7 @@ if ( {) {
       </div>;
     </div>);
 }
+
 
 
 

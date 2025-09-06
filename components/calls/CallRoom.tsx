@@ -23,6 +23,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 
 
+
   Room,
   RoomEvent,
   RemoteParticipant,
@@ -37,6 +38,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
@@ -55,12 +57,9 @@ type Props = {;
   startMode: StartMode;
   onLeave?: (durationSec: number) => void;
 
+}
+export default function CallRoom({
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
@@ -75,6 +74,7 @@ export type StartMode = 'video' | 'audio';
 
 
 
+
 };
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
@@ -82,6 +82,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
@@ -119,6 +120,7 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
   }, [connect]);
   const handleLeave = () => {
     if (room) {
+
       room.disconnect();
     }
   }, [connect]);
@@ -144,6 +146,7 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   const gridCols = useMemo(() => {
     const count = participants.length |1;
 
@@ -160,6 +163,7 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
       </div>
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
+
           <ParticipantTile
             key={String((p as any).sid |(p as any).identity) + idx}
             participant={p}
@@ -189,3 +193,4 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

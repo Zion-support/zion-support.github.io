@@ -1,6 +1,7 @@
 
 
 
+
   Settings,;
   Code,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -19,6 +20,7 @@ export default function CloudMonitoringPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export default function CloudMonitoringPage() {
@@ -68,17 +70,55 @@ export default function CloudMonitoringPage() {
       description:
 
 
+  const monitoringCapabilities = [
+    {
+      category: 'Infrastructure'
+      icon: <Server className='w-6 h-6 text-blue-400' />
+      metrics: [
+        'CPU Usage'
+        'Memory Utilization'
+        'Disk I/O'
+        'Network Performance'
+        'Container Metrics'
+      ]
+    }
+    {
+      category: 'Applications'
+      icon: <Code className='w-6 h-6 text-green-400' />
+      metrics: [
+        'Response Time'
+        'Error Rates'
+        'Throughput'
+        'User Experience'
+        'API Performance'
+      ]
+    }
+    {
+      category: 'Databases'
+      icon: <Database className='w-6 h-6 text-purple-400' />
+      metrics: [
+        'Query Performance'
+        'Connection Pool'
+        'Index Usage'
+        'Replication Lag'
+        'Storage Growth'
+      ]
+    }
+    {
+      category: 'Security'
+      icon: <Shield className='w-6 h-6 text-red-400' />
+      metrics: [
+        'Threat Detection'
+        'Access Logs'
+        'Vulnerability Scans'
+        'Compliance Status'
+        'Audit Trails'
+      ]
+    },  ];      icon: <Shield className="w-6 h-6 text-red-400" />
+      metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails']
+    }
 
-
-        'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-      gradient: 'from-teal-400 to-blue-500',
-    },;
   ];
-
-
-
-
 
 
 export default function CloudMonitoringPage() {
@@ -397,6 +437,7 @@ export default function CloudMonitoringPage() {;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -453,6 +494,7 @@ export default function CloudMonitoringPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 </p>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -464,9 +506,11 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Monitoring Capabilities */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -476,9 +520,11 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               Comprehensive Monitoring
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -557,6 +603,7 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -570,6 +617,7 @@ export default function CloudMonitoringPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Use Cases Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
@@ -580,6 +628,7 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -593,6 +642,7 @@ export default function CloudMonitoringPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               Use Cases
             </h2>
@@ -650,6 +700,7 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -659,6 +710,7 @@ export default function CloudMonitoringPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-black relative overflow-hidden">
@@ -813,6 +865,8 @@ export default function CloudMonitoringPage() {;
                 )}
 
 
+
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -825,7 +879,9 @@ export default function CloudMonitoringPage() {;
                 </div>;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     </li>
                   ))}
@@ -849,6 +905,7 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -863,6 +920,7 @@ export default function CloudMonitoringPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Integrations Section */}
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
@@ -873,6 +931,7 @@ export default function CloudMonitoringPage() {;
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+
 
           </div>;
         </div>;
@@ -922,10 +981,12 @@ export default function CloudMonitoringPage() {;
               </Card>;
 
 
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -953,6 +1014,7 @@ export default function CloudMonitoringPage() {;
 
 
 
+
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -966,8 +1028,10 @@ export default function CloudMonitoringPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             Ready to Monitor Your Infrastructure?
           </h2>
@@ -1010,8 +1074,15 @@ export default function CloudMonitoringPage() {;
         </div>
       </section>
     </>
+
+
+}
+
+}
+}
+}
+
   );
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+}
 

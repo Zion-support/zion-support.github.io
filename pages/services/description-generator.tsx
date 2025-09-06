@@ -27,6 +27,7 @@ import React, { useMemo, useState } from 'react';
 
 
 
+
 export default function ServiceDescriptionGeneratorPage() {;
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
@@ -42,10 +43,12 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
+
 
 
 
@@ -68,13 +71,106 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
 
 
+  const keyFeatures = useMemo(() => {
+    return featuresInput
+      .split('\n')
+      .map(f => f.trim())
+      .filter(Boolean);  }, [featuresInput]);
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    setAccepted(false)
+    try {
+      const response = await fetch('/api/generate-service-description', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          title
+          keyFeatures
+          targetAudience
+          additionalNotes: additionalNotes |undefined
+          tone
+        })
+      });
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error |'Failed to generate');
+      }
+      const data = (await response.json()) as { description: string }
+      setGenerated(data.description |'');
+    } catch (err: any) {
+      setError(err.message |'Something went wrong');
+    } finally {
+      setLoading(false);    }
+  }
+  function handleAccept() {
+    setAccepted(true);  }
+  function handleCopy() {
 
+  const keyFeatures = useMemo(() => {;
+    return featuresInput;
+      .split('\n');
+      .map((f) => f.trim());
+      .filter(Boolean);
+  }, [featuresInput]),;
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
+    setLoading(true);
+    setError(null);
+    setAccepted(false);
+    try {
+      const response = await fetch('/api/generate-service-description', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({;
+          title,;
+          keyFeatures,;
+          targetAudience,;
+          additionalNotes: additionalNotes || undefined,;
+          tone})}),;
+      if (!response.ok) {;
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || 'Failed to generate');
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      const data = (await response.json()) as { description: string };
+      setGenerated(data.description || '');
+    } catch (error) {
+      setError(err.message || 'Something went wrong');
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function handleAccept() {;
+    setAccepted(true);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function handleCopy() {;
 
 
     if (!generated) return;
@@ -85,8 +181,10 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   }
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -94,6 +192,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
       <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
         Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
       </p>
+
       <form
         onSubmit={handleSubmit}
 
@@ -116,6 +215,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <div>
@@ -183,12 +283,14 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
           />
         </div>
+
         <div className='flex items-center gap-3'>
         <div className="flex items-center gap-3">
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           <button
             type="submit"
@@ -235,9 +337,15 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
           />
           {accepted && (
-            <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
-              Accepted. You can copy and paste this into your CMS.
-            </div>          )}
+
+
+            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
         </div>;
       )}
 
@@ -267,6 +375,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -274,4 +383,5 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

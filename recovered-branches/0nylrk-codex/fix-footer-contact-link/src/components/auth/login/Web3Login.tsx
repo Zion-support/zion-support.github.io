@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
@@ -15,15 +16,18 @@ export function Web3Login() {;
 
 
 
+
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
 
   const handleWeb3Login = async () => {
     try {
+
       setIsLoading(true);
       setIsLoading(true),
       
+
       // Check if wallet is available
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
@@ -58,8 +62,10 @@ export function Web3Login() {
       setIsLoading(false);
 
     }
+
   }
   },
+
 
   return (
     <Button
@@ -83,6 +89,8 @@ export function Web3Login() {
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
+
+
 
 
 
@@ -142,6 +150,7 @@ export function Web3Login() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -150,6 +159,7 @@ export function Web3Login() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       )}
 
@@ -170,3 +180,5 @@ function Web3Login() {
   const { loginWithWeb3 } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
 ;
+
+

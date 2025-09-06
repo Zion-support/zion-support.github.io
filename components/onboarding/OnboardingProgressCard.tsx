@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
 import Link from 'next/link';
 
 
@@ -32,6 +34,7 @@ export type OnboardingStep = {;
 
 
 
+
 };
 
 export type OnboardingProgressCardProps = {;
@@ -39,6 +42,7 @@ export type OnboardingProgressCardProps = {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   title: string;
   steps: OnboardingStep[];
@@ -48,7 +52,9 @@ function computePercentage(steps: OnboardingStep[]): number {
   const completedCount = steps.filter(s => s.completed).length;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -56,6 +62,7 @@ function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
+
 
 
 export default function OnboardingProgressCard({
@@ -69,6 +76,7 @@ export default function OnboardingProgressCard({
   steps,
   highlightColorClass = 'from-neon-green to-neon-blue',
 }: OnboardingProgressCardProps) {;
+
 
 
   const percentage = computePercentage(steps);
@@ -201,6 +209,7 @@ export type OnboardingProgressCardProps = {
 };
 
 function computePercentage(steps: OnboardingStep[]): number {
+
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
@@ -333,6 +342,7 @@ function OnboardingProgressCard() {
 
 
 
+
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">
@@ -360,11 +370,25 @@ function OnboardingProgressCard() {
       ) : null}
 
 
+      <ul className='mt-4 space-y-2'>
+        {steps.map(step => (
+          <li key={step.id} className='flex items-center justify-between'>
+            <div className='flex items-center gap-2'>
+                <CheckCircle2
+                  className='text-green-600 dark:text-green-400'
+                  size={18}
+                />
+              ) : (
+                <Circle className='text-gray-400' size={18} />
+              )}
+              <span className={step.completed ? 'line-through opacity-70' : ''}>
+                {step.label}
+              </span>
+            </div>
+            {!step.completed && step.ctaHref && step.ctaLabel ? (
+              <Link href={step.ctaHref}>
+                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 
-      {/* Checklist */}
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
                   {step.ctaLabel}
                 </a>
@@ -376,7 +400,9 @@ function OnboardingProgressCard() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
@@ -391,6 +417,7 @@ function OnboardingProgressCard() {
     </div>
 
 
+
   )
 
 }
@@ -403,3 +430,4 @@ function OnboardingProgressCard() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,5 +1,7 @@
 
 
+
+
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' })
@@ -28,6 +30,7 @@ function escapeHtml(str: string) {
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
 
+
     .replace(/'/g, '&#039,')
 }
 
@@ -37,6 +40,7 @@ function escapeHtml(str: string) {
     .replace(/'/g, '&#039,');
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 
 
 
@@ -67,6 +71,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -77,4 +82,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

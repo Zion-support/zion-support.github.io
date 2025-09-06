@@ -4,6 +4,7 @@
 
 
 
+
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -35,12 +36,14 @@ export function IntegrationCard(): any ({;
   icon;
 
 
+
 interface IntegrationCardProps {
   title: string,
   description: string,
   icon: React.ReactNode,
   status?: "connected" | "disconnected" | "pending",
   href?: string,
+
   onConnect?: () => void
 }
 
@@ -52,6 +55,7 @@ interface IntegrationCardProps {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -96,6 +100,7 @@ interface IntegrationCardProps {
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
+
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -161,11 +166,13 @@ export function IntegrationCard({;
           </Button>;
 
 
+
         )}
       </CardFooter>
     </Card>
   )
 }
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -201,4 +208,5 @@ export function IntegrationCards() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

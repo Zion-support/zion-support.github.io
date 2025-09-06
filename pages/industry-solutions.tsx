@@ -29,6 +29,7 @@ export default function IndustrySolutions() {
       </div>
     </>
   )
+
 };
 import React from 'react';
 import Head from 'next/head';
@@ -61,3 +62,4 @@ export default function IndustrySolutions(req, res) {
       </div>;
     </>);
 }
+

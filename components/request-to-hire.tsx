@@ -19,6 +19,15 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 
+import { useRouter } from 'next/router';
+import { TALENT_PROFILES } from '../data/talent';
+
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(
+    () => TALENT_PROFILES.find(t => t.slug === talent)
+    [talent]
+  );export default function RequestToHirePage() {;
 
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
@@ -64,8 +73,37 @@ export default function RequestToHirePage() {;
     setError(null),;
     if (!form && form.name || !form && form.email || !form && form.description) {;
       setError('Please fill in name, email, and description.');
-      return;    }      return;
 
+      return;    }      return
+    }
+    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/requests/create', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          ...form
+          budget: normalizedBudget
+          talentSlug: selected?.slug |null
+        })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
+      setResult({ id: data.id, message: 'Request submitted successfully.' });
+    } catch (err: any) {
+      setError(err.message |'Something went wrong');
+    } finally {
+      setSubmitting(false);    }          budget: normalizedBudget
+          talentSlug: selected?.slug |null})})
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
+      setResult({ id: data.id, message: 'Request submitted successfully.' })
+    } catch (err: any) {
+      setError(err.message |'Something went wrong')
+    } finally {
+      setSubmitting(false)
+    }
 
 
           {submitting ? 'Submitting…' : 'Submit Request'}
@@ -74,9 +112,11 @@ export default function RequestToHirePage() {;
     </div>
 
 
+
   )
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 

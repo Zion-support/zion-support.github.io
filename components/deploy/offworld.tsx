@@ -1,6 +1,12 @@
 
 
+export default function OffworldDeploy() {
+  const [cid, setCid] = useState<string | null>(null),
+  const [status, setStatus] = useState<string>(''),
 
+export default function OffworldDeploy() {;
+  const [cid, setCid] = useState<string | null>(null);
+  const [status, setStatus] = useState<string>('');
 
 
   const [error, setError] = useState<string>('');
@@ -25,6 +31,7 @@ import {useState} from 'react';
 
   }
   return (
+
 
     <div className='min-h-screen p-8'>
       <Head>
@@ -68,6 +75,7 @@ import {useState} from 'react';
         <div className="mt-6 space-y-2">;
           <div>CID: <code className="break-all">{cid}</code></div>;
           {provider && <div>Provider: {provider}</div>}
+
 
 
 
@@ -160,6 +168,7 @@ import {useState} from 'react';
         </div>
       )}
     </div>
+
   )
 
 }
@@ -174,3 +183,4 @@ import {useState} from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {useForm} from "react-hook-form";
@@ -26,6 +27,7 @@ import {Review} from "@/types/reviews";
 
 
 
+
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -34,15 +36,41 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
-}
-interface ReviewFormProps {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+import { useState } from "react",;
+import { Star } from "lucide-react",;
+import { useForm } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import {;
+  RadioGroup,;
+  RadioGroupItem} from "@/components/ui/radio-group",;
+import { Switch } from "@/components/ui/switch",;
+import { Review } from "@/types/reviews",;
+interface ReviewFormValues {;
+  rating?: number,;
+  review_text?: string,;
+  communication_rating?: number,;
+  quality_rating?: number,;
+  timeliness_rating?: number,;
+  would_work_again?: boolean,;
+  is_anonymous?: boolean;
+}
+;
 
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
   revieweeName: string,;
+
   onSubmit: (data: any) => Promise<boolean>, ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   defaultValues?: Review;
@@ -119,6 +147,7 @@ export function ReviewForm(): any ({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -148,6 +177,7 @@ export function ReviewForm(): any ({;
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
+
             
 
 
@@ -159,6 +189,7 @@ export function ReviewForm(): any ({;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Communication */}
             <FormField
               control={form && form.control}
@@ -321,6 +352,8 @@ export function ReviewForm(): any ({;
       </form>
     </Form>
   )
+
 }
 }
 ;
+

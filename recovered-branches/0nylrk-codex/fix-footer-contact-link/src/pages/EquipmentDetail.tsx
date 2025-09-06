@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -35,6 +36,7 @@ interface EquipmentDetails {;
 
 
 
+
 }
 
 // Sample data - in a real app this would come from an API
@@ -46,6 +48,8 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     brand: "CineTech",
     category: "Equipment",
     subcategory: "Cameras",
+
+
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
@@ -58,6 +62,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     inStock: true
     expectedShipping: "3-5 business days"
     specifications: [
+
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" }
       { name: "Resolution", value: "8K (8192 x 4320)" }
       { name: "Dynamic Range", value: "16+ stops" }
@@ -121,6 +126,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     brand: "AudioTech",
     category: "Equipment",
     subcategory: "Audio",
+
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
@@ -143,6 +149,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
 
 
       { name: "Weight", value: "32 lbs" }
+
     ];
     features: [;
       "32-channel digital mixer with 24 premium mic preamps";
@@ -265,6 +272,7 @@ export default function EquipmentDetail() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     ))}
                   </div>;
                 )}
@@ -318,6 +326,7 @@ export default function EquipmentDetail() {;
                             <span className="text-zion-slate-light">{feature}</span>;
                           </li>;
                         ))}
+
                       </ul>
                     </div>
                   </TabsContent>
@@ -343,6 +352,7 @@ export default function EquipmentDetail() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -362,6 +372,7 @@ export default function EquipmentDetail() {;
                 {/* Product Title */}
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
+
                 
 
 
@@ -373,6 +384,7 @@ export default function EquipmentDetail() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -381,10 +393,12 @@ export default function EquipmentDetail() {;
                         <Star
                           key={i}
                           className={`h-5 w-5 ${
+
                             i < Math.floor(equipment.rating!)
                               ? "text-zion-cyan fill-zion-cyan"
                             i < Math.floor(equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
+
                               : "text-zion-slate-light"
                           }`}
                         />;
@@ -426,8 +440,10 @@ export default function EquipmentDetail() {;
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
+
                     <button
                     <button 
+
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
                       disabled={quantity <= 1 |!equipment.inStock}
@@ -440,8 +456,10 @@ export default function EquipmentDetail() {;
                       value={quantity}
                       readOnly
                     />
+
                     <button
                     <button 
+
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -452,14 +470,18 @@ export default function EquipmentDetail() {;
                 </div>
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
+
                   <Button
                   <Button 
+
                     onClick={handleBuyNow}
                     disabled={isAdding |!equipment.inStock}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
+
+
 
 
 
@@ -641,6 +663,7 @@ export default function EquipmentDetail() {;
                       </div>
                     </div>
                   )}
+
                 </div>
               </div>
             </div>
@@ -662,5 +685,4 @@ export default function EquipmentDetail() {;
     </>);
 }
 
-=======
-;
+

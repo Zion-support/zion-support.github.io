@@ -95,6 +95,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       opacity: 1
       y: 0
       transition: {
+
         duration: 0.5
       }
     }
@@ -118,10 +119,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));
   };
 
+
   return (
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
+
 
 
 
@@ -140,6 +143,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
+
 
 
 
@@ -193,6 +197,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -210,6 +215,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           initial={{ opacity: 0, y: 20 }}
@@ -232,6 +238,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               }`}
             >
               {category.name}
+
               <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
                 {category.count}
               <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}
@@ -249,11 +256,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+
               </span>
             </button>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </motion.div>
+
 
 
 
@@ -271,6 +280,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -285,6 +295,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
+
+
 
 
 
@@ -315,6 +327,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                 )}
 
 
+
                 {/* Popular Badge */}
                 {service && service.popular && (;
                   <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>;
@@ -334,6 +347,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
 
 
+
                 {/* Service Header */}
                 <div className='relative z-10'>
                   <div className='flex items-start justify-between mb-4'>
@@ -343,11 +357,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
@@ -602,6 +618,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           ))}
         </motion.div>
 
+
                 {/* Floating Particles */}
                 <div className='absolute inset-0 pointer-events-none overflow-hidden'>;
                   <div
@@ -633,6 +650,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+
             className="text-center"
 
 
@@ -640,13 +658,16 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <button
               onClick={loadMore}
+
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >
 
@@ -661,11 +682,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               Load More Revolutionary Services
             </button>
           </motion.div>
         )}
+
         {/* Call to Action */}
         <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div
@@ -673,6 +696,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           initial={{ opacity: 0, y: 30 }}
@@ -721,6 +745,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     </section>
 
 
+
               className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>            Ready to Experience the Future?;
           </h3>;
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
@@ -754,9 +779,11 @@ export default RevolutionaryServicesShowcase;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
 export default RevolutionaryServicesShowcase;  )
 }
 export default RevolutionaryServicesShowcase;
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -766,3 +793,4 @@ export default RevolutionaryServicesShowcase;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

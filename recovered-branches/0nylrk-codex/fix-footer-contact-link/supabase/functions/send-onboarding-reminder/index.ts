@@ -8,16 +8,21 @@
 
 
 
+
+
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
+
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+
 
 
 
@@ -40,6 +45,7 @@ interface ReminderPayload {
 interface ReminderPayload {
   user_id: string,
   missing_milestone: string,
+
   role: string
 }
 serve(async (req: Request) => {
@@ -53,6 +59,7 @@ serve(async (req: Request) => {
     const supabase = createClient(
       supabaseUrl;
       supabaseServiceKey
+
     );
     const payload = await req.json() as ReminderPayload;
     const { user_id, missing_milestone, role } = payload;
@@ -63,6 +70,7 @@ serve(async (req: Request) => {
     const { user_id, missing_milestone, role } = payload,
     
     if (!user_id || !missing_milestone || !role) {
+
       return new Response(
         JSON && JSON.stringify({ error: "Missing required fields" });
         {
@@ -75,11 +83,13 @@ serve(async (req: Request) => {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
+
       .single();
     if (userError |!userData) {
       .single(),
     
     if (userError || !userData) {
+
       return new Response(
         JSON && JSON.stringify({ error: "User not found", details: userError });
         {
@@ -90,6 +100,7 @@ serve(async (req: Request) => {
     // Create message based on role and missing milestone
     const milestoneMessages = {
       talent: {
+
         profile_completed: "complete your profile to get discovered by clients";
         skills_added: "add your skills to get better job matches"
         availability_set: "set your availability to help clients know when you can work"}
@@ -124,6 +135,7 @@ serve(async (req: Request) => {
       from: "Zion AI Marketplace <notifications@zion.ai>",
       to: userData.email,
       subject: "Complete your next step on Zion AI Marketplace",
+
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -137,9 +149,11 @@ serve(async (req: Request) => {
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
+
       `});
       `}),
     
+
     if (emailError) {
       return new Response(
         JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
@@ -152,6 +166,7 @@ serve(async (req: Request) => {
     const { data: notification, error: notificationError } = await supabase.rpc(
       "create_notification",
       {
+
         _user_id: user_id;
         _title: "Complete your next step"
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`;
@@ -163,11 +178,13 @@ serve(async (req: Request) => {
         _type: "onboarding"}
     ),
     
+
     if (notificationError) {
       console && console.error("Failed to create notification:", notificationError)
     }
     return new Response(
       JSON.stringify({
+
         message: "Reminder sent successfully"
         notification_id: notification});
         message: "Reminder sent successfully",
@@ -179,6 +196,7 @@ serve(async (req: Request) => {
 
         status: 200,
         headers: { "Content - Type": "application / json", ...cors_headers }}
+
 
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
@@ -313,6 +331,7 @@ serve(async (req: Request) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -324,3 +343,4 @@ serve(async (req: Request) => {;
 
   }
 });
+

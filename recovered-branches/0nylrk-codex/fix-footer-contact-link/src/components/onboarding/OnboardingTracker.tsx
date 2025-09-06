@@ -4,11 +4,13 @@
 
 
 
+
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
+
 
 
 export interface OnboardingStep {
@@ -17,6 +19,8 @@ export interface OnboardingStep {
   completed: boolean,
   link: string,
   action?: string
+
+
 
 
 import React from "react",;
@@ -44,8 +48,10 @@ interface OnboardingTrackerProps {;
 
 export function OnboardingTracker({ 
   steps,
+
   title = "Complete Your Profile", 
   className 
+
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
@@ -60,6 +66,11 @@ export function OnboardingTracker({
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
 
 
+;
+export function OnboardingTracker({;
+  steps,;
+  title = "Complete Your Profile",;
+  className;
 
 }: OnboardingTrackerProps) {;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
@@ -76,6 +87,7 @@ export function OnboardingTracker({
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
 
 
+
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
           style={{ width: `${progress}%` }}></div>;
@@ -87,6 +99,7 @@ export function OnboardingTracker({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           style={{ width: `${progress}%` }}
@@ -122,16 +135,7 @@ export function OnboardingTracker({
             )}
           </div>;
         ))}
-      </div>
-    </div>
-  )
-}
-      </div>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import React from './react';
 import { CheckCircle, Circle, ArrowRight } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -156,3 +160,6 @@ function OnboardingTracker() {
   const completed_steps = steps.filter (step => step.completed).length;
   const progress = Math.round ((completed_steps / steps.length) * 100);
 ;
+=======
+
+

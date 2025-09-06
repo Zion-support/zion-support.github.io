@@ -1,9 +1,11 @@
+
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import rateLimit from '@fastify/rate-limit',
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
+
 import dotenv from 'dotenv';
 
 import { createOpenAIClient, generateJobPost } from './openai ;
@@ -215,9 +217,11 @@ app.get('/notifications', async (req, reply) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
+
     );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

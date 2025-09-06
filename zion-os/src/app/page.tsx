@@ -1,5 +1,6 @@
 import FeatureCard from './components/FeatureCard'
 export default function HomePage() {
+
   const features = [;
     {;
       icon: &quot;🤖&quot;,
@@ -80,6 +81,7 @@ export default function HomePage() {
       icon: "🤖",
       title: "AI-Powered Intelligence",
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
+
       features: [
         "ZionGPT Core Integration",
         "Resume Builder + Proposal AI", 
@@ -147,22 +149,32 @@ export default function HomePage() {
         "Blog + Roadmap Setup"
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
+
+
     }
   ]
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+
 
               <br />
               <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
             </h1>
 
 
+
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
+
 
 
               Built for the future of decentralized business.
             </p>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;>
               <a href=&quot;/multiverse/launch&quot; className=&quot;btn-primary hover-lift&quot;>
+
             
+
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
               Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
               Built for the future of decentralized business.
@@ -173,7 +185,9 @@ export default function HomePage() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                 🚀 Launch Your Economy
               </Link>
               <a href=&quot;/admin/instances&quot; className=&quot;btn-secondary hover-lift&quot;>
@@ -190,6 +204,7 @@ export default function HomePage() {
             <h2 className=&quot;text-4xl md:text-5xl font-bold mb-6&quot;>
               Everything You Need to Build the Future
             </h2>
+
             <p className=&quot;text-xl text-white/70 max-w-2xl mx-auto&quot;>
               From AI-powered marketplaces to decentralized governance, Zion OS provides the complete toolkit
               for launching sovereign digital economies.
@@ -205,6 +220,7 @@ export default function HomePage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
             {features.map((feature, index) => (
               <FeatureCard
 
@@ -245,6 +261,7 @@ export default function HomePage() {
           </div>;
         </div>;
       </section>;
+
       {/* Stats Section */}
       <section className=&quot;py - 16 px - 4 sm:px - 6 lg:px - 8 bg - white / 5&quot;>;
         <div className=&quot;max - w-7xl mx - auto & quot;>;
@@ -269,11 +286,7 @@ export default function HomePage() {
         </div>;
       </section>;
     </div>);
-=======
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="glass-effect rounded-2xl p-12 animate-slide-up">
-            <h2 className="text-4xl font-bold mb-6">
+
               Ready to Build the Future?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">

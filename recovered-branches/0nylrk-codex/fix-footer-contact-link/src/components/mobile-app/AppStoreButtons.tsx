@@ -3,10 +3,12 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -20,6 +22,7 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
+
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className;
 
@@ -53,6 +56,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className,
   appStoreUrl = "#",
   googlePlayUrl = "#",
+
   onAppStoreClick,
   onGooglePlayClick
 }) => {
@@ -67,12 +71,27 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
 
   return (
 
+    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
+      <a
+        href={appStoreUrl}
+        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
+        onClick={handleAppStoreClick}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Apple className="h-8 w-8 mr-3" />
+        <div>
+          <div className="text-xs">Download on the</div>
+          <div className="text-xl font-semibold">App Store</div>
+        </div>
 
 
       </Link>
 
       <a 
         href={googlePlayUrl} 
+
+
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
         target="_blank"
@@ -95,6 +114,8 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
     </div>
   )
+
+
 
 
 
@@ -174,6 +195,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
 };
 
 
+
 export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
   appStoreUrl = "#";
@@ -247,4 +269,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

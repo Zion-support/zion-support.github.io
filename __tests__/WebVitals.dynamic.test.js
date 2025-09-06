@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -37,13 +39,8 @@ describe('WebVitals', () => {
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
-<<<<<<< HEAD
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe('WebVitalsdynamic', () => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling"
-import _React from 'react';  import '@testing-library/jest-dom'; import WebVitalsdynamic from '../components/WebVitals.dynamic'; describe('WebVitalsdynamic',() => { test('renders without crashing',() => { render(<WebVitalsdynamic />); expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<WebVitalsdynamic />)}); test('handles user interactions',() => { render(<WebVitalsdynamic />)}); test('applies correct styling',() => { render(<WebVitalsdynamic />)})});
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -64,9 +61,11 @@ describe('WebVitalsdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe("WebVitalsdynamic",() => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling",() => { render(<WebVitalsdynamic />)})});''"
+
 import _React from 'react';  import '@testing-library/jest-dom'; import WebVitalsdynamic from '../components/WebVitals.dynamic'; describe('WebVitalsdynamic',() => { test('renders without crashing',() => { render(<WebVitalsdynamic />); expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<WebVitalsdynamic />)}); test('handles user interactions',() => { render(<WebVitalsdynamic />)}); test('applies correct styling',() => { render(<WebVitalsdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import WebVitalsdynamic from '../components/WebVitals.dynamic'; describe('WebVitalsdynamic',() => { test('renders without crashing',() => { render(<WebVitalsdynamic />); expect(screen.getByTestId('webvitals.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<WebVitalsdynamic />)}); test('handles user interactions',() => { render(<WebVitalsdynamic />)}); test('applies correct styling',() => { render(<WebVitalsdynamic />)})});
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import WebVitalsdynamic from "./components/WebVitals.dynamic"; describe('WebVitalsdynamic', () => { test("renders without crashing",() => { render(<WebVitalsdynamic />); expect(screen.getByTestId("webvitals.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<WebVitalsdynamic />)}); test("handles user interactions",() => { render(<WebVitalsdynamic />)}); test("applies correct styling"
+

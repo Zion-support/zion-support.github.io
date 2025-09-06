@@ -1,3 +1,4 @@
+
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -138,6 +139,7 @@ const benefits = [;
     icon: Zap,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -234,8 +236,15 @@ const benefits = [;
     description: 'Instant analytics and decision-making support',;
     icon: BarChart3,;
 
+    color: 'text-pink-400';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 export default function AIAutomationServices() {
 
     color: 'text-pink-400',;
@@ -246,6 +255,7 @@ export default function AIAutomationServices() {;
   return (
     <Layout>
       <Head>
+
         <title>
           AI Automation Services - Zion Tech Group | Advanced AI-Powered
           Automation Solutions
@@ -423,11 +433,13 @@ export default function AIAutomationServices() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
               <Zap className="w-5 h-5 text-emerald-400" />
               <span className="text-emerald-400 font-medium">AI Automation Services</span>
             </div>
+
             <h1 className='text-5xl md:text-7xl font-bold mb-6 neon-text text-white'>
               <span className='bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text text-white">
@@ -443,11 +455,13 @@ export default function AIAutomationServices() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 AI Automation
               </span>
               <br />
               <span className="text-white">Revolution</span>
             </h1>
+
 
 
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed'>
@@ -456,10 +470,13 @@ export default function AIAutomationServices() {;
               everything with intelligent AI that learns and adapts to your
               needs.
 
+
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
                 <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
+
+
 
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -475,6 +492,7 @@ export default function AIAutomationServices() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -484,10 +502,12 @@ export default function AIAutomationServices() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
+
               <Link href='/contact' className='group'>
                 <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
               <Link href="/contact" className="group">
@@ -503,6 +523,7 @@ export default function AIAutomationServices() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -511,6 +532,7 @@ export default function AIAutomationServices() {;
             </div>
           </motion.div>
         </div>
+
 
 
 
@@ -559,6 +581,7 @@ export default function AIAutomationServices() {;
 
 
 
+
         </div>
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
           <div className="w-6 h-6 bg-teal-400 rounded-full"></div>
@@ -568,6 +591,7 @@ export default function AIAutomationServices() {;
         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </section>
+
       {/* Service Highlights */}
       <section
         id='services'
@@ -602,6 +626,7 @@ export default function AIAutomationServices() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               AI Automation <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
@@ -610,6 +635,7 @@ export default function AIAutomationServices() {;
               Comprehensive AI automation solutions that transform every aspect of your business operations
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceHighlights.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -628,10 +654,12 @@ export default function AIAutomationServices() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
                 </div>
+
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -656,11 +684,13 @@ export default function AIAutomationServices() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
+
                   ))}
                 </ul>
               </motion.div>
@@ -697,6 +727,7 @@ export default function AIAutomationServices() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span> Portfolio
@@ -705,6 +736,7 @@ export default function AIAutomationServices() {;
               Discover our comprehensive range of AI automation services designed for modern enterprises
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {advancedAIAutomationServices2025.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -721,6 +753,7 @@ export default function AIAutomationServices() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -744,6 +777,7 @@ export default function AIAutomationServices() {;
   }
 }
                   </div>
+
                   <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
@@ -842,9 +876,11 @@ export default function AIAutomationServices() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
+
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
@@ -861,10 +897,12 @@ export default function AIAutomationServices() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </Link>
                   </div>
                 </div>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -906,6 +944,7 @@ export default function AIAutomationServices() {;
 
 
 
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
@@ -914,6 +953,7 @@ export default function AIAutomationServices() {;
               Transform your business with intelligent automation that delivers measurable results
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -932,10 +972,12 @@ export default function AIAutomationServices() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
+
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
                 </h3>
@@ -988,6 +1030,7 @@ export default function AIAutomationServices() {;
 
 
 
+
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
@@ -996,6 +1039,7 @@ export default function AIAutomationServices() {;
               Join thousands of companies already transforming their operations with AI automation. 
               Get started today and see the difference intelligent automation can make.
             </p>
+
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='/contact' className='group'>
                 <button className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2'>
@@ -1011,10 +1055,12 @@ export default function AIAutomationServices() {;
 
 
 
+
                   <span>Start Your Automation Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
+
               <Link
                 href='/comprehensive-services-showcase-2025'
                 className='group'
@@ -1030,11 +1076,13 @@ export default function AIAutomationServices() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
             </div>
+
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
 
@@ -1048,6 +1096,7 @@ export default function AIAutomationServices() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <div>
                 <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Monitoring</div>
@@ -1067,8 +1116,53 @@ export default function AIAutomationServices() {;
       </section>
 
 
+  )
+            className="max-w-4xl mx-auto";
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+              Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Join thousands of companies already transforming their operations with AI automation.;
+              Get started today and see the difference intelligent automation can make.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+              <Link href="/contact" className="group">;
+                <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">;
+                  <span>Start Your Automation Journey</span>;
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                </button>;
+              </Link>;
+              <Link href="/comprehensive-services-showcase-2025" className="group">;
+                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">;
+                  <span>View All Services</span>;
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+                </button>;
+              </Link>;
+            </div>;
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
+              <div>;
+                <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>;
+                <div className="text-gray-300">AI Monitoring</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>;
+                <div className="text-gray-300">Uptime Guarantee</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>;
+                <div className="text-gray-300">Average ROI</div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

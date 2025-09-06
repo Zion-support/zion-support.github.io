@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
+
   Phone
   Mail
   MapPin
@@ -50,13 +51,16 @@ export default function NeoFuturisticFooter() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export default function NeoFuturisticFooter() {
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -66,6 +70,7 @@ export default function NeoFuturisticFooter() {
 
 export default function NeoFuturisticFooter() {;
   return (
+
 
 
               Productized AI, IT and micro SaaS solutions with transparent;
@@ -167,10 +172,7 @@ export default function NeoFuturisticFooter() {;
 
 
 
+export default function NeoFuturisticFooter() {
+  return (
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

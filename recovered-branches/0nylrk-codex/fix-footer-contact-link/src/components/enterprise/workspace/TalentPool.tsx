@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,11 +14,13 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
+
       id: "talent-1"
       name: "Jessica Lee"
       role: "UI/UX Designer"
@@ -48,6 +51,7 @@ export function TalentPool() {
       skills: ["Figma", "Sketch", "User Testing"];
       role: "UI/UX Designer",
       skills: ["Figma", "Sketch", "User Testing"],
+
       status: "available",
       match: 95
     },
@@ -79,8 +83,10 @@ export function TalentPool() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+
   }
   },
+
 
   return (
     <Card>
@@ -111,6 +117,7 @@ export function TalentPool() {
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
+
                   <Badge key={index} variant="secondary" className="text-xs">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -189,6 +196,7 @@ export function TalentPool() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   <Badge key={index} variant="secondary" className="text-xs">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {skill}
@@ -201,6 +209,7 @@ export function TalentPool() {;
               </div>;
             </div>;
           ))}
+
         </div>
       </CardContent>
     </Card>
@@ -244,5 +253,4 @@ export function TalentPool() {;
     </Card>);
 }
 
-=======
-;
+

@@ -3,7 +3,9 @@
 
 
 
+
 import { UseFormReturn } from "react-hook-form",
+
 import { 
   FormField;
   FormItem;
@@ -12,8 +14,10 @@ import {
   FormDescription;
   FormMessage 
 } from "@/components/ui/form",
+
 import { Input } from "@/components/ui/input";
 import { Input } from "@/components/ui/input",
+
 import { 
   Select;
   SelectContent;
@@ -23,6 +27,7 @@ import {
 } from "@/components/ui/select",
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
+
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
 import { ContractFormValues } from "./ContractForm";
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
@@ -38,6 +43,7 @@ import { ContractFormValues } from "./ContractForm",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -45,6 +51,7 @@ interface PaymentTermsFieldsProps {
 
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
+
 export function PaymentTermsFields({
   form;
   talent;
@@ -57,6 +64,7 @@ export function PaymentTermsFields({
   form,
   talent,
   handleMilestonesGenerated 
+
 }: PaymentTermsFieldsProps) {
   return (
     <>
@@ -81,6 +89,7 @@ export function PaymentTermsFields({
               </Select>
               <FormMessage />
             </FormItem>
+
 import { UseFormReturn } from "react-hook-form",;
 import {;
   FormField,;
@@ -149,6 +158,7 @@ export function PaymentTermsFields(): any ({ ;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           )}
 
         />;
@@ -184,6 +194,7 @@ export function PaymentTermsFields(): any ({ ;
       {form && form.watch("paymentTerms") === "milestone" && (;
         <div className="pt-2">;
           <MilestoneSuggestions
+
             projectName={form.getValues("projectName") |"Project"}
             scopeSummary={form.getValues("scopeSummary") |""}
             startDate={form.getValues("startDate") |new Date()}
@@ -194,6 +205,7 @@ export function PaymentTermsFields(): any ({ ;
             startDate={form.getValues("startDate") || new Date()}
             endDate={form.getValues("endDate")}
             projectType={form.getValues("projectName").includes("AI") ? "AI/ML" : 
+
                         form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
 
             onMilestonesGenerated={handleMilestonesGenerated}

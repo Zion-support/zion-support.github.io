@@ -1,6 +1,7 @@
 
 
 
+
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 ;
@@ -20,6 +21,7 @@ export interface Dispute {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string;
   project_id: string;
@@ -53,6 +55,8 @@ export interface Dispute {;
 
 
 
+
+
   id: string;
   dispute_id: string;
   user_id: string;
@@ -66,6 +70,8 @@ export interface Dispute {;
 
   }
 }
+
+
 
 
 
@@ -94,6 +100,7 @@ export type DisputeReason =;
 
 
 
+
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
 
@@ -103,6 +110,7 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
@@ -111,9 +119,11 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
 
 
+
   contract_terms: 'Contract Terms Disagreement',
 
 other: 'Other Issue'};
+
 
 
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
@@ -191,6 +201,7 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -198,4 +209,5 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

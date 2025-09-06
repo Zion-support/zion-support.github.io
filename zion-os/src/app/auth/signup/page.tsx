@@ -1,3 +1,4 @@
+
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -59,64 +60,7 @@ export default function SignUpPage() {;
           <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
           <p className="text-zinc-400 mb-4">;
             Start your free trial and launch sovereign AI-powered digital economies;
-=======
-"use client",
-import { useState  } from './react';,
-import Link from './next / link';,
-import { use_auth  } from '@/contexts / AuthContext';,
-export default /**
- * SignUpPage - Function description
- */
-function SignUpPage() {
-  const [name, set_name] = useState (""),
-  const [email, set_email] = useState (""),
-  const [password, set_password] = useState (""),
-  const [confirm_password, setConfirmPassword] = useState (""),
-  const [is_loading, setIsLoading] = useState (false),
-  const [error, set_error] = useState (""),
-  const { register } = use_auth (),
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default (),
-    setIsLoading (true),
-    set_error (""),
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ("Passwords do not match"),
-      setIsLoading (false);
-=======
-=======
-"use client",;
-import { useState } from "react",;
-import Link from "next/link",;
-import { useAuth } from "@/contexts/AuthContext",;
-export default function SignUpPage() {;
-  const [name, setName] = useState(""),;
-  const [email, setEmail] = useState(""),;
-  const [password, setPassword] = useState(""),;
-  const [confirmPassword, setConfirmPassword] = useState(""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState(""),;
-  const { register } = useAuth(),;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    setIsLoading(true),;
-    setError(""),;
-    if (password !== confirmPassword) {;
-      setError("Passwords do not match"),;
-      setIsLoading(false);
-      return;
-    }
-;
-    try {;
-      await register(name, email, password);
-    } catch (error) {;
-      setError(error instanceof Error ? error.message : "Registration failed");
-    } finally {;
-      setIsLoading(false);
-    }
-  };
+
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -161,7 +105,9 @@ export default function SignUpPage() {;
                 <p className="text-red-400 text-sm">{error}</p>;
               </div>;
             )}
+
 ;
+
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

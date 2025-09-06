@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+import { supabase } from '../../../utils/supabase/client';
+import {
 
 
 } from '../../../utils/notifications';
@@ -87,6 +89,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
 
+
   };
 }
       return res.status (200).json ({ notifications: fallback });
@@ -100,4 +103,5 @@ return res.status (500).json ({ error: 'Unexpected error' });
 }
   };
 }
+
 

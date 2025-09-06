@@ -1,3 +1,4 @@
+
 import React from 'react';
 }
 import React, { Suspense, lazy } from 'react';
@@ -16,6 +17,7 @@ import React, { Suspense, lazy } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface LazyComponentProps {
   component: ComponentType < Record < string, unknown>>;
   fallback?: ReactNode;
@@ -67,6 +69,7 @@ export default LazyComponent;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -88,4 +91,5 @@ import React from 'react';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

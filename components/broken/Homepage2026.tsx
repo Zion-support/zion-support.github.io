@@ -1,11 +1,14 @@
+
 import React from 'react',
 import Layout from './layout/Layout',
 import React from 'react';
 import Layout from './layout/Layout';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -86,6 +89,7 @@ const Homepage2026: React.FC = () => {;
 
 
 
+
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail;
 const Homepage2026: React.FC = () => {
@@ -100,11 +104,13 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {/* Hero Section */}
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
@@ -141,6 +147,7 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -148,6 +155,7 @@ const Homepage2026: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               {/* Company Badge */}
               <motion.div;
@@ -163,7 +171,9 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -230,6 +240,7 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </a>
               </div>
+
 
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -367,6 +378,7 @@ const Homepage2026: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -374,10 +386,123 @@ const Homepage2026: React.FC = () => {
 
 
         {/* Company Stats */}
-        <section className='py-20 px-4 bg-black/30 relative'>;
-          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>;
-          <div className='max-w-6xl mx-auto relative z-10'>            <motion&& motion.div
 
+        <section className='py-20 px-4 bg-black/30 relative'>
+          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
+          <div className='max-w-6xl mx-auto relative z-10'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'        <section className="py-20 px-4 bg-black/30 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
+          <div className="max-w-6xl mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'
+            >
+              <h2 className='text-4xl font-bold text-white mb-4'>
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+                We deliver innovative solutions that drive real business
+                transformation
+              </p>
+            </motion.div>
+            <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}            >
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver innovative solutions that drive real business transformation
+              </p>
+            </motion.div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className='text-center'
+              >
+                <div className='text-4xl mb-4'>🚀</div>
+                <h3 className='text-xl font-semibold text-white mb-2'>
+                  Micro SAAS Solutions
+                </h3>
+                <p className='text-gray-300 text-sm'>                  Starting at $69/month for specialized business solutions                className="text-center"
+              >
+                <div className="text-4xl mb-4">🚀</div>
+                <h3 className="text-xl font-semibold text-white mb-2">Micro SAAS Solutions</h3>
+                <p className="text-gray-300 text-sm">
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='text-center'
+              >
+                <div className='text-4xl mb-4'>🏗️</div>
+                <h3 className='text-xl font-semibold text-white mb-2'>
+                  IT Infrastructure
+                </h3>
+                <p className='text-gray-300 text-sm'>                  Starting at $499/month for robust infrastructure solutions                className="text-center"
+              >
+                <div className="text-4xl mb-4">🏗️</div>
+                <h3 className="text-xl font-semibold text-white mb-2">IT Infrastructure</h3>
+                <p className="text-gray-300 text-sm">
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className='text-center'
+              >
+                <div className='text-4xl mb-4'>🤖</div>
+                <h3 className='text-xl font-semibold text-white mb-2'>
+                  AI Automation
+                </h3>
+                <p className='text-gray-300 text-sm'>                  Starting at $199/month for intelligent automation                className="text-center"
+              >
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>
+                <p className="text-gray-300 text-sm">
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className='text-center'
+              >
+                <div className='text-4xl mb-4'>🧠</div>
+                <h3 className='text-xl font-semibold text-white mb-2'>
+                  Cutting-Edge AI
+                </h3>
+                <p className='text-gray-300 text-sm'>                  Starting at $179/month for next-generation AI                className="text-center"
+              >
+                <div className="text-4xl mb-4">🧠</div>
+                <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>
+                <p className="text-gray-300 text-sm">
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+        {/* Service Categories */}
+        <section className='py-20 px-4'>
+          <div className='max-w-6xl mx-auto'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
 
 
               <motion.div
@@ -394,7 +519,9 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -456,6 +583,7 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -463,6 +591,7 @@ const Homepage2026: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               {/* IT Infrastructure Services */}
@@ -479,7 +608,9 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -543,10 +674,12 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -566,7 +699,9 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -628,6 +763,7 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -635,6 +771,7 @@ const Homepage2026: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               {/* Cutting-Edge AI Services */}
@@ -651,7 +788,9 @@ const Homepage2026: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -712,81 +851,152 @@ const Homepage2026: React.FC = () => {
           </div>
         </section>
 
-
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
-                className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-8 hover:border-orange-400/50 transition-all duration-300'>;
-                <div className='text-5xl mb-6'>🧠</div>;
-                <h3 className='text-2xl font-semibold text-white mb-4'>;
-                  Cutting-Edge AI Services;
-                </h3>;
-                <p className='text-gray-300 mb-6'>;
-                  Next-generation AI solutions for competitive advantage. Video;
-                  generation, code assistance, and data analysis powered by;
-                  advanced AI.;
-                </p>;
-                <div className='space-y-3 mb-6'>;
-                  <div className='flex items-center space-x-2 text-sm text-gray-300'>;
-                    <CheckCircle className='w-4 h-4 text-green-400' />;
-                    <span>AI Video Generation - $199/month</span>;
-                  </div>;
-                  <div className='flex items-center space-x-2 text-sm text-gray-300'>;
-                    <CheckCircle className='w-4 h-4 text-green-400' />;
-                    <span>AI Code Generation - $299/month</span>;
-                  </div>;
-                  <div className='flex items-center space-x-2 text-sm text-gray-300'>;
-                    <CheckCircle className='w-4 h-4 text-green-400' />;
-                    <span>AI Data Analysis - $399/month</span>;
-                  </div>;
-                </div>;
-                <Link href='/comprehensive-2025-services-showcase'>;
-                  <button className='w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors'>                    Learn More              >;
-                <div className="text-5xl mb-6">🧠</div>;
-                <h3 className="text-2xl font-semibold text-white mb-4">Cutting-Edge AI Services</h3>;
-                <p className="text-gray-300 mb-6">;
-                  Next-generation AI solutions for competitive advantage. ;
-                  Video generation, code assistance, and data analysis powered by advanced AI.;
-                </p>;
-                <div className="space-y-3 mb-6">;
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">;
-                    <CheckCircle className="w-4 h-4 text-green-400" />;
-                    <span>AI Video Generation - $199/month</span>;
-                  </div>;
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">;
-                    <CheckCircle className="w-4 h-4 text-green-400" />;
-                    <span>AI Code Generation - $299/month</span>;
-                  </div>;
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">;
-                    <CheckCircle className="w-4 h-4 text-green-400" />;
-                    <span>AI Data Analysis - $399/month</span>;
-                  </div>;
-                </div>;
-                <Link href="/comprehensive-2025-services-showcase">;
-                  <button className="w-full px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors">;
-                    Learn More;
-                  </button>;
-                </Link>;
-              </motion && motion.div>;
-            </div>;
-          </div>;
-        </section>;
         {/* Contact Section */}
-        <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>;
-          <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-export default Homepage2026;
-
-
-
-
-
+        <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
+          <div className='max-w-4xl mx-auto text-center'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='space-y-6'        <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='space-y-6'
+            >
+              <h2 className='text-4xl font-bold text-white mb-6'>
+                Ready to Transform Your Business?
+              </h2>
+              <p className='text-xl text-gray-300 mb-8'>
+                Get in touch with our team to discuss how our innovative
+                services can drive your success
+              </p>
+              {/* Contact Information */}
+              <div className='bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8'>
+                <h3 className='text-2xl font-semibold text-cyan-400 mb-6'>
+                  Contact Information
+                </h3>
+                <div className='grid md:grid-cols-2 gap-6 text-left'>
+                  <div className='flex items-center space-x-3'>
+                    <Globe className='w-5 h-5 text-blue-400' />
+                    <div>
+                      <div className='text-sm text-gray-400'>Website</div>
+                      <a
+                        href='https://ziontechgroup.com'
+                        className='text-cyan-400 hover:underline font-medium'
+                      >                        ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Get in touch with our team to discuss how our innovative services can drive your success
+              </p>
+              {/* Contact Information */}
+              <div className="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8">
+                <h3 className="text-2xl font-semibold text-cyan-400 mb-6">Contact Information</h3>
+                <div className="grid md: grid-cols-2 gap-6 text-left">
+                  <div className="flex items-center space-x-3">
+                    <Globe className="w-5 h-5 text-blue-400" />
+                    <div>
+                      <div className="text-sm text-gray-400">Website</div>
+                      <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
+                        ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>
+                  <div className='flex items-center space-x-3'>
+                    <Phone className='w-5 h-5 text-green-400' />
+                    <div>
+                      <div className='text-sm text-gray-400'>Phone</div>
+                      <a
+                        href='tel:+13024640950'
+                        className='text-cyan-400 hover:underline font-medium'
+                      >                        +1 302 464 0950
+                      </a>
+                    </div>
+                  </div>                  <div className="flex items-center space-x-3">
+                    <Phone className="w-5 h-5 text-green-400" />
+                    <div>
+                      <div className="text-sm text-gray-400">Phone</div>
+                      <a href="tel:+13024640950" className="text-cyan-400 hover:underline font-medium">
+                      </a>
+                    </div>
+                  </div>
+                  <div className='flex items-center space-x-3'>
+                    <Mail className='w-5 h-5 text-yellow-400' />
+                    <div>
+                      <div className='text-sm text-gray-400'>Email</div>
+                      <a
+                        href='mailto:kleber@ziontechgroup.com'
+                        className='text-cyan-400 hover:underline font-medium'
+                      >                        kleber@ziontechgroup.com
+                      </a>
+                    </div>
+                  </div>                  <div className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-yellow-400" />
+                    <div>
+                      <div className="text-sm text-gray-400">Email</div>
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline font-medium">
+                      </a>
+                    </div>
+                  </div>
+                  <div className='flex items-center space-x-3'>
+                    <MapPin className='w-5 h-5 text-purple-400' />
+                    <div>
+                      <div className='text-sm text-gray-400'>Address</div>
+                      <div className='text-white font-medium'>
+                        364 E Main St STE 1008
+                        <br />                        Middletown DE 19709                  <div className="flex items-center space-x-3">
+                    <MapPin className="w-5 h-5 text-purple-400" />
+                    <div>
+                      <div className="text-sm text-gray-400">Address</div>
+                      <div className="text-white font-medium">
+                        364 E Main St STE 1008<br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <a
+                  href='mailto:kleber@ziontechgroup.com'
+                  className='inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'
+                >
+                  <span>Get Started Today</span>
+                  <ArrowRight className='w-5 h-5' />
+                </a>
+                <a
+                  href='tel:+13024640950'
+                  className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300'                >                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <span>Get Started Today</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
+                >
+                  Call Now
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+  );
 
 
 export default Homepage2026;  )
 }
 export default Homepage2026;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -796,3 +1006,4 @@ export default Homepage2026;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

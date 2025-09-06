@@ -3,6 +3,8 @@
 
 
 
+
+
 };
 };
   return (;
@@ -11,6 +13,7 @@
 };
 };
 };
+
   };
   };
   return (,
@@ -22,13 +25,16 @@
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/main
+
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href;
   children: React.ReactNode;
+
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 };
 };
   return (;
@@ -37,6 +43,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
 };
 };
+
 
 
 import React from 'react';
@@ -88,6 +95,7 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: React.ReactNode;
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 };
 };
   return (;
@@ -95,22 +103,32 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       {children};
 };
 };
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 };
 }
 origin/main
+
 function resolveHref(href: Href): string {
 
-};
-};
-  return (;
-    <a href={resolved} className={className} {...rest}>;
-      {children};
-};
-};
 
-};
+      href: resolved
+      className: mergedClassName
+      ...rest
 
+    });
+  }
+
+import React from 'react';
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  "href": Href;
+  children: React.ReactNode;
+};
+function resolveHref("href": Href): string {
+  if (typeof href === 'string') return href;
+  return href?.pathname || (href as { href?: string })?.href || '#';
+}
 
 
   const resolved = resolveHref(href);
@@ -131,7 +149,9 @@ function resolveHref(href: Href): string {
 
 
 
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 
 
   return (
@@ -139,6 +159,7 @@ function resolveHref(href: Href): string {
       {children}
     </a>
   );
+
 
 
 
@@ -160,6 +181,7 @@ function resolveHref(href: Href): string {
 
 
 >>>>>>> origin/automation-improvements-final
+
 
 
 

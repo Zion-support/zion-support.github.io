@@ -4,6 +4,7 @@ import path from 'path';
 
 
 
+
   content: string | null,
   generated_at: string | null;
 }
@@ -37,10 +38,12 @@ function ChangelogPage() {
       )}
 
 
+
           No changelog generated yet.
 
         </div>
       )}
+
 
 
 
@@ -53,6 +56,7 @@ function ChangelogPage() {
 
     return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
+
   } catch {
 
 
@@ -60,6 +64,7 @@ function ChangelogPage() {
 
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
+
 
 
 
@@ -94,6 +99,7 @@ function ChangelogPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

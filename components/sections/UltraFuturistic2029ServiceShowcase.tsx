@@ -24,6 +24,7 @@ import { motion } from 'framer-motion';
 
 
 
+
   ChevronDown,
   Star,
   TrendingUp,
@@ -44,6 +45,7 @@ import { motion } from 'framer-motion';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui / UltraFuturisticServiceCard';
@@ -211,12 +213,43 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
         case 'price':
 
+          return (
+            parseFloat(a.price.replace(/[^0-9.]/g, '')) -
+            parseFloat(b.price.replace(/[^0-9.]/g, ''))
+          );
+        case 'rating':
+          return b.rating - a.rating;
+        default:
+          return 0;      }        case 'price':
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        case 'rating':
+          return b.rating - a.rating;
+        default: return 0
+      }
+    })
+    .slice(0, maxServices);
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
+    }
+  }
 
   return (
     <section className="py-20 relative overflow-hidden">;
       {/* Background Elements */}
+
 
       <div className="absolute inset-0 pointer-events-none">;
         <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
@@ -238,11 +271,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+
           className='text-center mb-16'        >          className="text-center mb-16"
           className='text-center mb-16'        >
 
@@ -254,6 +289,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -272,6 +308,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -281,12 +318,14 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             {subtitle}
@@ -310,6 +349,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Filters and Controls */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -329,6 +369,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               {categories.map((category) => (
 
 
+
                 <button
 
 
@@ -341,6 +382,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
@@ -354,6 +396,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               ))}
             </div>
           </div>
+
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>;
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>;
@@ -390,6 +433,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -397,6 +441,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             >
               <option value='innovation'>Innovation Level</option>
               <option value='price'>Price</option>
+
               <option value='rating'>Rating</option>            </select>            <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
@@ -425,6 +470,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -443,6 +489,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             >
               <UltraFuturisticServiceCard
                 service={service}
+
                 className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group"
             >
               <UltraFuturisticServiceCard
@@ -469,6 +516,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -483,7 +531,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -535,6 +585,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
                 View Pricing;
               </a>;
             </div>;
@@ -546,12 +597,14 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Innovation Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className='mt-20'
+
 
 
 
@@ -581,6 +634,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 icon: Star
                 color: 'from-yellow-500 to-orange-500'
               }
+
 
 
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
@@ -613,6 +667,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                   services.length
 
 
+
                 ).toFixed(1)
                 icon: TrendingUp
                 color: 'from-green-500 to-teal-500'
@@ -634,6 +689,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <motion.div
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
@@ -683,7 +739,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -710,7 +768,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -727,10 +787,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

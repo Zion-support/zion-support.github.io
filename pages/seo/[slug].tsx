@@ -22,16 +22,25 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
 import { useRouter  } from 'next/router';
 import { useRouter } from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
 export type LandingPayload = {;
 export type LandingPayload = {
+
   title: string;
   h1: string;
   body_html: string;
   region?: string;
+
+
+  service?: string,;
+  faq: Array<{ q: string, a: string }>;
+},;
+export default function SEOLandingPage(req, res) {
+  try {
 
 
   const router = useRouter();
@@ -55,18 +64,31 @@ export type LandingPayload = {
         return;
 
 
+      } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]),
   if (!payload) return null,
+
+
   return (
     <div className="max-w-4xl mx-auto">
       <head>
         <title>{payload.title}</title>
         <meta name="description" content={`${payload.title} • Zion Marketplace`} />
       </head>
+
       <h1 className='text-2xl font-semibold mb-4'>{payload.h1}</h1>
       <div
         className='prose dark:prose-invert max-w-none'
@@ -78,6 +100,7 @@ export type LandingPayload = {
       <FAQ items={payload.faq} />
     </div>
 );
+
 
 
       <h1 className="text-2xl font-semibold mb-4">{payload.h1}</h1>
@@ -104,8 +127,10 @@ export type LandingPayload = {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

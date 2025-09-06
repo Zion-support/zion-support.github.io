@@ -6,6 +6,8 @@
 
 
 
+
+
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface ConversionAnalysisProps {;
   data: Array<Record<string, any>>;
@@ -14,19 +16,19 @@ interface ConversionAnalysisProps {;
 }
 
 
+export function ConversionAnalysisChart({
+  data
+  timeRange
+  onTimeRangeChange
+}: ConversionAnalysisProps) {
+  const dataKeys =
+    data && data.length > 0
+      ? Object.keys(data[0]).filter((key) => key !== "date")
+      : [];
 
-
-
-export function ConversionAnalysisChart(): any ({;
-  data,;
-  timeRange,;
-  onTimeRangeChange,;
-}: ConversionAnalysisProps) {;
-  const dataKeys =;
-    data && data.length > 0;
-      ? Object && Object.keys(data[0]).filter((key) => key !== "date");
-
-
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
 
 
 interface ConversionAnalysisProps {
@@ -34,6 +36,7 @@ interface ConversionAnalysisProps {
   time_range: string;
   onTimeRangeChange: (range: string) => void;
 }
+
 
 export function ConversionAnalysisChart({
   data,
@@ -61,6 +64,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -73,6 +77,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data |[]}
           dataKeys={dataKeys}
           type="bar"
+
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />
@@ -121,6 +126,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   );
 

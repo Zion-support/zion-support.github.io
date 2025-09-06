@@ -1,6 +1,7 @@
 
 
 
+
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -9,6 +10,7 @@ import {SEO} from '@/components/SEO';
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
+
 
 
 
@@ -55,6 +57,8 @@ function VideoCall() {
       isMuted: false
     }
   ]);
+
+
 import { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -91,6 +95,7 @@ export default function VideoCall() {;
 
 
 
+
   const handleJoinCall = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsJoining(true);
@@ -113,6 +118,7 @@ export default function VideoCall() {;
     });
 
 
+
   const handleJoinCall = () => {
     setIsJoining(true),
     // Simulate connection delay
@@ -123,20 +129,25 @@ export default function VideoCall() {;
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
+
   }
   },
+
 
   const handleLeaveCall = () => {
     setHasJoined(false),
     toast.info("Call ended", {
       description: "You have left the meeting"
+
     });
     }),
     
+
     // Navigate back after a short delay
     setTimeout(() => {
       navigate(-1)
     }, 1500)
+
   }
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
@@ -172,6 +183,7 @@ export default function VideoCall() {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
   return (
 
     <>;
@@ -193,10 +205,12 @@ export default function VideoCall() {;
           </div>
         ) : (
           <div className="space-y-4">
+
             <VideoCallRoom
               roomId={roomId |''}
             <VideoCallRoom 
               roomId={roomId || ''} 
+
               participants={participants}
               onLeave={handleLeaveCall}
             />
@@ -208,6 +222,7 @@ export default function VideoCall() {;
             </div>
           </div>
         )}
+
 
 
 
@@ -297,4 +312,5 @@ export default function VideoCall() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -3,6 +3,7 @@
 
 
 
+
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
@@ -10,6 +11,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -69,6 +71,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         talent && talent.skills?.some(skill => skill && skill.toLowerCase().includes(lowerSearch))
 
       )
+
+
 import { useState, useMemo } from 'react',;
 import { TalentProfile } from '@/types/talent',;
 export function useFilterTalents(talents: TalentProfile[]) {;
@@ -126,6 +130,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -133,6 +138,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
     // Filter by selected skills
@@ -172,6 +178,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
 
 
+
+
     // Filter by price range
 
     result = result && result.filter(talent => {
@@ -189,6 +197,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     // Sort talents
     switch (sortOption) {
       case 'price-low':
+
+
 
 
 
@@ -223,6 +233,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -230,6 +241,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         break;
       case 'price-high':
@@ -240,10 +252,14 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         break;
       case 'experience':
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
+
+
         break;
       default: // Default sorting by relevance (no specific order)
         break
     }
+
+
 
 
 
@@ -267,6 +283,8 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     sortOption;
     setSortOption;
     toggleSkill;
+
+
 ;
     return result;
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]),;
@@ -289,6 +307,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -296,6 +315,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     toggleAvailability;
     toggleRegion;

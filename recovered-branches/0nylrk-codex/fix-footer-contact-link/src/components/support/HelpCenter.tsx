@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
@@ -19,6 +20,7 @@ export default function HelpCenter() {;
 
 
   
+
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
     setSelectedArticle(null)
@@ -36,7 +38,9 @@ export default function HelpCenter() {;
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   },
+
   
+
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -65,9 +69,22 @@ export default function HelpCenter() {;
             </TabsList>
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
 
+
+import React, { useState } from "react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { HelpCategoryList } from "./HelpCategoryList",;
+import { HelpArticleList } from "./HelpArticleList",;
+import { HelpArticleView } from "./HelpArticleView",;
+import { HELP_CATEGORIES } from "./help-content",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { Search } from "lucide-react",;
+export default function HelpCenter() {;
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
+  const [searchQuery, setSearchQuery] = useState(""),;
 
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
@@ -118,12 +135,15 @@ export default function HelpCenter() {;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
 
+                <HelpCategoryList;
+                  categories={HELP_CATEGORIES} ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
                 />
               )}
+
 
                 <HelpCategoryList
                   categories={HELP_CATEGORIES} 
@@ -138,6 +158,7 @@ export default function HelpCenter() {;
 
 
               
+
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -147,15 +168,19 @@ export default function HelpCenter() {;
                   >
                     ← All Categories
                   </Button>
+
                   <HelpArticleList
                   <HelpArticleList 
+
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />;
                 </>;
               )}
+
               
+
               {selectedArticle && (
                 <>
 
@@ -173,11 +198,13 @@ export default function HelpCenter() {;
 
 
 
+
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 <div className="space-y-6">
                   <div>
@@ -312,15 +339,18 @@ export default function HelpCenter() {;
     </AppLayout>
 
 
+
   );
 }
   )
+
 
 ;
               {selectedArticle && (;
                 <>;
                   <Button;
                     variant="ghost";
+
 
 
 
@@ -359,3 +389,4 @@ export default function HelpCenter() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

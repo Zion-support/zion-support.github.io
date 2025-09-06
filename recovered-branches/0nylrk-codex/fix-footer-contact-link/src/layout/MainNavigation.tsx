@@ -1,6 +1,7 @@
 
 
 
+
 import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
@@ -27,11 +28,13 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
   className?: string
 }
+
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
   const { user } = useAuth();
@@ -45,45 +48,58 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user,
   const location = useLocation(),
   
+
   const links = [
     {
       name: "Home"
       href: "/"
       matches: (path: string) => path === "/"
+
     }
     },
+
     {
       name: "Marketplace"
       href: "/marketplace"
       matches: (path: string) => path.startsWith("/marketplace")
+
     }
     },
+
     {
       name: "Categories"
       href: "/categories"
       matches: (path: string) => path.startsWith("/categories")
+
     }
     },
+
     {
       name: "Talent"
       href: "/talent"
       matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
+
     }
     },
+
     {
       name: "Equipment"
       href: "/equipment"
       matches: (path: string) => path.startsWith("/equipment")
+
     }
     },
+
     {
       name: "Community"
       href: "/community"
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
+
   ];
   ],
   
+
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -104,6 +120,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
 
   return (
+
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
 
@@ -123,6 +140,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               )}
             >
               {link.name}
@@ -139,11 +157,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
+
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
                 location.pathname === "/messages" |location.pathname === "/inbox"
 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
+
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -152,6 +172,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               {unreadCount > 0 && (;
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
+
                 </span>
               )}
             </Link>
@@ -172,6 +193,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         )}
 

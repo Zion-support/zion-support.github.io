@@ -5,6 +5,8 @@
 
 
 
+
+
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -16,11 +18,21 @@ import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
+import { useState } from "react",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { User, Mail, AtSign, GraduationCap } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
 
 
 const profileSchema = z.object({
@@ -42,11 +54,13 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
+
     switch (userType) {;
 
       case "serviceProvider": return "Service Provider";
     switch (userType) {
       case "serviceProvider": return "Service Provider",
+
       case "talent":
         return "Talent",
       case "client":
@@ -54,8 +68,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       default:
         return "User"
     }
+
   }
   },
+
 
   return (
 
@@ -63,15 +79,18 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           <FormField
             control={form && form.control}
             name="displayName"
+
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
                 <FormControl>;
                   <div className="relative">;
+
                     <Input
                       placeholder="Your full name"
                       className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                       {...field}
+
                     />;
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                   </div>;
@@ -90,6 +109,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             )}
 
@@ -154,6 +174,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 
 
 
+
+
                   />;
                 </FormControl>;
 
@@ -174,9 +196,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

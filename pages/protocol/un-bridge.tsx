@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 export default function UNBridge() {
   const [form, setForm] = useState({
 
@@ -38,6 +39,7 @@ import React, { useState } from 'react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -59,7 +61,9 @@ import React, { useState } from 'react';
 
 
 
+
   }
+
 
 export default function UNBridge(req, res) {
   try {
@@ -154,6 +158,7 @@ export default function UNBridge(req, res) {
     }
 
   }
+
 
 
   return (
@@ -338,6 +343,7 @@ export default function UNBridge(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
@@ -380,6 +386,7 @@ export default function UNBridge(req, res) {
             <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
           </div>
         </div>
+
         <div className='space-y-3'>
           <div className='text-sm opacity-70'>Output</div>
           <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
@@ -446,6 +453,7 @@ export default function UNBridge(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
@@ -459,6 +467,7 @@ export default function UNBridge(req, res) {
   }
 }
               {result.meta.artifacts?.pdfPath && (
+
                 <div>
                   <a
                     className='text-blue-600 underline'
@@ -549,6 +558,7 @@ function export_artifacts() {
     // Check condition
 if (return) {
   $2
+
 }
     set_loading (true);
     try {
@@ -573,6 +583,7 @@ function submit() {
 if (return) {
   $2
 }
+
     set_loading (true),
     try {
       const res = await fetch ('/api / proposals / submit', {
@@ -593,4 +604,5 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

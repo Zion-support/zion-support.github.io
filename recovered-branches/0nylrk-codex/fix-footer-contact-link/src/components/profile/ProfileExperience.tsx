@@ -1,9 +1,11 @@
 
 
 
+import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
+import {Briefcase} from "lucide-react";
 
-
-
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
+import { Briefcase } from "lucide-react",
 
 
 interface ProfileExperienceProps {
@@ -30,6 +32,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
+
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {;
@@ -61,12 +64,14 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
 
 
 
+
         ))}
       </div>
     </div>
   )
 
 }
+
 
 
 
@@ -108,4 +113,5 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

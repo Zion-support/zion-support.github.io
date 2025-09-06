@@ -1,5 +1,6 @@
 
 
+
 import { 
   ArrowRight, CheckCircle, Globe;
   Search, Grid, List, Star as StarIcon;
@@ -47,6 +48,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
 
 
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -55,10 +57,13 @@ import {;
   Search, Grid, List, Star as StarIcon,;
   Phone, Mail, MapPin;
 } from 'lucide-react',;
+
+
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
+
 export default function Comprehensive2025InnovativeServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -132,6 +137,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
   },
 
 
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -151,8 +157,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
 
     website: 'https://ziontechgroup.com'
+
   }
   },
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -164,6 +172,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
       </Head>
       <EnhancedNavigation />
+
       {/* Hero Section */}
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -173,6 +182,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -197,6 +207,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
 
+
               Discover our extensive collection of cutting-edge micro SAAS services, AI solutions
               Discover our extensive collection of cutting-edge micro SAAS services, AI solutions, 
 
@@ -218,6 +229,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
@@ -232,6 +244,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <span>{contactInfo.address}</span>
               </div>
             </div>
+
             {/* Stats */}
             {/* Stats */  } catch (error) {
     console.error("Error:", error);
@@ -249,6 +262,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">{allServices.length}+</div>
@@ -270,6 +284,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           </motion.div>
         </div>
       </section>
+
       {/* Search and Filters */}
 
       <section className="px - 6 pb - 12">;
@@ -288,12 +303,14 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <div className="mb-6">
               <div className="relative max-w-2xl mx-auto">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search services by name, description, or features..."
+
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   value={searchTerm  } catch (error) {
@@ -317,10 +334,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300"
                 />
               </div>
             </div>
+
             {/* Filters */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Category Filter */}
@@ -364,12 +383,14 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
+
                   ))}
                 </select>
               </div>
@@ -415,6 +436,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="all">All Prices</option>
@@ -423,6 +445,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <option value="enterprise">Enterprise ($5,000+)</option>
                 </select>
               </div>
+
               {/* Sort By */}
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">Sort By</label>
@@ -458,6 +481,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="popularity">Popularity</option>
@@ -466,6 +490,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <option value="newest">Newest</option>
                 </select>
               </div>
+
               {/* View Mode */}
               {/* View Mode */  } catch (error) {
     console.error("Error:", error);
@@ -483,10 +508,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
                 <div className="flex gap-2">
                   <button
+
                     onClick={() => setViewMode('grid')}
                     className={`px-3 py-2 rounded-lg transition-all duration-300 ${
                       viewMode === 'grid'
@@ -507,10 +534,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                   >
                     <Grid className="w-4 h-4" />
                   </button>
                   <button
+
                     onClick={() => setViewMode('list')}
                     className={`px-3 py-2 rounded-lg transition-all duration-300 ${
                       viewMode === 'list'
@@ -531,6 +560,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                   >
                     <List className="w-4 h-4" />
                   </button>
@@ -540,6 +570,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           </motion.div>
         </div>
       </section>
+
       {/* Services Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -569,6 +600,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial="hidden"
             animate="visible"
             className="mb-8"
@@ -580,11 +612,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               <p className="text-white/60">
 
 
+                Showing results for "{searchTerm || 'all services'}" in {selectedCategory === 'all' ? 'all categories' : selectedCategory  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
               </p>
             </div>
             {filteredServices.length === 0 ? (
@@ -599,6 +633,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     setSelectedCategory('all');
 
                     setPriceRange('all')
+
                   }}
                   }  } catch (error) {
     console.error("Error:", error);
@@ -616,6 +651,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
                 >
                   Clear Filters
@@ -629,6 +665,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
               }>
                 {filteredServices.map((service, index) => (
                   <motion.div
+
                     key={service.id}
                     variants={itemVariants}
                     className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
@@ -722,6 +759,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center gap-3">
                           <div className={`text-3xl ${service.color.includes('from-') ? '' : service.color}`}>
@@ -733,6 +771,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           </div>
                           <div>
                             <h3 className="font-bold text-lg text-white group-hover:text-cyan-300 transition-colors duration-300">
+
                               {service.name}
                               {service.name  } catch (error) {
     console.error("Error:", error);
@@ -746,6 +785,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                             </h3>
                             <p className="text-sm text-white/60">{service.tagline}</p>
                           </div>
@@ -755,6 +795,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
                             Popular
                           </div>
+
                         )}
                       </div>
                       {/* Description */}
@@ -796,12 +837,14 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
                         <div className="grid grid-cols-1 gap-1">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-xs text-white/60">
                               <CheckCircle className="w-3 h-3 text-green-400" />
+
                               {feature}
                             </div>
                           ))}
@@ -838,6 +881,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
@@ -845,6 +889,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                           Learn More
                         </a>
                         <a
+
                           href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                           href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`  } catch (error) {
     console.error("Error:", error);
@@ -862,11 +907,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
                         >
                           Contact
                         </a>
                       </div>
+
                       {/* Additional Info */}
                       {/* Additional Info */  } catch (error) {
     console.error("Error:", error);
@@ -884,10 +931,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <div className="mt-4 pt-4 border-t border-white/10">
                         <div className="grid grid-cols-2 gap-4 text-xs text-white/50">
                           <div>
                             <span className="block text-white/70">Setup Time:</span>
+
                             {service.setupTime}
                             {service.setupTime  } catch (error) {
     console.error("Error:", error);
@@ -905,6 +954,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           </div>
                           <div>
                             <span className="block text-white/70">Trial:</span>
@@ -922,6 +972,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                       </div>
                     </div>
                   </motion.div>
+
                 ))}
               </div>
             )}
@@ -989,6 +1040,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -998,13 +1050,16 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               Get in touch today for a personalized consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
+
                 href={`mailto:${contactInfo.email}?subject=Business Consultation Request`}
                 href={`mailto:${contactInfo.email}?subject=Business Consultation Request`  } catch (error) {
     console.error("Error:", error);
@@ -1022,10 +1077,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
               >
                 Schedule Consultation
                 <ArrowRight className="w-5 h-5" />
+
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
@@ -1047,6 +1104,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -1070,10 +1128,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

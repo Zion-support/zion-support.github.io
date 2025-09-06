@@ -1,7 +1,9 @@
+
 import React from 'react',
 import React from 'react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
+
 
 
 
@@ -18,7 +20,9 @@ interface FeaturesProps {
   title: string;
   subtitle: string;
   features: Feature[];
+
   columns?: 2 | 3 | 4;
+
 
   columns?: 2 | 3 | 4;
 
@@ -50,6 +54,7 @@ const Features: React.FC<FeaturesProps> = ({;
           </div>;
           <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
             {title}
+
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
 
@@ -59,6 +64,7 @@ const Features: React.FC<FeaturesProps> = ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;
           {features && features.map((feature, index) => (;

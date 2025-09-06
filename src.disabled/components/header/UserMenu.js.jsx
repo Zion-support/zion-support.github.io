@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,6 +12,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import _React,{ useState,useRef,useEffect } from';react' import { Link } from';';react-router-dom' import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from';';lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('';mousedown',handleClickOutside) "return": () => document.removeEventListener('';mousedown',handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {'';'';
 =======

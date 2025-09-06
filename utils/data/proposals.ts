@@ -1,15 +1,32 @@
 
 
+import fs from 'fs';
+import path from 'path';
+import { v4 as uuidv4 } from 'uuid';
+export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
+
+  createdAt: string;
+  updatedAt: string;
+  title: string;
+  targetInstitution: string;
+  type: string;
+  regionalScope: string;
+  budgetOrResolution: string;
+  supportingMultiverses: string[];
+  languages: string[];
+  status: ProposalStatus;
+
   artifacts: {;
-    markdownPath?: string;
-    jsonPath?: string;
-    pdfPath?: string;
-    ipfsCid?: string;
-    ensRecordHash?: string;
-    signature?: string;
+
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-export type ProposalPayload = {title: string;
+},;
+export type ProposalPayload = {
+  title: string;
+
   targetInstitution: string;
   type: string;
   regionalScope: string;
@@ -18,13 +35,22 @@ export type ProposalPayload = {title: string;
   contentMarkdown: string;
   language?: string;
   metadata?: Record<string, any>;
-}
-const dataDir = path.join(process.cwd(), 'dataproposals');
-const publicDir = path.join(process.cwd(), 'publicproposals');
-function ensureDirs() {if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+
+};
+const dataDir = path.join(process.cwd(), 'dataproposals'),;
+const publicDir = path.join(process.cwd(), 'publicproposals'),;
+function ensureDirs() {;
+  if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDirs();
+;
+export function createProposal(payload: ProposalPayload): ProposalMeta {;
+  ensureDirs(),;
+
   const id = uuidv4();
   const createdAt = new Date().toISOString();
   const updatedAt = createdAt;
@@ -34,6 +60,7 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const markdownPath = path.join(publicProposalDir, 'proposal.md');
   const jsonPath = path.join(proposalDir, 'proposal.json');
+
   const meta: ProposalMeta = {id;
     createdAt;
     updatedAt;
@@ -93,11 +120,13 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
+
 }
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
     ...meta;
@@ -114,10 +143,12 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
+
 
 
 
@@ -130,3 +161,4 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

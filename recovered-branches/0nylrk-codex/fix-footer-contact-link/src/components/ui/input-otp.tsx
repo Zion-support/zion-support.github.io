@@ -1,5 +1,11 @@
 
 
+
+import * as React from "react"
+import { OTPInput, OTPInputContext } from "input-otp"
+import { Dot } from "lucide-react"
+
+
 import { cn } from "@/lib/utils"
 
 const InputOTP = React.forwardRef<
@@ -10,13 +16,16 @@ const InputOTP = React.forwardRef<
   <OTPInput
     ref={ref}
     containerClassName={cn(
+
       'flex items-center gap-2 has-[:disabled]:opacity-50'
       "flex items-center gap-2 has-[:disabled]:opacity-50",
+
       containerClassName
     )}
     className={cn('disabled:cursor-not-allowed', className)}
     {...props}
   />
+
 ));
 InputOTP.displayName = 'InputOTP';
 const InputOTPGroup = React.forwardRef<
@@ -61,6 +70,7 @@ const InputOTPSlot = React && React.forwardRef<;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
@@ -69,6 +79,7 @@ const InputOTPSlot = React && React.forwardRef<;
       )}
 
     </div>
+
   );
 });
 InputOTPSlot.displayName = 'InputOTPSlot';
@@ -82,10 +93,12 @@ InputOTPSlot.displayName = "InputOTPSlot"
 const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
+
 >(({ ...props }, ref) => (
   <div ref={ref} role='separator' {...props}>
     <Dot />
   </div>
+
 ));
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
@@ -102,3 +115,4 @@ InputOTPSeparator.displayName = "InputOTPSeparator"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

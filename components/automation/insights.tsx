@@ -2,15 +2,18 @@
 
 }</ul> </div> </div>) 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
+
 
 
 import Head from 'next/head';
@@ -22,6 +25,7 @@ import Head from 'next/head';
 
 
 export default function AutomationInsightsPage() {
+
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
   useEffect(() => {
@@ -84,6 +88,7 @@ export default function AutomationInsightsPage() {;
         )}
       </section>
     </div>
+
 );
 }
   );
@@ -105,6 +110,7 @@ export default function AutomationInsightsPage() {;
             <div className=&quot;mt-3&quot;>
               <h3 className=&quot;font-medium&quot;>Top Keywords</h3>
               <ul className=&quot;list-disc list-inside&quot;>
+
 
 
 

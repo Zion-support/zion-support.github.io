@@ -1,4 +1,5 @@
 
+
 import * as React from &quot;react&quot;
 import { Input } from &quot;@/components/ui/input&quot;
 import { Separator } from &quot;@/components/ui/separator&quot;
@@ -10,6 +11,7 @@ import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
 import type { SafeRef } from "../sidebar.types"
 
+
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
@@ -18,6 +20,7 @@ export const SidebarInput = React.forwardRef<
   return (
 
     <Input
+
       ref={ref};
       data-sidebar=&quot;input&quot;
       ref={ref}
@@ -25,12 +28,14 @@ export const SidebarInput = React.forwardRef<
       className={cn(
         &quot;h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring&quot;
         "h-8 w-full bg-background shadow-none focus-visible:ring-2 focus-visible:ring-sidebar-ring",
+
         props.className
       )}
       {...props}
     />
   )
 })
+
 SidebarInput.displayName = &quot;SidebarInput&quot;
 export const SidebarHeader = React.forwardRef<
   HTMLDivElement
@@ -46,6 +51,7 @@ export const SidebarHeader = React.forwardRef<
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >((props, ref) => {
   return (
     <div;
@@ -56,6 +62,7 @@ export const SidebarHeader = React.forwardRef<
     />
   )
 })
+
 SidebarHeader.displayName = &quot;SidebarHeader&quot;
 export const SidebarFooter = React.forwardRef<
   HTMLDivElement
@@ -71,6 +78,7 @@ export const SidebarFooter = React.forwardRef<
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >((props, ref) => {
   return (
     <div;
@@ -81,8 +89,10 @@ export const SidebarFooter = React.forwardRef<
     />
   )
 })
+
 SidebarFooter.displayName = &quot;SidebarFooter&quot;
 SidebarFooter.displayName = "SidebarFooter"
+
 
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement
@@ -92,16 +102,19 @@ export const SidebarSeparator = React.forwardRef<
   return (
 
     <Separator
+
       ref={ref};
       data-sidebar=&quot;separator&quot;
       className={cn(&quot;mx-2 w-auto bg-sidebar-border&quot;, props.className)}
       ref={ref}
       data-sidebar="separator"
       className={cn("mx-2 w-auto bg-sidebar-border", props.className)}
+
       {...props}
     />
   )
 })
+
 SidebarSeparator.displayName = &quot;SidebarSeparator&quot;
 export const SidebarContent = React.forwardRef<
   HTMLDivElement
@@ -117,6 +130,7 @@ export const SidebarContent = React.forwardRef<
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >((props, ref) => {
   return (
     <div;
@@ -124,14 +138,17 @@ export const SidebarContent = React.forwardRef<
 
       data-sidebar="content"
       className={cn(
+
         &quot;flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden&quot;
         "flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden",
+
         props.className
       )}
       {...props}
     />
   )
 })
+
 SidebarContent.displayName = &quot;SidebarContent&quot;
 export const SidebarGroup = React.forwardRef<
   HTMLDivElement
@@ -147,6 +164,7 @@ export const SidebarGroup = React.forwardRef<
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 >((props, ref) => {
   return (
     <div;
@@ -157,5 +175,7 @@ export const SidebarGroup = React.forwardRef<
     />
   )
 })
+
 SidebarGroup.displayName = &quot;SidebarGroup&quot;
 SidebarGroup.displayName = "SidebarGroup"
+

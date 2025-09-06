@@ -1,5 +1,13 @@
 
 
+import React from 'react',
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
+
+
 interface JobMatchProps {
   matchId: string,
   talentId: string,
@@ -14,6 +22,8 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void,
   onViewDetails?: (matchId: string) => void,
   onInvite?: (matchId: string) => void
+
+
 
 
 import React from 'react',;
@@ -72,10 +82,12 @@ export function JobMatchCard({;
   },
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   // Generate a formatted date for display
   const postedDate = new Date(),
+
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
 
 
@@ -169,11 +181,14 @@ import React from 'react';
 
 
 
+
+
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+
 
 
 
@@ -187,6 +202,7 @@ import React from 'react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -226,3 +242,5 @@ if ( {) {
     }
   }
 ;
+
+

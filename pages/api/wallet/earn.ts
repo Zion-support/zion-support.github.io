@@ -4,21 +4,25 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { userId, amount, reason, metadata } = req.body |{}
   if (!userId |typeof amount !== "number" |!reason) {
     return res.status(400).json({ error: "userId, amount, reason required" })
+
   }
   try {
     const tx = earnTokens(userId, Math.floor(amount), reason, metadata)
+
 
 
 
@@ -75,6 +79,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+
   }
 }
   }
@@ -82,6 +87,7 @@ export default function handler(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

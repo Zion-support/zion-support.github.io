@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react";
 import {useHireRequestForm, FormValues} from "./useHireRequestForm";
 import {Button} from "@/components/ui/button";
@@ -31,15 +32,19 @@ export interface HireRequestFormProps {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   userDetails?: {
     name?: string,
     email?: string,
     id?: string
+
   }
   },
+
   onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
+
 
 
     initialJobTitle;
@@ -54,6 +59,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     userDetails 
   }),
   
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -80,6 +86,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+
             disabled={isSubmitting}>;
             {isSubmitting ? (;
               <>;
@@ -100,6 +107,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             )}
 

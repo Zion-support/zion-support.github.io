@@ -1,6 +1,7 @@
 
 
 
+
 import Link from 'next/link';
 
 const AIHealthcareDiagnosticsPro: React.FC = () => {;
@@ -68,6 +69,7 @@ import Link from 'next/link',
 
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [;
+
     {
       icon: Brain,
 
@@ -259,6 +261,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       name: "Cloud Platforms",
       icon: Cpu,
 
+
           href='https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostics-pro'
         />;
       </Head>;
@@ -325,17 +328,68 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 
       {/* Hero Section */  } catch (error) {
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
-        {/* Floating Elements */}
+  ],
+  const specialties = [
+    {
+      icon: Heart,
+      name: "Cardiology",
+      description: "Heart disease detection, ECG analysis, cardiovascular risk assessment",
+      accuracy: "99.1%"
+    },
+    {
+      icon: Brain,
+      name: "Neurology",
+      description: "Brain tumor detection, stroke diagnosis, neurological disorder analysis",
+      accuracy: "98.9%"
+    },
+    {
+      icon: Activity,
+      name: "Pulmonology",
+      description: "Lung cancer screening, pneumonia detection, respiratory disease analysis",
+      accuracy: "99.3%"
+    },
+    {
+      icon: Eye,
+      name: "Ophthalmology",
+      description: "Retinal disease detection, glaucoma screening, diabetic retinopathy",
+      accuracy: "98.7%"
+    },
+    {
+      icon: Shield,
+      name: "Hepatology",
+      description: "Liver disease detection, cirrhosis assessment, tumor identification",
+      accuracy: "99.0%"
+    },
+    {
+      icon: Microscope,
+      name: "Nephrology",
+      description: "Kidney disease detection, renal function analysis, transplant assessment",
+      accuracy: "98.8%"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+
+  return (
+    <Layout>
+      <Head>
+        <title>AI Healthcare Diagnostics Pro - Zion Tech Group</title>
+        <meta name="description" content="Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and improve patient outcomes with our advanced AI platform." />
+        <meta name="keywords" content="AI healthcare, medical diagnostics, medical imaging, disease detection, healthcare AI, medical AI, diagnostic accuracy" />
+        <meta property="og:title" content="AI Healthcare Diagnostics Pro - Zion Tech Group" />
+        <meta property="og:description" content="Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection and reduce diagnosis time by 80%." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
+      </Head>
 
 
           >
@@ -350,6 +404,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               <br />
               <span className="text-white">Diagnostics Pro</span>
             </h1>
+
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Transform healthcare delivery with the world's most advanced AI
               diagnostic platform. Achieve 99.2% accuracy in disease detection
@@ -395,6 +450,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -437,7 +493,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
+
             {/* CTA Buttons */}
+
 
 
 
@@ -457,6 +515,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
       {/* Features Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
@@ -482,6 +541,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Advanced AI</span>
@@ -490,6 +550,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Our platform combines cutting-edge artificial intelligence with deep medical expertise to deliver unprecedented diagnostic accuracy and speed.
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -503,10 +564,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
+
                 <h3 className='text-xl font-semibold text-white mb-4'>
                   {feature.title}
                 </h3>
@@ -546,6 +609,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
@@ -553,6 +617,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI platform covers all major medical specialties with specialized models trained on millions of cases for maximum accuracy.
             </p>
+
             <ul className="text-sm text-gray-500 space-y-2">
               <li>• X-ray analysis</li>
               <li>• CT scan interpretation</li>
@@ -573,6 +638,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
@@ -583,6 +649,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                     <div className="text-sm text-gray-400">Accuracy</div>
                   </div>
                 </div>
+
                 <h3 className='text-xl font-semibold text-white mb-3'>
                   {specialty.name}
                 </h3>
@@ -622,6 +689,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
@@ -630,6 +698,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               From radiology to pathology, our AI platform adapts to your specific medical specialty and workflow requirements.
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -643,6 +712,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -653,6 +723,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                     <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
                     <div className="space-y-2">
                       {useCase.benefits.map((benefit, benefitIndex) => (
+
                         <div
                           key={benefitIndex}
                           className='flex items-center space-x-2 text-sm'
@@ -714,6 +785,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 
 
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
@@ -722,6 +794,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Flexible pricing options designed to scale with your healthcare practice. Start with our Starter plan and upgrade as you grow.
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
@@ -740,6 +813,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -747,6 +821,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                       Most Popular
                     </div>
                   </div>
+
                 )}
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -841,6 +916,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 
 
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
@@ -849,6 +925,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Connect with your existing healthcare systems and workflows. Our platform integrates with all major EHR, PACS, and medical device platforms.
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {integrations.map((integration, index) => (
               <motion.div
                 key={index}
@@ -862,10 +939,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
                 </div>
+
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   {integration.name}
                 </h3>
@@ -896,6 +975,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
@@ -907,6 +987,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Join leading healthcare institutions worldwide who have already
               revolutionized patient care with AI-powered diagnostics.
             </p>
+
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -922,12 +1003,14 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 Schedule Demo
               </button>
               <button className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'>
                 Contact Sales
               </button>
             </div>
+
             <div className='mt-8 text-sm text-gray-400'>
               <p>
                 Questions? Call us at{' '}
@@ -948,10 +1031,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           </motion.div>
         </div>
       </section>
     </Layout>
+
 
 
 
@@ -964,3 +1049,4 @@ export default AIHealthcareDiagnosticsPro;
 
 
 export default AIHealthcareDiagnosticsPro;
+

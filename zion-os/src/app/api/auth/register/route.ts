@@ -1,4 +1,5 @@
 
+
 import { NextRequest, NextResponse  } from './next / server';,
 import bcrypt from './bcryptjs';,
 import { prisma  } from '@/lib / prisma';,
@@ -14,4 +15,4 @@ function POST() {
   try {
     const body = await request.json (),
     const { name, email, password } = register_schema.parse (body),
-=======
+

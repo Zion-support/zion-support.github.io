@@ -359,10 +359,120 @@ let particles: Array< {;
 
         cancelAnimationFrame(animationFrameId);
       }
-    };  }, []);        cancelAnimationFrame(animationFrameId);
 
+    };  }, []);        cancelAnimationFrame(animationFrameId)
+      }
+    }
+  }, []);
+  return (
+    <div className={`relative min-h-screen overflow-hidden ${className}`}>
+      {/* Animated Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+        style={{
+          background:
+            'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)'
+        }}
+      />
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset-0 pointer-events-none z-10'>
+        <motion.div
+          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
+          animate={{
+            rotate: [0, 360]
+            scale: [1, 1.2, 1]
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut',      />
+      {/* Floating Geometric Shapes */}
+      <div className="fixed inset-0 pointer-events-none z-10">
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
+          animate={{
+            rotate: [0, 360];
+            scale: [1, 1.2, 1];
+            opacity: [0.1, 0.3, 0.1]
+          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+        />
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20'
+          animate={{
+            rotate: [360, 0]
+            scale: [1, 0.8, 1]
+            opacity: [0.1, 0.4, 0.1],          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        />
+        <motion.div
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20"
+          animate={{
+            rotate: [360, 0];
+            scale: [1, 0.8, 1];
+            opacity: [0.1, 0.4, 0.1]
+          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+        />
+        <motion.div
+          className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20'
+          animate={{
+            rotate: [0, 360]
+            scale: [1, 1.3, 1]
+            opacity: [0.1, 0.2, 0.1],          }}
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        />
+        <motion.div
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20"
+          animate={{
+            rotate: [0, 360];
+            scale: [1, 1.3, 1];
+            opacity: [0.1, 0.2, 0.1]
+          }}
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+        />
+        <motion.div
+          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
+          animate={{
+            rotate: [360, 0]
+            scale: [1, 0.9, 1]
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+            duration: 7
+            repeat: Infinity
+            ease: 'easeInOut',          }}          }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
+          animate={{
+            rotate: [360, 0];
+            scale: [1, 0.9, 1];
+            opacity: [0.1, 0.3, 0.1]
+          }}
+          transition={{
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+            duration: 7,
+            repeat: Infinity,
+
 
         />
       </div>
@@ -372,7 +482,9 @@ let particles: Array< {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -380,10 +492,12 @@ let particles: Array< {;
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
             style={{
+
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+
             }}
             animate={{
               y: [0, -100, 0]
@@ -422,6 +536,7 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
             }}
 
 
+
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
 
@@ -439,6 +554,7 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
@@ -447,12 +563,19 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
+          />
+        ))}
+      </div>
+
+
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -556,6 +679,7 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
                 stroke_dasharray: [0, 100, 0];
 
               transition={{
+
                 duration: 4 + Math.random() * 2
                 repeat: Infinity
                 delay: Math.random() * 2
@@ -567,10 +691,13 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -585,11 +712,14 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>
   );
+
 
 
 }
@@ -597,10 +727,12 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
+
 export default UltraAdvancedFuturisticBackgroundV2;    </div>
   )
 }
 export default UltraAdvancedFuturisticBackgroundV2;
+
 
 
       {/* Content */}
@@ -616,3 +748,4 @@ export default UltraAdvancedFuturisticBackgroundV2;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

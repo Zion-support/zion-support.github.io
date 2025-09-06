@@ -1,3 +1,4 @@
+
 const API_BASE = 'http: //localhost:4000';
 function getUserId(cb) {
   chrome.storage.local.get(['user_id'], ({ user_id }) => cb(user_id))
@@ -15,10 +16,13 @@ function getUserId(cb) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 }
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
+
+
 
 
 
@@ -91,8 +95,10 @@ document.getElementById('signIn').addEventListener('click', async () => {
 });
 
 
-
-
+;
+document.querySelectorAll('.example').forEach((btn) => {;
+  btn.addEventListener('click', () => {;
+    document.getElementById('prompt').value = btn.dataset.text || '';
 
   });
 
@@ -148,6 +154,7 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -155,4 +162,5 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

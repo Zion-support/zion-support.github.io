@@ -5,6 +5,7 @@
 
 
 
+
   }
   if (req.method === 'POST') {
 
@@ -16,6 +17,7 @@
       return res.status(400).json({ error: e.message || 'Invalid payload' });
     }
   }
+
 
 
     if (req.method === 'GET') {
@@ -39,6 +41,7 @@
 }
 
 
+
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
 
@@ -54,3 +57,4 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

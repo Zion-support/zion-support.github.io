@@ -20,6 +20,21 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { motion } from 'framer-motion';
 
+import {
+
+} from 'lucide-react';
+import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
+import Link from 'next/link';
+const Revolutionary2027Hero = () => {
+  const floatingIcons = [
+    { icon: Brain, delay: 0, position: 'top-20 left-20' }
+    { icon: Rocket, delay: 0.5, position: 'top-40 right-32' }
+    { icon: TestTube, delay: 1, position: 'bottom-40 left-32' }
+    { icon: Globe, delay: 1.5, position: 'bottom-20 right-20' }
+    { icon: Microscope, delay: 2, position: 'top-1/2 left-10' }
+    { icon: Lock, delay: 2.5, position: 'top-1/2 right-10' }
+    { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' }
+    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' },  ];    { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
 
   ];
   const containerVariants = {
@@ -27,6 +42,7 @@ import { motion } from 'framer-motion';
     visible: {
       opacity: 1
       transition: {
+
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
@@ -38,6 +54,7 @@ import { motion } from 'framer-motion';
     },  };
 
   };
+
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
@@ -100,6 +117,7 @@ const Revolutionary2027Hero = () => {;
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>;
       {/* Enhanced Background Effects */}
 
+
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]'></div>;
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]'></div>;
@@ -117,6 +135,7 @@ const Revolutionary2027Hero = () => {;
 
       <div className='absolute inset-0 opacity-20'>;
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
       {/* Enhanced Background Effects */}
@@ -125,6 +144,7 @@ const Revolutionary2027Hero = () => {;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]"></div>;
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]"></div>;
       {/* Animated Grid Pattern */}
+
       <div className="absolute inset-0 opacity-20">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       </div>;
@@ -134,12 +154,14 @@ const Revolutionary2027Hero = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Floating Icons */}
       {floatingIcons && floatingIcons.map((item, index) => (;
         <motion&& motion.div
           key={index}
           className={`absolute ${item && item.position} text-purple-400/30`}
           animate={{
+
 
 
 
@@ -183,6 +205,8 @@ const Revolutionary2027Hero = () => {;
 
 
 
+
+
           <motion && motion.div variants={itemVariants} className="space-y-6">;
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight">;
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
@@ -199,6 +223,7 @@ const Revolutionary2027Hero = () => {;
               <span>Technology</span>;
             </div>;
           </motion && motion.div>;
+
 
 
               <span>Technology</span>
@@ -614,6 +639,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
               ease: "easeInOut"
             }}
             transition={{
+
               duration: 2
               repeat: Infinity
               duration: 2,
@@ -631,21 +657,25 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>;
 
 
 
+
         {[...Array(20)].map((_, i) => (
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
             style={{
+
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+
             }}            animate={{
               y: [0, -100]
               opacity: [0, 1, 0]
             }}
             transition={{
+
 
               duration: 3 + Math && Math.random() * 2,
               repeat: Infinity,
@@ -685,4 +715,5 @@ export default Revolutionary2027Hero;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

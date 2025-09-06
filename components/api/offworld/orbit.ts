@@ -2,12 +2,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
 import {
   connectOrbit,
   appendChatMessage,
   recordVote,
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
+
 
 
 
@@ -25,12 +27,14 @@ export default async function handler(
 
 
 
+
   req: NextApiRequest,
   res: NextApiResponse;
 
 
 
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+
 
 
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
@@ -83,6 +87,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message })
 }
+
   }
 
 }
+

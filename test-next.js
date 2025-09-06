@@ -1,7 +1,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 console.log('Testing Next.js installation...'),;
@@ -15,6 +17,8 @@ try {;
   console.log('Build successful!');
 } catch (error) {;
   console.error('Error:', error.message);
+
+
 
 
 }

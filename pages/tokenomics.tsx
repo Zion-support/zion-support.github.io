@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 
 
+
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
@@ -12,11 +13,13 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+
 
 
   const [useCases, setUseCases] = useState<string>(
@@ -143,6 +146,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   const [governance, setGovernance] = useState<string>(
     'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
   );
+
   const [jurisdiction, setJurisdiction] = useState<string>('US');
   const [operatorPrompt, setOperatorPrompt] = useState<string>(
     defaultOperatorPrompt
@@ -283,15 +287,33 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     }
   }
 
-      const item = { ...copy[index] }
-
+}
+      const { url } = await res.json();
+      window.open(url, '_blank');
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
+    setDistribution((prev) => {;
+      const copy = [...prev];
 
       const item = { ...copy[index] };
+
+
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
       return copy;
     });
+
   }
   function addDistributionItem() {
     setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
@@ -471,12 +493,14 @@ if (item.label = value) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
       alert('Failed to create share link');
       return;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 
 
@@ -490,6 +514,7 @@ if (item.label = value) {
     'Distribution'
     'Governance Model'
     'Risks + Disclaimers'
+
 
 
   const sections = [
@@ -503,6 +528,7 @@ if (item.label = value) {
   ];
 
 
+
 }
 
 
@@ -513,6 +539,7 @@ if (item.label = value) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   return (
     <>
@@ -534,6 +561,7 @@ if (item.label = value) {
             <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
           </div>
         </div>
+
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <div className='space-y-6'>
             <div className='rounded-lg border p-4 space-y-4'>
@@ -556,6 +584,7 @@ if (item.label = value) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
@@ -586,6 +615,7 @@ if (item.label = value) {
                     <option value="AE">UAE</option>
                   </select>
                 </div>
+
                 <div className='flex items-center gap-2'>
                   <input
                     id='legalReview'
@@ -653,6 +683,7 @@ if (item.label = value) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 </div>
               </div>
             </div>
@@ -681,10 +712,12 @@ if (item.label = value) {
 
 
 
+
                   disabled={!isAdmin || isGenerating}
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
@@ -696,6 +729,8 @@ if (item.label = value) {
                   className='px-4 py-2 rounded-md border'
                 >
                   Clear AI Draft
+
+
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Operator Prompt</h3>
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
@@ -712,6 +747,7 @@ if (item.label = value) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -720,10 +756,12 @@ if (item.label = value) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
             </div>
+
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
@@ -782,6 +820,7 @@ if (item.label = value) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
@@ -790,6 +829,7 @@ if (item.label = value) {
         </div>
       </div>
     </>
+
   );
 function buildLocalMarkdown(input: {
   )
@@ -802,6 +842,7 @@ function buildLocalMarkdown(input: {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   tokenName: string;
@@ -817,23 +858,43 @@ function buildLocalMarkdown(input: {;
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
 
+  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
-  switch (j) {
+}
+;
+function jurisdictionalNote(j: string) {;
+  switch (j) {;
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
-
-function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
-  // Simple textual donut placeholder until a chart lib is added;
-  const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
-
-
-
-
+    case 'EU':;
+      return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.',;
+    case 'SG':;
+      return 'Intended utility token under MAS guidance, prospective purchasers should not view it as capital markets products.',;
+    case 'AE':;
+      return 'Intended utility token within relevant UAE free zone guidance, not an investment product.',;
+    default:;
+      return 'Intended strictly for utility use.';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
+
+
   return (
     <div className="space-y-1 text-sm">
       {data.map((d, idx) => (
@@ -843,6 +904,7 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
           </div>
           <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
         </div>
+
       ))}
     </div>
   );
@@ -877,6 +939,7 @@ function MarkdownPreview({
 
 
 
+
       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -897,7 +960,9 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
@@ -913,13 +978,29 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   return (
 
 
+    <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
+  )
+;
+function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {;
+  // Very lightweight section filter: split by headings;
+  const parts = useMemo(() => {;
+    const sections = markdown.split(/\n## /g);
+    const map: Record<string, string> = {};
+    sections.forEach((s, i) => {;
+      if (i === 0) return, // first is H1;
+      const [titleLine, ...rest] = s.split('\n');
+      map[titleLine.trim()] = rest.join('\n');
+    }),;
+    return map;
+  }, [markdown]);
+  const content = parts[activeSection] || '';
+  return (;
+    <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements

@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -10,11 +11,13 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   // If this is already a TalentProfile, just return it
   if (profile && profile.professional_title !== undefined) {
     return profile
+
   }
   // Convert ProfileData to TalentProfile
   return {;
@@ -75,3 +78,4 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

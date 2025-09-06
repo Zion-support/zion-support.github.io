@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildPressRelease } from "../../../utils/mediaKit";
 export default async function handler(
@@ -17,6 +19,7 @@ export default async function handler(
 
 
 
+
       type = "launch",
       companyName = "Zion",
       date = new Date().toISOString().substring(0, 10),
@@ -24,6 +27,7 @@ export default async function handler(
       description = "Innovative technology company",
       contactEmail = "press@zion.com",;
     } = req.body || {};
+
 
 
 
@@ -43,11 +47,54 @@ export default async function handler(
       downloadUrl: `/api/media/download/${pressRelease && pressRelease.id}`,
     });
   } catch (error: any) {
-    console && console.error("Press release generation error:", error);
-    return res && res.status(500).json({
+
+    console.error("Press release generation error:", error);
+    return res.status(500).json({
+      ok: false
+      error: "Failed to generate press release"
+    });
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { buildPressRelease } from '../../../utils/mediaKit';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (apiKey) {
+      try {
+        const { OpenAI } = await import('openai');
+        const client = new OpenAI({ apiKey });
+        const prompt = `Write a concise ${type} press release for ${companyName} (date ${date}) with clear headlines, 2 paragraphs, and one quote.`;
+        const completion = await client.chat.completions.create({
+          model: 'gpt-4o-mini',
+          messages: [
+            { role: 'system', content: 'You are a seasoned tech PR writer.' },
+            { role: 'user', content: prompt }
+          ],
+          temperature: 0.4,
+          max_tokens: 500
+        });
+        const text = completion.choices?.[0]?.message?.content?.trim();
+        if (text) {
+          res.status(200).json({ ok: true, text });
+          return;
+        }
+      } catch (_) {
+        // fall through to template
+      }
+    }
+
+    const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
+    res.status(200).json({ ok: true, text, fallback: true });
+  } catch (e: any) {
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
+
+  }
+
+  }
+}
+
+

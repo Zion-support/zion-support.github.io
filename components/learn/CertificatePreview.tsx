@@ -1,7 +1,10 @@
+
 import React from "react";
+
 
 import React from "react";
 export default function CertificatePreview({
+
 
 
 
@@ -15,6 +18,7 @@ export default function CertificatePreview({
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   courseId: string;
   userId?: string;
@@ -40,9 +44,11 @@ export default function CertificatePreview({
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">;
@@ -60,10 +66,12 @@ export default function CertificatePreview({
       </a>;
     </div>;
   );
+
 }
 }
 
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 

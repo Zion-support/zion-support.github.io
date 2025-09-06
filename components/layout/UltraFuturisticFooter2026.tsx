@@ -1,9 +1,12 @@
+
 import React from 'react',
 import React from 'react';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
   Phone,
@@ -27,6 +30,7 @@ import {
   Youtube,;
   Github,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
+
 
 
 
@@ -471,6 +475,7 @@ export default function UltraFuturisticFooter2026() {
 export default function UltraFuturisticFooter2026() {
   return (
     <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>
+
       {/* Background Effects */}
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]'></div>
@@ -496,6 +501,7 @@ export default function UltraFuturisticFooter2026() {
 export default function UltraFuturisticFooter2026() {
   return (
 
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -515,7 +521,9 @@ export default function UltraFuturisticFooter2026() {
                 cybersecurity, fintech blockchain, and healthcare biotech
                 solutions. Transforming businesses with cutting-edge technology.
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </p>
               {/* Contact Info */}
               <div className='space-y-3'>
@@ -546,6 +554,7 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
               </p>
               {/* Contact Info */}
@@ -556,6 +565,7 @@ export default function UltraFuturisticFooter2026() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -595,6 +605,7 @@ export default function UltraFuturisticFooter2026() {
             </motion && motion.div>;
           ))}
         </div>
+
         {/* Additional Links */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Company Links */}
@@ -614,10 +625,12 @@ export default function UltraFuturisticFooter2026() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+
 
 
                     href={link.href}
@@ -643,10 +656,12 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
           {/* Resources */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+
 
 
                     href={link.href}
@@ -669,6 +684,7 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>;
           </motion && motion.div>;
+
 
 
 
@@ -696,6 +712,7 @@ export default function UltraFuturisticFooter2026() {
                 <Link
                   key={index}
                   href={social.href}
+
                   className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
                 >
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
@@ -716,10 +733,12 @@ export default function UltraFuturisticFooter2026() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               ))}
             </div>
           </motion.div>
         </div>
+
 
 
 
@@ -739,6 +758,7 @@ export default function UltraFuturisticFooter2026() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Newsletter Signup */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -750,7 +770,9 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
         >
           <div className='text-center'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -812,6 +834,7 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
                 Subscribe;
               </button>;
             </div>;
@@ -853,6 +876,7 @@ export default function UltraFuturisticFooter2026() {
               © 2026 Zion Tech Group. All rights reserved. |;
 
 
+
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -863,7 +887,9 @@ export default function UltraFuturisticFooter2026() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
@@ -906,6 +932,7 @@ export default function UltraFuturisticFooter2026() {
           </div>
         </motion.div>
       </div>
+
 
 
 
@@ -1014,4 +1041,5 @@ export default function UltraFuturisticFooter2026() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

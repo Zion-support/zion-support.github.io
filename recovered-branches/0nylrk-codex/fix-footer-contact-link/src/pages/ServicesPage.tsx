@@ -1,6 +1,11 @@
 
 
 
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+import { AppLayout } from "@/layout/AppLayout",
+import { TrustedBySection } from "@/components/TrustedBySection",
+import { Button } from "@/components/ui/button",
 
 
 // Sample service listings
@@ -13,6 +18,8 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 5000,
     currency: "$",
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
+
+
     author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"
@@ -23,6 +30,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 124}
   {
+
     id: "service-2"
     title: "Cloud Infrastructure Management"
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
@@ -37,6 +45,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 3000,
     currency: "$",
     tags: ["Cloud", "DevOps", "Security"],
+
     author: {
       name: "CloudPro Experts"
       id: "cloud-pro"}
@@ -46,6 +55,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.7
     reviewCount: 92}
   {
+
     id: "service-3"
     title: "Big Data Analysis & Insights"
     description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services."
@@ -60,6 +70,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 4500,
     currency: "$",
     tags: ["Big Data", "Analytics", "Business Intelligence"],
+
     author: {
       name: "DataMind Solutions"
       id: "datamind"
@@ -70,6 +81,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.8
     reviewCount: 78}
   {
+
     id: "service-4"
     title: "Cybersecurity Assessment & Protection"
     description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats."
@@ -84,6 +96,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 6000,
     currency: "$",
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
+
     author: {
       name: "SecureNet Team"
       id: "secure-net"}
@@ -93,6 +106,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 103}
   {
+
     id: "service-5"
     title: "IT Infrastructure Modernization"
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
@@ -107,6 +121,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 8500,
     currency: "$",
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
+
     author: {
       name: "ModernizeIT Consulting"
       id: "modernize-it"}
@@ -116,6 +131,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.6
     reviewCount: 67}
   {
+
     id: "service-6"
     title: "AI Strategy & Implementation"
     description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage."
@@ -130,6 +146,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 7500,
     currency: "$",
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
+
     author: {
       name: "AI Future Consulting"
       id: "ai-future"
@@ -149,6 +166,35 @@ const SERVICE_FILTERS = [
   { label: 'Strategy', value: 'strategy' }]
 
 
+export default function ServicesPage() {
+  return (
+    <AppLayout>
+      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <h2 className="text-white text-lg font-medium">Featured Services</h2>
+          <div className="flex flex-wrap gap-2">
+            <Link to="/it-onsite-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Global IT Onsite Services
+              </Button>
+            </Link>
+            <Link to="/request-quote">
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                Request a Quote
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+import { DynamicListingPage } from "@/components/DynamicListingPage",;
+import { ProductListing } from "@/types/listings",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { TrustedBySection } from "@/components/TrustedBySection",;
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
+import { Globe } from "lucide-react",;
 
 // Sample service listings;
 const SERVICE_LISTINGS: ProductListing[] = [;
@@ -252,5 +298,7 @@ const SERVICE_LISTINGS: ProductListing[] = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,6 +1,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
 
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
@@ -65,6 +67,8 @@ import ServiceLanding from '../components/sections/ServiceLanding';
   );
 
 
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
 export default function ZeroTrustSecurityPlatformPage() {
 	return (
@@ -99,5 +103,7 @@ export default function ZeroTrustSecurityPlatformPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

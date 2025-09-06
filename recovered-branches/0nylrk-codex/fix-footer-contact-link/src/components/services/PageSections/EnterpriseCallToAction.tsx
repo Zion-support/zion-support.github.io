@@ -1,9 +1,11 @@
 
 
 
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
 
-
-
+import { Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
 
 
 export function EnterpriseCallToAction() {
@@ -20,6 +22,9 @@ export function EnterpriseCallToAction() {
     </div>
 
 
+import { Link } from "react-router-dom",;
+import { Button } from "@/components/ui/button";
+
 export function EnterpriseCallToAction() {;
   return (
     <div className="mt-12 text-center">;
@@ -33,6 +38,7 @@ export function EnterpriseCallToAction() {;
       </p>;
     </div>;
   );
+
 }
 ;
 
@@ -45,3 +51,4 @@ export function EnterpriseCallToAction() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -7,6 +7,7 @@
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 import { createWriteStream } from 'fs',
 import { join } from 'path',
@@ -15,6 +16,7 @@ import { createWriteStream } from 'fs',
 import { join } from 'path',
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ '','/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir)) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap); }; generateSitemap();
 import fs from 'fs';
 import path from 'path';
@@ -31,7 +33,9 @@ const pages = ['',
   '/contact',
 ];
 
+
 origin/automation-improvements-final
+
 
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -46,6 +50,7 @@ const generateSitemap = () => {
     <loc>https://ziontechgroup.com/about</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
+
     <priority>${page === '' ? '1.0' : '0.8'}</priority>
   </url>").join('\n')}
 </urlset>";
@@ -82,10 +87,12 @@ import fs from 'fs'; import path from 'path'; const __filename = fileURLToPath(i
 
 
 
+
   const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),
   const writeStream = createWriteStream(sitemapPath),
   writeStream.write(sitemap),
   writeStream.end(),
+
 
 
 
@@ -281,6 +288,7 @@ if (require.main === module) {
 
 module.exports = { generateSitemapXML, generateSitemapTXT, pages };
 origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+
 import { createWriteStream } from 'fs',;
 import { join } from 'path',;
 const generateSitemap = () => {;
@@ -323,6 +331,7 @@ generateSitemap();
 
 
 
+
 };
 ,
 generateSitemap(),
@@ -348,4 +357,5 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

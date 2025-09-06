@@ -1,6 +1,8 @@
 
 
 
+
+
 interface LoadingSpinnerProps {
 interface LoadingSpinnerProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -42,6 +44,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
           {text}
         </p>;
       )}
+
 
 
 
@@ -122,6 +125,7 @@ export default LoadingSpinner;
 
 
 
+
 export default function LoadingSpinner() {
   return (
     <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -135,7 +139,9 @@ export default function LoadingSpinner() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     </div>
   );
@@ -149,9 +155,11 @@ export default function LoadingSpinner() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,3 +1,4 @@
+
 // Sort options for talent directory
 
 export const SORT_OPTIONS = [
@@ -37,6 +38,7 @@ export const SORT_OPTIONS = [
 
 
 
+
 // Sort options for talent directory;
 export const SORT_OPTIONS = [;
   { value: 'relevance', label: 'Relevance' },;
@@ -50,6 +52,7 @@ export const SORT_OPTIONS = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -57,4 +60,5 @@ export const SORT_OPTIONS = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

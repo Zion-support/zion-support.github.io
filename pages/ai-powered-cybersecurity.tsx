@@ -1,5 +1,10 @@
 
 
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIPoweredCybersecurityPage() {
+
+
   return (
     <>;
       <Head>;
@@ -41,6 +46,8 @@
   );
 
 
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
 export default function AIPoweredCybersecurityPage() {
 	return (
@@ -76,5 +83,7 @@ export default function AIPoweredCybersecurityPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

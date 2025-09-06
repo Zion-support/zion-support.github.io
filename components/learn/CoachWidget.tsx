@@ -32,7 +32,9 @@ export default function CoachWidget() {;
   }
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (      });
       const data = await resp.json();
       setReply(data.text |'')
@@ -46,11 +48,13 @@ export default function CoachWidget() {;
 
 
 
+
   return (
 
 
   );
 }
+
 
 
 
@@ -93,6 +97,7 @@ function ask() {
     }
   }
   return (
+
     <div className='border rounded p - 3'>;
       <div className='font - medium mb - 2'>ZionGPT Coach</div>;
       <div className='flex gap - 2'>;
@@ -139,5 +144,6 @@ function ask() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

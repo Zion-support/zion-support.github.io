@@ -4,6 +4,7 @@
 
 
 
+
 export default function DisputeDetailPage() {
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -170,22 +171,40 @@ export default function DisputeDetailPage() {;
 
 
 
+
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
 
 
+  const dispute = data?.dispute;
+  const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview');
+  const [message, setMessage] = useState('');
+  const [resolutionSummary, setResolutionSummary] = useState('');
+  async function sendMessage() {;
+    if (!message.trim() || !id) return,;
+    await fetch(`/api/disputes/${id}/message`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ body: message }) }),;
+    setMessage('');
+    mutate();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {;
+    if (!id) return,;
+    await fetch(`/api/disputes/${id}/resolve`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ resolutionSummary, status }) });
+    setResolutionSummary('');
+    mutate();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
   return (
     <EnhancedLayout>
       {!dispute ? (
@@ -196,6 +215,7 @@ export default function DisputeDetailPage() {;
             <h1 className="text-2xl font-semibold">Case {dispute.id}</h1>
             <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>
           </div>
+
           <div className='mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
             <div className='p-3 border rounded'>
               <div className='font-medium text-gray-500'>Project</div>
@@ -217,6 +237,7 @@ export default function DisputeDetailPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             </div>
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Client</div>
@@ -227,6 +248,7 @@ export default function DisputeDetailPage() {;
               <div className="mt-1">{dispute.talentUserId}</div>
             </div>
           </div>
+
           <div className='border-b mb-4 flex gap-4 text-sm'>
             {(
               ['Overview', 'Messages', 'Attachments', 'Admin Notes'] as const
@@ -258,6 +280,7 @@ export default function DisputeDetailPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </div>
 
           {activeTab === 'Overview' && (
@@ -288,14 +311,97 @@ export default function DisputeDetailPage() {;
                   {dispute.resolvedAt && (
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     <li className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
                       <time className="text-xs text-gray-500">{new Date(dispute.resolvedAt).toLocaleString()}</time>
                       <div className="text-sm">Case resolved</div>
                     </li>
 
-
+;
+  return (;
+    <EnhancedLayout>;
+      {!dispute ? (;
+        <div>Loading...</div>;
+      ) : (;
+        <div className="max-w-4xl mx-auto">;
+          <div className="flex items-center justify-between mb-4">;
+            <h1 className="text-2xl font-semibold">Case {dispute.id}</h1>;
+            <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>;
+          </div>;
+          <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">;
+            <div className="p-3 border rounded">;
+              <div className="font-medium text-gray-500">Project</div>;
+              <div className="mt-1">{dispute.projectId}</div>;
+            </div>;
+            <div className="p-3 border rounded">;
+              <div className="font-medium text-gray-500">Client</div>;
+              <div className="mt-1">{dispute.clientUserId}</div>;
+            </div>;
+            <div className="p-3 border rounded">;
+              <div className="font-medium text-gray-500">Talent</div>;
+              <div className="mt-1">{dispute.talentUserId}</div>;
+            </div>;
+          </div>;
+          <div className="border-b mb-4 flex gap-4 text-sm">;
+            {(['OverviewMessagesAttachmentsAdmin Notes'] as const).map(t => (;
+              <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}</button>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+          {activeTab === 'Overview' && (;
+            <div className="space-y-6">;
+              <div className="p-4 border rounded">;
+                <div className="font-medium mb-2">Reason</div>;
+                <div className="text-sm">{dispute.reason}{dispute.reasonDetails ? ` — ${dispute.reasonDetails}` : ''}</div>;
+              </div>;
+              <div className="p-4 border rounded">;
+                <div className="font-medium mb-2">Description</div>;
+                <div className="text-sm whitespace-pre-wrap">{dispute.description}</div>;
+              </div>;
+              <div className="p-4 border rounded">;
+                <div className="font-medium mb-3">Timeline</div>;
+                <ol className="relative border-l ml-2">;
+                  <li className="mb-6 ml-4">;
+                    <div className="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 border border-white" />;
+                    <time className="text-xs text-gray-500">Created at {new Date(dispute.createdAt).toLocaleString()}</time>;
+                    <div className="text-sm">Case opened</div>;
+                  </li>;
+                  {dispute.messages.map((m: any) => (;
+                    <li key={m.id} className="mb-6 ml-4">;
+                      <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-1.5 border border-white" />;
+                      <time className="text-xs text-gray-500">{new Date(m.createdAt).toLocaleString()}</time>;
+                      <div className="text-sm">{m.authorRole} messaged</div>;
+                    </li>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  {dispute.resolvedAt && (;
+                    <li className="mb-6 ml-4">;
+                      <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />;
+                      <time className="text-xs text-gray-500">{new Date(dispute.resolvedAt).toLocaleString()}</time>;
+                      <div className="text-sm">Case resolved</div>;
+                    </li>;
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </ol>;
+              </div>;
+            </div>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
           {activeTab === 'Messages' && (
@@ -306,6 +412,7 @@ export default function DisputeDetailPage() {;
                 ) : (
                   <ul className="space-y-3">
                     {dispute.messages.map((m: any) => (
+
 
 
                       <li key={m.id} className='text-sm'>
@@ -340,6 +447,7 @@ export default function DisputeDetailPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <li key={m.id} className="text-sm">
                         <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
                         <div className="whitespace-pre-wrap">{m.body}</div>
@@ -352,6 +460,7 @@ export default function DisputeDetailPage() {;
 
               )}
             </div>;
+
 
 
           {activeTab === 'Attachments' && (;
@@ -381,6 +490,7 @@ export default function DisputeDetailPage() {;
 
 
 
+
           {activeTab === 'Attachments' && (
             <div className="space-y-3">
               {dispute.attachments.length === 0 ? (
@@ -393,6 +503,7 @@ export default function DisputeDetailPage() {;
                         <div className="font-medium">{a.fileName}</div>
                         <div className="text-xs text-gray-500">{a.mimeType} • {(a.fileSize / 1024).toFixed(1)} KB</div>
                       </div>
+
 
 
 
@@ -438,6 +549,7 @@ export default function DisputeDetailPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           {activeTab === 'Admin Notes' && (
             <div className="space-y-4">
               {user.role !== 'admin' ? (
@@ -453,6 +565,8 @@ export default function DisputeDetailPage() {;
 
 
 
+
+
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -462,6 +576,7 @@ export default function DisputeDetailPage() {;
             </div>;
           )}
         </div>;
+
       )}
 
 
@@ -475,3 +590,4 @@ export default function DisputeDetailPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

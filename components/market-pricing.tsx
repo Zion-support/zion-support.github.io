@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -26,6 +27,7 @@ pricingAnalysis: {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   ];
@@ -141,6 +143,7 @@ pricingAnalysis: {
       pricingAnalysis: {
         lowEnd: '$300 per user/month'
         midRange: '$750 per user/month'
+
 
 
 
@@ -312,6 +315,7 @@ pricingAnalysis: {
             </div>;
           </div>;
           <motion&& motion.div
+
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -642,8 +646,10 @@ pricingAnalysis: {
       {/* Pricing Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+
           <motion.h2
           <motion.h2 
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -654,17 +660,70 @@ pricingAnalysis: {
           </motion.h2>
           <div className="grid lg:grid-cols-4 gap-6 mb-12">
             {[
+
               { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' }
               { label: 'Mid Range', price: currentMarket.pricingAnalysis.midRange, color: 'from-yellow-500 to-orange-600' }
               { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' }
               { label: 'Low End', price: currentMarket.pricingAnalysis.lowEnd, color: 'from-green-500 to-emerald-600' },
               { label: 'Mid Range', price: currentMarket.pricingAnalysis.midRange, color: 'from-yellow-500 to-orange-600' },
               { label: 'High End', price: currentMarket.pricingAnalysis.highEnd, color: 'from-red-500 to-pink-600' },
+
               { label: 'Our Position', price: currentMarket.pricingAnalysis.ourPosition, color: 'from-cyan-500 to-blue-600' }
             ].map((tier, index) => (
               <motion.div
                 key={tier.label}
 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className={`w-20 h-20 bg-gradient-to-r ${tier.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <BarChart3 className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">{tier.label}</h3>
+                <p className="text-2xl font-bold text-cyan-400">{tier.price}</p>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h3 className="text-2xl font-bold mb-4">Strategic Advantages</h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {[
+                {
+                  title: 'Competitive Pricing'
+                  description: 'Positioned in the mid-range with premium features that justify our pricing strategy.'
+                }
+                {
+                  title: 'AI-First Approach'
+                  description: 'Unique focus on AI consciousness and emotional intelligence sets us apart from competitors.'
+                }
+                {
+                  title: 'Enterprise Focus'
+                  description: 'Built specifically for enterprise needs with security, scalability, and compliance features.'
+                }
+              ].map((advantage, index) => (
+                <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/10">
+                  <h4 className="font-semibold text-cyan-400 mb-2">{advantage.title}</h4>
+                  <p className="text-sm text-gray-300">{advantage.description}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Market Trends Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
 
 
             initial={{ opacity: 0, y: 20 }}
@@ -756,6 +815,7 @@ pricingAnalysis: {
 
 
 
+
               </ul>;
             </motion && motion.div>;
           </div>;
@@ -773,6 +833,7 @@ pricingAnalysis: {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -809,6 +870,7 @@ pricingAnalysis: {
       </section>
     </div>
   )
+
 }
 }
 }
@@ -817,6 +879,7 @@ pricingAnalysis: {
 };
 
 };
+
 'quantum-computing': {
   marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
   ];
@@ -833,6 +896,7 @@ pricingAnalysis: {
   marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
   ];
 pricingAnalysis: {
+
 
 
 
@@ -878,4 +942,5 @@ export default MarketPricing;export default MarketPricing;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

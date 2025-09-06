@@ -1,5 +1,7 @@
 
 
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -26,12 +28,14 @@ import { useWallet } from '../../hooks/useWallet';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
@@ -65,6 +69,8 @@ import { useWallet } from '../../hooks/useWallet';
       body: JSON && JSON.stringify({ region, stakeUsd: stake }),;
 
     });
+
+
 
 
 
@@ -108,6 +114,7 @@ import { useWallet } from '../../hooks/useWallet';
             </button>;
           )}
 
+
     setSuggestion(data)
   }
 
@@ -127,6 +134,7 @@ import { useWallet } from '../../hooks/useWallet';
 
 
   }
+
 
   return (
 
@@ -235,7 +243,9 @@ import { useWallet } from '../../hooks/useWallet';
               </div>
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -340,6 +350,7 @@ import { useWallet } from '../../hooks/useWallet';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -348,4 +359,5 @@ import { useWallet } from '../../hooks/useWallet';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

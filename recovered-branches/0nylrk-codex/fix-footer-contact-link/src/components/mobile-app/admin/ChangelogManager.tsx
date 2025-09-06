@@ -3,7 +3,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface ChangelogManagerProps {
@@ -12,6 +14,7 @@ interface ChangelogManagerProps {
 }
 
 type ChangelogEntry = {
+
   id: string;
   version: string;
   date: string;
@@ -77,6 +80,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   ]),
   
   const [newEntry, setNewEntry] = useState<Omit<ChangelogEntry "id">>({
+
     version: "",
     date: new Date().toISOString().split('T')[0],
     changes: ""
@@ -106,7 +110,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     const { name, value } = e.target,
     setNewEntry(prev => ({ ...prev, [name]: value }))
   },
+
   
+
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -125,6 +131,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 type="date"
                 name="date"
+
+
 
 
 import React, { useState } from "react",;
@@ -217,6 +225,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -227,11 +236,13 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
+
             >
               <Plus className="mr-2 h-4 w-4" />
               Add
             </Button>
           </div>
+
           
 
 
@@ -243,6 +254,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
@@ -250,6 +262,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             onChange={handleInputChange}
             rows={3}
           />
+
           
 
 
@@ -262,6 +275,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
 
@@ -289,6 +303,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             ))}
 
 
+
+
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
 
 
@@ -310,6 +326,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   );
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 }
@@ -318,3 +335,4 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 };
+

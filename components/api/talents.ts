@@ -6,6 +6,7 @@ import {
 
 
 
+
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
@@ -16,6 +17,7 @@ import {
 
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
+
 
 
 
@@ -65,6 +67,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const records = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : [];
   const now = new Date().toISOString();
   const record = {
+
     id: uuidv4(), name,
     email;
     skills: skills || [], programTrack: programTrack || null,
@@ -131,6 +134,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 }),
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201),
   return res.status(201).json({ id: record.id })
+
 
 }
 

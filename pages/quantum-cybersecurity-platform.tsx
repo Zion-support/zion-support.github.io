@@ -23,6 +23,7 @@ export default function QuantumCybersecurityPlatform() {
               'Post-quantum cryptography integrationQuantum key distribution optionsAdvanced anomaly and threat detectionSecurity analytics and incident workflowsCompliance and reportingFrom $4,999/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
+
             ))}
             ))  } catch (error) {
     console.error("Error:", error);
@@ -32,6 +33,7 @@ export default function QuantumCybersecurityPlatform() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Contact Security Team</Button>
@@ -40,6 +42,7 @@ export default function QuantumCybersecurityPlatform() {
       </div>
     </>
   )
+
 };
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -49,3 +52,4 @@ export default function QuantumCybersecurityPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

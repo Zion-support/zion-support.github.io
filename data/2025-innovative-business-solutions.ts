@@ -1,42 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
 
-
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string[];
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  }
-
-  {
-
-=======
 export interface InnovativeBusinessSolution {
   id: string, name: string,
   tagline: string, price: string,
@@ -506,6 +468,9 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7,
     reviews: 26,
   },;
+=======
+
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -518,7 +483,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7
 
     reviews: 26
-=======
+
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeBusinessSolution {;
   id: string,;
@@ -871,8 +837,11 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.7;
     reviews: 26;
 
+
+  }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   }
 ];
+
+

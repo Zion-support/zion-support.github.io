@@ -3,10 +3,12 @@
 
 
 
+
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
+
 
 
 
@@ -20,7 +22,9 @@ import { BasicInfoFormData } from "./schema",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface ContactFieldsProps {
@@ -40,6 +44,7 @@ export function ContactFields({ control }: ContactFieldsProps) {
             </FormControl>
             <FormMessage />
           </FormItem>
+
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
@@ -94,6 +99,7 @@ function ContactFields() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         )}
 
       />;
@@ -170,6 +176,7 @@ function ContactFields() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -180,4 +187,5 @@ function ContactFields() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

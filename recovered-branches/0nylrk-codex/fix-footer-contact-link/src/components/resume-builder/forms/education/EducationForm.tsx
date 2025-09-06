@@ -4,10 +4,12 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
@@ -17,6 +19,8 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
+
+
 
 
 
@@ -50,6 +54,8 @@ import {EducationFormFields} from './EducationFormFields';
       success = await updateEducation(editingId, educationData)
     } else {
       success = await addEducation(resumeId, educationData)
+
+
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Education } from '@/types/resume',;
@@ -93,11 +99,14 @@ export function EducationForm({;
       success = await addEducation(resumeId, educationData);
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
     }
     if (success) {
       setEditingId(null)
     }
+
 
   }
   };
@@ -117,6 +126,7 @@ export function EducationForm({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   const handleEdit = (edu: Education) => {
@@ -134,8 +144,21 @@ export function EducationForm({;
     } else {
       onBack()
 
+    }
 
-    if (success) {;
+  },;
+  const handleEdit = (edu: Education) => {;
+    setEditingId(edu.id!),;
+    // Form reset happens in the child component;
+  },;
+  const handleDelete = async (id: string) => {;
+    if (confirm('Are you sure you want to delete this education entry?')) {;
+      await deleteEducation(id);
+    }
+  };
+  const handleCancel = () => {;
+    if (editingId) {;
+
       setEditingId(null);
     }
 
@@ -148,7 +171,9 @@ export function EducationForm({;
   },
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   return (
     <div className="space-y-6">
@@ -158,6 +183,7 @@ export function EducationForm({;
           Add your educational background and academic achievements.
         </p>
       </div>
+
 
       <EducationList
         educationEntries={educationEntries}
@@ -180,9 +206,11 @@ export function EducationForm({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
+
 
 
 
@@ -197,6 +225,7 @@ export function EducationForm({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">

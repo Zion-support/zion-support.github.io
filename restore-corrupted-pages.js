@@ -2,9 +2,11 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 '),
+
 
 
       if (parts.length > 1) {
@@ -13,7 +15,9 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       }
     }
@@ -25,6 +29,8 @@
     if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
+
+
 
 
 
@@ -44,6 +50,8 @@
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
+
+
 ;
     // Create a backup of the current corrupted file;
     const timestamp = Date.now (),
@@ -61,6 +69,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -69,11 +78,14 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
+
+
 
 
 
@@ -99,6 +111,8 @@ function restoreAllCorruptedPages() {
         if ({
           scanDirectory(fullPath)
         }
+
+
 
 
 
@@ -130,10 +144,12 @@ function restoreAllCorruptedPages() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
         const result = restorePage(fullPath),
+
         if (result.restored) {
           results.restored++
           console.log(`✅ Restored: ${fullPath}`)
@@ -142,7 +158,21 @@ function restoreAllCorruptedPages() {;
         } else {
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+          // // // console.log(`❌ Failed: ${fullPath}`),
+          // // // console.log(`   Reason: ${result.reason}`)
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {;
+        results.total++,;
+        // // // console.log(`\n🔍 Checking: ${fullPath}`),;
+        const result = restorePage(fullPath);
+        if (result.restored) {;
+          results.restored++,;
+          // // // console.log(`✅ Restored: ${fullPath}`),;
+          // // // console.log(`   Used backup: ${result.backupUsed}`),;
+          // // // console.log(`   Corrupted backup: ${result.corruptedBackup}`);
+        } else {;
+          results.failed++,;
+          // // // console.log(`❌ Failed: ${fullPath}`),;
+          // // // console.log(`   Reason: ${result.reason}`);
 
 
         }
@@ -153,6 +183,7 @@ function restoreAllCorruptedPages() {;
       }
     }
   }
+
 
 
 
@@ -172,6 +203,7 @@ function restoreAllCorruptedPages() {;
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
+
 
 
 
@@ -205,6 +237,7 @@ function restoreAllCorruptedPages() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -213,11 +246,13 @@ function restoreAllCorruptedPages() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 }
 // Run the restoration if this script is executed directly
 if ({
   restoreAllCorruptedPages()
 }
+
 
 
 
@@ -278,6 +313,7 @@ if ( {) {
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -288,6 +324,7 @@ module.exports = {
   restore_page,
   restoreAllCorruptedPages,
   findBestBackup;
+
 },;
 
 };
@@ -304,3 +341,4 @@ main
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

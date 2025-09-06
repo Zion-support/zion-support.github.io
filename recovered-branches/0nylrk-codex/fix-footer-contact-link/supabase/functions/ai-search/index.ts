@@ -2,6 +2,7 @@
 
 
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -19,6 +20,7 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -31,6 +33,7 @@ serve(async (req) => {
     const { query } = await req && req.json();
     if (!query) {
       return new Response(
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -75,6 +78,7 @@ serve(async (req) => {
 
     const responseText = completion.choices[0].message.content || "",
     let filters,
+
     try {
       const match = responseText && responseText.match(/\{[\s\S]*\}/);
       filters = match ? JSON && JSON.parse(match[0]) : JSON && JSON.parse(responseText)
@@ -82,6 +86,8 @@ serve(async (req) => {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
     return new Response(
+
+
 
 
 
@@ -144,6 +150,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -155,3 +162,4 @@ if ( {) {
 
   }
 });
+

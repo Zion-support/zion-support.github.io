@@ -1,6 +1,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +33,7 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -41,6 +43,8 @@ import {AppScreenshots} from "@/components/mobile-app/AppScreenshots";
 import {AppTestimonials} from "@/components/mobile-app/AppTestimonials";
 import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
 import {DownloadSection} from "@/components/mobile-app/DownloadSection";
+
+
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -55,7 +59,9 @@ import { DownloadSection } from "@/components/mobile-app/DownloadSection",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 const MobileAppPage: React.FC = () => {
@@ -77,11 +83,20 @@ const MobileAppPage: React.FC = () => {
       <AppStoreBanner />
     </AppLayout>
   )
-}
-export default MobileAppPage;
 
 
-
+export default MobileAppPage,
+import React from "react",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { MobileAppHero } from "@/components/mobile-app/MobileAppHero",;
+import { AppFeatures } from "@/components/mobile-app/AppFeatures",;
+import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",;
+import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",;
+import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
+import { DownloadSection } from "@/components/mobile-app/DownloadSection",;
+const MobileAppPage: React.FC = () => {;
+  return (;
 
     <AppLayout>;
       <SEO;
@@ -98,6 +113,7 @@ export default MobileAppPage;
 
 
 
+
     </AppLayout>);
 }
 ;
@@ -106,3 +122,4 @@ export default MobileAppPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default MobileAppPage;
+

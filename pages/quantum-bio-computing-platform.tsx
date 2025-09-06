@@ -1,6 +1,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
 
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -59,7 +61,9 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
   );
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 
 
@@ -118,6 +122,7 @@ export default function QuantumBioComputingPlatformPage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -127,4 +132,5 @@ export default function QuantumBioComputingPlatformPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

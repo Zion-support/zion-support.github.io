@@ -3,6 +3,7 @@
 
 
 
+
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
@@ -20,6 +21,7 @@ export function useMessagingRealtime(;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   user: UserWithProfile;
   active_conversation: Conversation | null;
@@ -53,6 +55,8 @@ export function useMessagingRealtime(;
 
     return () => {
       supabase.removeChannel(subscription)
+
+
 import { useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { UserProfile, UserDetails } from '@/types/auth',;
@@ -107,6 +111,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -114,6 +119,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);

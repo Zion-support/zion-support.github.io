@@ -5,11 +5,10 @@ export default function AIEthicsGovernanceFramework() {
 		<ServiceLanding
 
 
-
-
-
-
-
+			title="AI Ethics & Governance Framework"
+			slug="ai-ethics-governance-framework"
+			description="Operationalize responsible AI with policies, risk assessments, model monitoring, and documentation. Align with global standards and regulatory expectations."
+			subtitle="Ship trustworthy AI with auditable controls and continuous oversight."
 
 
 			pricePerMonthUSD={1599  } catch (error) {
@@ -23,7 +22,9 @@ export default function AIEthicsGovernanceFramework() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Reduce compliance risk and accelerate approvals"
@@ -34,6 +35,18 @@ export default function AIEthicsGovernanceFramework() {
 				"Prompt governance and access controls",
 				"Regulatory mapping (EU AI Act, NIST AI RMF)",
 				"Training and incident response runbooks"
+
+
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
@@ -48,8 +61,10 @@ export default function AIEthicsGovernanceFramework() {
   }
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

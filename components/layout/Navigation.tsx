@@ -23,6 +23,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
   Globe,;
   ChevronDown,;
 } from 'lucide-react';
@@ -37,6 +38,7 @@ import Link from 'next/link';import { ;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import Link from 'next/link';
 
 
@@ -83,6 +85,7 @@ import Link from 'next/link';
                     <div
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
                     >
                       <span className='font-medium'>{item.name}</span>
@@ -103,6 +106,7 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -111,6 +115,7 @@ import Link from 'next/link';
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
                             className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
+
 
 
 
@@ -128,6 +133,7 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                           >
                             <div className='grid grid-cols-1 gap-3'>
@@ -205,6 +211,7 @@ import Link from 'next/link';
                                       </div>
                                     </div>
                                   </Link>
+
                                 );                                )
                               })}
 
@@ -217,6 +224,7 @@ import Link from 'next/link';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -240,6 +248,7 @@ import Link from 'next/link';
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
                     >
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
+
                       <span className='font-medium'>{item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
                     >
                       <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
@@ -252,10 +261,12 @@ import Link from 'next/link';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   )}
                 </div>
               ))}
             </div>
+
             {/* CTA Button */}
             <div className='hidden lg:block'>
 
@@ -316,6 +327,7 @@ import Link from 'next/link';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
               <motion.a
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
@@ -350,6 +362,7 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation */}
       <AnimatePresence>;
@@ -358,6 +371,7 @@ import Link from 'next/link';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
       {/* Mobile Navigation */}
       <AnimatePresence>
@@ -376,7 +390,9 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -390,6 +406,7 @@ import Link from 'next/link';
 
 
             {/* Backdrop */}
+
 
 
             <div
@@ -409,6 +426,7 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Mobile Menu */}
             <motion&& motion.div
               initial={{ x: '100%' }}
@@ -416,6 +434,7 @@ import Link from 'next/link';
               exit={{ x: '100%' }}
               transition={{ duration: 0.3 }}
               className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
+
 
 
 
@@ -447,6 +466,7 @@ import Link from 'next/link';
                   {navigationItems && navigationItems.map(item => (            >;
               <div className="p-6">;
               transition={{ duration: 0.3 }}
+
 
 
 
@@ -555,6 +575,7 @@ import Link from 'next/link';
                     <X className='w - 6 h - 6' />                  </motion.button>;
                 </div>;
                 {/* Mobile Menu Items */}
+
 
 
                 <div className='space - y-4'>;
@@ -703,6 +724,7 @@ import Link from 'next/link';
 
 
 
+
                           </div>
                         </div>
                       ) : (
@@ -711,14 +733,18 @@ import Link from 'next/link';
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
 
-
-
+                          className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
+                        >
+                          <item.icon className='w-5 h-5 text-cyan-400' />
+                          <span className='text-white font-medium'>
+                            {item.name}
 
 
                       )}
                     </div>
                   ))}
                 </div>
+
 
 
 
@@ -741,6 +767,7 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -756,6 +783,7 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -764,6 +792,7 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                       <span>{contactInfo.mobile}</span>
                     </div>
@@ -839,6 +868,7 @@ import Link from 'next/link';
   );
 
 
+
 };
 export default Navigation;  );
 };
@@ -851,9 +881,11 @@ export default Navigation;
 
 
 
+
 export default Navigation;  )
 }
 export default Navigation;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -863,3 +895,4 @@ export default Navigation;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

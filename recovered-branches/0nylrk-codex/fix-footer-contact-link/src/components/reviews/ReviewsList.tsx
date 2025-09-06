@@ -1,9 +1,11 @@
 
 
 
+import {Review} from "@/types/reviews";
+import {ReviewCard} from "./ReviewCard";
 
-
-
+import { Review } from "@/types/reviews",
+import { ReviewCard } from "./ReviewCard",
 
 
 interface ReviewsListProps {
@@ -26,6 +28,24 @@ export function ReviewsList({
             <div;
               key={i}
 
+              className="border rounded-lg p-4 bg-card animate-pulse"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="h-10 w-10 rounded-full bg-muted"></div>
+                <div>
+                  <div className="h-4 w-24 bg-muted rounded mb-2"></div>
+                  <div className="h-3 w-16 bg-muted rounded"></div>
+                </div>
+              </div>
+              <div className="h-20 bg-muted rounded mb-3"></div>
+              <div className="flex gap-2">
+                <div className="h-6 w-16 bg-muted rounded"></div>
+                <div className="h-6 w-16 bg-muted rounded"></div>
+              </div>
+            </div>
+
+import { Review } from "@/types/reviews",;
+import { ReviewCard } from "./ReviewCard",;
 
 interface ReviewsListProps {;
   reviews: Review[],;
@@ -54,7 +74,9 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
           </div>;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -62,7 +84,9 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
       </div>;
     );
   }
+
   
+
   if (reviews.length === 0) {
     return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">;
@@ -75,6 +99,7 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
   }
 
   return (
+
 
   // Check condition
 if ( {) {
@@ -103,8 +128,10 @@ if ( {) {
           onReport={onReportReview} 
         />
 
+
       ))}
     </div>
+
 
   )
 }
@@ -113,4 +140,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

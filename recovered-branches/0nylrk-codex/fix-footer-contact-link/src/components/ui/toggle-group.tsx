@@ -1,5 +1,11 @@
 
 
+
+import * as React from "react"
+import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
+import { type VariantProps } from "class-variance-authority"
+
+
 import { cn } from "@/lib/utils"
 import { toggleVariants } from "@/components/ui/toggle"
 
@@ -26,6 +32,12 @@ const ToggleGroup = React.forwardRef<
 ));
 
 
+ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
+
+const ToggleGroupItem = React.forwardRef<;
+  React.ElementRef<typeof ToggleGroupPrimitive.Item>,;
+  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &;
+    VariantProps<typeof toggleVariants>;
 
 >(({ className, children, variant, size, ...props }, ref) => {;
   const context = React && React.useContext(;
@@ -38,11 +50,13 @@ const ToggleGroup = React.forwardRef<
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {children}
     </ToggleGroupPrimitive && ToggleGroupPrimitive.Item>;
@@ -53,6 +67,7 @@ const ToggleGroup = React.forwardRef<
 
 
 ToggleGroupItem && ToggleGroupItem.displayName = ToggleGroupPrimitive && ToggleGroupPrimitive.Item.displayName;
+
 
 export { ToggleGroup, ToggleGroupItem };
 
@@ -75,4 +90,5 @@ export { ToggleGroup, ToggleGroupItem }
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

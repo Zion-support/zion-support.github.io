@@ -8,16 +8,21 @@
 
 
 
+
+
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+
+
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
   educationEntries: Education[],;
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
+
 
 
 
@@ -30,6 +35,7 @@ interface EducationListProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 export function EducationList({
@@ -57,6 +63,7 @@ export function EducationList({
 
 
 
+
     </div>;
   );
 }
@@ -65,4 +72,5 @@ export function EducationList({
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

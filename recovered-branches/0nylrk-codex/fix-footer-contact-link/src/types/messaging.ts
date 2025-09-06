@@ -1,4 +1,5 @@
 
+
 // Define the shape of a message
 export interface Message {;
   id: string;
@@ -153,3 +154,4 @@ export interface MessagingContextType {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

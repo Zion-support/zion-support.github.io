@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -21,6 +22,7 @@ export function MobileHome() {
   const { user } = useAuth(),
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   
+
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -28,6 +30,7 @@ export function MobileHome() {
         showNotifications
         showSettings
       />
+
       <main className="py-4">
       
       <main className="py-4">
@@ -62,6 +65,7 @@ export function MobileHome() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
       </main>;

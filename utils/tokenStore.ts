@@ -3,6 +3,7 @@ import path from 'path';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -13,6 +14,7 @@ export interface TokenTransaction {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -21,6 +23,8 @@ export interface TokenTransaction {
   timestamp: string;
   metadata?: Record < string, any>;
 }
+
+
 
 
 
@@ -107,13 +111,15 @@ function getDefaultConfig (): TokenConfig {
 
   return {
 
-
-
-    name: 'ZION Token',
-    symbol: 'ZION$',
-
-
-
+    name: 'ZION Token'
+    symbol: 'ZION$'
+    totalSupply: 1000000000
+    circulatingSupply: 250000000
+    exchangeRate: 0.05
+    stakingEnabled: true
+    stakingRewardRate: 12.5
+  }
+}
 
 
   const transactions = loadTransactions();
@@ -134,6 +140,7 @@ function getDefaultConfig (): TokenConfig {
 
 
 
+
 export function getConfig(): TokenConfig {;
   return loadConfig();
 }
@@ -143,6 +150,7 @@ export function setConfig(config: TokenConfig): void {;
 }
 
 export function getUserBalance(userId: string): number {;
+
 
 
 

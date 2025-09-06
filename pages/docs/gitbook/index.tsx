@@ -3,6 +3,7 @@
 
 
 
+
 import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
@@ -10,6 +11,7 @@ import Link from 'next/link',;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 function list(dir: string, baseDir: string) {
 
@@ -22,6 +24,7 @@ function list(dir: string, baseDir: string) {
   })
 
 
+
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name
@@ -29,6 +32,7 @@ function list(dir: string, baseDir: string) {
     : []
 
   return { props: { sections }, revalidate: 600 }
+
 
 
 
@@ -51,7 +55,9 @@ function list(dir: string, baseDir: string) {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
   });
@@ -77,6 +83,8 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
   return (
@@ -91,6 +99,7 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
               {s.items.map((it) => (
                 <li key={it.rel}>
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
+
                     {it.rel}
 
 
@@ -108,12 +117,15 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
 
 
 
+
                     {it.rel  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </Link>
+
+
 
 
                 </li>
@@ -137,11 +149,13 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

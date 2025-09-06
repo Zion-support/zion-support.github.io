@@ -1,7 +1,28 @@
-import useSWR from 'swr';
-import Link from 'next/link';
 
 
+
+import useSWR from 'swr'
+import Link from 'next/link'
+const fetcher = (url: string) => fetch(url).then((r) => r.json())
+export default function ClientDashboard() {
+  const { data, error, mutate } = useSWR('/api/jobs', fetcher),
+  if (error) return <div className="text-red-600">Failed to load</div>,
+  if (!data) return <div>Loading…</div>,
+  if (error) return <div className="text-red-600">Failed to load</div>,
+  if (!data) return <div>Loading…</div>,
+  const jobs = data.jobs as any[]
+
+  async function closeJob(id: string) {
+    await fetch(`/api/jobs/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status: 'Closed' })}),
+    mutate()
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
   return (
@@ -25,6 +46,7 @@ import Link from 'next/link';
                 {job.requiredSkills?.length > 0 && (
                   <div className="mt-2 flex flex-wrap gap-2">
                     {job.requiredSkills.map((s: string) => (
+
                       <span
                         key={s}
                         className='px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800'
@@ -119,6 +141,7 @@ export default function ClientDashboard(req, res) {
 
 
 
+
         ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -136,9 +159,11 @@ export default function ClientDashboard(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

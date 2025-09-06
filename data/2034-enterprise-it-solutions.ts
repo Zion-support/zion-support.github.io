@@ -2,6 +2,8 @@
 
 
 
+
+
   id: string;
   name: string;
   tagline?: string;
@@ -23,12 +25,15 @@
 
 
 
+
+
   features: string[];
   integrations?: string[];
   use_cases?: string[];
   link: string; // canonical internal link under /services/*;
   real_service?: boolean;
   rating?: number;
+
 
 
       'Device posture checks',
@@ -284,6 +289,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 
 
+
 }];	id: string;
 	name: string;
 
@@ -295,12 +301,16 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 
 
+
+
 export type EnterpriseITSolution = {
 	id: string,
 	name: string,
 	tagline?: string,
 	description: string,
+
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
+
 	pricing: {
 
 
@@ -309,6 +319,7 @@ export type EnterpriseITSolution = {
 
 
 		enterprise?: string
+
 	}
 	features: string[];
 	integrations?: string[];
@@ -317,10 +328,12 @@ export type EnterpriseITSolution = {
 	features: string[],
 	integrations?: string[],
 	useCases?: string[],
+
 	link: string, // canonical internal link under /services/*
 	realService?: boolean,
 	rating?: number,
 	launchDate?: string
+
 }
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	{
@@ -449,6 +462,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 	{
 		id: 'zero-trust-network-architecture',
 		name: 'Zero Trust Network Architecture',
+
 		tagline: 'Identity-first perimeterless security for modern enterprises',
 		description: 'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',
 		category: 'Enterprise Security',
@@ -665,14 +679,6 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		realService: true;
 
 
-
-	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-];
-;
-
-
-=======
 },
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
@@ -895,3 +901,8 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
 	}
 ];
+=======
+	}
+];
+
+

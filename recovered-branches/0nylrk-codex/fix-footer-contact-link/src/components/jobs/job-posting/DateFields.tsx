@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,11 +12,14 @@ import {;
 
 
 
+
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
+
+
 
 
 
@@ -36,7 +40,9 @@ import { cn } from "@/lib/utils",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface DateFieldsProps {
@@ -47,6 +53,8 @@ interface DateFieldsProps {
 }
 
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {
+
+
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -58,8 +66,10 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               <Button
                 variant={"outline"}
                 className={cn(
+
                   "w-full md: w-[240px] pl-3 text-left font-normal"
                   "w-full md:w-[240px] pl-3 text-left font-normal",
+
                   !startDate && "text-muted-foreground"
                 )}
               >
@@ -74,6 +84,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
           <PopoverContent className="w-auto p-0" align="start">
             <Calendar
               mode="single"
+
               selected={startDate}
               onSelect={setStartDate}
               disabled={(date) => date > new Date()}
@@ -136,6 +147,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initialFocus
             />
           </PopoverContent>
@@ -149,9 +161,11 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               <Button
                 variant={"outline"}
                 className={cn(
+
                   "w-full md: w-[240px] pl-3 text-left font-normal"
 
                   "w-full md:w-[240px] pl-3 text-left font-normal",
+
                   !endDate && "text-muted-foreground"
                 )}
               >
@@ -170,6 +184,8 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               onSelect={setEndDate}
 
 
+
+
               disabled={(date) =>;
                 date < new Date();
               }
@@ -179,6 +195,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
           </PopoverContent>;
         </Popover>;
       </div>;
+
     </div>;
 
 
@@ -186,6 +203,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   );
 >>>>>>> origin/feature/merge-conflicts-and-improvements

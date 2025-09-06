@@ -1,9 +1,9 @@
 
 
+if (ctx) {
+export default function UltraFuturisticBackground2035({
 
 
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -670,8 +670,10 @@ if ( {) {
             className='h-full w-full'
             style={{
               backgroundImage: `
+
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
@@ -708,6 +710,7 @@ if ( {) {
               linear - gradient (rgba (139, 92, 246, 0.1) 1px, transparent 1px);
               linear - gradient (90deg, rgba (139, 92, 246, 0.1) 1px, transparent 1px);
             `;
+
             background_size: '50px 50px';
           }} />;
         </div>;
@@ -717,15 +720,18 @@ if ( {) {
           className='absolute inset - 0 w - full h - full'          style={{ filter: 'blur (0.5px)' }}          className="absolute inset - 0 w - full h - full";
           style={{ filter: 'blur (0.5px)' }}
         />;
+
         {/* Floating neon orbs */}
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 32 h - 32 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 20';
 
           animate={{
+
             scale: [1, 1.2, 1]
             opacity: [0.2, 0.4, 0.2]
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
+
             rotate: [0, 180, 360],          }}
           transition={{
 
@@ -752,6 +758,7 @@ if ( {) {
 
             rotate: [360, 180, 0],          }}
           transition={{
+
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',          }}
@@ -775,6 +782,7 @@ if ( {) {
 
             duration: 8
             repeat: Infinity
+
 
 
 
@@ -808,12 +816,10 @@ if ( {) {
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+            animate={{
+              y: [-100, 100, -100];
+              opacity: [0, 0.3, 0]
 
 
             }}
@@ -850,6 +856,8 @@ if ( {) {
             animate={{
               y: [100, -100, 100];
               opacity: [0, 0.3, 0]
+
+
             duration: 8,
             repeat: Infinity,
 
@@ -867,6 +875,7 @@ if ( {) {
             }}
           />
         </div>
+
       </div>
       {/* Render children */}
       {children}
@@ -886,3 +895,4 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

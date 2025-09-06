@@ -1,11 +1,14 @@
+
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -73,6 +76,7 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -85,6 +89,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
       {/* Hero Section */}
+
 
 
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'>;
@@ -160,6 +165,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
             </div>
           </motion.div>
@@ -282,6 +288,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                         <div key={service.id} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
+
                       ))}
                     </div>
 
@@ -301,6 +308,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     <Link
 
@@ -322,6 +330,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
+
           </div>;
         </div>;
       </section>;
@@ -337,6 +346,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Featured Services */}
 
 
@@ -396,6 +406,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
+
           </div>;
         </div>;
       </section>;
@@ -411,6 +422,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Market Analysis */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -437,10 +449,12 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -524,6 +538,8 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -537,7 +553,9 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -595,6 +613,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
         </div>
       </section>
       <UltraFuturisticFooter2028 />
+
 
     </>;
 );
@@ -756,4 +775,5 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

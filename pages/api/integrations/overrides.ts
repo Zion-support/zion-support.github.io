@@ -1,6 +1,7 @@
 
 
 
+
   if (req && req.method === "GET") {
 
     const state = readState();
@@ -46,4 +47,5 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

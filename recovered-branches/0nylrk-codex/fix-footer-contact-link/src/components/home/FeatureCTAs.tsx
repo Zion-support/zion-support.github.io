@@ -5,12 +5,15 @@
 
 
 
+
+
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
+
 
 
 
@@ -58,13 +61,16 @@ function FeatureCTAs() {
 
 
 
+
 export function FeatureCTAs() {
   const features = [
     {
+
       title: "AI Talent Matching",;
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
+
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -85,12 +91,15 @@ export function FeatureCTAs() {
       badge: "New",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
     },
+
+
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware and tech equipment for AI development and research."
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />
       link: "/equipment"
       details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects."
+
     }
     {
       title: "Community Hub"
@@ -107,6 +116,7 @@ export function FeatureCTAs() {
       link: "/community",
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
     },
+
     {
       title: "Mobile Experience"
       description: "Take Zion with you on the go with our mobile app for iOS and Android devices."
@@ -114,6 +124,7 @@ export function FeatureCTAs() {
       link: "/mobile-launch"
       badge: "Featured"
       details: "Manage your projects, communicate with clients or talents, and receive real-time updates wherever you are."
+
     }
     {
       title: "Equipment Catalog",
@@ -199,6 +210,7 @@ export function FeatureCTAs() {
       link: "/dashboard/projects",
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     },
+
     {
       title: "Zion Hire AI"
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches."
@@ -229,6 +241,7 @@ export function FeatureCTAs() {
 
                   {feature.icon}
                   {feature.badge && (
+
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -357,6 +370,7 @@ export function FeatureCTAs() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                     <Badge variant="secondary" className="bg-primary/20 text-primary">

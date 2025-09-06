@@ -1,6 +1,7 @@
 
 
 
+
 };
 </header> {;
   items && items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) ;
@@ -42,6 +43,7 @@ export default function InnovationDigest(): any ({ items }: Props) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 };
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
@@ -49,7 +51,9 @@ export default function InnovationDigest(): any ({ items }: Props) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default function InnovationDigest({ items }: Props) {
@@ -76,20 +80,6 @@ export default function InnovationDigest({ items }: Props) {
       </ul>
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-);
-}
-  );
-}
-
-
-=======
 }
 </header> {
   items.length === 0 && (<div className="text - gray - 600 dark:text - gray - 400" >No entries yet. The automation will populate this feed shortly.</div>);
@@ -143,5 +133,13 @@ export default function InnovationDigest({ items }: Props) {
             {it.summary && <p className=&quot;mt-2 text-sm text-gray-600 dark:text-gray-300&quot;>{it.summary}</p>}
 =======
 
+
+
+=======
+);
+}
+
+  );
+}
 
 

@@ -1,8 +1,22 @@
 
 
+export async function getStaticProps() {;
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
 ;
+export default function AIAutonomousMarketingPlatform(req, res) {
+  try {
+	return <ServicePage {...props} />;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

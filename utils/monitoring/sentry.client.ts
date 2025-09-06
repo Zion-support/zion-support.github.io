@@ -1,7 +1,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 if (typeof window !== 'undefined') {;
@@ -15,6 +17,7 @@ if (typeof window !== 'undefined') {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
@@ -22,3 +25,4 @@ if (typeof window !== 'undefined') {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

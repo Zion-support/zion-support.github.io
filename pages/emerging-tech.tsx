@@ -3,6 +3,7 @@
 
 
 
+
   return (
     <Layout>
 
@@ -15,6 +16,7 @@ import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
 
 
 
+
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
@@ -22,7 +24,9 @@ import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 export default function EmergingTechPage() {
   const features = [
@@ -41,7 +45,9 @@ export default function EmergingTechPage() {_const _features = [
     {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
     {_name: 'Metaverse AI Platform', _href: '/metaverse-ai-development-platform'}];
 
+
 ursor/fix-lint-push-and-merge-to-main-ce13
+
   return (_<Layout>
 
       <Head>
@@ -58,6 +64,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Emerging Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+
               <a href="/contact" className="px-8 py-4">Start a Pilot</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
@@ -73,6 +80,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
           </header>
           <section>
@@ -93,6 +101,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
+
+
 
 
                 </Link>
@@ -118,10 +128,12 @@ ursor/fix-lint-push-and-merge-to-main-ce13
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,9 +1,16 @@
 
+
+import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';
+
+import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';
+
+
 :src.disabled/components/disabled/AICodeGenerator.jsx
 import React,{ useState,useCallback } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from\';\';lucide-react\' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState(\'';generate\') const [generatedCode,setGeneratedCode] = useState(\'';\';) const [customCode,setCustomCode] = useState(\'') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) \'';
 const React,{ useState,useCallback } from";react" import { motion,AnimatePresence } from";";framer-motion" import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from";";lucide-react" const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState("";generate") const [generatedCode,setGeneratedCode] = useState("";";) const [customCode,setCustomCode] = useState("") const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) "";''"
 import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('';';) const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';
 import _React,{ useState,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { Code,Sparkles,Eye,Zap,TestTube,FileText,Download,Copy,CheckCircle,AlertCircle,Brain,Settings,Play,Save,Share2 } from';';lucide-react' const AICodeGenerator = () => { const [activeTab,setActiveTab] = useState('';generate') const [generatedCode,setGeneratedCode] = useState('', ') const [customCode,setCustomCode] = useState('') const [copied,setCopied] = useState(false) const [isGenerating,setIsGenerating] = useState(false) '';
+
 :temp_exclude/src.disabled/components/disabled/AICodeGenerator.jsx
 
 
@@ -13,4 +20,5 @@ import _React,{ useState,useCallback } from';react' import { motion,AnimatePrese
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

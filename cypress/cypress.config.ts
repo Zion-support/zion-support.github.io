@@ -1,3 +1,4 @@
+
 import { defineConfig } from 'cypress';
 export default defineConfig({
   e2e: {
@@ -43,10 +44,13 @@ export default defineConfig({;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors;
     setupNodeEvents(on, config) {;
       on('before:browser:launch', (browser = {}, launchOptions) => {;
+
         if (browser.family === 'chromium') {;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
+
+
 
 
 
@@ -131,6 +135,7 @@ export default defineConfig({;
 
 
 
+
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -144,6 +149,7 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
+
 
 
 
@@ -196,6 +202,7 @@ export default defineConfig({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -204,4 +211,5 @@ export default defineConfig({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

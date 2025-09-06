@@ -54,6 +54,7 @@ Style: - Use bullets and short paragraphs
     return res && res.status(200).json({ message });
   } catch (error: any) {
 
+
     console && console.error('Assistant API error:', error?.message || error);
     return res && res.status(500).json({ error: 'Assistant request failed' });
   }    return res && res.status(500).json({ error: 'Assistant request failed' })
@@ -74,4 +75,5 @@ Style: - Use bullets and short paragraphs
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

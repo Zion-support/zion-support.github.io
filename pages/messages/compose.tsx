@@ -1,13 +1,22 @@
 
+import React from 'react';
+
+import { useRouter } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
+export default function ComposePage(req, res) {
+  try {
 
 
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
+
+
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
+
   React.useEffect(() => {
     if (!loading && !user) router.replace('/auth');  }, [loading, user, router]);
   if (!user) return null;
@@ -48,6 +57,7 @@
     : { type: 'general' },;
   const onSend = async () => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
     setSending(true);
 
     if (!recipientId && !talentId) return alert('Missing recipient');
@@ -62,9 +72,11 @@
 
 
 
+
       const mime = file.type |'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
       const mime = file.type || 'application/octet-stream';
+
 
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {
@@ -72,6 +84,7 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
       const mime = file.type || 'application/octet-stream';
@@ -86,10 +99,12 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
+
         recipientId: recipientId |talentId
         body: message
         linkUrl: linkUrl |undefined
@@ -146,10 +161,12 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             </p>
           </div>
           <div className="p-4 space-y-3">
             <textarea
+
               value={message}
               onChange={e => setMessage(e.target.value)}
               rows={6}
@@ -192,6 +209,7 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             />
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />
@@ -202,6 +220,7 @@
         </div>
       </div>
     </div>
+
 
 
 
@@ -264,5 +283,6 @@
                   ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                   : 'Write your message...';
               }
+
 
 

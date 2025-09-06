@@ -1,8 +1,10 @@
 
+
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {List, RefreshCw} from "lucide-react";
 import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
+
 
 
 
@@ -21,7 +23,9 @@ export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
+
   
+
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
@@ -35,7 +39,9 @@ export function ApiLogs() {
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   },
+
   
+
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -47,6 +53,7 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
+
   }
   // Calculate pagination info
   const totalPages = Math.ceil(totalLogs / pageSize);
@@ -58,6 +65,7 @@ export function ApiLogs() {
   const totalPages = Math.ceil(totalLogs / pageSize),
   const hasNextPage = currentPage < totalPages - 1,
   const hasPrevPage = currentPage > 0,
+
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -74,6 +82,7 @@ export function ApiLogs() {
           <div className="flex items-center space-x-2">
             <span className="text-sm text-zinc-400">Show</span>
             <Select
+
               value={pageSize.toString()}
               onValueChange={(value) => {
                 setPageSize(Number(value));
@@ -152,6 +161,7 @@ export function ApiLogs() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -269,6 +279,7 @@ export function ApiLogs() {;
             </div>;
           </div>;
         )}
+
       </CardContent>
     </Card>
   )
@@ -278,9 +289,4 @@ export function ApiLogs() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { useState, useEffect } from './react';
-import { format } from './date - fns';
-import { List, RefreshCw } from './lucide-react';
-import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
-;
+

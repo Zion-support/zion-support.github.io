@@ -1,17 +1,21 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handle_submit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
+
+
 
 
 
@@ -103,8 +107,10 @@ budgetRange: values.budgetRange;
       throw new Error(err?.message || 'Failed to submit');
 
     }
+
   }
   };
+
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
@@ -123,13 +129,16 @@ budgetRange: values.budgetRange;
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {filtered.map((service) => (
+
                 <EnhancedMarketplaceCard key={service.slug |service.id} service={service} onRequestQuote={handleRequestQuote} />
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+
               ))}
             </div>
           </div>
         </div>
       </div>
+
 
 
 
@@ -248,11 +257,13 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
+
 
 
       />;
@@ -265,4 +276,5 @@ export default ServicesPage;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

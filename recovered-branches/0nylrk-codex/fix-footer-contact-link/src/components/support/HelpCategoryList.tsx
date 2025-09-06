@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -14,6 +15,7 @@ import {HelpCategory} from "./types";
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface HelpCategoryListProps {
   categories: HelpCategory[];
@@ -39,6 +41,7 @@ export function HelpCategoryList({
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
+
       );
     : categories;
       )
@@ -91,6 +94,7 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
             </p>;
           </CardContent>;
         </Card>;
+
 
 
 

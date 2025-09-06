@@ -5,9 +5,11 @@ export default function AiPoweredDecisionEngine() {
 		<ServiceLanding
 
 
-
-
-
+			pricePerMonthUSD={279  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 			implementationWeeks="3-7 days"
@@ -23,6 +25,18 @@ export default function AiPoweredDecisionEngine() {
 				"Versioned strategies with canary rollouts"
 
 
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	)
@@ -35,8 +49,10 @@ export default function AiPoweredDecisionEngine() {
   }
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

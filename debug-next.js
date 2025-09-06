@@ -1,7 +1,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 console.log('🔍 Debugging Next.js project structure...'),;
@@ -18,7 +20,9 @@ if (fs.existsSync('package.json')) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
@@ -31,7 +35,9 @@ if (fs.existsSync('pages')) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   console.log('📄 Pages found:', pages.length),;
@@ -44,7 +50,9 @@ console.log('🔍 Checking for problematic files...'),;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
@@ -56,8 +64,10 @@ for (const file of allFiles) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

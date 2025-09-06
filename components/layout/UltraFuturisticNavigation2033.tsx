@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -68,6 +69,7 @@ import {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 import {
@@ -363,6 +365,7 @@ const quickLinks = [
   { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu, color: 'from-blue-500 to-cyan-600' }
   { name: 'Micro SAAS', href: '/enhanced-micro-saas-showcase', icon: Target, color: 'from-green-500 to-yellow-600' }
 
+
 export default function UltraFuturisticNavigation2033() {
 
 
@@ -603,6 +606,7 @@ export default function UltraFuturisticNavigation2033() {
 
 
 
+
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -641,25 +645,56 @@ export default function UltraFuturisticNavigation2033() {
           <div className="flex items-center justify-between h-20">
 
             {/* Logo */}
-            <motion&& motion.div
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-                {/* Mega Menu */}
-                <AnimatePresence>;
-                  {activeCategory === 'services' && (;
-                    <motion&& motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                      transition={{ duration: 0 && 0.2 }}
-                      onMouseEnter={() => setActiveCategory('services')}
-                      onMouseLeave={() => setActiveCategory(null)}
-                      className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
-
-
+            <motion.div
+              className='flex items-center space-x-3'
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >
+              <Link href='/' className='flex items-center space-x-3'>
+                <div className='relative'>
+                  <div className='w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl'>
+                    <Rocket className='w-7 h-7 text-white' />
+                  </div>
+                  <div className='absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse'></div>
+                </div>
+                <div className='flex flex-col'>
+                  <span className='text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent'>
+                    Zion Tech Group
+                  </span>
+                  <span className='text-xs text-purple-300 font-medium'>                    Future Technology Solutions            {/* Logo */}
+            <motion.div
+              className="flex items-center space-x-3"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <Link href="/" className="flex items-center space-x-3">
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-2xl">
+                    <Rocket className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 via-cyan-500 to-blue-500 rounded-xl blur opacity-75 animate-pulse"></div>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </span>
+                  <span className="text-xs text-purple-300 font-medium">
+                    Future Technology Solutions
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items-center space-x-8'>
+              {/* Services Mega Menu */}
+              <div className='relative group'>
+                <button
+                  onMouseEnter={() => setActiveCategory('services')}
+                  onMouseLeave={() => setActiveCategory(null)}
+                  className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
+                >
+                  <span>Services</span>
 
 
                 {/* Mega Menu */}
@@ -678,10 +713,12 @@ export default function UltraFuturisticNavigation2033() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -709,6 +746,7 @@ export default function UltraFuturisticNavigation2033() {
 
                                   key={service.name}
                                   href={service.href}
+
                                   className="block group";
                                 >;
                                   <div className="p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200">;
@@ -757,6 +795,7 @@ export default function UltraFuturisticNavigation2033() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                                 </Link>
                               ))}
                             </div>
@@ -767,6 +806,7 @@ export default function UltraFuturisticNavigation2033() {
                   )}
                 </AnimatePresence>
               </div>
+
 
 
 
@@ -807,17 +847,20 @@ export default function UltraFuturisticNavigation2033() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
               {/* Quick Links */}
               {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
 
+
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >              {quickLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+
 
 
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
@@ -828,10 +871,12 @@ export default function UltraFuturisticNavigation2033() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   {link.name}
                 </Link>
@@ -896,7 +941,9 @@ export default function UltraFuturisticNavigation2033() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -911,6 +958,8 @@ export default function UltraFuturisticNavigation2033() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
+
+
 
 
 
@@ -957,6 +1006,7 @@ export default function UltraFuturisticNavigation2033() {
 
 
 
+
                 </div>;
 
 
@@ -970,6 +1020,7 @@ export default function UltraFuturisticNavigation2033() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {/* Mobile Quick Links */}
 
 
@@ -978,6 +1029,7 @@ export default function UltraFuturisticNavigation2033() {
 
                   </div>
                 </div>
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -992,6 +1044,7 @@ export default function UltraFuturisticNavigation2033() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -1017,6 +1070,7 @@ export default function UltraFuturisticNavigation2033() {
             </motion.div>
 
           )}
+
 
         </AnimatePresence>;
       </nav>;
@@ -1044,4 +1098,5 @@ export default function UltraFuturisticNavigation2033() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

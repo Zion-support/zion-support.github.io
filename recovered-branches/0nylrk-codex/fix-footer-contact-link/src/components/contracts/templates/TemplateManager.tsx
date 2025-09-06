@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -37,6 +38,7 @@ import {ContractFormValues} from "@/components/contracts/components/ContractForm
 import {useToast} from "@/hooks/use-toast";
 
 
+
 interface TemplateManagerProps {
 
 
@@ -45,6 +47,7 @@ interface TemplateManagerProps {
   onSelectTemplate: (template: ContractFormValues) => void
 
   currentValues?: ContractFormValues
+
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -78,18 +81,23 @@ export function TemplateManager({;
     if (template && template.template_data) {
       onSelectTemplate(template.template_data),
       onClose(),
+
       toast({
         title: "Template loaded"
         description: `Template "${template.title}" has been loaded.`})
     }
+
   }
   },
+
 
   const handleSaveComplete = () => {
     setMode("list"),
     setSelectedTemplate(null)
+
   }
   },
+
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -103,6 +111,7 @@ export function TemplateManager({;
         {mode === "list" ? (
           <div className="space-y-4">
             <div className="flex justify-end">
+
               <Button
                 variant="outline"
               <Button 
@@ -118,11 +127,14 @@ export function TemplateManager({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 disabled={!currentValues}
               >
                 Save Current as Template
               </Button>
             </div>
+
+
 
 
 
@@ -142,6 +154,7 @@ export function TemplateManager({;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -150,12 +163,14 @@ export function TemplateManager({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
             currentValues={currentValues}
           />;
         )}
+
       </DialogContent>
     </Dialog>
   )
@@ -188,5 +203,4 @@ export function TemplateManager({;
     </Dialog>);
 }
 
-=======
-;
+

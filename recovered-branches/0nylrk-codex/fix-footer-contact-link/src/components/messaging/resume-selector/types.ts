@@ -1,6 +1,7 @@
 
 
 
+
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -11,6 +12,7 @@
 
 
 export interface ResumeSelectorProps {
+
 
 
 
@@ -32,6 +34,7 @@ export interface ResumeOption {;
   file?: File;
 }
 ;
+
 export interface ResumeSelectorProps {;
 
 
@@ -39,6 +42,7 @@ export interface ResumeSelectorProps {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   onResumeSelected: (resumeOption: ResumeOption) => void;
 >>>>>>> origin/feature/merge-conflicts-and-improvements

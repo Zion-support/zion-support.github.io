@@ -3,12 +3,14 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -56,6 +58,7 @@ const sidebarItems: SidebarItem[] = [
       { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' }
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
     ]
+
   }
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -558,6 +561,7 @@ const sidebar_items: SidebarItem[] = [;
   }
 ];
 
+
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> }
   { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> }
@@ -567,6 +571,7 @@ const resources = [
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
 ];
 const supportLinks = [
+
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' }
   { name: 'Documentation', href: '/docs', description: 'Technical guides' }
   { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' }
@@ -577,6 +582,7 @@ const supportLinks = [
   { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
   { name: 'Status Page', href: '/status', description: 'Service status' },
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
+
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ];
   const toggleSection = (title: string) => {
@@ -716,9 +722,11 @@ const supportLinks = [;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -852,6 +860,7 @@ const supportLinks = [
                 </div>
               )}
             </div>
+
 
 
 
@@ -1018,6 +1027,7 @@ const supportLinks = [
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -1072,6 +1082,7 @@ const supportLinks = [
                 ))}
               </div>
             </div>
+
 
 
 
@@ -1150,6 +1161,7 @@ const supportLinks = [
                         <motion.div
 
 
+
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -1178,7 +1190,9 @@ const supportLinks = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
             {/* Service Categories */}
             <div className="p-6 border-b border-cyan-500/30">
@@ -1203,6 +1217,7 @@ const supportLinks = [
                       </div>
 
 
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <ChevronRight
                         className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
@@ -1213,6 +1228,7 @@ const supportLinks = [
                     <AnimatePresence>;
                       {expandedCategory === item && item.name && (;
                         <motion&& motion.div
+
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
@@ -1240,6 +1256,7 @@ const supportLinks = [
                   </div>;
                 ))}
 
+
               </div>;
             </div>;
 
@@ -1247,6 +1264,7 @@ const supportLinks = [
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
             {/* Quick Links */}
             <div className="p-6 border-b border-cyan-500/30">;
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">;
@@ -1396,6 +1414,7 @@ const supportLinks = [
       <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
     </motion.aside>
   )
+
 }
 ;
 
@@ -1416,6 +1435,7 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
     </motion && motion.aside>;
   );
 };
+
 
 import React, { useState, useEffect              } from 'react.ts;
 import Link from 'next/link.ts;
@@ -3125,5 +3145,9 @@ Contact Us";
     </>;
 ";
 
-  ),,,;
+export default EnhancedSidebar2025,";
+  ),,
 }
+}}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))))
+
+

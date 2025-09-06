@@ -1,5 +1,6 @@
 
 
+
   
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -7,6 +8,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 }];
 setIsSearching (true);
 
@@ -98,6 +100,7 @@ setIsSearching (false) ;
   opacity: 1, y: 0, scale: 1
 }exit= {
   {
+
   opacity: 0, y: -10, scale: 0.95
 }transition= {
   {
@@ -107,6 +110,7 @@ setIsSearching (false) ;
 }transition= {
   {
   duration: 0.2 
+
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */
@@ -618,11 +622,15 @@ function debounce < T extends (...args: any[]) => any>(
   }
 }
 
+export default EnhancedSearch;
+
+}
+}
+}
+}
+}
+}
+}
+}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements

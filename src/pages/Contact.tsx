@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { useToast } from '../components/ui/use-toast';
 import { motion } from 'framer-motion';
@@ -61,6 +62,7 @@ const Contact: React.FC = () => {
       });
     }, 3000);
   };
+
 
 
       <div className="container mx-auto px-4 py-16">
@@ -338,11 +340,3 @@ const Contact: React.FC = () => {
       </div>
 
 
-
-
-
-    </div>
-  );
-};
-
-export default Contact;

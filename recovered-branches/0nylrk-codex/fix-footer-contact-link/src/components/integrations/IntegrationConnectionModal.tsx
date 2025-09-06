@@ -3,6 +3,7 @@
 
 
 
+
 import {;
   Dialog,;
   DialogContent,;
@@ -13,6 +14,7 @@ import {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -36,6 +38,7 @@ interface IntegrationConnectionModalProps {;
   isOpen: boolean;
   onClose: () => void;
 
+
   integration: Integration
 }
 
@@ -51,6 +54,7 @@ export function IntegrationConnectionModal(): any ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 export function IntegrationConnectionModal({
   isOpen
@@ -135,6 +139,8 @@ interface IntegrationConnectionModalProps {;
 
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false),
+
+
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,
     pushNotes: false,
@@ -167,7 +173,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     toast.success("Integration settings saved"),
     onClose()
   },
+
   
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md">;
@@ -183,15 +191,18 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
           <div>
             <DialogTitle>{integration.name} Integration</DialogTitle>
             <DialogDescription>
+
               {integration.status === "connected" |
               integration.status === "warning"
                 ? "Manage your connection settings"
               {integration.status === "connected" || integration.status === "warning" 
                 ? "Manage your connection settings" 
+
                 : `Connect your ${integration.name} account`}
             </DialogDescription>
           </div>
         </DialogHeader>
+
 
 
 
@@ -214,6 +225,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
@@ -223,13 +235,17 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+
                 
+
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="autoCreateContacts" 
                     checked={syncSettings.autoCreateContacts} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})
+
+
                     }
                   />
                   <Label htmlFor="autoCreateContacts">
@@ -241,13 +257,17 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+
                 
+
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="pushNotes" 
                     checked={syncSettings.pushNotes} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, pushNotes: checked as boolean})
+
+
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
@@ -257,13 +277,17 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+
                 
+
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncJobDetails" 
                     checked={syncSettings.syncJobDetails} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncJobDetails: checked as boolean})
+
+
                     }
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
@@ -273,18 +297,23 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+
                 
+
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncApplicantData" 
                     checked={syncSettings.syncApplicantData} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncApplicantData: checked as boolean})
+
+
                     }
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
+
               
 
 
@@ -297,6 +326,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
@@ -308,6 +338,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 </p>
               </div>
             </div>
+
             
 
 
@@ -320,6 +351,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
@@ -337,6 +369,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
           <>
             <div className="space-y-4 py-4">
               <p className="text-sm">
+
                 Connect your {integration.name} account to sync job contacts
                 applicants, and more. You'll be redirected to {integration.name}{" "}
                 to authorize this connection.
@@ -354,6 +387,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -364,6 +398,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 </ul>
               </div>
             </div>
+
             
 
 
@@ -376,6 +411,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting
@@ -384,6 +420,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               </Button>
             </DialogFooter>
           </>
+
         )}
       </DialogContent>
     </Dialog>
@@ -723,6 +760,7 @@ function IntegrationConnectionModal() {
     </Dialog>);
 
 }
+
 
 
 

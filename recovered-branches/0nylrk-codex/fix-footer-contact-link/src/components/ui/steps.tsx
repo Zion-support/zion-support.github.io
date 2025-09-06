@@ -5,6 +5,7 @@
 
 
 
+
 import React from "react";
 import {cn} from "@/lib/utils";
 import {CheckIcon} from "lucide-react";
@@ -25,6 +26,7 @@ export function Step(): any ({;
   className}: StepProps) {;
 
 
+
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
@@ -32,6 +34,12 @@ interface StepProps {
 
   className?: string
 }
+
+
+export function Step({
+  status,
+  label,
+  description,
 
 
   className}: StepProps) {
@@ -42,8 +50,10 @@ interface StepProps {
       className={cn(
         "relative flex items-center"
         {
+
           "opacity-60": status === "incomplete"}
           "opacity-60": status === "incomplete"},
+
         className
       )}>;
       <div
@@ -63,6 +73,7 @@ interface StepProps {
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
+
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from "lucide-react",;
@@ -117,6 +128,7 @@ export function Step({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             {/* Step number would go here */}
           </span>;
         )}
@@ -124,6 +136,7 @@ export function Step({;
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
+
             "text-zion-slate-light": status === "incomplete";
             "text-white": status === "current" |status === "complete"})}
             "text-zion-slate-light": status === "incomplete",
@@ -152,6 +165,7 @@ interface StepsProps {
 
 
 
+
 interface StepsProps {;
   currentStep: number,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -161,11 +175,14 @@ interface StepsProps {;
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
+
   
+
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
+
           if (!React.isValidElement(child)) return null;
           let status: "incomplete" | "current" | "complete" = "incomplete"
           if (index < currentStep) status = "complete";
@@ -177,6 +194,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -186,6 +204,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
+
+
 
 
 
@@ -221,7 +241,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
@@ -297,3 +319,5 @@ export /**
 function Steps() {
   const children_array = React.Children.to_array (children);
 ;
+
+

@@ -3,6 +3,7 @@
 
 
 
+
 import {;
   Card,;
   CardHeader,;
@@ -12,10 +13,12 @@ import {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 } from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
+
 
 
 interface FraudStatsCardsProps {;
@@ -24,6 +27,7 @@ interface FraudStatsCardsProps {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface FraudStatsCardsProps {
@@ -38,6 +42,7 @@ interface FraudStatsCardsProps {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
+
       
 
 
@@ -50,6 +55,7 @@ interface FraudStatsCardsProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -59,6 +65,7 @@ interface FraudStatsCardsProps {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
+
       
 
 
@@ -71,6 +78,7 @@ interface FraudStatsCardsProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -82,6 +90,7 @@ interface FraudStatsCardsProps {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
+
       
 
 
@@ -94,6 +103,7 @@ interface FraudStatsCardsProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -105,6 +115,7 @@ interface FraudStatsCardsProps {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
+
       
 
 
@@ -117,6 +128,7 @@ interface FraudStatsCardsProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -125,6 +137,7 @@ interface FraudStatsCardsProps {
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
+
       
 
 
@@ -137,6 +150,7 @@ interface FraudStatsCardsProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -146,6 +160,17 @@ interface FraudStatsCardsProps {
         </CardHeader>
       </Card>
 
+
+  )
+},
+import React from "react",;
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",;
+import { FraudStats } from "@/types/fraud",;
+interface FraudStatsCardsProps {;
+  stats: FraudStats;
+}
+;
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
   return (
@@ -214,9 +239,12 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
           <CardDescription>False Positives</CardDescription>;
         </CardHeader>;
       </Card>;
+
+
     </div>;
 );
 };
+
 
 export default FraudStatsCards;
 
@@ -231,4 +259,5 @@ export default FraudStatsCards;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

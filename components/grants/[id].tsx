@@ -1,3 +1,4 @@
+
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import {useEffect, useState} from 'react';
@@ -10,6 +11,7 @@ import type { GrantApplication } from '../../types/grants';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
@@ -27,6 +29,7 @@ import type { GrantApplication } from '../../types/grants';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -34,6 +37,7 @@ import type { GrantApplication } from '../../types/grants';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }, [id]);
   const addUpdate = async () => {
@@ -188,6 +192,7 @@ if (
               Grant Winner;
             </span>;
           )}
+
 
           <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>;
             {item && item.status}
@@ -365,4 +370,5 @@ if (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
+
 

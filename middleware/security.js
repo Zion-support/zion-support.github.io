@@ -1,3 +1,4 @@
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -5,9 +6,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 
+
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
+
 
 
 
@@ -47,11 +50,13 @@ export function securityHeaders(req, res, next) {
 
 
 
+
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res && res.setHeader(key, value);
   });
   next();
+
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -75,3 +80,4 @@ export function securityHeaders(req, res, next) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

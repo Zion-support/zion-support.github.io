@@ -1,3 +1,4 @@
+
 export interface Service {id: string;
   name: string;
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
@@ -704,3 +705,4 @@ export const getServiceById = (id: string) => {;
 export const getCategories = () => {;
   return Array.from(new Set(services.map(service => service.category)));
 };
+

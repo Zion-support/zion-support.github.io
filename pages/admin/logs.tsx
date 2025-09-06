@@ -2,15 +2,18 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import fs from 'fs';
 import path from 'path';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+
 
 
 import {
@@ -86,6 +89,7 @@ import {
 
 
 
+
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical',;
   message: string;
   category: string;
@@ -123,18 +127,21 @@ interface LogsPageProps {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
 
   lastUpdated: string;
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -145,6 +152,7 @@ interface LogsPageProps {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
@@ -161,11 +169,13 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
 
 
 
+
   logs: initialLogs,
   errorCount,
   warningCount,
   totalCount,
   lastUpdated,;
+
 
 
 
@@ -194,6 +204,7 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
   const colors = {;
+
     debug: 'bg-blue-100 text-blue-800',;
     info: 'bg-green-100 text-green-800',;
     warn: 'bg-yellow-100 text-yellow-800',;
@@ -221,12 +232,15 @@ export default function LogsPage(): any ({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
+
+
 
 
 
@@ -290,7 +304,9 @@ export default function LogsPage(): any ({;
 
 
 
+
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+
 
 
 
@@ -367,15 +383,19 @@ export default function LogsPage(): any ({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
+
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
+
+
 
 
   const formatTimestamp = (timestamp: string) => {
@@ -393,6 +413,7 @@ export default function LogsPage(): any ({;
     if (performance && performance.fps) {;
       parts && parts.push(`FPS: ${performance && performance.fps}`);
     }
+
 
 
     return parts && parts.length > 0 ? parts && parts.join(', ') : null;
@@ -436,11 +457,13 @@ export default function LogsPage(): any ({;
         log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()));
       );
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 ;
     // Level filter;
     if (levelFilter !== 'all') {;
@@ -534,6 +557,7 @@ const formatTimestamp = (timestamp: string) => {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -548,6 +572,7 @@ const formatTimestamp = (timestamp: string) => {
             Export
           </Button>
         </div>
+
       {/* Summary Cards */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
       </div>
@@ -566,6 +591,7 @@ const formatTimestamp = (timestamp: string) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -615,6 +641,7 @@ const formatTimestamp = (timestamp: string) => {
 
         </Card>
       </div>
+
       {/* Filters */}
       {/* Filters */  } catch (error) {
     console.error("Error:", error);
@@ -632,6 +659,7 @@ const formatTimestamp = (timestamp: string) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
@@ -653,6 +681,7 @@ const formatTimestamp = (timestamp: string) => {
                 <SelectValue placeholder="All levels" />
               </SelectTrigger>
               <SelectContent>
+
                 <SelectItem value='all'>All Levels</SelectItem>
                 <SelectItem value='debug'>Debug</SelectItem>
                 <SelectItem value='info'>Info</SelectItem>
@@ -687,6 +716,7 @@ const formatTimestamp = (timestamp: string) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               <SelectTrigger>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <SelectValue placeholder="All categories" />
@@ -702,6 +732,7 @@ const formatTimestamp = (timestamp: string) => {
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
 
+
                 onChange={e => setSearchTerm(e && e.target.value)}
               />;
             </div>;
@@ -713,6 +744,7 @@ const formatTimestamp = (timestamp: string) => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       <Card>
         <CardHeader>
@@ -737,6 +769,7 @@ const formatTimestamp = (timestamp: string) => {
                       {formatTimestamp(log.timestamp)}
                     </span>
                   </div>
+
                   <div className='text-sm font-medium'>{log.message}</div>
                   <div className="text-sm font-medium">{log.message}</div>
 
@@ -750,11 +783,14 @@ const formatTimestamp = (timestamp: string) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context
                       </summary>
+
+
 
 
 
@@ -776,6 +812,7 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -783,6 +820,7 @@ const formatTimestamp = (timestamp: string) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   {log.error && (
                     <details className="text-xs">
@@ -800,7 +838,9 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 </div>
@@ -809,6 +849,7 @@ const formatTimestamp = (timestamp: string) => {
               <div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>
+
             )}
           </div>;
         </div>;
@@ -874,6 +915,7 @@ const formatTimestamp = (timestamp: string) => {
         lastUpdated: new Date().toISOString()
       }
     }
+
 
 
 
@@ -983,9 +1025,12 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 }
 
 
+
+
   }
 }
 };
+
 
 
 
@@ -995,3 +1040,4 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

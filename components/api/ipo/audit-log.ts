@@ -7,6 +7,7 @@ import { requireSuperadminApi } from '../../../utils/api/auth';
 
 
 
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
@@ -41,4 +42,5 @@ function handler() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

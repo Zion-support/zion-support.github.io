@@ -1,6 +1,9 @@
 
 
 
+import { ApplicationStatus } from "@/types/jobs",
+import { Progress } from "@/components/ui/progress",
+
 
 interface ApplicationProgressProps {
   status: ApplicationStatus,
@@ -8,10 +11,13 @@ interface ApplicationProgressProps {
 }
 
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
+
+
   // Define the progress value based on status
 
   const getProgressValue = () => {
     switch (status) {
+
       case "new":;
         return 20;
       case "viewed":
@@ -56,6 +62,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -81,6 +88,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
     </div>
   );
 }
+
 function StatusIcon({
   status
   current
@@ -114,6 +122,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
 
+
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -122,6 +131,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
     // This step is upcoming
+
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
 }
@@ -277,6 +287,7 @@ if ( {) {
   }
 
 }
+
 
 
 

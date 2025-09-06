@@ -1,5 +1,10 @@
 
 
+import SEO from '../components/SEO';
+import Link from 'next/link';
+export default function RAGEvaluationLabPage() {
+
+
   return (
     <>;
       <SEO
@@ -108,6 +113,8 @@ function RAGEvaluationLabPage() {
   );
 
 
+import SEO from '../components/SEO',
+import Link from 'next/link',
 
 export default function RAGEvaluationLabPage() {
 	return (
@@ -181,6 +188,7 @@ export default function RAGEvaluationLabPage() {
 ;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -191,3 +199,4 @@ export default function RAGEvaluationLabPage() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

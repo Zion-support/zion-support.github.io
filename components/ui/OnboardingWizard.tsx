@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
+
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 
@@ -49,6 +51,7 @@ import { useRole } from '../context/RoleContext';
         window.localStorage.setItem('zion_has_onboarded', '1');
       }
     } catch {}
+
     setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
       }
     } catch {}
@@ -70,6 +73,7 @@ import { useRole } from '../context/RoleContext';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   if (!open) return null;
 
   return (
@@ -79,7 +83,10 @@ import { useRole } from '../context/RoleContext';
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
+          <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
+        </div>
+      </div>
+    </div>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

@@ -1,9 +1,11 @@
 
+
 export interface CountryPricing {
 
 
 
   pricePerIncident: number;
+
 
 
   pricePerIncident: number;
@@ -480,6 +482,7 @@ export const onsiteServicePricing: CountryPricing[] = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -487,3 +490,4 @@ export const onsiteServicePricing: CountryPricing[] = [;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

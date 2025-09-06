@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -20,9 +21,11 @@ export default function TalentDirectory() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
+
     filteredTalents;
     isLoading;
     searchTerm;
@@ -96,6 +99,7 @@ export default function TalentDirectory() {;
     navigate(`/talent/${id}`)
   },
   
+
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -106,6 +110,7 @@ export default function TalentDirectory() {;
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
           </div>
+
 
 
 
@@ -193,6 +198,7 @@ export default function TalentDirectory() {;
 
 
 
+
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
               <Button
@@ -203,6 +209,7 @@ export default function TalentDirectory() {;
                 Filter & Sort
               </Button>
             </div>
+
             
 
 
@@ -214,6 +221,7 @@ export default function TalentDirectory() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -223,6 +231,7 @@ export default function TalentDirectory() {;
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
               isAuthenticated={isAuthenticated}
+
               activeFiltersProps={{
                 selectedSkills;
                 toggleSkill;
@@ -247,6 +256,7 @@ export default function TalentDirectory() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 experienceRange;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -305,6 +315,7 @@ export default function TalentDirectory() {;
                 </div>
               </div>
             )}
+
           </div>
         </div>
       </div>
@@ -317,5 +328,4 @@ export default function TalentDirectory() {;
     </AppLayout>);
 }
 
-=======
-;
+

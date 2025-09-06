@@ -4,10 +4,13 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
 import {
+
 
 
 
@@ -17,6 +20,7 @@ import {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 } from "../../../utils/data/proposals";
@@ -41,9 +45,24 @@ function buildIpfsClient() {
   });
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { PDFDocument, StandardFonts } from 'pdf-lib';
+import crypto from 'crypto';
+import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals';
+import { create as createIpfsClient } from 'ipfs-http-client';
+import { ethers } from 'ethers';
+import fs from 'fs';
+import path from 'path';
+function buildIpfsClient() {
+  const projectId = process.env.IPFS_PROJECT_ID;
+  const projectSecret = process.env.IPFS_PROJECT_SECRET;
+  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
+  if (!projectId || !projectSecret) return null;
+  const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+  return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+}
+
 
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
@@ -60,6 +79,7 @@ function buildIpfsClient() {
           current = test;
         }
       }
+
 
 
     });
@@ -80,6 +100,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+
 
 
 
@@ -112,6 +133,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const markdownPath = path.join(process.cwd(), 'public', meta.artifacts.markdownPath || '');
     const markdown = fs.existsSync(markdownPath) ? fs.readFileSync(markdownPath, 'utf8') : '# Proposal';
+
+
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
 
@@ -130,6 +153,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
+
 
 
 
@@ -159,8 +183,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   }
 }
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -185,4 +211,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

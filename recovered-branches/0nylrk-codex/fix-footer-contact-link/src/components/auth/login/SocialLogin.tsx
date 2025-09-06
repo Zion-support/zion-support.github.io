@@ -1,11 +1,14 @@
 
+
 import { Facebook, Twitter } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 export function SocialLogin() {
+
 
 
 
@@ -15,6 +18,7 @@ export function SocialLogin() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     useAuth();
 
@@ -31,6 +35,8 @@ export function SocialLogin() {
         </div>
       </div>
       <div className="mt-6 grid grid-cols-4 gap-3">
+
+
 
 
 
@@ -67,9 +73,13 @@ export function SocialLogin() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   );
 }
 ;
+
+

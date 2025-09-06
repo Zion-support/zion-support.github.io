@@ -1,6 +1,7 @@
 
 
 
+
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {BriefcaseIcon, Clock} from "lucide-react";
@@ -22,6 +23,7 @@ export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
+
   useEffect(() => {
     if (projects && !isLoading) {
       const active = projects.filter(p =>
@@ -29,10 +31,12 @@ export function ActiveProjectsCard() {
       ).slice(0, 3), // Limit to 3 most recent projects
       setActiveProjects(active)
     }
+
   }, [projects, isLoading]);
 
   }, [projects, isLoading]),
   
+
   if (isLoading) {
     return (
       <Card>
@@ -47,6 +51,7 @@ export function ActiveProjectsCard() {
           <div className="space-y-2">
             {[1, 2].map(idx => (
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
+
 import { useEffect, useState } from "react",;
 import { Link } from "react-router-dom",;
 import { BriefcaseIcon, Clock } from "lucide-react",;
@@ -96,13 +101,16 @@ export function ActiveProjectsCard() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             ))}
           </div>;
         </CardContent>;
       </Card>;
     );
   }
+
   
+
   if (activeProjects.length === 0) {
     return (
       <Card>
@@ -160,14 +168,7 @@ export function ActiveProjectsCard() {;
           </Button>
         </CardFooter>
       )}
-    </Card>
-  )
-}
-    </Card>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import { useEffect, useState } from './react';
 import { Link } from './react-router-dom';
 import { BriefcaseIcon, Clock } from './lucide-react';
@@ -183,3 +184,6 @@ function ActiveProjectsCard() {
   const { projects, is_loading } = use_projects ();
   const [active_projects, setActiveProjects] = useState < Project[]>([]);
 ;
+=======
+
+

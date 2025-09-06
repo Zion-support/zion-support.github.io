@@ -1,8 +1,4 @@
-export default function AboutPage() {return (;
-export default function AboutPage() {;
-  return (;
-    <div className="min-h-screen bg-white">;
-=======
+
 export default /**
  * AboutPage - Function description
  */
@@ -12,6 +8,9 @@ function AboutPage() {
 =======
 export default function AboutPage() {;
   return (;
+=======
+
+
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - blue - 600 to - indigo - 700 text - white py - 20">;

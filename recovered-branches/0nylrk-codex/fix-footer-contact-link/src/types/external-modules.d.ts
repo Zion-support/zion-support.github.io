@@ -2,6 +2,7 @@
 
 
 
+
 declare module "@radix - ui / react - hover - card";
 declare module "input - otp";
 declare module "react - markdown";
@@ -30,6 +31,7 @@ declare module 'react - day - picker' {
 
 
 
+
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -41,6 +43,7 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
+
 
 
 
@@ -70,6 +73,7 @@ declare module 'react-day-picker' {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 declare module 'sonner';
 declare module 'lucide-react' {
@@ -275,6 +279,8 @@ import {FC, SVGProps} from 'react';
 
 
 
+
+
   export default icons
 
 }
@@ -325,6 +331,21 @@ declare module 'react - helmet - async';
 declare module 'react - hook - form' {
   import type { ComponentType, ReactElement, ReactNode } from 'react';
 
+  // Minimal generic typings to satisfy local usage without full type defs
+  export type FieldValues = Record<string, any>
+  export type FieldPath<TFieldValues extends FieldValues> =
+    keyof TFieldValues & string
+  export type Control<TFieldValues extends FieldValues = FieldValues> = any
+
+    TFieldValues extends FieldValues = FieldValues;
+  > {
+    control: Control<TFieldValues>
+    handleSubmit: any
+    register: any
+    formState: any
+    [key: string]: any
+  }
+
 
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
@@ -336,6 +357,8 @@ declare module 'react - hook - form' {
     render: (props: any) => ReactElement
   }
   export const Controller: ComponentType<ControllerProps<any, any>>
+
+
 
 
     TFieldValues extends FieldValues = FieldValues;
@@ -358,6 +381,7 @@ declare module 'ws';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
+
 
 
   export interface DateRange {
@@ -388,6 +412,7 @@ declare module 'react-day-picker' {;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any;
   export const DayPicker: any;
 }
+
 declare module 'sonner',;
 declare module 'lucide-react' {;
   import { FC, SVGProps } from 'react',;
@@ -754,6 +779,7 @@ declare module 'tailwind-merge';
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 declare module 'react - i18next';
@@ -769,4 +795,5 @@ declare module 'recharts';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

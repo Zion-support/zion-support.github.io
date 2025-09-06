@@ -1,4 +1,6 @@
 
+
+
 import React, { useMemo, useState } from 'react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -12,7 +14,45 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
 
+      }}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+    >
+      {copied ? 'Copied' : label}
+    </button>
+  )
 
+import {;
+  generateZionWiki,;
+  buildMarkdownFromWiki,;
+  buildWikitextFromWiki,;
+  operatorPrompt,;
+  slugify} from '../utils/data/zionContent',;
+function CopyButton({ text, label }: { text: string, label: string }) {;
+  const [copied, setCopied] = useState(false);
+  return (;
+    <button;
+      onClick={async () => {;
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+    >
+      {copied ? 'Copied' : label  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </button>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 
 }
@@ -21,6 +61,8 @@ export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []),
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
+
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">
@@ -29,6 +71,7 @@ export default function WikiPage() {
           {wiki.sections.map((s) => (
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
+
                 {s.title}
               </a>
                 {s.title  } catch (error) {
@@ -48,9 +91,11 @@ export default function WikiPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </li>
           ))}
           <li>
+
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
 
@@ -64,6 +109,7 @@ export default function WikiPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </li>
         </ul>
       </aside>
@@ -90,6 +136,8 @@ export default function WikiPage() {
 
 
 
+
+
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -105,12 +153,14 @@ export default function WikiPage() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
@@ -128,6 +178,7 @@ export default function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
+
 {md}
 {md  } catch (error) {
     console.error("Error:", error);
@@ -145,6 +196,7 @@ export default function WikiPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
@@ -152,6 +204,7 @@ export default function WikiPage() {
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
         </div>
       </article>
+
     </div>;
   );
 };
@@ -168,4 +221,5 @@ export default function WikiPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

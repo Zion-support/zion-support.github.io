@@ -1,5 +1,6 @@
 
 
+
 import React from 'react',
 import Head from 'next/head';
 
@@ -25,6 +26,7 @@ import Head from 'next/head';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   return (
     <>
       <Head>
@@ -40,6 +42,7 @@ import Head from 'next/head';
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
+
               'Research and summarize documents and web sources'
               'Draft emails, posts, briefs, and reports'
               'Auto-schedule meetings and follow-ups'
@@ -62,11 +65,13 @@ import Head from 'next/head';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
+
 
 
         <div className="bg-blue-50 rounded-lg p-8 text-center">
@@ -88,10 +93,12 @@ import Head from 'next/head';
 
 
 
+
       </div>
     </>
   )
 }
+
 
 
 
@@ -107,4 +114,5 @@ import Head from 'next/head';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -2,6 +2,8 @@
 
 
 
+
+
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
@@ -27,6 +29,8 @@ export function SelectResumeSection({
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
+
+
   isLoading
 }: SelectResumeSectionProps) {
   return (

@@ -1,5 +1,6 @@
 
 
+
 import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage";
 import { verifySignature } from "../../../utils/sync/signature";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
@@ -22,6 +23,7 @@ import {SyncEvent} from "../../../utils/sync/types";
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -38,14 +40,19 @@ import { SyncEvent } from "../../../utils/sync/types",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 function isAllowedByScope(stateType: string, scope: string): boolean {
   if (scope === "full") return true,
   if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement",
   if (scope === "marketplace") return stateType === "token_transfer" || stateType === "talent_mobility" || stateType === "leaderboard_entry",
+
+
   return true
 }
+
 
 
 
@@ -58,6 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -67,9 +75,12 @@ export default async function handler(req, res) {
   try {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
+
   if (!state.config.optIn || state.config.paused) {
+
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+
   const signature = req.headers["x-zion-signature"];
   const payload = req.body;
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
@@ -82,9 +93,11 @@ export default async function handler(req, res) {
   const signature = req.headers["x-zion-signature"],
   const payload = req.body,
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined),
+
   if (!signatureValid) {
     return res && res.status(401).json({ error: "Invalid signature" })
   }
+
   const event = payload as SyncEvent & { propagate?: boolean }
   if (!event |!event.type |!event.eventId) {
     return res.status(400).json({ error: "Invalid event" })
@@ -110,10 +123,13 @@ export default async function handler(req, res) {
 
 
 
+
   if (event.type === "proposal") {
     const votes = (event as any).payload?.votes,
     const providedRoot = event.merkleRoot,
     if (!Array.isArray(votes) || !providedRoot) {
+
+
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
 
     }
@@ -147,6 +163,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
   const entityId = getEntityId(event);
   const currentState = readState();
   upsertEvent(currentState, event);
@@ -188,23 +205,28 @@ export default async function handler(req, res) {
     const baseSignature = require("../../../utils/sync/signature"),
     const sig = baseSignature.signPayload(localBody),
     if (sig) headers["x-zion-signature"] = sig,
+
     await Promise.all(
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {
+
           const url = new URL("/api/sync/publish", peer.baseUrl).toString();
 
           const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+
           try {
 
 
             await axios.post(url, localBody, { headers, timeout: 5000 })
           } catch {
             // ignore peer failure
+
           }
         })
     )
   }
+
 
 
     const votes = (event as any).payload?.votes;
@@ -278,6 +300,7 @@ if (headers["x - zion - signature"] = sig) {
   }
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -288,4 +311,5 @@ if (headers["x - zion - signature"] = sig) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

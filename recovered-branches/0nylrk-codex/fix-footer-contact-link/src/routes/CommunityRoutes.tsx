@@ -1,6 +1,14 @@
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "../components/ProtectedRoute",
+import CommunityPage from "../pages/CommunityPage",
+import ForumCategoryPage from "../pages/ForumCategoryPage",
+import ForumPostPage from "../pages/ForumPostPage",
+import CreatePostPage from "../pages/CreatePostPage",
+
+
 const CommunityRoutes = () => {
   return (
     <Routes>
@@ -36,6 +44,8 @@ const CommunityRoutes = () => {
           <ProtectedRoute>
             <EditPostPage />
           </ProtectedRoute>
+
+
 
 
 import { Fragment } from "react",;
@@ -85,6 +95,8 @@ const CommunityRoutes = () => {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

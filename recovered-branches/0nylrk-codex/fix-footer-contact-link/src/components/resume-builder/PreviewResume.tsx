@@ -2,8 +2,10 @@
 
 
 
+
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
+
 
 
 
@@ -29,7 +31,9 @@ interface PreviewResumeProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }
@@ -47,6 +51,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
+
   );
 }
   )
@@ -57,4 +62,5 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

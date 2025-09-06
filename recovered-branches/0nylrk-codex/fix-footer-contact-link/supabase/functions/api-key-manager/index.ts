@@ -2,6 +2,7 @@
 
 
 
+
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
@@ -21,14 +22,19 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
 
 
-
-
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
+interface CreateKeyRequest {;
+  name: string,;
+  scopes: string[],;
+  expiresAt?: string | null;
 
 
 }
@@ -45,6 +51,7 @@ interface RegenerateKeyRequest {
 }
 // Create a Supabase client
 
+
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
@@ -53,6 +60,7 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
+
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
@@ -60,6 +68,7 @@ serve(async (req) => {
 
       headers: {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
+
   }
   try {
     // Extract auth token from request
@@ -578,13 +587,38 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
         status: 200
 
+        headers: { 'Content-Type': 'application/json' }})
+    }
 
+    // Get logs for those keys
+    const ids = keyIds.map(k => k.id);
+    const { data: logs, error: logsError, count } = await supabase
+      .from('api_logs')
+      .select('*', { count: 'exact' })
+      .in('api_key_id', ids)
+      .order('created_at', { ascending: false })
+      .range(offset, offset + limit - 1);
+    if (logsError) {
+      console.error('Error fetching API logs:', logsError);
+      return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
+        status: 500
+        headers: { 'Content-Type': 'application/json' }})
+    }
+    return new Response(JSON.stringify({ logs, count }), {
+      status: 200
+      headers: { 'Content-Type': 'application/json' }})
+  } catch (error) {
+    console.error('Error in getApiLogs:', error);
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+      status: 500
 
+      headers: { 'Content-Type': 'application/json' }})
 
 
 ;
@@ -615,12 +649,14 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 }
 async /**
@@ -634,3 +670,5 @@ function getApiLogs() {
       .select ('id');
       .eq ('user_id', user_id);
 ;
+
+

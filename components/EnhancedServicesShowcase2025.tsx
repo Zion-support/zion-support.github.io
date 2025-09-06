@@ -22,6 +22,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
   FaRocket,
   FaBrain,
   FaCloud,
@@ -33,6 +34,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   FaMobile,
   FaDatabase,
   FaNetworkWired,
+
 
 
 } from 'react-icons/si';
@@ -74,6 +76,7 @@ interface ServiceCategory {
 
 
 
+
 import { 
   FaRocket;
   FaBrain, 
@@ -109,6 +112,7 @@ import {
 
 
 
+
   color: string;  id: string
   name: string
   description: string
@@ -116,6 +120,7 @@ import {
 
   color: string
 }
+
 
 
 
@@ -132,6 +137,7 @@ import {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const serviceCategories: ServiceCategory[] = [
   {
@@ -226,6 +232,7 @@ const serviceCategories: ServiceCategory[] = [
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization'
     icon: <FaRobot className='w-6 h-6' />
     features: [
+
       'Intelligent workflow automation'
       'Natural language processing'
       'Predictive analytics'
@@ -776,6 +783,7 @@ const services: Service[] = [;
   }
 
 
+
 ];
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -787,6 +795,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
+
     
     if (searchTerm) {
       filtered = filtered.filter(service => 
@@ -805,6 +814,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -955,6 +965,7 @@ if ( {) {
           initial={{ opacity: 0, coordinate_y: 20 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8 }}
+
           className='text - center mb - 16'      }
     });
   }, [selected_category, search_term, sort_by]);
@@ -998,6 +1009,7 @@ if ( {) {
 
 
 
+
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1012,7 +1024,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1042,6 +1056,7 @@ if ( {) {
             >
               <option value='name'>Sort by Name</option>
               <option value='price'>Sort by Price</option>
+
               <option value='category'>Sort by Category</option>            </select>        >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
@@ -1107,6 +1122,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1125,6 +1141,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1133,12 +1150,14 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
+
 
 
 
@@ -1150,6 +1169,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 key={category.id}
@@ -1171,6 +1191,7 @@ if ( {) {
 
 
 
+
           </div>;
         </motion && motion.div>;
 
@@ -1185,11 +1206,13 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
 
@@ -1201,6 +1224,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1222,6 +1246,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1230,6 +1255,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               onClick={() => handleServiceSelect(service)}
             >;
@@ -1315,6 +1341,7 @@ if ( {) {
                 {service && service.technologies.slice(0, 3).map(tech => (;
                   <span
                     key={tech}
+
                     className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >              onClick={() => handleServiceSelect(service)}
             >
               <div className="flex items-center gap-3 mb-4">
@@ -1346,6 +1373,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     {tech}
                   </span>
                 ))}
@@ -1372,6 +1400,7 @@ if ( {) {
             </motion.div>
           ))}
         </motion.div>
+
 
               </div>;
 
@@ -1417,6 +1446,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -1430,6 +1460,7 @@ if ( {) {
             </h3>
             <p className='text-gray-400'>
               Try adjusting your search terms or category filters
+
             </p>          </motion.div>            className="text-center py-16"
           >
             <div className="text-6xl mb-4">🔍</div>
@@ -1454,6 +1485,7 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -1461,6 +1493,7 @@ if ( {) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
@@ -1478,12 +1511,14 @@ if ( {) {
 
 
 
+
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
+
 
 
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
@@ -1498,6 +1533,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             >
               <div className='flex items-start justify-between mb-6'>
@@ -1533,6 +1569,7 @@ if ( {) {
                 </div>
                 <button
                   onClick={closeModal}
+
                   className='p-2 hover:bg-white/10 rounded-lg transition-colors'
                 >
                   <span className='text-2xl'>×</span>
@@ -1574,11 +1611,13 @@ if ( {) {
 
 
 
+
                       </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </ul>
                 </div>
+
 
 
 
@@ -1597,6 +1636,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {/* Benefits */}
 
 
@@ -1604,6 +1644,7 @@ if ( {) {
                   </ul>
                 </div>
               </div>
+
 
 
 
@@ -1623,6 +1664,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* Technologies */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1632,6 +1674,7 @@ if ( {) {
                   {selectedService.technologies.map(tech => (
                     <span
                       key={tech}
+
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >              <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
                 <div className="flex flex-wrap gap-3">
@@ -1670,11 +1713,13 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
+
 
 
 
@@ -1685,6 +1730,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* Pricing */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1725,7 +1771,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1735,12 +1783,14 @@ if ( {) {
           </motion.div>
         )}
 
+      </AnimatePresence>
+    </div>
+);
 
+export default EnhancedServicesShowcase2025;  )
+}
+export default EnhancedServicesShowcase2025;
 
+export default EnhancedServicesShowcase2025;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

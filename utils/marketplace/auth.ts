@@ -1,5 +1,7 @@
 
 
+
+
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -25,6 +27,7 @@
   }
   return user;
 }
+
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -81,6 +84,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

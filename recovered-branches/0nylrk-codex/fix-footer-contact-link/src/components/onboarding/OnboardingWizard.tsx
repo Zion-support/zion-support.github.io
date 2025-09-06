@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
@@ -9,10 +10,12 @@ import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
 
 
+
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface WizardStep {
+
 
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib/utils';
@@ -67,6 +70,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
 
 
+
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -95,6 +99,7 @@ interface OnboardingWizardProps {;
 
 
 
+
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -105,6 +110,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const navigate = useNavigate(),
   const { user } = useAuth(),
   
+
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -114,12 +120,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Post a Job"
         url: "/post-job"
+
       }
       skipText: "I'll do this later"
     }
       },
       skipText: "I'll do this later"
     },
+
     {
       title: "View suggested matches"
       description: "Our AI system will find the best talent matches"
@@ -127,12 +135,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "View Matches"
         url: "/talent"
+
       }
       skipText: "Skip for now"
     }
       },
       skipText: "Skip for now"
     },
+
     {
       title: "Contact talent"
       description: "Reach out to the talent that fits your needs"
@@ -142,6 +152,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         url: "/talent"
       }
     }
+
   ];
 ;
   const talent_steps: WizardStep[] = [;
@@ -166,6 +177,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       },
       skipText: "I'll do this later"
     },
+
     {
       title: "Define skills & availability"
       description: "Let clients know when you're available and what you can do"
@@ -173,12 +185,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Set Availability"
         url: "/profile?tab=skills"
+
       }
       skipText: "Skip for now"
     }
       },
       skipText: "Skip for now"
     },
+
     {
       title: "Preview your profile"
       description: "See how clients will view your profile"
@@ -186,12 +200,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Preview Profile"
         url: `/talent/${user?.id}`
+
       }
       skipText: "Skip for now"
     }
       },
       skipText: "Skip for now"
     },
+
     {
       title: "Enable AI matchmaking"
       description: "Let our AI find the perfect opportunities for you"
@@ -199,9 +215,52 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
 
 
+  ];
+  const steps = type === 'client' ? clientSteps : talentSteps;
+  // Navigate to the specified URL
+  const handleAction = () => {
+    if (currentStep < steps.length - 1) {
+      navigate(steps[currentStep].action.url);
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      navigate(steps[currentStep].action.url);
+      onComplete()
+    }
+  }
+  // Skip the current step
+  const handleSkip = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      onSkip()
+    }
+
+  ],;
+  const steps = type === 'client' ? clientSteps : talentSteps,;
+  // Navigate to the specified URL;
+  const handleAction = () => {;
+    if (currentStep < steps.length - 1) {;
+      navigate(steps[currentStep].action.url),;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      navigate(steps[currentStep].action.url),;
+      onComplete();
+    }
+  },;
+  // Skip the current step;
+  const handleSkip = () => {;
+    if (currentStep < steps.length - 1) {;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      onSkip();
+    }
+  },
 
 
-  
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
@@ -220,9 +279,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
               <div
                 key={index}
                 className={cn(
+
                   "h-2 w-2 rounded-full mx-1";
 
                   "h-2 w-2 rounded-full mx-1",
+
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep

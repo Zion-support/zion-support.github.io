@@ -1,6 +1,7 @@
 
 
 
+
 interface SEOProps {
 
   title: string
@@ -22,6 +23,7 @@ import { Helmet } from "react-helmet-async",
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
 interface SEOProps {
   title: string,
   description: string,
@@ -32,6 +34,7 @@ interface SEOProps {
 
   noindex?: boolean
 }
+
 
 
   // Default to the Google Drive image URL
@@ -50,6 +53,7 @@ interface SEOProps {
   const siteTitle = "Zion - The Future of Tech & AI Marketplace",
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
+
   return (
     <Helmet>;
       <title>{fullTitle}</title>;
@@ -95,6 +99,8 @@ function SEO() {
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
 
+    </Helmet>
+  )
 
 
 import { Helmet } from "react-helmet-async",;
@@ -152,6 +158,7 @@ export function SEO({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -163,3 +170,4 @@ export function SEO({;
 
 }
 ;
+

@@ -4,6 +4,7 @@
 
 
 
+
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
@@ -32,6 +33,7 @@ export function EnhancedSearchInput(): any ({ ;
 
 
 
+
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -39,10 +41,12 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
+
 export function EnhancedSearchInput({ ;
   value;
 export function EnhancedSearchInput({ 
   value,
+
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 
@@ -58,6 +62,8 @@ export function EnhancedSearchInput({
       // Show recent searches when input is empty
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
       return
+
+
 
 
 
@@ -112,7 +118,9 @@ export function EnhancedSearchInput({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
       }
@@ -127,7 +135,9 @@ export function EnhancedSearchInput({;
     setIsFocused(false),
     inputRef.current?.blur()
   },
+
   
+
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">
@@ -138,6 +148,7 @@ export function EnhancedSearchInput({;
         <Input
           ref={inputRef}
           type="text"
+
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -167,6 +178,7 @@ export function EnhancedSearchInput({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}

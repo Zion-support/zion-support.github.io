@@ -13,10 +13,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
@@ -31,11 +33,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 ;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const key = req.headers['x-admin-key'];
 
@@ -97,7 +101,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     data[section] = arr as any;
     writeOrgData(data);
     return res.status(200).json({ ok: true });
+
   }
+
 
 
   }
@@ -109,6 +115,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });
+
 
 
   if (action && action.type === 'deactivate') {
@@ -250,4 +257,5 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 

@@ -4,6 +4,8 @@
 
 
 
+
+
 import React from 'react';
 
 interface Homepage2040Props {
@@ -22,10 +24,12 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 };
+
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -96,16 +100,26 @@ const Homepage2040: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
 
-
-
-        stagger_children: 0.1,
-        delay_children: 0.2;
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setCurrentServiceIndex((prev) => (prev + 1) % innovativeMicroSaasServices2025V2.length)
+    }, 5000);
+    return () => clearInterval(interval)
+  }, []);
+  // Enhanced animation variants for better performance
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+        delayChildren: 0.2
       }
     }
-  }
-;
-  const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+
     visible: {
       opacity: 1,
       coordinate_y: 0,
@@ -121,10 +135,71 @@ const Homepage2040: React.FC = () => {
       coordinate_y: [-10, 10, -10];
       transition: {
 
+        duration: 3
+        repeat: -1
+        ease: "easeInOut" as const
+      }
+    }
+  }
+  const statsData = [
+    {
+      number: "100+"
+      label: "Innovative Services"
+      description: "Cutting-edge solutions"
+      icon: Sparkles
+      color: "text-cyan-400"
+      hoverColor: "group-hover:text-cyan-300"
+    }
+    {
+      number: "∞"
+      label: "Future Possibilities"
+      description: "Unlimited potential"
+      icon: InfinityIcon
+      color: "text-purple-400"
+      hoverColor: "group-hover:text-purple-300"
+    }
+    {
+      number: "24/7"
+      label: "Autonomous Operations"
+      description: "Always available"
+      icon: Cpu
+      color: "text-blue-400"
+      hoverColor: "group-hover:text-blue-300"
+    }
+    {
+      number: "10x"
+      label: "Performance Boost"
+      description: "Quantum enhancement"
+      icon: Lightning
+      color: "text-green-400"
+      hoverColor: "group-hover:text-green-300"
+    }
+  ];
+  // Combine all services for showcase
+  const allServices = [...innovativeMicroSaasServices2025V2, ...emergingTechServices2025V2];
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
+  const serviceCategories = [
+    {
+      name: "AI & Machine Learning"
+      icon: Brain
+      count: allServices.filter(s => s.category.includes('AI')).length
+      color: "from-pink-500 to-rose-600"
+    }
+    {
+      name: "Quantum Technology"
+      icon: Atom
+      count: allServices.filter(s => s.category.includes('Quantum')).length
+      color: "from-blue-500 to-cyan-600"
+    }
+    {
+      name: "Emerging Tech"
+      icon: Rocket
+      count: allServices.filter(s => s.category.includes('Emerging') |s.category.includes('Space')).length
+      color: "from-purple-500 to-indigo-600"
+    }
+    {
 
-      name: "Cybersecurity",
-      icon: Shield,
-      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
+
       color: "from-green-500 to-emerald-600"
 
 
@@ -236,7 +311,9 @@ const Homepage2040: React.FC = () => {
             {/* Animated geometric shapes */}
 
 
+
             <motion.div 
+
 
 
               variants={floatingVariants}
@@ -256,6 +333,53 @@ const Homepage2040: React.FC = () => {
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
             ></motion.div>
 
+            {/* Quantum particle effects */}
+            <div className="absolute inset-0">
+              {[...Array(20)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
+                  style={{
+
+                    animationDelay: `${Math.random() * 3}s`;
+                  }}
+                  animate={{
+                    scale: [0, 1, 0];
+                    opacity: [0, 1, 0]}}
+                  transition={{
+
+                    delay: Math.random() * 3
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="text-center max-w-6xl mx-auto relative z-10">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className="space-y-8"
+            >
+              {/* Enhanced Company Badge */}
+              <motion.div
+                variants={itemVariants}
+                className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
+                role="banner"
+                aria-label="Company recognition"
+              >
+                <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />
+                <span>Innovation Leader 2040</span>
+                <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
+              </motion.div>
+
+                variants={itemVariants}
+                id="hero-heading"
+                className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
+              >
+                Zion Tech Group
+              </motion.h1>
+
 
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
@@ -267,9 +391,11 @@ const Homepage2040: React.FC = () => {
 
 
 
+
               
               {/* Enhanced CTA Section */}
               <motion.div 
+
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
               >
@@ -292,12 +418,14 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
+
               
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               {/* Enhanced Trust Indicators */}
@@ -401,6 +529,7 @@ const Homepage2040: React.FC = () => {
 
 
 
+
             </motion && motion.div>;
           </div>;
         </section>;
@@ -416,6 +545,7 @@ const Homepage2040: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -468,6 +598,7 @@ const Homepage2040: React.FC = () => {
 
 
 
+
             </motion && motion.div>;
           </div>;
         </section>;
@@ -483,6 +614,7 @@ const Homepage2040: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -491,6 +623,7 @@ const Homepage2040: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+
 
               className="text-center mb-16">;
               <motion&& motion.h2 
@@ -758,6 +891,7 @@ const Homepage2040: React.FC = () => {
 
                       {/* CTA Button */}
                       <Link 
+
                         href={service.link}
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
                       >
@@ -767,6 +901,7 @@ const Homepage2040: React.FC = () => {
                     </motion.div>
                   ))}
                 </motion.div>
+
 
 
 
@@ -822,6 +957,7 @@ const Homepage2040: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {/* View All Services Button */}
                 <motion&& motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -840,9 +976,11 @@ const Homepage2040: React.FC = () => {
                 </motion && motion.div>;
               ))}
 
+
             </motion && motion.div>;
           </div>;
         </section>;
+
 
 
 
@@ -856,15 +994,21 @@ const Homepage2040: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true }}
 
+              className="space-y-8"
+            >
+              <motion.h2
+                variants={itemVariants}
+                className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"
+              >
+                Ready to Transform Your Business?
+              </motion.h2>
+              <motion.p
+                variants={itemVariants}
+                className="text-xl text-gray-300 max-w-2xl mx-auto"
+              >
+                Join thousands of companies already leveraging our revolutionary technology solutions
+              </motion.p>
 
-
-
-
-              <motion.div 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -957,4 +1101,6 @@ const Homepage2040: React.FC = () => {
 
 export default Homepage2040;
 
+
 export default Homepage2040;
+

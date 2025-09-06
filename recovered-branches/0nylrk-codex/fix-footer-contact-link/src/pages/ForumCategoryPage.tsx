@@ -5,6 +5,8 @@
 
 
 
+
+
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -17,6 +19,12 @@ import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
 
+// Mock category data
+const categoriesInfo: Record<string, ForumCategoryInfo> = {
+  "getting-hired": {
+    id: "getting-hired"
+    name: "Getting Hired"
+    description: "Tips, strategies, and questions about getting hired on the platform.";
 
 
 import { useState } from "react",
@@ -49,12 +57,14 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     adminOnly: false,
     icon: "Briefcase"
   },
+
   "project-help": {
 
     id: "project-help"
@@ -63,6 +73,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false
 
     icon: "MessageSquare"
+
   }
   "ai-tools": {
 
@@ -77,6 +88,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false,
     icon: "Code"
   },
+
   "feedback": {
 
     id: "feedback"
@@ -85,8 +97,10 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false
 
     icon: "FileText"
+
   }
   },
+
   "announcements": {
 
     id: "announcements"
@@ -96,13 +110,16 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
     icon: "Megaphone"
   }
+
 }
 },
+
 
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
   "getting-hired": [
     {
+
 
 
 import { useState } from './react';
@@ -218,12 +235,14 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updatedAt: "2025-04-07T11:30:00Z",
       upvotes: 19,
       downvotes: 2,
+
       replyCount: 6
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   ];
   "project - help": [;
     {
+
       id: "3"
       title: "Looking for feedback on my automated testing approach"
       content: "I've set up a CI/CD pipeline with the following testing strategy..."
@@ -277,12 +296,14 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 0,
 
       replyCount: 7,
+
       isAnswered: true
 
     }
   ];
   "ai - tools": [;
     {
+
       id: "1"
       title: "Best practices for AI model fine-tuning"
       content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me..."
@@ -341,12 +362,14 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updated_at: "2025 - 04 - 05T16:40:00Z",
       upvotes: 31,
       downvotes: 0,
+
       replyCount: 9
 
     }
   ];
   "feedback": [;
     {
+
       id: "4"
       title: "Feature request: Team collaboration tools"
       content: "It would be really helpful if we could have built-in tools for team collaboration..."
@@ -397,12 +420,14 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updated_at: "2025 - 04 - 04T08:10:00Z",
       upvotes: 17,
       downvotes: 3,
+
       replyCount: 5
 
     }
   ];
   "announcements": [;
     {
+
       id: "9"
       title: "Platform Update: New AI Matching Algorithm"
       content: "We're excited to announce the launch of our new and improved AI matching algorithm..."
@@ -483,6 +508,7 @@ export default function ForumCategoryPage() {;
 
 
 
+
 const iconMap = {
   "Briefcase": Briefcase,
   "MessageSquare": MessageSquare,
@@ -490,10 +516,12 @@ const iconMap = {
   "FileText": FileText,
   "Megaphone": Megaphone
 
+
 },
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
+
 
 
     return (
@@ -509,11 +537,13 @@ export default function ForumCategoryPage() {
   }
 
 
+
   
   const category = categoriesInfo[categoryId],
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
   const posts = postsByCategory[categoryId] || [],
   
+
 
 
   // Filter posts based on search query
@@ -525,11 +555,13 @@ export default function ForumCategoryPage() {
       )
 
 
+
     : posts,
   
   // For announcements, check if user is admin
   const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin'),
   
+
 
 
   return (
@@ -570,6 +602,7 @@ export default function ForumCategoryPage() {
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
 
 
+
   const category = categoriesInfo[categoryId];
   const IconComponent = iconMap[category && category.icon as keyof typeof iconMap] || MessageSquare;
   const posts = postsByCategory[categoryId] || [];
@@ -577,6 +610,7 @@ export default function ForumCategoryPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               value={searchQuery}
 
@@ -606,6 +640,7 @@ export default function ForumCategoryPage() {
             )}
           </div>;
         )}
+
       </div>
     </AppLayout>
   )
@@ -615,7 +650,4 @@ export default function ForumCategoryPage() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  "Megaphone": Megaphone;
-}
-;
+

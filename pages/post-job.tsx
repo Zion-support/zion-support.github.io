@@ -4,6 +4,8 @@
 
 
 
+
+
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -44,12 +46,30 @@ export default function PostJobPage() {
     }
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+export default function PostJobPage(req, res) {
+  try {
+  const router = useRouter();
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [skills, setSkills] = useState<string>('');
+  const [budgetMinUsd, setBudgetMinUsd] = useState<string>('');
+  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>('');
+  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>('');
+  const [clientEmail, setClientEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
+    setError(null);
+    if (!title || !description || !category || !clientEmail) {;
+      setError('Please fill in all required fields.');
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
 
   }
@@ -96,11 +116,13 @@ export default function PostJobPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -141,6 +163,8 @@ export default function PostJobPage() {
 
 
 
+
+
             {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -158,10 +182,12 @@ export default function PostJobPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,6 +1,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../../utils/supabase/client";
 export default async function handler(
@@ -24,18 +25,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
     const { name, email, role, country, source } = req.body |{}
     if (!name |!email |!role |!country) {
 
       return res.status(400).json({ error: "Missing required fields" });
+
     const { name, email, role, country, source } = req.body || {};
     if (!name || !email || !role || !country) {
       return res.status(400).json({ error: 'Missing required fields' })
+
     }
     const { data, error } = await supabase
       .from("summit_registrations")
       .insert([
         {
+
 
           name
           email
@@ -55,12 +60,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
           source: source || 'zion-global-2025',
           created_at: new Date().toISOString()}])
       .select('*')
+
       .single();
     if (error) {
 
 
       return res.status(500).json({ error: error.message });
     }
+
     return res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |"Unknown error" });
@@ -76,6 +83,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
 
 }
+
 
 
 
@@ -126,5 +134,40 @@ export default async function handler(req, res) {
   }
 }
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    return res.status(200).json({ ok: true, registration: data });
+  } catch (error) {
+    return res.status(500).json({ error: e?.message || 'Unknown error' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+

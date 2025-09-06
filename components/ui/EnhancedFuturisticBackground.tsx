@@ -127,6 +127,7 @@ const EnhancedFuturisticBackground: React.FC<;
         // Fade out near end of life
         if (this.life < 20) {
 
+
           this.opacity *= 0.95
 
 
@@ -134,6 +135,7 @@ const EnhancedFuturisticBackground: React.FC<;
       }
 
           this.opacity *= 0.95;        }
+
 
         }
       }
@@ -153,6 +155,7 @@ const EnhancedFuturisticBackground: React.FC<;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+
 
         
 
@@ -181,6 +184,7 @@ const EnhancedFuturisticBackground: React.FC<;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -352,6 +356,7 @@ constructor(p1: Particle, p2: Particle) {
         ctx.font = `${fontSize}px monospace`;
 
 
+
       for (let i = 0; i < columns; i++) {;
         drops[i] = 1;      }      for (let i = 0, i < columns, i++) {;
         drops[i] = 1;
@@ -371,6 +376,7 @@ constructor(p1: Particle, p2: Particle) {
 
     };
 
+
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
@@ -389,6 +395,7 @@ constructor(p1: Particle, p2: Particle) {
       // Remove dead particles and add new ones
       particles = particles.filter(particle => !particle.isDead());
       while (particles.length < settings.particleCount) {
+
 
       };
       return drawMatrix;
@@ -432,6 +439,7 @@ constructor(p1: Particle, p2: Particle) {
 
 
 
+
           }
         }
       }
@@ -460,6 +468,7 @@ constructor(p1: Particle, p2: Particle) {
           ctx.lineTo(x - size, y + size);
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
+
 
       for (let index = 0; i < particles.length; i++) {
         for (let inner_index = i + 1; j < particles.length; j++) {
@@ -546,4 +555,5 @@ if (< 0.5) {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

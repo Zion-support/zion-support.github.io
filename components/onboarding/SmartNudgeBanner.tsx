@@ -29,12 +29,14 @@ import { X } from 'lucide-react';
 
 
 
+
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -46,12 +48,14 @@ import { X } from 'lucide-react';
 
 
 
+
   role: 'talent' | 'client',;
   userId?: string | null;
   message: string
 };
 
 export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
+
 
 
 
@@ -69,6 +73,7 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     } catch {}
   }, [storageKey]);
   const dismiss = React.useCallback(() => {
+
 
 };
 export default function SmartNudgeBanner(): any ({;
@@ -113,10 +118,12 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
   return (
+
 
 
         {message}
@@ -138,5 +145,6 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

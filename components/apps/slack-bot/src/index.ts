@@ -1,5 +1,7 @@
+
 import { App  } from '@slack/bolt';
 import { App } from '@slack/bolt';
+
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
@@ -82,22 +84,48 @@ function helpText(): string {
   } catch (err: any) {
     await respond({
 
+      response_type: 'ephemeral'
+      text: `Error: ${err.message |'unknown'}`
+    });  }      });
+      const data = (await res.json()) as any;
+      await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
+      return
+    }
+    if (sub === 'suggest-talent') {
+      const q = rest.join(' ') |'AI researcher in Brazil';
+      const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`, {
+        headers: { 'x-user-id': userId }
+      });
+      const data = (await res.json()) as any;
+      const lines = (data.results |[]).slice(0, 5).map((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice(0,3).join() |''}`);
+      await respond({ response_type: 'ephemeral', text: lines.length ? lines.join('\n') : 'No matches yet.' });
+      return
+    }
+    if (sub === 'track-project') {
+      const name = rest.join(' ') |'Kleber';
+      const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {
+        headers: { 'x-user-id': userId }
+      });
+      const data = (await res.json()) as any;
+      if (!data.project) {
+        await respond({ response_type: 'ephemeral', text: 'Project not found.' });
+        return
+      }
+      await respond({ response_type: 'ephemeral', text: `*${data.project.name}* – status: ${data.project.status}\nMilestones: ${JSON.stringify(data.project.milestones)}` });
+      return
+    }
+    await respond({ response_type: 'ephemeral', text: helpText() })
+  } catch (err: any) {
+    await respond({ response_type: 'ephemeral', text: `Error: ${err.message |'unknown'}` })
+  }
+});
 
-
+(async () => {
+  const port = Number(process.env.SLACK_PORT |3001);
+  await app.start(port);
+  // eslint-disable-next-line no-console
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

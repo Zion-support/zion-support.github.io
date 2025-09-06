@@ -5,6 +5,8 @@
 
 
 
+
+
 import Link from 'next/link';
 
 
@@ -18,6 +20,7 @@ import Link from 'next/link';
   status: string
 }
 const COMPANY_ID = 'cmp_acme';
+
 
 
 
@@ -43,10 +46,12 @@ export default function CompanyAdmin() {;
 
 
 
+
   );  const [members, setMembers] = useState<Member[]>([]);
   const [usage, setUsage] = useState<Usage | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
+
 
 
 
@@ -66,6 +71,7 @@ export default function CompanyAdmin() {;
 
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
+
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
           <Link href="/workspace/acme">Go to Workspace</Link>
@@ -73,6 +79,7 @@ export default function CompanyAdmin() {;
 
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
+
         {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
           <button
             key={t}
@@ -100,6 +107,7 @@ export default function CompanyAdmin() {;
     setName('');
     setEmail('');
     setRole('viewer');
+
 
 
 
@@ -162,6 +170,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -169,6 +178,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const add = async () => {
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
@@ -191,6 +201,8 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
     setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
   },
+
+
   return (
 
   set_members: (m: Member[]) => void;
@@ -302,6 +314,7 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
           <option value="viewer">Viewer</option>
           <option value="admin">Admin</option>
         </select>
+
 
 
 
@@ -507,6 +520,7 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             </th>          </tr>
 
 
+
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
@@ -519,22 +533,53 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
               </td>
 
 
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
-              </td>
-            </tr>
-
-
           ))}
         </tbody>
       </table>
     </section>
-  )
+  );
+function UsageTab({
+  usage
+  setUsage
+  seatsUsed
+}: {
+  usage: Usage;
+  setUsage: (u: Usage) => void;
+  seatsUsed: number;
+}) {
+  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(
+    usage.monthlyJobPosts
+  );
+  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
+  const save = async () => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {
+      method: 'PATCH'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ monthlyJobPosts, budgetCapUsd })
+    });
+    setUsage({ monthlyJobPosts, budgetCapUsd });  }
+
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </tbody>;
+      </table>;
+    </section>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
 
 function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
+
   const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts);
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
+
 
 
 
@@ -549,6 +594,8 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
     <section>
       <h2>Usage limits</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
+
+
         <label>
           <div>Monthly job posts</div>
           <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
@@ -560,14 +607,22 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
       </div>
 
 
-      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
-        <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
-        <span>Seats used: {seatsUsed}</span>
-      </div>
+  );
+function ActivityTab({ events }: { events: any[] }) {
+  return (
+    <section>
+      <h2>Team activity</h2>
+      <ul>
+        {events.map(e => (
+          <li key={e.id}>
+            <span style={{ color: '#6b7280' }}>
+              {new Date(e.timestampIso).toLocaleString()} —{' '}
+            </span>            <strong>{e.actorEmail}</strong> {e.action}
+          </li>
+        ))}
+      </ul>
     </section>
-
-
-
+  );
 
 
   )
@@ -589,9 +644,20 @@ function ActivityTab({ events }: { events: any[] }) {
   )
 }
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+          </li>;
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </ul>;
+    </section>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
@@ -602,6 +668,7 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
+
             <th
               style={{
                 textAlign: 'left'
@@ -653,10 +720,12 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
             <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Status</th>
             <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
           </tr>
+
         </thead>
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
+
 
   set_usage: (u: Usage) => void;
   seats_used: number;
@@ -830,4 +899,5 @@ function BillingTab() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

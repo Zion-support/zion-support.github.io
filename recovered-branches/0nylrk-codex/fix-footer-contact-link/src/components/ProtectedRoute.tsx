@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 
 
@@ -16,10 +17,13 @@ export interface ProtectedRouteProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
+
+
 
 
 
@@ -38,6 +42,8 @@ export interface ProtectedRouteProps {
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
   children,
   adminOnly = false,
+
+
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
@@ -67,6 +73,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
     return <Navigate to="/unauthorized" />
+
   }
   return <>{children}</>
 }
@@ -134,3 +141,4 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
 
 
 export default ProtectedRoute;
+

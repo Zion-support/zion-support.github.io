@@ -20,6 +20,8 @@ interface SafeConsole {
 
 
 
+
+
 // Declare available globals
 declare const globalThis: {
   console?: SafeConsole;
@@ -47,6 +49,8 @@ class MockApp {
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined;
 
     if (safeConsole && safeConsole.log) {
+
+
 
 
 
@@ -80,7 +84,9 @@ class MockApp {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
@@ -93,9 +99,11 @@ class MockApp {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
@@ -105,6 +113,8 @@ async function askZionGPT(prompt: string): Promise<string> {
 
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
+
+
 ;
 // Create a mock app instance;
 const app = new MockApp(),;
@@ -113,6 +123,7 @@ async function askZionGPT(prompt: string): Promise<string> {;
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -127,13 +138,16 @@ async function askZionGPT(prompt: string): Promise<string> {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
   return `AI response to: ${prompt}`
 }
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
@@ -151,6 +165,8 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       const project = args.join(' ');
       await respond(`Tracking project **${project}** - feature coming soon.`);
       break
+
+
 ;
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {;
   await ack(),;
@@ -172,6 +188,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       await respond(`Tracking project **${project}** - feature coming soon.`),;
       break;
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -180,10 +197,12 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
   const [action, ...args] = command.text.split(/\s+/);
 
 
+
     }
 
 
   }
+
 });
 // Mock startup with safer environment access
 (async () => {
@@ -214,3 +233,4 @@ export default app;
 
 
 export default app;
+

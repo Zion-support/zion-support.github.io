@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import { Card  } from '@/components / ui / card';
@@ -18,15 +19,18 @@ interface HelpArticleViewProps {
 
 
 
+
 interface HelpArticleViewProps {
   articleId: string
 }
+
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
+
   // Find the article in all categories
   let article,
   for (const category of HELP_CATEGORIES) {
@@ -34,6 +38,15 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     if (found) {
       article = found,
       break
+
+
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { ThumbsUp, ThumbsDown } from "lucide-react",;
+import { toast } from "@/components/ui/use-toast",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleViewProps {;
 
 
   articleId: string;
@@ -60,6 +73,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -69,11 +83,13 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     }
   }
   if (!article) {
     return <div>Article not found</div>;
   }
+
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     (setFeedbackGiven(type)
       // In a real implementation, this would send feedback to the server
@@ -97,6 +113,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         : "We'll work on improving this article."})
   },
   
+
   return (
     <div>
       <Card className="p-6">
@@ -158,6 +175,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 Contact Support
               </Button>
             </div>
+
 ;
   const handleFeedback = (type: "helpful" | "not-helpful") => {;
     setFeedbackGiven(type),;
@@ -221,12 +239,14 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             </div>;
 
 
+
           )}
         </div>
       </Card>
     </div>
   );
 }
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -246,11 +266,13 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   );
 }
 
+
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric"
     month: "long"
     day: "numeric"
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -260,4 +282,5 @@ function formatDate(date: string): string {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

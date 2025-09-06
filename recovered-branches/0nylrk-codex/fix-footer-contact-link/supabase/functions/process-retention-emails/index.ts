@@ -1,5 +1,6 @@
 
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
@@ -29,6 +30,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -47,6 +49,7 @@ serve(async (req) => {
     // Call the database function to schedule retention emails
     const { data: scheduledCount, error: scheduleError } = await supabase && supabase.rpc(
       "schedule_retention_emails"
+
     );
     if (scheduleError) {
       throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
@@ -60,12 +63,14 @@ serve(async (req) => {
 
     // // // console.log(`Scheduled ${scheduledCount} retention emails`),
 
+
     // Fetch pending retention email jobs
     const { data: pendingJobs, error: jobsError } = await supabase
       .from("scheduled_jobs")
       .select("id, payload")
       .eq("job_type", "send_retention_email")
       .eq("status", "pending")
+
       .limit(50);
     if (jobsError) {
       throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
@@ -79,6 +84,7 @@ serve(async (req) => {
 
     const processedJobs = [],
 
+
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         try {
@@ -88,24 +94,49 @@ serve(async (req) => {
             {
               method: "POST",
               headers: {
-                "Content-Type": "application/json"
-                "Authorization": `Bearer ${supabaseServiceKey}`}
-              body: JSON.stringify(job)}
-          );
-          if (!reminderResponse.ok) {
-            const errorText = await reminderResponse.text();
-            console.error(`Failed to process job ${job.id}: ${errorText}`);
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${supabaseServiceKey}`},
-              body: JSON.stringify(job)}
-          ),
 
 
-      });
+            // Update job status to failed
+            await supabase
+              .from("scheduled_jobs")
+              .update({
+                status: "failed"})
+              .eq("id", job.id)
+          } else {
+            processedJobs.push(job.id)
+          }
+        } catch (error) {
+
+          // Update job status to failed
+          await supabase
+            .from("scheduled_jobs")
+            .update({
+              status: "failed"})
+            .eq("id", job.id)
+        }
+      }
+    }
+    return new Response(
+      JSON.stringify({
+
+      {
+        status: 200
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+  } catch (error) {
+
+    return new Response(
+      JSON.stringify({
+        error: "Internal server error"
+        details: error.message
+      }),
+
       {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
+
+
 
 
 
@@ -180,6 +211,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -191,3 +223,4 @@ if ( {) {
 
   }
 });
+

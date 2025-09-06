@@ -1,20 +1,39 @@
 
+import React from 'react';
+import type { AppProps } from 'next/app';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
 
+import '../src/styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {;
 
 return <Component {...pageProps} />;
+
+import '../styles/globals.css';
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+
+
 import '../styles/globals.css';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import EnhancedFooter from '../components/layout/EnhancedFooter';
+
+
+export default function App({ Component, pageProps }: AppProps) {;
+  return <Component {...pageProps} />;
+}
+
+import Layout from '../components/layout/Layout';
+import '../styles/globals.css';
 
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
+
 
     <header style={{
       position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
@@ -100,4 +119,5 @@ import '../styles/globals.css';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

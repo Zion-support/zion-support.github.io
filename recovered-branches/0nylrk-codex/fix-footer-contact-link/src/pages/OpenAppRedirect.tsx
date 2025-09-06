@@ -1,14 +1,15 @@
 
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import React, { useEffect, useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
 
 
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
+
   const navigate = useNavigate()
   const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
   useEffect(() => {
@@ -31,12 +32,14 @@ const OpenAppRedirect: React.FC = () => {
       const appScheme = "zion: //",
       const androidAppUrl = "market://details?id=app.zion.marketplace",
       const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",
+
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page
       let timeout: number | undefined
       // Try to open the app
       if (isAndroid |isiOS) {
         // Set a timeout to redirect to app store if the app doesn't open
         timeout = window.setTimeout(() => {
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -66,6 +69,7 @@ import {useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
+
 // This component handles deep linking to the mobile app;
 const OpenAppRedirect: React.FC = () => {;
   const navigate = useNavigate(),;
@@ -109,6 +113,7 @@ const OpenAppRedirect: React.FC = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -120,12 +125,14 @@ const OpenAppRedirect: React.FC = () => {;
 
       }
       
+
       // Clear timeout if page visibility changes (meaning app opened successfully)
       document.addEventListener("visibilitychange", () => {
         if (document.hidden && timeout) {
           clearTimeout(timeout)
         }
       })
+
     }
     attemptAppOpen()
   }, [navigate]);
@@ -134,6 +141,7 @@ const OpenAppRedirect: React.FC = () => {;
     attemptAppOpen()
   }, [navigate]),
   
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
       <SEO
@@ -172,6 +180,7 @@ const OpenAppRedirect: React.FC = () => {;
             </Link>
           </>
         )}
+
       </div>
     </div>
   )
@@ -193,3 +202,4 @@ export default OpenAppRedirect;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 export default OpenAppRedirect;
+

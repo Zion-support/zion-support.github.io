@@ -1,5 +1,7 @@
 
 
+
+
   id: string;
   contentId: string;
   contentType: string;
@@ -9,6 +11,7 @@
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+
 
 
 }
@@ -32,6 +35,7 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
   return flag;
 
 }
+
 
 
 
@@ -80,3 +84,5 @@ export async function updateFlagStatus(
   return flag;
 
 }
+
+

@@ -1,9 +1,12 @@
+
 import React, { useState } from 'react',
 import React, { useState } from 'react';
+
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -32,6 +35,7 @@ import {
   Clock,;} from 'lucide-react';import { ;
 
 
+
   ArrowRight;
   Star
 
@@ -54,8 +58,10 @@ const Homepage2041: React.FC = () => {
     if (searchQuery.trim()) {
       window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`;      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`
     }
+
   }
   };
+
 
   const featuredServices = [
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3);
@@ -65,6 +71,7 @@ const Homepage2041: React.FC = () => {
 
 
     {
+
       name: 'Marcus Rodriguez',
       role: 'VP Quantum Computing, QuantumCorp',
       company: 'QuantumCorp',
@@ -74,6 +81,7 @@ const Homepage2041: React.FC = () => {
       rating: 5,
       avatar: "👩‍💼"
     };
+
     {
 
       name: 'Dr. Emily Watson',
@@ -94,6 +102,7 @@ const Homepage2041: React.FC = () => {
       avatar: "👩‍🔬"
     }
   ];
+
   const stats = [
     { number: '500+', label: 'Revolutionary Services', icon: Rocket }
     { number: '50+', label: 'Quantum Solutions', icon: Atom }
@@ -216,6 +225,7 @@ const Homepage2041: React.FC = () => {
 
 
 
+
                 />
               ))}
             </div>
@@ -224,8 +234,10 @@ const Homepage2041: React.FC = () => {
           <div className="text-center max-w-7xl mx-auto relative z-10">
 
 
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -290,6 +302,40 @@ const Homepage2041: React.FC = () => {
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                 <Link
 
+                  href='/2041-futuristic-services-showcase'
+                  className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3'
+                >
+                  <Rocket className='w-6 h-6' />
+                  Explore 2041 Services
+                  <ArrowRight className='w-5 h-5' />
+                </Link>
+                <Link
+                  href='/contact'
+                  className='px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3'
+                >
+                  <Users className='w-6 h-6' />                  Start Your Journey                >
+                  <Rocket className="w-6 h-6" />
+                  Explore 2041 Services
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3"
+                >
+                  <Users className="w-6 h-6" />
+                  Start Your Journey
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
+        {/* Stats Section */}
+        <section className='py-20 px-4'>
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+              className='grid grid-cols-2 md:grid-cols-4 gap-8'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+
 
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -301,6 +347,7 @@ const Homepage2041: React.FC = () => {
               {stats.map ((stat, index) => (
                 <motion.div;
                   key={stat.label}
+
                   className='text-center'                  initial={{ opacity: 0, y: 20 }}                  className="text-center"
                   className='text-center'                  initial={{ opacity: 0, y: 20 }}
 
@@ -315,6 +362,7 @@ const Homepage2041: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -327,6 +375,7 @@ const Homepage2041: React.FC = () => {
                   <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
                     {stat.number}
                   </div>
+
                   <div className='text-gray-400'>{stat.label}</div>                </motion.div>                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
@@ -339,10 +388,12 @@ const Homepage2041: React.FC = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               ))}
             </motion.div>
           </div>
         </section>
+
 
 
 
@@ -362,6 +413,7 @@ const Homepage2041: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
         {/* Featured Services Section */}
 
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
@@ -369,6 +421,7 @@ const Homepage2041: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
+
 
               initial={{ opacity: 0, y: 30 }}
 
@@ -381,6 +434,7 @@ const Homepage2041: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -396,6 +450,7 @@ const Homepage2041: React.FC = () => {
                 boundaries of what's possible.
               </p>
             </motion.div>
+
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Revolutionary 2041 Services
               </h2>
@@ -405,6 +460,7 @@ const Homepage2041: React.FC = () => {
             </motion.div>
 
             <motion.div
+
 
 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -425,7 +481,9 @@ const Homepage2041: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -444,6 +502,7 @@ const Homepage2041: React.FC = () => {
               ))}
 
 
+
             </motion && motion.div>;
             <motion&& motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion && motion.div 
@@ -460,11 +519,13 @@ const Homepage2041: React.FC = () => {
 
 
             <motion.div
+
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
               className="text-center mt-12"
 
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
+
 
 
 
@@ -478,14 +539,32 @@ const Homepage2041: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <Link
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                href='/2041-futuristic-services-showcase'
+                className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'
+              >
+                <Eye className='w-5 h-5' />
+                View All 2041 Services
+                <ArrowRight className='w-5 h-5' />              </Link>              >
+                <Eye className="w-5 h-5" />
+                View All 2041 Services
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+        {/* Testimonials Section */}
+        <section className='py-20 px-4'>
+          <div className='max-w-7xl mx-auto'>
+            <motion.div
+              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
 
 
               whileInView={{ opacity: 1, y: 0 }}
@@ -501,6 +580,7 @@ const Homepage2041: React.FC = () => {
                 our revolutionary 2041 services.
               </p>
             </motion.div>
+
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Leading the Future
               </h2>
@@ -519,6 +599,7 @@ const Homepage2041: React.FC = () => {
 
             <motion.div 
 
+
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
 
             <motion.div
@@ -526,9 +607,11 @@ const Homepage2041: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -538,6 +621,7 @@ const Homepage2041: React.FC = () => {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.name}
+
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}
 
@@ -549,6 +633,7 @@ const Homepage2041: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -575,6 +660,7 @@ const Homepage2041: React.FC = () => {
                   <div className='text-cyan-400'>{testimonial.role}</div>
                   <div className='text-gray-500 text-sm'>
                     {testimonial.company}
+
                   </div>                </motion.div>                    {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
@@ -590,10 +676,12 @@ const Homepage2041: React.FC = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               ))}
             </motion.div>
           </div>
         </section>
+
 
 
 
@@ -611,6 +699,7 @@ const Homepage2041: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         {/* CTA Section */}
@@ -631,6 +720,7 @@ const Homepage2041: React.FC = () => {
             <motion&& motion.div 
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
 
+
               initial={{ opacity: 0, y: 30 }}
 
 
@@ -648,6 +738,7 @@ const Homepage2041: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -703,9 +794,11 @@ const Homepage2041: React.FC = () => {
       </main>
     </Layout>
   );
+
 }
 Math.random () * 100
 };
+
 
 
 
@@ -754,6 +847,7 @@ top: `$ {
 
 }viewport= {
   {
+
   once: true 
 
 }> <UltraFuturisticServiceCard2026service= {
@@ -780,3 +874,4 @@ export default Homepage2041;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

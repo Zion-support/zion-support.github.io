@@ -1,10 +1,10 @@
 
 
 
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 
-
-
-
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 
 
 export default function CreateServiceProfile() {
@@ -25,6 +25,7 @@ export default function CreateServiceProfile() {
 
 
 
+
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 
 
@@ -40,4 +41,5 @@ import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProvi
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -44,13 +44,20 @@ import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-  Brain
+
+
+  TrendingUp,;
+  Shield,;} from 'lucide-react';import { ;
+
+  Brain;
+
   MessageSquare
   Image
   Video
   Code
   FileText
   Zap
+
   Star
   ExternalLink
   CheckCircle
@@ -66,6 +73,7 @@ import {
   Star,
   ExternalLink,
   CheckCircle,
+
 
 
 
@@ -87,12 +95,14 @@ import {
 
 
 
+
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
         'Plugin ecosystem access',
         'Code generation & debugging',
         'Professional writing assistance',
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
+
 
 
 
@@ -194,6 +204,7 @@ export default function AiToolsPage() {;
       description:
         'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.'
       features: [
+
         'Content generation'
         'Brand voice training'
         'SEO optimization'
@@ -220,6 +231,7 @@ export default function AiToolsPage() {;
 
 
     },  ];
+
 
   ];
 
@@ -324,6 +336,7 @@ export default function AiToolsPage() {;
         </div>
       </section>
       {/* AI Market Statistics */}
+
 
 
         />;
@@ -442,11 +455,13 @@ export default function AiToolsPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
 
 
@@ -470,6 +485,7 @@ export default function AiToolsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               Curated AI Tools & Services
             </h2>
@@ -662,14 +678,17 @@ export default function AiToolsPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
               AI Tool Categories
 
@@ -696,6 +715,7 @@ export default function AiToolsPage() {;
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
 
 
@@ -742,6 +762,7 @@ export default function AiToolsPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -755,6 +776,7 @@ export default function AiToolsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* AI Implementation Guide */}
       <section className='section-padding bg-gradient-cursor'>
@@ -765,6 +787,7 @@ export default function AiToolsPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -778,6 +801,7 @@ export default function AiToolsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               Getting Started with AI Tools
             </h2>
@@ -844,6 +868,7 @@ export default function AiToolsPage() {;
           </div>
         </div>
       </section>
+
 
 
 </div>;
@@ -982,4 +1007,5 @@ export default function AiToolsPage() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -2,6 +2,7 @@
 
 
 
+
     return res.status(200).json(updated)
   }
   return res.status(405).json({ error: "Method not allowed" })
@@ -19,3 +20,4 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

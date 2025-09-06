@@ -2,15 +2,18 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
+
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
+
 
 
 
@@ -31,11 +34,13 @@ import {;
 
 
 
+
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
+
 
 
 
@@ -62,12 +67,14 @@ const LoginPage = () => {;
 
 } from '@/components/ui/card';
 const LoginPage = () => {
+
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -77,6 +84,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const router = useRouter();
   const { t } = useTranslation();
@@ -88,6 +96,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
+
   // States for the new proactive resend form
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
@@ -467,6 +476,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
         body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
 
 
+
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
     console.error("Error:", error);
@@ -564,7 +574,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 }
   },
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
@@ -630,6 +642,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
             message: 'Please verify your email address before logging in. Check your inbox for a verification link.'
           } as AuthError),
           setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered
+
+
           // Auto-resend verification email
           setTimeout(() => {
             handleResendVerification()
@@ -638,6 +652,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
+
+
 
 
 
@@ -667,6 +683,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
       return () => clearTimeout(timer)
     }
     return undefined, // Explicitly return undefined if condition is not met
+
   }, [isEmailUnverified, verificationEmailSent, email, router]);
 
 
@@ -681,6 +698,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -694,6 +712,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     logInfo('LoginPage: Rendering "Checking authentication..."');
     return (
+
       <div className='min-h-screen flex items-center justify-center'>;
         <div className='text-center'>;
           <div className='animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4'></div>;
@@ -730,6 +749,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
   // This is a safeguard against the component's content persisting on other auth routes.;
 
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
@@ -744,13 +764,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
+
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
         <Card className='w-full max-w-md'>          <CardHeader>
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -780,12 +803,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
             </CardDescription>
           </CardHeader>
           <CardContent>
+
 
 
         />;
@@ -849,10 +874,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
                   className='text-blue-600 hover:underline'
                 >                  Sign up
               )  } catch (error) {
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
 
@@ -861,6 +888,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
                   Email
                 </label>
                 <Input
+
 
 
 
@@ -891,6 +919,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -899,6 +928,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 </Link>
               </p>
             </div>
@@ -906,6 +936,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
         </Card>
       </div>
     </>
+
+
 
 
 
@@ -946,6 +978,7 @@ export default LoginPage,
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
@@ -956,3 +989,4 @@ export default LoginPage,
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

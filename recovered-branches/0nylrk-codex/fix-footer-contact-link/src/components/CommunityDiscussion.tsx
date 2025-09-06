@@ -1,6 +1,7 @@
 
 
 
+
 interface DiscussionPost {
 
   id: number;
@@ -12,17 +13,21 @@ interface DiscussionPost {
 
 
 
+
 interface DiscussionPost {
   id: number,
   author: string,
   avatar?: string,
   time: string,
   title: string,
+
+
   body: string
 }
 
 const initial_posts: DiscussionPost[] = [;
   {
+
     id: 1,
     author: "Anna Zhou",
     time: "2h ago",
@@ -34,6 +39,9 @@ const initial_posts: DiscussionPost[] = [;
     time: "50m ago",
     title: "Quick tip: How to rank your Zion listing higher",
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
+
+
+
 
 
 
@@ -74,6 +82,7 @@ const initial_posts: DiscussionPost[] = [;
             <Textarea
               placeholder="What's on your mind?"
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
+
 import React, { useState } from "react",;
 import { MessageCircle } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -169,6 +178,7 @@ export const CommunityDiscussion: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
@@ -188,8 +198,10 @@ export const CommunityDiscussion: React.FC = () => {;
                 size="sm"
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
+
                 disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() || !newBody.trim()}
+
               >
                 Post
               </Button>
@@ -197,18 +209,19 @@ export const CommunityDiscussion: React.FC = () => {;
           </CardContent>
         </Card>
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-                Post;
-              </Button>;
-            </div>;
-          </CardContent>;
-
-
-);
-
-
-
+      )}
+      <div className="flex flex-col gap-6">
+        {posts.map((post) => (
+          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
+            <CardContent className="py-4 flex gap-4">
+              <Avatar>
+                <AvatarFallback>
+                  {post.author
+                    .split(" ")
+                    .map((s) => s[0])
+                    .join("")
+                    .toUpperCase()
+                    .slice(0, 2)}
 
 
                 </AvatarFallback>;
@@ -239,6 +252,7 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>;
     </div>;
   );
+
 
 
 
@@ -292,3 +306,4 @@ export const CommunityDiscussion: React.FC = () => {;
 
 
 };
+

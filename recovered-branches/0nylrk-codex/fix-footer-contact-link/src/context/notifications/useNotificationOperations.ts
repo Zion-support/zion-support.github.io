@@ -4,6 +4,8 @@
 
 
 
+
+
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -69,6 +71,8 @@ if (throw error) {
     markAllAsRead;
 
     dismissNotification;
+
+
 
 
 import { useState, useCallback } from 'react',;
@@ -165,6 +169,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -172,6 +177,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     setFilter;
     fetchNotifications}

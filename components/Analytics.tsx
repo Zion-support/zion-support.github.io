@@ -226,8 +226,10 @@ if ( {) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
+
                         name: 'load',
                         value: Math.round(loadTime),
+
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
@@ -237,3 +239,15 @@ if ( {) {
                       })
                     }
                   }
+
+                }, 0);
+              });
+            }
+
+        }}
+      />
+    </Head>
+  );
+
+export default Analytics;
+

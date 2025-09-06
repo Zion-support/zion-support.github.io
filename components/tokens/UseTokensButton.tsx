@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 import React, { useState } from "react";
@@ -22,11 +23,13 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
       >;
         Use Tokens;
       </button>;
+
       <UseTokensModal
         isOpen={open}
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+
 
 
 
@@ -49,6 +52,7 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
       />
     </>
 );
+
   );
   const [open, setOpen] = useState(false);
   return (
@@ -67,6 +71,7 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
       />
     </>
   );
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -106,3 +111,4 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
   )
 
 }
+

@@ -6,6 +6,7 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
+
     domains: ["localhost", "ziontechgroup.com"]
   }
   output: 'standalone'
@@ -28,3 +29,4 @@ const next_config = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

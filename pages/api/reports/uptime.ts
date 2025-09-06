@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
 const p = path.join(
   process.cwd()
   'data'
@@ -28,6 +29,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to read uptime' });
+
   }
 if (req.method === 'POST') {
     try {
@@ -52,6 +54,7 @@ if (req.method === 'POST') {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -64,4 +67,5 @@ if (req.method === 'POST') {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

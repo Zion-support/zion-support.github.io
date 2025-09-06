@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -10,6 +11,7 @@ import {Resend} from "npm: resend@2 ;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -22,6 +24,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+
     const { to, subject, html } = await req.json();
     const emailResponse = await resend.emails.send({
       from: "Lovable <onboarding@resend.dev>";
@@ -67,3 +70,4 @@ serve(async (req) => {
 
   }
 });
+

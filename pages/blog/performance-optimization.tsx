@@ -1,5 +1,6 @@
 
 
+
 import Head from 'next/head',
 import Link from 'next/link';
 
@@ -7,6 +8,7 @@ import React from 'react';
 export default function PerformanceOptimization(req, res) {
   try {
   return (;
+
 
 
 
@@ -27,6 +29,7 @@ export default function PerformanceOptimization(req, res) {
             <nav className='mb-8'>;
               <Link
                 href='/blog'
+
 
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'>;
                 ← Back to Blog;
@@ -91,6 +94,7 @@ export default function PerformanceOptimization(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 import React from 'react';
 export default function PerformanceOptimization(req, res) {
@@ -361,8 +365,10 @@ export default function PerformanceOptimization(req, res) {
 
 
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

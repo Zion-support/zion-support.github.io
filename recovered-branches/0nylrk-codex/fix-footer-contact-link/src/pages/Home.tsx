@@ -1,17 +1,18 @@
 
 
 
+import React from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CategoriesSection } from "@/components/CategoriesSection",
+import { BenefitsSection } from "@/components/BenefitsSection",
+import { HowItWorksSection } from "@/components/HowItWorksSection",
+import { NewsletterSection } from "@/components/NewsletterSection",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
+import { SEO } from "@/components/SEO",
+import { HeroSection } from "@/components/HeroSection",
+import { QuickAccess } from "@/components/home/QuickAccess",
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       <Footer />
     </div>
   )
+
 
 
 
@@ -81,4 +83,5 @@ import {FeatureHighlights} from "@/components/home/FeatureHighlights";
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

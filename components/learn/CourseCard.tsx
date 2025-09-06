@@ -1,7 +1,9 @@
 
-
+import Link from 'next/link';
 
 export type Course = {
+
+
   id: string;
   title: string;
   duration_minutes: number;
@@ -25,7 +27,9 @@ export default function CourseCard(): any ({ course }: { course: Course }) {;
 
   );
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

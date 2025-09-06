@@ -26,6 +26,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
+
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
@@ -53,6 +55,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (method === 'POST') {
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -60,6 +63,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     const updated = updateJsonFile<ReportingData>(
       FILE
@@ -108,9 +112,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

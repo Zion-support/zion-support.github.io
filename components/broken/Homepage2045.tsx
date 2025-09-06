@@ -1,17 +1,21 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
 
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
+ } from 'lucide-react';
 
-
-} from 'lucide-react';
 import Link from 'next/link';
 
 // Import our new innovative services
+
 
 
 import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
@@ -22,6 +26,7 @@ import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-a
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
+
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 
 
@@ -120,6 +125,8 @@ const Homepage2045: React.FC = () => {;
       return () => observer.disconnect()
     }
   }, []);
+
+
   const fadeInUp = {
 
     initial: { opacity: 0, y: 60 },
@@ -130,6 +137,7 @@ const Homepage2045: React.FC = () => {;
   const staggerContainer = {
     animate: {
       transition: {
+
         staggerChildren: 0.1,
 
         delayChildren: 0.2
@@ -311,6 +319,7 @@ if ( {) {
     );
   }
 
+
   return (
     <Layout>
       <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>
@@ -338,22 +347,34 @@ if ( {) {
             <motion.div;
               className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full';
               animate={{
-                rotate: [360, 0],
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.7, 0.3],
+
+                rotate: [360, 0]
+                scale: [1, 1.2, 1]
+                opacity: [0.3, 0.7, 0.3]
+              }}
+              transition={{
+                duration: 6
+                repeat: Infinity
+                ease: 'easeInOut'
+              }}
+            />
+            <motion.div
+              className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
+              animate={{
+                rotate: [45, 405]
+                scale: [1, 1.15, 1]
+                opacity: [0.3, 0.5, 0.3]
+              }}
+              transition={{
+                duration: 10
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
 
               }}
 
-
-
-
-
-
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut"
               }}
 
+              }}
 
 
             />
@@ -368,6 +389,7 @@ if ( {) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
               className='mb-8'            >          <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               className='mb-8'            >
 
@@ -382,6 +404,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -415,10 +438,12 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -462,7 +487,9 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -482,7 +509,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -573,12 +602,14 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -592,7 +623,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -764,6 +797,7 @@ if ( {) {
             {/* Service Categories Grid */}
 
 
+
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
@@ -780,6 +814,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -790,9 +825,11 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -841,6 +878,7 @@ if ( {) {
               </p>;
             </motion && motion.div>;
             {/* Featured New Services */}
+
 
                 <motion.div;
                   key={service.title}
@@ -1029,6 +1067,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
             </motion.div>
           </div>
         </section>
@@ -1041,12 +1080,14 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1165,6 +1206,7 @@ export default Homepage2045;
     </Layout>);
   animate: {
   transition: {
+
   staggerChildren: 0.1, delayChildren: 0.2
 }
   /* CTA Buttons */
@@ -1177,6 +1219,7 @@ export default Homepage2045;
 
 };
   /* CTA Buttons */ 
+
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
   /* Stats */
 }<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )
@@ -1196,6 +1239,7 @@ export default Homepage2045;
   duration: 0.8;
 }viewport= {
   {
+
 
 
 
@@ -1229,3 +1273,4 @@ export default Homepage2045;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

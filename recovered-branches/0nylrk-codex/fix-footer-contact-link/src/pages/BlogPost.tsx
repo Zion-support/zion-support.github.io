@@ -1,6 +1,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useParams, Link, useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
@@ -35,21 +36,26 @@ export default function BlogPost() {
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
   const [showShareMenu, setShowShareMenu] = useState(false),
   
+
   useEffect(() => {
     // Find the current post by slug
     const currentPost = BLOG_POSTS.find(p => p.slug === slug),
     
     if (currentPost) {
       setPost(currentPost),
+
       
+
       // Find related posts (same category, excluding current post)
       const related = BLOG_POSTS.filter(p =>
         p.id !== currentPost.id &&
         (p.category === currentPost.category |
          p.tags.some(tag => currentPost.tags.includes(tag)))
+
       ).slice(0, 3);
       ).slice(0, 3),
       
+
       setRelatedPosts(related)
     } else {
       // Post not found
@@ -57,9 +63,11 @@ export default function BlogPost() {
     }
     // Scroll to top when post changes
     window.scrollTo(0, 0)
+
   }, [slug, navigate]);
   }, [slug, navigate]),
   
+
   if (!post) {
 
     return (
@@ -70,6 +78,8 @@ export default function BlogPost() {
         </div>
       </AppLayout>
     )
+
+
 
 
 
@@ -144,10 +154,12 @@ export default function BlogPost() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   
+
   return (
     <AppLayout>
       <SEO
@@ -186,12 +198,14 @@ export default function BlogPost() {;
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
+
                 <img
                   src={post.author.avatarUrl}
                   alt={post.author.name}
                 <img 
                   src={post.author.avatarUrl} 
                   alt={post.author.name} 
+
                   className="w-12 h-12 rounded-full mr-3"
                   onError={(e) => {;
                     const target = e && e.target as HTMLImageElement;
@@ -232,6 +246,7 @@ export default function BlogPost() {;
                       >
                         <Facebook className="h-4 w-4 mr-2" />
                         <span>Facebook</span>
+
                       </a>
                       <a
                         href={getShareUrl('twitter')}
@@ -240,11 +255,13 @@ export default function BlogPost() {;
                       <a 
                         href={getShareUrl('twitter')} 
                         target="_blank" 
+
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                       >
                         <Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
+
                       </a>
                       <a
                         href={getShareUrl('linkedin')}
@@ -253,6 +270,7 @@ export default function BlogPost() {;
                       <a 
                         href={getShareUrl('linkedin')} 
                         target="_blank" 
+
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                       >
@@ -260,6 +278,7 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>
                       </Link>
                     </div>
+
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">;
               <div className="flex items-center mb-4 sm:mb-0">;
                 <img;
@@ -339,6 +358,7 @@ export default function BlogPost() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   )}
 
                 </div>;
@@ -349,6 +369,7 @@ export default function BlogPost() {;
           {/* Featured image */}
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
+
               <img
                 src={post && post.featuredImage} 
                 alt={post && post.title}
@@ -372,6 +393,7 @@ export default function BlogPost() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 }}
 
               />;
@@ -414,9 +436,11 @@ export default function BlogPost() {;
                           alt={relatedPost.title}
                           className="object-cover w-full h-full"
                           onError={(e) => {
+
                             const target = e.target as HTMLImageElement;
 
                             const target = e.target as HTMLImageElement,
+
                             target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                           }}
                         />
@@ -426,6 +450,7 @@ export default function BlogPost() {;
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
                       </div>
                     </Link>
+
             </div>;
 
             <Separator className="my-12 bg-zion-blue-light" />;
@@ -470,6 +495,7 @@ export default function BlogPost() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   ))}
                 </div>;
               </div>;
@@ -495,6 +521,7 @@ export default function BlogPost() {;
       </div>
     </AppLayout>
   )
+
 }
             <div className="flex justify-between items-center mt-12">;
               <Button;
@@ -525,3 +552,4 @@ export default function BlogPost() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

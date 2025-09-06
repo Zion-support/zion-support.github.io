@@ -4,7 +4,9 @@ import AnimatedBackground from './AnimatedBackground';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 export default function FuturisticHero() {
   return (
@@ -26,6 +28,7 @@ export default /**
  */
 function FuturisticHero() {
   return (
+
     <section className='relative py - 20 sm:py - 28'>;
       <AnimatedBackground />;
       <div className='text - center max - w-4xl mx - auto'>;
@@ -53,6 +56,7 @@ function FuturisticHero() {
 
   );
 }
+
 
 
 

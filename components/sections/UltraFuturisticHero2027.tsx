@@ -1,3 +1,4 @@
+
 import React from 'react',
 import React from 'react';
 import Link from 'next/link';
@@ -33,6 +34,7 @@ import {
 
 
 
+
 import {
   Rocket
   Brain
@@ -58,6 +60,7 @@ export default function UltraFuturisticHero2027() {
   Star, TrendingUp, Users, CheckCircle
 export default function UltraFuturisticHero2027() {
   const features = [
+
     {
       icon: Brain
       text: 'AI Consciousness Evolution'
@@ -116,6 +119,7 @@ export default /**
 function UltraFuturisticHero2027() {
   const features = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     {
       icon: Brain,
       text: 'AI Consciousness Evolution',
@@ -209,9 +213,11 @@ function UltraFuturisticHero2027() {
         <motion&& motion.div
           className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl"
           animate={{
+
             y: [0, -20, 0]
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
+
 
 
 
@@ -297,6 +303,7 @@ function UltraFuturisticHero2027() {
           transition={{
 
 
+
           animate={{
             coordinate_y: [0, -30, 0];
             scale: [1, 1.1, 1];
@@ -307,6 +314,7 @@ function UltraFuturisticHero2027() {
             duration: 12,
             repeat: Infinity,
             ease: "easeInOut"
+
 
 
 
@@ -328,13 +336,16 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
+
 
 
 
@@ -352,6 +363,7 @@ function UltraFuturisticHero2027() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           >
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>
@@ -376,6 +388,7 @@ function UltraFuturisticHero2027() {
           </motion.div>
 
 
+
         />;
 
         {/* Grid Pattern */}          className="absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl";
@@ -389,6 +402,7 @@ function UltraFuturisticHero2027() {
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
+
 
           {/* Subtitle */}
           <motion.p
@@ -407,7 +421,9 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
           {/* CTA Buttons */}
           <motion.div
@@ -419,7 +435,9 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
           >
             <Link
@@ -451,6 +469,7 @@ function UltraFuturisticHero2027() {
               <span>Start Your Journey</span>
             </Link>
           </motion.div>
+
 
 
           {/* Features Grid */}
@@ -563,11 +582,13 @@ function UltraFuturisticHero2027() {
           </motion.div>
 
 
+
           {/* Features Grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+
             className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'          >            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
             className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'          >
 
@@ -586,6 +607,7 @@ function UltraFuturisticHero2027() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           >
             {features.map((feature, index) => (
@@ -696,6 +718,7 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                 className='group'
@@ -706,6 +729,7 @@ function UltraFuturisticHero2027() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               >
                 <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   <div
@@ -713,6 +737,7 @@ function UltraFuturisticHero2027() {
                   >
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
+
                   <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>                    {feature.text}              >
                 <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
@@ -734,12 +759,14 @@ function UltraFuturisticHero2027() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </h3>
                 </div>
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
           </motion.div>
+
 
 
 
@@ -757,11 +784,13 @@ function UltraFuturisticHero2027() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
+
             className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'          >            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
             className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'          >
 
@@ -773,6 +802,7 @@ function UltraFuturisticHero2027() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -817,6 +847,7 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
               >
@@ -827,6 +858,7 @@ function UltraFuturisticHero2027() {
                 </div>;
                 <div className='text - cyan - 300 font - medium group - hover:text - cyan - 400 transition - colors duration - 300'>;
                   {stat.label}
+
 
 
 
@@ -845,6 +877,7 @@ function UltraFuturisticHero2027() {
                 <div className='flex justify-center mt-2'>
                   <stat.icon
                     className={`w-5 h-5 ${stat.color} group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+
                   />                </div>              >
                 <div className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}>
                   {stat.number}
@@ -876,6 +909,7 @@ function UltraFuturisticHero2027() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Trust Indicators */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -890,7 +924,9 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -915,6 +951,7 @@ function UltraFuturisticHero2027() {
 
 
 
+
             transition={{ duration: 0 && 0.8, delay: 1 && 1.4 }}
             className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'>;
             <h3 className='text-2xl font-bold text-white mb-6'>;
@@ -936,6 +973,7 @@ function UltraFuturisticHero2027() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -953,12 +991,14 @@ function UltraFuturisticHero2027() {
 
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -972,6 +1012,7 @@ function UltraFuturisticHero2027() {
                   </div>
                   <div className="text-cyan-300 font-medium">{trust}</div>
                 </motion.div>
+
 
 
 
@@ -1073,6 +1114,7 @@ function UltraFuturisticHero2027() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
               ))}
             </div>
           </motion.div>
@@ -1080,7 +1122,9 @@ function UltraFuturisticHero2027() {
       </div>
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

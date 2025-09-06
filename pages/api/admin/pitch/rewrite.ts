@@ -1,6 +1,8 @@
 
 
 
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   try {
@@ -17,6 +19,9 @@ Title: ${slide.title}\nContent:\n${slide.content}`
     } catch (err) {
       // keep original if AI fails;
     }
+
+res.status(200).json({ title, content })
+  } catch (e: any) {
 
 
 
@@ -59,6 +64,7 @@ ${slide.content}`;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
 
@@ -71,3 +77,4 @@ ${slide.content}`;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

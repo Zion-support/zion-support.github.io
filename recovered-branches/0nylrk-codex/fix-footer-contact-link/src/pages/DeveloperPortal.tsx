@@ -2,6 +2,8 @@
 
 
 
+
+
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
@@ -20,17 +22,22 @@ import {
 
 
 
+
+
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
 import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
+
+
 interface TabDefinition {
   id: string
   label: string
 
   icon: LucideIcon
 }
+
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -51,6 +58,7 @@ export function DeveloperPortal() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
+
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -70,6 +78,7 @@ export function DeveloperPortal() {
         </p>
       </div>
 
+
       {/* Tabs */}
 
 
@@ -82,9 +91,12 @@ export function DeveloperPortal() {
                   activeTab === tab.id;
                     ? "text-white border-zion-purple";
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";
+
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
+
+
 
 
 
@@ -113,6 +125,7 @@ export function DeveloperPortal() {
 
 
 
+
 ;
 
 export default function ProtectedDeveloperPortal() {;
@@ -132,4 +145,5 @@ export default function ProtectedDeveloperPortal() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

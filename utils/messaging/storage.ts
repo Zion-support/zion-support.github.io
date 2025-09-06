@@ -1,3 +1,4 @@
+
 // Messaging storage utilities
 export interface Message {;
   id: string;
@@ -35,6 +36,7 @@ export interface Message {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -59,6 +61,7 @@ export interface Message {;
 
 
 
+
 export interface MessageThread {;
 
 
@@ -78,6 +81,7 @@ export interface MessageThread {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   message: Message;
   conversation: Conversation;
@@ -321,6 +325,8 @@ class MessagingStorage {
 
 
 
+
+
   return messagingStorage.updateMessage(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -333,6 +339,7 @@ export async function deleteMessage(id: string): Promise<boolean> {
 export async function markAsRead(id: string): Promise<boolean> {
 
 
+
   return messagingStorage.markAsRead(id)
 
 
@@ -340,6 +347,7 @@ export async function markAsRead(id: string): Promise<boolean> {
 
 
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
+
 
 
   return messagingStorage.createConversation(conversation);
@@ -350,6 +358,7 @@ export async function getConversation(id: string): Promise<Conversation | null> 
 
 
 }
+
 
 
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
@@ -433,6 +442,7 @@ export async function getConversationsByUser(userId: string, includeArchived?: b
 
 
 
+
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
@@ -443,10 +453,13 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
 
 
 
+
+
   return messagingStorage.searchMessages(query, userId, limit);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 // Utility functions
+
 
 
 export function generateMessageId(): string {
@@ -478,6 +491,7 @@ export function generateConversationId(): string {;
 export function formatMessageTime(isoString: string): string {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const date = new Date(isoString);
   const now = new Date();
 
@@ -533,6 +547,7 @@ export function formatMessageTime(isoString: string): string {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -543,6 +558,7 @@ export function formatMessageTime(isoString: string): string {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 
 

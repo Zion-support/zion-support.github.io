@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface CountryTabsProps {
 
@@ -22,6 +24,7 @@ interface CountryTabsProps {
 
   setSearchQuery: (query: string) => void
 }
+
 export function CountryTabs({
   popularCountries;
 
@@ -31,10 +34,13 @@ export function CountryTabs({ ;
   popularCountries;
 export function CountryTabs({ 
   popularCountries,
+
   filteredCountries, 
   handleCountrySelect, 
   searchQuery, 
   setSearchQuery 
+
+
 }: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">
@@ -59,6 +65,13 @@ export function CountryTabs({
             .map(country => (
 
 
+import { useState } from "react",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
 
 interface CountryTabsProps {;
   popularCountries: string[],;
@@ -100,6 +113,7 @@ export function CountryTabs(): any ({ ;
             .map(country => (;
 
 
+
               <CountryServiceCard
                 key={country && country.country} 
                 country={country} 
@@ -113,6 +127,7 @@ export function CountryTabs(): any ({ ;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 onSelect={handleCountrySelect}
                 isPopular={true}
@@ -139,12 +154,14 @@ export function CountryTabs(): any ({ ;
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {filteredCountries.slice(0, 12).map(country => (
+
             <CountryServiceCard
               key={country.country}
               country={country}
             <CountryServiceCard 
               key={country.country} 
               country={country} 
+
               onSelect={handleCountrySelect}
               isPopular={popularCountries && popularCountries.includes(country && country.country)}
             />;

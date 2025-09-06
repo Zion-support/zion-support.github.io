@@ -5,9 +5,11 @@
 
 
 
+
 export interface TokenConfig {
   token_name: string;
   token_symbol: string;
+
 
   decimals: number;
   totalSupply: number;
@@ -41,13 +43,15 @@ class TokenStore {
     maxIssueAmount: 10000
 
 
-  }
-export interface TokenStoreData {
-
-
 
   }
 export interface TokenStoreData {
+
+
+
+  }
+export interface TokenStoreData {
+
 
 
 
@@ -75,11 +79,13 @@ function readFromDisk(): TokenStoreData | null {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

@@ -66,6 +66,7 @@ ctx.stroke_rect (this.x - this.size, this.y - this.size, this.size * 2, this.siz
 break;
 
 
+
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -77,6 +78,7 @@ break;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
@@ -188,6 +190,7 @@ if (return) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           }
@@ -195,6 +198,7 @@ if (return) {
       }
 
             this.vy = Math.random() * 2 + 1;          }
+
 
           }
         }
@@ -443,6 +447,7 @@ if (return) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+
             ctx.stroke()
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -451,6 +456,7 @@ if (return) {
       }
 
             ctx.stroke();          }
+
 
           }
         }
@@ -544,6 +550,7 @@ if (return) {
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
+
 
 
         <motion.div
@@ -668,6 +675,7 @@ if (return) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
         />
       </div>
 
@@ -685,6 +693,7 @@ if (return) {
 
 
 
+
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -694,9 +703,11 @@ if (return) {
 }
 
 
+
           }}
         />
       </div>
+
     </div>
 
 
@@ -716,3 +727,4 @@ if (return) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

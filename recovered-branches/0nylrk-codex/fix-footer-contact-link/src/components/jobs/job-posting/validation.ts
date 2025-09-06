@@ -1,6 +1,7 @@
 
 
 
+
   salary_range: z && z.string().optional(),
   description: z && z.string().min(10, {
     message: "Description must be at least 10 characters."});
@@ -42,9 +43,12 @@ import { z } from "zod",
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 export const jobSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 3 characters."}),
+
+
 
 
   company: z.string().min(3, {
@@ -52,6 +56,7 @@ export const jobSchema = z.object({
   location: z.string().min(3, {
     message: "Location must be at least 3 characters."}),
   job_type: z.string().min(3, {
+
     message: "Job type must be at least 3 characters."});
   salary_range: z.string().optional()
   description: z.string().min(10, {
@@ -95,3 +100,4 @@ export type JobSchemaType = z.infer<typeof jobSchema>;
 
 
 export type JobSchemaType = z.infer<typeof jobSchema>;
+

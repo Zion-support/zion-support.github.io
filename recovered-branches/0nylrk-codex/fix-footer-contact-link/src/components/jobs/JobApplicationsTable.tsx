@@ -5,6 +5,8 @@
 
 
 
+
+
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -13,6 +15,7 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
 interface JobApplicationsTableProps {;
   jobId: string;
 }
+
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
@@ -30,6 +33,7 @@ export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProp
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     markApplicationAsViewed;
     refetch;
   } = useJobApplications(jobId);
@@ -44,6 +48,8 @@ export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProp
       const application = applications.find(app => app.id === applicationId);
       if (application && !application.viewed_at) {
         await markApplicationAsViewed(applicationId)
+
+
 import { useState } from "react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -65,6 +71,7 @@ import {
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
+
 
 
 
@@ -95,6 +102,7 @@ import {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -108,6 +116,8 @@ import {
 
   if (isLoading) {
     return <LoadingState />
+
+
   },;
   const handleViewScore = (application: JobApplication) => {;
     setSelectedApplication(application),;
@@ -127,7 +137,9 @@ import {
     return <LoadingState />;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   }
   if (error) {
     return <ErrorState error={error} />
@@ -135,6 +147,8 @@ import {
   if (applications.length === 0) {
     return <EmptyState />
   }
+
+
 
 
 

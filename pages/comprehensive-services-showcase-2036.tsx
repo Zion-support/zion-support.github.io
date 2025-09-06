@@ -2,6 +2,8 @@
 
 
 
+
+
 import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
 import {real2036ITServices} from '../data/real-2036-it-services';
 import {real2036AIServices} from '../data/real-2036-ai-services';
@@ -9,13 +11,11 @@ import {real2036AIServices} from '../data/real-2036-ai-services';
 import {motion} from 'framer-motion';
 
 
-
-
-
-  const categories = [...new Set(allServices.map(service => service.category))]
-
-
-
+import Layout from '../components/layout/Layout',
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
+import { real2036ITServices } from '../data/real-2036-it-services',
+import { real2036AIServices } from '../data/real-2036-ai-services',
+import { motion } from 'framer-motion',
 
 
 const ComprehensiveServicesShowcase2036: React.FC = () => {
@@ -25,6 +25,8 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     ...real2036AIServices
   ],
   const categories = [...new Set(allServices.map(service => service.category))],
+
+
   return (
 
 
@@ -34,6 +36,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         description="Explore our revolutionary 2036 services portfolio featuring AI, Quantum Computing, Space Technology, and cutting-edge IT solutions. Transform your business with next-generation technology."
         keywords="AI services, quantum computing, space technology, IT solutions, 2036, Zion Tech Group, innovative technology"
       />
+
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white'>
         {/* Hero Section */}
         <section className='relative py-20 px-4 overflow-hidden'>
@@ -51,6 +54,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             <motion.h1
               initial={{ opacity: 0, y: 50 }  } catch (error) {
     console.error("Error:", error);
@@ -97,10 +101,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
             </motion.div>
           </div>
         </section>
+
         {/* Services Overview */}
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -166,6 +172,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 Our comprehensive portfolio spans the most advanced and innovative technology domains, designed to transform businesses and drive the future forward.
               </p>
             </motion.div>
+
             {/* Category Cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories.map((category, index) => (
                 <motion.div
@@ -214,11 +221,13 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 >
                   <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>
                   <p className="text-gray-300 mb-4">
                     {allServices.filter(service => service.category === category).length} innovative services
                   </p>
+
                   <div className='flex items-center justify-between'>
                     <span className='text-sm text-gray-400'>Starting from</span>
                     <span className='text-lg font-bold text-green-400'>
@@ -283,6 +292,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Featured Revolutionary Services
@@ -292,6 +302,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               </p>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </motion.div>
+
             {/* Featured Services Grid */}
 
             </div>;
@@ -416,6 +427,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Complete Service Portfolio
@@ -425,6 +437,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
               </p>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </motion.div>
+
             {/* Services by Category */}
             {categories && categories.map((category, categoryIndex) => (;
               <motion&& motion.div
@@ -437,6 +450,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -444,6 +458,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                     .filter(service => service.category === category)
                     .map((service, serviceIndex) => (
                       <motion.div
+
                         key={service.id}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -484,6 +499,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{service.icon}</span>
@@ -501,6 +517,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                         </div>
                         <div className="space-y-1 mb-3">
                           {service.features.slice(0, 2).map((feature, idx) => (
+
                             <div
                               key={idx}
                               className='flex items-center text-xs text-gray-300'
@@ -532,6 +549,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         </div>
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
                           View Details
@@ -540,7 +558,9 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             >
@@ -564,6 +584,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         </section>
       </div>
     </Layout>
+
 
 
                 Ready to Transform Your Business?;
@@ -596,3 +617,4 @@ export default ComprehensiveServicesShowcase2036;
 
 
 export default ComprehensiveServicesShowcase2036;
+

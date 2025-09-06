@@ -1,40 +1,78 @@
 
 
+  baseUrl: string, // e.g., https: //zion-latam.example.org;
+  scope?: SyncScope;
+  paused?: boolean;
+}
+export interface InstanceConfig {instanceId: string;
+  optIn: boolean;
+  paused: boolean;
+  scope: SyncScope;
+  peers: Peer[];
+  secretConfigured: boolean;
+
+export interface Peer {;
+  id: string;
+  baseUrl: string, // e.g., https: //zion-latam.example.org;
+  scope?: SyncScope,;
+  paused?: boolean;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface InstanceConfig {;
+  instanceId: string;
+  optIn: boolean;
+  paused: boolean;
+  scope: SyncScope,;
+  peers: Peer[];
+  secretConfigured: boolean;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-}
-
-;
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
   | "talent_mobility";
   | "dao_endorsement";
-  | "leaderboard_entry";
-export interface BaseEventPayload {id: string;
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-export interface ProposalVoteEntry {voterId: string;
+;
+export interface ProposalVoteEntry {
+  voterId: string;
   weight: number;
   choice: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-export interface ProposalPayload extends BaseEventPayload {proposalId: string;
+;
+export interface ProposalPayload extends BaseEventPayload {;
+  proposalId: string;
   title: string;
   votes: ProposalVoteEntry[];
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-export interface TokenTransferPayload extends BaseEventPayload {txId: string;
-  | "leaderboard_entry",;
-export interface BaseEventPayload {;
-  id: string;
+;
+export interface TokenTransferPayload extends BaseEventPayload {;
+  txId: string;
 
 
   token: string;
@@ -42,6 +80,7 @@ export interface BaseEventPayload {;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
+
 }
 export interface TalentMobilityPayload extends BaseEventPayload {personId: string;
   } catch (error) {
@@ -52,11 +91,13 @@ export interface TalentMobilityPayload extends BaseEventPayload {personId: strin
 ;
 export interface TalentMobilityPayload extends BaseEventPayload {;
   personId: string;
+
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
+
 }
 export interface DaoEndorsementPayload extends BaseEventPayload {fromDAO: string;
   toDAO: string;
@@ -98,15 +139,27 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
 
 
+  score: number;
+  category: string, // e.g., grants, contributions;
+  rank?: number,;
+  period?: string, // e.g., 2025-Q3;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 
 }
 ;
+
+
 
 
 export type SyncEventPayload =;
@@ -114,6 +167,7 @@ export type SyncEventPayload =;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
+
   | LeaderboardEntryPayload;
 export interface SyncEvent {eventId: string;
   type: SyncEventType;
@@ -122,10 +176,12 @@ export interface SyncEvent {eventId: string;
 export interface SyncEvent {;
 
 
+
   originInstanceId: string;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
+
 }
 export interface MultiverseState {
   config: InstanceConfig,
@@ -143,3 +199,4 @@ export interface MultiverseState {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -11,6 +13,15 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { writeState, readState } from '../../../../lib/integrations/fileStore';
+import { crm } from '../../../../lib/integrations/connectors';
+export default async function handler(req, res) {
 
   try {
   if (req && req.method !== "POST")
@@ -45,3 +56,22 @@ export default async function handler(
 
 
 }
+
+;
+  res.status(200).json({ ok: true, eventId });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+
+

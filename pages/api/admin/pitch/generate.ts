@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
@@ -13,6 +15,26 @@ const client = new OpenAI({
 
 });
 export default async function handler(
+
+
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: "Forbidden" });
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method Not Allowed" });
+  const { operatorPrompt, inputs, metrics } = req.body |{}
+  const seed = [
+    "Problem & Opportunity"
+    "Solution & Product"
+    "Market Size (TAM/SAM/SOM)"
+    "Traction & Metrics"
+    "Business Model"
+    "Go-To-Market"
+    "Team"
+    "Roadmap"
+    "Token Strategy"
+    "Ask & Call to Action"
+  ];
+
 
 
 
@@ -36,6 +58,7 @@ export default async function handler(
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
+
 
 
 
@@ -136,6 +159,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -177,9 +201,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -2,10 +2,13 @@
 
 
 
+
+
   className?: string;
   children: React && React.ReactNode,;
 
   showAfterScroll?: number;
+
 
 
   position?: "bottom" | "top"
@@ -32,6 +35,7 @@ export function StickyAction(): any ({;
   className,
   children,
   showAfterScroll = 300,
+
   position = "bottom"
 }: StickyActionProps) {
   const [isVisible, setIsVisible] = useState(false),
@@ -44,6 +48,7 @@ export function StickyAction(): any ({;
       } else {
         setIsVisible (false);
       }
+
     }
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -64,10 +69,13 @@ export function StickyAction(): any ({;
   }
   },
 
+
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
+
+
 
 
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
@@ -118,6 +126,7 @@ export function StickyAction({;
 
 
 
+
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
             positionClasses[position]
 
@@ -131,6 +140,7 @@ export function StickyAction({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;

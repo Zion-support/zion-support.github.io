@@ -24,6 +24,7 @@ import { motion } from 'framer-motion';
 
 
 
+
   CheckCircle,
   ArrowRight,
   Star,
@@ -49,6 +50,7 @@ import { motion } from 'framer-motion';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 } from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
 
@@ -137,6 +139,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       y: 0
       opacity: 1
       transition: {
+
         duration: 0.5
       }
     }
@@ -159,6 +162,7 @@ const ComprehensiveServicesShowcase2025 = () => {
     }
   };
 
+
   return (
     <section className='relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>
       {/* Animated Background Elements */}
@@ -175,10 +179,13 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
       {/* Animated Background Elements */}
+
 
       <div className="absolute inset-0 overflow-hidden">;
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>;
@@ -201,6 +208,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
@@ -215,7 +223,9 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -229,13 +239,14 @@ const ComprehensiveServicesShowcase2025 = () => {
             services, IT solutions, and AI innovations designed to transform
             your business and drive success in the digital age.          </p>        >
 
+          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
+            Revolutionary 2025 Services
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.
+          </p>
+        </motion.div>
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         {/* Service Categories */}
         <motion&& motion.div
@@ -364,6 +375,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <h3 className='text-3xl font-bold text-white mb-2'>
                     {category.title}
                   </h3>
+
                   <p className='text-gray-400 text-lg'>                    {category.description}            >
               {/* Category Header */}
               <div className="flex items-center mb-8">
@@ -403,12 +415,14 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+
 
 
 
@@ -450,12 +464,14 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   >
                     {/* Service Header */}
                     <div className='mb-4'>
                       <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors'>
                         {service.name}
                       </h4>
+
                       <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}                  >
                     {/* Service Header */}
                     <div className="mb-4">
@@ -482,6 +498,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                       </p>
                     </div>
@@ -515,6 +532,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -523,6 +541,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     {/* Pricing */}
 
                     <div className="mb-4">
@@ -622,6 +641,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                             {useCase}
                           </span>;
                         ))}
+
                     </div>
                     {/* CTA Button */}
                     <div className='mt-6'>;
@@ -645,11 +665,13 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                       </a>
                     </div>
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </motion.div>
+
 
 
 
@@ -662,11 +684,13 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 ))}
               </div>
             </motion.div>
           ))}
         </motion.div>
+
 
 
 
@@ -684,6 +708,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -698,7 +723,9 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -757,6 +784,7 @@ const ComprehensiveServicesShowcase2025 = () => {
   );
 
 
+
 };
 export default ComprehensiveServicesShowcase2025;  );
 };
@@ -769,9 +797,11 @@ export default ComprehensiveServicesShowcase2025;
 
 
 
+
 export default ComprehensiveServicesShowcase2025;  )
 }
 export default ComprehensiveServicesShowcase2025;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -781,3 +811,4 @@ export default ComprehensiveServicesShowcase2025;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

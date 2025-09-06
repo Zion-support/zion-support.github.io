@@ -2,6 +2,7 @@
 
 
 
+
 type RoadmapInputs = {
 
 
@@ -58,6 +59,7 @@ Goals:
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
 Format:
+
 
 
 
@@ -169,6 +171,8 @@ Validation:;
   }
 }
   },
+
+
   return (
     <>
       <Head>
@@ -190,6 +194,7 @@ Validation:;
               <div>
                 <label className="block text-sm font-medium text-gray-700">Milestones achieved so far</label>
                 <textarea
+
                   value={milestones}
                   onChange={(e) => setMilestones(e.target.value)}
                   rows={3}
@@ -215,6 +220,7 @@ Validation:;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
                 />
@@ -222,6 +228,7 @@ Validation:;
               <div>
                 <label className="block text-sm font-medium text-gray-700">Vision keywords</label>
                 <input
+
                   value={keywords}
                   onChange={(e) => setKeywords(e.target.value)}
                   value={keywords  } catch (error) {
@@ -241,6 +248,7 @@ Validation:;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -248,6 +256,7 @@ Validation:;
               <div>
                 <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>
                 <input
+
                   value={priorities}
                   onChange={(e) => setPriorities(e.target.value)}
                   value={priorities  } catch (error) {
@@ -270,6 +279,7 @@ Validation:;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
@@ -282,6 +292,7 @@ Validation:;
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
               <button
+
                 onClick={copyPrompt}
                 onClick={copyPrompt  } catch (error) {
     console.error("Error:", error);
@@ -299,6 +310,7 @@ Validation:;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
@@ -346,6 +358,8 @@ Validation:;
                     </ul>
                   </div>
                 </article>
+
+
 
 
   };
@@ -484,6 +498,7 @@ Validation:;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -495,4 +510,5 @@ Validation:;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

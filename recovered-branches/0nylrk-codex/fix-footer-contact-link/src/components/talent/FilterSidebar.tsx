@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Filter} from "lucide-react";
@@ -38,6 +39,7 @@ export function FilterSidebar(): any ({;
 }: FilterSidebarProps) {;
 
 
+
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -56,6 +58,8 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
+
+
 
 
   isMobileFilterOpen
@@ -78,6 +82,7 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
+
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -138,6 +143,7 @@ export function FilterSidebar({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}

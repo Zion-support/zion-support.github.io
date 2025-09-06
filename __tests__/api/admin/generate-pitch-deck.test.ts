@@ -1,3 +1,5 @@
+
+
 import { NextApiRequest, NextApiResponse } from 'next'
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import handler from '@/pages/api/admin/generate-pitch-deck'
@@ -48,6 +50,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint'
       "data"
             "error"
       "method"
+
       "headers"
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createMocks, RequestMethod } from 'node-mocks-http';
@@ -375,3 +378,4 @@ import { NextApiRequest,NextApiResponse } from 'next'; import { createMocks,Requ
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
       "headers"
+

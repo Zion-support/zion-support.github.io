@@ -1,4 +1,5 @@
 
+
 import React from "react";
 
 import {Link} from "react-router-dom";
@@ -20,9 +21,11 @@ import {
 
 
 
+
 export function QuickAccess() {
   const quickLinks = [
     {
+
 
 
 
@@ -34,34 +37,43 @@ export function QuickAccess() {
 
 
 
+
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
+
     }
     },
+
     {
       title: "Service Marketplace"
       description: "Discover professional services"
       icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
       link: "/services"
+
     }
     },
+
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware"
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
+
     }
     },
+
     {
       title: "Community"
       description: "Connect with tech professionals"
       icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
       link: "/community"
+
     }
     },
+
     {
       title: "Mobile App"
       description: "Zion on the go"
@@ -98,6 +110,7 @@ export function QuickAccess() {
                 <ArrowRight className="ml-1 h-3 w-3" />
               </div>
             </Link>
+
 import React from "react",;
 import { Link } from "react-router-dom",;
 import {;
@@ -189,6 +202,7 @@ export function QuickAccess() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           ))}
         </div>;
       </div>;

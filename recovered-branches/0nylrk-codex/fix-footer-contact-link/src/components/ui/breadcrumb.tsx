@@ -1,6 +1,7 @@
 
 
 import * as React from "react"
+
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
 
@@ -14,10 +15,12 @@ const Breadcrumb = React.forwardRef<;
 
 
 
+
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
+
  
 
 
@@ -28,6 +31,7 @@ import { cn } from "@/lib/utils"
 
 const Breadcrumb = React.forwardRef<
   HTMLElement,
+
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   }
@@ -126,6 +130,7 @@ const BreadcrumbEllipsis = ({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   >;
@@ -151,6 +156,7 @@ export {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
@@ -158,8 +164,13 @@ export {
   BreadcrumbSeparator;
 
 
-
-
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
 
   BreadcrumbEllipsis}
 ;
+
+

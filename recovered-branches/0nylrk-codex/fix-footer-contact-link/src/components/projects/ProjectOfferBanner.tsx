@@ -1,6 +1,7 @@
 
 
 
+
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -24,10 +25,13 @@ export function ProjectOfferBanner() {
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
   const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
   
+
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers)
+
+
 
 
 
@@ -68,11 +72,13 @@ export function ProjectOfferBanner() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   }
   
+
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -110,14 +116,7 @@ export function ProjectOfferBanner() {;
             </CardContent>
           </Card>
         ))}
-    </div>
-  )
-}
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import { useEffect, useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Bell, Calendar, X } from './lucide-react';
@@ -134,3 +133,6 @@ function ProjectOfferBanner() {
   const [pending_offers, setPendingOffers] = useState < Project[]>([]);
   const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
 ;
+=======
+
+

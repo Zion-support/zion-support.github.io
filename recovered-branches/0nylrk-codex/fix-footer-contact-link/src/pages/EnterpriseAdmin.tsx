@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -26,13 +27,25 @@ export default function EnterpriseAdmin() {
   // Check if user has enterprise admin role
   const isEnterpriseAdmin = user?.role === "enterprise_admin",
   
+
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-
+    <ProtectedRoute>
+      <SEO
+        title="Enterprise Admin - Zion AI Marketplace"
+        description="Manage your team's access, roles, and usage on the Zion AI Marketplace."
+      />
+      <Header />
+      <main className="min-h-screen bg-background">
+        <AdminDashboard />
+      </main>
+      <Footer />
+    </ProtectedRoute>
+  )
 
 
 import React from "react",;
@@ -70,6 +83,7 @@ export default function EnterpriseAdmin() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -78,6 +92,7 @@ export default function EnterpriseAdmin() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -96,3 +111,5 @@ export default /**
 function EnterpriseAdmin() {
   const { user } = use_auth ();
 ;
+
+

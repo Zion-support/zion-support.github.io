@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAgricultureService {;
   id: string;
@@ -45,6 +46,7 @@ export interface InnovativeAgricultureService {
 
 ;
 const contact = {
+
 
 
 
@@ -314,7 +316,9 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     realImplementation: true
     implementationDetails:
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
@@ -465,6 +469,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 
     reviews: 89
 
+
     reviews: 89
 
 
@@ -509,8 +514,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 ;
 
 
-=======
-=======
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAgricultureService {;
   id: string,;
@@ -752,3 +756,5 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
   }
 ];
+
+

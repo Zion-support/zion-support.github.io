@@ -2,10 +2,13 @@
 
 
 
+
+
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+
 
 
 import { Badge } from '@/components / ui / badge';
@@ -20,6 +23,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / too
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   let message = "This item has an open dispute";
+
 
 
 
@@ -63,6 +67,7 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
       message = "This dispute has been resolved",
       break,
     case 'closed':
+
       variant = "outline";
       message = "This dispute has been closed";
       break;
@@ -70,6 +75,7 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
       variant = "outline",
       message = "This dispute has been closed",
       break,
+
     default:
       break
   }
@@ -86,6 +92,8 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
       </TooltipContent>
     </Tooltip>
   )
+
+
 
 
 
@@ -136,9 +144,11 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

@@ -23,7 +23,8 @@ export type IntegrationProviderId =;
 export interface IntegrationProviderMeta {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  icon?: string
 
 }
 export interface SyncRules {
@@ -33,6 +34,10 @@ export interface SyncRules {
   // ATS rules;
   autoSyncApplicants?: boolean;
 
+  autoUploadResumes?: boolean;
+
+  providerId: IntegrationProviderId;
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
 
   expiresAt?: number;
   connectedAt?: number;
@@ -46,6 +51,7 @@ export interface SyncLogEntry {
   id: string;
   type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
   timestamp: number;
+
 
   payload: Record < string, any>;
 ;
@@ -66,10 +72,12 @@ export interface ZapierEvent {;
 
 
 
+
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
+
 
 
 
@@ -87,3 +95,4 @@ export interface ZapierEvent {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

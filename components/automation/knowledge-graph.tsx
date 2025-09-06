@@ -2,10 +2,12 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export default function KnowledgeGraph({ report }: Props) {
+
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
     <div className="space-y-6">;
@@ -37,12 +39,7 @@ export default function KnowledgeGraph({ report }: Props) {
         </ul>
       </section>
     </div>
-);
-}
-  );
-}
 
-=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -103,5 +100,7 @@ export default function KnowledgeGraph({ report }: Props) {
 
 
 
+
+=======
 
 

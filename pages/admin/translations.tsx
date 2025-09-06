@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -10,11 +11,13 @@ const TranslationPreview = dynamic(() => import('../../components/admin/Translat
 const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 export default function TranslationsAdminPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <TranslationPreview />
     </div>
+
 
 
 
@@ -31,3 +34,4 @@ export default function TranslationsAdminPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

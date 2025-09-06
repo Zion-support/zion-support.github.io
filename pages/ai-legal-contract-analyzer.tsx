@@ -2,6 +2,7 @@
 
 
 
+
   Phone,
   Mail,
   MapPin,
@@ -125,6 +126,7 @@ if (return null) {
 
 
 
+
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react',
@@ -136,9 +138,11 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 
+
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'))
   if (!service) return null,
+
   return (
     <Layout>
       <Head>
@@ -182,10 +186,13 @@ export default function AILegalContractAnalyzerPage() {
 
 
 
+
+
       </div>
     </Layout>
   )
 }
+
 
 
 
@@ -201,4 +208,5 @@ export default function AILegalContractAnalyzerPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

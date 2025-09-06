@@ -1,5 +1,6 @@
 
 
+
 import useSWR from 'swr';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';
@@ -9,6 +10,7 @@ import useSWR from 'swr',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import Link from 'next/link',
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
+
 
 
 export default function DisputesIndexPage() {
@@ -28,10 +30,12 @@ function DisputesIndexPage() {
   return (
 
 
+
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -48,10 +52,12 @@ function DisputesIndexPage() {
                 <tr key={d.id} className="border-t">
 
 
+
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</Link></Link></td>
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                   <td className="px-3 py-2">{d.projectId}</td>
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
@@ -105,6 +111,7 @@ function DisputesIndexPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -115,4 +122,5 @@ function DisputesIndexPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

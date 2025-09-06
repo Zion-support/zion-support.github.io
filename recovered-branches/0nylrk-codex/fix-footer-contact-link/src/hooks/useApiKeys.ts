@@ -5,11 +5,14 @@
 
 
 
+
+
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type ApiKeyScope = 'jobs: read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage';
+
 
 
 
@@ -30,12 +33,14 @@ export interface ApiKey {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   id: string;
   name: string;
   key_prefix: string;
   scopes: ApiKeyScope[];
   created_at: string;
   last_used_at: string | null;
+
 
 
 
@@ -54,11 +59,13 @@ export interface ApiLog {;
 
 
 
+
   id: string;
   endpoint: string;
   method: string;
   status_code: number;
   created_at: string;
+
 
 
 
@@ -74,6 +81,7 @@ export function useApiKeys() {;
 
 
 
+
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -81,6 +89,8 @@ export function useApiKeys() {;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [newApiKey, setNewApiKey] = useState<string | null>(null);
+
+
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -136,6 +146,7 @@ export function useApiKeys() {
     // Using optional chaining ensures this function works both in the browser
     // (where import && import.meta.env is injected by Vite) and in Node environments
     // such as tests or server side rendering.
+
     const env = (import.meta as any)?.env ?? process.env;
     const url = env.VITE_SUPABASE_URL |env.SUPABASE_URL;
     return `${url}/functions/v1/api-key-manager`
@@ -159,11 +170,14 @@ export function useApiKeys() {
     
 
 
+
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
         setError("Authentication required"),
         return
+
+
 
 
 
@@ -218,25 +232,30 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       setKeys(result.keys || [])
 
       setKeys(result.keys || [])
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     } catch (err) {
       console.error('Error fetching API keys:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
+
         variant: "destructive";
         title: "Error fetching API keys"
         variant: "destructive",
         title: "Error fetching API keys",
+
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } finally {
       set_loading (false);
     }
+
   }
   // Create new API key
   const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
@@ -254,11 +273,13 @@ if ( {) {
     setError(null),
     setNewApiKey(null),
     
+
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
+
       }
       const response = await fetch(`${getApiUrl()}/create`, {
         method: 'POST'
@@ -286,6 +307,7 @@ if ( {) {
       toast({
         title: "API Key Created"
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
+
 
 
 
@@ -338,7 +360,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
@@ -349,20 +373,25 @@ if ( {) {
       toast({
         title: "API Key Created",
         description: "Your new API key has been generated. Save it now, you won't be able to see it again."}),
+
       
+
       return result
     } catch (err) {
       console && console.error('Error creating API key:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
+
         variant: "destructive";
         title: "Error creating API key"
         variant: "destructive",
         title: "Error creating API key",
+
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+
   }
   // Regenerate API key
   const regenerateApiKey = async (keyId: string) => {
@@ -382,11 +411,13 @@ if ( {) {
     
 
 
+
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
+
 
 
       }
@@ -397,6 +428,7 @@ if ( {) {
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({ keyId })
+
 
 
 
@@ -453,6 +485,7 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -480,19 +513,23 @@ if ( {) {
         title: "API Key Regenerated",
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again."}),
       
+
       return result
     } catch (err) {
       console && console.error('Error regenerating API key:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
+
         variant: "destructive";
         title: "Error regenerating API key"
         variant: "destructive",
         title: "Error regenerating API key",
+
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+
   }
   // Revoke API key
   const revokeApiKey = async (keyId: string) => {
@@ -510,11 +547,13 @@ if ( {) {
     
 
 
+
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
+
 
 
       }
@@ -525,6 +564,7 @@ if ( {) {
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({ keyId })
+
 
 
 
@@ -582,6 +622,7 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -601,19 +642,23 @@ if ( {) {
         title: "API Key Revoked",
         description: "The API key has been revoked successfully."}),
       
+
       return result
     } catch (err) {
       console && console.error('Error revoking API key:', err);
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
+
         variant: "destructive";
         title: "Error revoking API key"
         variant: "destructive",
         title: "Error revoking API key",
+
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
       setLoading(false)
     }
+
   }
   // Fetch API usage logs
   const fetchApiLogs = async (limit = 50, offset = 0) => {
@@ -629,11 +674,13 @@ if ( {) {
     setLoading(true),
     setError(null),
     
+
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
+
       }
       const response = await fetch (
         `${getApiUrl ()}/logs?limit=${limit}&offset=${offset}`,
@@ -641,6 +688,7 @@ if ( {) {
         {
           method: 'GET'
           headers: {
+
 
 
 
@@ -701,6 +749,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -710,6 +759,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
       
+
       return result
     } catch (err) {
       console && console.error('Error fetching API logs:', err);
@@ -717,8 +767,10 @@ if ( {) {
       toast({
 
 
+
         title: "Error fetching API logs",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
+
 
 
 
@@ -741,16 +793,40 @@ if ( {) {
     fetchApiLogs;
 
 
+    clearNewApiKey: () => setNewApiKey(null)
 
-    clearNewApiKey: () => setNewApiKey (null);
-
-  }
-}
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+;
+      setLogs(result.logs || []),;
+      setTotalLogs(result.count || 0),;
+      return result;
+    } catch (err) {;
+      console.error('Error fetching API logs:', err),;
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
+      toast({;
+        variant: "destructive",;
+        title: "Error fetching API logs",;
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {;
+      setLoading(false);
+    }
+  },;
+  return {;
+    keys,;
+    logs,;
+    totalLogs,;
+    loading,;
+    error,;
+    newApiKey,;
+    fetchApiKeys,;
+    createApiKey,;
+    regenerateApiKey,;
+    revokeApiKey;
+    fetchApiLogs;
+    clearNewApiKey: () => setNewApiKey(null);
 
 
   }
 }
 ;
+
+

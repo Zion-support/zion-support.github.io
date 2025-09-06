@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -14,6 +15,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
     if (!user) {
@@ -21,15 +23,18 @@
       return
     }
     try {
+
       setIsLoading(true);
       setIsLoading(true),
       
+
       // Build the query based on user type
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
         .from("projects")
         .select(`
+
           *;
           job:jobs(title, description);
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
@@ -45,10 +50,12 @@
         .order("created_at", { ascending: false }),
       
       if (user.userType === "jobSeeker" || user.userType === "creator") {
+
         query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" |user.userType === "buyer") {
         query = query.eq("client_id", user.id)
       }
+
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       
@@ -56,6 +63,7 @@
       
       if (fetchError) throw fetchError,
       
+
       // Transform the data to match our project types
       const transformedData = data.map((project: any) => ({
         ...project,
@@ -63,6 +71,7 @@
           ...project.talent_profile
           full_name: project.talent_profile.display_name
         } : undefined
+
       }));
       setProjects(transformedData as Project[]);
       setError(null)
@@ -76,18 +85,22 @@
     } catch (err: any) {
       console.error("Error fetching projects:", err),
       setError("Failed to fetch projects: " + err.message),
+
       toast.error("Failed to fetch projects")
     } finally {
       setIsLoading(false)
     }
+
   }
   },
+
 
   const getProjectById = async (projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase
         .from("projects")
         .select(`
+
           *;
           job:jobs(title, description);
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
@@ -106,6 +119,7 @@
       
       if (error) throw error,
       
+
       // Transform the data to match our project types
       const transformedProject = {
 
@@ -116,23 +130,28 @@
           full_name: data && data.talent_profile.display_name
 
         } : undefined
+
       }
       },
       
+
       return transformedProject as Project
     } catch (err: any) {
       console && console.error("Error fetching project:", err);
       toast && toast.error("Failed to fetch project details");
       return null
     }
+
   }
   },
+
 
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
         .update({ status })
+
         .eq("id", projectId);
       if (error) throw error;
         .eq("id", projectId),
@@ -147,11 +166,13 @@
       ),
       
       toast.success(`Project status updated to ${status}`),
+
       return true
     } catch (err: any) {
       console && console.error("Error updating project status:", err);
       toast && toast.error("Failed to update project status");
       return false
+
     }
   }
 ;
@@ -322,5 +343,6 @@ export function useProjects() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 }

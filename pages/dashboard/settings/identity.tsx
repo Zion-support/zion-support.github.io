@@ -1,5 +1,6 @@
 
 
+
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../../utils/kyc',;
@@ -14,6 +15,7 @@ export default function IdentitySettingsPage() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 import React, { useEffect, useState } from 'react';
 
 import Head from 'next/head';
@@ -25,6 +27,7 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
   async function load() {
+
 
 
 
@@ -55,6 +58,7 @@ export default function IdentitySettingsPage() {
         <div className="mb-4">
 
 
+
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
@@ -68,7 +72,9 @@ export default function IdentitySettingsPage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
     try {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -88,6 +94,7 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   useEffect(() => {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -95,6 +102,7 @@ export default function IdentitySettingsPage(req, res) {
 
 
   }, []),
+
   return (
     <>
       <Head>
@@ -104,6 +112,7 @@ export default function IdentitySettingsPage(req, res) {
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Identity</h1>
         <div className="mb-4">
+
           <ProfileBadges profile={profile |undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
@@ -112,6 +121,7 @@ export default function IdentitySettingsPage(req, res) {
     </>
   );
 };
+
 
 
 
@@ -130,6 +140,8 @@ export default function IdentitySettingsPage(req, res) {
 }
 
 
+
+
       </main>
     </>
   )
@@ -138,11 +150,13 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

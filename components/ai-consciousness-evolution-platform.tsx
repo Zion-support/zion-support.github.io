@@ -3,12 +3,14 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -26,8 +28,10 @@
   opacity: 0, y: 20
 }animate= {
   {
+
   opacity: 1, y: 0
   opacity: 1, y: 0 
+
 
 }transition= {
   {
@@ -49,8 +53,10 @@
   opacity: 0, y: 20
 }animate= {
   {
+
   opacity: 1, y: 0
   opacity: 1, y: 0 
+
 
 }transition= {
   {
@@ -70,6 +76,7 @@
 }transition= {
   {
 
+
   duration: 0 && 0.8 
 
 
@@ -84,4 +91,5 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

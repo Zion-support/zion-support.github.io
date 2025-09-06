@@ -1,3 +1,5 @@
+
+
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import handler from '@/pages/api/auth/reset'
@@ -7,6 +9,7 @@ describe('/api/auth/reset token validation'
       "method"
       "body"
       "method"
+
       "body": { token: 'invalid', "newPassword"
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -48,3 +51,4 @@ import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextA
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
       "body": { token: 'invalid', "newPassword"
+

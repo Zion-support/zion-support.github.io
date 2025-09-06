@@ -1,4 +1,21 @@
 
+
+const partners: Partner[] = [ {
+  name: 'Gov Partner'
+}
+{
+  name: 'Venture Partner'
+}
+{
+  name: 'University Partner'
+}];
+const onSubmit = async (e: React.FormEvent) => {
+  e.preventDefault ();
+setSubmitting (true);
+setResult (null);
+try {
+  const res = await fetch ('/api/summit/register', {
+
   method: 'POST';
 
 headers: {;
@@ -50,9 +67,11 @@ setForm ({
 
 
 
+
 export default function SummitPage() {;
   const [platform, setPlatform] = React && React.useState<;
     'youtube' | 'twitch' | 'twitter';
+
 
 
 
@@ -62,6 +81,7 @@ export default function SummitPage() {;
   const { isPast, days, hours, minutes, seconds } =;
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
+
 
 
     name: ''
@@ -79,12 +99,15 @@ export default function SummitPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   });
   const [submitting, setSubmitting] = React && React.useState(false);
   const [result, setResult] = React && React.useState<{;
     ok?: boolean;
     error?: string;
   } | null>(null);
+
+
 
 
 
@@ -137,6 +160,8 @@ export default function SummitPage() {
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
   const [submitting, setSubmitting] = React.useState(false),
   const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null),
+
+
   const speakers: Speaker[] = [
 
     {
@@ -162,30 +187,81 @@ export default function SummitPage() {
       avatar_url: '/favicon.svg',
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
 
+      twitter: 'https://twitter.com'}],
+  const partners: Partner[] = [
+    { name: 'Gov Partner' },
+    { name: 'Venture Partner' },
+    { name: 'University Partner' }],
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setSubmitting(true),
+    setResult(null),
+    try {
+      const res = await fetch('/api/summit/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form, source: 'summit-page' })}),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data?.error || 'Failed'),
+      setResult({ ok: true }),
+      setForm({ name: '', email: '', role: '', country: '' })
+    } catch (err: any) {
+      setResult({ error: err?.message || 'Unexpected error' })
+    } finally {
+      setSubmitting(false)
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+  const livestreamEmbed = () => {
+    if (platform === 'youtube') {
+      return (
+        <iframe
+          className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+          src={`https://www.youtube.com/embed/${embedId}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          title="YouTube livestream"
+          allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
+          allowFullScreen
 
-    setResult(null),;
-    try {;
-      const res = await fetch('/api/summit/register', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ ...form, source: 'summit-page' }),;
-      });
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data?.error || 'Failed');
-      setResult({ ok: true });
-      setForm({ name: '', email: '', role: '', country: '' });
-    } catch (err: any) {;
-      setResult({ error: err?.message || 'Unexpected error' });
-    } finally {;
-      setSubmitting(false);    }
+        />
+      )
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (platform === 'twitch') {
 
+  return (
+    <>
+      <Head>
+        <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
+        <meta name="description" content="Zion Global Summit: AI, Talent, Trust — Globalized" />
+      </Head>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+            <li>Panel 1 — The Future of Digital Nations</li>
+            <li>Panel 2 — ZionDAO in Action</li>
+            <li>Demo — ZionGPT Live</li>
+            <li>Featured Speaker — Founder</li>
+          </ol>
+        </section>
+        <section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+          <h2 className="text-2xl font-bold mb-4">Event Info</h2>
+          <ul className="space-y-2">
+            <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
+            <li><span className="font-medium">Time:</span> 16:00 UTC</li>
+            <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>
+            <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
+          </ul>
+        </section>
+      </div>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 <div>
                   <div className="font-semibold">{s.name}</div>
@@ -205,6 +281,7 @@ export default function SummitPage() {
 }
         </div>
       </section>
+
       <section
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -232,6 +309,7 @@ export default function SummitPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         </div>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {partners.map((p) => (
@@ -245,6 +323,7 @@ export default function SummitPage() {
 }
         </div>
       </section>
+
       <section
         id='livestream'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -458,6 +537,7 @@ export default function SummitPage() {
 
 
 
+
           <div>
             <label className="block text-sm mb-1">Name</label>
             <input
@@ -510,6 +590,8 @@ export default function SummitPage() {
       </section>
 
 
+
+
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
@@ -533,5 +615,7 @@ export default function SummitPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

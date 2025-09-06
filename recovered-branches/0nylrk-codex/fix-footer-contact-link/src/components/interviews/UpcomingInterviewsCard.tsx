@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -17,16 +18,19 @@ export function UpcomingInterviewsCard() {;
 
 
 
+
   useEffect(() => {
 
     const loadInterviews = async () => {
       setIsLoading(true),
       try {
+
         const interviews = await fetchInterviews();
         const now = new Date();
         const interviews = await fetchInterviews(),
         const now = new Date(),
         
+
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
@@ -69,6 +73,7 @@ function UpcomingInterviewsCard() {
       } finally {
         setIsLoading (false);
       }
+
     }
 
 
@@ -116,12 +121,14 @@ function UpcomingInterviewsCard() {
               </div>;
 
 
+
             ))}
           </div>
         </CardContent>
       </Card>
     )
   }
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -140,6 +147,7 @@ function UpcomingInterviewsCard() {
       </Card>;
     );
   }
+
 
   if (upcomingInterviews.length === 0) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -175,6 +183,7 @@ function UpcomingInterviewsCard() {
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
+
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h: mm a')
@@ -194,6 +203,7 @@ function UpcomingInterviewsCard() {
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
+
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -238,6 +248,8 @@ function UpcomingInterviewsCard() {
       </CardContent>
     </Card>
   )
+
 }
 }
 ;
+

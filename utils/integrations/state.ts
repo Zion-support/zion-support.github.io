@@ -8,6 +8,7 @@ let state: IntegrationState = {
 
 
 
+
 };
 
 export function getState(): IntegrationState {;
@@ -21,11 +22,13 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
 
 
 
+
   updater(state);
   return { ...state }
 }
 export function resetState(): void {
   state = {
+
 
 
   connections: [],
@@ -43,3 +46,4 @@ export function resetState(): void {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

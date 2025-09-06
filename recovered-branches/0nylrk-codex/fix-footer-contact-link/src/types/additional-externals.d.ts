@@ -1,3 +1,4 @@
+
 declare module 'aria-query';
 declare module '@babel/core';
 declare module '@babel/generator';
@@ -56,3 +57,4 @@ declare module 'react-router-dom',;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

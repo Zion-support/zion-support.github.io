@@ -3,6 +3,7 @@
 
 
 
+
 import {;
   Card,;
   CardHeader,;
@@ -13,6 +14,7 @@ import {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
@@ -21,13 +23,19 @@ import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
+import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
+import { JobMatchCard } from "@/components/jobs/JobMatchCard",
+import { useJobMatches } from "@/hooks/useJobMatches",
+import { Skeleton } from "@/components/ui/skeleton",
 
 
 interface JobMatchesProps {
   jobId: string
 }
 export function JobMatches({ jobId }: JobMatchesProps) {
+
 
 
 
@@ -43,6 +51,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   if (isLoading) {
     return (
@@ -64,6 +73,8 @@ export function JobMatches({ jobId }: JobMatchesProps) {
                 <Skeleton className="h-4 w-32" />
               </div>
             </div>
+
+
 
 
 
@@ -127,9 +138,11 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   return (
     <div className="space-y-4">;
@@ -137,6 +150,7 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
         <JobMatchCard
           key={match.id}
           matchId={match.id}
+
           talentId={match.talent_profile?.id |""}
           name={match.talent_profile?.full_name |""}
           title={match.talent_profile?.professional_title |""}
@@ -166,6 +180,7 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   );

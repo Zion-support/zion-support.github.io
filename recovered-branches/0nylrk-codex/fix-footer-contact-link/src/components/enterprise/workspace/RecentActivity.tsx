@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,11 +14,13 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
+
 
 
 
@@ -40,6 +43,7 @@ export function RecentActivity() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -47,8 +51,10 @@ export function RecentActivity() {
       target: "5 candidates for UI/UX Designer"
       timestamp: "3h ago"
       type: "candidate"
+
     }
     },
+
     {
       id: "act-3"
       user: "David Johnson"
@@ -56,8 +62,10 @@ export function RecentActivity() {
       target: "Alex Morgan"
       timestamp: "Yesterday"
       type: "interview"
+
     }
     },
+
     {
       id: "act-4"
       user: "Emily Davis"
@@ -66,8 +74,10 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
+
   ];
   ],
+
 
   const getBadgeForType = (type: string) => {
     switch (type) {
@@ -81,8 +91,10 @@ export function RecentActivity() {
       default:
         return <Badge variant="outline">Activity</Badge>
     }
+
   }
   },
+
 
   return (
     <Card>
@@ -121,6 +133,8 @@ export function RecentActivity() {
       </CardContent>
     </Card>
   )
+
+
 
 
 
@@ -228,7 +242,9 @@ export function RecentActivity() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

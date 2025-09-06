@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,10 +14,12 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
   { id: "project", label: "Project-based" }
+
 ];
 export function AvailabilityFilter({
   selectedAvailability
@@ -26,6 +29,7 @@ export function AvailabilityFilter({
   isMobileFilterOpen
 }: AvailabilityFilterProps) {
 ],
+
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -54,6 +58,7 @@ export function AvailabilityFilter({
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
+
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
@@ -101,6 +106,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 {option.label}
               </label>
             </div>
@@ -109,14 +115,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         </div>;
       )}
 
-
-
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { AvailabilityFilterProps  } from '@/types / filters';
@@ -128,5 +126,8 @@ const AVAILABILITY_OPTIONS = [;
 ;
 
 
+
+=======
+    </div>
 
 

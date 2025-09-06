@@ -2,12 +2,14 @@
 
 
 
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
+
 
 
 
@@ -22,6 +24,8 @@ export function useSkills() {;
     if (!user) {
       setError('You must be logged in to add skills')
       return false
+
+
 
 
 
@@ -45,18 +49,23 @@ export function useSkills() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('resume_skills')
         .insert({
+
           resume_id: resumeId;
           name: skill.name;
           proficiency: skill.proficiency;
@@ -73,11 +82,14 @@ export function useSkills() {;
       
       if (error) throw error,
       
+
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
+
+
 
 
 
@@ -111,29 +123,36 @@ export function useSkills() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('resume_skills')
         .delete()
+
         .eq('id', skillId);
       if (error) throw error;
         .eq('id', skillId),
       
       if (error) throw error,
       
+
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
+
 
     }
   }
@@ -155,3 +174,4 @@ export function useSkills() {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+

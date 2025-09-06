@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,10 +20,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
+
 import Link from 'next/link';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+
   Menu
   X
   ChevronDown
@@ -49,6 +52,7 @@ import {
   Cpu;
 } from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 export default function UltraAdvancedNavigation2026V2() {;
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -282,6 +286,7 @@ export default function UltraAdvancedNavigation2026V2() {;
         },
       ],
     },    {
+
       name: 'Showcase'
       href: '/enhanced-services-showcase-2026-v2'
       icon: <Rocket className='w-4 h-4' />
@@ -322,6 +327,7 @@ export default function UltraAdvancedNavigation2026V2() {;
       icon: <Mail className='w - 4 h - 4' />,
     },  ];      icon: <Mail className="w - 4 h - 4" />;
 
+
   ];
 ;
   const contact_info = {
@@ -343,7 +349,9 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -420,9 +428,18 @@ export default function UltraAdvancedNavigation2026V2() {;
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                    >                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
 
 
                     </Link>
@@ -439,7 +456,9 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                     >
                       <div className='grid grid-cols-1 gap-2'>
                         {item.dropdown.map(dropdownItem => (
@@ -451,6 +470,7 @@ export default function UltraAdvancedNavigation2026V2() {;
                             <div className='text-purple-400 group-hover:text-purple-300 transition-colors'>
                               {dropdownItem.icon}
                             </div>
+
                             <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}                    >
                       <div className="grid grid-cols-1 gap-2">
                         {item.dropdown.map((dropdownItem) => (
@@ -479,6 +499,7 @@ export default function UltraAdvancedNavigation2026V2() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                             </span>
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -490,6 +511,7 @@ export default function UltraAdvancedNavigation2026V2() {;
               ))}
 
             </div>
+
             {/* CTA Button */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
@@ -508,10 +530,12 @@ export default function UltraAdvancedNavigation2026V2() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   Get Started
                 </button>
               </Link>
             </div>
+
 
 
 
@@ -524,6 +548,7 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             {/* Mobile Menu Button */}
@@ -547,6 +572,7 @@ export default function UltraAdvancedNavigation2026V2() {;
 
 
 
+
             </button>;
           </div>;
         </div>;
@@ -558,6 +584,7 @@ export default function UltraAdvancedNavigation2026V2() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -567,6 +594,7 @@ export default function UltraAdvancedNavigation2026V2() {;
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
+
 
 
 
@@ -631,6 +659,7 @@ href={item && item.href}
                         onClick={() => setIsOpen(false)}
                         className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
 
+
             <div className='p-6'>
               <div className='flex items-center justify-between mb-8'>
                 <div className='text-xl font-bold text-white'>Menu</div>
@@ -691,6 +720,8 @@ href={item && item.href}
 
 
 
+
+
                       >
                         {item.icon}
                         <span>{item.name}</span>
@@ -710,18 +741,34 @@ href={item && item.href}
                   </Link>
                 </div>
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+                {/* Mobile Contact Info */}
+                <div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>
+                  <div className='flex items-center space-x-2'>
+                    <Phone className='w-4 h-4 text-purple-400' />
+                    <span>{contactInfo.mobile}</span>
+                  </div>
+                  <div className='flex items-center space-x-2'>
+                    <Mail className='w-4 h-4 text-blue-400' />
+                    <span>{contactInfo.email}</span>
+                  </div>
+                  <div className='flex items-center space-x-2'>
+                    <MapPin className='w-4 h-4 text-green-400' />
+                    <span className='text-xs'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-4 h-4 text-blue-400" />
+                    <span>{contactInfo.email}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="w-4 h-4 text-green-400" />
+                    <span className="text-xs">{contactInfo.address}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
 
       {/* Overlay */}
@@ -736,6 +783,7 @@ href={item && item.href}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
+
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
 
@@ -757,6 +805,7 @@ href={item && item.href}
 
 
 
+
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
 
           onClick={() => setIsOpen(false)}
@@ -767,7 +816,9 @@ href={item && item.href}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         />
       )}
@@ -779,6 +830,7 @@ href={item && item.href}
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -786,4 +838,5 @@ href={item && item.href}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

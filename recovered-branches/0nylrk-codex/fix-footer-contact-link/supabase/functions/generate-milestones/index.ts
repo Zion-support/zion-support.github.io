@@ -2,6 +2,8 @@
 
 
 
+
+
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -11,6 +13,8 @@ serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
+
+
 
 
 
@@ -35,15 +39,19 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
 
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json(),
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     
+
     // Create prompt for OpenAI
     const prompt = `
     You are an expert project manager who specializes in breaking down projects into clear milestones.
@@ -61,20 +69,25 @@ serve(async (req) => {;
     Format the response as a valid JSON array of milestone objects with these fields:
     "title", "description", "dueDate", "estimatedHours"
     Ensure your response is ONLY the JSON array with no additional text.
+
     `;
     `,
+
 
     // Call OpenAI API
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
+
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`},
+
       body: JSON.stringify({
 
         model: 'gpt-4o-mini';
         messages: [
           {
+
             role: 'system'
             content: 'You are a project management expert that breaks work into appropriate milestones.'}
           {
@@ -132,6 +145,7 @@ serve(async (req) => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

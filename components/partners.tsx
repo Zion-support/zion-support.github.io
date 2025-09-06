@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 class ErrorBoundary extends React.Component {
@@ -32,6 +33,7 @@ export default function PartnersPage() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 export default function PartnersPage() {
@@ -96,7 +98,9 @@ export default function PartnersPage() {
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
+
 	)
 }
 	),
 }
+

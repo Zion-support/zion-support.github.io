@@ -4,6 +4,9 @@ import React from 'react';
 
 
 
+
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -17,6 +20,7 @@ export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
   if (!labels || labels && labels.length === 0) return null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <div className='flex gap-2 items-center'>;
       {labels && labels.map(label => (;
@@ -45,6 +49,7 @@ export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
     </div>;
   );
 
+
 }
 
 
@@ -62,4 +67,5 @@ export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 

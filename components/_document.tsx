@@ -3,6 +3,7 @@
 
 
 
+
   return (
     <Html lang='en'>;
       <Head>;
@@ -73,22 +74,6 @@ function Document() {
 
   );
 }
-=======
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-=======
-
-
-import Document, {
-
-  Html,
-  Head,
-  Main,
-  NextScript,;
-  DocumentContext,;
-
-} from 'next/document';
-
-
 
 export default function Document() {
   return (
@@ -107,5 +92,7 @@ export default function Document() {
       </body>
     </Html>
   );
+
 }
 }
+

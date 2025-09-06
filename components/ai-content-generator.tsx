@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+
 import {
   Brain,
   Zap,
@@ -19,6 +20,7 @@ import {
   Lock,;
   Sparkles,;
 } from 'lucide-react';
+
 
 import {
   Brain
@@ -138,6 +140,7 @@ import {
       period: '/month'
       description: 'For large organizations and enterprises'
       features: [
+
         'Unlimited words'
         'All templates + custom'
         'Full SEO suite'
@@ -174,6 +177,7 @@ import {
     },  ];
 
   ];
+
 
   const useCases = [
     {
@@ -228,6 +232,7 @@ import {
     }
   ];
   const integrations = [
+
 
 
 
@@ -308,6 +313,7 @@ import {
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -458,6 +464,7 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -481,6 +488,7 @@ import {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 </p>
               </Card>
             ))}
@@ -491,8 +499,10 @@ import {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -723,6 +733,7 @@ import {
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
 
+
           </div>;
         </div>;
       </section>;
@@ -795,6 +806,7 @@ import {
 
 
 
+
                         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
@@ -806,6 +818,7 @@ import {
           </div>
         </div>
       </section>
+
 
 
 
@@ -823,6 +836,7 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Pricing Section */}
 
@@ -1000,6 +1014,8 @@ import {
                 )}
 
 
+
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -1012,7 +1028,9 @@ import {
                 </div>;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     </li>
                   ))}
@@ -1036,6 +1054,7 @@ import {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -1050,6 +1069,7 @@ import {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1060,6 +1080,7 @@ import {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+
 
           </div>;
         </div>;
@@ -1109,10 +1130,12 @@ import {
               </Card>;
 
 
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -1140,6 +1163,7 @@ import {
 
 
 
+
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1153,8 +1177,10 @@ import {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             Ready to Transform Your Content Creation?
           </h2>
@@ -1190,10 +1216,12 @@ import {
 
   );
 
+
     </>);
 }
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

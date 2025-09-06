@@ -1,5 +1,6 @@
 
 
+
   // Check condition
 if ( {) {
   $2
@@ -47,6 +48,7 @@ if ( {) {
 
 
 
+
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
     } catch (error) {
@@ -56,6 +58,7 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
   if (req.method === "PATCH") {
     const { memberId, role } = req.body |{}
     if (!memberId |!role)
@@ -143,3 +146,4 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

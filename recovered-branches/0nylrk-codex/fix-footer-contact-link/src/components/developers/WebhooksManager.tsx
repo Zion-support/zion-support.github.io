@@ -5,6 +5,8 @@
 
 
 
+
+
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -25,6 +27,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 
 
 
+
 export function WebhooksManager() {
 
   const {;
@@ -36,6 +39,7 @@ export function WebhooksManager() {
     toggleWebhook;
     deleteWebhook;
     testWebhook;
+
 
 
 
@@ -72,6 +76,7 @@ export function WebhooksManager() {
     testWebhook,
 
 
+
     clearTestResult
   } = useWebhooks();
   const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -99,20 +104,24 @@ export function WebhooksManager() {
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 
+
   // Load webhooks on mount
   useEffect(() => {
     fetchWebhooks()
   }, []),
 
   const handleCreateWebhook = async () => {
+
     if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
+
     await createWebhook(
       webhookName
       webhookUrl
       selectedEvents
       webhookSecret.trim() === "" ? undefined : webhookSecret
+
     );
     setShowCreateDialog(false);
     resetWebhookForm()
@@ -136,19 +145,24 @@ export function WebhooksManager() {
   }
   },
 
+
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookId, testEventType);
     setShowTestResult(true)
+
   }
   },
+
 
   const resetWebhookForm = () => {
     setWebhookName("");
     setWebhookUrl("");
     setWebhookSecret("");
     setSelectedEvents([])
+
   }
   },
+
 
   // Event type options
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
@@ -163,8 +177,10 @@ export function WebhooksManager() {
         ? prev.filter(e => e !== event)
         : [...prev, event]
     )
+
   }
   },
+
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -221,7 +237,66 @@ export function WebhooksManager() {
                 <div className="space-y-2">
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
 
+                  <Input
+                    id="webhook-secret"
+                    type="password"
+                    value={webhookSecret}
+                    onChange={(e) => setWebhookSecret(e.target.value)}
+                    placeholder="••••••••••••••••"
+                    className="bg-zinc-800 border-zinc-700"
+                  />
+                  <p className="text-xs text-zinc-500">
+                    Used to verify webhook payload signatures. Keep it secret and secure.
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <Label>Event Types</Label>
+                  <div className="grid gap-2 pt-2">
+                    {eventOptions.map((event) => (
+                      <div key={event.value} className="flex items-center space-x-2">
 
+import { useState, useEffect } from "react",;
+import { format } from "date-fns",;
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",;
+import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
+import { Input } from "@/components/ui/input",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { Label } from "@/components/ui/label",;
+import { Badge } from "@/components/ui/badge",;
+import { Switch } from "@/components/ui/switch",;
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
+import { ScrollArea } from "@/components/ui/scroll-area",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+export function WebhooksManager() {;
+  const {;
+    webhooks,;
+    loading,;
+    testResult,;
+    fetchWebhooks,;
+    createWebhook,;
+    toggleWebhook,;
+    deleteWebhook,;
+    testWebhook,;
+    clearTestResult;
+  } = useWebhooks(),;
+  const [showCreateDialog, setShowCreateDialog] = useState(false),;
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),;
+  const [showTestDialog, setShowTestDialog] = useState<string | null>(null),;
+  const [showTestResult, setShowTestResult] = useState(false),;
+  // Create webhook form state;
+  const [webhookName, setWebhookName] = useState(""),;
+  const [webhookUrl, setWebhookUrl] = useState(""),;
+  const [webhookSecret, setWebhookSecret] = useState(""),;
+  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),;
+  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),;
+  // Load webhooks on mount;
+  useEffect(() => {;
+    fetchWebhooks();
+  }, []),;
 
   const handleCreateWebhook = async () => {;
     if (webhookName && webhookName.trim() === "" || webhookUrl && webhookUrl.trim() === "" || selectedEvents && selectedEvents.length === 0) return;
@@ -369,6 +444,7 @@ export function WebhooksManager() {
                   <div className="grid gap-2 pt-2">;
 
 
+
                     {eventOptions && eventOptions.map((event) => (;
                       <div key={event && event.value} className="flex items-center space-x-2">;
                         <Checkbox
@@ -382,6 +458,7 @@ export function WebhooksManager() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                           checked={selectedEvents.includes(event.value)}
@@ -418,6 +495,7 @@ export function WebhooksManager() {
             </DialogContent>
           </Dialog>
         </div>
+
         
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>;
                         </Label>;
@@ -638,6 +716,7 @@ function WebhooksManager() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {/* Webhooks List */}
         <div className="space - y-4">;
           {loading ? (
@@ -716,6 +795,7 @@ function WebhooksManager() {
 
 
 
+
                   </div>;
                 </div>;
               </div>;
@@ -776,6 +856,7 @@ function WebhooksManager() {
                       <DropdownMenuTrigger asChild>;
 
 
+
         onOpenChange={(open) => {
           if (!open) {
             setShowTestDialog(null);
@@ -800,6 +881,7 @@ function WebhooksManager() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -808,6 +890,7 @@ function WebhooksManager() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             }
           }
@@ -842,33 +925,66 @@ function WebhooksManager() {
                         </SelectItem>;
                       ))}
 
-                    </SelectContent>;
-                  </Select>;
-                  <p className="text-xs text-zinc-500">;
+                    </SelectContent>
+                  </Select>
+                  <p className="text-xs text-zinc-500">
+                    The event type will determine the structure of the test payload.
+                  </p>
+                </div>
+              </div>
+              <DialogFooter>
+                <Button variant="outline" onClick={() => setShowTestDialog(null)}>
+                  Cancel
+                </Button>
+                <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
+                  Send Test
+                </Button>
+              </DialogFooter>
+            </>
+          ) : (
+            <>
+              <div className="space-y-4 py-4">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <Label>Response Status</Label>
+                    <Badge
+                      className={
+                        testResult && testResult.status >= 200 && testResult.status < 300
+                          ? "bg-green-700"
+                          : "bg-red-700"
+                      }
+                    >
+                      {testResult?.status} {testResult?.statusText}
+                    </Badge>
+                  </div>
+                  <div className="space-y-2 mt-4">
+                    <Label>Response Body</Label>
+                    <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
+                      <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
+                        {testResult?.responseBody |"No response body"}
+                      </pre>
+                    </ScrollArea>
+                  </div>
+                </div>
+              </div>
+              <DialogFooter>
+                <Button variant="default" onClick={() => {
+                  setShowTestDialog(null),
+                  setShowTestResult(false),
+                  clearTestResult()
+                }}>
+                  Close
+                </Button>
+                <Button variant="outline" onClick={() => {
 
-                      </pre>;
-                    </ScrollArea>;
-                  </div>;
-                </div>;
-              </div>;
-
-                  clearTestResult();
-                }}>;
-                  Test Another Event;
-                </Button>;
-              </DialogFooter>;
-            </>;
+                  clearTestResult()
+                }}>
+                  Test Another Event
+                </Button>
+              </DialogFooter>
+            </>
 
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
           )}
         </DialogContent>
       </Dialog>
@@ -891,6 +1007,7 @@ function WebhooksManager() {
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+
               className="bg-red-600 hover: bg-red-700"
             >
               Delete
@@ -913,5 +1030,4 @@ function WebhooksManager() {
     </Card>);
 }
 
-=======
-;
+

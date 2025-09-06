@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026Service {;
   id: string;
@@ -63,6 +64,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     competitors: ['Intel LoihiIBM TrueNorthBrainChipQualcomm ZerothSpiNNaker'], marketSize: '$8.7B market',
     growthRate: '400% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+
 
 
 
@@ -483,8 +485,10 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
   }
 ];
+

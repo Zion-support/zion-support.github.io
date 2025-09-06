@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface PostFormValues {
 
@@ -22,6 +24,7 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
+
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
@@ -44,13 +47,16 @@ const mockPost: ForumPost = {
 
 
 
+
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
+
   }, [postId]);
   }, [postId]),
   
+
   if (isLoading) {
 
     return (
@@ -92,11 +98,13 @@ const mockPost: ForumPost = {
     )
   }
   // Check if the user is the author or an admin
+
   const isAuthor = user?.id === post.authorId;
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
   const isAuthor = user?.id === post.authorId,
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
   
+
   if (!isAuthor && !isAdmin) {
     return (
       <AppLayout>
@@ -115,8 +123,10 @@ const mockPost: ForumPost = {
     content: post.content
     categoryId: post.categoryId as ForumCategory
     tags: post.tags.join(", ")
+
   }
   },
+
 
   const handleSubmit = async (values: PostFormValues) => {
     try {
@@ -125,9 +135,11 @@ const mockPost: ForumPost = {
       toast({
         title: "Post updated"
         description: "Your post has been updated successfully"
+
       });
       }),
       
+
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
@@ -165,8 +177,10 @@ const mockPost: ForumPost = {
       });
 
     }
+
   }
   },
+
 
   return (
 
@@ -177,21 +191,28 @@ const mockPost: ForumPost = {
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
 
-
-        <PostForm 
-          initialValues={initialValues} 
-          onSubmit={handleSubmit} 
-          isEditing={true} 
-
-
-
-
+      />
+      <div className="container py-8">
+        <div className="flex items-center gap-3 mb-6">
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
+            Forum
+          </Link>
+          <span className="text-muted-foreground">/</span>
+          <Link to={`/community/post/${postId}`} className="text-sm text-muted-foreground hover:text-foreground">
+            Post
+          </Link>
+          <span className="text-muted-foreground">/</span>
+          <span className="text-sm font-medium">Edit</span>
+        </div>
+        <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
 
 
         />
       </div>
     </AppLayout>
   )
+
+
 
 
 
@@ -342,6 +363,7 @@ export default function EditPostPage() {;
   );
 
 
+
 import { useState, useEffect } from './react';
 import { Link, use_navigate, use_params } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -379,3 +401,4 @@ const mock_post: ForumPost = {
 
 }
 ;
+

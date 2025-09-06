@@ -1,14 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
 
-
-
-  const stake = Number(stakeUsd || 0);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body |{}
+  const stake = Number(stakeUsd |0);
 
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
@@ -19,10 +19,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

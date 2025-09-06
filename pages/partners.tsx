@@ -1,6 +1,7 @@
 
 
 
+
 import { motion } from 'framer-motion';
 
 import {
@@ -172,6 +173,7 @@ export default /**
 function PartnersPage() {
   const partners = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     {
       name: "Microsoft Azure",
       category: "Cloud Infrastructure",
@@ -238,6 +240,7 @@ function PartnersPage() {
       partnership: "Technology Partner",
       benefits: ["Hardware optimization", "Edge computing", "Performance tuning"],
       icon: Brain,
+
       color: 'from-indigo-500 to-purple-500',;
     },  ];
 
@@ -248,6 +251,7 @@ function PartnersPage() {
   }
 }
   ],
+
   const partnershipTypes = [
     {
       title: "Technology Alliance",
@@ -374,10 +378,13 @@ function PartnersPage() {
   }
 }
   ],
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Partners - Zion Tech Group</title>
+
         <meta
           name='description'
           content='Strategic partnerships and collaboration opportunities with Zion Tech Group. Join our ecosystem of technology leaders and innovators.'
@@ -400,10 +407,12 @@ function PartnersPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Strategic Partners
             </h1>
+
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Building the future of technology through strategic partnerships
               and collaboration            </p>
@@ -463,6 +472,7 @@ function PartnersPage() {
 
 
 
+
             </p>
           </motion.div>
           <motion.div
@@ -499,12 +509,15 @@ function PartnersPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
+
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -550,12 +563,14 @@ function PartnersPage() {
 
 
 
+
           >
             <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               We offer various partnership models to meet your business objectives and growth goals
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes.map((type, index) => (
               <motion.div
                 key={type.title}
@@ -574,10 +589,12 @@ function PartnersPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <type.icon className="w-8 h-8 text-white" />
                 </div>
+
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {type.title}
                 </h3>
@@ -642,12 +659,14 @@ function PartnersPage() {
 
 
 
+
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Leading technology companies and organizations that trust us to deliver innovative solutions
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners.map((partner, index) => (
               <motion.div
                 key={partner.name}
@@ -666,6 +685,7 @@ function PartnersPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
@@ -681,6 +701,7 @@ function PartnersPage() {
                       </span>
                     </div>
                   </div>
+
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {partner.name}
                   </h3>
@@ -759,6 +780,7 @@ function PartnersPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -783,6 +805,7 @@ function PartnersPage() {
     </div>
 
 
+
 ),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
 }</ul> </motion.div>) ) 
@@ -792,6 +815,7 @@ function PartnersPage() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 }</div> </div> </section> <motion.div initial= {
 
@@ -810,6 +834,8 @@ function PartnersPage() {
   {
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
+
+
   )
           >;
             <h2 className='text - 4xl font - bold text - white mb - 6'>;
@@ -846,6 +872,7 @@ function PartnersPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -853,4 +880,5 @@ function PartnersPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

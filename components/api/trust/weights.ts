@@ -2,11 +2,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
 import {
   getTrustWeights,
   setTrustWeights,
   getDefaultWeights,;
 } from '../../../utils/trust/weights';
+
 
 
 
@@ -33,6 +35,7 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {;
     const current = await getTrustWeights();
+
 
 
     const updated = await setTrustWeights(incoming);
@@ -78,5 +81,6 @@ if ( {) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 

@@ -1,5 +1,6 @@
 
 
+
 export interface DateRange {;
   from?: Date;
 
@@ -25,3 +26,4 @@ export interface DateRange {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

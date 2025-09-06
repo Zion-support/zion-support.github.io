@@ -3,11 +3,13 @@
 
 
 
+
 export interface ThemeColors {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   primaryColor: string;
   backgroundColor: string;
@@ -63,6 +65,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
   }
 }
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   switch (preset) {
     case 'dark':;
@@ -78,6 +81,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -88,6 +92,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
+
+
 
 
 
@@ -119,6 +125,10 @@ export function applyThemeColors(colors: ThemeColors) {;
 
 
 
+
+
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+
+

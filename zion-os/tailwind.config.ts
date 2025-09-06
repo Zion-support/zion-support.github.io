@@ -4,6 +4,7 @@ const config: Config = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
@@ -14,6 +15,7 @@ const config: Config = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   theme: {
     extend: {
@@ -34,5 +36,7 @@ const config: Config = {
         'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
 
   plugins: []}
+
 ;
+
 export default config;

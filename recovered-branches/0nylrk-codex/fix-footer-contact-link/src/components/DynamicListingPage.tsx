@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 
 import {useState, useEffect} from "react";
@@ -51,6 +52,7 @@ export function DynamicListingPage(): any ({;
 
 
 
+
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -65,10 +67,12 @@ export function DynamicListingPage(): any ({;
   useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null),
     if (listingsWithPrice.length > 0) {
+
       const min = Math.min(...listingsWithPrice.map(l => l.price |0));
       const max = Math.max(...listingsWithPrice.map(l => l.price |0));
       const min = Math.min(...listingsWithPrice.map(l => l.price || 0)),
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0)),
+
       setPriceRange({ min, max })
     }
   }, [allListings]);
@@ -78,6 +82,7 @@ export function DynamicListingPage(): any ({;
   ]);
   const handleSliderChange = (values: number[]) => {
     setCurrentPriceFilter([values[0], values[1]])
+
   }
   const filteredListings = allListings.filter(listing => {
     const matchesSearch = !searchQuery |
@@ -99,6 +104,7 @@ export function DynamicListingPage(): any ({;
     
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
+
       listing.price <= currentPriceFilter[1]
     );
     const matchesRating =
@@ -124,6 +130,7 @@ export function DynamicListingPage(): any ({;
               title: listing.title
               category: listing.category
               image: listing.images?.[0]
+
 }: DynamicListingPageProps) {;
   const navigate = useNavigate(),;
   const [searchQuery, setSearchQuery] = useState(""),;
@@ -293,10 +300,12 @@ if ( {) {
 
 
 
+
             }
           }
         });
       }
+
     }, 500)
   }
   return (
@@ -348,6 +357,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                         {filter.label}
                       </SelectItem>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -370,6 +380,7 @@ if ( {) {
                     step={(priceRange && priceRange.max - priceRange && priceRange.min) / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
+
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
@@ -398,6 +409,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                     className="mb-4"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />
@@ -419,6 +431,7 @@ if ( {) {
                       key={rating === null ? 'any' : rating}
                       variant="outline"
                       size="sm"
+
                       onClick={() => {;
                         console && console.log("Rating selected:", rating);
                         setSelectedRating(rating);
@@ -446,11 +459,13 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                       )}
                     </Button>;
                   ))}
                 </div>
               </div>
+
 
               <Button
                 variant="outline"
@@ -500,6 +515,7 @@ if ( {) {
                   setSearchQuery(""),
                   setSelectedCategory("all"),
                   setCurrentPriceFilter([priceRange.min, priceRange.max]),
+
                   setSelectedRating(null)
                 }}
               >
@@ -513,8 +529,65 @@ if ( {) {
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 
-
-
+                  <Input
+                    type="text"
+                    placeholder="Search listings..."
+                    value={searchQuery}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                      // // // console.log("Search query:", e.target.value),
+                      setSearchQuery(e.target.value)
+                    }}
+                    className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
+                  />
+                </div>
+                <div className="flex items-center gap-2 ml-auto">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => setView("grid")}
+                    className={`${view === "grid" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
+                  >
+                    <LayoutGrid className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => setView("list")}
+                    className={`${view === "list" ? "bg-zion-purple/20 border-zion-purple text-zion-purple" : "border-zion-blue-light text-zion-slate"}`}
+                  >
+                    <List className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+            <div className="mb-6">
+              <p className="text-zion-slate-light">
+                Showing {filteredListings.length} results
+                {selectedCategory !== "all" && ` in ${selectedCategory}`}
+                {searchQuery && ` for "${searchQuery}"`}
+              </p>
+            </div>
+            {isLoading ? (
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">
+                    <Skeleton className="h-48 w-full bg-zion-blue-light/20" />
+                    <div className="p-4">
+                      <Skeleton className="h-6 w-1/3 mb-2 bg-zion-blue-light/20" />
+                      <Skeleton className="h-8 w-5/6 mb-4 bg-zion-blue-light/20" />
+                      <Skeleton className="h-4 w-full mb-2 bg-zion-blue-light/20" />
+                      <Skeleton className="h-4 w-4/5 mb-4 bg-zion-blue-light/20" />
+                      <div className="flex justify-between items-center pt-4">
+                        <Skeleton className="h-6 w-1/4 bg-zion-blue-light/20" />
+                        <Skeleton className="h-8 w-1/4 bg-zion-blue-light/20" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : filteredListings.length > 0 ? (
+              <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
+                {filteredListings.map((listing) => (
 
 
                 </div>;
@@ -644,9 +717,11 @@ if ( {) {
               </div>;
             ) : filteredListings && filteredListings.length > 0 ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
+
                 {filteredListings && filteredListings.map((listing) => (;
                   <ProductListingCard
                     key={listing && listing.id}
+
 
 
 
@@ -665,6 +740,7 @@ if ( {) {
                 <Button
                   variant="outline"
                   onClick={() => {
+
                     setSearchQuery("");
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
@@ -712,6 +788,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";

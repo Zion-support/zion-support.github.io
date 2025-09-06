@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface ActiveFiltersBarProps {
 
@@ -27,6 +29,26 @@ interface ActiveFiltersBarProps {
 }
 
 
+export function ActiveFiltersBar({
+  selectedProductTypes,
+  selectedLocations,
+  selectedAvailability,
+  selectedRating,
+  searchQuery,
+  onRemoveFilter,
+  onRemoveRating,
+
+  onClearSearch
+}: ActiveFiltersBarProps) {
+
+  return (
+    <div className="flex flex-wrap gap-2 items-center mb-4">
+      <span className="text-sm text-zion-slate-light">Active filters:</span>
+      {searchQuery && (
+
+import React from "react",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { X } from "lucide-react",;
 
 interface ActiveFiltersBarProps {;
   selectedProductTypes: string[],;
@@ -90,6 +112,7 @@ export function ActiveFiltersBar(): any ({;
 
 
 
+
         <ClickableBadge
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={onClearSearch}>;
@@ -98,6 +121,7 @@ export function ActiveFiltersBar(): any ({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           onClick={onClearSearch}

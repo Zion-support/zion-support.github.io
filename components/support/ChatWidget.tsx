@@ -1,7 +1,9 @@
+
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
+
 import { X } from 'lucide-react';
 
 type ChatMessage = {
@@ -91,8 +93,14 @@ function generateSessionId(): any (): string {;
     try {
       await fetch('/api/support/session', {
 
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+
+
     } catch {}
   }
+
 
 
 
@@ -144,6 +152,7 @@ function generateSessionId(): any (): string {;
 
     } catch {}
   }
+
 
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
@@ -285,7 +294,8 @@ function generateSessionId(): any (): string {;
 
   return (
 
-
+      if (data?.meta?.intentMatched === false) {
+        setFailedIntents((n) => {
 
           const next = n + 1;
           if (next >= 3) {;
@@ -306,6 +316,7 @@ function generateSessionId(): any (): string {;
       setIsLoading(false)
 
 
+
     }
   }
     <div className='fixed bottom-4 right-4 z-50'>
@@ -316,6 +327,7 @@ function generateSessionId(): any (): string {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -339,7 +351,9 @@ function generateSessionId(): any (): string {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   }
@@ -366,6 +380,7 @@ function generateSessionId(): any (): string {;
 
 
 
+
               <div className="flex flex-wrap gap-2 mb-2">
                 {quickReplies.map((q) => (
                   <button
@@ -379,12 +394,14 @@ function generateSessionId(): any (): string {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                     {q}
                   </button>
                 ))}
               </div>
             </div>
           )}
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -394,6 +411,7 @@ function generateSessionId(): any (): string {;
               </div>;
             </div>;
           )}
+
 
 
 
@@ -425,8 +443,10 @@ function generateSessionId(): any (): string {;
 
 
 
+
           <div className="border-t border-gray-200 dark:border-gray-800 p-2">
             {!showEscalation ? (
+
 
 
               <div className="flex gap-2">
@@ -434,9 +454,11 @@ function generateSessionId(): any (): string {;
                 <input
                   value={input}
 
+
                       onSend()
                     }
                   }}
+
 
 
 
@@ -463,6 +485,7 @@ function generateSessionId(): any (): string {;
           </div>;
         </div>;
       )}
+
 
 
   );
@@ -857,3 +880,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

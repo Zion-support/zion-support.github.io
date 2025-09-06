@@ -5,6 +5,8 @@
 
 
 
+
+
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -54,6 +56,8 @@ export function checkUrlForReferralCode(): string | null {;
     url.searchParams.delete('ref');
     window.history.replaceState({}, document.title, url.toString());
     return refCode
+
+
 import { format } from 'date-fns',;
 /**;
  * Formats a date for display in the referral system;
@@ -87,20 +91,24 @@ export function checkUrlForReferralCode(): string | null {;
     window.history.replaceState({}, document.title, url.toString()),;
     return refCode;
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
-  }
-  return localStorage.getItem('referral_code')
-}
-
-
-
-
 
   }
   return localStorage.getItem('referral_code')
 }
+
+
+
+
+
+
+  }
+  return localStorage.getItem('referral_code')
+}
+
 
 
 
@@ -138,6 +146,8 @@ function track_referral() {
       localStorage.removeItem('referral_code')
 
 
+
+
 ;
 /**;
  * Track referral when a user signs up;
@@ -165,6 +175,7 @@ export async function trackReferral(userId: string, email: string) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -172,6 +183,7 @@ export async function trackReferral(userId: string, email: string) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
   } catch (error) {

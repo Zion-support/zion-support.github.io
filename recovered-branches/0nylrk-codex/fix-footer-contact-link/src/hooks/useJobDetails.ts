@@ -3,6 +3,7 @@
 
 
 
+
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
@@ -10,6 +11,7 @@ export function useJobDetails(jobId: string | undefined) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -52,6 +54,8 @@ export function useJobDetails(jobId: string | undefined) {;
     loadJobDetails
   }
 }
+
+
 
 
 
@@ -106,6 +110,7 @@ export function useJobDetails(jobId: string | undefined) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -115,3 +120,4 @@ export function useJobDetails(jobId: string | undefined) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default useJobDetails;
+

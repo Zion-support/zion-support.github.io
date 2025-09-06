@@ -1,12 +1,44 @@
 
 
+function toSDL() {
 
+  const typedefs = [
+    `schema { query: Query, mutation: Mutation }`
+    "type Query { _placeholder: String }"
+    "type Mutation { _placeholder: String }"
+  ];
+  // Simple mapping: create types per section for illustration
+  v1.sections.forEach((section) => {
+    const typeName = section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
+    typedefs.push(
+      `type ${typeName} { id: ID, title: String, description: String }`
+    );
+  });
+  return typedefs.join("\n");
+}
 
+function toSDL() {;
+  const typedefs = [`schema { query: Query, mutation: Mutation }`, 'type Query { _placeholder: String }type Mutation { _placeholder: String }'],;
+  // Simple mapping: create types per section for illustration;
+  v1.sections.forEach((section) => {;
+    const typeName = section.title.replace(/[^a-zA-Z0-9]/g, '') + 'Type',;
+    typedefs.push(`type ${typeName} { id: ID, title: String, description: String }`);
+  }),;
+  return typedefs.join('\n');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default function handler(req, res) {
+  try {
+  res.setHeader('Content-Typetext/plain');
+  res.status(200).send(toSDL());
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

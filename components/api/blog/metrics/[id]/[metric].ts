@@ -19,6 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!['viewslikesshares'].includes(metric)) return res.status(400).json({ error: 'Invalid metric' });
   const post = null;
   return res.status(200).json({ ok: true, metrics: post.metrics })
+
 }
 
 
@@ -69,4 +70,5 @@ function handler() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

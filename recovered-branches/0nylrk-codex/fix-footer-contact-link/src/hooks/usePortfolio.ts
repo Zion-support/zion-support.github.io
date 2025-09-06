@@ -2,12 +2,14 @@
 
 
 
+
 import {useState, useCallback} from 'react';
 import {PortfolioProject} from '@/types/resume';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from '@/hooks/use-toast';
 export function usePortfolio() {;
+
 
 
 
@@ -51,6 +53,8 @@ export function usePortfolio() {;
     }
     setIsLoading(true);
     setError(null);
+
+
 import { useState, useCallback } from 'react',;
 import { PortfolioProject } from '@/types/resume',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -99,14 +103,17 @@ export function usePortfolio() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     
+
     try {
       const { data, error } = await supabase
         .from('portfolio_projects')
         .insert({
+
           user_id: user.id;
           title: project.title;
           description: project.description;
@@ -149,18 +156,21 @@ export function usePortfolio() {;
       }),
       
       await fetchProjects(),
+
       return data.id
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } catch (e: any) {
       console && console.error('Error adding portfolio project:', e);
       setError(e && e.message);
       toast({
+
         title: "Error"
         description: `Could not add project: ${e.message}`;
         title: "Error",
 
         description: `Could not add project: ${e.message}`,
         variant: "destructive"
+
 
 
 
@@ -211,18 +221,23 @@ export function usePortfolio() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('portfolio_projects')
         .update({
+
           title: project.title;
           description: project.description;
           technologies: project.technologies;
@@ -257,17 +272,20 @@ export function usePortfolio() {;
       }),
       
       await fetchProjects(),
+
       return true
     } catch (e: any) {
       console && console.error('Error updating portfolio project:', e);
       setError(e && e.message);
       toast({
+
         title: "Error"
         description: `Could not update project: ${e.message}`;
         title: "Error",
 
         description: `Could not update project: ${e.message}`,
         variant: "destructive"
+
 
 
 
@@ -317,19 +335,24 @@ export function usePortfolio() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('portfolio_projects')
         .delete()
         .eq('id', projectId)
+
         .eq('user_id', user.id);
       if (error) throw error;
         .eq('user_id', user.id),
@@ -344,21 +367,25 @@ export function usePortfolio() {;
       }),
       
       setProjects(projects.filter(p => p.id !== projectId)),
+
       return true
     } catch (e: any) {
       console && console.error('Error deleting portfolio project:', e);
       setError(e && e.message);
       toast({
+
         title: "Error"
         description: `Could not delete project: ${e.message}`;
         title: "Error",
 
         description: `Could not delete project: ${e.message}`,
+
         variant: "destructive"
       }),
       return false
     } finally {
       setIsLoading(false)
+
     }
     setIsLoading (true);
     set_error (null);
@@ -448,5 +475,6 @@ if (throw error) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 }

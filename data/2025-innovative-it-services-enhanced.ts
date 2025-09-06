@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -892,6 +893,13 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
     launchDate: '2024-09-01', customers: 123,
     rating: 4.8,
+
+
+
+
+    rating: 4.8
+
+    reviews: 52
 
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -1952,6 +1960,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -1960,3 +1969,4 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 ];
+

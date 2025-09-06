@@ -20,6 +20,30 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 
+type Question = {
+  id: string;
+  question: string;
+  options: string[];
+  answerIndex: number;
+}
+type Props = {
+  questions: Question[];
+  onComplete: (score: number) => void;};  id: string
+  question: string
+  options: string[]
+  answerIndex: number
+}
+type Props = {
+  questions: Question[]
+  onComplete: (score: number) => void
+
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [submitted, setSubmitted] = useState(false);
+  const score = questions.reduce(
+    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
+    0
+  );
+  function submit() {
 
     setSubmitted(true);
     onComplete(score);
@@ -49,7 +73,9 @@ export default function Quiz({ questions, onComplete }: Props) {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   function submit() {
 
+
     setSubmitted(true)
+
 
     onComplete(score)
   }
@@ -95,6 +121,7 @@ export default function Quiz({ questions, onComplete }: Props) {
       </button>
       {submitted && (
         <div className='text-sm'>
+
 
 
           Score: {score} / {questions.length}
@@ -144,4 +171,5 @@ export default function Quiz({ questions, onComplete }: Props) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

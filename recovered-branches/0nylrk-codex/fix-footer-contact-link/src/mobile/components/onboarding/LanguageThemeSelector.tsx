@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface Language {
 
@@ -21,6 +23,7 @@ interface Language {
   flag: string
 }
 const languages: Language[] = [
+
 
 
 
@@ -43,6 +46,7 @@ const languages: Language[] = [
 
 
 
+
   return (
 
 
@@ -61,7 +65,9 @@ const languages: Language[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   <Check className="h-4 w-4 text-primary" />
@@ -97,11 +103,13 @@ const languages: Language[] = [
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
           <Card
+
 
 
             className={`flex-1 cursor-pointer transition-all ${
@@ -122,12 +130,15 @@ const languages: Language[] = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             </CardContent>;
           </Card>;
         </div>;
       </div>;
+
 
 
 
@@ -141,3 +152,4 @@ const languages: Language[] = [
 
 }
 ;
+

@@ -1,6 +1,8 @@
 
 
 
+
+
 interface Buffer {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -8,6 +10,7 @@ interface Buffer {  } catch (error) {
 }
 declare const __dirname: string;
 declare const __filename: string;
+
 
 
 
@@ -22,3 +25,4 @@ export {};
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

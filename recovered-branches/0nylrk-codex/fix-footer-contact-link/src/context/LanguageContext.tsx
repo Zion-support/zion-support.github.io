@@ -1,3 +1,4 @@
+
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
 
@@ -8,6 +9,7 @@ import React, { createContext, useState, useContext, useEffect, ReactNode } from
   isRTL: boolean,
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
 };
+
 
 
 
@@ -31,18 +33,13 @@ const defaultLanguageContext: LanguageContextType = {
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 
-
-
-
-
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
-  children, 
-  authState = { isAuthenticated: false, user: null } 
-}) => {;
-
-
-
-
+interface LanguageProviderProps {
+  children: ReactNode
+  authState?: {
+    isAuthenticated: boolean
+    user: { id?: string } | null
+  }
+}
 
 
   const { i18n, t } = useTranslation();
@@ -82,6 +79,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
             .eq('id', user.id);
           if (error) {
             console.error('Error updating language preference:', error)
+
+
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import { supabase } from '../integrations/supabase/client',;
@@ -226,17 +225,21 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           }
         } catch (err) {;
           console && console.error('Error syncing language with profile:', err);
         }
       }
+
+
 
 
 
@@ -265,6 +268,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
           .eq('id', user.id);
         if (error) {
           console.error('Error updating language preference:', error)
+
+
     },;
     syncLanguageWithProfile();
   }, [currentLanguage, isAuthenticated, user]);
@@ -298,6 +303,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -306,11 +312,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         }
       }
     } catch (err) {;
       console && console.error('Error changing language:', err);
     }
+
+
 
 
 
@@ -326,6 +335,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
         isRTL;
 
         supportedLanguages
+
+
   },;
   return (;
     <LanguageContext.Provider;
@@ -337,15 +348,18 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }}
     >
       {children}
 
+
       }}
     >
       {children}
+
 
 };
 
@@ -361,3 +375,4 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

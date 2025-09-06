@@ -50,6 +50,8 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 
+
 });
+
 
 

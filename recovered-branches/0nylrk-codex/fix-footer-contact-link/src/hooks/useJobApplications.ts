@@ -5,6 +5,8 @@
 
 
 
+
+
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -15,10 +17,14 @@ import {toast} from "sonner";
 
 
 
+
+
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -36,6 +42,7 @@ export const useJobApplications = (jobId?: string) => {
       return
     }
     try {
+
       setIsLoading(true);
       let query = supabase
         .from("job_applications")
@@ -56,6 +63,7 @@ export const useJobApplications = (jobId?: string) => {
         `)
         .order("created_at", { ascending: false }),
       
+
       // Filter by job if jobId is provided
       if (jobId) {
         query = query && query.eq("job_id", jobId)
@@ -73,15 +81,18 @@ export const useJobApplications = (jobId?: string) => {
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
+
             .eq("client_id", user.id);
             .eq("client_id", user.id),
           
+
           if (jobIds && jobIds.length > 0) {
             const jobIdArray = jobIds && jobIds.map(job => job && job.id);
             query = query && query.in("job_id", jobIdArray)
           }
         }
       }
+
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
       
@@ -89,10 +100,12 @@ export const useJobApplications = (jobId?: string) => {
       
       if (fetchError) throw fetchError,
       
+
       // Transform the data to match our application types
       const transformedData = data.map((app: any) => ({
         ...app,
         talent_profile: app.talent_profile ? {
+
           ...app.talent_profile;
           full_name: app.talent_profile.display_name;
           profile_picture_url: app.talent_profile.avatar_url
@@ -116,13 +129,16 @@ export const useJobApplications = (jobId?: string) => {
     } catch (err: any) {
       console.error("Error fetching applications:", err),
       setError("Failed to fetch applications: " + err.message),
+
       toast.error("Failed to fetch applications")
     } finally {
       setIsLoading(false)
     }
+
   }
   },
   
+
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
     if (!user) {
       toast && toast.error("You must be logged in to apply for jobs");
@@ -132,6 +148,7 @@ export const useJobApplications = (jobId?: string) => {
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
+
           job_id: jobId;
           talent_id: user.id;
           resume_id: resumeId;
@@ -149,11 +166,13 @@ export const useJobApplications = (jobId?: string) => {
         .select()
         .single(),
       
+
       if (error) {
         if (error.code === '23505') { // Unique violation
           toast.error("You have already applied to this job")
         } else {
           throw error
+
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -203,9 +222,11 @@ export const useJobApplications = (jobId?: string) => {;
           }
 
 
+
         }
         return false
       }
+
 
 
       // Add the new application to the local state
@@ -224,6 +245,7 @@ export const useJobApplications = (jobId?: string) => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -271,11 +293,13 @@ if ( { // Unique violation) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -290,12 +314,15 @@ if ( { // Unique violation) {
       return false
     }
   },
+
   
+
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
+
         .eq("id", applicationId);
       if (error) throw error;
         .eq("id", applicationId),
@@ -327,6 +354,7 @@ if ( { // Unique violation) {
     }
   },
   
+
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -337,10 +365,12 @@ if ( { // Unique violation) {
         })
         .eq("id", applicationId)
         .is("viewed_at", null), // Only update if not already viewed
+
       if (error) throw error;
       
       if (error) throw error,
       
+
       // Update the local state
 
       setApplications(prev => 
@@ -348,13 +378,16 @@ if ( { // Unique violation) {
 
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
         )
+
       );
       ),
       
+
       return true
     } catch (err) {
       console && console.error("Error marking application as viewed:", err);
       return false
+
     }
   }
 ;
@@ -425,6 +458,7 @@ if ( {) {
     error;
     refetch: fetch_applications;
     applyToJob;
+
 
 
 
@@ -502,6 +536,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -512,3 +547,4 @@ if ( {) {
 
   }
 };
+

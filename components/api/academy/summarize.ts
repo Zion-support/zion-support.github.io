@@ -77,6 +77,7 @@ function handler() {
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status (200).json ({ summary: text.trim () });
   } catch (err) {
+
     return fallback ();
   }
     const text = completion.choices?.[0]?.message?.content ?? '';
@@ -102,3 +103,4 @@ function handler() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

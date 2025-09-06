@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV4 {;
   id: string;
@@ -299,6 +300,13 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01', customers: 40,
     rating: 4.9,
+
+
+
+
+    rating: 4.9
+
+    reviews: 32
 
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -699,6 +707,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -707,3 +716,4 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 ];
+

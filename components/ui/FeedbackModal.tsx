@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
 
-
+export type FeedbackContext = { actionType?: string; metadata?: any }
+export default function FeedbackModal({
 
 
   isOpen: boolean;
@@ -53,6 +54,7 @@ import { useState } from 'react';
 
 
 
+
     setLoading(false);
     onClose(true)
   }
@@ -71,6 +73,7 @@ import { useState } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -360,6 +363,7 @@ function submit() {
         </div>
       </div>
     </div>
+
   )
 
 }
@@ -369,6 +373,7 @@ function submit() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

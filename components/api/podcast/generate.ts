@@ -19,10 +19,12 @@ function writeEpisodes(episodes: any[]) {
 
 
 
+
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
@@ -88,6 +90,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
     const episodes = readEpisodes();
+
     const episode = {
       id
       createdAt: new Date().toISOString()
@@ -150,3 +153,4 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

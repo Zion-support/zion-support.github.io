@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -33,7 +34,9 @@ import {toast} from "sonner";
 
 
 
+
 }
+
 
 
 
@@ -50,6 +53,7 @@ export function SmartContractBuilder({;
 
 
 
+
   onDeploy
 }: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -57,14 +61,17 @@ export function SmartContractBuilder({;
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
+
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
 
     network: 'ethereum'
     useEscrow: true
 
     deployToChain: false
+
   });
   const [deployStatus, setDeployStatus] = useState<string>('');
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
@@ -82,6 +89,7 @@ export function SmartContractBuilder({;
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
   },
+
 
   // Convert ContractFormValues to contract content string
   const handleContractGenerated = async (formValues: ContractFormValues) => {
@@ -129,6 +137,7 @@ export function SmartContractBuilder({;
       console.error("Error generating contract:", error),
       toast.error("Failed to generate smart contract")
     }
+
   }
   const handleDeployContract = async () => {
     if (!generatedContract) return;
@@ -144,6 +153,7 @@ export function SmartContractBuilder({;
       setDeployStatus('deploying'),
       const contractInfo = await deploySmartContract(generatedContract, deployOptions),
       
+
       if (contractInfo) {
         setDeploymentInfo(contractInfo);
         setDeployStatus('deployed');
@@ -154,6 +164,8 @@ export function SmartContractBuilder({;
         toast.error ("Failed to deploy smart contract");
       }
     } catch (error) {
+
+
 
 
 
@@ -255,11 +267,13 @@ export function SmartContractBuilder({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -286,10 +300,12 @@ export function SmartContractBuilder({;
 
 
 
+
     } catch (error) {;
       console && console.error("Error generating contract:", error);
       toast && toast.error("Failed to generate smart contract");
     }
+
   };
 
   const handleDeployContract = async () => {;
@@ -335,6 +351,13 @@ export function SmartContractBuilder({;
               >;
                 <Save className="h-4 w-4" />;
 
+                Templates;
+              </Button>;
+            </div>;
+          </div>;
+          <TabsContent value="form" className="pt-4">;
+            <ContractForm;
+
 
               talent={talent}
               client_name={client_name}
@@ -348,8 +371,10 @@ export function SmartContractBuilder({;
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <div>
+
                 <ContractPreview
                 <ContractPreview 
+
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
@@ -381,6 +406,7 @@ export function SmartContractBuilder({;
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+
         />
       </DialogContent>
     </Dialog>
@@ -427,5 +453,4 @@ export function SmartContractBuilder({;
     </Dialog>);
 }
 
-=======
-;
+

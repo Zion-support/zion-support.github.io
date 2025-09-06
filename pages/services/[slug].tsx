@@ -1,5 +1,17 @@
 
 
+import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
+import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
+import {extraServices} from '../../data/extra-services';
+import {additionalEnhancedServices} from '../../data/additional-real-services';
+import {newRealServices} from '../../data/new-real-services';
+import {marketReadyServices} from '../../data/market-ready-services';
+type Service = (typeof enhancedRealMicroSaasServices)[number];
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
 
 }
 import React from 'react';
@@ -9,6 +21,7 @@ import React from 'react';
   } catch {;
     return null;
   }
+
 
 
 
@@ -32,6 +45,7 @@ import React from 'react';
 export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const services = getAllServices();
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
@@ -278,6 +292,7 @@ function ServiceDetailPage() {
 
 
 
+
                     className='text-xs hover:underline'>;
                     {contactInfo && contactInfo.address}
                 </span>;
@@ -344,6 +359,7 @@ function ServiceDetailPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
@@ -496,6 +512,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -508,4 +525,5 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

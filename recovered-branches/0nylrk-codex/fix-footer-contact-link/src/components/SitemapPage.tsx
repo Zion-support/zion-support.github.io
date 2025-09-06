@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -17,12 +18,14 @@ import {AppLayout} from '@/layout/AppLayout';
 
 
 
+
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',
+
 
 
 
@@ -312,10 +315,13 @@ export const SitemapPage: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             </ul>;
           </div>;
         </div>;
       </div>;
     </AppLayout>;
+
   );
 };
+

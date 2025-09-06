@@ -2,9 +2,11 @@
 
 
 
-import { useEffect, useState } from 'react';
+
+
 
 export default function CloudAutomationHub() {
+
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
 import { useEffect, useState } from 'react',
@@ -29,13 +31,16 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
 ursor/fix-lint-push-and-merge-to-main-ce13
 
   useEffect__(() => {
+
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
 
 
+
   }, []),
+
   return (
     <div className="space-y-6">
       <div>
@@ -46,6 +51,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
         <a href="/docs/ROADMAP.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
           <h3 className="font-semibold">Roadmap (Autonomous)</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/ROADMAP.md</p>
+
         </a>
         <a href="/docs/LINK_HEALTH.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
           <h3 className="font-semibold">Link Health</h3>
@@ -75,10 +81,13 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
+
+
 
 
 
@@ -92,12 +101,14 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
           {logs.map((log) => (
             <li key={log.id} className="flex items-center justify-between">
               <span>{log.generatedAt || log.file}</span>
+
               <span className="text-gray-600">{log.insights?.theme}</span>
             </li>
           ))}
@@ -110,6 +121,19 @@ ursor/fix-lint-push-and-merge-to-main-ce13
     </div>
 
 
+  )
+import { useEffect, useState } from 'react';
+export default function CloudAutomationHub(req, res) {
+  try {
+  const [logs, setLogs] = useState<any[]>([]);
+  useEffect(() => {;
+    fetch('/api/automation/cloud-logs');
+      .then((r) => r.json());
+      .then((d) => setLogs(d.logs || []));
+      .catch(() => setLogs([]));
+  }, []);
+  return (;
+    <div className="space-y-6">;
 
       <div>;
         <h1 className="text - 2xl font - bold">Autonomous Cloud Automation</h1>;
@@ -147,6 +171,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -158,4 +183,5 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -4,6 +4,8 @@
 
 
 
+
+
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -98,9 +100,11 @@ export default function ContractBuilderPage() {
 
 
 
+
     setLoading(true),
     setError(null),
     setContract(''),
+
 
 
 
@@ -158,7 +162,9 @@ export default function ContractBuilderPage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     try {
@@ -245,6 +251,8 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -337,9 +345,21 @@ export default function ContractBuilderPage(req, res) {
         <div className="md:col-span-2 flex items-center gap-3">
 
 
+            {loading ? 'Generating…' : 'Generate contract'}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>
+          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
         </div>
@@ -347,10 +367,15 @@ export default function ContractBuilderPage(req, res) {
 
       {contract && (
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-
+        <div className="mt-8">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-2xl font-semibold">Generated Contract</h2>
+            <div className="flex gap-2">
+              <button className="btn btn-secondary" onClick={copyToClipboard}>Copy</button>
+              <button className="btn" onClick={downloadAsTxt}>Download .txt</button>
+            </div>
+          </div>
+          <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
 
 
             {contract  } catch (error) {
@@ -372,11 +397,13 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

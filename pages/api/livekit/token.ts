@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 
@@ -20,6 +22,8 @@ export default async function handler(
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
@@ -30,6 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
+
   }
   try {
     const { roomName, identity, name, audioOnly } = req.body |{}
@@ -56,6 +61,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       identity: String(identity),
       name: name ? String(name) : String(identity),
       ttl: 60 * 60 // 1 hour
+
     });
     at.addGrant({
       roomJoin: true
@@ -72,6 +78,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err: any) {
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
+
 
     at.addGrant({
 
@@ -257,4 +264,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

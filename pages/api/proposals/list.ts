@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listProposals } from "../../../utils/data/proposals";
 export default async function handler(
@@ -31,6 +33,8 @@ export default async function handler(
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -39,6 +43,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ proposals })
   } catch (error: any) {
     res.status(500).json({ error: error?.message || 'Failed to list proposals' });
+
   }
 
 
@@ -85,4 +90,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

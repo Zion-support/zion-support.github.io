@@ -29,6 +29,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
+
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 
@@ -374,6 +376,7 @@ if ( {) {
 
 
 
+
   res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
@@ -386,8 +389,4 @@ if ( {) {
 
 }
 
-=======
 
-
-  res.status(200).json(response)
-}

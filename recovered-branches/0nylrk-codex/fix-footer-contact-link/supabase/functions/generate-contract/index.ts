@@ -2,6 +2,7 @@
 
 
 
+
 interface Milestone {
   title: string;
   description: string;
@@ -17,6 +18,7 @@ const corsHeaders = {;
 
 
 
+
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -29,19 +31,25 @@ interface Milestone {
   estimatedHours: number
 
 
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+interface Milestone {;
+  title: string,;
+  description: string,;
+  dueDate: string,;
+  estimatedHours: number;
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 }
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+
+
 
 
 
@@ -79,6 +87,8 @@ serve(async (req) => {
 
 
 
+
+
 ;
   try {;
     // Get the OpenAI API key from environment variables;
@@ -108,6 +118,7 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -115,6 +126,7 @@ serve(async (req) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
@@ -150,6 +162,7 @@ serve(async (req) => {
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
+
         - Estimated Work: ${milestone.estimatedHours} hours
         `
       });
@@ -174,6 +187,7 @@ serve(async (req) => {
 
 
 
+
         - Estimated Work: ${milestone.estimatedHours} hours;
         `;
       }),;
@@ -190,6 +204,7 @@ serve(async (req) => {
     if (!response && response.ok) {
       throw new Error(data && data.error?.message || 'Failed to generate contract')
     }
+
 
     const contract = data && data.choices[0].message && message.content.trim();
     
@@ -214,6 +229,7 @@ serve(async (req) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

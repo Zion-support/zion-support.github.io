@@ -1,3 +1,4 @@
+
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../../components/layout/EnhancedLayout',
@@ -29,6 +30,7 @@ import type { GetServerSideProps } from 'next';
 
 
 
+
   let role = 'guest';
   try {;
     const user = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']) : null;
@@ -56,6 +58,7 @@ import type { GetServerSideProps } from 'next';
   }
 }
 },
+
 
 
 
@@ -139,6 +142,7 @@ export default function AdminDisputesDashboard() {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <EnhancedLayout>
       <div className="max-w-6xl mx-auto">
@@ -176,6 +180,8 @@ export default function AdminDisputesDashboard() {
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</a></Link>
                   </td>
                 </tr>
+
+
 
 
 
@@ -282,9 +288,11 @@ if (return list) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

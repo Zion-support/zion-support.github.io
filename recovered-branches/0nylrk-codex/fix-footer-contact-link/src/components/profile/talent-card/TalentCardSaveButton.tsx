@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface TalentCardSaveButtonProps {
 
@@ -21,6 +23,7 @@ interface TalentCardSaveButtonProps {
   onToggleSave?: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
 }
+
 export function TalentCardSaveButton({
   profileId
   profileName;
@@ -37,13 +40,16 @@ export function TalentCardSaveButton({
   profileName;
   profileId, 
   profileName,
+
   isSaved, 
   onToggleSave,
   isAuthenticated 
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast(),
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved),
+
   
+
   // Handle save toggle
 
   const handleSaveToggle = (e: React.MouseEvent) => {
@@ -53,6 +59,8 @@ export function TalentCardSaveButton({
         title: "Authentication required"
         description: "Please log in to save talents to your favorites"
         variant: "destructive"
+
+
 
 
 
@@ -99,6 +107,14 @@ export function TalentCardSaveButton({;
     }
 
 
+    toast({
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites",
+      description: localIsSaved 
+        ? `${profileName} has been removed from your favorites` 
+        : `${profileName} has been added to your favorites`,
+      variant: "default"
+    })
+  },
 
 
   return (
@@ -114,7 +130,10 @@ export function TalentCardSaveButton({;
 
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
 
-
+        )}
+      />
+    </button>
+  )
 
 
 ;
@@ -145,6 +164,7 @@ export function TalentCardSaveButton({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -152,6 +172,7 @@ export function TalentCardSaveButton({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -174,3 +195,5 @@ function TalentCardSaveButton() {
   const { toast } = use_toast ();
   const [localIsSaved, setLocalIsSaved] = React.useState (is_saved);
 ;
+
+

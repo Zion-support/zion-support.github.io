@@ -5,6 +5,8 @@
 
 
 
+
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -14,6 +16,7 @@ interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
   error?: string
 }
+
 
 
 interface TranslationResponse {
@@ -29,6 +32,7 @@ export function useTranslationService() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
@@ -58,6 +62,8 @@ export function useTranslationService() {;
           ar: ''
         }
         initialTranslations[sourceLanguage] = content;
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',;
@@ -96,6 +102,7 @@ export function useTranslationService() {;
           ar: '';
         },;
         initialTranslations[sourceLanguage] = content,;
+
 
 
 
@@ -170,6 +177,7 @@ export function useTranslationService() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {

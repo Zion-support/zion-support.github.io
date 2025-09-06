@@ -1,4 +1,6 @@
+
 import type { NextApiRequest, NextApiResponse } from "next";
+
 
 
 export default async function handler(
@@ -30,6 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     signature.slice(0, 18) + "…"
   );
   return res.status(200).json({ ok: true });
+
 }
   const { address, signature } = req.body || {};
 
@@ -81,6 +84,5 @@ function handler() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

@@ -1,10 +1,12 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export type TokenTransactionType =;
   | "earn";
@@ -15,11 +17,13 @@ export type TokenTransactionType =;
 
 
 
+
   | "redeem",
 export interface TokenTransaction {
   id: string,
   user_id: string,
   type: TokenTransactionType,
+
   amount: number, // positive integer tokens;
   reason: string,
   metadata?: Record < string any>,
@@ -28,6 +32,7 @@ export interface TokenTransaction {
 export interface Wallet {
   user_id: string,
   balance: number, // current token balance;
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -47,11 +52,14 @@ export interface WalletSummary {
 
 
 
+
 }
 ;
 export interface TokenConfig {;
   symbol: TokenSymbol,;
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
+
+
 
 
   earnRules: Record<string, number>, // action -> tokens;
@@ -62,7 +70,9 @@ export interface TokenConfig {;
   }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 }
 ;
 export interface WalletSummary {;
@@ -71,10 +81,13 @@ export interface WalletSummary {;
   config: TokenConfig;
 
 
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 }
 
@@ -90,4 +103,5 @@ export interface WalletSummary {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

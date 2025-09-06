@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -18,10 +19,12 @@ export default function Analytics() {;
 
 
 
+
   const { data: pageViewTrends } = useQuery({
     queryKey: ['page-views-trend', timeRange],
     queryFn: async () => {
       // Get daily page views for trend chart
+
 
       const days = parseInt(timeRange.replace('d', ''));
       const startDate = new Date();
@@ -30,10 +33,12 @@ export default function Analytics() {;
       const startDate = new Date(),
       startDate.setDate(startDate.getDate() - days),
       
+
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, path')
         .eq('event_typepage_view')
+
         .gte('created_at', startDate.toISOString());
       if (error) throw error;
       // Group by date
@@ -65,10 +70,12 @@ export default function Analytics() {;
         date.setDate(date.getDate() - i),
         const dateStr = date.toISOString().split('T')[0],
         
+
         if (viewsByDate[dateStr]) {
           result.push(viewsByDate[dateStr])
         } else {
           result.push({ date: dateStr, views: 0 })
+
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -129,10 +136,12 @@ export default function Analytics() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
     }
+
   });
 
   const { data: conversionData } = useQuery({;
@@ -184,11 +193,14 @@ export default function Analytics() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
           conversionsByType[conversionType][date] = 0
         }
+
+
 
 
 
@@ -216,6 +228,8 @@ export default function Analytics() {;
       })
     }
   });
+
+
 ;
         conversionsByType[conversionType][date]++;
       });
@@ -250,11 +264,13 @@ export default function Analytics() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
 
@@ -274,6 +290,7 @@ export default function Analytics() {;
         <UserBehaviorStats />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+
         <ConversionAnalysisChart
 
 
@@ -296,3 +313,4 @@ export default function Analytics() {;
 
 }
 ;
+

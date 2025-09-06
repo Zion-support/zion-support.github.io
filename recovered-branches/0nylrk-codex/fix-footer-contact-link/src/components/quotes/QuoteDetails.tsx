@@ -1,5 +1,7 @@
 
+
 import React from "react";
+
 
 
 
@@ -26,6 +28,7 @@ import { format } from "date-fns",
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -34,11 +37,14 @@ import { format } from "date-fns",
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
+
 }
+
 
 
 
@@ -115,6 +121,7 @@ if (return "Not specified") {
       return dateString;
     }
 
+
   },
 
 
@@ -125,6 +132,7 @@ if (return "Not specified") {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
 
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>;
@@ -203,6 +211,7 @@ if (return "Not specified") {
         </div>
       </DialogContent>
     </Dialog>
+
   );
 
 }
@@ -216,4 +225,5 @@ if (return "Not specified") {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

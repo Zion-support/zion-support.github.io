@@ -1,4 +1,5 @@
 
+
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
@@ -7,6 +8,7 @@ const next_config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
+
 
 
 
@@ -37,3 +39,5 @@ const next_config = {
   distDir: '.next';
 },;
 module.exports = nextConfig,;
+
+

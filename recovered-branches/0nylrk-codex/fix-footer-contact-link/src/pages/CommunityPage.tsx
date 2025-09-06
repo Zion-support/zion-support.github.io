@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -39,6 +40,7 @@ import {ForumPost} from "@/types/community";
     replyCount: 8,;
     isPinned: true,;
     isFeatured: true;
+
 
 
 
@@ -131,6 +133,7 @@ const recentPosts: ForumPost[] = [;
 
 
 
+
 export default function CommunityPage() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
@@ -138,6 +141,7 @@ export default function CommunityPage() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("categories"),
   
+
   return (
 
     <AppLayout>;
@@ -147,7 +151,41 @@ export default function CommunityPage() {
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
 
-
+      />
+      <div className="container py-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+          <div>
+            <h1 className="text-3xl font-bold">Community Forum</h1>
+            <p className="text-muted-foreground mt-2">
+              Join the conversation, ask questions, and share your knowledge
+            </p>
+          </div>
+          <Button asChild>
+            <Link to={user ? "/community/create" : "/login?next=/community/create"}>
+              Create New Post
+            </Link>
+          </Button>
+        </div>
+        <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">
+          <TabsList className="mb-6">
+            <TabsTrigger value="categories">Categories</TabsTrigger>
+            <TabsTrigger value="featured">Featured</TabsTrigger>
+            <TabsTrigger value="recent">Recent</TabsTrigger>
+          </TabsList>
+          <TabsContent value="categories">
+            <ForumCategories />
+          </TabsContent>
+          <TabsContent value="featured">
+            <div className="space-y-4">
+              {featuredPosts.map((post) => (
+                <PostCard key={post.id} post={post} />
+              ))}
+            </div>
+          </TabsContent>
+          <TabsContent value="recent">
+            <div className="space-y-4">
+              {recentPosts.map((post) => (
+                <PostCard key={post.id} post={post} />
 
 
 import { useState } from "react",;
@@ -306,9 +344,11 @@ export default function CommunityPage() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

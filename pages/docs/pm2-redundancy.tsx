@@ -10,6 +10,7 @@ export default function Pm2RedundancyRedirect() {
       </main>
     </>
   )
+
 }
 import Head from 'next/head';
 export default function Pm2RedundancyRedirect(req, res) {
@@ -28,5 +29,6 @@ export default function Pm2RedundancyRedirect(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

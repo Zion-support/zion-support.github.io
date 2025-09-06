@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
@@ -30,6 +32,7 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring
                 needs to the next level. Available on iOS and Android.
               </p>
+
 
 
 
@@ -76,6 +79,7 @@ export const DownloadSection: React.FC = () => {
 
 
 
+
               />
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
@@ -95,6 +99,7 @@ export const DownloadSection: React.FC = () => {
         </div>
       </div>
     </section>
+
 
 
 
@@ -130,4 +135,5 @@ export const DownloadSection: React.FC = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

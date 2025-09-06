@@ -15,6 +15,8 @@ export default function FintechSolutions() {
 
 
 
+
+
 			pricePerMonthUSD={2799  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -26,7 +28,9 @@ export default function FintechSolutions() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
@@ -37,6 +41,18 @@ export default function FintechSolutions() {
 				"Collections optimization and next-best-action",
 				"Realtime rules with feature store integration",
 				"Integrations: Core banking, KYC, payments, CRMs"
+
+
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Fintech", "Banking", "Lending", "Payments"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 			canonical="https: //ziontechgroup.com/fintech-solutions"
@@ -51,8 +67,10 @@ export default function FintechSolutions() {
   }
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

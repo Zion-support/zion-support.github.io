@@ -1,6 +1,15 @@
 
 
 
+import type { Wallet, TokenTransaction } from '@/types/tokens';
+export function useWallet() {;
+  const { user } = useAuth();
+  const [wallet, setWallet] = useState<Wallet | null>(null),
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
+  const [loading, setLoading] = useState(true);
+
+
+
 
     }
     try {
@@ -65,6 +74,8 @@ if ( {) {
     loading;
     error;
     fetchWallet;
+
+
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -165,7 +176,9 @@ export function useWallet() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     fetchTransactions;

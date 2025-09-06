@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -9,6 +10,7 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   path: string;
   label: string;
@@ -341,6 +343,8 @@ export const getAccessibleRoutes = (
     // Add role-specific routes
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
+
+
 // Define the types for our sitemap structure;
 export type SitemapItem = {;
   path: string,;
@@ -646,6 +650,7 @@ export const getAccessibleRoutes = (;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -653,6 +658,7 @@ export const getAccessibleRoutes = (;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
     if (userType === 'employer' |userType === 'buyer') {
@@ -662,6 +668,7 @@ export const getAccessibleRoutes = (;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
+
 
 
 
@@ -688,3 +695,4 @@ export const dynamic_paths = {
 
 
 };
+

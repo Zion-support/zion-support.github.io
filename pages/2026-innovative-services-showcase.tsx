@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -19,11 +20,40 @@ import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
+    { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount }
+    {
+      id: 'enterprise'
+      name: 'Enterprise IT'
+      icon: '🏢'
+      count: enterpriseCount
+    }
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount }
+    {
+      id: 'emerging'
+      name: 'Emerging Tech'
+      icon: '🔬'
+      count: emergingTechCount
+    },  ];
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' }
+    { id: 'low', name: 'Under $500', range: 'Under $500' }
+    { id: 'medium', name: '$500 - $1,000', range: '$500 - $1,000' }
+    { id: 'high', name: 'Over $1,000', range: 'Over $1,000' },  ];
+  const sortOptions = [
+    { id: 'name', name: 'Name' }
+    { id: 'price', name: 'Price' }
+    { id: 'rating', name: 'Rating' }
+    { id: 'popularity', name: 'Popularity' },  ];
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
@@ -176,12 +206,15 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       opacity: 1
       transition: {
 
-
-        duration: 0.5,
-      },
-    },  };
-
-
+        staggerChildren: 0.1
+      }
+    },  }
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 }
+    visible: {
+      y: 0
+      opacity: 1
+      transition: {
 
 
 export default function Innovative2026ServicesShowcase(req, res) {
@@ -362,6 +395,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -369,6 +403,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   return (
 
@@ -378,6 +413,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
       <UltraAdvancedFuturisticBackground2026
+
         intensity='extreme'
         colorScheme='neural-network'        particleCount={800}
         animationSpeed={3 && 3.0}
@@ -399,6 +435,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
 
 
 
@@ -434,6 +471,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
               </div>
 
             </motion.div>
+
             {/* Search and Filters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -442,6 +480,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             >
@@ -455,6 +494,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   className="w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
                 />
               </div>
+
               <div className='flex flex-wrap gap-4 justify-center mb-8'>
                 {categories.map(category => (                  <button
                     key={category.id}
@@ -499,6 +539,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   >
                     <span className="mr-2">{category.icon}</span>
                     {category.name} ({category.count})
@@ -509,6 +550,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
               </div>
+
               <div className='flex flex-wrap gap-4 justify-center'>
                 {priceRanges.map(range => (                  <button
                     key={range.id}
@@ -557,6 +599,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             <motion.div
               variants={containerVariants  } catch (error) {
     console.error("Error:", error);
@@ -603,6 +646,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-300 text-sm">{service.tagline}</p>
                     </div>
+
                     {/* Service Content */}
                     <div className='p-6'>
                       <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
@@ -634,12 +678,14 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                         </div>
                         <div className="flex items-center space-x-2">
                           <Users className="w-4 h-4 text-blue-400" />
                           <span className="text-gray-300 text-sm">{service.customers}+</span>
                         </div>
                       </div>
+
                       <div className='flex items-center justify-between mb-4'>
                         <div className='text-2xl font-bold text-white'>
                           {service.price}
@@ -656,12 +702,14 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                         </div>
                         <div className="flex items-center space-x-2">
                           <Zap className="w-4 h-4 text-yellow-400" />
                           <span className="text-gray-300 text-sm">{service.trialDays} days trial</span>
                         </div>
                       </div>
+
                       <div className='flex items-center justify-between mb-4'>
                         <div className='flex items-center space-x-2'>
                           <Clock className='w-4 h-4 text-green-400' />
@@ -819,6 +867,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                       <Link href={service.link}>
                         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
 
@@ -831,6 +880,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                         </button>
                       </Link>
                     </div>
+
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>
                 </motion.div>
@@ -843,10 +893,12 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               >
                 <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
                 <button
                   onClick={() => {
+
                     setSearchTerm('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
@@ -881,6 +933,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
               </motion.div>
 
 
+
           </div>;
         </section>;
 
@@ -894,13 +947,27 @@ export default function Innovative2026ServicesShowcase(req, res) {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
             >
 
@@ -912,7 +979,9 @@ export default function Innovative2026ServicesShowcase(req, res) {
               </p>
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 </div>
@@ -927,6 +996,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   <p className="text-green-300">ziontechgroup.com</p>
                 </div>
               </div>
+
               <Link href='/contact'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started Today
               <Link href="/contact">
@@ -945,6 +1015,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 </button>
               </Link>
             </motion.div>
@@ -952,6 +1023,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
         </section>
       </div>
     </>
+
 );
   )
             >;
@@ -1008,4 +1080,5 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

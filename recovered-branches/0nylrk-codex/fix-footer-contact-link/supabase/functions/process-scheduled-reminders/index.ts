@@ -8,13 +8,16 @@
 
 
 
+
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+
 
 
 
@@ -31,6 +34,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type"}
     "authorization, x-client-info, apikey, content-type"},
 
+
 serve(async (req: Request) => {
   // Handle CORS
   if (req && req.method === "OPTIONS") {
@@ -42,6 +46,7 @@ serve(async (req: Request) => {
     const supabase = createClient(
       supabaseUrl;
       supabaseServiceKey
+
     );
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase.rpc("create_scheduled_reminders");
@@ -50,6 +55,7 @@ serve(async (req: Request) => {
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase.rpc("create_scheduled_reminders"),
     
+
     if (error) {
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
@@ -65,9 +71,11 @@ serve(async (req: Request) => {
       .select("id, payload")
       .eq("job_type", "onboarding_reminder")
       .eq("status", "pending")
+
       .lt("scheduled_for", new Date().toISOString());
       .lt("scheduled_for", new Date().toISOString()),
     
+
     if (jobsError) {
       console && console.error("Failed to fetch pending jobs:", jobsError);
       return new Response(
@@ -77,10 +85,12 @@ serve(async (req: Request) => {
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
+
     const processedJobs = [];
     
     const processedJobs = [],
     
+
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
@@ -89,6 +99,7 @@ serve(async (req: Request) => {
           {
             method: "POST";
             headers: {
+
               "Content-Type": "application/json"
               "Authorization": `Bearer ${supabaseServiceKey}`}
             body: JSON.stringify(job.payload)}
@@ -98,6 +109,7 @@ serve(async (req: Request) => {
             body: JSON && JSON.stringify(job && job.payload)}
         );
         
+
         if (reminderResponse.ok) {
 
           // Update job status to completed
@@ -106,9 +118,11 @@ serve(async (req: Request) => {
             .update({
               status: "completed"
               completed_at: new Date().toISOString()})
+
             .eq("id", job.id);
             .eq("id", job.id),
           
+
           if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {
@@ -127,12 +141,14 @@ serve(async (req: Request) => {
     }
     return new Response(
       JSON.stringify({
+
         message: "Reminders processed successfully";
         processed_jobs: processedJobs.length
         job_ids: processedJobs});
         message: "Reminders processed successfully",
         processed_jobs: processedJobs.length,
         job_ids: processedJobs}),
+
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -145,6 +161,8 @@ serve(async (req: Request) => {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
+
+
 
 
 
@@ -278,6 +296,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -289,3 +308,4 @@ if ( {) {
 
   }
 });
+

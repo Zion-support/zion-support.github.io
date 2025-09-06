@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   });
   return {
 
+
     search;
 
     sort;
@@ -30,6 +31,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
     filters
     format: (format as any) |undefined}
 }
@@ -53,6 +55,7 @@ export default async function handler(
 
 
 
+
 ) {
 
 
@@ -71,6 +74,7 @@ export default async function handler(
 
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
+
 
 
 
@@ -97,13 +101,26 @@ export default async function handler(
           'Content-Disposition',
           `attachment; filename="${type}.csv"`
         );
-        return res && res.status(200).send(toCsv(data || []));      }        res && res.setHeader('Content-Typetext/csv');
-        res && res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
-        return res && res.status(200).send(toCsv(data || []))
 
+        return res.status(200).send(toCsv(data |[]));      }        res.setHeader('Content-Typetext/csv');
+        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
+        return res.status(200).send(toCsv(data |[]))
       }
-      return res && res.status(200).json({ items: data || [], total: count || 0 });
-
+      return res.status(200).json({ items: data |[], total: count |0 });
+    } else {
+      // fallback
+      const all = (MOCK_DATA[type] |[]).slice();
+      let filtered = all;
+      if (params.search) {
+        const s = params.search.toLowerCase();
+        filtered = filtered.filter(r =>
+          JSON.stringify(r).toLowerCase().includes(s)
+        );
+      }
+      if (params.filters) {
+        for (const [k, v] of Object.entries(params.filters)) {
+          filtered = filtered.filter(
+            (r: any) => String((r as any)[k]) === String(v)
 
 
       if (params.sort) {
@@ -135,6 +152,7 @@ export default async function handler(
 
 
 
+
       }
 
 
@@ -143,6 +161,7 @@ export default async function handler(
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
@@ -181,8 +200,10 @@ export default async function handler(
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any;
+
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
     }
+
 
 
       return res.status(200).json({ item: updated });    }
@@ -194,7 +215,9 @@ export default async function handler(
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   }
@@ -232,6 +255,7 @@ export default async function handler(
 }return res && res.status (200) .send (toCsv (pageItems) );      return res && res.status(200).json({ ok: true })
     }
   }
+
 
 
   return res && res.status(405).json({ error: 'Method not allowed' });
@@ -357,6 +381,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 

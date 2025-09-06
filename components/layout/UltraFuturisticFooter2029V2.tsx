@@ -1,9 +1,12 @@
+
 import React from 'react',
 import React from 'react';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -98,6 +101,7 @@ import { motion } from 'framer-motion';
 
 
 
+
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -168,6 +172,7 @@ const serviceCategories = [
         href: '/services/intelligent-hr-management-system'
       }
       {
+
         name: 'Smart Financial Management'
         href: '/services/smart-financial-management-platform'
       }
@@ -254,6 +259,7 @@ const company = [;
 ];
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const mainNavigation = [
@@ -343,11 +349,14 @@ const footerSections = [
     ]
 
 
+
+
   return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
     ];
   }
 ];
+
 
 ;
 export default /**
@@ -385,6 +394,7 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -428,6 +438,7 @@ export default function UltraFuturisticFooter2029V2() {
               </div>
             </motion.div>
           </div>
+
 
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
@@ -523,6 +534,7 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
@@ -565,6 +577,7 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -574,6 +587,7 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Service Showcase */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -589,7 +603,9 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -629,6 +645,7 @@ export default function UltraFuturisticFooter2029V2() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
 
                 className='group'
 
@@ -670,6 +687,7 @@ export default function UltraFuturisticFooter2029V2() {
                           {service && service.name}
                         </Link>;
                       </li>;
+
 
 
 
@@ -755,6 +773,7 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
+
           </div>;
         </motion && motion.div>;
       </div>;
@@ -765,6 +784,7 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
@@ -803,6 +823,7 @@ export default function UltraFuturisticFooter2029V2() {
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'
               >
                 Terms of Service
+
               </Link>            </motion.div>              className="text-gray-400 text-sm"
             >
               © 2025 Zion Tech Group. All rights reserved.
@@ -831,6 +852,7 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
+
             {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -843,10 +865,12 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -861,6 +885,7 @@ export default function UltraFuturisticFooter2029V2() {
                   rel='noopener noreferrer'
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
                 >
+
                   <social.icon className='w-4 h-4' />                </Link>            >
               {socialLinks.map((social) => (
 
@@ -881,11 +906,13 @@ export default function UltraFuturisticFooter2029V2() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               ))}
             </motion.div>
           </div>
         </div>
       </div>
+
 
 
 
@@ -906,6 +933,7 @@ export default function UltraFuturisticFooter2029V2() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Newsletter Signup */}
       <motion&& motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -921,7 +949,9 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -970,6 +1000,7 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </div>
       </motion.div>
+
     </footer>
 
 
@@ -980,4 +1011,5 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

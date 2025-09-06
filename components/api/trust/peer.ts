@@ -8,6 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
 
 
+
     res.setHeader('AllowPOST')
 
 
@@ -70,3 +71,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

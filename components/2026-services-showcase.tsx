@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,7 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
+
 
 
 
@@ -306,6 +308,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
+
         {/* Navigation */}
         <UltraAdvancedNavigation />
 
@@ -343,6 +346,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
           <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion&& motion.div
+
 
 
         {/* Search and Filter Section */}
@@ -406,8 +410,10 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 {/* Sort By */}
                 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -462,6 +468,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
@@ -471,6 +478,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Sort By */}
+
 
 
 
@@ -535,6 +543,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
+
                         <span className='text-gray-400 text-lg font-normal'>
                           {service.period}
                         </span>;
@@ -578,6 +587,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                     {/* Category and Technology */}
 
                     <div className="flex items-center justify-between mb-4">
@@ -591,6 +601,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
                       </span>
                     </div>
+
 
                       </ul>;
                     </div>;
@@ -629,6 +640,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     >
                       Learn More
                     </a>
@@ -637,6 +649,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
             </div>
+
 
 
 
@@ -654,6 +667,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -667,6 +681,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
                 </h3>
                 <p className='text-gray-400'>
                   Try adjusting your search terms or filters
+
                 </p>              </motion.div>                className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -685,11 +700,13 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
 
 
 
@@ -703,6 +720,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                         </span>;
@@ -872,6 +890,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+
 );
   );
 
@@ -881,6 +900,7 @@ return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(
   );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

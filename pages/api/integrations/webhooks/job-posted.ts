@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -34,6 +36,7 @@ export default async function handler(
   for (const conn of connections) {
     const log = {
 
+
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
       providerId: conn && conn.providerId,
       level: "info",
@@ -53,6 +56,7 @@ export default async function handler(
   const crms = state.connections.filter(c => c.providerId === 'salesforce' || c.providerId === 'hubspot' || c.providerId === 'zoho' || c.providerId === 'pipedrive');
   const results: any[] = [];
   for (const conn of crms) {
+
     const { log } = await crm.syncContact(conn, { company: job.company, contact: job.contact });
     writeState(s => s.logs.push(log));
     results.push({ providerId: conn.providerId, ok: true })
@@ -75,6 +79,7 @@ export default async function handler(
 }
 
 
+
   writeState(s => {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
 
@@ -95,3 +100,4 @@ export default async function handler(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
+

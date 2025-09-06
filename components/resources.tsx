@@ -1,5 +1,12 @@
 
 
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+export default function ResourcesPage() {
+  return (
+
+
+
 
 
 class ErrorBoundary extends React.Component {
@@ -26,7 +33,9 @@ export default ResourcesPage;
 
 
 
+
 import React from 'react';
+
 
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
@@ -54,6 +63,7 @@ export default ResourcesPage;
 
 
 export default Resources;
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -61,4 +71,5 @@ export default Resources;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

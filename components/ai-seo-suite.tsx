@@ -1,6 +1,7 @@
 
 
 
+
   Rocket,;
   Settings,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -19,6 +20,7 @@ export default function AISeosuitePage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export default function AISeosuitePage() {
@@ -69,17 +71,107 @@ export default function AISeosuitePage() {
       description:
 
 
+  const seoTools = [
+    {
+      category: 'Keyword Research'
+      icon: <Search className='w-6 h-6 text-blue-400' />
+      tools: [
+        'Long-tail keyword finder'
+        'Competitor keyword analysis'
+        'Search volume estimation'
+        'Keyword difficulty scoring'
+        'Trending keywords'
+      ]
+    }
+    {
+      category: 'On-Page SEO'
+      icon: <Target className='w-6 h-6 text-green-400' />
+      tools: [
+        'Content optimization'
+        'Meta tag generator'
+        'Schema markup builder'
+        'Internal linking suggestions'
+        'Image optimization'
+      ]
+    }
+    {
+      category: 'Technical SEO'
+      icon: <Settings className='w-6 h-6 text-purple-400' />
+      tools: [
+        'Site audit tool'
+        'Page speed analyzer'
+        'Mobile optimization'
+        'Core Web Vitals'
+        'XML sitemap generator'
+      ]
+    }
+    {
+      category: 'Analytics & Reporting'
+      icon: <BarChart3 className='w-6 h-6 text-orange-400' />
+      tools: [
+        'Ranking tracker'
+        'Traffic analysis'
+        'Conversion tracking'
+        'Competitor monitoring'
+        'Custom dashboards'
+      ]
+    },  ];      title: 'AI Keyword Research'
+      description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'}
+    {
+      icon: <TrendingUp className="w-8 h-8 text-white" />
+      title: 'Ranking Analytics'
+      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'}
+    {
+      icon: <Target className="w-8 h-8 text-white" />
+      title: 'Content Optimization'
+      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'}
+    {
+      icon: <BarChart3 className="w-8 h-8 text-white" />
+      title: 'Technical SEO'
+      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'}
+    {
+      icon: <Globe className="w-8 h-8 text-white" />
+      title: 'Local SEO'
+      description: 'Optimize for local search with location-based keyword research and citation management.'
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
+      gradient: 'from-teal-400 to-blue-500'}
+    {
+      icon: <Zap className="w-8 h-8 text-white" />
+      title: 'Automated Reports'
+      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
+      gradient: 'from-pink-400 to-rose-500'}]
+  const seoTools = [
+    {
+      category: 'Keyword Research'
+      icon: <Search className="w-6 h-6 text-blue-400" />
+      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
+    }
+    {
+      category: 'On-Page SEO'
+      icon: <Target className="w-6 h-6 text-green-400" />
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
+    }
+    {
+      category: 'Technical SEO'
+      icon: <Settings className="w-6 h-6 text-purple-400" />
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
+    }
+    {
+      category: 'Analytics & Reporting'
+      icon: <BarChart3 className="w-6 h-6 text-orange-400" />
+      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
+    }
 
-
-        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
-      gradient: 'from-pink-400 to-rose-500',
-    },;
   ];
-
-
-
-
 
 
 export default function AISeosuitePage() {
@@ -95,6 +187,7 @@ export default function AISeosuitePage() {
       description: 'Perfect for small websites and blogs'
       features: [
 
+
         'Up to 5 websitesBasic keyword researchMonthly site auditsEmail supportBasic reportingMobile app access'
       ];
       popular: false,
@@ -106,6 +199,7 @@ export default function AISeosuitePage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   return (
 
@@ -216,6 +310,7 @@ export default function AISeosuitePage() {
                 <h3 className='text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
                   {feature.title}
                 </h3>
+
                 <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -269,6 +364,7 @@ export default function AISeosuitePage() {
 
 
 
+
                 </p>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -276,6 +372,7 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
+
 
 
 
@@ -294,6 +391,7 @@ export default function AISeosuitePage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* SEO Tools Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -304,6 +402,7 @@ export default function AISeosuitePage() {
               Comprehensive SEO Tools
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+
 
           </div>;
         </div>;
@@ -371,6 +470,7 @@ export default function AISeosuitePage() {
 
 
 
+
                         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
@@ -382,6 +482,7 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
+
 
 
 
@@ -400,6 +501,7 @@ export default function AISeosuitePage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Success Metrics Section */}
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
@@ -410,6 +512,7 @@ export default function AISeosuitePage() {
               Proven Results
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+
 
           </div>;
         </div>;
@@ -459,10 +562,12 @@ export default function AISeosuitePage() {
 
 
 
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -484,6 +589,7 @@ export default function AISeosuitePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
       {/* Use Cases Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -494,6 +600,7 @@ export default function AISeosuitePage() {
               Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+
 
           </div>;
         </div>;
@@ -567,6 +674,7 @@ export default function AISeosuitePage() {
 
 
 
+
                         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
@@ -578,6 +686,7 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
+
 
 
 
@@ -616,6 +725,7 @@ export default function AISeosuitePage() {
           </div>;
         </div>;
       </section>;
+
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -878,6 +988,8 @@ export default function AISeosuitePage() {
                 )}
 
 
+
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -890,7 +1002,9 @@ export default function AISeosuitePage() {
                 </div>;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     </li>
                   ))}
@@ -914,6 +1028,7 @@ export default function AISeosuitePage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -928,6 +1043,7 @@ export default function AISeosuitePage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -938,6 +1054,7 @@ export default function AISeosuitePage() {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+
 
           </div>;
         </div>;
@@ -987,10 +1104,12 @@ export default function AISeosuitePage() {
               </Card>;
 
 
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -1018,6 +1137,7 @@ export default function AISeosuitePage() {
 
 
 
+
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1031,8 +1151,10 @@ export default function AISeosuitePage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             Ready to Dominate Search Rankings?
           </h2>
@@ -1075,8 +1197,17 @@ export default function AISeosuitePage() {
         </div>
       </section>
     </>
+
+
+}
+
+}
+}
+}
+}
+}
+
   );
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+}
 

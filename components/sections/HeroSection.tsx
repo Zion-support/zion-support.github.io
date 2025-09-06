@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 'use client';
+
 
 'use client';
 
@@ -84,6 +86,7 @@ const HeroSection: React.FC = () => {
           }}
           transition={{
 
+
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
       </div>
 
@@ -121,6 +124,7 @@ const HeroSection: React.FC = () => {
             duration: 10,
             repeat: Infinity,
             ease: 'easeInOut',
+
           }}
         />
         {/* Grid Pattern */}
@@ -220,6 +224,8 @@ const HeroSection: React.FC = () => {
         >
 
 
+
+
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -230,6 +236,7 @@ const HeroSection: React.FC = () => {
             <Star className='w-5 h-5 text-yellow-400 fill-current' />
             <span className='text-white font-medium'>
               Leading Technology Solutions Provider
+
             </span>          </motion.div>            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
           >
             <Star className="w-5 h-5 text-yellow-400 fill-current" />
@@ -243,6 +250,7 @@ const HeroSection: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
           {/* Main Heading */}
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -262,7 +270,9 @@ const HeroSection: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
           {/* Subtitle */}
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -272,6 +282,7 @@ const HeroSection: React.FC = () => {
           >
             From AI development to cloud architecture, we help companies
             revolutionize their digital presence and achieve sustainable growth
+
             in the modern technology landscape.          </motion.p>            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
             From AI development to cloud architecture, we help companies revolutionize their digital presence
@@ -521,11 +532,13 @@ const HeroSection: React.FC = () => {
           </motion.p>
 
 
+
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
+
 
 
             className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-16&quot;
@@ -547,6 +560,7 @@ const HeroSection: React.FC = () => {
           </motion.div>
 
           {_/* Stats */}
+
 
 
           >
@@ -580,7 +594,9 @@ const HeroSection: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
           {/* Stats */}
           <motion.div
@@ -590,7 +606,9 @@ const HeroSection: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
           >
             {stats.map((stat, index) => (
@@ -608,11 +626,13 @@ const HeroSection: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
@@ -621,6 +641,7 @@ const HeroSection: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
+
 
 
 
@@ -637,10 +658,12 @@ const HeroSection: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             ))}
           </motion.div>
         </motion.div>
       </div>
+
 
 
 
@@ -660,16 +683,41 @@ const HeroSection: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
 
+        className='absolute bottom-8 left-1/2 transform -translate-x-1/2'      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'        >
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className='w-1 h-3 bg-white/60 rounded-full mt-2'          />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+        >
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className='w-1 h-3 bg-white/60 rounded-full mt-2'            className="w-1 h-3 bg-white/60 rounded-full mt-2"
+          />
+        </motion.div>
+      </motion.div>
+
+    </section>
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements

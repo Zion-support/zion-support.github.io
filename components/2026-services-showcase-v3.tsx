@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,11 +20,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+
 
 
 
@@ -97,10 +100,12 @@ export default function ServicesShowcase2026V3() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
+
 
 
 
@@ -116,6 +121,7 @@ export default function ServicesShowcase2026V3() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -162,11 +168,13 @@ export default function ServicesShowcase2026V3() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -228,6 +236,7 @@ export default function ServicesShowcase2026V3() {;
         </section>
       </div>
     </UltraQuantumHolographicBackground>
+
 
 
 }
@@ -308,3 +317,4 @@ export default function ServicesShowcase2026V3() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

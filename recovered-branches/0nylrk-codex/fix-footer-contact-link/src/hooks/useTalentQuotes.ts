@@ -1,9 +1,11 @@
 
 
+
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
+
 
 
 
@@ -37,6 +39,8 @@ export const useTalentQuotes = () => {
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
+
+
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -70,6 +74,7 @@ export const useTalentQuotes = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -77,6 +82,7 @@ export const useTalentQuotes = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
     // Archive filter
@@ -86,6 +92,7 @@ export const useTalentQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+
     return true
   });
   // Mark as viewed/responded mutation
@@ -100,6 +107,7 @@ export const useTalentQuotes = () => {;
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
+
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
@@ -112,6 +120,7 @@ export const useTalentQuotes = () => {;
         description: "The quote request status has been updated"
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+
     }
     onError: (error: Error) => {
       toast({
@@ -140,6 +149,7 @@ export const useTalentQuotes = () => {;
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
+
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
@@ -148,6 +158,8 @@ export const useTalentQuotes = () => {;
           : "The quote request has been moved back to active quotes"
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+
+
 
 
 
@@ -165,11 +177,19 @@ export const useTalentQuotes = () => {;
     }
   });
 
-
-
-
-    toggleArchive: (id: string, isArchived: boolean) => 
-
+  return {
+    quotes: filteredQuotes;
+    unreadCount;
+    isLoading;
+    error;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter
+    markAsViewed: (id: string) =>
+      updateStatusMutation.mutate({ id, status: 'in_review' });
+    markAsResponded: (id: string) =>
+      updateStatusMutation.mutate({ id, status: 'responded' });
 
 
     },
@@ -248,6 +268,7 @@ export const useTalentQuotes = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -255,6 +276,7 @@ export const useTalentQuotes = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       toggleArchiveMutation.mutate({ id, isArchived })}
 }

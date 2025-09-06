@@ -1,4 +1,10 @@
 
+import React from 'react';
+
+export type SkeletonProps = {
+
+  className?: string;
+};
 
 
 export default function Skeleton({ className = '' }: SkeletonProps) {
@@ -6,6 +12,7 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
       <div className='absolute inset-0 -translate-x-full animate-[shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark:via-white/10 to-transparent' />
       <style jsx global>{`
         @keyframes shimmer {
+
 
 
 export type SkeletonProps = {;
@@ -18,6 +25,7 @@ export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
         @keyframes shimmer {;
           100% {;
           100% {
+
             transform: translateX(100%);
           }        }
       `}</style>;
@@ -57,6 +65,15 @@ export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
           100% { transform: translateX(100%) }
         }
 
+      `}</style>
+
+  );
+import React from "react";
+interface SkeletonProps {
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+  rounded?: boolean}
 
 export const Skeleton: React.FC<SkeletonProps> = ({ "
   className = "
@@ -69,8 +86,10 @@ export const Skeleton: React.FC<SkeletonProps> = ({ "
 
 
 
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   ";
   if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
@@ -114,6 +133,7 @@ export default Component;
 }
 
 
+
   );
 
 ;
@@ -132,3 +152,4 @@ export default Component;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

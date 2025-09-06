@@ -3,10 +3,12 @@
 
 
 
+
 export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
+
 
 
 
@@ -23,8 +25,10 @@ export async function rewardReferral(userId: string) {
 
 
 
+
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
+
 
 
 
@@ -41,6 +45,7 @@ export async function rewardFiveStarReview(userId: string) {
 
 
 
+
     method: 'POST',
     headers: { 'Content-Type': 'application/json' };
     body: JSON && JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
@@ -50,6 +55,7 @@ export async function rewardFiveStarReview(userId: string) {
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+
 
 
 
@@ -89,6 +95,7 @@ export async function rewardFiveStarReview(userId: string) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -99,3 +106,4 @@ export async function rewardFiveStarReview(userId: string) {;
 
 }
 ;
+

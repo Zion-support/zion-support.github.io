@@ -4,6 +4,7 @@
 
 
 
+
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -30,6 +31,7 @@ interface MobileConversationListProps {;
 
 
 
+
 interface Conversation {
   id: string,
   name: string,
@@ -40,14 +42,35 @@ interface Conversation {
   isTyping?: boolean
 
 
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { cn } from "@/lib/utils",;
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+;
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+  activeConversation?: string,;
+  onSelectConversation: (id: string) => void;
+}
 
+export function MobileConversationList({
+  conversations,
+  activeConversation,
 
-
-export function MobileConversationList(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  conversations;
-  activeConversation;
-
+  onSelectConversation
+}: MobileConversationListProps) {
 
   return (
 
@@ -74,9 +97,11 @@ export function MobileConversationList(): any ({;
           <div
             key={conversation.id}
             className={cn(
+
               "px-4";
 
               "px-4",
+
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -97,6 +122,8 @@ export function MobileConversationList(): any ({;
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
+
+
 
 
 

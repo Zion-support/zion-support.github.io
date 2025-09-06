@@ -5,6 +5,8 @@
 
 
 
+
+
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -12,10 +14,14 @@ import {Briefcase, Users, Check} from "lucide-react";
 
 
 
+
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from "lucide-react",
+
+
 
 
 
@@ -31,11 +37,13 @@ interface RolePickerProps {
 
 
 
+
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role)
     onSelect(role)
   }
   },
+
 
   return (
     <div className="space-y-4 px-4">
@@ -66,11 +74,13 @@ interface RolePickerProps {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
         <Card
+
 
 
           className={`cursor-pointer transition-all ${
@@ -79,6 +89,7 @@ interface RolePickerProps {
               : "border-border hover:border-primary/40"
           }`}
           onClick={() => handleSelect('client')}
+
 
 
             </div>;
@@ -97,3 +108,4 @@ interface RolePickerProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

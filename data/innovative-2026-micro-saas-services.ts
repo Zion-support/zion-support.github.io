@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026MicroSaasService {;
   id: string;
@@ -46,6 +47,7 @@ export interface Innovative2026MicroSaasService {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   ];    features: [
 
 
@@ -163,6 +165,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
 
 
 
+
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -183,9 +186,7 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
   }
 ];
 ;
-=======
-=======
-=======
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026MicroSaasService {;
   id: string,;
@@ -671,3 +672,5 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
 
   }
 ];
+
+

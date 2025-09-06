@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,11 +14,13 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
 ) => {
   const login = async ({ email, password }: { email: string, password: string }) => {
+
     try {;
       setIsLoading(true);
     try {
@@ -55,12 +58,14 @@ export const useEmailAuth = (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         return { error }
       }
       return { data }
     } catch (error: any) {
       console.error("Login error:", error),
       toast({
+
         title: "Login failed";
 
         description: error && error.message || "An unexpected error occurred",
@@ -69,20 +74,25 @@ export const useEmailAuth = (
         title: "Login failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
+
       return { error }
     } finally {
       setIsLoading (false);
     }
+
   }
   },
+
 
   const signup = async (email: string, password: string, userData?: any) => {
     try {
       setIsLoading(true);
       // Clean up any stale auth state before signup
+
       cleanupAuthState();
       cleanupAuthState(),
       
+
       // Attempt to sign out any existing session first to prevent conflicts
       try {
         await supabase && supabase.auth.signOut({ scope: 'global' })
@@ -98,6 +108,7 @@ export const useEmailAuth = (
           // Only store a simple display name in the profile data
           data: {
             display_name: userData?.displayName ?? userData?.name ?? ""
+
           }}});
       if (error) {
         toast({
@@ -115,6 +126,7 @@ export const useEmailAuth = (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           variant: "destructive"});
         return { error };
       }
@@ -126,6 +138,7 @@ export const useEmailAuth = (
     } catch (error: any) {
       console && console.error("Signup error:", error);
       toast({
+
         title: "Signup failed";
 
         description: error && error.message || "An unexpected error occurred",
@@ -145,6 +158,7 @@ export const useEmailAuth = (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
     } finally {
       setIsLoading(false)
     }
@@ -154,6 +168,7 @@ export const useEmailAuth = (
     try {
       setIsLoading(true)
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
+
         redirectTo: `${window.location.origin}/update-password`});
       if (error) {
         toast({
@@ -171,6 +186,7 @@ export const useEmailAuth = (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           variant: "destructive"});
         return { error };
       }
@@ -182,6 +198,7 @@ export const useEmailAuth = (
     } catch (error: any) {
       console && console.error("Password reset error:", error);
       toast({
+
         title: "Password reset failed";
 
         description: error && error.message || "An unexpected error occurred",
@@ -207,6 +224,7 @@ export const useEmailAuth = (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
     } finally {
       setIsLoading(false)
     }
@@ -217,5 +235,7 @@ export const useEmailAuth = (
 
 
 
+
   return { login, signup, resetPassword }
 };
+

@@ -2,6 +2,8 @@
 
 
 
+
+
     }
     const supabase = getServerSupabase()
     const { data, error } = await supabase
@@ -14,6 +16,8 @@
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
+
+
 
 
 
@@ -41,6 +45,7 @@
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
 
@@ -53,3 +58,4 @@
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

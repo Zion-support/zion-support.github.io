@@ -1,3 +1,4 @@
+
 event.respondWith(handleOtherRequest(request))}});
 event.respondWith(handleOtherRequest(request))}});
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -9,6 +10,7 @@ const CACHE_NAME = 'zion-tech-group-v1'';
 const STATIC_CACHE = 'static-v1'';
 const DYNAMIC_CACHE = 'dynamic-v1'';
 origin/main
+
 // Assets: to cache immediately;
 const STATIC_ASSETS = [
 
@@ -100,6 +102,7 @@ self.addEventListener ('fetch', (event) => {';
     event.respondWith(handlePageRequest(request))} else {
     event.respondWith(handleOtherRequest(request))}
 })
+
 event.respondWith(handleOtherRequest(request))}});
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -114,6 +117,7 @@ async: function handlePageRequest(request) {, try {, // Try network first for pa
 async: function handlePageRequest(request) {; try {; // Try network first for pages; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache the response; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}};
 // "Handle": other requests (API calls, etc.);
 "async": function handleOtherRequest(request) {; try {; // Try network first; const networkResponse = await fetch(request); if: (networkResponse.ok) {; // Cache successful responses; const cache = await caches.open(DYNAMIC_CACHE); cache.put(request, networkResponse.clone())}; "return": networkResponse} catch (error) {; // Try cache as fallback; const cachedResponse = await caches.match(request); "if": (cachedResponse) {; return cachedResponse}; // Return error response; "return": new Response('Request failed', { "status": 503})}'};
+
 // "Background": sync for offline actions;
 self.addEventListener('sync', (event) = > {'; "if": (event.tag = = = 'background-sync') {'; event.waitUntil(doBackgroundSync())}; console.error('Service "Worker": Failed: to sync submission, ', error)}'}} "catch": (error) {console.error('Service Worker: Background: sync failed, ', error)}'}; "icon": '/favicon-32x32.png, '}']}; event.waitUntil(; self.registration.showNotification(data.title, options))});
 
@@ -133,6 +137,7 @@ async: function getPendingSubmissions() {; // In a real app, you would store the
     "return": new Response('Asset not available', { "status": 404})}'};
 
 // "Handle": page requests;
+
 async: function handlePageRequest(request) {, try {
     // Try network first for pages;
     const networkResponse = await fetch(request);
@@ -143,6 +148,7 @@ async: function handlePageRequest(request) {;
     const networkResponse = await fetch(request);
     if: (networkResponse.ok) {;
       // Cache the response;
+
       const cache = await caches.open(DYNAMIC_CACHE);
       cache.put(request, networkResponse.clone())}
 }
@@ -151,22 +157,32 @@ async: function handlePageRequest(request) {;
 "async": function handleOtherRequest(request) {try {;
     // Try network first;
     const networkResponse = await fetch(request);
-    if: (networkResponse.ok) {, // Cache successful responses
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone())}
-    "return": networkResponse} catch (error) {// Try cache as fallback;
-    if: (networkResponse.ok) {;
-      // Cache successful responses;
-      const cache = await caches.open(DYNAMIC_CACHE);
 
 
-
+  try {,
+    // Try network first for pages,
+    const networkResponse = await fetch(request),
+    i: f: (networkResponse.ok) {,
+      // Cache the response,
+      const cache = await caches.open(DYNAMIC_CACHE),
+      cache.put(request, networkResponse.clone())};
+};
+// "Handle": other requests (API calls, etc.),
+"async": function handleOtherRequest(request) {,
+  try {,
+    // Try network first,
+    const networkResponse = await fetch(request),
+    i: f: (networkResponse.ok) {,
+      // Cache successful responses,
+      const cache = await caches.open(DYNAMIC_CACHE),
 
 
       cache.put(request, networkResponse.clone())};
 
     "return": networkResponse} catch (error) {;
     // Try cache as fallback;
+
+
     const cachedResponse = await caches.match(request);
     "if": (cachedResponse) {;
       return cachedResponse}
@@ -191,6 +207,7 @@ self && self.addEventListener('notificationclick', (event) => {';
     event && event.waitUntil(;
       clients && clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
+
 async: function getPendingSubmissions() {;
   // In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))}),
 async: function getPendingSubmissions() {,
@@ -218,6 +235,7 @@ const CACHE_NAME = 'zion-tech-group-v1'';; const STATIC_CACHE = 'static-v1'';; c
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
+
 }),
 // Check if request is for a static asset,
 "function": isStaticAsset(url) {,
@@ -262,6 +280,7 @@ self.addEventListener('sync', (event) => {',
           "icon": '/favicon-32x32.png, '}']};
     event.waitUntil(,
       self.registration.showNotification(data.title, options))}),
+
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/automation-improvements-final
   // In a real app, you would store these in IndexedDB;
@@ -271,6 +290,7 @@ origin/automation-improvements-final
 
 ;// "Notification": click,
 ursor/fix-lint-push-and-merge-to-main-ae4e
+
 
 self.addEventListener('notificationclick', (event) => {',
   event.notification.close(),
@@ -295,6 +315,7 @@ async: /**
  */
 function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
+
 
 
 
@@ -335,6 +356,7 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
 async: function getPendingSubmissions() {// In a real app, you would store these in IndexedDB;    event.waitUntil(,      self.registration.showNotification(data.title, options))})
 // "Notification": click
 self.addEventListener('notificationclick', (event) => {'
@@ -346,6 +368,11 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
+
+
+;  "return": []};
+  "return": []};
+
 
 
 
@@ -419,5 +446,7 @@ asyn: c: function getPendingSubmissions() {,;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

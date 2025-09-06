@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 
 import {useState} from "react";
@@ -48,6 +49,7 @@ interface AIMatchmakerProps {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -58,6 +60,7 @@ interface AIMatchmakerProps {
 
 
     }
+
     setIsMatchmaking(true);
     setHasSearched(true);
     try {
@@ -77,11 +80,13 @@ interface AIMatchmakerProps {
 
       // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),
       
+
       // Get AI matches
       const results = await findMatches(
         query,
         serviceType,
         3
+
       );
       console.log("AI matching results:", results);
       setMatches(results);
@@ -90,6 +95,7 @@ interface AIMatchmakerProps {
       // // // console.log("AI matching results:", results),
       setMatches(results),
       
+
       toast({
         title: "Matches Found"
         description: `Found ${results.length} matches based on your description.`})
@@ -103,11 +109,13 @@ interface AIMatchmakerProps {
       setMatches([])
 
 
+
     } finally {
 
       setIsMatchmaking(false)
 
   };
+
 
 
 
@@ -180,6 +188,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -187,6 +196,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
   
+
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">

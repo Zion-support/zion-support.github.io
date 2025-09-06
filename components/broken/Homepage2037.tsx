@@ -1,13 +1,16 @@
+
 import React from 'react',
 import Layout from './layout/Layout',
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
 import React from 'react';
 import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -44,6 +47,7 @@ import { motion } from 'framer-motion';
   CheckCircle,;
   Sparkles,;} from 'lucide-react';import {
   ArrowRight, Star, Users, Award, Clock, ;
+
 
 
 
@@ -107,12 +111,14 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -128,7 +134,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -278,12 +286,14 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -297,7 +307,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -321,6 +333,7 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <motion.div
+
 
 
               className='text-center mb-16'>;
@@ -361,6 +374,7 @@ const Homepage2037: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -374,7 +388,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -424,7 +440,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -478,7 +496,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -529,6 +549,7 @@ const Homepage2037: React.FC = () => {
                 viewport={{ once: true }}
 
 
+
         {/* Featured AI Services */}
         <section className='py-24 px-4'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4">;
@@ -544,6 +565,7 @@ const Homepage2037: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -557,7 +579,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -921,6 +945,7 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
@@ -939,6 +964,7 @@ const Homepage2037: React.FC = () => {
                   />;
                 </motion && motion.div>;
               ))}
+
 
 
 
@@ -966,7 +992,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1016,6 +1044,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1029,7 +1059,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1103,6 +1135,7 @@ const Homepage2037: React.FC = () => {
                       category: service.category,
                       icon: service.icon,
                     }}
+
 
 
 
@@ -1209,6 +1242,7 @@ const Homepage2037: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                   />
                 </motion.div>
               ))}
@@ -1234,7 +1268,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1284,6 +1320,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1297,7 +1335,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1371,6 +1411,7 @@ const Homepage2037: React.FC = () => {
                       category: service.category,
                       icon: service.icon,
                     }}
+
 
 
 
@@ -1477,6 +1518,7 @@ const Homepage2037: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                   />
                 </motion.div>
               ))}
@@ -1502,7 +1544,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1552,6 +1596,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1565,7 +1611,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1589,6 +1637,7 @@ const Homepage2037: React.FC = () => {
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
+
 
 
               className='text-center mb-16'>;
@@ -1629,6 +1678,7 @@ const Homepage2037: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -1642,7 +1692,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1706,7 +1758,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1770,7 +1824,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1834,7 +1890,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1898,12 +1956,14 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1917,7 +1977,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -2055,6 +2117,7 @@ const Homepage2037: React.FC = () => {
   );
 
 
+
 };
 export default Homepage2037;  );
 
@@ -2067,4 +2130,5 @@ export default Homepage2037;  );
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

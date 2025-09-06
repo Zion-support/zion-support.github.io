@@ -1,12 +1,19 @@
 
 
-
-
+  phone: string;
+  email: string;
+  address: string;
+  site: string;
 }
-export interface Service {
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  id: string;
+  name: string;
+  description: string;
+  category: 'micro-saas' | 'ai-services' | 'it-services';
+  price: {
+    min: number;
+    max: number;
+    currency: string;
 
   }
 
@@ -17,6 +24,7 @@ export interface Service {
   support: string;
   image?: string;
   popular?: boolean;
+
   title: string;
   href: string;
   icon: string;
@@ -27,12 +35,14 @@ export interface Service {
 
 
 
+
   title: string;
   description: string;
   count: number;
   features: string[];
   href: string;
   color: string;
+
 
 
 }
@@ -151,6 +161,7 @@ export interface AnimationState {,
   hasError: boolean,
 };
 
+
 }
 export interface LoadingState {
   is_loading: boolean;
@@ -159,12 +170,21 @@ export interface LoadingState {
 ;
 
 }
+
+
 export interface AnimationState {
-  is_loaded: boolean;
-  has_error: boolean;
+  isLoaded: boolean;
+  hasError: boolean;
+}
+export interface FormData {
+
+export interface AnimationState {;
+  isLoaded: boolean;
+  hasError: boolean;
 }
 
-export interface FormData {
+export interface FormData {;
+
 
   name: string;
   email: string;
@@ -172,6 +192,7 @@ export interface FormData {
   phone?: string;
   service?: string;
   message: string;
+
 }
 
 export interface ContactForm {
@@ -209,10 +230,12 @@ export interface FormData {
 
 
 
+
   id: string;
   name: string;
   role: string;
   company: string;
+
   content: string;
   avatar?: string;
   rating?: number;
@@ -231,6 +254,7 @@ export interface FormData {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   id: string;
   title: string;
   excerpt: string;
@@ -238,6 +262,7 @@ export interface FormData {
   author: string;
 
   date: string;
+
   tags: string[];
   image?: string;
   slug: string;
@@ -265,20 +290,24 @@ export interface FormData {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   id: string;
   name: string;
 
   role: string;
+
   bio: string;
   image: string;
   position: string;
   bio: string;
   image: string;
   skills: string[];
+
   social: {
     linkedin?: string;
     twitter?: string;
     github?: string;
+
   };
   skills?: string[];
   position?: string;
@@ -291,16 +320,19 @@ export interface FormData {
 
   status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
 
+
   description: string;
   image: string;
   technologies: string[];
   liveUrl?: string;
+
 origin/main
   "id": string;
   name: string;
   description: string;
   githubUrl?: string;
   featured: boolean;
+
   status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
 
   name: string;
@@ -314,6 +346,7 @@ origin/main
   start_date: Date;
   end_date: Date;
   budget: {
+
 
     allocated: number;
     spent: number;
@@ -447,6 +480,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/automation-improvements-final
 
 
+
   githubUrl?: string;
   featured: boolean;
   name?: string;
@@ -477,6 +511,8 @@ origin/automation-improvements-final
   deliverables?: {
 
 
+
+
     allocated: number;
     spent: number;
     currency: string;
@@ -492,38 +528,49 @@ origin/automation-improvements-final
     industry: string;
   }
   deliverables: {
+
+
     name: string;
     description: string;
     status: 'pending' | 'in - progress' | 'completed' | 'review';
     due_date: Date;
   }[];
+
   risks?: {
   risks: {
+
     description: string;
     probability: 'low' | 'medium' | 'high';
     impact: 'low' | 'medium' | 'high';
     mitigation: string;
   }[];
+
   dependencies?: {
   dependencies: {
+
     project: string;
     type: 'blocking' | 'influencing';
     description: string;
   }[];
+
   metrics?: {
   metrics: {
+
     name: string;
     value: number;
     unit: string;
     target: number;
   }[];
+
   lessons?: {
   lessons: {
+
     learned: string;
     category: 'technical' | 'process' | 'communication' | 'management';
     impact: 'positive' | 'negative' | 'neutral';
   }[];
 }
+
 
 
 
@@ -546,10 +593,12 @@ export interface Partner {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   question: string;
   answer: string;
   category?: string;
 }
+
 
 
 
@@ -562,6 +611,7 @@ export interface PricingPlan {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   id: string;
+
   name: string;
   price: number;
   period: string;
@@ -569,6 +619,7 @@ export interface PricingPlan {;
   popular?: boolean;
   cta: string;
   href: string;
+
   currency?: string;
   limitations?: string[];
   description?: string;
@@ -594,12 +645,14 @@ export interface NavigationItem {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   name: string;
   href: string;
   children?: NavigationItem[];
   submenu?: NavigationItem[];
   external?: boolean;
 }
+
 
 
 
@@ -660,6 +713,7 @@ export interface HeroSection {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   title: string;
   subtitle: string;
   cta: {
@@ -682,11 +736,15 @@ export interface HeroSection {;
 
 
 
+
+
   title: string;
   description: string;
   icon: string;
   color: string;
 }
+
+
 
 
 
@@ -699,7 +757,9 @@ export interface HeroSection {;
 
 
 
+
 export interface CaseStudy {
+
   id: string;
   title: string;
   client: string;
@@ -713,6 +773,7 @@ export interface CaseStudy {
   team_size: number;
   featured?: boolean;
 }
+
 
 export interface JobOpening {
   id: string;
@@ -761,6 +822,7 @@ export interface Event {
 export interface CaseStudy {
 
 
+
   id: string;
   title: string;
   department: string;
@@ -781,6 +843,8 @@ export interface CaseStudy {
 
 
 
+
+
   id: string;
   title: string;
   excerpt: string;
@@ -796,6 +860,8 @@ export interface CaseStudy {
 
 
 
+
+
   id: string;
   title: string;
   description: string;
@@ -806,6 +872,7 @@ export interface CaseStudy {
   registrationUrl?: string;
   image?: string;
 }
+
 
 
 
@@ -1068,6 +1135,7 @@ export interface FormField {
     message?: string;
   }
 }
+
 // Environment
 
 export interface Environment {
@@ -1076,6 +1144,7 @@ export interface Environment {
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
+
 
 }
 
@@ -1090,6 +1159,7 @@ export interface Environment {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export interface Partner {
   name: string;
@@ -1189,6 +1259,7 @@ export interface SuccessResponse < T> {
 }
 
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
+
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -1207,4 +1278,5 @@ export type Response<T> = SuccessResponse<T> | ErrorResponse;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

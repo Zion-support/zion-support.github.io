@@ -4,6 +4,8 @@
 
 
 
+
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -891,6 +893,7 @@ if ( {) {
                   }`}
 
 
+
           {/* Category Filters */}
           <div className="mt-6">;
             <div className="flex flex-wrap gap-3">;
@@ -912,6 +915,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -929,44 +933,79 @@ if ( {) {
         </div>
 
 
-
-
-            </div>;
-          </div>;
-        </div>;
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Results Summary */}
+        <div className='mb-8'>
+          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
+            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>
+              <div>
+                <h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-2'>
+                  {filteredServices.length} Services Found
+                </h2>
+                <p className='text-gray-600 dark:text-gray-400'>
+                  {selectedCategory !== 'all' &&
+                    `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
+                  {searchTerm && ` • Search: "${searchTerm}"`}
+                </p>
+              </div>
+              <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>
+                <div className='flex items-center gap-2'>
+                  <TrendingUp className='w-4 h-4 text-green-500' />
+                  <span>Market Growth: 150%+ YoY</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <Award className='w-4 h-4 text-blue-500' />                  <span>4.8+ Average Rating</span>              <div>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  {filteredServices.length} Services Found
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
+                  {searchTerm && ` • Search: "${searchTerm}"`}
+                </p>
+              </div>
+              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4 text-green-500" />
+                  <span>Market Growth: 150%+ YoY</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award className="w-4 h-4 text-blue-500" />
+                  <span>4.8+ Average Rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Services Grid/List */}
+        <div className='space-y-6'>
+          {filteredServices.length === 0 ? (
+            <div className='text-center py-12'>
+              <div className='text-gray-400 dark:text-gray-500 text-6xl mb-4'>
+                🔍
+              </div>
+              <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
+                No services found
+              </h3>
+              <p className='text-gray-600 dark:text-gray-400'>                Try adjusting your search terms or category filters.          {filteredServices.length === 0 ? (
+            <div className="text-center py-12">
+              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                No services found
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Try adjusting your search terms or category filters.
+              </p>
+            </div>
+          ) : (
+            <AnimatePresence>
+              {viewMode === 'grid' ? (
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                  {filteredServices.map(service => (
+                    <ServiceCard key={service.id} service={service} />
+                  ))}
+                </div>
+              ) : (
+                <div className='space-y-6'>
 
-
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
-
-                    <ServiceList key={service.id} service={service} />
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                   ))}
                 </div>;
@@ -978,6 +1017,7 @@ if ( {) {
 
 
 
+
         </div>;
 
 
@@ -986,6 +1026,7 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Call to Action */}
         <div className='mt-16 text-center'>;
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>;
@@ -1107,6 +1148,7 @@ if ( {) {
               <a
 
 
+
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300">;
                 <Phone className="w-5 h-5" />;
@@ -1146,3 +1188,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -22,6 +22,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 
+
 } from 'lucide-react';
 interface ServiceCardProps {
   service: {
@@ -40,6 +41,7 @@ import {;
 } from 'lucide-react';
 interface ServiceCardProps {;
   service: {;
+
 
 
 } from 'lucide-react';
@@ -82,6 +84,13 @@ interface ServiceCardProps {
     icon: string;
     color: string;
     popular: boolean;
+
+    launchDate: string;
+    customers: number;
+    rating: number;
+    reviews: number;
+    marketSize?: string;
+
 
 
 
@@ -141,6 +150,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
       case 'micro saas':
         return <TrendingUp className='w-5 h-5' />;
       default:
+
         return <Zap className='w-5 h-5' />;    }        return <Zap className="w-5 h-5" />;
       case 'quantum & emerging tech':
 
@@ -160,6 +170,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+
         return <Zap className='w-5 h-5' />;    }
 
     }
@@ -169,7 +180,9 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   };
@@ -179,8 +192,10 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
       return color;
     }
     return 'from-cyan-500 to-blue-500';
+
   }
   };
+
 
     >
       {/* Glow effect */}
@@ -191,6 +206,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
       {/* Main card */}
       <div className="relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden">;
         {/* Background pattern */}
+
 
       className="group relative";
     >;
@@ -225,6 +241,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   </span>
                 </div>
@@ -263,6 +280,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           <h3 className='text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300'>
             {service.name}
           </h3>
+
           <p className='text-gray-300 text-sm leading-relaxed'>            {service.tagline}          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
             {service.name}
           </h3>
@@ -324,6 +342,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+
           </p>
         </div>
         {/* Stats */}
@@ -337,8 +356,10 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             </div>
@@ -424,10 +445,12 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
           </div>;
         </div>;
+
 
 
 
@@ -437,6 +460,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Features
           </h4>
+
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>
           <div className="space-y-2">
@@ -454,6 +478,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+
             {service.features.slice(0, 3).map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -465,7 +490,9 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
@@ -473,6 +500,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
               </motion.div>
             ))}
             {service.features.length > 3 && (
+
               <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features              >
                 <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
                 <span className="text-gray-300">{feature}</span>
@@ -540,10 +568,12 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
               </div>
             )}
           </div>
         </div>
+
 
 
 
@@ -600,11 +630,13 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+
         {/* Benefits */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Benefits
           </h4>
+
           <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (        <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
           <div className="space-y-2">
@@ -617,6 +649,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -626,6 +659,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
                 className='flex items-center space-x-2 text-sm'
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>
+
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>                className="flex items-center space-x-2 text-sm"
               >
                 <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full"></div>
@@ -653,6 +687,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         {/* Market info */}
 
         {service.marketSize && service.growthRate && (
@@ -675,6 +710,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
             href={service.link}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className="relative z-10">
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
 
@@ -688,10 +724,12 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
           >
 
@@ -736,6 +774,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
           </motion && motion.a>;
         </div>;
 
+
         {/* Hover overlay */}
         <motion&& motion.div
           initial={{ opacity: 0 }}
@@ -751,12 +790,15 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         />
       </div>
     </motion.div>
   );
+
 
 
 
@@ -768,4 +810,5 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

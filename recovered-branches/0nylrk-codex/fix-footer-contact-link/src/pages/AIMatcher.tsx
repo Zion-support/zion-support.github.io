@@ -2,6 +2,7 @@
 
 
 
+
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const handleMatchSelect = (match: MatchResult) => {
@@ -16,6 +17,7 @@ export default function AIMatcherPage() {
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
   
+
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
     let itemType = "service",
@@ -23,6 +25,8 @@ export default function AIMatcherPage() {
     
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
+
+
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
@@ -37,10 +41,12 @@ export default function AIMatcherPage() {
         specificItem: match.item
       }
     })
+
   }
 
   },
   
+
   return (
     <>
       <Header />
@@ -71,6 +77,16 @@ export default function AIMatcherPage() {
             </div>
 
 
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { AIMatchmaker } from "@/components/AIMatchmaker",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { toast } from "@/hooks/use-toast",;
+import { MatchResult } from "@/lib/ai-matchmaking",;
 
 export default function AIMatcherPage() {;
   const navigate = useNavigate();
@@ -131,9 +147,17 @@ export default function AIMatcherPage() {;
               </Select>;
             </div>;
 
+            <AIMatchmaker;
 
-            <AIMatchmaker
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+              onMatchSelect={handleMatchSelect}
+            />;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+}
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

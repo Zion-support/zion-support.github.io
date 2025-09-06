@@ -3,6 +3,7 @@
 
 
 
+
 import { Web3Storage, File } from 'web3.storage';
 const TOKEN = process.env.WEB3_STORAGE_TOKEN |''
 export const config = { api: { bodyParser: { sizeLimit: '2mb' } } }
@@ -17,6 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ cid })
   } catch (e: any) {
+
 
 
 
@@ -44,6 +46,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   }
@@ -54,4 +57,5 @@ export default async function handler(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -2,6 +2,7 @@
 
 
 
+
 import { getUserFromRequest } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = getUserFromRequest(req)
@@ -25,3 +26,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

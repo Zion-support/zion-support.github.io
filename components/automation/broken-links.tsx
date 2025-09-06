@@ -7,5 +7,7 @@
       <p className="text-white/70 mt-2">This runs twice daily and auto-PRs updates.</p>
     </div>
   );
+
 }
 }
+

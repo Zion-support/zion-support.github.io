@@ -1,10 +1,15 @@
 
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
+
+import React, { useState, useEffect, useCallback } from 'react',
+import { useNavigate } from 'react-router-dom',
 
 
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",
+
 import { Form } from "@/components/ui/form";
 import { useJobForm  } from './useJobForm';
 import { BasicInfoFields  } from './BasicInfoFields';
@@ -25,10 +30,12 @@ import { JobSchemaType } from './validation',
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 interface JobPostingFormProps {
   jobId?: string,
   onSuccess?: () => void
 }
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -89,6 +96,7 @@ interface JobPostingFormProps {
   const [isFormLoading, setIsFormLoading] = useState(false),
   const [editorContent, setEditorContent] = useState(""),
   
+
   const {
     form,
     isLoading,
@@ -99,6 +107,7 @@ interface JobPostingFormProps {
     isRemote,
     setIsRemote,
     submitJob
+
   } = useJobForm({ jobId, onSuccess });
   const { handleSubmit, setValue, formState } = form;
   const { isSubmitting } = formState;
@@ -106,6 +115,7 @@ interface JobPostingFormProps {
 
   const { handleSubmit, setValue, formState } = form,
   const { isSubmitting } = formState,
+
 
   useEffect(() => {
     if (jobId) {
@@ -132,6 +142,7 @@ interface JobPostingFormProps {
                   setValue(key, value as any)
                 } catch (e) {
                   // Skip fields that don't exist in our form
+
 import React, { useState, useEffect, useCallback } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",;
@@ -253,6 +264,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 }
               }
             });
@@ -267,12 +279,15 @@ if ( {) {
           setIsFormLoading(false)
         })
     }
+
   }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
   }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]),
+
 
   const handleEditorChange = useCallback((value: string) => {
     setEditorContent(value)
     setValue('description', value)
+
   }, [setValue]);
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true);
@@ -281,12 +296,14 @@ if ( {) {
   const onSubmit = async (values: JobSchemaType) => {
     setIsFormLoading(true),
 
+
     try {
       const jobData = await submitJob(values)
       if (jobId) {
         await updateJob(jobId, jobData),
         toast.success("Job updated successfully!")
       } else {
+
         await createJob(jobData);
         toast.success("Job posted successfully!");
         form.reset();
@@ -332,6 +349,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       }
 
 
@@ -339,6 +357,7 @@ if ( {) {
         onSuccess();
       }
     } catch (error: any) {
+
       console.error("Error creating/updating job:", error);
       toast.error(error.message |"Failed to post job")
     } finally {
@@ -353,6 +372,7 @@ if ( {) {
     }
   },
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -366,12 +386,14 @@ if ( {) {
 
 
 
+
         <DateFields 
           startDate={startDate} 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           setStartDate={setStartDate}
           endDate={endDate}
@@ -388,14 +410,17 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
             />
             Remote
           </Label>
         </div>
+
 
 
         <DescriptionFields
@@ -436,10 +461,12 @@ if ( {) {
 
 
 
+
         </Button>
       </form>
     </Form>
   )
+
 }
 }
 ;
@@ -502,4 +529,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

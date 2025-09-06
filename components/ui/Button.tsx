@@ -78,13 +78,7 @@ const Button: React.FC<ButtonProps> = ({;
     lg: "h-12 px-8 text-lg",;
   };
 
-=======
-  
-  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   class_name?: string;
   on_click?: () => void;
@@ -140,4 +134,6 @@ if ( {) {
       disabled={disabled}
       type={type}
 
+
 export { Button };
+

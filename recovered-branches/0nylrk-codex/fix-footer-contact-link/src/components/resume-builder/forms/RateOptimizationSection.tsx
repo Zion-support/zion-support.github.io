@@ -2,8 +2,10 @@
 
 
 
+
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
+
 import { 
   FormField;
   FormItem;
@@ -13,6 +15,7 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
+
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
 import { Card, CardContent } from "@/components/ui/card";
 interface RateOptimizationSectionProps {
@@ -33,12 +36,14 @@ import { Card, CardContent } from "@/components/ui/card",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
   skills: string[],
   yearsExperience: number,
   location?: string,
+
   rateType: "hourly" | "fixed"
 }
 
@@ -50,12 +55,15 @@ interface RateOptimizationSectionProps {
   skills,
   yearsExperience,
   location,
+
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
+
   }
   },
+
 
   return (
     <div className="space-y-4">
@@ -71,6 +79,7 @@ interface RateOptimizationSectionProps {
                 min="1"
                 step="0.01"
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
+
 import React, { useState } from "react",;
 import { Control } from "react-hook-form",;
 import {;
@@ -137,6 +146,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 {...field}
               />;
             </FormControl>;
@@ -159,11 +169,14 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
 
 
+
+
           />;
         </CardContent>;
       </Card>;
     </div>;
   );
+
 
 
 
@@ -179,3 +192,4 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

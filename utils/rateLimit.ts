@@ -1,5 +1,10 @@
 
 
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
+const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
+export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
+
 
              'unknown';
   const now = Date.now();
@@ -27,6 +32,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -34,4 +40,5 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

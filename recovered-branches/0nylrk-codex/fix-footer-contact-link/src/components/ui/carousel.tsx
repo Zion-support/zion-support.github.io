@@ -1,3 +1,4 @@
+
 import * as React from &quot;react&quot;
 import useEmblaCarousel from &quot;embla-carousel-react&quot;
 import { ArrowLeft, ArrowRight } from &quot;lucide-react&quot;
@@ -9,6 +10,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+
 
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -27,6 +29,8 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+
+
 
 
 
@@ -78,11 +82,13 @@ function useCarousel(): CarouselContextProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   }
 ;
+
   return context as CarouselContextProps;
 }
 const Carousel = React.forwardRef<
@@ -91,6 +97,7 @@ const Carousel = React.forwardRef<
 >(
   (
     {
+
       orientation = &quot;horizontal&quot;
       opts
       setApi
@@ -103,16 +110,19 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
+
       ...props
     }
     ref
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
       {
+
         ...opts
         axis: orientation === &quot;horizontal&quot; ? &quot;x&quot; : &quot;y&quot;}
         ...opts,
         axis: orientation === "horizontal" ? "x" : "y"},
+
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -139,6 +149,7 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
+
       }
       [scrollPrev, scrollNext];
     );
@@ -222,6 +233,7 @@ if ( {) {
 
 
 
+
       return () => {
         api?.off("select", onSelect)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -252,6 +264,7 @@ on_select (api);
           api: api
           opts
           orientation:
+
             orientation |(opts?.axis === &quot;y&quot; ? &quot;vertical&quot; : &quot;horizontal&quot;)
           scrollPrev
           scrollNext
@@ -260,11 +273,13 @@ on_select (api);
           scrollPrev,
           scrollNext,
           canScrollPrev,
+
           canScrollNext}}
       >;
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
+
 className={cn(&quot;relative&quot;, className)}
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
@@ -282,6 +297,7 @@ className={cn(&quot;relative&quot;, className)}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {...props}
         >;
           {children}
@@ -290,8 +306,10 @@ className={cn(&quot;relative&quot;, className)}
   }
 
 )
+
 Carousel.displayName = &quot;Carousel&quot;
 Carousel.displayName = "Carousel"
+
 
 const CarouselContent = React.forwardRef<
   HTMLDivElement
@@ -303,10 +321,12 @@ const CarouselContent = React.forwardRef<
       <div
         ref={ref}
         className={cn(
+
           &quot;flex&quot;
           orientation === &quot;horizontal&quot; ? &quot;-ml-4&quot; : &quot;-mt-4 flex-col&quot;
           "flex",
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+
           className
         )}
         {...props}
@@ -314,8 +334,10 @@ const CarouselContent = React.forwardRef<
     </div>
   )
 })
+
 CarouselContent.displayName = &quot;CarouselContent&quot;
 CarouselContent.displayName = "CarouselContent"
+
 
 const CarouselItem = React.forwardRef<
   HTMLDivElement
@@ -330,18 +352,22 @@ const CarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
+
         &quot;min-w-0 shrink-0 grow-0 basis-full&quot;
         orientation === &quot;horizontal&quot; ? &quot;pl-4&quot; : &quot;pt-4&quot;
         "min-w-0 shrink-0 grow-0 basis-full",
         orientation === "horizontal" ? "pl-4" : "pt-4",
+
         className
       )}
       {...props}
     />
   )
 })
+
 CarouselItem.displayName = &quot;CarouselItem&quot;
 CarouselItem.displayName = "CarouselItem"
+
 
 const CarouselPrevious = React.forwardRef<
   HTMLButtonElement
@@ -356,6 +382,7 @@ const CarouselPrevious = React.forwardRef<
       size={size}
 
       className={cn(
+
         &quot;absolute  h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
           ? &quot;-left-12 top-1/2 -translate-y-1/2&quot;
@@ -364,6 +391,7 @@ const CarouselPrevious = React.forwardRef<
         orientation === "horizontal"
           ? "-left-12 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+
         className
       )}
 
@@ -372,8 +400,9 @@ const CarouselPrevious = React.forwardRef<
       {...props}
 
 
-
-
+    >
+      <ArrowLeft className="h-4 w-4" />
+      <span className="sr-only">Previous slide</span>
 
 
     </Button>
@@ -394,6 +423,7 @@ const CarouselNext = React.forwardRef<
       size={size}
 
       className={cn(
+
         &quot;absolute h-8 w-8 rounded-full&quot;
         orientation === &quot;horizontal&quot;
           ? &quot;-right-12 top-1/2 -translate-y-1/2&quot;
@@ -402,12 +432,14 @@ const CarouselNext = React.forwardRef<
         orientation === "horizontal"
           ? "-right-12 top-1/2 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+
         className
       )}
 
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
+
 
 
 >;
@@ -417,6 +449,7 @@ const CarouselNext = React.forwardRef<
 });
 CarouselNext.display_name = &quot;CarouselNext & quot;
 ;
+
 
 
     </Button>
@@ -431,6 +464,7 @@ export {
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
+
   CarouselNext};
   CarouselNext}
 
@@ -443,3 +477,4 @@ export {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -171,22 +171,50 @@ if ( {) {
       alpha: number;
       life: number;
 
-      x: number,
-      y: number,
+      maxLife: number;      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      alpha: number
+      life: number
+      maxLife: number
+        this.x = x;
+        this.y = y;
+        this.vx = (Math.random() - 0.5) * 2 * animationSpeed;
+        this.vy = (Math.random() - 0.5) * 2 * animationSpeed;
+        this.size = Math.random() * 3 + 1;
+        this.color = getColorSchemeColor();
+        this.alpha = Math.random() * 0.8 + 0.2;
+        this.life = Math.random() * 100 + 50;
+        this.maxLife = this.life;      }        this.maxLife = this.life
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+        // Bounce off edges
+        if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
+        if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
+        // Wrap around
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
+        // Fade out
+        this.alpha = this.life / this.maxLife;      }        this.alpha = this.life / this.maxLife
+      }
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
 
       }
     }
-
-
-
-
-
-      }
-    }
-
-
-    // Neural network node class
-    class NeuralNode {
 
 
     // Neural network node class
@@ -229,6 +257,7 @@ if ( {) {
             ctx && ctx.stroke();
           }
         });
+
         ctx && ctx.restore();      }            ctx && ctx.stroke();
           }
         });
@@ -242,11 +271,14 @@ if ( {) {
 
 
 
+
     }
+
 
 
     // Quantum field class;
     class QuantumField {;
+
 
     // Quantum field class
     class QuantumField {
@@ -287,12 +319,14 @@ if ( {) {
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
 
 
+
           ctx.stroke()
 
         }
         ctx.restore()
 
       }
+
 
 
 
@@ -303,8 +337,10 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
+
 
 
 
@@ -539,6 +575,7 @@ if ( {) {
         ctx.setLineDash([5, 5]);
 
 
+
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
@@ -557,6 +594,7 @@ if ( {) {
     }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     // Get color based on scheme
     function getColorSchemeColor(): string {
@@ -790,6 +828,7 @@ Math.random() * canvas.width;
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
               ctx.restore();
+
 
       color: string;      x: number,;
       y: number,;
@@ -1036,10 +1075,12 @@ Math.random() * canvas.width;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
             }
           });
         });
       }
+
       animationFrameId = requestAnimationFrame(animate);    };            }
           })
         })
@@ -1050,6 +1091,7 @@ Math.random() * canvas.width;
       animationFrameId = requestAnimationFrame(animate);    };
 
     };
+
 
     animate();
     return () => {
@@ -1078,6 +1120,7 @@ Math.random() * canvas.width;
 
 
 
+
       />;
 
 
@@ -1091,6 +1134,7 @@ Math.random() * canvas.width;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1177,6 +1221,7 @@ Math.random() * canvas.width;
               rotate: [360, 180, 0]
               opacity: [0.1, 0.3, 0.1],            }}
             transition={{
+
               duration: 10
               repeat: Infinity
               ease: 'easeInOut',            }}
@@ -1200,6 +1245,7 @@ Math.random() * canvas.width;
             animate={{
 
 
+
             }}
           />;
         </div>;
@@ -1212,6 +1258,7 @@ export default UltraAdvancedFuturisticBackground2026;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1220,4 +1267,5 @@ export default UltraAdvancedFuturisticBackground2026;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

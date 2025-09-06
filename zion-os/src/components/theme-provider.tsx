@@ -1,4 +1,5 @@
 
+
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 type Theme = "dark" | "light" | "system",
@@ -27,4 +28,4 @@ function ThemeProvider() {
     // Check condition
 if ( {) {
   $2
-=======
+

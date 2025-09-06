@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -48,6 +49,7 @@ export default function TranslationManager() {
   const { supportedLanguages } = useLanguage(),
   const { translateContent, isTranslating } = useTranslationService(),
   
+
   const [selectedNamespace, setSelectedNamespace] = useState("translation"),
   const [searchQuery, setSearchQuery] = useState(""),
   const [translations, setTranslations] = useState<Record<string any>>({}),
@@ -60,7 +62,9 @@ export default function TranslationManager() {
   useEffect(() => {
     // For demo purposes, we're using the loaded translations from i18next
     const currentTranslations: Record<string any> = {},
+
     
+
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace);
       if (res) {
@@ -73,6 +77,8 @@ export default function TranslationManager() {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
               acc[`${pre}${key}`] = obj[key]
+
+
 
 
 import React, { useState, useEffect } from 'react',;
@@ -203,7 +209,9 @@ export default function TranslationManager() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           updatedTranslations[lang.code] = {}
@@ -214,11 +222,14 @@ export default function TranslationManager() {;
       setTranslations(updatedTranslations),
       setEditingKey(null),
       setIsSaving(false),
+
       
+
       toast({
         title: t("translation.saved")
         description: t("translation.changes_saved")})
     }, 1000)
+
   }
   const handleTranslateKey = async (key: string) => {
     // Find first non-empty translation to use as source
@@ -231,6 +242,7 @@ export default function TranslationManager() {;
     let sourceLanguage: SupportedLanguage = 'en',
     let sourceText = '',
     
+
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (translations[lang]?.[key]) {
 
@@ -251,9 +263,11 @@ export default function TranslationManager() {;
         sourceText
         'general'
         sourceLanguage
+
       );
       ),
       
+
       if (error) {
         toast({
           title: t('translation.translation_failed')
@@ -297,9 +311,11 @@ export default function TranslationManager() {;
 
         ...editedTranslations,
         [key]: translatedText
+
       });
       }),
       
+
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
@@ -309,6 +325,7 @@ export default function TranslationManager() {;
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
+
     }
   }
   const handleCancel = () => {
@@ -328,6 +345,7 @@ export default function TranslationManager() {;
       .map(lang => lang.code)
       .filter(lang => !translations[lang]?.[key])
   }
+
 
 
 
@@ -422,6 +440,7 @@ export default function TranslationManager() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -429,6 +448,7 @@ export default function TranslationManager() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         description={t('translation.manager_description')}
       />
@@ -465,6 +485,7 @@ export default function TranslationManager() {;
                   </TabsList>
                 </Tabs>
               </div>
+
               
 
 
@@ -477,6 +498,7 @@ export default function TranslationManager() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -521,10 +543,12 @@ export default function TranslationManager() {;
                               ))}
                             </div>
                             <div className="flex gap-2 mt-4">
+
                               <Button
                                 size="sm"
                               <Button 
                                 size="sm" 
+
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -539,6 +563,7 @@ export default function TranslationManager() {;
                                     {t('general && general.save')}
                                   </>;
                                 )}
+
                               </Button>
                               <Button
                                 size="sm"
@@ -558,6 +583,7 @@ export default function TranslationManager() {;
                               </Button>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               <Button
+
                                 size="sm"
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}
@@ -611,6 +637,7 @@ export default function TranslationManager() {;
                     ))}
                   </div>;
                 )}
+
               </div>
             </div>
           </CardContent>
@@ -630,5 +657,4 @@ export default function TranslationManager() {;
     </>);
 }
 
-=======
-;
+

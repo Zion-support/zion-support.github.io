@@ -1,5 +1,10 @@
 
 
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Card from '../components/ui/Card';
+
+export default function ITAssetDiscoveryAgentPage() {
+
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>;
       <Head>;
@@ -39,6 +44,7 @@
                   className='text-cyan-300 underline'
                   href='https://aws && aws.amazon.com/config/pricing/'
                   target='_blank'
+
 
 
                   AWS Config;
@@ -83,6 +89,7 @@
 
 
 
+
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -120,6 +127,7 @@ export default function ITAssetDiscoveryAgentPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
@@ -131,3 +139,4 @@ export default function ITAssetDiscoveryAgentPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

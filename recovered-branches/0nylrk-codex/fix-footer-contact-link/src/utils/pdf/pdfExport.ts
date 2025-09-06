@@ -2,6 +2,7 @@
 
 
 
+
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -14,6 +15,7 @@ import {addEducationSection} from './sections/educationSection';
 import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
+
 
 
 
@@ -35,6 +37,8 @@ const defaultOptions: ExportOptions = {
 export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
+
+
 
 
 
@@ -70,6 +74,8 @@ export async function exportResumeToPDF(
   // Add portfolio projects if needed
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects)
+
+
 import { Resume } from '@/types/resume',;
 import { jsPDF } from 'jspdf',;
 import 'jspdf-autotable',;
@@ -130,6 +136,7 @@ export async function exportResumeToPDF (
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -137,6 +144,7 @@ export async function exportResumeToPDF (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
   return doc.output ('blob');

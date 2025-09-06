@@ -1,18 +1,30 @@
 
 
 
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Sparkles } from "lucide-react",
+import { supabase } from "@/integrations/supabase/client",
+import { AIListingForm } from "./AIListingForm",
 
+interface GeneratedContent {
+  description: string,
+  tags: string[],
+  suggestedPrice: {
+    min: number,
+    max: number
+  },
+  keyPoints: string[]
 
-
-import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Sparkles} from "lucide-react";
-import {supabase} from "@/integrations/supabase/client";
-import {AIListingForm} from "./AIListingForm";
-import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
-import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
-
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Sparkles } from "lucide-react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { AIListingForm } from "./AIListingForm",;
+import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
+import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
 
 interface GeneratedContent {;
   description: string,;
@@ -76,6 +88,7 @@ function AIListingGenerator() {
 ;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   const handle_generate = async ({
@@ -103,6 +116,7 @@ function AIListingGenerator() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       }
       if (data.error) {
         throw new Error(data.error)
@@ -120,6 +134,33 @@ function AIListingGenerator() {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
+
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  const handleApply = () => {
+    if (generatedContent && onApplyGenerated) {
+      onApplyGenerated(generatedContent);
+      toast({
+        title: "Content Applied"
+        description: "The generated content has been applied to your listing."
+      })
+    }
+
+  return (
+    <div className="space-y-6">
+      <Card className="border border-zion-blue-light bg-zion-blue-dark">
+        <CardHeader>
+          <CardTitle className="flex items-center text-white">
+            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
+            AI Listing Optimizer
+          </CardTitle>
+          <p className="text-sm text-zion-slate-light">
+            Provide basic information and let AI generate optimized, SEO-friendly content for your listing
+          </p>
+        </CardHeader>
+        <CardContent>
 
 
 ;
@@ -225,6 +266,7 @@ if ( {) {
         <CardContent>;
 
 
+
           <AIListingForm
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
@@ -233,6 +275,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             initialValues={initialValues}
@@ -245,6 +288,7 @@ if ( {) {
       {generatedContent && !isLoading && (;
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}
+
     </div>
   )
 }
@@ -252,5 +296,4 @@ if ( {) {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-;
+

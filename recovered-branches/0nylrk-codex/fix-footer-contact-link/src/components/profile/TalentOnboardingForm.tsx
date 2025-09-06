@@ -1,5 +1,6 @@
 
 
+
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -50,6 +51,7 @@ import {supabase} from "@/integrations/supabase/client";
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 // Define the form schema with validation
 
 
@@ -57,6 +59,7 @@ import {supabase} from "@/integrations/supabase/client";
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
+
     fullName: z.string().min(2, "Name must be at least 2 characters");
     professionalTitle: z.string().min(2, "Professional title is required");
     profilePicture: z.any().optional()})
@@ -64,6 +67,7 @@ const talentSchema = z.object({
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
   
+
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters"),
@@ -71,6 +75,7 @@ const talentSchema = z.object({
       z.object({
         title: z.string().min(2, "Project title is required"),
         description: z.string().min(10, "Project description is required")})
+
     ).min(1, "Add at least one key project");
     yearsOfExperience: z && z.string().min(1, "Years of experience is required")});
 
@@ -145,6 +150,7 @@ export function TalentOnboardingForm() {
   
   const totalSteps = 4,
   
+
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
@@ -176,15 +182,18 @@ export function TalentOnboardingForm() {
       control: form.control})
   // Handle profile picture upload
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+
     const file = e.target.files?.[0];
     if (!file) return;
     const file = e.target.files?.[0],
     if (!file) return,
     
+
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
+
     }
     reader.readAsDataURL(file);
     // Store the file in the form data
@@ -197,11 +206,13 @@ export function TalentOnboardingForm() {
     form.setValue("basicInfo.profilePicture", file)
   },
 
+
   // Handle CV upload
   const handleCvUpload = async (file: File) => {
     const fileName = `cv-${user?.id}-${Date.now()}`;
     const { error: cvError } = await supabase.storage
       .from('resumes')
+
       .upload(fileName, file);
       .upload(fileName, file),
       
@@ -215,6 +226,7 @@ export function TalentOnboardingForm() {
       .getPublicUrl(fileName);
     return publicUrl
   }
+
 
 
 
@@ -358,7 +370,9 @@ export function TalentOnboardingForm() {;
   // [Previous implementation continues...];
 
   return null;
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
 
 

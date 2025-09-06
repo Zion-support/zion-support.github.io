@@ -1,5 +1,6 @@
 
 
+
     const opt = {
 
       margin: [10, 10, 10, 10];
@@ -60,6 +61,7 @@ export default function PdfExportButton({
   targetRef,
 
 
+
       >
       Download as PDF
     </button>
@@ -73,8 +75,7 @@ export default function PdfExportButton({
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
 
+      Download as PDF
+    </button>
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

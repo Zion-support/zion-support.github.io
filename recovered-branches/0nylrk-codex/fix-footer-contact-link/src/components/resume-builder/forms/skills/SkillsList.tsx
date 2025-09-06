@@ -8,10 +8,13 @@
 
 
 
+
+
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
+
 
 
 
@@ -25,6 +28,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
@@ -37,6 +41,12 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
         acc[category].push (skill);
         return acc;
 
+      }
+      {} as Record<string, Skill[]>
+    );
+    setSkillsByCategory(grouped);
+  }, [skills]);
+  if (Object.keys(skillsByCategory).length === 0) {
 
 
 import { useState, useEffect } from 'react',;
@@ -68,11 +78,13 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   }
   
+
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
@@ -85,6 +97,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             onDelete={onDeleteSkill}
           />
         ))}
+
 
 
 
@@ -124,9 +137,12 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             onDelete={onDeleteSkill} 
           />;
         ))}
+
       </div>;
     </div>;
   );
 
 
+
 };
+

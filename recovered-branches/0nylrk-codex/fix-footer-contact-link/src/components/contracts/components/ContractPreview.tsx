@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -36,10 +37,12 @@ function ContractPreview() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
+
   talent?: TalentProfile;
   onDeploy?: () => void;
   onSign?: () => void;
@@ -68,12 +71,14 @@ export function ContractPreview({ ;
   contractContent;
 export function ContractPreview({ 
   contractContent,
+
   generatedContract, 
   status = 'ready', 
   onDeploy, 
   onSign,
   onClose,
   deployStatus,
+
   deploymentInfo
 }: ContractPreviewProps) {
   // Use either contractContent or generatedContract, whichever is provided
@@ -81,6 +86,7 @@ export function ContractPreview({
 
   const displayContent = contractContent || generatedContract || "",
   
+
   return (
     <div className="space - y-4">;
       <div className="flex justify - between items - center mb - 4">;
@@ -98,6 +104,7 @@ export function ContractPreview(): any ({ ;
 
           <Badge
             variant="secondary"
+
             className="text-sm bg-green-100 text-green-800">;
             Ready to Sign;
           </Badge>;
@@ -121,6 +128,7 @@ export function ContractPreview(): any ({ ;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         )}
 
@@ -159,7 +167,9 @@ export function ContractPreview(): any ({ ;
             Sign Contract
           </Button>
         )}
+
         
+
         {status === 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain

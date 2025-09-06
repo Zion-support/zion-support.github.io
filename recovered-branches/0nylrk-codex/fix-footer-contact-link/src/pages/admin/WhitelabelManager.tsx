@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -28,6 +29,7 @@ export default function WhitelabelManager() {
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
   
+
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -35,6 +37,16 @@ export default function WhitelabelManager() {
   return (
 
 
+                  including content, users, and analytics. Tenant admins cannot access data from other tenants.
+                </p>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
 
 
 import React, { useState } from 'react',;
@@ -147,9 +159,11 @@ export default function WhitelabelManager() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

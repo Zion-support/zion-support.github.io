@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 
@@ -123,6 +126,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -199,19 +203,176 @@ const serviceCategories = [;
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
       { name: 'AI Dream Interpreter Platform', href: '/ai-dream-interpreter-platform', description: 'Dream analysis with AI psychology', price: '$299/month' }
 
-
-
-    ];
-  };
-
-
-    title: '⚛️ 2031 Quantum & Emerging Tech',
-    icon: AtomIcon,
-    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
-    description: 'Quantum computing and beyond',
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+    ]
+  }
+    title: '⚛️ 2031 Quantum & Emerging Tech'
+    icon: AtomIcon
+    color: 'from-indigo-600 via-blue-600 to-cyan-600'
+    description: 'Quantum computing and beyond'
+    services: [
+      {
+        name: 'Quantum Internet Security Gateway'
+        href: '/quantum-internet-security-gateway'
+        description: 'Unbreakable quantum encryption'
+        price: '$15,999/month'
+      }
+      {
+        name: 'Biotech DNA Computing Platform'
+        href: '/biotech-dna-computing-platform'
+        description: 'DNA-based computation'
+        price: '$25,999/month'
+      }
+      {
+        name: 'Quantum Financial Trading Platform'
+        href: '/quantum-financial-trading-platform'
+        description: 'Quantum-powered trading algorithms'
+        price: '$35,999/month'
+      }
+      {
+        name: 'Quantum Creativity Studio'
+        href: '/quantum-creativity-studio'
+        description: 'Quantum-enhanced creativity'
+        price: '$1,999/month'
+      }
+    ]
+  },  {      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' }
+      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' }
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading algorithms', price: '$35,999/month' }
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio', description: 'Quantum-enhanced creativity', price: '$1,999/month' }
+    ]
+  }
+    title: '🏙️ 2031 Enterprise IT Solutions'
+    icon: CpuIcon
+    color: 'from-blue-600 via-cyan-600 to-teal-600'
+    description: 'Autonomous enterprise infrastructure'
+    services: [
+      {
+        name: 'Autonomous DevOps Platform'
+        href: '/autonomous-devops-platform'
+        description: 'Fully autonomous DevOps'
+        price: '$799/month'
+      }
+      {
+        name: 'Zero Trust Network Architecture'
+        href: '/zero-trust-network-architecture'
+        description: 'Never trust, always verify'
+        price: '$599/month'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration'
+        description: 'Distributed edge computing'
+        price: '$449/month'
+      }
+      {
+        name: 'AI-Powered IT Operations Center'
+        href: '/ai-it-operations-center'
+        description: 'Intelligent IT operations'
+        price: '$699/month'
+      }
+    ]
+  },  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' }
+      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' }
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' }
+      { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: '$699/month' }
+    ]
+  }
+    title: '🌌 2031 Space & Metaverse Tech'
+    icon: Rocket
+    color: 'from-teal-600 via-emerald-600 to-green-600'
+    description: 'Space exploration and digital reality'
+    services: [
+      {
+        name: 'Space Mining Automation Platform'
+        href: '/space-mining-automation-platform'
+        description: 'Automated asteroid mining'
+        price: '$45,999/month'
+      }
+      {
+        name: 'Metaverse Development Platform'
+        href: '/metaverse-development-platform'
+        description: 'Build immersive virtual worlds'
+        price: '$499/month'
+      }
+      {
+        name: 'AI Predictive Health Analytics'
+        href: '/ai-predictive-health-analytics'
+        description: 'Predictive health outcomes'
+        price: '$7,999/month'
+      }
+      {
+        name: 'AI Autonomous Business Manager'
+        href: '/ai-autonomous-business-manager'
+        description: 'Fully autonomous business operations'
+        price: '$12,999/month'
+      }
+    ]
+  },  {      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' }
+      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: '$499/month' }
+      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/month' }
+      { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
+    ]
+  }
+    title: '🎯 2031 Innovative Micro SAAS'
+    icon: Target
+    color: 'from-green-600 via-yellow-600 to-orange-600'
+    description: 'Cutting-edge micro solutions'
+    services: [
+      {
+        name: 'AI Business Intelligence Suite'
+        href: '/ai-business-intelligence-suite'
+        description: 'Intelligent business insights'
+        price: '$299/month'
+      }
+      {
+        name: 'Quantum-Secure Communication Platform'
+        href: '/quantum-secure-communication-platform'
+        description: 'Unbreakable encryption'
+        price: '$599/month'
+      }
+      {
+        name: 'AI Customer Success Automation'
+        href: '/ai-customer-success-automation'
+        description: 'Automate customer success'
+        price: '$199/month'
+      }
+      {
+        name: 'Blockchain Supply Chain Transparency'
+        href: '/blockchain-supply-chain-transparency'
+        description: 'End-to-end traceability'
+        price: '$399/month'
+      }
+    ]
+  },  {      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' }
+      { name: 'Quantum-Secure Communication Platform', href: '/quantum-secure-communication-platform', description: 'Unbreakable encryption', price: '$599/month' }
+      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' }
+      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' }
+    ]
+  }
+    title: '🔬 2031 Research & Development'
+    icon: Microscope
+    color: 'from-orange-600 via-red-600 to-pink-600'
+    description: 'Breakthrough research solutions'
+    services: [
+      {
+        name: 'Neuromorphic Computing Platform'
+        href: '/neuromorphic-computing-platform'
+        description: 'Brain-inspired computing'
+        price: '$899/month'
+      }
+      {
+        name: 'DNA Computing Platform'
+        href: '/dna-computing-platform'
+        description: 'Molecular computing'
+        price: '$1,299/month'
+      }
+      {
+        name: 'Photonic Computing Infrastructure'
+        href: '/photonic-computing-infrastructure'
+        description: 'Light-speed computing'
+        price: '$699/month'
+      }
+      {
 
 
 const mainNavigation = [
@@ -230,6 +391,7 @@ const mainNavigation = [
   { name: 'About', href: '/about', icon: Users }
   { name: 'Contact', href: '/contact', icon: MessageCircle }
   { name: 'Resources', href: '/resources', icon: BookOpen },];  { name: 'Resources', href: '/resources', icon: BookOpen }
+
 
 
 ];
@@ -252,6 +414,7 @@ export default function UltraFuturisticNavigation2031() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -311,7 +474,9 @@ export default function UltraFuturisticNavigation2031() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -393,6 +558,7 @@ export default function UltraFuturisticNavigation2031() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -402,6 +568,7 @@ export default function UltraFuturisticNavigation2031() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>
                 <Rocket className='w-6 h-6 text-white' />
@@ -443,6 +610,7 @@ export default function UltraFuturisticNavigation2031() {;
 
 
 
+
                 >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
@@ -459,6 +627,7 @@ export default function UltraFuturisticNavigation2031() {;
 
 
 
+
                 >
                   <Link
                     href={item.href}
@@ -468,6 +637,7 @@ export default function UltraFuturisticNavigation2031() {;
                     <span>{item.name}</span>
                   </Link>
                   {/* Hover effect */}
+
 
 
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>                >
@@ -510,11 +680,13 @@ export default function UltraFuturisticNavigation2031() {;
 
 
 
+
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>              <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
+
 
 
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >
@@ -535,6 +707,7 @@ export default function UltraFuturisticNavigation2031() {;
 
 
 
+
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -543,6 +716,18 @@ export default function UltraFuturisticNavigation2031() {;
               >
                 Get Started
               </motion.button>
+              <motion.button
+
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+                className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >                className="px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30"
+              >
+                Contact Us
+              </motion.button>
+            </div>
+            {/* Mobile menu button */}
+            <div className='lg:hidden'>              <motion.button            <div className="lg:hidden">
               <motion.button
 
 
@@ -756,6 +941,7 @@ function UltraFuturisticNavigation2031() {
 
 
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+
                   className='relative group';
                 >;
                   <Link;
@@ -818,6 +1004,7 @@ function UltraFuturisticNavigation2031() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {active_category === category.title && (
@@ -827,6 +1014,7 @@ function UltraFuturisticNavigation2031() {
                         exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
 
+
                         className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
 
 
@@ -834,6 +1022,7 @@ function UltraFuturisticNavigation2031() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       >
                         <div className="p-4">
                           <div className="mb-3">
@@ -856,9 +1045,11 @@ function UltraFuturisticNavigation2031() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                               >
                                 <Link
                                   href={service.href}
@@ -890,6 +1081,7 @@ function UltraFuturisticNavigation2031() {
           </div>
         </div>
       </nav>
+
 
 
 
@@ -1008,6 +1200,7 @@ function UltraFuturisticNavigation2031() {
 
 
 
+
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1025,7 +1218,9 @@ function UltraFuturisticNavigation2031() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1111,9 +1306,11 @@ function UltraFuturisticNavigation2031() {
       </AnimatePresence>
 
 
+
     </>
   )
 }
+
 
 
 
@@ -1146,6 +1343,7 @@ function UltraFuturisticNavigation2031() {
 
       <div className='h-32 lg:h-40'></div>
     </>
+
   );
 
 
@@ -1156,6 +1354,7 @@ function UltraFuturisticNavigation2031() {
 );      <div className="h-32 lg: h-40"></div>
     </>
   ),
+
 
 
 
@@ -1253,5 +1452,7 @@ function UltraFuturisticNavigation2031() {
       <div className='h-32 lg:h-40'></div>
     </>
   );
+
+
 
 

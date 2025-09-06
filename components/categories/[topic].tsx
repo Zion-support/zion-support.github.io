@@ -1,5 +1,7 @@
+
 import type { GetServerSideProps, NextPage } from 'next',
 import type { GetServerSideProps, NextPage } from 'next';
+
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -89,6 +91,22 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
               }).catch (() => {});
             }
 
+          />
+        </div>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          {posts.map(p => (
+            <BlogCard key={p.id} post={p} />
+          ))}
+        </div>
+        <div className='mt-6'>
+          <Link href='/blog' className='underline'>
+            Back to Blog
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+
 
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
   return { props: { topic, posts } }
@@ -141,6 +159,7 @@ export default TopicPage;      </Head>;
           ))}
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const topic = String(ctx.params?.topic || '');
 
@@ -154,6 +173,7 @@ export default TopicPage;      </Head>;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
+
 
 
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));

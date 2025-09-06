@@ -1,6 +1,7 @@
 
 
 
+
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'));
   if (!service) return null;
 
@@ -20,6 +21,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 
+
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Truck, Star } from 'lucide-react',
@@ -31,11 +33,13 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function QuantumLogisticsPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-logistics'))
   if (!service) return null,
+
   return (
     <Layout>
       <Head>
@@ -56,6 +60,7 @@ export default function QuantumLogisticsPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-blue-400 mt-0.5"><Check /><span>{feat}</span></li>
+
                 ))}
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -73,6 +78,7 @@ export default function QuantumLogisticsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6 h-fit">
@@ -83,6 +89,7 @@ export default function QuantumLogisticsPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
+
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Request Demo<ArrowRight /></a>
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Request Demo<ArrowRight /></Link>
 
@@ -96,6 +103,7 @@ export default function QuantumLogisticsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -107,6 +115,7 @@ export default function QuantumLogisticsPage() {
       </div>
     </Layout>
   )
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -119,4 +128,5 @@ export default function QuantumLogisticsPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

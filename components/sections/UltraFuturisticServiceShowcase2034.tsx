@@ -25,6 +25,8 @@ import { motion } from 'framer-motion';
 
 
 
+
+
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
@@ -135,6 +137,7 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
+
 
 
 
@@ -266,7 +269,9 @@ const service_categories = [;
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>;
       </div>;
     }
+
   };
+
 
 
 
@@ -284,6 +289,7 @@ const service_categories = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
       {/* Animated Background */}
@@ -296,6 +302,8 @@ const service_categories = [;
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 
         {/* Header */}
+
+
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
@@ -305,6 +313,7 @@ const service_categories = [;
     hidden: { opacity: 0, y: 20 },
 
         {/* Header */}
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -371,6 +380,7 @@ const service_categories = [;
         {/* Header */}
 
 
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -381,7 +391,9 @@ const service_categories = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
@@ -396,6 +408,7 @@ const service_categories = [;
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'>;
             {[;
               {
+
                 label: 'Total Services'
                 value: allServices.length.toString()
                 icon: Rocket
@@ -463,6 +476,7 @@ const service_categories = [;
 
 
 
+
             ].map((stat, index) => (
               <motion.div
 
@@ -478,6 +492,7 @@ const service_categories = [;
                 <div className='text-2xl font-bold text-white'>
                   {stat.value}
                 </div>
+
                 <div className='text-sm text-gray-400'>{stat.label}</div>              </motion.div>                className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
@@ -509,6 +524,7 @@ const service_categories = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Search and Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -524,7 +540,9 @@ const service_categories = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -541,6 +559,7 @@ const service_categories = [;
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
+
               <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />            </div>        >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
 
@@ -569,6 +588,7 @@ const service_categories = [;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -578,6 +598,7 @@ const service_categories = [;
             </select>
           </div>
         </motion.div>
+
 
 
 
@@ -597,6 +618,7 @@ const service_categories = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Service Categories */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -618,7 +640,9 @@ const service_categories = [;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -637,6 +661,7 @@ const service_categories = [;
             >
               {/* Popular Badge */}
               {service.popular && (
+
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
             >
               {/* Popular Badge */}
@@ -660,9 +685,11 @@ const service_categories = [;
               )}
 
 
+
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
 
                   Popular
+
 
 
 
@@ -675,6 +702,7 @@ const service_categories = [;
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
+
 
 
                 </div>
@@ -861,6 +889,7 @@ const service_categories = [;
 
               </div>
               {/* Service Info */}
+
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {service.name}
               </h3>;
@@ -923,6 +952,7 @@ const service_categories = [;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                   </div>
                 ))}
                 {service.features.length > 3 && (
@@ -931,6 +961,7 @@ const service_categories = [;
                   <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                   </div>
+
                 ))}
                 {service.features.length > 3 && (
                   <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
@@ -990,6 +1021,7 @@ const service_categories = [;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
@@ -1094,9 +1126,11 @@ const service_categories = [;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 <a
 
               <div className="flex space-x-3">
@@ -1140,6 +1174,7 @@ const service_categories = [;
 
 
 
+
               {/* Trial Info */}
               <div className='mt-4 text-center'>;
                 <div className='text-sm text-gray-400'>;
@@ -1167,6 +1202,7 @@ const service_categories = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1182,7 +1218,9 @@ const service_categories = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1244,6 +1282,7 @@ const service_categories = [;
               </a>;
                              <a
                  href="/pricing-2034"
+
 
 
 
@@ -1437,3 +1476,4 @@ const service_categories = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

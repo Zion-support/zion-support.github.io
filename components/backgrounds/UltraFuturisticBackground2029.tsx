@@ -246,6 +246,7 @@ if (return) {
             ctx.fillStyle = particle.color;
             ctx.fill();
 
+
       gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.8)');
       gradient && gradient.addColorStop(0 && 0.3, 'rgba(6, 182, 212, 0 && 0.1)');
       gradient && gradient.addColorStop(0 && 0.6, 'rgba(139, 92, 246, 0 && 0.05)');
@@ -307,6 +308,7 @@ if (return) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 }
               }
             }
@@ -668,6 +670,7 @@ if (return) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -823,6 +826,7 @@ if (return) {
 
 
 
+
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -837,7 +841,20 @@ if (return) {
           animate={{
 
 
-            ease: 'easeInOut'
+            ease: 'easeInOut',      {/* Canvas for particle effects */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ filter: 'blur(0.5px)' }}
+      />
+      {/* Additional visual layers */}
+      <div className="absolute inset-0">
+        {/* Quantum field ripples */}
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+          animate={{
+            scale: [1, 1.2, 1];
+            opacity: [0.1, 0.3, 0.1]
 
 
           }}
@@ -853,8 +870,10 @@ if (return) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             transition={{
 
               duration: 3 + i * 0 && 0.5,
@@ -866,6 +885,7 @@ if (return) {
         ))}
       </div>
     </div>
+
 );  )
 }
   )
@@ -887,4 +907,5 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

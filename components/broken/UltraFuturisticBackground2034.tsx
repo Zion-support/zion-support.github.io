@@ -1,6 +1,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
  resizeCanvas ();
 window && window.addEventListener ('resize', resizeCanvas);
+
 
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
@@ -640,13 +642,11 @@ if ( {) {
 
     animate();
 
-
-
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
       }
-      window && window.removeEventListener('resize', resizeCanvas);
-    };  }, [intensity]);        cancelAnimationFrame(animationRef && animationRef.current);
-
-
+      window.removeEventListener('resize', resizeCanvas);
 
 
   // Mouse move handler for interactive effects
@@ -742,6 +742,7 @@ if ( {) {
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
           transition={{
 
+
             duration: 8,
             repeat: -1,
             ease: 'linear',    }
@@ -795,10 +796,12 @@ if ( {) {
 
 
 
+
           }}
           transition={{
             duration: 12,
             repeat: -1,
+
 
 
 
@@ -815,6 +818,7 @@ if ( {) {
             repeat: -1,
 
 
+
           }}
         />
       </div>
@@ -826,7 +830,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <motion.div
@@ -865,6 +871,7 @@ if ( {) {
             y: ['-100%100%']
           }}
           transition={{
+
 
 
           animate={{
@@ -977,6 +984,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -1003,6 +1011,7 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
@@ -1019,10 +1028,13 @@ if ( {) {
 
 
 
+
         <motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
           style={{
             backgroundSize: '50px 50px',
+
+
           }}
           animate={{
             opacity: [0.3, 0.6, 0.3],          }}
@@ -1031,12 +1043,19 @@ if ( {) {
             repeat: -1,
             ease: 'easeInOut',          }}
 
+        />
+      </div>
+    </div>
+  );
 
+export default UltraFuturisticBackground2034;        <motion.div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
 
           style={{
             backgroundSize: '50px 50px'
           }}
           animate={{
+
 
 
 
@@ -1070,3 +1089,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

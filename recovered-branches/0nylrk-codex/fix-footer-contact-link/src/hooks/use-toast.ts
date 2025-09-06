@@ -1,3 +1,4 @@
+
 import React from "react";
 
 
@@ -17,6 +18,7 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
 
 
 export const useToast = useToastHook;
+
 import React from "react",
 import {
   useToast as useToastHook,
@@ -30,7 +32,9 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
 },
 
 
+
 export const useToast = useToastHook,
+
 
 
 
@@ -43,6 +47,7 @@ function baseToast(props: ToastOptions) {
 // Convenience helpers mirroring common toast variants.
 baseToast && baseToast.title = (title: string) => {
   baseToast({ title })
+
 }
 baseToast.description = (description: string) => {
   baseToast({ description })
@@ -84,3 +89,4 @@ baseToast.success = (message: string) => {
 
 
 };
+

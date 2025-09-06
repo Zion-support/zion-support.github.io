@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -20,11 +22,13 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
+
   }) => void;
   isLoading: boolean
 
   }) => void,
   isLoading: boolean,
+
   initialValues?: {
     title?: string,
     category?: string,
@@ -32,6 +36,7 @@ interface AIListingFormProps {
     targetAudience?: string
   }
 }
+
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();
@@ -51,6 +56,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
 
+
   const handleSubmit = () => {
     if (!title |!category) {
       toast({
@@ -66,8 +72,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       keyFeatures,
       targetAudience
     })
+
   }
   },
+
 
   return (
     <div className="space-y-4">
@@ -112,6 +120,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
+
+
 
 
 
@@ -224,6 +234,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -234,6 +245,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
 
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
+
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -244,16 +256,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content
           </>
         )}
-      </Button>
-    </div>
-  )
-}
-      </Button>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -285,3 +288,6 @@ function AIListingForm() {
   const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
 ;
+=======
+
+

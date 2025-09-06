@@ -1,9 +1,11 @@
 
 
 
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {CountryServiceSelector} from "../CountryServiceSelector";
 
-
-
+import { CountryPricing } from "@/data/onsiteServicePricing",
+import { CountryServiceSelector } from "../CountryServiceSelector",
 
 
 interface ServiceDetailsSectionProps {
@@ -31,6 +33,7 @@ export function ServiceDetailsSection({
             pricing
           </p>
         </div>
+
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 import { CountryServiceSelector } from "../CountryServiceSelector",;
 interface ServiceDetailsSectionProps {;
@@ -91,3 +94,4 @@ export function ServiceDetailsSection(): any ({ selectedCountry, setSelectedCoun
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

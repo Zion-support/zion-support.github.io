@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import {Header} from "@/components/Header";
@@ -10,6 +11,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceOnboarding() {;
   const { user, isLoading } = useAuth();
+
 
 
 
@@ -38,6 +40,7 @@ export default function ServiceOnboarding() {;
       <Footer />
     </>
   )
+
 }
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",;
@@ -84,3 +87,4 @@ export default function ServiceOnboarding() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

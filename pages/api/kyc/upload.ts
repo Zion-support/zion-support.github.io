@@ -2,13 +2,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+
 
 
 
@@ -22,10 +25,12 @@ import crypto from 'crypto';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
+
   } catch {
     return {}
   }
@@ -141,4 +146,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

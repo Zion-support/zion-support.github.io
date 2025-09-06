@@ -1,6 +1,14 @@
 
 
 
+  doc: jsPDF;
+  education: Education[];
+  colors: PdfThemeColors;
+  startY: number
+): number {
+
+
+
 
   let yPos = startY;
   // Check if we need to add a new page
@@ -67,6 +75,8 @@
 
     } else {
       yPos += 20
+
+
 
 
 import { jsPDF } from 'jspdf',;
@@ -138,7 +148,9 @@ export function addEducationSection(;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
   }

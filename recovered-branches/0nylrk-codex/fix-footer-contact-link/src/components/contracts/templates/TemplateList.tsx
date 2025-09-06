@@ -4,6 +4,7 @@
 
 
 
+
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -15,11 +16,13 @@ import {useState} from "react";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
+
 
 
 }
@@ -46,6 +49,7 @@ export function TemplateList({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 import { ContractTemplate } from "@/types/contracts",;
 import { Button } from "@/components/ui/button",;
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",;
@@ -98,8 +102,10 @@ export function TemplateList(): any ({;
   },
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   const handleSetDefault = async (templateId: string) => {
@@ -148,6 +154,7 @@ export function TemplateList(): any ({;
 
 
 
+
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
@@ -155,6 +162,7 @@ export function TemplateList(): any ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               className="w-full"
             >
@@ -176,6 +184,7 @@ export function TemplateList(): any ({;
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick={handleDeleteConfirm}
+
             >
               Delete
             </AlertDialogAction>
@@ -217,5 +226,4 @@ export function TemplateList(): any ({;
     </div>);
 }
 
-=======
-;
+

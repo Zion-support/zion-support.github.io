@@ -55,6 +55,7 @@ if ( {) {
 }
     chrome.tabs.create ({ url: `${BASE_URL}/talent` });
   }
+
   // Check condition
 if ( {) {
   $2
@@ -64,6 +65,7 @@ if ( {) {
   }
 
 }),;
+
 
 
 

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -55,10 +56,12 @@ import React, { useState } from 'react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
   const [sortBy, setSortBy] = useState<
     'name' | 'price' | 'rating' | 'popularity'
   >('popularity');
@@ -82,6 +85,7 @@ import React, { useState } from 'react';
           break;
         case '$800+':;
           priceMatch = price > 800;
+
 
 
 
@@ -144,7 +148,9 @@ import React, { useState } from 'react';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   const getPriceRange = (price: string) => {
@@ -168,6 +174,8 @@ import React, { useState } from 'react';
   },
 
 
+
+
   return (
     <>
       <Head>
@@ -180,6 +188,7 @@ import React, { useState } from 'react';
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-services-showcase-2025" />
       </Head>
+
       {/* Hero Section */}
       <section className='relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden'>
         {/* Animated Background */}
@@ -285,6 +294,7 @@ import React, { useState } from 'react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
@@ -301,6 +311,7 @@ import React, { useState } from 'react';
                 </div>
                 <div className='text-gray-400'>Real Services</div>
               </div>
+
             </div>
             {/* Contact CTA */}
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
@@ -1225,11 +1236,13 @@ import React, { useState } from 'react';
 
 
 
+
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
                       </Link>
                     </div>
+
                   </div>
                 </motion.div>
               ))}
@@ -1702,6 +1715,7 @@ import React, { useState } from 'react';
                   <div className=&quot;text-3xl font-bold text-green-400 mb-2&quot;>400%</div>
                   <div className=&quot;text-gray-400&quot;>Average ROI</div>
                 </div>
+
               </div>
 
               {/* Contact CTA */}
@@ -1727,6 +1741,7 @@ import React, { useState } from 'react';
           </div>
         </section>
     </>
+
 );
 export default ComprehensiveServicesShowcase2025;
 
@@ -1749,5 +1764,6 @@ export default ComprehensiveServicesShowcase2025;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

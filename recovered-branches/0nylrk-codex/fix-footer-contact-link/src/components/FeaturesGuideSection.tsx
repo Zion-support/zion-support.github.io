@@ -4,11 +4,15 @@
 
 
 
+
+
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Button} from "./ui/button";
 import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle} from "lucide-react";
+
+
 import { Link } from "react-router-dom",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -31,9 +35,12 @@ import {
 
 
 
+
+
 export function FeaturesGuideSection() {
   const features = [
     {
+
 
 
       id: "ai-matcher",
@@ -62,19 +69,23 @@ export function FeaturesGuideSection() {;
         "Review the AI-recommended matches tailored to your needs";
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace",
         "Fill in your project requirements and specifications",
         "Review the AI-recommended matches tailored to your needs",
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         "Connect with matched talents or services directly"
       ]
       link: "/match"
       buttonText: "Try AI Matcher"
+
     }
     {
       id: "talent - directory",
@@ -118,6 +129,7 @@ export function FeaturesGuideSection() {;
       title: "Services Marketplace",
       description: "Discover professional services for your AI and tech needs, from development to consulting.",
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,
+
       instructions: [
         "Browse service categories on the marketplace",
         "Compare service offerings and pricing options",
@@ -127,8 +139,10 @@ export function FeaturesGuideSection() {;
       ]
       link: "/services"
       buttonText: "View Services"
+
     }
     },
+
     {
       id: "equipment"
       title: "Equipment Catalog"
@@ -142,6 +156,7 @@ export function FeaturesGuideSection() {;
       ]
       link: "/equipment"
       buttonText: "Browse Equipment"
+
     }
     {
       id: "analytics"
@@ -154,6 +169,7 @@ export function FeaturesGuideSection() {;
       title: "Marketplace Analytics",
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
+
       instructions: [
         "Access analytics from your user dashboard";
         "View interactive charts on market trends and rates";
@@ -162,6 +178,7 @@ export function FeaturesGuideSection() {;
       ]
       link: "/analytics"
       buttonText: "View Analytics"
+
     }
     {
       id: "ai-assistant"
@@ -174,6 +191,7 @@ export function FeaturesGuideSection() {;
       title: "Zion AI Assistant",
       description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
+
       instructions: [
         "Click on the chat icon in the bottom right corner";
         "Ask questions about available services or talents";
@@ -183,14 +201,17 @@ export function FeaturesGuideSection() {;
       link: "#"
       buttonText: "Chat with Assistant"
       action: "openChat"
+
     }
     },
+
     {
       id: "publishing"
       title: "List Your Services"
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace."
       icon: <Plus className="h-10 w-10 text-zion-cyan" />
       instructions: [
+
         "Create or log in to your account";
         "Navigate to 'Create Listing' in your dashboard",;
 
@@ -218,6 +239,7 @@ export function FeaturesGuideSection() {;
       title: "Help & Resources",
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
+
       instructions: [
         "Visit our comprehensive knowledge base";
         "Watch video tutorials on specific features";
@@ -232,6 +254,7 @@ export function FeaturesGuideSection() {;
   ];
 ;
   return (
+
 
     <section className="py - 20 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
@@ -390,6 +413,7 @@ export function FeaturesGuideSection() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 key={feature.id}
                 value={feature.id}
 
@@ -494,6 +518,8 @@ export function FeaturesGuideSection() {;
 
 
 
+
+
         </Tabs>;
 
         <div className="mt-12 text-center">;
@@ -513,9 +539,11 @@ export function FeaturesGuideSection() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

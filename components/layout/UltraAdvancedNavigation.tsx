@@ -23,6 +23,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   Menu,
   X,
@@ -61,6 +62,7 @@ import Link from 'next/link';import { ;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
@@ -176,6 +178,8 @@ import Link from 'next / link';
 
     }
   ];
+
+
 
 
 
@@ -454,9 +458,11 @@ import Link from 'next / link';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -512,8 +518,52 @@ import Link from 'next / link';
           </motion && motion.div>;
           {/* Desktop Navigation */}
 
-
-
+          <div className='hidden lg:flex items-center space-x-8'>
+            {navigationItems.map((item, index) => (
+              <div key={item.name} className='relative group'>
+                {item.dropdown ? (
+                  <button
+                    onClick={() =>
+                      setActiveDropdown(
+                        activeDropdown === item.name ? null : item.name
+                      )
+                    }
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
+                  >
+                    {item.icon && <item.icon className='w-4 h-4' />}
+                    <span>{item.name}</span>
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-300 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`}
+                    />                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
+                  >
+                    {item.icon && <item.icon className='w-4 h-4' />}                    <span>{item.name}</span>            {navigationItems.map((item, index) => (
+              <div key={item.name} className="relative group">
+                {item.dropdown ? (
+                  <button
+                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                  >
+                    {item.icon && <item.icon className="w-4 h-4" />}
+                    <span>{item.name}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
+                  >
+                    {item.icon && <item.icon className='w-4 h-4' />}                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                  >
+                    {item.icon && <item.icon className="w-4 h-4" />}
+                    <span>{item.name}</span>
 
 
                   </Link>
@@ -529,6 +579,7 @@ import Link from 'next / link';
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+
 
 
 
@@ -558,6 +609,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                   <div className="text-sm text-gray-400">{dropdownItem.description}</div>
                                 </div>
                                 <div className="text-sm font-semibold text-cyan-400">
+
 
 
 
@@ -602,6 +654,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 
 
+
           </div>;
 
 
@@ -615,6 +668,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
@@ -631,7 +685,9 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               </a>
@@ -700,6 +756,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <button
               onClick={() => setIsOpen(!isOpen)}
+
               className='text-gray-300 hover:text-white transition-colors duration-200';
             >;
               {isOpen ? (;
@@ -763,6 +820,7 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -832,6 +890,7 @@ className="block py-2 text-gray-400 hover:text-white transition-colors duration-
                       onClick={() => setIsOpen(false)}
                       className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'
                     >
+
                       {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
                     >
                       {item.icon && <item.icon className="w-5 h-5" />}
@@ -846,6 +905,7 @@ className="block py-2 text-gray-400 hover:text-white transition-colors duration-
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -921,6 +981,7 @@ className="block py-2 text-gray-400 hover:text-white transition-colors duration-
   );
 
 
+
 }
 
 
@@ -935,4 +996,5 @@ export default UltraAdvancedNavigation;  );
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

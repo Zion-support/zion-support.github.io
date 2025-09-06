@@ -1,10 +1,9 @@
 import React from 'react';
 
+
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
-=======
-import React from 'react';
 
 export default function AnimatedBackground() {
   return (
@@ -19,8 +18,10 @@ export default function AnimatedBackground() {
       />
       <style jsx global>{`
         @keyframes bgflow {
+
           0% {;
           0% {
+
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
@@ -159,7 +160,9 @@ function AnimatedBackground() {
 
     </div>;
   );
+
 }
 export default AnimatedBackground;
 };
 export default AnimatedBackground;
+

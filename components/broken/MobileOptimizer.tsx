@@ -1,11 +1,13 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 setIsTablet (isTabletDevice);
 
 //Apply mobile - specific optimizations // Check condition
@@ -278,6 +280,7 @@ useEffect ( () => {;
 window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
 }
 if (!showPanel |!isVisible) return null;
@@ -297,6 +300,7 @@ const getStatusIcon = (status: string) => {
 
 };
 children 
+
 }{
   /* Mobile Optimization Panel */
 }<AnimatePresence> {
@@ -311,6 +315,7 @@ children
 }`
 }</style> </>)
 }
+
 
 
 //Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);
@@ -404,9 +409,11 @@ const handleMediaQueryChange = (e: MediaQueryListEvent) =>: any {
 // Check condition
 if (return null) {
   $2
+
 }
 }
 }
+
 
 
 children
@@ -445,5 +452,6 @@ export default MobileOptimizer;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

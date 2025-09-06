@@ -1,11 +1,16 @@
 
 
+export type ProjectStatus = 'InProgress' | 'Completed';
+export type Project = {
+  id: string;
 
 
   communication?: number, // 1-5 optional;
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
+
+
 
 
 export type Review = {
@@ -16,7 +21,9 @@ export type Review = {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   fromId: string, // clientId or talentSlug depending on fromRole;
@@ -25,6 +32,11 @@ export type Review = {
   rating: number, // 1-5;
 
 
+  text: string;
+  categories?: ReviewCategoryScores,;
+  anonymous?: boolean,;
+  approved: boolean, // admin moderated visibility;
+  reported: boolean;
 
 
   reports?: { reason: string, reportedAt: string }[],;
@@ -34,13 +46,16 @@ export type Review = {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
   totalCompletedProjects: number;
+
 
 
   mostRecent: PublicReview[];
@@ -92,3 +107,4 @@ export type ReviewsSummary = {
 
 }
 };
+

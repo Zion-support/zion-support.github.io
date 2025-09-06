@@ -1,10 +1,12 @@
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
+
 
 const CERTS_FILE = path.join(
   process.cwd()
@@ -43,16 +45,6 @@ res.setHeader("Allow", "GET");
     return res.status(500).json({ error: "Failed to load certifications" })
 
 
-
-};
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-}
-
-
-
-=======
 ;
 const CERTS_FILE = path.join (
   process.cwd (),
@@ -96,3 +88,11 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 }
   };
 }
+=======
+}
+}
+
+  };
+}
+
+

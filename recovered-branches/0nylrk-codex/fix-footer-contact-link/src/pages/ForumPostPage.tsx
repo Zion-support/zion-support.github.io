@@ -1,6 +1,21 @@
 
 
 
+import { useState } from "react",
+import { useParams, Link } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react",
+import { formatDistanceToNow, format } from "date-fns",
+import { ForumPost, ForumReply } from "@/types/community",
+import { useAuth } from "@/hooks/useAuth",
+import ReplyCard from "@/components/community/ReplyCard",
 
 
 // Mock data for a forum post
@@ -54,6 +69,7 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T14:30:00Z"
     upvotes: 12
     downvotes: 0
+
   }
   {
     id: "reply2"
@@ -106,6 +122,7 @@ const mockReplies: ForumReply[] = [
     downvotes: 0,
     isAnswer: true
   },
+
   {
     id: "reply4"
     postId: "1"
@@ -117,12 +134,15 @@ const mockReplies: ForumReply[] = [
     upvotes: 4
     downvotes: 0
   }
+
 ];
 ],
+
 
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
+
   // Cast the result instead to provide the expected shape.;
   const { postId } = useParams() as { postId?: string };
   const { user } = useAuth();
@@ -145,12 +165,15 @@ export default function ForumPostPage() {
   const [post, setPost] = useState(mockPost),
   const [replies, setReplies] = useState(mockReplies),
   
+
   // Check if this is the user's own post
   const isAuthor = user?.id === post?.authorId,
   
   // Check if user is admin/mod
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
+
   
+
   // For this demo, we'll assume the post is found
   if (!post) {
     return (
@@ -175,8 +198,10 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded"
       description: "You upvoted this post"})
+
   }
   },
+
 
   const handleDownvote = () => {
     if (!user) {
@@ -189,8 +214,10 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded"
       description: "You downvoted this post"})
+
   }
   },
+
 
   const handleSubmitReply = async (content: string) => {
     if (!user) {
@@ -201,6 +228,7 @@ export default function ForumPostPage() {
     }
     // Create a new reply
     const newReply: ForumReply = {
+
       id: `reply${Date.now()}`
       postId: post.id
       content;
@@ -235,6 +263,7 @@ export default function ForumPostPage() {
   }
   },
 
+
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -257,6 +286,7 @@ export default function ForumPostPage() {
 
       ...reply,
       isAnswer: reply.id === replyId
+
     }));
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true })
@@ -271,6 +301,7 @@ export default function ForumPostPage() {
   }
   },
 
+
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -281,6 +312,7 @@ export default function ForumPostPage() {
     toast({
       title: "Report submitted"
       description: "A moderator will review this content"})
+
   }
   const handlePinPost = () => {
     if (!isAdminOrMod) return;
@@ -318,6 +350,7 @@ export default function ForumPostPage() {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   
+
   return (
     <AppLayout>
       <SEO
@@ -349,6 +382,7 @@ export default function ForumPostPage() {
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (
                     <Badge variant="outline" className="mt-1">
+
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -608,6 +642,7 @@ export default function ForumPostPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       {post.authorRole}
                     </Badge>
                   )}
@@ -715,7 +750,9 @@ export default function ForumPostPage() {;
               ))}
             </div>
           )}
+
           
+
           {!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
@@ -730,7 +767,9 @@ export default function ForumPostPage() {;
               )}
             </div>
           )}
+
           
+
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -747,6 +786,7 @@ export default function ForumPostPage() {;
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
+
                   canMarkAnswer={!post.isAnswered && (isAuthor |isAdminOrMod)}
                 />
               ))}
@@ -812,5 +852,4 @@ export default function ForumPostPage() {;
     </AppLayout>);
 }
 
-=======
-;
+

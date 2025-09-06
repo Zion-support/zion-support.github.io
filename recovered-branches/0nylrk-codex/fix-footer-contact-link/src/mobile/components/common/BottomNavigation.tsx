@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";
@@ -15,6 +16,7 @@ export function BottomNavigation() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const location = useLocation();
@@ -33,15 +35,18 @@ export function BottomNavigation() {;
             key={item.path}
             to={item.path}
             className={cn(
+
               "flex flex-col items-center justify-center flex-1 py-1 px-2";
 
               "flex flex-col items-center justify-center flex-1 py-1 px-2",
+
               isActive ? "text-primary" : "text-muted-foreground"
             )}
           >
             <div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement, {
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground")
+
 
             key={item && item.path} 
             to={item && item.path}
@@ -67,6 +72,7 @@ export function BottomNavigation() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       })}
 

@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -37,11 +38,13 @@ import {toast} from "@/components/ui/use-toast";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
   isSubmitting?: boolean
 }
+
 
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
@@ -93,6 +96,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const { translateContent, isTranslating } = useTranslationService(),
   const { supportedLanguages, currentLanguage } = useLanguage(),
   
+
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
   
   // Form fields with translations
@@ -144,11 +148,14 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       budget,
       deadline})
   },
+
   
+
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
+
     }
   }
   // Auto translate function
@@ -169,6 +176,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         content = requirements[lang];
         sourceLanguage = lang;
         break
+
 
 
 
@@ -280,6 +288,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -292,6 +301,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       }
     }
     
+
     if (!content) {
       toast({
         title: t('translation.no_content')
@@ -300,15 +310,18 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       return
     }
     try {
+
       const { translations, error } = await translateContent(content, 'job', sourceLanguage);
       const { translations, error } = await translateContent(content, 'job', sourceLanguage),
       
+
       if (error) {
         toast({
           title: t('translation.translation_failed')
           description: error
           variant: "destructive"})
         return
+
 ;
     if (!content) {;
       toast({;
@@ -337,6 +350,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       }
       if (field === 'title') {
         setTitle(translations)
@@ -345,7 +359,9 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       } else if (field === 'requirements') {
         setRequirements(translations)
       }
+
       
+
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
@@ -355,6 +371,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
+
     }
   }
   // Ensure all translations are available
@@ -396,6 +413,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -411,11 +429,13 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
 
 
+
   },
 
 
 
   
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -613,6 +633,7 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
           ) : (
             t('jobs.post_job_button')
           )}
+
         </Button>
       </div>
     </form>
@@ -641,5 +662,4 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     </form>);
 }
 
-=======
-;
+

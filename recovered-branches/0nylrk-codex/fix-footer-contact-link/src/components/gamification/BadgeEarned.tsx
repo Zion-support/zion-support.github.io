@@ -2,6 +2,7 @@
 
 
 
+
 interface BadgeEarnedProps {
 
   badge: BadgeKey
@@ -35,6 +36,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
@@ -44,6 +46,14 @@ interface BadgeEarnedProps {
   earnedDate?: string
 }
 
+
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
+
+  showDesc = false,
+  earnedDate}) => {
+  const meta = getBadgeMeta(badge),
+  if (!meta) return null,
+  const Icon = meta.icon,
 
 
   return (
@@ -67,6 +77,7 @@ interface BadgeEarnedProps {
       </div>
       {showName && (
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
+
 import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 interface BadgeEarnedProps {;
@@ -111,6 +122,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           {meta.name}
         </span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -123,6 +135,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
+
 
 
 
@@ -140,3 +153,4 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

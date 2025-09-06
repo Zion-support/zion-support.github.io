@@ -1,5 +1,12 @@
 
 
+import {useEffect, useState} from 'react';
+const STEPS = [
+  { key: 'profile', label: 'Profile completed' }
+  { key: 'skills', label: 'Skills added' }
+  { key: 'availability', label: 'Availability set' }
+  { key: 'match', label: 'First match received' }
+
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -13,6 +20,9 @@ type StepKey = typeof STEPS[number]['key'];
 
 export default function TalentDashboard() {
 
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
+
+  });
 
   useEffect(() => {
     try {
@@ -56,10 +66,35 @@ export default function TalentDashboard() {;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import { useEffect, useState } from 'react';
+const STEPS = [;
+  { key: 'profile', label: 'Profile completed' },;
+  { key: 'skills', label: 'Skills added' },;
+  { key: 'availability', label: 'Availability set' },;
+  { key: 'match', label: 'First match received' }] as const,;
+type StepKey = typeof STEPS[number]['key'];
+export default function TalentDashboard(req, res) {
+  try {
+  const [completed, setCompleted] = useState<Record<StepKey boolean>>({ profile: false, skills: false, availability: false, match: false }),;
+  useEffect(() => {;
+    try {
+      const raw = window.localStorage.getItem('onboarding.talent');
+      if (raw) setCompleted(JSON.parse(raw));
+    } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, []),;
+  useEffect(() => {;
+    try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [completed]),
+  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
+  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
 
 
   return (
@@ -92,6 +127,8 @@ export default function TalentDashboard() {;
 
 
 
+
+
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -113,6 +150,7 @@ export default function TalentDashboard() {;
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
@@ -122,3 +160,4 @@ export default function TalentDashboard() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

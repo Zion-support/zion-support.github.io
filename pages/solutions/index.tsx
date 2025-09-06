@@ -1,6 +1,7 @@
 
 
 
+
 origin/main
 origin/automation-improvements-final
 
@@ -31,6 +32,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 origin/automation-improvements-final
+
 
 const solutions = [
   {
@@ -84,6 +86,7 @@ const solutions = [
       "Ongoing Support"
     ]
     color: "from-orange-600 to-orange-800"
+
 
 
 
@@ -390,6 +393,7 @@ const SolutionsPage: NextPage = () => {
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
       ];
@@ -400,6 +404,8 @@ const SolutionsPage: NextPage = () => {
 }
   ],
   return (
+
+
 
 
 
@@ -639,13 +645,17 @@ const SolutionsPage: NextPage = () => {
 
 
 
+
+
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
               {solutions.map((solution, index) => {;
+
                 const IconComponent = solution.icon;
                 return (
                   <motion.div
@@ -666,6 +676,7 @@ const SolutionsPage: NextPage = () => {
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
+
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -739,6 +750,7 @@ const SolutionsPage: NextPage = () => {
                 const IconComponent = solution.icon;
 
 
+
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -751,11 +763,69 @@ const SolutionsPage: NextPage = () => {
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
+                      <ul className="space-y-1">
+                        {solution.useCases.map((useCase, useCaseIndex) => (
+                          <li key={useCaseIndex} className="text-sm text-gray-600 flex items-center">
+                            <span className="text-purple-500 mr-2">•</span>
+                            {useCase  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </li>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </ul>
+                    </div>
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-800 mb-2">Key Benefits:</h4>
+                      <ul className="space-y-1">
+                        {solution.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                            <span className="text-green-500 mr-2">✓</span>
+                            {benefit  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </li>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </ul>
+                    </div>
+                    <div className="mb-4">
+                      <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
+                        Starting at {solution.pricing  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </span>;
+                    </div>;
+                    <Link;
+                      href={solution.link  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
+
+
                     >
                       <span>Explore {solution.title}</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
+
+
 
 
                   </motion.div>
@@ -832,45 +902,108 @@ const SolutionsPage: NextPage = () => {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl sm:text - 4xl md:text - 5xl font - bold mb - 6">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">;
-                Let's discuss your specific needs and create a custom solution that drives your success.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link href="/contact" className="px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold">;
-                  Get Free Consultation;
-                </Link>;
-                <Link href="/about" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold">;
-                  Learn About Us;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
-}
+
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Let's discuss your specific needs and create a custom solution that drives your success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Get Free Consultation
+                </Link>
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
+                  Learn About Us
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
   );
 
 }
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-                    >
-                      <span>Explore {solution.title}</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-
-
-
-
-
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            Need a Custom Solution?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Can't find exactly what you need? Our expert team can design and develop
+            custom solutions tailored to your specific requirements and industry challenges.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔧</div>
+              <h3 className="text-xl font-semibold mb-2">Custom Development</h3>
+              <p className="text-gray-600">Tailored solutions built from the ground up</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">🔗</div>
+              <h3 className="text-xl font-semibold mb-2">System Integration</h3>
+              <p className="text-gray-600">Seamless integration with existing systems</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">📚</div>
+              <h3 className="text-xl font-semibold mb-2">Training & Support</h3>
+              <p className="text-gray-600">Comprehensive training and ongoing support</p>
+            </div>
+          </div>
+          <Link
+            href="/contact"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Discuss Custom Solutions
+          </Link>
+        </div>
+        {/* Contact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our industry-specific solutions can address your unique challenges
+            and drive measurable business outcomes.
+          </p>
+          <div className="flex justify-center gap-4 mb-8">
+            <Link
+              href="/contact"
+              className="bg-purple-600 hover: bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Schedule Consultation
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Request Demo
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-600">
+            <div>
+              <h3 className="font-semibold mb-2">📱 Mobile</h3>
+              <p>+1 302 464 0950</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">✉️ Email</h3>
+              <p>kleber@ziontechgroup.com</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">🌐 Website</h3>
+              <p>https://ziontechgroup.com</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
 
 export default SolutionsPage;
 
-export default SolutionsPage;
+

@@ -1,4 +1,5 @@
 
+
 // Types used across fraud detection modules
 import { FraudSeverity } from '@/types/fraud';
 export interface AnalysisResult {
@@ -17,11 +18,13 @@ export interface AnalysisResult {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 }
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
 }
 
+
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity
 }
@@ -29,6 +32,7 @@ export interface MessageAnalysisResult extends AnalysisResult {
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity
 }
+
 
 
 
@@ -47,6 +51,7 @@ export interface FlagResult {
 
 
 
+
 ;
 export interface SignupCheckResult extends AnalysisResult {}
 ;
@@ -54,4 +59,5 @@ export interface SignupCheckResult extends AnalysisResult {}
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

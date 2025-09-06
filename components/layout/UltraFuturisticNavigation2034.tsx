@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 
@@ -148,6 +151,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+
 
 
 
@@ -380,6 +384,7 @@ import { motion, AnimatePresence } from 'framer-motion';
         price: '$2,999/month'
       }
       {
+
         name: 'Holographic Event Platform'
         href: '/holographic-event-platform'
         description: 'Immersive holographic experiences'
@@ -529,6 +534,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -551,16 +557,45 @@ const quickLinks = [
   { name: 'Status', href: '/status', icon: Activity }
 ];
 
+const socialLinks = [
+  {
+    name: 'LinkedIn'
+    href: 'https://linkedin.com/company/ziontechgroup'
+    icon: Linkedin
+  }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+  {
+    name: 'Instagram'
+    href: 'https://instagram.com/ziontechgroup'
+    icon: Instagram
+  }
+  {
+    name: 'YouTube'
+    href: 'https://youtube.com/@ziontechgroup'
+    icon: Youtube
+  }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+];
+const certifications = [
+  'ISO 27001 Certified'
+  'SOC 2 Type II Compliant'
+  'GDPR Compliant'
+  'HIPAA Compliant'
+  'PCI DSS Level 1'
+  'FedRAMP Authorized'
+  'Quantum Security Certified'
+  'AI Ethics Compliant',];];
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+];
+const certifications = [
+  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
+];
 
-
-
-
-
-export default function UltraFuturisticNavigation2034() {;
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -680,7 +715,9 @@ export default function UltraFuturisticNavigation2034() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -724,6 +761,7 @@ export default function UltraFuturisticNavigation2034() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -733,6 +771,7 @@ export default function UltraFuturisticNavigation2034() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -793,6 +832,7 @@ export default function UltraFuturisticNavigation2034() {;
               </div>;
             </motion && motion.div>;
             {/* Desktop Navigation */}
+
             <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
                 <Link
@@ -811,9 +851,11 @@ export default function UltraFuturisticNavigation2034() {;
 
 
 
+
                   {link.name}
                 </Link>
               ))}
+
 
                   {link.name}
                 </Link>
@@ -1105,6 +1147,7 @@ function UltraFuturisticNavigation2034() {
 
 
 
+
                             >
                               {service.name}
                             </Link>
@@ -1201,7 +1244,9 @@ function UltraFuturisticNavigation2034() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -1215,11 +1260,30 @@ function UltraFuturisticNavigation2034() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+              transition={{ duration: 0.3 }}
+              className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
+            >
+              <div className='px-4 py-6 space-y-4'>
+                {quickLinks.map(link => (                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                  >
+                    {link.name}
+                  </Link>
+                ))}
+              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {quickLinks.map((link) => (
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
 
 
                     </button>
@@ -1319,6 +1383,7 @@ function UltraFuturisticNavigation2034() {
                   className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
+
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";
 
 
@@ -1332,4 +1397,5 @@ function UltraFuturisticNavigation2034() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

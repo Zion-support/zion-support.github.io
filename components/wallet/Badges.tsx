@@ -1,8 +1,11 @@
+
 import React from 'react';
+
 
 import React from 'react';
   id: string;
 label: string;
+
 
 
 import React from 'react';
@@ -27,6 +30,7 @@ export function current_badge (balance: number): Badge | null {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   let current: Badge | null = null;
 ;
   return current;
@@ -60,6 +64,7 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
   return (
 
 
+
   }
   return current;
 }
@@ -73,6 +78,7 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -92,9 +98,11 @@ export default function Badges({ balance }: { balance: number }) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           }`}
           title={`Requires ${b.threshold} ZION$`}
@@ -102,6 +110,7 @@ export default function Badges({ balance }: { balance: number }) {
           {b.label}
         </span>))}
       {active && (
+
 
 
 
@@ -118,3 +127,4 @@ export default function Badges({ balance }: { balance: number }) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

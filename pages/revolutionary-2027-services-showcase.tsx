@@ -1,6 +1,7 @@
 
 
 
+
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {;
@@ -13,6 +14,7 @@ import {;
   MapPin,;
   MessageSquare,;
   Globe,;
+
 
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -164,6 +166,7 @@ export default function Revolutionary2027ServicesShowcase() {
     return filtered;  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
 
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -206,6 +209,7 @@ export default function Revolutionary2027ServicesShowcase() {
             transition={{ duration: 0.8 }}
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
+
 
 
 import { motion, AnimatePresence } from 'framer-motion';
@@ -294,6 +298,63 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
           return service && service.category.includes('Holographic');
         return true;
 
+      });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Price range filter;
+    if (selectedPriceRange !== 'all') {;
+      filtered = filtered.filter(service => {;
+        const price = parseInt(service.price.replace(/[^0-9]/g, '')),;
+        if (selectedPriceRange === 'under-500') return price < 500,;
+        if (selectedPriceRange === '500-2000') return price >= 500 && price < 2000,;
+        if (selectedPriceRange === '2000-10000') return price >= 2000 && price < 10000,;
+        if (selectedPriceRange === 'over-10000') return price >= 10000,;
+        return true;
+      });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Search filter;
+    if (searchTerm) {;
+      filtered = filtered.filter(service =>;
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      );
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Sort;
+    filtered.sort((a, b) => {;
+      switch (sortBy) {;
+        case 'price':;
+          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),;
+        case 'rating':;
+          return b.rating - a.rating,;
+        case 'customers':;
+          return b.customers - a.customers,;
+        case 'launchDate':;
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),;
+        default: return a.name.localeCompare(b.name);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    }),
+    return filtered
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
+
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -312,6 +373,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2027-services-showcase" />
       </Head>
+
       {/* Hero Section */}
       <section className='pt-24 pb-16 px-4 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center relative z-10'>          <motion.div
@@ -355,6 +417,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8">
               Revolutionary 2027
@@ -362,6 +425,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Services Showcase
             </h2>
+
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Experience the future of technology with our revolutionary AI
               Quantum Computing, and Next-Generation IT services. Each solution
@@ -407,6 +471,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
               >
                 <Phone className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.mobile}</span>
@@ -427,11 +492,13 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
+
             {/* CTA Buttons */}
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 Get Started Today
@@ -445,6 +512,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
           </motion.div>
         </div>
       </section>
+
       {/* Search and Filters */}
 
 
@@ -474,6 +542,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
               <input
                 type="text"
                 placeholder="Search revolutionary services..."
@@ -482,7 +551,9 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
+
             {/* Filters */}
+
 
 
 
@@ -495,6 +566,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
+
                   ))}
                 </select>
               </div>
@@ -574,6 +646,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               </div>
             </div>
           </div>
@@ -581,11 +654,14 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
       </section>
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             {filteredServices.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
                   <motion.div
+
                     key={service.id}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -660,6 +736,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
                               POPULAR
@@ -670,6 +747,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
   }
 }
                         </div>
+
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                           {service.name}
                         </h3>
@@ -755,6 +833,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                           <div>
                             <div className="text-lg font-bold text-cyan-400">{service.customers}</div>
                             <div className="text-xs text-gray-400">Customers</div>
@@ -768,6 +847,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
                         </div>
+
                         {/* Category Badge */}
                         <div className='mb-4'>
                           <span
@@ -820,10 +900,12 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                             Learn More
                           </Link>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <a
+
                             href={service && service.link}
                             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'>;
                             <ArrowRight className='w-4 h-4 mr-1' />;
@@ -837,6 +919,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                       </div>;
                     </div>;
                   </motion && motion.div>;
+
 
 
 
@@ -867,6 +950,8 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 
+
+
                 <button
                   onClick={() => {
                     setSearchTerm(''),
@@ -876,6 +961,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                   Clear Filters
                 </button>
               </motion.div>
+
 
 
 
@@ -903,6 +989,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                   Try adjusting your search criteria or filters;
                 </p>;
 
+
                 <button;
                   on_click={() => {
                     setSearchTerm ('');
@@ -917,14 +1004,40 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
         </div>;
       </section>;
 
+      {/* Contact CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }} className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join the future of technology with our revolutionary 2027 services.
               Each solution is designed to deliver measurable ROI and competitive advantage.
             </p>
+
             <div className='flex flex-wrap items-center justify-center gap-6 mb-8'>
               <div className='flex items-center gap-2 text-cyan-400'>
                 <Phone className='w-5 h-5' />
@@ -961,6 +1074,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               </div>
               <div className="flex items-center gap-2 text-purple-400">
                 <Mail className="w-5 h-5" />
@@ -971,6 +1085,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
               </div>
             </div>
+
             <div className='flex flex-wrap items-center justify-center gap-4'>
               <a
                 href='/contact'
@@ -993,6 +1108,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 Start Your Transformation
               </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
@@ -1005,6 +1121,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
         </div>
       </section>
     </UltraQuantumHolographicBackground>
+
 );
   )
 }
@@ -1024,4 +1141,5 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

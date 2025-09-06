@@ -1,6 +1,7 @@
 
 
 
+
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
@@ -8,6 +9,7 @@ import {Footer} from "@/components/Footer";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -53,6 +55,8 @@ export default function CreatorDashboard() {
               </p>
 
 
+
+
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
@@ -74,6 +78,7 @@ export default function CreatorDashboard() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -82,4 +87,5 @@ export default function CreatorDashboard() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

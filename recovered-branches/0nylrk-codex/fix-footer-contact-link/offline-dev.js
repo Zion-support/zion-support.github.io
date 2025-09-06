@@ -7,6 +7,7 @@ const server = http && http.createServer((req, res) => {
         res && res.end('Error loading offline && offline.html'),
         return
       }
+
       res.writeHead(200, { 'Content-Type': 'text/html' })
 
     })
@@ -34,6 +35,7 @@ const PORT = 8080
     res.end('Not found');
   }
 }),
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -63,11 +65,13 @@ server && server.listen(PORT, () => {
 `)
 
 
+
 }),
 
 const PORT = 8080,
 server.listen (PORT, () => {
   console.log (`;
+
 
 
 ╔══════════════════════════════════════════════════════════════════╗;
@@ -91,6 +95,7 @@ server.listen (PORT, () => {
 `);
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 }),
@@ -99,4 +104,5 @@ server.listen (PORT, () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

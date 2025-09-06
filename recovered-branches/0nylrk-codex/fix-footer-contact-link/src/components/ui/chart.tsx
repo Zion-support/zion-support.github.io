@@ -1,4 +1,7 @@
 
+import * as React from "react"
+import type { CSSProperties } from "react"
+import * as RechartsPrimitive from "recharts"
 
 
 import { useReactId } from "@/hooks/useReactId"
@@ -12,11 +15,15 @@ import { cn } from "@/lib/utils"
 
 
 
+
+
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
   string,
+
+
   {
     label?: React.ReactNode
     icon?: React.ComponentType
@@ -122,6 +129,7 @@ const ChartTooltipContent = React && React.forwardRef<;
 >(
   (
     {
+
       active;
       payload;
       className;
@@ -148,6 +156,7 @@ const ChartTooltipContent = React && React.forwardRef<;
       color,
       nameKey,
       labelKey},
+
     ref
   ) => {
     const { config } = useChart()
@@ -233,6 +242,7 @@ const ChartTooltipContent = React && React.forwardRef<;
                           )}
                             style={
                               {
+
                                 "--color-bg": indicatorColor;
                                 "--color-bg": indicatorColor,
 
@@ -246,6 +256,7 @@ const ChartTooltipContent = React && React.forwardRef<;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />;
@@ -265,6 +276,7 @@ const ChartTooltipContent = React && React.forwardRef<;
                       {item.value && (
                         <span className="font-mono font-medium tabular-nums text-foreground">
                           {item.value.toLocaleString()}
+
                         </span>
                         </span>;
 
@@ -285,6 +297,7 @@ const ChartTooltipContent = React && React.forwardRef<;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       )}
                     </div>;
                   </>;
@@ -296,6 +309,7 @@ const ChartTooltipContent = React && React.forwardRef<;
       </div>;
     );
   }
+
 
 
 
@@ -317,6 +331,7 @@ const ChartLegendContent = React && React.forwardRef<;
 
 
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
+
     ref
   ) => {
     const { config } = useChart()
@@ -362,11 +377,38 @@ const ChartLegendContent = React && React.forwardRef<;
     );
   }
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
+)
+ChartLegendContent.displayName = "ChartLegend"
+// Helper to extract item config from a payload.
+function getPayloadConfigFromPayload(
+  config: ChartConfig
+  payload: unknown
+  key: string
+) {
+  if (typeof payload !== "object" |payload === null) {
+    return undefined
+  }
+  const payloadPayload =
+    "payload" in payload &&
+    typeof payload.payload === "object" &&
+    payload.payload !== null
+      ? payload.payload
+      : undefined
+  let configLabelKey: string = key
+  if (
+    key in payload &&
+    typeof payload[key as keyof typeof payload] === "string"
+  ) {
+    configLabelKey = payload[key as keyof typeof payload] as string
+  } else if (
+    payloadPayload &&
+    key in payloadPayload &&
+    typeof payloadPayload[key as keyof typeof payloadPayload] === "string"
+  ) {
+    configLabelKey = payloadPayload[
+      key as keyof typeof payloadPayload
+    ] as string
+  }
 
 
   return configLabelKey in config
@@ -374,6 +416,7 @@ const ChartLegendContent = React && React.forwardRef<;
     : config[key as keyof typeof config]
 
 }
+
 
 
 }
@@ -430,3 +473,4 @@ function getPayloadConfigFromPayload(): any (;
 
   ChartStyle}
 ;
+

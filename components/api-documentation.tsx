@@ -1,9 +1,12 @@
+
 import React from 'react',
 import React from 'react';
+
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -72,6 +75,7 @@ export default function APIDocumentation() {;
   ArrowRight,
   BarChart3,
 
+
             <a className='text - cyan - 400' href='/api - documentation - generator'>;
 
               API Documentation Generator;
@@ -107,7 +111,9 @@ import {
 				</ul>
 			</div>
 		</div>
+
 	)
 }
 	),
 }
+

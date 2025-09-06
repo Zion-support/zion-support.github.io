@@ -3,10 +3,12 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -17,6 +19,7 @@ interface TalentCardContentProps {
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
+
 }
 
 
@@ -29,9 +32,12 @@ import {TalentCardSkills} from "./TalentCardSkills";
 
 
 
+
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div>
+
+
 
 
 import React, { useState } from "react",;
@@ -57,6 +63,7 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -65,6 +72,7 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Location */}
       {timezone && (;
@@ -75,6 +83,7 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
       )}
 
       {/* Short bio or summary - longer on hover for desktop */}
+
       <div
         className="overflow-hidden transition-all duration-300"
         style={{ maxHeight: isHovering ? "8rem" : "3rem" }}
@@ -91,6 +100,7 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
       >
         <p className="text-zion-slate mb-4">
           {summary || bio}
+
 
 
 

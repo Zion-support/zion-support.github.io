@@ -1,4 +1,5 @@
 
+
 import * as React from &quot;react&quot;
 import type { CSSProperties } from &quot;react&quot;
 import { Sheet, SheetContent } from &quot;@/components/ui/sheet&quot;
@@ -28,10 +29,13 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 
 
   if (props.collapsible === "none") {
+
     return (
       <div
         className={cn(
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
+
+
           props.className
         )}
 
@@ -61,6 +65,7 @@ if ( {) {
         </SheetContent>;
       </Sheet>);
   }
+
   return (;
     <div;
       ref={ref}
@@ -75,6 +80,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
@@ -84,6 +90,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       {/* This is what handles the sidebar gap on desktop */}
 <div
         className={cn(
+
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear&quot;
           &quot;group-data-[collapsible=offcanvas]:w-0&quot;
           &quot;group-data-[side=right]:rotate-180&quot;
@@ -96,10 +103,12 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === "floating" || props.variant === "inset"
             ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)))]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+
         )}
       />
       <div
         className={cn(
+
           "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex&quot;
           props.side === &quot;left&quot;
             ? &quot;left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]&quot;
@@ -116,6 +125,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
           props.variant === "floating" || props.variant === "inset"
             ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
+
           props.className
         )}
         {...props}
@@ -130,6 +140,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
     </div>
   )
 })
+
 Sidebar.displayName = &quot;Sidebar&quot;
 export const SidebarRail = React.forwardRef<
   HTMLButtonElement
@@ -147,6 +158,7 @@ export const SidebarRail = React.forwardRef<
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -158,6 +170,7 @@ export const SidebarRail = React.forwardRef<
       onClick={toggleSidebar}
       title="Toggle Sidebar"
       className={cn(
+
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex&quot;
         &quot;[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize&quot;
         &quot;[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize&quot;
@@ -170,12 +183,14 @@ export const SidebarRail = React.forwardRef<
         "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar",
         "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
         "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
+
         props.className
       )}
       {...props}
     />
   )
 })
+
 SidebarRail.displayName = &quot;SidebarRail&quot;
 export const SidebarInset = React.forwardRef<
   HTMLDivElement
@@ -193,20 +208,25 @@ export const SidebarInset = React.forwardRef<
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 >((props, ref) => {
   return (
     <main
       ref={ref as SafeRef<HTMLDivElement>}
       className={cn(
+
         "relative flex min-h-svh flex-1 flex-col bg-background&quot;
         &quot;peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow&quot;
         "relative flex min-h-svh flex-1 flex-col bg-background",
         "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
+
         props.className
       )}
       {...props}
     />
   )
 })
+
 SidebarInset.displayName = &quot;SidebarInset"
 SidebarInset.displayName = "SidebarInset"
+

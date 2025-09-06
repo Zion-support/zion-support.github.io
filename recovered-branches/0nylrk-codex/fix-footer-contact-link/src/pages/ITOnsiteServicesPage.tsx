@@ -1,6 +1,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -40,6 +41,7 @@ export default function ITOnsiteServicesPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -47,6 +49,7 @@ export default function ITOnsiteServicesPage() {
         title: "Payment Successful"
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
+
   }, [success]);
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
@@ -55,6 +58,7 @@ export default function ITOnsiteServicesPage() {
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
   
+
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>
@@ -62,6 +66,7 @@ export default function ITOnsiteServicesPage() {
     )
     .sort((a, b) => {
       // First, sort by popular status
+
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
       if (aIsPopular && !bIsPopular) return -1;
@@ -79,20 +84,24 @@ export default function ITOnsiteServicesPage() {
       return a.country.localeCompare(b.country)
     }),
   
+
   const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry(country)
     // Scroll to the service details section
     setTimeout(() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
+
   }
 
   },
   
+
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -172,14 +181,17 @@ export default function ITOnsiteServicesPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           {/* Hero Section with Features */}
 
           <PageHero />;
 
           {/* Country Selection Tabs */}
           <div className="mb-12">
+
             <CountryTabs
             <CountryTabs 
+
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
@@ -222,6 +234,7 @@ export default function ITOnsiteServicesPage() {;
       <QuoteFormSection />
     </AppLayout>
   )
+
 }
 }
 
@@ -322,3 +335,4 @@ if (return 1) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

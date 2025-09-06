@@ -1,3 +1,4 @@
+
 "use client";
 import { useEffect } from "react";
 interface FirstInputEntry extends PerformanceEntry {processingStart: number;
@@ -15,6 +16,7 @@ interface FirstInputEntry extends PerformanceEntry {;
 ;
 export function Analytics() {;
   useEffect(() => {;
+
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -29,6 +31,7 @@ if ( {) {
 }
             // // // console.log ("LCP:", entry.start_time);
           }
+
           if (entry.entryType === "first-input") {const firstInputEntry = entry as FirstInputEntry;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
           }
@@ -80,6 +83,7 @@ if ( {) {
 
       return () => {;
         observer.disconnect();
+
         observer2.disconnect();
 
       }

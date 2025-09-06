@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -16,7 +18,9 @@ export const Footer: React.FC = () => {
 const Footer: React.FC = () => {
   return (
 
+
     <footer className="bg-gray-900 text-white py-8">
+
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -90,7 +94,6 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
 
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-        </div>
 
 
         <div className='mt-12 pt-8 border-t border-primary/20'>
@@ -125,8 +128,10 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
+
 };
 
 export default Footer;
+
 
 

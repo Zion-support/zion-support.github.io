@@ -13,12 +13,16 @@ files && files.forEach((file) => {
 
 
 
+
+
       (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
+
+
 
 
 

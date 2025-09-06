@@ -5,11 +5,13 @@
 
 
 
+
 export interface SmartContractInfo {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string;
   transactionHash?: string;
@@ -24,16 +26,19 @@ export interface SmartContractInfo {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   client: string;
   talent: string;
   amount: number;
   currency: string;
   deliverables: string;
+
 
 
 
@@ -46,12 +51,15 @@ export interface DeploymentOptions {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
 
   deployToChain: boolean
 }
+
+
 ;
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none',;
 export interface SmartContractInfo {;
@@ -89,6 +97,7 @@ export interface DeploymentOptions {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -96,4 +105,5 @@ export interface DeploymentOptions {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

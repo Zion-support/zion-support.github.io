@@ -3,6 +3,7 @@
 
 
 
+
   isOpen,
   onClose,
   serviceId,
@@ -16,6 +17,7 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   isOpen: boolean;
   onClose: () => void;
@@ -195,9 +197,6 @@ defaultType
     </div>
 
 
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
         </div>
       </div>
@@ -205,3 +204,9 @@ defaultType
   )
 
 }
+=======
+}
+
+}
+
+

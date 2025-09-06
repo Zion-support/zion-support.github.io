@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -15,6 +16,7 @@ import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/res
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export function MobileResumeBuilder() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -23,7 +25,13 @@ export function MobileResumeBuilder() {
         title="Resume Builder"
         showBack
 
-
+      />
+      <main className="py-4">
+        <ResumeBuilderComponent />
+      </main>
+      <BottomNavigation />
+    </div>
+  )
 
 
 import React from "react",;
@@ -46,6 +54,7 @@ export function MobileResumeBuilder() {;
       <BottomNavigation />;
     </div>;
   );
+
 }
 
 
@@ -77,4 +86,5 @@ function MobileResumeBuilder() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

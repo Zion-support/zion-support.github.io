@@ -11,7 +11,9 @@ files.forEach((file) => {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
 
+
     let modified = false;
+
 
 
 

@@ -1,5 +1,6 @@
 }});
 console.log(`Fixed ${fixedCount} files`)));
+
 }
 });
 
@@ -11,4 +12,5 @@ console.log(`Fixed ${fixedCount} files`)));
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

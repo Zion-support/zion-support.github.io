@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 // Mock data for demonstration
 
@@ -71,6 +73,41 @@ const mockMessages: Message[] = [
   {
 
 
+  {
+
+export function MobileMessages() {
+
+  const handleSelectConversation = (id: string) => {
+    setActiveConversation(id)
+  },
+  
+  const handleBack = () => {
+    setActiveConversation(null)
+  },
+  
+  const handleSendMessage = (content: string) => {
+    const newMessage: Message = {
+      id: `${Date.now()}`,
+      content,
+      timestamp: "Just now",
+      isMe: true,
+      status: "sent"},
+    setMessages([...messages, newMessage])
+  },
+  
+  const currentContact = mockConversations.find(c => c.id === activeConversation),
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      {activeConversation ? (
+        <MobileChatView
+          contact={{
+
+import React, { useState } from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { MobileConversationList } from "../components/messaging/MobileConversationList",;
+import { MobileChatView } from "../components/messaging/MobileChatView",;
 
 // Mock data for demonstration;
 const mockConversations = [;
@@ -170,6 +207,7 @@ export function MobileMessages() {;
     <div className="min-h-screen flex flex-col">;
       {activeConversation ? (;
 
+
         <MobileChatView
           contact={{
             id: currentContact?.id |""
@@ -180,6 +218,7 @@ export function MobileMessages() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           }}
           messages={messages}

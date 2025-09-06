@@ -1,9 +1,16 @@
 
 
 
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import Login from "@/pages/Login",
+import Signup from "@/pages/Signup",
+import ForgotPassword from "@/pages/ForgotPassword",
+import UpdatePassword from "@/pages/UpdatePassword",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import Onboarding from "@/pages/Onboarding",
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const AuthRoutes = () => {
   return (
     <Routes>
@@ -39,10 +46,12 @@ const AuthRoutes = () => {
       />
     </Routes>
   )
+
 }
 export default AuthRoutes;
 
 },
+
 
 
 
@@ -106,6 +115,7 @@ const AuthRoutes = () => {;
   );
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -116,3 +126,4 @@ const AuthRoutes = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default AuthRoutes;
+

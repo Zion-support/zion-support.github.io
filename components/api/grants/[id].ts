@@ -2,8 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+import type {
 
-
+} from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
@@ -19,13 +21,24 @@ function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 
-  if (!fs && fs.existsSync(file)) return null;
-  return JSON && JSON.parse(fs && fs.readFileSync(file, 'utf8')) as GrantApplication;
+
+  const file = grantPath(id);
+  if (!fs.existsSync(file)) return null;
+  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication;
+function writeGrant(record: GrantApplication) {
+  ensureDir();
+  fs.writeFileSync(
+    grantPath(record.id)
+    JSON.stringify(record, null, 2)
+    'utf8'
+  );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
+}
 
 
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -36,6 +49,7 @@ function writeGrant(record: GrantApplication) {
 
   ensureDir(),
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
+
 
 
   if (!id) {
@@ -83,10 +97,7 @@ function writeGrant(record: GrantApplication) {
   }
 
   res.status(405).end('Method Not Allowed')
-}
 
-
-=======
       status: payload.submit ? 'Submitted' : existing.status;
       updated_at: new Date ().toISOString ()} as GrantApplication;
     write_grant (next);
@@ -109,3 +120,6 @@ function writeGrant(record: GrantApplication) {
   res.status(405).end('Method Not Allowed')
 
 }
+=======
+
+

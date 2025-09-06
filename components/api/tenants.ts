@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
 
 
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const method = (req && req.method || 'GET').toUpperCase(),
@@ -106,3 +107,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

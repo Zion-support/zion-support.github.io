@@ -3,10 +3,12 @@
 
 
 
+
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {Trash2} from 'lucide-react';
 import {SkillItemProps} from './types';
+
 
 
 
@@ -20,7 +22,9 @@ import { SkillItemProps } from './types',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
@@ -44,6 +48,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
         <Trash2 className="h-3 w-3" />
       </Button>
     </Badge>
+
   );
 
 
@@ -54,4 +59,5 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

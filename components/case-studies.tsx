@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,6 +22,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
 
 
 
@@ -49,6 +51,7 @@ export default function CaseStudiesPage() {
 
   return (
 
+
 }
 
 
@@ -59,4 +62,5 @@ export default function CaseStudiesPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,16 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+import { requireSuperadminApi } from '../../../utils/api/auth';
 
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [
@@ -24,5 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ['CAC/LTV ratio1: 5.60.4']], const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv');
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
   res.status(200).send(csv)
+
 }
 }
+

@@ -7,6 +7,7 @@
 
 
 
+
 import { useState } from './react';
 import { TALENT_PROFILES } from '@/data / talent_data';
 import { JOB_POSTS } from '@/data / jobs_data';
@@ -14,6 +15,7 @@ import { PROJECTS } from '@/data / projects_data';
 export interface SearchResult {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string;
   type: "talent" | "job" | "project";
@@ -27,15 +29,38 @@ interface SearchFilters {
   location?: string | null;
   budget?: { min: number, max: number } | null;
 
+  availability?: string | null
+}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+import { JOB_POSTS } from "@/data/jobsData",
+import { PROJECTS } from "@/data/projectsData",
+export interface SearchResult {
+  id: string,
+  type: "talent" | "job" | "project",
+  title: string,
+  description: string
+import { useState } from "react",;
+import { TALENT_PROFILES } from "@/data/talentData",;
+import { JOB_POSTS } from "@/data/jobsData",;
+import { PROJECTS } from "@/data/projectsData",;
+export interface SearchResult {;
+  id: string,;
+  type: "talent" | "job" | "project",;
+  title: string,;
+  description: string;
+}
+;
+interface SearchFilters {;
+  type?: string | null,;
+  skills?: string[] | null,;
+  location?: string | null,;
+  budget?: { min: number, max: number } | null,;
   availability?: string | null;
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
+export function useAISearch() {
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [loading, setLoading] = useState(false),
 
 
   const search = async (query: string) => {
@@ -44,6 +69,7 @@ interface SearchFilters {
       const response = await fetch(
         "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
         {
+
           method: "POST"
           headers: { "Content-Type": "application/json" }
           body: JSON.stringify({ query })}
@@ -59,16 +85,19 @@ interface SearchFilters {
       const filters: SearchFilters = data.filters || {},
 
       const items: SearchResult[] = [],
+
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills |filters.skills.length === 0) return true
         return skills?.some((s) =>
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
         )
+
       }
       if (!filters.type |filters.type === "talent" |filters.type === "all") {
       },
 
       if (!filters.type || filters.type === "talent" || filters.type === "all") {
+
         TALENT_PROFILES.forEach((t) => {
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return;
           if (!matchSkill(t.skills)) return;
@@ -94,8 +123,10 @@ interface SearchFilters {
     } finally {
       setLoading(false)
 
+
     }
   }
+
 
 
 
@@ -178,10 +209,14 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   return { results, loading, search }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+
+

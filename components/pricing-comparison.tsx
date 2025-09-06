@@ -1,9 +1,11 @@
+
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
+
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
@@ -22,6 +24,7 @@ export default function PricingComparisonPage() {
           rating: '4.8/5'
           pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
           cons: [
+
 
 
 
@@ -53,6 +56,7 @@ export default function PricingComparisonPage() {
           savings: 'Save $17/month with Zion',
         },          pros: ['Unlimited wordsGood valueSimple interface'],
           cons: ['Basic featuresLimited templatesNo advanced SEO'],
+
 
 
 
@@ -328,6 +332,9 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
               <Button
 
 
+                  </div>
+                  <p className={`text-lg font-semibold ${insight.color}`}>
+
                     {insight.insight}
                   </p>
                 </Card>
@@ -335,6 +342,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
             </div>
           </div>
         </section>
+
 
 
 
@@ -352,6 +360,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {/* Detailed Comparison */}
 
@@ -520,16 +529,22 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                             </div>;
                           ))}
 
-
-                        </div>;
-                      </div>;
-                    </Card>;
-                  </div>;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
+                        </div>
+                        <div className="text-center">
+                          <p className="text-green-400 font-semibold mb-2">Starting at</p>
+                          <p className="text-2xl font-bold text-white">{service.zionPricing.starter}</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                  {/* Competitors */}
+                  {service.competitors.map((competitor, compIndex) => (
+                    <div key={compIndex} className='lg:col-span-1'>
+                      <Card className='h-full border border-gray-700'>
+                        <div className='text-center p-6'>
+                          <div className='inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4'>
+                            {competitor.name}
+                          </div>
 
 
                               <Star
@@ -552,7 +567,9 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -599,6 +616,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -614,10 +632,12 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
 
 
+
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+
 
               Ready to Save Money and Get Better Features?
 
@@ -628,6 +648,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
@@ -656,6 +677,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 size='lg'
 
 
+
                 Try DevOps Automation
 
 
@@ -669,4 +691,5 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

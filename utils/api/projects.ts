@@ -1,10 +1,12 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export interface Milestone {
+
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
@@ -12,7 +14,9 @@ export interface Milestone {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   id: string;
   title: string;
@@ -24,6 +28,7 @@ export interface Milestone {;
   createdAt: string;
   updatedAt: string;
 }
+
 
 
 
@@ -47,10 +52,12 @@ export function getAllProjects(): Project[] {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
+
 
 
 
@@ -81,6 +88,7 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 
 
 
+
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
@@ -90,6 +98,7 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
+
 
 
 
@@ -106,10 +115,13 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
   };
   }
+
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   return newMilestone;
 }
+
+
 
 
 
@@ -128,6 +140,8 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
 
 
+
+
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
 
@@ -140,7 +154,9 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

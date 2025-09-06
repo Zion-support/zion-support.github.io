@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 class ErrorBoundary extends React.Component {
@@ -32,6 +33,7 @@ export default function InvestorsPage() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 export default function InvestorsPage() {
@@ -117,7 +119,9 @@ export default function InvestorsPage() {
 
 			</div>
 		</div>
+
 	)
 }
 	),
 }
+

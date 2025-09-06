@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -92,13 +93,16 @@ function InterviewCard() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
     const success = await respondToInterview(interview.id, { 
       interview_id: interview.id, 
       status 
     }),
+
     
+
     if (success) {
       toast({
         title: `Interview ${status}`
@@ -114,6 +118,7 @@ function InterviewCard() {
       })
     }
     setIsLoading(false)
+
   }
   const handleCancelInterview = async () => {
     setIsLoading(true);
@@ -124,6 +129,7 @@ function InterviewCard() {
     setIsLoading(true),
     const success = await cancelInterview(interview.id),
     
+
     if (success) {
       toast({
         title: "Interview cancelled"
@@ -138,20 +144,24 @@ function InterviewCard() {
       })
     }
     setIsLoading(false)
+
   }
   },
+
 
   const getStatusBadge = () => {
     switch (interview.status) {
       case 'requested':
         return <Badge className="bg-amber-500">Pending</Badge>;
       case 'confirmed':
+
         return isInterviewLive ?
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> :
           <Badge className="bg-green-600">Confirmed</Badge>;
         return isInterviewLive ? 
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : 
           <Badge className="bg-green-600">Confirmed</Badge>,
+
       case 'declined':
         return <Badge variant="destructive">Declined</Badge>,
       case 'rescheduled':
@@ -162,6 +172,8 @@ function InterviewCard() {
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,
       default:
         return <Badge>{interview.status}</Badge>
+
+
 
 
 
@@ -249,7 +261,9 @@ function InterviewCard() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -300,6 +314,7 @@ function InterviewCard() {
       <CardFooter className="pt-2">;
         <div className="grid grid-cols-1 gap-2 w-full">;
           {/* For clients with pending requests */}
+
           {isClient && isInterviewPending && (;
             <AlertDialog>;
               <AlertDialogTrigger asChild>;
@@ -326,6 +341,7 @@ function InterviewCard() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;
@@ -369,6 +385,7 @@ function InterviewCard() {
                 </Button>
               ) : (
                 <Button className="w-full" disabled={!isInterviewLive}>
+
                   <Video className="h-4 w-4 mr-2" />
                   <Video className="h-4 w-4 mr-2" /> 
 
@@ -381,10 +398,13 @@ function InterviewCard() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
+
               
+
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <Button variant="outline" size="sm" className="w-full mt-2">
@@ -431,12 +451,15 @@ function InterviewCard() {
           <DialogHeader>
             <DialogTitle>Respond to Interview Request</DialogTitle>
           </DialogHeader>
+
           <InterviewResponseForm
           <InterviewResponseForm 
+
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
+
           />
         </DialogContent>
       </Dialog>
@@ -470,5 +493,4 @@ function InterviewCard() {
     </Card>);
 }
 
-=======
-;
+

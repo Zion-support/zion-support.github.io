@@ -9,6 +9,7 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 export default function Web3LoginButton() {;
 
 
@@ -18,12 +19,14 @@ export default function Web3LoginButton() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+
 
 
 
@@ -38,6 +41,7 @@ export default function Web3LoginButton() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [open, setOpen] = useState(false);
 
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
@@ -92,6 +96,7 @@ export default function Web3LoginButton() {;
       await fetch('/api/auth/logout', { method: 'POST' });
     } catch {}
     setUser(null);
+
 
 
 
@@ -166,5 +171,6 @@ export default function Web3LoginButton() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

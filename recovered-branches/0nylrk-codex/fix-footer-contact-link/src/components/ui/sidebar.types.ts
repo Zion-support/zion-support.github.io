@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // This file fixes the ref type issues in sidebar components
 // Export a placeholder to ensure the file is recognized as a module
@@ -60,4 +61,7 @@ export type PolymorphicComponentProp<T extends React.ElementType, Props = {}> =
 
 
 
+
+
 };
+

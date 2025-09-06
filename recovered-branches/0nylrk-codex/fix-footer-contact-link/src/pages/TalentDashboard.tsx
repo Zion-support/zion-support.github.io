@@ -1,6 +1,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -29,6 +30,7 @@ function TalentDashboardContent() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <>
       <SEO
@@ -105,6 +107,7 @@ function TalentDashboardContent() {;
                 </div>
               </CardContent>
             </Card>
+
             
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -214,6 +217,7 @@ function TalentDashboardContent() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {/* Upcoming Interviews Card */}
@@ -289,6 +293,7 @@ function TalentDashboardContent() {;
     </>
   )
 }
+
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
@@ -319,4 +324,5 @@ export default function TalentDashboard() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

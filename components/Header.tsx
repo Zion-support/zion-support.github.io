@@ -1,6 +1,8 @@
 
 
 
+
+
 "use client";
 
 "use client";
@@ -10,12 +12,31 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
+import {
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { 
+  Menu, 
+  X, 
+  Phone, 
+  Mail, 
+
+
 "use client";
 ;
 import React, { useState, useEffect } from './react';
 import Link from './next / link';
 
 import {
+
+
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  ChevronDown, 
+  Menu, 
 
 
   X,
@@ -32,6 +53,7 @@ import {
   GraduationCap,
   Factory,
   Truck,
+
 
 
 
@@ -59,6 +81,7 @@ import {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 } from "lucide-react";
 
 export default function Header() {;
@@ -105,21 +128,132 @@ function Header() {
   }
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
 
 
-
-            <Link href="/" className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
-                <Brain className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
             </Link>
+          </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+          {/* Desktop CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+            >
+              Get Started
+            </Link>
+          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+        {/* Mobile Menu */}
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+
+
+
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { 
+      name: 'Services', 
+      href: '/services', 
+      dropdown: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      href: '/solutions', 
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Healthcare', href: '/solutions/healthcare' },
+        { name: 'Finance', href: '/solutions/finance' },
+        { name: 'Government', href: '/solutions/government' },
+        { name: 'Retail', href: '/solutions/retail' },
+        { name: 'Education', href: '/solutions/education' }
+      ]
+    },
+    { 
+      name: 'Industries', 
+      href: '/industries', 
+      dropdown: [
+        { name: 'Financial Services', href: '/industries/financial' },
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Retail', href: '/industries/retail' },
+        { name: 'Government', href: '/industries/government' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      href: '/about', 
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/resources', 
+      dropdown: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Tutorials', href: '/tutorials' },
+        { name: 'API Documentation', href: '/api-docs' }
+      ]
+    },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
+  };
+
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">
 
 
       {/* Top Bar */}
@@ -140,6 +274,7 @@ origin/automation-improvements-final
               <MapPin className="w-4 h-4" />
               <span>364 E Main St STE 1008, Middletown, DE 19709</span>
             </div>
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
           </div>
@@ -272,6 +407,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -279,6 +415,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 {item && item.name}
               </Link>;
             ))}
+
 
 
 
@@ -300,6 +437,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                             onClick={() => setActiveDropdown(null)}
                           >
                             {subItem.name}
+
                           </Link>
                         ))}
                       </motion.div>
@@ -312,10 +450,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
+
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
+
+
 
 
               animate={{ opacity: 1, height: 'auto' }}
@@ -358,6 +500,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                         </Link>
                       ))}
                     </div>
+
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -398,6 +541,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
 origin/automation-improvements-final
+
               <Link
                 key={item.name}
                 href={item.href}
@@ -406,6 +550,7 @@ origin/automation-improvements-final
                 {item.name}
               </Link>
             ))}
+
 
 >>>>>>> origin/automation-improvements-final
 
@@ -432,6 +577,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
             >
               Get Started
             </Link>
@@ -448,12 +594,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             )}
           </button>
         </div>
+
       </nav>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
           </button>;
         </div>;
+
 
 
 
@@ -473,6 +621,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
+
 className="lg:hidden bg-white shadow-lg">;
               <div className="px-4 py-6 space-y-4">;
                 {navigation && navigation.map((item) => (;
@@ -483,6 +632,7 @@ className="lg:hidden bg-white shadow-lg">;
                     className="block text-gray-700 hover:text-blue-600 font-medium">;
                     {item && item.name}
                   </Link>;
+
                   <Link
                     key={item.name}
                     href={item.href}
@@ -496,6 +646,7 @@ className="lg:hidden bg-white shadow-lg">;
                 <Link
                   href="/contact"
                   onClick={closeMenu}
+
 
       title: "Web Development",
       description: "Custom websites and web applications",
@@ -667,6 +818,7 @@ className="lg:hidden bg-white shadow-lg">;
 
 }
 
+
                 >
                   Get Started
                 </Link>
@@ -674,6 +826,7 @@ className="lg:hidden bg-white shadow-lg">;
             </motion.div>
           )}
         </AnimatePresence>
+
       </div>
     </header>
   );
@@ -694,3 +847,4 @@ export default Header;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,9 +1,11 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
   api: {
+
 
 
   if (
@@ -30,6 +32,12 @@ export const config = {
 }
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ invoice: 'PDF buffer' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export const config = {;
+  api: {;
 
     responseLimit: false}};
 
@@ -59,6 +67,7 @@ export const config = {
     response_limit: false,
   },
 }
+
 
 
 ;
@@ -98,3 +107,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

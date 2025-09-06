@@ -85,9 +85,11 @@ async function main() {
 
 
 
+
   // Generate automation ideas if key present;
   try {;
     await generateIdeasIfPossible();
+
   } catch {}
 
 
@@ -104,6 +106,7 @@ async function main() {
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
+
 
 
 
@@ -124,3 +127,4 @@ main().catch((e) => { console && console.error(e), process && process.exit(1) })
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,5 +1,7 @@
+
 export interface AdditionalRealService {;
 export interface AdditionalRealService {
+
   id: string;
   name: string;
   tagline: string;
@@ -12,6 +14,7 @@ export interface AdditionalRealService {
   contact_info: {
     mobile: string;
     email: string;
+
     address: string;
   };
 
@@ -22,10 +25,12 @@ export interface AdditionalRealService {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
     address: string;
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
+
     id: 'ai-automation-suite'
     name: 'AI Automation Suite'
     tagline: 'Intelligent automation for modern businesses'
@@ -118,11 +123,12 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
   },
 ];      mobile: "+1 302 464 0950";
 
-      email: "kleber@ziontechgroup.com";
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+
     id: "ai-automation-suite",
     name: "AI Automation Suite",
     tagline: "Intelligent automation for modern businesses",
@@ -177,3 +183,4 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     }
   }
 ];
+

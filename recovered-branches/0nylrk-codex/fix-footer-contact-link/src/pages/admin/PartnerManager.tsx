@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
@@ -18,6 +19,7 @@ import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
 
 
+
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -31,6 +33,7 @@ interface PartnerProfile {
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
+
   commission_rate?: number
 }
 
@@ -55,17 +58,22 @@ export default function PartnerManager() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
+
+
 
 
       navigate("/login");
@@ -168,7 +176,22 @@ export default function PartnerManager() {;
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
 
 
-
+      navigate("/login"),
+      return
+import { useState, useEffect } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useNavigate } from "react-router-dom",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
+import { toast } from "@/hooks/use-toast",;
+import { Check, Flag, Search, Settings, X } from "lucide-react",;
+import { supabase } from "@/integrations/supabase/client",;
 
 interface PartnerProfile {;
   id: string,;
@@ -229,6 +252,7 @@ export default function PartnerManager() {;
       } else {;
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
+
 
 
 
@@ -370,6 +394,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       }
 
       console.error ("Error fetching partners:", error);
@@ -386,14 +411,18 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
+
   }
   },
+
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
+
+
 
 
 
@@ -431,28 +460,35 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     
+
     setFilteredPartners(filtered)
   },
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)
+
   }
   },
+
 
   const handleTabChange = (value: string) => {
     setActiveTab(value)
     filterPartners(partners, value, searchQuery)
+
   }
   },
+
 
   const handleViewDetails = (partner: PartnerProfile) => {
     setSelectedPartner(partner)
     setIsDetailsOpen(true)
+
   }
   const handleOpenSettings = (partner: PartnerProfile) => {
     setSelectedPartner(partner);
@@ -467,21 +503,26 @@ if ( {) {
     setIsSettingsOpen(true)
   },
 
+
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p =>
         p.id === partnerId ? { ...p, status } : p
+
       ));
       )),
       
+
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
         searchQuery
+
       );
       ),
       
+
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected"
         description: `The partner has been ${status}.`
@@ -497,6 +538,7 @@ if ( {) {
         description: "Failed to update partner status"
         variant: "destructive"})
     }
+
   }
   const handleSaveSettings = async () => {
     if (!selectedPartner) return;
@@ -505,10 +547,12 @@ if ( {) {
   const handleSaveSettings = async () => {
     if (!selectedPartner) return,
     
+
     try {
       // Update commission rate
       setPartners(partners.map(p =>
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
+
       ));
 
       filterPartners(;
@@ -525,6 +569,7 @@ if ( {) {
         searchQuery
       ),
       
+
       toast({
         title: "Settings Updated"
         description: "Partner settings have been updated successfully."
@@ -536,6 +581,8 @@ if ( {) {
         title: "Error"
         description: "Failed to update partner settings"
         variant: "destructive"})
+
+
 
 
 
@@ -625,6 +672,7 @@ if ( {) {
       default: return size;
     }
 
+
   },
 
 
@@ -635,6 +683,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -646,8 +695,10 @@ if ( {) {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+
   }
   },
+
 
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
@@ -656,6 +707,7 @@ if ( {) {
 
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
+
         {flags}
       </Badge>
     )
@@ -733,6 +785,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -749,6 +802,7 @@ if ( {) {
                 </CardTitle>
                 <div className="text-2xl font-bold text-white">
                   {partners.filter(p => p.status === 'approved').length}
+
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -779,6 +833,7 @@ if ( {) {
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
                   {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
+
                 </div>
               </CardHeader>
               <CardContent className="pt-0">
@@ -817,10 +872,12 @@ if ( {) {
               <TabsTrigger value="all">All</TabsTrigger>
             </TabsList>
             <TabsContent value="pending" className="space-y-4">
+
               <PartnerTable
                 partners={filteredPartners}
               <PartnerTable 
                 partners={filteredPartners} 
+
                 isLoading={isLoading}
 
                 onViewDetails={handleViewDetails}
@@ -831,10 +888,12 @@ if ( {) {
               />
             </TabsContent>
             <TabsContent value="approved" className="space-y-4">
+
               <PartnerTable
                 partners={filteredPartners}
               <PartnerTable 
                 partners={filteredPartners} 
+
                 isLoading={isLoading}
 
                 onViewDetails={handleViewDetails}
@@ -845,6 +904,7 @@ if ( {) {
               />
             </TabsContent>
             <TabsContent value="rejected" className="space-y-4">
+
               <PartnerTable
                 partners={filteredPartners}
               <PartnerTable 
@@ -859,6 +919,7 @@ if ( {) {
               <PartnerTable;
                 partners={filtered_partners}
                 is_loading={is_loading}
+
 
 
                 onViewDetails={handleViewDetails}
@@ -940,7 +1001,9 @@ if ( {) {
                   </div>
                 </div>
               )}
+
               
+
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
@@ -966,6 +1029,21 @@ if ( {) {
                 <div className="flex justify-end gap-2 mt-4">
 
 
+                  >
+                    <X className="h-4 w-4 mr-1" />
+                    Reject
+                  </Button>
+                  <Button
+                    className="bg-green-600 hover:bg-green-700"
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
+                  >
+                    <Check className="h-4 w-4 mr-1" />
+                    Approve
+                  </Button>
+                </div>
+              )}
+            </div>
+
 
                   >;
                     <X className="h - 4 w - 4 mr - 1" />;
@@ -978,6 +1056,10 @@ if ( {) {
                     <Check className="h - 4 w - 4 mr - 1" />;
                     Approve;
                   </Button>;
+
+                </div>;
+              )}
+            </div>;
 
 
           )}
@@ -1027,18 +1109,15 @@ if ( {) {
   );
 }
 
-
-
-
-
-function PartnerTable({ 
-  partners, 
-  isLoading, 
-  onViewDetails, 
-
-
-
-
+interface PartnerTableProps {
+  partners: PartnerProfile[]
+  isLoading: boolean
+  onViewDetails: (partner: PartnerProfile) => void
+  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void
+  onOpenSettings: (partner: PartnerProfile) => void
+  getStatusBadge: (status: string) => JSX.Element
+  getFraudFlagBadge: (flags?: number) => JSX.Element | null
+}
 
 
   onUpdateStatus;
@@ -1053,6 +1132,8 @@ function PartnerTable({
         <p className="text-zion-slate-light">Loading partner data...</p>
       </div>
     )
+
+
 ;
 function PartnerTable({;
   partners,;
@@ -1075,7 +1156,9 @@ function PartnerTable({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   }
@@ -1251,18 +1334,18 @@ if ( {) {
                   size="sm"
                   onClick={() => onOpenSettings(partner)}
 
-
-
-                <Button
-                  variant="outline"
-                
-
-
+                  className="text-zion-slate-light hover:text-white"
+                >
+                  <Settings className="h-4 w-4" />
+                  <span className="sr-only">Settings</span>
+                </Button>
 
 
                 <Button 
 
                   variant="outline" 
+
+
                   size="sm"
                   onClick={() => onViewDetails(partner)}
                 >
@@ -1272,6 +1355,7 @@ if ( {) {
             </TableCell>
           </TableRow>
         ))}
+
       </TableBody>
     </Table>
   )
@@ -1280,5 +1364,4 @@ if ( {) {
     </Table>);
 }
 
-=======
-;
+

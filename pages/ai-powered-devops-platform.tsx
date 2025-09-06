@@ -1,5 +1,10 @@
 
 
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIPoweredDevOpsPlatformPage() {
+
+
   return (
     <>;
       <Head>;
@@ -35,6 +40,8 @@
   );
 
 
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
 
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
@@ -70,5 +77,7 @@ export default function AIPoweredDevOpsPlatformPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

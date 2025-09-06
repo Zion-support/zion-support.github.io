@@ -26,7 +26,9 @@ export default async function handler(
 }
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   try {
     const userId = getUserId(req);
@@ -123,17 +125,21 @@ function handler() {
     return res.status(500).json({ error: 'Unexpected error' })
 
 
+
+
 }
 
 
 
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

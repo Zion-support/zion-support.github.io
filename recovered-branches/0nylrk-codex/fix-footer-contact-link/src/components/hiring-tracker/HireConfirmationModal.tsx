@@ -3,12 +3,14 @@
 
 
 
+
 import React, { useState } from 'react',
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
+
   DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -17,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+
 import { useAuth } from "@/hooks/useAuth";
 import { JobApplication } from "@/types/jobs";
 export interface HireConfirmationModalProps {
@@ -54,6 +57,7 @@ export function HireConfirmationModal({ ;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   isOpen;
 
 
@@ -74,8 +78,15 @@ export function HireConfirmationModal({ ;
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
 
-
-
+  // Get talent information from either candidateData or application
+  const talentData = candidateData |(application?.talent_profile as TalentProfile);
+  const handleHireCandidate = async () => {
+    if (!projectName |!projectDescription) {
+      toast({
+        title: 'Required fields missing'
+        description: 'Please fill in both project name and description.'
+        variant: 'destructive'})
+      return
 
 
 import { useAuth } from "@/hooks/useAuth",
@@ -139,6 +150,7 @@ export function HireConfirmationModal({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -146,6 +158,7 @@ export function HireConfirmationModal({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
     if (!user) {
@@ -161,6 +174,7 @@ export function HireConfirmationModal({;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
+
 
 
 
@@ -194,6 +208,7 @@ export function HireConfirmationModal({;
       return;
 
     }
+
 
 
 
@@ -368,6 +383,8 @@ if ( {) {
     }
 
 
+
+
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -462,11 +479,13 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
 
@@ -529,6 +548,8 @@ if ( {) {
       </DialogContent>
     </Dialog>
   )
+
 }
 }
 ;
+

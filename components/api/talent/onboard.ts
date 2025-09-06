@@ -1,5 +1,7 @@
+
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
@@ -228,6 +230,7 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
         cv: savedCvPath,
       },
 
+
       ai: {
 
         summary,
@@ -283,3 +286,4 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

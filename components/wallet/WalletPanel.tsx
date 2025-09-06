@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -17,6 +18,7 @@ import Badges from './Badges';
 
 
 type Tx = {
+
 
 
   const [summary, setSummary] = useState<Summary | null>(null);
@@ -42,10 +44,12 @@ function getUserId(): any (): string {;
 }
 
 
+
 export default function WalletPanel() {
 
 
 export default function WalletPanel() {;
+
 
 
 
@@ -134,6 +138,7 @@ export default function WalletPanel() {;
         </div>
       </div>
         <div className="mt-4">
+
 
           </div>;
         </div>;
@@ -232,12 +237,14 @@ export default function WalletPanel() {;
 
 
 
+
           </div>
 
         )}
       </div>
     </div>
   );
+
 
 
 }
@@ -254,3 +261,4 @@ export default function WalletPanel() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

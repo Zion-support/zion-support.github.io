@@ -4,6 +4,8 @@
 
 
 
+
+
   if (typeof window === 'undefined') return;
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
@@ -40,20 +42,28 @@ if ( {) {
     }
   }
 
-
-
-
-};
-
-export const isHighContrast = (color1: string, color2: string): boolean => {;
-  return getContrastRatio(color1, color2) >= 4.5;
-};
-
-export const validateAriaLabel = (element: HTMLElement): boolean => {;
-
-
-
-
+  element.addEventListener('keydown', handleTabKey);
+  // Focus first element
+  firstElement?.focus();
+  return () => {
+    element.removeEventListener('keydown', handleTabKey);
+  }
+}
+export const getContrastRatio = (color1: string, color2: string): number => {
+  const getLuminance = (color: string): number => {;
+    const rgb = color.match(/\d+/g);
+    if (!rgb) return 0;
+    const [r, g, b] = rgb.map(c => {
+      const val = parseInt(c) / 255;
+      return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+  const lum1 = getLuminance(color1);
+  const lum2 = getLuminance(color2);
+  const brightest = Math.max(lum1, lum2);
+  const darkest = Math.min(lum1, lum2);
+  return (brightest + 0.05) / (darkest + 0.05);
 
 
   const hasAriaLabel = element.hasAttribute('aria-label');
@@ -63,6 +73,7 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {;
 }
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
+
 
 
 
@@ -147,9 +158,11 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
 
 export const isElementInViewport = (element: HTMLElement): boolean => {;
 
+
   const rect = element.getBoundingClientRect();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+
 
 
 
@@ -162,6 +175,7 @@ export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior =
 };
 
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
+
 
 
 
@@ -182,6 +196,8 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
   });
 
 
+
+
   return skipLink;
 }
 
@@ -199,3 +215,5 @@ export const generateId = (prefix: string = 'id'): string = > { return `${prefix
 
 =======
 };
+
+

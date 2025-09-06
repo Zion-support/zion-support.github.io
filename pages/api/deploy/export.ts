@@ -5,6 +5,8 @@
 
 
 
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
@@ -13,6 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   // In a real system, look up persisted deployment by id
   const fake = {
+
+
 
 
 export default async function handler(req, res) {
@@ -59,6 +63,7 @@ export default function handler(req, res) {
   }
 
 
+
 }
 }
 
@@ -75,4 +80,5 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,6 +1,7 @@
 
 
 
+
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -12,10 +13,13 @@ import {format} from 'date-fns';
 
 
 
+
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
+
+
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -30,6 +34,7 @@ interface CertificationsListProps {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -37,6 +42,7 @@ interface CertificationsListProps {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 export function CertificationsList({
@@ -84,6 +90,7 @@ if ( {) {
 
                   {cert.issuing_organization}
 
+
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Certifications</h3>;
       {certifications && certifications.map((cert) => (;
@@ -107,6 +114,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                   )}
                 </p>;
@@ -174,6 +182,7 @@ if ( {) {
         </Card>;
       ))}
 
+
     </div>;
   );
 }
@@ -182,4 +191,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

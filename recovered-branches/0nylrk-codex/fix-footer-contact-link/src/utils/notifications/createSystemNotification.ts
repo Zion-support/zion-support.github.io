@@ -3,12 +3,14 @@
 
 
 
+
 import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 /**
  * Creates a system notification for a user
@@ -36,6 +38,8 @@ export async function createSystemNotification({
 
 
 
+
+
 import { createNotification } from './createNotification',;
 import { SystemNotificationParams } from './types',;
 
@@ -60,8 +64,10 @@ function createSystemNotification() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 }
 ;
+

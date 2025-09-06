@@ -1,7 +1,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -22,8 +24,10 @@
             <span>{experienceRange[0]} years</span>
             <span>{experienceRange[1]} years</span>
           </div>
+
           <Slider
           <Slider 
+
 
 
 import { ChevronDown, ChevronUp } from "lucide-react",;
@@ -70,7 +74,9 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
           </div>;
 
 
+
           <Slider
+
 
 
             value={[experienceRange[0], experienceRange[1]]}

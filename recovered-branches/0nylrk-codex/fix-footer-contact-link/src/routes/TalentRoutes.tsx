@@ -1,8 +1,13 @@
 
 
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "../components/ProtectedRoute",
+import TalentDirectory from "../pages/TalentDirectory",
+import TalentsPage from "../pages/TalentsPage",
+import TalentProfilePage from "../pages/TalentProfilePage",
+import SavedTalentsPage from "../pages/SavedTalentsPage",
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const TalentRoutes = () => {
   return (
     <Routes>
@@ -29,10 +34,12 @@ const TalentRoutes = () => {
       <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
   )
+
 }
 export default TalentRoutes;
 
 },
+
 
 
 
@@ -85,6 +92,7 @@ const TalentRoutes = () => {;
   );
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -95,3 +103,4 @@ const TalentRoutes = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default TalentRoutes;
+

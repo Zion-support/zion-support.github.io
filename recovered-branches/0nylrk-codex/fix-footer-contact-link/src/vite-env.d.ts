@@ -1,4 +1,5 @@
 ;
+
 interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   // add more env variables as needed;
 }
@@ -74,11 +75,14 @@ declare let process: {;
   env: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test',;
+
     PORT?: string;
   }
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
+
+
 
 
 
@@ -103,7 +107,20 @@ declare module '@vitejs/plugin-react - swc' {
   export default function reactSWC (): Plugin;
 }
 
+// Removed custom lucide-react stub;
+// Create a replacement stub for LiveKit components;
+declare module '@livekit/components-react' {export interface VideoCallProps {;
+    room?: string;
+    token?: string;
+    serverUrl?: string;
+    onDisconnect?: () => void;
+    className?: string;
 
+    className?: string,
+    variant?: "default" | "secondary" | "destructive" | "outline",
+    children?: React.ReactNode,
+    key?: string | number
+},;
 
 // Badge component type fixes;
 declare module '@/components / ui / badge' {
@@ -151,6 +168,7 @@ declare module '@/components / ChatAssistant / ChatMessage' {
     key?: string | number;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   }
@@ -163,12 +181,17 @@ declare module '@/components / ChatAssistant / ChatMessage' {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
 
 
+// ProductListingCard type fixes;
+declare module '@/components/ProductListingCard' {;
+  export interface ProductListingCardProps {;
+    listing: any,;
 
     view?: any,  // Made optional to fix the errors;
     onRequestQuote: (listing_id: string) => void,
@@ -191,10 +214,14 @@ declare module '@livekit / components - react' {
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
 
 ;
+
+

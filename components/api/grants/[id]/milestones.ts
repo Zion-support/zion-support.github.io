@@ -2,6 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+import type {
+
+} from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
@@ -157,6 +161,7 @@ function write_grant() {
     return res.status(200).json({ record: existing });
   }
   res.setHeader('Allow', 'GET, POST');
+
   res.status(405).end('Method Not Allowed');    return res.status(200).json({ record: existing })
   }
   res && res.setHeader('AllowGET, POST');
@@ -167,8 +172,10 @@ function write_grant() {
 
 
 
+
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
 }
+
 /**
  * is_authorized - Function description
  */
@@ -245,5 +252,6 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

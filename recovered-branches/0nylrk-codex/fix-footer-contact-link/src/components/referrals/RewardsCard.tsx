@@ -1,10 +1,12 @@
 
 
 
+
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
 import {BadgeDollarSign, Badge} from "lucide-react";
+
 
 
 
@@ -16,11 +18,13 @@ import { BadgeDollarSign, Badge } from "lucide-react",
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean
@@ -53,9 +57,32 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   }
   return (
 
-  // Check condition
-if ( {) {
-  $2
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <BadgeDollarSign className="h-5 w-5" />
+          Your Rewards
+        </CardTitle>
+        <CardDescription>
+          Rewards earned from successful referrals
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {rewards.map((reward, index) => (
+            <div
+              key={reward.id}
+              className={`flex justify-between items-start ${
+                index !== rewards.length - 1 ? "border-b pb-3" : ""
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReferralReward } from "@/types/referrals",;
+import { formatDate } from "@/utils/referralUtils",;
+import { BadgeDollarSign, Badge } from "lucide-react",;
+interface RewardsCardProps {;
+  rewards: ReferralReward[];
+  isLoading: boolean;
+
 }
     return (
       <Card>;
@@ -160,6 +187,7 @@ if ( {) {
         </div>;
       </CardContent>;
     </Card>;
+
   );
 
 }
@@ -172,4 +200,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

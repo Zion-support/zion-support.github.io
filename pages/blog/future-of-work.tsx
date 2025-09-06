@@ -1,7 +1,9 @@
 
 
+
 import Head from 'next/head',
 import Link from 'next/link';
+
 
 import React from 'react';
 export default function FutureOfWork(req, res) {
@@ -111,6 +113,7 @@ function FutureOfWork() {
                 </ul>;
                 <p className='text-white/90 mb-4'>;
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -122,4 +125,5 @@ function FutureOfWork() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

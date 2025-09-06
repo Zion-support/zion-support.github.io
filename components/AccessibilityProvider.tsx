@@ -21,11 +21,13 @@ interface AccessibilityContextType {
 
 
 
+
 export const useAccessibility = () => {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
@@ -39,6 +41,7 @@ interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+
 
 
 
@@ -77,6 +80,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -103,6 +107,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
       </div>;
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
+
 }
     throw new Error (
       "use_accessibility must be used within an AccessibilityProvider",
@@ -148,3 +153,4 @@ export default AccessibilityProvider;
 };
 
 export default AccessibilityProvider;
+

@@ -2,6 +2,8 @@
 
 
 
+
+
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -11,7 +13,16 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ leaderboard: top })
 
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
+export default function handler(req, res) {
 
   try {
     const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8')),
@@ -36,6 +47,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -46,3 +58,4 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

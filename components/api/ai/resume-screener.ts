@@ -1,6 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+
+  if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
@@ -37,6 +42,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const text = await generateText(prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
   return res && res.status(200).json({ results: text })
 }
+
+
 
 
 

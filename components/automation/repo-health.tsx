@@ -2,6 +2,8 @@
 
 
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -37,8 +39,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
   } catch {;
     return { props: { report: null }, revalidate: 3600 }
   }
-}
-};
+
+
+export default function RepoHealth({ report }: Props) {
+
+export default function RepoHealth({ report }: Props) {;
+
+  if (!report) return <div>No report yet. Check back soon.</div>;
 
 
 
@@ -87,6 +94,7 @@ export default function RepoHealth({ report }: Props) {;
         </ul>
       </section>
     </div>
+
 );
 }
   );
@@ -113,6 +121,5 @@ export default function RepoHealth({ report }: Props) {
         <ul className=&quot;text-sm space-y-1&quot;>
           {report.largestFiles.map((f, i) => (
             <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{f.file}</span><span className=&quot;text-gray-500&quot;>{(f.bytes/1024).toFixed(1)} KB</span></li>
-=======
 
 

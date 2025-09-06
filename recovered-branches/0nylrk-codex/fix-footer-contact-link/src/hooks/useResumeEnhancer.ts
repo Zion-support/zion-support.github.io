@@ -3,11 +3,13 @@
 
 
 
+
 export function useResumeEnhancer() {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -48,6 +50,8 @@ export function useResumeEnhancer() {;
     isEnhancing;
 
     error
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',;
@@ -95,6 +99,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -103,6 +108,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 }

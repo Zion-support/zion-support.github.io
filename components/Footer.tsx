@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -82,9 +83,11 @@ export default function Footer() {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
+
       { name: "AI Services", href: "/ai-services" },
       { name: "IT Services", href: "/it-services" },
       { name: "Micro SaaS", href: "/micro-saas" },
@@ -100,6 +103,7 @@ export default function Footer() {
       { name: "IoT Solutions", href: "/iot" }
       { name: "Cybersecurity", href: "/cybersecurity" }
     ]
+
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise" }
       { name: "Startup Solutions", href: "/startup" }
@@ -117,6 +121,7 @@ export default function Footer() {
       { name: "Contact", href: "/contact" }
     ]
     resources: [
+
       { name: "Blog", href: "/blog" },
       { name: "Documentation", href: "/docs" },
       { name: "API Reference", href: "/api" },
@@ -194,6 +199,7 @@ export default function Footer() {;
 
 
   };
+
       { name: "Blog", href: "/blog" }
       { name: "Documentation", href: "/docs" }
       { name: "API Reference", href: "/api" }
@@ -202,12 +208,15 @@ export default function Footer() {;
       { name: "Support", href: "/support" }
     ]
   }
+
+
   return (
     <footer className="bg-gray-900 text-white">;
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
+
 
 
 
@@ -232,6 +241,7 @@ export default function Footer() {;
             </p>
             
 origin/automation-improvements-final
+
               Leading technology solutions provider specializing in AI
               cybersecurity, cloud infrastructure, quantum computing
               blockchain, IoT, and digital transformation services.
@@ -239,7 +249,9 @@ origin/automation-improvements-final
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {/* Contact Info */}
             <div className="space-y-3">
@@ -253,6 +265,7 @@ origin/automation-improvements-final
               </div>
               <div className="flex items-start text-gray-300">
                 <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />
+
                 <span>
                   364 E Main St STE 1008
                   <br />
@@ -266,27 +279,33 @@ origin/automation-improvements-final
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
             </div>
           </div>
           {/* Services */}
           <div>
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
+
                   <Link
                     href={link.href}
                   <Link 
                     href={link.href} 
 origin/automation-improvements-final
+
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
                 </li>
+
 
 
             <h3 className="text-lg font-semibold mb-6>Services</h3>
@@ -341,6 +360,7 @@ origin/automation-improvements-final
 
 
 
+
           {/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
@@ -350,6 +370,7 @@ origin/automation-improvements-final
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
+
           {/* Company */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Company</h3>
@@ -362,6 +383,7 @@ origin/automation-improvements-final
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
                   >
                     {link.name}
                   </Link>
@@ -377,6 +399,7 @@ origin/automation-improvements-final
 
 
 
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
@@ -387,6 +410,7 @@ origin/automation-improvements-final
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -400,6 +424,7 @@ origin/automation-improvements-final
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
+
           {/* Resources */}
           <div>
             <h3 className=text-lg font-semibold mb-6">Resources</h3>
@@ -412,12 +437,14 @@ origin/automation-improvements-final
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
+
 
 
 
@@ -429,6 +456,7 @@ origin/automation-improvements-final
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
@@ -514,6 +542,7 @@ origin/automation-improvements-final
             </div>
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">
+
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -525,6 +554,7 @@ origin/automation-improvements-final
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 Privacy Policy
               </Link>
                 className="text-gray-400 hover:text-white transition-colors">;
@@ -545,12 +575,20 @@ origin/automation-improvements-final
               </Link>;
               <Link
                 href="/cookies"
-}
-}
-};
 
-export default Footer;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+
 }
+
+}
+
+

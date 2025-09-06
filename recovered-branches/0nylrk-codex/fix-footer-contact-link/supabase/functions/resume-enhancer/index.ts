@@ -1,5 +1,6 @@
 
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -8,6 +9,7 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -23,6 +25,8 @@ serve(async (req) => {
 
 
 
+
+
   try {
 
     const { content, enhancementType, context } = await req && req.json();
@@ -31,12 +35,15 @@ serve(async (req) => {
 
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
+
+
 ;
   try {;
     const { content, enhancementType, context } = await req.json(),;
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
+
 
 
 
@@ -50,10 +57,12 @@ serve(async (req) => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     }
     if (!content) {
       throw new Error("Content is required")
     }
+
     // Determine the system prompt based on enhancement type
     let systemPrompt = "";
     let userPrompt = "";
@@ -86,21 +95,25 @@ serve(async (req) => {
         userPrompt = `Categorize these skills into logical groups: ${content}. Return a JSON object with skill categories as keys and arrays of skills as values. Common categories might include: Programming, DevOps, Cloud, Soft Skills, etc. ${context ? `Professional context: ${context}` : ''}`,
         break,
       default: systemPrompt = "You are a professional resume enhancement assistant. Improve the given text to be more impactful and professional.",
+
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
     }
     // Call OpenAI API
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
+
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"}
         "Authorization": `Bearer ${openAiKey}`,
         "Content-Type": "application/json"},
+
       body: JSON.stringify({
 
         model: "gpt-4o-mini";
         messages: [
           {
+
             role: "system"
             content: systemPrompt}
           {
@@ -114,12 +127,15 @@ serve(async (req) => {
             content: userPrompt}],
         temperature: 0.7})}),
 
+
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
+
     const data = await response.json();
     const enhancedContent = data.choices[0].message.content;
+
 
 
     return new Response(
@@ -137,6 +153,10 @@ serve(async (req) => {
       JSON.stringify({
         error: error.message}),
       {
+
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+    )
 
 
 ;
@@ -201,6 +221,7 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -211,3 +232,4 @@ serve(async (req) => {
 
   }
 });
+

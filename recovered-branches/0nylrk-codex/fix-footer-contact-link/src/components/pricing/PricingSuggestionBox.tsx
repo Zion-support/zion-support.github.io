@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface PricingSuggestionBoxProps {
 
@@ -21,6 +23,7 @@ interface PricingSuggestionBoxProps {
 
   rateType: "hourly" | "fixed"
 }
+
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -48,6 +51,7 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   }
   if (!suggestion) {
     return null
@@ -55,7 +59,9 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
 
 
 
+
   }
+
 
 
 
@@ -110,6 +116,8 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
       </CardContent>
     </Card>
   )
+
+
 
 
 
@@ -182,7 +190,9 @@ import {PricingSuggestion} from "@/services/pricingSuggestionService";
 export default PricingSuggestionBox;
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

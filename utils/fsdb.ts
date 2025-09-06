@@ -1,8 +1,12 @@
 
 
+      const content = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(content);
+
     }
   } catch (error) {
     console.error('Error reading file:', error);
+
 
 
 
@@ -16,6 +20,7 @@ export function writeJson<T>(filePath: string, data: T): void {
     }
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 
+
 }
 ;
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
@@ -25,8 +30,10 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   } catch (error) {
 
 
@@ -45,6 +52,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 
 
   }
+
 }
 
 
@@ -65,10 +73,13 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
 
 
+
   const all = await readAllDisputes();
   all.push(dispute);
   await writeAllDisputes(all);
 }
+
+
 
 
 
@@ -85,6 +96,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -93,4 +105,5 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -2,6 +2,8 @@
 
 
 
+
+
 export default function AccessibilityScannerPage() {
 	return (
 		<>
@@ -20,18 +22,9 @@ export default function AccessibilityScannerPage() {
 	)
 
 
-
-
-
-
-
-
-}
-;
-
-
-
-
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 

@@ -2,6 +2,7 @@
 
 
 
+
   } catch {
     return {}
   }
@@ -25,6 +26,7 @@
 
 
 
+
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -37,14 +39,30 @@ function load(): Record<string, KycProfile> {
 }
 
 
-
-
-
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { userId, amount, currency } = req.body as { userId?: string, amount?: number, currency?: string },;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  if (amount <= THRESHOLD) return res.status( allowed: true, reason: 'Below threshold' ).json({$2});
+  if (!profile) return res.status( allowed: false, reason: 'KYC not started' ).json({$2});
+  if (profile.status !== 'approved') return res.status(200).json({ allowed: false, reason: 'KYC not approved' });
+  if (profile.amlStatus === 'match' || (profile.flags || []).includes('aml_alert')) return res.status(200).json({ allowed: false, reason: 'AML alert' });
+  return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements

@@ -1,5 +1,7 @@
 
 
+
+
 const templates = {;
   lulu: {;
     sizes: [;
@@ -21,6 +23,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 }
 
@@ -37,4 +40,5 @@ export default function handler(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

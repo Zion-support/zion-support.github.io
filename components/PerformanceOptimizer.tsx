@@ -21,6 +21,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 import {
+
   Zap,
   Clock,
   TrendingUp,
@@ -47,6 +48,7 @@ interface PerformanceMetrics {;
 
   Database,;
   Network,;
+
 
 
 } from 'lucide-react';
@@ -378,6 +380,7 @@ if ( {) {
 
 
 
+
       observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
       return () => {;
         window && window.removeEventListener('load', measurePerformance);
@@ -413,6 +416,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
@@ -424,7 +428,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
@@ -526,8 +532,10 @@ if ( {) {
         </motion && motion.div>;
 
       )}
+
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">;
+
 
 
 
@@ -542,6 +550,7 @@ if ( {) {
 
             <div className="text-sm text-white/80">{optimizationStatus}</div>
           </div>
+
 
         </button>;
         {optimizationStatus !== 'idle' && (;
@@ -639,11 +648,13 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 
 
+
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
           Performance Tips
         </h4>
+
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
@@ -659,6 +670,7 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -667,6 +679,7 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         </ul>
       </div>
     </div>
+
 
   }, [measure_performance]);
 ;
@@ -871,6 +884,7 @@ if (return 'D') {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;
@@ -1007,6 +1021,7 @@ export default PerformanceOptimizer;
 
 export default PerformanceOptimizer;
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1014,4 +1029,5 @@ export default PerformanceOptimizer;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

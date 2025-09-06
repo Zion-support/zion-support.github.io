@@ -1,20 +1,26 @@
 
 // Content analysis functionality
+
 import { suspiciousPhrases  } from './constants';
 import { AnalysisResult } from './types';
 import { suspiciousPhrases } from './constants',
 import { AnalysisResult } from './types',
+
 /**
  * Analyzes text content for suspicious patterns
  */
 
 
+export const analyzeContent = (content: string): AnalysisResult => {
+
   const reasons: string[] = [],
-  
+
+
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
     if (contentLower.includes(phrase.toLowerCase())) {
       reasons.push(`Contains suspicious phrase: "${phrase}"`)
+
     }
   }
   // Check for links (simplified check)
@@ -70,6 +76,7 @@ export const analyzeContent = (content: string): AnalysisResult => {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
   // Check for poor grammar with repetitive punctuation
   if (/[!?]{3}/.test(content)) {
@@ -81,6 +88,7 @@ export const analyzeContent = (content: string): AnalysisResult => {;
 
     reasons
   }
+
 }
       reasons.push (`Contains suspicious phrase: "${phrase}"`);
     }
@@ -117,3 +125,4 @@ if ( {) {
 ;
 
 };
+

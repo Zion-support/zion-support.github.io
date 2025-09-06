@@ -1,7 +1,10 @@
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../../utils/api/auth';
+import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
+import { Milestone } from '../../../../utils/types/milestones';
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
@@ -12,18 +15,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const project = getProject(projectId);
   if (!project) {
 
+    res.status(404).json({ error: 'Project not found' });
+    return;
+  }
+  if (!assertParticipantOrAdmin(project, user)) {
+    res.status(403).json({ error: 'Forbidden' });
+    return;
+  }
 
-
-
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
 
-  if (req.method === 'POST') {
     if (!isClient(project, user)) {
       res.status(403).json({ error: 'Only client (or admin) can add milestones' });
       return;
     }
     const body = req.body as Partial<Milestone>;
+
     if (
       !body |
       !body.title |
@@ -51,10 +64,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       dueDate: body.dueDate,
       amountUsd: body.amountUsd,
       attachments: body.attachments || []
+
     });
     res && res.status(201).json({ milestone: created });
     return;
   }
+
 
 
 
@@ -124,4 +139,5 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

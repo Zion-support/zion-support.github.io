@@ -2,6 +2,8 @@
 
 
 
+
+
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -14,7 +16,9 @@ interface PaymentSummaryProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }
@@ -22,11 +26,13 @@ interface PaymentSummaryProps {;
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
+
     0;
   ).toFixed(2);
     0
   ).toFixed(2),
   
+
   const paidAmount = milestones
     .filter(m => m.status === 'paid')
     .reduce(
@@ -58,10 +64,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 
 
+
 }
 
             <p className="font-medium">
               ${paidAmount}
+
 
 
 
@@ -74,8 +82,10 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   );
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 };
+

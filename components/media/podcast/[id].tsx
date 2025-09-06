@@ -19,13 +19,17 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState } from 'react';
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import { useRouter } from 'next/router';
 
 export default function EpisodePage() {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default function EpisodePage() {;
+
+export default function EpisodePage() {
+
+  const router = useRouter();
+  const { id } = router.query as { id?: string };
+  const [episode, setEpisode] = useState<any>(null);
 
 
   const router = useRouter();
@@ -48,6 +52,7 @@ export default function EpisodePage() {;
   }, [id]);
   if (!episode) return <div>Loading…</div>;
   return (
+
 
 
       <div>
@@ -83,4 +88,5 @@ export default function EpisodePage() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

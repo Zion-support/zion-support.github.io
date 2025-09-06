@@ -1,9 +1,12 @@
+
 import React, { useState } from 'react',
 import React, { useState } from 'react';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 
@@ -104,6 +107,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
   Menu, X, Search, ChevronDown, ChevronRight;
 
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
@@ -118,111 +122,224 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const serviceCategories = [
 
-
-      {
-
-        name: 'AI Autonomous Business Manager',
-        href: '/services / ai - autonomous - business - manager',
-        description: 'Fully autonomous business operations',
-        price: '$12, 999 / month',
-      },
-    ],
-
-    title: '⚛️ 2029 Quantum & Emerging Tech',
-    icon: Globe,
-    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
-    description: 'Quantum computing and beyond',
-
-
-      {
-
-        name: 'Quantum Creativity Studio',
-        href: '/services / quantum - creativity - studio',
-        description: 'Quantum - enhanced creativity',
-        price: '$1, 999 / month',
-      },
-    ],
-
-    title: '🏙️ 2029 Enterprise IT Solutions',
-    icon: Cpu,
-    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
-    description: 'Autonomous enterprise infrastructure',
-
-
-      {
-
-        name: 'Smart Financial Management Platform',
-        href: '/services / smart - financial - management - platform',
-        description: 'AI - powered financial planning',
-        price: '$2, 999 / month',
-      },
-    ],
-
-    title: '🌌 2029 Space & Metaverse Tech',
-    icon: Rocket,
-    color: 'from - teal - 600 via - emerald - 600 to - green - 600',
-    description: 'Space exploration and digital reality',
-
-
-      {
-
-        name: 'Virtual Event Hologram Platform',
-        href: '/services / virtual - event - hologram - platform',
-        description: 'Holographic event experiences',
-        price: '$2, 999 / month',
-      },
-    ],
-
-    title: '🎯 2029 Innovative Micro SAAS',
-    icon: Target,
-    color: 'from-green-600 via-yellow-600 to-orange-600',
-    description: 'Cutting-edge micro solutions',
+    title: '🚀 2029 Futuristic AI Services'
+    icon: Brain
+    color: 'from-violet-600 via-purple-600 to-indigo-600'
+    description: 'Next-generation AI consciousness and creativity'
     services: [
-
-
       {
-
-        name: 'Intelligent Sales Optimization',
-        href: '/services / intelligent - sales - optimization',
-        description: 'AI - powered sales intelligence',
-        price: '$1, 799 / month',
-      },
-    ],
-
-    title: '🔬 2029 Research & Development',
-    icon: Eye,
-    color: 'from - orange - 600 via - red - 600 to - pink - 600',
-    description: 'Breakthrough research solutions',
-
-
-      'Advanced Research Automation',
-      'Quantum Research Platform',
-      'AI Research Assistant',
-      'Biotech Research Suite',
-    ],
-
-
-
+        name: 'AI Consciousness Evolution Platform'
+        href: '/services/ai-consciousness-evolution-platform'
+        description: 'Develop genuine AI consciousness'
+        price: '$19,999/month'
+      }
+      {
+        name: 'AI Emotional Intelligence Platform'
+        href: '/services/ai-emotional-intelligence-platform'
+        description: 'Real-time emotion analysis and response'
+        price: '$3,999/month'
+      }
+      {
+        name: 'AI Creativity Orchestrator'
+        href: '/services/ai-creativity-orchestrator'
+        description: 'Multi-model creativity fusion'
+        price: '$5,999/month'
+      }
+      {
+        name: 'AI Autonomous Business Manager'
+        href: '/services/ai-autonomous-business-manager'
+        description: 'Fully autonomous business operations'
+        price: '$12,999/month'
+      }
+    ]
+  },  {      { name: 'AI Consciousness Evolution Platform', href: '/services/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' }
+      { name: 'AI Emotional Intelligence Platform', href: '/services/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' }
+      { name: 'AI Creativity Orchestrator', href: '/services/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' }
+      { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
+    ]
+  }
+    title: '⚛️ 2029 Quantum & Emerging Tech'
+    icon: Globe
+    color: 'from-indigo-600 via-blue-600 to-cyan-600'
+    description: 'Quantum computing and beyond'
+    services: [
+      {
+        name: 'Quantum Internet Security Gateway'
+        href: '/services/quantum-internet-security-gateway'
+        description: 'Unbreakable quantum encryption'
+        price: '$15,999/month'
+      }
+      {
+        name: 'Biotech DNA Computing Platform'
+        href: '/services/biotech-dna-computing-platform'
+        description: 'DNA-based computation'
+        price: '$25,999/month'
+      }
+      {
+        name: 'Quantum Financial Trading Platform'
+        href: '/services/quantum-financial-trading-platform'
+        description: 'Quantum-powered trading algorithms'
+        price: '$35,999/month'
+      }
+      {
+        name: 'Quantum Creativity Studio'
+        href: '/services/quantum-creativity-studio'
+        description: 'Quantum-enhanced creativity'
+        price: '$1,999/month'
+      }
+    ]
+  },  {      { name: 'Quantum Internet Security Gateway', href: '/services/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' }
+      { name: 'Biotech DNA Computing Platform', href: '/services/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' }
+      { name: 'Quantum Financial Trading Platform', href: '/services/quantum-financial-trading-platform', description: 'Quantum-powered trading algorithms', price: '$35,999/month' }
+      { name: 'Quantum Creativity Studio', href: '/services/quantum-creativity-studio', description: 'Quantum-enhanced creativity', price: '$1,999/month' }
+    ]
+  }
+    title: '🏙️ 2029 Enterprise IT Solutions'
+    icon: Cpu
+    color: 'from-blue-600 via-cyan-600 to-teal-600'
+    description: 'Autonomous enterprise infrastructure'
+    services: [
+      {
+        name: 'AI Business Intelligence Suite'
+        href: '/services/ai-business-intelligence-suite'
+        description: 'Intelligent insights and analytics'
+        price: '$2,499/month'
+      }
+      {
+        name: 'Smart Supply Chain Optimization'
+        href: '/services/smart-supply-chain-optimization'
+        description: 'AI-powered supply chain intelligence'
+        price: '$3,999/month'
+      }
+      {
+        name: 'Intelligent HR Management System'
+        href: '/services/intelligent-hr-management-system'
+        description: 'AI-powered HR optimization'
+        price: '$1,599/month'
+      }
+      {
+        name: 'Smart Financial Management Platform'
+        href: '/services/smart-financial-management-platform'
+        description: 'AI-powered financial planning'
+        price: '$2,999/month'
+      }
+    ]
+  },  {      { name: 'AI Business Intelligence Suite', href: '/services/ai-business-intelligence-suite', description: 'Intelligent insights and analytics', price: '$2,499/month' }
+      { name: 'Smart Supply Chain Optimization', href: '/services/smart-supply-chain-optimization', description: 'AI-powered supply chain intelligence', price: '$3,999/month' }
+      { name: 'Intelligent HR Management System', href: '/services/intelligent-hr-management-system', description: 'AI-powered HR optimization', price: '$1,599/month' }
+      { name: 'Smart Financial Management Platform', href: '/services/smart-financial-management-platform', description: 'AI-powered financial planning', price: '$2,999/month' }
+    ]
+  }
+    title: '🌌 2029 Space & Metaverse Tech'
+    icon: Rocket
+    color: 'from-teal-600 via-emerald-600 to-green-600'
+    description: 'Space exploration and digital reality'
+    services: [
+      {
+        name: 'Space Mining Automation Platform'
+        href: '/services/space-mining-automation-platform'
+        description: 'Automated asteroid mining'
+        price: '$45,999/month'
+      }
+      {
+        name: 'Metaverse Digital Reality Platform'
+        href: '/services/metaverse-digital-reality-platform'
+        description: 'Immersive virtual worlds'
+        price: '$8,999/month'
+      }
+      {
+        name: 'AI Predictive Health Analytics'
+        href: '/services/ai-predictive-health-analytics'
+        description: 'Predictive health outcomes'
+        price: '$7,999/month'
+      }
+      {
+        name: 'Virtual Event Hologram Platform'
+        href: '/services/virtual-event-hologram-platform'
+        description: 'Holographic event experiences'
+        price: '$2,999/month'
+      }
+    ]
+  },  {      { name: 'Space Mining Automation Platform', href: '/services/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' }
+      { name: 'Metaverse Digital Reality Platform', href: '/services/metaverse-digital-reality-platform', description: 'Immersive virtual worlds', price: '$8,999/month' }
+      { name: 'AI Predictive Health Analytics', href: '/services/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/month' }
+      { name: 'Virtual Event Hologram Platform', href: '/services/virtual-event-hologram-platform', description: 'Holographic event experiences', price: '$2,999/month' }
+    ]
+  }
+    title: '🎯 2029 Innovative Micro SAAS'
+    icon: Target
+    color: 'from-green-600 via-yellow-600 to-orange-600'
+    description: 'Cutting-edge micro solutions'
+    services: [
+      {
+        name: 'Intelligent Customer Experience Platform'
+        href: '/services/intelligent-customer-experience-platform'
+        description: 'AI-powered customer journey optimization'
+        price: '$1,899/month'
+      }
+      {
+        name: 'Intelligent Marketing Automation'
+        href: '/services/intelligent-marketing-automation'
+        description: 'AI-powered marketing optimization'
+        price: '$1,299/month'
+      }
+      {
+        name: 'Smart Project Management'
+        href: '/services/smart-project-management'
+        description: 'AI-powered project optimization'
+        price: '$899/month'
+      }
+      {
+        name: 'Intelligent Sales Optimization'
+        href: '/services/intelligent-sales-optimization'
+        description: 'AI-powered sales intelligence'
+        price: '$1,799/month'
+      }
+    ]
+  },  {      { name: 'Intelligent Customer Experience Platform', href: '/services/intelligent-customer-experience-platform', description: 'AI-powered customer journey optimization', price: '$1,899/month' }
+      { name: 'Intelligent Marketing Automation', href: '/services/intelligent-marketing-automation', description: 'AI-powered marketing optimization', price: '$1,299/month' }
+      { name: 'Smart Project Management', href: '/services/smart-project-management', description: 'AI-powered project optimization', price: '$899/month' }
+      { name: 'Intelligent Sales Optimization', href: '/services/intelligent-sales-optimization', description: 'AI-powered sales intelligence', price: '$1,799/month' }
+    ]
+  }
+    title: '🔬 2029 Research & Development'
+    icon: Eye
+    color: 'from-orange-600 via-red-600 to-pink-600'
+    description: 'Breakthrough research solutions'
+    services: [
+      'Advanced Research Automation'
+      'Quantum Research Platform'
+      'AI Research Assistant'
+      'Biotech Research Suite'
+    ]
+  },];      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite'
+    ]
+  }
+];
 const mainNavigation = [
-
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'Services', href: '/services', icon: Briefcase },
-  { name: 'AI Solutions', href: '/ai - solutions', icon: Brain },
-  { name: 'Quantum Tech', href: '/quantum - tech', icon: Globe },
-  { name: 'Enterprise IT', href: '/enterprise - it', icon: Cpu },
-  { name: 'Space Tech', href: '/space - tech', icon: Rocket },
-  { name: 'Micro SAAS', href: '/micro - saas', icon: Target },
-  { name: 'Innovations', href: '/innovations', icon: Sparkles },
-  { name: 'About', href: '/about', icon: Users },
-
-
-
+  { name: 'Home', href: '/', icon: Home }
+  { name: 'Services', href: '/services', icon: Briefcase }
+  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain }
+  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe }
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu }
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket }
+  { name: 'Micro SAAS', href: '/micro-saas', icon: Target }
+  { name: 'Innovations', href: '/innovations', icon: Sparkles }
+  { name: 'About', href: '/about', icon: Users }
+  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+];
 const quickLinks = [
-
-
+  { name: 'About Us', href: '/about', icon: Users }
+  { name: 'Case Studies', href: '/case-studies', icon: BookOpen }
+  { name: 'Blog', href: '/blog', icon: BookOpen }
+  { name: 'News', href: '/news', icon: TrendingUp }
+  { name: 'Careers', href: '/careers', icon: GraduationCap }
+  { name: 'Support', href: '/support', icon: MessageCircle },];  { name: 'Support', href: '/support', icon: MessageCircle }
+];
 
 export default function UltraFuturisticNavigation2029V2() {
-  const [isOpen, setIsOpen] = useState(false)
+
+export default function UltraFuturisticNavigation2029V2() {;
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -252,7 +369,9 @@ export default function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -332,6 +451,7 @@ export default function UltraFuturisticNavigation2029V2() {
                 key={item && item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
+
 
   { name: 'Support', href: '/support', icon: MessageCircle }, ];  { name: 'Support', href: '/support', icon: MessageCircle }
 ];
@@ -443,6 +563,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -451,6 +572,7 @@ function UltraFuturisticNavigation2029V2() {
                 placeholder='Search services...'
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
+
 
 
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />            {/* Search */}
@@ -481,6 +603,7 @@ function UltraFuturisticNavigation2029V2() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -510,7 +633,9 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -533,7 +658,9 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -587,6 +714,7 @@ function UltraFuturisticNavigation2029V2() {
                   >
                     <item.icon className="w-5 h-5" />
                     <span>{item.name}</span>
+
                   </Link>
                 ))}
               </div>
@@ -606,6 +734,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -626,6 +755,7 @@ function UltraFuturisticNavigation2029V2() {
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
+
                       className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
                     >
                       <item.icon className='w-4 h-4' />
@@ -652,6 +782,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -665,6 +796,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -674,6 +806,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
                     <Mail className="w-4 h-4" />
@@ -685,6 +818,7 @@ function UltraFuturisticNavigation2029V2() {
                   </div>
                 </div>
               </div>
+
 
                 </div>;
               </div>;
@@ -844,6 +978,7 @@ function UltraFuturisticNavigation2029V2() {
           <motion&& motion.div
 
 
+
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeCategory && (
@@ -861,7 +996,9 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1026,6 +1163,7 @@ function UltraFuturisticNavigation2029V2() {
                         <Link;
                           key={service.name}
                           href={service.href}
+
                           className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group'          >;
             <div className="max - w-7xl mx - auto px - 4 py - 8">;
               <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">;
@@ -1080,4 +1218,5 @@ function UltraFuturisticNavigation2029V2() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

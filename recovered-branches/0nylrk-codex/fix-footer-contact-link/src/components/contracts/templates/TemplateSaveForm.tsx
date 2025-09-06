@@ -2,6 +2,7 @@
 
 
 
+
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
 }
@@ -16,6 +17,7 @@ export function TemplateSaveForm(): any ({;
 }: TemplateSaveFormProps) {;
   const [saving, setSaving] = useState(false);
   const { createTemplate, updateTemplate } = useContractTemplates();
+
 
 
 
@@ -44,7 +46,9 @@ import { Switch } from "@/components/ui/switch",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const formSchema = z.object({
   title: z.string().min(1, "Title is required"),
@@ -61,7 +65,9 @@ interface TemplateSaveFormProps {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
       }
@@ -69,6 +75,7 @@ interface TemplateSaveFormProps {
     } finally {
       setSaving(false)
     }
+
 
 
 
@@ -81,6 +88,7 @@ interface TemplateSaveFormProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   
+
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;

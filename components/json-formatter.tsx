@@ -31,6 +31,7 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   Code,
@@ -44,6 +45,7 @@ import {
 
   Settings,;
   Eye,;
+
 
 
 
@@ -112,6 +114,7 @@ import { Star } from 'lucide-react';
       setErrorMessage('');
     } catch (error) {
       setIsValid(false);
+
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }      setErrorMessage('')
     } catch (error) {
       setIsValid(false);
@@ -122,6 +125,7 @@ import { Star } from 'lucide-react';
     }
 
   };
+
 
   const clearAll = () => {
     setInputJson('');
@@ -569,6 +573,7 @@ import { Star } from 'lucide-react';
               <div className='space-y-4'>
                 <div className='relative'>
                   {showLineNumbers && (
+
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}              <div className="space-y-4">
                 <div className="relative">
                   {showLineNumbers && (
@@ -582,6 +587,7 @@ import { Star } from 'lucide-react';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </div>
 
 
@@ -626,6 +632,7 @@ import { Star } from 'lucide-react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -633,6 +640,7 @@ import { Star } from 'lucide-react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
@@ -818,6 +826,7 @@ import { Star } from 'lucide-react';
                     <p>
                       • Size: {((formattedJson.length * 2) / 1024).toFixed(2)}{' '}
                       KB
+
                     </p>                  </div>                  <div className="text-sm text-gray-400">
                     <p>• Characters: {formattedJson.length}</p>
                     <p>• Lines: {formattedJson.split('\n').length}</p>
@@ -834,12 +843,14 @@ import { Star } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 )}
               </div>
             </Card>
           </div>
         </div>
       </section>
+
 
 
 
@@ -856,11 +867,13 @@ import { Star } from 'lucide-react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+
 
               Professional JSON Formatting Features
 
@@ -875,6 +888,7 @@ import { Star } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -1031,6 +1045,7 @@ import { Star } from 'lucide-react';
           </div>
         </div>
       </section>
+
 
 
 
@@ -1434,4 +1449,5 @@ import { Star } from 'lucide-react';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

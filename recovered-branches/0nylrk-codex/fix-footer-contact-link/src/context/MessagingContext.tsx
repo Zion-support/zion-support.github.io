@@ -2,6 +2,8 @@
 
 
 
+
+
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -26,11 +28,13 @@ const defaultContext: MessagingContextType = {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -51,6 +55,7 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
+
 );
 ),
 
@@ -60,12 +65,14 @@ export function useMessaging(): MessagingContextType {
   const context = useContext(MessagingContext) as MessagingContextType;
   // Cast to avoid type errors when React type definitions are missing
   const context = useContext(MessagingContext) as MessagingContextType,
+
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider')
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return context;
 }
+
 
 
 
@@ -118,6 +125,7 @@ function MessagingProvider() {
 
   const {
 
+
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -140,6 +148,45 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     markAsRead;
 
 
+  return (
+    <MessagingContext.Provider value={contextValue}>
+
+;
+// Provider component;
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+  const { user } = useAuth(),;
+  const {;
+    messages,;
+    activeMessages,;
+    setActiveMessages,;
+    conversations,;
+    setConversations,;
+    unreadCount,;
+    setUnreadCount,;
+    activeConversation,;
+    setActiveConversation,;
+    isLoading,;
+    sendMessage,;
+    createConversation,;
+    markAsRead,;
+    fetchConversations,;
+    loadMessages;
+  } = useMessagingOperations(user),;
+  // Setup real-time subscription;
+  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
+  // Calculate unread count from conversations;
+  useEffect(() => {;
+    if (conversations.length > 0) {;
+      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
+      setUnreadCount(count);
+    }
+  }, [conversations, setUnreadCount]),;
+  // Fetch conversations when user changes;
+  useEffect(() => {;
+    if (user) {;
+      fetchConversations();
+    } else {;
+      setConversations([]),;
 
       setUnreadCount(0);
     }
@@ -167,9 +214,11 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {children}
 
     </MessagingContext && MessagingContext.Provider>;
@@ -181,3 +230,5 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     load_messages;
   }
 ;
+
+

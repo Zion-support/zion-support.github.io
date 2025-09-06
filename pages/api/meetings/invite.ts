@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
@@ -22,12 +24,22 @@ export default async function handler(
   }
   try {
 
+    const { projectId, roomName, inviterName } = req.body |{}
+    if (!projectId |!roomName)
+      return res.status(400).json({ error: "Missing required fields" });
+    if (!url |!key)
+      return res.status(500).json({ error: "Supabase not configured" });
+    const supabase = createClient(url, key);
+    await supabase.channel(`project_${projectId}_calls`).send({
+      type: "broadcast"
+      event: "call_invite"
+      payload: { projectId, roomName, inviterName }
+    });
+    return res.status(200).json({ ok: true });
+  } catch (e) {
+    console.error(e);
+    return res.status(500).json({ ok: false, error: "Failed to send invite" });
 
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
@@ -54,5 +66,7 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  }
+}
+
 

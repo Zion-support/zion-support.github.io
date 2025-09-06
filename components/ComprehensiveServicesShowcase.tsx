@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
   Award,;
   Target,;
 } from 'lucide-react';
@@ -19,6 +20,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
@@ -80,16 +82,42 @@ export default function ComprehensiveServicesShowcase() {
           return b.popular ? 1 : -1;
         case 'price':
 
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<;
-    'popularity' | 'price' | 'rating' | 'newest';
-  >('popularity');
-  // Combine all services;
-  const allServices = [;
-    ...comprehensiveMicroSaasServices,;
-    ...specializedEmergingTechServices,;
-  ];
+          return (
+            parseFloat(a.price.replace('$', '').replace(',', '')) -
+            parseFloat(b.price.replace('$', '').replace(',', ''))
+          );
+        case 'rating':
+          return b.rating - a.rating;
+        case 'newest':
+          return (
+            new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
+          );
+        default:
+          return 0;      }          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+        case 'rating':
+          return b.rating - a.rating;
+        case 'newest':
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+        default: return 0
+    });
 
+  const getCategoryIcon = (category: string) => {
+    const categoryData = categories.find(cat => cat.id === category);
+    return categoryData?.icon |'🚀';
+  }
+  const formatPrice = (price: string) => {
+    return price.replace('$', '').replace(',', '');
+  }
+  return (
+    <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
+      <div className='max-w-7xl mx-auto'>        {/* Header */}  }
+  const formatPrice = (price: string) => {
+    return price.replace('$', '').replace(, '')
+  }
+
+  return (
+
+        <motion.div
 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +130,9 @@ export default function ComprehensiveServicesShowcase() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -196,10 +226,12 @@ export default function ComprehensiveServicesShowcase() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -220,7 +252,9 @@ export default function ComprehensiveServicesShowcase() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -242,6 +276,7 @@ export default function ComprehensiveServicesShowcase() {
 
 
             {/* Sort and View Controls */}
+
             <div className='flex items-center gap-4'>        >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
 
@@ -647,10 +682,12 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
+
                     viewMode === 'list'
                       ? 'bg-blue-600 text-white'
                       : 'text-white/60 hover:text-white'
@@ -673,10 +710,12 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
             </div>
           </div>
         </motion.div>
+
 
 
 
@@ -693,6 +732,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 
+
         {/* Category Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -702,6 +742,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           className='mb-12'
         >
           <div className='flex flex-wrap justify-center gap-3'>
+
             {categories.map(category => (              <button          className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-3">
@@ -718,6 +759,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 key={category.id}
                 on_click={() => setSelectedCategory (category.id)}
                 className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -732,6 +774,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   {category.count}
                 </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
               </button>
+
             ))}
           </div>
         </motion.div>
@@ -755,6 +798,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   key={service && service.id}
 
 
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -762,9 +807,11 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   )}
+
 
 
 
@@ -783,6 +830,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 
+
                   {/* Service Content */}
                   <div className='p-6'>
                     <div className='flex items-start justify-between mb-4'>
@@ -794,6 +842,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         <div className='text-xs text-white/60'>
                           {service.period}
                         </div>
+
 
 
 
@@ -819,6 +868,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
+
 
                       </div>
                     </div>
@@ -867,6 +917,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         </div>;
                       ))}
                     </div>
+
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
@@ -895,6 +946,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
                           {service.rating}
@@ -915,6 +967,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         <div className="text-xs text-white/60">Trial</div>
                       </div>
                     </div>
+
 
                     </div>;
                     {/* Stats */}
@@ -967,6 +1020,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                     {/* CTA */}
                     <a
                       href={service.link}
@@ -1005,7 +1059,9 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1016,6 +1072,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <div className='flex-shrink-0'>
                       <div className='text-6xl mb-4'>{service.icon}</div>
                       {service.popular && (
+
                         <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular                >
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Left Side - Icon and Basic Info */}
@@ -1062,6 +1119,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                         <div>
                           <h3 className='text-2xl font-bold text-white mb-2'>
@@ -1122,6 +1180,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         </div>;
                       </div>;
                       {/* Features Grid */}
+
                       <div className='grid grid-cols-2 gap-2 mb-4'>
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div
@@ -1148,6 +1207,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1190,6 +1250,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         <div className="flex items-center gap-2 text-white">
                           <span>{getCategoryIcon(service.category)}</span>
                           <span className="text-sm">{service.category}</span>
+
 
                         </div>
 
@@ -1241,11 +1302,25 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 
+
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+
+            className='text-center py-20'
+          >
+            <div className='text-6xl mb-4'>🔍</div>
+            <h3 className='text-2xl font-bold text-white mb-2'>
+              No services found
+            </h3>
+            <p className='text-white/60'>
+              Try adjusting your search or filter criteria
+
+            </p>          </motion.div>
+
+
 
 
 
@@ -1254,6 +1329,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         )}
 
@@ -1272,7 +1348,9 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1322,6 +1400,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
       </div>
     </section>
 
+
   );
 
 
@@ -1366,5 +1445,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

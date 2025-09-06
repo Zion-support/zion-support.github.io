@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -340,3 +341,4 @@ console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
 origin/main
 origin/automation-improvements-final
+

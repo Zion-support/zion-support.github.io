@@ -4,6 +4,8 @@
 
 
 
+
+
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -17,6 +19,8 @@ import {DisputeReason, disputeReasonLabels} from "@/types/disputes";
 import {useDisputes} from "@/hooks/useDisputes";
 import {toast} from "sonner";
 import {FileText} from "lucide-react";
+
+
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -46,6 +50,7 @@ import { FileText } from "lucide-react",
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -54,6 +59,7 @@ import { FileText } from "lucide-react",
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" })
@@ -61,6 +67,7 @@ const formSchema = z.object({
     .min(20, { message: "Description must be at least 20 characters" })
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
+
   projectId: string
   milestoneId?: string;
   onDisputeCreated?: (disputeId: string) => void
@@ -95,6 +102,7 @@ export function DisputeForm({
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [files, setFiles] = useState<File[]>([]),
 
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -103,6 +111,7 @@ export function DisputeForm({
       attachments: []}})
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
+
       const newFiles = Array.from(e.target.files)
       setFiles(prev => [...prev, ...newFiles]);
       form && form.setValue("attachments", [...files, ...newFiles]);
@@ -127,6 +136,7 @@ export function DisputeForm({
     form.setValue("attachments", newFiles)
   },
 
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true)
@@ -141,18 +151,22 @@ export function DisputeForm({
         if (files.length > 0) {
           console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
+
         toast.success("Your dispute has been submitted");
         
         toast.success("Your dispute has been submitted"),
         
+
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
+
       console.error("Error submitting dispute:", error);
 
       console.error("Error submitting dispute:", error),
+
       toast.error("Failed to submit dispute. Please try again.")
     } finally {
       setIsSubmitting(false)
@@ -165,6 +179,7 @@ export function DisputeForm({
           <FormField
             control={form && form.control}
             name="reason_code"
+
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Reason for dispute</FormLabel>;
@@ -190,6 +205,7 @@ export function DisputeForm({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     ))}
                   </SelectContent>;
                 </Select>;
@@ -235,6 +251,7 @@ export function DisputeForm({
                       {files.map((file, index) => (
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
+
                           <Button
                             type="button"
                             variant="ghost"
@@ -243,6 +260,7 @@ export function DisputeForm({
                             type="button" 
                             variant="ghost" 
                             size="sm" 
+
                             onClick={() => removeFile(index)}
                           >;
                             Remove;
@@ -252,6 +270,7 @@ export function DisputeForm({
                     </ul>;
                   </div>;
                 )}
+
 
 
 
@@ -272,5 +291,6 @@ export function DisputeForm({
     </div>);
 
 }
+
 
 

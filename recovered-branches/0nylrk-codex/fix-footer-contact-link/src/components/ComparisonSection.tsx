@@ -1,5 +1,6 @@
 
 
+
 import {
   Table
   TableBody
@@ -36,7 +37,10 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -62,6 +66,7 @@ import {
               </TableHeader>
               <TableBody>
                 {[
+
                   {
                     service: "Server Hosting",
                     traditional: "$1, 200 / mo",
@@ -82,6 +87,7 @@ import {
                   { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
                   { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" },
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
+
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -101,6 +107,7 @@ import {
                 <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>
               </p>
             </div>
+
             
 
 
@@ -113,6 +120,7 @@ import {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
@@ -121,6 +129,11 @@ import {
       </div>
 
 
+  )
+import { GradientHeading } from "./GradientHeading",;
+import { Button } from "./ui/button",;
+import { CheckCircle2 } from "lucide-react",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
 
 export function ComparisonSection() {;
   return (
@@ -208,11 +221,21 @@ export function ComparisonSection() {;
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
               <p className="text-white">;
                 <span className="font-bold">Total Annual Savings: </span>;
-                <span className="text-green-400 font-bold text-xl">;
-                  Up to 65%;
-                </span>;
-                <span className="block text-sm text-zion-slate-light mt-1">;
 
+                <span className="text-green-400 font-bold text-xl">Up to 65%</span>;
+                <span className="block text-sm text-zion-slate-light mt-1">Results may vary based on specific requirements and service levels</span>;
+              </p>;
+            </div>;
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">;
+              Calculate Your Savings;
+            </Button>;
+          </div>;
+        </div>;
+      </div>;
+
+    </section>;
   );
 }
 ;
+
+

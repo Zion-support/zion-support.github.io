@@ -1,6 +1,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -34,10 +35,12 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
+
 
 
 
@@ -46,6 +49,7 @@ interface JobsListProps {
     const fetchJobs = async () => {
       if (!user) return;
       if (!user) return,
+
 
       try {
         let query = supabase
@@ -56,6 +60,7 @@ interface JobsListProps {
         if (filter) {
           query = query.eq("status", filter)
         }
+
         const { data, error } = await query;
         if (error) throw error;
 
@@ -143,6 +148,7 @@ interface JobsListProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   {skill}
                 </Badge>;
               ))}
@@ -178,14 +184,7 @@ interface JobsListProps {
           </CardFooter>;
         </Card>;
       ))}
-    </div>
-  )
-}
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -208,3 +207,6 @@ function JobsList() {
   const [jobs, set_jobs] = useState < Job[]>([]);
   const [is_loading, setIsLoading] = useState (true);
 ;
+=======
+
+

@@ -20,6 +20,13 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
+type Props = {
+  room: Room | null;
+  onLeave: () => void;
+  accent?: 'blue' | 'cyan';};type Props = {
+  room: Room | null
+  onLeave: () => void
+  accent?: 'blue' | 'cyan'
 
 
   const [micEnabled, setMicEnabled] = React.useState(true);
@@ -65,6 +72,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
+
 
 
 
@@ -172,6 +180,7 @@ if (return) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 
 

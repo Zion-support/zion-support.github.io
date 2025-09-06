@@ -2,6 +2,7 @@
 
 
 
+
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -19,9 +20,11 @@ import {TALENT_PROFILES} from '../../data/talent';
     const json = JSON && JSON.parse(raw);
     generatedAt = json && json.generatedAt || '';
     summaries = json && json.summaries || [];
+
   } catch {}
   return { props: { generatedAt, summaries } }
 }
+
 
 
 
@@ -40,6 +43,7 @@ import {TALENT_PROFILES} from '../../data/talent';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
   return (
@@ -56,10 +60,12 @@ import {TALENT_PROFILES} from '../../data/talent';
         ))}
       </div>
     </div>
+
 );
 }
   );
 }
+
 
 
 

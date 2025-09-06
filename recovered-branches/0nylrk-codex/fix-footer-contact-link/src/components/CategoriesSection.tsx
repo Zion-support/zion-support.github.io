@@ -2,6 +2,7 @@
 
 
 
+
   {
     title: "Services",
     description: "On - demand IT support, consulting, development, and more";
@@ -22,6 +23,7 @@
     description: "Rent or buy specialized hardware, servers, and devices";
 
 
+
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
@@ -31,7 +33,9 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 const categories = [
@@ -53,6 +57,8 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
+
+
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -62,6 +68,16 @@ const categories = [
 const specialServices = [
   {
 
+
+  }
+];
+
+interface CategoriesSectionProps {
+  showTitle?: boolean
+
+import { GradientHeading } from "./GradientHeading",;
+import { Link } from "react-router-dom",;
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 
 const categories = [;
   {;
@@ -101,11 +117,13 @@ interface CategoriesSectionProps {;
   showTitle?: boolean;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 
@@ -217,6 +235,20 @@ function CategoriesSection() {
               </Link>;
             ))}
 
+          </div>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/categories"
+            className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors"
+          >
+            View All Categories →
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+
 
           </div>;
         </div>;
@@ -240,5 +272,7 @@ function CategoriesSection() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

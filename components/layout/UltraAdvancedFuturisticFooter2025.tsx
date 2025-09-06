@@ -22,6 +22,8 @@ import { motion } from 'framer-motion';
 
 
 
+
+
 } from 'lucide-react';
 
 import Link from 'next/link';
@@ -141,6 +143,7 @@ const footerSections: FooterSection[] = [
   },  {
     title: 'Resources'
     links: [
+
       { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
     title: 'Solutions'
     links: [
@@ -428,10 +431,12 @@ const footer_sections: FooterSection[] = [;
 
 
 
+
   const footerSections = [
     {
       title: 'Services'
       items: [
+
         { label: 'AI & Machine Learning', href: '/ai-services' }
         { label: 'Quantum Computing', href: '/quantum-computing' }
         { label: 'Space Technology', href: '/space-tech' }
@@ -503,17 +508,26 @@ const footer_sections: FooterSection[] = [;
 
 
 
+
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
       {/* Animated Background Elements */}
 
+      <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
+        {[...Array(30)].map((_, i) => (
+          <motion.div
 
+  return (
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">
 
 
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
             key={i}
+
             className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
             animate={{
               x: [0, Math.random() * 1000, 0]
@@ -608,6 +622,7 @@ const footer_sections: FooterSection[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     ziontechgroup.com
                   </a>
@@ -789,6 +804,7 @@ const footer_sections: FooterSection[] = [;
 
 
 
+
           </motion && motion.div>;
 
 
@@ -802,6 +818,7 @@ const footer_sections: FooterSection[] = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Social Links & Newsletter */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -817,7 +834,9 @@ const footer_sections: FooterSection[] = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -838,6 +857,7 @@ const footer_sections: FooterSection[] = [;
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
+
                     <social.icon className='w-5 h-5' />                  </motion.a>          >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
 
@@ -879,6 +899,7 @@ const footer_sections: FooterSection[] = [;
 
 
 
+
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -895,8 +916,10 @@ const footer_sections: FooterSection[] = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 </p>
                 <div className='flex space-x-2'>
@@ -906,6 +929,7 @@ const footer_sections: FooterSection[] = [;
                     className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                   />
                   <motion.button
+
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}                </p>
                 <div className="flex space-x-2">
                   <input
@@ -927,6 +951,7 @@ const footer_sections: FooterSection[] = [;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -944,10 +969,12 @@ const footer_sections: FooterSection[] = [;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -1051,7 +1078,9 @@ const footer_sections: FooterSection[] = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1062,14 +1091,40 @@ const footer_sections: FooterSection[] = [;
               <div className='text-gray-400 text-sm'>
                 © 2024 Zion Tech Group. All rights reserved.
 
-
-
-          className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
-            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
-              <div className='text-gray-400 text-sm'>;
-                © 2024 Zion Tech Group. All rights reserved. |;
-
+                <Link
+                  href='/privacy'
+                  className='hover:text-white transition-colors duration-200 ml-2'
+                >
+                  Privacy Policy
+                </Link>{' '}
+                <Link
+                  href='/terms'
+                  className='hover:text-white transition-colors duration-200 ml-2'
+                >
+                  Terms of Service
+                </Link>
+              </div>
+              <div className='flex items-center space-x-4 text-gray-400 text-sm'>
+                <span>Powered by</span>
+                <div className='flex items-center space-x-2'>
+                  <Brain className='w-4 h-4 text-cyan-400' />                  <span>AI Consciousness</span>
+                </div>
+                <span>•</span>
+                <div className='flex items-center space-x-2'>
+                  <Atom className='w-4 h-4 text-purple-400' />
+                  <span>Quantum Computing</span>
+                </div>
+                <span>•</span>
+                <div className='flex items-center space-x-2'>
+                  <Rocket className='w-4 h-4 text-pink-400' />                  <span>Space Technology</span>                <div className="flex items-center space-x-2">
+                  <Rocket className="w-4 h-4 text-pink-400" />
+                  <span>Space Technology</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
 
 
         whileHover={{ scale: 1.1, y: -2 }}
@@ -1087,10 +1142,12 @@ const footer_sections: FooterSection[] = [;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

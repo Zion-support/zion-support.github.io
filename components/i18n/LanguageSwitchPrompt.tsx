@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
@@ -19,6 +20,7 @@ import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
@@ -144,6 +146,7 @@ export default function LanguageSwitchPrompt() {;
 
 
 
+
 }
 }
 export default /**
@@ -251,3 +254,4 @@ if (return null) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

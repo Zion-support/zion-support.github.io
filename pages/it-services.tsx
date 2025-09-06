@@ -1,14 +1,17 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import Head from 'next/head';
 
 import Link from 'next/link';
 
 import { motion } from 'framer-motion';
+
 
 
   Server,
@@ -49,6 +52,7 @@ import { motion } from 'framer-motion';
   Rocket;
 
 
+
 } from 'lucide-react';
 const itServices = [{
     title: 'Cloud Infrastructure Management'
@@ -60,6 +64,7 @@ const itServices = [{
     popular: true
   }
   {
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -88,6 +93,7 @@ const it_services = [{
     pricing: '$5,000 - $40,000/project'
     category: 'Security'
 origin/main
+
     popular: true
   }
   {
@@ -672,8 +678,10 @@ import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
 import { 
   Server, 
   Shield, 
@@ -709,7 +717,11 @@ import {
   Star,
   Zap,
 
+  Search, 
+  ShoppingCart, 
+  BookOpen, 
 
+  Rocket,;
 
 
   Laptop;
@@ -733,6 +745,25 @@ const itServices = [
     marketPrice: '$5,000/month'
     link: '/contact'
   }
+
+  {
+
+    category: 'Security',
+    popular: true,
+    benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
+    marketPrice: '$4,000/month',
+
+    title: 'Cybersecurity Solutions'
+    description: 'Comprehensive security services to protect your business from cyber threats'
+    icon: Shield
+    features: ['Security Assessment', 'Threat Monitoring', 'Incident Response', 'Compliance']
+    pricing: '$1,500 - $8,000/month'
+    category: 'Security'
+    popular: true
+    benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection']
+    marketPrice: '$4,000/month'
+
+    link: '/contact'
 
   }
   {
@@ -759,15 +790,297 @@ const industries = [
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' }
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
 
+
 ];
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
 
+
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);  }, []);
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    site: 'https://ziontechgroup.com',  }
+  const categories = [
+    { id: 'all', name: 'All IT Services', count: 100 }
+    { id: 'cloud', name: 'Cloud & Infrastructure', count: 25 }
+    { id: 'security', name: 'Cybersecurity', count: 20 }
+    { id: 'devops', name: 'DevOps & Automation', count: 15 }
+    { id: 'blockchain', name: 'Blockchain & Web3', count: 15 }
+    { id: 'quantum', name: 'Quantum Computing', count: 10 }
+    { id: 'enterprise', name: 'Enterprise Solutions', count: 15 },  ];
+  const services = [
+    {
+      id: 1
+      name: 'Quantum Computing Consulting'
+      description:
+        'Expert guidance on quantum computing implementation and optimization for enterprise applications.'
+      category: 'quantum'
+      features: [
+        'Quantum Algorithm Design'
+        'Hardware Selection'
+        'Performance Optimization'
+        'Security Implementation'
+      ]
+      price: 'Custom Pricing'
+      popular: true
+      benefits: [
+        'Exponential Speedup'
+        'Advanced Cryptography'
+        'Optimization Solutions'
+        'Future-Proof Technology'
+      ]
+    }
+    {
+      id: 2
+      name: 'Blockchain & Web3 Solutions'
+      description:
+        'Comprehensive blockchain development and Web3 integration services for modern businesses.'
+      category: 'blockchain'
+      features: [
+        'Smart Contract Development'
+        'DApp Creation'
+        'DeFi Integration'
+        'NFT Platforms'
+      ]
+      price: 'Custom Pricing'
+      popular: true
+      benefits: [
+        'Decentralized Solutions'
+        'Enhanced Security'
+        'Transparency'
+        'Innovation'
+      ]
+    }
+    {
+      id: 3
+      name: 'DevSecOps & Security Automation'
+      description:
+        'Integrated development, security, and operations with automated security testing and deployment.'
+      category: 'devops'
+      features: [
+        'CI/CD Pipelines'
+        'Security Scanning'
+        'Automated Testing'
+        'Infrastructure as Code'
+      ]
+      price: '$199/month'
+      popular: false
+      benefits: [
+        'Faster Deployment'
+        'Enhanced Security'
+        'Reduced Risk'
+        'Automated Compliance'
+      ]
+    }
+    {
+      id: 4
+      name: 'Enterprise Data Platform'
+      description:
+        'Comprehensive data management and analytics platform for enterprise-scale operations.'
+      category: 'enterprise'
+      features: [
+        'Data Warehousing'
+        'Real-time Analytics'
+        'Data Governance'
+        'Machine Learning Integration'
+      ]
+      price: '$299/month'
+      popular: true
+      benefits: [
+        'Data-Driven Insights'
+        'Scalable Architecture'
+        'Compliance Ready'
+        'Advanced Analytics'
+      ]
+    }
+    {
+      id: 5
+      name: 'High-Performance Computing Solutions'
+      description:
+        'Optimized computing infrastructure for demanding computational workloads and research.'
+      category: 'cloud'
+      features: [
+        'GPU Computing'
+        'Parallel Processing'
+        'Distributed Computing'
+        'Performance Monitoring'
+      ]
+      price: '$399/month'
+      popular: false
+      benefits: [
+        'Massive Processing Power'
+        'Scalable Resources'
+        'Cost Optimization'
+        'Advanced Capabilities'
+      ]
+    }
+    {
+      id: 6
+      name: 'Cloud Migration Services'
+      description:
+        'Seamless migration of applications and infrastructure to cloud platforms with zero downtime.'
+      category: 'cloud'
+      features: [
+        'Assessment & Planning'
+        'Data Migration'
+        'Application Modernization'
+        'Performance Optimization'
+      ]
+      price: 'Custom Pricing'
+      popular: true
+      benefits: [
+        'Reduced Costs'
+        'Enhanced Scalability'
+        'Improved Security'
+        'Better Performance'
+      ]
+    }
+    {
+      id: 7
+      name: 'Infrastructure as Code'
+      description:
+        'Automated infrastructure provisioning and management using modern DevOps practices.'
+      category: 'devops'
+      features: [
+        'Terraform Automation'
+        'Configuration Management'
+        'Version Control'
+        'Environment Provisioning'
+      ]
+      price: '$149/month'
+      popular: false
+      benefits: [
+        'Consistent Environments'
+        'Faster Provisioning'
+        'Version Control'
+        'Reduced Errors'
+      ]
+    }
+    {
+      id: 8
+      name: 'Disaster Recovery Solutions'
+      description:
+        'Comprehensive backup and disaster recovery strategies to ensure business continuity.'
+      category: 'security'
+      features: [
+        'Automated Backups'
+        'Multi-site Replication'
+        'Recovery Testing'
+        'RTO/RPO Optimization'
+      ]
+      price: '$179/month'
+      popular: true
+      benefits: [
+        'Business Continuity'
+        'Data Protection'
+        'Minimal Downtime'
+        'Compliance Ready'
+      ]
+    }
+    {
+      id: 9
+      name: 'Cybersecurity Assessment'
+      description:
+        'Comprehensive security evaluation and penetration testing for enterprise systems.'
+      category: 'security'
+      features: [
+        'Vulnerability Assessment'
+        'Penetration Testing'
+        'Compliance Auditing'
+        'Security Recommendations'
+      ]
+      price: '$249/month'
+      popular: false
+      benefits: [
+        'Risk Identification'
+        'Compliance Assurance'
+        'Security Hardening'
+        'Threat Mitigation'
+      ]
+    }
+    {
+      id: 10
+      name: 'API Development & Integration'
+      description:
+        'Custom API development and third-party integration services for seamless connectivity.'
+      category: 'enterprise'
+      features: [
+        'RESTful APIs'
+        'GraphQL Services'
+        'Third-party Integration'
+        'API Documentation'
+      ]
+      price: '$129/month'
+      popular: true
+      benefits: [
+        'System Integration'
+        'Improved Efficiency'
+        'Scalable Architecture'
+        'Developer Experience'
+      ]
+    }
+    {
+      id: 11
+      name: 'Microservices Architecture'
+      description:
+        'Design and implementation of microservices-based applications for scalable systems.'
+      category: 'enterprise'
+      features: [
+        'Service Design'
+        'Container Orchestration'
+        'Service Mesh'
+        'Monitoring & Logging'
+      ]
+      price: '$199/month'
+      popular: false
+      benefits: [
+        'Scalable Architecture'
+        'Independent Deployment'
+        'Technology Diversity'
+        'Fault Isolation'
+      ]
+    }
+    {
+      id: 12
+      name: 'Edge Computing Solutions'
+      description:
+        'Distributed computing infrastructure for low-latency applications and IoT systems.'
+      category: 'cloud'
+      features: [
+        'Edge Deployment'
+        'IoT Integration'
+        'Real-time Processing'
+        'Bandwidth Optimization'
+      ]
+      price: '$159/month'
+      popular: true
+      benefits: [
+        'Reduced Latency'
+        'Bandwidth Savings'
+        'Offline Capability'
+        'Enhanced Performance'
+      ]
+    }
+  ];
+
+  const filteredServices =
+    selectedCategory === 'all'
+      ? services
+      : services.filter(service => service.category === selectedCategory);
+
+  return (
+
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
 
         <meta
           name='description'
@@ -777,11 +1090,61 @@ const industries = [
           name='keywords'
           content='IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure'
 
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='robots' content='index, follow' />
+        <link rel='canonical' href={`${contact.site}/it-services`} />
+      </Head>
+
+      <ErrorBoundary level='page'>
+        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
+          {/* Hero Section */}
+          <section className='py-20 px-4 text-center' role='banner'>
+            <div className='max-w-4xl mx-auto'>
+              <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                IT Services
+              </h1>
+              <p
+                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                100+ Comprehensive IT Solutions
+              </p>
+              <p
+                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                Transform your business with our enterprise-grade IT services.
+                From cloud infrastructure to quantum computing, we provide
+                cutting-edge technology solutions that scale with your business
+                and drive innovation.              </p>
+            </div>
+          </section>
+          {/* Category Filter */}
+          <section className='py-8 px-4'>
+            <div className='max-w-6xl mx-auto'>
+              <div className='flex flex-wrap justify-center gap-4 mb-8'>
+                {categories.map(category => (                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-green-600 text-white'
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+
 
           {/* Services Grid */}
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+
 
 
 
@@ -831,6 +1194,7 @@ const industries = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 {filteredServices.map((service, index) => (
                   <div                    key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -840,6 +1204,7 @@ const industries = [
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
                         Popular
                       </div>
+
 
 
 
@@ -920,6 +1285,7 @@ origin/automation-improvements-final
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -945,20 +1311,52 @@ origin/automation-improvements-final
                         strokeWidth={2}
                         d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
 
-                      />;
-                    </svg>;
+                      />
+
+                      </div>;
+                    </div>;
+                    <div className="flex items-center justify-between mb-4">;
+                      <span className="text-2xl font-bold text-green-400">{service.price}</span>;
+                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>;
+                    </div>;
+                    <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">;
+                      Learn More;
+                    </button>;
                   </div>;
-                  <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>;
-                  <p className='text-slate-400'>;
-                    AWS, Azure, GCP, and hybrid cloud solutions;
-                  </p>;
-                </div>;
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </div>;
+          </section>;
+          {/* Technology Stack Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4 bg-slate-900/40">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                Our Technology Stack
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
 
-                <div className='text-center'>;
-                  <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+                    </svg>
+                  </div>
+                  <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>
+                  <p className='text-slate-400'>
+                    AWS, Azure, GCP, and hybrid cloud solutions
+                  </p>
+                </div>
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 
                     <svg
                       className='w-8 h-8 text-white'
@@ -970,9 +1368,8 @@ origin/automation-improvements-final
                         strokeLinejoin='round'
                         strokeWidth={2}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                        d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
+                      />
 
 
                     </svg>
@@ -985,8 +1382,10 @@ origin/automation-improvements-final
 
 
 
+
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+
 
 
                     <svg
@@ -1008,7 +1407,9 @@ origin/automation-improvements-final
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                     </svg>
@@ -1021,8 +1422,10 @@ origin/automation-improvements-final
 
 
 
+
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+
 
 
                     <svg
@@ -1035,9 +1438,8 @@ origin/automation-improvements-final
                         strokeLinejoin='round'
                         strokeWidth={2}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                        d='M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1'
+                      />
 
 
                     </svg>
@@ -1051,8 +1453,10 @@ origin/automation-improvements-final
           </section>
 
 
-
-
+          {/* CTA Section */}
+          <section className='py-16 px-4'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <h2 className='text-3xl md:text-4xl font-bold mb-8'>
 
 
                 Ready to Transform Your IT Infrastructure?
@@ -1065,10 +1469,12 @@ origin/automation-improvements-final
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 <Link
                   href='/contact'
@@ -1079,6 +1485,11 @@ origin/automation-improvements-final
                 <a
 
 
+                  href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
+                  className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'
+                >
+                  Call {contact.phone}
+                </a>
 
                 <a
 
@@ -1267,6 +1678,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+
               >
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
@@ -1276,6 +1688,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 </p>
                   <div className="text-3xl font-bold text-green-600 mb-6">
                   {level.pricing}
+
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -1298,6 +1711,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
               <h1
+
+
       description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
       category: 'quantum',
       features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
@@ -1438,6 +1853,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className="py-20 px-4 text-center" role="banner">
             <div className="max-w-4xl mx-auto">
               <h1 
+
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -2029,6 +2445,7 @@ function ITServices() {
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
+
                   <button
                     key={category.id}
                     on_click={() => setSelectedCategory (category.id)}
@@ -2044,6 +2461,7 @@ function ITServices() {
             </div>;
           </section>;
           {/* Services Grid */}
+
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -2054,11 +2472,13 @@ function ITServices() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
                   <div 
+
                     key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     {service.popular && (
+
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
                         Popular
                       </div>
@@ -2087,11 +2507,13 @@ function ITServices() {
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
+
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
+
 
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-blue-400 mb-2'>
@@ -2108,11 +2530,13 @@ function ITServices() {
                       <div className="flex flex-wrap gap-1">
                         {service.benefits.map((benefit, benefitIndex) => (
                           <span key={benefitIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
+
                             {benefit}
                           </span>
                         ))}
                       </div>
                     </div>
+
 
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-2xl font-bold text-green-400'>
@@ -2131,6 +2555,7 @@ function ITServices() {
                     </div>
                     
                     <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
+
                       Learn More
                     </button>
                   </div>
@@ -2140,6 +2565,7 @@ function ITServices() {
           </section>
 
           {/* Technology Stack Section */}
+
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
@@ -2320,11 +2746,13 @@ origin/automation-improvements-final
             </div>
 ursor/integrate-build-improve-and-re-verify-b76c
 origin/main
+
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
+
 
 
 
@@ -2384,4 +2812,5 @@ origin/main
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 

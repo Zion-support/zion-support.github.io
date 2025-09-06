@@ -23,6 +23,7 @@ import React from 'react';
 
 
 
+
 import { 
   Phone, 
   Mail, 
@@ -37,6 +38,7 @@ import {
   Database,
   Shield,
   Zap;
+
 
 
 
@@ -126,6 +128,8 @@ const Footer: React.FC = () => {;
 
   ];
   return (
+
+
 
 
 
@@ -259,6 +263,7 @@ const Footer: React.FC = () => {;
           </div>;
         </div>;
         {/* Bottom Bar */}
+
 
 
         <div className="border-t border-gray-800 mt-8 pt-8">;
@@ -400,3 +405,4 @@ export default Footer;import React from 'react'; import Link from 'next/link'; i
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

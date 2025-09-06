@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 export interface FuturisticAIService2030 {;
   id: string;
@@ -389,6 +390,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
 
 
 
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -402,7 +404,8 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
 
     reviews: 4
 
-=======
+
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface FuturisticAIService2030 {;
   id: string,;
@@ -668,3 +671,5 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
 
   }
 ];
+
+

@@ -1,4 +1,5 @@
 
+
 /**
  * Theme configuration for PDF export */
 export interface PdfThemeColors {;
@@ -24,6 +25,7 @@ export interface PdfThemeColors {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         background: '#ffffff';
         text: '#000000';
         heading: '#222222';
@@ -38,6 +40,8 @@ export interface PdfThemeColors {;
         heading: '#ffffff';
 
         accent: '#9b87f5'
+
+
 /**;
  * Theme configuration for PDF export */;
 export interface PdfThemeColors {;
@@ -58,10 +62,12 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
         accent: '#9b87f5';
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       }
 }

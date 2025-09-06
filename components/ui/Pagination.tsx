@@ -22,6 +22,7 @@ import EnhancedButton from './EnhancedButton';
 
 
 
+
   page: number;
   page_size: number;
   total: number;
@@ -47,6 +48,7 @@ export type PaginationProps = {
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
+
 
 
 
@@ -118,6 +120,7 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
         Next
       </EnhancedButton>
     </div>
+
 );
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -402,5 +405,6 @@ export default Pagination;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

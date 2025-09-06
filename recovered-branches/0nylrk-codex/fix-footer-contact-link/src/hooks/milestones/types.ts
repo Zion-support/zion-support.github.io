@@ -3,7 +3,9 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string;
   project_id: string;
@@ -14,6 +16,7 @@
   status: MilestoneStatus;
   created_at: string;
   updated_at: string;
+
 
 
 
@@ -28,6 +31,7 @@ export interface MilestoneActivity {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   id: string;
   milestone_id: string;
   user_id: string;
@@ -39,6 +43,8 @@ export interface MilestoneActivity {;
   created_by_profile?: {
 
     avatar_url?: string
+
+
 import { supabase } from '@/integrations/supabase/client',;
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved',;
 export interface Milestone {;
@@ -71,11 +77,13 @@ export interface MilestoneActivity {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 }

@@ -18,13 +18,16 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-
+import Head from 'next/head';
+import {
 
 
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+
+
 
 
 
@@ -171,8 +174,128 @@ import { Zap, Star, Calendar } from 'lucide-react';
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
 
+  const popularServices = getPopularRevolutionaryServices();
+  // Enhanced service categories with better descriptions
+  const enhancedCategories = [
+    {
+      name: 'Quantum AI & Cognitive Computing'
+      description:
+        'Revolutionary quantum AI solutions with human-level reasoning capabilities'
+      icon: <Brain className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Quantum AI & Cognitive Computing'
+      ).length
+      color: 'from-purple-500 to-indigo-600'
+    }
+      name: 'Autonomous Manufacturing & Industry 4.0'
+      description:
+        'Next-generation autonomous manufacturing with zero human intervention'
+      icon: <Factory className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Autonomous Manufacturing & Industry 4.0'
+      ).length
+      color: 'from-orange-500 to-red-600'
+    }
+    {
+      name: 'Quantum Blockchain & DeFi'
+      description:
+        'Quantum-secured blockchain platforms with infinite scalability'
+      icon: <Globe className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Quantum Blockchain & DeFi'
+      ).length
+      color: 'from-green-500 to-emerald-600'
+    }
+    {
+      name: 'AI Biomedical Research & Drug Discovery'
+      description:
+        'AI-powered platforms for accelerated drug discovery and medical research'
+      icon: <FlaskIcon className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'AI Biomedical Research & Drug Discovery'
+      ).length
+      color: 'from-blue-500 to-indigo-600'
+    }
+    {
+      name: 'Quantum Cybersecurity & Threat Detection'
+      description:
+        'Quantum-resistant cybersecurity with AI-powered threat detection'
+      icon: <ShieldCheck className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Quantum Cybersecurity & Threat Detection'
+      ).length
+      color: 'from-red-500 to-pink-600'
+    }
+    {
+      name: 'Space Technology & Satellite Optimization'
+      description:
+        'Revolutionary platforms for space exploration and satellite optimization'
+      icon: <Rocket className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Space Technology & Satellite Optimization'
+      ).length
+      color: 'from-indigo-500 to-purple-600'
+    }
+    {
+      name: 'AI Content Creation & Marketing'
+      description: 'Quantum-powered content creation at infinite scale'
+      icon: <FileText className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'AI Content Creation & Marketing'
+      ).length
+      color: 'from-teal-500 to-cyan-600'
+    }
+    {
+      name: 'Quantum Computing as a Service'
+      description: 'Enterprise quantum computing with real quantum processors'
+      icon: <Cpu className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Quantum Computing as a Service'
+      ).length
+      color: 'from-violet-500 to-purple-600'
+    }
+    {
+      name: 'Autonomous Vehicles & Smart Transportation'
+      description:
+        'AI platforms for autonomous vehicles and smart transportation'
+      icon: <CarIcon className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Autonomous Vehicles & Smart Transportation'
+      ).length
+      color: 'from-emerald-500 to-green-600'
+    }
+    {
+      name: 'Smart Energy & Renewable Energy'
+      description:
+        'AI platforms for smart energy grids and renewable energy optimization'
+      icon: <LeafIcon className='w-6 h-6' />
+      count: revolutionaryMicroSaasServices.filter(
+        s => s.category === 'Smart Energy & Renewable Energy'
+      ).length
+      color: 'from-yellow-500 to-orange-600'
+    },  ];      description: 'AI platforms for smart energy grids and renewable energy optimization'
+      icon: <LeafIcon className="w-6 h-6" />
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length
+      color: 'from-yellow-500 to-orange-600'
+    }
 
-
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+      }
+    },  };        staggerChildren: 0.1
+      }
+    }
+  }
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 }
+    visible: {
+      y: 0
+      opacity: 1
+      transition: {
 
 
   return (
@@ -183,6 +306,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
             Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI
             Autonomous Systems, Space Technology
           </title>
+
 
 
   const contactInfo = {;
@@ -314,10 +438,12 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+
                 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology
                 and cutting-edge solutions that redefine what's possible.
@@ -344,6 +470,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -426,6 +553,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -435,6 +563,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Popular Services Showcase */}
 
         <section className="py-16">
@@ -442,6 +571,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
+
 
               initial={{ opacity: 0, y: 20 }}
 
@@ -454,6 +584,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -493,11 +624,14 @@ import { Zap, Star, Calendar } from 'lucide-react';
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Most Popular
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
+                </span>
+                <br />
+                <span className="text-white">Revolutionary Services</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
+              </p>
+            </motion.div>
 
 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -523,7 +657,9 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -603,6 +739,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
                       ))}
 
 
+
               ))}
 
             </motion && motion.div>;
@@ -620,6 +757,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -696,6 +834,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
 
 
+
                     </button>;
                   </div>;
                 </div>;
@@ -713,12 +852,15 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+
+
               whileInView='visible'              viewport={{ once: true }}
 
 
@@ -729,7 +871,9 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -780,6 +924,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
                 </motion && motion.div>;
               ))}
 
+
             </motion && motion.div>;
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -823,6 +968,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1006,6 +1152,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
                     </div>
                   </div>
                 </div>
+
               </motion.div>
             </motion.div>
           )}
@@ -1121,12 +1268,14 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraFuturisticBackground>
+
 
                 >;
                   Schedule Demo;
@@ -1211,4 +1360,5 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

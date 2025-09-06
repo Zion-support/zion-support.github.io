@@ -2,6 +2,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +26,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
 
 
 
@@ -84,6 +86,7 @@ const serviceCategories = [
     icon: Database,
     color: 'from-cyan-500 to-blue-600',
 
+
     features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
   }
 ];
@@ -97,6 +100,7 @@ const heroFeatures = [
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   }
 
+
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -109,6 +113,7 @@ const contactInfo = {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -188,16 +193,22 @@ const serviceCategories = [
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export default function AdvancedAIAutomationServices() {
 
   return (
 
-          href='https://ziontechgroup && ziontechgroup.com/advanced-ai-automation-services'
-        />;
-      </Head>;
-
-
-
+    <Layout>
+      <Head>
+        <title>Advanced AI Automation Services - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI automation services for development, testing, DevOps, security, and data management. Transform your operations with intelligent automation." />
+        <meta name="keywords" content="AI automation, development automation, testing automation, DevOps automation, security automation, data automation" />
+        <meta property="og:title" content="Advanced AI Automation Services - Zion Tech Group" />
+        <meta property="og:description" content="Revolutionary AI automation services for development, testing, DevOps, security, and data management." />
+        <meta property="og:url" content="https://ziontechgroup.com/advanced-ai-automation-services" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/advanced-ai-automation-services" />
+      </Head>
 
 
           >
@@ -210,6 +221,7 @@ export default function AdvancedAIAutomationServices() {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
+
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -243,6 +255,7 @@ export default function AdvancedAIAutomationServices() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                 >
                   {stat.icon}
                   <span className="text-cyan-400 font-semibold">{stat.value}</span>
@@ -263,6 +276,7 @@ export default function AdvancedAIAutomationServices() {
             </div>
           </motion.div>
         </div>
+
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -302,10 +316,12 @@ export default function AdvancedAIAutomationServices() {
 
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our AI Automation Services?
             </h2>
+
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI automation services provide unprecedented efficiency
               accuracy, and cost savings across all aspects of technology
@@ -348,6 +364,7 @@ export default function AdvancedAIAutomationServices() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -361,6 +378,7 @@ export default function AdvancedAIAutomationServices() {
                   </div>
                 </div>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -410,6 +428,7 @@ export default function AdvancedAIAutomationServices() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               AI Automation Service Categories
@@ -418,6 +437,7 @@ export default function AdvancedAIAutomationServices() {
               Comprehensive AI automation solutions covering every aspect of modern technology operations
             </p>
           </motion.div>
+
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -466,6 +486,7 @@ export default function AdvancedAIAutomationServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -474,6 +495,7 @@ export default function AdvancedAIAutomationServices() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
+
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -523,6 +545,7 @@ export default function AdvancedAIAutomationServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -540,6 +563,7 @@ export default function AdvancedAIAutomationServices() {
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
+
                           <p className='text-gray-300 text-sm mb-4'>
                             {service.description}
                           </p>
@@ -583,6 +607,7 @@ export default function AdvancedAIAutomationServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -602,6 +627,7 @@ export default function AdvancedAIAutomationServices() {
                         </div>
                       </div>
                     </motion.div>
+
                   ))}
                 </div>
               </motion.div>
@@ -653,6 +679,7 @@ export default function AdvancedAIAutomationServices() {
 
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -661,6 +688,7 @@ export default function AdvancedAIAutomationServices() {
               Real feedback from organizations that have transformed their operations with our AI automation services
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -705,6 +733,7 @@ export default function AdvancedAIAutomationServices() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -718,6 +747,7 @@ export default function AdvancedAIAutomationServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
+
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
                   </div>
                 </div>
@@ -785,6 +815,7 @@ export default function AdvancedAIAutomationServices() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?
@@ -797,6 +828,7 @@ export default function AdvancedAIAutomationServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
+
                 <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo.mobile}
               </Link>
               <Link
@@ -827,6 +859,7 @@ export default function AdvancedAIAutomationServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -840,6 +873,7 @@ export default function AdvancedAIAutomationServices() {
           </motion.div>
         </div>
       </section>
+
 
 
 
@@ -872,3 +906,4 @@ export default function AdvancedAIAutomationServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

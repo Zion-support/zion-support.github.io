@@ -2,6 +2,8 @@
 
 
 
+
+
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -32,6 +34,8 @@ export function MilestoneSuggestions({
   startDate,
   endDate,
   projectType,
+
+
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
@@ -39,6 +43,7 @@ export function MilestoneSuggestions({
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
+
       scope: `${projectName}: ${scopeSummary}`
       startDate: startDate.toISOString()
       endDate: endDate ? endDate.toISOString() : null
@@ -53,10 +58,13 @@ export function MilestoneSuggestions({
 
     const milestones = await generateMilestones(input),
     
+
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+
+
 
 
 
@@ -160,11 +168,13 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <div className="space-y-4">;
@@ -226,6 +236,7 @@ if ( {) {
           </CardContent>
         </Card>
       )}
+
     </div>
   )
 }
@@ -233,3 +244,4 @@ if ( {) {
   );
 }
 ;
+

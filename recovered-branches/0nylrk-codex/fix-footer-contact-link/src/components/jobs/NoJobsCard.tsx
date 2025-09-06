@@ -6,6 +6,7 @@ interface NoJobsCardProps {;
 }
 
 
+
 export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
 
   return (
@@ -26,6 +27,7 @@ export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
 
 
 
+
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 interface NoJobsCardProps {
@@ -38,8 +40,10 @@ interface NoJobsCardProps {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

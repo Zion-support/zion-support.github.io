@@ -15,6 +15,8 @@ export default function HealthcareAISolutions() {
 
 
 
+
+
 			pricePerMonthUSD={2999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -26,7 +28,9 @@ export default function HealthcareAISolutions() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Reduce admin time 20–40% and improve throughput"
@@ -37,6 +41,18 @@ export default function HealthcareAISolutions() {
 				"Capacity forecasting and staffing optimization",
 				"HIPAA-compliant data pipelines and audit",
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
+
+
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
@@ -51,8 +67,10 @@ export default function HealthcareAISolutions() {
   }
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

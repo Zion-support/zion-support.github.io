@@ -1,10 +1,12 @@
 
 
 
+
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
+
 
 interface FeaturedListingsSectionProps {
   showTitle?: boolean
@@ -26,6 +28,7 @@ export /**
 function FeaturedListingsSection() {
   const featured_listings = [;
     {
+
       id: "advanced-nlp-model"
       title: "Advanced NLP Model for Text Analysis"
       description: "State-of-the-art natural language processing with 98% accuracy"
@@ -46,15 +49,19 @@ function FeaturedListingsSection() {
       tags: ["AI", "NLP", "Machine Learning"];
       category: "AI Models",
       tags: ["AI", "NLP", "Machine Learning"],
+
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-11-15T14:48:00.000Z",
       rating: 4.8,
       reviewCount: 124,
+
+
       author: {
         name: "TechAI Labs"
         id: "tech-ai-labs"
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       }
+
     }
     {
       id: "image-generation-service"
@@ -81,17 +88,21 @@ function FeaturedListingsSection() {
       createdAt: "2023-10-20T11:15:00.000Z",
       rating: 4.7,
       reviewCount: 89,
+
       author: {
         name: "VisualAI"
         id: "visual-ai"
       }
+
     }
     },
+
     {
       id: "fullstack-ai-dev"
       title: "Full-Stack AI Development"
       description: "End-to-end development for AI-powered applications"
       price: null, // Custom pricing
+
       currency: "$"
       category: "Services"
       tags: ["Development", "Full-stack", "AI"];
@@ -106,10 +117,12 @@ function FeaturedListingsSection() {
       createdAt: "2023-12-15T09:45:00.000Z",
       rating: 4.9,
       reviewCount: 56,
+
       author: {
         name: "DataMinds Consulting"
         id: "dataminds-consulting"
       }
+
     }
     {
       id: "sentiment-analysis-api"
@@ -136,6 +149,7 @@ function FeaturedListingsSection() {
       createdAt: "2024-01-05T11:15:00.000Z",
       rating: 4.6,
       reviewCount: 72,
+
       author: {
         name: "SocialAI"
         id: "social-ai"
@@ -160,6 +174,7 @@ function FeaturedListingsSection() {
             <ProductListingCard
               key={listing.id}
               listing={listing}
+
               view="grid"
 import { ProductListingCard } from "@/components/ProductListingCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -257,6 +272,7 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
               view="grid";
 
 
+
               view="grid"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
@@ -278,6 +294,7 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 
 
 
+
               view="grid"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
@@ -286,6 +303,7 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 
               onRequestQuote={() => {}}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -311,9 +329,11 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

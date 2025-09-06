@@ -4,11 +4,13 @@
 
 
 
+
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
@@ -24,6 +26,8 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   }
   return {
     ...analysis;
+
+
 
 
 
@@ -54,7 +58,9 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
 };
+

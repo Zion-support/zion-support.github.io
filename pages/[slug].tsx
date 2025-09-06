@@ -1,6 +1,7 @@
 
 
 
+
         return false;
       }
     });
@@ -11,6 +12,7 @@ if (return by_link) {
   }, [slug]);
 import React, { useMemo } from 'react';
 import Head from 'next/head';
+
 
 
 
@@ -33,7 +35,9 @@ import path from 'path';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 function getAllServices(): Service[] {
@@ -64,6 +68,7 @@ function getAllServices(): Service[] {
 
 
 
+
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
 	 })),;
@@ -71,6 +76,7 @@ function getAllServices(): Service[] {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 		fallback: false;
 	}
@@ -85,8 +91,221 @@ export async function getStaticProps() {
 	}
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+function toSlug(value: string): string {
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+function getExistingRootPageSlugs(): Set<string> {
+	const pagesDir = path.join(process.cwd(), 'pages');
+	const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+	const reserved = new Set<string>(['apireports', 'services']);
+	const slugs = new Set<string>();
+	for (const entry of entries) {
+		if (entry.name.startsWith('_')) continue;
+		if (reserved.has(entry.name)) continue;
+		// Files at root
+		if (entry.isFile()) {
+			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
+			if (m) {
+				const base = m[1];
+				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
+					slugs.add(base);
+				  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+		// Directories at root (folder routes)
+		if (entry.isDirectory()) {
+			slugs.add(entry.name);
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	return slugs;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export async function getStaticPaths(req, res) {
+  try {
+	const services = getAllServices();
+	const slugs = new Set<string>();
+	for (const s of services) {
+		if (s.id) slugs.add(toSlug(s.id));
+		else if (s.name) slugs.add(toSlug(s.name));
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	const existing = getExistingRootPageSlugs();
+	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
+	return {
+		paths: filtered.map((slug) => ({ params: { slug } })),
+		fallback: false
+	};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export async function getStaticProps(req, res) {
+  try {
+	const services = getAllServices();
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+	if (!service) {
+		return { notFound: true };
+	  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	return {
+		props: { service   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+	};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function RootServiceDetailPage({ service }: { service: Service }) {
+	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
+	return (
 
 
 		<UltraFuturisticBackground variant="quantum" intensity="high">
@@ -115,16 +334,82 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							{
 
 
+								provider: {
+									"@type": "Organization"
+									name: "Zion Tech Group"
+									url: "https://ziontechgroup.com"
+
+								  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+							},
+							null,
+							2
+							)
+						}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				/>
+			</Head>
+			<div className="container mx-auto px-4 py-16">
+				<div className="text-center mb-10">
+					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+						{service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+					</h1>
+					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+				</div>
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+					<div className="lg:col-span-2 space-y-6">
+						<Card className="p-6 bg-black/40 border border-gray-700/50">
+							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
+							<p className="text-gray-300 leading-relaxed">{service.description}</p>
+						</Card>
+
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{(service.features || []).slice(0, 12).map((f: string) => (
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
@@ -135,6 +420,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
 							<div className="flex flex-wrap gap-2">
+
 								{(service.integrations |[]).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
 								))}
@@ -147,6 +433,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 							</div>
 						</Card>
 					</div>
@@ -157,6 +444,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
+
 								</Link>
 								</a>
 
@@ -166,6 +454,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
@@ -184,8 +473,10 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
+
 							<a href={service.link |canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
+
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -193,6 +484,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+
 
 
 
@@ -318,6 +610,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 }
 
 
+
 	);
   } catch (error) {
     console.error("Error:", error);
@@ -366,6 +659,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -373,4 +667,5 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

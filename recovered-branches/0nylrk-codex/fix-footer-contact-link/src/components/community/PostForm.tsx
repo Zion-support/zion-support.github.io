@@ -3,8 +3,10 @@
 
 
 
+
 import { useState } from "react",
 import { useForm } from "react-hook-form",
+
 import { 
   Card;
   CardContent;
@@ -22,10 +24,12 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
+
 import { Textarea } from "@/components/ui/textarea";
 import { ForumCategory } from "@/types/community";
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
+
 
 
 
@@ -36,6 +40,8 @@ interface PostFormValues {
   content: string,
   categoryId: ForumCategory,
   tags: string
+
+
 
 
 
@@ -80,15 +86,19 @@ interface PostFormProps {;
 export const PostForm = ({
   initialValues,
   onSubmit,
+
+
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
+
       title: initialValues?.title |""
       content: initialValues?.content |""
       categoryId: initialValues?.categoryId |"project-help"
       tags: initialValues?.tags |""
     }
+
 
 
   });
@@ -136,6 +146,11 @@ export const PostForm = ({
       await on_submit (values);
     } finally {
 
+      setIsSubmitting(false)
+    }
+
+  }),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
 
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
@@ -143,6 +158,7 @@ export const PostForm = ({
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
+
 
     }
 
@@ -152,6 +168,7 @@ export const PostForm = ({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <Card>;
       <CardHeader>;
@@ -244,6 +261,7 @@ export const PostForm = ({
       </CardContent>
     </Card>
   )
+
 }
 ;
 export default PostForm;
@@ -261,3 +279,4 @@ export default PostForm;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

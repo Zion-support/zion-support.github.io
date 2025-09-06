@@ -1,4 +1,5 @@
 
+
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -53,10 +54,12 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+
     min: number;
 
     max: number;
@@ -104,6 +107,7 @@ export function GeneratedContentDisplay({
 }: GeneratedContentDisplayProps) {
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
+
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -116,6 +120,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           </h3>
           <p className="text-white">{content.description}</p>
         </div>
+
         
 
 
@@ -128,12 +133,14 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
           </h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
+
               <Badge
                 key={index}
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30"
@@ -149,11 +156,13 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {tag}
               </Badge>;
             ))}
           </div>
         </div>
+
         
 
 
@@ -166,6 +175,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -175,6 +185,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
+
         
 
 
@@ -187,6 +198,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -208,10 +220,20 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
-    </Card>
+
+
+  )
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
 
 
     </Card>;
   );
 }
 ;
+
+

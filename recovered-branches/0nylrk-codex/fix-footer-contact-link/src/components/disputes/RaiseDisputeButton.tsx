@@ -2,8 +2,10 @@
 
 
 
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
+
 import { 
   Dialog;
   DialogContent;
@@ -13,6 +15,7 @@ import {
   DialogOverlay
 } from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
+
 import { useNavigate } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
 interface RaiseDisputeButtonProps {
@@ -46,6 +49,7 @@ import { ShieldAlert } from "lucide-react",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -54,10 +58,12 @@ interface RaiseDisputeButtonProps {
   className?: string
 }
 
+
 export function RaiseDisputeButton({ ;
   projectId;
 export function RaiseDisputeButton({ 
   projectId,
+
   milestoneId, 
   variant = "outline", 
   size,
@@ -65,6 +71,7 @@ export function RaiseDisputeButton({
 }: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const navigate = useNavigate(),
+
   
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false)
@@ -73,6 +80,7 @@ export function RaiseDisputeButton({
 
   },
   
+
   return (
     <>
       <Button
@@ -94,6 +102,33 @@ export function RaiseDisputeButton({
           </DialogHeader>
 
 
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogDescription,;
+  DialogOverlay;
+} from "@/components/ui/dialog",;
+import { DisputeForm } from "./DisputeForm",;
+import { useNavigate } from "react-router-dom",;
+import { ShieldAlert } from "lucide-react",;
+interface RaiseDisputeButtonProps {;
+  projectId: string,;
+  milestoneId?: string,;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
+  size?: "default" | "sm" | "lg" | "icon",;
+  className?: string;
+}
+;
+export function RaiseDisputeButton({;
+  projectId,;
+  milestoneId,;
+  variant = "outline",;
+  size,;
+  className;
 
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -127,12 +162,11 @@ export function RaiseDisputeButton({
             </DialogDescription>;
           </DialogHeader>;
 
-
-          
           <DisputeForm 
+
+
 =======
-          <DisputeForm 
-
+          <DisputeForm;
 
 
             projectId={projectId}

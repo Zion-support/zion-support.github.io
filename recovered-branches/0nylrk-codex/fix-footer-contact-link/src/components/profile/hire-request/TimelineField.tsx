@@ -1,8 +1,10 @@
 
 
 
-
-
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { UseFormReturn } from "react-hook-form",
+import { FormValues } from "./useHireRequestForm",
 
 
 interface TimelineFieldProps {
@@ -11,6 +13,7 @@ interface TimelineFieldProps {
 export function TimelineField({ form }: TimelineFieldProps) {
 
   const timelineOptions = [
+
 
 
     { value: "Less than 1 week", label: "Less than 1 week" }
@@ -44,6 +47,7 @@ import {FormValues} from "./useHireRequestForm";
 
 
 
+
   return (
     <FormField
       control={form.control}
@@ -63,6 +67,7 @@ import {FormValues} from "./useHireRequestForm";
               <SelectContent>
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
+
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { UseFormReturn } from "react-hook-form",;
@@ -115,6 +120,7 @@ export function TimelineField(): any ({ form }: TimelineFieldProps) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                     {option.label}

@@ -4,12 +4,14 @@
 
 
 
+
 import {format} from 'date-fns';
 import {Edit, Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
+
 
 
 
@@ -25,10 +27,12 @@ import { EducationItemProps } from './types',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+
   return (
     <Card className="bg-muted/40">;
       <CardContent className="pt-6">;
@@ -76,6 +80,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -86,4 +91,5 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

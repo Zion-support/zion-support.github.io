@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -14,6 +15,7 @@ export default function ToolPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 import React, { useState } from 'react';
@@ -47,6 +49,14 @@ export default function ToolPage() {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
 
 
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+export default function ToolPage(req, res) {
+  try {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({});
+  const [showResults, setShowResults] = useState(false);
 
   const questions = [;
     {
@@ -121,6 +131,7 @@ export default function ToolPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -130,12 +141,15 @@ export default function ToolPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
+
   const resetAssessment = () => {
     setCurrentQuestion(0)
     setAnswers({})
     setShowResults(false)
+
   }
   },
+
   if (showResults) {
     const result = calculateScore()
     return (
@@ -165,12 +179,15 @@ export default function ToolPage() {
                   {questions.map((q, index) => (
                     <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
                       <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
+
                       <p className="text-white/80 text-sm">Score: {answers[q.id] |0}/5</p>
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
+
                     </div>
                   ))}
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
 
 
 
@@ -186,6 +203,7 @@ export default function ToolPage() {
 
 
 
+
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
@@ -193,7 +211,9 @@ export default function ToolPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                     href="/contact"
@@ -209,11 +229,13 @@ export default function ToolPage() {
       </>
     )
   }
+
   const currentQ = questions[currentQuestion]
 
 
 }
   const currentQ = questions[currentQuestion],
+
 
   return (
     <>
@@ -235,6 +257,7 @@ export default function ToolPage() {
               <h1 className="text-4xl font-bold text-white mb-4">Automation Readiness Assessment</h1>
               <p className="text-white/80 text-lg">Evaluate your organization's readiness for AI automation</p>
               <div className="mt-4 text-cyan-400">
+
                 Question {currentQuestion + 1} of {questions.length}
                 Question {currentQuestion + 1} of {questions.length  } catch (error) {
     console.error("Error:", error);
@@ -252,6 +275,7 @@ export default function ToolPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
             </div>
 
@@ -263,6 +287,7 @@ export default function ToolPage() {
                   <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                     <input
                       type="radio"
+
                       name={currentQ.id}
                       value={index + 1}
                       checked={answers[currentQ.id] === index + 1}
@@ -402,6 +427,7 @@ export default function ToolPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -417,6 +443,7 @@ export default function ToolPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -426,10 +453,13 @@ export default function ToolPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
+
+
 
 
     console.error("Error:", error);
@@ -440,6 +470,7 @@ export default function ToolPage() {
 
 
   }
+
   const current_q = questions[current_question],
   return (
     <>;
@@ -495,6 +526,7 @@ export default function ToolPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 </button>;
               </div>;
             </div>;
@@ -509,6 +541,7 @@ export default function ToolPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 
 }
@@ -519,4 +552,5 @@ export default function ToolPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

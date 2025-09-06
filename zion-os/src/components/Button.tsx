@@ -1,3 +1,4 @@
+
 'use client';
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
@@ -106,6 +107,7 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   },;
   const widthClasses = fullWidth ? 'w-full' : '',;
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,;
+
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
@@ -113,6 +115,7 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
+
 
 'use client',
 import React, { forward_ref } from 'react',
@@ -131,21 +134,18 @@ interface ButtonProps {
   class_name?: string,
   type?: 'button' | 'submit' | 'reset',
   full_width?: boolean,
-=======
 
-  ),;
-  if (href) {;
-    return (;
       <Link href={href} className={classes}>;
         {content}
       </Link>);
   }
-;
-  return (;
-=======
+
   return (
 =======
 ;
+=======
+
+
   return (;
     <button;
       ref={ref}
@@ -157,6 +157,7 @@ interface ButtonProps {
       aria - label={typeof children === 'string' ? children : undefined}
     >;
       {content}
+
 
 }),;
 Button.displayName = 'Button',;
@@ -195,11 +196,13 @@ export function IconButton({;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
+
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
 
       {children}
     </Button>);
 }
+
 // Floating action button;
 export function FloatingActionButton({icon;
   onClick;
@@ -215,6 +218,7 @@ export function FloatingActionButton({;
   ...props;
 }: ButtonProps & { icon: React.ReactNode }) {;
   return (;
+
     <Button;
       {...props}
       icon={icon}

@@ -2,8 +2,17 @@ import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Star } from 'lucide-react';
+
+
+export default function DocsPage() {
+
+export default function DocsPage() {
+  const contact = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  };
 
 
 
@@ -69,6 +78,7 @@ import { Star } from 'lucide-react';
       color: 'text-purple-400'
     }
     {
+
       title: 'Community Forum'
       description: 'Connect with other developers and users'
       icon: <ExternalLink className='w-6 h-6' />
@@ -81,6 +91,7 @@ import { Star } from 'lucide-react';
       href: '/community',
       color: 'text-yellow-400',
     },
+
   ];
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =
@@ -105,6 +116,7 @@ export default function DocsPage() {;
   });
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
+
 
 
       case 'Beginner': return 'bg-green-500/20 text-green-400';
@@ -209,6 +221,7 @@ export default function DocsPage() {;
   };
 
 
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
 
@@ -221,6 +234,7 @@ export default function DocsPage() {;
   }
 
   };
+
   const formatDate = (dateString: string) => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;
@@ -230,6 +244,7 @@ export default function DocsPage() {;
     });
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
   return (
 
@@ -263,6 +278,7 @@ export default function DocsPage() {;
                         className='text-cyan-400 hover:underline'
                       >
                         {l.name}
+
                       </a>                    </li>      </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
@@ -293,6 +309,7 @@ export default function DocsPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   ))}
                 </ul>;
               </Card>;
@@ -323,6 +340,7 @@ export default function DocsPage() {;
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
               {external.map((e) => (
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+
 
             </ul>;
           </Card>;
@@ -395,9 +413,11 @@ export default function DocsPage() {;
 
 
 
+
               ))}
             </ul>
           </Card>
+
 
 
 
@@ -408,3 +428,4 @@ export default function DocsPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

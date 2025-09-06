@@ -3,7 +3,9 @@
 
 
 
+
 import { useState } from 'react',
+
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -16,6 +18,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
+
 import { ProductListing } from "@/types/listings";
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from "@/integrations/supabase/client";
@@ -33,6 +36,7 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -52,6 +56,7 @@ const TIMELINE_OPTIONS = [
   { label: "6+ months", value: "6+months" }]
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
+
     description: ''
     email: ''
     budget: BUDGET_RANGES[0].value
@@ -74,9 +79,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
+
   }
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -86,6 +93,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(),
     setIsSubmitting(true),
+
 
     try {
       // Call Supabase function to process the quote;
@@ -117,11 +125,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
             endDate: endDate?.toISOString()}
         }
+
       });
       if (error) throw error;
       }),
 
       if (error) throw error,
+
 
       // Show success message
       toast({
@@ -130,6 +140,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       // Close the modal and reset form
       onOpenChange(false);
       setFormData({
+
         description: ''
         email: ''
         budget: BUDGET_RANGES[0].value
@@ -142,6 +153,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         timeframe: TIMELINE_OPTIONS[0].value}),
       setStartDate(new Date()),
       setEndDate(undefined),
+
       setCurrentStep('details')
     } catch (error) {
       console.error("Error submitting quote:", error);
@@ -153,20 +165,26 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     } finally {
       setIsSubmitting (false);
     }
+
   }
   },
+
 
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline');
     else if (currentStep === 'timeline') setCurrentStep('contact')
+
   }
   },
+
 
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details');
     else if (currentStep === 'contact') setCurrentStep('timeline')
+
   }
   },
+
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -199,6 +217,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
                   required
 
+
                 />;
               </div>;
 
@@ -221,6 +240,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                         {range.label}
@@ -293,9 +313,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <Button
                         variant={"outline"}
                         className={cn(
+
                           "justify-start text-left font-normal w-full";
 
                           "justify-start text-left font-normal w-full",
+
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -343,6 +365,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   )}
 
 
+
                   )}
                   {endDate && (;
                     <div className="flex justify-between">;
@@ -366,6 +389,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           )}
 
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
@@ -408,6 +432,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
+
             </div>
           </DialogFooter>
         </form>
@@ -423,5 +448,4 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>);
 }
 
-=======
-;
+

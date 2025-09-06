@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
@@ -24,6 +26,8 @@ export function ProjectDetailsStep({
   return (
     <div className="space-y-6">
       <div>
+
+
 
 
 
@@ -67,6 +71,8 @@ export function ProjectDetailsStep({
 
 
 
+
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -75,6 +81,8 @@ export function ProjectDetailsStep({
             <Input
               id="name"
               placeholder="Your name"
+
+
 
 
 
@@ -130,13 +138,17 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               value={formData.contactInfo.name}
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, name: e.target.value } ;
               })}
+
+
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -148,6 +160,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="company"
               placeholder="Your company name"
               value={formData.contactInfo.company}
+
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
@@ -159,6 +172,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, company: e.target.value } ;
               })}
+
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -173,6 +187,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Your email address"
 
               value={formData.contactInfo.email}
+
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
@@ -184,6 +199,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, email: e.target.value } ;
               })}
+
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -195,6 +211,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="phone"
               placeholder="Your phone number"
               value={formData.contactInfo.phone}
+
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
@@ -206,12 +223,14 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, phone: e.target.value } ;
               })}
+
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
           </div>
         </div>
       </div>
     </div>
+
 
 
 
@@ -232,6 +251,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               onChange={(e) => updateFormData({ ;
                 contactInfo: { ...formData && formData.contactInfo, phone: e && e.target.value } ;
               })}
+
 
 
 

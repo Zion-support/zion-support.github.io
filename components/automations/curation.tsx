@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -18,6 +19,7 @@ type Experiment = {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -90,6 +92,7 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
+
 
 
 
@@ -239,6 +242,7 @@ function getStaticProps() {
         items: parsed.items || [],
       },
       revalidate: 300,
+
     };  } catch {
     return {
       props: {
@@ -262,6 +266,7 @@ function getStaticProps() {
   } catch {
     return {
       props: {
+
 
 
 
@@ -349,3 +354,4 @@ export async function getStaticProps() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

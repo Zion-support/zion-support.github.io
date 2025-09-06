@@ -21,6 +21,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     leadInvestor: 'TBD'});
 
   res.status(200).json(terms)
+
 }
 
 
@@ -60,4 +61,5 @@ function handler() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,6 +12,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import React from';react' const SEOMeta = ({ title,description,keywords = 'AI,Machine Learning,Quantum Computing,Technology Solutions,Zion Tech Group',image = '/images/zion-tech-group-og.jpg',url = window.location.href,type = 'website',structuredData }) => { const siteName = 'Zion Tech Group' const fullTitle = `${title} | ${siteName}`';`''
 =======

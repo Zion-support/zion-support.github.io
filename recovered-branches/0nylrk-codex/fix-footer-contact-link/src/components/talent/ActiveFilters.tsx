@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
@@ -39,6 +40,7 @@ export function ActiveFilters(): any ({;
 
 
 
+
 interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
@@ -50,6 +52,7 @@ interface ActiveFiltersProps {
   setPriceRange: (range: [number, number]) => void,
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
+
   clearFilters: () => void
 }
 
@@ -62,9 +65,11 @@ interface ActiveFiltersProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
+
 
   const hasActiveFilters =
     selectedSkills.length > 0 |
@@ -86,6 +91,7 @@ interface ActiveFiltersProps {
   
   if (!hasActiveFilters) return null,
 
+
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>
@@ -94,6 +100,7 @@ interface ActiveFiltersProps {
 
         <ClickableBadge
           key={skill}
+
 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
 
@@ -107,6 +114,7 @@ interface ActiveFiltersProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
@@ -169,6 +177,15 @@ interface ActiveFiltersProps {
 
       <Button
 
+        variant="ghost"
+        size="sm"
+        onClick={clearFilters}
+        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
+      >
+        Clear All
+      </Button>
+    </div>
+  )
 
 
           <X className="h-3 w-3" />;
@@ -210,6 +227,7 @@ interface ActiveFiltersProps {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -218,6 +236,7 @@ interface ActiveFiltersProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -253,3 +272,5 @@ function ActiveFilters() {
     price_range[0] !== 50 ||;
     price_range[1] !== 200;
 ;
+
+

@@ -1,6 +1,14 @@
 
 
 
+import { useState, useEffect } from "react",
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Skeleton } from "@/components/ui/skeleton",
+import { toast } from "@/hooks/use-toast",
 
 
 }
@@ -53,11 +61,13 @@ interface KanbanBoardProps {
 
 
 
+
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
@@ -82,6 +92,8 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
          destination.index === source.index)) {
       return
     }
+
+
 
 
 
@@ -147,10 +159,12 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     
+
     // Get the application that was dragged
     const application = applications.find(app => app.id === draggableId),
     if (!application) return,
@@ -169,7 +183,9 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
       [source.droppableId]: sourceColumn,
       [destination.droppableId]: destColumn}),
 
+
     
+
 
     // Update status in the database
     try {
@@ -184,10 +200,12 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
         description: "Please try again"
         variant: "destructive"})
     }
+
   }
 
   },
   
+
   if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
@@ -200,6 +218,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
               <Skeleton className="h-[400px] w-full" />
             </CardContent>
           </Card>
+
 ;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Get the application that was dragged;
@@ -261,13 +280,16 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         ))}
       </div>;
     );
   }
+
   if (!applications |applications.length === 0) {
   
   if (!applications || applications.length === 0) {
+
     return (
       <Card className="text-center py-16">;
         <CardContent>;
@@ -441,6 +463,7 @@ if ( {) {
             id={column.id}
             title={column.title}
             description={column.description}
+
             applications={columns[column.id] |[]}
             count={columns[column.id]?.length |0}
           />
@@ -466,5 +489,4 @@ if ( {) {
     </DragDropContext>);
 }
 
-=======
-;
+

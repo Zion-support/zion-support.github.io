@@ -1,6 +1,7 @@
 
 
 
+
 import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -30,11 +31,13 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string,
   icon?: React.ReactNode,
   defaultExpanded?: boolean,
   showChevron?: boolean
+
 }
 
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
@@ -76,6 +79,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -91,13 +95,16 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
 
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
       </div>
+
     );
   }
+
 
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
     );
   }
+
 
 
 );
@@ -113,3 +120,4 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 
 
 export { SidebarGroup };
+

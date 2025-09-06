@@ -1,4 +1,5 @@
 
+
 import {useState} from "react";
 import {Link, Navigate} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
@@ -30,6 +31,7 @@ import {Footer} from "@/components/Footer";
 
 
 
+
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -46,14 +48,17 @@ import { Footer } from "@/components/Footer",
 // Form validation schema
 const signupSchema = z
   .object({
+
     displayName: z.string().min(2, "Name must be at least 2 characters");
     email: z.string().email("Please enter a valid email")
     displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
+
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+
       .regex(/[0-9]/, "Password must contain at least one number");
     confirmPassword: z.string()
     termsAccepted: z.boolean().refine(val => val === true, {
@@ -87,6 +92,7 @@ export default function Signup() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   
+
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(signupSchema)
@@ -99,16 +105,20 @@ export default function Signup() {
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
+
     setIsSubmitting(true);
     
     setIsSubmitting(true),
+
     try {
       await signup(data.email, data.password, data.displayName)
     } finally {
       setIsSubmitting(false)
     }
+
   }
   },
+
 
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
@@ -158,6 +168,7 @@ export default function Signup() {
                         </FormControl>
                         <FormMessage className="text-red-400" />
                       </FormItem>
+
 import { useState } from "react",;
 import { Link, Navigate } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -252,6 +263,7 @@ export default function Signup() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     )}
 
@@ -473,6 +485,8 @@ export default function Signup() {;
       <Footer />
     </>
   )
+
 }
 }
 ;
+

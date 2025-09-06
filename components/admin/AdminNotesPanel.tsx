@@ -3,6 +3,7 @@
 
 
 
+
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target;
@@ -12,6 +13,7 @@ type Note = {;
   target_id: string; // unique identifier for the target;
 
 
+
 }
 ;
 type Note = {
@@ -19,6 +21,7 @@ type Note = {
   target_type: string;
   target_id: string;
   text: string;
+
 
 
 import React, { useEffect, useMemo, useState } from 'react';
@@ -39,6 +42,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 type Note = {
   id: string
   targetType: string
@@ -46,6 +50,7 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
+
 
 
 
@@ -61,6 +66,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -158,12 +164,14 @@ if ( {) {
 
 
 
+
     return (
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     }
   }
+
 
     }
   }
@@ -396,6 +404,7 @@ if ( {) {
         </div>
         <div className=&quot;text-xs opacity-60 mt-2&quot;>Admin-only notes hidden.</div>
       </div>
+
     )
   }
 
@@ -434,5 +443,6 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

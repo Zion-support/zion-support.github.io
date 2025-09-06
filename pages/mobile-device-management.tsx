@@ -1,7 +1,10 @@
 
 
 
-
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
 
 
 export default function MDMPage() {
@@ -17,6 +20,8 @@ export default function MDMPage() {
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
+
+
   return (
     <Layout>
       <Head>
@@ -33,6 +38,7 @@ export default function MDMPage() {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Mobile Device Management (MDM)</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</a>
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</Link>
@@ -48,6 +54,7 @@ export default function MDMPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
           </header>
           <section>
@@ -81,6 +88,7 @@ export default function MDMPage() {
                 <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="px-4 py-3 rounded-xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 inline-flex items-center gap-2 text-cyan-300">
                   <ExternalLink className="w-4 h-4" />
                   <span>{r.name}</span>
+
                 </a>
               ))}
                 </Link>
@@ -100,6 +108,7 @@ export default function MDMPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
           </section>
 
@@ -117,10 +126,12 @@ export default function MDMPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

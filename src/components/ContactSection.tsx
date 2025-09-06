@@ -1,15 +1,96 @@
 
 
-import React from 'react';
-import { Link } from 'react-router-dom';
 
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: ""
+    email: ""
+    subject: ""
+    message: ""})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
 
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    subject?: string;
+    message?: string
 
-fetch("/api/contact", {
+import { useState } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast",
+import z from "zod",
+import { Mail } from 'lucide-react'
+
+export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitted, setSubmitted] = useState(false),
+  const [errors, setErrors] = useState<{
+    name?: string,
+    email?: string,
+    subject?: string,
+    message?: string
+  }>({}),
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target,
+    setFormData((prev) => ({ ...prev, [name]: value })),
+    setErrors((prev) => ({ ...prev, [name]: undefined }))
+  },
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(),
+
+    const schema = z.object({
+      name: z.string().min(2, "Name is required"),
+      email: z.string().email("Enter a valid email"),
+      subject: z.string().min(2, "Subject is required"),
+      message: z.string().min(10, "Message must be at least 10 characters")}),
+
+    const result = schema.safeParse(formData),
+    if (!result.success) {
+      const fieldErrors: Record<string string> = {},
+
+      for (const err of result.error.errors) {
+        if (err.path[0]) {
+          fieldErrors[err.path[0] as string] = err.message
+        }
+      }
+
+      toast({
+        title: "Form Validation Error"
+        description: result.error.errors[0]?.message |"Please check your form and try again"
+        variant: "destructive"})
+      return
+    }
+
+      toast({
+        title: "Form Validation Error",
+        description: result.error.errors[0]?.message || "Please check your form and try again",
+        variant: "destructive"}),
+      return;
+    }
+
+    setErrors({}),
+    setIsSubmitting(true),
+
+    fetch("/api/contact", {
+
       method: "POST"
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
+
 
           const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
         setIsSubmitting(false),
@@ -17,10 +98,12 @@ fetch("/api/contact", {
           const data = await res.json().catch(() => ({})),
           throw new Error(data.error || "Failed to send message")
 
+
         }
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
+
 
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 2000)
@@ -53,6 +136,7 @@ fetch("/api/contact", {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
+
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -65,16 +149,20 @@ fetch("/api/contact", {
 
 
 
+
+
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
+
   },
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -173,6 +261,7 @@ fetch("/api/contact", {
                   <Textarea
                     id="message"
                     name="message"
+
                     rows = {4,}
                     value = {formData.message,}
                     onChange = {handleChange,}
@@ -441,6 +530,7 @@ if ( {) {
 
 
 
+
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -452,10 +542,12 @@ if ( {) {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+
                     disabled = {isSubmitting,}
                   >
                     disabled={isSubmitting}
                   >;
+
 
 
 
@@ -465,6 +557,7 @@ if ( {) {
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
+
 
                 </div>;
               </form>;
@@ -501,4 +594,5 @@ description: err.message;
 }'"}
 }
 ;
+
 

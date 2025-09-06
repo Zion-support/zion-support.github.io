@@ -3,12 +3,14 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
@@ -31,9 +33,11 @@ if (newMetrics.loadTime > 3000) {
 if (ms < 1000) return `$ {
   Math.round (ms)
 }ms`;
+
 }
 
 };
+
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -66,11 +70,13 @@ else score += 25
 if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
+
 else score += 25
 }
 else score += 25 
 
 };
+
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -93,9 +99,9 @@ else score += 25
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 
+}
+export default PerformanceMonitor;
 
+}
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

@@ -1,8 +1,44 @@
 
 
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+  }
+}
+export const realMicroSaasServices: RealMicroSaasService[] = [
+  // AI-Powered Business Solutions
+  {
+
 
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
@@ -1336,9 +1372,118 @@
 // Helper functions
 export const getServicesByCategory = (category: string) => {
 
-  }, ];
+
+    features: ['Schema registryDiff viewerCI gatesBackfill helpers'];
+    benefits: ['Fewer incidentsFaster changes'];
+    targetAudience: ['Data platformAnalytics engineers'];
+    marketPosition: 'Complements dbt and warehouse-native governance.';
+    competitors: ['OpenMetadataGreat Expectations'];
+    techStack: ['TypeScriptPostgreSQLdbt'];
+
+    realImplementation: true
+    implementationDetails: 'Contracts as code, PR checks, lineage view.';
+
+    roi: 'Reduce data breakage incidents by 50–70%.';
+    useCases: ['Warehouse governanceAnalytics contracts'];
+    integrations: ['dbtGitHubBigQuery'];
+    support: 'Email support';
+    compliance: ['GDPR'];
+    link: 'https://ziontechgroup.com/services/data-contracts-hub';
+    icon: '📜';
+    color: 'from-lime-600 to-green-700';
+    popular: false;
+    launchDate: '2025-02-08';
+    customers: 19;
+
+    rating: 4.6
+    reviews: 6
+  }
+];
+// Helper functions
+export const getServicesByCategory = (category: string) => {;
+  return realMicroSaasServices.filter(service => service.category === category);
+marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
+competitors: ['TypeformSurveySparrowTally'];
+techStack: ['Next.jsSupabaseVercel EdgeOpenAI'];
+realImplementation: true;
+implementationDetails: 'Template gallery, response store, analytics, export jobs.';
+roi: 'Improves feedback volume 20–50%.';
+useCases: ['NPSBeta feedbackLead qual'];
+integrations: ['HubSpotSegmentZapier'];
+support: 'Email support, templates library';
+compliance: ['GDPRCCPA'];
+link: 'https://ziontechgroup.com/mobile-surveys';
+icon: '📱';
+color: 'from-emerald-600 to-teal-700';
+popular: false;
+launchDate: '2024-12-10';
+customers: 95;
+rating: 4.6;
+reviews: 22
+}
+marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
+competitors: ['AsanaClickUpNotion'];
+techStack: ['Next.jsPrismaPostgreSQL'];
+realImplementation: true;
+implementationDetails: 'Template JSON schemas, rules engine, import/export.';
+roi: 'Deliverables throughput +15–25%.';
+useCases: ['Client deliveryEditorial calendarSprints'];
+integrations: ['Google CalendarSlackLinear'];
+support: 'Email support';
+compliance: ['GDPR'];
+link: 'https://ziontechgroup.com/productivity-planner';
+icon: '🗓️';
+color: 'from-purple-600 to-pink-600';
+popular: false;
+launchDate: '2025-01-20';
+customers: 60;
+rating: 4.5;
+reviews: 14
+}
+export const serviceCategories = [
+
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
+  'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
+  'Enterprise IT'
+];
+
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  }
+}
+
 ;
 // Helper functions;
+
 export const getServicesByCategory = (category: string) =>: any {
   return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
 
@@ -1360,4 +1505,5 @@ export const getServicesByCategory = (category: string) =>: any {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

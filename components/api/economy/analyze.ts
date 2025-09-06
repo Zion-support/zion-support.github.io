@@ -1,5 +1,7 @@
 
 
+
+
 const user = [ `Operator Prompt: $ {
   operatorPrompt
 }`;
@@ -8,6 +10,7 @@ context ? `Context: $ {
 }` : undefined] .filter (Boolean) .join ('\n');
 const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
+
 
 
   role: 'system', content: system
@@ -50,6 +53,7 @@ export type AnalyzeResponse = {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default async function handler(
   req: NextApiRequest
@@ -105,6 +109,7 @@ export default async function handler(
   } catch (error: any) {
     console.error('Analyze API error', error?.message |error);
     return res.status(500).json({ error: 'Failed to generate analysis' });
+
   }
 
 
@@ -143,4 +148,5 @@ export default async function handler(
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

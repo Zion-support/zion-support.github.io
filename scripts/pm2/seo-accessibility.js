@@ -2,6 +2,7 @@
 
 
 
+
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -91,3 +92,4 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,4 +1,5 @@
 
+
  // All services combined const allServices = [ ...advancedAIMLServices;
 
 
@@ -11,6 +12,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
@@ -195,16 +197,20 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">;
                     <a
+
                       href={`mailto:${(service as any).contact |'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
+
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
                       Get Started
                     </a>
                     <a
+
                       href={`tel:${(service as any).mobile |'+1 302 464 0950'}`}
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -221,10 +227,12 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 
 
+
           {/* Services Display */}
           <AnimatePresence mode="wait">;
             {viewMode === 'grid' ? (;
               <motion&& motion.div 
+
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -249,6 +257,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                       </div>
                       <h3 className="text-xl font-bold mb-2">{service.name}</h3>
                       <p className="text-blue-100 text-sm">{service.tagline}</p>
+
                       
 
 
@@ -260,6 +269,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       {/* Price */}
                       <div className="mt-4">;
                         <span className="text-2xl font-bold">;
@@ -267,6 +277,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                         </span>
                       </div>
                     </div>
+
                     {/* Service Content */}
                     <div className="p-6">
                       <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
@@ -326,6 +337,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                       {/* Features */}
                       <div className="mb-6">;
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
@@ -338,6 +350,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                           ))}
                         </ul>
                       </div>
+
 
 
 
@@ -356,6 +369,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -363,6 +377,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                           <span className="ml-1">{service.category}</span>
                         </span>
                       </div>
+
 
                         </ul>;
                       </div>;
@@ -391,6 +406,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
                         <div>;
@@ -400,6 +416,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days
                         </div>
                       </div>
+
 
 
 
@@ -447,6 +464,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       {/* ROI and Popularity */}
                       <div className="flex items - center justify - between mb - 4">;
                         <div className="text - sm">;
@@ -461,6 +479,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                             <span className="text-sm font-medium">Popular</span>
                           </div>
                         </div>
+
 
 
 
@@ -481,6 +500,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         {/* Price and Features */}
                         <div className="lg:w - 1/3">;
                           <div className="text - right mb - 4">;
@@ -488,6 +508,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                             </span>
                             <span className="text-gray-500">
+
                               {typeof service.price === 'string' ? (service as any).period |'/month' : '/month'}
                             </span>
                           </div>
@@ -504,6 +525,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -511,9 +533,12 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                                 <li key={idx} className="flex items-center">
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
 
+                                  {feature}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
@@ -521,6 +546,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
                               {getCategoryIcon(service.category)}
                               <span className="ml-1">{service.category}</span>
                             </span>
+
 
                             </ul>;
                           </div>;
@@ -592,6 +618,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                             <a
                               href={service.link}
                               target="_blank"
@@ -614,12 +641,14 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className="text-center py-12">;
@@ -632,6 +661,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
           )}
         </div>
       </section>
+
 
 
 
@@ -649,6 +679,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
@@ -668,6 +699,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -676,6 +708,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
@@ -699,6 +732,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -707,6 +741,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -729,6 +764,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -737,6 +773,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -762,6 +799,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -770,6 +808,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
@@ -799,17 +838,46 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-    </div>);
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
+              className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
+            >
+              <Mail className="w-5 h-5" />
+              Start Consultation
+            </a>
+            <a
+              href="https://ziontechgroup.com"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
+            >
+              <Globe className="w-5 h-5" />
+              Visit Website
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
 }
-;
 export default ComprehensiveServicesShowcase;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
 

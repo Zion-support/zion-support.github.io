@@ -1,3 +1,4 @@
+
 import { useTheme } from &quot;next-themes&quot;
 import { Toaster as Sonner, toast } from &quot;sonner&quot;
 import { useTheme } from "next-themes"
@@ -8,6 +9,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
   const { theme = &quot;system&quot; } = useTheme()
   const { theme = "system" } = useTheme()
 
+
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
@@ -15,6 +17,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
       toastOptions={{
         classNames: {
           toast:
+
             &quot;group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg&quot;
           description: &quot;group-[.toast]:text-muted-foreground&quot;
           actionButton:
@@ -23,6 +26,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
           description: "group-[.toast]:text-muted-foreground",
           actionButton:
             "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
+
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
       {...props}
@@ -35,5 +39,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

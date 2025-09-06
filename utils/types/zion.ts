@@ -2,6 +2,7 @@
 
 
 
+
 export interface Branding {;
   logoUrl?: string;
   primaryColor?: string;
@@ -16,10 +17,13 @@ export interface Branding {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
+
+
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -34,6 +38,8 @@ export interface DeployModules {;
 
 
 
+
+
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -44,6 +50,8 @@ export interface DeployModules {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 }
 ;
 export interface DeployInput {;
@@ -53,10 +61,43 @@ export interface DeployInput {;
   tokenActivation: boolean;
 
 
+  governanceMode: GovernanceMode,;
+  branding: Branding,;
+  modules: DeployModules,;
+  requestedRoutes?: string[];
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface DeployLogEntry {
+  timestamp: string;
+  level: "info" | "warn" | "error",;
+  action: string;
+  details?: Record<string, unknown> | string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface GeneratedAsset {;
+  kind: "file" | "page" | "config" | "job" | "event",;
+  path: string;
+  description?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
 }
 ;
 export interface DeployResult {;
   success: boolean;
+
+
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -66,10 +107,13 @@ export interface DeployResult {;
 
 
 
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 
 
@@ -82,6 +126,7 @@ export interface DeployResult {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 export interface DeployModules {
@@ -140,10 +185,10 @@ export interface AccessControlConfig {
   adminKeyConfigured: boolean;
 
 
-
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
 

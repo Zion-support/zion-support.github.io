@@ -1,14 +1,16 @@
 
 
-
-
-
-
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-origin/main
+
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+
+
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -103,26 +105,51 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
 
+        {noIndex && <meta name="robots" content="noindex,nofollow" />}
+        {/* Open Graph */}
+        <meta property="og:title" content={ogTitle |title} />
+        <meta
+          property="og:description"
+          content={ogDescription |description}
+        />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:type" content="website" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle |title} />
+        <meta
+          name="twitter:description"
+          content={ogDescription |description}
+        />
+        <meta name="twitter:image" content={ogImage} />
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
 
 
-
-
-interface LayoutProps {
-  children: ReactNode,
-}
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <main className="min-h-screen">
-      {children}
-    </main>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
   );
 }
 export default Layout;
 
 
+import React, { ReactNode } from "react";
+interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
 
@@ -153,10 +180,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   );
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
+
+

@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { useAuth  } from '@/hooks/useAuth';
@@ -6,6 +7,7 @@ import { NotificationContextType } from './types';
 // Default context used when React type definitions are missing. Providing a
 // fully-typed object here avoids TypeScript errors that occur when an untyped
 // `createContext` call returns `{}` instead of the expected shape.
+
 
 
 
@@ -47,12 +49,15 @@ export const useNotifications = (): NotificationContextType => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   }
   return context
 },
+
 
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {;
   const { user } = useAuth();
@@ -66,6 +71,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   useEffect(() => {
     notificationOps.fetchNotifications(),
     
+
     // Set up real-time subscription for new notifications
     if (user) {
       const channel = supabase
@@ -78,11 +84,13 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             filter: `user_id=eq.${user.id}`
 
 
+
           }
           },
           (payload) => {
             console.log('Notification change received:', payload);
             notificationOps.fetchNotifications()
+
 
 
   return context;
@@ -202,6 +210,7 @@ if ( {) {
 };
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -209,4 +218,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

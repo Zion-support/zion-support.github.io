@@ -1,3 +1,4 @@
+
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -41,17 +42,21 @@ import {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
 import React from 'react';
 import Link from 'next/link';
 ursor/integrate-build-improve-and-re-verify-8f7d
+
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
 import { 
   Phone, 
   Mail, 
@@ -117,6 +122,7 @@ import {
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 origin/main
+
 const footerSections = [
   {
     title: 'Services',
@@ -208,8 +214,10 @@ const microSaasCategories = [
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
 ];
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+
 
   const footerLinks = {
     services: [
@@ -220,6 +228,7 @@ origin/automation-improvements-final
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
+
   };
 
     solutions: [
@@ -256,6 +265,7 @@ origin/automation-improvements-final
     ]
   }
 origin/main
+
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -263,6 +273,7 @@ origin/main
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
   ];
+
 const microSaasCategories = [
   { title: 'Marketing Tools', icon: Target, count: 15 },
   { title: 'Productivity', icon: Settings, count: 12 },
@@ -289,6 +300,7 @@ origin/main
   ];
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -435,6 +447,7 @@ origin/main
         </div>
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -449,6 +462,7 @@ origin/main
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -481,6 +495,8 @@ origin/main
                 </a>;
               ))}
             </motion.div>
+
+
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -560,10 +576,12 @@ origin/main
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
             
 origin/main
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -581,6 +599,8 @@ origin/main
                 </a>
               ))}
             </motion.div>
+
+
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -592,7 +612,9 @@ origin/main
                 Cookie Policy
               </Link>
             </div>
+
 origin/automation-improvements-final
+
           </div>
         </div>
       </div>

@@ -1,6 +1,30 @@
 
 
 
+import React, { useState, useMemo } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react',;
+import Button from '../components/ui/Button',;
+import Card from '../components/ui/Card',;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',;
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',;
+import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',;
+import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',;
+import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',;
+export default function Services2026ShowcaseEnhancedPage() {
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+
+
+
 
 
 
@@ -113,6 +137,8 @@
       }
 
 
+
+
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -128,6 +154,7 @@ import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-
 import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+
 export default function Services2026ShowcaseEnhancedPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -404,6 +431,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
     }),
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
@@ -419,6 +447,8 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
   },
+
+
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
@@ -427,6 +457,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
           <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
           <link rel="icon" href="/favicon.svg" />
+
           {/* Open Graph */}
           {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
@@ -444,11 +475,13 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+
           {/* Twitter */}
           {/* Twitter */  } catch (error) {
     console.error("Error:", error);
@@ -466,11 +499,13 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
+
         {/* Enhanced Header Section */}
         {/* Enhanced Header Section */  } catch (error) {
     console.error("Error:", error);
@@ -488,10 +523,12 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10 text-center">
             <motion.div
+
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -514,11 +551,13 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
                   >
                     <div className="text-3xl font-bold text-cyan-400">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                   </motion.div>
+
                 ))}
               </div>
               {/* Contact Information */}
@@ -544,6 +583,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Transform Your Business?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -564,6 +604,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
             </motion.div>
           </div>
         </section>
+
         {/* Enhanced Search and Filters */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -593,11 +634,13 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search for services, technologies, or use cases..."
+
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -659,12 +702,14 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
+
                     ))}
                   </select>
                 </div>
@@ -708,10 +753,12 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {priceRanges.map((range) => (
                       <option key={range.id} value={range.id}>
+
                         {range.name}
 
                       </option>))}
@@ -764,10 +811,12 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
+
                         {option.name}
 
                       </option>))}
@@ -802,6 +851,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
                   <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
@@ -832,6 +882,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                   </div>
                 </div>
               </div>
+
               {/* Results Count */}
               <div className="text-center">
                 <p className="text-gray-400">
@@ -857,12 +908,14 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
                 </p>
               </div>
             </div>
           </div>
         </section>
+
         {/* Enhanced Services Grid */}
         {/* Enhanced Services Grid */  } catch (error) {
     console.error("Error:", error);
@@ -878,11 +931,13 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
+
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -910,6 +965,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   className="text-center py-20"
                 >
                   <div className="text-6xl mb-4">🔍</div>
@@ -920,6 +976,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
                   {filteredServices.map((service, index) => (
                     <motion.div
+
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -989,6 +1046,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           <div className="flex items-start justify-between mb-4">
                             <div className="text-4xl">{service.icon}</div>
                             {service.popular && (
@@ -1017,6 +1075,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                             <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
+
                           {/* Service Title and Tagline */}
                           <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
@@ -1046,12 +1105,14 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
                             <ul className="space-y-1">
                               {service.features.slice(0, 3).map((feature, idx) => (
                                 <li key={idx} className="flex items-center text-xs text-gray-400">
                                   <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+
                                   {feature}
                                 </li>
                               ))}
@@ -1096,6 +1157,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
                             <div className="text-center">
                               <div className="text-cyan-400 font-semibold">{service.rating}★</div>
@@ -1110,6 +1172,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                               <div className="text-gray-400">trial</div>
                             </div>
                           </div>
+
                           {/* Market Position */}
                           {/* Market Position */  } catch (error) {
     console.error("Error:", error);
@@ -1127,10 +1190,12 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           <div className="mb-4 p-3 bg-gray-800/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-gray-200 mb-1">Market Position:</h4>
                             <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
                           </div>
+
                           {/* ROI */}
                           {/* ROI */  } catch (error) {
     console.error("Error:", error);
@@ -1148,10 +1213,12 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           <div className="mb-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-green-400 mb-1">ROI Promise:</h4>
                             <p className="text-xs text-green-300">{service.roi}</p>
                           </div>
+
                           {/* Action Buttons */}
                           {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
@@ -1169,11 +1236,13 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           <div className="flex space-x-2">
                             <Button
                               variant="primary"
                               size="sm"
                               className="flex-1"
+
                               onClick={() => window.open(service.link, '_blank')}
                               onClick={() => window.open(service.link, '_blank')  } catch (error) {
     console.error("Error:", error);
@@ -1191,6 +1260,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                             >
                               Learn More
                               <ArrowRight className="w-4 h-4 ml-1" />
@@ -1198,6 +1268,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                             <Button
                               variant="secondary"
                               size="sm"
+
                               onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`)}
                             >
                               Contact
@@ -1277,6 +1348,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1289,6 +1361,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                 <Button
                   variant="primary"
                   size="lg"
+
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')  } catch (error) {
     console.error("Error:", error);
@@ -1306,6 +1379,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -1313,6 +1387,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                 <Button
                   variant="secondary"
                   size="lg"
+
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')  } catch (error) {
     console.error("Error:", error);
@@ -1330,6 +1405,7 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -1348,10 +1424,12 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
