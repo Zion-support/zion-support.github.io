@@ -83,9 +83,10 @@ export default function AIMeetingAssistantPage() {
           </p>
           <Link
             href="/contact"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-            >
-          </p>
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+          >
+            Get Started Today
+          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <TestimonialCard
@@ -121,12 +122,40 @@ export default function AIMeetingAssistantPage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Assistant Demo Request"
-            className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Start Your Free Trial
           </a>
         </div>
       </section>
+    </div>
+  );
+}
+
+function TestimonialCard({ 
+  quote, 
+  author, 
+  role, 
+  company 
+}: { 
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}) {
+  return (
+    <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+      <p className="text-gray-700 mb-4 italic">"{quote}"</p>
+      <div className="flex items-center">
+        <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+          <span className="text-purple-600 font-semibold">{author.charAt(0)}</span>
+        </div>
+        <div>
+          <p className="font-semibold text-gray-900">{author}</p>
+          <p className="text-sm text-gray-600">{role}</p>
+          <p className="text-xs text-gray-500">{company}</p>
+        </div>
+      </div>
     </div>
   );
 }

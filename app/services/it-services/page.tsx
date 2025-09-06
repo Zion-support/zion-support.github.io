@@ -32,5 +32,6 @@ export default function ITServicesPage() {
           </a>
         </div>
       </section>
+    </div>
   );
 }
