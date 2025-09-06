@@ -1,8 +1,8 @@
-import React, { useCallback, useMemo, useState } from 'react',
-import Head from 'next/head',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import { GetServerSideProps } from 'next',
-import { requireAdminRole } from '../../utils/auth',
+import React, { useCallback, useMemo, useState } from 'react';
+import Head from 'next/head';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { GetServerSideProps } from 'next';
+import { requireAdminRole } from '../../utils/auth';
 export type Slide = {
   id: string,
   title: string,
@@ -12,7 +12,6 @@ export type Slide = {
     data: Array<{ label: string, value: number }>
   }
 },
-
 type BuilderState = {
   mission: string,
   fundingStage: string,
@@ -21,7 +20,6 @@ type BuilderState = {
   targetRaise: string,
   assets: File[]
 },
-
 function uid() {
   return Math.random().toString(36).slice(2)
 }
@@ -38,122 +36,111 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const result = await requireAdminRole(ctx),
   // @ts-ignore
-  if ('redirect' in result) return result,
+  if ('redirect' in result) return result;
   return result
-},
-
+};
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
-  const [slides, setSlides] = useState<Slide[]>([]),
-  const [activeIndex, setActiveIndex] = useState(0),
-  const [loading, setLoading] = useState(false),
-  const [versionTag, setVersionTag] = useState<string | null>(null),
+  const [slides, setSlides] = useState<Slide[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [versionTag, setVersionTag] = useState<string | null>(null);
   const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
-
-  const activeSlide = slides[activeIndex],
-
+  const activeSlide = slides[activeIndex];
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault(),
-    const files = Array.from(e.dataTransfer.files || []),
+    const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
-  }, []),
-
+  }, []);
   const prevent = (e: React.DragEvent) => {
     e.preventDefault(),
     e.stopPropagation()
-  },
-
-  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),
-
+  };
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
   const autoFetchMetrics = useCallback(async () => {
-    setLoading(true),
+    setLoading(true);
     try {
-      const res = await fetch('/api/admin/pitch/metrics'),
-      const data = await res.json(),
+      const res = await fetch('/api/admin/pitch/metrics');
+      const data = await res.json();
       return data
     } catch (e) {
       return {}
     } finally {
       setLoading(false)
     }
-  }, []),
-
+  }, []);
   const buildDeck = useCallback(async () => {
-    setLoading(true),
+    setLoading(true);
     try {
-      const metrics = await autoFetchMetrics(),
+      const metrics = await autoFetchMetrics();
       const res = await fetch('/api/admin/pitch/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           operatorPrompt,
           inputs: builder,
-          metrics})}),
-      const json = await res.json(),
+          metrics})});
+      const json = await res.json();
       const newSlides: Slide[] = json.slides || [],
-      setSlides(newSlides),
-      setActiveIndex(0),
-      const v = json.version || `v${new Date().toISOString()}`,
-      setVersionTag(v),
+      setSlides(newSlides);
+      setActiveIndex(0);
+      const v = json.version || `v${new Date().toISOString()}`;
+      setVersionTag(v);
       setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
     } catch (e) {
       // noop
     } finally {
       setLoading(false)
     }
-  }, [autoFetchMetrics, builder, operatorPrompt]),
-
+  }, [autoFetchMetrics, builder, operatorPrompt]);
   const rephraseSlide = useCallback(async (idx: number) => {
     if (!slides[idx]) return,
-    setLoading(true),
+    setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/rewrite', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slide: slides[idx] })}),
-      const json = await res.json(),
+      const json = await res.json();
       setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)))
     } catch (e) {
     } finally {
       setLoading(false)
     }
-  }, [slides]),
-
+  }, [slides]);
   const addSlide = useCallback(async () => {
-    setLoading(true),
+    setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' }),
-      const json = await res.json(),
+      const json = await res.json();
       setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),
       setActiveIndex(slides.length)
     } catch (e) {
     } finally {
       setLoading(false)
     }
-  }, [slides.length]),
-
+  }, [slides.length]);
   const exportPdf = useCallback(async () => {
-    setLoading(true),
+    setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),
-      const blob = await res.blob(),
-      const url = URL.createObjectURL(blob),
-      const a = document.createElement('a'),
-      a.href = url,
-      a.download = `pitch-deck-${versionTag || 'draft'}.pdf`,
-      a.click(),
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `pitch-deck-${versionTag || 'draft'}.pdf`;
+      a.click();
       URL.revokeObjectURL(url)
     } catch (e) {
     } finally {
       setLoading(false)
     }
-  }, [slides, versionTag]),
-
+  }, [slides, versionTag]);
   const exportGoogleSlides = useCallback(async () => {
-    setLoading(true),
+    setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
-      const json = await res.json(),
+      const json = await res.json();
       if (json && json.url) {
         window.open(json.url, '_blank')
       }
@@ -161,15 +148,13 @@ export default function PitchGenerator() {
     } finally {
       setLoading(false)
     }
-  }, [slides, versionTag]),
-
+  }, [slides, versionTag]);
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
   },
-
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null,
-    const { type, data } = slide.chart,
+    const { type, data } = slide.chart;
     return (
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
@@ -200,7 +185,6 @@ export default function PitchGenerator() {
       </div>
     )
   },
-
   return (
     <EnhancedLayout>
       <Head>

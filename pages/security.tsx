@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 export default function Security() {
   const securityMeasures = [
     {
@@ -39,7 +39,6 @@ export default function Security() {
       ]
     }
   ],
-
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -47,7 +46,6 @@ export default function Security() {
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
   ],
-
   return (
     <>
       <Head>

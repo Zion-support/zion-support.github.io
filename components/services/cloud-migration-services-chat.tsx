@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 const CloudMigrationServicesChat: NextPage = () => {
   return (
     <div>
@@ -17,5 +17,4 @@ const CloudMigrationServicesChat: NextPage = () => {
     </div>
   )
 },
-
-export default CloudMigrationServicesChat,
+export default CloudMigrationServicesChat;

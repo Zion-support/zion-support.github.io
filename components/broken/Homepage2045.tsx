@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from 'react',
-import Layout from './layout/Layout',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
-} from 'lucide-react',
-import Link from 'next/link',
+import React, { useState, useEffect } from 'react';
+import Layout from './layout/Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart, Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 // Import our new innovative services
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services',
-import { innovative2040ITServices } from '../data/innovative-2040-it-services',
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services',
-import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services',
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
+import { innovative2040ITServices } from '../data/innovative-2040-it-services';
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
+import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 // Loading fallback component
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -30,22 +26,18 @@ const LoadingFallback = () => (
     </motion.div>
   </div>
 ),
-
 const Homepage2045: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true),
-  const [isVisible, setIsVisible] = useState(false),
-  const [activeSection, setActiveSection] = useState('hero'),
-
+  const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
   useEffect(() => {
     // Simulate content loading with better timing
     const timer = setTimeout(() => {
-      setIsLoading(false),
+      setIsLoading(false);
       setIsVisible(true)
-    }, 800),
-
+    }, 800);
     return () => clearTimeout(timer)
-  }, []),
-
+  }, []);
   // Intersection Observer for better performance
   useEffect(() => {
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
@@ -59,20 +51,16 @@ const Homepage2045: React.FC = () => {
         },
         { threshold: 0.3, rootMargin: '-100px' }
       ),
-
-      const sections = document.querySelectorAll('section[id]'),
-      sections.forEach((section) => observer.observe(section)),
-
+      const sections = document.querySelectorAll('section[id]');
+      sections.forEach((section) => observer.observe(section));
       return () => observer.disconnect()
     }
-  }, []),
-
+  }, []);
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
   },
-
   const staggerContainer = {
     animate: {
       transition: {
@@ -81,20 +69,17 @@ const Homepage2045: React.FC = () => {
       }
     }
   },
-
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
     transition: { duration: 1.2, ease: "easeOut" }
   },
-
   const getColorClasses = (index: number) => {
     const colors = [
       'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
     ],
     return colors[index % colors.length]
-  },
-
+  };
   if (isLoading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
@@ -116,8 +101,8 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
               animate={{
-                rotate: [0, 360],
-                scale: [1, 1.1, 1],
+                rotate: [0, 360];
+                scale: [1, 1.1, 1];
                 opacity: [0.3, 0.6, 0.3]}}
               transition={{
                 duration: 8,
@@ -128,8 +113,8 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full"
               animate={{
-                rotate: [360, 0],
-                scale: [1, 1.2, 1],
+                rotate: [360, 0];
+                scale: [1, 1.2, 1];
                 opacity: [0.3, 0.7, 0.3]}}
               transition={{
                 duration: 6,
@@ -140,8 +125,8 @@ const Homepage2045: React.FC = () => {
             <motion.div
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
               animate={{
-                rotate: [45, 405],
-                scale: [1, 1.15, 1],
+                rotate: [45, 405];
+                scale: [1, 1.15, 1];
                 opacity: [0.3, 0.5, 0.3]}}
               transition={{
                 duration: 10,
@@ -431,5 +416,4 @@ const Homepage2045: React.FC = () => {
     </Layout>
   )
 },
-
-export default Homepage2045,
+export default Homepage2045;

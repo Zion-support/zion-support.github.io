@@ -1,28 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, 
-  Building2, 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  Zap,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
-  Phone,
-  Mail,
-  ExternalLink
-} from 'lucide-react';
+import { X, Building2, Code, Smartphone, Cloud, Shield, Zap, ShoppingCart, Heart, GraduationCap, Factory, Truck, CreditCard, Phone, Mail, ExternalLink } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void,
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -43,20 +26,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud },
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
       { name: 'Performance Optimization', href: '/services/performance', icon: Zap },
-    ],
+    ];
     'Solutions': [
       { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },
       { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart },
       { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart },
       { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap },
-    ],
+    ];
     'Industries': [
       { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
       { name: 'Logistics', href: '/industries/logistics', icon: Truck },
       { name: 'Finance', href: '/industries/finance', icon: CreditCard },
       { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
       { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    ],
+    ];
   };
 
   const quickLinks = [
@@ -196,7 +179,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </>
       )}
     </AnimatePresence>
-  );
+  ),
 };
 
 export default Sidebar;

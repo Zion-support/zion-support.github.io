@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import v1 from '../../../data/api-docs/v1',
-import { EndpointSpec } from '../../../data/api-docs/types',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+import { EndpointSpec } from '../../../data/api-docs/types';
 function toOpenApi() {
-  const paths: Record<string, any> = {},
+  const paths: Record<string, any> = {};
   v1.sections.forEach((section) => {
     section.endpoints.forEach((ep: EndpointSpec) => {
       paths[ep.path] = paths[ep.path] || {},
@@ -19,12 +19,11 @@ function toOpenApi() {
         security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []}
     })
   }),
-
   return {
     openapi: '3.0.3',
     info: { title: 'Zion OS API', version: 'v1', description: 'Zion OS API generated from internal spec' },
     servers: [{ url: 'https://api.zion.os' }],
-    paths,
+    paths;
     components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }}
 }
 

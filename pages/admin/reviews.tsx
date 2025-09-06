@@ -1,30 +1,27 @@
-import React, { useEffect, useState } from 'react',
-import type { NextPage } from 'next',
-import type { Review } from '../../types/reviews',
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
-
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
 const AdminReviewsPage: NextPage = () => {
-  const [pending, setPending] = useState<Review[]>([]),
-  const [all, setAll] = useState<Review[]>([]),
-  const [adminKey, setAdminKey] = useState(''),
-
+  const [pending, setPending] = useState<Review[]>([]);
+  const [all, setAll] = useState<Review[]>([]);
+  const [adminKey, setAdminKey] = useState('');
   async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews'),
-    const data = await res.json(),
+    const res = await fetch('/api/admin/debug/reviews');
+    const data = await res.json();
     if (res.ok) {
-      setAll(data.reviews),
+      setAll(data.reviews);
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
   }
 
-  useEffect(() => { refresh() }, []),
-
+  useEffect(() => { refresh() }, []);
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},
-      body: JSON.stringify({ action, reviewId })}),
+      body: JSON.stringify({ action, reviewId })});
     if (res.ok) refresh()
   }
 
@@ -60,6 +57,5 @@ const AdminReviewsPage: NextPage = () => {
       </section>
     </main>
   )
-},
-
-export default AdminReviewsPage,
+};
+export default AdminReviewsPage;

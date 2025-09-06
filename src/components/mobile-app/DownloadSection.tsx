@@ -1,8 +1,8 @@
 
-import React from "react",
+import React from "react";
 import { QrCodeIcon } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons",
-import { logInfo } from '@/utils/productionLogger',
+import { AppStoreButtons } from "./AppStoreButtons";
+import { logInfo } from '@/utils/productionLogger';
 export const DownloadSection: React.FC = () => {
 
   // These would typically come from environment variables or a config
@@ -34,7 +34,7 @@ export const DownloadSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
+            <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
                 {/* This would be replaced with an actual QR code in production */}

@@ -1,70 +1,50 @@
-import React, { useEffect, useState } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import Link from 'next/link',
-import { 
-  ArrowRight,
-  TrendingUp, 
-  Brain, 
-  Shield, 
-  Rocket, 
-  Atom, 
-  Sparkles,
-  Building, 
-  Phone, 
-  Mail, 
-  MapPin,
-  ArrowUpRight
-} from 'lucide-react',
-import Head from 'next/head',
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { ArrowRight, TrendingUp, Brain, Shield, Rocket, Atom, Sparkles, Building, Phone, Mail, MapPin, ArrowUpRight } from 'lucide-react';
+import Head from 'next/head';
 // Import our enhanced components
-import EnhancedNavigation from './layout/EnhancedNavigation',
-import EnhancedServiceCard from './ui/EnhancedServiceCard',
-import PerformanceMonitor from './PerformanceMonitor',
-import UltraFuturisticBackground from './ui/UltraFuturisticBackground',
+import EnhancedNavigation from './layout/EnhancedNavigation';
+import EnhancedServiceCard from './ui/EnhancedServiceCard';
+import PerformanceMonitor from './PerformanceMonitor';
+import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 // Import service data
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas',
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services',
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services',
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas',
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3',
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3',
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services',
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services',
+import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
+import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
+import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
+import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
+import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
+import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
+import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
 const EnhancedHomepage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [isVisible, setIsVisible] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
-  const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber'),
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false),
-  
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
+  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
   useEffect(() => {
-    setIsVisible(true),
-    
+    setIsVisible(true);
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)
-    }, 6000),
-    
+    }, 6000);
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     },
-    
     // Show performance monitor after 5 seconds
     const performanceTimer = setTimeout(() => {
       setShowPerformanceMonitor(true)
-    }, 5000),
-    
-    window.addEventListener('mousemove', handleMouseMove),
-    
+    }, 5000);
+    window.addEventListener('mousemove', handleMouseMove);
     return () => {
-      clearInterval(interval),
-      clearTimeout(performanceTimer),
+      clearInterval(interval);
+      clearTimeout(performanceTimer);
       window.removeEventListener('mousemove', handleMouseMove)
     }
-  }, []),
-
+  }, []);
   // Combine all revolutionary services
   const allRevolutionaryServices = [
     ...revolutionary2044AdvancedMicroSaas,
@@ -76,16 +56,14 @@ const EnhancedHomepage: React.FC = () => {
     ...innovative2025ITInfrastructureServices,
     ...innovative2025AIAutonomousServices
   ],
-
   // Filter services by category
   const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allRevolutionaryServices,
+    if (selectedCategory === 'all') return allRevolutionaryServices;
     return allRevolutionaryServices.filter(service => 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
       (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
     )
-  },
-
+  };
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },
     { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const },
@@ -94,10 +72,8 @@ const EnhancedHomepage: React.FC = () => {
     { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
   ],
-
   // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6),
-
+  const featuredServices = allRevolutionaryServices.slice(0, 6);
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -109,7 +85,6 @@ const EnhancedHomepage: React.FC = () => {
       }
     }
   },
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -121,7 +96,6 @@ const EnhancedHomepage: React.FC = () => {
       }
     }
   },
-
   const heroVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -133,25 +107,22 @@ const EnhancedHomepage: React.FC = () => {
       }
     }
   },
-
   const floatingVariants = {
     animate: {
-      y: [-10, 10, -10],
+      y: [-10, 10, -10];
       transition: {
         duration: 3,
         ease: "easeInOut" as const
       }
     }
   },
-
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId),
-    const category = categories.find(cat => cat.id === categoryId),
+    const category = categories.find(cat => cat.id === categoryId);
     if (category) {
       setColorScheme(category.scheme)
     }
-  },
-
+  };
   return (
     <>
       <Head>
@@ -182,7 +153,7 @@ const EnhancedHomepage: React.FC = () => {
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
         {/* Hero Section */}
         <motion.section 
-          className="relative min-h-screen flex items-center justify-center px-4 lg:px-8 pt-20"
+          className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20"
           variants={heroVariants}
           initial="hidden"
           animate="visible"
@@ -200,7 +171,7 @@ const EnhancedHomepage: React.FC = () => {
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
-              Pioneering the Future of Technology with Revolutionary AI Consciousness, 
+              Pioneering the Future of Technology with Revolutionary AI Consciousness,
               Quantum Computing, and Autonomous Solutions
             </motion.p>
 
@@ -419,7 +390,7 @@ const EnhancedHomepage: React.FC = () => {
                     
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button
-                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -507,5 +478,4 @@ const EnhancedHomepage: React.FC = () => {
     </>
   )
 },
-
-export default EnhancedHomepage,
+export default EnhancedHomepage;

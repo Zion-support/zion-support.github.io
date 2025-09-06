@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
 
 export const MobileFeatureShowcase: React.FC = () => {
@@ -30,7 +30,6 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
     }
   ],
-
   return (
     <section id="features" className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -47,7 +46,7 @@ export const MobileFeatureShowcase: React.FC = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"
             >
               <div className="mb-4">
                 {feature.icon}

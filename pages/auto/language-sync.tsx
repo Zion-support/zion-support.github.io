@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 const LanguageSync: NextPage = () => {
   return (
     <div>
@@ -20,6 +20,5 @@ const LanguageSync: NextPage = () => {
       </main>
     </div>
   )
-},
-
-export default LanguageSync,
+};
+export default LanguageSync;

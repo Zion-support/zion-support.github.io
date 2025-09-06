@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 const TechnologyImplementationStrategies: NextPage = () => {
   return (
     <div>
@@ -15,5 +15,4 @@ const TechnologyImplementationStrategies: NextPage = () => {
     </div>
   )
 },
-
-export default TechnologyImplementationStrategies,
+export default TechnologyImplementationStrategies;

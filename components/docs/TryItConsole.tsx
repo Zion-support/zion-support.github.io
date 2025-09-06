@@ -1,5 +1,4 @@
-import React, { useMemo, useState } from 'react',
-
+import React, { useMemo, useState } from 'react';
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   path: string, // full URL or relative
@@ -8,27 +7,25 @@ interface TryItProps {
 
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),
-  const [token, setToken] = useState(''),
-  const [body, setBody] = useState(''),
-  const [response, setResponse] = useState<string>(''),
-  const [loading, setLoading] = useState(false),
-
+  const [token, setToken] = useState('');
+  const [body, setBody] = useState('');
+  const [response, setResponse] = useState<string>('');
+  const [loading, setLoading] = useState(false);
   const url = useMemo(() => {
-    if (path.startsWith('http')) return path,
+    if (path.startsWith('http')) return path;
     return baseUrl.replace(/\/$/, '') + path
-  }, [baseUrl, path]),
-
+  }, [baseUrl, path]);
   async function onSend() {
-    setLoading(true),
-    setResponse(''),
+    setLoading(true);
+    setResponse('');
     try {
-      const headers: Record<string, string> = { 'Content-Type': 'application/json' },
-      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`,
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {
-        method,
-        headers,
+        method;
+        headers;
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),
-      const text = await res.text(),
+      const text = await res.text();
       setResponse(text)
     } catch (e: any) {
       setResponse(String(e?.message || e))

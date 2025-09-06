@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react',
-
+import React, { useEffect, useMemo, useState } from 'react';
 interface FraudItem {
   id: string,
   userId: string | null,
@@ -11,23 +10,21 @@ interface FraudItem {
 }
 
 export default function FraudAdminPage() {
-  const [items, setItems] = useState<FraudItem[]>([]),
-  const [adminToken, setAdminToken] = useState<string>(''),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<string | null>(null),
-
+  const [items, setItems] = useState<FraudItem[]>([]);
+  const [adminToken, setAdminToken] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
   useEffect(() => {
-    const saved = localStorage.getItem('admin-token') || '',
+    const saved = localStorage.getItem('admin-token') || '';
     setAdminToken(saved)
-  }, []),
-
+  }, []);
   const fetchItems = async () => {
-    setLoading(true),
-    setError(null),
+    setLoading(true);
+    setError(null);
     try {
       const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} }),
-      const json = await res.json(),
-      if (!res.ok) throw new Error(json.error || 'Failed to load'),
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || 'Failed to load');
       setItems(json.items || [])
     } catch (e: any) {
       setError(e.message || 'Failed to load')
@@ -35,29 +32,25 @@ export default function FraudAdminPage() {
       setLoading(false)
     }
   },
-
   useEffect(() => {
-    fetchItems(),
+    fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminToken]),
-
+  }, [adminToken]);
   const onSaveToken = () => {
-    localStorage.setItem('admin-token', adminToken),
+    localStorage.setItem('admin-token', adminToken);
     fetchItems()
-  },
-
+  };
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})},
-      body: JSON.stringify({ fraudId: id, action })}),
-    const json = await res.json(),
-    if (res.ok) fetchItems(),
+      body: JSON.stringify({ fraudId: id, action })});
+    const json = await res.json();
+    if (res.ok) fetchItems();
     else alert(json.error || 'Action failed')
-  },
-
+  };
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>

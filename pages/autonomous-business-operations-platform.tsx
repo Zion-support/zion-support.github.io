@@ -1,14 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Bot, Brain, Cpu, Zap, Shield, Globe, 
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
-  Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react',
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Bot, Brain, Cpu, Zap, Shield, Globe, Rocket, Target, TrendingUp, Users, CheckCircle, ArrowRight, Star, Award, Clock, DollarSign, Building2, Gauge, BarChart3, Settings, Workflow } from 'lucide-react';
 const AutonomousBusinessOperationsPlatform = () => {
   const features = [
     {
@@ -36,37 +30,34 @@ const AutonomousBusinessOperationsPlatform = () => {
       color: "from-red-500 to-orange-500"
     }
   ],
-
   const capabilities = [
-    "24/7 autonomous operation",
-    "Real-time decision making",
-    "Predictive analytics",
-    "Process optimization",
-    "Resource management",
-    "Performance monitoring",
-    "Risk assessment",
+    "24/7 autonomous operation";
+    "Real-time decision making";
+    "Predictive analytics";
+    "Process optimization";
+    "Resource management";
+    "Performance monitoring";
+    "Risk assessment";
     "Compliance automation"
-  ],
-
+  ];
   const industries = [
     {
       title: "Manufacturing",
       description: "Automated production lines, quality control, and supply chain management"
-    },
+    };
     {
       title: "Healthcare",
       description: "Patient care automation, medical device management, and administrative tasks"
-    },
+    };
     {
       title: "Finance",
       description: "Automated trading, risk management, and compliance monitoring"
-    },
+    };
     {
       title: "Retail",
       description: "Inventory management, customer service, and sales optimization"
     }
-  ],
-
+  ];
   const benefits = [
     {
       icon: TrendingUp,
@@ -93,7 +84,6 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "Increase in team productivity"
     }
   ],
-
   return (
     <>
       <Head>
@@ -128,7 +118,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with AI-powered autonomous operations that work 24/7, 
+                Transform your business with AI-powered autonomous operations that work 24/7,
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -328,5 +318,4 @@ const AutonomousBusinessOperationsPlatform = () => {
     </>
   )
 },
-
-export default AutonomousBusinessOperationsPlatform,
+export default AutonomousBusinessOperationsPlatform;

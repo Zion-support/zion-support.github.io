@@ -1,21 +1,15 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award,
-  Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code,
-  ShoppingCart
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const features = [
   {
     title: 'Real-time Content Analytics',
@@ -54,11 +48,10 @@ const features = [
     color: 'from-yellow-500 to-orange-500'
   }
 ],
-
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,500',
+    price: '$2,500';
     period: '/month',
     description: 'Perfect for small businesses and content creators',
     features: [
@@ -69,7 +62,7 @@ const pricingPlans = [
   },
   {
     name: 'Professional',
-    price: '$5,000',
+    price: '$5,000';
     period: '/month',
     description: 'Ideal for growing businesses and marketing teams',
     features: [
@@ -80,7 +73,7 @@ const pricingPlans = [
   },
   {
     name: 'Enterprise',
-    price: '$10,000',
+    price: '$10,000';
     period: '/month',
     description: 'For large organizations with complex content needs',
     features: [
@@ -90,7 +83,6 @@ const pricingPlans = [
     color: 'from-purple-500 to-pink-600'
   }
 ],
-
 const useCases = [
   {
     title: 'Content Marketing Optimization',
@@ -117,11 +109,9 @@ const useCases = [
     color: 'from-orange-500 to-red-500'
   }
 ],
-
 const integrations = [
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
-],
-
+];
 export default function AIContentIntelligencePlatform() {
   return (
     <Layout>

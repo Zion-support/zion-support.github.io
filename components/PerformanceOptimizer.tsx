@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useCallback } from 'react',
-import { motion } from 'framer-motion',
-import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react',
-
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
+import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
 interface PerformanceMetrics {
   loadTime: number,
   firstContentfulPaint: number,
@@ -24,19 +23,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     firstInputDelay: 0,
     timeToInteractive: 0
   }),
-  const [isOptimizing, setIsOptimizing] = useState(false),
-  const [optimizationStatus, setOptimizationStatus] = useState<string>('idle'),
-  const [showMetrics, setShowMetrics] = useState(false),
-
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [optimizationStatus, setOptimizationStatus] = useState<string>('idle');
+  const [showMetrics, setShowMetrics] = useState(false);
   // Measure performance metrics
   const measurePerformance = useCallback(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-      const paintEntries = performance.getEntriesByType('paint'),
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint'),
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0],
-      
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
       const newMetrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
@@ -45,25 +41,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         firstInputDelay: 0, // Would need to be measured with FID API
         timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart
       },
-
       setMetrics(newMetrics)
     }
-  }, []),
-
+  }, []);
   // Optimize images
   const optimizeImages = useCallback(async () => {
-    setIsOptimizing(true),
+    setIsOptimizing(true);
     setOptimizationStatus('Optimizing images...'),
-
     try {
-      const images = document.querySelectorAll('img'),
-      let optimizedCount = 0,
-
+      const images = document.querySelectorAll('img');
+      let optimizedCount = 0;
       for (const img of Array.from(images)) {
         if (img.complete && img.naturalWidth > 0) {
           // Add lazy loading
-          img.loading = 'lazy',
-          
+          img.loading = 'lazy';
           // Add responsive sizes if not present
           if (!img.sizes) {
             img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -73,25 +64,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         }
       }
 
-      setOptimizationStatus(`Optimized ${optimizedCount} images`),
-      
+      setOptimizationStatus(`Optimized ${optimizedCount} images`);
       // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 1000)),
-      
+      await new Promise(resolve => setTimeout(resolve, 1000));
       setOptimizationStatus('Image optimization complete')
     } catch (error) {
-      setOptimizationStatus('Image optimization failed'),
+      setOptimizationStatus('Image optimization failed');
       console.error('Image optimization error:', error)
     } finally {
       setIsOptimizing(false)
     }
-  }, []),
-
+  }, []);
   // Optimize fonts
   const optimizeFonts = useCallback(async () => {
-    setIsOptimizing(true),
+    setIsOptimizing(true);
     setOptimizationStatus('Optimizing fonts...'),
-
     try {
       // Add font-display: swap to improve font loading
       const style = document.createElement('style'),
@@ -109,130 +96,109 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
           font-display: swap
         }
       `,
-      document.head.appendChild(style),
-
-      setOptimizationStatus('Font optimization complete'),
-      
+      document.head.appendChild(style);
+      setOptimizationStatus('Font optimization complete');
       // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 800))
     } catch (error) {
-      setOptimizationStatus('Font optimization failed'),
+      setOptimizationStatus('Font optimization failed');
       console.error('Font optimization error:', error)
     } finally {
       setIsOptimizing(false)
     }
-  }, []),
-
+  }, []);
   // Optimize CSS and JavaScript
   const optimizeCode = useCallback(async () => {
-    setIsOptimizing(true),
+    setIsOptimizing(true);
     setOptimizationStatus('Optimizing code...'),
-
     try {
       // Add resource hints for critical resources
       const preloadLinks = [
         { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
       ],
-
       preloadLinks.forEach(linkAttrs => {
-        const link = document.createElement('link'),
+        const link = document.createElement('link');
         Object.entries(linkAttrs).forEach(([key, value]) => {
           if (key === 'crossorigin') {
             link.setAttribute(key, value as string)
           } else {
             (link as any)[key] = value
           }
-        }),
+        });
         document.head.appendChild(link)
-      }),
-
-      setOptimizationStatus('Code optimization complete'),
-      
+      });
+      setOptimizationStatus('Code optimization complete');
       // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 1200))
     } catch (error) {
-      setOptimizationStatus('Code optimization failed'),
+      setOptimizationStatus('Code optimization failed');
       console.error('Code optimization error:', error)
     } finally {
       setIsOptimizing(false)
     }
-  }, []),
-
+  }, []);
   // Run all optimizations
   const runAllOptimizations = useCallback(async () => {
-    setIsOptimizing(true),
+    setIsOptimizing(true);
     setOptimizationStatus('Starting comprehensive optimization...'),
-
     try {
-      await optimizeImages(),
-      await optimizeFonts(),
-      await optimizeCode(),
-      
-      setOptimizationStatus('All optimizations complete!'),
-      
+      await optimizeImages();
+      await optimizeFonts();
+      await optimizeCode();
+      setOptimizationStatus('All optimizations complete!');
       // Re-measure performance after optimization
       setTimeout(() => {
         measurePerformance()
       }, 500)
       
     } catch (error) {
-      setOptimizationStatus('Optimization failed'),
+      setOptimizationStatus('Optimization failed');
       console.error('Optimization error:', error)
     } finally {
       setIsOptimizing(false)
     }
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]),
-
+  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
   // Initialize performance monitoring
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Measure initial performance
-      window.addEventListener('load', measurePerformance),
-      
+      window.addEventListener('load', measurePerformance);
       // Monitor for performance issues
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime,
+            const lcp = entry.startTime;
             if (lcp > 2500) { // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp)
             }
           }
         }
-      }),
-      
+      });
       observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-      
       return () => {
-        window.removeEventListener('load', measurePerformance),
+        window.removeEventListener('load', measurePerformance);
         observer.disconnect()
       }
     }
-  }, [measurePerformance]),
-
+  }, [measurePerformance]);
   const getPerformanceScore = (): number => {
-    let score = 100,
-    
-    if (metrics.firstContentfulPaint > 1800) score -= 20,
-    if (metrics.largestContentfulPaint > 2500) score -= 25,
-    if (metrics.loadTime > 3000) score -= 15,
-    if (metrics.timeToInteractive > 3500) score -= 20,
-    
+    let score = 100;
+    if (metrics.firstContentfulPaint > 1800) score -= 20;
+    if (metrics.largestContentfulPaint > 2500) score -= 25;
+    if (metrics.loadTime > 3000) score -= 15;
+    if (metrics.timeToInteractive > 3500) score -= 20;
     return Math.max(0, score)
-  },
-
+  };
   const getPerformanceGrade = (score: number): string => {
     if (score >= 90) return 'A',
-    if (score >= 80) return 'B',
-    if (score >= 70) return 'C',
-    if (score >= 60) return 'D',
+    if (score >= 80) return 'B';
+    if (score >= 70) return 'C';
+    if (score >= 60) return 'D';
     return 'F'
-  },
-
-  const performanceScore = getPerformanceScore(),
-  const performanceGrade = getPerformanceGrade(performanceScore),
-
+  };
+  const performanceScore = getPerformanceScore();
+  const performanceGrade = getPerformanceGrade(performanceScore);
   return (
     <div className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
@@ -358,5 +324,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
     </div>
   )
 },
-
-export default PerformanceOptimizer,
+export default PerformanceOptimizer;

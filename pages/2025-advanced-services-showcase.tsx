@@ -1,27 +1,19 @@
-import React, { useState, useEffect } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
-  DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
-import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion',
-import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations',
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network, Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2, DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
+import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
 export default function AdvancedServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]),
-
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
   // Combine all services
   const allServices = [...advancedInnovativeServices, ...emergingTechInnovations],
-
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
     { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length, icon: '🧠' },
@@ -35,31 +27,29 @@ export default function AdvancedServicesShowcase2025() {
     { id: 'Blockchain & DeFi', name: 'Blockchain', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('DeFi')).length, icon: '🔗' },
     { id: 'Metaverse & VR/AR', name: 'Metaverse', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('VR/AR')).length, icon: '🌐' }
   ],
-
   const filteredServices = allServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
-      const price = parseFloat(service.price.replace('$', '').replace(, '')),
-      const matchesPrice = price >= priceRange[0] && price <= priceRange[1],
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const price = parseFloat(service.price.replace('$', '').replace(, ''));
+      const matchesPrice = price >= priceRange[0] && price <= priceRange[1];
       return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'price':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
-          return b.rating - a.rating,
+          return b.rating - a.rating;
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
       }
     }),
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,7 +59,6 @@ export default function AdvancedServicesShowcase2025() {
       }
     }
   },
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -80,12 +69,10 @@ export default function AdvancedServicesShowcase2025() {
       }
     }
   },
-
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀'
-  },
-
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -111,7 +98,7 @@ export default function AdvancedServicesShowcase2025() {
               2025 Advanced Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions, 
+              Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions;
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             
@@ -370,7 +357,7 @@ export default function AdvancedServicesShowcase2025() {
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                       >
                         <ExternalLink className="w-4 h-4" />
                         Learn More
@@ -402,7 +389,7 @@ export default function AdvancedServicesShowcase2025() {
               <button
                 onClick={() => {
                   setSearchTerm(''),
-                  setSelectedCategory('all'),
+                  setSelectedCategory('all');
                   setPriceRange([0, 10000])
                 }}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"

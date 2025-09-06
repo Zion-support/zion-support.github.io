@@ -1,66 +1,56 @@
-import { useState } from 'react',
-import { Header } from '@/components/Header',
-import { SEO } from '@/components/SEO',
-import { GradientHeading } from '@/components/GradientHeading',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
-import { Card } from '@/components/ui/card',
-import { toast } from '@/components/ui/use-toast',
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger',
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip',
-import z from 'zod',
-import { ChatAssistant } from '@/components/ChatAssistant',
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card } from '@/components/ui/card';
+import { toast } from '@/components/ui/use-toast';
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import z from 'zod';
+import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''}),
-  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{
-    name?: string,
-    email?: string,
+    name?: string;
+    email?: string;
     message?: string
-  }>({}),
-  const [isChatOpen, setIsChatOpen] = useState(false),
-  const [submitted, setSubmitted] = useState(false),
-
+  }>({});
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target,
-    setFormData((prev) => ({ ...prev, [name]: value })),
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: undefined }))
-  },
-
+  };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
-    logInfo('[ContactForm] handleSubmit triggered.'),
+    logInfo('[ContactForm] handleSubmit triggered.');
     logInfo('[ContactForm] formData:', { data: formData }),
-
     const schema = z.object({
-      name: z.string().min(2, 'Name must be at least 2 characters'),
+      name: z.string().min(2, 'Name must be at least 2 characters');
       email: z.string().email('Invalid email address'),
-      message: z.string().min(10, 'Message must be at least 10 characters')}),
-
-    const result = schema.safeParse(formData),
+      message: z.string().min(10, 'Message must be at least 10 characters')});
+    const result = schema.safeParse(formData);
     logInfo('[ContactForm] Zod validation result:', { data: result }),
-
     if (!result.success) {
-      const fieldErrors: Record<string, string> = {},
+      const fieldErrors: Record<string, string> = {};
       for (const err of result.error.errors) {
         if (err.path[0]) {
           fieldErrors[err.path[0] as string] = err.message
         }
       }
-      setErrors(fieldErrors),
-      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again',
+      setErrors(fieldErrors);
+      const validationErrorMsg = result.error.errors[0]?.message || 'Please check your form and try again';
       logWarn('[ContactForm] Validation failed:', { data: { validationErrorMsg, fieldErrors: result.error.flatten().fieldErrors } }),
       toast({
         title: 'Form Validation Error',
@@ -69,10 +59,9 @@ export default function Contact() {
       return
     }
 
-    setErrors({}),
-    setIsSubmitting(true),
-    logInfo('[ContactForm] Starting form submission (fetch to /api/contact).'),
-
+    setErrors({});
+    setIsSubmitting(true);
+    logInfo('[ContactForm] Starting form submission (fetch to /api/contact).');
     try {
       fetch('/api/contact', {
         method: 'POST',
@@ -82,7 +71,6 @@ export default function Contact() {
           logInfo('[ContactForm] API response status:', { data: res.status }),
           const responseBody = await res.text(), // Read as text first to avoid JSON parse error if not JSON
           logInfo('[ContactForm] API response body:', { data: responseBody }),
-
           // Note: setIsSubmitting(false) is called within then/catch of the promise.
           // If fetch itself or .then/.catch structure has a synchronous error,
           // the outer try/catch will handle it.
@@ -100,19 +88,18 @@ export default function Contact() {
           }
 
           setIsSubmitting(false), // Moved here for success path
-          logInfo('[ContactForm] Message submission successful.'),
+          logInfo('[ContactForm] Message submission successful.');
           toast({
             title: 'Message Sent',
-            description:
-              "We've received your message and will get back to you soon."}),
-          setSubmitted(true),
-          setTimeout(() => setSubmitted(false), 2000),
+            description: "We've received your message and will get back to you soon."}),
+          setSubmitted(true);
+          setTimeout(() => setSubmitted(false), 2000);
           setFormData({ name: '', email: '', message: '' })
         })
         .catch((err) => {
           // This catches errors from the fetch promise (network, res.ok is false, or manual throw)
           logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err }),
-          setIsSubmitting(false),
+          setIsSubmitting(false);
           toast({
             title: 'Submission Error',
             description: err.message || 'An unexpected error occurred during submission.',
@@ -122,14 +109,13 @@ export default function Contact() {
       // This catches synchronous errors that might occur when initiating fetch or in its direct vicinity
       // if not caught by the promise's .catch (less common for typical fetch issues but good for safety)
       logErrorToProduction('[ContactForm] Synchronous error during fetch initiation or processing:', { data: error }),
-      setIsSubmitting(false),
+      setIsSubmitting(false);
       toast({
         title: 'Critical Submission Error',
         description: error instanceof Error ? error.message : 'An unexpected critical error occurred.',
         variant: 'destructive'})
     }
   },
-
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
@@ -141,24 +127,21 @@ export default function Contact() {
             'Content-Type': 'application/json'},
           body: JSON.stringify({
             messages: [{ role: 'user', content: message }]})},
-      ),
-
+      );
       if (!response.ok) {
         throw new Error('Failed to get response from AI assistant')
       }
 
       return Promise.resolve()
     } catch (error) {
-      logErrorToProduction('Error in AI chat', error),
+      logErrorToProduction('Error in AI chat', error);
       toast({
         title: 'Chat Error',
-        description:
-          'There was an error communicating with our AI assistant. Please try again.',
+        description: 'There was an error communicating with our AI assistant. Please try again.',
         variant: 'destructive'}),
       return Promise.resolve()
     }
-  },
-
+  };
   const offices = [
     {
       name: 'Headquarters',
@@ -170,7 +153,6 @@ export default function Contact() {
       address: '456 Innovation Street, New York, NY 10001',
       phone: '+1 302 464 0950',
       email: 'commercial@ziontechgroup.com'}],
-
   return (
     <>
       <SEO
@@ -327,8 +309,8 @@ export default function Contact() {
                       <div className="flex items-center">
                         <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                         <a
-                          href={`mailto:${office.email}`}
-                          className="text-zion-cyan hover:underline"
+                          href={`mailto: ${office.email}`}
+                          className="text-zion-cyan hover: underline"
                         >
                           {office.email}
                         </a>

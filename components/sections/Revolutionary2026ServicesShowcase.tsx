@@ -1,16 +1,15 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react',
-import Link from 'next/link',
-import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services',
-import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services',
-import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services',
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
   // Get featured services from each category
-  const featuredAIServices = aiAutonomousServices2026.slice(0, 3),
-  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3),
-  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3),
-
+  const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
+  const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
+  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -20,7 +19,6 @@ export default function Revolutionary2026ServicesShowcase() {
       }
     }
   },
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -31,7 +29,6 @@ export default function Revolutionary2026ServicesShowcase() {
       }
     }
   },
-
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}

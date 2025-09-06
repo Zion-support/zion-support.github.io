@@ -5,9 +5,8 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function WCAGScannerPage() {
-  const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner')),
-  if (!service) return null,
-
+  const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
+  if (!service) return null;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

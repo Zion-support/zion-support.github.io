@@ -1,20 +1,14 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
-import { 
-  Star, CheckCircle, ArrowRight, TrendingUp, Users, 
-  Award, Clock, Zap, Shield, Brain, Atom, Rocket,
-  ShoppingCart, Cpu, Globe, Lock, Video, Palette,
-  BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
-} from 'lucide-react',
-import { realMarketServices } from '../../data/2024-real-market-services',
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Star, CheckCircle, ArrowRight, TrendingUp, Users, Award, Clock, Zap, Shield, Brain, Atom, Rocket, ShoppingCart, Cpu, Globe, Lock, Video, Palette, BarChart, UserCheck, FileText, Heart, Eye, Search, Phone } from 'lucide-react';
+import { realMarketServices } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     id: 'ai-services',
@@ -71,22 +65,18 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ],
-
 export default function UltraFuturisticServiceShowcase2034() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const allServices = [...realMarketServices, ...aiEmergingTechServices],
-  
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
-      serviceCategories.some(cat => cat.services.includes(service)),
+      serviceCategories.some(cat => cat.services.includes(service));
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
-  }),
-
+  });
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -96,12 +86,10 @@ export default function UltraFuturisticServiceShowcase2034() {
       }
     }
   },
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   },
-
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
       {/* Animated Background */}

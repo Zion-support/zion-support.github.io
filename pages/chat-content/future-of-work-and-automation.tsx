@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 const FutureOfWorkAndAutomation: NextPage = () => {
   return (
     <div>
@@ -15,5 +15,4 @@ const FutureOfWorkAndAutomation: NextPage = () => {
     </div>
   )
 },
-
-export default FutureOfWorkAndAutomation,
+export default FutureOfWorkAndAutomation;

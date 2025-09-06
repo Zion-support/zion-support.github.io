@@ -1,19 +1,17 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react',
-
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 export default function SEOAnalyzerToolPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false),
-  const [analysisResults, setAnalysisResults] = useState(null),
-  const [url, setUrl] = useState(''),
-
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
+  const [url, setUrl] = useState('');
   const features = [
     {
       icon: <Search className="w-8 h-8 text-white" />,
       title: 'Comprehensive SEO Analysis',
-      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',
+      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.';
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
@@ -34,13 +32,12 @@ export default function SEOAnalyzerToolPage() {
       description: 'Get intelligent recommendations and actionable insights to improve your search rankings.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'}],
-
   const seoFactors = [
     {
       category: 'On-Page SEO',
       factors: [
         'Title tags optimizationMeta descriptionsHeader structure (H1, H2, H3)Content quality and lengthInternal linking structureImage optimization (alt tags)'
-      ],
+      ];
       icon: '📝',
       color: 'text-green-400'
     },
@@ -69,7 +66,6 @@ export default function SEOAnalyzerToolPage() {
       color: 'text-orange-400'
     }
   ],
-
   const pricing = [
     {
       name: 'Starter',
@@ -102,11 +98,9 @@ export default function SEOAnalyzerToolPage() {
       popular: false
     }
   ],
-
   const handleAnalyzeSEO = async () => {
-    if (!url.trim()) return,
-    
-    setIsAnalyzing(true),
+    if (!url.trim()) return;
+    setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -132,8 +126,7 @@ export default function SEOAnalyzerToolPage() {
       }),
       setIsAnalyzing(false)
     }, 4000)
-  },
-
+  };
   return (
     <>
       <Head>
@@ -159,7 +152,7 @@ export default function SEOAnalyzerToolPage() {
             SEO Analyzer Tool
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, 
+            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights;
             keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
           </p>
           

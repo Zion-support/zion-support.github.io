@@ -1,15 +1,9 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
-import { 
-  Rocket, CheckCircle, ArrowRight, Brain, Atom, 
-  Shield, Zap, Users, Clock, Target, Star,
-  FileText, Video, Code, Globe, Building
-} from 'lucide-react',
-
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Rocket, CheckCircle, ArrowRight, Brain, Atom, Shield, Zap, Users, Clock, Target, Star, FileText, Video, Code, Globe, Building } from 'lucide-react';
 export default function GetStarted() {
-  const [selectedPath, setSelectedPath] = useState<string>(''),
-  const [currentStep, setCurrentStep] = useState(1),
-
+  const [selectedPath, setSelectedPath] = useState<string>('');
+  const [currentStep, setCurrentStep] = useState(1);
   const onboardingSteps = [
     {
       step: 1,
@@ -36,7 +30,6 @@ export default function GetStarted() {
       icon: <Rocket className="w-8 h-8 text-green-400" />
     }
   ],
-
   const technologyPaths = [
     {
       id: 'ai-consciousness',
@@ -53,7 +46,7 @@ export default function GetStarted() {
     {
       id: 'quantum-computing',
       name: 'Quantum Computing Solutions',
-      description: 'Leverage quantum computing for cryptography, optimization, and simulation',
+      description: 'Leverage quantum computing for cryptography, optimization, and simulation';
       icon: <Atom className="w-8 h-8 text-purple-400" />,
       features: [
         'Quantum algorithmsPost-quantum cryptographyQuantum machine learningQuantum simulation'
@@ -87,7 +80,6 @@ export default function GetStarted() {
       complexity: 'Intermediate'
     }
   ],
-
   const quickStartOptions = [
     {
       title: 'Free Consultation',
@@ -122,24 +114,20 @@ export default function GetStarted() {
       color: 'from-orange-500 to-red-600'
     }
   ],
-
   const handlePathSelection = (pathId: string) => {
     setSelectedPath(pathId),
     setCurrentStep(2)
-  },
-
+  };
   const handleNextStep = () => {
     if (currentStep < 4) {
       setCurrentStep(currentStep + 1)
     }
-  },
-
+  };
   const handlePreviousStep = () => {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1)
     }
-  },
-
+  };
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -156,7 +144,7 @@ export default function GetStarted() {
               Get Started Today
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Begin your journey into the future of AI consciousness, quantum computing, 
+              Begin your journey into the future of AI consciousness, quantum computing;
               and autonomous systems. Our expert team will guide you every step of the way.
             </p>
             <div className="flex flex-wrap justify-center gap-6">

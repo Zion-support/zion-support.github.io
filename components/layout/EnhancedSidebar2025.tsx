@@ -1,25 +1,15 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  X, ChevronRight, Home, Star, Users, 
-  Settings, HelpCircle, Mail, Phone, MapPin,
-  Brain, Atom, Shield, Rocket, DollarSign,
-  Globe, Cpu, Database, Lock, Zap,
-  TrendingUp, Award, CheckCircle, Clock,
-  ArrowRight, Search, Menu, X as CloseIcon,
-  Target, BookOpen, Truck, BarChart3,
-  Sparkles, Eye, Lightbulb, Palette, Code
-} from 'lucide-react',
-
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ChevronRight, Home, Star, Users, Settings, HelpCircle, Mail, Phone, MapPin, Brain, Atom, Shield, Rocket, DollarSign, Globe, Cpu, Database, Lock, Zap, TrendingUp, Award, CheckCircle, Clock, ArrowRight, Search, Menu, X as CloseIcon, Target, BookOpen, Truck, BarChart3, Sparkles, Eye, Lightbulb, Palette, Code } from 'lucide-react';
 interface SidebarItem {
   name: string,
   href: string,
-  icon?: React.ReactNode,
-  description?: string,
-  children?: SidebarItem[],
-  badge?: string,
-  isNew?: boolean,
+  icon?: React.ReactNode;
+  description?: string;
+  children?: SidebarItem[];
+  badge?: string;
+  isNew?: boolean;
   isHot?: boolean
 }
 
@@ -29,7 +19,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const sidebarItems: SidebarItem[] = [
   {
     name: 'All Services',
@@ -218,7 +207,6 @@ const sidebarItems: SidebarItem[] = [
     ]
   }
 ],
-
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
   { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> },
@@ -227,8 +215,6 @@ const resources = [
   { name: 'Training & Certification', href: '/training', icon: <Award className="w-4 h-4" /> },
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
 ],
-
-
 const supportLinks = [
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },
@@ -237,7 +223,6 @@ const supportLinks = [
   { name: 'Training', href: '/training', description: 'Learn our platforms' },
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ],
-
   const toggleSection = (title: string) => {
     const newExpanded = new Set(expandedSections),
     if (newExpanded.has(title)) {
@@ -246,15 +231,13 @@ const supportLinks = [
       newExpanded.add(title)
     }
     setExpandedSections(newExpanded)
-  },
-
+  };
   const filteredServices = sidebarItems.flatMap(item =>
     item.children?.filter(child =>
       child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
-  ),
-
+  );
   return (
     <motion.aside
       initial={{ x: -300, opacity: 0 }}
@@ -591,5 +574,4 @@ const supportLinks = [
     </motion.aside>
   )
 },
-
-export default EnhancedSidebar2025,
+export default EnhancedSidebar2025;

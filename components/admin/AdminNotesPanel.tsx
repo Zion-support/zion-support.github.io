@@ -1,10 +1,8 @@
-import React, { useEffect, useMemo, useState } from 'react',
-
+import React, { useEffect, useMemo, useState } from 'react';
 export type AdminNotesPanelProps = {
   targetType: string, // e.g., 'user' | 'listing'
   targetId: string,   // unique identifier for the target
-},
-
+};
 type Note = {
   id: string,
   targetType: string,
@@ -13,25 +11,23 @@ type Note = {
   authorId: string,
   createdAt: number
 },
-
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
-  const [isAdmin, setIsAdmin] = useState(true),
-  const [adminId, setAdminId] = useState('admin-demo'),
-  const [notes, setNotes] = useState<Note[]>([]),
-  const [loading, setLoading] = useState(false),
-  const [adding, setAdding] = useState(false),
-  const [text, setText] = useState(''),
-
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [adminId, setAdminId] = useState('admin-demo');
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [adding, setAdding] = useState(false);
+  const [text, setText] = useState('');
   async function fetchNotes() {
     try {
-      setLoading(true),
+      setLoading(true);
       const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
         headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
       if (!res.ok) {
-        setNotes([]),
+        setNotes([]);
         return
       }
-      const data = await res.json(),
+      const data = await res.json();
       setNotes(data.notes || [])
     } finally {
       setLoading(false)
@@ -40,21 +36,20 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
   useEffect(() => {
     if (isAdmin) fetchNotes()
-  }, [isAdmin, targetType, targetId]),
-
+  }, [isAdmin, targetType, targetId]);
   async function addNote() {
-    if (!text.trim()) return,
-    setAdding(true),
+    if (!text.trim()) return;
+    setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
-        body: JSON.stringify({ targetType, targetId, text })}),
+        body: JSON.stringify({ targetType, targetId, text })});
       if (!res.ok) {
-        alert('Failed to add note'),
+        alert('Failed to add note');
         return
       }
-      setText(''),
+      setText('');
       await fetchNotes()
     } finally {
       setAdding(false)

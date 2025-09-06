@@ -1,12 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import {
-  Cpu, Network, Zap, Shield, Database, Globe, 
-  ArrowRight, CheckCircle, Star, TrendingUp, Users
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Cpu, Network, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Users } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 export default function EdgeComputingPage() {
   const features = [
     {
@@ -46,39 +43,36 @@ export default function EdgeComputingPage() {
       color: "from-yellow-500 to-orange-500"
     }
   ],
-
   const benefits = [
-    "Reduce latency by 80-90% with edge processing",
-    "Cut bandwidth costs by 60% through local data processing",
-    "Improve reliability with distributed computing architecture",
-    "Scale seamlessly across global edge networks",
-    "Enable real-time AI and machine learning at the edge",
+    "Reduce latency by 80-90% with edge processing";
+    "Cut bandwidth costs by 60% through local data processing";
+    "Improve reliability with distributed computing architecture";
+    "Scale seamlessly across global edge networks";
+    "Enable real-time AI and machine learning at the edge";
     "Reduce central server load and improve overall performance"
-  ],
-
+  ];
   const useCases = [
     {
       industry: "Manufacturing",
-      description: "Real-time quality control, predictive maintenance, and production optimization",
+      description: "Real-time quality control, predictive maintenance, and production optimization";
       results: "30% reduction in downtime, 25% improvement in product quality"
-    },
+    };
     {
       industry: "Healthcare",
-      description: "Patient monitoring, medical device management, and telemedicine support",
+      description: "Patient monitoring, medical device management, and telemedicine support";
       results: "40% faster response times, improved patient outcomes"
-    },
+    };
     {
       industry: "Transportation",
-      description: "Autonomous vehicle support, traffic management, and fleet optimization",
+      description: "Autonomous vehicle support, traffic management, and fleet optimization";
       results: "50% reduction in accidents, 35% improvement in efficiency"
-    },
+    };
     {
       industry: "Retail",
-      description: "Inventory management, customer analytics, and supply chain optimization",
+      description: "Inventory management, customer analytics, and supply chain optimization";
       results: "45% reduction in stockouts, 30% improvement in customer satisfaction"
     }
-  ],
-
+  ];
   const pricing = [
     {
       plan: "Starter",
@@ -87,12 +81,12 @@ export default function EdgeComputingPage() {
       description: "Basic edge computing for small deployments",
       features: [
         "Up to 10 edge nodes",
-        "Basic orchestration",
-        "Standard monitoring",
-        "Email support",
-        "Basic security features",
+        "Basic orchestration";
+        "Standard monitoring";
+        "Email support";
+        "Basic security features";
         "Up to 100 IoT devices"
-      ],
+      ];
       popular: false
     },
     {
@@ -102,14 +96,14 @@ export default function EdgeComputingPage() {
       description: "Advanced features for growing edge networks",
       features: [
         "Everything in Starter",
-        "Up to 100 edge nodes",
-        "Advanced orchestration",
-        "Real-time monitoring",
-        "Priority support",
-        "Advanced security",
-        "Up to 1000 IoT devices",
+        "Up to 100 edge nodes";
+        "Advanced orchestration";
+        "Real-time monitoring";
+        "Priority support";
+        "Advanced security";
+        "Up to 1000 IoT devices";
         "Custom integrations"
-      ],
+      ];
       popular: true
     },
     {
@@ -119,18 +113,17 @@ export default function EdgeComputingPage() {
       description: "Full-scale solution for large organizations",
       features: [
         "Everything in Professional",
-        "Unlimited edge nodes",
-        "Custom orchestration",
-        "Dedicated support team",
-        "Unlimited IoT devices",
-        "On-premise deployment",
-        "Custom training",
+        "Unlimited edge nodes";
+        "Custom orchestration";
+        "Dedicated support team";
+        "Unlimited IoT devices";
+        "On-premise deployment";
+        "Custom training";
         "SLA guarantees"
-      ],
+      ];
       popular: false
     }
   ],
-
   return (
     <>
       <Head>
@@ -228,7 +221,7 @@ export default function EdgeComputingPage() {
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Edge Computing?</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Edge computing brings processing power closer to where data is generated, enabling faster response times,
+                Edge computing brings processing power closer to where data is generated, enabling faster response times;
                 reduced bandwidth usage, and improved reliability for distributed applications.
               </p>
               <div className="space-y-4">

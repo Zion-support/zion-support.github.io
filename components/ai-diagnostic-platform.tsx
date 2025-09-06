@@ -1,23 +1,17 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  Brain, Shield, Zap, Target, Stethoscope, 
-  BarChart3, Cpu, Globe, Users, Award,
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Brain, Shield, Zap, Target, Stethoscope, BarChart3, Cpu, Globe, Users, Award, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const features = [
   'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integrationReal-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'
-],
-
+];
 const pricingPlans = [
   {
     name: 'Starter',
@@ -41,7 +35,6 @@ const pricingPlans = [
     popular: false
   }
 ],
-
 export default function AIDiagnosticPlatform() {
   return (
     <Layout>

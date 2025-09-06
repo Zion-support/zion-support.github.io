@@ -1,24 +1,13 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
-  Rocket, Shield, Cpu, Target, Microscope, Users,
-  Facebook, Twitter, Linkedin, Instagram, Youtube,
-  Github, ArrowRight, Heart, Star, Award, CheckCircle,
-  Home, Briefcase, BookOpen, MessageCircle, DollarSign,
-  TrendingUp, Target as TargetIcon, Users as UsersIcon,
-  Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon,
-  MessageCircle as MessageCircleIcon, Star as StarIcon
-} from 'lucide-react',
-
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom, Rocket, Shield, Cpu, Target, Microscope, Users, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, ArrowRight, Heart, Star, Award, CheckCircle, Home, Briefcase, BookOpen, MessageCircle, DollarSign, TrendingUp, Target as TargetIcon, Users as UsersIcon, Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon, MessageCircle as MessageCircleIcon, Star as StarIcon } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const mainNavigationRoutes = [
   { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
   { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },
@@ -29,7 +18,6 @@ const mainNavigationRoutes = [
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
 ],
-
 const serviceCategories = [
   {
     title: '🚀 2032 Revolutionary AI Services',
@@ -86,7 +74,6 @@ const serviceCategories = [
     ]
   }
 ],
-
 const quickLinks = [
   { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },
   { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },
@@ -97,7 +84,6 @@ const quickLinks = [
   { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
 ],
-
 const companyInfo = [
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
@@ -106,7 +92,6 @@ const companyInfo = [
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
 ],
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -115,7 +100,6 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
 ],
-
 const footerVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -127,12 +111,10 @@ const footerVariants = {
     }
   }
 },
-
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
 },
-
 export default function UltraFuturisticFooter2032() {
   return (
     <footer className="relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden">
@@ -293,7 +275,7 @@ export default function UltraFuturisticFooter2032() {
                 Stay Ahead with Future Technology
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-                Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, 
+                Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations;
                 and autonomous systems development. Join our community of future technology pioneers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

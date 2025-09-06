@@ -1,30 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
-  ChevronDown, 
-  Menu, 
-  X,
-  Code,
-  Smartphone,
-  Cloud,
-  Database,
-  Shield,
-  Zap,
-  Building,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard
-} from 'lucide-react';
+import { Phone, Mail, Facebook, Twitter, Linkedin, Instagram, ChevronDown, Menu, X, Code, Smartphone, Cloud, Database, Shield, Zap, Building, ShoppingCart, Heart, GraduationCap, Factory, Truck, CreditCard } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,8 +48,7 @@ const Header: React.FC = () => {
       href: '/services/performance',
       icon: Zap
     }
-  ];
-
+  ],
   const solutionsDropdown = [
     {
       title: 'Enterprise Solutions',
@@ -98,8 +74,7 @@ const Header: React.FC = () => {
       href: '/solutions/education',
       icon: GraduationCap
     }
-  ];
-
+  ],
   const industriesDropdown = [
     { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
     { name: 'Logistics', href: '/industries/logistics', icon: Truck },
@@ -107,8 +82,7 @@ const Header: React.FC = () => {
     { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
     { name: 'Education', href: '/industries/education', icon: GraduationCap },
     { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
-  ];
-
+  ],
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -116,8 +90,7 @@ const Header: React.FC = () => {
     { name: 'Solutions', href: '/solutions' },
     { name: 'Industries', href: '/industries' },
     { name: 'Contact', href: '/contact' }
-  ];
-
+  ],
   return (
     <header className="bg-white shadow-lg">
       {/* Top Bar */}
@@ -333,7 +306,7 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
     </header>
-  );
+  ),
 };
 
 export default Header;

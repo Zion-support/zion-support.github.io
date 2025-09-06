@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function CaseStudyPage() {
   return (
     <>
@@ -14,7 +14,7 @@ export default function CaseStudyPage() {
         <main className="container mx-auto px-6 py-12">
           {/* Breadcrumb */}
           <nav className="mb-8">
-            <Link href="/" className="text-white/60 hover:text-white transition-colors">
+            <Link href="/" className="text-white/60 hover: text-white transition-colors">
               Home
             </Link>
             <span className="text-white/60 mx-2">→</span>
@@ -46,7 +46,7 @@ export default function CaseStudyPage() {
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Financial Services Provider</h3>
                 <p className="text-white/90 text-lg mb-4">
-                  A leading financial services company serving millions of customers with banking, 
+                  A leading financial services company serving millions of customers with banking,
                   investment, and insurance products. The company faced challenges with high customer service costs and long response times.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">

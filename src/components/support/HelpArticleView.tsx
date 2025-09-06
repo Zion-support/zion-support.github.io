@@ -1,23 +1,22 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { ThumbsUp, ThumbsDown } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { HELP_CATEGORIES } from "./help-content",
+import { toast } from "@/components/ui/use-toast";
+import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
   articleId: string
 }
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
-  
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
   // Find the article in all categories
-  let article,
+  let article;
   for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find(a => a.id === articleId),
+    const found = category.articles.find(a => a.id === articleId);
     if (found) {
-      article = found,
+      article = found;
       break
     }
   }
@@ -28,7 +27,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type),
-    
     // In a real implementation, this would send feedback to the server
     toast({
       title: "Thank you for your feedback!",
@@ -36,7 +34,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
         ? "We're glad this article was helpful." 
         : "We'll work on improving this article."})
   },
-  
   return (
     <div>
       <Card className="p-6">

@@ -1,24 +1,13 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Rocket, Brain, Atom, Zap, Sparkles, Shield, 
-  Phone, Mail, MapPin, Globe, ArrowRight,
-  Linkedin, Twitter, Facebook, Instagram, Youtube, Github,
-  CheckCircle, Award, Star, Crown, Gem, Infinity,
-  Heart, ShieldCheck, Users, Briefcase, BookOpen,
-  Target, Microscope, Cpu, Database, Cloud, Lock,
-  Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity,
-  ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
-} from 'lucide-react',
-
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Rocket, Brain, Atom, Zap, Sparkles, Shield, Phone, Mail, MapPin, Globe, ArrowRight, Linkedin, Twitter, Facebook, Instagram, Youtube, Github, CheckCircle, Award, Star, Crown, Gem, Infinity, Heart, ShieldCheck, Users, Briefcase, BookOpen, Target, Microscope, Cpu, Database, Cloud, Lock, Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity, ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     title: '🧠 Revolutionary AI Services',
@@ -29,17 +18,17 @@ const serviceCategories = [
       { name: 'AI-Powered Cybersecurity', href: '/ai-cybersecurity-platform', price: '$799/month' },
       { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', price: '$3,999/month' }
     ]
-  },
+  };
   {
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     services: [
-      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', price: '$1,999/month' },
+      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', price: '$1,999/month' };
       { name: 'Blockchain AI Platform', href: '/blockchain-ai-platform', price: '$899/month' },
       { name: 'Edge AI Computing', href: '/edge-ai-computing-platform', price: '$599/month' },
       { name: 'AI Climate Modeling', href: '/ai-climate-modeling-platform', price: '$1,299/month' }
     ]
-  },
+  };
   {
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
@@ -61,7 +50,6 @@ const serviceCategories = [
     ]
   }
 ],
-
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -72,7 +60,6 @@ const quickLinks = [
   { name: 'Blog', href: '/blog', icon: MessageSquare },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ],
-
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Careers', href: '/careers', icon: Briefcase },
@@ -81,7 +68,6 @@ const companyLinks = [
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
 ],
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
@@ -89,18 +75,15 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
 ],
-
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
-],
-
+];
 const stats = [
   { label: 'Happy Customers', value: '50K+', icon: Users },
   { label: 'Services Delivered', value: '200+', icon: Rocket },
   { label: 'Countries Served', value: '45+', icon: Globe },
   { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
 ],
-
 export default function UltraFuturisticFooter2034() {
   return (
     <footer className="bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">

@@ -1,7 +1,6 @@
-import React from 'react',
-import Button from '../ui/Button',
-import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react',
-
+import React from 'react';
+import Button from '../ui/Button';
+import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 interface HeroProps {
   title: string,
   subtitle: string,
@@ -22,9 +21,9 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({
   title,
-  subtitle,
-  primaryAction,
-  secondaryAction,
+  subtitle;
+  primaryAction;
+  secondaryAction;
   stats}) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
@@ -142,5 +141,4 @@ const Hero: React.FC<HeroProps> = ({
     </section>
   )
 },
-
-export default Hero,
+export default Hero;

@@ -11,17 +11,14 @@ const EnhancedContactForm: React.FC = () => {
     service: '',
     message: ''
   }),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
-  const { showSuccess, showError } = useToast(),
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { showSuccess, showError } = useToast();
   const services = [
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
-  ],
-
+  ];
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {},
-
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required'
     } else if (formData.name.trim().length < 2) {
@@ -42,26 +39,24 @@ const EnhancedContactForm: React.FC = () => {
       newErrors.message = 'Message must be less than 1000 characters'
     }
 
-    setErrors(newErrors),
-    return Object.keys(newErrors).length === 0
-  },
-
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
-    
     if (!validateForm()) {
-      showError('Validation ErrorPlease fix the errors in the form'),
-      return
+      showError('Validation ErrorPlease fix the errors in the form');
+      return;
     }
 
-    setIsSubmitting(true),
+    setIsSubmitting(true);
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000)),
+      await new Promise(resolve => setTimeout(resolve, 2000));
       
-      setIsSubmitted(true),
-      showSuccess('Message Sent!Thank you for contacting us. We\'ll get back to you soon.'),
+      setIsSubmitted(true);
+      showSuccess('Message Sent!Thank you for contacting us. We\'ll get back to you soon.');
       
       setFormData({
         name: '',
@@ -70,28 +65,25 @@ const EnhancedContactForm: React.FC = () => {
         service: '',
         message: ''
       }),
-      setErrors({})
+      setErrors({});
     } catch (error) {
-      console.error('Error submitting form:', error),
-      showError('Submission FailedThere was an error sending your message. Please try again.')
+      console.error('Error submitting form:', error);
+      showError('Submission FailedThere was an error sending your message. Please try again.');
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  },
-
+  };
   const services = [
     'AI Business IntelligenceQuantum CybersecurityEdge Computing OrchestrationSpace Technology InnovationNeural Interface DevelopmentOther'
-  ],
-
+  ];
   const handleInputBlur = (name: keyof FormData) => {
     // Validate individual field on blur
     if (formData[name] && errors[name]) {
       const newErrors = { ...errors },
-      delete newErrors[name],
+      delete newErrors[name];
       setErrors(newErrors)
     }
-  },
-
+  };
   if (isSubmitted) {
     return (
       <motion.div
@@ -320,5 +312,4 @@ const EnhancedContactForm: React.FC = () => {
     </section>
   )
 },
-
 export default EnhancedContactForm;

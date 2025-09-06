@@ -1,5 +1,5 @@
-import Link from 'next/link',
-import AnimatedBackground from './AnimatedBackground',
+import Link from 'next/link';
+import AnimatedBackground from './AnimatedBackground';
 export default function FuturisticHero() {
   return (
     <section className="relative py-20 sm:py-28">

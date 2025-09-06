@@ -1,14 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Monitor, Brain, Cpu, Zap, Shield, Globe, 
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
-  Database, Network, Server, Laptop, Smartphone
-} from 'lucide-react',
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Monitor, Brain, Cpu, Zap, Shield, Globe, Rocket, Target, TrendingUp, Users, CheckCircle, ArrowRight, Star, Award, Clock, DollarSign, Database, Network, Server, Laptop, Smartphone } from 'lucide-react';
 const AIPoweredITAssetManagement = () => {
   const features = [
     {
@@ -36,16 +30,14 @@ const AIPoweredITAssetManagement = () => {
       color: "from-red-500 to-orange-500"
     }
   ],
-
   const assetTypes = [
-    "Hardware devices (servers, workstations, mobile devices)",
-    "Software licenses and applications",
-    "Network infrastructure and equipment",
-    "Cloud resources and virtual machines",
-    "Security devices and appliances",
+    "Hardware devices (servers, workstations, mobile devices)";
+    "Software licenses and applications";
+    "Network infrastructure and equipment";
+    "Cloud resources and virtual machines";
+    "Security devices and appliances";
     "Peripheral devices and accessories"
-  ],
-
+  ];
   const benefits = [
     {
       icon: DollarSign,
@@ -72,18 +64,16 @@ const AIPoweredITAssetManagement = () => {
       description: "Increased operational efficiency"
     }
   ],
-
   const capabilities = [
-    "Automated asset discovery and inventory",
-    "Real-time health monitoring and alerts",
-    "Predictive maintenance scheduling",
-    "License compliance management",
-    "Security vulnerability assessment",
-    "Asset lifecycle optimization",
-    "Cost allocation and tracking",
+    "Automated asset discovery and inventory";
+    "Real-time health monitoring and alerts";
+    "Predictive maintenance scheduling";
+    "License compliance management";
+    "Security vulnerability assessment";
+    "Asset lifecycle optimization";
+    "Cost allocation and tracking";
     "Integration with existing IT tools"
-  ],
-
+  ];
   return (
     <>
       <Head>
@@ -118,7 +108,7 @@ const AIPoweredITAssetManagement = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your IT operations with intelligent asset management that discovers, 
+                Transform your IT operations with intelligent asset management that discovers,
                 monitors, and optimizes every piece of your technology infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -318,5 +308,4 @@ const AIPoweredITAssetManagement = () => {
     </>
   )
 },
-
-export default AIPoweredITAssetManagement,
+export default AIPoweredITAssetManagement;

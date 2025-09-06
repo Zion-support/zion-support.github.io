@@ -1,47 +1,44 @@
-import { useEffect, useMemo, useState } from 'react',
-import { useRouter } from 'next/router',
-import ProgressBar from '../../components/learn/ProgressBar',
-import Quiz from '../../components/learn/Quiz',
-import CertificatePreview from '../../components/learn/CertificatePreview',
-import CoachWidget from '../../components/learn/CoachWidget',
+import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+import ProgressBar from '../../components/learn/ProgressBar';
+import Quiz from '../../components/learn/Quiz';
+import CertificatePreview from '../../components/learn/CertificatePreview';
+import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView() {
-  const router = useRouter(),
+  const router = useRouter();
   const { courseId } = router.query as { courseId: string },
-  const [course, setCourse] = useState<any>(null),
+  const [course, setCourse] = useState<any>(null);
   const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),
-  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null),
-  const [finalPassed, setFinalPassed] = useState(false),
-
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+  const [finalPassed, setFinalPassed] = useState(false);
   useEffect(() => {
-    if (!courseId) return,
+    if (!courseId) return;
     async function load() {
       const [courseResp, progResp] = await Promise.all([
-        fetch(`/api/learn/courses/${courseId}`),
+        fetch(`/api/learn/courses/${courseId}`);
         fetch(`/api/learn/progress?userId=demo-user`)
-      ]),
-      const courseData = await courseResp.json(),
-      const progData = await progResp.json(),
-      setCourse(courseData.course),
+      ]);
+      const courseData = await courseResp.json();
+      const progData = await progResp.json();
+      setCourse(courseData.course);
       const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },
-      setProgress(cp),
+      setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null)
     }
     load()
-  }, [courseId]),
-
-  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),
-
+  }, [courseId]);
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
   async function markLessonComplete(lessonId: string) {
     const completedCount = (progress.completedLessons || []).includes(lessonId)
       ? (progress.completedLessons || []).length
       : (progress.completedLessons || []).length + 1,
-    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100),
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
     const resp = await fetch('/api/learn/progress', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
-    }),
-    const data = await resp.json(),
+    });
+    const data = await resp.json();
     setProgress(data.progress)
   }
 
@@ -52,12 +49,11 @@ export default function CourseView() {
 
   async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold || 0,
-    const passed = score >= needed,
+    const passed = score >= needed;
     setFinalPassed(passed)
   }
 
   if (!course) return <div>Loading...</div>,
-
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">

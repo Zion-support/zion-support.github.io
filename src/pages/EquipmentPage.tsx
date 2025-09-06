@@ -1,54 +1,54 @@
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary';
+import { useCurrency } from '@/hooks/useCurrency';
+import { logErrorToProduction } from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
-    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
+    description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.";
     category: "AI Hardware",
     price: 85000,
     currency: "$",
     brand: "NVIDIA",
-    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
-    tags: ["AI", "Machine Learning", "GPU"],
+    specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"];
+    tags: ["AI", "Machine Learning", "GPU"];
     author: { name: "NVIDIA", id: "nvidia" },
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:30:00.000Z",
     rating: 4.9,
     reviewCount: 27,
-    location: "Santa Clara, CA",
+    location: "Santa Clara, CA";
     availability: "In Stock"
   },
   {
     id: "dell-poweredge-r750",
     title: "Dell PowerEdge R750 Server",
-    description: "2U rack server with dual Intel Xeon processors, enterprise-grade performance for virtualization workloads.",
+    description: "2U rack server with dual Intel Xeon processors, enterprise-grade performance for virtualization workloads.";
     category: "Servers & Compute",
     price: 12500,
     currency: "$",
     brand: "Dell",
-    specifications: ["2U Rack", "Dual Xeon", "128GB RAM", "2TB SSD"],
-    tags: ["Server", "Enterprise", "Virtualization"],
+    specifications: ["2U Rack", "Dual Xeon", "128GB RAM", "2TB SSD"];
+    tags: ["Server", "Enterprise", "Virtualization"];
     author: { name: "Dell", id: "dell" },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-12T14:20:00.000Z",
     rating: 4.7,
     reviewCount: 34,
-    location: "Austin, TX",
+    location: "Austin, TX";
     availability: "In Stock"
   },
   {
@@ -59,14 +59,14 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     price: 18500,
     currency: "$",
     brand: "Cisco",
-    specifications: ["48x 100GbE", "QSFP28", "Line Rate"],
-    tags: ["Switch", "100GbE", "Datacenter"],
+    specifications: ["48x 100GbE", "QSFP28", "Line Rate"];
+    tags: ["Switch", "100GbE", "Datacenter"];
     author: { name: "Cisco", id: "cisco" },
     images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T09:15:00.000Z",
     rating: 4.8,
     reviewCount: 19,
-    location: "San Jose, CA",
+    location: "San Jose, CA";
     availability: "In Stock"
   },
   {
@@ -77,14 +77,14 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     price: 14500,
     currency: "$",
     brand: "HPE",
-    specifications: ["2U Rack", "Dual Xeon", "256GB RAM", "4TB SSD"],
-    tags: ["Server", "Enterprise", "Compute"],
+    specifications: ["2U Rack", "Dual Xeon", "256GB RAM", "4TB SSD"];
+    tags: ["Server", "Enterprise", "Compute"];
     author: { name: "HPE", id: "hpe" },
     images: ["https://images.unsplash.com/photo-1555617981-dac388a08846?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-18T11:00:00.000Z",
     rating: 4.6,
     reviewCount: 21,
-    location: "Houston, TX",
+    location: "Houston, TX";
     availability: "In Stock"
   },
   {
@@ -95,14 +95,14 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     price: 42000,
     currency: "$",
     brand: "NetApp",
-    specifications: ["24TB Flash", "NVMe", "Active-Active"],
-    tags: ["Storage", "Flash", "NVMe"],
+    specifications: ["24TB Flash", "NVMe", "Active-Active"];
+    tags: ["Storage", "Flash", "NVMe"];
     author: { name: "NetApp", id: "netapp" },
     images: ["https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-18T09:45:00.000Z",
     rating: 4.7,
     reviewCount: 18,
-    location: "Chicago, IL",
+    location: "Chicago, IL";
     availability: "2-3 Weeks"
   },
   {
@@ -113,18 +113,17 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     price: 23000,
     currency: "$",
     brand: "Arista",
-    specifications: ["48x10GbE", "6x40GbE", "Wire Speed"],
-    tags: ["Switch", "10GbE", "Datacenter"],
+    specifications: ["48x10GbE", "6x40GbE", "Wire Speed"];
+    tags: ["Switch", "10GbE", "Datacenter"];
     author: { name: "Arista", id: "arista" },
     images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-17T12:10:00.000Z",
     rating: 4.5,
     reviewCount: 16,
-    location: "Sunnyvale, CA",
+    location: "Sunnyvale, CA";
     availability: "In Stock"
   }
 ],
-
 // Market insights component
 const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -154,7 +153,6 @@ const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
     </CardContent>
   </Card>
 ),
-
 // Filter controls
 const EquipmentFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
@@ -183,12 +181,11 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 ),
-
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-    <Card className="h-full hover:shadow-lg transition-shadow">
+    <Card className="h-full hover: shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
           <div className="flex-1 min-w-0">
@@ -226,14 +223,12 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     </Card>
   )
 },
-
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
-),
-
+);
 // Error fallback component
 function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, resetErrorBoundary: () => void }) {
   return (
@@ -263,43 +258,38 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, r
 // Main component
 function EquipmentPageContent() {
   const router = useRouter(),
-  const [sortBy, setSortBy] = useState('newest'),
-  const [filterCategory, setFilterCategory] = useState(''),
-  const [showRecommended, setShowRecommended] = useState(false),
-
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterCategory, setFilterCategory] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
   // Generate a consistent seed based on current filters for deterministic data
   const dataSeed = useMemo(() => {
     return `equipment-${filterCategory}-${showRecommended}`
-  }, [filterCategory, showRecommended]),
-
+  }, [filterCategory, showRecommended]);
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
     // Simulate realistic API delay
-    await new Promise(resolve => setTimeout(resolve, 300)),
-
+    await new Promise(resolve => setTimeout(resolve, 300));
     try {
       // Generate consistent virtual dataset using the seed
-      const VIRTUAL_DATASET_SIZE = 150,
+      const VIRTUAL_DATASET_SIZE = 150;
       const baseVirtualEquipment = generateDatacenterEquipment(
-        VIRTUAL_DATASET_SIZE,
-        INITIAL_EQUIPMENT.length,
+        VIRTUAL_DATASET_SIZE;
+        INITIAL_EQUIPMENT.length;
         dataSeed
-      ),
+      );
       let fullVirtualDataset: ProductListing[] = [
         ...INITIAL_EQUIPMENT,
         ...baseVirtualEquipment
       ],
-
       // Deduplicate by ID in case of overlaps
-      const dedupMap = new Map<string, ProductListing>(),
+      const dedupMap = new Map<string, ProductListing>();
       for (const item of fullVirtualDataset) {
         if (!dedupMap.has(item.id)) {
           dedupMap.set(item.id, item)
         }
       }
-      fullVirtualDataset = Array.from(dedupMap.values()),
-
+      fullVirtualDataset = Array.from(dedupMap.values());
       // Apply category filtering
-      let processedDataset = fullVirtualDataset,
+      let processedDataset = fullVirtualDataset;
       if (filterCategory) {
         processedDataset = processedDataset.filter(e => e.category === filterCategory)
       }
@@ -313,23 +303,21 @@ function EquipmentPageContent() {
       processedDataset.sort((a, b) => {
         switch (sortBy) {
           case 'price-low':
-            return (a.price || 0) - (b.price || 0),
+            return (a.price || 0) - (b.price || 0);
           case 'price-high':
-            return (b.price || 0) - (a.price || 0),
+            return (b.price || 0) - (a.price || 0);
           case 'rating':
-            return (b.rating || 0) - (a.rating || 0),
+            return (b.rating || 0) - (a.rating || 0);
           default: // 'newest'
             return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
         }
       }),
-
       // Slice for pagination
-      const startIndex = (page - 1) * limit,
-      const endIndex = startIndex + limit,
-      const items = processedDataset.slice(startIndex, endIndex),
-
+      const startIndex = (page - 1) * limit;
+      const endIndex = startIndex + limit;
+      const items = processedDataset.slice(startIndex, endIndex);
       return {
-        items,
+        items;
         hasMore: endIndex < processedDataset.length,
         total: processedDataset.length
       }
@@ -337,21 +325,19 @@ function EquipmentPageContent() {
       logErrorToProduction('Error in fetchEquipment:', { data: error }),
       throw new Error('Failed to load equipment data. Please try again.')
     }
-  }, [sortBy, filterCategory, showRecommended, dataSeed]),
-
+  }, [sortBy, filterCategory, showRecommended, dataSeed]);
   const {
     items: equipment,
-    loading,
-    error,
-    hasMore,
-    total,
-    isFetching,
-    lastElementRef,
-    refresh,
-    scrollToTop,
+    loading;
+    error;
+    hasMore;
+    total;
+    isFetching;
+    lastElementRef;
+    refresh;
+    scrollToTop;
     loadMore
-  } = useInfiniteScrollPagination(fetchEquipment, 12),
-
+  } = useInfiniteScrollPagination(fetchEquipment, 12);
   // Refresh when filters change
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -359,25 +345,21 @@ function EquipmentPageContent() {
     }, 100), // Small delay to prevent rapid successive refreshes
 
     return () => clearTimeout(timeoutId)
-  }, [sortBy, filterCategory, showRecommended, refresh]),
-
+  }, [sortBy, filterCategory, showRecommended, refresh]);
   const marketStats = useMemo(() => {
-    if (equipment.length === 0) return null,
+    if (equipment.length === 0) return null;
     return getEquipmentMarketStats(equipment)
-  }, [equipment]),
-
+  }, [equipment]);
   const categories = useMemo(() => {
     // Use all possible categories, not just from current items
     return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
-  }, []),
-
-  const [showScrollTop, setShowScrollTop] = useState(false),
+  }, []);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
-    window.addEventListener('scroll', handleScroll),
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
+  }, []);
   // Loading state
   if (loading && equipment.length === 0) {
     return (

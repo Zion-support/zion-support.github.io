@@ -1,21 +1,18 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
-import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services',
-import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it',
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const pricingTiers = [
   {
     name: 'Starter',
@@ -53,7 +50,7 @@ const pricingTiers = [
     features: [
       'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrationsAdvanced analytics & reportingDedicated account managerCustom developmentSLA guarantees',
       'On-premise optionsCompliance certifications'
-    ],
+    ];
     icon: <Shield className="w-6 h-6" />,
     color: 'from-green-500 to-emerald-500',
     cta: 'Contact Sales',
@@ -61,59 +58,53 @@ const pricingTiers = [
     popular: false
   }
 ],
-
 const serviceCategories = [
   {
     name: 'AI & Consciousness Services',
     icon: <Brain className="w-8 h-8" />,
     color: 'from-cyan-500 to-blue-500',
-    services: cuttingEdgeAIServices2025.slice(0, 6),
+    services: cuttingEdgeAIServices2025.slice(0, 6);
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence'
   },
   {
     name: 'Quantum & Emerging Tech',
     icon: <Atom className="w-8 h-8" />,
     color: 'from-purple-500 to-pink-500',
-    services: cuttingEdgeQuantumServices2025.slice(0, 6),
+    services: cuttingEdgeQuantumServices2025.slice(0, 6);
     description: 'Breakthrough quantum computing and space technology solutions'
   },
   {
     name: 'Enterprise IT Solutions',
     icon: <Shield className="w-8 h-8" />,
     color: 'from-blue-500 to-cyan-500',
-    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6),
+    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6);
     description: 'Advanced enterprise infrastructure and security solutions'
   },
   {
     name: 'Micro SAAS Solutions',
     icon: <Rocket className="w-8 h-8" />,
     color: 'from-teal-500 to-emerald-500',
-    services: cuttingEdgeMicroSaasServices2025.slice(0, 6),
+    services: cuttingEdgeMicroSaasServices2025.slice(0, 6);
     description: 'Innovative business solutions for modern enterprises'
   }
 ],
-
 const stats = [
   { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-400' },
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
 ],
-
 export default function CuttingEdgePricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
     ...cuttingEdgeAIServices2025,
     ...cuttingEdgeQuantumServices2025,
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025
   ],
-
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => service.category === selectedCategory),
-
+    : allServices.filter(service => service.category === selectedCategory);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -123,7 +114,6 @@ export default function CuttingEdgePricing2025() {
       }
     }
   },
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -134,7 +124,6 @@ export default function CuttingEdgePricing2025() {
       }
     }
   },
-
   return (
     <>
       <Head>

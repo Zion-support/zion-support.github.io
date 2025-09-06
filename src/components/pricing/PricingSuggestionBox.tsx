@@ -1,11 +1,11 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Loader2, Info, ThumbsUp } from 'lucide-react'
-import { PricingSuggestion } from "@/services/pricingSuggestionService",
+import { PricingSuggestion } from "@/services/pricingSuggestionService";
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
   isLoading: boolean,
@@ -15,8 +15,8 @@ interface PricingSuggestionBoxProps {
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
-  isLoading,
-  onApplySuggestion,
+  isLoading;
+  onApplySuggestion;
   rateType}) => {
   if (isLoading) {
     return (
@@ -41,7 +41,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
-
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
       <CardContent className="p-5 space-y-4">
@@ -91,4 +90,4 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
       </CardContent>
     </Card>
   )
-},
+};

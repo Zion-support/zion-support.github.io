@@ -1,11 +1,11 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react',
-import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030',
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
-import { innovative2030Services } from '../data/2030-innovative-services',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -13,7 +13,6 @@ export default function Revolutionary2030ServicesPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -24,7 +23,7 @@ export default function Revolutionary2030ServicesPage() {
         <link rel="icon" href="/favicon.ico" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="2030 Revolutionary Technology Services | Zion Tech Group" />
+        <meta property="og: title" content="2030 Revolutionary Technology Services | Zion Tech Group" />
         <meta property="og:description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/2030-revolutionary-services" />
@@ -46,25 +45,25 @@ export default function Revolutionary2030ServicesPage() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "description": "Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
+              "@type": "Organization";
+              "name": "Zion Tech Group";
+              "description": "Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing";
+              "url": "https: //ziontechgroup.com",
+              "logo": "https: //ziontechgroup.com/logo.png",
               "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
+                "@type": "ContactPoint";
+                "telephone": "+1-302-464-0950";
+                "contactType": "customer service";
                 "email": "kleber@ziontechgroup.com"
-              },
+              };
               "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
+                "@type": "PostalAddress";
+                "streetAddress": "364 E Main St STE 1008";
+                "addressLocality": "Middletown";
+                "addressRegion": "DE";
+                "postalCode": "19709";
                 "addressCountry": "US"
-              },
+              };
               "sameAs": [
                 "https://github.com/Zion-Holdings"
               ]

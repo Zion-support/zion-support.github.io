@@ -1,11 +1,11 @@
 
-import { useState, useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
-import { cn } from '@/lib/utils',
+import { cn } from '@/lib/utils';
 interface WizardStep {
   title: string,
   description: string,
@@ -25,10 +25,9 @@ interface OnboardingWizardProps {
 }
 
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0),
+  const [currentStep, setCurrentStep] = useState(0);
   const router = useRouter(), // Changed from useNavigate to useRouter
-  const { user } = useAuth(),
-  
+  const { user } = useAuth();
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -61,11 +60,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       }
     }
   ],
-
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
-      description: "Add your skills, experience, and preferences",
+      description: "Add your skills, experience, and preferences";
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
       action: {
         text: "Edit Profile",
@@ -103,14 +101,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       }
     }
   ],
-  
-  const steps = type === 'client' ? clientSteps : talentSteps,
-
+  const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
   const handleAction = () => {
-    const currentStepData = steps[currentStep],
-    if (!currentStepData) return,
-    
+    const currentStepData = steps[currentStep];
+    if (!currentStepData) return;
     if (currentStep < steps.length - 1) {
       router.push(currentStepData.action.url), // Changed to router.push
       setCurrentStep(currentStep + 1)
@@ -119,8 +114,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       router.push(currentStepData.action.url), // Changed to router.push
       onComplete()
     }
-  },
-  
+  };
   // Skip the current step
   const handleSkip = () => {
     if (currentStep < steps.length - 1) {
@@ -129,8 +123,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       // Last step
       onSkip()
     }
-  },
-  
+  };
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
@@ -148,7 +141,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
               <div
                 key={index}
                 className={cn(
-                  "h-2 w-2 rounded-full mx-1",
+                  "h-2 w-2 rounded-full mx-1";
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep

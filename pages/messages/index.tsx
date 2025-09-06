@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import EmptyState from '../../components/ui/EmptyState',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import EmptyState from '../../components/ui/EmptyState';
 const Messages: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
@@ -20,5 +20,4 @@ const Messages: NextPage = () => {
     </div>
   )
 },
-
-export default Messages,
+export default Messages;

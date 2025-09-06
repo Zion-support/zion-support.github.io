@@ -1,35 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FaRocket,
-  FaBrain, 
-  FaCloud, 
-  FaShieldAlt, 
-  FaChartLine, 
-  FaCogs,
-  FaLightbulb,
-  FaGlobe,
-  FaMobile,
-  FaDatabase,
-  FaNetworkWired,
-  FaRobot,
-  FaSearch
-} from 'react-icons/fa',
-import { 
-  SiNextdotjs,
-  SiReact, 
-  SiTypescript, 
-  SiTailwindcss,
-  SiPrisma,
-  SiSupabase,
-  SiVercel,
-  SiDocker,
-  SiKubernetes,
-  SiAws,
-  SiGooglecloud,
-  SiMicrosoftazure
-} from 'react-icons/si',
-
+import { FaRocket, FaBrain, FaCloud, FaShieldAlt, FaChartLine, FaCogs, FaLightbulb, FaGlobe, FaMobile, FaDatabase, FaNetworkWired, FaRobot, FaSearch } from 'react-icons/fa';
+import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiPrisma, SiSupabase, SiVercel, SiDocker, SiKubernetes, SiAws, SiGooglecloud, SiMicrosoftazure } from 'react-icons/si';
 interface Service {
   id: string,
   title: string,
@@ -98,7 +70,6 @@ const serviceCategories: ServiceCategory[] = [
     color: 'from-yellow-500 to-orange-500'
   }
 ],
-
 const services: Service[] = [
   {
     id: 'ai-automation-suite',
@@ -215,16 +186,13 @@ const services: Service[] = [
     ]
   }
 ],
-
 const EnhancedServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedService, setSelectedService] = useState<Service | null>(null),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name'),
-
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
   const filteredServices = useMemo(() => {
-    let filtered = services,
-    
+    let filtered = services;
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)
     }
@@ -240,22 +208,19 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return a.pricing.starter - b.pricing.starter,
+          return a.pricing.starter - b.pricing.starter;
         case 'category':
-          return a.category.localeCompare(b.category),
+          return a.category.localeCompare(b.category);
         default: return a.title.localeCompare(b.title)
       }
     })
-  }, [selectedCategory, searchTerm, sortBy]),
-
+  }, [selectedCategory, searchTerm, sortBy]);
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service)
   },
-
   const closeModal = () => {
     setSelectedService(null)
-  },
-
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Header */}
@@ -507,7 +472,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                         ${price}
                         <span className="text-sm text-gray-400 font-normal">/month</span>
                       </div>
-                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300">
                         Get Started
                       </button>
                     </div>
@@ -521,5 +486,4 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     </div>
   )
 },
-
 export default EnhancedServicesShowcase2025;

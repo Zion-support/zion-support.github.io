@@ -1,30 +1,16 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  Star, TrendingUp, Users, Award, Clock, Heart, 
-  Brain, Atom, Shield, Rocket, Zap, Globe, 
-  CheckCircle, ArrowRight, Search, Filter,
-  ChevronDown, ChevronUp, Eye, Play, Sparkles,
-  Target, Microscope, Lock, Cloud, BarChart3,
-  Settings, Cpu, Database, Network, Server,
-  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon,
-  UsersIcon, CheckCircleIcon, ArrowRightIcon,
-  CpuIcon, DollarSign, Phone, Mail, MapPin,
-  Dna, Target as TargetIcon, Shield as ShieldIcon,
-  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon,
-  Brain as BrainIcon, Play as PlayIcon
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Star, TrendingUp, Users, Award, Clock, Heart, Brain, Atom, Shield, Rocket, Zap, Globe, CheckCircle, ArrowRight, Search, Filter, ChevronDown, ChevronUp, Eye, Play, Sparkles, Target, Microscope, Lock, Cloud, BarChart3, Settings, Cpu, Database, Network, Server, ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon, CheckCircleIcon, ArrowRightIcon, CpuIcon, DollarSign, Phone, Mail, MapPin, Dna, Target as TargetIcon, Shield as ShieldIcon, BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon, Brain as BrainIcon, Play as PlayIcon } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -97,42 +83,37 @@ const serviceCategories = [
     count: 1
   }
 ],
-
 const stats = [
   { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' },
   { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
 ],
-
 export default function UltimateFuturisticServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popular'),
-  const [viewMode, setViewMode] = useState('grid'),
-
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popular');
+  const [viewMode, setViewMode] = useState('grid');
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory
-  }),
-
+  });
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
+        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
       case 'rating':
-        return b.rating - a.rating,
+        return b.rating - a.rating;
       case 'customers':
-        return b.customers - a.customers,
+        return b.customers - a.customers;
       default: return b.popular ? 1 : -1
     }
   }),
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -142,7 +123,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
       }
     }
   },
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -153,7 +133,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
       }
     }
   },
-
   return (
     <Layout>
       <Head>
@@ -186,7 +165,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of technology with our revolutionary services that combine AI consciousness, 
+              Experience the future of technology with our revolutionary services that combine AI consciousness,
               quantum computing, space technology, and breakthrough innovations to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -382,10 +361,10 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">
                   <div className="text-sm">
                     <div className="text-gray-300 mb-2">
-                      <span className="font-semibold text-white">ROI:</span> {service.roi}
+                      <span className="font-semibold text-white">ROI: </span> {service.roi}
                     </div>
                     <div className="text-gray-300">
-                      <span className="font-semibold text-white">Market Size:</span> {service.marketSize}
+                      <span className="font-semibold text-white">Market Size: </span> {service.marketSize}
                     </div>
                   </div>
                 </div>

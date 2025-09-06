@@ -1,91 +1,34 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { 
-	Menu,
-	X, 
-	ChevronDown, 
-	ChevronRight,
-	Phone,
-	Mail,
-	MapPin,
-	Globe,
-	ArrowRight,
-	Sparkles,
-	Brain,
-	Atom,
-	Shield,
-	DollarSign,
-	FileText,
-	BarChart3,
-	MessageSquare,
-	Truck,
-	Users,
-	Database,
-	Cpu,
-	Cloud,
-	Play,
-	Search,
-	ShieldCheck,
-	TrendingUp,
-	Rocket,
-	Zap,
-	Check,
-	Star,
-	Clock,
-	Target,
-	Building,
-	Award,
-	ChartBar,
-	Lock,
-	Smartphone,
-	Palette,
-	Calendar,
-	CreditCard,
-	Settings,
-	Code,
-	BookOpen,
-	Activity,
-	Bot,
-	ChevronRight as ChevronRightIcon,
-	Eye,
-	FlaskConical,
-	Link as LinkIcon
-} from 'lucide-react',
-import Button from '../ui/Button',
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Menu, X, ChevronDown, ChevronRight, Phone, Mail, MapPin, Globe, ArrowRight, Sparkles, Brain, Atom, Shield, DollarSign, FileText, BarChart3, MessageSquare, Truck, Users, Database, Cpu, Cloud, Play, Search, ShieldCheck, TrendingUp, Rocket, Zap, Check, Star, Clock, Target, Building, Award, ChartBar, Lock, Smartphone, Palette, Calendar, CreditCard, Settings, Code, BookOpen, Activity, Bot, ChevronRight as ChevronRightIcon, Eye, FlaskConical, Link as LinkIcon } from 'lucide-react';
+import Button from '../ui/Button';
 export default function NeoFuturisticNavigation() {
-	const [isOpen, setIsOpen] = useState(false),
-	const [isScrolled, setIsScrolled] = useState(false),
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-	const router = useRouter(),
-
+	const [isOpen, setIsOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
+	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+	const router = useRouter();
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
 	},
-
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 20)
-		},
-
-		window.addEventListener('scroll', handleScroll),
+		};
+		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll)
-	}, []),
-
+	}, []);
 	const toggleDropdown = (dropdown: string) => {
 		setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
 	},
-
 	const closeMobileMenu = () => {
-		setIsOpen(false),
+		setIsOpen(false);
 		setActiveDropdown(null)
-	},
-
+	};
 	const isActive = (path: string) => router.pathname === path,
-
 	const serviceCategories = [
 		{
 			name: 'Quantum Computing',
@@ -198,14 +141,12 @@ export default function NeoFuturisticNavigation() {
 			]
 		}
 	],
-
 	const companyInfo = [
 		{ name: 'About Zion Tech Group', description: 'Leading the global micro SaaS revolution', icon: <Rocket className="w-5 h-5" />, link: '/about' },
 		{ name: 'Careers', description: 'Join our revolutionary team', icon: <Star className="w-5 h-5" />, link: '/careers' },
 		{ name: 'News & Updates', description: 'Latest announcements and releases', icon: <TrendingUp className="w-5 h-5" />, link: '/news' },
 		{ name: 'Contact', description: 'Talk to our team 24/7', icon: <Phone className="w-5 h-5" />, link: '/contact' }
 	],
-
 	const resources = [
 		{ name: 'Documentation', description: 'Comprehensive service guides', icon: <BookOpen className="w-5 h-5" />, link: '/docs' },
 		{ name: 'Blog & Insights', description: 'Latest technology trends', icon: <FileText className="w-5 h-5" />, link: '/blog' },
@@ -213,7 +154,6 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'Pricing', description: 'Transparent and flexible plans', icon: <CreditCard className="w-5 h-5" />, link: '/pricing' },
 		{ name: 'Reports', description: 'Live performance and audits', icon: <Activity className="w-5 h-5" />, link: '/reports' }
 	],
-
 	// Popular quick links to flagship services
 	const popularServiceLinks = [
 		{ name: 'AI Content Generator', href: '/ai-content-generator' },
@@ -226,7 +166,6 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'AI Sales Automation', href: '/ai-sales-automation' },
 		{ name: 'AI Market Research', href: '/ai-market-research' }
 	],
-
 	// Newly added real services quick links
 	const newServiceLinks = [
 		{ name: 'Email Deliverability Monitor', href: '/services/email-deliverability-monitor' },
@@ -236,7 +175,6 @@ export default function NeoFuturisticNavigation() {
 		{ name: 'Error Budget Automation', href: '/services/error-budget-automation' },
 		{ name: 'LLM Usage Governance', href: '/services/llm-usage-governance' }
 	],
-
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/80 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'

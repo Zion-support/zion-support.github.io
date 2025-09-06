@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
+import React from 'react';
+import Head from 'next/head';
+import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950',
@@ -11,11 +11,9 @@ export default function AIEvalsPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
 	},
-
 	const features = [
 		'Golden datasets and synthetic evalsHallucination and grounding scoreToxicity, bias and safety metricsLLM version comparison reportsCI quality gates and webhooksLatency and cost KPIs with budgets'
-	],
-
+	];
 	return (
 		<QuantumHolographicMatrixBackground>
 			<Head>

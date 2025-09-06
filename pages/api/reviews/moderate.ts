@@ -1,10 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { readReviews, writeReviews } from '../../../utils/dataStore',
-
-const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key',
-
-type Action = 'approve' | 'remove' | 'edit',
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readReviews, writeReviews } from '../../../utils/dataStore';
+const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
+type Action = 'approve' | 'remove' | 'edit';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -20,12 +17,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       action: Action,
       reviewId: string,
       updates?: { rating?: number, text?: string }
-    },
-
-    const reviews = await readReviews(),
-    const idx = reviews.findIndex((r) => r.id === reviewId),
+    };
+    const reviews = await readReviews();
+    const idx = reviews.findIndex((r) => r.id === reviewId);
     if (idx < 0) return res.status(404).json({ error: 'Review not found' }),
-
     if (action === 'approve') {
       reviews[idx].approved = true
     } else if (action === 'remove') {

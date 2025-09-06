@@ -10,8 +10,8 @@ function grantPath(id: string) {
 
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true }),
-  const p = grantPath(id),
-  if (!fs.existsSync(p)) return null,
+  const p = grantPath(id);
+  if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 
@@ -23,10 +23,8 @@ function writeGrant(record: GrantApplication) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string },
   if (!id) return res.status(400).json({ error: 'Missing id' }),
-
-  const existing = readGrant(id),
+  const existing = readGrant(id);
   if (!existing) return res.status(404).json({ error: 'Not found' }),
-
   if (req.method === 'GET') {
     return res.status(200).json({ updates: existing.updates || [] })
   }
@@ -35,12 +33,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { content } = req.body as { content?: string },
     if (!content || !content.trim()) return res.status(400).json({ error: 'Missing content' }),
     const update = { id: uuidv4(), createdAt: new Date().toISOString(), content: content.trim() },
-    existing.updates = [...(existing.updates || []), update],
-    existing.updatedAt = new Date().toISOString(),
-    writeGrant(existing),
+    existing.updates = [...(existing.updates || []), update];
+    existing.updatedAt = new Date().toISOString();
+    writeGrant(existing);
     return res.status(201).json({ update })
   }
 
-  res.setHeader('AllowGET, POST'),
+  res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }

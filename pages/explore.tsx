@@ -1,19 +1,13 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  Search, Filter, Grid, List, ArrowRight, ChevronRight,
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
-} from 'lucide-react',
-import SmartHeader from '../components/SmartHeader',
-import SmartFooter from '../components/SmartFooter',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon } from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popularity'),
-
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
   const categories = [
     {
       id: 'ai',
@@ -106,7 +100,6 @@ export default function ExplorePage() {
       featured: false
     }
   ],
-
   const featuredServices = [
     {
       id: 'ai-consciousness-evolution',
@@ -114,7 +107,7 @@ export default function ExplorePage() {
       category: 'ai',
       description: 'Revolutionary AI consciousness platform with emotional intelligence',
       status: 'beta',
-      price: '$1,999/month',
+      price: '$1,999/month';
       icon: Brain,
       color: 'from-purple-500 to-pink-500'
     },
@@ -124,7 +117,7 @@ export default function ExplorePage() {
       category: 'quantum',
       description: 'Quantum-powered AI with advanced consciousness capabilities',
       status: 'beta',
-      price: '$1,299/month',
+      price: '$1,299/month';
       icon: Atom,
       color: 'from-blue-500 to-cyan-500'
     },
@@ -144,33 +137,30 @@ export default function ExplorePage() {
       category: 'space',
       description: 'AI-powered space exploration and resource optimization',
       status: 'beta',
-      price: '$2,499/month',
+      price: '$2,499/month';
       icon: Rocket,
       color: 'from-indigo-500 to-purple-500'
     }
   ],
-
   // Filter categories based on search
   const filteredCategories = categories.filter(category => {
     const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         category.description.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory,
+                         category.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
     return matchesSearch && matchesFilter
-  }),
-
+  });
   // Sort categories
   const sortedCategories = [...filteredCategories].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return b.serviceCount - a.serviceCount,
+        return b.serviceCount - a.serviceCount;
       case 'name':
-        return a.name.localeCompare(b.name),
+        return a.name.localeCompare(b.name);
       case 'featured':
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
       default: return 0
     }
   }),
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -195,7 +185,7 @@ export default function ExplorePage() {
               Explore Technology Categories
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive range of cutting-edge technology solutions across AI, 
+              Discover our comprehensive range of cutting-edge technology solutions across AI,
               quantum computing, cybersecurity, space technology, and more
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { v4 as uuidv4 } from 'uuid',
-import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore',
-import type { Review } from '../../../types/reviews',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
+import type { Review } from '../../../types/reviews';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -10,21 +10,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const {
       projectId,
-      fromRole,
-      fromId,
-      rating,
-      text,
-      categories,
+      fromRole;
+      fromId;
+      rating;
+      text;
+      categories;
       anonymous} = req.body as {
       projectId: string,
       fromRole: 'client' | 'talent',
       fromId: string,
       rating: number,
       text: string,
-      categories?: Review['categories'],
+      categories?: Review['categories'];
       anonymous?: boolean
-    },
-
+    };
     if (!projectId || !fromRole || !fromId) {
       return res.status(400).json({ error: 'Missing required fields' })
     }
@@ -44,14 +43,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const toRole = counterpartRole(fromRole),
-    const toId = toRole === 'talent' ? project.talentSlug : project.clientId,
-
-    const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug,
+    const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
+    const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
       return res.status(403).json({ error: 'Invalid reviewer for this project' })
     }
 
-    const existing = await hasExistingReview(projectId, fromRole, fromId),
+    const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
     }
@@ -59,23 +57,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const now = new Date().toISOString(),
     const review: Review = {
       id: uuidv4(),
-      projectId,
-      fromRole,
-      fromId,
-      toRole,
-      toId,
-      rating,
+      projectId;
+      fromRole;
+      fromId;
+      toRole;
+      toId;
+      rating;
       text: String(text).trim(),
-      categories,
+      categories;
       anonymous: Boolean(anonymous),
       approved: false, // requires admin approval
       reported: false,
       reports: [],
       removed: false,
       createdAt: now},
-
-    await upsertReview(review),
-
+    await upsertReview(review);
     return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })

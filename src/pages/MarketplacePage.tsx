@@ -1,20 +1,20 @@
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { useTranslation } from 'react-i18next',
-import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
-import { NextSeo } from '@/components/NextSeo',
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { MARKETPLACE_LISTINGS } from '@/data/listingData',
-import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { NextSeo } from '@/components/NextSeo';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts';
+import { useCurrency } from '@/hooks/useCurrency';
+import { logErrorToProduction } from '@/utils/productionLogger';
 // Market insights component
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -44,7 +44,6 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
     </CardContent>
   </Card>
 ),
-
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
@@ -75,17 +74,16 @@ const MarketplaceFilterControls = ({
     </Button>
   </div>
 ),
-
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { toast } from '@/hooks/use-toast',
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { toast } from '@/hooks/use-toast';
 // Product card
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-  <Card className="h-full hover:shadow-lg transition-shadow">
+  <Card className="h-full hover: shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
         <div className="flex-1 min-w-0">
@@ -135,34 +133,29 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   </Card>
   )
 },
-
 // Loading grid
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
-),
-
+);
 // Main component
 function MarketplacePageContent() {
-  const router = useRouter(),
-  const { t } = useTranslation(),
-  const dispatch = useDispatch<AppDispatch>(),
-  const { isAuthenticated } = useAuth(),
-  const [sortBy, setSortBy] = useState('newest'),
-  const [filterCategory, setFilterCategory] = useState(''),
-  const [showRecommended, setShowRecommended] = useState(false),
-
+  const router = useRouter();
+  const { t } = useTranslation();
+  const dispatch = useDispatch<AppDispatch>();
+  const { isAuthenticated } = useAuth();
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterCategory, setFilterCategory] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
   const fetchProducts = useCallback(async (page: number, limit: number) => {
     // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 300)),
-
+    await new Promise(resolve => setTimeout(resolve, 300));
     try {
       // Combine initial products with marketplace listings
       const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS],
-
       // Apply category filtering
-      let processedDataset = fullDataset,
+      let processedDataset = fullDataset;
       if (filterCategory) {
         processedDataset = processedDataset.filter(p => p.category === filterCategory)
       }
@@ -176,27 +169,25 @@ function MarketplacePageContent() {
       processedDataset.sort((a, b) => {
         switch (sortBy) {
           case 'price-low':
-            return (a.price || 0) - (b.price || 0),
+            return (a.price || 0) - (b.price || 0);
           case 'price-high':
-            return (b.price || 0) - (a.price || 0),
+            return (b.price || 0) - (a.price || 0);
           case 'rating':
-            return (b.rating || 0) - (a.rating || 0),
+            return (b.rating || 0) - (a.rating || 0);
           case 'popular':
-            return (b.reviewCount || 0) - (a.reviewCount || 0),
+            return (b.reviewCount || 0) - (a.reviewCount || 0);
           case 'ai-score':
-            return (b.aiScore || 0) - (a.aiScore || 0),
+            return (b.aiScore || 0) - (a.aiScore || 0);
           default: // 'newest'
             return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
         }
       }),
-
       // Slice for pagination
-      const startIndex = (page - 1) * limit,
-      const endIndex = startIndex + limit,
-      const items = processedDataset.slice(startIndex, endIndex),
-
+      const startIndex = (page - 1) * limit;
+      const endIndex = startIndex + limit;
+      const items = processedDataset.slice(startIndex, endIndex);
       return {
-        items,
+        items;
         hasMore: endIndex < processedDataset.length,
         total: processedDataset.length
       }
@@ -204,51 +195,44 @@ function MarketplacePageContent() {
       logErrorToProduction('Error in fetchProducts:', { data: error }),
       throw new Error('Failed to load marketplace data. Please try again.')
     }
-  }, [sortBy, filterCategory, showRecommended]),
-
+  }, [sortBy, filterCategory, showRecommended]);
   const {
     items: products,
-    loading,
-    error,
-    hasMore,
-    total,
-    isFetching,
-    lastElementRef,
-    refresh,
-    scrollToTop,
+    loading;
+    error;
+    hasMore;
+    total;
+    isFetching;
+    lastElementRef;
+    refresh;
+    scrollToTop;
     loadMore
-  } = useInfiniteScrollPagination(fetchProducts, 12),
-
+  } = useInfiniteScrollPagination(fetchProducts, 12);
   // Refresh when filters change
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       refresh()
-    }, 100),
-
+    }, 100);
     return () => clearTimeout(timeoutId)
-  }, [sortBy, filterCategory, showRecommended, refresh]),
-
+  }, [sortBy, filterCategory, showRecommended, refresh]);
   const marketStats = useMemo(() => {
-    if (products.length === 0) return null,
+    if (products.length === 0) return null;
     return {
-      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
-      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length;
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length;
       totalProducts: products.length,
       availableCount: products.filter(p => p.availability === "Available").length
     }
-  }, [products]),
-
+  }, [products]);
   const categories = useMemo(() => {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
-  }, []),
-
-  const [showScrollTop, setShowScrollTop] = useState(false),
+  }, []);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
-    window.addEventListener('scroll', handleScroll),
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
+  }, []);
   // Loading state
   if (loading && products.length === 0) {
     return (

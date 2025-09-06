@@ -1,26 +1,13 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Phone, Mail, MapPin, Globe, ArrowRight, 
-  Brain, Rocket, Target, Shield, Cpu, 
-  Facebook, Twitter, Linkedin, Instagram, Youtube,
-  Github, MessageCircle, Star, Zap, Sparkles,
-  Home, Users, Briefcase, BookOpen, TrendingUp,
-  MessageSquare, Calendar,
-  GraduationCap, ShieldCheck, Eye, Code, Wrench,
-  Smartphone, BarChart3, Palette, Camera, Video,
-  Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind,
-  Droplets, Mountain, Globe2, Bot, Crown, Infinity
-} from 'lucide-react',
-
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, ArrowRight, Brain, Rocket, Target, Shield, Cpu, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageCircle, Star, Zap, Sparkles, Home, Users, Briefcase, BookOpen, TrendingUp, MessageSquare, Calendar, GraduationCap, ShieldCheck, Eye, Code, Wrench, Smartphone, BarChart3, Palette, Camera, Video, Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind, Droplets, Mountain, Globe2, Bot, Crown, Infinity } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -67,7 +54,6 @@ const serviceCategories = [
     ]
   }
 ],
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -80,7 +66,6 @@ const mainNavigation = [
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ],
-
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
@@ -89,7 +74,6 @@ const quickLinks = [
   { name: 'Careers', href: '/careers', icon: GraduationCap },
   { name: 'Support', href: '/support', icon: MessageCircle }
 ],
-
 const resources = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
   { name: 'API Reference', href: '/api', icon: Code },
@@ -100,7 +84,6 @@ const resources = [
   { name: 'Events', href: '/events', icon: Calendar },
   { name: 'Webinars', href: '/webinars', icon: Video }
 ],
-
 const company = [
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Our Team', href: '/team', icon: Users },
@@ -111,7 +94,6 @@ const company = [
   { name: 'Legal', href: '/legal', icon: Shield },
   { name: 'Privacy', href: '/privacy', icon: ShieldCheck }
 ],
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
@@ -120,7 +102,6 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
 ],
-
 const footerSections = [
   {
     title: 'Services',
@@ -167,7 +148,6 @@ const footerSections = [
     ]
   }
 ],
-
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className="relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20">

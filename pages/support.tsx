@@ -1,16 +1,9 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
-import { 
-  HelpCircle, MessageCircle, Phone, Mail, Clock, 
-  BookOpen, Video, FileText, Search, Filter,
-  CheckCircle, ArrowRight, Brain, Atom, Rocket, 
-  Shield, Zap, Users, Star, TrendingUp, Code
-} from 'lucide-react',
-
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { HelpCircle, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Search, Filter, CheckCircle, ArrowRight, Brain, Atom, Rocket, Shield, Zap, Users, Star, TrendingUp, Code } from 'lucide-react';
 export default function Support() {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const supportCategories = [
     {
       id: 'ai-services',
@@ -44,7 +37,7 @@ export default function Support() {
       id: 'billing',
       name: 'Billing & Account',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      description: 'Payment, invoices, and account management',
+      description: 'Payment, invoices, and account management';
       articles: 15
     },
     {
@@ -55,7 +48,6 @@ export default function Support() {
       articles: 42
     }
   ],
-
   const quickActions = [
     {
       title: 'Live Chat',
@@ -90,7 +82,6 @@ export default function Support() {
       available: true
     }
   ],
-
   const popularArticles = [
     {
       title: 'Getting Started with AI Consciousness Platform',
@@ -128,7 +119,6 @@ export default function Support() {
       helpful: '89%'
     }
   ],
-
   const supportHours = [
     {
       day: 'Monday - Friday',
@@ -146,11 +136,9 @@ export default function Support() {
       status: 'Limited'
     }
   ],
-
   const filteredCategories = selectedCategory === 'all' 
     ? supportCategories 
-    : supportCategories.filter(cat => cat.id === selectedCategory),
-
+    : supportCategories.filter(cat => cat.id === selectedCategory);
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -167,7 +155,7 @@ export default function Support() {
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Get the support you need for our AI consciousness, quantum computing, 
+              Get the support you need for our AI consciousness, quantum computing;
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
             
@@ -386,7 +374,7 @@ export default function Support() {
                     placeholder="Search for help topics, questions, or solutions..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -419,15 +407,15 @@ export default function Support() {
               {
                 question: "What is AI Consciousness Evolution?",
                 answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self-aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence."
-              },
+              };
               {
                 question: "How does Quantum Neural Ecosystem work?",
                 answer: "Our Quantum Neural Ecosystem combines quantum computing with neural networks to solve previously impossible problems, leveraging quantum superposition and entanglement for exponential computational power."
-              },
+              };
               {
                 question: "What makes Space Resource Intelligence unique?",
                 answer: "Our space technology uses AI-powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization."
-              },
+              };
               {
                 question: "How secure is your Quantum Cybersecurity platform?",
                 answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations."
@@ -435,7 +423,7 @@ export default function Support() {
               {
                 question: "Can I integrate your AI with my existing systems?",
                 answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure."
-              },
+              };
               {
                 question: "What support do you offer for enterprise deployments?",
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
@@ -651,7 +639,7 @@ export default function Support() {
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
-                  For urgent technical issues or critical support needs, 
+                  For urgent technical issues or critical support needs,
                   our team is available around the clock.
                 </p>
                 
@@ -721,8 +709,7 @@ export default function Support() {
     </div>
   )
 },
-
-export default Support,
+export default Support;
           </div>
         </section>
 
@@ -770,5 +757,4 @@ export default Support,
     </Layout>
   )
 },
-
-export default SupportPage,
+export default SupportPage;

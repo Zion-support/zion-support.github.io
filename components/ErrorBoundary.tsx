@@ -1,19 +1,19 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props),
+    this.state = { hasError: false },
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -49,7 +49,7 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <button 
                 onClick={() => typeof window !== 'undefined' && window.location.reload()} 
-                className="w-full px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                className="w-full px-6 py-3 bg-blue-600 rounded-lg hover: bg-blue-700 transition-colors font-semibold"
               >
                 Reload Page
               </button>
@@ -72,7 +72,7 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      ),
     }
 
     return this.props.children;

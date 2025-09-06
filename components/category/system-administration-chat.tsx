@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 const SystemAdministrationChat: NextPage = () => {
   return (
     <div>
@@ -17,5 +17,4 @@ const SystemAdministrationChat: NextPage = () => {
     </div>
   )
 },
-
-export default SystemAdministrationChat,
+export default SystemAdministrationChat;

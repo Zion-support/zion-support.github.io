@@ -1,11 +1,10 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 export default function ToolResourcePage() {
-  const router = useRouter(),
-  const { id } = router.query,
-
+  const router = useRouter();
+  const { id } = router.query;
   // Tools data - this should match the data in resources.tsx
   const tools = [
     {
@@ -49,7 +48,7 @@ export default function ToolResourcePage() {
         </ol>
         
         <h2>Next Steps After Assessment</h2>
-        <p>Once you complete the assessment, you'll receive:</p>
+        <p>Once you complete the assessment, you'll receive: </p>
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
@@ -94,7 +93,7 @@ export default function ToolResourcePage() {
         </ul>
         
         <h2>Using the Framework</h2>
-        <p>To effectively use this framework:</p>
+        <p>To effectively use this framework: </p>
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -169,7 +168,7 @@ export default function ToolResourcePage() {
         </ul>
         
         <h2>Action Planning</h2>
-        <p>Based on benchmark results, develop action plans that include:</p>
+        <p>Based on benchmark results, develop action plans that include: </p>
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -183,9 +182,7 @@ export default function ToolResourcePage() {
       ]
     }
   ],
-
-  const tool = tools.find(t => t.id === id),
-
+  const tool = tools.find(t => t.id === id);
   if (!tool) {
     return (
       <>

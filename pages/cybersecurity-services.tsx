@@ -1,25 +1,20 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, 
-  CheckCircle, ArrowRight, Star, Clock, Target,
-  Zap, Users, BarChart3, Settings, Database
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, CheckCircle, ArrowRight, Star, Clock, Target, Zap, Users, BarChart3, Settings, Database } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceHighlights = [
   {
     title: 'Zero Trust Security',
-    description: 'Never trust, always verify - Advanced zero trust implementation',
+    description: 'Never trust, always verify - Advanced zero trust implementation';
     icon: Shield,
     color: 'from-red-500 to-pink-600',
     features: ['Continuous verificationMicro-segmentationAdaptive controlsReal-time monitoring']
@@ -53,7 +48,6 @@ const serviceHighlights = [
     features: ['Device authenticationNetwork monitoringThreat detectionAutomated response']
   }
 ],
-
 const benefits = [
   {
     title: '99.99% Threat Detection',
@@ -80,7 +74,6 @@ const benefits = [
     color: 'text-purple-400'
   }
 ],
-
 export default function CybersecurityServices() {
   return (
     <Layout>
@@ -136,7 +129,7 @@ export default function CybersecurityServices() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Protect your business with cutting-edge cybersecurity solutions. From zero trust security to AI threat intelligence, 
+              Protect your business with cutting-edge cybersecurity solutions. From zero trust security to AI threat intelligence,
               we provide comprehensive protection that adapts to evolving threats.
             </p>
             

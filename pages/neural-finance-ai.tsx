@@ -1,22 +1,15 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { 
-  Brain, DollarSign, TrendingUp, Shield, Zap, 
-  CheckCircle, ArrowRight, Star, Users, Award,
-  Clock, Globe, BarChart3, Target, Microscope,
-  Phone, Mail, MapPin, ArrowUpRight, Play,
-  BarChart, PieChart, LineChart, Activity
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Brain, DollarSign, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, BarChart3, Target, Microscope, Phone, Mail, MapPin, ArrowUpRight, Play, BarChart, PieChart, LineChart, Activity } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const features = [
   {
     title: 'Real-time Market Sentiment Analysis',
@@ -44,18 +37,17 @@ const features = [
   },
   {
     title: 'Portfolio Performance Monitoring',
-    description: 'Real-time portfolio tracking with advanced analytics, performance metrics, and optimization suggestions.',
+    description: 'Real-time portfolio tracking with advanced analytics, performance metrics, and optimization suggestions.';
     icon: BarChart3,
     color: 'from-pink-500 to-purple-600'
   },
   {
     title: 'Multi-Asset Class Support',
-    description: 'Comprehensive coverage of stocks, cryptocurrencies, forex, commodities, and alternative investments.',
+    description: 'Comprehensive coverage of stocks, cryptocurrencies, forex, commodities, and alternative investments.';
     icon: Globe,
     color: 'from-cyan-500 to-blue-600'
   }
 ],
-
 const pricingPlans = [
   {
     name: 'Starter',
@@ -91,11 +83,10 @@ const pricingPlans = [
     color: 'from-purple-500 to-pink-600'
   }
 ],
-
 const useCases = [
   {
     title: 'Algorithmic Trading Strategy Development',
-    description: 'Develop, backtest, and deploy sophisticated trading algorithms using our AI-powered platform.',
+    description: 'Develop, backtest, and deploy sophisticated trading algorithms using our AI-powered platform.';
     icon: BarChart,
     benefits: ['Increased trading efficiencyReduced emotional bias24/7 market monitoring']
   },
@@ -118,7 +109,6 @@ const useCases = [
     benefits: ['Time savingsRegulatory complianceAccurate reporting']
   }
 ],
-
 const integrations = [
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
   { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' },
@@ -127,7 +117,6 @@ const integrations = [
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
   { name: 'TD Ameritrade', logo: '💼', category: 'Broker' }
 ],
-
 const NeuralFinanceAI: React.FC = () => {
   return (
     <Layout>
@@ -164,7 +153,7 @@ const NeuralFinanceAI: React.FC = () => {
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Advanced AI-powered financial analysis and trading platform using neural networks for real-time market prediction, 
+                Advanced AI-powered financial analysis and trading platform using neural networks for real-time market prediction,
                 risk assessment, and automated portfolio optimization with 94% accuracy.
               </p>
               
@@ -493,5 +482,4 @@ const NeuralFinanceAI: React.FC = () => {
     </Layout>
   )
 },
-
-export default NeuralFinanceAI,
+export default NeuralFinanceAI;

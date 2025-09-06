@@ -1,7 +1,7 @@
-import { FooterNewsletter } from "@/components/FooterNewsletter",
+import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link", // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget",
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
     return fallback
@@ -14,22 +14,21 @@ const TWITTER_URL = resolveUrl(
   "https: //twitter.com/ZionTechGroup"
 ),
 const LINKEDIN_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL,
+  process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN_URL;
   "https: //linkedin.com/company/ziontechgroup"
 ),
 const FACEBOOK_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL,
+  process.env.NEXT_PUBLIC_SOCIAL_FACEBOOK_URL;
   "https: //facebook.com/ZionTechGroup"
 ),
 const INSTAGRAM_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL,
+  process.env.NEXT_PUBLIC_SOCIAL_INSTAGRAM_URL;
   "https: //instagram.com/ZionTechGroup"
 ),
 const GITHUB_URL = resolveUrl(
-  process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL,
+  process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL;
   "https: //github.com/ZionTechGroup"
 ),
-
 export function Footer() {
   return (
     <footer className="bg-card border-t border-primary/20 pt-12 pb-8">
@@ -167,7 +166,7 @@ export function Footer() {
             type="button"
             onClick={() => {
               window.scrollTo({ 
-                top: 0, 
+                top: 0,
                 behavior: 'smooth' 
               })
             }}

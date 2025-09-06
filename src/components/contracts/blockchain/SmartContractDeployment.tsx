@@ -1,15 +1,15 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts";
 import { Loader2, ShieldCheck, Download } from 'lucide-react'
-import { toast } from "sonner",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { toast } from "sonner";
+import { logErrorToProduction } from '@/utils/productionLogger';
 interface SmartContractDeploymentProps {
   solidityCode: string,
   onDeploy: (options: DeploymentOptions) => Promise<void>,
@@ -18,7 +18,7 @@ interface SmartContractDeploymentProps {
 
 export function SmartContractDeployment({ 
   solidityCode,
-  onDeploy,
+  onDeploy;
   isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
@@ -27,10 +27,9 @@ export function SmartContractDeployment({
     deployToChain: false,
     walletAddress: ''
   }),
-
   const handleDeployContract = async () => {
     if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
-      toast.error("Please enter a wallet address for blockchain deployment"),
+      toast.error("Please enter a wallet address for blockchain deployment");
       return
     }
     
@@ -40,26 +39,21 @@ export function SmartContractDeployment({
       logErrorToProduction('Deployment error:', { data: error })
     }
   },
-  
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code
     const blob = new Blob([solidityCode], { type: 'text/plain' }),
-    const url = URL.createObjectURL(blob),
-    
+    const url = URL.createObjectURL(blob);
     // Create a temporary anchor to trigger download
-    const a = document.createElement('a'),
-    a.href = url,
-    a.download = 'ZionContract.sol',
-    document.body.appendChild(a),
-    a.click(),
-    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ZionContract.sol';
+    document.body.appendChild(a);
+    a.click();
     // Clean up
-    URL.revokeObjectURL(url),
-    document.body.removeChild(a),
-    
+    URL.revokeObjectURL(url);
+    document.body.removeChild(a);
     toast.success("Solidity contract downloaded")
-  },
-
+  };
   return (
     <Card className="w-full">
       <CardHeader>

@@ -1,9 +1,9 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react',
-import { innovative2026AIServices } from '../../data/innovative-2026-ai-services',
-import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure',
-import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas',
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
+import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
+import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
+import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -15,15 +15,14 @@ export default function Enhanced2026ServiceShowcase() {
       }
     }
   },
-
   const itemVariants = {
     hidden: { 
-      opacity: 0, 
+      opacity: 0,
       y: 50,
       scale: 0.9
     },
     visible: { 
-      opacity: 1, 
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: {
@@ -32,7 +31,6 @@ export default function Enhanced2026ServiceShowcase() {
       }
     }
   },
-
   const cardVariants = {
     hover: {
       y: -10,
@@ -43,7 +41,6 @@ export default function Enhanced2026ServiceShowcase() {
       }
     }
   },
-
   const renderServiceCard = (service: any, index: number) => (
     <motion.div
       key={service.id}
@@ -126,7 +123,6 @@ export default function Enhanced2026ServiceShowcase() {
       </motion.div>
     </motion.div>
   ),
-
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background effects */}

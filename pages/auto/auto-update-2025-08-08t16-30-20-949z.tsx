@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 const AutoUpdate20250808t163020949z: NextPage = () => {
   return (
     <div>
@@ -15,5 +15,4 @@ const AutoUpdate20250808t163020949z: NextPage = () => {
     </div>
   )
 },
-
-export default AutoUpdate20250808t163020949z,
+export default AutoUpdate20250808t163020949z;

@@ -1,7 +1,7 @@
-import React from 'react',
-import { motion } from 'framer-motion',
-import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react',
-import Link from 'next/link',
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
+import Link from 'next/link';
 const Enhanced2026ServicesShowcase = () => {
   const featuredServices = [
     {
@@ -18,7 +18,7 @@ const Enhanced2026ServicesShowcase = () => {
     {
       id: 'autonomous-ai-agents-platform-2026',
       name: 'Autonomous AI Agents Platform 2026',
-      description: 'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
+      description: 'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.';
       price: '$199',
       period: '/month',
       icon: Zap,
@@ -41,7 +41,7 @@ const Enhanced2026ServicesShowcase = () => {
       id: 'neuromorphic-computing-platform-2026',
       name: 'Neuromorphic Computing Platform 2026',
       description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
-      price: '$1,499',
+      price: '$1,499';
       period: '/month',
       icon: Cpu,
       color: 'from-green-500 to-emerald-500',
@@ -52,7 +52,7 @@ const Enhanced2026ServicesShowcase = () => {
       id: 'dna-computing-platform-2026',
       name: 'DNA Computing Platform 2026',
       description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
-      price: '$2,999',
+      price: '$2,999';
       period: '/month',
       icon: Globe,
       color: 'from-indigo-500 to-purple-500',
@@ -71,14 +71,12 @@ const Enhanced2026ServicesShowcase = () => {
       features: ['Real-time TrackingCollision PredictionSatellite SafetySpace Traffic Management']
     }
   ],
-
   const categories = [
     { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },
     { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
   ],
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Background Effects */}
@@ -239,5 +237,4 @@ const Enhanced2026ServicesShowcase = () => {
     </section>
   )
 },
-
-export default Enhanced2026ServicesShowcase,
+export default Enhanced2026ServicesShowcase;

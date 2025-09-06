@@ -6,7 +6,6 @@ type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
   | { type: 'deactivate', section: keyof OrgData, id: string },
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -18,10 +17,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   const action = req.body as AdminAction,
-  const data = readOrgData(),
-
+  const data = readOrgData();
   if (action.type === 'invite') {
-    const section = action.section,
+    const section = action.section;
     // @ts-expect-error Indexing into dynamic section
     const arr: BasePerson[] = data[section] || [],
     // prevent duplicates
@@ -30,8 +28,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     arr.push({ ...action.person, active: true }),
     // @ts-expect-error write back dynamic section
-    data[section] = arr as any,
-    writeOrgData(data),
+    data[section] = arr as any;
+    writeOrgData(data);
     return res.status(200).json({ ok: true })
   }
 
@@ -39,12 +37,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const section = action.section,
     // @ts-expect-error Indexing into dynamic section
     const arr: BasePerson[] = data[section] || [],
-    const idx = arr.findIndex((p) => p.id === action.id),
+    const idx = arr.findIndex((p) => p.id === action.id);
     if (idx === -1) return res.status(404).json({ error: 'Not found' }),
     arr[idx] = { ...arr[idx], ...action.updates },
     // @ts-expect-error write back dynamic section
-    data[section] = arr as any,
-    writeOrgData(data),
+    data[section] = arr as any;
+    writeOrgData(data);
     return res.status(200).json({ ok: true })
   }
 
@@ -52,12 +50,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const section = action.section,
     // @ts-expect-error Indexing into dynamic section
     const arr: BasePerson[] = data[section] || [],
-    const idx = arr.findIndex((p) => p.id === action.id),
+    const idx = arr.findIndex((p) => p.id === action.id);
     if (idx === -1) return res.status(404).json({ error: 'Not found' }),
     arr[idx] = { ...arr[idx], active: false },
     // @ts-expect-error write back dynamic section
-    data[section] = arr as any,
-    writeOrgData(data),
+    data[section] = arr as any;
+    writeOrgData(data);
     return res.status(200).json({ ok: true })
   }
 

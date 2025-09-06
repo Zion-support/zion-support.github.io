@@ -1,24 +1,20 @@
-import Link from 'next/link',
+import Link from 'next/link';
 import { Heart } from 'lucide-react'
-import { useWishlist } from '@/hooks/useWishlist',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip',
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import Image from 'next/image',
-import React, { useState, useEffect } from 'react',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useRouter } from 'next/router',
-import { Product } from '@/services/marketplace',
-import { useMediaQuery } from 'usehooks-ts',
-import { toast } from '@/hooks/use-toast',
-import { captureException } from '@/utils/sentry',
+import { useWishlist } from '@/hooks/useWishlist';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useRouter } from 'next/router';
+import { Product } from '@/services/marketplace';
+import { useMediaQuery } from 'usehooks-ts';
+import { toast } from '@/hooks/use-toast';
+import { captureException } from '@/utils/sentry';
 interface ProductCardProps {
   product: Product,
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure
@@ -28,12 +24,11 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled = false }: ProductCardProps) {
-  const { isAuthenticated } = useAuth(),
-  const { isWishlisted, toggle } = useWishlist(),
-  const [imageError, setImageError] = useState(false),
+  const { isAuthenticated } = useAuth();
+  const { isWishlisted, toggle } = useWishlist();
+  const [imageError, setImageError] = useState(false);
   const [isRedirecting, setIsRedirecting] = useState(false), // Added for loading state
-  const router = useRouter(),
-
+  const router = useRouter();
   const stockStatus =
     product.stock === undefined
       ? 'In stock'
@@ -41,8 +36,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       ? 'Out of stock'
       : product.stock <= 5
       ? 'Low stock'
-      : 'In stock',
-
+      : 'In stock';
   const stockVariant =
     product.stock === undefined
       ? 'success'
@@ -50,14 +44,13 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       ? 'destructive'
       : product.stock <= 5
       ? 'warning'
-      : 'success',
+      : 'success';
   // Reset redirecting state if component unmounts (e.g., navigation cancelled by user)
   useEffect(() => {
     return () => {
       setIsRedirecting(false)
     }
-  }, []),
-
+  }, []);
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
     captureException(new Error('Invalid product data received by ProductCard'), {
       extra: { product }}),
@@ -71,18 +64,16 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   }
 
   const active = isWishlisted(product.id),
-  const dispatch = useDispatch<AppDispatch>(),
-
+  const dispatch = useDispatch<AppDispatch>();
   // Title is now guaranteed to be a non-empty string by the check above.
-  const productTitle = product.title,
-
+  const productTitle = product.title;
   const addToCart = () => {
     if (!isAuthenticated) {
       toast({
         title: 'Login Required',
         description: 'Please log in to add items to your cart.',
         variant: 'destructive'}),
-      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`),
+      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`);
       return
     }
     dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 })),
@@ -93,10 +84,8 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         label: 'View Cart',
         onClick: () => router.push('/cart')}})
   },
-
-  const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null,
-  const imageAltText = productTitle,
-
+  const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
+  const imageAltText = productTitle;
   const handleImageError = (error: any) => {
     if (!imageError) {
       setImageError(true),
@@ -104,13 +93,10 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         product: product.id,
         imageUrl})
     }
-  },
-
+  };
   const isMobile = useMediaQuery('(max-width: 768px)'),
   const isTablet = useMediaQuery('(max-width: 1200px)'),
-
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
-
+  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
   return (
     <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button
@@ -187,7 +173,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
                   onClick={(e) => {
                     e.stopPropagation(),
                     if (onBuy) {
-                      setIsRedirecting(true),
+                      setIsRedirecting(true);
                       onBuy()
                         .catch(() => {
                           // Error is handled by parent, but we still need to reset loading locally

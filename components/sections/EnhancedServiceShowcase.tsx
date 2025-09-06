@@ -1,11 +1,7 @@
-import React, { useState, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import { 
-  Star, Users, TrendingUp, DollarSign, Clock, 
-  CheckCircle, ArrowRight, Zap, Shield, Rocket,
-  Brain, Globe, Lock, Code, Database, Cloud
-} from 'lucide-react',
-import Button from '../ui/Button',
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Zap, Shield, Rocket, Brain, Globe, Lock, Code, Database, Cloud } from 'lucide-react';
+import Button from '../ui/Button';
 interface Service {
   id: string,
   name: string,
@@ -50,22 +46,21 @@ interface Service {
 interface EnhancedServiceShowcaseProps {
   title: string,
   subtitle: string,
-  showFilters?: boolean,
-  services?: Service[],
+  showFilters?: boolean;
+  services?: Service[];
   maxServices?: number
 }
 
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title,
-  subtitle,
-  showFilters = false,
-  services = [],
+  subtitle;
+  showFilters = false;
+  services = [];
   maxServices = 12
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('popular'),
-
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<string>('popular');
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
     { id: 'ai', name: 'AI & ML', icon: '🧠' },
@@ -74,7 +69,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
   ],
-
   const priceRanges = [
     { id: 'all', name: 'All Prices' },
     { id: 'low', name: 'Under $1K/month' },
@@ -82,7 +76,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'high', name: '$5K - $20K/month' },
     { id: 'premium', name: '$20K+/month' }
   ],
-
   const sortOptions = [
     { id: 'popular', name: 'Most Popular' },
     { id: 'rating', name: 'Highest Rated' },
@@ -90,7 +83,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' }
   ],
-
   const filteredServices = useMemo(() => {
     const filtered = services.filter(service => {
       const matchesCategory = selectedCategory === 'all' || 
@@ -98,51 +90,46 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                              (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
                              (selectedCategory === 'blockchain' && (service.category.includes('Blockchain') || service.category.includes('DeFi') || service.category.includes('NFT'))) ||
                              (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-                             (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech'))),
-
+                             (selectedCategory === 'emerging' && (service.category.includes('Neural') || service.category.includes('Autonomous') || service.category.includes('Space') || service.category.includes('Biotech')));
       const matchesPrice = selectedPriceRange === 'all' ||
                           (selectedPriceRange === 'low' && parseFloat(service.price.replace(/[$]/g, '')) < 1000) ||
                           (selectedPriceRange === 'medium' && parseFloat(service.price.replace(/[$]/g, '')) >= 1000 && parseFloat(service.price.replace(/[$]/g, '')) < 5000) ||
                           (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
-                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000),
-
+                          (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
       return matchesCategory && matchesPrice
-    }),
-
+    });
     // Sort services
     switch (sortBy) {
       case 'popular':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
-        break,
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
+        break;
       case 'rating':
-        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0)),
-        break,
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
       case 'roi':
         filtered.sort((a, b) => {
-          const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0'),
-          const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0'),
+          const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
+          const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
           return bROI - aROI
-        }),
-        break,
+        });
+        break;
       case 'price-low':
-        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, ''))),
-        break,
+        filtered.sort((a, b) => parseFloat(a.price.replace(/[$]/g, '')) - parseFloat(b.price.replace(/[$]/g, '')));
+        break;
       case 'price-high':
-        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, ''))),
-        break,
+        filtered.sort((a, b) => parseFloat(b.price.replace(/[$]/g, '')) - parseFloat(a.price.replace(/[$]/g, '')));
+        break;
       default: break
     }
 
     return filtered.slice(0, maxServices)
-  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]),
-
+  }, [services, selectedCategory, selectedPriceRange, sortBy, maxServices]);
   const stats = [
     { label: 'Total Services', value: services.length, icon: Rocket, color: 'text-blue-400' },
     { label: 'Active Customers', value: services.reduce((sum, s) => sum + (s.customers || 0), 0), icon: Users, color: 'text-green-400' },
     { label: 'Average Rating', value: (services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length).toFixed(1), icon: Star, color: 'text-yellow-400' },
     { label: 'Market Growth', value: '300%+', icon: TrendingUp, color: 'text-purple-400' }
   ],
-
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -399,5 +386,4 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     </section>
   )
 },
-
-export default EnhancedServiceShowcase,
+export default EnhancedServiceShowcase;

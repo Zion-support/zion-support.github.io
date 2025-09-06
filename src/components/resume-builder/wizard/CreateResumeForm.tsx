@@ -1,21 +1,19 @@
 
-import { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
-import { CreateResumeFormProps } from "./types",
+import { CreateResumeFormProps } from "./types";
 export const CreateResumeForm = ({ 
-  onCreateResume,
-  onCancel,
+  onCreateResume;
+  onCancel;
   isLoading 
 }: CreateResumeFormProps) => {
-  const [newResumeTitle, setNewResumeTitle] = useState(''),
-
+  const [newResumeTitle, setNewResumeTitle] = useState('');
   const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return,
+    if (!newResumeTitle.trim()) return;
     await onCreateResume(newResumeTitle)
-  },
-
+  };
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardContent className="py-8">
@@ -51,4 +49,4 @@ export const CreateResumeForm = ({
       </CardContent>
     </Card>
   )
-},
+};

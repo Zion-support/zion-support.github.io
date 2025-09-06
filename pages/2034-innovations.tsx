@@ -1,15 +1,14 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032',
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
+import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 export default function Innovations2034Page() {
   return (
     <>
@@ -53,9 +52,9 @@ export default function Innovations2034Page() {
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`}}
                   animate={{
-                    y: [0, -100, 0],
-                    opacity: [0.6, 1, 0.6],
-                    scale: [1, 1.5, 1],
+                    y: [0, -100, 0];
+                    opacity: [0.6, 1, 0.6];
+                    scale: [1, 1.5, 1];
                     rotate: [0, 360]}}
                   transition={{
                     duration: 4 + Math.random() * 3,
@@ -140,12 +139,12 @@ export default function Innovations2034Page() {
                 Innovation Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 2034 innovations span across multiple cutting-edge technology domains, 
+                Our 2034 innovations span across multiple cutting-edge technology domains,
                 each designed to revolutionize industries and accelerate human progress.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   icon: '🧠',
@@ -157,7 +156,7 @@ export default function Innovations2034Page() {
                 {
                   icon: '⚛️',
                   title: 'Quantum Tech',
-                  description: 'Quantum computing, DNA computing, and quantum internet infrastructure',
+                  description: 'Quantum computing, DNA computing, and quantum internet infrastructure';
                   color: 'from-indigo-500 to-blue-600',
                   count: '6+ Services'
                 },
@@ -245,29 +244,29 @@ export default function Innovations2034Page() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're pioneers building the future, 
+                We're not just another technology company. We're pioneers building the future,
                 one breakthrough innovation at a time.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: '🚀',
                   title: 'First-to-Market',
-                  description: 'We\'re the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.',
+                  description: 'We\'re the first to bring many of these revolutionary technologies to market, giving you a competitive advantage.';
                   color: 'from-cyan-500 to-blue-600'
                 },
                 {
                   icon: '🧠',
                   title: 'AI-First Approach',
-                  description: 'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',
+                  description: 'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.';
                   color: 'from-purple-500 to-pink-600'
                 },
                 {
                   icon: '⚡',
                   title: 'Lightning Fast',
-                  description: 'Our platforms are designed for speed and performance, handling the most demanding workloads.',
+                  description: 'Our platforms are designed for speed and performance, handling the most demanding workloads.';
                   color: 'from-yellow-500 to-orange-600'
                 },
                 {
@@ -279,7 +278,7 @@ export default function Innovations2034Page() {
                 {
                   icon: '🌍',
                   title: 'Global Scale',
-                  description: 'Built to scale globally, our services work seamlessly across borders and time zones.',
+                  description: 'Built to scale globally, our services work seamlessly across borders and time zones.';
                   color: 'from-teal-500 to-cyan-600'
                 },
                 {

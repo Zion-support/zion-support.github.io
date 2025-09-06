@@ -1,29 +1,25 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import { 
-  Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
-} from 'lucide-react',
-import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',
-import { innovativeITServices2033 } from '../data/2033-innovative-it-services',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin } from 'lucide-react';
+import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
+import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 export default function Pricing2033Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
-
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   // Enhanced service categories with pricing
   const serviceCategories = [
     {
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
       services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
-      avgPrice: '$11,499/month',
+      avgPrice: '$11,499/month';
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
       color: 'from-violet-500 to-purple-500'
@@ -32,7 +28,7 @@ export default function Pricing2033Page() {
       name: 'Quantum & Emerging Tech',
       description: 'Quantum computing and DNA-based solutions',
       services: ['Quantum DNA ComputingQuantum Internet SecurityQuantum Financial TradingQuantum Creativity Studio'],
-      avgPrice: '$19,999/month',
+      avgPrice: '$19,999/month';
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
       color: 'from-indigo-500 to-blue-500'
@@ -50,7 +46,7 @@ export default function Pricing2033Page() {
       name: 'Space & Metaverse Tech',
       description: 'Space mining and metaverse development',
       services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events'],
-      avgPrice: '$14,999/month',
+      avgPrice: '$14,999/month';
       savings: 'Save 65-80% vs. competitors',
       icon: Rocket,
       color: 'from-teal-500 to-emerald-500'
@@ -68,13 +64,12 @@ export default function Pricing2033Page() {
       name: 'Research & Development',
       description: 'Breakthrough technologies and innovations',
       services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation'],
-      avgPrice: '$1,099/month',
+      avgPrice: '$1,099/month';
       savings: 'Save 55-75% vs. competitors',
       icon: Microscope,
       color: 'from-orange-500 to-red-500'
     }
   ],
-
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -86,7 +81,7 @@ export default function Pricing2033Page() {
       features: [
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeBasic Security Features',
         'API Access (1000 calls/month)Community Support'
-      ],
+      ];
       popular: false,
       color: 'from-gray-500 to-gray-600'
     },
@@ -99,7 +94,7 @@ export default function Pricing2033Page() {
       features: [
         'Access to 200+ Advanced ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features',
         'API Access (10,000 calls/month)Dedicated Account ManagerCustom IntegrationsAdvanced Reporting'
-      ],
+      ];
       popular: true,
       color: 'from-purple-500 to-cyan-500'
     },
@@ -112,17 +107,16 @@ export default function Pricing2033Page() {
       features: [
         'Access to All 500+ ServicesFull AI & Quantum IntegrationPremium Support (24/7)90-Day Free TrialEnterprise Analytics SuiteDedicated Support Users99.99% Uptime GuaranteeEnterprise Security Features',
         'Unlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced ComplianceWhite-label SolutionsSLA Guarantees'
-      ],
+      ];
       popular: false,
       color: 'from-blue-500 to-indigo-500'
     }
   ],
-
   // Popular services with pricing
   const popularServices = [
     {
       name: 'AI Consciousness Evolution Platform',
-      price: '$24,999/month',
+      price: '$24,999/month';
       description: 'Develop genuine AI consciousness through advanced neural architecture',
       category: 'AI & Consciousness',
       features: ['Multi-dimensional consciousness mappingEmotional intelligence evolutionSelf-awareness development'],
@@ -130,7 +124,7 @@ export default function Pricing2033Page() {
     },
     {
       name: 'Quantum DNA Computing Platform',
-      price: '$35,999/month',
+      price: '$35,999/month';
       description: 'Breakthrough platform combining quantum computing with DNA-based computation',
       category: 'Quantum & Biotech',
       features: ['DNA-based quantum algorithmsBiological quantum entanglementDNA memory systems'],
@@ -138,7 +132,7 @@ export default function Pricing2033Page() {
     },
     {
       name: 'Space Mining Automation Platform',
-      price: '$45,999/month',
+      price: '$45,999/month';
       description: 'Revolutionary platform for automated asteroid mining and resource extraction',
       category: 'Space Technology',
       features: ['Asteroid identification and mappingAutomated mining operationsResource extraction algorithms'],
@@ -153,7 +147,6 @@ export default function Pricing2033Page() {
       savings: 'Save 50% vs. competitors'
     }
   ],
-
   return (
     <>
       <Head>

@@ -1,37 +1,34 @@
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 export type FeedbackWidgetProps = {
-  responseId?: string,
+  responseId?: string;
   aiModel?: string
-},
-
+};
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
-  const [rating, setRating] = useState<null | 'up' | 'down'>(null),
-  const [comment, setComment] = useState(''),
-  const [submitting, setSubmitting] = useState(false),
-  const [submitted, setSubmitted] = useState(false),
-  const [error, setError] = useState<string | null>(null),
-
-  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]),
-
+  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
+  const [comment, setComment] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
   const submit = async () => {
     if (!rating) {
-      setError('Please choose 👍 or 👎'),
+      setError('Please choose 👍 or 👎');
       return
     }
-    setError(null),
-    setSubmitting(true),
+    setError(null);
+    setSubmitting(true);
     try {
       const res = await fetch('/api/feedback/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           responseId: effectiveResponseId,
-          rating,
+          rating;
           comment: comment.trim(),
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
-          aiModel})}),
-      if (!res.ok) throw new Error('Failed to submit feedback'),
+          aiModel})});
+      if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true)
     } catch (e: any) {
       setError(e?.message || 'Something went wrong')
@@ -39,7 +36,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setSubmitting(false)
     }
   },
-
   return (
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>

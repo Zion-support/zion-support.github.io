@@ -6,7 +6,7 @@ import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {
   isLoading: boolean
   error: Error | null
@@ -34,7 +34,7 @@ const EnhancedLoading: React.FC<{
   showProgress?: boolean
 }> = ({ 
   progress = 0,
-  message = 'Loading component...', 
+  message = 'Loading component...',
   showProgress = true 
 }) => (
   <Card className="w-full max-w-md mx-auto">
@@ -139,14 +139,14 @@ const useNetworkStatus = () => {
 // Advanced Dynamic Component Loader
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn,
-  fallback,
-  errorFallback,
-  loadingComponent,
-  enableRetry = true,
-  maxRetries = 3,
-  prefetch = false,
-  className,
-  children,
+  fallback;
+  errorFallback;
+  loadingComponent;
+  enableRetry = true;
+  maxRetries = 3;
+  prefetch = false;
+  className;
+  children;
   ...props
 }) => {
   const [loadingState, setLoadingState] = useState<LoadingState>({
@@ -252,7 +252,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   if (loadingState.error) {
     if (errorFallback) {
       return React.createElement(errorFallback, { 
-        error: loadingState.error, 
+        error: loadingState.error,
         retry 
       })
     }
