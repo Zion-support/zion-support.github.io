@@ -1,0 +1,2 @@
+export\": const SmartAppBanner = ({ appName = \'Zion Marketplace\',appIconSrc,appStoreUrl = \'/download\',googlePlayUrl = \'/;
+export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/

@@ -1,45 +1,173 @@
-
-
-
-interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string;
-  readonly VITE_SUPABASE_URL: string;
-  readonly VITE_SUPABASE_ANON_KEY: string;
-  // add more env variables as needed
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+;
+  // add more env variables as needed;
 }
-
 interface ImportMeta {
-  readonly env: ImportMetaEnv;
+  readonly env: ImportMetaEnv,
   readonly url?: string;
 }
-
-// Type declarations for modules used in Vite configuration
-declare module 'vitest/config' {
-  export { defineConfig } from 'vite';
+// Type declarations for modules used in Vite configuration;
+declare module 'vitest / config' {
+  export { define_config } from 'vite';
 }
+<<<<<<< HEAD
+declare module '@vitejs/plugin-react - swc' {
+  import { Plugin } from 'vite',
+  export default function reactSWC (): Plugin;
+}
+declare module 'path' {
+  export function resolve (...paths: string[]): string,
+  export function join (...paths: string[]): string,
+  export function dirname (path: string): string;
+}
+declare module 'lovable - tagger' {
+  import { Plugin } from 'vite',
+  export function component_tagger (): Plugin;
+}
+// Add Node.js globals;
 
-declare module '@vitejs/plugin-react-swc' {
-  import { Plugin } from 'vite';
+=======
+
+=======
+interface ImportMetaEnv {
+  readonly VITE_APP_TITLE: string,
+  readonly VITE_SUPABASE_URL: string,
+  readonly VITE_SUPABASE_ANON_KEY: string,
+  // add more env variables as needed;
+}
+interface ImportMeta {
+  readonly env: ImportMetaEnv,
+  readonly url?: string;
+}
+// Type declarations for modules used in Vite configuration;
+declare module 'vitest / config' {
+  export { define_config } from 'vite';
+}
+declare module '@vitejs/plugin-react - swc' {
+  import { Plugin } from 'vite',
+  export default function reactSWC (): Plugin;
+}
+declare module 'path' {
+  export function resolve (...paths: string[]): string,
+  export function join (...paths: string[]): string,
+  export function dirname (path: string): string;
+}
+declare module 'lovable - tagger' {
+  import { Plugin } from 'vite',
+  export function component_tagger (): Plugin;
+}
+// Add Node.js globals;
+
+
+
+;
+interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
+  readonly VITE_SUPABASE_URL: string;
+  readonly VITE_SUPABASE_ANON_KEY: string;
+  // add more env variables as needed;
+}
+interface ImportMeta {readonly env: ImportMetaEnv;
+  readonly url?: string;
+}
+// Type declarations for modules used in Vite configuration;
+declare module 'vitest/config' {export { defineConfig } from 'vite';
+}
+declare module '@vitejs/plugin-react-swc' {import { Plugin } from 'vite';
   export default function reactSWC(): Plugin;
 }
-
-declare module 'path' {
-  export function resolve(...paths: string[]): string;
+declare module 'path' {export function resolve(...paths: string[]): string;
   export function join(...paths: string[]): string;
   export function dirname(path: string): string;
 }
+declare module 'lovable-tagger' {import { Plugin } from 'vite';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+interface ImportMetaEnv {;
+  readonly VITE_APP_TITLE: string,;
+  readonly VITE_SUPABASE_URL: string,;
+  readonly VITE_SUPABASE_ANON_KEY: string,;
+  // add more env variables as needed;
+}
+;
+interface ImportMeta {;
+  readonly env: ImportMetaEnv,;
+  readonly url?: string;
+}
+;
+// Type declarations for modules used in Vite configuration;
+declare module 'vitest/config' {;
+  export { defineConfig } from 'vite';
+}
+;
+declare module '@vitejs/plugin-react-swc' {;
+  import { Plugin } from 'vite',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  export default function reactSWC(): Plugin;
+}
+;
+declare module 'path' {;
+  export function resolve(...paths: string[]): string,;
+  export function join(...paths: string[]): string,;
+  export function dirname(path: string): string;
+}
+<<<<<<< HEAD
+;
+declare module 'lovable-tagger' {;
+  import { Plugin } from 'vite',;
 
-declare module 'lovable-tagger' {
-  import { Plugin } from 'vite';
+<<<<<<< HEAD
   export function componentTagger(): Plugin;
 }
-
 // Add Node.js globals
-declare let __dirname: string;
+
+
+
+=======
+=======
+
+  export function componentTagger(): Plugin;
+}
+// Add Node.js globals
+  }
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+declare let __dirname: string,
 declare let process: {
   env: {
-    [key: string]: string | undefined;
+    [key: string]: string | undefined,
+    NODE_ENV: 'development' | 'production' | 'test',
+    PORT?: string
+;
+// Add Node.js globals;
+declare let __dirname: string,;
+declare let process: {;
+  env: {;
+    [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+=======
+  }
+}
   }
 };
+  }
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

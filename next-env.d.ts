@@ -1,13 +1,28 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
+// <reference path="./.next/types/routes.d.ts" />
 
 // NOTE: This file should not be edited
+// see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
+
 <<<<<<< HEAD
-// see https://nextjs.org/docs/pages/building-your-application/configuring/typescript for more information.
+ 
+ursor/fix-lint-push-and-merge-to-main-ae4e
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-<<<<<<< HEAD
-// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
-=======
-// see https://nextjs.org/docs/pages/building-your-application/configuring/typescript for more information.
->>>>>>> 4d15aa1ac9d (Fix project errors and implement PM2 automation system)
->>>>>>> 878d942794613d77e7906d7fb8891458141d2dcc
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,69 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+tagline: string;
+price: string;
+period: string;
+description: string;
+features: string[];
+popular: boolean;
+icon: string;
+category: string;
+}export const microSaasServices: MicroSaasService[] = [ {
+  id: 'ai - content - generator';
+name: 'AI Content Generator';
+tagline: 'Generate high - quality content with AI';
+price: '$29';
+period: '/month';
+popular: true;
+icon: '🤖';
+category: 'AI & Machine Learning';
+}];
+'All';
+'AI & Machine Learning';
+'Cybersecurity';
+'Cloud Computing';
+'Data Analytics' ];
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+name: string;
+tagline: string;
+price: string;
+period: string;
+description: string;
+features: string[];
+popular: boolean;
+icon: string;
+category: string;
+}export const microSaasServices: MicroSaasService[] = [ {;
+  id: 'ai-content-generator';
+name: 'AI Content Generator';
+tagline: 'Generate high-quality content with AI';
+price: '$29';
+period: '/month';
+popular: true;
+icon: '🤖';
+category: 'AI & Machine Learning';
+}];
+'All';
+'AI & Machine Learning';
+'Cybersecurity';
+'Cloud Computing';
+'Data Analytics' ];
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface MicroSaasService {
   id: string,
   name: string,
@@ -2163,13 +2229,76 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 27
   }
-],
+];
 
 // Helper functions
 export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSaasService[] => {
   if (categoryName === 'All' || categoryName === 'all') {
     return enhancedRealMicroSaasServices
   }
+<<<<<<< HEAD
+// Service categories
+export const serviceCategories = [
+  'AllAI & Enterprise Automation',
+  'Quantum AI & BiotechAI & Cybersecurity',
+  'Quantum AI & FinanceAI & Supply Chain',
+  'Quantum AI & ClimateAI & Manufacturing',
+  'Quantum AI & HealthcareAI & Logistics',
+  'Quantum AI & EnergyAI & Education',
+  'Quantum AI & CybersecurityAI & Marketing',
+  'Quantum AI & ResearchAI & Legal Services',
+  'Quantum AI & Autonomous VehiclesAI & Real Estate',
+  'Quantum AI & CyberneticsQuantum AI & Space Technology',
+  // ADDITIONAL INNOVATIVE CATEGORIES
+  'AI & Content CreationAI & Customer Service',
+  'AI & Sales AutomationAI & Data Analytics',
+  'AI & HR TechAI & Market Research',
+  'AI & Video ProductionAI & SEO',
+  'AI & BlockchainAI & IoT',
+  'AI & Machine LearningQuantum Computing & AI',
+  'Quantum Finance & TradingQuantum Technology',
+  'Autonomous ManufacturingAutonomous Systems',
+  'Quantum CybersecuritySpace Technology & Aerospace',
+  'Metaverse & VR/ARMetaverse & Virtual Reality',
+  'Biomedical AINeural Technology',
+  'Blockchain & DeFiEdge Computing & IoT',
+  'Manufacturing & Industry 4.0Cybersecurity & Privacy',
+  'Healthcare & BiotechnologyFinancial Technology',
+  'Financial Technology & TradingEnergy & Sustainability',
+  'IoT & Smart CitiesClimate Technology',
+  'Robotics & AutomationAgriculture & Food Tech'
+];
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+// Combined all services
+export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export const getServicesByCategory = (category: string) => {
+  if (category === 'All') return allEnhancedRealMicroSaasServices;
+  return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
+};
+export const getPopularServices = () => {
+  return allEnhancedRealMicroSaasServices.filter(service => service.popular)
+};
+export const getServicesByPriceRange = (min: number, max: number) => {
+  return allEnhancedRealMicroSaasServices.filter(service => {
+    const price = parseInt(service.price.replace('$', ''));
+    return price >= min && (max === Infinity ? true : price <= max)
+  })
+};
+export const serviceCategories = [
+  'AllQuantum ComputingAI & Machine LearningCybersecurityBiomedical & HealthcareFinancial TechnologyContent & MarketingData Analytics & BI';
+  'Customer Service & SupportSupply Chain & LogisticsHuman ResourcesLegal TechnologySales & MarketingBlockchain & Web3IoT & Edge ComputingCloud & Infrastructure';
+  'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
+];
+;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
@@ -2189,7 +2318,17 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
     'Analytics & Business Intelligence': ['AI & Data AnalyticsAI & Market Research'],
     'Cloud & Infrastructure': ['Cloud PlatformEdge Computing & IoT'],
     'Climate Technology': ['Climate Technology']
-  },
+  };
+
+  // Find matching categories
+  const matchingCategories = categoryMapping[categoryName] || [];
+  
+  return enhancedRealMicroSaasServices.filter(service => 
+    matchingCategories.some(category => 
+      service.category.includes(category)
+    )
+  );
+};
 
 // Service categories
 export const serviceCategories = [
@@ -2221,34 +2360,14 @@ export const serviceCategories = [
   'Financial Technology & TradingEnergy & Sustainability',
   'IoT & Smart CitiesClimate Technology',
   'Robotics & AutomationAgriculture & Food Tech'
-],
+];
 
-export const getServicesByCategory = (category: string) => {
-  if (category === 'All') return allEnhancedRealMicroSaasServices,
-  return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
-},
+// Combined all services
+export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
-export const getPopularServices = () => {
-  return allEnhancedRealMicroSaasServices.filter(service => service.popular),
-},
 
-export const getServicesByPriceRange = (min: number, max: number) => {
-  return allEnhancedRealMicroSaasServices.filter(service => {
-    const price = parseInt(service.price.replace('$', '')),
-    return price >= min && (max === Infinity ? true : price <= max),
-  }),
-},
-
-export const serviceCategories = [
-  'AllQuantum Computing',
-  'AI & Machine LearningCybersecurity',
-  'Biomedical & HealthcareFinancial Technology',
-  'Content & MarketingData Analytics & BI',
-  'Customer Service & SupportSupply Chain & Logistics',
-  'Human ResourcesLegal Technology',
-  'Sales & MarketingBlockchain & Web3',
-  'IoT & Edge ComputingCloud & Infrastructure',
-  'Video & MediaSEO & Digital Marketing',
-  'Automation & RoboticsEdge Computing',
-  'Predictive Analytics'
-],
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

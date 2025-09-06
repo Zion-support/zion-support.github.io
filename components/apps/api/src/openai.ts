@@ -1,20 +1,118 @@
-import OpenAI from 'openai',
+import OpenAI from 'openai';
+<<<<<<< HEAD
 
-type OpenAIClient = OpenAI,
-
+<<<<<<< HEAD
+=======
+type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
-  return new OpenAI({ apiKey }),
-}
-
-export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  return new OpenAI({ apiKey });
+export async function generateJobPost(
+  openai: OpenAIClient
+  role: string
+  opts: any
+): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+Company: ${opts.company |'Confidential'}
+Location: ${opts.location |'Remote'}
+Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
-Key skills: ${(opts.tags || []).join() || 'N/A'}
-Add responsibilities, requirements, and benefits in bullet points.`,
-  const completion = await openai.responses.create({
-    model: 'gpt-4o-mini',
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+
+
+  return new OpenAI({ apiKey });
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+Company: ${opts.company |'Confidential'}
+Location: ${opts.location |'Remote'}
+Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai && openai.responses.create({
+    model: 'gpt-4o-mini';
     input: prompt
-  }),
-  return completion.output_text,
+  });
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  return completion && completion.output_text
 }
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+type OpenAIClient = OpenAI;
+;
+export function createOpenAIClient (api_key: string): OpenAIClient {
+  return new OpenAI ({ api_key });
+export async function generateJobPost (
+  openai: OpenAIClient,
+  role: string,
+  opts: any): Promise < string> {
+  const prompt = `Create a concise, compelling job post for a ${role}.;
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join (', ') || 'N / A'}
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai.responses.create ({
+    model: 'gpt - 4o - mini',
+    input: prompt,
+  });
+  return completion.output_text;Key skills: ${(opts.tags || []).join () || 'N / A'}
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai.responses.create ({
+    model: 'gpt - 4o - mini';
+    input: prompt;
+  });
+  return completion.output_text;
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return completion && completion.output_text
+}
+
+
+}
+
+
+
+
+  return completion.output_text
+}
+}
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

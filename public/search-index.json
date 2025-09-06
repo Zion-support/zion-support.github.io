@@ -1,79 +1,42 @@
-{
-  "version": "1.0",
-
-  "generated": "2025-09-05T22:04:11.140Z",
-
-  "pages": [
-    {
-      "title": "Home",
-      "url": "/",
-      "description": "Zion Tech Group - AI and Technology Solutions",
-      "keywords": [
-        "AI",
-        "technology",
-        "solutions",
-        "automation"
-      ],
-      "id": 1
-    },
-    {
-      "title": "About",
-      "url": "/about",
-      "description": "About Zion Tech Group - Leading AI and Technology Company",
-      "keywords": [
-        "about",
-        "company",
-        "team",
-        "mission"
-      ],
-      "id": 2
-    },
-    {
-      "title": "Services",
-      "url": "/services",
-      "description": "Our Services - AI Development, Automation, and Technology Solutions",
-      "keywords": [
-        "services",
-        "AI",
-        "automation",
-        "development"
-      ],
-      "id": 3
-    },
-    {
-      "title": "Contact",
-      "url": "/contact",
-      "description": "Contact Us - Get in Touch with Zion Tech Group",
-      "keywords": [
-        "contact",
-        "support",
-        "help"
-      ],
-      "id": 4
-    },
-    {
-      "title": "Portfolio",
-      "url": "/portfolio",
-      "description": "Our Portfolio - AI and Technology Projects",
-      "keywords": [
-        "portfolio",
-        "projects",
-        "work",
-        "examples"
-      ],
-      "id": 5
-    },
-    {
-      "title": "Blog",
-      "url": "/blog",
-      "description": "Blog - Latest AI and Technology Insights",
-      "keywords": [
-        "blog",
-        "articles",
-        "insights",
-        "news"
-      ],
-      "id": 6
-    }
-  ]
-}
+[
+  {
+    "title": "Home",
+    "url": "/",
+    "content": "Zion Tech Group - Leading technology solutions provider",
+    "keywords": [
+      "home",
+      "technology",
+      "solutions"
+    ]
+  },
+  {
+    "title": "About",
+    "url": "/about",
+    "content": "Learn about Zion Tech Group and our mission",
+    "keywords": [
+      "about",
+      "company",
+      "mission"
+    ]
+  },
+  {
+    "title": "Services",
+    "url": "/services",
+    "content": "Our comprehensive technology services",
+    "keywords": [
+      "services",
+      "technology",
+      "solutions"
+    ]
+  },
+  {
+    "title": "Contact",
+    "url": "/contact",
+    "content": "Get in touch with Zion Tech Group",
+    "keywords": [
+      "contact",
+      "reach",
+      "support"
+    ]
+  }
+]

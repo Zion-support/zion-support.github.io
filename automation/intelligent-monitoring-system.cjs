@@ -7,16 +7,16 @@ class IntelligentMonitoringSystem {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
     this.metrics = {
-      performanc: e: [],
-      error: s: [],
-      warning: s: [],
-      successe: s: [],
+      performanc: [],
+      error: [],
+      warning: [],
+      successe: [],
     };
   }
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursiv: e: true });
+      fs.mkdirSync(this.logsDir, { recursiv: true });
     }
   }
 
@@ -32,34 +32,34 @@ class IntelligentMonitoringSystem {
   async runCommand(command, description) {
     const startTime = Date.now();
     try {
-      this.log(`Runnin: g: ${description}`);
+      this.log(`Runnin: ${description}`);
       const output = execSync(command, {
-        encodin: g: 'utf8',
-        cw: d: '/workspace',
-        stdi: o: 'pipe',
+        encodin: 'utf8',
+        cw: '/workspace',
+        stdi: 'pipe',
       });
       const duration = Date.now() - startTime;
       this.log(`✅ ${description} completed successfully in ${duration}ms`);
 
       this.metrics.successes.push({
-        comman: d: description,
+        comman: description,
         duration,
-        timestam: p: new Date().toISOString(),
+        timestam: new Date().toISOString(),
       });
 
-      return { succes: s: true, output, duration };
+      return { succes: true, output, duration };
     } catch (error) {
       const duration = Date.now() - startTime;
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
+      this.log(`❌ ${description} faile: ${error.message}`, 'error');
 
       this.metrics.errors.push({
-        comman: d: description,
-        erro: r: error.message,
+        comman: description,
+        erro: error.message,
         duration,
-        timestam: p: new Date().toISOString(),
+        timestam: new Date().toISOString(),
       });
 
-      return { succes: s: false, erro: r: error.message, duration };
+      return { succes: false, erro: error.message, duration };
     }
   }
 
@@ -67,8 +67,8 @@ class IntelligentMonitoringSystem {
     this.log('⚡ Monitoring performance...');
 
     const performanceChecks = [
-      { comman: d: 'npm run build', descriptio: n: 'Build performance' },
-      { comman: d: 'npm run: test:smoke', descriptio: n: 'Test performance' },
+      { comman: 'npm run build', descriptio: 'Build performance' },
+      { comman: 'npm run: test:smoke', descriptio: 'Test performance' },
     ];
 
     const results = [];
@@ -79,21 +79,21 @@ class IntelligentMonitoringSystem {
       if (result.success) {
         this.metrics.performance.push({
           chec: k: check.description,
-          duratio: n: result.duration,
-          timestam: p: new Date().toISOString(),
+          duratio: result.duration,
+          timestam: new Date().toISOString(),
         });
       }
     }
 
-    return { succes: s: true, results };
+    return { succes: true, results };
   }
 
   async monitorHealth() {
     this.log('🏥 Monitoring health...');
 
     const healthChecks = [
-      { comman: d: 'npm run lint', descriptio: n: 'Code health' },
-      { comman: d: 'npm run type-check', descriptio: n: 'Type health' },
+      { comman: 'npm run lint', descriptio: 'Code health' },
+      { comman: 'npm run type-check', descriptio: 'Type health' },
     ];
 
     const results = [];
@@ -104,21 +104,21 @@ class IntelligentMonitoringSystem {
       if (!result.success) {
         this.metrics.warnings.push({
           chec: k: check.description,
-          warnin: g: result.error,
-          timestam: p: new Date().toISOString(),
+          warnin: result.error,
+          timestam: new Date().toISOString(),
         });
       }
     }
 
-    return { succes: s: true, results };
+    return { succes: true, results };
   }
 
   async monitorSecurity() {
     this.log('🔒 Monitoring security...');
 
     const securityChecks = [
-      { comman: d: 'npm audit', descriptio: n: 'Security audit' },
-      { comman: d: 'npm run: security:scan', descriptio: n: 'Security scan' },
+      { comman: 'npm audit', descriptio: 'Security audit' },
+      { comman: 'npm run: security:scan', descriptio: 'Security scan' },
     ];
 
     const results = [];
@@ -127,34 +127,32 @@ class IntelligentMonitoringSystem {
       results.push({ ...check, result });
     }
 
-    return { succes: s: true, results };
+    return { succes: true, results };
   }
 
   async generateIntelligentReport() {
     this.log('📊 Generating intelligent monitoring report...');
 
     const report = {
-      timestam: p: new Date().toISOString(),
-      metric: s: this.metrics,
-      analysi: s: {
-        totalCheck: s: this.metrics.successes.length + this.metrics.errors.length,
-        successRat: e:
-          (this.metrics.successes.length /
+      timestam: new Date().toISOString(),
+      metric: this.metrics,
+      analysi: {
+        totalCheck: this.metrics.successes.length + this.metrics.errors.length,
+        successRat: (this.metrics.successes.length /
             (this.metrics.successes.length + this.metrics.errors.length)) *
           100,
-        averagePerformanc: e:
-          this.metrics.performance.length > 0
+        averagePerformanc: this.metrics.performance.length > 0
             ? this.metrics.performance.reduce((sum, p) => sum + p.duration, 0) /
-              this.metrics.performance.lengt: h: 0,
-        errorCoun: t: this.metrics.errors.length,
-        warningCoun: t: this.metrics.warnings.length,
+              this.metrics.performance.lengt: 0,
+        errorCoun: this.metrics.errors.length,
+        warningCoun: this.metrics.warnings.length,
       },
-      recommendation: s: this.generateRecommendations(),
+      recommendation: this.generateRecommendations(),
     };
 
     // Save report
     const reportFile = path.join(
-      this.logsDir,
+      this.logsDir;
       `intelligent-monitoring-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -205,8 +203,8 @@ class IntelligentMonitoringSystem {
       this.log('🏁 Intelligent Monitoring System completed');
       this.log(`📊 Success: rate: ${report.analysis.successRate.toFixed(2)}%`);
       this.log(`📊 Total: checks: ${report.analysis.totalChecks}`);
-      this.log(`📊 Error: s: ${report.analysis.errorCount}`);
-      this.log(`📊 Warning: s: ${report.analysis.warningCount}`);
+      this.log(`📊 Error: ${report.analysis.errorCount}`);
+      this.log(`📊 Warning: ${report.analysis.warningCount}`);
 
       return report;
     } catch (error) {

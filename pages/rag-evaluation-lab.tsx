@@ -1,7 +1,34 @@
-import React from 'react',
-import SEO from '../components/SEO',
-import Link from 'next/link',
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+  return (
+    <>;
+      <SEO
+        title='RAG Evaluation Lab'
+        description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -14,10 +41,10 @@ export default function RAGEvaluationLabPage() {
 					</p>
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{[
-							{ title: 'Grounding & Faithfulness', desc: 'Measure factual consistency, citation quality, and hallucination rate.' },
+							{ title: 'Grounding & Faithfulness', desc: 'Measure factual consistency, citation quality, and hallucination rate.' };
 							{ title: 'Golden Datasets', desc: 'Curate and run task-specific datasets for repeatable evaluation.' },
-							{ title: 'Scenario Evals', desc: 'Synthetic and real-world tests across intents, domains, and edge cases.' },
-							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions, compare models and versions.' },
+							{ title: 'Scenario Evals', desc: 'Synthetic and real-world tests across intents, domains, and edge cases.' };
+							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions, compare models and versions.' };
 							{ title: 'Offline & Canary', desc: 'Pre-release offline runs and live traffic canaries with alerts.' },
 							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
 						].map((f) => (
@@ -29,10 +56,8 @@ export default function RAGEvaluationLabPage() {
 					</div>
 
   const useCases = [
-    'Enterprise Knowledge ManagementCustomer Support Systems',
-    'Research & DevelopmentContent Generation Platforms',
-    'Educational ApplicationsLegal & Compliance Systems'
-  ],
+    'Enterprise Knowledge ManagementCustomer Support SystemsResearch & DevelopmentContent Generation PlatformsEducational ApplicationsLegal & Compliance Systems'
+  ];
 
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
@@ -44,3 +69,5 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
+
+

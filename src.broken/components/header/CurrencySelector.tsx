@@ -7,11 +7,10 @@ import {
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
 import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext',
 import { DollarSign } from 'lucide-react',
-
 const SUPPORTED: { code: SupportedCurrency, symbol: string }[] = [
   { code: 'USD', symbol: '$' },
-  { code: 'EUR', symbol: '€' },
-  { code: 'GBP', symbol: '£' }],
+  { code: 'EUR', symbol: '' },
+  { code: 'GBP', symbol: '' }],
 
 export function CurrencySelector() {
   const { currency, setCurrency } = useCurrency(),
@@ -30,11 +29,12 @@ export function CurrencySelector() {
             key={c.code}
             className={`cursor-pointer ${currency.code === c.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10'}`}
             onClick={() => setCurrency(c.code)}
-          >
+          >;
             {c.symbol} {c.code}
-          </DropdownMenuItem>
+          </DropdownMenuItem>;
         ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
-  ),
+      </DropdownMenuContent>;
+    </DropdownMenu>;
+  );
 }
+;

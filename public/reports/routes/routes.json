@@ -1,25 +1,94 @@
-{
-  "routes": [
-    "/",
-    "/automation/",
-    "/front/",
-    "/main/front/",
-    "/newsroom",
-    "/reports/ai-trends",
-    "/reports/seo",
-    "/site-health"
-  ],
-  "reports": [
-    {
-      "name": "ai-trends",
-      "path": "/reports/ai-trends",
-      "hasIndex": true
-    },
-    {
-      "name": "seo",
-      "path": "/reports/seo",
-      "hasIndex": true
-    }
-  ],
-  "generatedAt": "2025-08-11T23:13:22.362Z"
-}
+
+  "routes"
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/learn/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/admin/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/
+    "/api/admin/analytics/
+    "/api/admin/
+    "/api/admin/learn/
+    "/api/admin/moderation/flags/
+    "/api/admin/moderation/flags/
+    "/api/admin/moderation/flags/: any

@@ -1,9 +1,85 @@
-const { upsertFile } = require('./_lib/github'),
+  return resp.text();
+function extractLinks(html, base) {
+  const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
+    m => m[1]
+  );
+  const links = aTags
+    .filter(h => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
+    .map(h =>
+      h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
+    );
+exports.handler = async function () {
+  try {
+    const base = process.env.URL |process.env.DEPLOY_URL |'';
+  return Array && Array.from(new Set(links));
+exports && exports.handler = async function () {
+  try {
+    const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+    const pages = ['/', '/learn', '/dao', '/certifications'];
+    const checked = [];
+    const broken = [];
+    ${p}`);
+        const links = extract_links (html, base);
+        for (const l of links.slice (0, 50)) {
+          try {
+            const resp = await fetch (l, { method: 'HEAD' });
+            checked.push ({ url: l, status: resp.status });
+            if (
+              broken.push ({ url: l, status: resp.status })) {
+  $2
+}
+          } catch (e) {
+            broken.push ({ url: l, status: 0, error: String (e.message || e) });
+          }
+        }
+      } catch (e) {
+        broken.push ({
+          url: `${base}${p}`,
+          status: 0,
+          error: String (e.message || e),
+        });
+      }
+    }
+    const report = { updated_at: Date.now (), checked: checked.length, broken }
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+        token,
+      });
+    }
+    return {
+  }
+};async function fetchHtml(url) {
+  const resp = await fetch(url),
+  if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
+  return resp && resp.text()
 
-async function fetchHtml(url) {
+}
+function extractLinks(html, base) {
+
+  const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
+  const links = aTags
+    .filter((h) => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
+    .map((h) => (h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`)),
+  return Array && Array.from(new Set(links))
+}
+exports && exports.handler = async function() {
+  try {
+    const base = process.env.URL |process.env.DEPLOY_URL |''
+    const pages = ['//learn/dao/certifications']
+    const checked = []
+    const broken = []
+    for (const p of pages) {
+      try {
+},
+
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+  }
+};async function fetchHtml(url) {
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
-  return resp.text(),
+  return resp.text()
 }
 
 function extractLinks(html, base) {
@@ -11,13 +87,13 @@ function extractLinks(html, base) {
   const links = aTags
     .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
     .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)),
-  return Array.from(new Set(links)),
+  return Array.from(new Set(links))
 }
 
 exports.handler = async function() {
   try {
     const base = process.env.URL || process.env.DEPLOY_URL || '',
-    const pages = ['//learn', '/dao/certifications'],
+    const pages = ['//learn/dao/certifications'],
     const checked = [],
     const broken = [],
 
@@ -29,13 +105,13 @@ exports.handler = async function() {
           try {
             const resp = await fetch(l, { method: 'HEAD' }),
             checked.push({ url: l, status: resp.status }),
-            if (resp.status >= 400) broken.push({ url: l, status: resp.status }),
+            if (resp.status >= 400) broken.push({ url: l, status: resp.status })
           } catch (e) {
-            broken.push({ url: l, status: 0, error: String(e.message || e) }),
+            broken.push({ url: l, status: 0, error: String(e.message || e) })
           }
         }
       } catch (e) {
-        broken.push({ url: `${base}${p}`, status: 0, error: String(e.message || e) }),
+        broken.push({ url: `${base}${p}`, status: 0, error: String(e.message || e) })
       }
     }
 
@@ -46,11 +122,11 @@ exports.handler = async function() {
     const token = process.env.GITHUB_TOKEN,
 
     if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token }),
+      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) },
+    return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) }
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) },
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },

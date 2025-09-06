@@ -1,18 +1,174 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
 
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
 
+=======
+=======
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { useEffect  } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {useEffect} from 'react';
+import {useLocation} from 'react-router-dom';
+import { useEffect } from 'react',
+import { useLocation } from 'react-router-dom',
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
  */
+
+<<<<<<< HEAD
+
+export function usePageViewTracking() {
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export function usePageViewTracking() {;
+  const location = useLocation();
 export function usePageViewTracking() {
   const location = useLocation(),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  const location = useLocation();
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view
-      // // // console.log('Page view:', window.location.pathname),
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      console && console.log('Page view:', window && window.location.pathname)
+    };
+
+      // // // console.log('Page view:', window.location.pathname)
+    },
+
+    
+<<<<<<< HEAD
+    // Listen for route changes
+    window && window.addEventListener('popstate', handleRouteChange);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    // Initial page load
+
+    handleRouteChange(),
+    
+    // Initial page load
+    handleRouteChange();
+    return () => {
+      window && window.removeEventListener('popstate', handleRouteChange)
+    }
+  }, []);
+
+  // Also track when location changes directly via React Router
+  useEffect(() => {
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+    console && console.log('Page view:', location && location.pathname)
+  }, [location && location.pathname])
+}
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+    console && console.log('Page view:', location && location.pathname)
+  }, [location && location.pathname])
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import {useEffect} from 'react';
+import {use_location} from 'react-router-dom';
+/**;
+* Custom hook to track page views for analytics purposes;
+* Attaches event listeners to track route changes and logs page views;
+*/;
+export /**
+ * usePageViewTracking - Function description
+ */
+function usePageViewTracking() {
+  const location = use_location ();
+;
+  useEffect (() => {
+    const handleRouteChange = () =>: any {
+      // Track page view;
+      console.log ('Page view:', window.location.pathname);
+    }
+;
+    // Listen for route changes;
+    window.addEventListener ('popstate', handleRouteChange);
+;
+    // Initial page load;
+    handleRouteChange ();
+;
+    return () => {
+      window.removeEventListener ('popstate', handleRouteChange);
+    }
+  }, []);
+}
+;
+<<<<<<< HEAD
+  // Also track when location changes directly via React Router;
+  useEffect (() => {
+    console.log ('Page view:', location.pathname);
+  }, [location.pathname]);
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import { useEffect } from 'react',;
+import { useLocation } from 'react-router-dom',;
+;
+      console.log('Page view:', window.location.pathname)
+    }
+    // Listen for route changes
+    window.addEventListener('popstate', handleRouteChange);
+    // Initial page load
+    handleRouteChange();
+      // // // console.log('Page view:', window.location.pathname)
     },
     
     // Listen for route changes
@@ -22,12 +178,42 @@ export function usePageViewTracking() {
     handleRouteChange(),
     
     return () => {
-      window.removeEventListener('popstate', handleRouteChange),
-    },
+      window.removeEventListener('popstate', handleRouteChange)
+    }
   }, []),
 
   // Also track when location changes directly via React Router
   useEffect(() => {
-    // // // console.log('Page view:', location.pathname),
-  }, [location.pathname]),
+    // // // console.log('Page view:', location.pathname)
+  }, [location.pathname])
 }
+import { useEffect } from 'react',;
+import { useLocation } from 'react-router-dom',;
+/**;
+ * Custom hook to track page views for analytics purposes;
+ * Attaches event listeners to track route changes and logs page views;
+ */;
+export function usePageViewTracking() {;
+  const location = useLocation(),;
+  useEffect(() => {;
+    const handleRouteChange = () => {;
+      // Track page view;
+      // // // console.log('Page view:', window.location.pathname);
+    },;
+    // Listen for route changes;
+    window.addEventListener('popstate', handleRouteChange),;
+    // Initial page load;
+    handleRouteChange();
+    return () => {;
+      window.removeEventListener('popstate', handleRouteChange);
+    }
+  }, []);
+  // Also track when location changes directly via React Router;
+  useEffect(() => {;
+    // // // console.log('Page view:', location.pathname);
+  }, [location.pathname]);
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

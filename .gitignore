@@ -5,18 +5,40 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-# Build outputs
-dist/
-build/
+
+# Next.js
 .next/
 out/
-# Environment variables
+dist/
+build/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
 .env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
-# IDE and editor files
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
 .vscode/
 .idea/
 *.swp
@@ -38,17 +60,24 @@ pids
 *.pid
 *.seed
 *.pid.lock
+
 # Coverage directory used by tools like istanbul
 coverage/
 *.lcov
+
 # nyc test coverage
 .nyc_output
+
 # Dependency directories
+node_modules/
 jspm_packages/
+
 # Optional npm cache directory
 .npm
+
 # Optional eslint cache
 .eslintcache
+
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
@@ -140,3 +169,6 @@ backups/
 health-check-report.json
 performance-metrics.json
 security-scan-report.json
+
+core
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

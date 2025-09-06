@@ -1,13 +1,65 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore - JSON import
-import data from '../../data/innovation-radar.json',
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  );
+};
+
+=======
+=======
+  );
+};
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                {it.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Link>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+              </div>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
+            </li>
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore - JSON import import data from '../../data/innovation-radar.json';
 export default function InnovationRadarPage() {
-  const items: any[] = (data?.items || []).slice(0, 50),
+
+  const items: any[] = (data?.items |[]).slice(0, 50)
+
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">Innovation Radar</h1>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Signals generated at {data?.generatedAt |'—'}</p>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Signals generated at {data?.generatedAt || '—'}</p>
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
@@ -16,6 +68,9 @@ export default function InnovationRadarPage() {
                 {it.title}
               </a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {it.source} · {it.author |'unknown'} · {new Date(it.created_at).toLocaleString()}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
@@ -24,5 +79,29 @@ export default function InnovationRadarPage() {
         </ul>
       </div>
     </EnhancedLayout>
-  ),
+  );
+};
+  );
+};
+
+                {it.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+              </Link>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
