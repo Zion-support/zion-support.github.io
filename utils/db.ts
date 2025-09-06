@@ -1,7 +1,8 @@
+import fs from 'fs';
+
 // Mock database utility
 export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
-    const fs = require('fs'),
     if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
@@ -17,8 +18,14 @@ export function writeJsonFile<T>(fileName: string, data: T): void {
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
   fs.renameSync(tmpPath, filePath);
+}
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
+}
+
+function getFilePath(fileName: string): string {
+  return `./data/${fileName}`;
+}

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-// Mock admin auth utility
-export function getSessionFromReq(req: any): any {
-  // Mock implementation - in a real app, this would parse JWT or session
-  return null;
-}
-
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true;
-};
-=======
 import type { NextApiRequest } from 'next';
 
 export interface Session {
@@ -40,4 +28,8 @@ export function isInternalAgentRequest(req: NextApiRequest): boolean {
   
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-e3be
+
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+};

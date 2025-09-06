@@ -5,9 +5,10 @@ import {
   Project,
   Milestone,
   MilestoneStatus,
-  isMilestoneStatus,;
+  isMilestoneStatus,
 } from '../types/milestones';
 import { CurrentUser } from './auth';
+
 export interface Milestone {
   id: string;
   title: string;
@@ -17,14 +18,14 @@ export interface Milestone {
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: any[];
   createdAt: string;
-  updatedAt: string,
+  updatedAt: string;
 }
 
 // Mock storage
 const projects: Project[] = [];
 
 export function getProjectById(id: string): Project | null {
-  return projects.find(p => p.id === id) || null,
+  return projects.find(p => p.id === id) || null;
 }
 
 export function getAllProjects(): Project[] {
@@ -44,7 +45,7 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
   const project = projects.find(p => p.id === id);
-  if (!project) return null,
+  if (!project) return null;
   
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
   return project;
@@ -58,10 +59,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };
-  project.milestones[idx] = next;
-  project.updatedAt = now;
-  saveProject(project);
-  return next;  
+  
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   
@@ -70,7 +68,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
   const milestone = project.milestones.find(m => m.id === milestoneId);
-  if (!milestone) return null,
+  if (!milestone) return null;
   
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
@@ -80,7 +78,7 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
 
 export function deleteMilestone(project: Project, milestoneId: string): boolean {
   const index = project.milestones.findIndex(m => m.id === milestoneId);
-  if (index === -1) return false,
+  if (index === -1) return false;
   
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
