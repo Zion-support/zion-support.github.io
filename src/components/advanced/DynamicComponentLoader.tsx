@@ -219,7 +219,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       return React.createElement(loadingComponent)
     }
 
-    
       >
         <EnhancedLoading
           progress={progress}

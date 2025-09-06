@@ -49,7 +49,6 @@ export async function getStaticPaths() {
   const services = getAllServices();
   const slugs = new Set<string>();
 
-  
     // Fall back to normalized id or name to provide a stable URL under /services/*
     if (s.id) slugs.add(toSlug(s.id));
     else if (s.name) slugs.add(toSlug(s.name));

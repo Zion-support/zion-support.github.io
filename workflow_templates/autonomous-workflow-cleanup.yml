@@ -2,7 +2,6 @@ name: Autonomous Workflow Cleanup
 
 on:
 
-
   schedule: - cron: '0 0 * * *'
   workflow_dispatch:
 
@@ -11,12 +10,10 @@ on:
 
 concurrency:
 
-
   group: "workflow-cleanup-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
-
 
   cleanup: - name: Delete old workflow runs (> 14 days)
            
@@ -43,8 +40,6 @@ jobs:
 
       - name: Delete expired artifacts (> 14 days)
 
-
-                
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |
             const owner = context.repo.owner;
@@ -68,7 +63,5 @@ jobs:
 
       - name: Summary
 
-
-                
           echo "Deleted runs: "${{ steps.oldruns.outputs.deleted_runs }}"" >> $GITHUB_STEP_SUMMARY
           echo "Deleted artifacts: "${{ steps.oldartifacts.outputs.deleted_artifacts }}"" >> $GITHUB_STEP_SUMMARY

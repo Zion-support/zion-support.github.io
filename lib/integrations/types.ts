@@ -16,7 +16,6 @@ export interface IntegrationProviderMeta {
   icon?: string
 }
 
-
 export interface SyncRules {
   // CRM rules
   autoCreateContacts?: boolean;

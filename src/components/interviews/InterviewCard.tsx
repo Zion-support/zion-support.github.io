@@ -29,7 +29,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const isInterviewConfirmed = interview.status === 'confirmed'
   const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
 
-
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>
       default:
         return <Badge>{interview.status}</Badge>

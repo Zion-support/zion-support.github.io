@@ -24,9 +24,8 @@ function resolveConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Replace merge conflict markers with incoming changes
-    // Remove <<<<<<< HEAD and ======= lines, keep only >>>>>>> branch-name content
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n/g, '');
-    content = content.replace(/>>>>>>> [^\n]*\n/g, '');
+    // Remove and
+    content = content.replace(/[\s\S]*?
     
     // Write the resolved content back
     fs.writeFileSync(filePath, content);

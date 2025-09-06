@@ -44,7 +44,6 @@ const TalentCardComponent = ({
     }
   },
 
-
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
 

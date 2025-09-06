@@ -89,7 +89,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
     return 'from-cyan-500 to-blue-500';
   };
 
-  
     >
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>

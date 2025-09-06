@@ -16,9 +16,7 @@ export function formatCurrency(amount: number, currency = "USD"): string {
   }).format(amount);
 }
 
-
 };
 
 },
-
 

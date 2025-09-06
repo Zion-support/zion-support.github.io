@@ -41,7 +41,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
   }
 
-
     <Image
       src={src}
       alt={alt}

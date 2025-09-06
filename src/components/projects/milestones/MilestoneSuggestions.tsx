@@ -66,7 +66,6 @@ export function MilestoneSuggestions({
 }: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),
   const [ showSuggestions, setShowSuggestions ] = useState(false),
 
-
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`,

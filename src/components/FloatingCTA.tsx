@@ -38,7 +38,6 @@ export function FloatingCTA() {
   const [ isVisible, setIsVisible ] = useState(false),
   const [ isClosed, setIsClosed ] = useState(false),
 
-
   useEffect((,) => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY

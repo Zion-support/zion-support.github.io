@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default {
 
   plugin: s: {
@@ -7,11 +6,3 @@ export default {
   },
 
 };
-=======
-export default {;
-  plugins: {;
-  tailwindcss: {},
-    autoprefixer: {},,,
-},,,
-};
->>>>>>> origin/automation-fixes

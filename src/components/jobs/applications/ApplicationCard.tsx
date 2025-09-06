@@ -35,7 +35,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
   const [ expanded, setExpanded ] = useState(false),
 
-
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info('Resume download functionality will be implemented soon') }

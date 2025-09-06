@@ -32,28 +32,7 @@ declare module 'lovable-tagger' {;
   import { Plugin } from 'vite',;
   export function componentTagger(): Plugin;
 }
-<<<<<<< HEAD
-
 // Add Node.js globals
-<<<<<<< HEAD
-declare let __dirname: string,
-=======
-declare let __dirname: string;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-declare let process: {
-  env: {
-    [key: string]: string | undefined,
-    NODE_ENV: 'development' | 'production' | 'test',
-    PORT?: string
-=======
-;
-// Add Node.js globals;
-declare let __dirname: string,;
-declare let process: {;
-  env: {;
-    [key: string]: string | undefined,;
-    NODE_ENV: 'development' | 'production' | 'test';
-    PORT?: string;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
   }
 };

@@ -260,7 +260,6 @@ export function ValidatedFormField({
     )
   }
 
-  
       render={() => (
         <FormItem>
           <FormLabel className='text-sm font-medium'>

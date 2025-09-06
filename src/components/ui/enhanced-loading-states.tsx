@@ -392,7 +392,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     )
   }
 
-  
     >
       {loadTime && (
         <Badge variant='outline' className={getPerformanceColor(loadTime)}>

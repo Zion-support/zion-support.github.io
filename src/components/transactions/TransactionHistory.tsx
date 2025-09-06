@@ -39,7 +39,6 @@ export function TransactionHistory() {
       
     }, 
 
-
               const isClient = user?.id === transaction.user_id;              const isPending =
                 transaction.status === 'pending' || transaction.status === 'in_escrow'
               const isInEscrow = transaction.in_escrow

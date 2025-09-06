@@ -159,7 +159,6 @@ export default function MarketPricing2026() {
       allServices.reduce((sum, service) => sum + service.rating, 0) /
       allServices.length,
 
-  
     >
       <div className='min-h-screen'>
         <Head>

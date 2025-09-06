@@ -89,12 +89,8 @@ module.exports = {;
       time: true
     }
   ]
-<<<<<<< HEAD
 },
 export default {
-=======
-},export default {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   apps: [
     {
       name: 'bolt-zion-app',

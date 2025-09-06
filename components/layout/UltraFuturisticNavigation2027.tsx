@@ -695,7 +695,6 @@ export default function UltraFuturisticNavigation2027() {
     { name: 'Contact', href: '/contact', icon: <Mail className='w-4 h-4' /> },
   ];
 
-  
     >
       {/* Animated Background */}
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse' />

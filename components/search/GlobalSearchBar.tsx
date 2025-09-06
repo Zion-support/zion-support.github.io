@@ -69,7 +69,6 @@ export default function GlobalSearchBar() {
     rec.start();
   };
 
-  
     >
       <input
         value={query}

@@ -41,7 +41,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
     }
   };
 
-  
     >
       {children}
     </motion.div>

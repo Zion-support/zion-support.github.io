@@ -1,6 +1,5 @@
 
 
-
         shipping_address: details?.address}),
 
       const sessionId = data.sessionId as string | undefined

@@ -116,7 +116,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
     }),
   };
 
-  
     >
       {/* Holographic glow effect */}
       <motion.div

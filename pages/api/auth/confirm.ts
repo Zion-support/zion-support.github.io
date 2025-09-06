@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -9,15 +8,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   
   // TODO: Implement confirmation logic here
   res.status(200).json({ message: 'Confirm endpoint placeholder' })
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET' && req.method !== 'POST') {
-    res.status(405).end();
-    return;
-  }
-  
-  // TODO: Implement confirmation logic here
-  res.status(200).json({ message: 'Confirm endpoint placeholder' });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
 } 

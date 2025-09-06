@@ -21,7 +21,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   const [ message, setMessage ] = useState(''),
   const inputRef = useRef<HTMLTextAreaElement>(null),
 
-
   useEffect(() => {    // Focus input when component mounts
     inputRef.current?.focus() }, [])
     inputRef.current?.focus()

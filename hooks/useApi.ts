@@ -45,7 +45,6 @@ export function useApi<T>(url: string, options?: RequestInit) {
 
   return state;
 }
-<<<<<<< HEAD
 };
 
 interface UseApiProps {
@@ -53,9 +52,6 @@ interface UseApiProps {
 }
 
 interface UseApiOptions {
-=======
-};interface UseApiOptions {
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   immediate?: boolean;
   onSuccess?: (data: any) => void;
   onError?: (error: any) => void}
@@ -95,45 +91,4 @@ export default function UseApi({ }: UseApiProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
-}
-
-export function useApi<T>(
-  apiCall: () => Promise<T>,
-  options: UseApiOptions = {}
-): ApiState<T> & { refetch: () => void } {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const fetchData = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-    const result = await apiCall(),
-    setData(result)
-  } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  }, [apiCall]);
-
-  useEffect(() => {
-    if (options.immediate !== false) {
-      fetchData();
-    }
-  }, [fetchData, options.immediate]);
-
-
-    fetchData();
-  }, [url, options]);
-
-  return state;
-
-}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e

@@ -88,7 +88,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
       Math.max(0, maxPortfolioItems)
     );
 
-    
       >
         <div className='p-8'>
           {/* Header */}

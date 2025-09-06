@@ -198,8 +198,6 @@ if (typeof BroadcastChannel === 'undefined') {;
 if (typeof window.scrollTo === 'undefined') {;
   window.scrollTo = jest.fn();
 }
-<<<<<<< HEAD
-
 // Mock axios.create to return axios itself
 import axios from 'axios',
 // @ts-ignore
@@ -270,73 +268,6 @@ jest.mock('@/context/auth/AuthProvider', () => {
     __esModule: true,
     AuthProvider,
     default: AuthProvider,
-=======
-;
-// Mock axios.create to return axios itself;
-import axios from 'axios',;
-// @ts-ignore;
-axios.create = jest.fn(() => axios),;
-// -----------------------------;
-// Vitest Compatibility Layer for Jest;
-// -----------------------------;
-// Some test files were originally written for Vitest and import utilities from 'vitest'.;
-// To keep migrating gradually while still running the Jest suite successfully, we create;
-// a lightweight shim that re-maps the most common Vitest helpers to their Jest equivalents.;
-// This avoids individual test failures like "Vitest cannot be imported in a CommonJS module".;
-//;
-// NOTE: When the test suite is fully migrated to Vitest this shim can be removed together;
-// with the associated `moduleNameMapper` entry in `jest.config.cjs`.;
-// ---------------------------------------------------------------------------;
-jest.mock('vitest', () => {;
-  const jestFn = (...args: unknown[]) => jest.fn(...(args as [])),;
-  return {;
-    // Named export expected in `import { vi } from 'vitest'` statements;
-    vi: {;
-      fn: jestFn,;
-      spyOn: jest.spyOn.bind(jest),;
-      mock: jest.mock.bind(jest),;
-      clearAllMocks: jest.clearAllMocks,;
-      resetAllMocks: jest.resetAllMocks,;
-      restoreAllMocks: jest.restoreAllMocks,;
-      useFakeTimers: jest.useFakeTimers.bind(jest),;
-      useRealTimers: jest.useRealTimers.bind(jest),;
-      runAllTimers: jest.runAllTimers.bind(jest),;
-      advanceTimersByTime: jest.advanceTimersByTime.bind(jest),;
-      // Provide a simple implementation of `import.meta` mocking helpers;
-      // frequently used in Vitest examples;
-      // (no-op implementations because Jest already handles env vars via `process.env`).;
-      importActual: jest.requireActual,;
-      mockResolvedValue: <T = unknown>(value: T) => jest.fn().mockResolvedValue(value),;
-      mockRejectedValue: <T = unknown>(value: T) => jest.fn().mockRejectedValue(value)},;
-    // Re-export common testing globals so that `import { expect, test } from 'vitest'`;
-    // continues to work inside the Jest environment.;
-    describe: global.describe,;
-    it: global.it,;
-    test: global.test,;
-    expect: expect, // Use expect from jest-dom/jest instead of global.expect;
-    beforeEach: global.beforeEach,;
-    afterEach: global.afterEach,;
-    beforeAll: global.beforeAll,;
-    afterAll: global.afterAll} as unknown as Record<string unknown>;
-}),;
-// -----------------------------;
-// Lightweight Context & Redux mocks to avoid provider runtime errors;
-// -----------------------------;
-// Auth Context;
-jest.mock('@/context/auth/AuthProvider', () => {;
-  const useAuth = () => ({;
-    isAuthenticated: false,;
-    isLoading: false,;
-    user: null,;
-    login: jest.fn(),;
-    logout: jest.fn(),;
-    signUp: jest.fn()}),;
-  const AuthProvider = ({ children }: any) => children,;
-  return {;
-    __esModule: true,;
-    AuthProvider,;
-    default: AuthProvider,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
     useAuth}
 }),;
 // Analytics Context;

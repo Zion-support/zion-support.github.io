@@ -56,7 +56,6 @@ export function SafeImage({
     )
   }
 
-  
     />
   );        aria-label={alt}
       >
@@ -65,7 +64,6 @@ export function SafeImage({
     )
   }
 
-  
     />
   ); return (
     <Image

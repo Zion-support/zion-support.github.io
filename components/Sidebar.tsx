@@ -80,7 +80,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             onClick={onClose}
           />
 
-          
           <motion.div
             initial={{ x: -300 }}
             animate={{ x: 0 }}
