@@ -4,10 +4,10 @@ import { Menu, X } from 'lucide-react'
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navigation = [
-    { name: 'Home', href: '/' }
-    { name: 'About', href: '/about' }
-    { name: 'Services', href: '/services' }
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
   ]
   return (
