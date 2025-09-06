@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
-=======
-<<<<<<< HEAD
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-=======
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
->>>>>>> origin/main
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -43,10 +32,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
-<<<<<<< HEAD
-
 })
-
-=======
-});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-8b20
