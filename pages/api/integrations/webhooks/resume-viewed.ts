@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 try {
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { resume } = req && req.body as { resume?: Record<string, any> };
   if (!resume) return res && res.status(400).json({ error: "Missing resume payload" });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -21,7 +14,7 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   const { resume } = req.body as { resume?: Record<string, any> }
   if (!resume) return res.status(400).json({ error: "Missing resume payload" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   const state = readState();
   const crms = state && state.connections.filter(
     (c) =>
@@ -68,8 +61,7 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
-<<<<<<< HEAD
-  res && res.status(200).json({ ok: true, results });
+res && res.status(200).json({ ok: true, results });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
@@ -103,56 +95,5 @@ results.push({ providerId: conn.providerId, ok: true })
   }
   res.status (200).json ({ ok: true, results });
 }
-=======
-<<<<<<< HEAD
-  res.status(200).json({ ok: true, results });
 }
-=======
-res.status(200).json({ ok: true, results });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../../lib/integrations/fileStore';
-import { crm } from '../../../../lib/integrations/connectors';
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    const { log } = await crm.addEmailTouchpoint(conn, { subject: 'Resume viewed', resumeId: resume.id });
-    writeState(s => s.logs.push(log));
-    results.push({ providerId: conn.providerId, ok: true });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  res.status(200).json({ ok: true, results });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

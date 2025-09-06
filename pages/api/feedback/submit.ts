@@ -119,7 +119,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
     id: responseId,
     rating,
-comment: String(comment || "").slice(0, 2000),
+    comment: String(comment || "").slice(0, 2000),
     pagePath: String(pagePath || ""),
     aiModel: String(aiModel || ""),
     userAgent: req.headers["user-agent"] || "",

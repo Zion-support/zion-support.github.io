@@ -51,7 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 =======
   }
-const company = store.getCompanyById(companyId);
+  const company = store.getCompanyById(companyId);
   if (!company) return res.status(404).json({ error: "company_not_found" });
   return res.status(200).json(company.activity);
 }

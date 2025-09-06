@@ -1,7 +1,5 @@
-
-<<<<<<< HEAD
 import React from "react";
-<<<<<<< HEAD
+
 import {
   Card
   CardContent
@@ -26,34 +24,11 @@ export function HelpArticleList({
   if (!category) {
     return <div>Category not found</div>;
   }
-=======
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HELP_CATEGORIES} from "./help-content";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { HELP_CATEGORIES } from "./help-content",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
 
-export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
-  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
-  
-  if (!category) {
-    return <div>Category not found</div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
@@ -67,32 +42,51 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { HELP_CATEGORIES } from "./help-content";
+interface HelpArticleListProps {
+  categoryId: string;
+  onArticleSelect: (articleId: string) => void;
+  searchQuery: string;
+}
+
+export function HelpArticleList({
+  categoryId,
+  onArticleSelect,
+  searchQuery,
+}: HelpArticleListProps) {
+  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
+
+  if (!category) {
+    return <div>Category not found</div>;
+  }
+
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
-          article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
           article.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
-<<<<<<< HEAD
-    : category.articles;
-=======
-    : category.articles,
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+: category.articles;
+
   return (
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
+
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>
@@ -126,39 +120,13 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric"
+year: "numeric"
     month: "long"
     day: "numeric"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   });
 }
 
-=======
-  })
-=======
-  })
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-;
-function formatDate(date: string): string {;
-  return new Date(date).toLocaleDateString("en-US", {;
-    year: "numeric";
-    month: "long";
-    day: "numeric";
-  });
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

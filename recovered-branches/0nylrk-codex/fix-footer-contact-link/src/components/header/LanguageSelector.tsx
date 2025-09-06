@@ -1,32 +1,20 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 import {
-<<<<<<< HEAD
-  DropdownMenu
+DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-=======
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-<<<<<<< HEAD
 export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from 'react',
 import { useTranslation } from 'react-i18next',
@@ -40,15 +28,9 @@ import {
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
 
 export function LanguageSelector() {
-<<<<<<< HEAD
-  const { t } = useTranslation();
+const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-=======
-  const { t } = useTranslation(),
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -61,19 +43,11 @@ export function LanguageSelector() {
         {supportedLanguages.map((lang) => (
           <DropdownMenuItem
             key={lang.code}
-<<<<<<< HEAD
-            className={`cursor-pointer ${
+className={`cursor-pointer ${
               currentLanguage === lang.code
                 ? "bg-zion-purple/20 text-zion-cyan"
                 : "text-white hover:bg-zion-purple/10"
-=======
-            className={`cursor-pointer ${;
-              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -83,16 +57,8 @@ export function LanguageSelector() {
             </div>
           </DropdownMenuItem>
         ))}
-<<<<<<< HEAD
-      </DropdownMenuContent>
+</DropdownMenuContent>
     </DropdownMenu>
-=======
-      </DropdownMenuContent>;
-    </DropdownMenu>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   );
 }

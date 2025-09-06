@@ -1,12 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  AlertDialog
+AlertDialog
   AlertDialogAction
   AlertDialogCancel
   AlertDialogContent
@@ -17,68 +15,29 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
 import { PortfolioProject } from "@/types/resume";
-
-=======
-import {useState} from 'react';
-import {Card, CardContent, CardFooter} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Badge} from '@/components/ui/badge';
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
-import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
-import {PortfolioProject} from '@/types/resume';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 }
-<<<<<<< HEAD
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-=======
-
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
-<<<<<<< HEAD
-      onDelete(project.id);
+onDelete(project.id);
     }
     setDeleteDialogOpen(false);
   }
-
-=======
-      onDelete(project.id)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from 'react',;
-import { Card, CardContent, CardFooter } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',;
-import { PortfolioProject } from '@/types/resume',;
-interface ProjectCardProps {;
-  project: PortfolioProject,;
-  onEdit: (project: PortfolioProject) => void,;
-  onDelete: (projectId: string) => void;
-}
-;
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-  const handleDelete = () => {;
-    if (project.id) {;
-      onDelete(project.id);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     setDeleteDialogOpen(false)
   },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false);
+  };
+
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -94,7 +53,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
           </div>
         )}
       </div>
-      <CardContent className="flex-grow pt-6">
+<CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
           {project.description && (
@@ -102,27 +61,20 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               {project.description}
             </p>
           )}
+
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
-<<<<<<< HEAD
-                </Badge>
+</Badge>
               ))}
             </div>
-=======
-                </Badge>;
-              ))}
-            </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           )}
         </div>
       </CardContent>
+
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
           {project.github_url && (
@@ -136,6 +88,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
               </Button>
             </Link>
           )}
+
           {project.demo_url && (
             <a
               href={project.demo_url}
@@ -148,6 +101,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
             </Link>
           )}
         </div>
+
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>
             <Edit className="h-4 w-4" />
@@ -161,6 +115,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
           </Button>
         </div>
       </CardFooter>
+
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -182,11 +137,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-<<<<<<< HEAD
+
   );
 }
-=======
-  )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

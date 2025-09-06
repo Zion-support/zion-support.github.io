@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const id = String(req && req.query.id || "");
   if (id) {
     const updates = readJsonFile("updates && updates.json", [] as any[]);
@@ -48,33 +47,23 @@ if ( {) {
 }
       updates[idx].opens = (updates[idx].opens || 0) + 1;
       writeJsonFile ("updates.json", updates);
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const id = String(req.query.id |"");
-=======
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const id = String(req.query.id || "");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   if (id) {
     const updates = readJsonFile("updates.json", [] as any[]);
     const idx = updates.findIndex((x: any) => x.id === id);
     if (idx >= 0) {
       updates[idx].opens = (updates[idx].opens |0) + 1;
       writeJsonFile("updates.json", updates);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     }
   }
-  const pixel = Buffer.from (
+const pixel = Buffer.from (
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
   );
@@ -88,15 +77,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.set_header (
     "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",
   );
-<<<<<<< HEAD
-  res.status (200).send (pixel);
+res.status (200).send (pixel);
 
 }
-=======
-  res.status(200).send(pixel);
-}
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -29,11 +28,6 @@ export default function UseTokensModal(): any ({;
   serviceId,;
   defaultType,;
 }: {;
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
 export type RedemptionType =
@@ -41,25 +35,16 @@ export type RedemptionType =
   | "promote_listing";
   | "premium_support";
 export default function UseTokensModal({
-<<<<<<< HEAD
-  isOpen
+isOpen
   onClose
   serviceId
   defaultType
 }: {
-=======
-  isOpen,
-  onClose,
-  serviceId,
-  defaultType,
-}: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
   defaultType?: RedemptionType;
-<<<<<<< HEAD
 }) {;
   const [account, setAccount] = useState<string | null>(null);
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
@@ -76,8 +61,6 @@ defaultType
   onClose: () => void,
   serviceId?: string;
   defaultType?: RedemptionType
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }) {
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
@@ -163,10 +146,7 @@ export default function UseTokensModal ({
       setIsSubmitting(false);
     }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center">
@@ -339,9 +319,8 @@ if (return null) {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
+);
+
 }
     </div>);
         </div>
@@ -350,17 +329,7 @@ if (return null) {
   )
 
 }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-);
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
+
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

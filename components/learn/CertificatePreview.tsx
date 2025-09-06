@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -116,31 +115,17 @@ function CertificatePreview() {
   )
 
 }
-=======
-<<<<<<< HEAD
-=======
-import React from "react";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import React from "react";
 export default function CertificatePreview({
-<<<<<<< HEAD
-  courseId
+courseId
   userId = "demo-user"
 }: {
-=======
-  courseId,
-  userId = "demo-user",
-}: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   courseId: string;
   userId?: string;
 }) {
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>
@@ -157,15 +142,8 @@ export default function CertificatePreview({
         Download PDF
       </a>
     </div>
-<<<<<<< HEAD
-  );
-=======
-<<<<<<< HEAD
 );
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">
@@ -184,9 +162,5 @@ export default function CertificatePreview({
       </a>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

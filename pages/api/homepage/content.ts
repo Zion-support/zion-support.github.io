@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
     );
     if (!response && response.ok) return null;
@@ -69,17 +68,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message || 'Internal error' })
   }
   }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
-import path from "path";
-async function fetchFromGitHub() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
     const localPath = path && path.join(process && process.cwd(), "data", "homepage && homepage.json");
     if (fs && fs.existsSync(localPath)) {
@@ -93,17 +81,7 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-    return res.status (405).json ({ error: "Method not allowed" });
-=======
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "GET") {;
-    return res.status(405).json({ error: "Method not allowed" });
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+return res.status (405).json ({ error: "Method not allowed" });
   }
   try {
     const local_path = path.join (process.cwd (), "data", "homepage.json");
@@ -116,8 +94,7 @@ export default async function handler(
   } catch {
     // fall back to remote;
   }
-<<<<<<< HEAD
-  if (remote) return res && res.status(200).json(remote);
+if (remote) return res && res.status(200).json(remote);
   return res && res.status(200).json(null);
 }
   const remote = await fetchFromGitHub ();
@@ -126,15 +103,7 @@ export default async function handler(
 }
   return res.status (200).json (null);
 }
-=======
-  const remote = await fetchFromGitHub();
-  if (remote) return res.status(200).json(remote);
-  return res.status(200).json(null);
-<<<<<<< HEAD
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -245,11 +214,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

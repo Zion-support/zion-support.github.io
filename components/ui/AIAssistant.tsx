@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
@@ -20,13 +19,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
-<<<<<<< HEAD
-=======
-import React, { useCallback, useEffect, useMemo, useState } from "react";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
   buttonLabel?: string;
@@ -35,7 +28,6 @@ export type AIAssistantProps = {;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-<<<<<<< HEAD
 };
 export default function AIAssistant({
   buttonLabel = 'Generate with AI',
@@ -45,27 +37,7 @@ export default function AIAssistant({
   onAccept,
 authorizationToken
 }: AIAssistantProps) {
-=======
-}
-export default function AIAssistant({
-<<<<<<< HEAD
-  buttonLabel = "Generate with AI"
-  title = "AI Writing Assistant"
-  defaultPrompt
-  systemPrompt
-  onAccept
-  authorizationToken
-}: AIAssistantProps) {
-=======
-  buttonLabel = "Generate with AI",
-  title = "AI Writing Assistant",
-  defaultPrompt,
-  systemPrompt,
-  onAccept,
-  authorizationToken,
-}: AIAssistantProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -73,11 +45,7 @@ export default function AIAssistant({
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
-<<<<<<< HEAD
-    setPrompt(defaultPrompt)
-=======
-    setPrompt(defaultPrompt);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+setPrompt(defaultPrompt)
   }, [defaultPrompt]);
   const callOperator = useCallback(async () => {
     setLoading(true);
@@ -86,7 +54,6 @@ export default function AIAssistant({
       const res = await fetch("/api/ai/operator", {
         method: "POST"
         headers: {
-<<<<<<< HEAD
 import React, { useCallback, useEffect, useMemo, useState } from './react';
 export type AIAssistantProps = {
   button_label?: string;
@@ -123,19 +90,12 @@ function AIAssistant() {
           ...(authorization_token;
             ? { Authorization: `Bearer ${authorization_token}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
-=======
-          "Content-Type": "application/json"
-          ...(authorizationToken
-            ? { Authorization: `Bearer ${authorizationToken}` }
-            : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               ? {
                   Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}`
                 }
               : {})
         }
-<<<<<<< HEAD
-          'Content-Type': 'application/json',
+'Content-Type': 'application/json',
           ...(authorizationToken
             ? { Authorization: `Bearer ${authorizationToken}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
@@ -233,32 +193,8 @@ if ( {) {
     } catch {}
 }, [output]);
   const onOpen = useCallback(() => {;
-=======
-        body: JSON.stringify({ prompt, system: systemPrompt })
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data?.error |"Failed to generate");
-      }
-      setOutput(String(data.text |""));
-      setIsEditing(false);
-    } catch (e: any) {
-      setError(e.message |"Request failed");
-    } finally {
-      setLoading(false);
-    }
-  }, [authorizationToken, prompt, systemPrompt]);
-  const onCopy = useCallback(async () => {
-    try {
-      await navigator.clipboard.writeText(output);
-    } catch {}
-  }, [output]);
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const onOpen = useCallback(() => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
@@ -298,31 +234,17 @@ if ( {) {
               <div>;
                 <label
                   className="block text-xs font-medium mb-1"
-<<<<<<< HEAD
-                  htmlFor="input-Operator prompt">;
+htmlFor="input-Operator prompt">;
                   Operator prompt;
                 </label>;
-=======
-                  htmlFor="input-Operator prompt"
-                >
-                  Operator prompt
-                </label>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e && e.target.value)}
                   rows={4}
-<<<<<<< HEAD
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
+className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
                 />;
               </div>;
               <div className="flex items-center gap-2">;
-=======
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
-                />
-              </div>
-              <div className="flex items-center gap-2">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <button
                   onClick={callOperator}
                   disabled={loading}
@@ -352,8 +274,7 @@ if ( {) {
                     (onAccept(output), onClose());
                   }}
                   disabled={!canAccept}
-<<<<<<< HEAD
-                  className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
+className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
 ;
   const on_open = useCallback (() => {
     setIsOpen (true);
@@ -444,35 +365,19 @@ if ( {) {
               {error && (
                 <div className="text-red-600 text-sm">{error}</div>
               )}
-=======
-                  className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60"
-                >
-                  Accept
-                </button>
-              </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
                 <label
                   className="block text-xs font-medium mb-1"
-<<<<<<< HEAD
-                  htmlFor="input-Output (markdown)">;
+htmlFor="input-Output (markdown)">;
                   Output (markdown);
                 </label>;
                 {isEditing ? (;
-=======
-                  htmlFor="input-Output (markdown)"
-                >
-                  Output (markdown)
-                </label>
-                {isEditing ? (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <textarea
                     value={output}
                     onChange={(e) => setOutput(e && e.target.value)}
                     rows={12}
-<<<<<<< HEAD
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
+className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
                   />;
                 ) : (;
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">;
@@ -488,14 +393,6 @@ if ( {) {
   );
 }
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
-=======
-                    className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
-                  />
-                ) : (
-                  <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">
-                    {output |"No content yet. Click Generate."}
-                  </pre>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 )}
               </div>
             </div>
@@ -503,7 +400,6 @@ if ( {) {
         </div>
       )}
     </>
-<<<<<<< HEAD
 );
 }
               {error && <div className="text - red - 600 text - sm">{error}</div>}
@@ -530,11 +426,3 @@ if ( {) {
         </div>)}
     </>);
 }
-=======
-  );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

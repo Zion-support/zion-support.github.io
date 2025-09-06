@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 try {
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
   const { job } = req && req.body as { job?: Record<string, any> };
   if (!job) return res && res.status(400).json({ error: "Missing job payload" });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -21,7 +14,7 @@ export default async function handler(
     return res.status(405).json({ error: "Method not allowed" });
   const { job } = req.body as { job?: Record<string, any> }
   if (!job) return res.status(400).json({ error: "Missing job payload" });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   const state = readState();
   const crms = state && state.connections.filter(
     (c) =>
@@ -91,10 +84,9 @@ results.push({ providerId: conn.providerId, ok: true })
       payload: { job },
     });
   });
-  res && res.status(200).json({ ok: true, results });
+res && res.status(200).json({ ok: true, results });
 }
-<<<<<<< HEAD
-  writeState(s => {
+writeState(s => {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
   });
   res.status(200).json({ ok: true, results })
@@ -123,13 +115,7 @@ results.push({ providerId: conn.providerId, ok: true })
 ;
   res.status (200).json ({ ok: true, results });
 }
-=======
 
-<<<<<<< HEAD
-=======
-res.status(200).json({ ok: true, results });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -173,10 +159,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

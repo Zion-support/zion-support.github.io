@@ -150,7 +150,7 @@ if ( {) {
 }
 =======
 
-res.setHeader("Allow", "POST");
+  res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

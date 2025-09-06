@@ -1,24 +1,8 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {formatDistanceToNow} from "date-fns";
-import {Star, Flag, User} from "lucide-react";
-import {Review} from "@/types/reviews";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-import {Textarea} from "@/components/ui/textarea";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { Star, Flag, User } from "lucide-react",
 import { Review } from "@/types/reviews",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -33,40 +17,22 @@ import {
 } from "@/components/ui/dialog";
 
 import { Textarea } from "@/components/ui/textarea";
-=======
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog",
+DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function ReviewCard({ review, onReport }: ReviewCardProps) {;
-  const [reportReason, setReportReason] = useState("");
-  const [isReporting, setIsReporting] = useState(false);
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
-<<<<<<< HEAD
-  const [reportReason, setReportReason] = useState("");
+const [reportReason, setReportReason] = useState("");
   const [isReporting, setIsReporting] = useState(false);
   const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
 
@@ -79,14 +45,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       setReportReason("");
       setIsReportDialogOpen(false);
     }
-  }
+}
   const renderStars = (rating?: number) => {
     if (!rating) return null;
-=======
-  const [reportReason, setReportReason] = useState(""),
-  const [isReporting, setIsReporting] = useState(false),
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const handleReport = async () => {
     if (!reportReason.trim()) return,
@@ -103,8 +64,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
   
   const renderStars = (rating?: number) => {
     if (!rating) return null,
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  };
+
+  const renderStars = (rating?: number) => {
+    if (!rating) return null;
+
     return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
@@ -114,29 +79,16 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           />
         ))}
       </div>
-<<<<<<< HEAD
-    );
+);
   }
-=======
-    )
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-<<<<<<< HEAD
-      .substring(0, 2);
+.substring(0, 2);
   }
-
-=======
-      .substring(0, 2)
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -156,145 +108,42 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 />
               ) : (
                 <AvatarFallback>
-<<<<<<< HEAD
-                  {review.reviewer_profile?.display_name
+{review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : "??"}
                 </AvatarFallback>
-=======
-                  {review.reviewer_profile?.display_name ? 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from "react",;
-import { formatDistanceToNow } from "date-fns",;
-import { Star, Flag, User } from "lucide-react",;
-import { Review } from "@/types/reviews",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogFooter,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogTrigger} from "@/components/ui/dialog",;
-import { Textarea } from "@/components/ui/textarea",;
-interface ReviewCardProps {;
-  review: Review,;
-  onReport: (reviewId: string, reason: string) => Promise<boolean>;
-}
-;
-export function ReviewCard({ review, onReport }: ReviewCardProps) {;
-  const [reportReason, setReportReason] = useState(""),;
-  const [isReporting, setIsReporting] = useState(false),;
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),;
-  const handleReport = async () => {;
-    if (!reportReason.trim()) return,;
-    setIsReporting(true),;
-    const success = await onReport(review.id, reportReason),;
-    setIsReporting(false),;
-    if (success) {;
-      setReportReason(""),;
-      setIsReportDialogOpen(false);
-    }
-  },;
-  const renderStars = (rating?: number) => {;
-    if (!rating) return null,;
-    return (;
-      <div className="flex">;
-        {[1, 2, 3, 4, 5].map((star) => (;
-          <Star;
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />;
-        ))}
-      </div>;
-    );
-  };
-  const getInitials = (name: string) => {;
-    return name;
-      .split(" ");
-      .map((n) => n[0]);
-      .join("");
-      .toUpperCase();
-      .substring(0, 2);
-  };
-  return (;
-    <div className="border rounded-lg p-4 bg-card">;
-      <div className="flex justify-between items-start mb-3">;
-        <div className="flex items-center gap-3">;
-          {review.is_anonymous ? (;
-            <Avatar>;
-              <AvatarFallback className="bg-muted">;
-                <User className="h-4 w-4" />;
-              </AvatarFallback>;
-            </Avatar>;
-          ) : (;
-            <Avatar>;
-              {review.reviewer_profile?.avatar_url ? (;
-                <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />;
-              ) : (;
-                <AvatarFallback>;
-                  {review.reviewer_profile?.display_name ?;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     getInitials(review.reviewer_profile.display_name) : "??"}
                 </AvatarFallback>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               )}
             </Avatar>
           )}
-<<<<<<< HEAD
-=======
-          
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           <div>
             <div className="font-medium">
               {review.is_anonymous
                 ? "Anonymous"
-                : review.reviewer_profile?.display_name |"User"}
+: review.reviewer_profile?.display_name |"User"}
             </div>
             <div className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-              {formatDistanceToNow(new Date(review.created_at), {
+{formatDistanceToNow(new Date(review.created_at), {
                 addSuffix: true
               })}
             </div>
           </div>
-<<<<<<< HEAD
-=======
-              {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
-            </div>;
-          </div>;
-        </div>;
-        <div className="flex">;
-=======
-        </div>
-        <div className="flex">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           {renderStars(review.rating)}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         </div>
         <div className="flex">{renderStars(review.rating)}</div>
       </div>
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
-<<<<<<< HEAD
-      {(review.communication_rating |
+{(review.communication_rating |
         review.quality_rating |
         review.timeliness_rating |
         review.would_work_again !== undefined) && (
-=======
-      {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -305,6 +154,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>
               </Badge>
             )}
+
             {review.quality_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
@@ -313,6 +163,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>
               </Badge>
             )}
+
             {review.timeliness_rating && (
               <Badge variant="outline" className="flex gap-1 items-center">
                 Timeliness
@@ -321,6 +172,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 </span>
               </Badge>
             )}
+
             {review.would_work_again !== undefined && (
               <Badge
                 variant={review.would_work_again ? "default" : "secondary"}
@@ -331,23 +183,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   : "Would not work again"}
               </Badge>
             )}
-<<<<<<< HEAD
-          </div>
+</div>
         </div>
-<<<<<<< HEAD
+
       )}
-=======
-          </div>;
-        </div>;
-=======
-=======
-          </div>;
-        </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       )}
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -360,7 +202,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-                If you believe this review violates our community guidelines
+If you believe this review violates our community guidelines
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -370,6 +212,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               onChange={(e) => setReportReason(e.target.value)}
               className="min-h-[100px]"
             />
+
             <DialogFooter>
               <Button
                 variant="outline"
@@ -379,7 +222,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               </Button>
               <Button
                 onClick={handleReport}
-                disabled={!reportReason.trim() |isReporting}
+disabled={!reportReason.trim() |isReporting}
               >
                 {isReporting ? "Submitting..." : "Submit Report"}
               </Button>
@@ -388,18 +231,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </Dialog>
       </div>
     </div>
-<<<<<<< HEAD
+
   );
 }
-=======
-  )
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

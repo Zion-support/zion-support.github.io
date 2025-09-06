@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -41,16 +40,10 @@ import {;
   Bot,;
   Factory,;
   Car,;
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-<<<<<<< HEAD
-  Menu
+Menu
   X
   ChevronDown
   Search
@@ -71,48 +64,19 @@ import {
   Bot
   Factory
   Car
-=======
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  User,
-  Settings,
-  LogOut,
-  Bell,
-  Globe,
-  Zap,
-  Brain,
-  Rocket,
-  Dna,
-  DollarSign,
-  Lock,
-  Wifi,
-  Truck,
-  Gamepad2,
-  Bot,
-  Factory,
-  Car,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
 }
-<<<<<<< HEAD
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
   className = "",;
 }) => {;
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
 }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -130,8 +94,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
   const navigationItems = [
     {
-<<<<<<< HEAD
-      name: 'Services',
+name: 'Services',
       href: '/services',
 icon: <Brain className="w-4 h-4" />,
       dropdown: [
@@ -171,85 +134,6 @@ icon: <Brain className="w-4 h-4" />,
         { name: 'Government Solutions', href: '/solutions?type=government' },
         { name: 'Healthcare Solutions', href: '/solutions?type=healthcare' },
         { name: 'Financial Solutions', href: '/solutions?type=financial' }
-=======
-      name: "Services"
-      href: "/services"
-      icon: <Brain className="w-4 h-4" />
-      dropdown: [
-        {
-          name: "AI & Machine Learning"
-          href: "/services?category=ai-ml"
-          icon: <Brain className="w-4 h-4" />
-        }
-        {
-          name: "Quantum Computing"
-          href: "/services?category=quantum"
-          icon: <Rocket className="w-4 h-4" />
-        }
-        {
-          name: "Space Technology"
-          href: "/services?category=space"
-          icon: <Globe className="w-4 h-4" />
-        }
-        {
-          name: "Biotech & Healthcare"
-          href: "/services?category=biotech"
-          icon: <Dna className="w-4 h-4" />
-        }
-        {
-          name: "Financial Services"
-          href: "/services?category=finance"
-          icon: <DollarSign className="w-4 h-4" />
-        }
-        {
-          name: "Cybersecurity"
-          href: "/services?category=security"
-          icon: <Lock className="w-4 h-4" />
-        }
-        {
-          name: "IoT & Smart Devices"
-          href: "/services?category=iot"
-          icon: <Wifi className="w-4 h-4" />
-        }
-        {
-          name: "Logistics & Supply Chain"
-          href: "/services?category=logistics"
-          icon: <Truck className="w-4 h-4" />
-        }
-        {
-          name: "Metaverse & Gaming"
-          href: "/services?category=metaverse"
-          icon: <Gamepad2 className="w-4 h-4" />
-        }
-        {
-          name: "Robotics & Automation"
-          href: "/services?category=robotics"
-          icon: <Bot className="w-4 h-4" />
-        }
-        {
-          name: "Manufacturing"
-          href: "/services?category=manufacturing"
-          icon: <Factory className="w-4 h-4" />
-        }
-        {
-          name: "Autonomous Vehicles"
-          href: "/services?category=vehicles"
-          icon: <Car className="w-4 h-4" />
-        }
-      ]
-      hasDropdown: true
-      dropdownItems: [
-<<<<<<< HEAD
-        { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
-        { name: "Quantum Computing", href: "/services?category=quantum" }
-        { name: "Space Technology", href: "/services?category=space" }
-        { name: "Biotech & Healthcare", href: "/services?category=biotech" }
-        { name: "Financial Services", href: "/services?category=finance" }
-        { name: "Cybersecurity", href: "/services?category=security" }
-        { name: "Edge Computing", href: "/services?category=edge" }
-        { name: "Blockchain", href: "/services?category=blockchain" }
-        { name: "View All Services", href: "/services" }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       ]
 import React, { useState, useEffect } from './react';
 import { motion, AnimatePresence  } from './framer-motion';
@@ -291,7 +175,6 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
     const handle_scroll = () =>: any {
       setIsScrolled (window.scroll_y > 20);
     }
-<<<<<<< HEAD
 ;
     window.addEventListener ("scroll", handle_scroll);
     return () => window.removeEventListener ("scroll", handle_scroll);
@@ -400,20 +283,6 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
     website: "https://ziontechgroup.com",
-=======
-=======
-        { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
-        { name: "Quantum Computing", href: "/services?category=quantum" },
-        { name: "Space Technology", href: "/services?category=space" },
-        { name: "Biotech & Healthcare", href: "/services?category=biotech" },
-        { name: "Financial Services", href: "/services?category=finance" },
-        { name: "Cybersecurity", href: "/services?category=security" },
-        { name: "Edge Computing", href: "/services?category=edge" },
-        { name: "Blockchain", href: "/services?category=blockchain" },
-        { name: "View All Services", href: "/services" },
-      ],
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       name: "Solutions"
       href: "/solutions"
@@ -431,16 +300,13 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
     { name: "Blog", href: "/blog" }
     { name: "Contact", href: "/contact" }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     mobile: "+1 302 464 0950"
     email: "kleber@ziontechgroup.com"
     address: "364 E Main St STE 1008 Middletown DE 19709"
     website: "https://ziontechgroup.com"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   }
 ;
   return (
@@ -459,8 +325,7 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
             initial={{ opacity: 0, coordinate_x: -20 }}
             animate={{ opacity: 1, coordinate_x: 0 }}
             transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-            className="flex items - center space - x-3";
+className="flex items - center space - x-3";
           >;
             <Link href="/" className="flex items - center space - x-3 group">;
               <div className="relative">;
@@ -496,69 +361,6 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
                                 className="block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
                                 {dropdownItem && dropdownItem.name}
                               </Link>;
-=======
-            className="flex items-center space-x-3"
-          >
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
-              </div>
-              <div className="hidden sm:block">
-                <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                  Zion Tech Group
-                </div>
-                <div className="text-xs text-cyan-400">
-                  Revolutionary Technology
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative"
-                onMouseEnter={() =>
-                  item.hasDropdown && setActiveDropdown(item.name)
-                }
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                {item.hasDropdown ? (
-                  <div className="relative">
-                    <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">
-                      <span>{item.name}</span>
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-300 ${
-                          activeDropdown === item.name ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                    <AnimatePresence>
-                      {activeDropdown === item.name && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
-                        >
-                          <div className="p-2">
-                            {item.dropdownItems?.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.name}
-                                href={dropdownItem.href}
-                                className="block px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
-                              >
-                                {dropdownItem.name}
-                              </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             ))}
                           </div>;
                         </motion && motion.div>;
@@ -567,30 +369,16 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
                   </div>;
                 ) : (;
                   <Link
-<<<<<<< HEAD
-                    href={item && item.href}
+href={item && item.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2">;
                     {item && item.name}
                   </Link>;
-=======
-                    href={item.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                  >
-                    {item.name}
-                  </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 )}
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>;
+</div>;
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">;
-=======
-          </div>
-          {/* Right side actions */}
-          <div className="hidden lg:flex items-center space-x-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Search */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -655,8 +443,7 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
+transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
               <Search className="w-5 h-5" />;
             </motion && motion.button>;
@@ -676,20 +463,7 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
               <Bell className="w-5 h-5" />;
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />;
             </motion && motion.button>;
-=======
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
-            >
-              <Search className="w-5 h-5" />
-            </motion.button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Notifications */}
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
@@ -700,15 +474,7 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
               <Bell className="w-5 h-5" />
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -722,18 +488,12 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
             </motion && motion.div>;
           </div>;
           {/* Mobile menu button */}
-<<<<<<< HEAD
-          <motion&& motion.button
+<motion&& motion.button
             initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0 && 0.5, delay: 0 && 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-<<<<<<< HEAD
-            className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
+className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </motion && motion.button>;
@@ -743,26 +503,12 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-=======
-            className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </motion.button>
-        </div>
-      </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -784,45 +530,27 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
                   <Link
                     href={item && item.href}
                     onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
+className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2";
                   >;
                     {item && item.name}
                   </Link>;
                   {item && item.hasDropdown && item && item.dropdownItems && (;
                     <div className="ml-4 space-y-1">;
                       {item && item.dropdownItems.map((dropdownItem) => (;
-=======
-                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                  >
-                    {item.name}
-                  </Link>
-                  {item.hasDropdown && item.dropdownItems && (
-                    <div className="ml-4 space-y-1">
-                      {item.dropdownItems.map((dropdownItem) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <Link
                           key={dropdownItem && dropdownItem.name}
                           href={dropdownItem && dropdownItem.href}
                           onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm";
+className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm";
                         >;
                           {dropdownItem && dropdownItem.name}
                         </Link>;
-=======
-                          className="block text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 text-sm"
-                        >
-                          {dropdownItem.name}
-                        </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       ))}
                     </div>;
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
-              {/* Contact Info */}
+{/* Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20">;
                 <div className="space-y-2 text-sm text-gray-400">;
                   <div className="flex items-center space-x-2">;
@@ -945,11 +673,6 @@ const EnhancedNavigation: React.FC < EnhancedNavigationProps> = ({
 }
 export default EnhancedNavigation;
 ;
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20">
                 <div className="space-y-2 text-sm text-gray-400">
@@ -978,25 +701,10 @@ export default EnhancedNavigation;
         )}
       </AnimatePresence>
     </nav>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
+);
+
 }
 export default EnhancedNavigation;
-
-=======
 };
+export default EnhancedNavigation;
 
-export default EnhancedNavigation;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-);
-};
-<<<<<<< HEAD
-export default EnhancedNavigation;
-=======
-
-export default EnhancedNavigation;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

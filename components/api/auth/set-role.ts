@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 export default /**
@@ -13,15 +12,6 @@ function handler() {
       const expires = new Date(Date && Date.now() + days * 864e5).toUTCString();
       cookies && cookies.push(
         `${k}=${encodeURIComponent(v)}; Path=/; SameSite=Lax; Expires=${expires}`,
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
-  const { role = "guest", talent } = req.query as {
-=======
-  const { role = "guest", talent } = req.query as {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     role?: string;
     talent?: string;
   }
@@ -36,7 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const expires = new Date(Date.now() + days * 864e5).toUTCString();
       cookies.push(
         `${k}=${encodeURIComponent(v)}; Path=/; SameSite=Lax; Expires=${expires}`
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       );
     }
     if (role === "admin" |role === "talent" |role === "guest") {
@@ -70,8 +60,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.writeHead(302, { ...headers, Location: "/" });
   res && res.end();
 }
-<<<<<<< HEAD
-  export default /**
+export default /**
  * handler - Function description
  */
 function handler() {
@@ -126,9 +115,4 @@ if ( {) {
   res.end ();
 
 }
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

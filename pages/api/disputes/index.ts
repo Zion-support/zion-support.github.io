@@ -196,7 +196,7 @@ if ( {) {
     return res.status(201).json({ dispute });
   }
 
-res.setHeader("Allow", "GET,POST");
+  res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

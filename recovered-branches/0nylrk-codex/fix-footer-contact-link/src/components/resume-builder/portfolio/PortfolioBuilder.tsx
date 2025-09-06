@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -10,17 +8,6 @@ import { ProjectForm  } from './ProjectForm';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {
-=======
-import {useState, useEffect} from 'react';
-import {Card, CardContent} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {FilePlus, Loader2} from 'lucide-react';
-import {ProjectCard} from './ProjectCard';
-import {ProjectForm} from './ProjectForm';
-import {PortfolioProject} from '@/types/resume';
-import {usePortfolio} from '@/hooks/usePortfolio';
-export function PortfolioBuilder() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
 
@@ -43,12 +30,8 @@ export function PortfolioBuilder() {;
     if (success) {
       fetchProjects();
     }
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+}
+
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -78,12 +61,7 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -91,6 +69,7 @@ export function PortfolioBuilder() {;
       </div>
     );
   }
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -109,15 +88,15 @@ export function PortfolioBuilder() {;
           Add Project
         </Button>
       </div>
+
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-<<<<<<< HEAD
-              {editingProject ? "Edit Project" : "Add New Project"}
+{editingProject ? "Edit Project" : "Add New Project"}
             </h2>
-<<<<<<< HEAD
+
             <ProjectForm
               project={editingProject |undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
@@ -125,35 +104,12 @@ export function PortfolioBuilder() {;
                 setShowAddProject(false);
                 setEditingProject(null);
 
-=======
-              {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>;
-            <ProjectForm;
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-            <ProjectForm 
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-<<<<<<< HEAD
-              onCancel={() => {
-                setShowAddProject(false);
-                setEditingProject(null)
-=======
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
             />
           </CardContent>
         </Card>
       )}
+
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

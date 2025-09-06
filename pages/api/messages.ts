@@ -401,7 +401,7 @@ export default function handler(req, res) {
 
 =======
 
-res.setHeader("AllowGET, POST");
+  res.setHeader("AllowGET, POST");
   res.status(405).end("Method Not Allowed");
 }
 =======
