@@ -3,8 +3,7 @@ import {
   LightBulbIcon, 
   GlobeAltIcon, 
   ShieldCheckIcon,
-  AcademicCapIcon,
-  RocketLaunchIcon
+  AcademicCapIcon
 } from '@heroicons/react/24/outline'
 
 const values = [

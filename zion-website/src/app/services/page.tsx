@@ -1,12 +1,7 @@
 import { 
-  UserGroupIcon,
   LightBulbIcon, 
   CogIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  RocketLaunchIcon,
-  AcademicCapIcon,
-  GlobeAltIcon
+  ShieldCheckIcon
 } from '@heroicons/react/24/outline'
 
 const professionalServices = [
