@@ -3,13 +3,8 @@ command = "npm ci && npm run build"
 publish = "dist"
 
 [build.environment]
-<<<<<<< HEAD
-  NODE_VERSION = "20"
-  NODE_OPTIONS = "--max-old-space-size=4096"
-=======
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -18,15 +13,9 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   directory = "netlify/functions"
 
 [[redirects]]
-<<<<<<< HEAD
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-=======
 from = "/api/*"
 to = "/.netlify/functions/:splat"
 status = 200
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 # Security and caching headers for static assets
 [[headers]]
@@ -54,11 +43,7 @@ status = 200
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
-<<<<<<< HEAD
-# Static redirects for exported site
-=======
 # Static redirects to mirror Next.js redirects (since output: export)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
@@ -95,12 +80,6 @@ status = 200
   status = 301
 
 [[redirects]]
-<<<<<<< HEAD
-  from = "/affiliate-attribution-suite"
-  to = "/services/affiliate-attribution-suite/"
-  status = 301
-=======
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
 status = 301
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
