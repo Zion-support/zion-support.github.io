@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-<<<<<<< HEAD
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
   keywords: "AI services, micro SaaS, IT services, FinTech, HealthTech, EdTech, cloud migration, DevOps, SRE, enterprise software, blockchain, cybersecurity"
@@ -73,34 +72,13 @@ export default function ServicesOverviewPage() {
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           From AI-powered micro SaaS platforms to enterprise IT infrastructure, we deliver cutting-edge solutions 
           that drive growth, efficiency, and innovation across all industries.
-=======
-  title: 'Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions',
-  description: 'Comprehensive technology services including AI development, micro SaaS solutions, financial technology, healthcare technology, and educational technology. Transform your business with cutting-edge solutions.',
-  keywords: 'AI services, micro SaaS, FinTech, HealthTech, EdTech, technology solutions, software development, digital transformation'
-};
-
-export default function ServicesOverviewPage() {
-  return (
-    <div className="space-y-16">
-      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Comprehensive technology solutions to accelerate your digital transformation. 
-          From AI development to micro SaaS products, we deliver enterprise-grade solutions that drive real results.
->>>>>>> 619adce3c38ede69a2a90a99e5e85fcc2b5e4c96
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="mailto:kleber@ziontechgroup.com?subject=Services Inquiry"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
-<<<<<<< HEAD
             Get Free Consultation
-=======
-            Get Consultation
->>>>>>> 619adce3c38ede69a2a90a99e5e85fcc2b5e4c96
           </a>
           <a
             href="tel:+13024640950"
@@ -110,8 +88,6 @@ export default function ServicesOverviewPage() {
           </a>
         </div>
       </section>
-<<<<<<< HEAD
-
       {/* Statistics */}
       <section className="py-12">
         <div className="text-center mb-12">
@@ -397,8 +373,6 @@ export default function ServicesOverviewPage() {
           <p>📧 kleber@ziontechgroup.com</p>
         </div>
       </section>
-=======
->>>>>>> 619adce3c38ede69a2a90a99e5e85fcc2b5e4c96
     </div>
   );
 }

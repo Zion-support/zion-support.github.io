@@ -437,8 +437,4 @@ function TestimonialCard({ quote, author, role, company }: {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 619adce3c38ede69a2a90a99e5e85fcc2b5e4c96

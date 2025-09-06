@@ -129,9 +129,6 @@ module.exports = {
         '4xl': '2rem',
         '5xl': '2.5rem'
       },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-      },
     },
   },
   plugins: [
