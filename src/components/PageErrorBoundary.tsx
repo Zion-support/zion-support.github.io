@@ -1,7 +1,40 @@
-
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
 
+<<<<<<< HEAD
+  },
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+  return (
+    <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
+      <div className='max-w-2xl w-full'>;
+        {/* Main Error Card */}
+        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
+          <div className='text-center mb-6'>;
+            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>;
+              <AlertTriangle className='h-8 w-8 text-red-600' />;
+            </div>;
+            <h1 className='text-3xl font-bold text-gray-900 mb-2'>;
+              {pageName ? `${pageName} Unavailable` : 'Page Unavailable'}
+            </h1>;
+            <p className='text-gray-600'>;
+              {isAuthConfigError;
+                ? 'This page cannot load due to missing authentication configuration';
+                : 'An unexpected error occurred while loading this page'}
+
+import React from 'react';
+import Link from 'next / link';
+import { ErrorBoundary, FallbackProps } from 'react - error - boundary';
+import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
+import { logErrorToProduction } from '@/utils / production_logger';
+=======
 import { logErrorToProduction } from '@/utils/productionLogger'
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {
   logInfo
   logErrorToProduction as prodLogError
@@ -13,7 +46,6 @@ function PageErrorFallback({
   resetErrorBoundary
   pageName
 }: PageErrorFallbackProps) {
-
     error?.message?.includes('environment')
   const handleRefresh = () => {
     if (resetErrorBoundary) {
@@ -22,7 +54,7 @@ function PageErrorFallback({
       window.location.reload()
     }
   }
-
+=======
 import React from 'react';
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
@@ -46,6 +78,9 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
     }
   },
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
@@ -84,7 +119,52 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               <summary className="cursor-pointer text-gray-700 font-medium">
                 Technical Details
               </summary>
+<<<<<<< HEAD
+              <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>
+                {error.message}
+              </pre>
+            </details>
+          )}
+          {/* Action Buttons */}
+          <div className='flex flex-col sm:flex-row gap-3 mb-6'>
+            <button
+              onClick={handleRefresh}
+              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'            >
+              <RefreshCw className='w-4 h-4 mr-2' />
+              Try Again
+            </button>
+            <Link
+              href='/'
+              className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
+              <pre className="mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto">
+                {error.message}
+              </pre>;
+            </details>;
+          )}
 
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            <button 
+              onClick={handleRefresh}
+              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
+            >
+              <RefreshCw className="w-4 h-4 mr-2" />
+              Try Again
+            </button>
+            
+            <Link 
+              href="/"
+              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             >
               <Home className="w-4 h-4 mr-2" />
               Go Home
@@ -127,12 +207,71 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
       </div>
     </div>
   )
+<<<<<<< HEAD
+interface PageErrorBoundaryProps {
+  children: React.ReactNode
+  pageName?: string
+  fallback?: React.ComponentType<FallbackProps>
+export default function PageErrorBoundary({
+  children
+  pageName
+  fallback
+}: PageErrorBoundaryProps) {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+    prodLogError(
+      `PageErrorBoundary caught error on ${pageName |'unknown page'}:`
+      error
+    )
+    logErrorToProduction(
+      error instanceof Error ? error.message : String(error)
+      error instanceof Error ? error : undefined
+      {
+        page: pageName |'unknown'
+        componentStack: errorInfo.componentStack |undefined
+        errorBoundary: 'PageErrorBoundary'
+        timestamp: new Date().toISOString()
+      }
+    )
+  }
+<<<<<<< HEAD
+  const FallbackComponent =
+    fallback |
+  const FallbackComponent = null;
+    fallback ||
+=======
 
+
+  const FallbackComponent = null;
+    fallback ||
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        logInfo(`Resetting error boundary for ${pageName |'page'}`)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+              href='mailto:support@zion && zion.tech'
+              className='text-blue-400 hover:underline'>;
+              support@zion && zion.tech;
+
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
               onClick={handleRefresh}
@@ -218,12 +357,74 @@ export default function PageErrorBoundary({;
       onReset={() => {;
         // Reset any application state if needed;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }}
     >
       {children}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </ErrorBoundary>
+  )
+}
+}
+}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+} ;
+} ;
+};
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
     </ErrorBoundary>;
   );
 } ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+
+  const FallbackComponent =;
+    fallback ||;
+    ((props: FallbackProps) => (
+      <PageErrorFallback {...props} page_name={page_name} />));
+      on_reset={() => {        // Reset any application state if needed;
+        log_info (`Resetting error boundary for ${page_name || 'page'}`);
+      }}
+    >;
+      {children}
+    </ErrorBoundary>);
+}
+}
+}
+=======
+=======
+    </ErrorBoundary>;
+  );
+} ;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

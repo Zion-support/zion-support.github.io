@@ -1,5 +1,26 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Certification  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useCertifications() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Certification} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export function useCertifications() {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -8,7 +29,16 @@
     if (!user) {
       setError('You must be logged in to add certifications')
       return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
 
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
@@ -22,23 +52,67 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to add certifications'),;
       return false;
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
     setError(null),
-
+    
     try {
       const { error } = await supabase
         .from('certifications')
         .insert({
-
+          resume_id: resumeId;
+          name: cert.name;
+          issuing_organization: cert.issuing_organization;
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
+          credential_id: cert.credential_id
+          credential_url: cert.credential_url
+        });
+      if (error) throw error;
+          resume_id: resumeId,
+          name: cert.name,
+          issuing_organization: cert.issuing_organization,
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,
+          credential_id: cert.credential_id,
+          credential_url: cert.credential_url
+        }),
+      
+      if (error) throw error,
+      
+=======
+        });
+      if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add certification')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  }
+  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update certifications')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+=======
 
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -66,23 +140,80 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to update certifications'),;
       return false;
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
     setError(null),
-
+    
+=======
+    }
+  }
+  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update certifications')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       const { error } = await supabase
         .from('certifications')
         .update({
-
+<<<<<<< HEAD
+          name: cert.name;
+          issuing_organization: cert.issuing_organization;
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
+          credential_id: cert.credential_id
+          credential_url: cert.credential_url
+        })
+        .eq('id', certId);
+      if (error) throw error;
+          name: cert.name,
+          issuing_organization: cert.issuing_organization,
+          issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null,
+          expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null,
+          credential_id: cert.credential_id,
+          credential_url: cert.credential_url
+        })
+        .eq('id', certId),
+      
+      if (error) throw error,
+      
+=======
+        })
+        .eq('id', certId);
+      if (error) throw error;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return showSuccessToast("Certification updated", "Your certification has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update certification')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+  }
+  const deleteCertification = async (certId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete certifications')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+=======
 
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -110,38 +241,91 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to delete certifications'),;
       return false;
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
     setError(null),
-
+    
+=======
+    }
+  }
+  const deleteCertification = async (certId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete certifications')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     try {
       const { error } = await supabase
         .from('certifications')
         .delete()
-
+        .eq('id', certId);
+      if (error) throw error;
+<<<<<<< HEAD
+        .eq('id', certId),
+      
+      if (error) throw error,
+      
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete certification')
     } finally {
       setIsLoading(false)
-
-;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      const { error } = await supabase;
-        .from('certifications');
-        .delete();
-        .eq('id', certId),;
-      if (error) throw error,;
-      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume");
-    } catch (e: any) {;
-      return handleResumeError(e, 'Could not delete certification');
-    } finally {;
-      setIsLoading(false);
     }
+  }
+  return {
+    isLoading;
+    error;
+    addCertification;
+    updateCertification;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+    deleteCertification
+  }
+}
+=======
+
+
+
+=======
+    deleteCertification
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {Certification} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export /**
+ * use_certifications - Function description
+ */
+function use_certifications() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+;
+  const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to add certifications'),
+      return false;
+    }
+<<<<<<< HEAD
+
   },;
   return {;
     isLoading,;
@@ -149,8 +333,17 @@ export function useCertifications() {;
     addCertification;
     updateCertification;
     deleteCertification;
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    setIsLoading (true);
+    set_error (null);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
-

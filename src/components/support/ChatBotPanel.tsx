@@ -1,8 +1,8 @@
 
-
+=======
 import React, { useState, useRef, useEffect } from "react",
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { ScrollArea } from "@/components/ui/scroll-area",
@@ -12,6 +12,67 @@ import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from 'lucide-react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Define suggested quick replies
+const QUICK_REPLIES = [
+  { id: "hire", text: "How do I hire?" },
+  { id: "match", text: "How do I get matched?" },
+  { id: "billing", text: "Billing help" }],
+
+const QUICK_REPLIES = [
+  { id: "hire", text: "How do I hire?" }
+  { id: "match", text: "How do I get matched?" }
+  { id: "billing", text: "Billing help" }]
+=======
+type Message = {
+  id: string
+  content: string
+  sender: "user" | "bot"
+  timestamp: Date
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export /**
+ * ChatBotPanel - Function description
+ */
+function ChatBotPanel() {
+  const [messages, set_messages] = useState < Message[]>([;
+    {
+
+      id: "welcome",
+      content: "Hi! How can I help you?",
+      sender: "bot",
+      timestamp: new Date ()}]),
+  const [input_value, setInputValue] = useState ("");
+  const [is_loading, setIsLoading] = useState (false);
+  const [failed_attempts, setFailedAttempts] = useState (0);
+  const scrollAreaRef = useRef < HTMLDivElement>(null);
+  const input_ref = useRef < HTMLInputElement>(null);
+  const { theme } = use_theme ();
+  // Auto - scroll to bottom when messages change;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      scrollAreaRef.current.scroll_top = scrollAreaRef.current.scroll_height;
+
+    }
+  }, [messages]);
+  // Focus input when component mounts;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      input_ref.current.focus ();
+    }
+
+import { Send, Loader2 } from 'lucide-react'import { useTheme } from "@/hooks/useTheme";
+import { Send, Loader2 } from 'lucide-react'
+
+import { useTheme } from "@/hooks/useTheme",
 
 // Define suggested quick replies
 const QUICK_REPLIES = [
@@ -19,13 +80,8 @@ const QUICK_REPLIES = [
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
 
-type Message = {
-  id: string
-  content: string
-  sender: "user" | "bot"
-  timestamp: Date
-}
 
+=======
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -33,7 +89,13 @@ export function ChatBotPanel() {
       content: "Hi! How can I help you?",
       sender: "bot",
       timestamp: new Date()}]),
-
+  const [inputValue, setInputValue] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const [failedAttempts, setFailedAttempts] = useState(0)
+  const scrollAreaRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const { theme } = useTheme()
+=======
   const [inputValue, setInputValue] = useState(""),
   const [isLoading, setIsLoading] = useState(false),
   const [failedAttempts, setFailedAttempts] = useState(0),
@@ -41,11 +103,27 @@ export function ChatBotPanel() {
   const inputRef = useRef<HTMLInputElement>(null),
   const { theme } = useTheme(),
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+<<<<<<< HEAD
 
+    if (!text.trim()) return;
+      timestamp: new Date()},
+    
+        timestamp: new Date()},
+      
+        description: "We're having trouble connecting to our support service."}),
+            
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import { Button } from "@/components/ui/button",;
@@ -58,6 +136,10 @@ import { ChatMessage } from "./ChatMessage",;
 import { QuickReplyButton } from "./QuickReplyButton",;
 import { Send, Loader2 } from 'lucide-react';
 import { useTheme } from "@/hooks/useTheme",;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Define suggested quick replies;
 const QUICK_REPLIES = [;
   { id: "hire", text: "How do I hire?" },;
@@ -68,7 +150,12 @@ type Message = {;
   content: string,;
   sender: "user" | "bot",;
   timestamp: Date;
+<<<<<<< HEAD
+};
+
+=======
 },;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function ChatBotPanel() {;
   const [messages, setMessages] = useState<Message[]>([;
     {;
@@ -76,6 +163,60 @@ export function ChatBotPanel() {;
       content: "Hi! How can I help you?",;
       sender: "bot",;
       timestamp: new Date()}]),;
+<<<<<<< HEAD
+  const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [failedAttempts, setFailedAttempts] = useState(0);
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const { theme } = useTheme();
+
+  // Auto-scroll to bottom when messages change;
+  useEffect((,) => {;
+    if (scrollAreaRef && scrollAreaRef.current) {;
+      scrollAreaRef && scrollAreaRef.current.scrollTop = scrollAreaRef && scrollAreaRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  // Focus input when component mounts;
+  useEffect((,) => {;
+    if (inputRef && inputRef.current) {;
+      inputRef && inputRef.current.focus();
+    }
+  }, []);
+
+  const handleSendMessage = async (text: string = inputValue) => {;
+    if (!text && text.trim()) return;
+      timestamp: new Date()},;
+
+        timestamp: new Date()},;
+
+        description: "We're having trouble connecting to our support service."}),;
+
+
+  );
+}
+
+  }, []);
+  const handleSendMessage = async (text: string = input_value) => {
+    if () return) {
+  $2
+}
+      timestamp: new Date ()},
+        timestamp: new Date ()},
+        description: "We're having trouble connecting to our support service."}),
+      id: `bot - escalation-${Date.now ()}`,
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+      sender: "bot",
+      timestamp: new Date ()},
+  const handleQuickReply = (text: string, ) =>: any {
+    handleSendMessage (text);
+  }
+  );
+}
+  );
+}
+=======
   const [inputValue, setInputValue] = useState(""),;
   const [isLoading, setIsLoading] = useState(false),;
   const [failedAttempts, setFailedAttempts] = useState(0),;
@@ -183,6 +324,7 @@ export function ChatBotPanel() {;
     }
   },
 
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -223,7 +365,13 @@ export function ChatBotPanel() {;
 
   const suggestEscalation = () => {
     const escalationMessage: Message = {
+<<<<<<< HEAD
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       id: `bot-escalation-${Date.now()}`,
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
@@ -254,8 +402,8 @@ export function ChatBotPanel() {;
   },
 
   const handleQuickReply = (text: string) => {
+<<<<<<< HEAD
     handleSendMessage(text)
-
   },
 
   const handleEscalateToLiveAgent = () => {
@@ -535,4 +683,66 @@ export function ChatBotPanel() {;
   );
 }
 ;
+<<<<<<< HEAD
+      const data = await response.json(),;
+      return {;
+        success: true,;
+        message: data.message;
+      }
+    } catch (error) {
+      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' }),
+      return {
+        success: false,
+        message: "I'm experiencing technical difficulties. Please try again later."
+      }
+      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' });
+      return {
+        success: false,
+        message: "I'm experiencing technical difficulties. Please try again later."
+      };
+    }
+  },
 
+  const suggestEscalation = () => {
+    const escalationMessage: Message = {
+<<<<<<< HEAD
+
+
+      id: `bot-escalation-${Date.now()}`,
+      content: 
+        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+      sender: "bot",
+      timestamp: new Date()},
+    
+    setMessages((prev) => [...prev, escalationMessage]),
+    
+    // Log this interaction for the support team
+    logSupportEscalation()
+  },
+
+  const logSupportEscalation = async () => {
+    try {
+      // Send the conversation to the backend for logging
+      // This would be implemented in a real system
+      logDebug("Support escalation triggered", {
+        conversationHistory: messages.map(m => ({
+          content: m.content,
+          sender: m.sender,
+          timestamp: m.timestamp
+        })),
+        component: 'ChatBotPanel'
+      })
+    } catch (error) {
+      logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' })
+    }
+  },
+
+  const handleQuickReply = (text: string) => {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    handleSendMessage(text)
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

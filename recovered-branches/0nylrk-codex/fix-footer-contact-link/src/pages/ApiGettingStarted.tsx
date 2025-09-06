@@ -1,20 +1,62 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+=======
 
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export function ApiGettingStarted() {
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`,;
+const quickStartJs = `import axios from 'axios';
+<<<<<<< HEAD
 import React from "react",
-
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`
+const quickStartJs = `import axios from 'axios';
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+
+  const quickStartJs = `import axios from 'axios',
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+
+  const quickStartJs = `import axios from 'axios',
+=======
+const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
+=======
 
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
 
+=======
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+
+  const quickStartJs = `import axios from 'axios',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   headers: {
-    Authorization: \`Bearer \${API_KEY}\`
+    Authorization: \`Bearer \${API_KEY}\`;
   }
+});
+console.log(response.data),`;
+}),
+
+// // // console.log(response.data),`,
 
   return (
     <ApiDocsLayout>
@@ -28,7 +70,10 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
         </p>
         <h2>Authentication</h2>
         <p>
-
+          All API requests must include your API key in the Authorization header.
+          You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
+          All API requests must include your API key in the Authorization header. 
+          You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
         </p>
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -67,11 +112,47 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors"
           >
             Download Postman Collection
-          </Link>
+          </a>
         </div>
       </div>
     </ApiDocsLayout>
   )
-
+}
 export default ApiGettingStarted;
 
+import React from "react",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+import { CodeBlock } from "@/components/developers/CodeBlock",;
+
+export function ApiGettingStarted() {;
+  const authExample = `curl -X GET \\;
+  https: //api && api.zionai.com/v1/jobs \\;
+  -H "Authorization: Bearer YOUR_API_KEY"`,;
+
+  const quickStartJs = `import axios from 'axios';
+const response = await axios && axios.get('https://api && api.zionai.com/v1/jobs', {;
+  headers: {;
+    Authorization: \`Bearer \${API_KEY}\`;
+  }
+=======
+const quickStartJs = `import axios from 'axios';
+const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
+  headers: {
+    Authorization: \`Bearer \${API_KEY}\`;
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+});
+}
+<<<<<<< HEAD
+
+;
+<<<<<<< HEAD
+=======
+export default ApiGettingStarted;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default ApiGettingStarted;

@@ -1,6 +1,22 @@
-
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+import { Header  } from '@/components/Header';
+import { NextSeo  } from '@/components/NextSeo';
+import React, { useEffect, useState } from 'react'
+import { Header } from '@/components/Header'
+import { NextSeo } from '@/components/NextSeo'
 import { Globe, MapPin } from 'lucide-react'
 
+=======
+import { Header } from '@/components / Header';
+import { NextSeo } from '@/components / NextSeo';
+import { Globe, MapPin } from 'lucide-react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import { Globe, MapPin } from 'lucide-react'
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {
   Tooltip
   TooltipContent
@@ -60,6 +76,10 @@ interface FeedItem {
   text: string
 export default function GlobalMapPage() {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [feed, setFeed] = useState<FeedItem[]>([])
   useEffect((,) => {
     const interval = setInterval((,) => {
@@ -69,7 +89,20 @@ export default function GlobalMapPage() {
         'New franchise deployed: Zion Indonesia'
       ]
       const id = Date.now()
+<<<<<<< HEAD
+      const text =
+        messages[Math.floor(Math.random() * messages.length)] |
+      const text = null;
+        messages[Math.floor(Math.random() * messages.length)] ||
+=======
 
+      const text = null;
+        messages[Math.floor(Math.random() * messages.length)] ||
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         'System update in progress'
       setFeed(f => [{ id, text }, ...f].slice(0, 5))
     }, 5000)
@@ -82,7 +115,17 @@ export default function GlobalMapPage() {
     const y = ((90 - lat) / 180) * height
     return { x, y }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { NextSeo } from '@/components/NextSeo',;
@@ -157,11 +200,51 @@ export default function GlobalMapPage() {;
   }
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="min-h-screen bg-background">
       <NextSeo title="Global Zion Map" description="Overview of Zion deployments" />
       <Header />
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <main className='py-10 container mx-auto space-y-8'>
+        <h1 className='text-3xl font-bold'>Global Instances</h1>
+        <div className='flex flex-col lg:flex-row gap-8'>
+          <div className='relative' style={{ width, height }}>
+            <Globe className='w-full h-full text-secondary' />
+            {INSTANCES.map(i => {
+              const { x, y } = project(i.lat, i.lng)
+              const color = null;
+                i.governance === 'admin';
+                  ? 'bg-red-500';
+                  : i.governance === 'hybrid';
+                    ? 'bg-yellow-500';
+                    : 'bg-green-500'; return (
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
       <main className="py-10 container mx-auto space-y-8">
         <h1 className="text-3xl font-bold">Global Instances</h1>
@@ -172,7 +255,31 @@ export default function GlobalMapPage() {;
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      <main className="py-10 container mx-auto space-y-8">
+        <h1 className="text-3xl font-bold">Global Instances</h1>
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="relative" style={{ width, height }}>
+            <Globe className="w-full h-full text-secondary" />
+            {INSTANCES.map((i) => {
+              const { x, y } = project(i.lat, i.lng),
+              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
+              return (
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -199,14 +306,61 @@ export default function GlobalMapPage() {;
           </div>
           <div className="flex-1 space-y-6">
             <section>
+<<<<<<< HEAD
+              <h2 className='text-xl font-semibold mb-2'>
+                Top Regions by Talent
+              </h2>
+              <ul className='space-y-1'>
+                {topRegions.map(r => (
+                  <li key={r.id} className='flex justify-between border-b pb-1'>                    <span>{r.region}</span>
+              <h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>
+              <ul className="space-y-1">
+                {topRegions.map((r) => (
+                  <li key={r.id} className="flex justify-between border-b pb-1">
+                    <span>{r.region}</span>
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <span>{r.talent}</span>
                   </li>
                 ))}
               </ul>
             </section>
             <section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <h2 className='text-xl font-semibold mb-2'>Live Feed</h2>
+              <ul className='space-y-1'>
+                {feed.map(f => (
+                  <li key={f.id} className='text-sm'>
+                    {f.text}
+                  </li>                ))}
+              </ul>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+}
+}
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+;
+}
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <h2 className="text-xl font-semibold mb-2">Live Feed</h2>
               <ul className="space-y-1">
                 {feed.map((f) => (
@@ -220,5 +374,155 @@ export default function GlobalMapPage() {;
     </div>;
   );
 }
-;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+  votes_passed: number;
+  votes_pending: number;
+  region: string;
+const INSTANCES: Instance[] = [;
+  {
+    id: 1,
+    name: 'Zion LATAM',
+    lat: -15,
+    lng: -70,
+    talent: 120,
+    governance: 'hybrid',
+    votes_passed: 5,
+    votes_pending: 1,
+    region: 'Latin America',
+  },
+  {
+    id: 2,
+    name: 'Zion Health',
+    lat: 37,
+    lng: -95,
+    talent: 200,
+    governance: 'admin',
+    votes_passed: 8,
+    votes_pending: 2,
+    region: 'North America',
+  },
+  {
+    id: 3,
+    name: 'Zion Law',
+    lat: 51,
+    lng: 10,
+    talent: 150,
+    governance: 'vote',
+    votes_passed: 12,
+    votes_pending: 3,
+    region: 'Europe',
+  },
+];
+interface FeedItem {
+  id: number;
+  text: string;
+export default /**
+ * GlobalMapPage - Function description
+ */
+function GlobalMapPage() {
+  const [feed, set_feed] = useState < FeedItem[]>([]);
+  useEffect ((, ) => {
+    const interval = set_interval ((, ) => {
+      const messages = [;
+        'ZionGPT upgraded to v1.7 in Egypt',
+        'Proposal #121 passed in Zion DevOps',
+        'New franchise deployed: Zion Indonesia',
+      ];
+      const id = Date.now ();
+      const text =;
+        messages[Math.floor (Math.random () * messages.length)] ||;
+        'System update in progress';
+      set_feed (function => [{ id, text }, ...f].slice (0, 5));
+    }, 5000);
+    return () => clear_interval (interval);
+  }, []);
+  const width = 800;
+  const height = 400;
+  /**
+ * project - Function description
+ */
+function project() {
+    const coordinate_x = ((lng + 180) / 360) * width;
+    const coordinate_y = ((90 - lat) / 180) * height;
+    return { x, y }
+  }
+  const top_regions = INSTANCES.sort ((a, b) => b.talent - a.talent).slice (0, 5);
+  return (
+    <div className='min - h-screen bg - background'>;
+      <NextSeo;
+        title='Global Zion Map';
+        description='Overview of Zion deployments';
+      />;
+      <Header />;
+      <main className='py - 10 container mx - auto space - y-8'>;
+        <h1 className='text - 3xl font - bold'>Global Instances</h1>;
+        <div className='flex flex - col lg:flex - row gap - 8'>;
+          <div className='relative' style={{ width, height }}>;
+            <Globe className='w - full h - full text - secondary' />;
+            {INSTANCES.map (index => {
+              const { x, y } = project (i.lat, i.lng);
+              const color =;
+                i.governance === 'admin';
+                  ? 'bg - red - 500';
+                  : i.governance === 'hybrid';
+                    ? 'bg - yellow - 500';
+                    : 'bg - green - 500'; return (
+                <TooltipProvider key={i.id}>;
+                  <Tooltip>;
+                    <TooltipTrigger as_child>;
+                      <div;
+                        className={`absolute ${color} rounded - full p - 1`}
+                        style={{ left: x, top: y }}
+                      >;
+                        <MapPin className='w - 4 h - 4 text - white' />;
+                      </div>;
+                    </TooltipTrigger>;
+                    <TooltipContent>;
+                      <div className='text - sm space - y-1'>;
+                        <div className='font - semibold'>{i.name}</div>;
+                        <div > Talent: {i.talent}</div>;
+                        <div > Governance: {i.governance}</div>;
+                        <div > Passed Votes: {i.votes_passed}</div>;
+                        <div > Pending Votes: {i.votes_pending}</div>;
+                      </div>;
+                    </TooltipContent>;
+                  </Tooltip>;
+                </TooltipProvider>);
+            })}
+          </div>;
+          <div className='flex - 1 space - y-6'>;
+            <section>;
+              <h2 className='text - xl font - semibold mb - 2'>;
+                Top Regions by Talent;
+              </h2>;
+              <ul className='space - y-1'>;
+                {top_regions.map (r => (
+                  <li key={r.id} className='flex justify - between border - b pb - 1'>                    <span>{r.region}</span>;
+                    <span>{r.talent}</span>;
+                  </li>))}
+              </ul>;
+            </section>;
+            <section>;
+              <h2 className='text - xl font - semibold mb - 2'>Live Feed</h2>;
+              <ul className='space - y-1'>;
+                {feed.map (function => (
+                  <li key={f.id} className='text - sm'>;
+                    {f.text}
+                  </li>                ))}
+              </ul>;
+            </section>;
+          </div>;
+        </div>;
+      </main>;
+    </div>);
+}
+}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

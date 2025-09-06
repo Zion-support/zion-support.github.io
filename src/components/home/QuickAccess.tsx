@@ -1,5 +1,4 @@
 
-
   const { t } = useTranslation()
   const quickLinks = [
     {
@@ -54,7 +53,7 @@
           </p>
         </div>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
-
+=======
 import React from "react",
 import Link from "next/link",
 import { useTranslation } from "react-i18next",
@@ -68,7 +67,7 @@ interface QuickAccessProps {
 
 export function QuickAccess({ className, style }: QuickAccessProps) {
   const { t } = useTranslation(),
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -101,7 +100,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       link: "/community"
     },
     {
-
       title: t('home.tool_mobile_appMobile App'),
       description: t('home.tool_mobile_app_descZion on the go'),
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
@@ -122,19 +120,54 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {t('home.quick_access_title', 'Quick Access')}
           </h2>
           <p className="text-zion-slate-light text-lg">
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
           </p>
         </div>
-
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {quickLinks.map((link, index) => (
             <Link
               key={index}
               href={link.link}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+              </p>;
+              <div className='flex items - center text - zion - cyan text - xs mt - auto'>;
+                <span>{t ('general.explore')}</span>;
+                <ArrowRight className='ml - 1 h - 3 w - 3 transition - transform group - hover:translate - x-1' />;
+              </div>;
+            </Link>;
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+export default /**
+ * Page - Function description
+ */
+function Page() {";
+    { name: "Consulting", count: 6, color: "from - yellow - 500 to - orange - 500" }, ";
+    { name: "Innovation", count: 10, color: "from - green - 500 to - teal - 500" }, ";
+    { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,
+
+
+import { motion  } from 'framer-motion';
+export default function Page() {";
+    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
+    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
+    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       transition: {
         duration: 0.5,"
         ease: "easeOut"}}}
@@ -290,6 +323,24 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
                 whileTap={{ scale: 0.95 }}"
                 className="mt-auto">
                 <Link
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                  to={link && link.path}`
+                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link && link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}>;
+                  Explore {link && link.title}";
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
+              </motion && motion.div>;
+            </motion && motion.div>;
+
+
+export default QuickAccess;
+;
+<<<<<<< HEAD
+
+=======
                   to={link.path}`
                   className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}
                 >
@@ -303,7 +354,8 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
     </section>
   )
 export default QuickAccess }
-
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
@@ -324,4 +376,52 @@ export default QuickAccess }
 }
 ;
 export default QuickAccess;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+  { opacity: 0,
+  scale: 0.8;
+}}
+                      whileInView = {
+  { opacity: 1,
+  scale: 1;
+}}
+                      transition = {
+  { duration: 0.4,
+  delay: 0.2 + idx * 0.1;
+}}
+                      viewport={{ once: true }}";
+                      className="text - center">";
+                      <div className="text - lg font - bold text - zion - cyan">{value}</div>";
+                      <div className="text - xs text - gray - 500 capitalize">{key}</div>;
+                    </motion.div>))}
+                </div>;
+              </div>;
+              {/* CTA */}
+              <motion.div;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}";
+                className="mt - auto">;
+                <Link;
+                  to={link.path}`;
+                  className={`inline - flex items - center justify - center w - full px - 4 py - 3 bg - gradient - to - r ${link.color} text - white font - semibold rounded - lg transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 25`}
+                >;
+                  Explore {link.title}";
+                  <ChevronRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform"  />                </Link>;
+              </motion.div>;
+            </motion.div>))}
+        </div>;
+      </div>;
+    </section>);
+export default QuickAccess }
+export default QuickAccess;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

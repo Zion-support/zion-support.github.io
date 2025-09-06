@@ -1,10 +1,10 @@
-
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -27,7 +27,24 @@ import { Button } from "@/components/ui/button",
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+              src='https://placehold.co/800x400'
+              alt='Screenshot showing integrations';
+              className='object-cover';
+            />;
+          </div>;
+          <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
+          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
+              src="https://placehold.co/800x400"
+              alt="Screenshot showing integrations"
+              className="object-cover"
+            />
+          </div>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <li>Trigger Slack notifications for new orders or messages.</li>
             <li>Embed talent search or job listings directly on your site.</li>
             <li>Build custom analytics by pulling data from our REST endpoints.</li>
@@ -43,7 +60,23 @@ import { Button } from "@/components/ui/button",
               <p className="text-zion-slate-light">Yes, free tier requests are limited per hour. Contact sales for higher limits.</p>
             </div>
           </div>
+<<<<<<< HEAD
+          <div className='text-center'>
+            <Button size='lg' className='bg-zion-purple text-white' asChild>
+              <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
+          <div className="text-center">
+=======
+              src='https://placehold && placehold.co/800x400'
+              alt='Screenshot showing integrations'
+              className='object-cover'
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
             </Button>
@@ -51,8 +84,21 @@ import { Button } from "@/components/ui/button",
         </div>
       </main>
     </>
-  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+;
+<<<<<<< HEAD
+
+=======
+  )
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -123,8 +169,17 @@ export default function IntegrationsFeature() {;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+;
+=======
     </>;
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

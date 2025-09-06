@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
@@ -6,71 +11,99 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST");
-    return res.status(405).json({ error: "Method not allowed" });
-  const { providerId } = req.body as { providerId?: string }
-  if (!providerId |!getProviderById(providerId)) {
-    return res.status(400).json({ error: "Invalid providerId" });
+
+  try {
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { providerId } = req && req.body as { providerId?: string };
+  if (!providerId || !getProviderById(providerId)) {
+    return res && res.status(400).json({ error: "Invalid providerId" });
+
   }
   const state = readState();
-  const conn = state.connections.find((c) => c.providerId === providerId);
-  if (!conn) return res.status(404).json({ error: "Connection not found" });
-  const now = Date.now();
+  const conn = state && state.connections.find((c) => c && c.providerId === providerId);
+  if (!conn) return res && res.status(404).json({ error: "Connection not found" });
+  const now = Date && Date.now();
   writeState((s) => {
-    s.logs.push({
-      id: `${now}-${providerId}-resync`
-      timestamp: now
-      providerId: providerId as any
-      level: "info"
-      action: "resync"
-    });
-    const target = s.connections.find((c) => c.providerId === providerId);
-    if (target) target.lastSyncAt = now;
-  });
-  res.status(200).json({ ok: true });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+    s && s.logs.push({
+      id: `${now}-${providerId}-resync`,
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_state, write_state  } from '../../../lib / integrations / file_store';
+import { getProviderById  } from '../../../lib / integrations / registry';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
 }
 
+    });
+
+}
+
+<<<<<<< HEAD
+=======
+=======
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { providerId } = req.body as { providerId?: string };
+  if (!providerId || !getProviderById(providerId)) {
+    return res.status(400).json({ error: 'Invalid providerId' })
   }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   const state = readState();
   const conn = state.connections.find(c => c.providerId === providerId);
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  if (!conn) return res.status(400).json({ error: 'Provider not connected' });
+
+  const now = Date.now();
+  writeState(s => {
     s.logs.push({ id: `${now}-${providerId}-resync`, timestamp: now, providerId: providerId as any, level: 'info', action: 'resync' });
     const target = s.connections.find(c => c.providerId === providerId);
-    if (target) target.lastSyncAt = now;
+    if (target) target.lastSyncAt = now
   });
-  res.status(200).json({ ok: true });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  res.status(200).json({ ok: true })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+
+    const target = s.connections.find ((c) => c.provider_id === provider_id);
+    // Check condition
+if (target.lastSyncAt = now) {
+  $2
+}
+<<<<<<< HEAD
+=======
+  });
+  res.status (200).json ({ ok: true });
+}
+
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

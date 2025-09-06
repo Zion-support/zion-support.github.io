@@ -1,16 +1,15 @@
 {
 <<<<<<< HEAD
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-=======
-<<<<<<< HEAD
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
-=======
   "extends": [
     "next/core-web-vitals",
     "@typescript-eslint/recommended"
   ],
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
+=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
@@ -19,7 +18,6 @@
 <<<<<<< HEAD
     "es6": true,
     "jest": true
-=======
     "es2021": true
   },
   "globals": {
@@ -29,11 +27,13 @@
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
@@ -42,16 +42,17 @@
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
-=======
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   },
   "ignorePatterns": [
     "node_modules/",
@@ -249,12 +250,13 @@
     "automated-merge-conflict-resolver.cjs",
     "automation/**",
     "backup-problematic-files/**"
-=======
     "pages.disabled_auto/"
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   ]
 }

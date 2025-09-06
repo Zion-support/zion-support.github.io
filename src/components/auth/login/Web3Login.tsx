@@ -1,31 +1,89 @@
+<<<<<<< HEAD
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { useWallet as useAppWallet } from "../../../context/WalletContext ;
+import { Wallet } from 'lucide-react'import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function Web3Login() {;
 
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
       return
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  const handleWeb3Login = async () => {
+    if (!isWalletSystemAvailable) {
+      toast("Web3 login unavailable", {
+        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
+      return
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     try {
-
+      setIsLoading(true)
+      // Check if Ethereum provider (e.g., MetaMask) is available
+      const ethereum = (window as any).ethereum
+      setIsLoading(true),
+      
+      // Check if Ethereum provider (e.g., MetaMask) is available
+      const ethereum = (window as any).ethereum,
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+    try {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."})
         return
+=======
+<<<<<<< HEAD
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
         return;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
+<<<<<<< HEAD
+      await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
+      
+      await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
+      
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     } catch (error: any) {
       toast("Login failed", {
         description: error.message |"Failed to connect wallet. Please try again."})
@@ -33,7 +91,30 @@
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
+  }
+  const buttonDisabled = isLoading |!isWalletSystemAvailable
+  const buttonTitle = !isWalletSystemAvailable
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
+    : ""
+}
 
+  const { loginWithWeb3 } = useAuth();
+  const { isWalletSystemAvailable } = useAppWallet();
+  const [isLoading, setIsLoading] = useState(false);
+
+    : "";
+};
+  );
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   },
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable,
@@ -152,5 +233,14 @@ export function Web3Login() {;
     </Button>;
   );
 }
-;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

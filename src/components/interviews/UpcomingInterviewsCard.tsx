@@ -1,12 +1,33 @@
-
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview => 
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
           )
+<<<<<<< HEAD
+<<<<<<< HEAD
+          .sort(
+            (a, b) =>
+              parseISO(a.scheduled_date).getTime() -
+              parseISO(b.scheduled_date).getTime()          )
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          .sort(;
+            (a, b) =>;
+              parseISO(a.scheduled_date).getTime() -;
+              parseISO(b.scheduled_date).getTime()          );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           .slice(0, 3); // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
       } catch (error) {
@@ -19,7 +40,7 @@
     }
     loadInterviews()
   }, [])
-
+=======
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
@@ -36,6 +57,18 @@
     loadInterviews()
   }, []),
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -55,7 +88,16 @@
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -118,9 +160,29 @@ export function UpcomingInterviewsCard() {;
         </CardContent>;
       </Card>;
     );
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
   }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   if (upcomingInterviews.length === 0) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -143,6 +205,10 @@ export function UpcomingInterviewsCard() {;
     )
   }
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -153,7 +219,22 @@ export function UpcomingInterviewsCard() {;
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
+<<<<<<< HEAD
+            const interviewDate = parseISO(interview.scheduled_date)
+            const formattedDate = format(interviewDate, 'EEE, MMM d')
+            const formattedTime = format(interviewDate, 'h:mm a')
+            // Determine if interview is happening soon (within 30 minutes)            const now = new Date()
+            const isStartingSoon = null;
+              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
+              interviewDate.getTime() > now.getTime()
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -163,7 +244,17 @@ export function UpcomingInterviewsCard() {;
             const isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
+            
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -171,7 +262,40 @@ export function UpcomingInterviewsCard() {;
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      loading="lazy"
+                    />
+                  ) : (
+                      loading='lazy'                    />
+                  ) : (
+                    <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>
+                      {(
+                        interview.client_name ||
+                        interview.talent_name ||
+                        'U'
+                      ).charAt(0)}
+                    </div>
+            return (<div key={interview.id} className="flex items-center gap-3">
+                <Avatar className="h-10 w-10 bg-zion-purple/10">
+                  {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
+                  {/* For now, conditional rendering based on available image */}
+                  {interview.client_avatar || interview.talent_avatar ? (
+                    <img 
+                      src={interview.client_avatar || interview.talent_avatar || undefined} // Ensure src is string | undefined
+                      alt={interview.client_name || interview.talent_name || "User"} // Ensure alt is string
+                    />
+                  ) : (
+                      loading="lazy"
+                    />
+                  ) : (
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
                     </div>
@@ -181,7 +305,7 @@ export function UpcomingInterviewsCard() {;
                   <div className="flex justify-between items-start">
                     <p className="font-medium line-clamp-1">
                       {interview.title || "Interview"}
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     </p>
                     {isStartingSoon && (
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
@@ -189,13 +313,53 @@ export function UpcomingInterviewsCard() {;
                       </span>
                     )}
                   </div>
+<<<<<<< HEAD
+                  <div className='flex items-center text-sm text-muted-foreground'>
+                    <Clock className='h-3 w-3 mr-1' />
+                    {formattedDate} at {formattedTime}
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+        <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>
+          <Button asChild size='sm' variant='outline' className='w-full'>
+            <Link href='/interviews'>View All Interviews</Link>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Clock className="h-3 w-3 mr-1" />
+                    {formattedDate} at {formattedTime}
+                  </div>;
+                </div>;
+              </div>;
+            );
+          })}
+        </div>
+        
+        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
+          <Button asChild size="sm" variant="outline" className="w-full">
+            <Link href="/interviews">
+              View All Interviews
+            </Link>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </Button>
         </div>
       </CardContent>
     </Card>
   )
 }
-
+=======
+=======
 ;
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

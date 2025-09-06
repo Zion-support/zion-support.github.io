@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NotFound: React.FC = () => {
+const NotFound = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="max-w-md w-full text-center">
@@ -22,3 +21,4 @@ const NotFound: React.FC = () => {
   );
 };
 
+export default NotFound;

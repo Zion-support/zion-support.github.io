@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 
+import {Badge} from "@/components/ui/badge";
+import {QuoteStatus} from "@/types/quotes";
+const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {
+import { Badge } from "@/components/ui/badge",
+import { QuoteStatus } from "@/types/quotes",
+const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
@@ -15,34 +25,83 @@
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }}
 interface QuoteStatusBadgeProps {
   status: QuoteStatus
+<<<<<<< HEAD
+}
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
 
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
   return (
     <Badge className={config.className}>
       {config.label}
     </Badge>
   )
+}
 
+=======
+
+
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+
+
+  const config = statusConfig[status];
+=======
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
+  const config = status_config[status];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return (
+    <Badge className={config.class_name}>;
+      {config.label}
+
+const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {;
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Badge } from "@/components/ui/badge",;
 import { QuoteStatus } from "@/types/quotes",;
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
+
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },;
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },;
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },;
   responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },;
   closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },;
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},;
+
 interface QuoteStatusBadgeProps {;
   status: QuoteStatus;
 }
-;
+
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
-  return (;
-    <Badge className={config.className}>;
-      {config.label}
+
+  return (
+    <Badge className={config && config.className}>;
+      {config && config.label}
     </Badge>;
   );
+<<<<<<< HEAD
+=======
 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
-
+=======
+interface QuoteStatusBadgeProps {
+  status: QuoteStatus;
+}
+  return (
+    <Badge className={config.class_name}>;
+      {config.label}
+=======
+    </Badge>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

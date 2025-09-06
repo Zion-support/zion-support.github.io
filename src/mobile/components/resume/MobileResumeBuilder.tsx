@@ -1,14 +1,45 @@
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
 
+<<<<<<< HEAD
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import {
+=======
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+type ResumeStep = "basics" | "experience" | "education" | "skills",;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   Select
   SelectContent
   SelectItem
   SelectTrigger
   SelectValue} from "@/components/ui/select"
 import { Label } from "@/components/ui/label"
-
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import {
@@ -18,7 +49,10 @@ import {
   SelectTrigger,
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
-
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
@@ -45,7 +79,11 @@ export function MobileResumeBuilder() {
       case "education":
         return <EducationStep />
       case "skills":
-
+<<<<<<< HEAD
+        return <SkillsStep />
+        return <SkillsStep />,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       default:
         return <BasicsStep />
     }
@@ -54,28 +92,110 @@ export function MobileResumeBuilder() {
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
+<<<<<<< HEAD
+          variant = {currentStep === "basics" ? "default" : "outline",}
+          className="flex-1 rounded-full"
+          onClick = {(,) => setCurrentStep("basics"),}
+          variant={currentStep === "basics" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("basics")}
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         >
           Basics
         </Button>
         <Button
+<<<<<<< HEAD
+          variant = {currentStep === "experience" ? "default" : "outline",}
+          className="flex-1 rounded-full"
+          onClick = {() => setCurrentStep("experience"),}
+          variant={currentStep === "experience" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("experience")}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         >
           Experience
         </Button>
         <Button
+<<<<<<< HEAD
+          variant = {currentStep === "education" ? "default" : "outline",}
+          className="flex-1 rounded-full"
+          onClick = {() => setCurrentStep("education"),}
+          variant={currentStep === "education" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("education")}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         >
           Education
         </Button>
         <Button
+<<<<<<< HEAD
+          variant = {currentStep === "skills" ? "default" : "outline",}
+          className="flex-1 rounded-full"
+          onClick = {() => setCurrentStep("skills"),}
+          variant={currentStep === "skills" ? "default" : "outline"}
+          className="flex-1 rounded-full"
+          onClick={() => setCurrentStep("skills")}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         >
           Skills
         </Button>
       </div>
       {renderStepContent()}
+<<<<<<< HEAD
+      <Button className="w-full flex gap-2" size="lg">
+        <Zap className="h-5 w-5" /> Enhance with AI
+      </Button>
+      
+      <Button className="w-full flex gap-2" size="lg">
+        <Zap className="h-5 w-5" /> Enhance with AI
+      </Button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
@@ -108,7 +228,16 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <Textarea
+            id="summary"
+            placeholder="Write a brief summary about yourself"
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             rows = {4,}
           />
         </div>
@@ -116,7 +245,13 @@ function BasicsStep() {
     </Card>
   )
 }
-
+<<<<<<< HEAD
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -174,6 +309,12 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full";
           onClick={() => setCurrentStep("skills")}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         >;
           Skills;
         </Button>;
@@ -226,7 +367,22 @@ function BasicsStep() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
@@ -235,7 +391,23 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+  const removeEducation = (id: string,) => {
+    setEducations(educations.filter(edu => edu.id !== id))
+  }
+  const removeSkill = (id: string,) => {
+    setSkills(skills.filter(skill => skill.id !== id))
+  }
+}
+  )
+}
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
   },
   
   return (
@@ -365,6 +537,7 @@ function EducationStep() {
     </div>
   )
 }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 function SkillsStep() {
   const [skills, setSkills] = useState([
@@ -497,6 +670,12 @@ function EducationStep() {;
     </div>;
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+;
+=======
 ;
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
@@ -584,4 +763,7 @@ function SkillsStep() {;
   )
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

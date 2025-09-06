@@ -1,11 +1,11 @@
-
-
 import React from "react",
 import Link from "next/link",
 import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { AppStoreButtons } from "./AppStoreButtons",
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -21,14 +21,18 @@ export const MobileAppHero: React.FC = () => {
             <p className="text-lg md:text-xl opacity-90 mb-8">
               Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, now available on your mobile device.
             </p>
-
+=======
+            
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="mb-8">
               <AppStoreButtons 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
                 Open App
@@ -36,12 +40,56 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
+<<<<<<< HEAD
+          
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
+<<<<<<< HEAD
+              {/* This would be replaced with an actual phone mockup image in production */}
+<<<<<<< HEAD
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+=======
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
 
+
+};
+import React from "react";
+import Link from "next/link";
+import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button";
+import { AppStoreButtons } from "./AppStoreButtons";
+
+  );
+};
+";
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
@@ -87,4 +135,18 @@ export const MobileAppHero: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+"
+
+
+";
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

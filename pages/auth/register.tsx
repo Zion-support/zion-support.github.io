@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 
 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -24,7 +31,12 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
+<<<<<<< HEAD
+=======
+=======
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -33,9 +45,45 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
+const RegisterPage = () => {
+  const router = useRouter()
+  useEffect(() => {
+    fireEvent('signup_page_view')
+  }, [])
+  const handleSuccess = ({ email, emailVerificationRequired }: {
+    email: string
+    emailVerificationRequired: boolean
+  }) => {
+    if (emailVerificationRequired) {
+      router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+    } else {
+      router.push('/auth/login?registrationSuccess=true')
+    }
+  }
+const RegisterPage = () => {;
+  const router = useRouter();
+  useEffect(() => {;
+    fireEvent('signup_page_view');
+  }, []),;
+  const handleSuccess = ({ email, emailVerificationRequired }: {;
+    email: string;
 
+    emailVerificationRequired: boolean;
+  }) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+<<<<<<< HEAD
+=======
+
+      router.push ('/auth / login?registration_success = true');
+
+    }
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
-
   return (
     <>
       <Head>
@@ -49,13 +97,53 @@ import { useRouter } from 'next/router';
               className="mx-auto h-12 w-auto"
               src="/logos/zion-logo.png"
               alt="Zion Tech"
+              width={48}
+              height={48}
+              on_error={(e) => {
+                const target = e.current_target as HTMLImageElement,
+                target.style.display = 'none';
 
+              }}
+              width={48  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              height={48  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onError={(e) => {;
+                const target = e.currentTarget as HTMLImageElement;
+                target.style.display = 'none';
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
+              Or{' '}
+              Or{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -65,7 +153,18 @@ import { useRouter } from 'next/router';
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
+          {/* Social signup options */}
+          {/* Social signup options */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -79,7 +178,34 @@ import { useRouter } from 'next/router';
           </div>
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
+              By creating an account, you agree to our{' '}
+              <Link href="/legal / terms" className="text - blue - 600 hover:text - blue - 500">;
+                Terms of Service;
+              </Link>{' '}
+              and{' '}
+              By creating an account, you agree to our{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">
+                Terms of Service
+              </Link>{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              and{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
@@ -89,7 +215,14 @@ import { useRouter } from 'next/router';
       </div>
     </>
   )
+}
+export default RegisterPage;
 
+<<<<<<< HEAD
+},
+
+export default RegisterPage,;
+;
 export default RegisterPage,
             />;
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">;
@@ -146,14 +279,30 @@ export default RegisterPage,
   }
 }
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
+=======
+=======
+              <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Privacy Policy;
               </Link>;
             </p>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </>;
   );
 },;
 export default RegisterPage;
+=======
+    </>);
+},
+export default RegisterPage,
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

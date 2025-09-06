@@ -1,12 +1,64 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ServiceDescriptionForm} from "@/components/services/ServiceDescriptionForm";
+import {GeneratedDescriptionDisplay} from "@/components/services/GeneratedDescriptionDisplay";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function ServiceDescriptionGenerator() {;
+<<<<<<< HEAD
+  const { isAuthenticated, isLoading } = useAuth();
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
 import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+export default function ServiceDescriptionGenerator() {
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const { isAuthenticated, isLoading } = useAuth();
+
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function ServiceDescriptionGenerator() {
+  const { isAuthenticated, isLoading } = useAuth(),
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
+  
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -24,6 +76,8 @@ import { SEO } from "@/components/SEO",
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription)
     // Here you could also save to database if needed
+  }
+  },
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
@@ -42,7 +96,9 @@ import { SEO } from "@/components/SEO",
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
-
+<<<<<<< HEAD
+              <GeneratedDescriptionDisplay
+              <GeneratedDescriptionDisplay 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -54,9 +110,13 @@ import { Navigate } from "react-router-dom",;
 export default function ServiceDescriptionGenerator() {;
   const { isAuthenticated, isLoading } = useAuth(),;
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Show loading while checking authentication;
   if (isLoading) {;
-    return (;
+    return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
         <div className="animate-pulse text-zion-purple text-lg">;
           Loading...;
@@ -64,22 +124,23 @@ export default function ServiceDescriptionGenerator() {;
       </div>;
     );
   }
-;
+
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
   }
-;
+
   const handleDescriptionSave = (editedDescription: string) => {;
-    setGeneratedDescription(editedDescription);
+    setGeneratedDescription(editedDescription),;
     // Here you could also save to database if needed;
   };
-  return (;
+
+  return (
     <div className="min-h-screen flex flex-col bg-zion-blue">;
-      <SEO;
-        title="Service Description Generator";
-        description="Generate professional service descriptions using AI";
-        keywords="service description, AI content, professional description generator";
+      <SEO
+        title="Service Description Generator" 
+        description="Generate professional service descriptions using AI"
+        keywords="service description, AI content, professional description generator"
       />;
       <Header />;
       <main className="flex-1 p-6 md:p-10">;
@@ -88,19 +149,37 @@ export default function ServiceDescriptionGenerator() {;
           <p className="text-zion-slate mb-8">;
             Create professional service descriptions with the help of AI. Just provide basic details about your service.;
           </p>;
+
           <div className="space-y-8">;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
-            {generatedDescription && (;
-              <GeneratedDescriptionDisplay;
 
+            {generatedDescription && (;
+<<<<<<< HEAD
+              <GeneratedDescriptionDisplay;
+=======
+
+              <GeneratedDescriptionDisplay
+=======
+
+              <GeneratedDescriptionDisplay 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  const { isAuthenticated, isLoading } = useAuth();
+
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+              <GeneratedDescriptionDisplay
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
-              />
+              />;
             )}
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  )
+          </div>;
+        </div>;
+      </main>;
+      <Footer />;
+=======
+    </div>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

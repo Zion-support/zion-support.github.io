@@ -1,16 +1,40 @@
+import React from "react";
+import Head from "next/head";
+<<<<<<< HEAD
+origin/main
+origin/automation-improvements-final
 
+=======
+>>>>>>> origin/automation-improvements-final
 
+=======
+import React from './react';
+import Head from './next / head';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface SEOProps {
+=======
+interface SEOProps {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
-
+<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   keywords?: string;
 }
-const SEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions"
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting"
 }) => {
+=======
+
+const SEO: React.FC<SEOProps> = ({;
+  title = "Zion Tech Group - Technology Solutions",;
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
+}) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Head>
       <title>{title}</title>
@@ -19,13 +43,19 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
   );
-
+<<<<<<< HEAD
 }
+};
 
+export default SEO;
+
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
   image?: string;
   url?: string;
   type?: string;
-
 export default function SEO({
   title = "Zion Tech Group - Advanced AI Solutions",
   description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
@@ -35,7 +65,6 @@ export default function SEO({
 }: SEOProps) {
   const router = useRouter();
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
-
   return (
     <Head>
       <title>{title}</title>
@@ -52,7 +81,15 @@ export default function SEO({
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
 export default SEO;
-
+origin/main
+origin/automation-improvements-final
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+}
+export default SEO;

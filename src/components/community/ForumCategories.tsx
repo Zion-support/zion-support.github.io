@@ -1,9 +1,8 @@
-
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
 
     id: "getting-hired"
@@ -12,23 +11,38 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-reac
     adminOnly: false
     icon: "Briefcase"
   }
-
+=======
 import { ForumCategoryInfo } from "@/types/community",
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
     id: "project-help"
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
     icon: "MessageSquare"
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
+<<<<<<< HEAD
+  }
+  },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   {
     id: "announcements"
     name: "Announcements"
@@ -36,7 +50,51 @@ import { ForumCategoryInfo } from "@/types/community",
     adminOnly: true
     icon: "Megaphone"
   }
+<<<<<<< HEAD
+]
+const iconMap = {
+  Briefcase
+  MessageSquare
+  Code
+  FileText
+  Megaphone
+}
 
+
+
+],
+
+const iconMap = {
+  Briefcase,
+  MessageSquare,
+  Code,
+  FileText,
+  Megaphone
+},
+
+export const ForumCategories = () => {
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+
+  const visibleCategories = categories.filter(
+    category => !category.adminOnly || isAdmin
+  ),
+
+  return (
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
+      {visibleCategories.map((category) => {
+        const Icon = iconMap[category.icon as keyof typeof iconMap],
+        return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
@@ -51,7 +109,26 @@ import { ForumCategoryInfo } from "@/types/community",
             </Card>
           </Link>
         )
+<<<<<<< HEAD
+<<<<<<< HEAD
+      })}
+    </div>
+  )
+}
+export default ForumCategories
+"
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+export default ForumCategories
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
+export default ForumCategories;
+;
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Link from "next/link",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -131,4 +208,21 @@ export const ForumCategories = () => {;
   );
 };
 export default ForumCategories;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+export default ForumCategories;
+
+
+export default ForumCategories;
+";
+  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+export default ForumCategories;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

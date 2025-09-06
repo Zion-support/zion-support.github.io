@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -13,10 +12,16 @@ import {
   DialogTitle
 } from '@/components/ui/dialog'
 
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+=======
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
-
   onSubmit: (details: { email: string; address: string }) => void
 export default function GuestCheckoutModal({
   open
@@ -39,7 +44,8 @@ export default function GuestCheckoutModal({
       setIsSubmitting(false)
     }
   }
-
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -81,7 +87,18 @@ export default function GuestCheckoutModal({;
       setIsSubmitting(false);
     }
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">
@@ -99,9 +116,23 @@ export default function GuestCheckoutModal({;
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
         )}
+<<<<<<< HEAD
+        <form onSubmit={handleSubmit} className='space-y-4'>
+          <div className='space-y-2'>
+            <Label
+              htmlFor='guest-email'
+              className='text-white flex items-center gap-2'>;
+              <Mail className='h-4 w-4 text-zion-cyan' />;
+              Email Address;
+            </Label>;
+            <Input
+              id='guest-email'
+              type='email'
 
+=======
               id="guest-email"
               type="email"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               value={email || ''}
               onChange={(e) => setEmail(e.target.value || '')}
               placeholder="your.email@example.com"
@@ -115,6 +146,59 @@ export default function GuestCheckoutModal({;
               <MapPin className="h-4 w-4 text-zion-cyan" />
               Shipping Address
             </Label>
+<<<<<<< HEAD
+            <Input
+<<<<<<< HEAD
+              id='guest-email'
+              type='email'
+              value={email || ''}
+              onChange={e => setEmail(e.target.value || '')}
+              placeholder='your.email@example.com'              required
+              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light'
+            />
+          </div>
+          <div className='space-y-2'>
+            <Label
+              htmlFor='guest-address'
+              className='text-white flex items-center gap-2'
+            >
+              <MapPin className='h-4 w-4 text-zion-cyan' />
+              Shipping Address
+            </Label>
+            <Textarea
+              id='guest-address'
+              value={address || ''}
+              onChange={e => setAddress(e.target.value || '')}
+              placeholder='Enter your full shipping address...'              required
+              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]'
+            />
+          </div>
+          <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>
+            <p className='text-yellow-400 text-sm'>
+              💡 Creating an account allows you to track your order and checkout
+              faster next time.
+            </p>
+          </div>
+          <DialogFooter className='space-x-2'>
+            <Button
+              type='button'
+              variant='outline'
+              onClick={() => onOpenChange(false)}
+              className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'            >
+              Cancel
+            </Button>
+            <Button
+              type='submit'
+              disabled={isSubmitting || !email || !address}
+              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
+              id="guest-email"
+              type="email"
+              value={email || ''}
+              onChange={(e) => setEmail(e.target.value || '')}
+              placeholder="your.email@example.com"
+              required
+              className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light"
+=======
             <Textarea
               id="guest-address"
               value={address || ''}
@@ -122,6 +206,7 @@ export default function GuestCheckoutModal({;
               placeholder="Enter your full shipping address..."
               required
               className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />
           </div>
 
@@ -131,6 +216,15 @@ export default function GuestCheckoutModal({;
             </p>
           </div>
 
+<<<<<<< HEAD
+          <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
+            <p className="text-yellow-400 text-sm">
+              💡 Creating an account allows you to track your order and checkout faster next time.
+            </p>
+          </div>
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <DialogFooter className="space-x-2">
             <Button
               type="button"
@@ -145,7 +239,15 @@ export default function GuestCheckoutModal({;
               disabled={isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
+=======
+<<<<<<< HEAD
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -154,7 +256,49 @@ export default function GuestCheckoutModal({;
                   Continue to Payment
                 </>
               )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+              disabled={isSubmitting || !email || !address}
+              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
+              {isSubmitting ? (;
+                'Processing...';
+              ) : (;
+                <>;
+                  <CreditCard className='h-4 w-4 mr-2' />;
+                  Continue to Payment;
+                </>;
+              )}
+
+};
+};
+<<<<<<< HEAD
+
+
+          <DialogFooter className='space - x-2'>;
+            <Button;
+              type='button';
+              variant='outline';
+              on_click={() => onOpenChange (false)}
+              className='border - zion - cyan / 30 text - zion - slate - light hover:bg - zion - cyan / 10'            >;
+              Cancel;
+            </Button>;
+            <Button;
+              type='submit';
+              disabled={is_submitting || !email || !address}
+              className='bg - zion - cyan hover:bg - zion - cyan / 90 text - zion - blue'            >;
+              {is_submitting ? (
+                'Processing...') : (
+                <>;
+                  <CreditCard className='h - 4 w - 4 mr - 2' />;
+                  Continue to Payment;
+                </>)}
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </Button>;
           </DialogFooter>;
         </form>;
@@ -163,4 +307,6 @@ export default function GuestCheckoutModal({;
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

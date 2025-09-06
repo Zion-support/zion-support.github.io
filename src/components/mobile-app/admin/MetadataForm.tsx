@@ -1,6 +1,24 @@
-
+<<<<<<< HEAD
+interface MetadataFormProps {;
+  form: UseFormReturn<AppMetadataValues>;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
@@ -133,14 +151,29 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                   </FormControl>
                 </FormItem>
               )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />
           </div>
         </Form>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+}
+};
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+=======
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from 'lucide-react'
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

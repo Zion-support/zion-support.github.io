@@ -1,21 +1,59 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import type { KycProfile } from '../../../utils/kyc',;
+import fs from 'fs',;
+import path from 'path',;
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),
+const FILE = path.join(DATA_DIR, 'profiles.json'),
 
+function load(): Record<string, KycProfile> {
+  try {
+    const raw = fs.readFileSync(FILE, 'utf8'),
+    return JSON.parse(raw)
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+const DATA_DIR = path.join(process.cwd(), 'datakyc')
+const FILE = path.join(DATA_DIR, 'profiles.json')
+function load(): Record<string, KycProfile> {
+  try {
+
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
+
+<<<<<<< HEAD
+function load(): Record<string, KycProfile> {
+  try {
+    if (!fs.existsSync(FILE)) return {};
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch {
     return {};
   }
 }
-function save(db: Record<string, KycProfile>) {
 
-fs.mkdirSync(DATA_DIR, { recursive: true })
 
+<<<<<<< HEAD
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+  const db = load()
+  const db = load(),
   if (req.method === 'GET') {
     const queue = Object.values(db).filter((p) => p.status === 'submitted' |p.status === 'needs_more_info')
     return res.status(200).json({ ok: true, queue })
@@ -35,6 +73,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     save(db)
     return res.status(200).json({ ok: true, profile })
 
+  }
+  return res.status(405).json({ error: 'Method not allowed' });
+
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  }
+;
+  return res.status(405).json({ error: 'Method not allowed' });
+};
   try {
     if (req.method === 'GET') {
       const profiles = load();
@@ -58,4 +106,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

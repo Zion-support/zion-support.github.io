@@ -1,8 +1,22 @@
+<<<<<<< HEAD
 
-
+<<<<<<< HEAD
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
 import React from 'react',
 import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom",
+import { ArrowLeft } from "lucide-react",
+=======
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function BackToDirectoryButton() {
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">
@@ -16,13 +30,24 @@ export function BackToDirectoryButton() {
         </Link>
       </Button>
     </div>
-
+<<<<<<< HEAD
+  );
+}
+  )
+  )
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { ArrowLeft } from "lucide-react";
+=======
+
+import React from 'react';
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {ArrowLeft} from "lucide-react";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function BackToDirectoryButton() {;
-  return (;
+  return (
     <div className="container mx-auto px-4 md: px-6 mb-12">;
       <Button variant="outline" asChild className="my-8">;
         <Link to="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
@@ -32,7 +57,13 @@ export function BackToDirectoryButton() {;
       </Button>;
     </div>;
   );
-
 }
 ;
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

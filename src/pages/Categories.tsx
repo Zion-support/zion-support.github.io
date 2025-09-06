@@ -1,4 +1,9 @@
-
+<<<<<<< HEAD
+import { GradientHeading } from "@/components/GradientHeading",
+import { SkeletonCard } from '@/components/ui',
+import ErrorBoundary from "@/components/GlobalErrorBoundary",
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
@@ -8,6 +13,10 @@ interface CategoryType {
   name: string;
   slug: string;
   icon: string
+<<<<<<< HEAD
+}
+=======
+
 
       logErrorToProduction('Categories API error:', { data: response.statusText })
       return CATEGORIES as CategoryType[]
@@ -16,8 +25,24 @@ interface CategoryType {
   const isLoading = !data && !error
 
 }
+<<<<<<< HEAD
+      logErrorToProduction('Categories API error:', { data: response && response.statusText }),;
+      return CATEGORIES as CategoryType[];
+    fallbackData: initialCategories}),;
+  const categories = data || [];
+  const isLoading = !data && !error;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+      logErrorToProduction ('Categories API error:', { data: response.status_text }),
+      return CATEGORIES as CategoryType[];
+    fallback_data: initial_categories}),
+  const categories = data || [];
+  const is_loading = !data && !error;
+=======
 import React from "react";
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 const Categories: React.FC: = () => {,"
   const categories = []
@@ -134,9 +159,32 @@ const Categories: React.FC = () => {}
 export default Categories""
 "
   )}
+<<<<<<< HEAD
+<<<<<<< HEAD
 export: default Categories
 export default Categories," ]
-
+export default Categories"")))))))))
+}
+export default Categories"")))))))));
+};
+import useSWR from 'swr',
+import { CategoryCard } from "@/components/CategoryCard",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SkeletonCard } from '@/components/ui',
+import ErrorBoundary from "@/components/GlobalErrorBoundary",
+import { Folder } from 'lucide-react'
+import { CATEGORIES } from '@/data/categories',
+import { NextSeo } from '@/components/NextSeo',
+import {logErrorToProduction} from '@/utils/productionLogger',
+interface CategoryType {
+  id: string,
+  name: string,
+  slug: string,
+  icon: string
+=======
+export: default Categories
+export default Categories," ]
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -169,7 +217,17 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {;
 },;
 export interface CategoriesProps {;
   categories?: CategoryType[];
+<<<<<<< HEAD
 }
+=======
+
+export: default Categories,;
+export default Categories," ];
+export default Categories"")))))))));
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
   const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {
@@ -236,4 +294,6 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

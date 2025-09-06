@@ -1,9 +1,10 @@
-
-
+=======
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Calendar, ArrowRight } from 'lucide-react'
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -64,7 +65,27 @@ export function EnterpriseCTA() {
                       <span className='text-primary text-sm font-medium'>
                         4
                       </span>                    </div>
+<<<<<<< HEAD
 
+import { Calendar } from 'lucide-react';
+
+
+
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Calendar, ArrowRight } from 'lucide-react'
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
@@ -123,9 +144,31 @@ export function EnterpriseCTA() {
           </div>
         </div>
       </div>
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </section>;
+  );
+};
+}
+    </section>
+  )
+}
 import React from "react",;
 import { Button } from "@/components/ui/button";
+=======
+
+
+
+    </section>
+
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button";
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Calendar, ArrowRight } from 'lucide-react';
 export function EnterpriseCTA() {;
   return (;
@@ -188,5 +231,17 @@ export function EnterpriseCTA() {;
     </section>;
   );
 }
-;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+    </section>);
+}
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

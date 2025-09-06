@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 
-
+<<<<<<< HEAD
+import {Link} from "react-router-dom";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
+import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 import { Link } from "react-router-dom",
-
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useAuth } from "@/hooks/useAuth";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { useAuth } from "@/hooks/useAuth",
 import {
   MessageSquare;
   Briefcase;
@@ -9,7 +18,22 @@ import {
   FileText;
   Megaphone
 } from "@/components/icons",
+import { ForumCategory, ForumCategoryInfo } from "@/types/community";
+const categories: ForumCategoryInfo[] = [
+  {
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+    icon: "Briefcase"
+  }
+import { ForumCategory, ForumCategoryInfo } from "@/types/community",
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -18,7 +42,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Briefcase"
   },
-
   {
 
     id: "project-help"
@@ -27,7 +50,20 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "MessageSquare"
+  }
+  {
 
+
+    icon: "Code"
+  }
+  },
+  {
+    id: "ai-tools",
+    name: "AI Tools Discussion",
+    description: "Discuss AI tools, frameworks, and best practices.",
+    adminOnly: false,
+    icon: "Code"
+  },
   {
 
     id: "feedback"
@@ -36,7 +72,8 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "FileText"
-
+  }
+  },
   {
 
     id: "announcements"
@@ -45,6 +82,8 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
+];
+],
 
 const iconMap = {
   Briefcase,
@@ -52,6 +91,21 @@ const iconMap = {
   Code,
   FileText,
   Megaphone
+}
+export const ForumCategories = () => {
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
+  const visibleCategories = categories.filter(
+    category => !category.adminOnly |isAdmin
+  );
+},
+
+export const ForumCategories = () => {;
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+export const ForumCategories = () => {
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
 
   const visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
@@ -76,6 +130,146 @@ const iconMap = {
             </Card>
           </Link>
         )
-
+      })}
+    </div>
+  )
+}
 export default ForumCategories;
 
+import { Link } from "react-router-dom",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { useAuth } from "@/hooks/useAuth",;
+import {;
+  MessageSquare,;
+  Briefcase,;
+  Code,;
+  FileText,;
+  Megaphone;
+} from "@/components/icons",;
+import { ForumCategory, ForumCategoryInfo } from "@/types/community",;
+
+const categories: ForumCategoryInfo[] = [;
+  {;
+    id: "getting-hired",;
+    name: "Getting Hired",;
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    adminOnly: false,;
+    icon: "Briefcase";
+  };
+  {;
+    id: "project-help",;
+    name: "Project Help",;
+    description: "Get help with your ongoing projects and collaboration.",;
+    adminOnly: false,;
+    icon: "MessageSquare";
+  };
+  {;
+    id: "ai-tools",;
+    name: "AI Tools Discussion",;
+    description: "Discuss AI tools, frameworks, and best practices.";
+    adminOnly: false,;
+    icon: "Code";
+  };
+  {;
+    id: "feedback",;
+    name: "Feedback & Feature Requests",;
+    description: "Share your feedback and suggest new features.",;
+    adminOnly: false,;
+    icon: "FileText";
+  };
+  {;
+    id: "announcements",;
+    name: "Announcements",;
+    description: "Official announcements from the Zion team.",;
+    adminOnly: true,;
+    icon: "Megaphone";
+  }
+];
+
+const iconMap = {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+import { Link } from './react-router-dom';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
+import { use_auth } from '@/hooks / use_auth';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';
+import { ForumCategory, ForumCategoryInfo } from '@/types / community';
+const categories: ForumCategoryInfo[] = [;
+  {
+    id: "getting - hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    admin_only: false,
+    icon: "Briefcase";
+  }
+  {
+    id: "project - help",
+    name: "Project Help",
+    description: "Get help with your ongoing projects and collaboration.",
+    admin_only: false,
+    icon: "MessageSquare";
+  }
+  {
+    id: "ai - tools",
+    name: "AI Tools Discussion",
+    description: "Discuss AI tools, frameworks, and best practices.";
+    admin_only: false,
+    icon: "Code";
+  }
+  {
+    id: "feedback",
+    name: "Feedback & Feature Requests",
+    description: "Share your feedback and suggest new features.",
+    admin_only: false,
+    icon: "FileText";
+  }
+  {
+    id: "announcements",
+    name: "Announcements",
+    description: "Official announcements from the Zion team.",
+    admin_only: true,
+    icon: "Megaphone";
+  }
+];
+;
+const icon_map = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  Briefcase;
+  MessageSquare;
+  Code;
+  FileText;
+  );
+  return (
+        return (
+          <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
+            <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
+              <CardHeader className="flex flex-row items-center gap-4">;
+                <div className="p-2 bg-zion-purple/10 rounded-full">;
+                  <Icon className="h-6 w-6 text-zion-purple" />;
+                </div>;
+                <CardTitle className="text-xl">{category && category.name}</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <CardDescription className="text-base">{category && category.description}</CardDescription>;
+              </CardContent>;
+            </Card>;
+          </Link>;
+        );
+      })}
+<<<<<<< HEAD
+
+    </div>;
+  );
+};
+<<<<<<< HEAD
+=======
+export default ForumCategories;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default ForumCategories;

@@ -1,6 +1,3 @@
-import type { NextPage } from 'next';
-import Seo from '../components/seo/Seo';
-import { JobPostingJsonLd } from 'next-seo';
 
 const Jobs: NextPage = () => {
   const job = {
@@ -14,12 +11,27 @@ const Jobs: NextPage = () => {
       value: 160000
       unitText: 'YEAR'}
     hiringOrganization: {
-
+      name: 'Zion Tech Solutions'
+      sameAs: 'https://ziontechgroup.netlify.app'
+      logo: 'https://ziontechgroup.netlify.app/logo.png'}
+    jobLocationType: 'TELECOMMUTE'} as const
+      name: 'Zion Tech Solutions',
+      same_as: 'https://ziontechgroup.netlify.app',
+      logo: 'https://ziontechgroup.netlify.app / logo.png'},
+    jobLocationType: 'TELECOMMUTE'} as const,
   return (
     <div>
       <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
       <JobPostingJsonLd
+        datePosted={job.datePosted}
+        description={job.description}
+        employment_type={job.employment_type}
+        hiring_organization={job.hiring_organization}
+        jobLocationType={job.jobLocationType}
+        title={job.title}
 
+<<<<<<< HEAD
+export default Jobs,;
         datePosted={job.datePosted  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -60,14 +72,27 @@ const Jobs: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       />;
       <main>;
-        <h1>Jobs</h1>;
+        <h1 > Jobs</h1>;
         <p>{job.title}</p>;
         <p>{job.description}</p>;
       </main>;
+
     </div>;
   );
 },;
 export default Jobs;
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,4 +1,3 @@
-
     typeof window !== 'undefined'
       ? encodeURIComponent(window.location.href)
       : ''
@@ -31,6 +30,7 @@
           title: 'Link Copied!'
           description: 'The link has been copied to your clipboard'
         })
+=======
 
 import { Button } from "./ui/button",
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -64,18 +64,20 @@ export function SocialShareSection() {
         toast({
           title: "Link Copied!",
           description: "The link has been copied to your clipboard"})
-
+      })
+      .catch(() => {
+        toast({
       })
       .catch(() => {
         toast({
           title: t('errors.failed_to_copy'),
-
           description: "Please try again or copy the URL manually",
           variant: "destructive"
         })
       })
   },
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const shareLinks = [
     {
       name: "Twitter",
@@ -96,13 +98,14 @@ export function SocialShareSection() {
       onClick: shareToLinkedIn
     },
     {
-
       name: "Copy Link",
       icon: <Link className="h-5 w-5" aria-hidden="true" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
     }],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,7 +114,51 @@ export function SocialShareSection() {
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <div className='flex flex-wrap gap-3'>
+            {shareLinks.map((link, index) => (              <Button
+                key = {index,}
+                className={`${link.color} text-white`}
+                size='sm'
+                onClick={link.onClick}
+                aria-label={link.name}
+                title={link.name}              >
+                {link.icon}
+                <span className='sr-only'>{link.name}</span>
+                <span aria-hidden='true'>{link.name}</span>
+              </Button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+  navigator.clipboard.writeText (window.location.href) .then ( () => {
+  toast ({
+}) .catch ( () => {
+  toast ({
+  title: t ('errors.failed to copy')
+})
+}
+}</div> </div> </div> </section>)
+}'"
+}
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+};
+}</div> </div> </div> </section>) ;
+}'";
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div className="flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (
               <Button
@@ -209,4 +256,6 @@ export function SocialShareSection() {;
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

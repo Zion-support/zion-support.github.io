@@ -1,5 +1,28 @@
+<<<<<<< HEAD
 
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import React, { useState, useEffect } from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {Button} from "@/components/ui/button";
+import {Form} from "@/components/ui/form";
+import {Card} from "@/components/ui/card";
+import {RateOptimizationSection} from "../RateOptimizationSection";
+import {basicInfoSchema, BasicInfoFormData} from "./schema";
+import {PersonalInfoFields} from "./PersonalInfoFields";
+import {ContactFields} from "./ContactFields";
+export interface BasicInfoFormProps {;
+<<<<<<< HEAD
+  resumeId?: string;
+  initialData?: Partial<BasicInfoFormData>;
 import React, { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -8,53 +31,214 @@ import { Form } from "@/components/ui/form",
 import { Card } from "@/components/ui/card",
 import { RateOptimizationSection } from "../RateOptimizationSection",
 import { basicInfoSchema, BasicInfoFormData } from "./schema",
+import { PersonalInfoFields } from "./PersonalInfoFields";
+import { ContactFields } from "./ContactFields";
+export interface BasicInfoFormProps {
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  resumeId?: string;
+
+  initialData?: Partial<BasicInfoFormData>;
+  skills?: string[];
+  yearsExperience?: number;
+import { PersonalInfoFields } from "./PersonalInfoFields",
+import { ContactFields } from "./ContactFields",
+export interface BasicInfoFormProps {
+  resumeId?: string,
+  initialData?: Partial<BasicInfoFormData>,
   onSave: (data: BasicInfoFormData) => void,
   skills?: string[],
   yearsExperience?: number,
+  onComplete?: () => void
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export function BasicInfoForm({;
+  resumeId;
+  initialData = {};
+  onSave;
+  skills = [];
+  yearsExperience = 0;
+export function BasicInfoForm({
+=======
+
+
+export function BasicInfoForm(): any ({;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  resumeId;
+
+  initialData = {}
+  onSave;
+  skills = [];
+  yearsExperience = 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  resumeId,
+  initialData = {},
+  onSave,
+  skills = [],
+  yearsExperience = 0,
+=======
+
+
 
   onComplete?: () => void
 }
 
-export function BasicInfoForm({
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
     resolver: zodResolver(basicInfoSchema)
     defaultValues: {
+      fullName: ""
+      title: ""
+      email: ""
+      phone: ""
+      location: ""
+      website: ""
+      linkedin: ""
+      github: ""
+      hourlyRate: 0
+      ...initialData}});
+      fullName: "",
+      title: "",
+      email: "",
+      phone: "",
+      location: "",
+      website: "",
+      linkedin: "",
+      github: "",
+      hourlyRate: 0,
+      ...initialData}}),
 
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
+import React, { useState, useEffect } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { Button } from "@/components/ui/button",;
+import { Form } from "@/components/ui/form",;
+import { Card } from "@/components/ui/card",;
+import { RateOptimizationSection } from "../RateOptimizationSection",;
+import { basicInfoSchema, BasicInfoFormData } from "./schema",;
+import { PersonalInfoFields } from "./PersonalInfoFields",;
+import { ContactFields } from "./ContactFields",;
+export interface BasicInfoFormProps {;
+  resumeId?: string,;
+  initialData?: Partial<BasicInfoFormData>,;
+  onSave: (data: BasicInfoFormData) => void,;
+  skills?: string[],;
+  yearsExperience?: number,;
+  onComplete?: () => void;
+}
+;
+export function BasicInfoForm({;
+  resumeId,;
+  initialData = {},;
+  onSave,;
+  skills = [],;
+  yearsExperience = 0,;
 
+  onComplete;
+}: BasicInfoFormProps) {;
+  const form = useForm<BasicInfoFormData>({;
+    resolver: zodResolver(basicInfoSchema),;
+    defaultValues: {;
+      fullName: "",;
+      title: "",;
+      email: "",;
+      phone: "",;
+      location: "",;
+      website: "",;
+      linkedin: "",;
+      github: "",;
+      hourlyRate: 0,;
+      ...initialData}});
+
+  useEffect(() => {;
+    if (initialData) {;
+      Object && Object.entries(initialData).forEach(([key, value]) => {;
+        if (value !== undefined) {;
+
+          form.setValue(key as keyof BasicInfoFormData, value as any);
+<<<<<<< HEAD
         }
-      })
+      });
+    }
+  }, [initialData, form]);
+  const handleSubmit = (data: BasicInfoFormData) => {
+    onSave(data)
+    if (onComplete) {
+      onComplete()
+    }
+  }
+  };
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+      });
     }
 
+
+=======
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, [initialData, form]),;
+
   const handleSubmit = (data: BasicInfoFormData) => {;
-    onSave(data);
+    onSave(data),;
     if (onComplete) {;
       onComplete();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        }
+      });
+    }
+  }, [initialData, form]);
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-        <Card className="p-6 space-y-6">
-          <PersonalInfoFields control={form.control} />
-          <ContactFields control={form.control} />
-          <div className="pt-4 border-t border-gray-200">
-            <h3 className="text-lg font-medium mb-4">Rate Information</h3>
             <RateOptimizationSection
-              control={form.control}
-              setValue={form.setValue}
+              control={form && form.control}
+              setValue={form && form.setValue}
               skills={skills}
-
+<<<<<<< HEAD
+              yearsExperience={yearsExperience |0}
+              yearsExperience={yearsExperience || 0}
               location={form.getValues("location")}
               rateType="hourly"
             />
@@ -66,4 +250,99 @@ export function BasicInfoForm({
       </form>
     </Form>
   )
-
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+import React, { useState, useEffect } from './react';
+import { use_form } from './react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { Button } from '@/components / ui / button';
+import { Form } from '@/components / ui / form';
+import { Card } from '@/components / ui / card';
+import { RateOptimizationSection } from '../RateOptimizationSection';
+import { basicInfoSchema, BasicInfoFormData } from './schema';
+import { PersonalInfoFields } from './PersonalInfoFields';
+import { ContactFields } from './ContactFields';
+export interface BasicInfoFormProps {
+  resume_id?: string;
+  initial_data?: Partial < BasicInfoFormData>;
+  on_save: (data: BasicInfoFormData) => void,
+  skills?: string[];
+  years_experience?: number;
+  on_complete?: () => void;
+}
+export /**
+ * BasicInfoForm - Function description
+ */
+function BasicInfoForm() {
+  const form = use_form < BasicInfoFormData>({
+    resolver: zod_resolver (basicInfoSchema),
+    default_values: {
+      full_name: "",
+      title: "",
+      email: "",
+      phone: "",
+      location: "",
+      website: "",
+      linkedin: "",
+      github: "",
+      hourly_rate: 0,
+      ...initial_data}});
+;
+<<<<<<< HEAD
+=======
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      Object.entries (initial_data).for_each (([key, value]) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          form.set_value (key as keyof BasicInfoFormData, value as any);
+        }
+      });
+    }
+  }, [initial_data, form]);
+;
+  const handle_submit = (data: BasicInfoFormData) =>: any {
+    on_save (data),
+    // Check condition
+if ( {) {
+  $2
+}
+      on_complete ();
+    }
+  }
+;
+  return (
+    <Form {...form}>;
+      <form on_submit={form.handle_submit (handle_submit)} className="space - y-6">;
+        <Card className="p - 6 space - y-6">;
+          <PersonalInfoFields control={form.control} />;
+          <ContactFields control={form.control} />;
+          <div className="pt - 4 border - t border - gray - 200">;
+            <h3 className="text - lg font - medium mb - 4">Rate Information</h3>;
+            <RateOptimizationSection;
+              control={form.control}
+              set_value={form.set_value}
+              skills={skills}
+              years_experience={years_experience || 0}
+              location={form.get_values ("location")}
+              rate_type="hourly";
+            />;
+          </div>;
+        </Card>;
+        <div className="flex justify - end">;
+          <Button type="submit">Save Basic Information</Button>;
+        </div>;
+      </form>;
+    </Form>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

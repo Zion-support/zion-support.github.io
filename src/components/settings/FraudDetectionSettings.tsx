@@ -1,15 +1,13 @@
-
-
+=======
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
 import { Button } from '@/components/ui/button',
 import { Label } from '@/components/ui/label',
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { ShieldAlert, Info } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
-
   return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
@@ -114,4 +112,6 @@ import {
       </CardContent>
     </Card>
   )
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

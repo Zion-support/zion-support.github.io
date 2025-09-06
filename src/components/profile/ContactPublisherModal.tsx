@@ -1,4 +1,29 @@
+<<<<<<< HEAD
+import React from 'react'
+import FocusLock from 'react-focus-lock'
+import {
+<<<<<<< HEAD
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+import React from 'react'
+import FocusLock from 'react-focus-lock'
+import {
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  Dialog,
+  DialogContent,
+  DialogHeader,;
+  DialogTitle;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -193,7 +218,7 @@ export function ContactPublisherModal({  isOpen,  isOpen
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown = {handleKeyDown,}          aria-modal="true"
-
+=======
 import React from 'react',;
 import FocusLock from 'react-focus-lock',;
 import {;
@@ -292,7 +317,18 @@ export function ContactPublisherModal({;
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown={handleKeyDown}
           aria-modal="true"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -307,7 +343,36 @@ export function ContactPublisherModal({;
             <span className="block">Email:</span>
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
+<<<<<<< HEAD
+            </a>
+          </div>
+        )}
+        <Form {...form}>
+          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
+            <FormField
+              control = {form.control,}
+              name="subject"
+              render={({ field }: { field: any },) => (                <FormItem>
+            </Link>
+          </div>
+        )}
+        <Form {...form}>
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+            <FormField
+              control={form.control}
+              name="subject"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -319,7 +384,29 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
+<<<<<<< HEAD
+            />
+            <FormField
+              control = {form.control,}
+              name="message"
+              render={({ field }: { field: any },) => (                <FormItem>
+            />;
+            <FormField
+              control = {form.control,}
+              name="message"
 
+              render={({ field }: { field: any }) => (
+                <FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -331,7 +418,98 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
+<<<<<<< HEAD
+            />
+            <Button
+              onClick = {handleSend,}
+              className="w-full"
+              disabled = {!form.formState.isValid |isSubmitting,}            >
+              <SendIcon className="mr-2" />
+              {isSubmitting ? 'Sending...' : 'Send Message'}
 
+<<<<<<< HEAD
+=======
+            </Button>
+          </form>
+        </Form>
+        </DialogContent>
+      </FocusLock>
+    </Dialog>
+    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+<<<<<<< HEAD
+    </>
+  ) </>
+  )
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    </>;
+  ) </>;
+  );
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
+      <FocusLock disabled={!is_open} return_focus>;
+        <DialogContent;
+          className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md";
+          onKeyDown = {handleKeyDown, }          aria - modal="true";
+          aria - labelledby="contact - publisher - title";
+        >;
+          <DialogHeader>;
+            <DialogTitle id="contact - publisher - title" className="text - xl font - bold text - white flex items - center gap - 2">;
+              <Mail className="h - 5 w - 5 text - zion - cyan" />;
+              Contact Publisher;
+            </DialogTitle>;
+          </DialogHeader>;
+          {error && <p className="text - red - 500 mb - 2">{error}</p>}
+          {publisher_email && (
+            <div className="mb - 4 text - zion - slate - light">;
+            <span className="block">Email:</span>;
+            <a href={`mailto:${publisher_email}`} className="text - zion - cyan hover:underline truncate block">;
+              {publisher_email}
+            </a>;
+          </div>)}
+        <Form {...form}>;
+          <form on_submit={(e, ) => e.prevent_default ()} className="space - y-4">;
+            <FormField;
+              control = {form.control, }
+              name="subject";
+              render={({ field }: { field: any }, ) => (                <FormItem>;
+                  <FormLabel > Subject</FormLabel>;
+                  <FormControl>;
+                    <Input;
+                      placeholder="Subject";
+                      className="bg - zion - blue border - zion - blue - light text - white";
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage className="text - red - 500" />;
+                </FormItem>)}
+            />;
+            <FormField;
+              control = {form.control, }
+              name="message";
+              render={({ field }: { field: any }, ) => (                <FormItem>;
+                  <FormLabel > Message</FormLabel>;
+                  <FormControl>;
+                    <Textarea;
+                      placeholder={`Message to ${publisher_name}...`}
+                      className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage className="text - red - 500" />;
+                </FormItem>)}
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             />;
             <Button;
               onClick={handleSend}
@@ -346,9 +524,19 @@ export function ContactPublisherModal({;
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+    <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>) </>);
+=======
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

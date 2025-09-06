@@ -1,8 +1,24 @@
-
+<<<<<<< HEAD
+import { cn } from '@/lib / utils';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { StarIcon } from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
 import { Star } from 'lucide-react'
+<<<<<<< HEAD
+=======
+import Image from 'next / image'; // Import next / image;
+import React, { useState } from 'react'; // Import useStateimport Image from 'next / image'; // Import next / image;
+import React, { useState } from 'react'; // Import useState;
+import { Star } from 'lucide-react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface ListingScoreCardProps {
   title: string;
   description: string;
@@ -16,13 +32,18 @@ interface ListingScoreCardProps {
   reviewCount?: number;
   className?: string
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function ListingScoreCard(): any ({;
+=======
 export function ListingScoreCard({
-
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { StarIcon } from 'lucide-react'
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 interface ListingScoreCardProps {
   title: string,
@@ -43,7 +64,15 @@ export function ListingScoreCard({
   description, 
   image, 
   category, 
+<<<<<<< HEAD
+=======
+export function ListingScoreCard(): any ({;
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   tags,
   author,
   authorImage,
@@ -52,7 +81,11 @@ export function ListingScoreCard({
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const [mainImageError, setMainImageError] = useState(false)
+  const [authorImageError, setAuthorImageError] = useState(false)
+    >
   const [mainImageError, setMainImageError] = useState(false),
   const [authorImageError, setAuthorImageError] = useState(false),
 
@@ -61,11 +94,27 @@ export function ListingScoreCard({
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
       className
     )}>
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  const [mainImageError, setMainImageError] = useState(false),
+  const [authorImageError, setAuthorImageError] = useState(false),
+
+  return (
+    <div className={cn(
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+      className
+    )}>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
-
+=======
             src={image} 
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -73,7 +122,16 @@ export function ListingScoreCard({
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -89,7 +147,7 @@ export function ListingScoreCard({
           </Badge>
           {aiScore === undefined || aiScore === null ? (
             <div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           ) : (
             aiScore > 0 && (
               <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">
@@ -99,7 +157,33 @@ export function ListingScoreCard({
             )
           )}
         </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
+          {title}
+        </h3>
+        <p className='text-zion-slate mb-4 flex-grow line-clamp-2'>
+          {description}
+        </p>
+        {rating > 0 && (
+          <div className='flex items-center gap-1 mb-4'>
+            <div className='flex'>
+              {[1, 2, 3, 4, 5].map(star => (
+                <StarIcon
+                  key={star}
+                  className={cn(
+                    'h-4 w-4'
+                    star <= Math.round(rating)
+                      ? 'text-zion-cyan fill-zion-cyan'
+                      : 'text-zion-slate-light'
+                  )}                />
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
         
@@ -203,7 +287,18 @@ export function ListingScoreCard({;
                       : "text-zion-slate-light";
                   )}
                 />;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               ))}
             </div>
             <span className="text-sm text-zion-slate-light ml-1">
@@ -211,7 +306,9 @@ export function ListingScoreCard({;
             </span>
           </div>
         )}
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
               <Badge
@@ -226,20 +323,69 @@ export function ListingScoreCard({;
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
           Request Quote
         </Button>
-
+        
+        {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
+=======
+
+
+        {tags && tags.length > 0 && (;
+          <div className='flex flex-wrap gap-2 mb-4'>;
+            {tags && tags.map((tag, i) => (;
+
+              <Badge
+                key={i}
+                variant='outline'
+                className='border-zion-slate-dark text-zion-slate-light'>                {tag}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          <div className='flex flex-wrap gap-2 mb-4'>
+            {tags.map((tag, i) => (
+              <Badge
+                key={i}
+                variant='outline'
+                className='border-zion-slate-dark text-zion-slate-light'
+              >                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+        <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
+          Request Quote
+        </Button>
+=======
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag, i) => (
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+                {tag}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               </Badge>;
             ))}
           </div>;
         )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>
+        
+=======
+<<<<<<< HEAD
 
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {author && (
           <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
             {authorImage && !authorImageError ? (
@@ -247,16 +393,73 @@ export function ListingScoreCard({;
                 <Image
                   src={authorImage}
                   alt={author}
+<<<<<<< HEAD
+
+      </div>;
+    </div>;
+  );
+}
+
+                  className='object - cover rounded - full';
+                  on_error={() => setAuthorImageError (true)}
+                  priority={false}                />;
+              </div>) : (
+              <div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2 flex items - center justify - center text - zion - purple'>;
+                {author.char_at (0)}
+              </div>)}
+            <span className='text - sm text - zion - slate - light'>{author}</span>;
+          </div>)}
+      </div>;
+    </div>);
+}
+
+                  className="object-cover rounded-full"
+                  onError={() => setAuthorImageError(true)}
+                  priority={false}
+                />
+              </div>
+            ) : (
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 {author.charAt(0)}
               </div>
             )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {author.charAt(0)}
+              </div>
+            )}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <span className="text-sm text-zion-slate-light">{author}</span>
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         )}
       </div>;
     </div>;
   );
-
+<<<<<<< HEAD
+};
+}
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

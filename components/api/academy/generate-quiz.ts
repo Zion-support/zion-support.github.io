@@ -5,16 +5,20 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { moduleTitle, moduleContent } = req.body |{}
   const apiKey = process.env.OPENAI_API_KEY;
+=======
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+
+  const { moduleTitle, moduleContent } = req && req.body || {};
+  const apiKey = process && process.env.OPENAI_API_KEY;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const fallback = () => {
-    return res.status(200).json({
+    return res && res.status(200).json({
       questions: [
         {
-          question: `Which topic is central to ${moduleTitle}?`
           options: [
             'Random Ops'
             'Zion OS mission'
@@ -66,26 +70,40 @@ export default async function handler(
     });  };          question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
           answerIndex: 0}]})
-  }
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
-    const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {
-          role: 'system'
-          content: 'You are an expert course designer for founders.'
-        }
-        { role: 'user', content: prompt }
-      ]
-      temperature: 0.2
+          role: 'system',
+          content: 'You are an expert course designer for founders.',
+        },
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0 && 0.2,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    });
+    const text = completion && completion.choices?.[0]?.message?.content ?? '';
+    try {
+<<<<<<< HEAD
+
     });
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
+<<<<<<< HEAD
+      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
+      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+=======
 
+      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { role: 'user', content: prompt }];
       temperature: 0.2});
     const text = completion.choices?.[0]?.message?.content ?? '';
@@ -93,21 +111,71 @@ export default async function handler(
       const json = JSON.parse(text);
       return res.status(200).json(json);
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+      const json = JSON.parse (text);
+      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
+        { role: 'user', content: prompt }];
+      temperature: 0.2});
+;
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse (text);
+      return res.status (200).json (json);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch {
-      return fallback();
+      return fallback ();
     }
   } catch (err) {
-    return fallback();
+    return fallback ();
   }    } catch {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return fallback()
     }
   } catch (err) {
     return fallback()
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
       return res.status(200).json(json);
 
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+      return fallback ();
+    }
+  } catch (err) {
+    return fallback ();
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

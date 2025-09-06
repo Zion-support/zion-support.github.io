@@ -1,11 +1,18 @@
-
-
-import React from 'react',;
-import SEO from '../components/SEO',;
-
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
 import React from 'react'
 import SEO from '../components/SEO'
+import React from 'react',;
+import SEO from '../components/SEO',;
+import React from 'react'
+import SEO from '../components/SEO'
+=======
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AISustainabilityPlatformPage() {
   return (
     <div className="min-h-[60vh] px-6 py-24">
@@ -16,4 +23,9 @@ export default function AISustainabilityPlatformPage() {
       </div>
     </div>
   )
-
+};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

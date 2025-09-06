@@ -1,6 +1,67 @@
-
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+async function fetchFromGitHub(): Promise<any[]> {;
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+async function fetchFromGitHub(): Promise<any[]> {
   try {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+      } catch {
+        // ignore;
+      }
+    }
+return results;
+  } catch {
+    return [];
+  }
+}
+
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+const dir = path.join (process.cwd (), 'automation_logs'),
+  try {
+    if () {) {
+  $2
+}
+      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
+      // Check condition
+if ( {) {
+  $2
+}
+        const logs = files.slice (0, 50).map ((f) => {
+          try {
+            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
+            const json = JSON.parse (raw),
+            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
+          } catch {
+            return { id: f, file: f }
+          }
+        }),
+        return res.status (200).json ({ logs });
+
+      }
+    }
+  } catch {
+<<<<<<< HEAD
+    // fall through to GitHub
+  }
+const remote = await fetchFromGitHub()
+
+  return res.status(200).json({ logs: remote })
+const remote = await fetchFromGitHub(),
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+async function fetchFromGitHub(): Promise<any[]> {;
+  try {
     const repoUrl = require('../../../package.json').repository?.url || '';
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
@@ -84,20 +145,32 @@ export default async function handler(req, res) {
 }
   } catch {;
     // fall through to GitHub;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
+
+  const remote = await fetchFromGitHub();
+  return res.status(200).json({ logs: remote });
+}
+};
+=======
+    // fall through to GitHub;
+  }
+
+=======
+}
+
+=======
+const remote = await fetchFromGitHub (),
+  return res.status (200).json ({ logs: remote });
 }
 ;
-  const remote = await fetchFromGitHub();
-  return res.status(200).json({ logs: remote });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-  const remote = await fetchFromGitHub();
 
   return res.status(200).json({ logs: remote });
 
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

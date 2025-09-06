@@ -1,55 +1,248 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import React from "react";
+import { getBadgeMeta, BadgeKey } from "./badgeConfig";
+=======
+import React from './react';
+import { getBadgeMeta, BadgeKey } from './badge_config';
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+interface BadgeEarnedProps {
+
+  badge: BadgeKey
+
+  size?: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  showName?: boolean;
+  showDesc?: boolean;
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
+=======
+
+
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+  show_name?: boolean;
+  show_desc?: boolean;
+  earned_date?: string;
+}
+export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  badge;
+
+  size = 44;
+<<<<<<< HEAD
+
+  showDesc = false,;
+  earnedDate}) => {;
+  const meta = getBadgeMeta(badge);
+  if (!meta) return null;
+  const Icon = meta && meta.icon;
+
+
+=======
+
+
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+
+=======
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
   showName?: boolean,
   showDesc?: boolean,
-
   earnedDate?: string
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+  badge;
+  size = 44;
+  showName = true;
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
+  badge;
 
+  size = 44;
+  showName = true;
+  showDesc = false
+  earnedDate}) => {
+  const meta = getBadgeMeta(badge);
+  if (!meta) return null;
+  const Icon = meta.icon;
+  badge,
+  size = 44,
+  showName = true,
   showDesc = false,
   earnedDate}) => {
   const meta = getBadgeMeta(badge),
   if (!meta) return null,
   const Icon = meta.icon,
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-    <div className="flex flex-col items-center text-center gap-1 px-2">
+    <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
-          background: meta.bg
-          borderRadius: "9999px"
-          width: size
-          height: size
-          display: "flex"
-          alignItems: "center"
           justifyContent: "center"}}
         className="shadow hover-scale"
+<<<<<<< HEAD
+
         title={meta.name}
       >
         <Icon color={meta.color} size={size * 0.7} />
       </div>
       {showName && (
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
+import React from "react",;
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
+interface BadgeEarnedProps {;
+  badge: BadgeKey,;
+  size?: number,;
+  showName?: boolean,;
+  showDesc?: boolean,;
+  earnedDate?: string;
+}
+;
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+  badge,;
+  size = 44,;
+  showName = true,;
+  showDesc = false,;
+  earnedDate}) => {;
+  const meta = getBadgeMeta(badge),;
+  if (!meta) return null,;
+  const Icon = meta.icon,;
+  return (;
+    <div className="flex flex-col items-center text-center gap-1 px-2">;
+      <div;
+        style={{;
+          background: meta.bg,;
+          borderRadius: "9999px",;
+          width: size,;
+          height: size,;
+          display: "flex",;
+          alignItems: "center";
+          justifyContent: "center"}}
+        className="shadow hover-scale";
+        title={meta.name}
+      >;
+        <Icon color={meta.color} size={size * 0.7} />;
+      </div>;
+      {showName && (;
+        <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {meta.name}
         </span>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        title={meta && meta.name}>;
+        <Icon color={meta && meta.color} size={size * 0 && 0.7} />;
+      </div>;
+      {showName && (;
+        <span className="text-xs font-semibold mt-1" style={{ color: meta && meta.color }}>;
+          {meta && meta.name}
+        </span>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       )}
-      {earnedDate && (
-        <span className="text-[10px] text-gray-400">
+      {earnedDate && (;
+        <span className="text-[10px] text-gray-400">;
           {earnedDate}
-        </span>
+        </span>;
       )}
-      {showDesc && (
-        <span className="text-xs text-zion-slate-light">{meta.description}</span>
+      {showDesc && (;
+        <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </div>
+  )
+}
 
+    </div>;
+  );
+    </div>;
+  );
+=======
+
+
+
+    </div>;
+  );
+
+=======
+=======
+    </div>;
+  );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
-
+=======
+=======
+  show_name = true;
+  show_desc = false,
+  earned_date}) => {
+  const meta = getBadgeMeta (badge);
+  // Check condition
+if (return null) {
+  $2
+}
+  const Icon = meta.icon;
+;
+  return (
+    <div className="flex flex - col items - center text - center gap - 1 px - 2">;
+      <div;
+        style={{
+          background: meta.bg,
+          border_radius: "9999px",
+          width: size,
+          height: size,
+          display: "flex",
+          align_items: "center",
+          justify_content: "center"}}
+        className="shadow hover - scale";
+        title={meta.name}
+      >;
+        <Icon color={meta.color} size={size * 0.7} />;
+      </div>;
+      {show_name && (
+        <span className="text - xs font - semibold mt - 1" style={{ color: meta.color }}>;
+          {meta.name}
+        </span>)}
+      {earned_date && (
+        <span className="text-[10px] text - gray - 400">;
+          {earned_date}
+        </span>)}
+      {show_desc && (
+        <span className="text - xs text - zion - slate - light">{meta.description}</span>)}
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,12 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
 import React, { useState } from 'react',
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
+=======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function BlogPage() {
 	return (
-
 		<Layout>
 			<Head>
 				<title>Blog | Zion Tech Group</title>
@@ -18,4 +32,10 @@ export default function BlogPage() {
 			</section>
 		</Layout>
 	)
-
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;

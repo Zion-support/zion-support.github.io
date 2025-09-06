@@ -1,4 +1,3 @@
-
 import {
   Card,
   CardContent,
@@ -11,14 +10,25 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import {
 
 export function UsageStats() {
 
+<<<<<<< HEAD
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
   const handleSaveChanges = () => {
     toast({
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-8">
       <div>
@@ -27,7 +37,9 @@ export function UsageStats() {
           Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -56,7 +68,19 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -85,7 +109,19 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -114,7 +150,19 @@ export function UsageStats() {
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
+<<<<<<< HEAD
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -155,7 +203,27 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
+<<<<<<< HEAD
+      <div className='bg-muted/50 rounded-lg p-6 flex items-center justify-between'>
+        <div className='flex items-center gap-4'>
+          <div className='h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center'>
+            <Sparkles className='h-5 w-5 text-primary' />
+      
+      <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
+            <Sparkles className="h-5 w-5 text-primary" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </div>
           <div>
             <h3 className="font-medium">Need higher limits?</h3>
@@ -166,12 +234,27 @@ export function UsageStats() {
         </div>
         <Button>Contact Us</Button>
       </div>
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </div>;
+  );
+}"};
+    </div>
+  )
+}"}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {;
   Card,;
   CardContent,;
@@ -332,10 +415,20 @@ export function UsageStats() {;
             </p>;
           </div>;
         </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+        <Button > Contact Us</Button>;
+=======
         <Button>Contact Us</Button>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       </div>;
     </div>;
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

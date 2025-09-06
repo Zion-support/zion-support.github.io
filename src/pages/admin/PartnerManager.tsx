@@ -1,4 +1,37 @@
+<<<<<<< HEAD
+onViewDetails, }
 
+  )
+}
+
+
+
+import { use_router } from 'next / router';
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Input  } from '@/components / ui / input';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components / ui / table';
+import { Badge  } from '@/components / ui / badge';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components / ui / dialog';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+import { Alert, AlertDescription, AlertTitle  } from '@/components / ui / alert';
+import { toast  } from '@/hooks / use - toast';
+import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';
+import { logErrorToProduction } from '@/utils / production_logger';
+import { EmptyState  } from '@/components / ui / empty - state';
+<<<<<<< HEAD
+=======
+import { supabase } from "@/integrations/supabase/client",
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { EmptyState } from "@/components/ui/empty-state",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
@@ -12,7 +45,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -21,17 +55,33 @@ interface PartnerProfile {
   created_at: string,
   niche: string,
   audience_size: string,
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+  social_media?: Record<string, string>
+  website?: string
+  bio?: string
+  payout_method?: string
+  fraud_flags?: number
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   social_media?: Record<string string>,
   website?: string,
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
-
+<<<<<<< HEAD
   commission_rate?: number
 }
 export default function PartnerManager() {
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  commission_rate?: number
+}
+export default function PartnerManager() {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [partners, setPartners] = useState<PartnerProfile[]>([])
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -62,9 +112,22 @@ export default function PartnerManager() {
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
+<<<<<<< HEAD
+  partners
+  isLoading
+  onViewDetails, }
 
+  )
+  partners, 
+  isLoading, ;
+  onViewDetails, };
+  );
+};
 }
-
+=======
+}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -110,6 +173,16 @@ interface PartnerProfile {;
   bio?: string,;
   payout_method?: string,;
   fraud_flags?: number,;
+<<<<<<< HEAD
+=======
+  social_media?: Record < string, string>;
+  website?: string;
+  bio?: string;
+  payout_method?: string;
+  fraud_flags?: number;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   commission_rate?: number;
 }
 ;
@@ -893,4 +966,6 @@ function PartnerTable({;
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

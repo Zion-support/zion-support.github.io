@@ -1,8 +1,9 @@
 
-
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
+
+=======
 
 import Link from "next/link",
 import { 
@@ -22,23 +23,170 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export function ApplicationActions({
+  application;
+  processingId;
+  onViewApplication;
+  onStatusChange
+}: ApplicationActionsProps) {
+  return (
+    <div className="flex items-center justify-end gap-2">
+      <Button 
+        variant="outline" 
+        size="sm" 
+        onClick={() => onViewApplication(application.id)}
+        disabled={!!application.viewed_at}
+      >
+        <Eye className="h-4 w-4" />
+      </Button>
+      
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button 
+            variant="outline" 
+            size="sm"
+            disabled={processingId === application.id}
+          >
+            {processingId === application.id ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
+            )}
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem 
+            onClick={() => onStatusChange(application.id, "shortlisted")}
+          >
+            Shortlist
+          </DropdownMenuItem>
+          <DropdownMenuItem 
+            onClick={() => onStatusChange(application.id, "interview")}
+          >
+            Schedule Interview
+          </DropdownMenuItem>
+          <DropdownMenuItem 
+            onClick={() => onStatusChange(application.id, "hired")}
+
+          >
+            Hire
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "rejected")}
+            className="text-red-600"
+          >
+
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
+      <Button
+        variant="default"
+        size="sm"
+        asChild
+      >
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      
+
+      
+      
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <Button 
         variant="default" 
         size="sm"
         asChild
       >
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+            onClick={() => onStatusChange(application && application.id, 'hired')}          >;
+            Shortlist;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+            onClick = {() => onStatusChange(application && application.id, "interview"),}          >;
+            Schedule Interview;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+            onClick = {() => onStatusChange(application && application.id, "hired"),}
+          >;
+            Hire;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+
+            onClick={() => onStatusChange(application && application.id, 'rejected')}
+            className='text-red-600'          >            onClick={() => onStatusChange(application && application.id, "hired")}
+          >;
+            Hire;
+          </DropdownMenuItem>;
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application && application.id, "rejected")}
+            className="text-red-600";
+
+import Link from 'next / link';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <Link href={`/messages?talentId=${application.talent_id}`}>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+          Contact
+        </Link>
+      </Button>
+    </div>;
+  );
+};
+}
+=======
+        <Link href={`/messages?talentId=${application.talent_id}`}>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           Contact
         </Link>
       </Button>
     </div>
   )
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import Link from "next/link",;
 import {;
   DropdownMenu,;
@@ -47,6 +195,12 @@ import {;
   DropdownMenuTrigger;
 } from "@/components/ui/dropdown-menu",;
 import { Button } from "@/components/ui/button",;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;
@@ -123,4 +277,6 @@ export function ApplicationActions({;
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

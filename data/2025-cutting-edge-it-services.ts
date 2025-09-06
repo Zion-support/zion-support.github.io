@@ -1,4 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -83,6 +94,86 @@ export const cuttingEdgeITServices2025 = [
     compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'Quantum Security Standards']
   }
   {
+=======
+    description:
+      'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
+      'Quantum-enhanced security protocols'
+      'Distributed quantum computing nodes'
+      'Real-time infrastructure optimization'
+      'Quantum-resistant encryption'
+      'Advanced load balancing algorithms'
+      'Predictive scaling capabilities'
+      'Multi-cloud quantum orchestration'
+      'Real-time performance monitoring'
+      'Quantum-enhanced data processing'
+      'Automated infrastructure management'
+    ]
+    pricing: {
+      starter: {
+        price: 399
+        period: 'month'
+        features: [
+          'Basic quantum infrastructure'
+          'Standard security protocols'
+          'Email support'
+        ]
+      }
+      professional: {
+        price: 999
+        period: 'month'
+        features: [
+          'Advanced quantum features'
+          'Enhanced security protocols'
+          'Priority support'
+          'Performance optimization'
+        ]
+      }
+      enterprise: {
+        price: 2499
+        period: 'month'
+        features: [
+          'Full quantum platform'
+          'Custom security protocols'
+          'Dedicated specialists'
+          '24/7 support'
+        ]
+      }
+    }
+    category: 'Quantum IT'
+    tags: [
+      'Quantum Computing',
+      'Cloud Infrastructure',
+      'Security',
+      'Performance',
+      'Scalability',
+    ],
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+    targetAudience:
+      'Cloud providers, enterprises, financial institutions, government agencies, research institutions'
+    competitiveAdvantage:
+      'First quantum-enhanced cloud infrastructure, quantum-resistant security, real-time optimization'
+    useCases: [
+      'High-security cloud deployments'
+      'Financial services infrastructure'
+      'Government cloud systems'
+      'Research computing platforms'
+      'Enterprise cloud migration'
+    ]
+    integrations: [
+      'AWS'
+      'Azure'
+      'Google Cloud'
+      'Kubernetes'
+      'Docker'
+      'Terraform'
+    ]
+    compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'Quantum Security Standards']
+  }
+  {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     id: 'edge-computing-orchestration-platform'
     name: 'Edge Computing Orchestration Platform'
     description:
@@ -132,6 +223,7 @@ export const cuttingEdgeITServices2025 = [
     }
     category: 'Edge Computing'
     tags: [
+<<<<<<< HEAD
       'Edge Computing'
       'Orchestration'
       'Real-time Processing'
@@ -144,6 +236,18 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$18.7B'
+=======
+      'Edge Computing',
+      'Orchestration',
+      'Real - time Processing',
+      'AI Deployment',
+      'Low Latency',
+    ],
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     targetAudience:
       'IoT companies, telecommunications providers, manufacturing companies, smart city developers'
     competitiveAdvantage:
@@ -218,6 +322,7 @@ export const cuttingEdgeITServices2025 = [
     }
     category: 'Cybersecurity'
     tags: [
+<<<<<<< HEAD
       'Zero Trust'
       'Security'
       'Authentication'
@@ -230,6 +335,18 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$31.2B'
+=======
+      'Zero Trust',
+      'Security',
+      'Authentication',
+      'IAM',
+      'Threat Detection',
+    ],
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     targetAudience:
       'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions'
     competitiveAdvantage:
@@ -301,6 +418,7 @@ export const cuttingEdgeITServices2025 = [
     }
     category: 'Blockchain'
     tags: [
+<<<<<<< HEAD
       'Blockchain'
       'Smart Contracts'
       'Distributed Ledger'
@@ -313,6 +431,18 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$19.9B'
+=======
+      'Blockchain',
+      'Smart Contracts',
+      'Distributed Ledger',
+      'Enterprise',
+      'Automation',
+    ],
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     targetAudience:
       'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies'
     competitiveAdvantage:
@@ -378,6 +508,7 @@ export const cuttingEdgeITServices2025 = [
         price: 2499
         period: 'month'
         features: [
+<<<<<<< HEAD
           'Full AI DevOps platform'
           'Custom development'
           'Dedicated specialists'
@@ -393,6 +524,20 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$25.6B'
+=======
+          'Full AI DevOps platform',
+          'Custom development',
+          'Dedicated specialists',
+          '24 / 7 support',
+        ],
+      },
+    },
+    category: 'DevOps',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+    },
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     targetAudience:
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies'
     competitiveAdvantage:
@@ -415,12 +560,91 @@ export const cuttingEdgeITServices2025 = [
       'Google Cloud'
     ]
     compliance: [
+      'DevOps Best Practices'
+      'Security Standards'
+      'Quality Assurance Protocols'
+    ]
+  }
+<<<<<<< HEAD
+=======
+export const cuttingEdgeITServices2025 = [
+  {
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+=======
+    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
+    description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
+    features: [
+      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
+      'Quantum-enhanced data processingAutomated infrastructure management'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    market_size: '$25.6B',
+    target_audience:;
+      'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
+    competitive_advantage:;
+      'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
+    use_cases: [;
+      'Software development automation',
+      'Continuous deployment pipelines',
+      'Performance monitoring and optimization',
+      'Incident response automation',
+      'Quality assurance automation',
+    ],
+    integrations: [;
+      'GitHub',
+      'GitLab',
+      'Jenkins',
+      'Docker',
+      'Kubernetes',
+      'AWS',
+      'Azure',
+      'Google Cloud',
+    ],
+    compliance: [;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      'DevOps Best Practices',
+      'Security Standards',
+      'Quality Assurance Protocols',
+    ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  },;
+=======
+
+  },;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+=======
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+<<<<<<< HEAD
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+  }
+];
+
+=======
+
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -626,7 +850,23 @@ export const cuttingEdgeITServices2025 = [;
     ],;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
-
+=======
+  },
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    ];
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
+  }
+];
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,5 +1,4 @@
-
-
+=======
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
 import Link from 'next/link',;
@@ -293,7 +292,7 @@ export default function TalentDirectory() {;
                           onClick={(e) => {;
                             e.preventDefault(),;
                             setCurrentPage(Math.max(1, currentPage - 1));
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           }}
                         />
                       </PaginationItem>
@@ -343,4 +342,30 @@ export default function TalentDirectory() {;
               </div>
             </div>
           )}
+<<<<<<< HEAD
+        </div>
+      </div>
+    </div>
+  )
+}
+  );
+}
 
+  const is_admin = user?.user_type === 'admin';
+  const paginated_talents = filtered_talents;
+  const page_key = `talent - directory-${route_key}-${router.as_path}`);
+}
+  );
+}
+
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

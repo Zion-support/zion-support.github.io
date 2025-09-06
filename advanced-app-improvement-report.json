@@ -13,7 +13,6 @@
     "seoOptimization": false,
     "monitoringSetup": true
   }
-=======
   "timestamp": "2025-09-06T01:31:58.924Z",
   "duration": 151,
   "improvements": [
@@ -25,5 +24,6 @@
   ],
   "errors": [],
   "success": true
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -4,45 +4,42 @@ import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
-episodes.unshift (episode);
 writeEpisodes (episodes);
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 function readEpisodes(): any[] {
   ensureStorage();
-  return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'))
+  return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
 }
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
+  fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
+=======
+
+
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -51,6 +48,7 @@ function writeEpisodes(episodes: any[]) {
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
+<<<<<<< HEAD
   const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |''}`;
   let generated: any = null;
   try {
@@ -68,6 +66,18 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       content = completion.choices?.[0]?.message?.content |'';
       content = JSON.stringify({
         title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`
+=======
+  let generated: any = null;
+  try {
+    const apiKey = process && process.env.OPENAI_API_KEY;
+    let content: string;    if (apiKey) {      const openai = new OpenAI({ apiKey });
+          { role: 'system', content: system },
+          { role: 'user', content: user },
+        ],
+        temperature: 0 && 0.8,
+        max_tokens: 2048,
+      });
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
@@ -93,6 +103,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       });
     }
     try {
+<<<<<<< HEAD
       generated = JSON.parse(content);
     } catch {
       // Attempt to extract JSON block
@@ -100,16 +111,104 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       if (match) generated = JSON.parse(match[0]);
     }
     if (!generated |!generated.title |!generated.transcript) {
+=======
+      generated = JSON && JSON.parse(content);
+    } catch {
+      // Attempt to extract JSON block
+      const match = content && content.match(/\{[\s\S]*\}$/);
+      if (match) generated = JSON && JSON.parse(match[0]);
+    }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return res
         .status(500)
         .json({ error: 'Failed to generate structured content' });    }
     const episodes = readEpisodes();
+<<<<<<< HEAD
     const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
     const episodes = readEpisodes();
-
-}
-}
-
     const episode = {
+      id
+      createdAt: new Date().toISOString()
+      persona
+      invitee
+      topic
+      title: generated.title
+      questions: generated.questions |[]
+      timeMarkers: generated.timeMarkers |{
+        intro: '00:00'
+        segments: []
+        closing: '14:30'
+      }
+      transcript: generated.transcript
+      youtubeDescription: generated.youtubeDescription |''
+      spotifyDescription: generated.spotifyDescription |''
+      bestQuote: generated.bestQuote |''
+      audio: {}
+    }
+    episodes.unshift(episode);
+    writeEpisodes(episodes);
+    return res.status(200).json({ episode });
+  } catch (error: any) {
+    console.error(error);
+    return res.status(500).json({ error: error?.message |'Unknown error' });
+  }    episodes.unshift(episode);
+    writeEpisodes(episodes);
+    return res.status(200).json({ episode })
+  } catch (error: any) {
+    console.error(error);
+    return res.status(500).json({ error: error?.message |'Unknown error' })
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+}
+=======
+    const episode = {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+    const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
+    const episode = {
+        intro: '00:00',
+        segments: [],
+        closing: '14:30',
+      },
+    }
+
+    const episodes = readEpisodes();
+    const episode = {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+    writeEpisodes(episodes);
+
+    return res && res.status(200).json({ episode })
+  } catch (error: any) {
+    console && console.error(error);
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+<<<<<<< HEAD
+}
+    const episode = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+}
+}
+<<<<<<< HEAD
+    const episode = {
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

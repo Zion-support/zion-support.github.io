@@ -1,5 +1,14 @@
+<<<<<<< HEAD
+ 
+}else {
+  console.warn ('Missing artifact for', name) 
 
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
@@ -28,3 +37,9 @@ function main() {
   }
 }
 
+<<<<<<< HEAD
+}main ();main()
+
+}main ();main(),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

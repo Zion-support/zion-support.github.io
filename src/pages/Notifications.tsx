@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+interface NotificationProps {
+  type: 'message' | 'order' | 'default';
+}
+
+
+export function NotificationBadge({ type }: NotificationProps) {
+  switch (type) {
+    case 'message':
+      return <Badge className="bg-blue-500">Message</Badge>;
+    case 'order':
+      return <Badge className="bg-orange-500">Order</Badge>;
+    default:
+      return <Badge variant="outline">Notification</Badge>;
+  }
+}
+
+export default function NotificationsPage() {
+  return (
+    <div className="container py-10">
+      <h1 className="text-3xl font-bold mb-6">Notifications</h1>
+      <p className="text-muted-foreground">Your notifications will appear here.</p>
+    </div>
+  );
+}
+import React, { useState, useEffect } from 'react';
+import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 
 interface Notification {
@@ -10,6 +54,17 @@ interface Notification {
   actionUrl?: string;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState } from 'react',;
 import { useNotifications } from '@/context/notifications/NotificationContext',;
 import {;
@@ -291,4 +346,6 @@ export default function NotificationsPage() {
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

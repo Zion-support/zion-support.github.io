@@ -1,4 +1,7 @@
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react"
 import {format} from "date-fns"
@@ -14,9 +17,29 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+<<<<<<< HEAD
+<<<<<<< HEAD
+  quote
+  onViewDetails
+  onMarkAsResponded
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  quote,
+  onViewDetails,
+  quote,
+  onViewDetails,
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   onMarkAsResponded,
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onToggleArchive
 }) => {
   // Format date for display
@@ -26,7 +49,21 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
+<<<<<<< HEAD
+  }
+  },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -45,12 +82,41 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           <span className="text-white font-medium">From: </span>
           {quote.requester_name}
         </div>
+<<<<<<< HEAD
+        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
+        
+        <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
+        
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
+<<<<<<< HEAD
 
+    <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+
+        
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
@@ -61,7 +127,18 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             <Eye className="h-4 w-4" />
             View Details
           </Button>
+<<<<<<< HEAD
+          
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
               <Button
@@ -74,7 +151,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 Mark Responded
               </Button>
             )}
-
+<<<<<<< HEAD
+            
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Button
               variant="ghost"
               size="sm"
@@ -85,7 +165,52 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+              )}
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+"}
+}
 
+=======
+<<<<<<< HEAD
+              )}
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+<<<<<<< HEAD
+  )
+}
+"}
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  );
+};
+"};
+};
+<<<<<<< HEAD
+
+=======
+
+  );
+};
+"};
+};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -183,4 +308,78 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+      return date_string;
+    }
+  }
+  return (
+    <Card key={quote.id} className="bg - zion - blue - dark border border - zion - blue - light overflow - hidden">;
+      <CardHeader className="pb - 2">;
+        <div className="flex justify - between items - start">;
+          <div>;
+            <CardTitle className="text - white">{quote.project_name}</CardTitle>;
+            <CardDescription className="text - zion - slate - light">;
+              {format_date (quote.created_at)}
+            </CardDescription>;
+          </div>;
+          <QuoteStatusBadge status={quote.status} />;
+        </div>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="text - sm text - zion - slate - light mb - 3">;
+          <span className="text - white font - medium">From: </span>;
+          {quote.requester_name}
+        </div>;
+        <p className="text - white line - clamp - 3 mb - 4">{quote.project_summary}</p>;
+        <div className="flex items - center gap - 2 text - sm text - zion - slate - light mb - 3">;
+          <CalendarIcon className="h - 4 w - 4" />;
+          <span > Timeline: {quote.timeline}</span>;
+        </div>;
+        <div className="flex justify - between items - center mt - 4">;
+          <Button;
+            variant="outline";
+            size="sm";
+            on_click = {() => onViewDetails (quote), }
+            className="flex items - center gap - 1";
+          >;
+            <Eye className="h - 4 w - 4" />;
+            View Details;
+          </Button>;
+          <div className="flex items - center">;
+            {quote.status !== 'responded' && onMarkAsResponded && (
+              <Button;
+                variant="ghost";
+                size="sm";
+                on_click = {(, ) => onMarkAsResponded (quote.id), }
+                className="flex items - center gap - 1";
+              >;
+                <MessageSquare className="h - 4 w - 4" />;
+                Mark Responded;
+              </Button>)}
+            <Button;
+              variant="ghost";
+              size="sm";
+              on_click = {() => onToggleArchive (quote.id, !quote.is_archived), }
+              className="flex items - center gap - 1";
+            >;
+              {quote.is_archived ? (
+                <RefreshCw className="h - 4 w - 4" />) : (
+                <ArchiveIcon className="h - 4 w - 4" />)}
+            </Button>;
+          </div>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+"},
+}
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

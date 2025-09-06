@@ -1,5 +1,35 @@
-
-
+<<<<<<< HEAD
+public_url;
+}= supabase.storage.from ('resumes') .getPublicUrl (file_name);
+return public_url;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { useForm, useFieldArray } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod";
+import { useRouter  } from 'next/router';
+import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { useForm, useFieldArray } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { useRouter } from 'next/router'
+import { logErrorToProduction } from '@/utils/productionLogger'
+=======
+import React, { useState } from "react",
+import { useForm, useFieldArray } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { useRouter } from 'next/router',
+import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Form
   FormControl
@@ -50,7 +80,20 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
+import { supabase } from "@/integrations/supabase/client";
+=======
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth"
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer"
+import { supabase } from "@/integrations/supabase/client"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -107,12 +150,121 @@ export function TalentOnboardingForm() {
   const [showSuccessScreen, setShowSuccessScreen] = useState(false)
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer()
   const totalSteps = 4
-
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
+import { supabase } from "@/integrations/supabase/client",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+import { useAuth } from "@/hooks/useAuth",
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
+import { supabase } from "@/integrations/supabase/client",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+        fullName: user?.displayName |''
+        professionalTitle: ''
+        profilePicture: undefined
+      }
+      experience: {
+        bio: ''
+        keyProjects: [{ title: '', description: '' }]
+        yearsOfExperience: ''
+      }
+      skills: {
+        skillsList: ''
+        toolsUsed: ''
+      }
+      availability: {
+        availabilityType: ''
+        timezone: ''
+        hourlyRate: ''
+        portfolioLinks: [{ url: '' }]
+        cv: undefined
+      }
+    }
+    mode: 'onChange'
+  })
+  const {
+    fields: projectFields
+    append: appendProject
+    remove: removeProject
+  } = useFieldArray({
+    name: 'experience.keyProjects'
+    control: form.control
+  })
+  const {
+    fields: linkFields
+    append: appendLink
+    remove: removeLink
+  } = useFieldArray({
+    name: 'availability.portfolioLinks'
+    control: form.control
+  })
+  // Handle profile picture upload
+  const handleProfilePictureUpload = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+=======
+        fullName: user?.displayName || "",
+        professionalTitle: "",
+        profilePicture: undefined},
+      experience: {
+        bio: "",
+        keyProjects: [{ title: "", description: "" }],
+        yearsOfExperience: ""},
+      skills: {
+        skillsList: "",
+        toolsUsed: ""},
+      availability: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        availabilityType: '',
+        timezone: '',
+        hourlyRate: '',
+        portfolioLinks: [{ url: '' }],
+        cv: undefined,
+      },
+    },
+    mode: 'onChange',
+  })
+  const {
+    fields: projectFields,
+    append: appendProject,
+    remove: removeProject,
+  } = useFieldArray({
+    name: 'experience.keyProjects',
+    control: form.control,
+  })
+  const {
+    fields: linkFields,
+    append: appendLink,
+    remove: removeLink,
+  } = useFieldArray({
+    name: 'availability.portfolioLinks',
+    control: form.control,
+  })
+  // Handle profile picture upload
+  const handleProfilePictureUpload = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = e.target.files?.[0]
+    if (!file) return;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -134,9 +286,64 @@ export function TalentOnboardingForm() {
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
     if (!file) return,
-
+    
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+    reader.readAsDataURL(file)
+    // Store the file in the form data
+    form.setValue('basicInfo.profilePicture', file);
+  };
+  // Handle CV upload;
+  const handleCvUpload = async (file: File) => {;
+    const fileName = `cv-${user?.id}-${Date.now()}`;    const { error: cvError } = await supabase.storage
+      .from('resumes')
+      .upload(fileName, file)
+    if (cvError) {
+      logErrorToProduction('Error uploading CV:', { data: cvError })
+      throw new Error('Failed to upload CV')
+    }
+    // Get the public URL
+    const {
+      data: { publicUrl }
+    } = supabase.storage.from('resumes').getPublicUrl(fileName)
+    return publicUrl
+  }
 
+  // Rest of the file remains unchanged...
+  // [Previous implementation continues...]
+  return null
+  //Step 1: Basic Info basicInfo: z.object ({
+  ) .optional () .default ([])
+cv: z.any () .optional ()
+})
+})
+type TalentFormValues = z.infer<typeof talentSchema>
+const form = useForm<TalentFormValues> ({
+  resolver: zodResolver (talentSchema), defaultValues: {
+  basicInfo: {
+  cv: undefined
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+}'}
+}
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

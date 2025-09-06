@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const ServicesPage: React.FC = () => {
@@ -31,3 +30,6 @@ const ServicesPage: React.FC = () => {
   );
 };
 
+=======
+export default ServicesPage;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

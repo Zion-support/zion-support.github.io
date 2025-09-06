@@ -1,18 +1,54 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import { NotificationType  } from './types';
+import { createNotification } from './createNotification';
+import {NotificationType} from './types';
+import {createNotification} from './createNotification';
+=======
+
+import {NotificationType} from './types';
+import {createNotification} from './createNotification';
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Demo function to create test notifications for the current user
  */
-export async function createTestNotification(userId: string) {;
+export async function createTestNotification(userId: string) {
+  try {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
 
-  const randomType = types[Math.floor(Math.random() * types.length)]
+  const randomType = types[Math && Math.floor(Math && Math.random() * types && types.length)],
+  
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
   }
   const messages = {
-    'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
+=======
+import {NotificationType} from './types';
+import {create_notification} from './create_notification';
+/**;
+* Demo function to create test notifications for the current user;
+*/;
+export async /**
+ * createTestNotification - Function description
+ */
+function createTestNotification() {
+  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
+  const random_type = types[Math.floor (Math.random () * types.length)],
+  const titles = {
+    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
   }
+;
+  const messages = {
+    'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
+  }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -21,17 +57,18 @@ export async function createTestNotification(userId: string) {;
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
-  return createNotification({
-    userId;
-    title: titles[randomType];
-    message: messages[randomType];
-    type: randomType;
-    sendEmail: true;
-    actionUrl: actions[randomType].url
+<<<<<<< HEAD
 
+<<<<<<< HEAD
     actionText: actions[randomType].text
   })
+}
+=======
+=======
 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { NotificationType } from './types',;
 import { createNotification } from './createNotification',;
 /**;
@@ -63,7 +100,15 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
-
+=======
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

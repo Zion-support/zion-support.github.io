@@ -1,5 +1,4 @@
 
-
 interface TalentRateRecommenderProps {
   skills: string[]
   yearsExperience: number
@@ -8,11 +7,11 @@ interface TalentRateRecommenderProps {
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import {logErrorToProduction} from '@/utils/productionLogger'
-
+=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { 
   getTalentRateSuggestion,
   PricingSuggestion,
@@ -21,12 +20,29 @@ import {
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
+<<<<<<< HEAD
+  skills: string[]
+  yearsExperience: number
+  location?: string
+  onSuggestionApplied: (value: number,) => void
+=======
 
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  skills: string[],
+  yearsExperience: number,
+  location?: string,
+  onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
-
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  rateType: "hourly" | "fixed"
     }
     setIsLoading(true)
     try {
@@ -47,7 +63,7 @@ interface TalentRateRecommenderProps {
       // We'll use the middle of the range as the suggested rate
       const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2)
       onSuggestionApplied(suggestedRate)
-
+=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -96,13 +112,17 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       setIsLoading(false);
     }
   },
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
   const handleApplySuggestion = () => {
     if (suggestion) {
       // We'll use the middle of the range as the suggested rate
       const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2),
       onSuggestionApplied(suggestedRate),
-
+      
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -115,7 +135,21 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         })
       }
     }
+<<<<<<< HEAD
+  }
+  },
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-4">
       <div>
@@ -123,14 +157,36 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           <Button
             type="button"
             variant="outline"
-
+<<<<<<< HEAD
+            onClick = {generateSuggestion,}
+            disabled = {skills.length === 0 |yearsExperience <= 0,}
+            onClick={generateSuggestion}
+            disabled={skills.length === 0 || yearsExperience <= 0}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
           </Button>
         ) : (
           <PricingSuggestionBox
+<<<<<<< HEAD
 
+
+  rateType 
+}/>) 
+}</div> </div>) ;
+};
+'"};
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -141,4 +197,53 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
     </div>;
   );
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+    <div className="space - y-4">;
+      <div>;
+        {!suggestion && !is_loading ? (
+          <Button;
+            type="button";
+            variant="outline";
+            on_click = {generate_suggestion, }
+            disabled = {skills.length === 0 || years_experience <= 0, }
+            className="w - full";
+          >;
+            <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
+          </Button>) : (
+          <PricingSuggestionBox;
+            suggestion = {suggestion, }
+            is_loading = {is_loading, }
+            onApplySuggestion = {handleApplySuggestion, }
+            rate_type = {rate_type, }
+          />)}
+      </div>;
+    </div>);
+}
+return (<div className="space - y-4" > <div> {";
+  !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
+  generate_suggestion ";
+}> <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
+  suggestion;
+}is_loading= {
+  is_loading;
+}onApplySuggestion= {
+  handleApplySuggestion;
+}rate_type= {
+  rate_type;
+}/>);
+}</div> </div>);
+}
+'"},
+}
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,7 +1,22 @@
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { ReactNode } from "react";
+import {cn} from "@/lib/utils";
+import {slugify} from "@/lib/slugify";
+import {Link} from "react-router-dom";
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
+import { slugify } from "@/lib/slugify";
+import { Link } from "react-router-dom";
+import { slugify } from "@/lib/slugify",
+import { Link } from "react-router-dom",
+=======
 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface CategoryCardProps {
 
   title: string
@@ -13,34 +28,145 @@ interface CategoryCardProps {
    * accent colour is used. Previously this prop was ignored which meant
    * callers could not customise the icon colour as intended.
    */
+
+import React, { ReactNode } from "react";
+import {cn} from "@/lib/utils";
+import {slugify} from "@/lib/slugify";
+import {Link} from "react-router-dom";
+=======
   color?: string,
   count?: number,
   className?: string
 }
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
+  // Create a URL-friendly slug from the category title;
+  const slug = slugify(title);
+  // Create a URL-friendly slug from the category title
+<<<<<<< HEAD
+  const slug = slugify(title),
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const slug = slugify(title);
   return (
     <Link
       to={`/category/${slug}`}
       className={cn(
-
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
         className
       )}
     >
       <div
         className={cn(
+          "mb-4 p-3 bg-zion-blue-dark rounded-full";
 
+          !color && "text-zion-cyan"
+          "mb-4 p-3 bg-zion-blue-dark rounded-full",
+          !color && "text-zion-cyan"
+import React, { ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { slugify } from "@/lib/slugify",;
+import { Link } from "react-router-dom",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface CategoryCardProps {;
+  title: string,;
+  description: string,;
+  icon: ReactNode | string,;
+  /**;
+   * Optional color to use for the icon. If not provided the default cyan;
+   * accent colour is used. Previously this prop was ignored which meant;
+   * callers could not customise the icon colour as intended.;
+   */;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  color?: string;
+  count?: number;
+  className?: string;
+}
+
+  const slug = slugify(title);
+  return (
+    <Link
+      className={cn(
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
+        className
+      )}>;
+      <div
+        className={cn(
+          !color && "text-zion-cyan"
         )}
-        style={color ? { color } : undefined}
-      >
+        style={color ? { color } : undefined}>;
         {icon}
-      </div>
-      <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-      <p className="text-zion-slate-light text-center">{description}</p>
-      {count !== undefined && (
-        <div className="mt-3 text-sm text-zion-cyan">{count} listings</div>
+      </div>;
+      <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
+      <p className="text-zion-slate-light text-center">{description}</p>;
+      {count !== undefined && (;
+        <div className="mt-3 text-sm text-zion-cyan">{count} listings</div>;
       )}
-    </Link>
-  )
+    </Link>;
+  );
+=======
+import React, { ReactNode } from './react';
+import { cn } from '@/lib / utils';
+import { slugify } from '@/lib / slugify';
+import { Link } from './react-router-dom';
+interface CategoryCardProps {
+  title: string,
+  description: string,
+  icon: ReactNode | string,
+  /**;
+  * Optional color to use for the icon. If not provided the default cyan;
+  * accent colour is used. Previously this prop was ignored which meant;
+  * callers could not customise the icon colour as intended.;
+  */;
+  color?: string;
+  count?: number;
+  class_name?: string;
+}
+export /**
+ * CategoryCard - Function description
+ */
+function CategoryCard() {
+  // Create a URL - friendly slug from the category title;
+  const slug = slugify (title);
+;
+  return (
+    <Link;
+      to={`/category/${slug}`}
+      className={cn (
+        "flex flex - col items - center p - 6 bg - zion - blue - light rounded - lg border border - zion - purple / 20 hover: border - zion - purple / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - purple / 20 group",
+        class_name)}
+    >;
+      <div;
+<<<<<<< HEAD
+
+        className={cn(;
+          "mb-4 p-3 bg-zion-blue-dark rounded-full";
+          !color && "text-zion-cyan";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        )}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        className={cn (
+          "mb - 4 p - 3 bg - zion - blue - dark rounded - full";
+          !color && "text - zion - cyan")}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+        style={color ? { color } : undefined}
+      >;
+        {icon}
+      </div>;
+      <h3 className="text - xl font - bold mb - 2 text - white group - hover:text - zion - purple transition - colors">{title}</h3>;
+      <p className="text - zion - slate - light text - center">{description}</p>;
+      {count !== undefined && (
+        <div className="mt - 3 text - sm text - zion - cyan">{count} listings</div>)}
+    </Link>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

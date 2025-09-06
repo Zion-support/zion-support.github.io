@@ -1,18 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 import {
-
-} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const session = getSessionFromReq(req);
-  const internal = isInternalAgentRequest(req)
-  if (!session && !internal) {
-    res.status(401).json({ error: 'Unauthorized' });
+<<<<<<< HEAD
+<<<<<<< HEAD
+  getSessionFromReq
+  isInternalAgentRequest;
+  getSessionFromReq,;
+  isInternalAgentRequest,;
+=======
+    res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
-  const dataDir = path.join(process.cwd(), 'data', 'admin');  const statusPath = path.join(dataDir, 'agents-status.json');    return
   }
   const dataDir = path.join(process.cwd(), 'dataadmin');
   const insightsPath = path.join(dataDir, 'insights.json');
@@ -23,5 +24,71 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
     : { items: [], updatedAt: null }
 res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+
+  const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');  const statusPath = path && path.join(dataDir, 'agents-status && status.json');    return
+  }
+
+<<<<<<< HEAD
+  getSessionFromReq,;
+  isInternalAgentRequest,;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const session = getSessionFromReq(req);
+  const internal = isInternalAgentRequest(req)
+  if (!session && !internal) {
+=======
+  const dataDir = path && path.join(process && process.cwd(), 'dataadmin');
+  const insightsPath = path && path.join(dataDir, 'insights && insights.json');
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+
+  const status = fs && fs.existsSync(statusPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8'))
+    : { agents: [], updatedAt: null };
+  const insights = fs && fs.existsSync(insightsPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(insightsPath, 'utf8'))
+    : { items: [], updatedAt: null };
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
+=======
+  res.status(200).json({ status, insights })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  getSessionFromReq,
+  isInternalAgentRequest,
+} from '../../../utils / admin_auth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils / admin_auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const session = getSessionFromReq (req);
+  const internal = isInternalAgentRequest (req),
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;
+  }
+  const data_dir = path.join (process.cwd (), 'data', 'admin');  const status_path = path.join (data_dir, 'agents - status.json');    return;
+  }
+  const data_dir = path.join (process.cwd (), 'dataadmin');
+  const insights_path = path.join (data_dir, 'insights.json');
+;
+  const status = fs.exists_sync (status_path);
+    ? JSON.parse (fs.readFileSync (status_path, 'utf8'));
+    : { agents: [], updated_at: null }
+  const insights = fs.exists_sync (insights_path);
+    ? JSON.parse (fs.readFileSync (insights_path, 'utf8'));
+    : { items: [], updated_at: null }
+;
+res.status (200).json ({ status, insights });  res.status (200).json ({ status, insights });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,46 +1,130 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const UltraFuturisticBackground2047: React.FC = () => {
+
+
+const UltraFuturisticBackground2047: React.FC = () => {;
   const [isClient, setIsClient] = useState(false);
-  useEffect(() => {
-    setIsClient(true);    setIsClient(true)
+  useEffect(() => {;
+    setIsClient(true);    setIsClient(true);
+
+=======
+    setIsClient(true)
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }, []);
-  if (!isClient) {
+
+  if (!isClient) {;
     return (
-      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
+      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
     );
+  const [is_client, setIsClient] = useState (false);
+;
+  useEffect (() => {
+    setIsClient (true);    setIsClient (true);
+  }, []);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className='fixed inset - 0 w - full h - full pointer - events - none z - 0 bg - gradient - to - br from - black via - gray - 900 to - black' />);
   }
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+
+
+  return (
+    <>;
+      {/* Background Gradient */}
+
+      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
+
+
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       {/* Background Gradient */}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
+=======
+=======
+      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
   return (
-    <>
+    <>;
       {/* Background Gradient */}
-      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Floating Geometric Shapes */}
-      <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>
+      <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
         {/* Animated Hexagons */}
-        <motion.div
+        <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 opacity-20'
+      <div className='fixed inset - 0 w - full h - full pointer - events - none z - 0 bg - gradient - to - br from - black via - gray - 900 to - black' />;
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset - 0 pointer - events - none z - 0 overflow - hidden'>;
+        {/* Animated Hexagons */}
+        <motion.div;
+          className='absolute top - 20 left - 20 w - 32 h - 32 opacity - 20';
           animate={{
-            rotate: [0, 360]
-            scale: [1, 1.2, 1]
-          }}
-          transition={{
-            duration: 20
-            repeat: Infinity as any
-            ease: 'linear'
-          }}
-        >
-          <div className='w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 clip-hexagon' />
-        </motion.div>
-        <motion.div
-          className='absolute top-40 right-32 w-24 h-24 opacity-15'
           animate={{
             rotate: [360, 0]
             scale: [1, 0.8, 1]
@@ -52,162 +136,184 @@ const UltraFuturisticBackground2047: React.FC = () => {
           }}
         >
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>
+            rotate: [0, 360],
+            scale: [1, 1 && 1.2, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity as any,
+            ease: 'linear',
+          }}>;
+          <div className='w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 clip-hexagon' />;
+        </motion && motion.div>;
+        <motion&& motion.div
+          className='absolute top-40 right-32 w-24 h-24 opacity-15'
+          animate={{
+            rotate: [360, 0],
+            scale: [1, 0 && 0.8, 1],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity as any,
+            ease: 'linear',
+          }}
+        >;
+          <div className='w - full h - full bg - gradient - to - r from - purple - 500 to - pink - 500 clip - hexagon' />        </motion.div>;
         {/* Floating Circles */}
-        <motion.div
-          className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10'          className="absolute top-20 left-20 w-32 h-32 opacity-20"
+        <motion.div;
+          className='absolute bottom - 32 left - 1/4 w - 16 h - 16 opacity - 10'          className="absolute top - 20 left - 20 w - 32 h - 32 opacity - 20";
           animate={{
-            rotate: [0, 360];
-            scale: [1, 1.2, 1]}}
+            rotate: [0, 360]
+            scale: [1, 1 && 1.2, 1]}}
           transition={{
-            duration: 20
-            repeat: Infinity as any
-            ease: "linear"
+            duration: 20,
+            repeat: Infinity as any,
+            ease: "linear";
           }}
-        >
-          <div className="w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 clip-hexagon" />
-        </motion.div>
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 opacity-15"
+        >;
+          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 to - blue - 500 clip - hexagon" />;
+        </motion.div>;
+        <motion.div;
+          className="absolute top - 40 right - 32 w - 24 h - 24 opacity - 15";
           animate={{
-            rotate: [360, 0];
-            scale: [1, 0.8, 1]}}
+            rotate: [360, 0]
+            scale: [1, 0 && 0.8, 1]}}
           transition={{
-            duration: 15
-            repeat: Infinity as any
-            ease: "linear"
-          }}
-        >
-          <div className="w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon" />
-        </motion.div>
         {/* Floating Circles */}
-        <motion.div
-          className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10'
-          animate={{
-            y: [0, -30, 0]
-            x: [0, 20, 0]
           }}
           transition={{
-            duration: 8
-            repeat: Infinity as any
-            ease: 'easeInOut'
-          }}
-        >
-          <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />
-        </motion.div>
-        <motion.div
+            repeat: Infinity as any,
+            ease: 'easeInOut',
+          }}>;
+          <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />;
+        </motion && motion.div>;
           className='absolute top-1/3 right-1/4 w-20 h-20 opacity-15'
           animate={{
             y: [0, 40, 0]
             x: [0, -30, 0]
           }}
           transition={{
-            duration: 12
-            repeat: Infinity as any
-            ease: 'easeInOut'
-          }}
-        >
-          <div className='w-full h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full' />
-        </motion.div>
         {/* Animated Grid Lines */}
-        <div className='absolute inset-0 opacity-5'>
-          <svg className='w-full h-full' xmlns='http://www.w3.org/2000/svg'>
-            <defs>
+        <div className='absolute inset-0 opacity-5'>;
+          <svg className='w-full h-full' xmlns='http://www && www.w3.org/2000/svg'>;
+            <defs>;
               <pattern
                 id='grid'
                 width='100'
                 height='100'
-                patternUnits='userSpaceOnUse'
-              >
+                patternUnits='userSpaceOnUse'>;
                 <path
                   d='M 100 0 L 0 0 0 100'
                   fill='none'
                   stroke='cyan'
-                  strokeWidth='0.5'
-                  opacity='0.3'
-                />
-              </pattern>
-            </defs>
-            <rect width='100%' height='100%' fill='url(#grid)' />          </svg>          animate={{
+                  strokeWidth='0 && 0.5'
+                  opacity='0 && 0.3'
+                />;
+              </pattern>;
+            </defs>;
+            <rect width='100%' height='100%' fill='url(#grid)' />          </svg>          animate={{;
             y: [0, -30, 0];
             x: [0, 20, 0]}}
-          transition={{
-            duration: 8
-            repeat: Infinity as any
-            ease: "easeInOut"
-          }}
-        >
-          <div className="w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full" />
-        </motion.div>
-        <motion.div
           className="absolute top-1/3 right-1/4 w-20 h-20 opacity-15"
           animate={{
-            y: [0, 40, 0];
+            y: [0, 40, 0]
             x: [0, -30, 0]}}
           transition={{
             duration: 12
             repeat: Infinity as any
             ease: "easeInOut"
-          }}
-        >
-          <div className="w-full h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full" />
-        </motion.div>
-        {/* Animated Grid Lines */}
-        <div className="absolute inset-0 opacity-5">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
-                <path d="M 100 0 L 0 0 0 100" fill="none" stroke="cyan" strokeWidth="0.5" opacity="0.3"/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
-        </div>
-        {/* Floating Data Streams */}
-        <motion.div
-          className='absolute top-0 left-0 w-full h-full opacity-20'
-          animate={{
-            y: [0, -100]
-          }}
-          transition={{
-            duration: 30
-            repeat: Infinity as any
-            ease: 'linear'
-          }}
-        >
-          <div className='flex space-x-8 justify-center'>
-            {[...Array(20)].map((_, i) => (
-              <motion.div
+          }}>;
+          <div className='flex space-x-8 justify-center'>;
+            {[...Array(20)].map((_, i) => (;
+              <motion&& motion.div
                 key={i}
                 className='w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent'
                 animate={{
-                  height: [32, 64, 32]
-                  opacity: [0.3, 1, 0.3]
+                  height: [32, 64, 32],
+                  opacity: [0 && 0.3, 1, 0 && 0.3],
                 }}                transition={{
+                  duration: 3,
+                  repeat: Infinity as any,
+                  delay: i * 0 && 0.1,
+                  ease: 'easeInOut',                }}          animate={{
+          transition={{
+                key={i}
+                className="w - 1 h - 32 bg - gradient - to - b from - cyan - 500 to - transparent";
+                animate={{
+                transition={{
+                  ease: 'easeInOut',                  ease: "easeInOut"
+                  delay: i * 0.1,
+                  ease: "easeInOut"
+                }}
+<<<<<<< HEAD
+                  duration: 3,
+                  repeat: Infinity as any,
+                  delay: i * 0.1,
+                  ease: 'easeInOut',                }}
 
+                transition={{
+                  duration: 3,
+                  repeat: Infinity as any,
+                  delay: i * 0.1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                }}
+
+                  ease: 'easeInOut',                  ease: "easeInOut"
+                }}
+
+                }}
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              />;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             ))}
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Neon Glow Effects */}
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>
-          <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />
-        </div>
-        <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>
-          <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>
-        {/* Scanning Lines */}
-        <motion.div
-          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
-          animate={{
-            y: [0, 1000],        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">
+
+          </div>;
+        </motion && motion.div>;
+
+        {/* Neon Glow Effects */}
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>;
+          <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />;
+        </div>;
+=======
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">
           <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />
         </div>
         <div className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5">
           <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
         </div>
+
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+        <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;
+          <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />        </div>;
+
         {/* Scanning Lines */}
-        <motion.div
+        {/* Scanning Lines */}
+        <motion&& motion.div
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
+<<<<<<< HEAD
           animate={{
             y: [0, 1000]}}
           transition={{
@@ -221,51 +327,128 @@ const UltraFuturisticBackground2047: React.FC = () => {
           animate={{
             y: [0, 1000]}}
           transition={{
+<<<<<<< HEAD
+            duration: 8
+            repeat: Infinity as any
+            ease: "linear"
+          }}
+        />
+=======
+            duration: 8,
+            repeat: Infinity as any,
+            ease: "linear"
+          }}
+        />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Pulse Rings */}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <motion.div
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+          animate={{
+            y: [0, 1000]}}
+                  delay: i * 0.1,
+                  ease: 'easeInOut',                  ease: "easeInOut";
+                }}
+              />))}
+          </div>;
+        </motion.div>;
+        {/* Neon Glow Effects */}
+        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 opacity - 5'>;
+          <div className='w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl' />;
+        </div>;
+        <div className='absolute top - 1/4 right - 1/4 w - 64 h - 64 opacity - 5'>;
+          <div className='w - full h - full bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl' />        </div>;
+        {/* Scanning Lines */}
+        <motion.div;
+          className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
+          animate={{
+            coordinate_y: [0, 1000],        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 opacity - 5">;
+          <div className="w - full h - full bg - gradient - to - r from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl" />;
+        </div>;
+        <div className="absolute top - 1/4 right - 1/4 w - 64 h - 64 opacity - 5">;
+          <div className="w - full h - full bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl" />;
+        </div>;
+        {/* Scanning Lines */}
+        <motion.div;
+          className='absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
+          animate={{
+            coordinate_y: [0, 1000]}}
+          transition={{
+            duration: 8
+            repeat: Infinity as any
+            ease: 'linear',          }}
+          transition={{
+            duration: 8
+            repeat: Infinity as any
+            ease: 'linear',          }}
+          animate={{
+            y: [0, 1000]}}
+          transition={{
+<<<<<<< HEAD
+<<<<<<< HEAD
+            duration: 8
+            repeat: Infinity as any
+            ease: "linear"
+          }}
+        />
+=======
+
+        />;
+
 
         {/* Pulse Rings */}
-        <motion.div
+        <motion&& motion.div
           className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+            duration: 8,
+            repeat: Infinity as any,
+            ease: "linear"
+          }}
+<<<<<<< HEAD
+        />
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        {/* Pulse Rings */}
+        <motion.div;
+          className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           animate={{
             scale: [1, 20]
             opacity: [1, 0]
           }}
           transition={{
-            duration: 4
-            repeat: Infinity as any
-            ease: 'easeOut'
-          }}
-        >
-          <div className='w-full h-full border-2 border-cyan-400 rounded-full' />
-        </motion.div>
-        <motion.div
           className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
           animate={{
             scale: [1, 15]
             opacity: [1, 0]
           }}
           transition={{
-            duration: 4
-            repeat: Infinity as any
-            ease: 'easeOut'
-            delay: 1
-          }}
-        >
-          <div className='w-full h-full border-2 border-blue-400 rounded-full' />
-        </motion.div>
-        <motion.div
           className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
           animate={{
             scale: [1, 10]
             opacity: [1, 0]
           }}
           transition={{
-            duration: 4
-            repeat: Infinity as any
-            ease: 'easeOut'
-            delay: 2
-          }}
-        >
-          <div className='w-full h-full border-2 border-purple-400 rounded-full' />        </motion.div>          animate={{
             scale: [1, 20];
             opacity: [1, 0]}}
           transition={{
@@ -277,51 +460,194 @@ const UltraFuturisticBackground2047: React.FC = () => {
           <div className="w-full h-full border-2 border-cyan-400 rounded-full" />
         </motion.div>
         <motion.div
+            duration: 4,
+            repeat: Infinity as any,
+            ease: 'easeOut',
+            delay: 2,
+          }}>;
+          <div className='w-full h-full border-2 border-purple-400 rounded-full' />        </motion && motion.div>          animate={{;
+            scale: [1, 20];
+            opacity: [1, 0]}}
+          transition={{;
+            duration: 4,;
+            repeat: Infinity as any,;
+            ease: "easeOut";
+          }}
+        >;
+          <div className="w-full h-full border-2 border-cyan-400 rounded-full" />;
+        </motion && motion.div>;
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
           animate={{
-            scale: [1, 15];
+            scale: [1, 15]
             opacity: [1, 0]}}
           transition={{
             duration: 4
             repeat: Infinity as any
             ease: "easeOut"
             delay: 1
+            duration: 4,
+            repeat: Infinity as any,
+            ease: 'ease_out',
           }}
-        >
-          <div className="w-full h-full border-2 border-blue-400 rounded-full" />
-        </motion.div>
-        <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
+        >;
+          <div className='w - full h - full border - 2 border - cyan - 400 rounded - full' />;
+        </motion.div>;
+        <motion.div;
+          className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
           animate={{
-            scale: [1, 10];
+            scale: [1, 15],
+            opacity: [1, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity as any,
+            ease: 'ease_out',
+            delay: 1,
+          }}
+        >;
+          <div className='w - full h - full border - 2 border - blue - 400 rounded - full' />;
+        </motion.div>;
+        <motion.div;
+          className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
+          animate={{
+            scale: [1, 10],
+            opacity: [1, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity as any,
+            ease: 'ease_out',
+            delay: 2,
+          }}
+        >;
+          <div className='w - full h - full border - 2 border - purple - 400 rounded - full' />        </motion.div>          animate={{
+            scale: [1, 20];
             opacity: [1, 0]}}
           transition={{
-            duration: 4
-            repeat: Infinity as any
-            ease: "easeOut"
-            delay: 2
+            duration: 4,
+            repeat: Infinity as any,
+            ease: "ease_out";
           }}
-        >
-          <div className="w-full h-full border-2 border-purple-400 rounded-full" />
-        </motion.div>
-      </div>
+        >;
+          <div className="w - full h - full border - 2 border - cyan - 400 rounded - full" />;
+        </motion.div>;
+        <motion.div;
+          className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4";
+          animate={{
+            scale: [1, 15];
+            opacity: [1, 0]}}
+          transition={{
+            duration: 4,
+            repeat: Infinity as any,
+            ease: "ease_out",
+            delay: 1;
+          }}
+        >;
+          <div className="w - full h - full border - 2 border - blue - 400 rounded - full" />;
+        </motion.div>;
+        <motion.div;
+          className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4";
+          animate={{
+            scale: [1, 10]
+            opacity: [1, 0]}}
+          transition={{
+<<<<<<< HEAD
 
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CSS for hexagon clip */}
       <style jsx>{`
         .clip-hexagon {
-          clip-path: polygon(
-            50% 0%
-            100% 25%
-            100% 75%
-            50% 100%
-            0% 75%
-            0% 25%
+
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+          }}>;
+          <div className="w-full h-full border-2 border-purple-400 rounded-full" />;
+        </motion && motion.div>;
+      </div>;
+
+      {/* CSS for hexagon clip */}
+      <style jsx>{`;
+        .clip-hexagon {;
+          clip-path: polygon(;
+            50% 0%,;
+            100% 25%,;
+            100% 75%,;
+            50% 100%,;
+            0% 75%,;
+            0% 25%;
           );
         }
-      `}</style>
-    </>
+      `}</style>;
+    </>;
   );
+      `}</style>;
+    </>;
+  );
+<<<<<<< HEAD
+}
+};
+=======
+};
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default UltraFuturisticBackground2047;
+            duration: 4,
+            repeat: Infinity as any,
+            ease: "ease_out",
+            delay: 2;
+          }}
+        >;
+          <div className="w - full h - full border - 2 border - purple - 400 rounded - full" />;
+        </motion.div>;
+      </div>;
+      {/* CSS for hexagon clip */}
+      <style jsx>{`;
+        .clip - hexagon {
+          clip - path: polygon (
+            50% 0%,
+            100% 25%,
+            100% 75%,
+            50% 100%,
+            0% 75%,
+            0% 25%);
+        }
+      `}</style>;
+    </>);
+}
+;
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+=======
+;
+export default UltraFuturisticBackground2047;
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default UltraFuturisticBackground2047;        }
       `}</style>
     </>
@@ -330,4 +656,9 @@ export default UltraFuturisticBackground2047;        }
 export default UltraFuturisticBackground2047;
 
 export default UltraFuturisticBackground2047;
-
+export default UltraFuturisticBackground2047;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

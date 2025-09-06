@@ -1,17 +1,39 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface AccessibilityContextType {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+import React, { create_context, useContext, useState, ReactNode } from './react';
+;
+interface AccessibilityContextType {
+  high_contrast: boolean;
+  large_text: boolean;
+  reduced_motion: boolean;
   toggleHighContrast: () => void;
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 const AccessibilityContext = createContext<
   AccessibilityContextType | undefined
 >(undefined);
+export const useAccessibility = () => {
 
+export const useAccessibility = () => {;
+=======
+
+
+
+export const useAccessibility = () => {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -24,28 +46,128 @@ interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+const AccessibilityContext = createContext<;
+  AccessibilityContextType | undefined;
+>(undefined);
+<<<<<<< HEAD
+export const useAccessibility = () => {;
+=======
+<<<<<<< HEAD
+export const useAccessibility = () => {
+=======
+
+export const useAccessibility = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const context = useContext(AccessibilityContext);
+  if (context === undefined) {;
+    throw new Error(;
+      "useAccessibility must be used within an AccessibilityProvider",;
+    );
+  }
+  return context;
+};
+interface AccessibilityProviderProps {;
+  children: React && React.ReactNode;
+}
+<<<<<<< HEAD
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
+  children,;
+}) => {;
+
+=======
+<<<<<<< HEAD
+  children
+}) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  children,
+}) => {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-  const value = {
-    highContrast
-    largeText
-    reducedMotion
-    toggleHighContrast
-    toggleLargeText
-    toggleReducedMotion
-  }
-  return (
-    <AccessibilityContext.Provider value={value}>
-      <div
-        className={`${highContrast ? "high-contrast" : ""} ${largeText ? "large-text" : ""} ${reducedMotion ? "reduced-motion" : ""}`}
-      >
-        {children}
-      </div>
-    </AccessibilityContext.Provider>
-  );
 
+
+  const value = {;
+    highContrast,;
+    largeText,;
+    reducedMotion,;
+    toggleHighContrast,;
+    toggleLargeText,;
+    toggleReducedMotion,;
+  };
+
+
+  return (
+    <AccessibilityContext && AccessibilityContext.Provider value={value}>;
+      <div
+        className={`${highContrast ? "high-contrast" : ""} ${largeText ? "large-text" : ""} ${reducedMotion ? "reduced-motion" : ""}`}>;
+        {children}
+      </div>;
+    </AccessibilityContext && AccessibilityContext.Provider>;
+  );
+}
+    throw new Error (
+      "use_accessibility must be used within an AccessibilityProvider",
+    );
+  }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  return context;
+}
+;
+interface AccessibilityProviderProps {
+  children: React.ReactNode;
+}
+export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
+  children,
+}) => {
+  const [high_contrast, setHighContrast] = useState (false);
+  const [large_text, setLargeText] = useState (false);
+  const [reduced_motion, setReducedMotion] = useState (false);
+;
+  const toggleHighContrast = () =>: any setHighContrast (!high_contrast);
+  const toggleLargeText = () =>: any setLargeText (!large_text);
+  const toggleReducedMotion = () =>: any setReducedMotion (!reduced_motion);
+;
+  const value = {
+    high_contrast,
+    large_text,
+    reduced_motion,
+    toggleHighContrast,
+    toggleLargeText,
+    toggleReducedMotion,
+<<<<<<< HEAD
+  }
+;
+  return (
+    <AccessibilityContext.Provider value={value}>;
+      <div;
+        className={`${high_contrast ? "high - contrast" : ""} ${large_text ? "large - text" : ""} ${reduced_motion ? "reduced - motion" : ""}`}
+      >;
+        {children}
+      </div>;
+    </AccessibilityContext.Provider>);
+}
+;
+export default AccessibilityProvider;
+};
+
+export default AccessibilityProvider;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

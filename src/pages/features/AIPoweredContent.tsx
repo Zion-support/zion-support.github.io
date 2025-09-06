@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -6,6 +5,7 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -28,7 +28,29 @@ import Link from 'next/link',
           </p>
           <div className="relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden">
             <img
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+              src='https://placehold.co/800x400'
+              alt='Screenshot of ZionGPT content tool';
+              className='object-cover';
+            />;
+          </div>;
+          <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
+          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
+            <li>
+              Save time drafting marketing content for your products or
+              services.
+            </li>
+              src="https: //placehold.co/800x400"
+              alt="Screenshot of ZionGPT content tool"
+              className="object-cover"
+            />
+          </div>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+            <li>Save time drafting marketing content for your products or services.</li>
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <li>Improve search rankings with keyword optimized text.</li>
             <li>Create multilingual content to reach a global audience.</li>
           </ul>
@@ -43,7 +65,23 @@ import Link from 'next/link',
               <p className="text-zion-slate-light">Yes, you can review and modify all suggestions before publishing.</p>
             </div>
           </div>
+<<<<<<< HEAD
+          <div className='text-center'>
+            <Button size='lg' className='bg-zion-purple text-white' asChild>
+              <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
+          <div className="text-center">
+=======
+              src='https://placehold && placehold.co/800x400'
+              alt='Screenshot of ZionGPT content tool'
+              className='object-cover'
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
             </Button>
@@ -51,8 +89,22 @@ import Link from 'next/link',
         </div>
       </main>
     </>
-  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+;
+}
+<<<<<<< HEAD
+
+=======
+  )
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -125,8 +177,17 @@ export default function AIPoweredContent() {;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+;
+=======
     </>;
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

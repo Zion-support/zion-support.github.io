@@ -1,5 +1,15 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -10,7 +20,6 @@ import {ExportPanel} from "./ExportPanel";
 import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
-
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -21,10 +30,52 @@ import { ExportPanel } from "./ExportPanel",
 import { Button } from "@/components/ui/button",
 import { toast } from "sonner",
 export type AppPlatform = "ios" | "android",
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 export type AppMetadataValues = {
+  appTitle: string
+  shortDescription: string
+  longDescription: string
+  keywords: string[]
+  version: string
+=======
 
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export type AppMetadataValues = {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  appTitle: string,
+  shortDescription: string,
+  longDescription: string,
+  keywords: string[],
+  version: string,
+<<<<<<< HEAD
+  platform: AppPlatform;
+};
   platform: AppPlatform
+}
+const defaultValues: AppMetadataValues = {
+  appTitle: "Zion AI Marketplace"
+  shortDescription: "Hire top AI talent or find global IT jobs on the go."
+  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.";
+  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
+  version: "1.0.0"
+  platform: "ios"
+}
+export const MetadataManager: React.FC = () => {
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
+  const [isSaving, setIsSaving] = useState(false);
+  // Separate form instances for each platform
+  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } })
+  const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } })
+  const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
+},
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace",
@@ -35,17 +86,31 @@ const defaultValues: AppMetadataValues = {
   platform: "ios"
 },
 
+export const MetadataManager: React.FC = () => {;
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
+  const [isSaving, setIsSaving] = useState(false);
+export const MetadataManager: React.FC = () => {
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),
+  const [isSaving, setIsSaving] = useState(false),
+  
   // Separate form instances for each platform
   const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),
   
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
-
+  
   const handleSaveMetadata = async (data: AppMetadataValues) => {
     setIsSaving(true)
     try {
       // This would be implemented with actual API calls in production
-
+      console.log("Saving metadata for", currentPlatform, data);
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      // // // console.log("Saving metadata for", currentPlatform, data),
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000)),
+      
       toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`)
     } catch (error) {
       toast.error("Failed to save metadata"),
@@ -53,7 +118,9 @@ const defaultValues: AppMetadataValues = {
     } finally {
       setIsSaving(false)
     }
-
+  }
+  },
+  
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">
       <Tabs defaultValue="ios" className="w-full">
@@ -66,7 +133,16 @@ const defaultValues: AppMetadataValues = {
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
+          <Button
+          <Button 
+=======
 
+
+          <Button 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -100,7 +176,17 @@ const defaultValues: AppMetadataValues = {
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
+}
 
+=======
+
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -112,6 +198,7 @@ import { ExportPanel } from "./ExportPanel",;
 import { Button } from "@/components/ui/button",;
 import { toast } from "sonner",;
 export type AppPlatform = "ios" | "android",;
+
 export type AppMetadataValues = {;
   appTitle: string,;
   shortDescription: string,;
@@ -119,38 +206,47 @@ export type AppMetadataValues = {;
   keywords: string[],;
   version: string,;
   platform: AppPlatform;
-},;
+};
+
 const defaultValues: AppMetadataValues = {;
   appTitle: "Zion AI Marketplace",;
   shortDescription: "Hire top AI talent or find global IT jobs on the go.",;
-  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.",;
-  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"],;
-  version: "1.0.0",;
+  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.";
+  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
+  version: "1 && 1.0.0",;
   platform: "ios";
-},;
+};
+
 export const MetadataManager: React.FC = () => {;
-  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),;
-  const [isSaving, setIsSaving] = useState(false),;
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
+  const [isSaving, setIsSaving] = useState(false);
+
   // Separate form instances for each platform;
   const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),;
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),;
-  const currentForm = currentPlatform === "ios" ? iosForm : androidForm,;
+
+  const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
+
   const handleSaveMetadata = async (data: AppMetadataValues) => {;
     setIsSaving(true),;
+
     try {;
       // This would be implemented with actual API calls in production;
-      // // // console.log("Saving metadata for", currentPlatform, data),;
+      console && console.log("Saving metadata for", currentPlatform, data);
+
       // Simulate API call;
-      await new Promise(resolve => setTimeout(resolve, 1000)),;
-      toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`);
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      toast && toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`);
     } catch (error) {;
-      toast.error("Failed to save metadata"),;
-      console.error(error);
+      toast && toast.error("Failed to save metadata");
+      console && console.error(error);
     } finally {;
       setIsSaving(false);
     }
   };
-  return (;
+
+  return (
     <div className="bg-zion-blue-dark rounded-lg p-6">;
       <Tabs defaultValue="ios" className="w-full">;
         <div className="flex justify-between items-center mb-6">;
@@ -162,40 +258,110 @@ export const MetadataManager: React.FC = () => {;
               Google Play (Android);
             </TabsTrigger>;
           </TabsList>;
-          <Button;
-            onClick={currentForm.handleSubmit(handleSaveMetadata)}
-            disabled={isSaving}
-          >;
+
+          <Button
+            onClick={currentForm && currentForm.handleSubmit(handleSaveMetadata)}
+            disabled={isSaving}>;
             {isSaving ? "Saving..." : "Save Metadata"}
           </Button>;
         </div>;
+
         <TabsContent value="ios" className="mt-0">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <div className="lg:col-span-2 space-y-6">;
               <MetadataForm form={iosForm} />;
               <ChangelogManager platform="ios" />;
             </div>;
+
             <div className="space-y-6">;
               <ScreenshotManager platform="ios" />;
-              <ExportPanel platform="ios" metadata={iosForm.getValues()} />;
+              <ExportPanel platform="ios" metadata={iosForm && iosForm.getValues()} />;
             </div>;
           </div>;
         </TabsContent>;
+
         <TabsContent value="android" className="mt-0">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <div className="lg:col-span-2 space-y-6">;
               <MetadataForm form={androidForm} />;
               <ChangelogManager platform="android" />;
             </div>;
+
             <div className="space-y-6">;
               <ScreenshotManager platform="android" />;
-              <ExportPanel platform="android" metadata={androidForm.getValues()} />;
+              <ExportPanel platform="android" metadata={androidForm && androidForm.getValues()} />;
+=======
+;
+  return (
+    <div className="bg - zion - blue - dark rounded - lg p - 6">;
+      <Tabs default_value="ios" className="w - full">;
+        <div className="flex justify - between items - center mb - 6">;
+          <TabsList className="bg - zion - blue">;
+            <TabsTrigger value="ios" on_click={() => setCurrentPlatform ("ios")}>;
+              App Store (iOS);
+            </TabsTrigger>;
+            <TabsTrigger value="android" on_click={() => setCurrentPlatform ("android")}>;
+              Google Play (Android);
+            </TabsTrigger>;
+          </TabsList>;
+          <Button;
+            on_click={current_form.handle_submit (handleSaveMetadata)}
+            disabled={is_saving}
+          >;
+            {is_saving ? "Saving..." : "Save Metadata"}
+          </Button>;
+        </div>;
+        <TabsContent value="ios" className="mt - 0">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
+            <div className="lg:col - span - 2 space - y-6">;
+              <MetadataForm form={ios_form} />;
+              <ChangelogManager platform="ios" />;
+            </div>;
+            <div className="space - y-6">;
+              <ScreenshotManager platform="ios" />;
+              <ExportPanel platform="ios" metadata={ios_form.get_values ()} />;
+            </div>;
+          </div>;
+        </TabsContent>;
+        <TabsContent value="android" className="mt - 0">;
+          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
+            <div className="lg:col - span - 2 space - y-6">;
+              <MetadataForm form={android_form} />;
+              <ChangelogManager platform="android" />;
+            </div>;
+            <div className="space - y-6">;
+              <ScreenshotManager platform="android" />;
+              <ExportPanel platform="android" metadata={android_form.get_values ()} />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    } catch (error) {
+      toast.error ("Failed to save metadata");
+      console.error (error);
+    } finally {
+      setIsSaving (false);
+    }
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             </div>;
           </div>;
         </TabsContent>;
       </Tabs>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     </div>;
   );
+=======
 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
-
+=======
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

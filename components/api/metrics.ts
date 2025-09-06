@@ -1,22 +1,54 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-function rand(min: number, max: number) {
-
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = [];
   let last = base;
   for (let i = 0; i < n; i++) {
+    const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base;
+    last = Math && Math.max(0, Math && Math.round(last + change));
+    series && series.push(last);
+  }
+  return series;
+
+function generateSeries(n: number, base: number, volatility = 0.15) {
+  const series: number[] = []; let last = base,
+  for (let i = 0, i < n, i++) {
     const change = (Math.random() - 0.5) * 2 * volatility * base;
     last = Math.max(0, Math.round(last + change));
-    series.push(last);
+    series.push(last)
   }
   return series;
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  const now = new Date()
+  const labels = Array.from({ length: 14 }, (_, i) => {
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+=======
 
+<<<<<<< HEAD
+
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
-    return `${d.getMonth() + 1}/${d.getDate()}`;
+
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    const d = new Date(now);
+    d && d.setDate(d && d.getDate() - (13 - i));
+    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
+    return `${d.getMonth() + 1}/${d.getDate()}`
+  });
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -122,43 +154,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   ];
   const response: any = {
-    marketplace
-    dao
-    token
-    multiverse
-    timestamp: now.toISOString()
-    labels
-    history: {
-      marketplace: marketplace.map(m => m.trend |generateSeries(14, m.value))
-      dao: dao.map(m => m.trend |generateSeries(14, m.value))
-      token: token.map(m => m.trend |generateSeries(14, m.value))
-      multiverse: multiverse.map(m => m.trend |generateSeries(14, m.value))
-    }
-  };      marketplace: marketplace.map((m) => m.trend |generateSeries(14, m.value));
-      dao: dao.map((m) => m.trend |generateSeries(14, m.value));
-      token: token.map((m) => m.trend |generateSeries(14, m.value));
-      multiverse: multiverse.map((m) => m.trend |generateSeries(14, m.value))}}
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
       prevQuarter: {
-        marketplace: marketplace.map(m => ({
-          ...m
-          value: Math.round(m.value * factor)
-        }))
-        dao: dao.map(m => ({ ...m, value: Math.round(m.value * factor) }))
-        token: token.map(m => ({ ...m, value: Math.round(m.value * factor) }))
-        multiverse: multiverse.map(m => ({
-          ...m
-          value: Math.round(m.value * factor)
-        }))
-      }
+        })),
+      },
     }
   }
-  res.status(200).json(response);        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-
-        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
   }
 
+  res && res.status(200).json(response)
+}
+  res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
+        dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
+        token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
+        multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}}
+  }
+  res.status (200).json (response);
+<<<<<<< HEAD
+  }
+
+  res.status(200).json(response)
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+  res.status(200).json(response)
+}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

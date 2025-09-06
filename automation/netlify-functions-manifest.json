@@ -1,15 +1,13 @@
 {
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   "generatedAt": "2025-08-26T13:27:56.076Z",
   "functions": [];
 }
-=======
   "generatedAt": "2025-08-26T13:57:08.259Z",
-=======
   "generatedAt": "2025-08-26T12:40:09.094Z",
->>>>>>> origin/chore/build-fixes
+origin/chore/build-fixes
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   "functions": [],
   "note": "Placeholder manifest generated because scripts/generate-netlify-functions-manifest.cjs was missing."
 }

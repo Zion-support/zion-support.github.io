@@ -1,9 +1,33 @@
+<<<<<<< HEAD
 
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ShieldAlert} from "lucide-react";
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer";
+import { ShieldAlert } from "lucide-react";
+import { Footer } from "@/components/Footer",
+import { ShieldAlert } from "lucide-react",
+=======
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Unauthorized() {
   return (
     <>
@@ -38,14 +62,24 @@ export default function Unauthorized() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
+}
+=======
 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { ShieldAlert } from "lucide-react";
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Unauthorized() {;
-  return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  return (
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">;
@@ -60,25 +94,33 @@ export default function Unauthorized() {;
             You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.;
           </p>;
           <div className="flex flex-col gap-3">;
-            <Link;
-              to="/";
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center";
-            >;
+            <Link
+              to="/"
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center">;
               Return to Home;
             </Link>;
-            <Link;
-              to="/login";
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center";
-            >;
+            <Link
+              to="/login"
               Login with Different Account;
             </Link>;
           </div>;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
     </>;
   );
-
 }
 ;
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

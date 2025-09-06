@@ -1,5 +1,17 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
+import { signPayload } from "../../../utils/sync/signature",;
+import axios from "axios",;
+import { v4 as uuidv4 } from "uuid",;
+import { nextVersionFor } from "../../../utils/sync/versioning",;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -16,6 +28,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
     personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
+
+  };
+
+  if (!personId || !fromNation || !toNation || !role || !startDate) {
+    return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
+
   }
   if (!personId |!fromNation |!toNation |!role |!startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
@@ -23,7 +41,57 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${personId}:${startDate}`
   const version = nextVersionFor(state, entityKey)
   const event = {
+<<<<<<< HEAD
+    eventId: uuidv4()
+    type: "talent_mobility" as const
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()}
+  upsertEvent(state, event)
+  writeState(state)
+  const body = { ...event, propagate: false }
+  const headers: Record<string, string> = {}
+  const sig = signPayload(body)
+  if (sig) headers["x-zion-signature"] = sig
+    eventId: uuidv4(),
+    type: "talent_mobility" as const,
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: Date.now()},
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+  upsertEvent(state, event);
+  writeState(state);
+
+  const body = { ...event, propagate: false };
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
+
+
+  await Promise.all(
+    state.config.peers
+      .filter((p) => !p.paused)
+      .map(async (peer) => {
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+        try {
+          await axios.post(url, body, { headers, timeout: 5000 })
+        } catch {}
+      })
+  ),
+
+  return res.status(200).json({ status: "created", version, eventId: event.eventId });
+};
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -86,13 +154,134 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
-
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+        try {
+          await axios.post(url, body, { headers, timeout: 5000 })
+        } catch {}
+      })
+  )
 
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+        try {
+          await axios.post(url, body, { headers, timeout: 5000 })
+        } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+      })
+  ),
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {;
+    personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string;
+  },;
+  if (!personId || !fromNation || !toNation || !role || !startDate) {;
+    return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  const entityKey = `${personId}:${startDate}`;
+  const version = nextVersionFor(state, entityKey);
+  const event = {;
+    eventId: uuidv4();
+    type: "talent_mobility" as const;
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate },;
+    originInstanceId: state.config.instanceId,;
+    version,;
+    timestamp: Date.now()},;
+  upsertEvent(state, event);
+  writeState(state);
+  const body = { ...event, propagate: false },;
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
+  await Promise.all(;
+    state.config.peers;
+      .filter((p) => !p.paused);
+      .map(async (peer) => {;
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+        try {
+          await axios.post(url, body, { headers, timeout: 5000 });
+        } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      });
+  );
+  return res.status(200).json({ status: "created", version, eventId: event.eventId });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+}
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

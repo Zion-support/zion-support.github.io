@@ -1,19 +1,43 @@
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { BookProject } from '../book/bookTypes',;
+export function buildPrintableHtml(project: BookProject): string {;
+  const { meta, chapters, visuals } = project,;
+  const quotesHtml = visuals.quoteCallouts;
+    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
+    .join('\n'),;
 import type { BookProject } from '../book/bookTypes';
-
+export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
+export function buildPrintableHtml(project: BookProject): string {;
+  const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
+=======
 
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const chapterHtml = chapters;
     .map(;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       (c) => `;
       <section class="chapter">;
-        <h2>${escapeHtml(c.title)}</h2>;
-        <div class="content">${paragraphize(c.content)}</div>;
+        <h2>${escape_html (c.title)}</h2>;
+        <div class="content">${paragraphize (c.content)}</div>;
       </section>;
     `);
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+    .join('\n\n'),;
+  const visualsHtml = [;
+    ...visuals.timelineImages,;
+    ...visuals.daoVoteCharts,;
+    ...visuals.uiScreens];
+    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join('\n'),;
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -21,15 +45,82 @@ import type { BookProject } from '../book/bookTypes';
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
+=======
 
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======
+    .join ('\n\n'),
+  const visuals_html = [;
+    ...visuals.timeline_images,
+    ...visuals.daoVoteCharts,
+    ...visuals.ui_screens];
+    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join ('\n'),
+  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return `<!doctype html>;
 <html>;
 <head>;
-<meta charset="utf-8" />;
-<title>${escapeHtml(meta.title)}</title>;
+<meta charset="utf - 8" />;
+<title>${escape_html (meta.title)}</title>;
 <style>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  @page { margin: 1in }
+  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
+  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
+  .cover h1 { font-size: 40px, margin: 0 }
+  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444 }
+  .cover .by { margin-top: 24px, color: #666 }
+  .barcode { margin-top: 24px, height: 64px }
+  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333 }
+  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal }
+  .chapter { break-before: page }
+  .chapter h2 { font-size: 28px, margin: 0 0 12px 0 }
+  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
+  .visual { break-inside: avoid, margin: 12px 0 }
+  .visual img { max-width: 100%, height: auto }
+</style>;
+</head>;
+<body>;
+  <section class="cover">;
+    <div>${escapeHtml(meta.publisher |'')}</div>;
+    <h1>${escapeHtml(meta.title)}</h1>;
+    <h3>${escapeHtml(meta.subtitle |'')}</h3>;
+    <div class="by">By ${escapeHtml(meta.author)}</div>;
+    ${barcode}
+  </section>;
+  ${quotesHtml}
+  ${chapterHtml}
+  ${visualsHtml}
+</body>;
+</html>`;
+}
+function paragraphize(text: string): string {if (!text) return '';
+  return text;
+    .split(/\n\n+/);
+    .map((p) => `<p>${escapeHtml(p)}</p>`);
+    .join('\n');
+}
+function escapeHtml(s: string): string {return s;
+;
+function escapeHtml(s: string): string {;
+  return s;
+=======
 
+
+;
+function escapeHtml(s: string): string {;
+  return s;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -100,10 +191,37 @@ import type { BookProject } from '../book/bookTypes';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+=======
+  @page { margin: 1in }
+  body { font - family: ui - serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
+  .cover { break - after: page, display: flex, flex - direction: column, justify - content: center, height: 90vh }
+  .cover h1 { font - size: 40px, margin: 0 }
+  .cover h3 { font - size: 20px, margin: 8px 0 0 0, color: #444 }
+  .cover .by { margin - top: 24px, color: #666 }
+  .barcode { margin - top: 24px, height: 64px }
+  .quote { border - left: 4px solid #222, padding - left: 12px, margin: 16px 0, color: #333 }
+  .quote cite { display: block, margin - top:6px, color:#666, font - style: normal }
+  .chapter { break - before: page }
+  .chapter h2 { font - size: 28px, margin: 0 0 12px 0 }
+  .content p { line - height: 1.6, margin: 0 0 12px 0, white - space: pre - wrap }
+  .visual { break - inside: avoid, margin: 12px 0 }
+  .visual img { max - width: 100%, height: auto }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 </style>;
 </head>;
 <body>;
   <section class="cover">;
+    ${barcode}
+  </section>;
+  ${quotes_html}
+  ${chapter_html}
+  ${visuals_html}
+</body>;
+</html>`;
+}
+<<<<<<< HEAD
+
     <div>${escapeHtml(meta.publisher || '')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
     <h3>${escapeHtml(meta.subtitle || '')}</h3>;
@@ -139,11 +257,29 @@ import type { BookProject } from '../book/bookTypes';
 ;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

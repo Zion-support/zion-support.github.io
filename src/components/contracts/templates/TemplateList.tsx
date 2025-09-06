@@ -1,5 +1,4 @@
-
-
+=======
 import { useState } from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -7,6 +6,7 @@ interface TemplateListProps {
   onSelect: (template: ContractTemplate,) => void,
   onEdit: (template: ContractTemplate,) => void
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
@@ -15,7 +15,19 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth";
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import { useAuth } from "@/hooks/useAuth",
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 // useRouter replaces the old useLocation hook from react-router
 
   AlertDialog
@@ -26,8 +38,105 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle} from "@/components/ui/alert-dialog"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import { ContractTemplate } from "@/types/contracts"
+import { Button } from "@/components/ui/button"
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
+import { useContractTemplates } from "@/hooks/useContractTemplates"
+import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { useAuth } from "@/hooks/useAuth"
+// useRouter replaces the old useLocation hook from react-router
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle} from "@/components/ui/alert-dialog",
+<<<<<<< HEAD
 import { useState } from "react"
+interface TemplateListProps {
+  templates: ContractTemplate[]
+  isLoading: boolean
+  onSelect: (template: ContractTemplate,) => void
+  onEdit: (template: ContractTemplate,) => void
+
+
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null)
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates()
+  const { user } = useAuth()
+  const router = useRouter()
+  const handleDeleteClick = (templateId: string,) => {
+    setTemplateToDelete(templateId)
+  }
+  const handleDeleteConfirm = async () => {
+    if (templateToDelete) {
+      await deleteTemplate.mutateAsync(templateToDelete)
+      setTemplateToDelete(null)
+    }
+  }
+  const handleSetDefault = async (templateId: string,) => {
+    if (!user) {
+      const currentPath = router.asPath
+      router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`)
+      return;
+    }
+    await setDefaultTemplate.mutateAsync(templateId)
+  }
+import { useAuth } from "@/hooks/useAuth",
+// useRouter replaces the old useLocation hook from react-router
+import { useRouter } from 'next/router',
+=======
+
+
+
+
+// use_router replaces the old use_location hook from react - router;
+import { use_router } from 'next / router';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle } from '@/components / ui / alert - dialog';
+import { ContractTemplate  } from '@/types / contracts';
+import { Button  } from '@/components / ui / button';
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
+import { useContractTemplates  } from '@/hooks / useContractTemplates';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
+import { use_auth  } from '@/hooks / use_auth';
+// use_router replaces the old use_location hook from react - router;
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+<<<<<<< HEAD
+  AlertDialogTitle} from "@/components/ui/alert-dialog",
+import { useState } from "react",
+=======
+  AlertDialogTitle} from "@/components / ui / alert - dialog",
+import { useState  } from './react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+import { useState } from "react"
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface TemplateListProps {
   templates: ContractTemplate[]
   isLoading: boolean
@@ -63,7 +172,7 @@ export function TemplateList({
     }
     await setDefaultTemplate.mutateAsync(templateId)
   }
-
+=======
 import { useState } from "react",
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -122,9 +231,23 @@ export function TemplateList({;
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
       return;
     }
+<<<<<<< HEAD
+    await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
+  };
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  if (isLoading) {;
+
+=======
     await setDefaultTemplate.mutateAsync(templateId)
   },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
@@ -157,7 +280,19 @@ export function TemplateList({;
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
                 </p>
               </div>
+<<<<<<< HEAD
+              
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               <div className="flex items-center gap-2">
                 <Button
                   variant="ghost"
@@ -195,6 +330,18 @@ export function TemplateList({;
                 <Button
                   variant="ghost"
                   size="icon"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+            
+            <Separator className="my-3" />
+            
+=======
                   onClick={() => handleDeleteClick(template.id)}
                   aria-label="Delete template"
                 >
@@ -202,13 +349,16 @@ export function TemplateList({;
                 </Button>
               </div>
             </div>
-
+=======
+            
             <Separator className="my-3" />
-
+            
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="w-full"
             >
               Use This Template
@@ -216,7 +366,18 @@ export function TemplateList({;
           </CardContent>
         </Card>
       ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      
+=======
 
+
+      
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -245,7 +406,22 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
 }`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+return
+}await setDefaultTemplate.mutateAsync (templateId)
+return;
+}await setDefaultTemplate.mutateAsync (templateId) 
+=======
 
+
+return;
+}await setDefaultTemplate.mutateAsync (templateId) 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
@@ -265,7 +441,42 @@ router.push (`/auth/login?returnTo=$ {
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+                  onClick = {() => handleDeleteClick(template && template.id),}
+                  aria-label="Delete template";
+                >;
+                  <Trash className="h-4 w-4 text-destructive" />;
+                </Button>;
+              </div>;
+            </div>;
+
+            <Separator className="my-3" />;
+
+            <Button
+              onClick = {() => onSelect(template),}
+              variant="outline" ;
+              className="w-full";
+            >;
+              Use This Template;
+            </Button>;
+          </CardContent>;
+        </Card>;
+      ))}
+
+
+  handleDeleteConfirm ;
+}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
+}'"};
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
         <AlertDialogContent>;
@@ -290,4 +501,6 @@ router.push (`/auth/login?returnTo=$ {
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

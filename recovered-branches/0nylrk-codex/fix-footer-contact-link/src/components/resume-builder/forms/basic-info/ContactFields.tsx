@@ -1,10 +1,57 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+=======
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { Control  } from './react - hook - form';
+import { BasicInfoFormData  } from './schema';
+
+interface ContactFieldsProps {
+  control: Control < BasicInfoFormData>;
+}
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Control} from "react-hook-form";
+import {BasicInfoFormData} from "./schema";
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -22,50 +69,143 @@ export function ContactFields({ control }: ContactFieldsProps) {
             </FormControl>
             <FormMessage />
           </FormItem>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Control } from "react-hook-form",;
+import { BasicInfoFormData } from "./schema";
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface ContactFieldsProps {;
+  control: Control<BasicInfoFormData>;
+}
 
+export function ContactFields(): any ({ control }: ContactFieldsProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+      <FormField
+        control={control}
+        name="location"
+export /**
+ * ContactFields - Function description
+ */
+function ContactFields() {
+  return (
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+      <FormField;
+        control={control}
+        name="location";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Location</FormLabel>;
+            <FormControl>;
+              <Input placeholder="San Francisco, CA" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+<<<<<<< HEAD
+
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Location</FormLabel>
+            <FormControl>
+              <Input placeholder="San Francisco, CA" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
-      />
+
+      />;
+
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <FormField
         control={control}
         name="website"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Website</FormLabel>
-            <FormControl>
-              <Input placeholder="https://yourwebsite.com" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Website</FormLabel>;
+            <FormControl>;
+              <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
         )}
-      />
-      <FormField
         control={control}
-        name="linkedin"
+        name="linkedin";
         render={({ field }) => (
-          <FormItem>
-            <FormLabel>LinkedIn</FormLabel>
-            <FormControl>
-              <Input
-                placeholder="https://linkedin.com/in/username"
+          <FormItem>;
+            <FormLabel > LinkedIn</FormLabel>;
+            <FormControl>;
+              <Input;
+                placeholder="https://linkedin.com / in / username";
                 {...field}
-              />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
       <FormField
         control={control}
         name="github"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>GitHub</FormLabel>
-            <FormControl>
-              <Input placeholder="https://github.com/username" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>GitHub</FormLabel>;
+            <FormControl>;
+              <Input placeholder="https://github && github.com/username" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
         )}
+<<<<<<< HEAD
+<<<<<<< HEAD
       />
     </div>
+  );
+}
+  )
+}
+;
+=======
 
+      />;
+    </div>;
+  );
+}
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+              />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="github";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > GitHub</FormLabel>;
+            <FormControl>;
+              <Input placeholder="https://github.com / username" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>)}
+      />;
+    </div>);
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

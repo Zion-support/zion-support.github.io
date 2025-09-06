@@ -1,9 +1,35 @@
 
-
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
+<<<<<<< HEAD
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+export function AdminHeader() {
+  // const { user } = useAuth(), // Unused but available
+  const { company } = useCompanyWorkspace();
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+export function AdminHeader() {
+  // const { user } = useAuth(), // Unused but available
+  const { company } = useCompanyWorkspace(),
 
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Download, Settings } from 'lucide-react'
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+
+export function AdminHeader() { // const { user  } = useAuth(), // Unused but available
+  const { company  } = useCompanyWorkspace(),
+
+
+
+
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -18,14 +44,95 @@ import { Download, Settings } from 'lucide-react'
             <Settings className="h-4 w-4" />
             Settings
           </Button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
             Export Data
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+        <div className='bg-card rounded-lg p-4 border border-border'>
+          <div className='text-sm text-muted-foreground'>Subscription Plan</div>
+          <div className='text-xl font-medium'>
+            {company?.plan |'Enterprise'}
+          </div>
+        </div>
+        <div className='bg-card rounded-lg p-4 border border-border'>
+          <div className='text-sm text-muted-foreground'>Team Members</div>
+          <div className='text-xl font-medium'>
+            {company?.teamSize |'Loading...'} / {company?.teamLimit |'∞'}
+          </div>
+        </div>
+        <div className='bg-card rounded-lg p-4 border border-border'>
+          <div className='text-sm text-muted-foreground'>Billing Cycle</div>
+          <div className='text-xl font-medium'>
+            {company?.billingCycle |'Annual'}
+          </div>
+        </div>
+      </div>
+      <div className='bg-muted/50 rounded-lg p-4 flex items-center justify-between'>
+        <div className='flex items-center gap-4'>
+          <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center'>
+            <img
+              src={company?.logoUrl |'/placeholder.svg'}
+              alt={company?.name |'Company'}
+              className='max-h-10 max-w-10'
+              loading='lazy'            />
+          </div>
+          <div>
+            <h2 className='font-medium'>{company?.name |'Company Name'}</h2>
+            <p className='text-sm text-muted-foreground'>
+              Workspace URL: {company?.workspaceUrl |'loading...'}            </p>
+            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
+            <p className="text-sm text-muted-foreground">
+              Workspace URL: {company?.workspaceUrl |"loading..."}
+        </div>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Team Members</div>
+          <div className="text-xl font-medium">{company?.teamSize |"Loading..."} / {company?.teamLimit |"∞"}</div>
+        </div>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className="text-sm text-muted-foreground">Billing Cycle</div>
+          <div className="text-xl font-medium">{company?.billingCycle |"Annual"}</div>
+        </div>
+      </div>
 
+      <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
+            <img
+
+              src={company?.logoUrl || "/placeholder.svg"}
+              alt={company?.name || "Company"}
+              className="max-h-10 max-w-10"
+              loading="lazy"
+            />
+          </div>
+          <div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
@@ -40,30 +147,80 @@ import { Download, Settings } from 'lucide-react'
           <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>
         </div>
       </div>
-
+      
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
             <img
+<<<<<<< HEAD
+              src={company?.logoUrl |"/placeholder.svg"}
+              alt={company?.name |"Company"}
+              src={company?.logoUrl || "/placeholder.svg"}
+              alt={company?.name || "Company"}
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               className="max-h-10 max-w-10"
               loading="lazy"
             />
           </div>
           <div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
+            <p className="text-sm text-muted-foreground">
+              Workspace URL: {company?.workspaceUrl |"loading..."}
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
           </div>
         </div>
         <Button>Customize Workspace</Button>
       </div>
     </div>
-  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+    <div className='space-y-4'>;
+      <div className='flex items-center justify-between'>;
+
+;
+<<<<<<< HEAD
+
+=======
+  )
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from 'lucide-react';
@@ -128,4 +285,6 @@ export function AdminHeader() {;
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

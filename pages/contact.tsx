@@ -1,17 +1,52 @@
+<<<<<<< HEAD
+=======
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import Layout from "../components/Layout";
-
 import React from 'react';
-
+ursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/Layout';
-
 import Layout from '../components/Layout';
+origin/automation-improvements-final
 
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -71,18 +106,27 @@ export default function Contact() {
 }
   };
   return (
-
+    <Layout
+      title="Contact Us - Zion Tech Group"
+      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Contact Us
+            </h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+origin/automation-improvements-final
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
-
 import React from 'react';
-
 import Head from 'next/head';
 import Link from 'next/link';
+origin/main
 
 import React from "react";
 import Layout from "../components/Layout";
-
 export default function Contact() {
   return (
     <>
@@ -105,7 +149,6 @@ export default function Contact() {
             {/* A placeholder for a contact form could go here */}
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
-
             </p>
           </div>
           <Link href="/services" className="btn-secondary">
@@ -115,7 +158,8 @@ export default function Contact() {
       </div>
     </>
   );
-
+}
+}
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -200,7 +244,6 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
-
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -512,19 +555,19 @@ const ContactPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
             </div>
           </div>
         </div>
       </div>
-
+    </Layout>;
+    </>
   );
-
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 }
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-

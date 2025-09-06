@@ -1,10 +1,23 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+<<<<<<< HEAD
+<<<<<<< HEAD
 export const useLoadMilestones = (projectId?: string) => {;
   const { user } = useAuth();
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -37,7 +50,36 @@ export const useLoadMilestones = (projectId?: string) => {;
           .eq('milestone_id', milestone.id)
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
+        activitiesMap[milestone.id] = activitiesData |[]
+=======
 
+        
+        activitiesMap[milestone && milestone.id] = activitiesData || []
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      }
+      setActivities(activitiesMap);
+      setError(null)
+    } catch (err: any) {
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      console && console.error("Error fetching milestones:", err);
+      setError("Failed to fetch milestones: " + err && err.message),
+      toast && toast.error("Failed to fetch milestones")
+
+        
+        activitiesMap[milestone.id] = activitiesData || []
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -52,32 +94,57 @@ export const useLoadMilestones = (projectId?: string) => {;
   const fetchMilestones = async () => {;
     if (!projectId) {;
       setIsLoading(false),;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+export const useLoadMilestones = (project_id?: string) =>: any {
+  const { user } = use_auth ();
+  const [milestones, set_milestones] = useState < Milestone[]>([]);
+  const [activities, set_activities] = useState < Record < string, MilestoneActivity[]>>({});
+  const [is_loading, setIsLoading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const fetch_milestones = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsLoading (false);
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       return;
     }
+    try {
+      setIsLoading (true);
 ;
-    try {;
-      setIsLoading(true),;
-      const { data: milestonesData, error: milestonesError } = await supabase;
-        .from('project_milestones');
-        .select('*');
-        .eq('project_id', projectId);
-        .order('due_date', { ascending: true }),;
-      if (milestonesError) throw milestonesError,;
-      setMilestones(milestonesData),;
+      const { data: milestones_data, error: milestones_error } = await supabase;
+        .from ('project_milestones');
+        .select ('*');
+        .eq ('project_id', project_id);
+        .order ('due_date', { ascending: true });
+;
+      // Check condition
+if (throw milestones_error) {
+  $2
+}
+      set_milestones (milestones_data);
+;
       // Fetch activities for each milestone;
-      const activitiesMap: Record<string MilestoneActivity[]> = {},;
-      for (const milestone of milestonesData) {;
-        const { data: activitiesData, error: activitiesError } = await supabase;
-          .from('milestone_activities');
-          .select(`;
-            *,;
-            created_by_profile:profiles!user_id(display_name, avatar_url);
+      const activities_map: Record < string, MilestoneActivity[]> = {}
+;
+      for (const milestone of milestones_data) {
+        const { data: activities_data, error: activities_error } = await supabase;
+          .from ('milestone_activities');
+          .select (`;
+            *;
+            created_by_profile:profiles ! user_id (display_name, avatar_url);
           `);
+<<<<<<< HEAD
+
           .eq('milestone_id', milestone.id);
           .order('created_at', { ascending: false }),;
         if (activitiesError) throw activitiesError,;
         activitiesMap[milestone.id] = activitiesData || [];
-
+<<<<<<< HEAD
       }
       
       setActivities(activitiesMap),
@@ -88,7 +155,43 @@ export const useLoadMilestones = (projectId?: string) => {;
       toast.error("Failed to fetch milestones")
     } finally {
       setIsLoading(false)
+    }
+  };
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          .eq ('milestone_id', milestone.id);
+          .order ('created_at', { ascending: false });
+;
+        // Check condition
+if (throw activities_error) {
+  $2
+}
+        activities_map[milestone.id] = activities_data || [];
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      }
+      set_activities (activities_map);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching milestones:", err);
+      set_error ("Failed to fetch milestones: " + err.message),
+      toast.error ("Failed to fetch milestones");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsLoading (false);
+    }
+  }
+  return {
+    milestones;
+    activities;
+    is_loading;
+    error;
+<<<<<<< HEAD
+    refetch: fetchMilestones
 ;
       setActivities(activitiesMap),;
       setError(null);
@@ -112,7 +215,18 @@ export const useLoadMilestones = (projectId?: string) => {;
     isLoading,;
     error;
     refetch: fetchMilestones;
+=======
+    refetch: fetch_milestones;
+<<<<<<< HEAD
+=======
+      setIsLoading(false)
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
-
+=======
+  }
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

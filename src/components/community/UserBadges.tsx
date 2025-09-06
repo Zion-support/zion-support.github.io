@@ -1,15 +1,99 @@
+<<<<<<< HEAD
+;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
+import { Badge } from "@/types/community",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 interface UserBadgesProps {
   badges: Badge[]
 }
 const iconMap = {
+<<<<<<< HEAD
+  Trophy
+  Award
+  BadgeCheck
+  Star
+  MessageSquare
+}
+export const UserBadges = ({ badges }: UserBadgesProps) => {
+  if (!badges?.length) return null
+  Trophy,
+  Award,
+  BadgeCheck,
+  Star,
+  MessageSquare
+},
 
+export const UserBadges = ({ badges }: UserBadgesProps) => {
+  if (!badges?.length) return null,
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  return (
+
+
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
+<<<<<<< HEAD
+<<<<<<< HEAD
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy
+export default UserBadges
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  return (
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
+export default UserBadges;
+}
+}
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="flex flex-wrap gap-2">
+      {badges.map((badge) => {
+        // Get the correct icon component based on the badge's icon name
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
         return (
@@ -48,7 +132,13 @@ const iconMap = {;
   BadgeCheck,;
   Star,;
   MessageSquare;
+<<<<<<< HEAD
+};
+<<<<<<< HEAD
+
+=======
 },;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;
   return (;
@@ -84,4 +174,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
   );
 };
 export default UserBadges;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

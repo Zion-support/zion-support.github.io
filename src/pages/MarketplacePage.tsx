@@ -1,10 +1,11 @@
-
-
+=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { useTranslation } from 'react-i18next',
 import { motion, AnimatePresence } from 'framer-motion',
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -18,12 +19,26 @@ import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
+<<<<<<< HEAD
 // Market insights component
 
-const MarketplaceInsights = ({ stats }: { stats: any },) => (
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+<<<<<<< HEAD
+=======
 
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+// Market insights component
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+const MarketplaceInsights = ({ stats }: { stats: any },) => (
+=======
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -54,19 +69,56 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
+<<<<<<< HEAD
+}: any,) => (
+}: any) => (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
+<<<<<<< HEAD
+      <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <option value="">All Categories</option>
         {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
+<<<<<<< HEAD
+      <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
         <option value="price-high">Price: High to Low</option>
@@ -109,6 +161,21 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           <div className="text-xl font-bold text-blue-600">{formatPrice(product.price ?? 0)}</div>
           <Badge variant={product.availability === "Available" ? "default" : "outline"} className="text-xs">
             {product.availability}
+<<<<<<< HEAD
+          </Badge>;
+        </div>;
+      </div>;
+    </CardHeader>;
+
+
+          onClick={onAddToCart}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+=======
           </Badge>
         </div>
       </div>
@@ -126,7 +193,10 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
         <Button
           size="icon"
           variant="outline"
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           aria-label="Add to cart"
           data-testid="add-to-cart-listing-button"
         >
@@ -141,7 +211,66 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   )
 }
 // Loading grid
+<<<<<<< HEAD
+const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number },) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {Array.from({ length: count }).map((_, i,) => <SkeletonCard key={i} />)}
+  </div>
+)
+// Main component
+function MarketplacePageContent() {
+  const router = useRouter()
+  const { t } = useTranslation()
+  const dispatch = useDispatch<AppDispatch>()
+  const { isAuthenticated } = useAuth()
+  const [sortBy, setSortBy] = useState('newest')
+  const [filterCategory, setFilterCategory] = useState('')
+  const [showRecommended, setShowRecommended] = useState(false)
+  const fetchProducts = useCallback(async (page: number, limit: number,) => {
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 300))
+    try {
+      // Combine initial products with marketplace listings
+      const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS]
+      // Apply category filtering
+      let processedDataset = fullDataset
+      if (filterCategory) {
+        processedDataset = processedDataset.filter(p => p.category === filterCategory)
+const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
+  </div>;
+),;
+// Main component;
+function MarketplacePageContent() {;
+  const router = useRouter(),;
+  const { t } = useTranslation(),;
+  const dispatch = useDispatch<AppDispatch>(),;
+  const { isAuthenticated } = useAuth(),;
+  const [sortBy, setSortBy] = useState('newest'),;
+  const [filterCategory, setFilterCategory] = useState(''),;
+  const [showRecommended, setShowRecommended] = useState(false),;
+  const fetchProducts = useCallback(async (page: number, limit: number) => {;
+    // Simulate API delay;
+    await new Promise(resolve => setTimeout(resolve, 300)),;
+    try {;
+      // Combine initial products with marketplace listings;
+      const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS],;
+      // Apply category filtering;
+      let processedDataset = fullDataset,;
+      if (filterCategory) {;
+        processedDataset = processedDataset.filter(p => p.category === filterCategory);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
       // Apply recommended filtering
       if (showRecommended) {
@@ -177,7 +306,12 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
       logErrorToProduction('Error in fetchProducts:', { data: error })
       throw new Error('Failed to load marketplace data. Please try again.')
     }
+<<<<<<< HEAD
+  }, [sortBy, filterCategory, showRecommended])
+  }, [sortBy, filterCategory, showRecommended]),
 
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   const {
     items: products
     loading
@@ -200,13 +334,34 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   const marketStats = useMemo((,) => {
     if (products.length === 0) return null
     return {
-
+<<<<<<< HEAD
+      averagePrice: products.reduce((sum, p,) => sum + (p.price |0), 0) / products.length
+      averageRating: products.reduce((sum, p,) => sum + (p.rating |0), 0) / products.length
+      totalProducts: products.length
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
+      totalProducts: products.length,
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       availableCount: products.filter(p => p.availability === "Available").length
     }
   }, [products])
   const categories = useMemo((,) => {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
+<<<<<<< HEAD
+  }, [])
+  const [showScrollTop, setShowScrollTop] = useState(false)
+  useEffect((,) => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800)
+    window.addEventListener('scroll', handleScroll)
+  }, []),
 
+  const [showScrollTop, setShowScrollTop] = useState(false),
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
+    window.addEventListener('scroll', handleScroll),
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   // Loading state
@@ -216,7 +371,63 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
+<<<<<<< HEAD
+  }, [sortBy, filterCategory, showRecommended]),;
+  const {;
+    items: products,;
+    loading,;
+    error,;
+    hasMore,;
+    total,;
+    isFetching,;
+    lastElementRef,;
+    refresh,;
+    scrollToTop,;
+    loadMore;
+  } = useInfiniteScrollPagination(fetchProducts, 12),;
+  // Refresh when filters change;
+  useEffect(() => {;
+    const timeoutId = setTimeout(() => {;
+      refresh();
+    }, 100),;
+    return () => clearTimeout(timeoutId);
+  }, [sortBy, filterCategory, showRecommended, refresh]),;
+  const marketStats = useMemo(() => {;
+    if (products.length === 0) return null,;
+    return {;
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,;
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,;
+      totalProducts: products.length,;
+      availableCount: products.filter(p => p.availability === "Available").length;
+    }
+  }, [products]),;
+  const categories = useMemo(() => {;
+    return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"];
+  }, []),;
+  const [showScrollTop, setShowScrollTop] = useState(false),;
+  useEffect(() => {;
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),;
+    window.addEventListener('scroll', handleScroll),;
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []),;
+  // Loading state;
 
+  if (loading && products.length === 0) {;
+    return (;
+      <>;
+        <NextSeo;
+          title="Marketplace - Zion Tech Marketplace Solutions & Services";
+          description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
         />
       <div className="container py-8">
@@ -234,6 +445,37 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   // Error state
   if (error && products.length === 0) {
     return (
+<<<<<<< HEAD
+      <>;
+        <NextSeo
+          title="Marketplace - Zion Tech Marketplace Solutions & Services"
+          description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
+          openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
+        />;
+      <div className="container py-8">;
+        <motion && motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">;
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
+            {t('marketplace && marketplace.hero_title')}
+          </h1>;
+          <p className="text-muted-foreground text-lg">{t('marketplace && marketplace.hero_subtitle')}</p>;
+        </motion && motion.div>;
+        <MarketplaceLoadingGrid />;
+      </div>;
+      </>;
+    );
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+  // Error state;
+  if (error && products && products.length === 0) {;
+
+    return (
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <>
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
@@ -259,6 +501,63 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
       </>
     )
   }
+<<<<<<< HEAD
+  // Error state;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <>;
+        <NextSeo;
+          title="Marketplace - Zion Tech Marketplace Solutions & Services";
+          description="Visit our Zion Tech Marketplace to browse top - rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
+          open_graph={{ images: [{ url: 'https://app.ziontechgroup.com / og.png' }] }}
+        />;
+      <div className="container py - 8">;
+        <div className="text - center space - y-4">;
+          <AlertTriangle className="mx - auto h - 12 w - 12 text - red - 500" />;
+          <h2 className="text - 2xl font - bold">Unable to load marketplace</h2>;
+          <p className="text - muted - foreground max - w-md mx - auto">{error}</p>;
+          <div className="flex gap - 2 justify - center">;
+            <Button on_click={refresh} variant="outline">;
+              <RefreshCw className="h - 4 w - 4 mr - 2" />;
+              Try Again;
+            </Button>;
+            <Button on_click={(, ) => window.location.reload ()}>;
+              Refresh Page;
+            </Button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+        openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
+      />;
+    <div className="container py-8">;
+      <motion && motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>;
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
+          {t('marketplace && marketplace.hero_title')}
+        </h1>;
+        <p className="text-muted-foreground text-lg">{t('marketplace && marketplace.hero_subtitle')}</p>;
+      </motion && motion.div>;
+
+      {marketStats && (;
+        <motion && motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0 && 0.2 }}>;
+          <MarketplaceInsights stats={marketStats} />;
+        </motion && motion.div>;
+=======
   return (
     <>
       <NextSeo
@@ -277,8 +576,8 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           <MarketplaceInsights stats={marketStats} />
         </motion.div>
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       )}
-
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         <MarketplaceFilterControls
           sortBy = {sortBy,}
@@ -289,6 +588,10 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           showRecommended = {showRecommended,}
           setShowRecommended = {setShowRecommended,}
           loading = {isFetching,}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         />
       </motion.div>
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
@@ -297,7 +600,19 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
             <motion.div
               key = {item.id,}
               ref = {index === products.length - 1 ? lastElementRef : null,}
+<<<<<<< HEAD
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+              initial={{ opacity: 0, scale: 0.9 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
         <MarketplaceFilterControls;
@@ -320,7 +635,19 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
               ref={index === products.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} ;
               animate={{ opacity: 1, scale: 1 }} ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
@@ -338,13 +665,53 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
                   router.push(`/marketplace/listing/${item.id}`)
                 }}
 
+<<<<<<< HEAD
+
+
+                onAddToCart={() => {;
+                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),;
+                  toast({;
+                    title: 'Added to cart',;
+                    description: `${item.title} has been added to your cart`,;
+                    action: {;
+                      label: 'View Cart',;
+                      onClick: (,) => router && router.push('/cart')}});
+                }}
+              />;
+
+            </motion.div>;
+          ))}
+        </AnimatePresence>;
+      </motion.div>;
+      {(isFetching || loading) && products.length > 0 && (;
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <MarketplaceLoadingGrid count={4} />;
+        </motion.div>;
+      )}
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 }}
               />
             </motion.div>
           ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
         </AnimatePresence>
       </motion.div>
+      {(isFetching |loading) && products.length > 0 && (
+      {(isFetching || loading) && products.length > 0 && (
+=======
 
+
+      {(isFetching || loading) && products.length > 0 && (
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+        </AnimatePresence>
+      </motion.div>
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <MarketplaceLoadingGrid count={4} />
         </motion.div>
@@ -356,7 +723,27 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           ) : (
             <Button onClick={loadMore} variant="outline" size="lg">
               Load More Products
+<<<<<<< HEAD
 
+        </AnimatePresence>;
+      </motion && motion.div>;
+
+      {(isFetching || loading) && products && products.length > 0 && (;
+        <motion && motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <MarketplaceLoadingGrid count={4} />;
+        </motion && motion.div>;
+
+            </Button>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           )}
         </div>
       )}
@@ -380,12 +767,100 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
             <ArrowUp className="h-5 w-5 text-primary-foreground" />
           </motion.button>
         )}
+<<<<<<< HEAD
       </AnimatePresence>
     </div>
     </>
   )
+=======
+      </AnimatePresence>;
+    </div>;
+    </>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+<<<<<<< HEAD
+
+
+;
+
+// Main export;
+export default function MarketplacePage() {;
+  return <MarketplacePageContent />;
+}
+
+
+                  dispatch (add_item ({ id: item.id, title: item.title, price: item.price ?? 0 })),
+                  toast ({
+                    title: 'Added to cart',
+                    description: `${item.title} has been added to your cart`,
+                    action: {
+                      label: 'View Cart',
+                      on_click: (, ) => router.push ('/cart')}});
+                }}
+              />;
+            </motion.div>))}
+        </AnimatePresence>;
+      </motion.div>;
+      {(is_fetching || loading) && products.length > 0 && (
+        <motion.div className="mt - 8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <MarketplaceLoadingGrid count={4} />;
+        </motion.div>)}
+      {has_more && !loading && (
+        <div className="text - center mt - 8">;
+          {is_fetching ? (
+            <Spinner className="mx - auto h - 6 w - 6" />) : (
+            <Button on_click={load_more} variant="outline" size="lg">;
+              Load More Products;
+            </Button>          )}
+          {total !== undefined && (
+            <p className="mt - 2 text - sm text - muted - foreground">;
+              Showing {products.length} of {total} items;
+            </p>)}
+        </div>)}
+      {!has_more && products.length > 0 && (
+        <motion.div className="text - center mt - 12 py - 8 border - t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <div className="text - muted - foreground text - lg mb - 2">🚀 You've explored all available products!</div>;
+          <div className="text - sm text - muted - foreground">Showing {products.length} marketplace items</div>;
+        </motion.div>)}
+      <AnimatePresence>;
+        {showScrollTop && (
+          <motion.button;
+            on_click = {scrollToTop, }
+            className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50";
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            while_hover={{ scale: 1.1 }}
+            while_tap={{ scale: 0.9 }}
+          >;
+            <ArrowUp className="h - 5 w - 5 text - primary - foreground" />;
+          </motion.button>)}
+      </AnimatePresence>;
+    </div>;
+    </>);
+}
+// Main export;
+export default /**
+ * MarketplacePage - Function description
+ */
+function MarketplacePage() {
+  return <MarketplacePageContent />;
+}
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Main export export default function MarketplacePage() {
   return <MarketplacePageContent />;
-
+};
+}
+;
+=======
+=======
+// Main export export default function MarketplacePage() {
+  return <MarketplacePageContent />;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

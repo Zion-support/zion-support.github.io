@@ -1,5 +1,4 @@
-
-
+=======
 import React, {;
   useState,;
   useEffect,;
@@ -20,7 +19,7 @@ export interface Message {;
   message: string,;
   timestamp: Date,;
   read?: boolean;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 export interface ChatAssistantProps {;
@@ -168,6 +167,7 @@ export function ChatAssistant({;
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   useState
   useEffect
@@ -247,6 +247,10 @@ export function ChatAssistant({
         setDisplayGuestMessages(storedGuestMessages)
       }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }, [
     isGuest
     initialMessages
@@ -266,6 +270,7 @@ export function ChatAssistant({
     valueOrFn: Message[] | ((val: Message[],) => Message[])
   ) => {
     if (isGuest) {
+<<<<<<< HEAD
       const newMessages = null;
         valueOrFn instanceof Function
           ? valueOrFn(displayGuestMessages)
@@ -273,7 +278,27 @@ export function ChatAssistant({
       setDisplayGuestMessages(newMessages)
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
+      const newMessages =
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
+      const newMessages = null;
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+=======
 
+
+      const newMessages = null;
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+      const newMessages = null;
+        valueOrFn instanceof Function
+          ? valueOrFn(displayGuestMessages)
+          : valueOrFn
+      setDisplayGuestMessages(newMessages)
+      setStoredGuestMessages(newMessages), // Always update localStorage for guests
+    } else {
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       setLoggedInMessages(newMessages)
     }
   }
@@ -366,7 +391,20 @@ export function ChatAssistant({
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
+<<<<<<< HEAD
+            onClick = {onClose,}
+            onClick={onClose}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -388,7 +426,32 @@ export function ChatAssistant({
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
+<<<<<<< HEAD
+                  {starterQuestions.map((q, idx,) => (
+                    <Button
+                      key = {idx,}
+                      variant="outline"
+                      className="text-xs"
+                      onClick = {(,) => handleSendMessage(q),}
+                    >
+                  {starterQuestions.map((q, idx) => (
+                    <Button
+                      key={idx}
+                      variant="outline"
+                      className="text-xs"
+                      onClick={() => handleSendMessage(q)}
+                    >;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                       {q}
                     </Button>
                   ))}
@@ -427,13 +490,37 @@ export function ChatAssistant({
             <div className="flex justify-end space-x-3">
               <Button
                 variant="outline"
+<<<<<<< HEAD
+                onClick = {handleModalCancel,}
+                onClick={handleModalCancel}
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
+<<<<<<< HEAD
+                onClick = {handleModalSendConfirm,}
+                onClick={handleModalSendConfirm}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -444,6 +531,24 @@ export function ChatAssistant({
       )}
     </div>
   );
+<<<<<<< HEAD
 
+
+
+        </div>)}
+    </div>);
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+
+}
+=======
+=======
 ;
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,4 +1,29 @@
-
+<<<<<<< HEAD
+import { useState, useEffect  } from './react';
+import { format  } from './date - fns';
+import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks / useApiKeys';
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components / ui / select';
+import { Badge  } from '@/components / ui / badge';
+import { ApiLogsChart  } from './ApiLogsChart';
+export /**
+ * ApiLogs - Function description
+ */
+function ApiLogs() {
+  const { logs, total_logs, loading, fetchApiLogs } = useApiKeys ();
+  const [page_size, setPageSize] = useState (25);
+  const [current_page, setCurrentPage] = useState (0);
+  const hasNextPage = current_page < total_pages - 1;
+  const hasPrevPage = current_page > 0);
+}
+  )
+}
+      </CardContent>;
+    </Card>;
+  );
+}
+=======
 
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -7,12 +32,11 @@ import { useApiKeys } from "@/hooks/useApiKeys",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]),
-
+  
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -137,4 +161,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
             </div>
           </div>
         )}
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

@@ -1,8 +1,9 @@
-
-
+=======
 import React from 'react'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const features = [
   {
     title: 'Private Hiring Portal'
@@ -65,6 +66,16 @@ export function EnterpriseFeatures() {
               </div>
               <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
               <p className='text-muted-foreground'>{feature.description}</p>            </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
             </div>
 
@@ -173,10 +184,52 @@ export function EnterpriseFeatures() {;
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>;
               <p className="text-muted-foreground">{feature.description}</p>;
             </div>;
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           ))}
         </div>
       </div>;
     </section>;
   );
+<<<<<<< HEAD
+};
+}
 
+        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
+          {features.map (feature => (
+            <div;
+              key={feature.title}
+              className='bg - card rounded - lg p - 6 shadow - sm border border - border transition - all hover:shadow - md'            >;
+              <div className='h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5'>;
+                <feature.icon className='h - 6 w - 6 text - primary' />;
+              </div>;
+              <h3 className='font - bold text - xl mb - 3'>{feature.title}</h3>;
+              <p className='text - muted - foreground'>{feature.description}</p>            </div>;
+              <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
+              <p className="text - muted - foreground">{feature.description}</p>;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          {features.map ((feature) => (
+            <div;
+              key={feature.title}
+              className="bg - card rounded - lg p - 6 shadow - sm border border - border transition - all hover:shadow - md";
+            >;
+              <div className="h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5">;
+                <feature.icon className="h - 6 w - 6 text - primary" />;
+              </div>;
+              <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
+              <p className="text - muted - foreground">{feature.description}</p>;
+            </div>))}
+        </div>;
+      </div>;
+    </section>);
+}
+
+}
+;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

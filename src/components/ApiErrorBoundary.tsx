@@ -1,4 +1,3 @@
-
 import { RefreshCw, WifiOff } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApiErrorBoundaryProps {
@@ -113,12 +112,10 @@ export class ApiErrorBoundary extends Component<
   render() {
     if (this.state.hasError) {
       // Check if it's a network-related error
-
         !this.state.isOnline
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback
-
 import { QueryClient } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
 import { Button } from '@/components/ui/button';
@@ -232,9 +229,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
       // Use custom fallback if provided;
       if (this.props.fallback) {;
         return this.props.fallback;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return (
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
@@ -243,7 +241,27 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
+<<<<<<< HEAD
+                  <RefreshCw className='h-4 w-4' />
+                )}
+                <AlertTitle>
+                  {isNetworkError
+                    ? 'Connection Problem'
+                    : 'Something went wrong'}
+                  <RefreshCw className="h-4 w-4" />
+                )}
+                <AlertTitle>;
+                  {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -258,7 +276,31 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
               </AlertDescription>
             </Alert>
+<<<<<<< HEAD
+            <div className='flex flex-col gap-2'>
+              <Button
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className='w-full'              >
 
+
+            <div className='flex flex-col gap-2'>;
+              <Button
+
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className="w-full"
+              >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -272,7 +314,25 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
               </Button>
               <Button
+<<<<<<< HEAD
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
+                variant="outline"
+                onClick={() => window.location.reload()}
+                className="w-full"
+              >
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 Reload Page
               </Button>
             </div>
@@ -287,13 +347,56 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
+<<<<<<< HEAD
+                <pre className='mt-2 whitespace-pre-wrap break-all'>
+                <pre className="mt-2 whitespace-pre-wrap break-all">
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+          </div>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+// Hook for accessing query client in function components
+export const useApiErrorHandler = () => {
+  const handleApiError = (error: Error) => {
+    Sentry.withScope(scope => {
+      scope.setTag('source', 'useApiErrorHandler')
+      scope.setLevel('error')
+      Sentry.captureException(error)
+    })
+  }
+  return { handleApiError }
+}
+  return { handleApiError }
+}
+  return { handleApiError }
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+}, ;
+  return { handleApiError };
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </div>;
         </div>;
       );
@@ -313,6 +416,24 @@ export const useApiErrorHandler = () => {;
     });
   };
   return { handleApiError }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+
+},
+  return { handleApiError }
+},
+
 
 };
-
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

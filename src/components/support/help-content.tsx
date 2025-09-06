@@ -1,9 +1,8 @@
-
-
 import React from "react",
 import { HelpCategory } from "./types",
 import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: "getting-started",
@@ -149,7 +148,19 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["mediation", "dispute", "resolution"]
       },
       {
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+id: 'dispute-prevention',
+        title: 'Tips for preventing disputes',
+        content:
+          "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
+        lastUpdated: '2023-12-05',
+        tags: ['prevention', 'best practices', 'communication'],
+      },
+    ],;
+  },;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
@@ -185,7 +196,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\nUse the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.",;
         lastUpdated: "2023-12-01",;
         tags: ["navigation", "interface"];
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       }
       {
         id: 'complete-profile'
@@ -203,6 +222,90 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         lastUpdated: '2023-12-01'
         tags: ['navigation', 'interface']
       }
+<<<<<<< HEAD
 
+
+import React from 'react';
+import { HelpCategory } from './types';
+import {;
+  HelpCircle,;
+  CreditCard,;
+  Users,;
+  Calendar,;
+  Briefcase,;
+} from 'lucide-react';
+
+export const HELP_CATEGORIES: HelpCategory[] = [;
+
+    ];
+  },;
+  {;
+    id: "payments",;
+    name: "Payments",;
+    description: "Everything about payments and billing",;
+    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />,;
+    articles: [;
+      {;
+        id: "payment-methods",;
+        title: "Accepted payment methods",;
+        content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.",;
+        lastUpdated: "2023-11-01",;
+        tags: ["payment", "billing", "finance"];
+      },;
+      {;
+        id: "escrow-system",;
+        title: "How our escrow system works",;
+        content: "Zion's escrow system protects both clients and talent by ensuring secure and fair payments. Here's how it works:\n\n1. Client makes a payment into escrow when beginning a project\n2. Funds are held securely by Zion, not released to either party\n3. Talent begins work knowing that funds are secured\n4. Upon milestone or project completion, talent submits deliverables\n5. Client reviews and approves the work\n6. Funds are released from escrow to the talent\n\nIf any disputes arise, our resolution team will review the situation and determine the appropriate distribution of escrowed funds based on contract terms and delivered work.",;
+        lastUpdated: "2023-11-15",;
+        tags: ["escrow", "payment", "security"];
+      },;
+      {;
+        id: "invoice-management",;
+        title: "Managing invoices and receipts",;
+        content: "Keeping track of your financial transactions on Zion is simple. Here's how to manage your invoices and receipts:\n\n1. Navigate to Settings > Billing & Payments > Invoices\n2. View a complete history of all transactions\n3. Filter by date range, project, or transaction type\n4. Download individual invoices or receipts as PDF files\n5. Generate financial reports for accounting purposes\n6. Set up automatic forwarding of invoices to your email or accounting system\n\nFor tax purposes, annual statements are also available summarizing all transaction activity for the calendar year. These can be accessed from the same section in January of the following year.",;
+        lastUpdated: "2023-12-01",;
+        tags: ["invoice", "receipt", "billing"];
+      }
+    ];
+  },;
+  {;
+    id: "payments",;
+    name: "Payments",;
+    description: "Everything about payments and billing",;
+    icon: <CreditCard className="h-6 w-6 text-zion-cyan" />,;
+    articles: [;
+      {;
+        id: "payment-methods",;
+        title: "Accepted payment methods",;
+        content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.",;
+        lastUpdated: "2023-11-01",;
+        tags: ["payment", "billing", "finance"];
+      },;
+      {;
+        id: "escrow-system",;
+        title: "How our escrow system works",;
+        content: "Zion's escrow system protects both clients and talent by ensuring secure and fair payments. Here's how it works:\n\n1. Client makes a payment into escrow when beginning a project\n2. Funds are held securely by Zion, not released to either party\n3. Talent begins work knowing that funds are secured\n4. Upon milestone or project completion, talent submits deliverables\n5. Client reviews and approves the work\n6. Funds are released from escrow to the talent\n\nIf any disputes arise, our resolution team will review the situation and determine the appropriate distribution of escrowed funds based on contract terms and delivered work.",;
+        lastUpdated: "2023-11-15",;
+        tags: ["escrow", "payment", "security"];
+      },;
+      {;
+
+        id: "dispute-prevention",;
+        title: "Tips for preventing disputes",;
+        content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",;
+        lastUpdated: "2023-12-05";
+        tags: ["prevention", "best practices", "communication"];
+      }
+    ];
+  }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ];
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

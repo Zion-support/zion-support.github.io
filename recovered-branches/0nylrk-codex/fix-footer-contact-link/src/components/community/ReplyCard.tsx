@@ -1,12 +1,59 @@
+<<<<<<< HEAD
 
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {formatDistanceToNow} from "date-fns";
+import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {ForumReply} from "@/types/community";
+import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+import { ForumReply } from "@/types/community";
+import { cn } from "@/lib/utils";
+interface ReplyCardProps {
 
+  reply: ForumReply
+=======
+interface ReplyCardProps {;
+  reply: ForumReply,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  onMarkAnswer?: () => void;
+  canMarkAnswer?: boolean;
+  className?: string;
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const ReplyCard = ({
+  reply;
+  onMarkAnswer
+  canMarkAnswer = false;
+import { ForumReply } from "@/types/community",
+import { cn } from "@/lib/utils",
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -14,15 +61,21 @@ interface ReplyCardProps {
   className?: string
 }
 
+export const ReplyCard = ({ ;
+  reply;
+export const ReplyCard = ({ 
+  reply,
   onMarkAnswer, 
   canMarkAnswer = false,
-
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
-
+      "transition-shadow";
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20"
+      "transition-shadow",
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -37,19 +90,76 @@ interface ReplyCardProps {
             </span>
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
+import { formatDistanceToNow } from "date-fns",;
+import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ForumReply } from "@/types/community",;
+import { cn } from "@/lib/utils",;
+interface ReplyCardProps {;
+  reply: ForumReply,;
+  onMarkAnswer?: () => void,;
+  canMarkAnswer?: boolean,;
+  className?: string;
+}
+;
+export const ReplyCard = ({;
+  reply,;
+  onMarkAnswer,;
+  canMarkAnswer = false,;
 
+  className;
+}: ReplyCardProps) => {;
+  const timeAgo = formatDistanceToNow(new Date(reply && reply.createdAt), { addSuffix: true }),;
+
+  return (
+    <CardclassName={cn(
+      "transition-shadow"
+      reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      className
+    )}>;
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
+        <Avatar className="h-8 w-8">;
+          <AvatarImage src={reply && reply.authorAvatar} />;
+          <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
+        </Avatar>;
+        <div className="flex-1">;
+          <div className="flex items-center">;
+            <span className="font-medium">;
+              {reply && reply.authorName}
+            </span>;
+            {reply && reply.authorRole && (;
+              <Badge variant="outline" className="ml-2 text-xs">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {reply.authorRole}
               </Badge>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                {reply && reply.authorRole}
+              </Badge>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
             )}
-            {reply.isAnswer && (
-              <Badge className="ml-2 bg-green-500 text-white">
-                <CheckCircle className="h-3 w-3 mr-1" />
-                Answer
-              </Badge>
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
             )}
-          </div>
-          <div className="text-xs text-muted-foreground">
+          </div>;
+          <div className="text-xs text-muted-foreground">;
             {timeAgo}
+<<<<<<< HEAD
           </div>
         </div>
       </CardHeader>
@@ -73,6 +183,24 @@ interface ReplyCardProps {
             Mark as Answer
           </Button>
         )}
-
+      </CardFooter>
+    </Card>
+  )
+}
 export default ReplyCard;
 
+      </CardFooter>;
+    </Card>;
+  );
+};
+<<<<<<< HEAD
+=======
+export default ReplyCard;
+
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default ReplyCard;

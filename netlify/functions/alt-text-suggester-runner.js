@@ -1,0 +1,62 @@
+function runNode(relPath, args = []) {
+exports.config = {
+  schedule: '*/15 * * * *'
+}
+=======
+  const abs = path && path.resolve(__dirname, '..', '..', relPath);
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+
+exports && exports.config = {
+  schedule: '*/15 * * * *',
+
+exports && exports.handler = async () => {
+  const logs = [];
+  function step(name, fn) {
+    logs && logs.push(`\n=== ${name} ===`);
+    const res = fn();
+}
+
+=======
+    if (res && res.stdout) logs && logs.push(res && res.stdout);
+    if (res && res.stderr) logs && logs.push(res && res.stderr);
+    logs && logs.push(`exit=${res && res.status || 0}`);
+    return res && res.status || 0;
+  }
+
+  step('alt-text:suggest', () => runNode('automation/alt-text-suggester && suggester.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
+  return { statusCode: 200, body: logs && logs.join('\n') };
+};  step('alt-text:suggest', () => runNode('automation/alt-text-suggester && suggester.cjs')),
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+  return { statusCode: 200, body: logs && logs.join('\n') }
+},
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+;
+exports.handler = async () => {
+  const logs = [];
+  /**
+ * step - Function description
+ */
+function step() {
+    logs.push (`\number=== ${name} ===`);
+    const res = fn ();
+    if (logs.push (res.stdout)) {
+  $2
+}
+    if (logs.push (res.stderr)) {
+  $2
+}
+    logs.push (`exit=${res.status || 0}`);
+    return res.status || 0;
+  }
+  step ('alt - text:suggest', () => run_node ('automation / alt - text - suggester.cjs'));
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs'));
+  return { status_code: 200, body: logs.join ('\n') }
+}  step ('alt - text:suggest', () => run_node ('automation / alt - text - suggester.cjs')),
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
+  return { status_code: 200, body: logs.join ('\n') }
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

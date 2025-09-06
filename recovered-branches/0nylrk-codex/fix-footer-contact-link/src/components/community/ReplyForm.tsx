@@ -1,11 +1,51 @@
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+FormMessage,;
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+}
+interface ReplyFormValues {
+  content: string;
+}
+
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: ""
+    }
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting(true);
+    try {
+      (await onSubmit(values.content), form.reset());
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+  };
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -27,53 +67,130 @@ import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+  FormMessage,;
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+
 interface ReplyFormProps {;
-  onSubmit: (content: string) => Promise<void>,;
-  parentId?: string;
+
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
 }
-;
+
+import { useState  } from './react';
+import { use_form  } from './react - hook - form';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
+=======
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+
+
 interface ReplyFormValues {;
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   content: string;
 }
-;
-export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const form = useForm<ReplyFormValues>({;
-    defaultValues: {;
-      content: "";
-    }
-  }),;
-  const handleSubmit = async (values: ReplyFormValues) => {;
-    setIsSubmitting(true),;
+    setIsSubmitting(true);
     try {;
-      await onSubmit(values.content),;
-      form.reset();
+      (await onSubmit(values && values.content), form && form.reset());
     } finally {;
       setIsSubmitting(false);
     }
+<<<<<<< HEAD
+
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   return (
-    <Card>
-      <CardContent className="pt-6">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)}>
+    <Card>;
+      <CardContent className="pt-6">;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(handleSubmit)}>;
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="content"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormControl>;
                     <Textarea
+<<<<<<< HEAD
+=======
+export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
+  const [is_submitting, setIsSubmitting] = useState (false);
+;
+  const form = use_form < ReplyFormValues>({
+    default_values: {
+      content: "",
+    },
+  });
+;
+  const handle_submit = async (values: ReplyFormValues) => {
+    setIsSubmitting (true);
+    try {
+      (await on_submit (values.content), form.reset ());
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+;
+  return (
+    <Card>;
+      <CardContent className="pt - 6">;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (handle_submit)}>;
+            <FormField;
+              control={form.control}
+              name="content";
+              render={({ field }) => (
+                <FormItem>;
+                  <FormControl>;
+                    <Textarea;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+                      placeholder={
+                        parent_id;
+                          ? "Write your reply...";
+                          : "Join the discussion...";
+                      }
+<<<<<<< HEAD
+                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -91,4 +208,30 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
         </Form>
       </CardContent>
     </Card>
+  );
+}
+export default ReplyForm;
 
+  )
+},
+
+<<<<<<< HEAD
+export default ReplyForm,
+export default ReplyForm;
+export default ReplyForm,
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+                      className="min - h-[100px] resize - y";
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+              </Button>;
+            </div>;
+          </form>;
+        </Form>;
+      </CardContent>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

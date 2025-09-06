@@ -1,5 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {
+  getTrustWeights,
+  setTrustWeights,
+  getDefaultWeights,;
+} from '../../../utils/trust/weights';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import {
   getTrustWeights
   setTrustWeights
@@ -9,23 +29,66 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method === 'GET') {;
-    const current = await getTrustWeights();
-    return res.status(200).json({ current, defaults: getDefaultWeights() });  }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {;
+  try {
+  if (req && req.method === 'GET') {
     const current = await getTrustWeights();
-    return res.status(200).json({ current, defaults: getDefaultWeights() })
+    return res && res.status(200).json({ current, defaults: getDefaultWeights() })
   }
-  if (req.method === 'PUT') {
-    const incoming = req.body |{}
+
+  if (req && req.method === 'PUT') {
+    const incoming = req && req.body || {};
     const updated = await setTrustWeights(incoming);
-    return res.status(200).json({ updated });
+    return res && res.status(200).json({ updated });
   }
-  res.setHeader('Allow', 'GET, PUT');
-  return res.status(405).json({ error: 'Method not allowed' });    return res.status(200).json({ updated })
+<<<<<<< HEAD
+
+
+  res && res.setHeader('Allow', 'GET, PUT');
+  return res && res.status(405).json({ error: 'Method not allowed' });    return res && res.status(200).json({ updated })
   }
-  res.setHeader('AllowGET, PUT');
-
-  return res.status(405).json({ error: 'Method not allowed' })
-
+  res && res.setHeader('AllowGET, PUT');
+  return res && res.status(405).json({ error: 'Method not allowed' })
+}
+=======
+import {
+  getTrustWeights,
+  setTrustWeights,
+  getDefaultWeights,
+} from '../../../utils / trust / weights';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+}
+    const current = await getTrustWeights ();
+    return res.status (200).json ({ current, defaults: getDefaultWeights () });  }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    const current = await getTrustWeights ();
+    return res.status (200).json ({ current, defaults: getDefaultWeights () });
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const incoming = req.body || {}
+    const updated = await setTrustWeights (incoming);
+    return res.status (200).json ({ updated });
+  }
+  res.set_header ('Allow', 'GET, PUT');
+  return res.status (405).json ({ error: 'Method not allowed' });    return res.status (200).json ({ updated });
+  }
+  res.set_header ('AllowGET, PUT');
+  return res.status (405).json ({ error: 'Method not allowed' });

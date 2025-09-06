@@ -1,5 +1,4 @@
 
-
   const stockStatus = null;
     product.stock === undefined
       : 'In stock'
@@ -16,7 +15,7 @@
 }
   )
 }
-
+=======
 import Link from 'next/link',;
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist',;
@@ -61,6 +60,28 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       ? 'Low stock';
       : 'In stock',;
   const stockVariant =;
+<<<<<<< HEAD
+    product && product.stock === undefined;
+  const productTitle = product && product.title;
+
+  const imageUrl = Array && Array.isArray(product && product.images) && product && product.images.length > 0 ? product && product.images[0] : null;
+  const imageAltText = productTitle;
+
+  const isMobile = useMediaQuery('(max-width: 768px)'),;
+  const isTablet = useMediaQuery('(max-width: 1200px)'),;
+
+  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+
+  );
+}
+<<<<<<< HEAD
+
+  );
+}
+
+  const stock_status =;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     product.stock === undefined;
       ? 'success';
       : product.stock <= 0;
@@ -240,4 +261,6 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -10,7 +9,7 @@ import { Badge } from "@/components/ui/badge",
 import Skeleton from "@/components/ui/skeleton",
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Transaction {
   id: string,
   user_id: string,
@@ -21,7 +20,6 @@ interface Transaction {
   status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
   in_escrow: boolean,
   created_at: string,
-
   completed_at?: string,
   refunded_at?: string,
   cancelled_at?: string,
@@ -64,6 +62,136 @@ interface Transaction {;
     title?: string;
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function TransactionHistory() {
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
+    () => (safeStorage.getItem('transaction_filter') as any) |'all'
+  )
+  useEffect((,) => {
+    safeStorage.setItem('transaction_filter', filter)
+  }, [filter])
+  const { data: transactions, isLoading, error, refetch } = useQuery({
+    queryKey: ['transactions', user?.id, filter]
+    queryFn: async () => {
+
+      if (!user) return []
+          provider:profiles!provider_id(display_name)
+      query = query.order('created_at', { ascending: false })
+    }
+              const isClient = user?.id === transaction.user_id;              const isPending =
+                transaction.status === 'pending' |transaction.status === 'in_escrow'
+              const isInEscrow = transaction.in_escrow
+              const canRelease = !isClient && isPending && isInEscrow
+              const canCancel = isClient && isPending
+              const canRefund = isClient && transaction.status === 'released'
+              const counterpartyName = isClient
+                ? transaction.provider?.display_name |'Service Provider'
+                : 'Client'
+}
+
+  )
+}
+import { safeStorage } from "@/utils/safeStorage",
+import { useCurrency } from '@/hooks/useCurrency',
+import {logErrorToProduction} from '@/utils/productionLogger',
+interface Transaction {
+  id: string,
+  user_id: string,
+  provider_id: string,
+  service_id: string,
+  amount: number,
+  currency: string,
+  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
+  in_escrow: boolean,
+  created_at: string,
+  completed_at?: string
+  refunded_at?: string
+  cancelled_at?: string
+  provider?: {
+    display_name?: string
+  }
+  service?: {
+    title?: string
+  }
+}
+
+export function TransactionHistory() {
+  const { user } = useAuth()
+  const { toast } = useToast()
+  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
+    () => (safeStorage.getItem('transaction_filter') as any) || 'all'
+  )
+  useEffect((,) => {
+    safeStorage.setItem('transaction_filter', filter)
+  }, [filter])
+  const { data: transactions, isLoading, error, refetch } = useQuery({
+    queryKey: ['transactions', user?.id, filter]
+    queryFn: async () => {
+      if (!user) return []
+          provider:profiles!provider_id(display_name)
+      query = query.order('created_at', { ascending: false }),;
+      ;
+    };
+              const isClient = user?.id === transaction.user_id;              const isPending = null;
+                transaction.status === 'pending' || transaction.status === 'in_escrow'
+              const isInEscrow = transaction.in_escrow
+              const canRelease = !isClient && isPending && isInEscrow
+              const canCancel = isClient && isPending
+              const canRefund = isClient && transaction.status === 'released'
+              const counterpartyName = isClient 
+                ? transaction.provider?.display_name || 'Service Provider' 
+                : 'Client'
+}
+  )
+}
+;
+  completed_at?: string,
+  refunded_at?: string,
+  cancelled_at?: string,
+  provider?: {
+    display_name?: string
+  },
+  service?: {
+    title?: string
+import React, { useState, useEffect } from "react",;
+import { useQuery } from "@tanstack/react-query",;
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import Skeleton from "@/components/ui/skeleton",;
+import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react';
+import { formatDistanceToNow } from "date-fns",;
+import { safeStorage } from "@/utils/safeStorage",;
+import { useCurrency } from '@/hooks/useCurrency',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface Transaction {;
+  id: string,;
+  user_id: string,;
+  provider_id: string,;
+  service_id: string,;
+  amount: number,;
+  currency: string,;
+  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',;
+  in_escrow: boolean,;
+  created_at: string,;
+  completed_at?: string,;
+  refunded_at?: string,;
+  cancelled_at?: string,;
+  provider?: {;
+    display_name?: string;
+  },;
+  service?: {;
+    title?: string;
+  }
+}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ;
 export function TransactionHistory() {;
   const { user } = useAuth(),;
@@ -561,7 +689,24 @@ export function TransactionHistory() {;
         )}
       </div>;
     </div>;
+=======
+          provider:profiles ! provider_id (display_name);
+      query = query.order ('created_at', { ascending: false }),
+    },
+              const is_client = user?.id === transaction.user_id;              const is_pending =;
+                transaction.status === 'pending' || transaction.status === 'in_escrow';
+              const isInEscrow = transaction.in_escrow;
+              const can_release = !is_client && is_pending && isInEscrow;
+              const can_cancel = is_client && is_pending;
+              const can_refund = is_client && transaction.status === 'released';
+              const counterparty_name = is_client;
+                ? transaction.provider?.display_name || 'Service Provider';
+                : 'Client';
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

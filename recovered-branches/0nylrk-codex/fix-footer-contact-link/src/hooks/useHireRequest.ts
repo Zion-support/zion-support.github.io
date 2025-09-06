@@ -1,5 +1,50 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast";
+import { TalentProfile } from "@/types/talent";
+=======
+import {useState} from 'react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import { TalentProfile } from '@/types / talent';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+export interface HireRequestData {
+  talent: {
+    id: string;
+    full_name: string;
+  }
+  project: {
+    overview: string;
+    timeline: string;
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {useState} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {TalentProfile} from "@/types/talent";
+export interface HireRequestData {
+  talent: {;
+    id: string;
+    full_name: string;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -8,7 +53,6 @@ export interface HireRequestData {
   talent: {
     id: string,
     full_name: string,
-
     professional_title: string,
     email?: string
   },
@@ -21,11 +65,20 @@ export interface HireRequestData {
     overview: string,
     timeline: string,
     budgetMin: number,
-
     budgetMax: number
   }
 }
+<<<<<<< HEAD
+export function useHireRequest() {
 
+export function useHireRequest() {;
+=======
+
+
+export function useHireRequest() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -34,16 +87,117 @@ export interface HireRequestData {
     setError(null)
     try {
       // Call the edge function to process the hire request
-      const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
+      const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
-
+      });
+      }),
+      
       if (error) throw error;
       // Show success message
       toast({
+        title: "Request Submitted"
+        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
+      return { success: true, requestId: response?.request_id }
+    } catch (error) {
+      console.error("Error submitting hire request:", error);
+      const errorMessage = error instanceof Error
+        ? error.message
+        : "There was a problem submitting your request. Please try again.";
+        title: "Request Submitted",
+        description: `Your request to hire ${requestData && requestData.talent.full_name} has been sent successfully.`});
+      
+      return { success: true, requestId: response?.request_id }
+    } catch (error) {
+      console && console.error("Error submitting hire request:", error);
+      
+      const errorMessage = error instanceof Error 
 
+=======
+        : "There was a problem submitting your request. Please try again.";
       setError(errorMessage);
       toast({
+        title: "Error";
+        description: errorMessage
+        variant: "destructive"});
+      return { success: false, error: errorMessage }
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+    budget_min: number,
+    budget_max: number;
+  }
+}
+export /**
+ * useHireRequest - Function description
+ */
+function useHireRequest() {
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const submitHireRequest = async (request_data: HireRequestData) => {
+    setIsSubmitting (true);
+    set_error (null),
+    try {
+      // Call the edge function to process the hire request;
+      const { data: response, error } = await supabase.functions.invoke ('process - hire - request', {
+        body: request_data;
+      });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Show success message;
+      toast ({
+        title: "Request Submitted",
+        description: `Your request to hire ${request_data.talent.full_name} has been sent successfully.`});
+;
+      return { success: true, request_id: response?.request_id }
+    } catch (error) {
+      console.error ("Error submitting hire request:", error);
+;
+      const error_message = error instanceof Error;
+        ? error.message;
+        : "There was a problem submitting your request. Please try again.";
+;
+      set_error (error_message);
+;
+      toast ({
+        title: "Error";
+        description: error_message,
+        variant: "destructive"});
+;
+      return { success: false, error: error_message }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+<<<<<<< HEAD
 
+;
+  return {
+    submitHireRequest;
+    is_submitting;
+    error;
+
+=======
+        ? error.message 
+        : "There was a problem submitting your request. Please try again.",
+      
+      setError(errorMessage);
+      toast({
+<<<<<<< HEAD
+        title: "Error";
+        description: errorMessage
+        variant: "destructive"});
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"}),
+      
+<<<<<<< HEAD
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
@@ -54,7 +208,12 @@ export interface HireRequestData {
     isSubmitting;
 
     error
-
+  }
+}
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"}),
+      
 import { useState } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -115,8 +274,14 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
     error;
-
   }
 }
 ;
+=======
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+  }
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

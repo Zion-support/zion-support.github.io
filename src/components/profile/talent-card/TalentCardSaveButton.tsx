@@ -1,4 +1,4 @@
-
+=======
 
 import React from "react",
 import { Heart } from 'lucide-react'
@@ -13,6 +13,7 @@ interface TalentCardSaveButtonProps {
   isAuthenticated: boolean
 }
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function TalentCardSaveButton({
   profileId,
   profileName,
@@ -20,7 +21,6 @@ export function TalentCardSaveButton({
   onToggleSave,
   isAuthenticated
 }: TalentCardSaveButtonProps) {
-
   const { toast } = useToast(),
   const router = useRouter(),
   // Using router.asPath for current path
@@ -74,15 +74,27 @@ export function TalentCardSaveButton({;
       }),;
       const returnTo = encodeURIComponent(router.asPath),;
       router.push(`/auth/login?returnTo=${returnTo}`),;
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return;
-
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -100,7 +112,28 @@ export function TalentCardSaveButton({;
 
     </button>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+}variant: "default" 
+}) 
+};
+}/> </button>) ;
+}";
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+    
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved 
@@ -148,5 +181,17 @@ export function TalentCardSaveButton({;
     </button>;
   );
 }
-;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}/> </button>);
+}";
+}
 
+
+;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

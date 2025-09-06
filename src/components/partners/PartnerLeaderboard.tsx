@@ -1,10 +1,9 @@
 
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   referrals: number,
   earnings: number,
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -19,7 +18,20 @@ export function PartnerLeaderboard() {
       referrals: 178
       earnings: 4500
       badges: ["gold", "trending"]
+<<<<<<< HEAD
+    }
+    },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       id: "2"
       rank: 2
@@ -28,7 +40,20 @@ export function PartnerLeaderboard() {
       referrals: 145
       earnings: 3625
       badges: ["silver"]
+<<<<<<< HEAD
+    }
+    },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       id: "3"
       rank: 3
@@ -37,7 +62,20 @@ export function PartnerLeaderboard() {
       referrals: 124
       earnings: 3100
       badges: ["bronze"]
+<<<<<<< HEAD
+    }
+    },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       id: "4"
       rank: 4
@@ -46,7 +84,41 @@ export function PartnerLeaderboard() {
       referrals: 98
       earnings: 2450
       badges: []
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+    {
+      id: "5"
+      rank: 5
+      name: "Deep Learning Daily"
+      avatar: ""
+      referrals: 87
+      earnings: 2175
 
+      badges: ["newcomer"]
+    }
+  ]
+  // Function to render rank badge
+
+  const renderRankBadge = (rank: number,) => {
+    switch(rank) {
+      case 1:
+        return <Trophy className="h-5 w-5 text-yellow-500" />
+      case 2:
+        return <Medal className="h-5 w-5 text-gray-400" />
+      case 3:
+        return <Medal className="h-5 w-5 text-amber-700" />
+      default:
+        return <span className="text-sm font-semibold">{rank}</span>
+}
+
+  )
+}
+    },
+    },
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     {
       id: "5",
       rank: 5,
@@ -55,11 +127,36 @@ export function PartnerLeaderboard() {
       referrals: 87,
       earnings: 2175,
       badges: ["newcomer"]
-
+<<<<<<< HEAD
+    }
+  ]
+  // Function to render rank badge
+  const renderRankBadge = (rank: number,) => {
+    switch(rank) {
+      case 1:
+        return <Trophy className="h-5 w-5 text-yellow-500" />
+      case 2:
+        return <Medal className="h-5 w-5 text-gray-400" />
+      case 3:
+        return <Medal className="h-5 w-5 text-amber-700" />,
+      default:
+        return <span className="text-sm font-semibold">{rank}</span>;
+};
+  );
+};
+}
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
@@ -258,4 +355,6 @@ export function PartnerLeaderboard() {;
   )
 }
 ;
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

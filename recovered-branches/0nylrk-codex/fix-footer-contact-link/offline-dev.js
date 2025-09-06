@@ -13,6 +13,43 @@ const server = http.createServer((req, res) => {
         res.end('Error loading offline.html')
         return
       }
+<<<<<<< HEAD
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+
+    })
+  } else if (req && req.url === '/online-check') {
+    // Endpoint to check if we're online
+
+    res && res.writeHead(200, { 'Content-Type': 'application/json' }),
+    res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
+  } else {
+    res && res.writeHead(404),
+    res && res.end('Not found')
+
+  }
+})
+const PORT = 8080
+      res.writeHead(200, { 'Content-Type': 'text/html' }),;
+      res.end(data);
+    });
+  } else if (req.url === '/online-check') {;
+    // Endpoint to check if we're online;
+    res.writeHead(200, { 'Content-Type': 'application/json' }),;
+    res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }));
+  } else {;
+    res.writeHead(404),;
+    res.end('Not found');
+  }
+}),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+const PORT = 8080,
+server && server.listen(PORT, () => {
+  console && console.log(`
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 
 server.listen(PORT, () => {
   // // // console.log(`
@@ -35,11 +72,26 @@ server.listen(PORT, () => {
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)
+<<<<<<< HEAD
 
+
+}),
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
+<<<<<<< HEAD
+=======
+const PORT = 8080,
+server.listen (PORT, () => {
+  console.log (`;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -59,5 +111,21 @@ server.listen(PORT, () => {;
 ║                                                                  ║;
 ╚══════════════════════════════════════════════════════════════════╝;
 `);
+<<<<<<< HEAD
+<<<<<<< HEAD
 }),;
+=======
+}),
+;
 
+=======
+}),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}),;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

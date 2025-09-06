@@ -1,4 +1,3 @@
-
   private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
@@ -151,8 +150,41 @@
   }
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
+<<<<<<< HEAD
+<<<<<<< HEAD
     window.location.href = window.location.href + '?_t=' + Date.now()
+=======
 
+    window && window.location.href = window && window.location.href + '?_t=' + Date && Date.now();
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+  private showFatalErrorMessage(): void {
+    // Create a user-friendly error message
+
+          background: #0070f3
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+          font-size: 1rem
+          cursor: pointer
+          margin-right: 1rem;        ">
+
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style="
+          background: #666
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+    const errorDiv = document && document.createElement('div');
+    errorDiv && errorDiv.style.cssText = `
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+    window.location.href = window.location.href + '?_t=' + Date.now()
+=======
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
  * Handles automatic retry, cache clearing, and graceful degradation;
@@ -312,12 +344,78 @@ class ChunkErrorHandler {;
   private hardRefresh(): void {;
     // Force a hard refresh bypassing all caches;
     window.location.href = window.location.href + '?_t=' + Date.now();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   }
 
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const errorDiv = document.createElement('div')
+    errorDiv.style.cssText = `
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.8)
+      color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 999999
+      font-family: system-ui, -apple-system, sans-serif
+    `
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+    const errorDiv = document.createElement('div'),
+    errorDiv.style.cssText = `
+      position: fixed,
+      top: 0,
+      left: 0,
+      width: 100%,
+      height: 100%,
+      background: rgba(0, 0, 0, 0.8),
+      color: white,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      z-index: 999999,
+      font-family: system-ui, -apple-system, sans-serif,
+    `,
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const errorDiv = document.createElement('div')
+    errorDiv.style.cssText = `
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.8)
+      color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 999999
+      font-family: system-ui, -apple-system, sans-serif
+    `
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const errorDiv = document.createElement('div'),
     errorDiv.style.cssText = `
       position: fixed,
@@ -334,6 +432,19 @@ class ChunkErrorHandler {;
       font-family: system-ui, -apple-system, sans-serif,
     `,
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
@@ -342,7 +453,28 @@ class ChunkErrorHandler {;
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+          background: #0070f3
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+          font-size: 1rem
+          cursor: pointer
+          margin-right: 1rem;        ">
+          Try Again
+        </button>
+        <button onclick="window.location.href='/'" style="
+          background: #666
+          color: white
+          border: none
+          padding: 0.75rem 1.5rem
+          border-radius: 0.5rem
+          font-size: 1rem
+          cursor: pointer
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           background: #0070f3,
           color: white,
           border: none,
@@ -362,16 +494,141 @@ class ChunkErrorHandler {;
           border-radius: 0.5rem,
           font-size: 1rem,
           cursor: pointer,
+=======
+<<<<<<< HEAD
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         ">
           Go Home
         </button>
       </div>
+<<<<<<< HEAD
+    `
+    document.body.appendChild(errorDiv)
+  }
+  private delay(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
+  private getSessionKey(): string {
+
+    return `${navigator && navigator.userAgent}_${window && window.location.origin}`;
+
+  }
+  private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {
+
+    if (!this && this.errorStats.has(sessionKey)) {
+      this && this.errorStats.set(sessionKey, {
+        errorCount: 0,
+        lastErrorTime: 0,
+        userAgent: navigator && navigator.userAgent,
+        url: window && window.location.href,
+      });
+    }
+    return this && this.errorStats.get(sessionKey)!;
+
+  }
+
+    `,
+
+    document.body.appendChild(errorDiv)
+;
+  private showFatalErrorMessage(): void {;
+    // Create a user-friendly error message;
+    const errorDiv = document.createElement('div'),;
+    errorDiv.style.cssText = `;
+      position: fixed,;
+      top: 0,;
+      left: 0,;
+      width: 100%,;
+      height: 100%,;
+      background: rgba(0, 0, 0, 0.8),;
+      color: white,;
+      display: flex,;
+      align-items: center,;
+      justify-content: center,;
+      z-index: 999999,;
+      font-family: system-ui, -apple-system, sans-serif,;
+    `,;
+    errorDiv.innerHTML = `;
+      <div style="text-align: center, padding: 2rem, max-width: 500px,">;
+        <h2 style="margin-bottom: 1rem,">Connection Issue</h2>;
+        <p style="margin-bottom: 1.5rem, line-height: 1.5,">;
+          We're having trouble loading some parts of the application.;
+          This might be due to a poor network connection or a temporary server issue.;
+        </p>;
+        <button onclick="window.location.reload()" style=";
+          background: #0070f3,;
+          color: white,;
+          border: none,;
+          padding: 0.75rem 1.5rem,;
+          border-radius: 0.5rem,;
+          font-size: 1rem,;
+          cursor: pointer,;
+          margin-right: 1rem,;
+        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+          background: #666,;
+          color: white,;
+          border: none,;
+          padding: 0.75rem 1.5rem,;
+          border-radius: 0.5rem,;
+          font-size: 1rem,;
+          cursor: pointer,;
+        ">;
+          Go Home;
+        </button>;
+      </div>;
+    `,;
+    document.body.appendChild(errorDiv);
+  }
+;
+  private delay(ms: number): Promise<void> {;
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+;
+  private getSessionKey(): string {;
+    return `${navigator.userAgent}_${window.location.origin}`;
+  }
+;
+  private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {;
+    if (!this.errorStats.has(sessionKey)) {;
+      this.errorStats.set(sessionKey, {;
+        errorCount: 0,;
+        lastErrorTime: 0,;
+        userAgent: navigator.userAgent,;
+        url: window.location.href;
+      });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     }
     return this.errorStats.get(sessionKey)!
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+    return this.errorStats.get(sessionKey)!
+  }
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
     this.clearCaches().then(() => {
@@ -396,6 +653,152 @@ export default chunkErrorHandler
         ">
           Try Again
         </button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <button onclick="window.location.href='/'" style="
+export default chunkErrorHandler
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+      background: rgba (0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      align - items: center;
+      justify - content: center;
+      z - index: 999999;
+      font - family: system - ui, -apple - system, sans - serif;
+    `;
+    error_div.innerHTML = `;
+      <div style="text - align: center; padding: 2rem; max - width: 500px;">;
+        <h2 style="margin - bottom: 1rem;">Connection Issue</h2>;
+        <p style="margin - bottom: 1.5rem; line - height: 1.5;">;
+          We're having trouble loading some parts of the application.;
+          This might be due to a poor network connection or a temporary server issue.;
+        </p>;
+        <button onclick="window.location.reload ()" style=";
+          background: #0070f3;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border - radius: 0.5rem;
+          font - size: 1rem;
+          cursor: pointer;
+          margin - right: 1rem;        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+<<<<<<< HEAD
+export default chunkErrorHandler;
+}
+}
+=======
+          background: #666;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border - radius: 0.5rem;
+          font - size: 1rem;
+          cursor: pointer;
+        ">;
+          Go Home;
+        </button>;
+      </div>;
+    `;
+    document.body.append_child (error_div);
+  }
+  private delay (ms: number): Promise < void> {
+    return new Promise (resolve => set_timeout (resolve, ms));
+  }
+  private getSessionKey (): string {
+    return `${navigator.user_agent}_${window.location.origin}`;
+  }
+  private getOrCreateErrorStats (session_key: string): ChunkErrorStats {
+    if () {) {
+  $2
+}
+      this.error_stats.set (session_key, {
+        error_count: 0,
+        lastErrorTime: 0,
+        user_agent: navigator.user_agent,
+        url: window.location.href,
+      });
+    }
+    return this.error_stats.get (session_key)!;
+  }
+  // Public method to manually trigger recovery;
+  public trigger_recovery (): void {
+    this.clear_caches ().then (() => {
+      this.reload_page ();
+    }) }
+  // Public method to check if we're in a chunk error state;
+  public isInErrorState (): boolean {
+    const session_key = this.getSessionKey ();
+    const stats = this.error_stats.get (session_key);
+    return stats ? stats.error_count > 0 : false;
+  }
+  // Public method to reset error state;
+  public resetErrorState (): void {
+    const session_key = this.getSessionKey ();
+    this.error_stats.delete (session_key);
+  }
+// Create and export singleton instance;
+export const chunkErrorHandler = new ChunkErrorHandler ();
+// Export for manual usage;
+export default chunkErrorHandler;
+export default chunkErrorHandler;
+        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+}
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+;
+  // Public method to manually trigger recovery;
+  public triggerRecovery(): void {;
+    this.clearCaches().then(() => {;
+      this.reloadPage();
+    });
+  }
+;
+  // Public method to check if we're in a chunk error state;
+  public isInErrorState(): boolean {;
+    const sessionKey = this.getSessionKey(),;
+    const stats = this.errorStats.get(sessionKey),;
+    return stats ? stats.errorCount > 0 : false;
+  }
+;
+  // Public method to reset error state;
+  public resetErrorState(): void {;
+    const sessionKey = this.getSessionKey(),;
+    this.errorStats.delete(sessionKey);
+  }
+}
+;
+// Create and export singleton instance;
+export const chunkErrorHandler = new ChunkErrorHandler();
+// Export for manual usage;
+<<<<<<< HEAD
+export default chunkErrorHandler;
+<<<<<<< HEAD
+export default chunkErrorHandler;
+        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+}
+}
 
 ;
   // Public method to manually trigger recovery;
@@ -422,5 +825,11 @@ export default chunkErrorHandler
 // Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default chunkErrorHandler;
-
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

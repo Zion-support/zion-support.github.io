@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
@@ -7,18 +6,81 @@ import { Label } from "@/components/ui/label",
 import { Plus, Loader2 } from 'lucide-react'
 import { useResume } from "@/hooks/useResume",
 import { exportResumeToPDF } from "@/utils/pdfExport",
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Fetch resume data when component mounts
   useEffect(() => {
     const loadResumes = async () => {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+import React, { useState, useEffect } from 'react';
+import { Button  } from '@/components / ui / button';
+import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
+import { Label  } from '@/components / ui / label';
+import { Plus, Loader2 } from 'lucide-react'import { use_resume  } from '@/hooks / use_resume';
+import { exportResumeToPDF  } from '@/utils / pdf_export';
+import { toast  } from '@/components / ui / use - toast';
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { UploadSection } from './UploadSection';
+import { SelectResumeSection } from './SelectResumeSection';
+import { ResumeOption, ResumeSelectorProps } from './types';
+import {logErrorToProduction} from '@/utils / production_logger';
+export /**
+ * ResumeSelector - Function description
+ */
+function ResumeSelector() {
+  const [selected_option, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
+  const [selected_resume, setSelectedResume] = useState < ResumeOption | null>(null);
+  const [resume_options, setResumeOptions] = useState < ResumeOption[]>([]);
+  const [custom_file, setCustomFile] = useState < File | null>(null);
+  const [is_loading, setIsLoading] = useState (false);
+  const { resume, fetch_resume } = use_resume ();
+  // Fetch resume data when component mounts;
+  useEffect ((, ) => {
+    const load_resumes = async () => {
+      setIsLoading (true);
+
+
+      setIsLoading(true),
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       try {
         await fetchResume()
       } catch (error) {
         logErrorToProduction('Error loading resumes:', { data: error })
       } finally {
         setIsLoading(false)
+<<<<<<< HEAD
+<<<<<<< HEAD
+      }
+    }
+            return;
+      }
+}
 
+  )
+}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  ;
+};
+  );
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+=======
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
@@ -292,5 +354,13 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     </div>
   )
 }
-;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+;
+=======
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

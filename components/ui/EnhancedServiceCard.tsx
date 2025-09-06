@@ -1,12 +1,60 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+<<<<<<< HEAD
+}
 import React from 'react';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
+  Star
+  ExternalLink
+  ArrowRight
+  TrendingUp
+  Users
+  Clock
+  Shield
+  Zap;
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,;
+  Zap,;
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
   service: {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+import {;
+  Star,;
+  ExternalLink,;
+  ArrowRight,;
+  TrendingUp,;
+  Users,;
+  Clock,;
+  Shield,;
+  Zap,;
+} from 'lucide-react';
+interface EnhancedServiceCardProps {;
+  service: {;
     id: string;
     name: string;
     tagline: string;
@@ -17,35 +65,37 @@ interface EnhancedServiceCardProps {
     popular: boolean;
     icon: string;
     color: string;
-    textColor: string;
+    text_color: string;
     link: string;
-    marketPosition: string;
-    targetAudience: string;
-    trialDays: number;
-    setupTime: string;
+    market_position: string;
+    target_audience: string;
+    trial_days: number;
+    setup_time: string;
     category: string;
-    realService: boolean;
+    real_service: boolean;
     technology: string[];
     integrations: string[];
-    useCases: string[];
+    use_cases: string[];
     roi: string;
     competitors: string[];
-    marketSize: string;
-    growthRate: string;
+    market_size: string;
+    growth_rate: string;
     variant: string;
-    contactInfo: {
       mobile: string;
       email: string;
       address: string;
 
       website: string;
     }
+<<<<<<< HEAD
 
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
+    reviews: number;
+  };
 
     reviews: number;
   }
@@ -59,38 +109,190 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       y: 0
       scale: 1
       transition: {
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
+    },    hover: {        ease: "easeOut" as const
+      }
+    }
+    hover: {
+      y: -8
+      scale: 1.02
+      transition: {
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
+    },  }
+  const iconVariants = {
+    hidden: { rotate: -180, scale: 0 }
+    visible: {      rotate: 0
+      scale: 1
+      transition: {
+        duration: 0.6
+        ease: 'backOut' as const
+      }
+    },    hover: {        ease: "easeOut" as const
+      }
+    }
+  }
+  const iconVariants = {
+    hidden: { rotate: -180, scale: 0 }
+    visible: {    visible: {
+      rotate: 0
+      scale: 1
+      transition: {
+        duration: 0.6
+        ease: 'backOut' as const
+      }
+    },        ease: "backOut" as const
+      }
+    }
+    hover: {
+      rotate: 360
+      scale: 1.1
+      transition: {
+        duration: 0.6
+        ease: 'easeInOut' as const
+      }
+    }
+  }
+        duration: 0.6,
 
+        ease: 'ease_out' as const,
+      },
+    },    hover: {        ease: "ease_out" as const;
+
+      }
+    }
+    hover: {
+
+      y: -8,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+
+        ease: 'ease_out' as const,
+      },
+    },  };
+
+  const iconVariants = {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    hidden: { rotate: -180, scale: 0 },
+    visible: {      rotate: 0,
+=======
+      opacity: 1,
+      coordinate_y: 0,
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      }
+    }
+    hover: {
+      coordinate_y: -8,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+      }
+    }
+  }
+;
+  const icon_variants = {
+    hidden: { rotate: -180, scale: 0 },
+      rotate: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      }
+    }
+    hover: {
+      rotate: 360,
+      scale: 1.1,
+      transition: {
+        duration: 0.6,
+      }
+    }
+  };
+
+  const iconVariants = {;
+    hidden: { rotate: -180, scale: 0 },;
+    visible: {    visible: { ;
+      rotate: 0,;
+      scale: 1,;
+      transition: {;
+        duration: 0 && 0.6,;
+        ease: 'backOut' as const,;
+      },;
+    },        ease: "backOut" as const;
+      }
+    };
+    hover: {;
+      rotate: 360,;
+      scale: 1 && 1.1,;
+      transition: {;
+        duration: 0 && 0.6,;
+        ease: 'easeInOut' as const,;
+      },;
+    },;
+  };
+
+
+<<<<<<< HEAD
     >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    >;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       {/* Background Glow */}
       <div
-        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+        className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
         style={{
-          background: `linear-gradient(135deg, ${service.color
+          background: `linear-gradient(135deg, ${service && service.color
             .replace('from-', '')
             .replace('to-', '')
             .split(' ')
-            .map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`)
-            .join(', ')})`
+  return (
+    <motion.div
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover"
+      viewport={{ once: true }}
+    >
+      {/* Background Glow */}
+      <div 
+        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+        style={{
+          background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`
         }}
-      />
+      />;
       {/* Popular Badge */}
+<<<<<<< HEAD
+
       {service.popular && (
-        <div className='absolute top-4 right-4 z-10'>
+        <div className="absolute top-4 right-4 z-10">
           <motion.div
-            className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            <Star className='w-3 h-3 fill-current' />            POPULAR            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"
+<<<<<<< HEAD
+            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <Star className='w-3 h-3 fill-current' />            <Star className="w-3 h-3 fill-current" />
+            <Star className="w-3 h-3 fill-current" />
             POPULAR
           </motion.div>
         </div>
+<<<<<<< HEAD
       )}
+<<<<<<< HEAD
+=======
+
+      )}
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       {/* Card Content */}
       <div className='relative p-6'>
@@ -99,22 +301,41 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       <div className='relative p-6'>
 
         {/* Header */}
+<<<<<<< HEAD
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             variants={iconVariants}
             initial='hidden'
             animate='visible'
-            whileHover='hover'
+
+      <div className="relative p-6">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-4">
+          <motion.div
+            className={`text-4xl ${service.textColor}`}
+            variants={iconVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
           >
             {service.icon}
           </motion.div>
-          <div className='text-right'>
-            <div className='text-2xl font-bold text-white'>{service.price}</div>
-            <div className='text-sm text-gray-400'>{service.period}</div>          </div>
+          
+          <div className="text-right">
+            <div className="text-2xl font-bold text-white">{service.price}</div>
+            <div className="text-sm text-gray-400">{service.period}</div>
+          </div>
+
         </div>
         {/* Title & Tagline */}
+<<<<<<< HEAD
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
           {service.name}
         </h3>
@@ -123,13 +344,65 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
         </p>
+        {/* Key Metrics */}
+        {/* Key Metrics */}          
+=======
 
+
+        {/* Key Metrics */}          
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
+          </div>
         </div>
         {/* Title & Tagline */}
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+          {service.name}
+        </h3>
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+          {service.name}
+        </h3>
+        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+          {service.tagline}
 
+=======
+      )}
+      {/* Card Content */}
+        </div>
+        {/* Title & Tagline */}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+        </p>
+        {/* Description */}
+          {service.description}
+        </p>
+        {/* Key Metrics */}
+<<<<<<< HEAD
+        <div className='grid grid-cols-2 gap-4 mb-6'>
+          <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
+            <div className='text-cyan-400 text-lg font-bold'>
+              {service.customers}+
+            </div>
+            <div className='text-xs text-gray-400'>Customers</div>
+
+          {service.tagline}
+        </p>
+
+        {/* Description */}
+
+          {service.description}
+        </p>
+
+        {/* Key Metrics */}
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -141,6 +414,9 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         <div className='mb-6'>
           <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
             <Zap className='w-4 h-4 text-yellow-400' />        <div className="grid grid-cols-2 gap-4 mb-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
             <div className="text-cyan-400 text-lg font-bold">{service.customers}+</div>
             <div className="text-xs text-gray-400">Customers</div>
@@ -149,47 +425,121 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             <div className="text-purple-400 text-lg font-bold">{service.rating}</div>
             <div className="text-xs text-gray-400">Rating</div>
         </div>
+            whileHover='hover'>;
+            {service && service.icon}
+          </motion && motion.div>;
+
+          <div className='text-right'>;
+            <div className='text-2xl font-bold text-white'>{service && service.price}</div>;
+            <div className='text-sm text-gray-400'>{service && service.period}</div>          </div>;
+        </div>;
+
+        {/* Title & Tagline */}
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
+          {service && service.name}
+        </h3>;
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>          {service && service.tagline}
+        </p>;
+
+        {/* Description */}
+        <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service && service.description}
+        </p>;
+
+        {/* Key Metrics */}          ;
+          <div className="text-right">;
+            <div className="text-2xl font-bold text-white">{service && service.price}</div>;
+            <div className="text-sm text-gray-400">{service && service.period}</div>;
+        </div>;
+
+        {/* Title & Tagline */}
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
+          {service && service.name}
+        </h3>;
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
+          {service && service.name}
+        </h3>;
+        <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
+        </p>;
+
+        {/* Description */}
+        <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>        <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3">;
+          {service && service.description}
+        </p>;
+
+        {/* Key Metrics */}
+        <div className='grid grid-cols-2 gap-4 mb-6'>;
+          <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>;
+            <div className='text-cyan-400 text-lg font-bold'>;
+              {service && service.customers}+;
+            </div>;
+            <div className='text-xs text-gray-400'>Customers</div>;
+          </div>;
+          <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>;
+            <div className='text-purple-400 text-lg font-bold'>;
+              {service && service.rating}
+            </div>;
+            <div className='text-xs text-gray-400'>Rating</div>          </div>;
+        </div>;
+
         {/* Features Preview */}
-        <div className='mb-6'>
-          <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
-            <Zap className='w-4 h-4 text-yellow-400' />
-            Key Features
-          </h4>
-          <div className='space-y-2'>
-            {service.features.slice(0, 3).map((feature, index) => (
-              <motion.div
+        {/* Features Preview */}
+        <div className='mb-6'>;
+          <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>;
+            <Zap className='w-4 h-4 text-yellow-400' />;
+            Key Features;
+          </h4>;
+          <div className='space-y-2'>;
+            {service && service.features.slice(0, 3).map((feature, index) => (;
+              <motion&& motion.div
                 key={index}
                 className='flex items-center gap-2 text-sm text-gray-300'                initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 * index }}
-              >
-                <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />                {feature}
-              </motion.div>
+                transition={{ delay: 0 && 0.1 * index }}>;
+                <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full' />                {feature}
+              </motion && motion.div>;
             ))}
-            {service.features.length > 3 && (
-              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features            Key Features
-          </h4>
-          <div className="space-y-2">
-            {service.features.slice(0, 3).map((feature, index) => (
-              <motion.div
+            {service && service.features.length > 3 && (;
+              <div className='text-xs text-gray-500 mt-2'>                +{service && service.features.length - 3} more features            Key Features;
+          </h4>;
+          <div className="space-y-2">;
+            {service && service.features.slice(0, 3).map((feature, index) => (;
+              <motion&& motion.div
                 key={index}
                 className="flex items-center gap-2 text-sm text-gray-300"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
                 transition={{ delay: 0.1 * index }}
               >
+                <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
                 {feature}
-              </motion.div>
+              </motion && motion.div>;
             ))}
-            {service.features.length > 3 && (
-              <div className='text-xs text-gray-500 mt-2'>              <div className="text-xs text-gray-500 mt-2">
-                +{service.features.length - 3} more features
-              </div>
+            {service && service.features.length > 3 && (;
+              <div className='text-xs text-gray-500 mt-2'>              <div className="text-xs text-gray-500 mt-2">;
+                +{service && service.features.length - 3} more features;
+              </div>;
             )}
+<<<<<<< HEAD
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Market Info */}
         <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
           <div className='flex items-center justify-between mb-2'>
@@ -198,6 +548,14 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             </span>
             <span className='text-xs text-cyan-400'>{service.marketSize}</span>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
@@ -210,6 +568,9 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             <span className='text-xs text-yellow-400'>{service.roi}</span>          </div>
         </div>
         {/* Trial & Setup Info */}          </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-semibold text-white">Growth Rate</span>
             <span className="text-xs text-green-400">{service.growthRate}</span>
@@ -220,58 +581,195 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           </div>
         </div>
         {/* Trial & Setup Info */}
+<<<<<<< HEAD
+        <div className='flex items-center justify-between mb-6 text-sm'>
+          <div className='flex items-center gap-2 text-gray-400'>
+            <Clock className='w-4 h-4' />
+            {service.trialDays} day trial
+          </div>
+          <div className='flex items-center gap-2 text-gray-400'>
+            <Shield className='w-4 h-4' />            {service.setupTime}        <div className="flex items-center justify-between mb-6 text-sm">
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+          <div className="flex items-center gap-2 text-gray-400">
+            <Clock className="w-4 h-4" />
+            {service.trialDays} day trial
+          </div>
+          <div className="flex items-center gap-2 text-gray-400">
+            <Shield className="w-4 h-4" />
+<<<<<<< HEAD
 
+            {service.setupTime}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+          </div>
+        </div>
+          </div>;
+        </div>;
+
+        {/* Market Info */}
+        <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>;
+          <div className='flex items-center justify-between mb-2'>;
+            <span className='text-xs font-semibold text-white'>;
+              Market Size;
+            </span>;
+            <span className='text-xs text-cyan-400'>{service && service.marketSize}</span>;
+          </div>;
+          <div className='flex items-center justify-between mb-2'>;
+            <span className='text-xs font-semibold text-white'>;
+              Growth Rate;
+            </span>;
+            <span className='text-xs text-green-400'>{service && service.growthRate}</span>;
+          </div>;
+          <div className='flex items-center justify-between'>;
+            <span className='text-xs font-semibold text-white'>ROI</span>;
+            <span className='text-xs text-yellow-400'>{service && service.roi}</span>          </div>;
+        </div>;
+
+        {/* Trial & Setup Info */}          </div>;
+          <div className="flex items-center justify-between mb-2">;
+            <span className="text-xs font-semibold text-white">Growth Rate</span>;
+            <span className="text-xs text-green-400">{service && service.growthRate}</span>;
+          </div>;
+          <div className="flex items-center justify-between">;
+            <span className="text-xs font-semibold text-white">ROI</span>;
+            <span className="text-xs text-yellow-400">{service && service.roi}</span>;
+          </div>;
+        </div>;
+
+        {/* Trial & Setup Info */}
+        <div className='flex items-center justify-between mb-6 text-sm'>;
+          <div className='flex items-center gap-2 text-gray-400'>;
+            <Clock className='w-4 h-4' />;
+            {service && service.trialDays} day trial;
+          </div>;
+          <div className='flex items-center gap-2 text-gray-400'>;
+            <Shield className='w-4 h-4' />            {service && service.setupTime}        <div className="flex items-center justify-between mb-6 text-sm">;
+          <div className="flex items-center gap-2 text-gray-400">;
+            <Clock className="w-4 h-4" />;
+            {service && service.trialDays} day trial;
+          </div>;
+          <div className="flex items-center gap-2 text-gray-400">;
+            <Shield className="w-4 h-4" />;
+          </div>;
+        </div>;
+
+        {/* Action Buttons */}
+<<<<<<< HEAD
+
+
+
+            {service.setupTime}
+
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
         {/* Action Buttons */}
         <div className='flex gap-3'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <motion.a
             href={service.link}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ExternalLink className='w-4 h-4' />
-            Learn More
-          </motion.a>
-          <motion.a
-            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
+
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}>;
+            <ExternalLink className='w-4 h-4' />;
+            Learn More;
+          </motion && motion.a>;
+
+          <motion&& motion.a
+            href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ArrowRight className='w-4 h-4' />          </motion.a>
-        </div>
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}>;
+            <ArrowRight className='w-4 h-4' />          </motion && motion.a>;
+        </div>;
+
+
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
         {/* Contact Info */}
-        <div className='mt-4 pt-4 border-t border-white/10'>
-          <div className='text-xs text-gray-500 text-center'>            Contact: {service.contactInfo.email}          <motion.a
+        <div className='mt-4 pt-4 border-t border-white/10'>;
+          <div className='text-xs text-gray-500 text-center'>            Contact: {service && service.contactInfo.email}          <motion&& motion.a
+            href={service && service.link}
+        <div className="flex gap-3">
+          <motion.a
             href={service.link}
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ExternalLink className="w-4 h-4" />
-            Learn More
-          </motion.a>
-          <motion.a
-            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ArrowRight className="w-4 h-4" />
-          </motion.a>
-        </div>
-        {/* Contact Info */}
+          <div className="text-xs text-gray-500 text-center">
+            Contact: {service.contactInfo.email}
+<<<<<<< HEAD
 
+
+            Contact: {service.contactInfo.email}
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
           </div>
         </div>
       </div>
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}>;
+            <ExternalLink className="w-4 h-4" />;
+            Learn More;
+          </motion && motion.a>;
+
+          <motion&& motion.a
+            href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
+            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
+            whileHover={{ scale: 1 && 1.05 }}
+            whileTap={{ scale: 0 && 0.95 }}>;
+            <ArrowRight className="w-4 h-4" />;
+          </motion && motion.a>;
+        </div>;
+
+        {/* Contact Info */}
+        <div className='mt-4 pt-4 border-t border-white/10'>;
+          <div className='text-xs text-gray-500 text-center'>        <div className="mt-4 pt-4 border-t border-white/10">;
+          <div className="text-xs text-gray-500 text-center">;
+            Contact: {service && service.contactInfo.email}
+          </div>;
+        </div>;
+      </div>;
+
       {/* Hover Effect Border */}
-      <div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
-    </motion.div>
+<<<<<<< HEAD
+
+};
+export default EnhancedServiceCard;    </motion && motion.div>;
   );
+<<<<<<< HEAD
+}
+};
 
 export default EnhancedServiceCard;    </motion.div>
   )
@@ -279,6 +777,275 @@ export default EnhancedServiceCard;    </motion.div>
 export default EnhancedServiceCard;
 
 };
+export default EnhancedServiceCard;
+export default EnhancedServiceCard;
+=======
+
+};
 
 export default EnhancedServiceCard;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+export default EnhancedServiceCard;
 
+      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover: opacity-100 transition-opacity duration-500" />
+    </motion.div>
+  )
+};
+
+export default EnhancedServiceCard;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+        ease: 'easeInOut' as const,
+      },
+    },
+  }
+;
+    >;
+      {/* Background Glow */}
+      <div;
+        className={`absolute inset - 0 bg - gradient - to - br ${service.color} opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500`}
+        style={{
+          background: `linear - gradient (135deg, ${service.color;
+            .replace ('from-', '');
+            .replace ('to-', '');
+            .split (' ');
+            .map (c => `var (--tw-${c.split ('-')[0]}-${c.split ('-')[1]})`);
+            .join (', ')})`,
+        }}
+      />;
+      {/* Popular Badge */}
+      {service.popular && (
+        <div className='absolute top - 4 right - 4 z - 10'>;
+          <motion.div;
+            className='bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1'            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >;
+            <Star className='w - 3 h - 3 fill - current' />            POPULAR            className="bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1";
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >;
+            <Star className='w - 3 h - 3 fill - current' />            <Star className="w - 3 h - 3 fill - current" />;
+            POPULAR;
+          </motion.div>;
+        </div>)}
+      {/* Card Content */}
+      <div className='relative p - 6'>;
+        <div className='flex items - start justify - between mb - 4'>;
+          <motion.div;
+            className={`text - 4xl ${service.text_color}`}
+            variants={icon_variants}
+            initial='hidden';
+            animate='visible';
+            while_hover='hover';
+          >;
+            {service.icon}
+          </motion.div>;
+          <div className='text - right'>;
+            <div className='text - 2xl font - bold text - white'>{service.price}</div>;
+            <div className='text - sm text - gray - 400'>{service.period}</div>          </div>;
+        </div>;
+        {/* Title & Tagline */}
+        <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300'>;
+          {service.name}
+        </h3>;
+        <p className='text - gray - 300 text - sm mb - 4 leading - relaxed'>          {service.tagline}
+        </p>;
+        {/* Description */}
+        <p className='text - gray - 400 text - sm mb - 6 leading - relaxed line - clamp - 3'>          {service.description}
+        </p>;
+        {/* Key Metrics */}
+          <div className="text - right">;
+            <div className="text - 2xl font - bold text - white">{service.price}</div>;
+            <div className="text - sm text - gray - 400">{service.period}</div>;
+        </div>;
+        {/* Title & Tagline */}
+        <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300'>;
+          {service.name}
+        </h3>;
+        <p className='text - gray - 300 text - sm mb - 4 leading - relaxed'>        <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300">;
+          {service.name}
+        </h3>;
+        <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
+        </p>;
+        {/* Description */}
+        <p className='text - gray - 400 text - sm mb - 6 leading - relaxed line - clamp - 3'>        <p className="text - gray - 400 text - sm mb - 6 leading - relaxed line - clamp - 3">;
+          {service.description}
+        </p>;
+        {/* Key Metrics */}
+        <div className='grid grid - cols - 2 gap - 4 mb - 6'>;
+          <div className='text - center p - 3 bg - white / 5 rounded - lg border border - white / 10'>;
+            <div className='text - cyan - 400 text - lg font - bold'>;
+              {service.customers}+;
+            </div>;
+            <div className='text - xs text - gray - 400'>Customers</div>;
+          </div>;
+          <div className='text - center p - 3 bg - white / 5 rounded - lg border border - white / 10'>;
+            <div className='text - purple - 400 text - lg font - bold'>;
+              {service.rating}
+            </div>;
+            <div className='text - xs text - gray - 400'>Rating</div>          </div>;
+        </div>;
+        {/* Features Preview */}
+        <div className='mb - 6'>;
+          <h4 className='text - sm font - semibold text - white mb - 3 flex items - center gap - 2'>;
+            <Zap className='w - 4 h - 4 text - yellow - 400' />        <div className="grid grid - cols - 2 gap - 4 mb - 6">;
+          <div className="text - center p - 3 bg - white / 5 rounded - lg border border - white / 10">;
+            <div className="text - cyan - 400 text - lg font - bold">{service.customers}+</div>;
+            <div className="text - xs text - gray - 400">Customers</div>;
+          </div>;
+          <div className="text - center p - 3 bg - white / 5 rounded - lg border border - white / 10">;
+            <div className="text - purple - 400 text - lg font - bold">{service.rating}</div>;
+            <div className="text - xs text - gray - 400">Rating</div>;
+        </div>;
+        {/* Features Preview */}
+        <div className='mb - 6'>;
+          <h4 className='text - sm font - semibold text - white mb - 3 flex items - center gap - 2'>;
+            <Zap className='w - 4 h - 4 text - yellow - 400' />;
+            Key Features;
+          </h4>;
+          <div className='space - y-2'>;
+            {service.features.slice (0, 3).map ((feature, index) => (
+              <motion.div;
+                key={index}
+                className='flex items - center gap - 2 text - sm text - gray - 300'                initial={{ opacity: 0, coordinate_x: -20 }}
+                animate={{ opacity: 1, coordinate_x: 0 }}
+                transition={{ delay: 0.1 * index }}
+              >;
+                <div className='w - 1.5 h - 1.5 bg - cyan - 400 rounded - full' />                {feature}
+              </motion.div>))}
+            {service.features.length > 3 && (
+              <div className='text - xs text - gray - 500 mt - 2'>                +{service.features.length - 3} more features            Key Features;
+          </h4>;
+          <div className="space - y-2">;
+            {service.features.slice (0, 3).map ((feature, index) => (
+              <motion.div;
+                key={index}
+                className="flex items - center gap - 2 text - sm text - gray - 300";
+                initial={{ opacity: 0, coordinate_x: -20 }}
+                animate={{ opacity: 1, coordinate_x: 0 }}
+                transition={{ delay: 0.1 * index }}
+              >;
+                <div className='w - 1.5 h - 1.5 bg - cyan - 400 rounded - full' />                <div className="w - 1.5 h - 1.5 bg - cyan - 400 rounded - full" />;
+                {feature}
+              </motion.div>))}
+            {service.features.length > 3 && (
+              <div className='text - xs text - gray - 500 mt - 2'>              <div className="text - xs text - gray - 500 mt - 2">;
+                +{service.features.length - 3} more features;
+              </div>)}
+          </div>;
+        </div>;
+        {/* Market Info */}
+        <div className='mb - 6 p - 4 bg - gradient - to - r from - white / 5 to - white / 10 rounded - lg border border - white / 10'>;
+          <div className='flex items - center justify - between mb - 2'>;
+            <span className='text - xs font - semibold text - white'>;
+              Market Size;
+            </span>;
+            <span className='text - xs text - cyan - 400'>{service.market_size}</span>;
+          </div>;
+          <div className='flex items - center justify - between mb - 2'>;
+            <span className='text - xs font - semibold text - white'>;
+              Growth Rate;
+            </span>;
+            <span className='text - xs text - green - 400'>{service.growth_rate}</span>;
+          </div>;
+          <div className='flex items - center justify - between'>;
+            <span className='text - xs font - semibold text - white'>ROI</span>;
+            <span className='text - xs text - yellow - 400'>{service.roi}</span>          </div>;
+        </div>;
+        {/* Trial & Setup Info */}          </div>;
+          <div className="flex items - center justify - between mb - 2">;
+            <span className="text - xs font - semibold text - white">Growth Rate</span>;
+            <span className="text - xs text - green - 400">{service.growth_rate}</span>;
+          </div>;
+          <div className="flex items - center justify - between">;
+            <span className="text - xs font - semibold text - white">ROI</span>;
+            <span className="text - xs text - yellow - 400">{service.roi}</span>;
+          </div>;
+        </div>;
+        {/* Trial & Setup Info */}
+        <div className='flex items - center justify - between mb - 6 text - sm'>;
+          <div className='flex items - center gap - 2 text - gray - 400'>;
+            <Clock className='w - 4 h - 4' />;
+            {service.trial_days} day trial;
+          </div>;
+          <div className='flex items - center gap - 2 text - gray - 400'>;
+            <Shield className='w - 4 h - 4' />            {service.setup_time}        <div className="flex items - center justify - between mb - 6 text - sm">;
+          <div className="flex items - center gap - 2 text - gray - 400">;
+            <Clock className="w - 4 h - 4" />;
+            {service.trial_days} day trial;
+          </div>;
+          <div className="flex items - center gap - 2 text - gray - 400">;
+            <Shield className="w - 4 h - 4" />;
+          </div>;
+        </div>;
+        {/* Action Buttons */}
+        <div className='flex gap - 3'>;
+          <motion.a;
+            href={service.link}
+            className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg text - center transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 2';
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}
+          >;
+            <ExternalLink className='w - 4 h - 4' />;
+            Learn More;
+          </motion.a>;
+          <motion.a;
+            href={`mailto:${service.contact_info.email}?subject = Inquiry about ${service.name}`}
+            className='bg - white / 10 hover:bg - white / 20 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 border border - white / 20 hover:border - white / 40 flex items - center justify - center';
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}
+          >;
+            <ArrowRight className='w - 4 h - 4' />          </motion.a>;
+        </div>;
+        {/* Contact Info */}
+        <div className='mt - 4 pt - 4 border - t border - white / 10'>;
+          <div className='text - xs text - gray - 500 text - center'>            Contact: {service.contact_info.email}          <motion.a;
+            href={service.link}
+            className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg text - center transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 2";
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}
+          >;
+            <ExternalLink className="w - 4 h - 4" />;
+            Learn More;
+          </motion.a>;
+          <motion.a;
+            href={`mailto:${service.contact_info.email}?subject = Inquiry about ${service.name}`}
+            className="bg - white / 10 hover:bg - white / 20 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 border border - white / 20 hover:border - white / 40 flex items - center justify - center";
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}
+          >;
+            <ArrowRight className="w - 4 h - 4" />;
+          </motion.a>;
+        </div>;
+        {/* Contact Info */}
+        <div className='mt - 4 pt - 4 border - t border - white / 10'>;
+          <div className='text - xs text - gray - 500 text - center'>        <div className="mt - 4 pt - 4 border - t border - white / 10">;
+          <div className="text - xs text - gray - 500 text - center">;
+            Contact: {service.contact_info.email}
+          </div>;
+        </div>;
+      </div>;
+      {/* Hover Effect Border */}
+      <div className='absolute inset - 0 rounded - 2xl border - 2 border - transparent bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500' />;
+    </motion.div>);
+}
+;
+export default EnhancedServiceCard;    </motion.div>);
+}
+;
+export default EnhancedServiceCard;
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+};
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

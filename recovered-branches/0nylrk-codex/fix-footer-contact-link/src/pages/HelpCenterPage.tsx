@@ -1,24 +1,96 @@
+<<<<<<< HEAD
 
-
+<<<<<<< HEAD
+import React from "react";
+import HelpCenter from "@/components/support/HelpCenter";
+import {SEO} from "@/components/SEO";
 import React from "react",
+import HelpCenter from "@/components/support/HelpCenter";
+import { SEO } from "@/components/SEO";
+import HelpCenter from "@/components/support/HelpCenter",
+import { SEO } from "@/components/SEO",
+=======
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function HelpCenterPage() {
   return (
     <>
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import HelpCenter from "@/components/support/HelpCenter";
+import {SEO} from "@/components/SEO";
+export default function HelpCenterPage() {;
+  return (
+    <>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
       <SEO
         title="Help Center | Zion AI Marketplace"
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team."
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace"
+<<<<<<< HEAD
+<<<<<<< HEAD
       />
       <HelpCenter />
     </>
   )
-
+}
 import React from "react",;
 import HelpCenter from "@/components/support/HelpCenter",;
 import { SEO } from "@/components/SEO";
 export default function HelpCenterPage() {;
   return (;
+=======
+
+      />;
+      <HelpCenter />;
+    </>;
+  );
+}
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+=======
+import React from './react';
+import HelpCenter from "@/components / support / HelpCenter";
+import { SEO } from '@/components / SEO';
+export default /**
+ * HelpCenterPage - Function description
+ */
+function HelpCenterPage() {
+  return (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>;
       <SEO;
         title="Help Center | Zion AI Marketplace";
@@ -26,9 +98,25 @@ export default function HelpCenterPage() {;
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace";
       />;
       <HelpCenter />;
+<<<<<<< HEAD
+
     </>;
   );
+<<<<<<< HEAD
+}
+;
+}
+;
+=======
+
 
 }
 ;
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

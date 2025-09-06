@@ -1,5 +1,48 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+const fs = require('fs');
+const path = require('path');
+console.log('🔍 Debugging Next.js project structure...');
+// Check if we're in a valid Next.js project;
+console.log('📁 Current directory:', process.cwd());
+console.log('📄 Package.json exists:', fs.existsSync('package.json'));
+console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js'));
+console.log('📁 Pages directory exists:', fs.existsSync('pages'));
+console.log('📁 Components directory exists:', fs.existsSync('components'));
+// Check package.json;
+if (fs.existsSync('package.json')) {const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
+  console.log('📦 Next.js version:', packageJson.dependencies?.next |'Not found');
+  console.log('📦 React version:', packageJson.dependencies?.react |'Not found');
+}
+// Check pages directory structure;
+if (fs.existsSync('pages')) {const pages = fs.readdirSync('pages');
+  console.log('📄 Pages found:', pages.length);
+  console.log('📄 Main pages:', pages.filter(p => p.includes('index') |p.includes('_app')));
+}
+// Check for any problematic files;
+console.log('🔍 Checking for problematic files...');
+const problematicFiles = [];
+const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']);
+for (const file of allFiles) {;
+  try {;
+    const content = fs.readFileSync(file, 'utf8');
+    if (content.includes('') |content.includes('
+const fs = require('fs'),;
+const path = require('path'),;
+const fs = require('fs');
+const path = require('path');
+=======
 
+const fs = require ('fs'),
+const path = require ('path'),
+console.log ('🔍 Debugging Next.js project structure...'),
+=======
 
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 console.log('🔍 Debugging Next.js project structure...'),;
 // Check if we're in a valid Next.js project;
 console.log('📁 Current directory:', process.cwd()),;
@@ -9,25 +52,103 @@ console.log('📁 Pages directory exists:', fs.existsSync('pages')),;
 console.log('📁 Components directory exists:', fs.existsSync('components')),;
 // Check package.json;
 if (fs.existsSync('package.json')) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
+  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
+  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
   console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
 }
 ;
 // Check pages directory structure;
 if (fs.existsSync('pages')) {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const pages = fs.readdirSync('pages');
+  const pages = fs.readdirSync('pages'),;
+  const pages = fs.readdirSync('pages');
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
   console.log('📄 Pages found:', pages.length),;
   console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
 }
 ;
 // Check for any problematic files;
 console.log('🔍 Checking for problematic files...'),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+const problematicFiles = [];
+const problematicFiles = [],;
+const problematicFiles = [];
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if (content.includes('') || content.includes('
+}
+}
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
+=======
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+      problematicFiles.push(file);
+    }
+  } catch (error) {;
+    // Skip files that can't be read;
+  }
+}
+;
+console.log('⚠️  Files with merge conflicts:', problematicFiles.length),;
+if (problematicFiles.length > 0) {;
+  console.log('Files:', problematicFiles.slice(0, 10));
+}
+;
+// Function to get all files recursively;
+function getAllFiles(dir, extensions) {;
+  let files = [];
+  try {;
+    const items = fs.readdirSync(dir);
+    for (const item of items) {;
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
+        files = files.concat(getAllFiles(fullPath, extensions));
+      } else if (extensions.some(ext => item.endsWith(ext))) {;
+        files.push(fullPath);
+      }
+    }
+  } catch (error) {;
+    // Skip directories that can't be read;
+  }
+  return files;
+}
+;
+console.log('✅ Debug completed'),;
+<<<<<<< HEAD
+=======
 
-    if (content.includes('
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

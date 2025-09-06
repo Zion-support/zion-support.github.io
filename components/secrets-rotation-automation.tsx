@@ -1,77 +1,150 @@
 
+<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+=======
+
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export default function SecretsRotationAutomationPage() {
 
+  const features = [
+    "Automated key and secret rotation"
+    "JIT credentials with expirations"
+    "Policy approvals and audit trails"
+    "CI/CD integration (GitHub Actions, CircleCI)"
+    "Cloud KMS and Vault support"
+  ];
   return (
 
 export default function SecretsRotationAutomationPage() {
   const features = [
+=======
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * SecretsRotationAutomationPage - Function description
+ */
+function SecretsRotationAutomationPage() {
+  const features = [;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
-    "CI/CD integration (GitHub Actions, CircleCI)",
-    "Cloud KMS and Vault support",;
+    "CI / CD integration (GitHub Actions, CircleCI)",
+    "Cloud KMS and Vault support",
   ];
-
-    <>
-      <SEO
-        title="Secrets Rotation Automation"
-        description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs."
-      />
-      <main id="main" className="container mx-auto px-4 py-24">
-        <section className="max-w-5xl mx-auto">
-          <h1 className="text-4xl font-extrabold tracking-tight">
-            Secrets Rotation Automation
-          </h1>
-          <p className="mt-4 text-lg text-gray-300">
-            Keep credentials short-lived and compliant. Automate rotations
-            across providers with full auditability.
-          </p>
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
-            {features.map((f) => (
-              <div
-                key={f}
-                className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10"
-              >
-                <Check className="w-5 h-5 text-cyan-400 mt-1" />
-                <p className="text-gray-200">{f}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="/contact"
-              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
-            >
-              Start from $199/mo
-            </a>
-            <a
-              href="/pricing"
-              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
-            >
-              Pricing
-            </a>
-            <a
-              href="https://developer.hashicorp.com/vault"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
-            >
-              <ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs
-            </a>
-            <a
-              href="https://cloud.google.com/kms"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
-            >
-              <ExternalLink className="w-4 h-4" /> Google Cloud KMS
-            </a>
-          </div>
-        </section>
-      </main>
-    </>
-  );
+;
   return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    <>;
+      <SEO;
+        title="Secrets Rotation Automation";
+        description="Automate key and secret rotation across cloud and CI / CD with approvals and audit logs.";
+      />;
+      <main id="main" className="container mx - auto px - 4 py - 24">;
+        <section className="max - w-5xl mx - auto">;
+          <h1 className="text - 4xl font - extrabold tracking - tight">;
+            Secrets Rotation Automation;
+          </h1>;
+          <p className="mt - 4 text - lg text - gray - 300">;
+            Keep credentials short - lived and compliant. Automate rotations;
+            across providers with full auditability.;
+          </p>;
+          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
+            {features.map ((f) => (
+              <div;
+                key={f}
+                className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
+              >;
+                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;
+                <p className="text - gray - 200">{f}</p>;
+              </div>))}
+          </div>;
+          <div className="mt - 8 flex flex - wrap items - center gap - 4">;
+            <a;
+              href="/contact";
+              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200";
+            >;
+              Start from $199 / mo;
+            </a>;
+            <a;
+              href="/pricing";
+              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10";
+            >;
+              Pricing;
+            </a>;
+            <a;
+              href="https://developer.hashicorp.com / vault";
+              target="_blank";
+              rel="noreferrer";
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
+            >;
+              <ExternalLink className="w - 4 h - 4" /> HashiCorp Vault Docs;
+            </a>;
+            <a;
+              href="https://cloud.google.com / kms";
+              target="_blank";
+              rel="noreferrer";
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
+            >;
+              <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+<<<<<<< HEAD
+
+return (
+  return (
+<<<<<<< HEAD
+=======
+    <>;
+      <SEO;
+        title="Secrets Rotation Automation";
+        description="Automate key and secret rotation across cloud and CI / CD with approvals and audit logs.";
+      />;
+      <main id="main" className="container mx - auto px - 4 py - 24">;
+        <section className="max - w-5xl mx - auto">;
+          <h1 className="text - 4xl font - extrabold tracking - tight">;
+            Secrets Rotation Automation;
+          </h1>;
+          <p className="mt - 4 text - lg text - gray - 300">;
+            Keep credentials short - lived and compliant. Automate rotations;
+            across providers with full auditability.;
+          </p>;
+          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
+            {features.map ((f) => (
+              <div;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -89,47 +162,57 @@ export default function SecretsRotationAutomationPage() {
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {features.map((f) => (
               <div
+
                 key={f}
-                className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10"
-              >
-                <Check className="w-5 h-5 text-cyan-400 mt-1" />
-                <p className="text-gray-200">{f}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="/contact"
-              className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200"
-            >
-              Start from $199/mo
-            </a>
-            <a
-              href="/pricing"
-              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
-            >
-              Pricing
-            </a>
-            <a
-              href="https://developer.hashicorp.com/vault"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
-            >
-              <ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs
-            </a>
-            <a
-              href="https://cloud.google.com/kms"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
-            >
-              <ExternalLink className="w-4 h-4" /> Google Cloud KMS
-            </a>
-          </div>
-        </section>
-      </main>
-    </>
-  );
+                className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
+              >;
+                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;
+                <p className="text - gray - 200">{f}</p>;
+              </div>))}
+          </div>;
+          <div className="mt - 8 flex flex - wrap items - center gap - 4">;
+            <a;
+              href="/contact";
+              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover: bg - gray - 200";
+            >;
+              Start from $199 / mo;
+            </a>;
+            <a;
+              href="/pricing";
+              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10";
+            >;
+              Pricing;
+            </a>;
+            <a;
+              href="https://developer.hashicorp.com / vault";
+              target="_blank";
+              rel="noreferrer";
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
+            >;
+              <ExternalLink className="w - 4 h - 4" /> HashiCorp Vault Docs;
+            </a>;
+            <a;
+              href="https://cloud.google.com / kms";
+              target="_blank";
+              rel="noreferrer";
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
+            >;
+              <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+=======
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+<<<<<<< HEAD
+
 }
 
+=======
+    </>);
+}
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f

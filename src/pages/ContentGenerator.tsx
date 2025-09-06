@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Button } from "@/components/ui/button",
@@ -13,7 +12,6 @@ import { toast } from "sonner",
 import { Loader2 } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-
   // Check if user is still loading
   if (isLoading) {
     return (
@@ -111,7 +109,6 @@ import { useAuth } from "@/hooks/useAuth",
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
-
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />
@@ -222,4 +219,6 @@ import { useAuth } from "@/hooks/useAuth",
     </>
   )
 }
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
