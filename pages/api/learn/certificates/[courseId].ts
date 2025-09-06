@@ -1,12 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 
-const doc = new PDFDocument ({
-  size: 'A4', margin: 50 
-});
-// Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
-doc.fill ('#ffffff');
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
@@ -17,50 +11,40 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     courseId: string;
     userId?: string;
   };
-  try {
-    const users = readJson(usersPath);
-    const courses = readJson(coursesPath);
-    const course = courses.find((c: any) => c.id === courseId);
-    const user = users[userId];
-    if (!course) return res.status(404).json({ error: 'Course not found' });
-    if (!user) return res.status(404).json({ error: 'User not found' });
 
+  try {
+    const doc = new PDFDocument({
+      size: 'A4',
+      margin: 50
+    });
+
+    // Set response headers
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader(
-      'Content-Disposition',
-      `attachment; filename="${courseId}-certificate.pdf"`
-    );
-    const doc = new PDFDocument({ size: 'A4', margin: 50 });
-    // Pipe to response
-    // @ts-ignore
+    res.setHeader('Content-Disposition', `attachment; filename="certificate-${courseId}.pdf"`);
+
+    // Pipe PDF to response
     doc.pipe(res);
-    // Zion certificate template (simple)
+
+    // Certificate content
     doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
     doc.fill('#ffffff');
-
-    doc
-      .fontSize(28)
-      .text('Zion AI Marketplace', { align: 'center', underline: false });    doc.moveDown(0.5);
-    doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
-    doc.moveDown(1.5);
-    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
-    doc.moveDown(0.5);
-    doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
-    doc.moveDown(0.5);
-    doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
-    doc.moveDown(0.5);
-    doc.fontSize(20).text(course.title, { align: 'center' });
-    doc.moveDown(0.5);
-    doc
-      .fontSize(12)
-      .text(`Badge: ${course.certificationBadge}`, { align: 'center' });
-    const date = new Date().toLocaleDateString();
-    doc.moveDown(2);
-    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
+    
+    doc.fontSize(24)
+       .text('Certificate of Completion', 50, 100, { align: 'center' });
+    
+    doc.fontSize(16)
+       .text(`Course: ${courseId}`, 50, 150, { align: 'center' });
+    
+    doc.fontSize(14)
+       .text(`Student: ${userId}`, 50, 200, { align: 'center' });
+    
+    doc.fontSize(12)
+       .text('This certifies that the above student has successfully completed the course.', 50, 250, { align: 'center' });
+    
+    doc.text('Date: ' + new Date().toLocaleDateString(), 50, 300, { align: 'center' });
 
     doc.end();
   } catch (e: any) {
-    res
-      .status(500)
-      .json({ error: e?.message ?? 'Failed to generate certificate' });
+    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' });
   }
+}

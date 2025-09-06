@@ -6,3 +6,4 @@ export function rateLimit(req: any, res: any, next: any) {
   }
 
   return true;
+}

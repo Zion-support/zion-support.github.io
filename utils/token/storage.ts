@@ -10,6 +10,7 @@ export interface TokenStoreData {
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
+}
 
 function readFromDisk(): TokenStoreData | null {
   try {

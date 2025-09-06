@@ -29,3 +29,4 @@ export async function updateFlagStatus(
   flag.updatedAt = new Date().toISOString();
   await upsertFlag(flag);
   return flag;
+}

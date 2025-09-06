@@ -5,7 +5,7 @@ import {
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
-  isTalent,;
+  isTalent,
 } from '../../../../../utils/api/projects';
 import { isMilestoneStatus } from '../../../../../utils/types/milestones';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -67,3 +67,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'PATCH');
   res.status(405).end('Method Not Allowed');
+
+}

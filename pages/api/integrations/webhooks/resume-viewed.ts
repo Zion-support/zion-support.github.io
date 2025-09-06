@@ -19,7 +19,7 @@ export default async function handler(
       c.providerId === 'pipedrive'
   );
   const results: any[] = [];
-   = await crm.addEmailTouchpoint(conn, {
+  const touchpointResult = await crm.addEmailTouchpoint(conn, {
       subject: 'Resume viewed',
       resumeId: resume.id,
     });

@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   readState,
   writeState,
-  upsertEvent,;
+  upsertEvent,
 } from '../../../utils/sync/storage';
 import { computeMerkleRootFromVotes } from '../../../utils/sync/merkle';
 import { signPayload } from '../../../utils/sync/signature';
@@ -44,7 +44,7 @@ export default async function handler(
   };
   upsertEvent(state, event);
   writeState(state);
-  const body = { ...event; propagate: false },
+  const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers['x-zion-signature'] = sig;
@@ -64,3 +64,5 @@ export default async function handler(
   return res
     .status(200)
     .json({ status: 'created', merkleRoot, version, eventId: event.eventId });
+
+}

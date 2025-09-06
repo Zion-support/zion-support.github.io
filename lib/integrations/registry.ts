@@ -50,3 +50,5 @@ export function getProviderById(
   id: string
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
+
+}

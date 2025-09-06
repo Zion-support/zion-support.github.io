@@ -11,3 +11,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     e => e.type === 'zion.talent.matched' && e.timestamp > sinceTs
   );
   res.status(200).json({ events });
+
+}

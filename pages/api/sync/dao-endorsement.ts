@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   readState,
   writeState,
-  upsertEvent,;
+  upsertEvent,
 } from '../../../utils/sync/storage';
 import { signPayload } from '../../../utils/sync/signature';
 import axios from 'axios';
@@ -52,7 +52,7 @@ export default async function handler(
   };
   upsertEvent(state, event);
   writeState(state);
-  const body = { ...event; propagate: false },
+  const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers['x-zion-signature'] = sig;
@@ -70,3 +70,5 @@ export default async function handler(
   return res
     .status(200)
     .json({ status: 'created', version, eventId: event.eventId });
+
+}

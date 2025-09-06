@@ -21,3 +21,4 @@ function escapeHtml(str: string) {
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
+}

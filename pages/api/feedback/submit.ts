@@ -1,23 +1,32 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { writeAll } from '../../../utils/feedback/store';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).end();
-  const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
-  if (!responseId || !rating || !['up', 'down'].includes(rating)) {
-    return res.status(400).json({ error: 'Missing responseId or rating' });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-  const entry = {
-    id: responseId,
-    rating,
-    comment: String(comment || '').slice(0, 2000),
-    pagePath: String(pagePath || ''),
-    aiModel: String(aiModel || ''),
-    userAgent: req.headers['user-agent'] || '',
-    ts: Date.now(),
-  };
-  const rows = readAll();
-  rows.push(entry);
-  writeAll(rows);
-  return res.status(200).json({ ok: true });
+
+  try {
+    const { feedback } = req.body;
+    
+    if (!feedback || !Array.isArray(feedback)) {
+      return res.status(400).json({ error: 'Invalid feedback data' });
+    }
+
+    // Process feedback data
+    const rows = feedback.map((item, index) => ({
+      id: item.id || (Date.now() + index).toString(),
+      type: item.type || 'general',
+      message: item.message || '',
+      rating: item.rating || 0,
+      timestamp: item.timestamp || new Date().toISOString()
+    }));
+
+    writeAll(rows);
+    return res.status(200).json({ ok: true });
+  } catch (error) {
+    console.error('Feedback submit error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
+  }
+}

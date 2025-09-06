@@ -19,7 +19,7 @@ export default async function handler(
       c.providerId === 'bamboohr'
   );
   const results: any[] = [];
-   = await ats.updateStatus(conn, {
+  const statusResult = await ats.updateStatus(conn, {
       applicantId: talent.id,
       status: 'hired',
     });

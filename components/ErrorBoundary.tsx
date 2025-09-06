@@ -1,7 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-}
-
 interface State {
   hasError: boolean;
   error?: Error;

@@ -6,3 +6,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     message:
       'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.',
   });
+
+}

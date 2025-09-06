@@ -12,12 +12,17 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });  const { markdown, publicPreview } = req.body || {};
+    return res.status(405).json({ error: 'Method not allowed' });
+  
+  const { markdown, publicPreview } = req.body || {};
   if (!markdown) return res.status(400).json({ error: 'Missing markdown' });
+  
   const id = randomUUID();
-  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview },
+  store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
   const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
   res.status(200).json({ id, url });
+}
 
 export function getShared(id: string) {
   return store[id];
+}

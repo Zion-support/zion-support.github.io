@@ -8,3 +8,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   state.config.paused = Boolean(paused);
   writeState(state);
   return res.status(200).json({ paused: state.config.paused });
+
+}

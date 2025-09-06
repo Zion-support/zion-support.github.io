@@ -12,9 +12,6 @@ const nextConfig = {
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   
-  // Performance optimizations
-  swcMinify: true,
-  
   // Image optimization
   images: {
     domains: [

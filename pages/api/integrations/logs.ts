@@ -10,3 +10,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ? state.logs.filter(l => l.providerId === providerId)
     : state.logs;
   res.status(200).json({ logs });
+
+}

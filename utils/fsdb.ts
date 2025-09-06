@@ -24,17 +24,20 @@ export function writeJson<T>(filePath: string, data: T): void {
   } catch (error) {
     console.error('Error writing file:', error);
   }
-  await writeAllDisputes(all);
+}
 
 export async function createDispute(dispute: DisputeCase): Promise<void> {
   const all = await readAllDisputes();
   all.push(dispute);
   await writeAllDisputes(all);
+}
 
 export function getDisputeUploadDir(caseId: string): string {
   return path.join(UPLOADS_ROOT, caseId);
+}
 
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
+}

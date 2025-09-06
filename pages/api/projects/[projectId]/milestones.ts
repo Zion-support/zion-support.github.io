@@ -4,7 +4,7 @@ import {
   addMilestone,
   getProject,
   assertParticipantOrAdmin,
-  isClient,;
+  isClient,
 } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -56,3 +56,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
+
+}
