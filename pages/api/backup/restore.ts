@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
@@ -15,6 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await r.json()
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -34,6 +37,9 @@ export default async function handler(req, res) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -56,6 +62,7 @@ function handler() {
 }
     const data = await r.json (),
     return res.status (200).json (data);
+<<<<<<< HEAD
 =======
     return res.status(200).json(data)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -94,9 +101,19 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+  } catch (e: any) {
+    return res.status (500).json ({ error: e?.message || 'Restore failed' });
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ;
 
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

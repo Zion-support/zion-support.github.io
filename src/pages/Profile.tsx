@@ -1,5 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src/pages/Profile.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/pages/Profile.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 const Profile = () =>: any {
   return (
@@ -15,6 +22,13 @@ const Profile = () =>: any {
     </div>);
 }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD:src/pages/Profile.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36:backup-problematic-files/src/pages/Profile.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default Profile;

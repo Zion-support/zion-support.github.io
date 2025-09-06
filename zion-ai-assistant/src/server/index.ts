@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import "dotenv / config",
 import express from './express';,
 import cors from './cors';,
@@ -29,6 +33,7 @@ if ( {) {
   $2
 }
       return res.status (400).json ({ error: "Invalid input", details: error.issues });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -62,6 +67,10 @@ app.post("/api/ai/milestones", async (req, res) => {try {;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {// // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import "dotenv/config",;
 import express from "express",;
 import cors from "cors",;
@@ -86,22 +95,29 @@ app.post("/api/ai/milestones", async (req, res) => {;
     if (error instanceof z.ZodError) {;
       return res.status(400).json({ error: "Invalid input", details: error.issues });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     }
     console.error (error),
     res.status (500).json ({ error: "Failed to generate milestones" });
   }
 
+<<<<<<< HEAD
 =======
     }
     console.error(error),;
     res.status(500).json({ error: "Failed to generate milestones" });
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }),;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
 app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -156,3 +172,8 @@ app.listen(port, () => {;
 =======
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

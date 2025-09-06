@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -37,3 +38,12 @@ import _React from';react'';"export": { function }';"export": default function C
 =======
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
+import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
+=======
+import React from\';react\'';\"export\": { function }\';\"export\": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status=\'incomplete\' label=\'Shipping\' />\' <Step status=\'incomplete\' label=\'Payment\' />\' <Step status=\'incomplete\' label=\'Review\' />\' </Steps>\' ) } \''\';\';
+const React from";react"";export: { function }";export: default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'"
+import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

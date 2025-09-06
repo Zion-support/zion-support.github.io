@@ -1,7 +1,9 @@
 #!/usr/bin/env node;
 // Minimal, safe PR "merger": lists open PRs and attempts to merge them via GitHub API.
 // Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
+
 const { execSync } = require('child_process');
+
 function getRepoFromGit() {}
   // "Example": https://x-access-token:***@github.com/Zion-Holdings/zion.app;
   const remoteUrl = execSync('git remote get-url origin', { "encoding": 'utf8' }).trim();
@@ -81,6 +83,7 @@ async function tryMergePR(owner, repo, number, title) {}
 };
 async function main() {}
   const { owner, repo } = getRepoFromGit();
+  
   const prs = await listOpenPRs(owner, repo);
   if (!prs.length) {}
     console.log('No open PRs');
@@ -116,3 +119,5 @@ async function main() {}
 main().catch(err => {})
   console.error('"Error": ', err.message);
   process.exit(1)}
+});
+

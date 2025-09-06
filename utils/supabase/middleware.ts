@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { NextResponse } from 'next/server';
@@ -21,6 +22,9 @@ export function middleware(request: NextRequest) {;
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { NextResponse } from 'next / server',
 import type { NextRequest } from 'next / server',
 export /**
@@ -35,6 +39,7 @@ if ( {) {
     const role = request.cookies.get ('user_role')?.value || 'talent',
     const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
     return NextResponse.redirect (new URL (target, request.url));
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -66,6 +71,13 @@ export function middleware(request: NextRequest) {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+  }
+}
+export const config = {
+  matcher: ['/dashboard / dashboard/']}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
 import { NextResponse } from 'next / server',
 import type { NextRequest } from 'next / server',
@@ -93,6 +105,7 @@ export const config = {;
   matcher: ['/dashboard/dashboard/']};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -105,3 +118,7 @@ export const config = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

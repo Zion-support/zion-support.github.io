@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class ErrorFixer {}
   constructor() {}
     this.logFile = 'logs/pm2/error-fixer.log';
@@ -28,6 +29,7 @@ class ErrorFixer {}
   };
   async fixSyntaxErrors() {}
     this.log('Starting syntax error fixing...');
+    
     try {}
       const fixes = [{}]
           "pattern": /;/g,
@@ -50,12 +52,15 @@ class ErrorFixer {}
           "description": 'Fix template literal className attributes'
         };
       ];
+
       let totalFixed = 0;
       const files = this.getSourceFiles();
+      
       for (const file of files) {}
         try {}
           let content = fs.readFileSync(file, 'utf8');
           let fileFixed = false;
+          
           for (const fix of fixes) {}
             const before = content;
             content = content.replace(fix.pattern, fix.replacement);
@@ -81,6 +86,7 @@ class ErrorFixer {}
   };
   async fixLintingErrors() {}
     this.log('Starting linting error fixing...');
+    
     try {}
       execSync('npm run "lint": fix', { })
         "stdio": 'pipe',
@@ -98,6 +104,7 @@ class ErrorFixer {}
     const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];
     const extensions = ['.ts', '.tsx', '.js', '.jsx'];
     const files = [];
+    
     for (const dir of sourceDirs) {}
       if (fs.existsSync(dir)) {}
         this.getFilesRecursively(dir, extensions, files);
@@ -107,9 +114,11 @@ class ErrorFixer {}
   };
   getFilesRecursively(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
+    
     for (const item of items) {}
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+      
       if (stat.isDirectory()) {}
         this.getFilesRecursively(fullPath, extensions, files);
       } else if (extensions.some(ext => item.endsWith(ext))) {}
@@ -119,11 +128,14 @@ class ErrorFixer {}
   };
   async run() {}
     this.log('Starting error fixing automation...');
+    
     try {}
       const syntaxFixed = await this.fixSyntaxErrors();
       const lintingFixed = await this.fixLintingErrors();
+      
       this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)
         - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
+      
       return {}
         syntaxFixed,
         lintingFixed,
@@ -147,3 +159,4 @@ if (require.main === module) {}
   }
 });
 };
+module.exports = ErrorFixer;

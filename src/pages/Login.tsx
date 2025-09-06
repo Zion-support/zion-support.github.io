@@ -1,34 +1,104 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react'; const Login = () => { return ( <div className="min-h-screen bg-gray-50 flex items-center justify-center"> <div className="max-w-md w-full"> <div className="bg-white p-8 rounded-lg shadow-md"> <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center">Login</h1> <form className="space-y-4"> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Email</label> <input type="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Password</label> <input type="password" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"> Sign In </button> </form> </div> </div> </div> )}; export default Login;
+import React, { useState } from 'react';
+import Button from '../components/Button';
 
-<<<<<<< HEAD
-import React from 'react'; const Login = () =>: any { return ( <div className="min - h-screen bg - gray - 50 flex items - center justify - center"> <div className="max - w-md w - full"> <div className="bg - white p - 8 rounded - lg shadow - md"> <h1 className="text - 2xl font - bold text - gray - 900 mb - 6 text - center">Login</h1> <form className="space - y-4"> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Email</label> <input type="email" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Password</label> <input type="password" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <button type="submit" className="w - full bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - blue - 500"> Sign In </button> </form> </div> </div> </div> )} export default Login;
-=======
-import React from 'react'; const Login = () =>: any { return ( <div className="min - h-screen bg - gray - 50 flex items - center justify - center"> <div className="max - w-md w - full"> <div className="bg - white p - 8 rounded - lg shadow - md"> <h1 className="text - 2xl font - bold text - gray - 900 mb - 6 text - center">Login</h1> <form className="space - y-4"> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Email</label> <input type="email" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Password</label> <input type="password" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <button type="submit" className="w - full bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - blue - 500"> Sign In </button> </form> </div> </div> </div> )} export default Login;
-import React from 'react'; const Login = () => { return ( <div className="min-h-screen bg-gray-50 flex items-center justify-center"> <div className="max-w-md w-full"> <div className="bg-white p-8 rounded-lg shadow-md"> <h1 className="text-2xl font-bold text-gray-900 mb-6 text-center">Login</h1> <form className="space-y-4"> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Email</label> <input type="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <div> <label className="block text-sm font-medium text-gray-700 mb-2">Password</label> <input type="password" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" /> </div> <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"> Sign In </button> </form> </div> </div> </div> )}; export default Login;
-import React from 'react'; const Login = () =>: any { return ( <div className="min - h-screen bg - gray - 50 flex items - center justify - center"> <div className="max - w-md w - full"> <div className="bg - white p - 8 rounded - lg shadow - md"> <h1 className="text - 2xl font - bold text - gray - 900 mb - 6 text - center">Login</h1> <form className="space - y-4"> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Email</label> <input type="email" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <div> <label className="block text - sm font - medium text - gray - 700 mb - 2">Password</label> <input type="password" className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500" /> </div> <button type="submit" className="w - full bg - blue - 600 text - white py - 2 px - 4 rounded - md hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - blue - 500"> Sign In </button> </form> </div> </div> </div> )} export default Login;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+const Login: React.FC = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle login logic here
+    console.log('Login attempt:', formData);
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full space-y-8">
+        <div>
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            Sign in to your account
+          </h2>
+          <p className="mt-2 text-center text-sm text-gray-600">
+            Or{' '}
+            <a href="/contact" className="font-medium text-blue-600 hover:text-blue-500">
+              contact us for access
+            </a>
+          </p>
+        </div>
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+          <div className="rounded-md shadow-sm -space-y-px">
+            <div>
+              <label htmlFor="email" className="sr-only">
+                Email address
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                placeholder="Email address"
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="sr-only">
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                required
+                value={formData.password}
+                onChange={handleChange}
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <input
+                id="remember-me"
+                name="remember-me"
+                type="checkbox"
+                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              />
+              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
+                Remember me
+              </label>
+            </div>
+
+            <div className="text-sm">
+              <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
+                Forgot your password?
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <Button type="submit" variant="primary" size="large" className="w-full">
+              Sign in
+            </Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Login;

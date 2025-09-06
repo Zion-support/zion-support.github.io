@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -13,9 +14,15 @@ export default function WhitepaperPreview() {
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 
+=======
+
+import {useRouter} from 'next/router';
+import {useEffect, useState} from 'react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function WhitepaperPreview() {;
 
 
+=======
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
 export default function WhitepaperPreview() {
@@ -53,11 +60,15 @@ export default function WhitepaperPreview() {
 <<<<<<< HEAD
   if (notFound);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return (
       <div className='container mx-auto px-4 py-6'>;
         Preview not available or expired.;
@@ -68,14 +79,19 @@ export default function WhitepaperPreview() {
     return <div className='container mx-auto px-4 py-6'>Loading…</div>;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className='container mx-auto px-4 py-6'>;
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>;
       <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -111,6 +127,9 @@ function WhitepaperPreview() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // In a production app, this would fetch from a real DB.;
     fetch (`/api / whitepaper / get?id=${id}`);
       .then (r => (r.ok ? r.json () : Promise.reject ()));
@@ -126,6 +145,7 @@ if (
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -230,3 +250,7 @@ export default function WhitepaperPreview(req, res) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

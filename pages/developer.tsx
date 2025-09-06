@@ -1,10 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function DeveloperPage() {
   return (
     <>
@@ -49,6 +55,7 @@ export default function DeveloperPage() {_return (
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, _SDKs, _and quickstarts for all services. Contact us for enterprise onboarding.</p>
               <div className="space-x-4">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</a>
         <a href="/docs" className="text-cyan-400 underline">Guides</a>
         <a href="/support" className="text-cyan-400 underline">Support</a>
@@ -57,9 +64,13 @@ export default function DeveloperPage() {_return (
     </>
   )
 
+=======
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 import React from 'react',
 import Head from 'next / head',
@@ -93,6 +104,7 @@ function DeveloperPage() {
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 
 
@@ -166,3 +178,5 @@ export default function DeveloperPage() {_return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

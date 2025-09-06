@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* Honeypot field */}
       <input
 
@@ -236,6 +237,11 @@ export function FooterNewsletter(): React.ReactElement {;
         name="honeypot"
         value={honeypot}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+{/* Honeypot field */}
+      <input
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         onChange={e => setHoneypot(e && e.target.value)}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -245,16 +251,22 @@ export function FooterNewsletter(): React.ReactElement {;
       />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       <Button
         type="submit"
         disabled={isSubmitting}
 
+<<<<<<< HEAD
 =======
       <Button
         type="submit"
         disabled={isSubmitting}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
 
         type="text"
@@ -265,6 +277,7 @@ export function FooterNewsletter(): React.ReactElement {;
         tabIndex={-1}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         type='text'
@@ -300,6 +313,8 @@ export function FooterNewsletter(): React.ReactElement {;
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -313,6 +328,7 @@ export function FooterNewsletter(): React.ReactElement {;
           <>;
 <<<<<<< HEAD
             <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             Subscribing...;
@@ -429,6 +445,8 @@ export function FooterNewsletter():React.ReactElement {;
 =======
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             Subscribing...;
           </>;
         ) : (;
@@ -438,15 +456,21 @@ export function FooterNewsletter():React.ReactElement {;
     </form>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 } ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } ;
 
 import React, { useState, useRef } from 'react';
@@ -573,6 +597,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 
@@ -591,3 +616,6 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

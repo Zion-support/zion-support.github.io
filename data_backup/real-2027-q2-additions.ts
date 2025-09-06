@@ -1,11 +1,15 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface Real2027Q2Addition {
   "id": string;
   name: string;
@@ -23,6 +27,7 @@ export const "real2027Q2Additions": Real2027Q2Addition[] = [{
       'Advanced solutions',
     ]},
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -84,3 +89,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

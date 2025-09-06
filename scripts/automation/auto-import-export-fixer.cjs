@@ -10,3 +10,4 @@ console.log(' Starting auto import/export fixer...')
         content = content.replace(/from\s+['"]src\/([^'"]+)['"]/g, "
         content = content.replace(/from\s+['"]@\/([^'"]+)['"]/g, "
         content = content.replace(/from\s+['"]([^'')]
+  console.error(' Auto import/export fixer failed to "start")

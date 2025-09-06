@@ -129,3 +129,4 @@ class ComprehensiveMergeConflictResolver {}
 if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
   resolver.run().catch(console.error)};
+module.exports = ComprehensiveMergeConflictResolver;

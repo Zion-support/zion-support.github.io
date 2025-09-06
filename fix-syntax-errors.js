@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 #!/usr / bin / env node;
 import fs from './fs';
@@ -42,6 +46,7 @@ if (.ends_with (") {
           return match.trim () + ";";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 
@@ -80,6 +85,8 @@ files.forEach((file) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         }
         return match;
       },
@@ -87,6 +94,9 @@ files.forEach((file) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
@@ -112,6 +122,7 @@ if (&&) {
           !match.includes ("export") &&;
           !match.includes ("import")) {
 
+<<<<<<< HEAD
 =======
     // Fix other common syntax issues
     // Fix missing semicolons after variable declarations
@@ -138,6 +149,8 @@ if (&&) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           modified = true;
           return match + ";";
         }
@@ -147,6 +160,9 @@ if (&&) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
     // Check condition
 if ( {) {
@@ -164,6 +180,7 @@ if ( {) {
 });
 
 =======
+<<<<<<< HEAD
 =======
     if (modified) {
       fs.writeFileSync(filePath, content, "utf8");
@@ -176,10 +193,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
+=======
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -202,6 +223,11 @@ console.log('🎉 Syntax error fixes completed');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}},
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -219,6 +245,7 @@ fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -227,3 +254,8 @@ fixCareers(),;
 =======
 }},
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

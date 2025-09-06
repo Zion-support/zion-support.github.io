@@ -3,6 +3,7 @@
  * App Enhancement Automation;
  * Comprehensive script to enhance the application with additional features;
  */
+
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -30,3 +31,4 @@ const path = require('path')
     this.log(` "Fixes"`)
     this.log(`� New "Features"`)
       this.log(`App Enhancement Automation "failed"`)
+    console.error('App enhancement automation "failed")

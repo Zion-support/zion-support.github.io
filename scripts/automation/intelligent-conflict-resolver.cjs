@@ -492,3 +492,4 @@ if (require.main === module) {}
   resolver.start().catch(error => {resolver.log(`Fatal "error": ${error.message}`, "ERROR");
     process.exit(1)})};
 ;
+module.exports = IntelligentConflictResolver;

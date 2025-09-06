@@ -1,3 +1,6 @@
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 console.log('� Starting Security Enhancement Automation...')
     "file"
     "issue"
@@ -36,3 +39,4 @@ console.log('� Starting Security Enhancement Automation...')
     "recommendations"
     "nextSteps"
   console.log('� Security improvements "applied")
+  console.error(' Security enhancement automation "failed")

@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -26,3 +28,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+=======
+import React from \'react\'; import Head from \'next/head\'; import Link from \'next/link\'; export default function ServicesPage() { return ( <> <Head> <title>Services — Zion Tech Group</title> <meta name=\"description\" content=\"Explore AI,micro SaaS,and IT services with pricing and benefits.\" /> </Head> <main className=\"min-h-screen bg-white\"> <section className=\"max-w-6xl mx-auto px-4 py-12\"> <h1 className=\"text-3xl font-bold mb-6\">Services</h1> <div className=\"grid \"md\": grid-cols-2 gap-6\"> <div className=\"p-6 border rounded-lg\"> <h2 className=\"text-xl font-semibold mb-2\">AI Email Automation</h2> <p className=\"text-gray-600 mb-3\">Increase open rates by 40% and conversions by 60%.</p> <Link href=\"/services/ai-email-automation.page\" className=\"text-blue-600 underline\">View service</Link> </div> <div className=\"p-6 border rounded-lg\"> <h2 className=\"text-xl font-semibold mb-2\">AI Fraud Detection</h2> <p className=\"text-gray-600 mb-3\">Reduce false positives by 70% and detect fraud 10x faster.</p> <Link href=\"/services/ai-fraud-detection.page\" className=\"text-blue-600 underline\">View service</Link> </div> </div> </section> </main> </> )}
+const React from "react"; import Head from "next/head"; import Link from "next/link"; export default function ServicesPage() { return ( <> <Head> <title>Services Zion Tech Group</title> <meta name="description" content="Explore AI,micro SaaS,and IT services with pricing and benefits." /> </Head> <main className="min-h-screen bg-white"> <section className="max-w-6xl mx-auto px-4 py-12"> <h1 className="text-3xl font-bold mb-6">Services</h1> <div className="grid md: grid-cols-2 gap-6"> <div className="p-6 border rounded-lg"> <h2 className="text-xl font-semibold mb-2">AI Email Automation</h2> <p className="text-gray-600 mb-3">Increase open rates by 40% and conversions by 60%.</p> <Link href="/services/ai-email-automation.page" className="text-blue-600 underline">View service</Link> </div> <div className="p-6 border rounded-lg"> <h2 className="text-xl font-semibold mb-2">AI Fraud Detection</h2> <p className="text-gray-600 mb-3">Reduce false positives by 70% and detect fraud 10x faster.</p> <Link href="/services/ai-fraud-detection.page" className="text-blue-600 underline">View service</Link> </div> </div> </section> </main> </> )}'"'"
+import _React from 'react'; import Head from 'next/head'; import Link from 'next/link'; export default function ServicesPage() { return ( <> <Head> <title>Services — Zion Tech Group</title> <meta name="description" content="Explore AI,micro SaaS,and IT services with pricing and benefits." /> </Head> <main className="min-h-screen bg-white"> <section className="max-w-6xl mx-auto px-4 py-12"> <h1 className="text-3xl font-bold mb-6">Services</h1> <div className="grid "md": grid-cols-2 gap-6"> <div className="p-6 border rounded-lg"> <h2 className="text-xl font-semibold mb-2">AI Email Automation</h2> <p className="text-gray-600 mb-3">Increase open rates by 40% and conversions by 60%.</p> <Link href="/services/ai-email-automation.page" className="text-blue-600 underline">View service</Link> </div> <div className="p-6 border rounded-lg"> <h2 className="text-xl font-semibold mb-2">AI Fraud Detection</h2> <p className="text-gray-600 mb-3">Reduce false positives by 70% and detect fraud 10x faster.</p> <Link href="/services/ai-fraud-detection.page" className="text-blue-600 underline">View service</Link> </div> </div> </section> </main> </> )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> origin/main
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

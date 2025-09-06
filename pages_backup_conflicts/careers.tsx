@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import * as React from 'react';
+
+>>>>>>> main
 interface CareersProps {
   // Add props here as needed
 <<<<<<< HEAD
@@ -15,6 +20,7 @@ export default function Careers({ }: CareersProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 }
@@ -25,3 +31,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> main

@@ -5,6 +5,7 @@ if (typeof window !== 'undefined') {
 <<<<<<< HEAD
   window.addEventListener('load', () => {
     const perfData = performance.getEntriesByType('navigation')[0];
+<<<<<<< HEAD
 
 =======
 
@@ -36,3 +37,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+    console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

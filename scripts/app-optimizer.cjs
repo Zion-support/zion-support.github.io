@@ -1,3 +1,6 @@
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process')
 console.log(' Starting App Optimizer...')
     // Directory doesn't exist or can'
@@ -15,3 +18,4 @@ console.log('\n App Optimization "Summary")
 // console.log(`   - Bundle "size"`)
 console.log(`   - Total "images"`)
 // console.log('\n "Improvements")
+  console.log('\n "Recommendations")

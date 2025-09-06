@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -647,6 +648,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
@@ -917,6 +925,7 @@ if (require.main === module) {}
     process.exit(1);,
   });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 module.exports = SecurityScanner;
@@ -2439,3 +2448,9 @@ scanner.run().catch(error => {,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+module.exports = SecurityScanner;
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

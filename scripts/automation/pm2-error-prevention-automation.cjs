@@ -14,6 +14,7 @@ const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
 const glob = require("glob");
+
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -44,6 +45,7 @@ class $1 {}
   "cwd": this.projectRoot,
         "stdio": "pipe",
         "timeout": 60000;
+
   async runTypeCheck() {}
   try {}
   this.log("Running TypeScript type check...");
@@ -79,6 +81,7 @@ class $1 {}
   "cwd": this.projectRoot,
         "stdio": "pipe",
         "timeout": 120000;
+
   async runBuild() {}
   try {}
   this.log("Running build process...");
@@ -146,6 +149,7 @@ class $1 {}
         const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*["][^"]+[""](?!\s*)/g;
         if (missingSemicolonRegex.test(content)) {}
   content = content.replace(missingSemicolonRegex, "$&;");
+
   fixImportIssues() {}
   this.log("Fixing import issues...");
     const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd": this.projectRoot }
@@ -155,6 +159,7 @@ class $1 {}
   const fullPath = path.join(this.projectRoot, "filePath);
         let content = fs.readFileSync(fullPath", "utf8");
         let modified = false;
+
         // Fix broken import statements;
         const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^"]+)["]\s*;?\s*$/gm;
         if (brokenImportRegex.test(content)) {}
@@ -193,6 +198,7 @@ class $1 {}
         // Fix missing closing tags;
         const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
+
         // Fix missing closing tags;
         const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
@@ -200,6 +206,7 @@ class $1 {}
             modified = true};
         }
 });
+
         if (modified) {}
   fs.writeFileSync(fullPath, content);this.log(`Fixed component issues in ${filePath}`);
           this.fixCount++};
@@ -222,6 +229,7 @@ class $1 {}
       for (const dep of essentialDeps) {}
   try {execSync(`npx ${dep} --version`, { "stdio": "pipe" })} catch (error) {  this.log(`Installing missing "dependency": ${dep  }`);execSync(`npm install --save-dev ${dep}`, { "cwd": this.projectRoot, "stdio": "pipe" }
 });this.log(`${dep} installed`);
+
       // Check if other essential dependencies are available;
       const essentialDeps = ["@"types/react"", "@"types/react-dom"", "@"types/node""];
       for (const dep of essentialDeps) {}
@@ -273,6 +281,7 @@ class $1 {}
 });this.log(`Removed ${dir} directory`)};
       }
 });
+
       // Remove TypeScript build info;
       const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");
       if (fs.existsSync(tsBuildInfo)) {}
@@ -321,6 +330,7 @@ class $1 {}
         this.errorCount++};
       ;
       this.log("PM2 Error Prevention Automation completed")} catch (error) {  this.log(`Fatal error in "automation": ${error.message  }`, true);
+
   async run() {}
   this.log("Starting PM2 Error Prevention Automation...");
     try {}
@@ -361,10 +371,13 @@ process.on("SIGINT", () => {}
   automation.log("Received SIGINT, shutting down gracefully...");
   process.exit(0)}
 });
+
 process.on("SIGTERM", () => {}
   automation.log("Received SIGTERM, shutting down gracefully...");
   process.exit(0)}
 });
+
 // Run the automation;
 automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
   process.exit(1)}
+});

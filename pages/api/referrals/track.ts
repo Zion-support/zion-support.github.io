@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -144,6 +148,8 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   try {
     // Check condition
 if ( {) {
@@ -173,6 +179,7 @@ if ( {) {
   }
 }
 
+<<<<<<< HEAD
 =======
     return res.status(200).json({ saved: false, error: e?.message });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -228,6 +235,13 @@ export default async function handler(req, res) {
 }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -270,10 +284,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   }
@@ -285,3 +303,8 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

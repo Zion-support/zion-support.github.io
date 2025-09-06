@@ -1,11 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>
         </div>
       </div>
@@ -17,6 +22,9 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <Layout>;
       <Head>;
         <title > Incident Postmortem Generator | Zion Tech Group</title>;
@@ -24,6 +32,7 @@
         <link rel="canonical" href="https://ziontechgroup.com / incident - postmortem - generator" />;
       </Head>;
 
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -78,6 +87,8 @@ export default function IncidentPostmortemGeneratorPage(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/incident-postmortem-generator" />;
       </Head>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent">Incident Postmortem Generator</h1>;
@@ -91,6 +102,7 @@ export default function IncidentPostmortemGeneratorPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -120,3 +132,8 @@ export default function IncidentPostmortemGeneratorPage(req, res) {
 ;
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

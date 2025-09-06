@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 >>>>>>> origin/automation-improvements-final
@@ -7,6 +11,7 @@
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 }}}
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -35,6 +40,14 @@ import React from 'react';
 interface Jest.setupProps {
   // Add props here as needed
 }
+=======
+import React from 'react';
+
+interface Jest.setupProps {
+  // Add props here as needed
+}
+
+>>>>>>> main
 export default function Jest.setup({ }: Jest.setupProps) {
   return (
     <div>
@@ -42,6 +55,7 @@ export default function Jest.setup({ }: Jest.setupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -58,8 +72,38 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 }}};
 }}}
 }}}
 ;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
+=======
+}
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+=======
+}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main

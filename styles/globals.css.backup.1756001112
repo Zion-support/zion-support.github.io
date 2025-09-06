@@ -824,6 +824,13 @@ body::after {
 <<<<<<< HEAD
     transform: translateY(-15px) rotate(0.5deg);
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    transform: translateY(-15px) rotate(0.5deg);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     transform: translate(-10px, -10px) rotate(1deg);
   }
   50% {
@@ -2460,6 +2467,13 @@ pre code {
 <<<<<<< HEAD
     background-size: 25px 25px;
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    background-size: 25px 25px;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 

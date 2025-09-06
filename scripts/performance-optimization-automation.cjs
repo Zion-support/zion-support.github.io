@@ -1,3 +1,6 @@
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 console.log('⚡ Starting Performance Optimization Automation...')
     '.next': '43.33 MB'
     'node_modules': '782.66 MB'
@@ -19,3 +22,4 @@ console.log('⚡ Starting Performance Optimization Automation...')
       "recommendations"
     "nextSteps"
   console.log('� Performance improvements "created")
+  console.error(' Performance optimization automation "failed")

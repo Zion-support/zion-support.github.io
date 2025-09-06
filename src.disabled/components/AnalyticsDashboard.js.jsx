@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -18,3 +19,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export: const AnalyticsDashboard = ({ className = ",showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ enableTracking: "tru",e,enablePerformanceTracking: "tru",e,enableUserBehaviorTracking: "tru",e,enableHeatmapTracking: "fals",e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState ("24h") const [analyticsSummary,setAnalyticsSummary] = useState (null) "";"";"""
+=======
+export: const AnalyticsDashboard = ({ className = ",showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ enableTracking: "tru",e,enablePerformanceTracking: "tru",e,enableUserBehaviorTracking: "tru",e,enableHeatmapTracking: "fals",e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState ("24h") const [analyticsSummary,setAnalyticsSummary] = useState (null) "";"";"""
+=======
+"export\": const AnalyticsDashboard = ({ className = \',showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ \"enableTracking\": \'tru\',e,\"enablePerformanceTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'tru\',e,\"enableHeatmapTracking\": \'fals\',e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState (\'24h\') const [analyticsSummary,setAnalyticsSummary] = useState (null) \'';\"";
+export: const AnalyticsDashboard = ({ className = ",showRealTime = true,refreshInterval = 5000}) => { const { isTracking,currentSession,performanceMetrics,events,getAnalyticsSummary,trackEvent,trackConversion} = useAnalytics ({ enableTracking: "tru",e,enablePerformanceTracking: "tru",e,enableUserBehaviorTracking: "tru",e,enableHeatmapTracking: "fals",e}) const [isExpanded,setIsExpanded] = useState (false) const [selectedTimeRange,setSelectedTimeRange] = useState ("24h") const [analyticsSummary,setAnalyticsSummary] = useState (null) "";"";"""
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

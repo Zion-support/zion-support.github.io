@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -20,6 +21,12 @@ const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
@@ -38,6 +45,9 @@ res.setHeader('AllowPOST')
   try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
@@ -57,9 +67,12 @@ res.setHeader('AllowPOST')
 
     return res.status(200).json({ ok: true, user })
 =======
+<<<<<<< HEAD
 =======
     return res.status(200).json({ ok: true, user })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -117,6 +130,7 @@ if (user.boostInSearch = enable_boost, ) {
     write_json (users_path, users),
     return res.status (200).json ({ ok: true, user });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message ?? 'Failed to complete course' });
@@ -281,6 +295,10 @@ if ( {) {
   }
 
 
+=======
+  } catch (e: any) {
+    return res.status (500).json ({ error: e?.message ?? 'Failed to complete course' });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 
 }
@@ -300,4 +318,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  }
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

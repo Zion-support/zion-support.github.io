@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 ;
@@ -454,11 +455,14 @@ export default class ErrorBoundary extends Component<Props, State> {
             >
               Reload Page
             </button>
+=======
+>>>>>>> main
           </div>
         </div>
       );
     }
 
+<<<<<<< HEAD
 
     return this && this.props.children;
   }
@@ -623,3 +627,9 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+    return this.props.children;
+  }
+}
+
+>>>>>>> main

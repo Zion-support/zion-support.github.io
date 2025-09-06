@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,3 +6,12 @@
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';''}
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';''}
 import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef && canvasRef.current if (!canvas) return const ctx = canvas && canvas.getContext('2d') if (!ctx) return'';';''}
+=======
+<<<<<<< HEAD
+import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';''}
+=======
+"export\": const FuturisticAnimatedBackground = ({ className = \',intensity = \'medium\',colorScheme = \'multi\' }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { \''\';\'"\";
+export: const FuturisticAnimatedBackground = ({ className = ",intensity = "medium",colorScheme = "multi" }) => { const canvasRef = useRef (null) const animationRef = useRef () useEffect ( () => { """;""";"""
+import React from';react' "export": const FuturisticAnimatedBackground = ({ className = ',intensity = 'medium',colorScheme = 'multi'}) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return'';';''}
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

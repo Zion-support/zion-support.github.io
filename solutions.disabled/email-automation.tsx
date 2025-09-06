@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -13,14 +15,19 @@ interface EmailautomationProps {
 import React from 'react';
 interface EmailautomationProps {
   // Add props here as needed
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function Emailautomation({ }: EmailautomationProps) {
   return (
     <div>
@@ -32,6 +39,7 @@ export default function Emailautomation({ }: EmailautomationProps) {
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
@@ -46,3 +54,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

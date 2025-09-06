@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { markdown, targetLanguage = "en" } = req.body |{}
@@ -51,3 +52,10 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

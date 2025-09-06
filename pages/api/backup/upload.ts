@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -20,6 +21,10 @@ export const config = { api: { bodyParser: { sizeLimit: '2mb' } } }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end()
   if (!TOKEN) return res.status(400).json({ error: 'Missing WEB3_STORAGE_TOKEN' })
@@ -32,6 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ cid })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |'Backup failed' })
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   }
@@ -54,6 +60,12 @@ export default async function handler(req, res) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  }
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -91,6 +103,7 @@ function handler() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
     return res.status(500).json({ error: e?.message || 'Backup failed' })
   };
@@ -128,3 +141,5 @@ export default async function handler(req, res) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

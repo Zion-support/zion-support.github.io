@@ -2,6 +2,7 @@
 /**
  * Fix Team Page - Targeted fix for team.tsx;
  */
+
 const fs = require('fs')
   const filePath = './pages/team.tsx'
     console.log(' Team page not found')
@@ -82,3 +83,4 @@ const fs = require('fs')
               "fontWeight"
               "display"
               "border"
+              "transition"

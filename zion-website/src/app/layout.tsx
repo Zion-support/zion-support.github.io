@@ -45,16 +45,21 @@ export default /**
  */
 function RootLayout() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
       <body className={`${inter.class_name} bg - black text - white antialiased`}>;
         <Navigation />;
         <main className=&quot;min - h-screen & quot;>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -132,20 +137,35 @@ export default function RootLayout({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+  return (
+    <html lang="en" className="scroll-smooth">
+
+      <body className={`${inter.className} bg-black text-white antialiased`}>
+        <Navigation />
+        <main className="min-h-screen">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {children}
         </main>;
         <Footer />;
       </body>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     </html>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     </html>);
 
 }
+<<<<<<< HEAD
 
 }
 ;
@@ -159,3 +179,11 @@ export default function RootLayout({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import type { AppProps } from 'next/app';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -11,6 +15,9 @@ import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 
 =======
@@ -22,6 +29,14 @@ export default function App({ Component, pageProps }: AppProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
+<<<<<<< HEAD
+=======
+=======
+import '../src/styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 return <Component {...pageProps} />;
 import '../styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
@@ -39,6 +54,7 @@ export default function App({ Component, pageProps }: AppProps) {
 import '../src/styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
+<<<<<<< HEAD
 =======
 
 
@@ -245,12 +261,15 @@ export default function App({ Component, pageProps }: AppProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import '../styles/globals.css';
 
 }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -260,6 +279,11 @@ import '../styles/globals.css';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { AppProps } from 'next / app';
 import '../src / styles / globals.css';
 ;
@@ -278,6 +302,7 @@ function App() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   );
@@ -287,10 +312,18 @@ import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 import '../styles/globals.css';
+=======
+import type { AppProps } from 'next/app';
+<<<<<<< HEAD
+>>>>>>> main
 import '../styles/globals.css';
+=======
+import '../src/index.css';
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
+<<<<<<< HEAD
 }
   );
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -307,3 +340,9 @@ origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> main

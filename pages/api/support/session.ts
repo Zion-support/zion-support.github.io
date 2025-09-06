@@ -1,21 +1,32 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any };
   if (!sessionId || !eventType) return res.status(400).json({ error: 'sessionId and eventType required' });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const log = readJson<any[]>('support/sessions.json', []);
   const entry = { ts: Date.now(), sessionId, eventType, payload };
   log.push(entry);
   writeJson('support/sessions.json', log);
+<<<<<<< HEAD
 
   await logSupportEventToOperator({ type: eventType, sessionId, payload });
 
+=======
+  await logSupportEventToOperator({ type: eventType, sessionId, payload });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return res.status(200).json({ ok: true })
 }
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 
 
@@ -119,3 +130,9 @@ export default async function handler(req, res) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

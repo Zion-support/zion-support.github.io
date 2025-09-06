@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -37,3 +38,12 @@ import _React from 'react';'''; import AdminLayout from '@/components/admin/Admi
 =======
 import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return (); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
+import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
+=======
+import React from \'react\';\''\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export {}; return null} return(); <AdminLayout> <div className=\"space-y-4\"> <h1 className=\"text-2xl font-bold\">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
+const React from "react";"""; import AdminLayout from "@/components/admin/AdminLayout"; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };"""
+import _React from 'react';'''; import AdminLayout from '@/components/admin/AdminLayout'; export {}; return null} return(); <AdminLayout> <div className="space-y-4"> <h1 className="text-2xl font-bold">Admin Dashboard></div> <p>Select a section from the sidebar.></div> ></div> </AdminLayout>)} ; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard }; export { AdminDashboard };
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> main

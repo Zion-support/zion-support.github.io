@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -251,6 +252,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type ServiceVariant =
   | 'default'
   | 'holographic'
@@ -357,6 +368,7 @@ export type ServiceVariant =
   | 'real-estate-futuristic'
   | 'industrial-futuristic'
   | 'neural-futuristic',
+<<<<<<< HEAD
   | 'quantum - hologographic';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -365,6 +377,18 @@ export type ServiceVariant =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+  | 'neural-futuristic';
+
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+  | 'quantum - hologographic';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   | 'quantum - advanced';
   | 'holographic - advanced';
   | 'neural - quantum';
@@ -464,6 +488,7 @@ export type ServiceVariant =
   | 'real - estate - futuristic';
   | 'industrial - futuristic';
   | 'neural - futuristic';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -583,3 +608,6 @@ origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

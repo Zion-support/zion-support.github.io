@@ -3,6 +3,7 @@
 const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+
 class $1 {}
   constructor() {}
   this.projectRoot = path.resolve(__dirname, "../../");
@@ -29,9 +30,12 @@ class $1 {}
     console.log("logEntry);
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");
+
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
     const logEntry = "[${timestamp}] [${level}] ${message}";
+    
+
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n")};
 ;
@@ -60,6 +64,7 @@ class $1 {}
       }
 });
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
+
       child.on("error", error => {this.log("Command "error": ${error.message}", "ERROR");
         reject(error)})})};
 ;
@@ -77,6 +82,7 @@ class $1 {}
     try {}
   await this.runCommand("npm run lint");
       this.log("Linting completed successfully");
+
   async runLint() {}
   this.log("Running linting...");
     try {}
@@ -100,6 +106,7 @@ class $1 {}
     try {}
   await this.runCommand("npm run build");
       this.log("Build completed successfully");
+
   async runBuild() {}
   this.log("Building project...");
     try {}
@@ -148,6 +155,7 @@ class $1 {}
         "failed": results.filter(r => !r.success).length}};
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));this.log("Report "generated": ${this.reportFile}");
+
     return report};
 ;
   async run() {}
@@ -159,9 +167,12 @@ class $1 {}
   "step": "install-dependencies",
       "success": depsResult,
       "timestamp": new Date().toISOString(),
+
   async run() {}
   this.log("Starting CI automation...");
+
     const results = [];
+
     // Install dependencies;
     const depsResult = await this.installDependencies();
     results.push({})
@@ -169,6 +180,7 @@ class $1 {}
       "success": depsResult,
       "timestamp": new Date().toISOString()}
 });
+
     if (!depsResult) {}
   this.log(Skipping remaining steps due to dependency installation failure",)
         "WARN";
@@ -183,6 +195,7 @@ class $1 {}
       "success": lintResult,
       "timestamp": new Date().toISOString()}
 });
+
     // Run type check;
     const typeCheckResult = await this.runTypeCheck();
     results.push({})
@@ -217,6 +230,7 @@ class $1 {}
 this.log("CI automation completed. "Status": ${report.status}");this.log(""Passed": ${report.summary.passed}/${report.summary.total}");
     if (report.status === "FAILED") {}
   this.log("CI automation failed. Check the report for details.", "ERROR");
+
     if (buildResult) {}
   // Verify build output;
       const verifyResult = await this.verifyBuildOutput();
@@ -225,6 +239,7 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(""Passe
         "success": verifyResult,
         "timestamp": new Date().toISOString()}
 });
+
       // Run tests;
       const testResult = await this.runTests();
       results.push({})
@@ -235,6 +250,7 @@ this.log("CI automation completed. "Status": ${report.status}");this.log(""Passe
     // Generate final report;
     const report = await this.generateReport(results);
 this.log("CI automation completed. "Status": ${report.status}");this.log(""Passed": ${report.summary.passed}/${report.summary.total}`);
+
     if (report.status === "FAILED") {}
   this.log("CI automation failed. Check the report for details.", "ERROR");
       process.exit(1)};
@@ -248,3 +264,4 @@ if (require.main === module) {}
   console.error("CI automation "failed": ', error);
     process.exit(1)})};
 ;
+module.exports = CIAutomation;

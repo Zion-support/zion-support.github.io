@@ -4,14 +4,22 @@ Allow: /
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemaps
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
+=======
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+<<<<<<< HEAD
+>>>>>>> main
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+<<<<<<< HEAD
 Disallow: /test/
 Disallow: /temp/
 
@@ -91,3 +99,21 @@ Allow: /services
 Allow: /contact
 Allow: /pricing
 >>>>>>> d1825bf80d0f4576e032e91c766dd295d0eb83f4
+=======
+
+# Allow important pages
+Allow: /services/
+Allow: /ai-services/
+Allow: /it-services/
+Allow: /micro-saas/
+Allow: /industries/
+Allow: /blog/
+Allow: /resources/
+Allow: /guides/
+
+# Crawl delay
+=======
+# Crawl-delay for respectful crawling
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+Crawl-delay: 1
+>>>>>>> main

@@ -3,9 +3,11 @@
  * Project Health Monitor Automation;
  * Monitors overall project health and provides insights;
  */
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class ProjectHealthMonitor {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -30,22 +32,26 @@ class ProjectHealthMonitor {}
         console.log(message)};
     checkProjectStructure() {}
         this.log('Checking project structure...');
+        
         const requiredFiles = ['package.json',]
             'next.config.js',
             'tsconfig.json',
             'tailwind.config.js'
         ];
+        
         const optionalFiles = ['README.md',]
             '.gitignore',
             '.env.example',
             'Dockerfile',
             'docker-compose.yml'
         ];
+        
         const structure = {}
             "required": {},
             "optional": {},
             "score": 0;
        };
+        
         // Check required files;
         for (const file of requiredFiles) {}
             const exists = fs.existsSync(path.join(this.projectRoot, file;););
@@ -67,6 +73,7 @@ class ProjectHealthMonitor {}
         return structure};
     checkCodeQuality() {}
         this.log('Checking code quality...');
+        
         try {}
             // Run linting;
             execSync('npm run lint', { })
@@ -74,6 +81,7 @@ class ProjectHealthMonitor {}
                 "stdio": 'pipe'
             }
 });
+            
             return {;}
                 "status": 'success',
                 "linting": 'passed',
@@ -88,12 +96,14 @@ class ProjectHealthMonitor {}
     };
     checkTypeScript() {}
         this.log('Checking TypeScript configuration...');
+        
         try {}
             execSync('npm run type-check', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
             }
 });
+            
             return {;}
                 "status": 'success',
                 "typeCheck": 'passed',
@@ -108,12 +118,14 @@ class ProjectHealthMonitor {}
     };
     checkBuildHealth() {}
         this.log('Checking build health...');
+        
         try {}
             execSync('npm run build', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
             }
 });
+            
             return {;}
                 "status": 'success',
                 "build": 'passed',
@@ -128,11 +140,14 @@ class ProjectHealthMonitor {}
     };
     checkDependencies() {}
         this.log('Checking dependencies health...');
+        
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
+            
             const totalDeps = Object.keys(packageJson.dependencies || {}).length + 
                              Object.keys(packageJson.devDependencies || {}).lengt;h;
+            
             // Check for outdated packages;
             let outdatedCount = ;0;
             try {}
@@ -153,6 +168,7 @@ class ProjectHealthMonitor {}
                 };
             };
             const score = Math.max(0, 20 - (outdatedCount * 2;););
+            
             return {;}
                 "status": 'success',
                 "totalDependencies": totalDeps,
@@ -167,15 +183,19 @@ class ProjectHealthMonitor {}
     };
     checkSecurity() {}
         this.log('Checking security health...');
+        
         try {}
             const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
+            
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
+            
             const score = Math.max(0, 20 - (vulnerabilities * 5;););
+            
             return {;}
                 "status": 'success',
                 "vulnerabilities": vulnerabilities,
@@ -189,17 +209,21 @@ class ProjectHealthMonitor {}
     };
     generateHealthReport() {}
         this.log('Generating project health report...');
+        
         const structure = this.checkProjectStructure(;);
         const codeQuality = this.checkCodeQuality(;);
         const typeScript = this.checkTypeScript(;);
         const build = this.checkBuildHealth(;);
         const dependencies = this.checkDependencies(;);
         const security = this.checkSecurity(;);
+        
         const totalScore = structure.score + codeQuality.score + typeScript.score + 
                           build.score + dependencies.score + security.scor;e;
+        
         const healthStatus = totalScore >= 80 ? 'excellent' : 
                            totalScore >= 60 ? 'good' : 
                            totalScore >= 40 ? 'fair' : 'poo;r;';
+        
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -218,12 +242,15 @@ class ProjectHealthMonitor {}
             },
             "recommendations": this.generateHealthRecommendations(totalScore, healthStatus);
        };
+
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Project health report saved to ${this.reportFile}`);
         this.log(`Overall health "score": ${totalScore}/100 (${healthStatus})`);
+        
         return report};
     generateHealthRecommendations(score, status) {}
         const recommendations = [];
+        
         if ( {})
             recommendations.push('Project health needs immediate attention')};
         if (status === 'poor' || status === 'fair') {}
@@ -237,9 +264,11 @@ class ProjectHealthMonitor {}
         recommendations.push('Implement automated testing');
         recommendations.push('Set up continuous integration');
         recommendations.push('Regularly monitor project health');
+        
         return recommendations};
     async run() {}
         this.log('Project Health Monitor started');
+        
         try {}
             const report = this.generateHealthReport(;);
             this.log('Project Health Monitor completed successfully');
@@ -254,3 +283,4 @@ if ( {})
      {}
     const monitor = new ProjectHealthMonitor}(;);
     monitor.run().catch(console.error)};
+module.exports = ProjectHealthMonitor;

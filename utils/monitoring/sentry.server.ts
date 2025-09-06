@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 if (!Sentry.getCurrentHub().getClient()) {Sentry.init({;
     dsn: process.env.SENTRY_DSN |process.env.NEXT_PUBLIC_SENTRY_DSN |'';
@@ -8,6 +9,8 @@ if (!Sentry.getCurrentHub().getClient()) {Sentry.init({;
 import * as Sentry from '@sentry/node',;
 import * as Sentry from '@sentry/node';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import * as Sentry from '@sentry / node',
 if (.get_client ()) {) {
@@ -19,6 +22,7 @@ if (.get_client ()) {) {
     enabled: Boolean (process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -38,6 +42,11 @@ if (!Sentry.getCurrentHub().getClient()) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 if (!Sentry.getCurrentHub().getClient()) {;
   Sentry.init({;
@@ -46,6 +55,7 @@ if (!Sentry.getCurrentHub().getClient()) {;
     enabled: Boolean(process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -66,3 +76,8 @@ if (!Sentry.getCurrentHub().getClient()) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

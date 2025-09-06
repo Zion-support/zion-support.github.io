@@ -2,6 +2,7 @@
 "use client;"";";";,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 :src.disabled/components/ThemeProvider.jsx
@@ -21,3 +22,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "use client"
 "use client"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+"use client"
+>>>>>>> main

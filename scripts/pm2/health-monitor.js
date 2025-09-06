@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -110,6 +111,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    
+<<<<<<< HEAD
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
     try {}
       fs.appendFileSync(this.logFile, logMessage);,
     } catch (error) {}
@@ -340,6 +348,7 @@ const healthMonitor = new HealthMonitor();
         disk: null,
         cpu: null
       }
+<<<<<<< HEAD
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };
 ;
@@ -454,6 +463,8 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
               size: stats.size;
               sizeMB: Math.round(stats.size / (1024 * 1024) * 100) / 100;
               lastModified: stats.mtime})
+=======
+>>>>>>> main
       return health;
     } catch (error) {}
       this.error(`System health check failed: ${error.message}`);,
@@ -558,6 +569,7 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
         logFiles: [];
         totalSize: 0
       }
+<<<<<<< HEAD
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1617,6 +1629,8 @@ const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error => {_;
   process.exit(1)});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> main
       return processes;
     } catch (error) {}
       this.error(`Failed to get process info: ${error.message}`);,
@@ -1784,7 +1798,10 @@ if (require.main === module) {}
     process.exit(1);,
   });
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 <<<<<<< HEAD
 =======
 
@@ -1804,6 +1821,7 @@ healthMonitor.run().catch(error = > {process.exit(1)});
 =======
 =======
 module.exports = HealthMonitor;
+<<<<<<< HEAD
 module.exports = HealthMonitor;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/automate-test-improve-and-merge-code-8ee2
@@ -3032,3 +3050,6 @@ healthMonitor.run().catch(error => {_;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+>>>>>>> main
